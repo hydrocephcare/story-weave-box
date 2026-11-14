@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Mood Disorders",
+ "subject": "Psychiatry",
+ "summary": "Mood disorders are recurrent or persistent disturbances of affect, energy and cognition. Diagnosis relies on DSM‑5 criteria, clinical history and simple bedside tests. Management balances treating the underlying cause, symptom control and monitoring for complications.",
+ "aka": [
+  "Depression",
+  "Bipolar Disorder",
+  "Major Depressive Disorder",
+  "Mania",
+  "Cyclothymia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Mood disorders encompass bipolar and depressive disorders, defined by DSM‑5 criteria. A thorough history of mood episodes, duration, and associated symptoms is essential. The PHQ‑9 and YMRS are useful screening tools. In low‑resource settings, a focused interview and observation of affect and psychomotor activity often suffice.",
+   "b": [
+    "DSM‑5 criteria for MDD: ≥5 symptoms for ≥2 weeks, one being depressed mood or anhedonia",
+    "DSM‑5 criteria for Bipolar I: ≥1 manic episode, ≥1 depressive episode optional",
+    "DSM‑5 criteria for Bipolar II: ≥1 hypomanic episode + ≥1 major depressive episode",
+    "Cyclothymia: ≥2 years of hypomanic and depressive symptoms not meeting full criteria"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by episode frequency, functional impairment and risk of self‑harm. The Hamilton Depression Rating Scale (HDRS) and YMRS provide quantitative assessment. In resource‑poor settings, the Clinical Global Impression (CGI) scale can guide treatment intensity.",
+   "b": [
+    "Mild: brief episodes, minimal impairment",
+    "Moderate: frequent episodes, moderate impairment",
+    "Severe: chronic, high impairment, suicidality"
+   ],
+   "t": [
+    {
+     "a": "HDRS",
+     "b": "Measures depression severity; >20 indicates severe depression"
+    },
+    {
+     "a": "YMRS",
+     "b": "Rates mania; >20 suggests severe mania"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Etiology is multifactorial: genetic predisposition, neurochemical imbalance, psychosocial stressors, and medical comorbidities common in East Africa. Infections such as HIV, TB, malaria, and schistosomiasis can precipitate mood symptoms. Herbal remedies and khat chewing may also contribute.",
+   "b": [
+    "Medication: antiretrovirals, antimalarials"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report low mood, anhedonia, fatigue, sleep disturbance, appetite changes, and impaired concentration. Mania presents with euphoria, pressured speech, decreased need for sleep, grandiosity, and risky behaviour. Psychotic features may include delusions or hallucinations.",
+   "b": [
+    "Psychosis: fixed false beliefs, auditory hallucinations"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline investigations rule out medical mimics and guide treatment. In low‑resource settings, prioritize tests that are affordable and available.",
+   "b": [
+    "If tests unavailable, use clinical judgment and treat empirically while monitoring for adverse effects"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Hb <10 g/dL suggests anemia"
+    },
+    {
+     "a": "TSH",
+     "b": "TSH >4.5 mIU/L or <0.4 mIU/L"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive result requires antiretroviral therapy"
+    },
+    {
+     "a": "Urine pregnancy test (women of childbearing age)",
+     "b": "Positive indicates need for obstetric referral"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include suicidal ideation, psychosis, severe agitation, or rapid cognitive decline. Complications can be medical (e.g., arrhythmia from lithium) or psychosocial (self‑harm, suicide).",
+   "b": [
+    "Signs of medication toxicity (e.g., tremor, confusion with lithium)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Symptomatic treatment uses drug classes chosen for efficacy, safety, and availability. Non‑pharmacologic support (psychotherapy, social support) is essential.",
+   "b": [
+    "Monitoring: weight, renal function, blood glucose, liver enzymes"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review every 2–4 weeks during acute phase, then every 3–6 months. Educate patients on medication adherence, side‑effect recognition, and early warning signs. Preventive strategies include stress management and early treatment of comorbid medical conditions.",
+   "b": [
+    "Encourage family involvement"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes delirium, dementia, thyroid disease, anemia, substance intoxication, and psychosis secondary to infection.",
+   "b": [
+    "Thyroid dysfunction: abnormal TSH, physical signs"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal due to local factors. For example, malaria parasitemia can be low in chronic infection, and TSH may be normal in subclinical hypothyroidism.",
+   "b": [
+    "TSH within normal range does not exclude thyroid dysfunction in East Africa"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Suicidal ideation or plan",
+  "Delusions or hallucinations",
+  "Severe agitation or aggression",
+  "Rapid cognitive decline",
+  "Signs of medication toxicity"
+ ],
+ "faq": [
+  {
+   "q": "How do I differentiate bipolar from major depression in a resource‑poor setting?",
+   "a": "Look for a history of at least one manic or hypomanic episode, characterized by elevated mood, increased energy, and decreased sleep. If only depressive episodes are present, consider major depressive disorder."
+  },
+  {
+   "q": "What is the safest first‑line antidepressant in a patient with HIV?",
+   "a": "An SSRI such as fluoxetine is preferred because it has minimal drug‑drug interactions with antiretrovirals and a good safety profile."
+  },
+  {
+   "q": "Can khat use cause a mood disorder?",
+   "a": "Yes, chronic khat chewing can induce mania‑like symptoms and depression; cessation often improves mood."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old man presents with 3‑month history of low mood, anhedonia, and weight loss. He denies suicidal thoughts. What is the next best step? — Obtain a PHQ‑9 to quantify depression severity and rule out medical causes with CBC and TSH.",
+  "A patient with known bipolar disorder is admitted with a manic episode. He is on lithium but develops tremor and confusion. What should you do? — Discontinue lithium, check serum level, and consider switching to valproate.",
+  "A 35‑year‑old woman with HIV is experiencing depressive symptoms. Which antidepressant is least likely to interact with her antiretroviral therapy? — Fluoxetine (an SSRI) has minimal interactions with most ART regimens.",
+  "A child presents with irritability, poor sleep, and rapid speech. What is the most likely diagnosis? — Acute mania; assess for psychosis and rule out delirium.",
+  "A patient reports feeling “high” and has pressured speech. He denies any drug use. What is the most appropriate next step? — Perform a urine drug screen and assess for substance‑induced mood disorder.",
+  "A 60‑year‑old man with chronic fatigue and depression has a normal TSH. What should you consider next? — Evaluate for anemia, thyroid antibodies, and consider subclinical hypothyroidism.",
+  "A patient with bipolar disorder is pregnant and requires mood stabilization. Which medication is safest? — Lamotrigine is preferred; avoid lithium and valproate due to teratogenicity.",
+  "A patient with depression reports suicidal thoughts. What is the immediate management? — Ensure safety, arrange for psychiatric admission or intensive outpatient care, and start an SSRI while monitoring closely."
+ ],
+ "related": [
+  "Anxiety Disorders",
+  "Schizophrenia",
+  "Substance‑Induced Psychosis",
+  "Thyroid Dysfunction",
+  "HIV‑Associated Neurocognitive Disorder"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

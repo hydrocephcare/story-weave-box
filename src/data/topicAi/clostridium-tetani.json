@@ -1,0 +1,143 @@
+{
+ "medical": true,
+ "title": "Clostridium tetani",
+ "subject": "Microbiology & immunology",
+ "summary": "A soil‑borne, spore‑forming anaerobe that releases a neurotoxin blocking inhibitory neurotransmitters, causing generalized muscle rigidity and spasms. Rapid recognition and prompt antitoxin and antibiotics are lifesaving.",
+ "aka": [
+  "Tetanus bacillus",
+  "C. tetani"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Clostridium tetani is a gram‑positive, obligate anaerobe that forms hardy spores. It thrives in soil, manure and animal faeces and enters the body through contaminated wounds.",
+   "b": [
+    "Spore survival >10 years in soil",
+    "Anaerobic growth",
+    "Toxin is a potent neurotoxin"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The organism is rod‑shaped, non‑motile, and produces a tetanus toxin (TeNT) that binds presynaptic membranes and blocks GABA and glycine release.",
+   "b": [
+    "Spore size 2–4 µm",
+    "TeNT is a single polypeptide of 150 kDa"
+   ],
+   "t": [
+    {
+     "a": "Culture of wound",
+     "b": "Is the organism present? A positive culture confirms tetanus but a negative does not exclude it because the toxin is already released."
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spores enter via puncture or laceration, germinate in hypoxic tissue, and produce toxin. The life cycle is completed in the host; spores are shed in faeces and soil.",
+   "b": [
+    "Common in rural areas with animal contact",
+    "Wound contamination is the main route"
+   ],
+   "t": [
+    {
+     "a": "Wound inspection",
+     "b": "Does the wound have necrotic tissue or is it deep and dirty? A dirty, deep wound is high risk."
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Tetanus is characterised by trismus, opisthotonus, risus sardonicus and generalized rigidity. The toxin blocks inhibitory neurotransmission, leading to sustained muscle contraction.",
+   "b": [
+    "Classic signs: lockjaw, jaw spasms, neck rigidity",
+    "Severity graded by Modified Tetanus Severity Score (MTS) 1–5"
+   ],
+   "t": [
+    {
+     "a": "Modified Tetanus Severity Score",
+     "b": "Assesses respiratory compromise, autonomic instability and muscle rigidity; a score ≥4 indicates need for ICU."
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical diagnosis is based on history of wound and classic signs. Laboratory confirmation is rarely needed but can be supportive.",
+   "b": [
+    "No specific lab test for toxin"
+   ],
+   "t": [
+    {
+     "a": "Serum anti‑tetanus IgG",
+     "b": "Shows previous immunisation; <0.1 IU/mL indicates susceptibility."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Immediate administration of human tetanus immunoglobulin (HTIG) neutralises unbound toxin, followed by penicillin or metronidazole to eradicate the organism. Supportive care includes benzodiazepines for spasms and airway protection.",
+   "b": [
+    "HTIG 300 IU/kg over 10–15 min"
+   ],
+   "t": [
+    {
+     "a": "Benzodiazepines",
+     "b": "Reduce muscle spasms; a normal response is decreased rigidity."
+    },
+    {
+     "a": "Penicillin G",
+     "b": "Eradicates the organism; a rash or anaphylaxis would indicate avoidance."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a negative culture does not rule out tetanus. In low‑resource settings, focus on wound care, HTIG and benzodiazepines. Autonomic instability is a red flag for ICU transfer.",
+   "b": [
+    "Always give HTIG first"
+   ],
+   "t": [
+    {
+     "a": "Autonomic instability",
+     "b": "Signs: tachycardia, hypertension, sweating; indicates severe tetanus."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe muscle rigidity with respiratory failure",
+  "Autonomic instability (tachycardia, hypertension, sweating)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common source of C. tetani infection in East Africa?",
+   "a": "Contaminated animal wounds, especially from livestock and poultry, and deep puncture injuries in rural settings."
+  },
+  {
+   "q": "Can tetanus be prevented?",
+   "a": "Yes, by completing the WHO tetanus immunisation schedule and revaccinating every 10 years."
+  },
+  {
+   "q": "Why is penicillin used instead of clindamycin?",
+   "a": "Penicillin is the first‑line antibiotic for C. tetani; clindamycin is reserved for penicillin‑allergic patients but has less bactericidal activity."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old farmer presents with jaw stiffness and neck rigidity after a foot puncture. What is the first step in management? — Give HTIG immediately, then antibiotics and benzodiazepines.",
+  "A patient with tetanus develops sudden tachycardia and sweating. What is the most likely complication? — Autonomic dysfunction; monitor BP and give beta‑blocker if needed.",
+  "Why is a negative wound culture not enough to rule out tetanus? — The toxin is released before the organism is cultured; clinical picture is decisive.",
+  "Which antibiotic is preferred for tetanus in a patient with penicillin allergy? — Clindamycin, but monitor for efficacy.",
+  "What bedside sign indicates impending respiratory failure in tetanus? — Trismus with inability to open mouth fully and difficulty swallowing.",
+  "How does tetanus toxin cause muscle spasms? — It blocks GABA and glycine release at the neuromuscular junction, leading to unchecked excitatory transmission."
+ ],
+ "related": [
+  "Tetanus immunisation",
+  "Tetanus antitoxin",
+  "Bacterial spores",
+  "Anaerobic infections",
+  "Wound care in low‑resource settings"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

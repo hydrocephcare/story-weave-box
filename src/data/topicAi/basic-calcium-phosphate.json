@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Basic Calcium Phosphate Deposition Disease",
+ "subject": "Medicine",
+ "summary": "BCP deposition disease involves hydroxyapatite crystals depositing in tendons, bursae, and periarticular soft tissue, causing acute or chronic pain. It is common in middle‑aged adults and can mimic infection or gout. Management focuses on pain control, physiotherapy and addressing underlying rheumatic disease.",
+ "aka": [
+  "Hydroxyapatite crystal deposition disease",
+  "Calcific tendinitis",
+  "Milwaukee shoulder"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Deposition of basic calcium phosphate crystals (hydroxyapatite, octacalcium phosphate, tricalcium phosphate) in soft tissues, most often peri‑articular tendons or bursae.",
+   "b": [
+    "Diagnosis is clinical plus imaging showing calcific deposits; crystal analysis is rarely needed.",
+    "Differentiates from gout (monosodium urate) and CPPD (calcium pyrophosphate)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom duration and functional impact rather than a formal stage system.",
+   "b": [
+    "Acute phase: sudden severe pain, swelling, limited motion.",
+    "Sub‑acute/chronic phase: persistent pain, stiffness, possible calcific mass."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Exact pathogenesis is unclear; risk factors are listed by category.",
+   "b": [
+    "Metabolic: hyperparathyroidism, renal failure, hyperphosphatemia.",
+    "Rheumatic: rheumatoid arthritis, systemic lupus, spondyloarthropathies.",
+    "Local trauma or overuse of the affected tendon.",
+    "In low‑resource settings: chronic infection (TB) or herbal injections causing local tissue injury."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with sudden shoulder pain (Milwaukee shoulder) or pain in other joints (hip, elbow) with limited active range of motion.",
+   "b": [
+    "Pain often worse at night, may radiate down the arm.",
+    "Swelling, warmth, and sometimes a palpable hard nodule.",
+    "Absence of systemic fever distinguishes from septic bursitis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging and basic labs guide diagnosis and rule out mimics.",
+   "t": [
+    {
+     "a": "Plain radiograph of the affected joint",
+     "b": "Shows dense, homogeneous calcific deposits; confirms BCP and excludes fracture."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Detects fluid, guides aspiration, and shows hyperechoic deposits with posterior shadowing; useful when X‑ray unavailable."
+    },
+    {
+     "a": "Aspiration of bursal fluid (if effusion present)",
+     "b": "Helps rule out infection; crystal analysis shows non‑birefringent hydroxyapatite, but often not needed."
+    },
+    {
+     "a": "Serum calcium, phosphate, PTH, renal function",
+     "b": "Identify metabolic contributors; treat underlying disorder."
+    },
+    {
+     "a": "If imaging unavailable",
+     "b": "Rely on clinical picture and response to therapeutic lavage; consider referral for imaging when possible."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are usually local but can become serious.",
+   "b": [
+    "Persistent severe pain despite treatment → consider infection or rotator‑cuff tear.",
+    "Rapidly expanding calcific mass → risk of tendon rupture.",
+    "Systemic signs (fever, chills) → treat as possible septic bursitis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat pain, remove deposits when needed, and address underlying disease.",
+   "b": [
+    "Analgesia: NSAIDs (ibuprofen) for inflammation; avoid in renal failure or active peptic ulcer.",
+    "Physical therapy: gentle range‑of‑motion exercises after acute pain subsides.",
+    "Ultrasound‑guided barbotage or needling: lavage to break up deposits; preferred when skilled operator present.",
+    "Corticosteroid injection into bursa after lavage if inflammation persists.",
+    "Treat metabolic causes: control hyperparathyroidism, adjust dialysis calcium load.",
+    "Surgery (arthroscopic removal) only for refractory cases or tendon rupture."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review to ensure pain control and monitor for recurrence.",
+   "b": [
+    "Re‑evaluate shoulder function at 4‑6 weeks after intervention.",
+    "Educate on activity modification to avoid overuse of affected tendons.",
+    "Screen for metabolic disorders annually in recurrent cases."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Gout – monosodium urate crystals, usually podagra, needle‑shaped crystals, positive birefringence.",
+    "Calcium pyrophosphate deposition disease (CPPD) – rhomboid crystals, chondrocalcinosis on X‑ray.",
+    "Septic bursitis – systemic signs, purulent aspirate, positive culture."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal serum calcium does not exclude BCP; deposits are local phenomena.",
+    "Calcifications may be missed on plain X‑ray if very early; ultrasound is more sensitive."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained fever or chills with joint swelling",
+  "Rapid loss of function or suspicion of tendon rupture",
+  "Worsening pain despite NSAIDs and physiotherapy"
+ ],
+ "faq": [
+  {
+   "q": "Why does the pain often peak at night?",
+   "a": "Calcific deposits irritate the peri‑tendinous tissue and the shoulder capsule, which is less supported when lying down."
+  },
+  {
+   "q": "Can BCP deposits resolve without intervention?",
+   "a": "Yes, many acute deposits resorb spontaneously over weeks to months."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "No, most patients improve with NSAIDs, physiotherapy, and, if needed, ultrasound‑guided lavage."
+  }
+ ],
+ "exam": [
+  "What bedside test helps differentiate BCP deposition from septic bursitis? — Look for systemic fever, warm erythema, and obtain aspirate for Gram stain; BCP lacks purulent fluid.",
+  "A 45‑year‑old farmer presents with sudden shoulder pain and a hard palpable nodule; X‑ray is unavailable. What is your next step? — Perform focused ultrasound to identify calcific deposit and guide possible needling.",
+  "Explain why NSAIDs are first‑line but should be avoided in a patient with chronic kidney disease. — NSAIDs reduce inflammation from crystal‑induced synovitis but can worsen renal function and cause fluid retention.",
+  "How would you manage a patient with recurrent calcific shoulder pain and newly diagnosed hyperparathyroidism? — Treat hyperparathyroidism (surgical or medical), use NSAIDs for acute pain, and consider physiotherapy; address metabolic driver to prevent recurrence.",
+  "What feature on ultrasound distinguishes hydroxyapatite crystals from gout crystals? — Hydroxyapatite appears as hyperechoic aggregates with posterior shadowing; gout shows “double contour” sign and may have a “snowstorm” appearance.",
+  "When is surgical removal indicated in BCP disease? — When pain persists despite repeated lavage and steroids, or when there is tendon rupture or large obstructive calcific mass.",
+  "A patient with rheumatoid arthritis develops a calcific deposit in the elbow. Which underlying mechanism is most likely? — Chronic inflammation leads to local tissue degeneration, providing a nidus for calcium phosphate precipitation.",
+  "Why might serum calcium be normal in a patient with extensive BCP deposition? — Deposits are localized; systemic calcium homeostasis can remain unchanged."
+ ],
+ "related": [
+  "Calcific Tendinitis of the Shoulder",
+  "Calcium Pyrophosphate Deposition Disease",
+  "Gout",
+  "Septic Bursitis",
+  "Rotator Cuff Tear",
+  "Hyperparathyroidism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

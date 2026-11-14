@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "title": "Carpal Tunnel Syndrome",
+ "subject": "Medicine",
+ "summary": "A median‑nerve entrapment at the wrist causing nocturnal paresthesia, sensory loss in the thumb, index and middle fingers, and possible motor weakness. Diagnosis is clinical, confirmed by nerve conduction if available.",
+ "aka": [
+  "Median nerve entrapment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Carpal tunnel syndrome (CTS) is compression of the median nerve within the carpal tunnel, producing sensory and motor symptoms. In low‑resource settings, diagnosis relies on history and bedside tests; nerve conduction studies confirm severity when available.",
+   "b": [
+    "Nocturnal tingling in thumb, index, middle fingers",
+    "Weakness of abductor pollicis brevis"
+   ],
+   "t": [
+    {
+     "a": "Tinel sign",
+     "b": "Does tapping over the carpal tunnel elicit tingling? Positive suggests median nerve irritation."
+    },
+    {
+     "a": "Phalen maneuver",
+     "b": "Does sustained wrist flexion reproduce symptoms? Positive supports CTS."
+    },
+    {
+     "a": "Nerve conduction study (NCS)",
+     "b": "Measures median nerve latency and amplitude. Prolonged distal latency (>3.5 ms) or reduced amplitude confirms compression."
+    },
+    {
+     "a": "EMG",
+     "b": "Assesses motor unit activity in abductor pollicis brevis; abnormal findings support severe CTS."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by symptom duration, motor involvement, and electrophysiology. The Boston Carpal Tunnel Questionnaire (BCCTQ) is useful when available.",
+   "b": [
+    "Stage I – sensory only, mild symptoms",
+    "Stage II – sensory + mild motor weakness",
+    "Stage III – marked motor loss, atrophy"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the most common causes are diabetes, rheumatoid arthritis, and pregnancy. Other tropical factors include parasitic infections (schistosomiasis), herbal remedies causing edema, and HIV‑related neuropathy.",
+   "b": [
+    "Diabetes mellitus – chronic hyperglycaemia damages nerves",
+    "Rheumatoid arthritis – synovial proliferation",
+    "Pregnancy – fluid retention",
+    "HIV – opportunistic neuropathies"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report burning or tingling that awakens them at night, worsens with wrist flexion, and may progress to weakness of thumb opposition.",
+   "b": [
+    "Nocturnal paresthesia",
+    "Wrist flexion aggravates symptoms",
+    "Weakness of thumb abduction"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When resources allow, NCS/EMG confirm diagnosis. In their absence, a thorough history and Tinel/Phalen tests suffice.",
+   "t": [
+    {
+     "a": "Tinel sign",
+     "b": "Positive indicates median nerve irritation."
+    },
+    {
+     "a": "Phalen maneuver",
+     "b": "Positive reproduces symptoms."
+    },
+    {
+     "a": "NCS/EMG",
+     "b": "Prolonged latency or reduced amplitude confirms CTS; absence of findings suggests alternative diagnoses."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent referral is needed if there is rapid motor loss, loss of sensation in the median nerve distribution, or signs of systemic infection.",
+   "b": [
+    "Rapid progression of weakness",
+    "Loss of thumb abduction",
+    "Fever or swelling suggesting infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause first. Supportive care includes night splints and ergonomic advice. Pharmacotherapy with NSAIDs or corticosteroids is considered when inflammation is prominent. Surgery is reserved for refractory cases.",
+   "b": [
+    "Night wrist splint – reduces nocturnal pressure",
+    "NSAIDs – reduce inflammation",
+    "Corticosteroid injection – short‑term relief"
+   ],
+   "t": [
+    {
+     "a": "Corticosteroid injection",
+     "b": "Reduces median nerve swelling; avoid in diabetic patients with poor wound healing."
+    },
+    {
+     "a": "Surgical release",
+     "b": "Indicated when conservative measures fail or motor function deteriorates; avoids long‑term disability."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate symptom progression every 3–6 months. Prevent recurrence by controlling diabetes, avoiding repetitive wrist strain, and maintaining healthy weight.",
+   "b": [
+    "Regular glucose monitoring",
+    "Ergonomic wrist support",
+    "Weight management"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Cubital tunnel syndrome, cervical radiculopathy, and peripheral neuropathies can mimic CTS.",
+   "b": [
+    "Cubital tunnel – ulnar nerve symptoms",
+    "Cervical radiculopathy – neck pain radiating to arm",
+    "Peripheral neuropathy – symmetric sensory loss"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal NCS does not exclude mild CTS; early disease may show normal electrophysiology. A negative Tinel sign does not rule out CTS.",
+   "b": [
+    "Early CTS may have normal NCS",
+    "Negative Tinel can occur in mild cases"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid loss of thumb abduction",
+  "Sudden worsening of symptoms",
+  "Fever or swelling of the wrist"
+ ],
+ "faq": [
+  {
+   "q": "Can pregnancy cause carpal tunnel syndrome?",
+   "a": "Yes, fluid retention during pregnancy increases pressure in the carpal tunnel."
+  },
+  {
+   "q": "Is diabetes a risk factor for CTS?",
+   "a": "Diabetes causes nerve damage and swelling, making CTS more likely."
+  },
+  {
+   "q": "What is the best first‑line treatment in a low‑resource setting?",
+   "a": "Night wrist splint and ergonomic advice; NSAIDs if inflammation is suspected."
+  }
+ ],
+ "exam": [
+  "What bedside test would you perform first to confirm median nerve involvement? — Tinel sign; it reproduces tingling when tapping the tunnel.",
+  "Which systemic disease is most commonly associated with CTS in East Africa? — Diabetes mellitus; it causes neuropathy and edema.",
+  "Why might a normal nerve conduction study not rule out CTS? — Early or mild CTS can have normal electrophysiology.",
+  "When is surgical release indicated? — Persistent symptoms despite splinting and medication, or progressive motor weakness.",
+  "How does pregnancy physiologically contribute to CTS? — Fluid retention increases carpal tunnel pressure.",
+  "What is the most common red flag that requires urgent referral? — Rapid loss of thumb abduction or sensory loss.",
+  "Why are corticosteroid injections avoided in poorly controlled diabetics? — They impair wound healing and increase infection risk.",
+  "What ergonomic advice would you give a patient with repetitive wrist strain? — Use wrist‑neutral positions, take frequent breaks, and use padded supports."
+ ],
+ "related": [
+  "Median nerve anatomy",
+  "Rheumatoid arthritis",
+  "Diabetic neuropathy",
+  "Pregnancy‑related edema",
+  "Cervical radiculopathy",
+  "Cubital tunnel syndrome",
+  "Peripheral neuropathy",
+  "Ergonomics"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Postural (Orthostatic) Hypotension",
+ "subject": "Medicine",
+ "summary": "A fall in blood pressure on standing caused by inadequate autonomic or volume compensation. Recognise the bedside test, common tropical causes, and manage with fluids, compression and careful drug choice.",
+ "aka": [
+  "Orthostatic hypotension",
+  "Postural hypotension"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A sustained drop in systolic ≥20 mmHg or diastolic ≥10 mmHg within 3 minutes of standing (or head‑up tilt) with associated symptoms.",
+   "b": [
+    "Measure BP supine after 5 min rest, then at 1 and 3 min after standing.",
+    "Ask about dizziness, light‑headedness, visual blur, syncope."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage I: systolic drop 20‑29 mmHg or diastolic 10‑19 mmHg; Stage II: systolic ≥30 mmHg or diastolic ≥20 mmHg; Stage III: symptomatic collapse or need for emergency care.",
+   "b": [
+    "Stage guides urgency of fluid resuscitation and monitoring."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify by volume depletion, autonomic failure, medication, and secondary disease.",
+   "b": [
+    "Volume depletion – diarrhoea, malaria, severe anaemia, vomiting, poor oral rehydration.",
+    "Autonomic neuropathy – diabetes, HIV, chronic alcohol, peripheral neuropathy from antiretrovirals.",
+    "Medications – low‑potency antipsychotics (chlorpromazine, quetiapine), antihypertensives, diuretics.",
+    "Cardiac – severe aortic stenosis, heart failure with low output.",
+    "Infections – TB meningitis, chronic hepatitis B with cirrhosis, schistosomiasis‑related portal hypertension."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report dizziness on standing, blurred vision, fatigue, or syncope. Physical exam shows tachycardia, cold clammy skin if hypovolaemic, and a delayed rise in BP.",
+   "b": [
+    "Orthostatic test positive when symptoms accompany the BP fall.",
+    "Look for signs of dehydration: dry mucosa, reduced skin turgor, sunken eyes."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Supine and standing blood pressure",
+     "b": "Confirms orthostatic fall; if unavailable, use manual cuff with timed readings."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Detects anaemia, infection, or eosinophilia from parasitic disease."
+    },
+    {
+     "a": "Serum electrolytes & creatinine",
+     "b": "Assesses volume status and renal contribution."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Excludes hypoglycaemia as a cause of dizziness."
+    },
+    {
+     "a": "ECG",
+     "b": "Looks for bradyarrhythmia or conduction block that can mimic orthostatic drop."
+    },
+    {
+     "a": "Autonomic function tests (if available)",
+     "b": "Distinguish neurogenic from volume‑depletion causes."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe falls can cause head injury; prolonged hypoperfusion may precipitate myocardial ischaemia or stroke in high‑risk patients.",
+   "b": [
+    "Syncope with chest pain or palpitations → urgent cardiac review.",
+    "Persistent tachycardia >120 bpm with hypotension → consider sepsis or adrenal crisis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, restore intravascular volume, and use non‑pharmacologic measures before drugs.",
+   "b": [
+    "Oral rehydration solution (ORS) for mild‑moderate dehydration; IV crystalloids (normal saline) if vomiting or severe volume loss.",
+    "Compression stockings (30‑40 mmHg) to reduce venous pooling.",
+    "Educate slow positional changes; raise head of bed 10‑20°.",
+    "Review medications – stop or replace chlorpromazine, quetiapine, diuretics if possible.",
+    "Midodrine (α‑agonist) only if non‑pharmacologic measures fail and no severe cardiac disease.",
+    "Fludrocortisone (mineralocorticoid) for neurogenic cases with low aldosterone, avoiding in heart failure."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑measure orthostatic vitals after each intervention; aim for no symptomatic drop. Counsel on adequate fluid intake, salt supplementation where safe, and avoidance of precipitating drugs.",
+   "b": [
+    "Schedule review within 1 week for acute cases, then monthly until stable.",
+    "In chronic autonomic failure, involve physiotherapy for tilt‑training."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause dizziness but have different mechanisms.",
+   "b": [
+    "Cardiac syncope – arrhythmia or outflow obstruction; pulse often irregular or absent.",
+    "Vasovagal faint – prodrome of nausea, warm skin, bradycardia; BP fall is abrupt after trigger.",
+    "Cerebral hypoperfusion from anemia – no orthostatic change, improves with transfusion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal despite significant orthostatic fall.",
+   "b": [
+    "Normal resting BP does not exclude orthostatic hypotension; always perform standing measurements.",
+    "Serum sodium may be normal in early dehydration; rely on clinical signs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Syncope with chest pain, palpitations or dyspnoea",
+  "Persistent systolic BP <90 mmHg while standing",
+  "New neurological deficits after a fall"
+ ],
+ "faq": [
+  {
+   "q": "Why does standing cause a blood pressure drop?",
+   "a": "Gravity pools blood in the legs, reducing venous return; if the autonomic system or volume cannot compensate, BP falls."
+  },
+  {
+   "q": "Can antipsychotics really cause orthostatic hypotension?",
+   "a": "Yes; low‑potency agents like chlorpromazine block α‑adrenergic receptors, blunting vasoconstriction on standing."
+  },
+  {
+   "q": "Is it safe to give fluids to a patient with heart failure who has orthostatic hypotension?",
+   "a": "Give cautious, low‑volume boluses and monitor for pulmonary oedema; consider compression stockings and medication adjustment first."
+  }
+ ],
+ "exam": [
+  "What bedside test confirms orthostatic hypotension and how is it performed? — Measure supine BP after 5 min rest, then standing BP at 1 and 3 min; look for ≥20 mmHg systolic or ≥10 mmHg diastolic drop with symptoms.",
+  "A patient on chlorpromazine presents with dizziness on standing. How do you manage the drug issue? — Review necessity, taper or switch to a drug with less α‑blockade; if essential, add compression stockings and monitor BP.",
+  "How would you differentiate neurogenic orthostatic hypotension from hypovolaemia in a malaria‑endemic area? — Neurogenic shows minimal heart‑rate increase (<15 bpm) on standing; hypovolaemia shows tachycardia >20 bpm and improves with fluids.",
+  "What are the first‑line non‑pharmacologic measures for an acute orthostatic episode in a rural clinic? — Slow position changes, oral rehydration with salt, compression stockings, and review of offending meds.",
+  "When is midodrine indicated and what are its contraindications? — Use after failure of fluids and compression in persistent symptomatic orthostatic hypotension; avoid in severe cardiac disease, supine hypertension, or pheochromocytoma.",
+  "A patient collapses after standing, BP 85/50, pulse 130, and has a fever. What urgent steps do you take? — Treat as possible sepsis: give IV crystalloids, obtain cultures, start broad‑spectrum antibiotics, and monitor cardiac status.",
+  "Why might a normal resting ECG not rule out orthostatic hypotension? — ECG assesses rhythm, not autonomic vascular response; orthostatic drop can occur with a normal sinus rhythm.",
+  "Explain why compression stockings are preferred over leg elevation in low‑resource settings. — Stockings are cheap, easy to apply, maintain venous return continuously, and do not require a bed‑side assistant."
+ ],
+ "related": [
+  "Dehydration",
+  "Diabetic autonomic neuropathy",
+  "Heart failure",
+  "Medication‑induced hypotension",
+  "Syncope",
+  "Malaria‑related volume loss"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Leprosy (Hansen Disease)",
+ "subject": "Medicine",
+ "summary": "Leprosy is a chronic infection by Mycobacterium leprae causing skin lesions and peripheral nerve loss. Diagnosis relies on clinical pattern and simple skin smears; treatment is multidrug therapy with rifampicin, dapsone and clofazimine.",
+ "aka": [
+  "Hansen disease",
+  "Mycobacterium leprae infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Leprosy is a granulomatous infection of skin and peripheral nerves caused by Mycobacterium leprae. Diagnosis is clinical, supported by slit‑skin smear microscopy or, where available, PCR.",
+   "b": [
+    "Typical hypopigmented or erythematous macules with loss of sensation",
+    "Thickened peripheral nerves palpable in the ulnar, common peroneal or posterior tibial distribution",
+    "Positive acid‑fast bacilli on slit‑skin smear (≥1 bacillus per 100 fields) confirms the disease"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Ridley‑Jopling classification grades disease from tuberculoid (paucibacillary) to lepromatous (multibacillary) based on lesion count, smear grade and immune response.",
+   "b": [
+    "Paucibacillary: ≤5 skin lesions, negative or scant smear (0‑1+)",
+    "Multibacillary: >5 lesions or smear ≥2+",
+    "WHO operational classification uses the same cut‑offs for treatment decisions"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Leprosy is transmitted mainly by prolonged close contact with untreated patients; the organism thrives in cool skin areas.",
+   "b": [
+    "Mycobacterium leprae infection – endemic in East Africa, especially rural and tribal communities",
+    "Co‑infection with HIV may increase risk of atypical presentations",
+    "Living in overcrowded households with poor ventilation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with a combination of skin and nerve findings that evolve over months to years.",
+   "b": [
+    "Hypopigmented, anesthetic macules or plaques; may be raised or nodular in lepromatous form",
+    "Peripheral nerve thickening with loss of sensation, especially in hands and feet",
+    "Loss of eyebrows (madarosis) and nasal collapse in advanced disease",
+    "Secondary ulceration or secondary infection of anesthetic areas"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, simple tests guide diagnosis and classification.",
+   "t": [
+    {
+     "a": "Slit‑skin smear (acid‑fast stain)",
+     "b": "Confirms presence of bacilli and determines paucibacillary vs multibacillary; if unavailable, rely on lesion count and nerve exam"
+    },
+    {
+     "a": "Skin biopsy (histopathology)",
+     "b": "Provides definitive diagnosis and classification when smear is negative; not essential if clinical picture is classic"
+    },
+    {
+     "a": "Sensory testing (monofilament or cotton wool)",
+     "b": "Detects loss of protective sensation; helps map nerve involvement and monitor treatment response"
+    },
+    {
+     "a": "Basic blood count and liver function",
+     "b": "Baseline for monitoring drug toxicity; if labs unavailable, monitor clinically for skin rash, jaundice, or neuropathy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated disease can lead to irreversible disability and systemic involvement.",
+   "b": [
+    "Rapid progression of nerve loss causing foot drop or claw hand",
+    "Severe ulceration with secondary bacterial infection",
+    "Erythema nodosum leprosum (immune complex reaction) causing fever and painful nodules",
+    "Eye involvement leading to corneal ulceration and blindness"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Standard WHO multidrug therapy (MDT) is given for 6‑12 months depending on classification; steroids are added for severe nerve inflammation.",
+   "b": [
+    "Rifampicin (bactericidal) – core drug, given monthly supervised dose",
+    "Dapsone (bacteriostatic) – daily dose, avoids resistance when combined with rifampicin",
+    "Clofazimine (anti‑inflammatory) – added in multibacillary disease; causes skin discoloration but is well tolerated",
+    "Prednisone for acute neuritis or erythema nodosum leprosum – short course to reduce inflammation",
+    "Avoid monotherapy to prevent resistance; avoid fluoroquinolones unless indicated for co‑infection"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of lesions, nerve function and drug side effects is essential; contact tracing reduces transmission.",
+   "b": [
+    "Monthly clinical review during MDT; assess lesion size, smear status if available, and sensory testing",
+    "Educate patients on foot care, protective footwear and wound hygiene",
+    "Screen household contacts; give single‑dose rifampicin prophylaxis to eligible contacts",
+    "Vaccination with BCG may confer partial protection in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several dermatologic and neuropathic conditions mimic leprosy.",
+   "b": [
+    "Cutaneous tuberculosis – similar granulomas but usually ulcerative and not associated with peripheral neuropathy",
+    "Sarcoidosis – non‑caseating granulomas, lacks loss of sensation and nerve thickening",
+    "Fungal infections (e.g., chromoblastomycosis) – verrucous lesions, no nerve involvement",
+    "Diabetic peripheral neuropathy – symmetric stocking‑glove loss, no skin lesions"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely negative or give a misleading picture.",
+   "b": [
+    "Slit‑skin smear can be negative in early tuberculoid disease; clinical judgment is crucial",
+    "Skin biopsy may miss bacilli in paucibacillary cases; do not rule out disease solely on histology",
+    "Peripheral nerve thickening can be subtle; use palpation of multiple sites"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of motor function in a limb",
+  "Severe foot ulcer with spreading cellulitis",
+  "Acute eye pain or vision loss"
+ ],
+ "faq": [
+  {
+   "q": "Why does leprosy cause loss of sensation before visible skin change?",
+   "a": "M. leprae invades Schwann cells, causing segmental demyelination and nerve dysfunction before the skin lesions become obvious."
+  },
+  {
+   "q": "Can leprosy be cured?",
+   "a": "Yes, WHO‑recommended MDT cures >95 % of patients when completed."
+  },
+  {
+   "q": "Is leprosy highly contagious?",
+   "a": "Transmission requires prolonged close contact; casual contact rarely spreads the disease."
+  }
+ ],
+ "exam": [
+  "A patient presents with a single hypopigmented, anesthetic patch on the forearm and a thickened ulnar nerve – what is your next diagnostic step and why? — Perform a slit‑skin smear to classify paucibacillary vs multibacillary disease; if unavailable, count lesions and assess nerve involvement.",
+  "How does the Ridley‑Jopling classification influence treatment duration? — Paucibacillary (≤5 lesions) receives 6 months MDT; multibacillary (>5 lesions or positive smear) receives 12 months MDT.",
+  "A lepromatous patient develops painful nodules and fever – what complication is this and how do you manage it? — Erythema nodosum leprosum; treat with high‑dose prednisone or thalidomide if available.",
+  "Why is rifampicin given under supervision each month rather than daily? — To ensure adherence, prevent resistance, and exploit its strong bactericidal effect on M. leprae.",
+  "A patient on MDT develops a rash and jaundice – which drug is most likely responsible and what is your action? — Dapsone can cause hypersensitivity hepatitis; stop dapsone and continue rifampicin and clofazimine with close monitoring.",
+  "What foot care advice would you give to a patient with sensory loss due to leprosy? — Daily inspection, use of protective footwear, keep feet clean and dry, treat any minor trauma promptly to avoid ulceration.",
+  "How would you differentiate tuberculoid leprosy from cutaneous tuberculosis on exam? — Tuberculoid leprosy shows isolated anesthetic patches with nerve thickening; cutaneous TB shows ulcerative or verrucous lesions without sensory loss.",
+  "A household contact of a newly diagnosed leprosy case asks about prophylaxis – what is recommended? — Single‑dose rifampicin (SDR) for eligible contacts, combined with education on early symptom detection."
+ ],
+ "related": [
+  "Peripheral neuropathy",
+  "Tuberculosis skin manifestations",
+  "Erythema nodosum leprosum",
+  "Bacterial skin ulcer",
+  "HIV co‑infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

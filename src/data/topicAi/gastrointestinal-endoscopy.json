@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "Endoscopy is the definitive tool for diagnosing and managing upper GI pathology. In resource‑limited hospitals, clinical judgment, basic labs and simple imaging guide when to refer for endoscopy, and how to manage common findings safely.",
+ "aka": [
+  "Upper GI endoscopy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gastrointestinal endoscopy uses a flexible scope to visualize the esophagus, stomach and duodenum, allowing direct inspection, biopsy and therapeutic intervention.",
+   "b": [
+    "Visual confirmation of lesions",
+    "Biopsy for histology",
+    "Therapeutic hemostasis"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Confirm source of bleeding or ulcer"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Lesions are staged by size, depth and vascularity. Ulcers >2 cm or with exposed vessels are high risk for rebleeding.",
+   "b": [
+    "Bleeding risk score: Forrest I–III"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, common causes of upper GI bleeding are peptic ulcer disease, esophageal varices, and gastritis from infections or herbal remedies.",
+   "b": [
+    "Helicobacter pylori",
+    "Alcohol/NSAID use",
+    "Schistosomiasis",
+    "Herbal hepatotoxins"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have hematemesis, melena, epigastric pain, or anemia with fatigue. Signs of shock indicate massive bleeding.",
+   "b": [
+    "Hematemesis, melena, syncope, tachycardia, hypotension"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Basic labs and imaging guide urgency. When endoscopy is unavailable, CT angiography or barium swallow can localise lesions.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Assess anemia severity"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Rule out portal hypertension"
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Ensure safe endoscopy"
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Detect free air for perforation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Signs of perforation, ongoing massive bleeding, or hemodynamic instability require immediate surgical referral.",
+   "b": [
+    "Peritonitis, rebound tenderness",
+    "Persistent vomiting of blood",
+    "Hypotension despite resuscitation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control bleeding, and support haemodynamics. Endoscopic therapy is first line for ulcers and varices.",
+   "b": [
+    "Proton pump inhibitor infusion",
+    "Endoscopic clipping or cautery",
+    "Balloon tamponade for variceal bleeding"
+   ],
+   "t": [
+    {
+     "a": "Proton pump inhibitor",
+     "b": "Reduce acid to promote ulcer healing"
+    },
+    {
+     "a": "Octreotide",
+     "b": "Reduce portal pressure in variceal bleeding"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After acute control, eradicate H. pylori, counsel on alcohol/NSAID avoidance, and monitor for rebleeding.",
+   "b": [
+    "Eradication therapy for H. pylori",
+    "Patient education on diet and medication use",
+    "Scheduled repeat endoscopy if high‑risk lesions persist"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Peptic ulcer disease can mimic gastritis or malignancy; variceal bleeding may be mistaken for hematemesis from a non‑variceal source.",
+   "b": [
+    "Gastritis vs ulcer",
+    "Variceal vs non‑variceal bleeding"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal coagulation tests may still mask bleeding risk in cirrhosis; low Hb can be due to chronic disease rather than acute bleed.",
+   "b": [
+    "Coagulation profile normal in cirrhosis",
+    "Hb may be low chronically"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled bleeding, hypotension despite fluids, signs of perforation (free air, peritonitis)"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step if a patient has hematemesis and is unstable?",
+   "a": "Resuscitate with IV fluids and blood, then call for emergency endoscopy or surgical intervention."
+  },
+  {
+   "q": "Why is a proton pump inhibitor preferred over an H2 blocker in ulcer bleeding?",
+   "a": "PPIs reduce acid more effectively, promoting ulcer healing and reducing rebleeding."
+  },
+  {
+   "q": "Can a barium swallow replace endoscopy in low‑resource settings?",
+   "a": "It can localise obstruction but cannot diagnose ulcers or control bleeding; use only if endoscopy is unavailable and the patient is stable."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old man presents with melena and hypotension. What is the first investigation? — Check haemoglobin, coagulation profile and start IV fluids; arrange urgent endoscopy if stable.",
+  "A patient with known cirrhosis has hematemesis. Which drug is contraindicated? — Octreotide is contraindicated in severe hypoglycaemia.",
+  "During endoscopy a 3 cm ulcer with an exposed vessel is seen. What is the next step? — Endoscopic clipping or cautery to stop bleeding.",
+  "A patient has epigastric pain but no bleeding. Endoscopy shows gastritis. What is the likely cause in an East African setting? — Herbal hepatotoxins or schistosomiasis.",
+  "A patient with anemia has normal MCV and MCH but positive fecal occult blood. What is the most likely source? — Upper GI bleeding, likely ulcer or varices.",
+  "A patient presents with sudden abdominal pain and peritonitis. What imaging is most useful? — Plain abdominal X‑ray to look for free air indicating perforation.",
+  "A patient with peptic ulcer disease is on NSAIDs. What preventive measure is most effective? — Eradicate H. pylori and prescribe a proton pump inhibitor.",
+  "A patient has a history of alcohol use and now has hematemesis. What is the most urgent management? — Stabilise haemodynamics, give octreotide, and arrange urgent endoscopy for variceal ligation."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "title": "Lipoma",
+ "subject": "Pathology",
+ "summary": "A lipoma is a benign tumor of mature adipocytes, usually subcutaneous and slow‑growing. Diagnosis is clinical, supported by simple imaging; treatment is excision if symptomatic or for diagnosis.",
+ "aka": [
+  "Benign fatty tumor",
+  "Subcutaneous lipoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lipoma is a well‑circumscribed, soft, mobile mass composed of mature fat cells. It is diagnosed by history and physical exam; ultrasound or fine‑needle aspiration (FNA) can confirm when needed.",
+   "b": [
+    "Soft, doughy consistency",
+    "Mobile over underlying structures",
+    "Usually <5 cm, but giant lipomas >10 cm exist"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Lipomas are benign and not staged, but size, depth, and symptomatology guide management. Giant lipomas (>10 cm or >1 kg) may cause functional impairment.",
+   "b": [
+    "Small, asymptomatic – observe",
+    "Large or painful – consider excision",
+    "Rapid growth or fixation – rule out liposarcoma"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most lipomas are idiopathic. Risk factors include genetics (familial multiple lipomatosis), trauma, and obesity. In low‑resource settings, consider HIV‑associated lipodystrophy as a mimic.",
+   "b": [
+    "Idiopathic (most common)",
+    "Familial multiple lipomatosis",
+    "Post‑traumatic fat necrosis",
+    "HIV lipodystrophy (fat redistribution)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients notice a painless, slowly enlarging lump, often on the trunk, neck, or extremities. Occasionally the mass may become painful if it compresses nerves or is traumatized.",
+   "b": [
+    "Painless, mobile subcutaneous nodule",
+    "May be multiple in familial cases",
+    "Rarely ulcerates or becomes infected"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging and cytology help differentiate lipoma from malignant or infectious lesions, especially when the presentation is atypical.",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Is the mass cystic or solid and what are its borders? – Shows a homogeneous, hyperechoic, well‑defined lesion consistent with fat."
+    },
+    {
+     "a": "Fine‑needle aspiration (FNA)",
+     "b": "What cells are present? – Yields mature adipocytes without atypia; helps rule out liposarcoma when cytology is uncertain."
+    },
+    {
+     "a": "MRI (if available)",
+     "b": "Is there deep tissue involvement or suspicious features? – Lipoma appears hyperintense on T1, suppresses with fat‑sat; irregular septa or nodularity suggest liposarcoma."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Although benign, certain features warrant urgent evaluation for malignancy or infection.",
+   "b": [
+    "Rapid growth >1 cm/month",
+    "Fixation to underlying structures",
+    "Pain, ulceration, or overlying skin change",
+    "Systemic symptoms (fever, weight loss)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is conservative unless the lipoma is symptomatic, cosmetically concerning, or suspicious for malignancy.",
+   "b": [
+    "Observation for small, asymptomatic lesions",
+    "Surgical excision under local anaesthesia for symptomatic or diagnostic purposes",
+    "Avoid liposuction in deep or large lesions where capsule integrity is needed"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Routine follow‑up is only needed after excision to monitor wound healing. No proven primary prevention; weight control may reduce new lesions in predisposed individuals.",
+   "b": [
+    "Review wound at 2 weeks post‑op",
+    "Educate patient to report new rapid growth",
+    "Encourage healthy BMI"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several other soft‑tissue masses can mimic lipoma clinically.",
+   "b": [
+    "Lipoma vs. well‑differentiated liposarcoma – requires imaging or genetic test (MDM2/CDK4 amplification)",
+    "Lipoma vs. epidermoid cyst – cystic centre, central punctum",
+    "Lipoma vs. lymphadenopathy – firmer, less mobile"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging and cytology may be equivocal, especially in resource‑limited settings.",
+   "b": [
+    "Ultrasound may miss deep infiltrative liposarcoma",
+    "FNA can sample only peripheral fat, missing focal atypia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid increase in size",
+  "Pain, ulceration, or overlying skin colour change",
+  "Fixed or deep‑seated mass",
+  "Systemic symptoms such as fever or weight loss"
+ ],
+ "faq": [
+  {
+   "q": "Can a lipoma become cancerous?",
+   "a": "A true lipoma does not turn malignant, but a rapidly growing, fixed mass may be a liposarcoma and needs evaluation."
+  },
+  {
+   "q": "Is liposuction a safe way to remove a lipoma?",
+   "a": "Liposuction may leave residual tissue and makes pathological assessment difficult; excision is preferred when diagnosis is uncertain."
+  },
+  {
+   "q": "Do lipomas recur after removal?",
+   "a": "Recurrence is uncommon if the capsule is completely excised; incomplete removal can lead to regrowth."
+  }
+ ],
+ "exam": [
+  "What bedside features distinguish a lipoma from an inflamed lymph node? — Soft, doughy consistency, mobility, lack of tenderness, and absence of systemic signs.",
+  "A 45‑year‑old farmer presents with a 12 cm painless thigh mass. What is your next investigative step and why? — Obtain ultrasound to confirm a homogeneous fatty lesion before planning excision.",
+  "How would you manage a subcutaneous mass that is mobile but has grown rapidly over 2 weeks? — Treat as possible liposarcoma: order MRI (or refer for imaging) and arrange biopsy before excision.",
+  "Why is fine‑needle aspiration sometimes insufficient to rule out liposarcoma? — It samples only superficial cells and may miss atypical deep components; imaging or core biopsy is needed.",
+  "In a low‑resource clinic without MRI, how can you differentiate a lipoma from a deep‑seated sarcoma? — Use high‑resolution ultrasound for internal septa, assess growth pattern, and refer for surgical excision with histology if suspicion persists.",
+  "What are the contraindications to surgical excision of a lipoma in a patient with uncontrolled HIV on antiretroviral therapy? — Poor wound healing risk, thrombocytopenia, and drug interactions; optimise HIV control before elective surgery.",
+  "Explain why a giant lipoma may cause functional impairment and how you would assess it. — Size can compress nerves or limit joint movement; assess range of motion, neurovascular status, and pain on movement.",
+  "A patient reports a ‘fatty lump’ that feels firm and fixed. What red‑flag condition must you exclude and what test confirms it? — Exclude well‑differentiated liposarcoma; MRI with fat‑suppression and, if available, MDM2/CDK4 amplification testing."
+ ],
+ "related": [
+  "Well‑differentiated liposarcoma",
+  "Epidermoid cyst",
+  "Inguinal hernia",
+  "Lymphadenopathy",
+  "Dermoid cyst",
+  "Myelolipoma"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

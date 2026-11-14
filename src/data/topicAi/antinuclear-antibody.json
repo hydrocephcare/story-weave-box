@@ -1,0 +1,149 @@
+{
+ "medical": true,
+ "title": "Antinuclear Antibody (ANA) Testing",
+ "subject": "Microbiology & immunology",
+ "summary": "ANA detects auto‑antibodies against nuclear components and is a key screening tool for systemic autoimmune diseases. Interpretation requires pattern, titer and clinical context, especially where resources are limited.",
+ "aka": [
+  "antinuclear antibody",
+  "ANA test"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ANA is an indirect immunofluorescence (IIF) test that identifies IgG antibodies binding to cellular nuclei. A positive result supports a diagnosis of systemic autoimmune rheumatic disease (SARD) but is not disease‑specific.",
+   "b": [
+    "Positive if fluorescence at ≥1:40 on HEp‑2 cells (screening cut‑off).",
+    "Higher titers (≥1:160) increase specificity for SARD."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Auto‑antibody production is driven by loss of tolerance. In low‑resource settings the most common ANA‑positive diseases are:",
+   "b": [
+    "Systemic lupus erythematosus (SLE) – most frequent cause of high‑titer ANA.",
+    "Systemic sclerosis (scleroderma) – nucleolar pattern.",
+    "Mixed connective tissue disease – speckled pattern with anti‑RNP.",
+    "Dermatomyositis – anti‑Mi‑2 pattern.",
+    "Drug‑induced lupus (hydralazine, procainamide)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with multisystem complaints that reflect immune complex deposition or vasculopathy.",
+   "b": [
+    "Malar rash, photosensitivity, oral ulcers (SLE).",
+    "Raynaud’s phenomenon, sclerodactyly, dysphagia (systemic sclerosis).",
+    "Proximal muscle weakness, Gottron papules (dermatomyositis).",
+    "Arthralgia, serositis, renal or neurologic involvement."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Indirect immunofluorescence (IIF) on HEp‑2 cells",
+     "b": "Is there an auto‑antibody to nuclear antigens? – Positive fluorescence confirms ANA; pattern (homogeneous, speckled, nucleolar, centromere) narrows differential."
+    },
+    {
+     "a": "ANA titer",
+     "b": "How strong is the antibody response? – Titers ≥1:160 are more likely true disease; low titers (1:40‑1:80) can be seen in healthy individuals or infections."
+    },
+    {
+     "a": "Complement levels (C3, C4)",
+     "b": "Is disease activity high in SLE? – Low complement supports active immune complex disease."
+    },
+    {
+     "a": "Specific auto‑antibodies (anti‑dsDNA, anti‑Sm, anti‑RNP, anti‑centromere, anti‑Mi‑2)",
+     "b": "Which disease is most likely? – Anti‑dsDNA = SLE; anti‑centromere = limited systemic sclerosis; anti‑Mi‑2 = dermatomyositis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked autoimmune activity can lead to organ‑life‑threatening damage.",
+   "b": [
+    "Lupus nephritis – rising creatinine, proteinuria, hypertension.",
+    "Pulmonary hypertension in systemic sclerosis – dyspnoea, syncope.",
+    "Myositis with respiratory failure – progressive weakness, hypoxia.",
+    "Severe vasculitis – skin necrosis, digital gangrene."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying autoimmune disease; ANA itself is not therapeutic.",
+   "b": [
+    "SLE – hydroxychloroquine (disease‑modifying, safe in pregnancy), low‑dose steroids for flares, add mycophenolate or azathioprine for organ involvement.",
+    "Systemic sclerosis – ACE inhibitors for renal crisis, endothelin‑receptor antagonists for pulmonary hypertension, avoid high‑dose steroids (risk of renal crisis).",
+    "Dermatomyositis – steroids plus methotrexate; avoid long‑term high‑dose steroids alone due to infection risk.",
+    "Drug‑induced lupus – stop offending drug; symptoms usually resolve."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of disease activity and treatment toxicity is essential.",
+   "b": [
+    "SLE – check ANA, dsDNA, complement every 3‑6 months; urine protein each visit.",
+    "Systemic sclerosis – annual echocardiogram, pulmonary function tests, renal function.",
+    "Educate patients on sun protection, infection prophylaxis, and medication adherence."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other serologic tests that may be ordered in similar presentations.",
+   "b": [
+    "Anti‑neutrophil cytoplasmic antibodies (ANCA) – vasculitis, not ANA.",
+    "Rheumatoid factor – rheumatoid arthritis, can be positive in SLE but is a different target.",
+    "Anti‑phospholipid antibodies – clotting disorder, may coexist with ANA‑positive disease."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls especially in low‑resource settings.",
+   "b": [
+    "Low‑titer ANA in healthy individuals – avoid over‑diagnosis.",
+    "False‑negative ANA if testing performed during immunosuppression.",
+    "Pattern misreading without experienced eye – may miss centromere or nucleolar patterns."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid rise in creatinine or new proteinuria (possible lupus nephritis).",
+  "Sudden dyspnoea or chest pain with known systemic sclerosis (pulmonary hypertension or pulmonary fibrosis).",
+  "Severe muscle weakness with respiratory compromise (myositis)."
+ ],
+ "faq": [
+  {
+   "q": "Can a positive ANA alone diagnose lupus?",
+   "a": "No. ANA is a screening tool; diagnosis requires clinical criteria and often a disease‑specific antibody such as anti‑dsDNA."
+  },
+  {
+   "q": "Why is the ANA titer important?",
+   "a": "Higher titers (≥1:160) increase the likelihood of true autoimmune disease, whereas low titers are common in healthy people."
+  },
+  {
+   "q": "What does a nucleolar pattern suggest?",
+   "a": "It is most often seen in systemic sclerosis, especially the diffuse form."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with malar rash and arthritis has ANA 1:80 homogeneous. What is your next step? — Order anti‑dsDNA and complement; low‑titer ANA alone does not confirm SLE.",
+  "A patient with Raynaud’s, skin thickening and ANA 1:320 nucleolar pattern presents with new dyspnoea. What complication should you suspect? — Pulmonary hypertension; arrange echocardiogram urgently.",
+  "Why is hydroxychloroquine preferred as first‑line therapy in SLE despite a positive ANA? — It reduces flares, is safe long‑term, and does not increase infection risk like high‑dose steroids.",
+  "A patient on hydralazine develops arthralgia and a positive ANA. How do you differentiate drug‑induced lupus from idiopathic SLE? — Drug‑induced lupus usually has antihistone antibodies, lacks renal or CNS involvement, and improves after stopping the drug.",
+  "In a setting without IIF, how would you screen for ANA? — Use ELISA panels for common nuclear antigens, but interpret cautiously as sensitivity is lower.",
+  "What red‑flag sign in a lupus patient mandates immediate referral? — New onset proteinuria >0.5 g/day or rising creatinine indicating possible lupus nephritis.",
+  "How does ANA testing help differentiate mixed connective tissue disease from systemic sclerosis? — MCTD shows a speckled pattern with high anti‑RNP; systemic sclerosis often shows nucleolar or centromere patterns.",
+  "A patient with suspected vasculitis has a negative ANA but positive ANCA. Why is this important? — ANCA points toward small‑vessel vasculitis (e.g., GPA) rather than a ANA‑associated disease."
+ ],
+ "related": [
+  "Systemic Lupus Erythematosus",
+  "Systemic Sclerosis",
+  "Mixed Connective Tissue Disease",
+  "Dermatomyositis",
+  "Anti‑Neutrophil Cytoplasmic Antibody (ANCA) Vasculitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

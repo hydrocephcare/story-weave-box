@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "title": "Cleft Palate",
+ "subject": "Surgery",
+ "summary": "Cleft palate is a congenital midline defect of the secondary palate that impairs feeding, speech and middle‑ear function. Management requires multidisciplinary repair, infection control and long‑term follow‑up, especially in low‑resource settings.",
+ "aka": [
+  "isolated cleft palate"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A cleft palate is a failure of fusion of the palatal shelves during weeks 7‑12 of gestation, producing an opening in the hard and/or soft palate.",
+   "b": [
+    "Diagnosed at birth by visual inspection of the oral cavity",
+    "May be confirmed with a flexible nasendoscope if the defect is subtle"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of the defect and involvement of the hard versus soft palate.",
+   "b": [
+    "Veau classification: I – soft palate only; II – hard palate up to incisive foramen; III – hard palate to incisive foramen + soft palate; IV – complete bilateral cleft of hard and soft palate"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are multifactorial; genetic variants and environmental exposures interact.",
+   "b": [
+    "Maternal folate deficiency",
+    "Family history of cleft palate; mutations in FOXE1, IRF6, TBX22",
+    "Maternal infections common in the tropics (rubella, syphilis, malaria) and teratogenic drugs (phenytoin, retinoids)",
+    "Maternal smoking, alcohol, and poorly controlled diabetes"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Newborns with a cleft palate have characteristic feeding difficulties and may develop recurrent otitis media.",
+   "b": [
+    "Nasogastric or spoon‑feeding required; milk regurgitates through the nose",
+    "Hypernasal speech after the first months of life",
+    "Middle‑ear effusion causing conductive hearing loss"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Clinical oral examination",
+     "b": "Confirms location and size of the cleft; guides surgical planning"
+    },
+    {
+     "a": "Flexible nasendoscopy",
+     "b": "Assesses the soft palate and nasopharyngeal airway when the defect is not obvious"
+    },
+    {
+     "a": "Audiometry (behavioural or OAE) if age >3 months",
+     "b": "Detects conductive hearing loss from middle‑ear effusion; if unavailable, use tympanometry with a portable device"
+    },
+    {
+     "a": "Genetic counseling / karyotype if other anomalies present",
+     "b": "Identifies syndromic causes (e.g., 22q11.2 deletion) that affect management"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening in the newborn period and later affect growth and development.",
+   "b": [
+    "Severe feeding failure leading to dehydration or malnutrition",
+    "Aspiration pneumonia from nasal regurgitation",
+    "Recurrent otitis media with hearing loss affecting language acquisition",
+    "Associated airway anomalies (e.g., tracheoesophageal fistula) that require urgent surgery"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is staged: initial feeding support, surgical repair, and long‑term multidisciplinary care.",
+   "b": [
+    "Feeding: use specially designed bottles or spoon‑feeding; consider nasogastric tube if severe",
+    "Surgical repair: primary palatoplasty at 9‑12 months (or earlier if severe feeding problems); technique chosen by local expertise (e.g., von Langenbeck, Furlow)",
+    "Antibiotics: peri‑operative ampicillin‑sulbactam to prevent wound infection; avoid clindamycin in areas with high C. difficile prevalence",
+    "Ear care: insert grommets (ventilation tubes) after 6 months if chronic effusion persists; monitor hearing",
+    "Speech therapy: start after palate closure to address hypernasality"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term follow‑up focuses on growth, speech, hearing and psychosocial support.",
+   "b": [
+    "Regular audiology review every 6 months until school age",
+    "Speech assessment at 2 years and yearly thereafter",
+    "Nutritional monitoring and growth charts",
+    "Counselling on folic acid supplementation for future pregnancies"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that may mimic a cleft palate or coexist.",
+   "b": [
+    "Submucous cleft palate – intact mucosa with underlying muscular defect; presents with bifid uvula and hypernasal speech",
+    "Hard palate fistula after trauma or surgery – localized opening rather than congenital defect"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal otoscopy does not rule out middle‑ear effusion; tympanometry is more reliable",
+    "A small mucosal defect may be missed on visual exam; nasendoscopy is needed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent feeding failure despite assisted feeding",
+  "Signs of aspiration (coughing, wheeze, desaturation) after feeds",
+  "Recurrent otitis media with no improvement after antibiotics"
+ ],
+ "faq": [
+  {
+   "q": "Why is isolated cleft palate more common in females?",
+   "a": "The sex difference is thought to reflect X‑linked genetic factors and hormonal influences during palate formation."
+  },
+  {
+   "q": "Can a child with cleft palate have a normal speech?",
+   "a": "Speech can be near normal after timely repair and speech therapy, but hypernasality may persist without adequate follow‑up."
+  },
+  {
+   "q": "What if I cannot obtain a nasendoscope?",
+   "a": "Rely on careful oral inspection and, if needed, refer for imaging (e.g., CT) or arrange a tele‑consult with a centre that has the equipment."
+  }
+ ],
+ "exam": [
+  "What are the key steps in feeding a newborn with an isolated cleft palate? — Use a specialized bottle or spoon, keep the infant upright, consider nasogastric feeding if regurgitation is severe; monitor weight daily.",
+  "How does the Veau classification influence timing of surgery? — Larger (Veau III/IV) defects often need earlier repair (9‑10 months) to improve speech, while small (Veau I) defects may be delayed until 12‑14 months.",
+  "A 6‑month‑old presents with chronic otitis media and a known cleft palate. What is the next appropriate intervention? — Arrange audiometry and consider insertion of ventilation tubes to prevent hearing loss.",
+  "Which genetic mutation is specifically associated with isolated cleft palate and congenital hypothyroidism? — FOXE1 mutation; it explains the thyroid phenotype and hair changes.",
+  "In a low‑resource hospital without grommets, how would you manage persistent middle‑ear effusion? — Perform regular ear cleaning, use topical antibiotics if infected, and refer for hearing assessment; prioritize speech therapy.",
+  "What red‑flag symptom would prompt urgent referral for a newborn with cleft palate? — Signs of aspiration pneumonia (tachypnea, desaturation) or severe dehydration despite feeding attempts.",
+  "Why is ampicillin‑sulbactam preferred for peri‑operative prophylaxis in this setting? — Broad coverage against oral flora and low resistance rates; clindamycin is avoided due to high C. difficile risk.",
+  "How would you differentiate a submucous cleft palate from an overt cleft palate on exam? — Look for a bifid uvula, zona pellucida, and a palpable muscular gap; the mucosa remains intact."
+ ],
+ "related": [
+  "Cleft Lip",
+  "Submucous Cleft Palate",
+  "Velopharyngeal Insufficiency",
+  "Middle‑Ear Effusion",
+  "Congenital Syndromes (22q11.2 deletion)",
+  "Feeding Difficulties in Neonates"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

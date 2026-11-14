@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Posterior Fossa Tumours",
+ "subject": "Surgery",
+ "summary": "Posterior fossa tumours are space‑occupying lesions in the cerebellum, brainstem or fourth ventricle that cause raised intracranial pressure and cerebellar dysfunction. In low‑resource settings, common paediatric tumours are medulloblastoma, cerebellar astrocytoma and ependymoma; adults most often have haemangioblastoma or metastases. Early recognition and timely surgical referral are vital.",
+ "aka": [
+  "PF tumours",
+  "Posterior cranial fossa neoplasms"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A posterior fossa tumour is any neoplastic or tumour‑like lesion arising within the posterior cranial fossa, compressing the cerebellum, brainstem or fourth ventricle.",
+   "b": [
+    "Diagnosed by neuro‑imaging (CT or MRI) showing a lesion in the posterior fossa.",
+    "Histology after biopsy or resection confirms tumour type."
+   ],
+   "t": [
+    {
+     "a": "CT brain (non‑contrast, then contrast if possible)",
+     "b": "Is there a space‑occupying lesion and where is it located? – Shows hyper‑dense mass, calcification, cystic components; useful where MRI unavailable."
+    },
+    {
+     "a": "MRI brain with contrast",
+     "b": "What is the tumour’s exact anatomy and tissue characteristics? – T1/T2 signal, enhancement pattern; differentiates medulloblastoma (solid, hyperintense) from cystic astrocytoma."
+    },
+    {
+     "a": "Fundoscopy",
+     "b": "Is there papilledema indicating raised intracranial pressure? – Swollen optic disc, blurred margins."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows tumour‑specific systems; for medulloblastoma the Chang staging (M0‑M4) is most used, while ependymoma uses WHO grade (II‑III).",
+   "b": [
+    "M0–M4 for medulloblastoma (M0 no metastasis, M4 disseminated disease).",
+    "WHO grade II–III for ependymoma (higher grade = poorer prognosis)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most posterior fossa tumours are primary neoplasms; in low‑resource regions infections and vascular lesions can mimic them.",
+   "b": [
+    "Paediatric: medulloblastoma, cerebellar pilocytic astrocytoma, ependymoma.",
+    "Adult: haemangioblastoma, metastasis (lung, breast), schwannoma of cranial nerves.",
+    "Mimics: tuberculoma, neurocysticercosis cyst, abscess – consider HIV/TB endemicity."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop signs of raised intracranial pressure and cerebellar dysfunction, often progressing over weeks.",
+   "b": [
+    "Headache worse in the morning, vomiting without nausea.",
+    "Ataxia, dysmetria, truncal instability.",
+    "Cranial nerve VI palsy (horizontal diplopia) from brainstem compression.",
+    "Papilledema on fundoscopy."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging and basic labs guide diagnosis; when MRI is unavailable, CT plus clinical clues are acceptable.",
+   "t": [
+    {
+     "a": "CT brain",
+     "b": "Is there a posterior fossa mass and hydrocephalus? – Shows lesion density, ventricular size; if unavailable, refer for MRI when possible."
+    },
+    {
+     "a": "MRI brain with contrast",
+     "b": "What are the tumour’s margins, cystic vs solid components? – Helps plan surgical approach."
+    },
+    {
+     "a": "CBC, HIV test, TB screen",
+     "b": "Are there systemic infections that could mimic a tumour? – Positive HIV/TB may point to tuberculoma."
+    },
+    {
+     "a": "Serum calcium & VEGF (if haemangioblastoma suspected)",
+     "b": "Is there a paraneoplastic syndrome? – Elevated VEGF supports haemangioblastoma; not essential if surgery planned."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration signals impending brain herniation; early neurosurgical input is mandatory.",
+   "b": [
+    "Sudden loss of consciousness or decerebrate posturing.",
+    "Rapidly worsening papilledema or new cranial nerve palsies.",
+    "Obstructive hydrocephalus causing tense fontanelle in infants."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Surgery is the cornerstone; adjuvant therapy follows tumour histology and stage.",
+   "b": [
+    "Urgent ventriculoperitoneal shunt or external ventricular drain if hydrocephalus threatens life.",
+    "Posterior fossa craniotomy with maximal safe resection – aim for gross total removal when feasible.",
+    "Radiotherapy for medulloblastoma and high‑grade ependymoma; avoid in very young children unless essential.",
+    "Chemotherapy (e.g., vincristine, carboplatin) for medulloblastoma – chosen for radiosensitisation; avoid agents with high nephrotoxicity in low‑resource settings."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular imaging monitors recurrence; genetic counselling is relevant for familial syndromes.",
+   "b": [
+    "MRI at 3‑month intervals for the first year, then every 6‑12 months.",
+    "Screen for von Hippel‑Lindau disease in haemangioblastoma patients.",
+    "Educate families on early signs of raised intracranial pressure."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several non‑neoplastic lesions can mimic posterior fossa tumours clinically and radiologically.",
+   "b": [
+    "Tuberculoma – often shows ring enhancement; consider TB history.",
+    "Neurocysticercosis cyst – cystic lesion with scolex; common in East Africa.",
+    "Cerebellar infarct – acute onset, diffusion restriction on MRI."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging and labs may give false reassurance if interpreted without context.",
+   "b": [
+    "CT may miss small posterior fossa lesions due to beam‑hardening; MRI is preferred.",
+    "Papilledema can be absent early in chronic hydrocephalus, leading to delayed diagnosis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness, new focal neurological deficit, or rapidly worsening headache/vomiting – treat as neurosurgical emergency."
+ ],
+ "faq": [
+  {
+   "q": "Why is MRI preferred over CT for posterior fossa tumours?",
+   "a": "MRI provides better soft‑tissue contrast, detects cystic components and avoids bone artefact that obscures the posterior fossa on CT."
+  },
+  {
+   "q": "Can a ventriculoperitoneal shunt replace tumour resection?",
+   "a": "No; shunting relieves hydrocephalus temporarily but does not treat the underlying mass."
+  },
+  {
+   "q": "What is the most common posterior fossa tumour in children?",
+   "a": "Medulloblastoma, followed closely by cerebellar pilocytic astrocytoma."
+  }
+ ],
+ "exam": [
+  "What bedside signs would make you suspect a posterior fossa lesion in a child with morning headaches? — Look for ataxia, dysmetria, papilledema, and cranial nerve VI palsy.",
+  "A 7‑year‑old presents with vomiting, ataxia and a CT showing a cystic posterior fossa mass with a mural nodule. What is the most likely diagnosis and next step? — Pilocytic astrocytoma; arrange MRI and refer for surgical resection.",
+  "How does the Chang staging system influence adjuvant therapy for medulloblastoma? — Higher M stage (M1‑M4) mandates craniospinal irradiation and intensified chemotherapy.",
+  "In a resource‑limited hospital without MRI, how would you confirm a posterior fossa tumour? — Use contrast‑enhanced CT to identify lesion location and hydrocephalus; supplement with fundoscopy and clinical exam.",
+  "Why is radiotherapy avoided in children under 3 years with medulloblastoma, and what alternative is used? — To prevent severe neurocognitive damage; high‑dose chemotherapy with stem‑cell rescue is considered.",
+  "What distinguishes a haemangioblastoma from a metastatic lesion on imaging? — Haemangioblastoma often shows a well‑circumscribed, intensely enhancing nodule with a surrounding cyst; metastasis is usually multiple, irregular, and may have surrounding edema.",
+  "A patient with known HIV presents with a posterior fossa mass. Which infection should be high on your differential and why? — Tuberculoma, because TB is common in HIV and can produce ring‑enhancing lesions mimicking tumours.",
+  "What immediate measure should be taken if a patient with a posterior fossa tumour develops acute hydrocephalus? — Insert an external ventricular drain or place a ventriculoperitoneal shunt to relieve pressure before definitive tumour surgery."
+ ],
+ "related": [
+  "Hydrocephalus",
+  "Cerebellar stroke",
+  "Brainstem glioma",
+  "Neurocysticercosis",
+  "Tuberculoma",
+  "Craniospinal irradiation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

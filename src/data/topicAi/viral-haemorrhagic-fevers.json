@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "title": "Viral Haemorrhagic Fevers",
+ "subject": "Medicine",
+ "summary": "Viral haemorrhagic fevers (VHFs) are severe illnesses caused by various RNA viruses. They present with non-specific symptoms like fever and malaise, progressing to haemorrhagic manifestations and multi-organ dysfunction. Early recognition and supportive care are crucial, especially in endemic regions.",
+ "aka": [
+  "VHFs"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "VHFs are a group of acute febrile illnesses caused by several distinct families of RNA viruses. Diagnosis is often challenging due to non-specific initial symptoms and requires a high index of suspicion, especially in travellers returning from endemic areas. Laboratory confirmation is essential.",
+   "b": [
+    "Clinical suspicion based on symptoms and travel history.",
+    "Exclusion of other causes of fever and bleeding."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity varies greatly depending on the specific virus, viral load, and host factors. VHFs can range from mild, self-limiting illnesses to rapidly fatal conditions. Staging is often based on the presence and severity of haemorrhagic signs and organ dysfunction.",
+   "b": [
+    "Mild: Fever, malaise, headache.",
+    "Moderate: Conjunctival injection, petechiae, mild bleeding.",
+    "Severe: Macroscopic bleeding, hypotension, shock, organ failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "VHFs are caused by a variety of RNA viruses, often transmitted by arthropods or rodents. In East Africa, Lassa fever and Rift Valley fever are significant concerns. Dengue fever is also common and can present with haemorrhagic manifestations.",
+   "b": [
+    "Arenaviruses (e.g., Lassa virus)",
+    "Filoviruses (e.g., Ebola virus, Marburg virus)",
+    "Bunyaviruses (e.g., Rift Valley fever virus, Hantaviruses)",
+    "Flaviviruses (e.g., Dengue virus, Yellow fever virus)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Initial symptoms are often non-specific, including sudden onset of fever, headache, muscle aches, and malaise. This may be followed by gastrointestinal symptoms, rash, and eventually bleeding (petechiae, ecchymoses, epistaxis, haematurysis, melaena). Shock and organ failure can occur in severe cases.",
+   "b": [
+    "Prodromal phase: Fever, headache, myalgia, fatigue.",
+    "Haemorrhagic phase: Petechiae, purpura, bleeding from gums, nose, GI tract.",
+    "Shock phase: Hypotension, tachycardia, organ dysfunction."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Assess for anaemia, thrombocytopenia, and leucopenia, which are common in VHFs. Thrombocytopenia is a key indicator of severity."
+    },
+    {
+     "a": "Coagulation Profile (PT/INR, aPTT)",
+     "b": "Evaluate for coagulopathy, a hallmark of severe VHF. Prolonged PT/INR and aPTT indicate disseminated intravascular coagulation (DIC)."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "Assess for hepatic involvement, indicated by elevated transaminases (AST, ALT) and bilirubin. Jaundice can occur."
+    },
+    {
+     "a": "Renal Function Tests (U&Es)",
+     "b": "Monitor for acute kidney injury, indicated by elevated urea and creatinine. Dehydration and direct viral effects can cause renal impairment."
+    },
+    {
+     "a": "Viral Serology (IgM/IgG) and PCR",
+     "b": "Confirms specific viral diagnosis. PCR is useful in early stages for detecting viral RNA. Serology is useful later for antibody detection. In low-resource settings, these may not be readily available, relying on clinical diagnosis and supportive care."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration, severe bleeding, shock, and multi-organ failure are critical red flags. Complications include DIC, acute respiratory distress syndrome (ARDS), encephalitis, myocarditis, and secondary bacterial infections."
+  },
+  {
+   "h": "Management",
+   "p": "Management is primarily supportive, focusing on fluid resuscitation, electrolyte balance, and managing haemorrhagic complications. Antivirals are available for some VHFs but are not universally effective or available. Strict isolation precautions are essential.",
+   "b": [
+    "Fluid resuscitation: Maintain adequate hydration and perfusion with intravenous crystalloids.",
+    "Blood product replacement: Transfuse platelets for severe thrombocytopenia and fresh frozen plasma/cryoprecipitate for coagulopathy.",
+    "Monitoring: Close monitoring of vital signs, fluid balance, and organ function.",
+    "Isolation: Implement strict contact and droplet precautions to prevent transmission."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up focuses on recovery from organ dysfunction and rehabilitation. Prevention strategies include vector control, rodent control, safe handling of animal products, and vaccination where available (e.g., Yellow fever). Public health measures are critical.",
+   "b": [
+    "Education on transmission routes and prevention.",
+    "Safe practices in healthcare settings.",
+    "Vector and rodent control programmes.",
+    "Vaccination campaigns for specific VHFs (e.g., Yellow Fever)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "VHFs can mimic other febrile illnesses, particularly those causing jaundice, rash, or bleeding. Differentiating them is crucial for appropriate management and public health response.",
+   "b": [
+    "Malaria",
+    "Viral Hepatitis (A, B, E)",
+    "Leptospirosis",
+    "Typhoid fever",
+    "Dengue fever (can also be a VHF)",
+    "Sepsis with coagulopathy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Initial laboratory results can be non-specific. Mild thrombocytopenia or elevated transaminases can be seen in many viral infections. Normal coagulation parameters early on do not exclude impending DIC. Clinical assessment remains paramount.",
+   "b": [
+    "Normal FBC early in the illness.",
+    "Mildly elevated LFTs in other viral infections.",
+    "Normal coagulation profile initially, despite risk of DIC.",
+    "Rash can be non-specific and mimic other exanthems."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most important initial step in managing a suspected VHF?",
+   "a": "Immediate isolation of the patient and implementation of strict infection control precautions to prevent nosocomial spread."
+  },
+  {
+   "q": "Are NSAIDs safe in suspected VHF?",
+   "a": "No, NSAIDs should be avoided as they can exacerbate bleeding and renal impairment, which are common complications of VHFs."
+  },
+  {
+   "q": "Can VHF be diagnosed without specific laboratory tests?",
+   "a": "In resource-limited settings, diagnosis is often presumptive based on clinical presentation, epidemiological context, and exclusion of more common diseases. However, laboratory confirmation is ideal."
+  }
+ ],
+ "exam": [
+  "A 30-year-old man returns from a rural area in West Africa with a 3-day history of fever, headache, and myalgia. He develops petechiae on his trunk and epistaxis. What are your immediate management priorities and why? — Isolation, supportive care (fluids, monitoring), and investigations to confirm diagnosis and assess severity. Avoid NSAIDs.",
+  "How would you differentiate Lassa fever from Dengue fever in a patient presenting with fever and rash in East Africa? — Lassa fever often has more prominent mucosal bleeding and may have neurological signs. Dengue can have retro-orbital pain and a more characteristic rash. Specific serology/PCR is definitive.",
+  "A patient with suspected VHF develops severe hypotension and bleeding. What fluid and blood product management would you consider? — Aggressive intravenous crystalloid resuscitation. Platelets for severe thrombocytopenia (<20-50 x 10^9/L). Fresh frozen plasma or prothrombin complex concentrate for coagulopathy (prolonged PT/INR, aPTT).",
+  "Why is early recognition of VHF critical in a low-resource setting? — To implement isolation measures, prevent outbreaks, and initiate supportive care promptly, as specific diagnostic tests and treatments may be delayed or unavailable.",
+  "What are the key differences in presentation between mild and severe Viral Haemorrhagic Fever? — Mild cases present with non-specific febrile symptoms. Severe cases progress to haemorrhagic manifestations, shock, and multi-organ dysfunction.",
+  "You are managing a patient with VHF and they develop acute kidney injury. What are the potential causes and how would you manage it? — Causes include dehydration, hypotension, direct viral nephrotoxicity. Management involves aggressive fluid resuscitation, maintaining haemodynamic stability, and close monitoring of renal function. Avoid nephrotoxic drugs."
+ ],
+ "related": [
+  "Dengue Fever",
+  "Malaria",
+  "Leptospirosis",
+  "Typhoid Fever",
+  "Septic Shock",
+  "Disseminated Intravascular Coagulation (DIC)",
+  "Arboviral Infections",
+  "Travel Medicine"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

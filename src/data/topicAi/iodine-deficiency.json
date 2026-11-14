@@ -1,0 +1,204 @@
+{
+ "medical": true,
+ "title": "Iodine Deficiency",
+ "subject": "Biochemistry & genetics",
+ "summary": "Iodine is essential for thyroid hormone synthesis; deficiency leads to congenital hypothyroidism, cretinism and goiter. In low‑resource settings, diet, soil, and infections worsen the problem.",
+ "aka": [
+  "Endemic goiter",
+  "Iodine‑deficiency disorder (IDD)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Iodine is a trace element incorporated into thyroxine (T4) and triiodothyronine (T3). The thyroid gland concentrates iodine from plasma via the sodium‑iodide symporter (NIS).",
+   "b": [
+    "Iodine is absorbed in the duodenum; 80–90% is taken up by the thyroid.",
+    "Urinary iodine excretion reflects recent intake; <100 µg/L indicates deficiency."
+   ],
+   "t": [
+    {
+     "a": "Urinary iodine concentration",
+     "b": "Measures recent iodine intake; <100 µg/L = deficiency, 100–199 µg/L = borderline, ≥200 µg/L = adequate."
+    }
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Iodide is oxidised by thyroid peroxidase (TPO) and organified onto tyrosyl residues of thyroglobulin, forming monoiodotyrosine (MIT) and diiodotyrosine (DIT). Coupling yields T3 and T4.",
+   "b": [
+    "T4 is secreted in larger amounts; T3 is the active hormone.",
+    "T4 is converted to T3 in peripheral tissues by deiodinases."
+   ],
+   "t": [
+    {
+     "a": "Serum TSH",
+     "b": "Elevated when thyroid hormone production is low; indicates primary hypothyroidism."
+    },
+    {
+     "a": "Serum free T4",
+     "b": "Low in hypothyroidism; normal in subclinical."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "TSH from the pituitary stimulates iodine uptake and hormone synthesis. Negative feedback by T4/T3 suppresses TSH.",
+   "b": [
+    "TSH rises when T4 falls; TSH is the most sensitive screen for hypothyroidism."
+   ],
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Primary hypothyroidism: TSH >4.5 mIU/L with low free T4."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Iodine deficiency impairs hormone synthesis, leading to low T4/T3, high TSH, and compensatory goiter. In pregnancy, fetal brain development is halted, causing cretinism.",
+   "b": [
+    "Congenital hypothyroidism: severe mental retardation, growth failure, umbilical hernia.",
+    "Acquired hypothyroidism: fatigue, cold intolerance, weight gain, constipation."
+   ],
+   "t": [
+    {
+     "a": "Neonatal screening TSH",
+     "b": "Detects congenital hypothyroidism; a TSH >20 mIU/L warrants referral."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In East Africa, high‑altitude, soil erosion, and reliance on unfortified salt increase risk. HIV, malaria, and malnutrition can mask or worsen symptoms.",
+   "b": [
+    "Goiter is the most common visible sign; patients may present with growth delay or developmental lag."
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Palpable goiter, delayed milestones, hypotonia."
+    },
+    {
+     "a": "Thyroid ultrasound",
+     "b": "Shows diffuse enlargement; nodules uncommon in pure iodine deficiency."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When laboratory access is limited, a pragmatic approach uses clinical signs, urinary iodine, and TSH.",
+   "b": [
+    "If TSH >10 mIU/L and free T4 low, treat as hypothyroidism."
+   ],
+   "t": [
+    {
+     "a": "Urinary iodine",
+     "b": "Shows recent intake; <100 µg/L confirms deficiency."
+    },
+    {
+     "a": "TSH",
+     "b": "High indicates primary hypothyroidism; normal TSH with low free T4 suggests central."
+    },
+    {
+     "a": "Thyroid ultrasound",
+     "b": "Differentiates diffuse goiter from nodular disease."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying deficiency and support thyroid function.",
+   "b": [
+    "Iodine supplementation: iodised salt or potassium iodide tablets.",
+    "Levothyroxine replacement if TSH >10 mIU/L or symptomatic.",
+    "Monitor TSH every 6–12 months; adjust dose to keep TSH 0.5–2.5 mIU/L."
+   ],
+   "t": [
+    {
+     "a": "Iodine supplementation",
+     "b": "Prevents goiter and congenital hypothyroidism; avoid excess to prevent hyperthyroidism."
+    },
+    {
+     "a": "Levothyroxine",
+     "b": "Chosen for its safety profile; avoid amiodarone or lithium in endemic areas due to iodine load."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hashimoto’s thyroiditis, iodine‑induced hyperthyroidism, and subclinical hypothyroidism.",
+   "b": [
+    "Hashimoto’s: anti‑TPO antibodies positive; nodules may be present.",
+    "Iodine‑induced hyperthyroidism: sudden rise in iodine intake causes thyrotoxicosis."
+   ],
+   "t": [
+    {
+     "a": "Anti‑TPO antibodies",
+     "b": "Positive in autoimmune disease; negative in pure iodine deficiency."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Urinary iodine can be falsely low in chronic renal failure; TSH may be normal in early deficiency.",
+   "b": [
+    "In pregnancy, TSH reference ranges shift; use trimester‑specific values."
+   ],
+   "t": [
+    {
+     "a": "TSH reference range",
+     "b": "Lower in first trimester; use 0.1–4.0 mIU/L for screening."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the 200 µg/L urinary iodine cut‑off for adequacy. In a resource‑poor setting, a high TSH with low free T4 is diagnostic. Avoid iodine loading in patients with known thyroid disease.",
+   "b": [
+    "Use iodised salt as first‑line public health measure."
+   ],
+   "t": [
+    {
+     "a": "TSH >10 mIU/L",
+     "b": "Indicates overt hypothyroidism; start levothyroxine."
+    },
+    {
+     "a": "Urinary iodine <100 µg/L",
+     "b": "Confirms deficiency; counsel on diet and salt iodisation."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe mental retardation in infancy, persistent goiter with compressive symptoms, unexplained weight gain with cold intolerance, or sudden onset of hyperthyroid symptoms after iodine supplementation."
+ ],
+ "faq": [
+  {
+   "q": "Can iodine deficiency cause hyperthyroidism?",
+   "a": "Yes, excessive iodine intake can trigger the Wolff‑Chaikoff effect reversal, leading to thyrotoxicosis, especially in those with pre‑existing thyroid disease."
+  },
+  {
+   "q": "What foods are good iodine sources in East Africa?",
+   "a": "Fish, dairy, eggs, and iodised salt are the main sources; locally, cassava and millet are low in iodine."
+  },
+  {
+   "q": "Why is urinary iodine the best screening test?",
+   "a": "It reflects recent intake and is inexpensive; spot samples are acceptable in low‑resource settings."
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old boy from a high‑altitude village has a diffuse goiter and delayed milestones. What is the most likely diagnosis? — Iodine‑deficiency goiter with congenital hypothyroidism; check TSH and free T4.",
+  "A pregnant woman in a rural clinic presents with fatigue and cold intolerance. Her TSH is 12 mIU/L. What is the next step? — Start levothyroxine and counsel on iodised salt; monitor TSH in 6 weeks.",
+  "A patient with known Hashimoto’s thyroiditis develops sudden hyperthyroidism after starting iodised salt. What explains this? — Iodine loading reverses the Wolff‑Chaikoff effect, precipitating thyrotoxicosis.",
+  "You find a patient with a diffuse goiter but normal TSH. What should you do? — Check anti‑TPO antibodies to rule out Hashimoto’s; if negative, consider iodine deficiency and start supplementation.",
+  "A neonate has a TSH of 25 mIU/L on screening. What is the most appropriate management? — Refer for confirmatory testing and start levothyroxine promptly to prevent cretinism.",
+  "A patient with a history of TB presents with a large goiter and weight loss. What is the differential? — Iodine deficiency, TB thyroiditis, and lymphoma; obtain ultrasound and fine‑needle aspiration if suspicious.",
+  "A child with a goiter has a urinary iodine of 80 µg/L. What public health measure is most effective? — Universal salt iodisation; community education on iodised salt use.",
+  "A patient with a history of amiodarone therapy develops hypothyroidism. What is the likely mechanism? — Amiodarone contains iodine; it can cause both hypo- and hyperthyroidism by overwhelming the thyroid’s iodine stores."
+ ],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

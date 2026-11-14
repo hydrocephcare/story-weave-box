@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "title": "Creutzfeldt-Jakob Disease",
+ "subject": "Microbiology & immunology",
+ "summary": "Creutzfeldt-Jakob Disease (CJD) is a rare, rapidly progressive, and uniformly fatal neurodegenerative disorder caused by prions. It leads to spongiform changes in the brain, resulting in dementia, ataxia, and myoclonus. CJD can be sporadic, familial, or acquired through iatrogenic means or consumption of contaminated beef.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Creutzfeldt-Jakob Disease (CJD) is the most common human prion disease, though still very rare, with an incidence of approximately 1 case per million people per year. It is characterized by a rapid decline in cognitive function, motor disturbances, and ultimately death, typically within months of symptom onset. Understanding CJD is crucial for clinicians due to its devastating nature, the need for accurate diagnosis to rule out treatable conditions, and the public health implications of its transmissible forms.",
+   "b": [
+    "CJD is a uniformly fatal neurodegenerative disease.",
+    "It is caused by prions, which are misfolded proteins.",
+    "The disease leads to characteristic spongiform changes in the brain.",
+    "Clinical presentation includes rapidly progressive dementia, myoclonus, and ataxia."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The causative agents of CJD are prions (PrPSc), which are abnormal, misfolded isoforms of a normal cellular protein (PrPC) found predominantly in the brain. Prions are unique infectious agents as they lack nucleic acids (DNA or RNA) and are highly resistant to conventional sterilization methods like heat, radiation, and disinfectants. Their ability to induce normal PrPC proteins to misfold into the pathogenic PrPSc form leads to a chain reaction of protein aggregation and neuronal damage.",
+   "b": [
+    "Prions are misfolded proteins, not bacteria, viruses, or fungi.",
+    "They are resistant to standard sterilization techniques.",
+    "Prions propagate by converting normal cellular proteins into their abnormal form.",
+    "Accumulation of these abnormal proteins causes neuronal dysfunction and death."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "CJD is not transmitted through casual contact. The majority of cases (approximately 90%) are sporadic, meaning the misfolding of PrPC occurs spontaneously without a known cause. Familial CJD accounts for 5-15% of cases and is linked to mutations in the PRNP gene. Acquired forms are rare but significant for public health. These include iatrogenic CJD (from contaminated neurosurgical instruments, corneal transplants, or dura mater grafts) and variant CJD (vCJD), which is associated with the consumption of beef products from cattle infected with Bovine Spongiform Encephalopathy (BSE, or 'Mad Cow Disease').",
+   "b": [
+    "Sporadic CJD is the most common form, with no clear transmission route.",
+    "Familial CJD is inherited due to PRNP gene mutations.",
+    "Iatrogenic CJD can occur through medical procedures involving contaminated tissues or instruments.",
+    "Variant CJD is linked to dietary exposure to BSE-infected beef.",
+    "Prions accumulate in the brain, leading to progressive neuronal loss and spongiform encephalopathy."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "CJD manifests as a rapidly progressive neurodegenerative disease. The clinical course is typically short, with death occurring within 7 months on average. The disease primarily affects the central nervous system, leading to a constellation of neurological and psychiatric symptoms. In low-resource settings, early symptoms might be mistaken for other common neurological conditions, making accurate diagnosis challenging.",
+   "b": [
+    "Rapidly progressive dementia is the hallmark symptom.",
+    "Myoclonus (involuntary muscle jerks) is common, especially in later stages.",
+    "Ataxia (impaired coordination and balance) is frequently observed.",
+    "Other symptoms can include visual disturbances, psychiatric changes (depression, anxiety, psychosis), and pyramidal/extrapyramidal signs.",
+    "The disease progresses to akinetic mutism and death."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosing CJD relies on a combination of clinical features, neuroimaging, electroencephalography (EEG), and cerebrospinal fluid (CSF) analysis. In settings where advanced tests are unavailable, a strong clinical suspicion based on the rapid progression of dementia, myoclonus, and ataxia is crucial. Brain biopsy or post-mortem examination provides definitive diagnosis but is rarely performed ante-mortem due to invasiveness and risk of prion transmission.",
+   "t": [
+    {
+     "a": "Clinical presentation",
+     "b": "Does the patient have rapidly progressive dementia, myoclonus, and ataxia? — A combination of these core symptoms raises strong suspicion for CJD."
+    },
+    {
+     "a": "Electroencephalography (EEG)",
+     "b": "Are there characteristic periodic sharp wave complexes (PSWCs)? — PSWCs are highly suggestive of sporadic CJD, though not always present, especially early in the disease."
+    },
+    {
+     "a": "Cerebrospinal Fluid (CSF) analysis for 14-3-3 protein",
+     "b": "Is the 14-3-3 protein elevated in CSF? — Elevated 14-3-3 protein is a marker of rapid neuronal damage and supports a diagnosis of CJD, but it is not specific and can be elevated in other conditions like stroke or encephalitis. This test may not be widely available."
+    },
+    {
+     "a": "CSF RT-QuIC (Real-Time Quaking-Induced Conversion)",
+     "b": "Are prions present in the CSF? — This highly specific and sensitive test detects the abnormal prion protein and is becoming the gold standard for ante-mortem diagnosis. Availability is very limited in low-resource settings."
+    },
+    {
+     "a": "Magnetic Resonance Imaging (MRI) of the brain",
+     "b": "Are there characteristic signal abnormalities in specific brain regions? — Diffusion-weighted imaging (DWI) and FLAIR sequences can show hyperintensities in the cortical ribbon (cortical restricted diffusion), basal ganglia, and thalamus, which are highly suggestive of CJD. This may be unavailable or difficult to inter"
+    },
+    {
+     "a": "Brain biopsy (rarely ante-mortem)",
+     "b": "Is there definitive evidence of spongiform changes and prion protein deposition? — This is the definitive diagnostic test, but it is invasive and carries a risk of prion transmission. It is usually reserved for cases where a treatable condition is strongly suspected and CJD needs to be definitively ruled out."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "There is currently no cure or effective treatment for CJD. Management is entirely supportive, focusing on alleviating symptoms and improving the patient's quality of life. Due to the infectious nature of prions, strict infection control measures are essential when handling tissues or instruments from suspected or confirmed CJD patients.",
+   "b": [
+    "No specific antiviral, antibiotic, or anti-prion therapy exists.",
+    "Supportive care includes managing pain, myoclonus (e.g., with clonazepam or valproate), and psychiatric symptoms.",
+    "Nutritional support and prevention of complications like aspiration pneumonia are crucial.",
+    "Strict sterilization protocols are required for surgical instruments that have come into contact with CJD-infected tissues (e.g., extended autoclaving or chemical decontamination).",
+    "Public health measures include surveillance for CJD and strict regulations on animal feed to prevent BSE transmission."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "CJD is a rare but important disease to understand due to its unique pathophysiology and devastating prognosis. Examiners often focus on distinguishing CJD from other rapidly progressive dementias and understanding its public health implications."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive dementia accompanied by myoclonus or ataxia",
+  "New-onset neurological symptoms that worsen quickly over weeks to months"
+ ],
+ "faq": [
+  {
+   "q": "Is CJD contagious through casual contact?",
+   "a": "No, CJD is not spread through casual contact, touching, or airborne transmission. It requires direct exposure to infected brain or nervous tissue."
+  },
+  {
+   "q": "What is the difference between sporadic CJD and variant CJD?",
+   "a": "Sporadic CJD arises spontaneously without a known cause, while variant CJD is acquired through the consumption of beef products contaminated with Bovine Spongiform Encephalopathy (BSE) prions."
+  },
+  {
+   "q": "Can CJD be treated?",
+   "a": "Currently, there is no cure or effective treatment for CJD. Management is supportive, aimed at alleviating symptoms and providing comfort."
+  }
+ ],
+ "exam": [
+  "A 60-year-old patient presents with a 3-month history of rapidly worsening memory, confusion, and involuntary jerking movements of his limbs. What is your top differential diagnosis and what initial investigations would you prioritize in a low-resource setting? — Top differential is Creutzfeldt-Jakob Disease (CJD). Prioritize clinical assessment, detailed neurological exam, and if available, EEG (looking for PSWCs) and MRI brain (looking for cortical ribboning/basal ganglia h",
+  "You suspect CJD in a patient undergoing a lumbar puncture. What specific precautions must be taken with the CSF sample and equipment? — CSF samples should be handled with universal precautions. Equipment, especially needles and stylets, should be treated as potentially contaminated with prions. This requires specialized decontamination procedures (e.g., extended autoclaving at high temperatures and pressures, or chemical disinfection with strong agents like sodium hypochlorit",
+  "How would you differentiate CJD from other causes of rapidly progressive dementia, such as autoimmune encephalitis or paraneoplastic syndromes, especially when advanced diagnostics are limited? — Focus on the clinical course: CJD typically progresses very rapidly (weeks to months) with prominent myoclonus and ataxia. Autoimmune encephalopathies might have a slower progression, respond to immunotherapy, and often show inflammatory markers in CSF. Paraneoplastic syndromes might",
+  "A patient with suspected CJD requires a surgical procedure for an unrelated condition. What are the key considerations for the surgical team and hospital management? — The primary concern is preventing iatrogenic transmission. Surgical instruments used on suspected CJD patients must be quarantined and subjected to specialized prion decontamination protocols or disposed of. The surgical team should be informed, and procedures minimized if possible. Anesthesia equipment should ",
+  "What is the public health significance of variant CJD (vCJD) compared to sporadic CJD, particularly in regions with historical exposure to BSE? — Variant CJD is significant because it is transmissible through contaminated beef products, raising concerns about food safety and potential secondary transmission (e.g., via blood transfusions, though this is rare). Sporadic CJD has no known environmental or dietary link. Public health measures for vCJD focus on animal surveillance ",
+  "A patient's family asks about the prognosis and treatment options for CJD. How would you counsel them? — Explain that CJD is a uniformly fatal disease with a rapid progression, typically leading to death within months. Emphasize that there is currently no cure or specific treatment to halt the disease progression. Focus on supportive care, symptom management (e.g., for pain, myoclonus), and ensuring comfort and dignity for the patient. Discuss end-of-life planning and palliat",
+  "Why are prions so difficult to inactivate compared to bacteria or viruses? — Prions are misfolded proteins, not living organisms with genetic material. Their resistance stems from their stable, aggregated protein structure, which is highly resistant to heat, radiation, proteases, and many chemical disinfectants that would normally destroy bacteria or viruses. This makes standard sterilization methods ineffective against prions."
+ ],
+ "related": [
+  "Bovine Spongiform Encephalopathy (BSE)",
+  "Kuru",
+  "Fatal Familial Insomnia",
+  "Gerstmann-Sträussler-Scheinker Syndrome",
+  "Rapidly Progressive Dementias",
+  "Autoimmune Encephalitis",
+  "Neurodegenerative Diseases"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

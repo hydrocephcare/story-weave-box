@@ -1,0 +1,178 @@
+{
+ "medical": true,
+ "title": "Febrile Neutropenia",
+ "subject": "Medicine",
+ "summary": "Febrile neutropenia is a medical emergency defined by fever and an absolute neutrophil count <500/µL. Prompt assessment, risk stratification and empiric broad‑spectrum antibiotics are essential, especially in low‑resource settings.",
+ "aka": [
+  "Neutropenic fever"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Fever (single oral temperature ≥38.3 °C or ≥38.0 °C sustained for ≥1 h) plus an absolute neutrophil count (ANC) <500/µL, or <1000/µL with a predicted decline to <500 within 48 h, defines febrile neutropenia.",
+   "b": [
+    "ANC = WBC × % neutrophils (including bands) ÷ 100",
+    "Use a calibrated thermometer; in low‑resource settings a reliable digital device suffices"
+   ],
+   "t": [
+    {
+     "a": "Complete blood count with differential",
+     "b": "Confirms neutropenia; ANC <500 µL confirms diagnosis"
+    },
+    {
+     "a": "Temperature measurement",
+     "b": "Identifies fever; ≥38.3 °C single reading or ≥38.0 °C sustained for 1 h"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Multinational Association for Supportive Care (MASCC) score and the Clinical Index of Stable Febrile Neutropenia (CISFN) separate low‑risk from high‑risk patients.",
+   "b": [
+    "MASCC ≥21 → low risk, may be managed outpatient",
+    "CISFN ≤2 → low risk; otherwise high risk"
+   ],
+   "t": [
+    {
+     "a": "MASCC risk assessment",
+     "b": "Answers: Is the patient low‑risk? A score ≥21 suggests outpatient therapy is safe"
+    },
+    {
+     "a": "CISFN",
+     "b": "Answers: Is the patient clinically stable? Score ≤2 indicates low risk"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals the most common precipitants are chemotherapy for solid tumours or leukaemia, HIV‑related marrow suppression, severe malaria, tuberculosis, and sickle‑cell disease crises.",
+   "b": [
+    "Cytotoxic chemotherapy (especially alkylating agents, anthracyclines)",
+    "HIV infection with opportunistic marrow suppression",
+    "Severe malaria causing transient neutropenia",
+    "Disseminated TB with bone‑marrow involvement",
+    "Sickle‑cell vaso‑occlusive crisis with functional neutropenia"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often appear acutely ill, with chills, rigors, or a new temperature spike. The physical exam may be deceptively quiet because neutropenia blunts classic signs of infection.",
+   "b": [
+    "Fever or rigors without focal signs",
+    "Mucosal ulceration or oral thrush common in HIV",
+    "Possible skin lesions from malaria or bacterial entry"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that guide antimicrobial choice and identify a source; adapt when labs are unavailable.",
+   "t": [
+    {
+     "a": "Blood cultures (2 sets, aerobic and anaerobic)",
+     "b": "Detect bloodstream infection; positive culture directs targeted therapy"
+    },
+    {
+     "a": "Urine dipstick and microscopy",
+     "b": "Answers: Is there a urinary source? Positive leukocyte esterase or nitrites suggest UTI"
+    },
+    {
+     "a": "Chest X‑ray (portable if needed)",
+     "b": "Answers: Is there pulmonary infection? Infiltrate supports pneumonia"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Answers: Is malaria contributing? Positive test prompts antimalarial therapy"
+    },
+    {
+     "a": "If culture unavailable: empirical broad‑spectrum coverage based on local flora",
+     "b": "Answers: Which antibiotics to start? Choose agents covering Gram‑negatives, Pseudomonas, and anaerobes"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration can occur from septic shock, invasive fungal infection, or hemorrhagic complications of marrow failure.",
+   "b": [
+    "Hypotension (SBP <90 mmHg) or tachycardia >120 bpm",
+    "Respiratory distress or O₂ saturation <90 %",
+    "New mental status change",
+    "Persistent fever >72 h despite antibiotics"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start empiric IV antibiotics within 60 minutes, adjust for risk, and consider adjuncts such as G‑CSF when indicated.",
+   "b": [
+    "G‑CSF (filgrastim) for prolonged neutropenia (>7 days) or high‑risk regimens",
+    "Isolation precautions: hand hygiene, protective barrier, limit visitors"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess daily, monitor ANC recovery, and modify chemotherapy schedules. Primary prophylaxis with G‑CSF for high‑risk regimens and vaccination where possible.",
+   "b": [
+    "Daily temperature and ANC until ANC >500 µL and afebrile for 48 h",
+    "Educate patients on early fever reporting",
+    "Consider prophylactic flu and pneumococcal vaccines in HIV or cancer patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Febrile neutropenia can be mistaken for simple fever of unknown origin or for sepsis in a patient with normal neutrophils.",
+   "b": [
+    "Fever of unknown origin (no neutropenia)",
+    "Septicemia in immunocompetent host (different antimicrobial spectrum)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal white‑cell count does not exclude neutropenia if differential is not performed; malaria rapid tests can be false‑negative in low parasitaemia.",
+   "b": [
+    "Relying on total WBC alone may miss neutropenia",
+    "Negative malaria test does not rule out infection in endemic areas"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypotension despite fluids",
+  "Respiratory failure or O₂ saturation <90 %",
+  "Altered mental status",
+  "Fever lasting >72 h after appropriate antibiotics"
+ ],
+ "faq": [
+  {
+   "q": "Why is fever alone enough to start antibiotics?",
+   "a": "Neutropenia blunts local signs, so fever is the earliest reliable indicator of infection."
+  },
+  {
+   "q": "When is oral therapy acceptable?",
+   "a": "In low‑risk patients (MASCC ≥21) who are haemodynamically stable, can tolerate oral intake, and have reliable follow‑up."
+  },
+  {
+   "q": "What role does G‑CSF play?",
+   "a": "It shortens neutropenia duration, reducing infection risk, but is reserved for high‑risk or prolonged neutropenia."
+  }
+ ],
+ "exam": [
+  "What is the definition of febrile neutropenia and why is the ANC threshold set at <500/µL? — Fever ≥38.3 °C (or ≥38.0 °C sustained) plus ANC <500 µL; <500 reflects markedly impaired bacterial defence.",
+  "A 45‑year‑old on cyclophosphamide presents with 38.5 °C fever and ANC 420/µL. What is your immediate management? — Start IV broad‑spectrum antibiotics (e.g., piperacillin‑tazobactam) within 60 min, obtain cultures, assess risk.",
+  "How do you differentiate low‑risk from high‑risk febrile neutropenia in a resource‑limited setting? — Use MASCC score ≥21 or CISFN ≤2; low‑risk may be managed orally or outpatient.",
+  "Why is vancomycin added only in certain scenarios? — It covers MRSA and resistant Gram‑positives when there is a catheter, skin/soft‑tissue source, or hemodynamic instability.",
+  "A patient on ART for HIV develops fever and ANC 300/µL. Which additional infections should you consider? — Opportunistic infections such as disseminated TB, fungal infections, and malaria; obtain relevant tests.",
+  "When is G‑CSF indicated in febrile neutropenia? — For expected neutropenia >7 days, high‑risk chemotherapy regimens, or when rapid ANC recovery is needed.",
+  "What are the red‑flag signs that require ICU transfer? — Persistent hypotension, respiratory failure, altered consciousness, or uncontrolled sepsis despite antibiotics.",
+  "Explain why a normal total WBC does not exclude febrile neutropenia. — Neutrophil proportion may be low; a differential is required to calculate ANC."
+ ],
+ "related": [
+  "Neutropenia",
+  "Sepsis",
+  "Chemotherapy‑induced myelosuppression",
+  "HIV‑related opportunistic infections",
+  "Malaria",
+  "Tuberculosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

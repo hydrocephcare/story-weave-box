@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "title": "Exocytosis in Cellular Physiology",
+ "subject": "Physiology",
+ "summary": "Exocytosis moves substances from inside the cell to the extracellular space using vesicle fusion. It underpins neurotransmission, hormone release, and digestive enzyme secretion, and its failure causes several clinical syndromes.",
+ "aka": [
+  "vesicular release",
+  "secretory exocytosis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Exocytosis is the process by which cells export cargo—neurotransmitters, hormones, enzymes—via membrane‑bound vesicles that fuse with the plasma membrane.",
+   "b": [
+    "Key for synaptic transmission, endocrine signaling, and pancreatic secretion",
+    "Requires calcium influx and SNARE protein complex"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "An action potential opens voltage‑gated Ca²⁺ channels; Ca²⁺ binds synaptotagmin, triggering SNARE proteins (syntaxin, SNAP‑25, VAMP) to pull vesicle and plasma membranes together, forming a fusion pore.",
+   "b": [
+    "Vesicle docking → priming → calcium‑triggered fusion",
+    "Fusion pore expands, cargo released, vesicle membrane becomes part of plasma membrane"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Calcium concentration is the primary trigger; accessory proteins (Munc13, complexin) modulate speed and fidelity. Hormonal signals (e.g., cAMP) can prime vesicles for rapid release.",
+   "b": [
+    "Low intracellular Ca²⁺ → vesicles remain docked but inactive",
+    "Second‑messenger pathways can increase vesicle pool size"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Defective exocytosis leads to impaired neurotransmission, endocrine failure, or pancreatic autodigestion.",
+   "b": [
+    "Botulism toxin cleaves SNAP‑25 → paralytic weakness",
+    "Familial hemophagocytic lymphohistiocytosis (defective perforin exocytosis) → severe immune dysregulation",
+    "Acute pancreatitis from blocked zymogen granule exocytosis → intracellular activation of enzymes"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding exocytosis guides diagnosis and treatment of neurotoxic poisoning, endocrine emergencies, and pancreatic disease, especially where advanced imaging is unavailable.",
+   "b": [
+    "Identify botulism by descending flaccid paralysis and absent reflexes",
+    "Recognise acute pancreatitis by epigastric pain, raised amylase/lipase, and lack of gallstone imaging",
+    "Interpret insulinoma suspicion when hypoglycaemia persists despite fasting"
+   ],
+   "t": [
+    {
+     "a": "Serum amylase/lipase",
+     "b": "Confirms pancreatic enzyme leakage; >3× upper limit supports acute pancreatitis"
+    },
+    {
+     "a": "Serum botulinum toxin assay (if available)",
+     "b": "Detects toxin; if unavailable, rely on clinical picture and epidemiology"
+    },
+    {
+     "a": "Fasting glucose with supervised fast",
+     "b": "Demonstrates Whipple's triad for insulinoma; if glucometer unavailable, use bedside capillary glucose"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on mechanism‑clinical links, bedside clues, and management priorities when resources are limited.",
+   "b": [
+    "Link calcium‑triggered exocytosis to the rapid onset of neuromuscular symptoms in botulism",
+    "Explain why secretin test is rarely used in low‑resource settings for pancreatic assessment"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive respiratory muscle weakness in suspected botulism",
+  "Severe epigastric pain with vomiting and hypotension suggesting necrotising pancreatitis",
+  "Recurrent hypoglycaemia causing seizures or loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why does botulism cause flaccid paralysis?",
+   "a": "The toxin cleaves SNAP‑25, preventing vesicle fusion and acetylcholine release at the neuromuscular junction."
+  },
+  {
+   "q": "How can you differentiate pancreatitis from other causes of abdominal pain without imaging?",
+   "a": "Rely on characteristic pain radiating to the back, vomiting, and serum amylase/lipase >3× normal."
+  },
+  {
+   "q": "What bedside test indicates impaired exocytosis of insulin?",
+   "a": "A supervised fast showing plasma glucose <55 mg/dL with inappropriately high insulin (>5 µU/mL)."
+  }
+ ],
+ "exam": [
+  "A patient presents with descending weakness after eating home‑preserved fish; what toxin mechanism explains the findings — inhibition of SNARE‑mediated exocytosis of acetylcholine.",
+  "In a febrile child with sudden onset of flaccid paralysis, which bedside sign confirms a presynaptic problem — absent deep tendon reflexes with preserved sensation.",
+  "You suspect acute pancreatitis but ultrasound is unavailable; which laboratory result is most diagnostic and why — amylase or lipase >3× upper limit indicates pancreatic enzyme leakage.",
+  "Explain why giving anticholinesterase drugs in botulism can be harmful — they increase acetylcholine but the release machinery is blocked, providing little benefit and risk of cholinergic excess.",
+  "A patient with HIV develops severe abdominal pain and elevated lipase; what extra cause should you consider and how does it relate to exocytosis — opportunistic CMV pancreatitis causing duct obstruction and impaired enzyme secretion.",
+  "During a malaria outbreak, a child develops hypoglycaemia unresponsive to glucose; which endocrine exocytosis defect should you suspect — impaired glucagon release due to parasite‑induced β‑cell dysfunction.",
+  "Describe the first emergency step for a patient with suspected botulism — secure airway and provide mechanical ventilation if respiratory muscles are compromised.",
+  "Why is secretin stimulation test rarely used in low‑resource hospitals for pancreatic disease — it requires intravenous secretin and serial enzyme measurements unavailable in most settings."
+ ],
+ "related": [
+  "Synaptic Transmission",
+  "Calcium Signaling",
+  "SNARE Protein Complex",
+  "Acute Pancreatitis",
+  "Botulism",
+  "Insulin Secretion",
+  "Endocrine Emergencies"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

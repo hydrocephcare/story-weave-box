@@ -1,0 +1,116 @@
+{
+ "medical": true,
+ "title": "Creutzfeldt-Jakob Disease",
+ "subject": "Microbiology & immunology",
+ "summary": "Creutzfeldt-Jakob Disease (CJD) is a rare, rapidly progressive, and fatal neurodegenerative disorder caused by prions. It leads to spongiform changes in the brain, resulting in dementia, ataxia, and myoclonus. CJD can be sporadic, familial, or acquired.",
+ "aka": [
+  "Jakob disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Creutzfeldt-Jakob Disease (CJD) is the most common human prion disease, characterized by rapidly progressive neurological deterioration. It is invariably fatal, typically within one year of symptom onset. Understanding CJD is crucial for clinicians due to its unique infectious agent, diagnostic challenges, and public health implications, especially in differentiating it from other dementias.",
+   "b": [
+    "CJD is a transmissible spongiform encephalopathy (TSE).",
+    "It is caused by abnormally folded prion proteins (PrPSc) that induce normal prion proteins (PrPC) to misfold.",
+    "The disease leads to neuronal loss and characteristic vacuolation (spongiform changes) in the brain.",
+    "Four main forms exist: sporadic (sCJD), familial (fCJD), iatrogenic (iCJD), and variant (vCJD)."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Prions are unique infectious agents, distinct from bacteria, viruses, fungi, or parasites. They are composed solely of misfolded proteins and lack nucleic acids. This makes them highly resistant to conventional sterilization methods, including heat, radiation, and common disinfectants.",
+   "b": [
+    "Prions are infectious protein particles, not living organisms.",
+    "The normal cellular prion protein (PrPC) is found on cell surfaces, particularly in the brain.",
+    "The pathogenic form (PrPSc) is resistant to proteases and accumulates in neural tissue.",
+    "PrPSc acts as a template, converting normal PrPC into more PrPSc, leading to a chain reaction of misfolding."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Prion diseases do not have a typical life cycle like other infectious agents. Transmission depends on the specific form of CJD. Sporadic CJD arises spontaneously, familial CJD is inherited, and acquired forms result from exposure to PrPSc. In low-resource settings, awareness of iatrogenic transmission risks is paramount.",
+   "b": [
+    "Sporadic CJD (sCJD): Most common form (85-90%), cause unknown, believed to arise from spontaneous PrPC misfolding.",
+    "Familial CJD (fCJD): Accounts for 5-15% of cases, caused by inherited mutations in the PRNP gene.",
+    "Iatrogenic CJD (iCJD): Acquired through medical procedures, such as contaminated neurosurgical instruments, dura mater grafts, or growth hormone derived from human pituitary glands.",
+    "Variant CJD (vCJD): Linked to consumption of beef products from cattle infected with Bovine Spongiform Encephalopathy (BSE, or 'Mad Cow Disease').",
+    "Kuru: A historical prion disease transmitted through ritualistic cannibalism in Papua New Guinea."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "CJD presents as a rapidly progressive neurological syndrome. The clinical picture is dominated by dementia, motor dysfunction, and psychiatric symptoms. The rapid progression and specific neurological signs are key to differentiating it from more common causes of dementia in East Africa, such as HIV-associated neurocognitive disorder or advanced neurosyphilis.",
+   "b": [
+    "Rapidly progressive dementia: Deterioration over weeks to months, often within 6 months.",
+    "Myoclonus: Involuntary muscle jerks, often stimulated by noise or touch (startle myoclonus).",
+    "Ataxia: Impaired coordination, affecting gait and limb movements.",
+    "Pyramidal or extrapyramidal signs: Spasticity, rigidity, bradykinesia.",
+    "Visual disturbances: Cortical blindness, diplopia.",
+    "Psychiatric symptoms: Depression, anxiety, apathy, behavioral changes, especially in vCJD."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of CJD is challenging due to its rarity and the need to exclude other treatable conditions. Clinical suspicion is paramount, followed by a combination of neuroimaging, CSF analysis, and EEG. Definitive diagnosis often requires neuropathological examination of brain tissue, which is usually post-mortem. In low-resource settings, reliance on clinical criteria and readily available tests like EEG is crucial.",
+   "t": [
+    {
+     "a": "Clinical evaluation (history and neurological exam)",
+     "b": "To identify rapidly progressive dementia, myoclonus, ataxia, and other characteristic neurological signs. A high index of suspicion is key, especially in the absence of other clear causes."
+    },
+    {
+     "a": "Electroencephalogram (EEG)",
+     "b": "To detect characteristic periodic sharp wave complexes (PSWCs), present in about two-thirds of sCJD cases. Absence of PSWCs does not rule out CJD, but their presence strongly supports the diagnosis."
+    },
+    {
+     "a": "Cerebrospinal Fluid (CSF) analysis for 14-3-3 protein",
+     "b": "To detect neuronal damage, as 14-3-3 protein is a marker of rapid neuronal destruction. It is sensitive but not specific for CJD, as it can be elevated in other conditions like viral encephalitis or stroke. If unavailable, consider other markers of neuronal injury if possible."
+    },
+    {
+     "a": "CSF RT-QuIC (Real-Time Quaking-Induced Conversion)",
+     "b": "To detect minute amounts of misfolded prion protein in CSF. This test is highly specific and sensitive for CJD, especially sCJD. It is often unavailable in low-resource settings, making clinical and other lab findings more critical."
+    },
+    {
+     "a": "Magnetic Resonance Imaging (MRI) of the brain",
+     "b": "To identify characteristic abnormalities like restricted diffusion in the cortical ribbon, basal ganglia, or thalamus (pulvinar sign in vCJD). MRI helps exclude other causes of dementia and supports CJD diagnosis. If MRI is unavailable, CT scan may show non-specific atrophy but cannot rule in CJD."
+    },
+    {
+     "a": "Genetic testing (PRNP gene sequencing)",
+     "b": "To confirm familial CJD by identifying mutations in the prion protein gene. This is usually reserved for cases with a family history or atypical presentation."
+    },
+    {
+     "a": "Brain biopsy (rarely performed ante-mortem)",
+     "b": "To provide definitive neuropathological diagnosis by showing spongiform changes, neuronal loss, and astrogliosis. Carries risk and is usually reserved for atypical cases where a treatable condition is strongly suspected."
+    },
+    {
+     "a": "Post-mortem neuropathological examination",
+     "b": "To confirm the diagnosis definitively by demonstrating spongiform changes, neuronal loss, astrogliosis, and PrPSc deposition in brain tissue. This is the gold standard for CJD diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "There is currently no cure or effective treatment for CJD. Management is entirely supportive, focusing on alleviating symptoms and improving the patient's quality of life. Infection control measures are crucial to prevent iatrogenic transmission, especially in surgical settings where standard sterilization may be insufficient for prions.",
+   "b": [
+    "No specific antiviral, antibacterial, or antiprion therapy exists.",
+    "Symptomatic management includes medications for myoclonus (e.g., clonazepam, valproate), pain, and psychiatric symptoms.",
+    "Nutritional support, physical therapy, and occupational therapy are important for maintaining comfort.",
+    "Strict infection control protocols are essential for handling tissues and instruments from suspected CJD patients.",
+    "Disposable instruments are preferred for neurosurgical procedures on suspected CJD cases; otherwise, specialized decontamination procedures are required.",
+    "Public health surveillance is important for monitoring incidence and identifying potential clusters, especially for vCJD."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "CJD is a high-yield topic for understanding unique infectious agents and rapidly progressive neurological disease. Examiners will test your ability to differentiate CJD from other dementias, understand its unique pathophysiology, and apply appropriate infection control."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

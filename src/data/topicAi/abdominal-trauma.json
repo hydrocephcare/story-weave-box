@@ -1,0 +1,227 @@
+{
+ "medical": true,
+ "title": "Abdominal Trauma: Blunt and Penetrating Injuries",
+ "subject": "Surgery",
+ "summary": "Abdominal trauma involves injury to the abdominal wall or contents, often from blunt force or penetrating objects. Prompt assessment and management are crucial due to the risk of significant internal bleeding and organ damage. It requires a systematic approach to identify life-threatening injuries, especially in resource-limited settings.",
+ "aka": [
+  "Abdominal injury",
+  "Blunt abdominal trauma",
+  "Penetrating abdominal trauma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Abdominal trauma refers to any injury to the abdominal wall or the organs contained within the abdominal cavity. It is broadly classified into blunt and penetrating trauma. Blunt trauma, often from motor vehicle accidents or falls, typically causes compression or shearing forces, leading to solid organ injury (e.g., spleen, liver) or hollow viscus rupture. Penetrating trauma, from stabbings or gunshot wounds, directly lacerates tissues and organs.",
+   "b": [
+    "**Blunt Abdominal Trauma (BAT):** Injury without an open wound, often from deceleration, compression, or crushing forces.",
+    "**Penetrating Abdominal Trauma (PAT):** Injury involving a breach of the abdominal wall, such as from stabs, gunshots, or impalement."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of abdominal trauma is determined by the extent of organ damage, blood loss, and physiological derangement. While formal grading systems (e.g., AAST Organ Injury Scales) exist for specific organs, clinical assessment of hemodynamic stability and the presence of peritonitis are paramount for initial management decisions, especially in low-resource settings where advanced imaging may be limited.",
+   "b": [
+    "**Hemodynamic Stability:** The most critical factor; unstable patients require immediate resuscitation and often surgical intervention.",
+    "**Peritoneal Signs:** Guarding, rigidity, rebound tenderness indicate peritoneal irritation or inflammation, often due to blood, bile, or bowel contents.",
+    "**Organ Injury Scales:** Used for specific organs (e.g., spleen, liver) to grade the severity of injury, guiding non-operative management decisions in stable patients."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of abdominal trauma vary significantly between blunt and penetrating mechanisms, with specific organs being more commonly affected depending on the type of injury. In low-resource settings, interpersonal violence (stabbings, assaults) and road traffic accidents are major contributors.",
+   "b": [
+    "**Blunt Trauma:**",
+    "Motor vehicle accidents (MVAs) — leading cause, often involving deceleration injuries.",
+    "Falls from height — common in agricultural or construction settings.",
+    "Assaults/Fights — direct blows to the abdomen.",
+    "Sporting injuries — less common but can occur.",
+    "**Penetrating Trauma:**",
+    "Stab wounds — common in interpersonal violence, often involving knives or sharp objects.",
+    "Gunshot wounds — high-energy transfer, causing extensive damage and often multiple organ injuries.",
+    "Impalement injuries — less common but can cause severe localized damage.",
+    "Iatrogenic injuries — rare, during surgical or diagnostic procedures."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies widely from subtle signs to overt shock, depending on the mechanism, organs involved, and extent of bleeding or contamination. A high index of suspicion is crucial, as initial symptoms can be masked by other injuries or altered mental status.",
+   "b": [
+    "**Pain:** Localized or generalized abdominal pain, often exacerbated by movement.",
+    "**Tenderness:** Palpation reveals tenderness, guarding, or rigidity, indicating peritoneal irritation.",
+    "**Distension:** Abdominal distension can suggest intra-abdominal bleeding or bowel obstruction.",
+    "**Bruising/Abrasions:** Ecchymosis (e.g., Cullen's sign around umbilicus, Grey-Turner's sign on flanks for retroperitoneal bleeding), seatbelt marks, or abrasions on the abdominal wall.",
+    "**External Wounds:** Puncture wounds, lacerations, or evisceration in penetrating trauma.",
+    "**Hypovolemic Shock:** Tachycardia, hypotension, pallor, altered mental status due to significant blood loss.",
+    "**Referred Pain:** Left shoulder pain (Kehr's sign) from diaphragmatic irritation due to splenic injury or subdiaphragmatic blood."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to identify the presence of intra-abdominal injury, the specific organs involved, and the extent of bleeding or contamination. The choice of investigation depends on the patient's hemodynamic stability and the availability of resources.",
+   "t": [
+    {
+     "a": "Primary Survey (ABCDE)",
+     "b": "Identifies immediate life threats and guides resuscitation. — Airway patency, breathing adequacy, circulation (pulse, BP, signs of shock), disability (GCS), exposure (full body exam). Abnormalities indicate need for immediate intervention."
+    },
+    {
+     "a": "Focused Assessment with Sonography for Trauma (FAST)",
+     "b": "Detects free fluid (blood) in the pericardium, perihepatic, perisplenic, and pelvic spaces. — Positive FAST in an unstable patient indicates significant intra-abdominal bleeding requiring urgent laparotomy. Negative FAST does not rule out injury, especially hollow viscus or retroperitoneal."
+    },
+    {
+     "a": "Diagnostic Peritoneal Lavage (DPL)",
+     "b": "Detects intra-abdominal bleeding or bowel contents, especially when FAST is unavailable or inconclusive in an unstable patient. — Gross blood, bile, or particulate matter in the aspirate, or specific cell counts (e.g., >100,000 RBCs/mm³) indicate significant injury requiring laparotomy. Invasive, higher complication ra"
+    },
+    {
+     "a": "Upright Chest X-ray",
+     "b": "Checks for diaphragmatic injury (elevated hemidiaphragm, bowel in chest), pneumothorax, hemothorax, or free air under the diaphragm (perforated hollow viscus). — Presence of free air or bowel in the chest indicates significant injury."
+    },
+    {
+     "a": "Abdominal X-ray (AP/Lateral)",
+     "b": "May show foreign bodies (e.g., bullets), free air (less sensitive than CXR), or bowel distension. — Limited utility in blunt trauma, more useful for penetrating injuries to locate foreign bodies."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Assesses hemoglobin and hematocrit levels to estimate blood loss, and white blood cell count for inflammation/infection. — Falling Hb/Hct suggests ongoing bleeding. Elevated WBC may indicate inflammation or stress."
+    },
+    {
+     "a": "Cross-matching/Group and Save",
+     "b": "Prepares for potential blood transfusion. — Essential for any patient with significant trauma due to risk of hemorrhage."
+    },
+    {
+     "a": "Serum Amylase/Lipase",
+     "b": "Screens for pancreatic injury. — Elevated levels suggest pancreatic trauma, though not highly specific."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Detects hematuria, indicating genitourinary tract injury. — Gross or microscopic hematuria warrants further investigation of the kidneys, ureters, or bladder."
+    },
+    {
+     "a": "Computed Tomography (CT) Scan with IV contrast",
+     "b": "Provides detailed imaging of solid organs, hollow viscera, retroperitoneum, and vascular structures. — Identifies specific organ injuries, extent of bleeding, and guides non-operative management in hemodynamically stable patients. Not for unstable patients. May not be available in all low-resource settings."
+    },
+    {
+     "a": "Exploratory Laparotomy",
+     "b": "Definitive diagnostic and therapeutic procedure for unstable patients with suspected intra-abdominal injury or clear signs of peritonitis. — Direct visualization and repair of injuries. Indicated for hemodynamic instability, peritonitis, evisceration, or impalement."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of red flags is critical to prevent life-threatening complications. These often relate to ongoing hemorrhage, organ dysfunction, or infection.",
+   "b": [
+    "**Hemodynamic Instability:** Persistent hypotension, tachycardia, or signs of shock despite fluid resuscitation.",
+    "**Peritoneal Signs:** Worsening abdominal pain, guarding, rigidity, or rebound tenderness.",
+    "**Abdominal Distension:** Rapidly increasing abdominal girth.",
+    "**Evisceration:** Protrusion of abdominal contents through an open wound.",
+    "**Absent Bowel Sounds:** May indicate paralytic ileus or significant peritoneal irritation.",
+    "**Decreased Urine Output:** Sign of hypovolemia or renal injury.",
+    "**Complications:**",
+    "**Hemorrhage:** Most immediate life-threatening complication, leading to hypovolemic shock.",
+    "**Sepsis/Peritonitis:** From bowel perforation or contamination.",
+    "**Abdominal Compartment Syndrome:** Increased intra-abdominal pressure leading to organ dysfunction.",
+    "**Organ Failure:** Acute kidney injury, ARDS, liver failure.",
+    "**Fistula Formation:** Enterocutaneous or enterovesical fistulas.",
+    "**Adhesions/Bowel Obstruction:** Long-term complications of abdominal surgery."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows the ATLS (Advanced Trauma Life Support) principles: primary survey, resuscitation, secondary survey, and definitive care. The decision for operative versus non-operative management is crucial and depends on patient stability and injury type.",
+   "b": [
+    "**Initial Resuscitation (Primary Survey):**",
+    "**Airway:** Establish and maintain patent airway, consider intubation if GCS is low or respiratory compromise.",
+    "**Breathing:** Assess and manage pneumothorax/hemothorax.",
+    "**Circulation:** Control external bleeding, establish two large-bore IV lines, rapid infusion of crystalloids (e.g., Ringer's Lactate) for hypotension. Transfuse blood products (O-negative or cross-matched) early for ongoing hemorrhage.",
+    "**Disability:** Brief neurological assessment (GCS).",
+    "**Exposure:** Fully expose patient, prevent hypothermia.",
+    "**Definitive Management:**",
+    "**Operative Management (Laparotomy):** Indicated for hemodynamic instability despite resuscitation, peritonitis, evisceration, impalement, gunshot wounds, or positive DPL/FAST in an unstable patient. Aims to control bleeding, repair organ injuries, and prevent contamination.",
+    "**Non-Operative Management (NOM):** Preferred for hemodynamically stable patients with blunt solid organ injuries (spleen, liver, kidney) without signs of peritonitis or hollow viscus injury. Requires close monitoring in an ICU setting, serial abdominal exams, and serial hemoglobin measurements. Availability of CT scan is crucial for NOM.",
+    "**Antibiotics:** Administer broad-spectrum antibiotics (e.g., Ceftriaxone + Metronidazole) for penetrating trauma or suspected hollow viscus injury to prevent infection.",
+    "**Pain Management:** Provide adequate analgesia.",
+    "**Tetanus Prophylaxis:** Administer if indicated for open wounds."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up care depends on the nature of the injury and treatment. Prevention focuses on public health measures and safety education.",
+   "b": [
+    "**Post-Operative Care:** Wound care, monitoring for complications (infection, ileus, fistula), nutritional support.",
+    "**Non-Operative Management Follow-up:** Serial imaging (ultrasound or CT) to assess healing of organ injuries, activity restrictions.",
+    "**Rehabilitation:** For patients with significant injuries or prolonged hospital stays.",
+    "**Prevention:**",
+    "Road safety campaigns (seatbelt use, helmet use, avoiding drunk driving).",
+    "Violence prevention programs.",
+    "Safe storage of weapons.",
+    "Workplace safety regulations."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Abdominal trauma can mimic or be complicated by other acute abdominal conditions, making accurate diagnosis challenging.",
+   "b": [
+    "**Acute Appendicitis/Cholecystitis/Pancreatitis:** Can present with abdominal pain and tenderness, but usually lack a clear traumatic mechanism. Imaging and lab tests help differentiate.",
+    "**Mesenteric Ischemia:** Severe abdominal pain, often out of proportion to physical findings, but typically in older patients with vascular risk factors.",
+    "**Diabetic Ketoacidosis (DKA):** Can cause severe abdominal pain and tenderness, but blood glucose and ketone levels are diagnostic.",
+    "**Sickle Cell Crisis:** Abdominal pain is a common manifestation, especially in patients with known sickle cell disease. History and blood film are key."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Several factors can lead to misleading clinical or investigative findings in abdominal trauma, requiring careful interpretation.",
+   "b": [
+    "**Normal Initial Hemoglobin:** Significant bleeding may not immediately reflect in hemoglobin levels due to compensatory vasoconstriction and lack of hemodilution.",
+    "**Negative FAST Scan:** Does not rule out retroperitoneal hemorrhage, hollow viscus injury, or small amounts of free fluid.",
+    "**Altered Mental Status:** Patients with head injury, intoxication, or spinal cord injury may not accurately report pain or show clear peritoneal signs.",
+    "**Rib Fractures:** Lower rib fractures can cause referred pain to the abdomen, mimicking intra-abdominal injury, but also increase suspicion for splenic or hepatic injury.",
+    "**Pelvic Fractures:** Can cause significant retroperitoneal hemorrhage that may not be detected by FAST or DPL.",
+    "**Peritoneal Lavage:** Can yield false positives if performed incorrectly or if there's pre-existing ascites, or false negatives if injuries are walled off."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent or worsening abdominal pain after injury",
+  "Signs of shock (dizziness, rapid heart rate, low blood pressure)",
+  "Abdominal distension or rigidity",
+  "Vomiting blood or passing blood in stool",
+  "Difficulty breathing or chest pain after abdominal injury",
+  "Any open wound to the abdomen"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common organ injured in blunt abdominal trauma?",
+   "a": "The spleen is the most frequently injured organ in blunt abdominal trauma, followed by the liver."
+  },
+  {
+   "q": "When should I consider non-operative management for abdominal trauma?",
+   "a": "Non-operative management is considered for hemodynamically stable patients with blunt solid organ injuries (e.g., spleen, liver) without signs of peritonitis or hollow viscus injury, and when close monitoring and imaging (like CT) are available."
+  },
+  {
+   "q": "What is the role of a FAST scan in abdominal trauma?",
+   "a": "A FAST scan rapidly detects free fluid (usually blood) in the abdomen and pericardium. It is crucial for identifying significant internal bleeding in hemodynamically unstable patients, guiding the decision for urgent laparotomy."
+  }
+ ],
+ "exam": [
+  "A 35-year-old man presents to the emergency department after a high-speed motor vehicle accident. He is hypotensive (BP 80/50 mmHg) and tachycardic (HR 120 bpm). His abdomen is distended and tender. What is your immediate priority and next step in management? — Immediate priority is to stabilize the patient's circulation. Establish two large-bore IV lines, administer rapid crystalloid boluses, and cross-match blood. Perform a FAST scan. If positive for free fluid, proceed to ",
+  "You are in a rural hospital with no CT scanner. A 20-year-old male presents with a stab wound to the left upper quadrant. He is hemodynamically stable, but you are concerned about potential intra-abdominal injury. What investigations would you perform, and what would guide your decision for surgery? — Perform a primary survey, serial abdominal examinations, and monitor vital signs closely. Obtain an upright chest X-ray to look for diaphragmatic injury or free air. Consider a ",
+  "A 10-year-old child falls from a tree and sustains blunt abdominal trauma. He is hemodynamically stable but complains of left upper quadrant pain. What organ injury are you most concerned about, and how would your management differ from an adult? — Most concerned about splenic injury. Management in children often favors non-operative management for splenic injuries if stable, due to higher success rates and to preserve splenic function. Close observation, serial exams, and po",
+  "Describe the key differences in presentation and management between blunt and penetrating abdominal trauma. — Blunt trauma often presents with diffuse pain, bruising, and internal organ damage (spleen, liver). Penetrating trauma has a visible entry wound and direct laceration of organs. Management of penetrating trauma often has a lower threshold for surgical exploration, especially for gunshot wounds, due to higher likelihood of significant injury and contamination. Blunt tr",
+  "A patient with blunt abdominal trauma is undergoing non-operative management for a splenic laceration. What are the critical parameters you would monitor, and what signs would prompt you to convert to operative management? — Monitor vital signs (BP, HR), serial abdominal exams for worsening pain or peritoneal signs, and serial hemoglobin levels. Conversion to operative management would be indicated by hemodynamic instability despite resuscitation, increasing abdominal distens",
+  "Why is abdominal compartment syndrome a critical complication of severe abdominal trauma, and how is it diagnosed and managed? — Abdominal compartment syndrome (ACS) occurs when increased intra-abdominal pressure compromises organ perfusion, leading to multi-organ dysfunction. It's diagnosed by measuring intra-abdominal pressure (IAP) via a bladder catheter (IAP > 20-25 mmHg with new organ dysfunction). Management involves decompressive laparotomy to relieve pressure, often w",
+  "You are managing a patient with a gunshot wound to the abdomen. What specific considerations regarding antibiotic prophylaxis are important, and why? — Broad-spectrum antibiotics (e.g., a third-generation cephalosporin like Ceftriaxone plus Metronidazole) should be administered promptly. This is crucial because gunshot wounds often cause multiple perforations of hollow viscera, leading to significant contamination of the peritoneal cavity with bowel contents, increasing the r"
+ ],
+ "related": [
+  "Traumatic Shock",
+  "Spleen Injury",
+  "Liver Trauma",
+  "Hollow Viscus Injury",
+  "Abdominal Compartment Syndrome",
+  "Advanced Trauma Life Support (ATLS)",
+  "Pelvic Fractures",
+  "Diaphragmatic Injury"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

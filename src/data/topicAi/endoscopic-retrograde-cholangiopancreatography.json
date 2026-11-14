@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Endoscopic Retrograde Cholangiopancreatography (ERCP)",
+ "subject": "Medicine",
+ "summary": "ERCP combines endoscopy and fluoroscopy to visualise and treat biliary and pancreatic duct disease. In low‑resource settings it remains the main therapeutic tool for obstructive jaundice, cholangitis and selected pancreatic leaks.",
+ "aka": [
+  "ERCP",
+  "Endoscopic retrograde cholangiopancreatography"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ERCP is a minimally invasive procedure that uses a side‑viewing duodenoscope to inject contrast into the biliary and pancreatic ducts under fluoroscopic guidance.",
+   "b": [
+    "Provides both imaging and therapeutic options in one session",
+    "Requires sedation, fluoroscopy, and skilled endoscopist"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by the underlying disease (e.g., cholangitis grade, stone burden) and by procedure‑related risk (e.g., pancreatitis, perforation).",
+   "b": [
+    "Tokyo Guidelines grade A–C cholangitis guides urgency of ERCP",
+    "Large stones (>10 mm) or multiple stones increase technical difficulty"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Obstruction of the common bile duct is the commonest indication for ERCP in East Africa.",
+   "b": [
+    "Choledocholithiasis – most frequent cause of obstructive jaundice",
+    "Strictures from primary sclerosing cholangitis, cholangiocarcinoma, or post‑operative scarring",
+    "Parasite‑related obstruction (e.g., Fasciola hepatica) – region‑specific",
+    "HIV‑related opportunistic biliary disease (e.g., CMV cholangitis)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with jaundice, right upper quadrant pain, fever, or pancreatitis depending on the level and duration of obstruction.",
+   "b": [
+    "Charcot’s triad (fever, RUQ pain, jaundice) suggests acute cholangitis",
+    "Elevated alkaline phosphatase and bilirubin point to biliary obstruction",
+    "Persistent epigastric pain with lipase rise may indicate post‑ERCP pancreatitis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects dilated intra‑hepatic ducts and stones; if unavailable, rely on clinical jaundice and liver function tests"
+    },
+    {
+     "a": "Liver function tests (ALT, AST, ALP, GGT, bilirubin)",
+     "b": "Confirms cholestasis; a rising bilirubin >5 mg/dL signals urgent ERCP"
+    },
+    {
+     "a": "CT abdomen (if available)",
+     "b": "Excludes mass lesions and assesses for pancreatic necrosis"
+    },
+    {
+     "a": "ERCP with fluoroscopy",
+     "b": "Answers the question ‘What is the exact level and cause of ductal obstruction?’; contrast filling defects = stones, strictures appear as narrowed segments"
+    },
+    {
+     "a": "Blood cultures (when fever present)",
+     "b": "Identify causative organism in cholangitis; guide antibiotics before ERCP"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and must be recognised early.",
+   "b": [
+    "Post‑ERCP pancreatitis – most common; watch for abdominal pain and rising amylase after 24 h",
+    "Severe cholangitis – fever, hypotension, mental status change; requires urgent drainage",
+    "Perforation – sudden severe pain, free air on X‑ray",
+    "Bleeding from sphincterotomy – hematemesis or melena"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Therapeutic ERCP aims to relieve obstruction and treat infection while minimising complications.",
+   "b": [
+    "Antibiotics (e.g., ceftriaxone) before and after ERCP for cholangitis; avoid aminoglycosides in renal impairment",
+    "Sphincterotomy followed by stone extraction with basket or balloon for stones ≤10 mm",
+    "Large stones: mechanical lithotripsy or temporary stent placement if lithotripsy unavailable",
+    "Stricture dilation and placement of plastic or metal stent; metal stents preferred for malignant strictures",
+    "If ERCP fails or fluoroscopy unavailable, percutaneous transhepatic drainage is an alternative"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After successful ERCP, monitor for delayed pancreatitis and ensure ductal patency.",
+   "b": [
+    "Check liver enzymes 24–48 h; persistent elevation may need repeat imaging",
+    "Educate patients on avoiding biliary sludge (dietary fat moderation, treat gallstones early)",
+    "Vaccinate against hepatitis B to reduce future cholangiopathy in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic biliary obstruction clinically.",
+   "b": [
+    "Acute hepatitis – presents with jaundice but lacks ductal dilatation",
+    "Pancreatic head cancer – may cause painless jaundice; requires CT/MRI for differentiation",
+    "Mirizzi syndrome – gallstone impacted in cystic duct compressing common bile duct"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls specific to low‑resource settings.",
+   "b": [
+    "Normal bilirubin does not exclude early cholangitis; rely on fever and RUQ pain",
+    "Ultrasound may miss small stones; a negative scan should not delay ERCP if clinical suspicion is high",
+    "Fluoroscopy quality may be poor; subtle strictures can be overlooked – consider repeat study if symptoms persist"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain after ERCP",
+  "High‑grade fever, hypotension, or altered mental status (severe cholangitis)",
+  "Persistent vomiting with rising amylase (post‑ERCP pancreatitis)"
+ ],
+ "faq": [
+  {
+   "q": "Why is ERCP preferred over MRCP in emergencies?",
+   "a": "ERCP provides immediate therapeutic options (stone removal, stenting) while MRCP is diagnostic only."
+  },
+  {
+   "q": "Can ERCP be done without fluoroscopy?",
+   "a": "In some centres a ‘pure endoscopic’ approach is used, but ductal visualization is limited and success rates fall."
+  },
+  {
+   "q": "What prophylaxis reduces post‑ERCP pancreatitis?",
+   "a": "Rectal NSAIDs (e.g., indomethacin) given immediately before the procedure lower the risk."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with Charcot’s triad presents to a district hospital lacking MRCP – what is the next step and why? — Immediate ERCP for drainage because cholangitis is grade B‑C and delay increases mortality.",
+  "During ERCP a 12‑mm stone is seen; the endoscopist cannot extract it with a basket – what alternatives are appropriate in a low‑resource setting? — Place a temporary plastic stent to decompress the duct and arrange referral for lithotripsy or repeat ERCP.",
+  "A patient develops severe epigastric pain 6 h after ERCP; amylase is 3‑fold rise – how do you manage? — Admit, keep NPO, give IV fluids, analgesia, and monitor; most cases resolve with supportive care.",
+  "Why is a metal stent favoured over a plastic stent for malignant biliary obstruction? — Metal stents have longer patency (>6 months) and lower occlusion rates, reducing repeat procedures.",
+  "What are the key differences between ERCP‑related cholangitis and sepsis from a urinary source? — ERCP cholangitis shows biliary dilatation, elevated ALP, and often requires biliary drainage; urinary sepsis shows pyuria and needs catheter drainage.",
+  "Explain how you would differentiate Mirizzi syndrome from common bile duct stones on ultrasound. — Mirizzi shows a stone in the cystic duct causing extrinsic compression of the CBD, often with a normal CBD diameter proximal to the compression.",
+  "A patient with HIV on antiretroviral therapy presents with cholestatic LFTs; what opportunistic causes should you consider before ERCP? — CMV cholangitis, Mycobacterium avium complex, and fungal infections; treat medically if identified before invasive procedures.",
+  "What measures can you take if fluoroscopy is unavailable but ERCP is urgently needed? — Use a pure endoscopic approach with careful cannulation, limit contrast use, and arrange percutaneous drainage if drainage fails."
+ ],
+ "related": [
+  "Acute cholangitis",
+  "Choledocholithiasis",
+  "Pancreatitis",
+  "Percutaneous transhepatic biliary drainage",
+  "Magnetic resonance cholangiopancreatography (MRCP)",
+  "Sphincter of Oddi dysfunction"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "title": "Paediatric Neurological Disorders",
+ "subject": "Paediatrics",
+ "summary": "A practical guide for ward rounds in low‑resource settings, focusing on common infections, metabolic causes, and red‑flag signs that require urgent referral. It blends history, exam, and pragmatic investigations.",
+ "aka": [
+  "Child Neurology",
+  "Paediatric Neuro"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Neurological disorders in children encompass any abnormality of the nervous system that affects structure or function, from seizures to developmental delay. Diagnosis starts with a focused history, bedside exam, and targeted investigations.",
+   "b": [
+    "History of onset, triggers, family history",
+    "Cranial nerve exam, motor strength, tone, reflexes",
+    "Developmental milestones"
+   ],
+   "t": [
+    {
+     "a": "Basic CBC",
+     "b": "Normal or mild anaemia – not cause of seizures"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Low sodium <130 mmol/L or low potassium <3.5 mmol/L"
+    },
+    {
+     "a": "Lumbar puncture (if meningitis suspected)",
+     "b": "High WCC >1000/µL or low glucose <2.5 mmol/L"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the Glasgow Coma Scale (GCS) for altered consciousness and the Modified Rankin Scale for functional outcome. Seizure severity is staged by frequency and duration.",
+   "b": [
+    "GCS 13–15 mild, 9–12 moderate, <8 severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infections dominate: malaria, meningitis, HIV, and schistosomiasis. Metabolic causes include hypoglycaemia, hyponatraemia, and thiamine deficiency. Genetic disorders such as cerebral palsy and congenital infections (TORCH) are also common.",
+   "b": [
+    "Genetic/structural: cerebral palsy, congenital hydrocephalus"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentations vary: seizures, altered consciousness, focal deficits, developmental delay, or chronic pain. Look for fever, neck stiffness, or signs of raised intracranial pressure.",
+   "b": [
+    "Developmental delay: speech, motor milestones"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that are affordable and available. Use point‑of‑care devices where possible.",
+   "b": [
+    "Ultrasound for hydrocephalus if available"
+   ],
+   "t": [
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive → treat with artesunate"
+    },
+    {
+     "a": "Rapid HIV test",
+     "b": "Positive → start antiretroviral therapy"
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "CSF WCC >1000/µL or low glucose"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include persistent vomiting, papilledema, focal seizures, or sudden loss of consciousness. Complications may be raised ICP, seizures, or death.",
+   "b": [
+    "Severe hyponatraemia leading to cerebral oedema"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care. Avoid drugs that worsen the primary condition or are unavailable.",
+   "b": [
+    "Monitor for complications: ICP, renal function"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Schedule regular neurodevelopmental assessments, immunisations, and malaria prophylaxis. Educate caregivers on recognising early seizure signs.",
+   "b": [
+    "Counselling on safe sleep and head injury prevention"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Seizures can mimic febrile illness; developmental delay may be mistaken for cerebral palsy; raised ICP may be confused with dehydration.",
+   "b": [
+    "Hyponatraemia vs dehydration"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal CSF glucose can occur in early meningitis; malaria antigen tests may be negative in low parasitaemia; thiamine levels are rarely measured.",
+   "b": [
+    "Thiamine assay unavailable in most labs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Focal neurological deficit",
+  "Papilledema",
+  "Seizure with post‑ictal confusion",
+  "Persistent vomiting with headache"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step if a child has a seizure in a low‑resource setting?",
+   "a": "Check airway, breathing, circulation; give oxygen if needed; start phenobarbital or phenytoin if seizures continue."
+  },
+  {
+   "q": "How do you differentiate febrile seizures from meningitis?",
+   "a": "Look for neck stiffness, photophobia, altered consciousness, and perform a lumbar puncture if any red flag is present."
+  },
+  {
+   "q": "Why is thiamine given before glucose in suspected deficiency?",
+   "a": "Glucose can worsen neurological injury by driving glucose into cells while thiamine is needed for energy metabolism."
+  }
+ ],
+ "exam": [
+  "A 6‑month‑old presents with seizures and fever. What is the next best investigation? — Check for meningitis: lumbar puncture if no contraindication; malaria test if endemic.",
+  "A child with HIV has new onset seizures. What is the most likely cause? — Opportunistic infection such as cryptococcal meningitis or PML; start empirical therapy.",
+  "A 4‑year‑old with chronic renal failure has tremors. What is the most common neurological disorder? — Guillain‑Barré syndrome is rare; the most common is peripheral neuropathy due to uremic toxins.",
+  "A child with a history of malaria now has papilledema. What complication should you suspect? — Cerebral malaria leading to raised intracranial pressure.",
+  "A 2‑year‑old with developmental delay is found to have normal head circumference. What is a likely diagnosis? — Cerebral palsy or spastic diplegia from prematurity.",
+  "A child presents with vomiting, headache, and seizures. Serum sodium is 125 mmol/L. What is the immediate treatment? — Rapid but controlled correction of hyponatraemia with hypertonic saline, monitoring for osmotic demyelination.",
+  "A 3‑year‑old with seizures is started on phenobarbital. What side effect should you monitor? — Hepatotoxicity and sedation; check liver function if available.",
+  "A child with suspected meningitis has a normal CSF glucose. What should you consider? — Early meningitis or partially treated infection; repeat LP if clinical suspicion remains high."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

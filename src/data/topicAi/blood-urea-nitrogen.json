@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Blood Urea Nitrogen in Children",
+ "subject": "Paediatrics",
+ "summary": "BUN reflects renal handling of nitrogen waste and volume status. In low‑resource settings it guides assessment of dehydration, renal dysfunction and catabolic illness. Interpretation must consider local disease patterns and test limitations.",
+ "aka": [
+  "Blood Urea",
+  "Urea nitrogen"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Blood urea nitrogen (BUN) measures the concentration of nitrogen derived from urea in serum. It is reported in mg/dL; the total urea concentration equals BUN × 2.14.",
+   "b": [
+    "Normal paediatric range: 5–18 mg/dL (varies with age).",
+    "BUN is calculated from a basic chemistry panel; no special specimen needed."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "BUN alone does not stage disease, but combined with creatinine (BUN/Cr ratio) it helps differentiate prerenal azotemia from intrinsic renal injury.",
+   "b": [
+    "BUN/Cr >20 : suggests hypovolaemia or prerenal azotemia.",
+    "BUN/Cr 10–20 : mixed or intrinsic renal disease.",
+    "BUN >100 mg/dL in a child usually indicates severe renal failure requiring dialysis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African children the most common precipitants are volume depletion and infectious catabolism.",
+   "b": [
+    "Prerenal: diarrhoea, vomiting, malaria‑induced dehydration, sickle‑cell vaso‑occlusive crisis with fluid loss.",
+    "Renal: acute tubular necrosis from severe malaria, sepsis, nephrotoxic herbal remedies, HIV‑associated nephropathy.",
+    "Post‑renal: obstructive uropathy from posterior urethral valves, schistosomal fibrosis.",
+    "High protein catabolism: severe malnutrition, burns, severe infection."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Elevated BUN is not a symptom but often accompanies clinical signs of the underlying cause.",
+   "b": [
+    "Dehydration: dry mucous membranes, sunken eyes, poor skin turgor, tachycardia.",
+    "Renal failure: oliguria/anuria, peripheral edema, hypertension, uremic odor.",
+    "Catabolic states: weight loss, muscle wasting, lethargy."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum BUN and creatinine",
+     "b": "Is the azotemia prerenal or intrinsic? A ratio >20 points to hypovolaemia; a normal ratio with high creatinine suggests intrinsic renal injury."
+    },
+    {
+     "a": "Urine dipstick and microscopy",
+     "b": "Are there signs of intrinsic renal disease (protein, blood, casts)? Presence of granular casts supports ATN."
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if available)",
+     "b": "Is there hydronephrosis or bladder outlet obstruction? Detects post‑renal causes."
+    },
+    {
+     "a": "Serum electrolytes, bicarbonate",
+     "b": "Is metabolic acidosis present? Low bicarbonate often accompanies high BUN in dehydration."
+    },
+    {
+     "a": "If chemistry panel unavailable",
+     "b": "Use bedside urine specific gravity and clinical volume assessment; repeat BUN after fluid challenge to see if it falls."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected severe azotemia can progress to uremic encephalopathy, pericarditis, and life‑threatening electrolyte disturbances.",
+   "b": [
+    "BUN >100 mg/dL with oliguria → consider dialysis.",
+    "Rapid rise in BUN after fluid resuscitation → possible worsening renal perfusion.",
+    "Acidosis, hyperkalemia, or pulmonary edema → urgent referral."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; then support renal function and monitor trends.",
+   "b": [
+    "Rehydration: isotonic saline bolus 20 mL/kg; reassess BUN after 6 h.",
+    "Treat infection: antimalarials, antibiotics, antiretrovirals as indicated.",
+    "Avoid nephrotoxins: NSAIDs, aminoglycosides, traditional herbal diuretics.",
+    "If intrinsic renal failure suspected, consider diuretics (furosemide) only after volume status is optimized.",
+    "Dialysis: reserved for BUN >100 mg/dL with uremic symptoms or refractory electrolyte imbalance."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Serial BUN/Cr measurements guide recovery; educate families on early rehydration and avoidance of nephrotoxic traditional medicines.",
+   "b": [
+    "Re‑measure BUN and creatinine every 24 h in acute illness.",
+    "Long‑term: monitor growth, blood pressure, and urine protein in children with prior renal injury.",
+    "Vaccinate against hepatitis B and provide malaria prophylaxis to reduce renal insults."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "BUN is sometimes mistaken for serum urea or for total nitrogen balance.",
+   "b": [
+    "Serum urea = BUN × 2.14; both reflect the same molecule but are reported differently.",
+    "Blood urea nitrogen is not a direct measure of kidney filtration rate; creatinine‑based eGFR is more reliable for that purpose."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Several factors can cause a normal BUN despite renal dysfunction.",
+   "b": [
+    "Low protein intake or severe malnutrition lowers BUN.",
+    "Liver failure reduces urea synthesis, giving a falsely low BUN.",
+    "Early intrinsic renal injury may show a normal BUN/Cr ratio."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "BUN >100 mg/dL with oliguria",
+  "Rapidly rising BUN despite fluids",
+  "Signs of uremic encephalopathy (confusion, seizures)",
+  "Severe metabolic acidosis (bicarbonate <15 mmol/L)"
+ ],
+ "faq": [
+  {
+   "q": "Why is BUN high in dehydration?",
+   "a": "Reduced renal perfusion concentrates urea, raising BUN; the BUN/Cr ratio >20 helps identify this prerenal state."
+  },
+  {
+   "q": "Can I rely on BUN alone to diagnose renal failure?",
+   "a": "No; BUN must be interpreted with creatinine, urine output, and clinical context."
+  },
+  {
+   "q": "What if the chemistry lab is unavailable?",
+   "a": "Use clinical volume assessment, urine specific gravity, and repeat BUN after a fluid trial to infer prerenal vs intrinsic causes."
+  }
+ ],
+ "exam": [
+  "A 4‑year‑old with severe malaria presents with sunken eyes and BUN 45 mg/dL. — Explain the pathophysiology, interpret the BUN/Cr ratio, and outline immediate management.",
+  "A child on traditional herbal diuretics has BUN 30 mg/dL, creatinine 1.2 mg/dL, and oliguria. — Differentiate prerenal from intrinsic renal injury and list the next investigative step.",
+  "Why is a BUN/Cr ratio >20 not sufficient to start dialysis in a paediatric patient? — Discuss the role of clinical signs and other laboratory parameters.",
+  "In a child with posterior urethral valves, BUN is 55 mg/dL and creatinine 1.5 mg/dL. — Describe how obstruction alters BUN and the urgent interventions required.",
+  "A malnourished HIV‑positive child has BUN 12 mg/dL but rising creatinine. — Explain why BUN may be falsely low and how you would monitor renal function.",
+  "During a fluid bolus, BUN falls from 70 to 45 mg/dL. — What does this change indicate about the underlying cause?",
+  "When is dialysis indicated in paediatric azotemia? — List the biochemical and clinical thresholds.",
+  "How does severe acidosis influence BUN levels, and what does this mean for management? — Connect metabolic derangement to renal handling of urea."
+ ],
+ "related": [
+  "Serum Creatinine",
+  "Acute Kidney Injury",
+  "Dehydration in Children",
+  "Malaria‑Associated Renal Failure",
+  "Nephrotoxic Herbal Medicines",
+  "Posterior Urethral Valves"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

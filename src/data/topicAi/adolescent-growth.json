@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Adolescent Growth and Puberty",
+ "subject": "Paediatrics",
+ "summary": "Adolescent growth is a rapid phase of height, weight and bone development driven by hormonal changes. Recognising normal versus abnormal patterns guides early detection of endocrine, nutritional and skeletal disorders, especially in low‑resource settings.",
+ "aka": [
+  "pubertal growth spurt",
+  "adolescent growth spurt"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The adolescent growth spurt is a period of accelerated linear growth lasting 2–3 years, occurring earlier in girls (10‑12 y) than boys (12‑14 y). Diagnosis is clinical, using serial height measurements plotted on a growth chart.",
+   "b": [
+    "Height velocity > 6 cm/yr in girls, > 7 cm/yr in boys indicates the peak growth period.",
+    "Bone age (Greulich‑Pyle) within 1 year of chronological age confirms normal timing."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Growth disorders are staged by deviation from expected height velocity and final adult height.",
+   "b": [
+    "Mild: velocity 5‑6 cm/yr (girls) or 6‑7 cm/yr (boys).",
+    "Moderate: velocity 3‑5 cm/yr or > 2 SD below target height.",
+    "Severe: velocity < 3 cm/yr or > 2 SD below target height with delayed bone age."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most adolescents have physiologic growth; pathology should be considered when velocity falls outside expected ranges.",
+   "b": [
+    "Endocrine: hypothyroidism, growth hormone deficiency, hyperthyroidism.",
+    "Nutritional: chronic malnutrition, iron‑deficiency anemia (≈ 2 % of girls).",
+    "Chronic disease: HIV, TB, sickle cell disease, rheumatic heart disease.",
+    "Medications: long‑term glucocorticoids, antiepileptics.",
+    "Genetic: Turner syndrome, constitutional delay of growth and puberty."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with slowed height gain, short stature relative to peers, or delayed secondary sexual characteristics.",
+   "b": [
+    "History of reduced growth velocity on school health records.",
+    "Physical: height < 3rd percentile, delayed bone age, low BMI.",
+    "Associated symptoms: fatigue, cold intolerance (hypothyroidism), menstrual irregularities (iron loss)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serial height measurements",
+     "b": "Is growth velocity adequate? – Decline > 1 cm/yr suggests pathology."
+    },
+    {
+     "a": "Bone age X‑ray (hand/wrist)",
+     "b": "Is skeletal maturation appropriate? – Bone age > 2 years behind chronological age supports delayed growth."
+    },
+    {
+     "a": "Thyroid function tests (TSH, free T4)",
+     "b": "Is hypothyroidism present? – Elevated TSH with low free T4 confirms."
+    },
+    {
+     "a": "IGF‑1 level",
+     "b": "Is growth hormone deficiency likely? – Low IGF‑1 with low GH peaks on stimulation test."
+    },
+    {
+     "a": "CBC with ferritin",
+     "b": "Is iron‑deficiency anemia contributing? – Hb < 12 g/dL (girls) or < 13 g/dL (boys) with low ferritin."
+    },
+    {
+     "a": "HIV test (rapid) if risk factors",
+     "b": "Is chronic infection affecting growth? – Positive test warrants ART and nutritional support."
+    },
+    {
+     "a": "If X‑ray unavailable, use mid‑upper arm circumference (MUAC)",
+     "b": "Is severe malnutrition present? – MUAC < 12.5 cm in adolescents suggests."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised growth failure can lead to permanent short stature, psychosocial distress, and worsening of underlying disease.",
+   "b": [
+    "Severe short stature (< -3 SD) with delayed bone age.",
+    "Signs of systemic disease (persistent fever, weight loss).",
+    "Rapidly progressive skeletal pain – consider osteosarcoma."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, optimise nutrition, and monitor growth.",
+   "b": [
+    "Endocrine: levothyroxine for hypothyroidism; GH therapy for proven deficiency (only where available).",
+    "Nutritional: iron supplementation (ferrous sulfate) for iron‑deficiency; balanced diet with protein and calories.",
+    "Infection: ART for HIV, anti‑TB therapy, malaria prophylaxis where endemic.",
+    "Avoid long‑term steroids; if required, give calcium/vitamin D.",
+    "Counselling on sleep, physical activity and psychosocial support."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular growth monitoring every 3–6 months until final height is reached.",
+   "b": [
+    "Re‑measure height and weight, update growth chart.",
+    "Repeat bone age if growth remains < 5 cm/yr after 6 months.",
+    "Screen for anemia annually in menstruating girls."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic growth failure.",
+   "b": [
+    "Constitutional delay of growth and puberty – normal bone age, later onset of puberty.",
+    "Familial short stature – normal growth velocity, target height matches parents.",
+    "Skeletal dysplasias – abnormal limb proportions, radiographic metaphyseal changes."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Potential pitfalls in interpretation.",
+   "b": [
+    "Bone age may appear normal in early hypothyroidism; rely on clinical signs.",
+    "Ferritin can be elevated in infection, masking iron deficiency – use transferrin saturation.",
+    "IGF‑1 low in malnutrition; repeat after nutritional repletion before diagnosing GH deficiency."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe short stature with height < -3 SD and delayed bone age.",
+  "Rapidly worsening pain over long bones – risk of osteosarcoma.",
+  "Signs of systemic illness: persistent fever, weight loss, night sweats."
+ ],
+ "faq": [
+  {
+   "q": "Why does the growth spurt occur earlier in girls?",
+   "a": "Estrogen triggers epiphyseal plate closure earlier, so girls reach peak height velocity 1–2 years before boys."
+  },
+  {
+   "q": "Can iron‑deficiency anemia really affect height?",
+   "a": "Yes, chronic anemia reduces oxygen delivery to growth plates, contributing to reduced velocity, especially in menstruating girls."
+  },
+  {
+   "q": "What if I cannot obtain a bone‑age X‑ray?",
+   "a": "Use serial height velocity and clinical assessment; if growth remains < 5 cm/yr after 6 months, refer for specialist evaluation."
+  }
+ ],
+ "exam": [
+  "A 13‑year‑old girl presents with height falling from the 50th to the 5th percentile over 6 months – what investigations would you order and why? — Assess growth velocity, obtain bone age, thyroid function, CBC with ferritin, and HIV test to identify endocrine, nutritional or infectious causes.",
+  "How does hypothyroidism alter adolescent growth, and what clinical clues help you differentiate it from constitutional delay? — Hypothyroidism causes slowed velocity, cold intolerance, dry skin; bone age lags > 2 years, whereas constitutional delay shows normal thyroid labs and later puberty.",
+  "A boy with sickle cell disease has stopped growing at 14 years; what management steps are essential? — Optimize hydroxyurea, ensure adequate nutrition, screen for iron deficiency, and consider endocrine referral for GH assessment.",
+  "Explain why iron‑deficiency anemia is common during the adolescent growth spurt in girls and how you would treat it in a low‑resource clinic. — Rapid growth increases iron demand; menstrual loss adds to deficit. Treat with oral ferrous sulfate, dietary counseling, and de‑worming if helminths are present.",
+  "What red‑flag symptom in an adolescent with rapid height gain should prompt evaluation for osteosarcoma? — New, localized bone pain or swelling, especially around the knee, warrants X‑ray and referral.",
+  "When is growth hormone therapy indicated in adolescents, and why might it be unavailable in low‑resource settings? — Indicated for confirmed GH deficiency with low IGF‑1 after stimulation testing; cost and need for monitoring limit use in many settings.",
+  "A patient on long‑term steroids presents with slowed growth – how would you modify therapy? — Reduce steroid dose if possible, add calcium/vitamin D, and consider alternative agents; monitor bone age and height.",
+  "Distinguish between familial short stature and growth failure due to chronic disease on a growth chart. — Familial short stature follows a normal growth curve parallel to target height; chronic disease shows a drop in velocity and falling percentiles."
+ ],
+ "related": [
+  "Pubertal Development",
+  "Growth Hormone Deficiency",
+  "Hypothyroidism in Adolescents",
+  "Iron‑Deficiency Anemia",
+  "Sickle Cell Disease and Growth",
+  "Osteosarcoma"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}

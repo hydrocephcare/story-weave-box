@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "title": "Poliomyelitis",
+ "subject": "Microbiology & immunology",
+ "summary": "Poliomyelitis is an acute, non‑contagious viral infection that attacks anterior horn cells, causing asymmetric flaccid paralysis. In low‑resource settings, diagnosis relies on clinical features and simple laboratory tests; management is supportive with early respiratory support.",
+ "aka": [
+  "Polio",
+  "Poliomyelitis virus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Poliomyelitis is caused by the enterovirus type 1, 2 or 3, transmitted faecal‑oral route. It is largely controlled by vaccination but outbreaks still occur in areas with low coverage.",
+   "b": [
+    "Highly contagious in children <5",
+    "Incubation 7–14 days",
+    "Clinical spectrum: asymptomatic, flu‑like, paralytic"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The virus is a non‑enveloped, single‑stranded RNA virus of the Picornaviridae family. It has a tropism for motor neurons in the anterior horn of the spinal cord.",
+   "b": [
+    "Small 30‑40 nm capsid",
+    "Stable in environment",
+    "No cell culture needed for diagnosis"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is faecal‑oral; contaminated water or food is common in low‑resource settings. The virus replicates in the gut, spreads hematogenously to the CNS.",
+   "b": [
+    "No airborne spread",
+    "No vector"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The hallmark is asymmetric flaccid paralysis of limbs, often with bulbar involvement. Sensory nerves are spared, distinguishing it from spinal cord lesions.",
+   "b": [
+    "Flaccid paralysis, no sensory loss",
+    "Bulbar palsy in severe cases",
+    "Respiratory failure in 5–10%"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical diagnosis is based on history of recent infection and asymmetric flaccid paralysis. Laboratory confirmation is rarely needed in resource‑poor settings.",
+   "b": [
+    "CSF: normal cell count, normal protein"
+   ],
+   "t": [
+    {
+     "a": "CSF cell count",
+     "b": "Normal or <5 cells/µL"
+    },
+    {
+     "a": "Serology (IgM in serum or CSF)",
+     "b": "Positive IgM in serum or CSF"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "There is no antiviral therapy; care focuses on supportive measures, early recognition of respiratory compromise and vaccination.",
+   "b": [
+    "Early intubation if respiratory muscle weakness",
+    "Physiotherapy for residual weakness",
+    "Vaccination (IPV or OPV)"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that poliomyelitis presents with flaccid paralysis without sensory loss and that respiratory failure is the main cause of death.",
+   "b": [
+    "Flaccid paralysis + normal sensation = polio"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of acute flaccid paralysis include Guillain‑Barré syndrome, transverse myelitis, and spinal cord compression.",
+   "b": [
+    "GBS: ascending weakness, areflexia, sensory changes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "CSF protein may be mildly elevated in early polio; normal CSF does not exclude polio.",
+   "b": [
+    "Normal CSF does not rule out polio"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, monitor respiratory function, and ensure early vaccination of contacts.",
+   "b": [
+    "Supportive care: fluids, nutrition, physiotherapy"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent referral if respiratory distress, rapid progression of weakness, or loss of consciousness.",
+   "b": [
+    "Respiratory rate >30/min",
+    "SpO2 <90%",
+    "Rapidly worsening paralysis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Respiratory distress",
+  "Rapidly progressive paralysis",
+  "Loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common age group affected by poliomyelitis?",
+   "a": "Children under 5 years are most vulnerable, especially in areas with low vaccination coverage."
+  },
+  {
+   "q": "Can poliomyelitis be transmitted from person to person?",
+   "a": "Yes, via the faecal‑oral route; it is not airborne."
+  },
+  {
+   "q": "What is the main reason for death in polio patients?",
+   "a": "Respiratory failure due to paralysis of the diaphragm and intercostal muscles."
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old presents with sudden onset of right leg weakness and normal sensation – what is the most likely diagnosis? — Asymmetric flaccid paralysis with preserved sensation points to poliomyelitis.",
+  "A child with suspected polio develops respiratory distress – what is the first step in management? — Early intubation and mechanical ventilation to support diaphragm function.",
+  "Which laboratory test would confirm acute poliomyelitis if available? — Serum or CSF IgM against poliovirus.",
+  "Why is a normal CSF cell count not sufficient to rule out polio? — Polio can have normal or mildly elevated CSF; clinical picture is paramount.",
+  "What is the most important public health measure to prevent polio outbreaks? — Routine immunisation with IPV or OPV.",
+  "A patient with acute flaccid paralysis has normal reflexes – what condition should be considered? — Guillain‑Barré syndrome typically has areflexia; preserved reflexes suggest polio."
+ ],
+ "related": [
+  "Acute flaccid paralysis",
+  "Guillain‑Barré syndrome",
+  "Enterovirus infections",
+  "Vaccination programmes"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-14",
+ "reviewed": false
+}
