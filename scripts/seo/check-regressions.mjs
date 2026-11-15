@@ -11,7 +11,6 @@ const auditScript = read("scripts/seo/audit-production.mjs");
 const libraryMeta = read("src/lib/libraryMeta.js");
 const libraryPrerender = read("scripts/library/prerender.mjs");
 const htmlTemplate = read("index.html");
-const htmlTemplate = read("index.html");
 const seoLib = read("src/lib/seo.ts");
 const staticNotePage = read("src/pages/StaticNote.tsx");
 
