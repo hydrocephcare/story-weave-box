@@ -125,6 +125,8 @@ function isCrawler(userAgent: string | null): boolean {
     ua.includes("bot") ||
     ua.includes("crawl") ||
     ua.includes("spider") ||
+    ua.includes("openseo-audit") ||
+    ua.includes("ompathstudymonitor") ||
     // Google fetchers that do NOT contain "bot" in the UA string. Without
     // these, Google-InspectionTool / GoogleOther get the JS shell while
     // Googlebot gets the pre-rendered page — which is exactly what makes

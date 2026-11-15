@@ -18,6 +18,7 @@ const checks = [
   ["interactive clinical cases are excluded from the sitemap", sitemap.includes("clinical") && sitemap.includes("case")],
   ["exam start routes are excluded from the sitemap", sitemap.includes("exams") && sitemap.includes("start")],
   ["sitemap filters known removed URLs", sitemap.includes("REMOVED_404") && sitemap.includes("weekly-pathology-exam-april-3-2026-sections-b-and-c")],
+  ["metadata API recognises both SEO audit user agents as crawlers", meta.includes('ua.includes("openseo-audit")') && meta.includes('ua.includes("ompathstudymonitor")')],
   ["crawler metadata reads generated topic JSON pages", meta.includes("/topics/") && meta.includes("topicSlug") && meta.includes("topicRes.status !== 404")],
   ["essay crawler metadata combines duplicate slug records", meta.includes("source_count: rows.length") && meta.includes('mergeQuestions("short_answer_questions")')],
   ["browser essay lookup uses the same six-to-twelve character ID suffix rule", essayPage.includes("replace(/-[0-9a-f]{6,12}$/i")],
