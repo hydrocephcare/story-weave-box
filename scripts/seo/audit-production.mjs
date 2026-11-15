@@ -54,7 +54,7 @@ function extractMeta(html, name) {
   return (html.match(re) || html.match(reverse) || [])[1] || "";
 }
 function pageTitle(html) {
-  return (html.match(/<title[^>]*>([\\s\\S]*?)<\\/title>/i) || [])[1]?.replace(/<[^>]+>/g, "").trim() || "";
+  return (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1]?.replace(/<[^>]+>/g, "").trim() || "";
 }
 function canonical(html) {
   const m = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i)
