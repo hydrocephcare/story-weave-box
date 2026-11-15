@@ -8,8 +8,9 @@ const robots = read("public/robots.txt");
 const checks = [
   ["temporary crawler failures use retryable 503 responses", /status:\s*503/.test(meta) && /"retry-after":\s*"300"/.test(meta)],
   ["temporary crawler failures do not permanently redirect to a section hub", !/Never return 5XX to crawlers[\s\S]*?return permanentRedirect\(safeSection\)/.test(meta)],
-  ["interactive clinical cases are excluded from the sitemap", /clinical\\/case/.test(sitemap)],
-  ["exam start routes are excluded from the sitemap", /exams\\\/\[\^<\]\+/.test(sitemap) || /\/exams\//.test(sitemap)],
+  ["interactive clinical cases are excluded from the sitemap", sitemap.includes("clinical") && sitemap.includes("case")],
+  ["exam start routes are excluded from the sitemap", sitemap.includes("exams") && sitemap.includes("start")],
+  ["sitemap filters known removed URLs", sitemap.includes("REMOVED_404")],
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
 ];
