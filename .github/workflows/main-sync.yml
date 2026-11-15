@@ -31,6 +31,12 @@ jobs:
       - name: Install exact dependencies
         run: npm ci
 
+      - name: SEO source guardrails
+        run: node scripts/seo/check-regressions.mjs
+
+      - name: Validate production monitor syntax
+        run: node --check scripts/seo/audit-production.mjs
+
       - name: Test combined Lovable and repository code
         run: npm test
         env:

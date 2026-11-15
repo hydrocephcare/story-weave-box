@@ -261,13 +261,45 @@ function cleanPublicSlug(rawSlug: string | null | undefined, fallbackTitle: stri
 
 const STOP_WORDS = new Set(["the", "and", "for", "with", "from", "into", "onto", "this", "that", "notes", "note", "mcq", "mcqs", "quiz", "questions", "study"]);
 
+const LEGACY_REDIRECT_PATHS = new Set([
+  "/blog/amebiasis-pathogenic-free-living-amebae-guide",
+  "/blog/entamoeba-histolytica-amoebiasis",
+  "/blog/liver-tumors-benign-and-malignant-overview",
+  "/blog/lymphoma-overview-classification",
+  "/blog/liver-tumors-summary-notes",
+  "/blog/non-hodgkin-lymphoma",
+  "/blog/pleural-effusion-lights-criteria-y4",
+  "/blog/pneumothorax-clinical-management-y4",
+  "/blog/bronchial-asthma-internal-medicine-y4",
+  "/mcqs/medical-bacteriology-mcqs",
+  "/mcqs/chemical-pathology-mcqs",
+  "/mcqs/cardiovascular-pathology-mcqs",
+  "/mcqs/respiratory-pathology-mcqs",
+  "/mcqs/glomerular-diseases-mcqs",
+  "/mcqs/sickle-cell-anaemia-mcqs",
+  "/mcqs/infective-endocarditis-mcqs",
+  "/mcqs/biliary-tract-disease-mcqs",
+  "/mcqs/rheumatic-heart-disease-mcqs",
+  "/mcqs/paed-2021-mcqs",
+  "/mcqs/congenital-heart-disease-mcqs",
+  "/mcqs/gout-mcqs",
+  "/mcqs/pneumonia-mcqs",
+  "/mcqs/osteoarthritis-presentation-mcqs",
+  "/mcqs/fibromyalgia-presentation-mcqs",
+  "/mcqs/crystal-arthropathies-mcqs",
+  "/mcqs/sepsis-mcqs",
+  "/mcqs/hepatic-amoebiasis-mcqs",
+  "/mcqs/blood-transfusion-mcqs",
+  "/essays/congenital-heart-disease-essay-questions",
+]);
+
 function tokenScore(target: string, candidate: string): number {
   const a = new Set(String(target || "").toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/[\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
   const b = new Set(String(candidate || "").toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/[\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
   if (!a.size || !b.size) return 0;
   let overlap = 0;
   a.forEach((t) => { if (b.has(t)) overlap++; });
-  return overlap / (new Set([...a, ...b]).size || 1);
+  return (2 * overlap) / (a.size + b.size);
 }
 
 async function closestLivePath(table: string, param: string, prefix: "/blog" | "/mcqs" | "/flashcards" | "/essays" | "/contests", fallback: string): Promise<string | null> {
@@ -282,10 +314,16 @@ async function closestLivePath(table: string, param: string, prefix: "/blog" | "
       score = nextScore;
     }
   }
-  return best && score >= 0.28 ? `${prefix}/${cleanPublicSlug(best.slug, best.title, fallback)}` : null;
+  // Only pre-approved legacy URLs may use this high-confidence fallback.
+  // Unknown/missing slugs must return 410, not a misleading permanent redirect.
+  return best && score >= 0.72 ? `${prefix}/${cleanPublicSlug(best.slug, best.title, fallback)}` : null;
 }
 
-/** A close live page to send an old address to, or a clear "gone" answer when there is none. */
+async function verifiedLegacyRedirect(path: string, table: string, param: string, prefix: "/blog" | "/mcqs" | "/flashcards" | "/essays", fallback: string): Promise<string | null> {
+  if (!LEGACY_REDIRECT_PATHS.has(path)) return null;
+  return closestLivePath(table, param, prefix, fallback);
+}
+
 function redirectOrGone(path: string | null, hub: string, self = ""): Response {
   // a redirect to the same address is a loop: answer "gone" instead
   if (path && path !== self) return permanentRedirect(path);
@@ -551,10 +589,8 @@ async function fetchEssayByIdOrSlug(param: string) {
 async function fetchEssayBySlugOrId(param: string) {
   const decoded = decodeURIComponent(param).trim();
   const cols = "id,title,slug,category,short_answer_questions,long_answer_questions,article_id,created_at,updated_at";
-  const bySlug = await sbFetch("essays",
-    `select=${cols}&slug=eq.${encodeURIComponent(decoded)}&published=eq.true&deleted_at=is.null&limit=1`
-  );
-  if (bySlug && bySlug.length > 0) return bySlug[0];
+
+  // UUID-based legacy links identify one exact record.
   const id = extractUuidFromParam(param);
   if (id) {
     const byId = await sbFetch("essays",
@@ -562,18 +598,58 @@ async function fetchEssayBySlugOrId(param: string) {
     );
     if (byId && byId.length > 0) return byId[0];
   }
-  const candidates = await sbFetch("essays", "select=id,title,slug&published=eq.true&deleted_at=is.null&order=created_at.asc&limit=1000");
+
+  // A clean public slug can represent several records (e.g. the same essay
+  // title imported for more than one unit/year). Resolve all of them in a
+  // stable order and combine their questions instead of silently choosing
+  // an arbitrary duplicate record.
+  const candidates = await sbFetch(
+    "essays",
+    "select=id,title,slug&published=eq.true&deleted_at=is.null&order=created_at.asc&limit=1500"
+  );
   const wanted = decoded.toLowerCase();
-  const match = (candidates || []).find((row: Record<string, string>) =>
+  const matches = (candidates || []).filter((row: Record<string, string>) =>
     cleanPublicSlug(row.slug, row.title, "essay") === wanted ||
     slugify(row.title || "") === wanted ||
     String(row.slug || "").toLowerCase() === wanted
   );
-  if (!match?.id) return null;
-  const byClean = await sbFetch("essays",
-    `select=${cols}&id=eq.${encodeURIComponent(match.id)}&published=eq.true&deleted_at=is.null&limit=1`
+  if (!matches.length) return null;
+
+  const ids = matches.map((row: Record<string, string>) => row.id).filter(Boolean);
+  const rows = await sbFetch(
+    "essays",
+    `select=${cols}&id=in.(${ids.join(",")})&published=eq.true&deleted_at=is.null&order=created_at.asc`
   );
-  return byClean && byClean.length > 0 ? byClean[0] : null;
+  if (!rows?.length) return null;
+  if (rows.length === 1) return rows[0];
+
+  const mergeQuestions = (field: "short_answer_questions" | "long_answer_questions") => {
+    const seen = new Set<string>();
+    const merged: unknown[] = [];
+    for (const row of rows) {
+      const questions = Array.isArray(row[field]) ? row[field] : [];
+      for (const question of questions) {
+        if (!question || typeof question !== "object") continue;
+        const item = question as Record<string, unknown>;
+        const stem = String(item.question || "").replace(/\s+/g, " ").trim();
+        if (!stem) continue;
+        const answer = String(item.answer || "").replace(/\s+/g, " ").trim();
+        const key = `${stem.toLowerCase()}|${answer.toLowerCase()}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        merged.push(question);
+      }
+    }
+    return merged;
+  };
+  const categories = [...new Set(rows.map((row: Record<string, string>) => String(row.category || "").trim()).filter(Boolean))];
+  return {
+    ...rows[0],
+    category: categories.join(" · "),
+    short_answer_questions: mergeQuestions("short_answer_questions"),
+    long_answer_questions: mergeQuestions("long_answer_questions"),
+    source_count: rows.length,
+  };
 }
 
 async function fetchStoryByParam(param: string) {
@@ -944,27 +1020,76 @@ export default async function handler(req: Request): Promise<Response> {
       keywords = `OmpathStudy, medical contest Kenya, ${contest.title}, live exam competition`;
       type = "website";
     } else if (section === "topic" && param) {
-      // a topic page written on the site since the last deploy has no prepared page yet: its share card comes straight from the database
-      const rows = await sbFetch("topic_pages", `select=slug,name,category,content&slug=eq.${encodeURIComponent(decodeURIComponent(param).toLowerCase())}&status=eq.published&limit=1`).catch(() => []);
-      const row = rows?.[0];
-      if (row) {
-        const c = row.content || {};
-        title = topicTitle(row.name, row.category);
-        description = toMetaDescription(c.summary || `Everything on ${row.name} from Ompath Study.`, `Notes, images and practice questions on ${row.name}.`);
-        ogImage = cardUrl(row.name, row.category, "Topic", c.summary || "");
-        keywords = `${row.name}, ${row.category || "medicine"}, medical students, Ompath Study, study notes, MCQs`;
+      const topicSlug = decodeURIComponent(param).trim().toLowerCase();
+      let topicData: Record<string, any> | null = null;
+      // TopicPage reads these generated JSON files directly. Crawler metadata
+      // must use the same source; checking only topic_pages in Supabase wrongly
+      // noindexed many valid generated topic pages.
+      const topicRes = await fetch(`${origin}/topics/${encodeURIComponent(topicSlug)}.json`, {
+        headers: { accept: "application/json" },
+      });
+      if (topicRes.ok) {
+        const candidate = await topicRes.json() as Record<string, any>;
+        if (candidate?.s === topicSlug && candidate?.n) topicData = candidate;
+      } else if (topicRes.status !== 404) {
+        // A temporary asset/CDN failure is not proof that the topic is missing.
+        // Let the outer handler return a retryable 503 rather than accidental noindex.
+        throw new Error(`Topic metadata source unavailable: HTTP ${topicRes.status}`);
+      }
+
+      let row: Record<string, any> | null = null;
+      if (!topicData) {
+        const rows = await sbFetch(
+          "topic_pages",
+          `select=slug,name,category,content&slug=eq.${encodeURIComponent(topicSlug)}&status=eq.published&limit=1`
+        ).catch(() => []);
+        row = rows?.[0] ?? null;
+      }
+
+      if (topicData || row) {
+        const name = String(topicData?.n || row?.name || "Medical topic");
+        const category = String(topicData?.c || row?.category || "Medicine");
+        const content = topicData?.ai || row?.content || {};
+        const summary = String(content.summary || topicData?.lead?.t || `Study notes and clinical revision on ${name}.`);
+        title = topicTitle(name, category);
+        description = toMetaDescription(summary, `Medical study notes, key concepts and practice questions on ${name}.`);
+        ogImage = cardUrl(name, category, "Topic", summary);
+        keywords = `${name}, ${category}, medical students, Ompath Study, clinical study notes, revision questions`;
         type = "article";
-        schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "MedicalWebPage", name: title, url: absoluteUrl, description, image: ogImage, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: origin } });
-        const secs = Array.isArray(c.sections) ? c.sections : [];
-        bodyExtra = `<article><h1>${htmlEscape(row.name)}</h1><p>${htmlEscape(c.summary || "")}</p>${secs.map((x: { h?: string; p?: string; b?: string[] }) => `<h2>${htmlEscape(x.h || "")}</h2>${x.p ? `<p>${htmlEscape(x.p)}</p>` : ""}${Array.isArray(x.b) ? `<ul>${x.b.map((t) => `<li>${htmlEscape(t)}</li>`).join("")}</ul>` : ""}`).join("")}</article>`;
+        schemaJson = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          name: title,
+          url: absoluteUrl,
+          description,
+          image: ogImage,
+          about: { "@type": "Thing", name },
+          isPartOf: { "@type": "WebSite", name: "Ompath Study", url: origin },
+        });
+
+        const sections = Array.isArray(content.sections) && content.sections.length
+          ? content.sections
+          : (Array.isArray(topicData?.sec) ? topicData.sec : []);
+        const sectionHtml = sections.slice(0, 14).map((x: { h?: string; p?: string; b?: string[]; t?: { a?: string; b?: string }[] }) =>
+          `<section><h2>${htmlEscape(x.h || "")}</h2>${x.p ? `<p>${htmlEscape(x.p)}</p>` : ""}${Array.isArray(x.b) && x.b.length ? `<ul>${x.b.slice(0, 10).map((t) => `<li>${htmlEscape(t)}</li>`).join("")}</ul>` : ""}${Array.isArray(x.t) && x.t.length ? `<dl>${x.t.slice(0, 12).map((t) => `<div><dt><strong>${htmlEscape(t.a || "")}</strong></dt><dd>${htmlEscape(t.b || "")}</dd></div>`).join("")}</dl>` : ""}</section>`
+        ).join("");
+        const sources = Array.isArray(topicData?.src) ? topicData.src.filter((x: { u?: string }) => String(x.u || "").startsWith("/")).slice(0, 8) : [];
+        const sourceHtml = sources.length
+          ? `<section><h2>Related study resources</h2><ul>${sources.map((x: { u?: string; t?: string }) => `<li><a href="${htmlEscape(x.u || "#")}">${htmlEscape(x.t || "Related study notes")}</a></li>`).join("")}</ul></section>`
+          : "";
+        const fallbackSections = !sectionHtml && Array.isArray(topicData?.snip)
+          ? `<ul>${topicData.snip.slice(0, 8).map((x: { t?: string }) => `<li>${htmlEscape(x.t || "")}</li>`).join("")}</ul>`
+          : "";
+        bodyExtra = `<article><h1>${htmlEscape(name)}</h1><p>${htmlEscape(summary)}</p>${sectionHtml || fallbackSections}${sourceHtml}</article>`;
       } else {
-        // no written page for this topic: crawlers would get the generic home-page title and read it as a copy of the home page, so keep it out of search results
-        return new Response(buildHtml({ title: "Topic | OmpathStudy", description: "This topic page has no written overview yet.", url: absoluteUrl, ogImage: OG_FALLBACK_IMAGE }).replace("</title>", "</title><meta name=\"robots\" content=\"noindex,follow\" />"), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
+        // Only genuinely missing topic pages are excluded; generated public JSON
+        // pages are recognised above even when they are not in topic_pages.
+        return new Response(buildHtml({ title: "Topic | OmpathStudy", description: "This topic page has no written overview yet.", url: absoluteUrl, ogImage: OG_FALLBACK_IMAGE }).replace("</title>", '</title><meta name="robots" content="noindex,follow" />'), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
       }
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
       if (!article) {
-        return redirectOrGone(await closestLivePath("articles", param, "/blog", "article"), "/blog", `/blog/${param}`);
+        return redirectOrGone(await verifiedLegacyRedirect(`/blog/${param}`, "articles", param, "/blog", "article"), "/blog", `/blog/${param}`);
       }
       // The requested param may be a stale/UUID/near-match variant of this
       // article's slug. Always 301 to the article's own true canonical path
@@ -1007,7 +1132,7 @@ export default async function handler(req: Request): Promise<Response> {
     } else if (section === "mcqs" && param) {
       const mcq = await fetchMcqSetBySlugOrId(param);
       if (!mcq) {
-        return redirectOrGone(await closestLivePath("mcq_sets", param, "/mcqs", "quiz"), "/mcqs", `/mcqs/${param}`);
+        return redirectOrGone(await verifiedLegacyRedirect(`/mcqs/${param}`, "mcq_sets", param, "/mcqs", "quiz"), "/mcqs", `/mcqs/${param}`);
       }
       const canonicalMcqPath = `/mcqs/${cleanPublicSlug(mcq.slug, mcq.title, "quiz")}`;
       if (canonicalMcqPath !== `/mcqs/${param}`) {
@@ -1078,7 +1203,7 @@ ${explanationLine}
     } else if (section === "flashcards" && param) {
       const set = await fetchFlashcardSetBySlugOrId(param);
       if (!set) {
-        return redirectOrGone(await closestLivePath("flashcard_sets", param, "/flashcards", "flashcards"), "/flashcards", `/flashcards/${param}`);
+        return redirectOrGone(await verifiedLegacyRedirect(`/flashcards/${param}`, "flashcard_sets", param, "/flashcards", "flashcards"), "/flashcards", `/flashcards/${param}`);
       }
       const canonicalFlashcardPath = `/flashcards/${cleanPublicSlug(set.slug, set.title, "flashcards")}`;
       if (canonicalFlashcardPath !== `/flashcards/${param}`) {
@@ -1131,7 +1256,7 @@ ${explanationLine}
 
     } else if (section === "essays" && param) {
       const essay = await fetchEssayBySlugOrId(param);
-      if (!essay) return redirectOrGone(await closestLivePath("essays", param, "/essays", "essay"), "/essays", `/essays/${param}`);
+      if (!essay) return redirectOrGone(await verifiedLegacyRedirect(`/essays/${param}`, "essays", param, "/essays", "essay"), "/essays", `/essays/${param}`);
       const canonicalEssayPath = `/essays/${cleanPublicSlug(essay.slug, essay.title, "essay")}`;
       if (canonicalEssayPath !== `/essays/${param}`) return permanentRedirect(canonicalEssayPath);
       const saq = Array.isArray(essay.short_answer_questions) ? essay.short_answer_questions : [];
@@ -1216,14 +1341,20 @@ ${explanationLine}
       },
     });
   } catch (err) {
-    // Never return 5XX to crawlers — soft-redirect to the section root so
-    // pages are removed/consolidated cleanly in Google + Ahrefs reports.
-    const safeSection = (() => {
-      const seg = (new URL(req.url).searchParams.get("path") || "/").split("?")[0].split("/").filter(Boolean)[0] || "";
-      if (["blog", "mcqs", "flashcards", "stories", "exams", "essays", "contests"].includes(seg)) return `/${seg}`;
-      return "/";
-    })();
-    console.error("og-meta soft-redirect:", err instanceof Error ? err.message : String(err));
-    return permanentRedirect(safeSection);
+    // A temporary database/network failure is not evidence that a public page has moved.
+    // Never issue a permanent redirect to a section hub here: Google can cache that 301
+    // and replace a valid article's canonical URL with the hub. Return a retryable 503.
+    console.error("og-meta temporary failure:", err instanceof Error ? err.message : String(err));
+    return new Response(
+      "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>Temporarily unavailable | OmpathStudy</title></head><body><h1>Temporarily unavailable</h1><p>Please retry this page shortly.</p></body></html>",
+      {
+        status: 503,
+        headers: {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "no-store",
+          "retry-after": "300",
+        },
+      },
+    );
   }
 }

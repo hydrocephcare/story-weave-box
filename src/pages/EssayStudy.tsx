@@ -31,42 +31,100 @@ export default function EssayStudy() {
   useEffect(() => {
     if (!slug) return;
 
-    // public links carry the clean slug; the stored one may end in the id prefix
-    const lookup = async (): Promise<{ data: any }> => {
-      const exact = await supabase.from("essays").select("*").eq("slug", slug).maybeSingle();
-      if (exact.data) return exact;
-      const alt = await supabase.from("essays").select("*").ilike("slug", `${slug.replace(/[%_]/g, "")}-%`).eq("published", true).is("deleted_at", null).limit(5);
-      return { data: (alt.data || []).find((row: any) => /^[0-9a-f]{6,12}$/i.test(String(row.slug).slice(slug.length + 1))) ?? null };
+    const slugify = (value: string) => String(value || "").toLowerCase().trim()
+      .replace(/&/g, " and ")
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
+    const cleanPublicSlug = (rawSlug: string | null | undefined, title: string) => {
+      const base = String(rawSlug || slugify(title) || "essay").trim().toLowerCase();
+      return base
+        .replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-/i, "")
+        .replace(/-[0-9a-f]{6,12}$/i, "")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "") || "essay";
     };
+
+    const lookup = async (): Promise<Essay[]> => {
+      const uuid = slug.match(/[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/i)?.[0];
+      if (uuid) {
+        const byId = await supabase.from("essays").select("*").eq("id", uuid).eq("published", true).is("deleted_at", null).maybeSingle();
+        if (byId.data) return [byId.data as unknown as Essay];
+      }
+
+      // Match the same cleaned slug rules used by the server and sitemap.
+      // Load all matching records so repeated titles from different units do
+      // not randomly select one row or generate a different canonical URL.
+      const { data: candidates, error } = await supabase.from("essays")
+        .select("id,slug,title")
+        .eq("published", true)
+        .is("deleted_at", null)
+        .order("created_at", { ascending: true })
+        .limit(1500);
+      if (error) throw error;
+      const wanted = slug.toLowerCase();
+      const matches = (candidates || []).filter((row: any) =>
+        cleanPublicSlug(row.slug, row.title) === wanted ||
+        slugify(row.title || "") === wanted ||
+        String(row.slug || "").toLowerCase() === wanted
+      );
+      if (!matches.length) return [];
+      const { data: fullRows, error: fullError } = await supabase.from("essays")
+        .select("*")
+        .in("id", matches.map((row: any) => row.id))
+        .eq("published", true)
+        .is("deleted_at", null)
+        .order("created_at", { ascending: true });
+      if (fullError) throw fullError;
+      return (fullRows || []) as unknown as Essay[];
+    };
+
+    const mergeQuestions = (rows: Essay[], field: "short_answer_questions" | "long_answer_questions") => {
+      const seen = new Set<string>();
+      const merged: { question: string; answer: string }[] = [];
+      for (const row of rows) {
+        for (const item of Array.isArray(row[field]) ? row[field] : []) {
+          const question = String(item?.question || "").replace(/\s+/g, " ").trim();
+          if (!question) continue;
+          const answer = String(item?.answer || "").replace(/\s+/g, " ").trim();
+          const key = `${question.toLowerCase()}|${answer.toLowerCase()}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          merged.push(item);
+        }
+      }
+      return merged;
+    };
+
     lookup()
-      .then(({ data }) => {
-        // fallback: if slug not found, try fetching by id (for old links)
-        if (!data) {
-          return supabase
-            .from("essays")
-            .select("*")
-            .eq("id", slug)
-            .maybeSingle()
-            .then(({ data: fallbackData }) => {
-              const e = fallbackData as unknown as Essay | null;
-              setEssay(e);
-              if (e) {
-                const canonicalSlug = String(e.slug || e.title || e.id).trim().toLowerCase().replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-/i, "").replace(/-[0-9a-f]{6,12}$/i, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
-                const canonicalPath = `/essays/${canonicalSlug}`;
-                if (location.pathname !== canonicalPath) navigate(canonicalPath, { replace: true });
-                updateMetaTags({ title: `${e.title} – Essay`, description: `Practice structured medical answers for ${e.title} here.`, url: `${SITE_URL}${canonicalPath}`, type: "article" });
-              }
-              setLoading(false);
-            });
+      .then((rows) => {
+        if (!rows.length) {
+          setEssay(null);
+          setLoading(false);
+          return;
         }
-        const e = data as unknown as Essay | null;
+        const categories = [...new Set(rows.map((row) => String(row.category || "").trim()).filter(Boolean))];
+        const e = {
+          ...rows[0],
+          category: categories.join(" · "),
+          short_answer_questions: mergeQuestions(rows, "short_answer_questions"),
+          long_answer_questions: mergeQuestions(rows, "long_answer_questions"),
+        } as Essay;
         setEssay(e);
-        if (e) {
-          const canonicalSlug = String(e.slug || e.title || e.id).trim().toLowerCase().replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-/i, "").replace(/-[0-9a-f]{6}$/i, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
-          const canonicalPath = `/essays/${canonicalSlug}`;
-          if (location.pathname !== canonicalPath) navigate(canonicalPath, { replace: true });
-          updateMetaTags({ title: `${e.title} – Essay`, description: `Practice structured medical answers for ${e.title} here.`, url: `${SITE_URL}${canonicalPath}`, type: "article" });
-        }
+        const canonicalSlug = cleanPublicSlug(e.slug, e.title);
+        const canonicalPath = `/essays/${canonicalSlug}`;
+        if (location.pathname !== canonicalPath) navigate(canonicalPath, { replace: true });
+        updateMetaTags({
+          title: `${e.title} – Essay`,
+          description: `Practice ${e.short_answer_questions.length + e.long_answer_questions.length} structured medical questions on ${e.title} here.`,
+          url: `${SITE_URL}${canonicalPath}`,
+          type: "article",
+        });
+        setLoading(false);
+      })
+      .catch(() => {
+        setEssay(null);
         setLoading(false);
       });
   }, [slug, location.pathname, navigate]);

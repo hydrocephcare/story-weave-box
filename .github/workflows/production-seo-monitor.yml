@@ -1,0 +1,30 @@
+name: Production SEO monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-seo-monitor
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Audit live robots.txt, sitemaps and indexable pages
+        run: npm run seo:audit
+        env:
+          SEO_AUDIT_MAX_URLS: "1000"
+          SEO_AUDIT_CONCURRENCY: "10"
