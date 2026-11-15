@@ -29,7 +29,7 @@ const checks = [
       return ua.includes("OpenSEO-Audit") && ua.includes("OmpathStudySEOMonitor");
     });
   })()],
-  ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title")],
+  ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title") && auditScript.includes("missing a primary H1 heading")],
   ["static note metadata is length-limited and the AUB page uses concise O&G metadata", seoLib.includes("buildStaticNoteMeta") && staticNotePage.includes("buildStaticNoteMeta(note)") && seoLib.includes("candidate.length <= 60") && seoLib.includes("plain.length > 160")],
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
