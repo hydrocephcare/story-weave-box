@@ -216,7 +216,7 @@ There is marked social/occupational impairment, hospitalisation to prevent harm,
 - Sleep: reduced need without expected tiredness.
 - Insight/judgement often impaired.
 
-### 5.3 Hypomania
+### 5.3 Hypomania: comparison with mania
 - Similar mood/energy change for at least **four consecutive days**.
 - Unequivocal change from baseline, observable by others.
 - Not severe enough for marked impairment or hospitalisation; no psychosis.
@@ -275,7 +275,7 @@ Assess risk and progression, review antidepressants/stimulants and other trigger
 - **EPDS:** 10-item screening tool, not diagnostic. Any positive self-harm response requires prompt direct assessment.
 - Management: assess safety/severity; CBT/IPT/support; practical infant-care and sleep support; antidepressants for moderate-severe illness when indicated. Consider previous response, breastfeeding, infant exposure and maternal preference. Sertraline is often considered when starting an SSRI during breastfeeding because infant exposure is generally low.
 
-### 7.3 Postpartum psychosis
+### 7.3 Postpartum psychosis: clinical comparison
 > **Psychiatric emergency:** acute psychosis, severe mood disturbance or disorganisation after childbirth requires urgent specialist assessment and usually admission.
 
 - Often begins within days and commonly within the first two weeks.
@@ -351,7 +351,7 @@ Do not rely on a score alone. Formulate baseline vulnerabilities, current though
 - Establish timing relative to exposure, dose changes and withdrawal; exclude primary bipolar and medical causes.
 - Treat acute risk, manage intoxication/withdrawal safely and review causative medicines with prescriber.
 
-### 9.3 Mood disorder due to another medical condition
+### 9.3 Causes: mood disorder due to another medical condition
 Consider especially with late/abrupt onset, atypical features, cognitive change, neurological signs or systemic illness.
 
 | Condition | Possible presentation |
