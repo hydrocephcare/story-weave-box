@@ -16,7 +16,7 @@ export interface AiPage {
   summary: string;
   aka?: string[];
   sections: { key?: string; h: string; heading?: string; applicable?: boolean; confidence?: "high" | "medium" | "low"; content?: { p?: string; b?: string[]; t?: { a: string; b: string }[]; images?: { url: string; alt: string }[] }; p?: string; b?: string[]; t?: { a: string; b: string }[]; images?: { url: string; alt: string }[] }[];
-  exam?: string[];
+  exam?: string[];\n  mcqs?: { q: string; options: string[]; correct: number; explanations: string[] }[];
   whenToSeekHelp?: string[];
   faq?: { q: string; a: string }[];
   related?: string[];
