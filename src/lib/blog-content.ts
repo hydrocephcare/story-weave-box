@@ -438,6 +438,14 @@ export function dropEmptySections(lines: string[]): string[] {
   return out;
 }
 
+function trimSurroundingAsterisks(value: string): string {
+  let start = 0;
+  let end = value.length;
+  while (start < end && value[start] === "*") start++;
+  while (end > start && value[end - 1] === "*") end--;
+  return value.slice(start, end);
+}
+
 export function cleanHeadingText(value: string): string {
   return value
     .replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu, "")
