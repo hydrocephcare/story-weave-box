@@ -105,14 +105,14 @@ create or replace function public.set_topic_page_type()
 returns trigger
 language plpgsql
 set search_path = public, pg_temp
-as $
+as $topic$
 begin
   if new.content is not null and new.content ? 'topicType' then
     new.topic_type := new.content->>'topicType';
   end if;
   return new;
 end;
-$;
+$topic$;
 drop trigger if exists topic_pages_set_type on public.topic_pages;
 create trigger topic_pages_set_type
 before insert or update of content on public.topic_pages
