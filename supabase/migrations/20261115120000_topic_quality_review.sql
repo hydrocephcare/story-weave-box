@@ -350,3 +350,64 @@ begin
   end if;
 end;
 $$;
+
+
+-- New topic schema contains up to 21 typed sections and larger explanations.
+create or replace function public.publish_topic_page(
+  p_slug text, p_name text, p_category text, p_content jsonb, p_model text default 'unknown'
+) returns jsonb
+language plpgsql
+security definer
+set search_path = public
+as $publish$
+declare
+  existing public.topic_pages%rowtype;
+  today_count int;
+  n_sections int;
+  as_text text;
+begin
+  if p_slug is null or p_slug !~ '^[a-z0-9]+(-[a-z0-9]+)*$' or length(p_slug) > 80 then
+    return jsonb_build_object('ok', false, 'reason', 'slug');
+  end if;
+  if p_name is null or length(p_name) < 3 or length(p_name) > 100 or p_name ~ '[<>]' then
+    return jsonb_build_object('ok', false, 'reason', 'name');
+  end if;
+  if p_content is null or jsonb_typeof(p_content) <> 'object' or pg_column_size(p_content) > 300000 then
+    return jsonb_build_object('ok', false, 'reason', 'size');
+  end if;
+  if jsonb_typeof(p_content->'sections') <> 'array' then
+    return jsonb_build_object('ok', false, 'reason', 'shape');
+  end if;
+  n_sections := jsonb_array_length(p_content->'sections');
+  if n_sections < 3 or n_sections > 24 or length(coalesce(p_content->>'summary', '')) < 40 then
+    return jsonb_build_object('ok', false, 'reason', 'shape');
+  end if;
+  if coalesce(p_content->>'topicType','') not in ('condition','emergency','injury/toxicology','drug','procedure','investigation','anatomy','physiology','public-health') then
+    return jsonb_build_object('ok', false, 'reason', 'topic_type');
+  end if;
+  as_text := p_content::text;
+  if as_text ~* '(www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text)' then
+    return jsonb_build_object('ok', false, 'reason', 'unsafe');
+  end if;
+
+  select * into existing from public.topic_pages where slug = p_slug;
+  if found and existing.status = 'published' then
+    return jsonb_build_object('ok', true, 'existing', true);
+  end if;
+
+  select count(*) into today_count from public.topic_pages where created_at > now() - interval '1 day';
+  if today_count >= 150 then
+    return jsonb_build_object('ok', false, 'reason', 'busy');
+  end if;
+
+  insert into public.topic_pages (slug, name, category, topic_type, status, content, model, reviewed, updated_at)
+  values (p_slug, p_name, left(coalesce(p_category, ''), 60), p_content->>'topicType', 'published', p_content, left(coalesce(p_model, 'unknown'), 80), false, now())
+  on conflict (slug) do update
+    set content = excluded.content, topic_type=excluded.topic_type, status = 'published', model = excluded.model, updated_at = now()
+    where public.topic_pages.status <> 'published';
+  return jsonb_build_object('ok', true, 'existing', false);
+end;
+$publish$;
+
+revoke all on function public.publish_topic_page(text,text,text,jsonb,text) from public;
+grant execute on function public.publish_topic_page(text,text,text,jsonb,text) to anon, authenticated;
