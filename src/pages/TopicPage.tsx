@@ -682,7 +682,7 @@ export default function TopicPage() {
 
             {page?.exam && page.exam.length > 0 && (
               <Section id="examiner" title="Questions an examiner may ask">
-                <ol className="space-y-5">{page.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
+                <ol className="space-y-5">{page.exam.map((q, i) => <ExaminerQuestion key={q.q + i} n={i + 1} text={q.q + " — " + q.a} />)}</ol>
                 <p className="text-sm text-muted-foreground">Try answering aloud before you scroll back up.</p>
               </Section>
             )}
