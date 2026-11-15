@@ -78,13 +78,20 @@ returns trigger
 language plpgsql
 security definer
 set search_path = public, pg_temp
-as $$
+as $queue$
+declare should_queue boolean := false;
 begin
   if current_setting('app.topic_review_write', true) = 'true' then
     return new;
   end if;
-  if new.status = 'published' and new.content is not null
-     and (tg_op = 'INSERT' or old.status is distinct from new.status or old.content is distinct from new.content) then
+  if new.status = 'published' and new.content is not null then
+    if tg_op = 'INSERT' then
+      should_queue := true;
+    else
+      should_queue := old.status is distinct from new.status or old.content is distinct from new.content;
+    end if;
+  end if;
+  if should_queue then
     insert into public.review_jobs(article_id, run_after, status, loop_count, last_error, updated_at)
     values (new.slug, now() + interval '5 minutes', 'pending', 0, null, now())
     on conflict (article_id) where status='pending'
@@ -94,7 +101,7 @@ begin
   end if;
   return new;
 end;
-$$;
+$queue$;
 
 drop trigger if exists topic_pages_enqueue_review on public.topic_pages;
 create trigger topic_pages_enqueue_review
