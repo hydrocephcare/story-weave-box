@@ -82,7 +82,7 @@ async function rewriteAffected(env, page, review, name) {
   const result = await completeGroq(env, prompt, 11000);
   const parsed = parseJson(result.text);
   if (!parsed || !Array.isArray(parsed.sections)) throw new Error("Groq returned an invalid section patch");
-  return { sections: parsed.sections, faq: Array.isArray(parsed.faq) ? parsed.faq : null, exam: Array.isArray(parsed.exam) ? parsed.exam : null, model: result.model };
+  return { sections: parsed.sections, faq: Array.isArray(parsed.faq) ? parsed.faq : null, exam: Array.isArray(parsed.exam) ? parsed.exam : null, mcqs: Array.isArray(parsed.mcqs) ? parsed.mcqs : null, model: result.model };
 }
 async function rest(env, path, options = {}) {
   const base = String(env.SUPABASE_URL || "").replace(/\/$/, "");
@@ -156,9 +156,9 @@ export async function runTopicReviewBatch(env, { limit = 5 } = {}) {
           const related = lastReview.findings.filter((f) => f.section === key || f.section === s.heading || f.section === s.h);
           return !related.some(isCriticalHigh);
         });
-        if (!safeSections.length && !patch.faq && !patch.exam) { needsReview = true; break; }
+        if (!safeSections.length && !patch.faq && !patch.exam && !patch.mcqs) { needsReview = true; break; }
         const applied = await rpc(env, "apply_topic_review_sections", {
-          p_slug: job.article_id, p_sections: safeSections, p_faq: patch.faq, p_exam: patch.exam,
+          p_slug: job.article_id, p_sections: safeSections, p_faq: patch.faq, p_exam: patch.exam, p_mcqs: patch.mcqs,
           p_reason: "Automated " + reviewer.toUpperCase() + " review correction", p_source: reviewer + " topic review", p_loop: loops + 1
         });
         if (!applied?.ok) throw new Error("Section patch was not saved");
