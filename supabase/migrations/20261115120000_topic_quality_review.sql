@@ -7,6 +7,7 @@ alter table public.topic_pages
   add column if not exists review_status text not null default 'pending',
   add column if not exists review_loops integer not null default 0,
   add column if not exists reviewed_by uuid,
+  add column if not exists reviewed_by_name text,
   add column if not exists reviewed_at timestamptz,
   add column if not exists last_reviewed_at timestamptz;
 
@@ -99,6 +100,23 @@ drop trigger if exists topic_pages_enqueue_review on public.topic_pages;
 create trigger topic_pages_enqueue_review
 after insert or update of content, status on public.topic_pages
 for each row execute function public.enqueue_topic_review();
+
+create or replace function public.set_topic_page_type()
+returns trigger
+language plpgsql
+set search_path = public, pg_temp
+as $
+begin
+  if new.content is not null and new.content ? 'topicType' then
+    new.topic_type := new.content->>'topicType';
+  end if;
+  return new;
+end;
+$;
+drop trigger if exists topic_pages_set_type on public.topic_pages;
+create trigger topic_pages_set_type
+before insert or update of content on public.topic_pages
+for each row execute function public.set_topic_page_type();
 
 create or replace function public.claim_topic_review_jobs(p_limit integer default 5)
 returns table(id uuid, article_id text, loop_count integer)
@@ -194,7 +212,7 @@ begin
     raise exception 'admin_required';
   end if;
   update public.topic_pages
-     set reviewed=true, reviewed_by=auth.uid(), reviewed_at=now(), updated_at=now()
+     set reviewed=true, reviewed_by=auth.uid(), reviewed_by_name=coalesce((select nullif(raw_user_meta_data->>'full_name','') from auth.users where id=auth.uid()), (select email from auth.users where id=auth.uid()), 'OmpathStudy administrator'), reviewed_at=now(), updated_at=now()
    where slug=p_slug and status='published';
   if not found then return jsonb_build_object('ok',false,'reason','not_found'); end if;
   return jsonb_build_object('ok',true);
@@ -221,7 +239,7 @@ begin
   update public.review_jobs set status='cancelled',updated_at=now(),completed_at=now()
    where article_id=p_slug and status in ('pending','processing');
   update public.topic_pages
-     set status='failed',content=null,reviewed=false,reviewed_by=null,reviewed_at=null,
+     set status='failed',content=null,reviewed=false,reviewed_by=null,reviewed_by_name=null,reviewed_at=null,
          ai_checked_at=null,ai_review_status='pending',requires_review=false,review_status='pending',review_loops=0,updated_at=now()
    where slug=p_slug;
   return jsonb_build_object('ok',true);
@@ -261,6 +279,12 @@ begin
     requires_review=exists(select 1 from public.audit_findings where article_id=f.article_id and status='pending' and id<>f.id)
     where slug=f.article_id;
   update public.audit_findings set status='applied',resolved_at=now(),resolved_by=auth.uid() where id=f.id;
+  insert into public.review_jobs(article_id,run_after,status,loop_count,updated_at)
+  values(f.article_id,now()+interval '5 minutes','pending',0,now())
+  on conflict (article_id) where status='pending'
+  do update set run_after=excluded.run_after,loop_count=0,updated_at=now();
+  update public.topic_pages set ai_review_status='pending',review_status='pending',ai_checked_at=null
+   where slug=f.article_id;
   return jsonb_build_object('ok',true);
 end;
 $$;
