@@ -4,7 +4,6 @@
 // Nothing here may break a page: every failure returns a status, and the reader keeps what the site already has.
 import { supabase } from "@/integrations/supabase/client";
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
-import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/functions/_shared/topicParts.js";
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
 
@@ -61,7 +60,7 @@ export async function askOmpathAi(question: string, snippet: string, name: strin
 async function publish(page: AiPage & { subject?: string }, slug: string, name: string, category: string): Promise<{ saved: boolean }> {
   try {
     const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean; reason?: string } | null }> })
-      .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category || page.subject || "", p_content: page, p_model: "gemini" });
+      .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category || page.subject || "", p_content: page, p_model: page.model || "unknown" });
     return { saved: Boolean(data?.ok) };
   } catch { return { saved: false }; }
 }
@@ -116,31 +115,4 @@ export async function writeTopicPage({ name, category, context, choices, keepSlu
   }
 
   if (aiPaused()) return { status: "paused" };
-  // Route 2: Ompath AI in short parts, then publish with the database function
-  try {
-    const prompts = buildPartPrompts({ name, category });
-    let first = await askOmpathAi(prompts[0], context, name, category, signal).then(parseJsonReply, () => null);
-    if (!first) first = await askOmpathAi(prompts[0], "", name, category, signal).then(parseJsonReply, () => null);
-    if (!first) return { status: aiPaused() ? "paused" : "failed" };
-    if (first.medical === false) return { status: "rejected" };
-    const later = await Promise.all(prompts.slice(1).map((p) => askOmpathAi(p, "", name, category, signal).then(parseJsonReply, () => null)));
-    const parts = [first, ...later] as (Record<string, unknown> | null)[];
-    let page: AiPage & { medical?: boolean };
-    try { page = mergeParts(parts, { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch {
-      // the answer came in an unusable shape: ask once more without the site's notes
-      const again = await askOmpathAi(prompts[0], "", name, category, signal).then(parseJsonReply, () => null);
-      if (!again) return { status: "failed" };
-      try { page = mergeParts([again, ...later], { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch { return { status: "failed" }; }
-    }
-    if (page.medical === false) return { status: "rejected" };
-    countWrite();
-    let saved = false;
-    try {
-      const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean; existing?: boolean; reason?: string } | null }> })
-        .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category || (page as { subject?: string }).subject || "", p_content: page, p_model: "gemini" });
-      saved = Boolean(data?.ok);
-      if (data?.reason === "busy") return { status: "published", page, saved: false };
-    } catch { saved = false; }
-    return { status: "published", page, saved };
-  } catch { return { status: "failed" }; }
-}
+  // Do not silently switch to the general chat model: topic pages must use the controlled Groq-first pipeline.\n  return { status: "failed" };\n}\n
