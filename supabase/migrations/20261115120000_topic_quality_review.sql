@@ -210,7 +210,7 @@ begin
 end;
 $$;
 revoke all on function public.apply_topic_review_sections(text,jsonb,jsonb,jsonb,jsonb,text,text,integer) from public, anon, authenticated;
-grant execute on function public.apply_topic_review_sections(text,jsonb,jsonb,jsonb,text,text,integer) to service_role;
+grant execute on function public.apply_topic_review_sections(text,jsonb,jsonb,jsonb,jsonb,text,text,integer) to service_role;
 
 create or replace function public.mark_topic_medically_reviewed(p_slug text)
 returns jsonb
