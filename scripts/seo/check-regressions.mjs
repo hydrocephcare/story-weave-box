@@ -36,7 +36,7 @@ const checks = [
       return ua.includes("OpenSEO-Audit") && ua.includes("OmpathStudySEOMonitor");
     });
   })()],
-  ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title") && auditScript.includes("missing a primary H1 heading") && auditScript.includes("hidden from crawlers")],
+  ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title") && auditScript.includes("missing a primary H1 heading") && auditScript.includes("hidden from crawlers") && auditScript.includes("MIN_VISIBLE_WORDS") && auditScript.includes("visibleWordCount(html)") && auditScript.includes("too thin for indexing")],
   ["static note metadata is length-limited and the AUB page uses concise O&G metadata", seoLib.includes("buildStaticNoteMeta") && staticNotePage.includes("buildStaticNoteMeta(note)") && seoLib.includes("candidate.length <= 60") && seoLib.includes("plain.length > 160")],
   ["prerendered content is visible before JavaScript loads", htmlTemplate.includes(".prerendered{position:relative") && !htmlTemplate.includes("clip:rect(0 0 0 0)") && libraryPrerender.includes('<div id="root"><div class="prerendered">') && !libraryPrerender.includes('class="boot-loader" aria-hidden="true"></div><div class="prerendered"')],
   ["library metadata is capped at search snippet lengths", libraryMeta.includes("boundedTitle") && libraryMeta.includes("boundedDescription") && libraryMeta.includes("value.length <= 60") && libraryMeta.includes("text.length <= 160")],
