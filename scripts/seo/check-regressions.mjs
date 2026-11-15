@@ -2,14 +2,15 @@ import fs from "node:fs";
 
 const read = (p) => fs.readFileSync(p, "utf8");
 const meta = read("api/og-meta.ts");
+const vercel = JSON.parse(read("vercel.json"));
 const sitemap = read("api/sitemap.js");
 const robots = read("public/robots.txt");
 const essayPage = read("src/pages/EssayStudy.tsx");
 const css = read("src/index.css");
-const vercel = JSON.parse(read("vercel.json"));
 const auditScript = read("scripts/seo/audit-production.mjs");
 const libraryMeta = read("src/lib/libraryMeta.js");
 const libraryPrerender = read("scripts/library/prerender.mjs");
+const htmlTemplate = read("index.html");
 const htmlTemplate = read("index.html");
 const seoLib = read("src/lib/seo.ts");
 const staticNotePage = read("src/pages/StaticNote.tsx");
@@ -22,6 +23,8 @@ const checks = [
   ["exam start routes are excluded from the sitemap", sitemap.includes("exams") && sitemap.includes("start")],
   ["sitemap filters known removed URLs", sitemap.includes("REMOVED_404") && sitemap.includes("weekly-pathology-exam-april-3-2026-sections-b-and-c")],
   ["metadata API recognises both SEO audit user agents as crawlers", meta.includes('ua.includes("openseo-audit")') && meta.includes('ua.includes("ompathstudymonitor")')],
+  ["topic crawlers use the rich static topic prerender instead of thin API metadata", !vercel.rewrites.some((r) => r.source === "/topic/:slug" && r.destination === "/api/og-meta?path=/topic/:slug")],
+  ["story crawler metadata includes sanitised article body content", meta.includes("function storyPlainText") && meta.includes("function storyBodyHtml") && meta.includes("bodyExtra = \"<article>\" + storyBodyHtml(rawStory) + \"</article>\"") && meta.includes("articleBody: plainStory.slice(0, 12000)")],
   ["crawler metadata reads generated topic JSON pages", meta.includes("/topics/") && meta.includes("topicSlug") && meta.includes("topicRes.status !== 404")],
   ["essay crawler metadata combines duplicate slug records", meta.includes("source_count: rows.length") && meta.includes('mergeQuestions("short_answer_questions")')],
   ["browser essay lookup uses the same six-to-twelve character ID suffix rule", essayPage.includes("replace(/-[0-9a-f]{6,12}$/i")],
@@ -33,9 +36,10 @@ const checks = [
       return ua.includes("OpenSEO-Audit") && ua.includes("OmpathStudySEOMonitor");
     });
   })()],
-  ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title") && auditScript.includes("missing a primary H1 heading") && auditScript.includes("hidden prerender wrapper or blocking loader")],
+  ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title") && auditScript.includes("missing a primary H1 heading") && auditScript.includes("hidden from crawlers") && auditScript.includes("MIN_VISIBLE_WORDS") && auditScript.includes("visibleWordCount(html)") && auditScript.includes("too thin for indexing") && auditScript.includes("hidden prerender wrapper or blocking loader")],
   ["static note metadata is length-limited and the AUB page uses concise O&G metadata", seoLib.includes("buildStaticNoteMeta") && staticNotePage.includes("buildStaticNoteMeta(note)") && seoLib.includes("candidate.length <= 60") && seoLib.includes("plain.length > 160")],
-  ["prerendered content is placed directly in the root before JavaScript loads", !htmlTemplate.includes(".prerendered") && !htmlTemplate.includes("clip:rect(0 0 0 0)") && libraryPrerender.includes('html = html.replace(\'<div id="root"></div>\', `<div id="root">${body}</div>`);')],
+  ["prerendered content is visible before JavaScript loads", htmlTemplate.includes(".prerendered{position:relative") && !htmlTemplate.includes("clip:rect(0 0 0 0)") && libraryPrerender.includes('<div id="root"><div class="prerendered">') && !libraryPrerender.includes('class="boot-loader" aria-hidden="true"></div><div class="prerendered"')],
+  ["prerendered content is placed directly in the root before JavaScript loads", !htmlTemplate.includes(".prerendered") && !htmlTemplate.includes("clip:rect(0 0 0 0)") && libraryPrerender.includes("html.replace(\'<div id=\"root\"></div>\', `<div id=\"root\">${body}</div>`);")],
   ["static note titles and descriptions are capped before prerendering", libraryPrerender.includes("boundedSeoTitle") && libraryPrerender.includes("boundedSeoDescription") && libraryPrerender.includes("boundedSeoTitle(n.title") && libraryPrerender.includes("boundedSeoDescription(n.description)")],
   ["library metadata is capped at search snippet lengths", libraryMeta.includes("boundedTitle") && libraryMeta.includes("boundedDescription") && libraryMeta.includes("value.length <= 60") && libraryMeta.includes("text.length <= 160")],
   ["thin deep library folders are noindexed and omitted from the sitemap", libraryMeta.includes("chain.length <= 1 || totalFiles >= 3") && libraryPrerender.includes("noindex: !indexable") && libraryPrerender.includes("data.updated, indexable")],
