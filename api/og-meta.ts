@@ -593,9 +593,9 @@ async function fetchEssayBySlugOrId(param: string) {
       for (const question of questions) {
         if (!question || typeof question !== "object") continue;
         const item = question as Record<string, unknown>;
-        const stem = String(item.question || "").replace(/\\s+/g, " ").trim();
+        const stem = String(item.question || "").replace(/\s+/g, " ").trim();
         if (!stem) continue;
-        const answer = String(item.answer || "").replace(/\\s+/g, " ").trim();
+        const answer = String(item.answer || "").replace(/\s+/g, " ").trim();
         const key = `${stem.toLowerCase()}|${answer.toLowerCase()}`;
         if (seen.has(key)) continue;
         seen.add(key);
@@ -1044,7 +1044,7 @@ export default async function handler(req: Request): Promise<Response> {
       } else {
         // Only genuinely missing topic pages are excluded; generated public JSON
         // pages are recognised above even when they are not in topic_pages.
-        return new Response(buildHtml({ title: "Topic | OmpathStudy", description: "This topic page has no written overview yet.", url: absoluteUrl, ogImage: OG_FALLBACK_IMAGE }).replace("</title>", "</title><meta name="robots" content="noindex,follow" />"), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
+        return new Response(buildHtml({ title: "Topic | OmpathStudy", description: "This topic page has no written overview yet.", url: absoluteUrl, ogImage: OG_FALLBACK_IMAGE }).replace("</title>", '</title><meta name="robots" content="noindex,follow" />'), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
       }
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
