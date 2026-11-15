@@ -1,0 +1,178 @@
+{
+ "medical": true,
+ "title": "Intravenous Immunoglobulin in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Intravenous Immunoglobulin (IVIG) is a blood product containing antibodies used to treat various immune-mediated and inflammatory conditions in children. It works by modulating the immune system, often by blocking Fc receptors or providing passive immunity. It is a crucial therapy in many low-resource settings where alternative treatments may be unavailable.",
+ "aka": [
+  "IVIG",
+  "Pooled Human Immunoglobulin"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Intravenous Immunoglobulin (IVIG) is a sterile, purified preparation of human plasma-derived polyclonal IgG antibodies. It is administered intravenously to provide passive immunity or to modulate the immune system in various conditions. Its use is not a diagnosis itself, but a treatment for underlying immune dysregulation or antibody deficiency.",
+   "b": [
+    "Derived from pooled human plasma, containing a broad spectrum of IgG antibodies.",
+    "Administered intravenously, typically over several hours.",
+    "Mechanism involves immune modulation, Fc receptor blockade, and provision of antibodies."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "IVIG is used to treat conditions where there is an antibody deficiency or an autoimmune process. In paediatric settings, common indications include primary immunodeficiencies, autoimmune disorders, and certain severe infections.",
+   "b": [
+    "Primary Immunodeficiency Diseases (PIDs): e.g., X-linked agammaglobulinemia, Common Variable Immunodeficiency (CVID).",
+    "Idiopathic Thrombocytopenic Purpura (ITP): especially steroid-refractory cases.",
+    "Kawasaki Disease: to prevent coronary artery aneurysms.",
+    "Guillain-Barré Syndrome (GBS): to reduce disease severity and accelerate recovery.",
+    "Severe infections: e.g., toxic shock syndrome, severe measles in immunocompromised children (off-label).",
+    "Autoimmune hemolytic anemia, autoimmune neutropenia.",
+    "Myasthenia Gravis (acute exacerbations)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The 'presentation' refers to the underlying condition for which IVIG is indicated, not IVIG itself. For example, a child with ITP might present with petechiae and bleeding, while a child with Kawasaki disease presents with fever, rash, and conjunctivitis. IVIG is a treatment, not a condition.",
+   "b": [
+    "Primary immunodeficiency: recurrent severe infections, failure to thrive.",
+    "ITP: sudden onset of petechiae, purpura, mucosal bleeding.",
+    "Kawasaki disease: persistent fever, conjunctivitis, rash, lymphadenopathy, oral changes, extremity changes.",
+    "Guillain-Barré Syndrome: rapidly progressive ascending paralysis, loss of reflexes."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are performed to diagnose the underlying condition requiring IVIG, and to monitor for potential side effects during administration. Availability of tests varies greatly in low-resource settings.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To assess platelet count in ITP, or look for anemia/leukocytosis in other conditions. Low platelets in ITP would support IVIG use."
+    },
+    {
+     "a": "Erythrocyte Sedimentation Rate (ESR) / C-Reactive Protein (CRP)",
+     "b": "To assess inflammation, particularly in Kawasaki disease. Elevated levels would support the diagnosis and need for IVIG."
+    },
+    {
+     "a": "Serum Immunoglobulin levels (IgG, IgA, IgM)",
+     "b": "To diagnose primary immunodeficiencies. Low IgG levels would indicate a need for replacement therapy with IVIG. (Often unavailable in low-resource settings; clinical suspicion and response to treatment may guide decisions)."
+    },
+    {
+     "a": "Electrolytes, Urea, Creatinine",
+     "b": "To monitor renal function, especially important during IVIG infusion due to potential for renal impairment, particularly with high doses or pre-existing renal issues. Elevated creatinine could indicate renal compromise."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "To assess liver health before and during IVIG, as some preparations can rarely affect liver enzymes. Abnormal LFTs might require dose adjustment or alternative treatment."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "To check for proteinuria or hematuria, which can be signs of renal complications from IVIG. Presence of protein or blood would warrant further investigation."
+    },
+    {
+     "a": "Viral serology (HIV, Hepatitis B/C)",
+     "b": "To screen for potential viral infections in the recipient, as IVIG is a blood product, though modern preparations are highly purified. Positive results require careful monitoring and counselling."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While generally safe, IVIG can cause adverse reactions ranging from mild to severe. Vigilant monitoring during and after infusion is crucial, especially in children.",
+   "b": [
+    "Anaphylaxis: rare but life-threatening, especially in patients with IgA deficiency.",
+    "Acute renal failure: more common with high doses, pre-existing renal impairment, or certain formulations.",
+    "Thromboembolic events: stroke, myocardial infarction, deep vein thrombosis, pulmonary embolism (rare in children, but a risk).",
+    "Aseptic meningitis: headache, fever, neck stiffness, photophobia.",
+    "Hemolytic anemia: due to anti-A or anti-B antibodies in the IVIG product.",
+    "Volume overload: risk in patients with cardiac or renal compromise.",
+    "Infusion-related reactions: fever, chills, headache, nausea, rash (most common, usually mild and manageable)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management involves careful patient selection, appropriate dosing, slow infusion rates, and close monitoring for adverse reactions. Pre-medication may be used to reduce infusion-related side effects.",
+   "b": [
+    "Pre-medication: Antihistamines (e.g., promethazine) or paracetamol may be given to reduce infusion reactions.",
+    "Infusion rate: Start slowly and gradually increase if tolerated, monitoring vital signs closely.",
+    "Hydration: Ensure adequate hydration before and during infusion to reduce renal complications.",
+    "Monitoring: Vital signs (BP, HR, RR, Temp) every 15-30 minutes for the first hour, then hourly.",
+    "Renal function: Monitor urine output, electrolytes, urea, and creatinine.",
+    "Specific indications: For Kawasaki disease, IVIG is given with aspirin; for ITP, it's an alternative to steroids or for steroid-refractory cases; for GBS, it's a 2-day course.",
+    "Clostridium-specific IVIG: No benefit once spasm has started in tetanus."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up depends on the underlying condition. For chronic conditions like primary immunodeficiencies, IVIG is a regular, lifelong replacement therapy. For acute conditions, follow-up assesses treatment efficacy and monitors for long-term complications.",
+   "b": [
+    "Primary immunodeficiency: Regular infusions (e.g., monthly) to maintain protective IgG levels.",
+    "Kawasaki disease: Echocardiograms to monitor for coronary artery aneurysms.",
+    "ITP: Monitor platelet counts and bleeding symptoms.",
+    "Guillain-Barré Syndrome: Physical therapy and rehabilitation to aid recovery from paralysis.",
+    "Prevention: Ensure proper screening of plasma donors and manufacturing processes to minimize infection transmission risks."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "IVIG is a broad-spectrum antibody product. It should not be confused with specific immunoglobulins or plasma exchange, though it shares some therapeutic goals.",
+   "b": [
+    "Specific Immunoglobulins: e.g., Anti-D immunoglobulin (RhoGAM), Tetanus immunoglobulin, Hepatitis B immunoglobulin. These are targeted antibodies for specific antigens, whereas IVIG is polyclonal.",
+    "Plasma Exchange (Plasmapheresis): A procedure that removes plasma (and thus antibodies) from the patient's blood. While it has comparable efficacy to IVIG in some conditions like GBS, it is a more invasive procedure with different risks (e.g., central line complications).",
+    "Steroids: Often used alongside or as an alternative to IVIG in autoimmune conditions. Steroids suppress the immune system broadly, while IVIG modulates it through various mechanisms."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting the effects of IVIG requires understanding its mechanisms and potential interactions. Some lab results might be transiently affected by IVIG administration.",
+   "b": [
+    "Antibody levels: Post-IVIG, serum IgG levels will be high, but this reflects the infused product, not necessarily the patient's endogenous production.",
+    "Coombs test: Can become positive after IVIG due to passive transfer of antibodies, even without active hemolysis.",
+    "Blood group typing: Can be affected by passively transferred anti-A or anti-B antibodies, leading to false positives or difficulties in interpretation.",
+    "Vaccine response: IVIG can transiently interfere with the immune response to live attenuated vaccines; vaccination should be delayed for several months after IVIG administration."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe headache, neck stiffness, or photophobia after infusion (aseptic meningitis)",
+  "Sudden onset of difficulty breathing, wheezing, or severe rash (anaphylaxis)",
+  "Decreased urine output or swelling (renal impairment, volume overload)",
+  "New onset of weakness, numbness, or difficulty moving a limb (thromboembolic event)",
+  "Persistent fever, chills, or severe body aches after infusion (severe infusion reaction or infection)"
+ ],
+ "faq": [
+  {
+   "q": "Is IVIG safe for children?",
+   "a": "Yes, IVIG is generally safe for children when administered correctly and with appropriate monitoring. Adverse reactions are usually mild and manageable, but serious complications can occur."
+  },
+  {
+   "q": "How does IVIG work in autoimmune diseases?",
+   "a": "IVIG works through multiple mechanisms, including blocking Fc receptors on macrophages, neutralizing pathogenic autoantibodies, modulating cytokine production, and suppressing B and T cell activity, thereby dampening the autoimmune response."
+  },
+  {
+   "q": "Can IVIG transmit infections?",
+   "a": "Modern IVIG products undergo rigorous screening and viral inactivation/removal processes, making the risk of transmitting viral infections (like HIV, Hepatitis B/C) extremely low. However, it is a blood product, so theoretical risks remain."
+  }
+ ],
+ "exam": [
+  "A 5-year-old presents with 7 days of fever, conjunctivitis, rash, and swollen hands. You suspect Kawasaki disease. What is your immediate management plan, and what specific role does IVIG play? — Immediate management includes IVIG and high-dose aspirin. IVIG's role is to reduce inflammation and prevent the development of coronary artery aneurysms, a major complication of Kawasaki disease.",
+  "A 3-year-old with a history of recurrent severe bacterial infections is diagnosed with X-linked agammaglobulinemia. How would you explain the rationale for IVIG therapy to the parents? — Explain that their child cannot produce enough antibodies to fight infections effectively. IVIG provides these missing antibodies, offering passive immunity to help prevent severe infections and improve quality of life.",
+  "A child receiving IVIG for Guillain-Barré Syndrome develops a severe headache, fever, and neck stiffness during the infusion. What is your differential diagnosis and immediate action? — Differential includes aseptic meningitis (most common IVIG-related cause), severe infusion reaction, or an unrelated infection. Immediate action: stop the infusion, assess vital signs, perform a neurological exam, and consider lumbar puncture to rule out meningitis.",
+  "You are in a rural hospital with limited resources. A child presents with severe ITP and active bleeding, but platelet transfusions are unavailable. What is the role of IVIG in this scenario, and what are the practical considerations? — IVIG can rapidly increase platelet count by blocking Fc receptors, reducing platelet destruction. Practical considerations include ensuring availability of IVIG, managing potential infusion reactions with limited resources, and monitoring for ",
+  "A patient with IgA deficiency requires IVIG. What specific precaution must you take, and why? — Patients with IgA deficiency are at higher risk of anaphylactic reactions to IVIG because they can develop anti-IgA antibodies. Use an IgA-depleted IVIG product if available, or administer with extreme caution and close monitoring, ensuring resuscitation equipment is ready.",
+  "Compare and contrast the use of IVIG and plasma exchange in the management of Guillain-Barré Syndrome in a paediatric patient. — Both IVIG and plasma exchange are effective in GBS. IVIG is easier to administer, less invasive, and avoids central line complications. Plasma exchange removes pathogenic antibodies directly. Choice depends on availability, patient factors (e.g., cardiac status), and local expertise.",
+  "What are the key renal considerations when administering IVIG to a child, especially in a low-resource setting? — Key considerations include ensuring adequate hydration before and during infusion, monitoring urine output and renal function (urea, creatinine), and using the lowest effective dose. In low-resource settings, where renal function monitoring might be limited, careful hydration and slower infusion rates are even more critical to prevent acute kidney injury."
+ ],
+ "related": [
+  "Kawasaki Disease",
+  "Idiopathic Thrombocytopenic Purpura",
+  "Guillain-Barré Syndrome",
+  "Primary Immunodeficiency Diseases",
+  "Autoimmune Hemolytic Anemia",
+  "Plasma Exchange",
+  "Steroid Therapy",
+  "Anaphylaxis Management"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

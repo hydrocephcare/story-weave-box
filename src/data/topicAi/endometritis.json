@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "title": "Endometritis: Uterine Infection",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Endometritis is an inflammation of the endometrium, the inner lining of the uterus, usually caused by infection. It commonly occurs after childbirth, miscarriage, or gynaecological procedures. Prompt diagnosis and treatment are crucial to prevent serious complications.",
+ "aka": [
+  "Uterine infection",
+  "Puerperal endometritis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Endometritis is an inflammatory condition affecting the endometrium, the innermost layer of the uterus. It is most frequently infectious in origin, often arising from an ascending infection from the lower genital tract. Diagnosis is primarily clinical, based on a combination of symptoms, physical examination findings, and a high index of suspicion, especially in the postpartum or post-procedural setting.",
+   "b": [
+    "Acute endometritis: Typically presents with fever, lower abdominal pain, and abnormal vaginal discharge, often within days of an event like childbirth or abortion.",
+    "Chronic endometritis: Less common and often asymptomatic or presents with subtle symptoms like recurrent abnormal uterine bleeding or infertility. Diagnosis usually requires endometrial biopsy."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "While a formal staging system specifically for endometritis is not universally applied, its severity is often considered within the broader context of Pelvic Inflammatory Disease (PID). Endometritis can be a component of PID, which is staged based on the extent of infection and inflammation.",
+   "b": [
+    "Mild: Endometritis without signs of peritonitis or systemic illness.",
+    "Moderate: Endometritis with signs of peritonitis (e.g., rebound tenderness, guarding) but no abscess formation.",
+    "Severe: Endometritis associated with tubo-ovarian abscess (TOA), pelvic peritonitis, or systemic signs of sepsis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Endometritis typically results from an ascending infection. Factors that disrupt the cervical barrier or introduce bacteria into the uterus increase the risk.",
+   "b": [
+    "Postpartum endometritis: Most common cause, often due to retained placental fragments, prolonged labour, multiple vaginal examinations, or manual removal of the placenta.",
+    "Post-abortion or miscarriage: Incomplete evacuation of uterine contents or instrumentation.",
+    "Gynaecological procedures: Intrauterine device (IUD) insertion, hysteroscopy, D&C (dilation and curettage).",
+    "Sexually transmitted infections (STIs): Chlamydia trachomatis and Neisseria gonorrhoeae are common culprits, especially in chronic endometritis or as part of PID.",
+    "Other infections: Bacterial vaginosis, Group B Streptococcus, Escherichia coli, anaerobic bacteria.",
+    "Retained foreign bodies: Such as a forgotten pessary."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinical presentation varies depending on whether the endometritis is acute or chronic, but acute presentations are more common and clinically significant in low-resource settings.",
+   "b": [
+    "Fever: Often the most prominent symptom, especially in acute postpartum endometritis.",
+    "Lower abdominal pain: Can range from mild cramping to severe, diffuse pain.",
+    "Abnormal vaginal discharge: Foul-smelling, purulent, or bloody discharge.",
+    "Uterine tenderness: Pain upon palpation of the uterus during bimanual examination.",
+    "Tachycardia: Elevated heart rate, often accompanying fever.",
+    "Malaise and chills: General feeling of unwellness.",
+    "Subinvolution of the uterus: In postpartum cases, the uterus may remain larger and softer than expected."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, identify the causative organisms, and rule out complications. In low-resource settings, reliance on clinical judgment and basic tests is crucial.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To assess for leukocytosis (elevated white blood cell count), indicating infection. A high WBC count supports the diagnosis of infection."
+    },
+    {
+     "a": "Erythrocyte Sedimentation Rate (ESR) / C-reactive protein (CRP)",
+     "b": "To detect inflammation. Elevated levels suggest an inflammatory process, though non-specific."
+    },
+    {
+     "a": "High vaginal swab (HVS) / Endocervical swab (ECS)",
+     "b": "To identify causative organisms (e.g., Chlamydia, Gonorrhoea, anaerobes). Culture and sensitivity guide antibiotic choice. If unavailable, empirical broad-spectrum antibiotics are used."
+    },
+    {
+     "a": "Urine dipstick / Urinalysis",
+     "b": "To rule out urinary tract infection (UTI), which can present with similar symptoms. Negative results help focus on gynaecological causes."
+    },
+    {
+     "a": "Pelvic Ultrasound",
+     "b": "To assess for retained products of conception, tubo-ovarian abscess, or other pelvic pathology. May show thickened endometrium or fluid collection. If unavailable, careful clinical examination and response to treatment are key."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "To identify systemic infection (sepsis) in severely ill or febrile patients. Positive cultures guide targeted antibiotic therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated or inadequately treated endometritis can lead to severe and life-threatening complications, especially in settings with limited access to advanced care.",
+   "b": [
+    "Sepsis and septic shock: Systemic inflammatory response to infection, potentially leading to multi-organ failure.",
+    "Pelvic abscess formation: Including tubo-ovarian abscess (TOA), requiring surgical drainage.",
+    "Peritonitis: Spread of infection to the peritoneal cavity.",
+    "Infertility: Due to scarring and damage to the fallopian tubes (secondary to PID).",
+    "Chronic pelvic pain: Persistent pain after acute infection.",
+    "Ectopic pregnancy: Increased risk due to tubal damage.",
+    "Adhesions: Formation of scar tissue within the pelvis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on prompt antibiotic therapy, addressing any underlying causes, and supportive care. Treatment regimens should be broad-spectrum, covering common pathogens, and adjusted based on local resistance patterns and patient response.",
+   "b": [
+    "Antibiotics: Broad-spectrum intravenous antibiotics are initiated empirically, covering Gram-positive, Gram-negative, and anaerobic bacteria. Common regimens include a combination of a penicillin (e.g., ampicillin or amoxicillin) or cephalosporin (e.g., ceftriaxone) with metronidazole and/or gentamicin.",
+    "Removal of retained products: If retained placental fragments or other foreign bodies are identified, surgical evacuation (e.g., D&C) may be necessary after initiating antibiotics to prevent further infection.",
+    "Supportive care: Includes analgesia for pain, antipyretics for fever, and intravenous fluids for hydration, especially in febrile or septic patients.",
+    "Monitoring: Close observation for signs of worsening infection or complications (e.g., abscess formation, sepsis).",
+    "Switch to oral antibiotics: Once the patient is afebrile for 24-48 hours and clinically improving, switch to oral antibiotics to complete a 10-14 day course."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is essential to ensure complete resolution of infection and to address any long-term complications. Prevention strategies focus on reducing risk factors.",
+   "b": [
+    "Clinical review: Assess for resolution of symptoms, uterine involution (postpartum), and absence of discharge.",
+    "STI screening and treatment: If STIs are suspected or confirmed, ensure partner notification and treatment to prevent reinfection.",
+    "Counselling: Discuss contraception, safe sexual practices, and the importance of completing antibiotic courses.",
+    "Prevention: Aseptic technique during childbirth and gynaecological procedures, prophylactic antibiotics for high-risk procedures, and prompt management of retained products of conception."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic endometritis, making accurate differentiation crucial for appropriate management.",
+   "b": [
+    "Urinary Tract Infection (UTI): Can cause lower abdominal pain and fever, but typically presents with dysuria, frequency, and urgency.",
+    "Appendicitis: Presents with right lower quadrant pain, but usually lacks vaginal discharge and uterine tenderness.",
+    "Ovarian torsion: Sudden onset of severe, unilateral pelvic pain, often with nausea and vomiting, but usually without fever or discharge initially.",
+    "Ectopic pregnancy: Presents with abdominal pain and vaginal bleeding, but a pregnancy test will be positive and ultrasound will show an extrauterine pregnancy.",
+    "Pelvic Inflammatory Disease (PID): Endometritis is often a component of PID, but PID encompasses broader infection of the upper genital tract (salpingitis, oophoritis, peritonitis)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting clinical and laboratory findings requires careful consideration, as some results can be misleading or non-specific.",
+   "b": [
+    "Normal white blood cell count: In some cases, especially in immunocompromised patients or early infection, the WBC count may not be significantly elevated.",
+    "Negative cultures: Swabs may not always identify the causative organism, especially if the infection is polymicrobial or if antibiotics were started prior to sampling.",
+    "Mild symptoms: Chronic endometritis can be asymptomatic or present with subtle, non-specific symptoms, making diagnosis challenging without biopsy.",
+    "Ultrasound findings: Ultrasound may not always clearly show endometritis, especially in early stages, or may show non-specific findings like a thickened endometrium."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Can endometritis affect fertility?",
+   "a": "Yes, especially chronic endometritis or severe acute cases that lead to pelvic inflammatory disease. Scarring of the fallopian tubes can block them, making it difficult for sperm to reach the egg or for a fertilized egg to implant in the uterus."
+  },
+  {
+   "q": "Is endometritis contagious?",
+   "a": "Endometritis itself is not directly contagious, but if it's caused by a sexually transmitted infection (STI), then the underlying STI can be transmitted to sexual partners."
+  },
+  {
+   "q": "How long does it take to recover from endometritis?",
+   "a": "With prompt and appropriate antibiotic treatment, most patients with acute endometritis start to improve within 48-72 hours. A full course of antibiotics, typically 10-14 days, is crucial to ensure complete eradication of the infection and prevent recurrence."
+  }
+ ],
+ "exam": [
+  "A 28-year-old woman presents 5 days postpartum with fever, lower abdominal pain, and foul-smelling lochia. What is your immediate differential diagnosis and what are the key clinical findings you would look for on examination? — Puerperal endometritis is highly suspected. Other differentials include urinary tract infection, wound infection (episiotomy/caesarean section), and retained products of conception. On examination, look for uterine tenderness, subinvolution of the ute",
+  "You suspect acute endometritis in a patient in a rural clinic with limited resources. What are the essential investigations you would prioritize, and what would you do if a pelvic ultrasound is unavailable? — Prioritize a full blood count (for leukocytosis), high vaginal swab for microscopy and culture (if available), and urinalysis to rule out UTI. If ultrasound is unavailable, rely heavily on clinical signs (fever, uterine tenderness, discharge) and response to empirical br",
+  "A patient with suspected endometritis is started on IV antibiotics, but after 48 hours, her fever persists, and abdominal pain worsens. What are your next steps in management? — Re-evaluate the diagnosis and consider complications. Check for signs of sepsis. Broaden antibiotic coverage or switch to a different regimen based on local resistance patterns. Consider repeating investigations, especially a pelvic ultrasound, to look for abscess formation (e.g., tubo-ovarian abscess",
+  "Discuss the role of retained placental fragments in the pathogenesis of postpartum endometritis. — Retained placental fragments act as a nidus for bacterial growth, providing a rich culture medium within the uterine cavity. They also prevent proper uterine involution, which impairs the natural expulsion of bacteria and promotes an environment conducive to infection. This significantly increases the risk and severity of postpartum endometritis.",
+  "How would you differentiate between acute endometritis and a severe urinary tract infection in a febrile postpartum patient? — Both can cause fever and lower abdominal pain. Endometritis typically presents with uterine tenderness on bimanual examination, foul-smelling lochia, and possibly subinvolution. A UTI would primarily present with dysuria, frequency, urgency, and suprapubic tenderness, with a positive urine dipstick/urinalysis. A high vaginal swab and urine culture wou",
+  "What are the long-term consequences of inadequately treated endometritis, particularly in a young woman in a low-resource setting? — Inadequately treated endometritis can lead to chronic pelvic pain, infertility (due to tubal damage and adhesions), increased risk of ectopic pregnancy, and recurrent pelvic inflammatory disease. In low-resource settings, these complications can have significant impacts on a woman's reproductive health and quality of life, often without access t",
+  "A patient with chronic endometritis is diagnosed after recurrent miscarriages. What is the typical management approach for this condition? — Chronic endometritis often requires a prolonged course of oral antibiotics, typically doxycycline for 10-14 days, sometimes combined with metronidazole, to eradicate the persistent low-grade infection. Endometrial biopsy is usually required for diagnosis, often showing plasma cells. Treatment aims to improve uterine receptivity and reduc"
+ ],
+ "related": [
+  "Pelvic Inflammatory Disease (PID)",
+  "Puerperal Sepsis",
+  "Retained Products of Conception",
+  "Chorioamnionitis",
+  "Salpingitis",
+  "Tubo-ovarian Abscess",
+  "Postpartum Haemorrhage",
+  "Urinary Tract Infection"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

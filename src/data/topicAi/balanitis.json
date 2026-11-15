@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "title": "Balanitis",
+ "subject": "Pathology",
+ "summary": "Inflammation of the glans penis, often extending to the foreskin. Common in uncircumcised men, especially with poor hygiene, diabetes, or Candida infection. Diagnosis is clinical, supported by simple microscopy when available.",
+ "aka": [
+  "Balinitis",
+  "Balanoposthitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Balanitis is inflammation of the glans penis, with or without involvement of the prepuce (balanoposthitis). Diagnosis is made by history and visual inspection; microscopy of a swab can identify Candida or bacterial pathogens when resources allow.",
+   "b": [
+    "Red, painful glans; possible swelling, discharge, or fissuring",
+    "Often associated with poor hygiene, diabetes, or recent antibiotic use"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded clinically:",
+   "b": [
+    "Mild: erythema, mild discomfort, no ulceration",
+    "Moderate: marked erythema, edema, fissures, discharge",
+    "Severe: extensive edema, ulceration, necrosis, or paraphimosis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings the most frequent causes are:",
+   "b": [
+    "Candida albicans – especially in diabetics or after broad‑spectrum antibiotics",
+    "Staphylococcus aureus – common skin flora, worsened by poor hygiene",
+    "Streptococcus pyogenes – acute bacterial balanitis",
+    "Irritant dermatitis – soaps, herbal preparations",
+    "Sexually transmitted infections – HSV, syphilis, gonorrhoea (less common)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report redness, burning, itching, and sometimes a thick white discharge. In uncircumcised men the foreskin may be difficult to retract (phimosis) or become trapped (paraphimosis).",
+   "b": [
+    "Painful glans, often worse after urination",
+    "Foul‑smelling or cheesy discharge if Candida",
+    "Swelling that may impede retraction of the foreskin"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When microscopy is unavailable, treat empirically based on the most likely cause (Candida or bacterial).",
+   "t": [
+    {
+     "a": "Wet mount microscopy of glans swab",
+     "b": "Is the inflammation infectious? – Pseudohyphae or budding yeasts confirm Candida; Gram stain shows bacteria"
+    },
+    {
+     "a": "Blood glucose (finger‑stick)",
+     "b": "Is diabetes a predisposing factor? – Elevated glucose supports Candida‑related balanitis"
+    },
+    {
+     "a": "HIV rapid test (if unknown status)",
+     "b": "Does immunosuppression increase risk? – Positive result raises suspicion for atypical infections"
+    },
+    {
+     "a": "Urinalysis (dipstick)",
+     "b": "Is there concurrent urinary infection? – Leukocyte esterase or nitrites suggest co‑existing UTI"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from delayed treatment or severe inflammation.",
+   "b": [
+    "Paraphimosis causing vascular compromise",
+    "Necrotizing ulceration (rare, usually bacterial)",
+    "Secondary infection spreading to the urethra or bloodstream",
+    "Development of lichen sclerosus (balanitis xerotica obliterans)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve symptoms, and educate on hygiene.",
+   "b": [
+    "Topical antifungal (clotrimazole 1% cream) for Candida – chosen for efficacy and low systemic absorption",
+    "Topical antibacterial (mupirocin) for suspected bacterial infection – avoids systemic side‑effects",
+    "Gentle retraction and cleaning with warm water; avoid soaps or irritants",
+    "Circumcision for recurrent balanitis in uncircumcised men – removes the niche for pathogens",
+    "Control diabetes or other systemic risk factors"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate after 7‑10 days; ensure resolution of signs. Prevent recurrence with daily hygiene and control of diabetes.",
+   "b": [
+    "Ask patient to return if pain persists or swelling worsens",
+    "Teach proper cleaning technique: retract foreskin, wash with water, dry gently",
+    "Screen for diabetes if not previously diagnosed"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic balanitis:",
+   "b": [
+    "Lichen sclerosus (balanitis xerotica obliterans) – white atrophic patches, chronic course",
+    "Herpes simplex infection – vesicular lesions, systemic prodrome",
+    "Penile psoriasis – well‑demarcated plaques, silvery scale"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Potential pitfalls in interpretation:",
+   "b": [
+    "Negative microscopy does not exclude Candida if sample is inadequate",
+    "Normal blood glucose does not rule out intermittent hyperglycaemia in diabetics"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly increasing swelling of the glans or foreskin (possible paraphimosis)",
+  "Severe pain, ulceration, or necrosis",
+  "Systemic signs: fever, chills, or malaise"
+ ],
+ "faq": [
+  {
+   "q": "Can balanitis occur in circumcised men?",
+   "a": "Yes, but it is far less common; when it does occur, consider irritant dermatitis or STI."
+  },
+  {
+   "q": "Why is Candida the most common cause in diabetics?",
+   "a": "High glucose levels promote yeast growth and impair local immunity."
+  },
+  {
+   "q": "Is partner treatment needed for Candida balanitis?",
+   "a": "Routine partner treatment is not required unless the partner has symptoms."
+  }
+ ],
+ "exam": [
+  "What bedside signs differentiate Candida from bacterial balanitis? — Look for thick white discharge and itching (Candida) versus purulent exudate and acute pain (bacterial).",
+  "A patient with uncontrolled diabetes presents with painful glans erythema and white discharge. What is your next step? — Perform a wet‑mount microscopy; if unavailable, start topical antifungal while arranging glucose control.",
+  "How would you manage a case of balanitis complicated by paraphimosis? — Reduce edema manually with lubrication, give analgesia, and arrange urgent urological review for possible circumcision.",
+  "Why is circumcision recommended for recurrent balanitis in low‑resource settings? — It eliminates the moist subpreputial space that harbours pathogens, reducing recurrence without need for long‑term medication.",
+  "A patient reports using a traditional herbal paste on his penis and now has erythema and fissuring. What is the likely diagnosis and management? — Irritant dermatitis; advise cessation of the paste, gentle cleansing, and a mild topical steroid if inflammation persists.",
+  "What laboratory test would you order to assess an underlying systemic risk factor, and how would the result influence treatment? — Point‑of‑care glucose; hyperglycaemia would prompt tighter diabetic control and favours antifungal therapy.",
+  "Explain why routine partner treatment is not indicated for Candida balanitis. — Candida colonisation is usually endogenous; partners are asymptomatic and treatment offers no benefit unless they have symptoms.",
+  "Describe the key features that would make you suspect lichen sclerosus rather than acute balanitis. — Chronic white atrophic plaques, itching, and phimosis without acute discharge."
+ ],
+ "related": [
+  "Phimosis",
+  "Paraphimosis",
+  "Lichen sclerosus (balanitis xerotica obliterans)",
+  "Genital candidiasis",
+  "Penile ulcerative STIs"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

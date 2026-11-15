@@ -1,0 +1,199 @@
+{
+ "medical": true,
+ "title": "Erectile Dysfunction",
+ "subject": "Medicine",
+ "summary": "Erectile dysfunction (ED) is the consistent inability to achieve or maintain an erection sufficient for satisfactory sexual intercourse. It is a common condition with diverse underlying causes, ranging from psychological factors to systemic diseases. Clinicians must identify the root cause to guide appropriate management.",
+ "aka": [
+  "Impotence"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Erectile dysfunction is defined as the consistent or recurrent inability to attain and/or maintain a penile erection sufficient for satisfactory sexual performance. Diagnosis is primarily clinical, based on a thorough history from the patient and, if possible, their partner. It's crucial to differentiate between problems with libido, ejaculation, or orgasm, as these are distinct from ED.",
+   "b": [
+    "Consistent inability to achieve or maintain an erection.",
+    "Sufficient for satisfactory sexual intercourse.",
+    "Duration of symptoms typically at least 3 months for diagnosis.",
+    "Distinguish from low libido, ejaculatory disorders, or anorgasmia."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity of erectile dysfunction is often assessed using patient-reported questionnaires, such as the International Index of Erectile Function (IIEF-5), which helps quantify the impact and monitor treatment response. Clinically, it can range from mild (occasional difficulty) to severe (complete inability to achieve an erection).",
+   "b": [
+    "Mild: Occasional difficulty, but erections are often sufficient.",
+    "Moderate: Difficulty more frequent, erections often not sufficient.",
+    "Severe: Complete inability to achieve or maintain an erection."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Erectile dysfunction has a multifactorial etiology, broadly categorized into organic (physical) and psychogenic (psychological) causes. In low-resource settings, chronic diseases, infections, and lifestyle factors are particularly prevalent.",
+   "b": [
+    "Psychogenic (most common in younger men): Stress, anxiety, depression, relationship issues, performance anxiety.",
+    "Vascular (most common in older men): Atherosclerosis (e.g., hypertension, diabetes, hyperlipidemia), peripheral vascular disease (e.g., Leriche syndrome – aortoiliac occlusion causing bilateral buttock claudication and impotence), venous leak.",
+    "Neurological: Spinal cord injury, multiple sclerosis, stroke, diabetic neuropathy, pelvic surgery (prostatectomy, abdominoperineal resection) affecting sacral autonomic fibres.",
+    "Hormonal: Hypogonadism (low testosterone), hyperprolactinemia, thyroid disorders, adrenal insufficiency (ACTH deficiency leading to fatigue, hyperpigmentation, decreased libido).",
+    "Medication-induced: Antihypertensives (especially diuretics, beta-blockers), antidepressants (SSRIs), anticholinergics, alpha-blockers, 5-alpha-reductase inhibitors, opiates, sedatives.",
+    "Systemic diseases: Diabetes mellitus (neuropathy, vasculopathy), chronic kidney disease, liver disease, HIV (due to disease itself or antiretroviral therapy), sickle cell disease (priapism leading to fibrosis).",
+    "Anatomical/Structural: Peyronie's disease (penile curvature), urethral stricture (can lead to ED in 30-60% of cases), trauma to the penis or pelvis.",
+    "Lifestyle factors: Smoking, excessive alcohol consumption, illicit drug use, obesity, lack of physical activity."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with a complaint of difficulty achieving or maintaining an erection. The history should explore the onset, duration, consistency, and specific circumstances of the problem. It is also important to inquire about morning erections, which can help differentiate organic from psychogenic causes.",
+   "b": [
+    "Inability to achieve an erection firm enough for penetration.",
+    "Inability to maintain an erection during intercourse.",
+    "Reduced rigidity of erections.",
+    "Loss of morning or nocturnal erections (suggests organic cause).",
+    "Associated symptoms: decreased libido, ejaculatory problems, symptoms of underlying systemic disease (e.g., claudication, polyuria, fatigue)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to identify underlying organic causes, especially those that are treatable. In low-resource settings, focus on readily available and cost-effective tests first.",
+   "t": [
+    {
+     "a": "Detailed history and physical examination",
+     "b": "To identify risk factors (diabetes, hypertension, smoking), medication use, psychological stressors, and signs of systemic disease (e.g., peripheral pulses, neurological deficits, signs of hypogonadism like loss of axillary/pubic hair). A digital rectal exam may be performed to assess prostate health."
+    },
+    {
+     "a": "Fasting blood glucose / HbA1c",
+     "b": "To screen for diabetes mellitus, a common cause of ED due to vasculopathy and neuropathy. Elevated levels indicate diabetes."
+    },
+    {
+     "a": "Lipid profile",
+     "b": "To screen for dyslipidemia, a risk factor for atherosclerosis and vascular ED. Elevated LDL cholesterol and triglycerides are concerning."
+    },
+    {
+     "a": "Serum testosterone (total and free, if available)",
+     "b": "To screen for hypogonadism. Low testosterone levels (typically below 8-12 nmol/L, or local lab reference range) may indicate a hormonal cause. Should be drawn in the morning (7-11 AM) due to diurnal variation. If unavailable, clinical signs of hypogonadism (decreased libido, loss of secondary sexual characteristics) ar"
+    },
+    {
+     "a": "Serum prolactin",
+     "b": "To screen for hyperprolactinemia, which can suppress testosterone and cause ED. Elevated levels warrant further investigation for pituitary adenoma."
+    },
+    {
+     "a": "Thyroid stimulating hormone (TSH)",
+     "b": "To screen for thyroid dysfunction (hypo- or hyperthyroidism), which can affect sexual function. Abnormal TSH levels indicate thyroid disease."
+    },
+    {
+     "a": "Full blood count, renal and liver function tests",
+     "b": "To assess for anemia, chronic kidney disease, or liver disease, which can contribute to ED. Abnormal results suggest systemic illness."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "To screen for urinary tract infections or glycosuria, which might indicate diabetes. Presence of glucose or protein is abnormal."
+    },
+    {
+     "a": "Penile Doppler ultrasound (if available)",
+     "b": "To assess penile blood flow and identify vascular causes of ED (arterial insufficiency or venous leak). Reduced arterial flow or increased venous outflow suggests vascular ED. Often unavailable in low-resource settings; clinical suspicion based on risk factors is key."
+    },
+    {
+     "a": "Nocturnal penile tumescence (NPT) monitoring (if available)",
+     "b": "To differentiate psychogenic from organic ED. Presence of normal nocturnal erections indicates psychogenic ED, while absence suggests an organic cause. Often unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain presentations of ED warrant urgent attention or indicate severe underlying conditions. Complications can arise from the ED itself or its underlying causes.",
+   "b": [
+    "Sudden onset ED, especially if associated with neurological symptoms (e.g., weakness, numbness, bladder/bowel dysfunction), suggesting spinal cord or brainstem involvement.",
+    "ED with bilateral buttock claudication, indicating Leriche syndrome (aortoiliac occlusion).",
+    "ED with signs of severe systemic illness (e.g., unexplained weight loss, fever, severe fatigue).",
+    "Priapism (prolonged, painful erection) – a urological emergency that can lead to penile fibrosis and permanent ED.",
+    "Psychological distress, depression, and relationship problems due to ED.",
+    "Failure to conceive (infertility) if ED prevents successful intercourse."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of ED is individualized and focuses on treating the underlying cause, lifestyle modifications, and symptomatic relief. In low-resource settings, prioritize accessible and affordable interventions.",
+   "b": [
+    "Lifestyle modifications: Smoking cessation, reduced alcohol intake, regular exercise, weight loss, healthy diet. These improve cardiovascular health and can significantly impact ED.",
+    "Address underlying conditions: Optimize control of diabetes, hypertension, hyperlipidemia. Treat hormonal deficiencies (e.g., testosterone replacement therapy for hypogonadism, if appropriate and monitored).",
+    "Medication review: Discontinue or switch medications known to cause ED if clinically feasible and safe (e.g., certain antihypertensives, antidepressants).",
+    "Psychological counseling: For psychogenic ED, or as an adjunct for organic ED, to address anxiety, stress, and relationship issues. Cognitive Behavioral Therapy (CBT) can be effective.",
+    "Oral phosphodiesterase-5 inhibitors (PDE5i): Sildenafil, Tadalafil. These are first-line pharmacological agents for symptomatic relief, enhancing the effects of nitric oxide to relax penile smooth muscle and increase blood flow. They are contraindicated with nitrates due to risk of severe hypotension. Availability and cost can be barriers.",
+    "Vacuum erection devices (VEDs): Non-pharmacological option, creating negative pressure to draw blood into the penis. Safe and effective, but can be cumbersome.",
+    "Intracavernosal injections (e.g., alprostadil): Direct injection into the penis to induce an erection. More invasive, but effective for those who fail oral therapy. Risk of priapism and penile fibrosis.",
+    "Urethral suppositories (alprostadil): Less invasive than injections, but less effective. Risk of local pain and priapism.",
+    "Penile prostheses (implants): Surgical option for severe, refractory ED. Highly effective but expensive, invasive, and carries surgical risks. Generally not available in low-resource settings."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to assess treatment efficacy, manage side effects, and monitor for progression of underlying conditions. Prevention focuses on managing risk factors for cardiovascular disease and maintaining a healthy lifestyle.",
+   "b": [
+    "Regular monitoring of blood glucose, lipids, and blood pressure in patients with chronic diseases.",
+    "Counseling on healthy lifestyle choices (diet, exercise, smoking cessation, moderate alcohol intake).",
+    "Screening for and managing depression or anxiety.",
+    "Reviewing medication lists regularly for potential culprits.",
+    "Encouraging open communication with partners regarding sexual health."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It's important to distinguish erectile dysfunction from other sexual dysfunctions, as their causes and management differ.",
+   "b": [
+    "Decreased libido (low sex drive): This is a lack of desire for sexual activity, which can lead to ED but is a distinct problem. ED is the inability to achieve/maintain an erection, regardless of desire.",
+    "Ejaculatory disorders (e.g., premature ejaculation, delayed ejaculation, anejaculation): These relate to the timing or ability to ejaculate, not the ability to achieve an erection.",
+    "Anorgasmia: The inability to achieve orgasm, which can occur even with a firm erection and successful ejaculation."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or test results can be misinterpreted, leading to an incorrect diagnosis or management plan for ED.",
+   "b": [
+    "Normal morning erections: While often suggesting psychogenic ED, some men with organic ED can still have occasional morning erections, especially in early stages.",
+    "Normal testosterone levels: ED can occur even with normal testosterone, as other factors like vascular health or neurological function are crucial.",
+    "Patient denial or embarrassment: Patients may downplay symptoms or attribute them to stress, delaying diagnosis of an organic cause.",
+    "Over-reliance on single test results: ED is multifactorial; a comprehensive assessment is needed, not just one lab value."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of erectile dysfunction, especially if accompanied by numbness, weakness, or bladder/bowel problems.",
+  "Erectile dysfunction associated with severe pain in the legs during walking (claudication).",
+  "Priapism (a painful erection lasting more than 4 hours)."
+ ],
+ "faq": [
+  {
+   "q": "Can stress cause erectile dysfunction?",
+   "a": "Yes, psychological factors like stress, anxiety, depression, and relationship issues are common causes of erectile dysfunction, particularly in younger men."
+  },
+  {
+   "q": "Are there natural remedies for erectile dysfunction?",
+   "a": "While some herbal remedies are marketed for ED, their efficacy is often unproven and they can have dangerous interactions with other medications. Lifestyle changes like diet, exercise, and quitting smoking are natural and effective."
+  },
+  {
+   "q": "Is erectile dysfunction always a sign of a serious underlying disease?",
+   "a": "Not always, but it can be. ED is often an early warning sign of cardiovascular disease, diabetes, or neurological conditions, so it's important to get it checked by a clinician."
+  }
+ ],
+ "exam": [
+  "A 55-year-old man presents with a 6-month history of difficulty maintaining erections. He also reports bilateral buttock and thigh pain when walking more than 100 meters, which resolves with rest. What is your primary differential diagnosis for his ED, and what specific physical examination findings would you look for? — Leriche syndrome (aortoiliac occlusion). Look for absent or diminished femoral, popliteal, and pedal pulses, bruits over the aorta or iliac arteries, and sig",
+  "You are seeing a 30-year-old man with new-onset ED. He denies any chronic medical conditions or regular medications. What is the most likely cause in this age group, and what initial investigations would you prioritize in a low-resource setting? — Most likely psychogenic ED. Prioritize a detailed history (stressors, relationship issues, morning erections), physical exam (ruling out obvious organic causes), and basic blood tests like fasting glucose and testosterone if availab",
+  "A patient with known hypertension and diabetes is complaining of ED. He is currently on hydrochlorothiazide and metformin. What is your initial management approach, considering potential medication side effects? — First, optimize control of his hypertension and diabetes. Review his medications; hydrochlorothiazide can cause ED. Consider switching to an antihypertensive less likely to cause ED (e.g., ACE inhibitor or ARB) if blood pressure control allows, and discuss lifestyle",
+  "A 60-year-old man with ED has a morning serum testosterone level of 6 nmol/L (normal range 8-30 nmol/L). What further investigations are warranted, and what are the implications for management? — Repeat morning testosterone, and if still low, check LH, FSH, and prolactin to differentiate primary from secondary hypogonadism. If confirmed hypogonadism, consider testosterone replacement therapy, but carefully assess for contraindications (e.g., prostate cancer) and monitor close",
+  "You are counseling a patient about starting sildenafil for ED. What are the key contraindications and important patient education points you must cover? — Contraindications: Concomitant use of nitrates (risk of severe hypotension), severe cardiovascular disease, recent stroke or MI. Education: Take 30-60 minutes before sexual activity, avoid heavy meals, potential side effects (headache, flushing, visual disturbances), seek urgent medical attention for priapism (erection last",
+  "A patient with ED reports that he still experiences morning erections but struggles to maintain an erection during intercourse. What does the presence of morning erections suggest about the etiology of his ED? — The presence of morning erections strongly suggests a psychogenic component to his ED, as it indicates that the physiological capacity for erection is intact. However, organic causes cannot be entirely ruled out, and a comprehensive assessment is still needed.",
+  "Describe the mechanism by which diabetes mellitus contributes to erectile dysfunction. — Diabetes causes ED primarily through two mechanisms: microvascular damage (diabetic vasculopathy) leading to impaired blood flow to the penis, and diabetic neuropathy affecting the autonomic nerves responsible for penile erection. It can also contribute to hormonal imbalances and psychological stress."
+ ],
+ "related": [
+  "Hypogonadism",
+  "Diabetes Mellitus",
+  "Hypertension",
+  "Peripheral Vascular Disease",
+  "Priapism",
+  "Male Infertility",
+  "Sexual Dysfunction"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

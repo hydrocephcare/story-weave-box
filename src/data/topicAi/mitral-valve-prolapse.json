@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "title": "Mitral Valve Prolapse",
+ "subject": "Medicine",
+ "summary": "A common, often benign, valvular disorder where the mitral leaflets billow into the left atrium during systole, producing a mid‑systolic click and late systolic murmur. It can lead to regurgitation, arrhythmias and, rarely, infective endocarditis.",
+ "aka": [
+  "Mitral Regurgitation",
+  "Mid‑systolic click"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Mitral valve prolapse (MVP) is defined by systolic displacement of one or both leaflets >2 mm beyond the annular plane, seen on echocardiography. Clinically it presents with a mid‑systolic click followed by a late systolic murmur best heard at the apex, radiating to the axilla.",
+   "b": [
+    "MVP is the most common valvular disease in young women.",
+    "It is usually benign but can progress to significant regurgitation or arrhythmias."
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Shows leaflet billowing >2 mm beyond annulus and confirms regurgitation"
+    },
+    {
+     "a": "Holter ECG",
+     "b": "Detects atrial or ventricular arrhythmias that may be associated with MVP"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "b": [
+    "Mild: click only, no murmur or regurgitation",
+    "Moderate: click + murmur, mild‑moderate regurgitation",
+    "Severe: click + murmur, significant regurgitation, LV enlargement"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary MVP is a connective‑tissue disorder with excess leaflet tissue or weak chordae. Secondary causes include rheumatic heart disease, infective endocarditis, and post‑myocardial‑infarction papillary‑muscle rupture.",
+   "b": [
+    "Primary MVP – familial, often associated with Marfan or Ehlers‑Danlos",
+    "Rheumatic fever – common in low‑resource settings",
+    "Infective endocarditis – especially with IV drug use or HIV"
+   ],
+   "t": [
+    {
+     "a": "Blood cultures",
+     "b": "Rule out infective endocarditis in patients with fever or new murmur"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows left‑sided heart enlargement if severe regurgitation"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report chest pain, palpitations, dyspnoea, or a feeling of a fluttering heart. The classic auscultatory finding is a mid‑systolic click followed by a late systolic murmur.",
+   "b": [
+    "Chest pain may mimic angina but is usually positional",
+    "Palpitations often due to atrial fibrillation or supraventricular tachycardia",
+    "Dyspnoea occurs when regurgitation is significant"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, a focused history, physical exam, and a basic ECG are first steps. If available, transthoracic echo confirms diagnosis and assesses severity.",
+   "b": [
+    "ECG – look for arrhythmias or left‑atrial enlargement"
+   ],
+   "t": [
+    {
+     "a": "Transthoracic echocardiography",
+     "b": "Normal: no billowing; MVP: >2 mm billowing; severe regurgitation: >30 mL/beat"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal: no cardiomegaly; enlarged left heart suggests significant MR"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed for signs of heart failure, uncontrolled arrhythmias, or infective endocarditis.",
+   "b": [
+    "Acute pulmonary oedema",
+    "Rapidly worsening dyspnoea",
+    "New‑onset atrial fibrillation with rapid ventricular response",
+    "Fever with new murmur"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. For uncomplicated MVP, reassurance and routine follow‑up are adequate. Symptomatic MR or arrhythmias require medical therapy; severe MR may need surgery.",
+   "b": [
+    "Beta‑blockers – reduce palpitations and improve exercise tolerance",
+    "ACE inhibitors/ARBs – used if LV dysfunction develops",
+    "Anticoagulation – only if atrial fibrillation or embolic risk"
+   ],
+   "t": [
+    {
+     "a": "Beta‑blocker",
+     "b": "Avoid in severe asthma or heart block"
+    },
+    {
+     "a": "ACE inhibitor",
+     "b": "Avoid in pregnancy or renal failure"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Annual review with ECG and symptom check. In endemic areas, screen for rheumatic fever and treat streptococcal infections early to prevent secondary MVP.",
+   "b": [
+    "Annual ECG to detect new arrhythmias",
+    "Repeat echo every 2–3 years if moderate MR",
+    "Penicillin prophylaxis for rheumatic fever"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Mitral stenosis (fixed opening, diastolic rumble), aortic regurgitation (diastolic decrescendo murmur), and pericardial knock.",
+   "b": [
+    "Mitral stenosis – diastolic rumble, not a click",
+    "Aortic regurgitation – diastolic murmur, not systolic"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑volume echo machines, mild MR may be missed. A normal ECG does not exclude arrhythmias; a Holter may be needed.",
+   "b": [
+    "Echo sensitivity drops below 2 mm billowing",
+    "Holter detects paroxysmal arrhythmias missed on 12‑lead ECG"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why is a mid‑systolic click heard in MVP?",
+   "a": "It is the sound of the leaflet or chordae snapping back into place as the valve bulges into the atrium."
+  },
+  {
+   "q": "Can MVP cause sudden death?",
+   "a": "Rarely, through ventricular arrhythmias or severe MR leading to heart failure."
+  },
+  {
+   "q": "Is MVP inherited?",
+   "a": "Yes, it is often familial and linked to connective‑tissue disorders like Marfan syndrome."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman reports chest pain after exertion and a new heart sound – what is the most likely diagnosis? — MVP (mid‑systolic click + late systolic murmur).",
+  "You suspect MVP but the patient has a fever and new murmur – what is the next step? — Obtain blood cultures and start empiric antibiotics for possible endocarditis.",
+  "A patient with MVP develops atrial fibrillation – what anticoagulation strategy is appropriate? — Start a vitamin K antagonist or DOAC if no contraindication, considering bleeding risk.",
+  "You have a patient with MVP and mild MR – what is the best long‑term management? — Reassurance, beta‑blocker for palpitations, and annual follow‑up.",
+  "A patient with MVP presents with acute pulmonary oedema – what is the immediate treatment? — Diuretics, oxygen, and evaluate for severe MR or arrhythmia.",
+  "You find a mid‑systolic click but no murmur on exam – what is the significance? — It may indicate mild MVP; repeat exam or echo to confirm.",
+  "A patient with MVP is pregnant – which drug class is safest for palpitations? — Beta‑blockers (e.g., labetalol) are preferred over ACE inhibitors.",
+  "You observe a late systolic murmur radiating to the axilla – what other condition could mimic this? — Aortic regurgitation (diastolic murmur) or mitral stenosis (diastolic rumble)."
+ ],
+ "related": [
+  "Rheumatic Heart Disease",
+  "Aortic Regurgitation",
+  "Marfan Syndrome",
+  "Infective Endocarditis",
+  "Atrial Fibrillation",
+  "Heart Failure",
+  "Holter Monitoring"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

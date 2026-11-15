@@ -1,0 +1,233 @@
+{
+ "medical": true,
+ "title": "Melena",
+ "subject": "Medicine",
+ "summary": "Melena is black, tarry stool indicating upper GI bleeding. Rapid assessment, resuscitation and identification of source are essential, especially in low‑resource settings where endoscopy may be delayed.",
+ "aka": [
+  "Black tarry stool",
+  "Coffee‑ground vomitus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Melena is the passage of black, tarry stools caused by digested blood from an upper gastrointestinal source. It is a clinical sign, not a diagnosis.",
+   "b": [
+    "Black, shiny, foul‑smelling stool",
+    "Occurs 1–2 days after bleeding"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin",
+     "b": "Is the patient anemic? A drop of >2 g/dL suggests significant blood loss"
+    },
+    {
+     "a": "Platelet count",
+     "b": "Is thrombocytopenia present? May indicate liver disease or portal hypertension"
+    },
+    {
+     "a": "Coagulation profile (INR, aPTT)",
+     "b": "Is there coagulopathy? Important before invasive procedures"
+    },
+    {
+     "a": "Urine occult blood",
+     "b": "Positive suggests lower GI source; negative supports upper GI bleeding"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by hemodynamic stability and laboratory indices. The Glasgow‑Blatchford score (GBS) helps triage patients when endoscopy is not immediately available.",
+   "b": [
+    "GBS ≥ 12 → high risk, urgent endoscopy"
+   ],
+   "t": [
+    {
+     "a": "GBS",
+     "b": "Predicts need for transfusion or endoscopic intervention; a score >12 indicates high risk"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa and low‑resource settings, the leading causes are peptic ulcer disease, variceal bleeding from portal hypertension, and duodenal erosions. Infections such as Helicobacter pylori and schistosomiasis can precipitate ulcers.",
+   "b": [
+    "Peptic ulcer disease (H. pylori, NSAIDs)",
+    "Portal hypertension varices",
+    "Duodenal erosions",
+    "Schistosomiasis",
+    "Hepatitis B/C leading to cirrhosis"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Identifies ulcer, varix, or malignancy; gold standard for source localisation"
+    },
+    {
+     "a": "Upper GI contrast study (if endoscopy unavailable)",
+     "b": "Shows ulcer or varix but less sensitive"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report black stools, sometimes with coffee‑ground vomitus. They may feel weak, dizzy, or have syncope. In chronic disease, signs of portal hypertension may be present.",
+   "b": [
+    "Black tarry stool",
+    "Coffee‑ground vomitus",
+    "Syncope or dizziness",
+    "Abdominal pain (epigastric)"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for splenomegaly, caput medusae, jaundice, or ascites"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise resuscitation; then basic labs and imaging that are available. Endoscopy is definitive but may be delayed.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Assess hemoglobin and hematocrit for anemia"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Identify cirrhosis or hepatitis"
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Guide transfusion and procedural risk"
+    },
+    {
+     "a": "Bedside ultrasound",
+     "b": "Detect ascites, splenomegaly, portal hypertension"
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Rule out perforation or obstruction if available"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled bleeding, shock, severe anemia, and signs of hepatic encephalopathy require urgent intervention.",
+   "b": [
+    "Hypotension (SBP <90 mmHg)",
+    "Heart rate >120/min",
+    "Oxygen saturation <90%",
+    "Altered mental status"
+   ],
+   "t": [
+    {
+     "a": "Clinical signs",
+     "b": "Indicate need for immediate resuscitation and possible transfusion"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the source, support haemodynamics, and address coagulopathy. In low‑resource settings, early transfusion and proton pump inhibitor therapy are key.",
+   "b": [
+    "Resuscitate with crystalloids and blood products"
+   ],
+   "t": [
+    {
+     "a": "IV proton pump inhibitor (e.g., omeprazole)",
+     "b": "Reduces gastric acid, promotes ulcer healing"
+    },
+    {
+     "a": "Octreotide (if varices)",
+     "b": "Vasoconstricts splanchnic vessels, reduces portal pressure"
+    },
+    {
+     "a": "Tranexamic acid (if available)",
+     "b": "Stabilises clots in active bleeding"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilization, investigate for H. pylori, advise on NSAID avoidance, and manage portal hypertension. Follow‑up endoscopy is essential if bleeding source remains unclear.",
+   "b": [
+    "Eradicate H. pylori with antibiotics"
+   ],
+   "t": [
+    {
+     "a": "Repeat endoscopy",
+     "b": "Confirm healing of ulcer or control of varices"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Melena can be mistaken for black stools from iron supplements or certain foods. Coffee‑ground vomitus may be confused with fresh haematemesis.",
+   "b": [
+    "Iron supplementation",
+    "Bismuth subsalicylate"
+   ],
+   "t": [
+    {
+     "a": "Stool color",
+     "b": "Iron gives a uniform dark brown; melena is tarry and foul"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Coagulation tests may be normal in early bleeding; occult blood may be negative if bleeding is slow.",
+   "b": [
+    "Occult blood negative despite upper GI bleed"
+   ],
+   "t": [
+    {
+     "a": "Occult blood test",
+     "b": "Negative does not exclude upper GI bleeding"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Hypotension (SBP <90 mmHg)",
+  "Heart rate >120/min",
+  "Oxygen saturation <90%",
+  "Altered mental status",
+  "Severe anemia (Hb <7 g/dL)"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in a patient with suspected melena?",
+   "a": "Resuscitate with IV fluids and blood products, then obtain a full history and perform a focused exam."
+  },
+  {
+   "q": "Why is a proton pump inhibitor started early?",
+   "a": "It reduces gastric acidity, promotes clot stability, and aids ulcer healing."
+  },
+  {
+   "q": "Can melena occur from lower GI bleeding?",
+   "a": "Rarely; if the bleeding is massive, blood can be digested enough to appear black, but usually stool is red or maroon."
+  }
+ ],
+ "exam": [
+  "What is the most appropriate initial management for a patient with melena and hypotension? — Resuscitate with crystalloids, cross‑match blood, and start IV PPI.",
+  "How would you differentiate variceal bleeding from peptic ulcer bleeding clinically? — Look for signs of portal hypertension (splenomegaly, caput medusae) versus epigastric pain and H. pylori history.",
+  "When is urgent endoscopy indicated in melena? — GBS ≥12, ongoing bleeding, or hemodynamic instability.",
+  "Why is octreotide used in variceal bleeding? — It causes splanchnic vasoconstriction, reducing portal pressure.",
+  "What laboratory test would you order to assess bleeding risk before endoscopy? — INR and platelet count to evaluate coagulopathy.",
+  "If endoscopy is unavailable, what alternative imaging can help localise the source? — Upper GI contrast study or bedside ultrasound for ascites and splenomegaly."
+ ],
+ "related": [
+  "Peptic ulcer disease",
+  "Portal hypertension",
+  "Upper gastrointestinal bleeding",
+  "Hemodynamic resuscitation",
+  "Endoscopic therapy",
+  "Hepatitis B/C",
+  "Schistosomiasis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

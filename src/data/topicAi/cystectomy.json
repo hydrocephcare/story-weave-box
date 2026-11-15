@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "title": "Ovarian Cystectomy",
+ "subject": "Surgery",
+ "summary": "Ovarian cystectomy removes a cyst while preserving ovarian tissue, aiming to relieve symptoms, prevent torsion, and avoid malignancy. It is preferred in reproductive‑age women when safe.",
+ "aka": [
+  "Oophorectomy (partial)",
+  "Laparoscopic cyst removal"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Ovarian cystectomy is the surgical removal of an ovarian cyst wall, leaving healthy ovarian tissue intact. Diagnosis is based on ultrasound findings of a cystic ovarian mass, often with Doppler assessment of vascularity.",
+   "b": [
+    "Cyst >5 cm or complex appearance",
+    "Persistent pain or torsion risk",
+    "Suspicion of malignancy (solid components, papillary projections)"
+   ],
+   "t": [
+    {
+     "a": "Pelvic ultrasound",
+     "b": "Detects cyst size, morphology, and vascularity; a complex cyst raises suspicion for malignancy."
+    },
+    {
+     "a": "CA‑125 (if available)",
+     "b": "Elevated levels may support malignancy but are nonspecific; normal in most benign cysts."
+    },
+    {
+     "a": "Transvaginal Doppler",
+     "b": "Assesses blood flow; absent flow may indicate torsion."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging is relevant only for malignant cysts. Benign cysts are staged by size and complexity; malignant cysts use FIGO staging based on tumour spread.",
+   "b": [
+    "Stage I: confined to ovary",
+    "Stage II: pelvic extension",
+    "Stage III: peritoneal spread",
+    "Stage IV: distant metastasis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The majority of ovarian cysts are functional, arising from the follicular or luteal phase. Other common causes include endometriomas, dermoid cysts, and parasitic cysts.",
+   "b": [
+    "Functional cysts (follicular, luteal)",
+    "Endometriomas (chocolate cysts)",
+    "Dermoid cysts (mature cystic teratoma)",
+    "Parasitic cysts (e.g., hydatid)"
+   ],
+   "t": [
+    {
+     "a": "Serum hCG",
+     "b": "Rules out gestational trophoblastic disease in a pregnant patient."
+    },
+    {
+     "a": "Serum AFP",
+     "b": "Elevated in germ‑cell tumours."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or present with pelvic pain, bloating, menstrual irregularity, or acute abdominal pain if torsion occurs.",
+   "b": [
+    "Chronic dull pelvic pain",
+    "Acute sharp pain with nausea/vomiting (torsion)",
+    "Abdominal distension (large cyst)",
+    "Menstrual irregularity (functional cyst)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on characterising the cyst and ruling out malignancy.",
+   "t": [
+    {
+     "a": "Pelvic ultrasound",
+     "b": "Defines cyst size, septations, solid areas, and Doppler flow."
+    },
+    {
+     "a": "Serum CA‑125",
+     "b": "Elevated levels suggest possible malignancy but are not definitive."
+    },
+    {
+     "a": "Serum hCG",
+     "b": "Excludes ectopic pregnancy or gestational trophoblastic disease."
+    },
+    {
+     "a": "Serum AFP",
+     "b": "Helps identify germ‑cell tumours."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include sudden severe pain, haemodynamic instability, or signs of infection. Complications may be haemorrhage, infection, ovarian failure, or adhesions.",
+   "b": [
+    "Acute haemorrhage (tension)",
+    "Severe infection (fever, tachycardia)",
+    "Ovarian insufficiency (amenorrhoea)",
+    "Adhesions causing bowel obstruction"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is surgical, with laparoscopic cystectomy preferred when feasible. The goal is to excise the cyst wall while preserving ovarian tissue.",
+   "b": [
+    "Pre‑op: optimise haemostasis, ensure availability of blood products",
+    "Intra‑op: use bipolar cautery, avoid excessive traction",
+    "Post‑op: monitor haemoglobin, pain control, early mobilisation"
+   ],
+   "t": [
+    {
+     "a": "Antibiotics",
+     "b": "Prevent postoperative infection; broad‑spectrum coverage if contamination suspected."
+    },
+    {
+     "a": "Analgesia",
+     "b": "Opioid‑free multimodal approach to reduce ileus risk."
+    },
+    {
+     "a": "Early mobilisation",
+     "b": "Reduces thromboembolic risk and promotes recovery."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative follow‑up includes clinical review and ultrasound to assess ovarian reserve and detect recurrence.",
+   "b": [
+    "Ultrasound at 3–6 months",
+    "Monitor menstrual pattern",
+    "Counsel on contraception and fertility plans"
+   ],
+   "t": [
+    {
+     "a": "Pelvic ultrasound",
+     "b": "Checks for residual cysts or recurrence."
+    },
+    {
+     "a": "Serum AMH (if available)",
+     "b": "Assesses ovarian reserve post‑surgery."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain with haemodynamic instability",
+  "Fever >38.5 °C with abdominal tenderness",
+  "Signs of haemorrhage (tachycardia, hypotension)"
+ ],
+ "faq": [
+  {
+   "q": "When is cystectomy preferred over drainage?",
+   "a": "When the cyst wall is thick, complex, or likely malignant; drainage has high recurrence."
+  },
+  {
+   "q": "Can cystectomy be done in a pregnant patient?",
+   "a": "Yes, if the cyst threatens viability or causes torsion; laparoscopic approach is safe in the second trimester."
+  },
+  {
+   "q": "What is the risk of infertility after cystectomy?",
+   "a": "Risk depends on cyst size and surgical technique; preserving healthy tissue minimizes impact on ovarian reserve."
+  }
+ ],
+ "exam": [
+  "What is the first step in managing a patient with a 6 cm complex ovarian cyst? — Identify malignancy risk, order CA‑125, and plan laparoscopic cystectomy if benign.",
+  "How would you differentiate an endometrioma from a dermoid cyst on ultrasound? — Endometrioma shows low‑level internal echoes; dermoid has echogenic foci and shadowing.",
+  "What is the most appropriate antibiotic prophylaxis for laparoscopic cystectomy? — Broad‑spectrum coverage (e.g., ampicillin‑sulbactam) to cover gut flora.",
+  "Why is early mobilisation important after ovarian cystectomy? — Reduces thromboembolic risk and promotes bowel function.",
+  "What is the key factor that determines whether to perform detorsion or oophorectomy in ovarian torsion? — Viability of ovarian tissue; if viable, detorsion and cystectomy are preferred.",
+  "Which serum marker is most useful for ruling out germ‑cell tumours in an ovarian cyst? — Alpha‑fetoprotein (AFP).",
+  "What complication is most feared if haemorrhage is not recognised early post‑cystectomy? — Hypovolaemic shock.",
+  "How does a normal CA‑125 level affect your surgical decision? — It lowers suspicion of malignancy but does not rule it out; imaging and intra‑op assessment remain essential."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

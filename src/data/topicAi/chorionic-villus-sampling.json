@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "title": "Chorionic Villus Sampling",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "CVS obtains placental tissue in early pregnancy for genetic diagnosis. It is performed 11‑14 weeks, carries a small miscarriage risk, and is valuable where later tests are unavailable.",
+ "aka": [
+  "Chorionic villus biopsy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Chorionic villus sampling is a percutaneous procedure that retrieves chorionic villi from the placenta for cytogenetic or molecular analysis, confirming fetal chromosomal or single‑gene disorders.",
+   "b": [
+    "Performed trans‑cervical or trans‑abdominal under ultrasound guidance",
+    "Indicated when a definitive prenatal diagnosis is required before 15 weeks"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The need for CVS arises from maternal or fetal risk factors that warrant early genetic information.",
+   "b": [
+    "Advanced maternal age (≥35 y)",
+    "Positive first‑trimester combined screen (nuchal translucency + PAPP‑A + β‑hCG)",
+    "Family history of autosomal‑dominant or recessive disorders (e.g., sickle cell, thalassaemia)",
+    "Previous child with chromosomal abnormality"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The patient is usually an asymptomatic pregnant woman seeking diagnostic clarification. Key history points include gestational age, prior screening results, and any contraindications such as active bleeding or infection.",
+   "b": [
+    "No physical signs specific to CVS; focus on obstetric assessment"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Ultrasound (trans‑abdominal)",
+     "b": "Confirms gestational age (11‑14 wks) and placental location; guides needle entry"
+    },
+    {
+     "a": "Karyotype / Chromosomal microarray on villi",
+     "b": "Detects aneuploidy, microdeletions, and structural rearrangements"
+    },
+    {
+     "a": "Targeted PCR for single‑gene disorders",
+     "b": "Identifies mutations (e.g., sickle cell, thalassaemia, 21‑hydroxylase deficiency)"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are rare but must be recognised promptly.",
+   "b": [
+    "Miscarriage (0.5‑1 %); counsel before procedure",
+    "Placental bleeding or hematoma",
+    "Infection (chorioamnionitis) – fever, uterine tenderness",
+    "Molar pregnancy – avoid invasive sampling"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management centres on safe performance, result interpretation, and counselling.",
+   "b": [
+    "Pre‑procedure: confirm gestational age, obtain consent, screen for infection, give prophylactic oral antibiotics if local protocol advises",
+    "Procedure: sterile technique, ultrasound guidance, gentle suction of villi, limit passes to reduce trauma",
+    "Post‑procedure: observe 30‑60 min, advise rest, warn of bleeding or fever, schedule follow‑up ultrasound at 2 weeks"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After CVS, monitor for early pregnancy loss and provide genetic counselling based on results.",
+   "b": [
+    "If result normal and pregnancy continues, routine antenatal care resumes",
+    "If abnormal, discuss options: continuation with specialist care, in‑utero therapy (e.g., for 21‑hydroxylase deficiency), or termination where legal",
+    "Prevent future complications by documenting any procedure‑related adverse events"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions or tests that may be mistaken for CVS.",
+   "b": [
+    "Amniocentesis – performed 15‑20 weeks, samples amniotic fluid, higher gestational age",
+    "Percutaneous umbilical blood sampling – invasive fetal blood draw, used for severe anemia or infections"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting CVS findings.",
+   "b": [
+    "Confined placental mosaicism – abnormal result in villi but normal fetus; may need amniocentesis for confirmation",
+    "Maternal cell contamination – can give false‑negative results; labs use short‑tandem repeat markers to detect"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Heavy vaginal bleeding after the procedure",
+  "Fever > 38 °C with uterine tenderness",
+  "Severe abdominal pain or signs of peritoneal irritation"
+ ],
+ "faq": [
+  {
+   "q": "What is the optimal gestational window for CVS?",
+   "a": "11‑14 weeks; before the placenta is fully formed and before the fetal pole is easily visualised."
+  },
+  {
+   "q": "How does CVS differ from amniocentesis?",
+   "a": "CVS samples placental tissue early (11‑14 wks) while amniocentesis samples amniotic fluid later (15‑20 wks); risk profiles and timing differ."
+  },
+  {
+   "q": "Can CVS be done in a low‑resource setting?",
+   "a": "Yes, with basic ultrasound, sterile technique, and a trained operator; molecular testing may be sent to a regional lab."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old at 12 weeks requests definitive testing after a high‑risk combined screen – what is the next step? — Explain indication for CVS, obtain consent, and arrange ultrasound‑guided sampling.",
+  "During CVS the operator notes a thickened placenta and difficulty obtaining villi – what should be considered? — Recognise possible molar pregnancy; stop procedure and arrange urgent obstetric review.",
+  "A patient’s CVS karyotype shows trisomy 21 but ultrasound is normal – how do you counsel? — Discuss that CVS reflects fetal genotype, explain options, and address parental concerns.",
+  "What are the main reasons CVS may give a false‑negative result? — Confined placental mosaicism and maternal cell contamination; recommend confirmatory amniocentesis if suspicion remains.",
+  "In a setting without on‑site PCR, how can a suspected sickle‑cell disease be evaluated prenatally? — Perform CVS for DNA extraction, send sample to a reference lab, or use targeted restriction‑enzyme analysis if available.",
+  "A woman develops fever and uterine tenderness 24 h after CVS – what is your immediate management? — Treat as possible chorioamnionitis: start broad‑spectrum antibiotics, monitor vitals, and arrange obstetric review.",
+  "Compare the miscarriage risk of CVS versus amniocentesis and explain why one may be preferred in early pregnancy. — CVS risk ≈0.5‑1 %; amniocentesis risk ≈0.5‑1 % but performed later; early diagnosis favours CVS when timing is critical.",
+  "Why is it important to document the number of needle passes during CVS? — Each pass increases placental trauma and loss risk; limiting passes reduces miscarriage probability."
+ ],
+ "related": [
+  "Amniocentesis",
+  "Prenatal genetic counselling",
+  "First‑trimester combined screening",
+  "Molar pregnancy",
+  "Placental mosaicism",
+  "Fetal karyotyping"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

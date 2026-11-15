@@ -1,0 +1,203 @@
+{
+ "medical": true,
+ "title": "Primary Biliary Cholangitis",
+ "subject": "Pathology",
+ "summary": "Autoimmune destruction of intra‑hepatic bile ducts causing cholestasis, pruritus and fatigue. Diagnosis hinges on antimitochondrial antibody and cholestatic biochemistry; management centres on ursodeoxycholic acid and monitoring for cirrhosis.",
+ "aka": [
+  "Primary Biliary Cirrhosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Primary biliary cholangitis (PBC) is a chronic, immune‑mediated disease that destroys small intra‑hepatic bile ducts, leading to cholestasis and eventual cirrhosis. The diagnosis is made when two of the following are present: (1) cholestatic liver enzymes (ALP >1.5× ULN or GGT >2× ULN), (2) antimitochondrial antibody (AMA) positivity, (3) compatible liver biopsy showing non‑suppurative destructive cholangitis.",
+   "b": [
+    "Cholestatic pattern on LFTs",
+    "Positive AMA (≥1:40 titre)",
+    "Histology: lymphocytic infiltrate, bile duct loss"
+   ],
+   "t": [
+    {
+     "a": "Liver function tests",
+     "b": "Do they show cholestasis? Elevated ALP and GGT indicate bile duct injury."
+    },
+    {
+     "a": "Antimitochondrial antibody (ELISA)",
+     "b": "Positive result confirms autoimmune bile duct destruction; negative does not exclude if clinical picture strong."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Rule out extra‑hepatic obstruction; normal ducts support intra‑hepatic disease."
+    },
+    {
+     "a": "Liver biopsy (if needed)",
+     "b": "Shows portal tract inflammation and bile duct loss; used if diagnosis uncertain or to stage disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Mayo Risk Score predicts 5‑year transplant‑free survival and guides therapy escalation. It incorporates age, bilirubin, albumin, INR and ALP. Staging on biopsy uses the Scheuer system (I–IV).",
+   "b": [
+    "Mayo Score >3 = high risk",
+    "Stage III/IV = cirrhosis"
+   ],
+   "t": [
+    {
+     "a": "Mayo Risk Score",
+     "b": "Calculates transplant‑free survival; high scores prompt earlier referral for transplant."
+    },
+    {
+     "a": "Scheuer biopsy stage",
+     "b": "Stage IV indicates cirrhosis; management shifts to portal hypertension surveillance."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "PBC is autoimmune; the exact trigger is unknown but genetic susceptibility (HLA‑DRB1*08) and environmental factors (viral infections, herbal toxins) are implicated. In low‑resource settings, co‑infection with hepatitis B/C or schistosomiasis can coexist and worsen liver injury.",
+   "b": [
+    "Genetic predisposition",
+    "Environmental toxins (e.g., herbal remedies)",
+    "Co‑infection with hepatitis B/C"
+   ],
+   "t": [
+    {
+     "a": "Hepatitis B surface antigen",
+     "b": "Screen to exclude viral hepatitis; positive result changes management."
+    },
+    {
+     "a": "Schistosoma serology",
+     "b": "Positive indicates possible additive hepatic fibrosis; treat with praziquantel."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually complain of fatigue, pruritus, and mild jaundice. Physical exam may reveal xanthomas, splenomegaly, or stigmata of chronic liver disease if advanced.",
+   "b": [
+    "Fatigue",
+    "Pruritus (especially after shower)",
+    "Yellowing of skin and sclera"
+   ],
+   "t": [
+    {
+     "a": "Pruritus severity",
+     "b": "Assesses need for bile acid sequestrants or cholestyramine."
+    },
+    {
+     "a": "Xanthomas",
+     "b": "Suggest hypercholesterolaemia, common in cholestasis."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline work‑up includes LFTs, AMA, viral serology, ultrasound, and, if available, FibroScan or MRCP to exclude extra‑hepatic obstruction.",
+   "b": [
+    "HBsAg, HCV RNA",
+    "Abdominal US"
+   ],
+   "t": [
+    {
+     "a": "Liver stiffness measurement (FibroScan)",
+     "b": "Non‑invasive assessment of fibrosis; >12 kPa indicates cirrhosis."
+    },
+    {
+     "a": "MRCP",
+     "b": "Detects extra‑hepatic biliary obstruction; normal ducts support PBC diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include cirrhosis, portal hypertension, hepatocellular carcinoma, and cholangiocarcinoma. Red flags are worsening jaundice, ascites, encephalopathy, or sudden weight loss.",
+   "b": [
+    "Ascites",
+    "Encephalopathy",
+    "Rapid weight loss"
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin >3 mg/dL",
+     "b": "Suggests advanced cholestasis or biliary obstruction."
+    },
+    {
+     "a": "Platelet count <100,000/µL",
+     "b": "May indicate portal hypertension."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line therapy is ursodeoxycholic acid (UDCA) to improve bile flow and delay progression. If inadequate response, consider obeticholic acid or fibrates. Supportive care includes bile acid sequestrants for pruritus, vitamin D and K supplementation, and lifestyle advice.",
+   "b": [
+    "Obeticholic acid if UDCA inadequate",
+    "Bile acid sequestrants for pruritus"
+   ],
+   "t": [
+    {
+     "a": "UDCA",
+     "b": "Improves cholestasis and prolongs survival; avoid if patient has severe liver failure."
+    },
+    {
+     "a": "Bile acid sequestrants",
+     "b": "Reduce pruritus by binding bile acids in gut."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Patients should have LFTs and AMA every 6–12 months, ultrasound for cirrhosis surveillance, and vaccinations for hepatitis A/B. Counsel on avoiding hepatotoxic drugs and alcohol.",
+   "b": [
+    "LFTs every 6–12 months",
+    "Ultrasound every 2 years if cirrhosis"
+   ],
+   "t": [
+    {
+     "a": "Vaccination",
+     "b": "Protect against hepatitis A/B to prevent superimposed liver injury."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening jaundice",
+  "New ascites",
+  "Encephalopathy",
+  "Rapid weight loss"
+ ],
+ "faq": [
+  {
+   "q": "Why is pruritus so severe in PBC?",
+   "a": "Bile acids accumulate in skin; they stimulate itch receptors."
+  },
+  {
+   "q": "Can PBC be cured?",
+   "a": "No, but UDCA can slow progression and improve quality of life."
+  },
+  {
+   "q": "What if a patient is pregnant?",
+   "a": "PBC is usually stable; avoid hepatotoxic drugs and monitor liver function closely."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old woman with fatigue and pruritus has ALP 400 IU/L, GGT 350 IU/L, and positive AMA. What is the next best step? — Order a liver biopsy to confirm diagnosis if non‑invasive tests are inconclusive.",
+  "A patient with known PBC develops sudden jaundice and ascites. What is the most likely complication? — Acute decompensation of cirrhosis; assess for variceal bleeding and hepatic encephalopathy.",
+  "Why is ursodeoxycholic acid the first‑line treatment in PBC? — It improves bile flow, reduces cholestasis, and delays progression to cirrhosis.",
+  "A patient with PBC has a normal ultrasound. What does this suggest? — Intra‑hepatic cholestasis; extra‑hepatic obstruction is unlikely.",
+  "Which laboratory value best predicts long‑term survival in PBC? — Mayo Risk Score components, especially bilirubin and albumin.",
+  "A patient with PBC is on UDCA but still has pruritus. What is an appropriate adjunct therapy? — Bile acid sequestrants such as cholestyramine.",
+  "Why should patients with PBC avoid certain herbal remedies? — Many contain hepatotoxic compounds that can worsen liver injury."
+ ],
+ "related": [
+  "Primary sclerosing cholangitis",
+  "Autoimmune hepatitis",
+  "Cholestatic liver disease",
+  "Liver fibrosis",
+  "Portal hypertension"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

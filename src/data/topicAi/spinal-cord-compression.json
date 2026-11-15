@@ -1,0 +1,182 @@
+{
+ "medical": true,
+ "title": "Spinal Cord Compression",
+ "subject": "Medicine",
+ "summary": "Spinal cord compression is a neurosurgical emergency where external pressure damages the cord, causing progressive neurological loss. Prompt recognition, imaging, and decompression are essential to prevent permanent deficit, especially in low‑resource settings.",
+ "aka": [
+  "Cord compression"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A focal or circumferential force on the spinal cord that impairs conduction, producing motor, sensory, and autonomic deficits. Diagnosis rests on clinical suspicion and imaging, usually MRI.",
+   "b": [
+    "Rapidly progressive weakness or sensory change",
+    "Pain that is worse with movement or at rest",
+    "Bladder/bowel dysfunction"
+   ],
+   "t": [
+    {
+     "a": "MRI spine (preferred)",
+     "b": "Confirms location, extent, and cause of compression; shows cord edema or myelomalacia"
+    },
+    {
+     "a": "CT spine (if MRI unavailable)",
+     "b": "Detects bony lesions, fractures, or calcified masses; guides surgical planning"
+    },
+    {
+     "a": "Plain radiograph",
+     "b": "Identifies gross vertebral collapse or pathological fracture when advanced imaging is absent"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The ASIA (American Spinal Injury Association) impairment scale grades motor and sensory loss; early stages (ASIA D/E) have better prognosis after decompression.",
+   "b": [
+    "ASIA A – complete loss below level",
+    "ASIA B – sensory only",
+    "ASIA C – some motor function, <50% key muscles ≥3/5",
+    "ASIA D – motor function, ≥50% key muscles ≥3/5",
+    "ASIA E – normal"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, the commonest etiologies are metastatic disease, infection, and trauma.",
+   "b": [
+    "Metastatic solid tumours (breast, prostate, lung) – most frequent overall",
+    "Vertebral osteomyelitis/discitis from TB or pyogenic bacteria",
+    "Traumatic fracture‑dislocation (road‑traffic accidents, falls)",
+    "HIV‑related opportunistic infections (TB, cryptococcal, bacterial abscess)",
+    "Schistosomal granuloma (rare, endemic areas)",
+    "Herbal or traditional medicine‑induced epidural haematoma"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop a characteristic pattern of pain, motor weakness, sensory level, and autonomic loss that evolves over hours to days.",
+   "b": [
+    "Localized back/neck pain, often nocturnal",
+    "Progressive limb weakness, usually distal first",
+    "Sensory level (pinprick loss) below the lesion",
+    "Hyperreflexia and positive Babinski above the level",
+    "Urinary retention or overflow incontinence"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging confirms compression; basic labs identify infection or coagulopathy; bedside tests assess neurologic function.",
+   "b": [
+    "Full blood count, ESR, CRP – screen for infection",
+    "Serum calcium – hypercalcaemia can mimic neurologic signs",
+    "HIV test – guides antimicrobial choice"
+   ],
+   "t": [
+    {
+     "a": "MRI spine with contrast",
+     "b": "What is the exact level, cause (tumour, abscess, fracture), and cord signal? – Guides urgent decompression"
+    },
+    {
+     "a": "CT myelogram (if MRI contraindicated)",
+     "b": "What is the canal diameter and bony involvement? – Alternative for surgical planning"
+    },
+    {
+     "a": "Urgent bedside neurologic exam (ASIA)",
+     "b": "What is the current functional grade? – Determines urgency and prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrelieved compression leads to irreversible cord injury, respiratory compromise, and autonomic dysreflexia.",
+   "b": [
+    "Rapidly worsening motor power (≥1 grade in 12 h)",
+    "New onset respiratory insufficiency (cervical lesion)",
+    "Severe autonomic dysreflexia (hypertensive crisis, bradycardia)",
+    "Spinal shock with loss of all reflexes"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Immediate goals are to stabilise the spine, treat the underlying cause, and decompress the cord surgically or with radiotherapy when surgery is not feasible.",
+   "b": [
+    "Immobilise with rigid cervical collar or spinal board",
+    "High‑dose intravenous steroids (e.g., dexamethasone) only if tumour‑related and no infection",
+    "Empiric broad‑spectrum antibiotics for suspected pyogenic infection (e.g., ceftriaxone + metronidazole) while awaiting cultures",
+    "Anti‑TB therapy (rifampicin, isoniazid, pyrazinamide, ethambutol) for confirmed spinal TB",
+    "Urgent decompressive laminectomy or vertebrectomy when surgical capacity exists",
+    "Radiotherapy for radiosensitive tumours when surgery unavailable"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After decompression, monitor neurologic recovery, manage pain, and address the primary disease to avoid recurrence.",
+   "b": [
+    "Repeat MRI at 4–6 weeks to assess decompression adequacy",
+    "Physiotherapy for gait and strength retraining",
+    "Bone health optimisation (calcium, vitamin D, bisphosphonates) in metastatic disease",
+    "Adherence to anti‑TB regimen for at least 9 months"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions produce similar motor‑sensory patterns but differ in etiology and management.",
+   "b": [
+    "Acute transverse myelitis – inflammatory, often post‑viral, no mass effect on imaging",
+    "Severe vitamin B12 deficiency – subacute, dorsal column signs, reversible with supplementation",
+    "Cauda equina syndrome – lower‑lumbar root compression, saddle anesthesia, early surgical decompression"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may appear normal despite serious compression.",
+   "b": [
+    "Plain X‑ray may miss early epidural tumour or small abscess",
+    "Normal ESR does not exclude TB in HIV‑positive patients",
+    "Negative blood cultures do not rule out spinal infection if antibiotics already given"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive weakness or paralysis within hours",
+  "New urinary retention or incontinence",
+  "Severe neck or back pain with neurologic change"
+ ],
+ "faq": [
+  {
+   "q": "Why is MRI preferred over CT?",
+   "a": "MRI shows soft‑tissue detail, cord edema, and tumour extent without radiation, which CT cannot."
+  },
+  {
+   "q": "Can steroids be given in all cases?",
+   "a": "Only when compression is tumour‑related and infection is excluded; steroids worsen infections."
+  },
+  {
+   "q": "What is the first step if MRI is unavailable?",
+   "a": "Stabilise the spine, obtain a CT scan, and start empiric antibiotics if infection is likely."
+  }
+ ],
+ "exam": [
+  "What immediate bedside actions do you take for a patient with suspected cervical cord compression? — Immobilise, assess ASIA grade, arrange urgent imaging, start steroids only if tumour is likely.",
+  "How does spinal TB present differently from metastatic compression? — TB often has constitutional symptoms, subacute pain, and vertebral collapse; metastasis is usually painless and associated with known primary cancer.",
+  "Which imaging modality confirms cord edema and why is this important? — MRI with T2‑weighted sequences shows myelomalacia, indicating irreversible injury if delayed.",
+  "What are the contraindications to high‑dose dexamethasone in this setting? — Active infection (especially TB), uncontrolled diabetes, and recent gastrointestinal bleed.",
+  "How would you differentiate cauda equina syndrome from lumbar cord compression clinically? — Cauda equina has saddle anesthesia, absent anal wink, and early bowel/bladder loss; lumbar cord compression shows a sensory level and upper motor signs.",
+  "In a resource‑limited hospital without radiotherapy, how do you manage a radiosensitive metastatic lesion? — Prioritise surgical decompression if feasible; otherwise use high‑dose steroids and systemic chemotherapy if appropriate.",
+  "What laboratory tests help distinguish pyogenic from tuberculous spinal infection? — Elevated CRP and neutrophilia suggest pyogenic; high ESR, lymphocytosis, and positive TB PCR support TB.",
+  "Why is autonomic dysreflexia a red flag in cervical compression? — It can cause life‑threatening hypertension and bradycardia, requiring immediate blood pressure control."
+ ],
+ "related": [
+  "Acute Transverse Myelitis",
+  "Spinal Tuberculosis (Pott disease)",
+  "Metastatic Spinal Cord Compression",
+  "Cauda Equina Syndrome",
+  "Spinal Fracture Management",
+  "Neuro‑oncology"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

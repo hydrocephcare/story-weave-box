@@ -1,0 +1,91 @@
+{
+ "medical": true,
+ "title": "Balantidium coli Infection",
+ "subject": "Microbiology & immunology",
+ "summary": "Balantidium coli is a ciliated protozoan causing balantidiasis, mainly diarrhoea and dysentery. It is acquired from contaminated water or food, especially in low‑resource settings. Diagnosis relies on stool microscopy; treatment is metronidazole or tetracycline.",
+ "aka": [
+  "Balantidiasis",
+  "B. coli"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Balantidium coli is the largest known intestinal protozoan, a single‑cell organism with cilia that moves in a whip‑like fashion. It is the causative agent of balantidiasis, a zoonotic disease transmitted mainly through faecal‑oral routes.",
+   "b": [
+    "Largest intestinal protozoan",
+    "Ciliated, motile",
+    "Zoonotic"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The organism is oval, 50–100 µm, with a single nucleus and a prominent macronucleus. It has a ventral sucker for attachment and a single flagellum for motility.",
+   "b": [
+    "Size 50–100 µm",
+    "Single nucleus + macronucleus",
+    "Ventral sucker"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is faecal‑oral via contaminated water, food or contact with infected pigs. The cyst stage is resistant to desiccation; trophozoites are the active form in the gut.",
+   "b": [
+    "Cyst stage resistant to drying",
+    "Trophozoites in colon",
+    "Pigs are common reservoirs"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Balantidiasis presents with watery or bloody diarrhoea, abdominal pain, fever and tenesmus. Severe cases can lead to perforation, sepsis or death, especially in immunocompromised patients.",
+   "b": [
+    "Watery or bloody diarrhoea",
+    "Abdominal pain",
+    "Fever, tenesmus"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Microscopy of fresh stool is the gold standard. Multiple samples increase yield. In low‑resource settings, a simple wet mount is often all that is available.",
+   "b": [
+    "Fresh stool wet mount"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "In a patient with chronic diarrhoea and a history of pig exposure, consider balantidiasis. Microscopy may be negative early; repeat samples improve sensitivity. Metronidazole is effective but avoid in pregnancy unless no alternative.",
+   "b": [
+    "Consider in pig‑exposed patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Giardia lamblia (giardiasis) – both cysts in stool, but Giardia lacks cilia and is smaller. Entamoeba histolytica – causes dysentery but lacks cilia.",
+   "b": [
+    "Giardia lamblia – no cilia, smaller"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Stool microscopy may be falsely negative if samples are old or if the patient is on antibiotics that kill trophozoites. Cysts are fragile and may not survive transport.",
+   "b": [
+    "Old samples reduce detection"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Severe dehydration, persistent fever >48 h, bloody diarrhoea, abdominal tenderness suggesting perforation, or signs of sepsis.",
+   "b": [
+    "Severe dehydration"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

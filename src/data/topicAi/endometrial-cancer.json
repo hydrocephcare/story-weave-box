@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Endometrial Cancer",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Endometrial cancer is the commonest gynecologic malignancy in post‑menopausal women, presenting with abnormal uterine bleeding. Diagnosis relies on tissue sampling and staging guides surgery, radiotherapy and systemic therapy.",
+ "aka": [
+  "Uterine carcinoma",
+  "Endometrial adenocarcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A malignant tumour arising from the endometrial lining, most often an endometrioid adenocarcinoma. Diagnosis requires histologic confirmation from endometrial sampling.",
+   "b": [
+    "Histology shows glandular proliferation with atypia; grade 1‑3 based on architecture and nuclear atypia",
+    "Immunohistochemistry (p53, mismatch repair proteins) helps identify Lynch syndrome"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the FIGO 2023 surgical system, based on depth of myometrial invasion, cervical spread, nodal involvement and distant metastases.",
+   "b": [
+    "Stage I: confined to uterus (IA ≤50% myometrium, IB >50%)",
+    "Stage II: cervical stromal invasion",
+    "Stage III: local spread to serosa, adnexa or nodes",
+    "Stage IV: bladder/rectal invasion or distant metastasis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Risk factors are grouped into hormonal, genetic and environmental categories, with obesity and unopposed estrogen being the strongest.",
+   "b": [
+    "Obesity (BMI ≥ 30) → peripheral aromatization of androgens",
+    "Nulliparity, early menarche, late menopause",
+    "Tamoxifen use, estrogen‑only HRT",
+    "Lynch syndrome (MLH1, MSH2, MSH6, PMS2 mutations)",
+    "Chronic anovulation (PCOS)",
+    "Diabetes, hypertension – common in East Africa"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic presentation is post‑menopausal bleeding, but pre‑menopausal women may have abnormal uterine bleeding (AUB) or intermenstrual spotting.",
+   "b": [
+    "Bleeding that is new, persistent, or heavier than usual",
+    "Pelvic pain is uncommon unless advanced disease",
+    "Weight loss, fatigue in late stages"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Transvaginal ultrasound",
+     "b": "Is the endometrium thickened? – Endometrial thickness ≥5 mm in post‑menopausal women suggests pathology; thin endometrium (<5 mm) makes cancer unlikely."
+    },
+    {
+     "a": "Endometrial sampling (pipelle or D&C)",
+     "b": "What is the histology? – Provides definitive diagnosis and grade; if unavailable, refer for hysterectomy specimen."
+    },
+    {
+     "a": "MRI pelvis",
+     "b": "How deep is myometrial invasion? – High‑resolution MRI predicts IA vs IB and cervical involvement; if MRI not available, use intra‑operative assessment."
+    },
+    {
+     "a": "CT chest/abdomen/pelvis",
+     "b": "Is there distant spread? – Detects nodal or organ metastases; if CT unavailable, chest X‑ray and abdominal ultrasound are alternatives."
+    },
+    {
+     "a": "Molecular testing (MMR IHC or MSI PCR)",
+     "b": "Is there Lynch syndrome? – Guides surveillance and immunotherapy; if not possible, refer for genetic counseling based on family history."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from local invasion or metastasis and can be life‑threatening.",
+   "b": [
+    "Rapidly increasing bleeding causing anemia",
+    "Ureteric obstruction → hydronephrosis",
+    "Vaginal fistula from extensive disease",
+    "Pulmonary or hepatic metastases causing organ failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is stage‑directed, combining surgery, radiotherapy and systemic therapy. In low‑resource settings, surgery remains the cornerstone.",
+   "b": [
+    "Stage I‑II: Total hysterectomy with bilateral salpingo‑oophorectomy; sentinel node biopsy if feasible.",
+    "Adjuvant radiotherapy (vaginal brachytherapy) for high‑grade or deep invasion.",
+    "Stage III‑IV: Consider combined external beam radiotherapy and chemotherapy (carboplatin + paclitaxel).",
+    "Hormone therapy (progestins) for selected low‑grade, fertility‑preserving patients.",
+    "Immunotherapy (PD‑1 inhibitors) for mismatch‑repair deficient tumours when available."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Surveillance aims to detect recurrence early and manage long‑term risks.",
+   "b": [
+    "Clinical exam and symptom review every 3‑6 months for 2 years, then annually.",
+    "Ultrasound or CT if symptoms recur.",
+    "Weight control, regular physical activity, and managing diabetes reduce future risk.",
+    "For Lynch syndrome carriers: annual colonoscopy and consider risk‑reducing hysterectomy after childbearing."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause abnormal uterine bleeding.",
+   "b": [
+    "Endometrial hyperplasia – benign proliferation, may progress to cancer.",
+    "Uterine polyps – focal lesions, usually benign.",
+    "Adenomyosis – diffuse endometrial tissue within myometrium, causes heavy bleeding."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may give false reassurance.",
+   "b": [
+    "Thin endometrium on ultrasound can miss focal cancer; always sample if bleeding persists.",
+    "Normal CA‑125 does not exclude disease; it is not a screening test.",
+    "MRI may underestimate superficial cervical invasion; intra‑operative assessment remains gold standard."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Heavy or sudden uterine bleeding causing dizziness or fainting",
+  "Rapidly worsening pelvic pain with fever",
+  "Signs of urinary obstruction (flank pain, decreased urine output)"
+ ],
+ "faq": [
+  {
+   "q": "Why is obesity such a strong risk factor?",
+   "a": "Adipose tissue converts androgens to estrogen, creating unopposed estrogen stimulation of the endometrium."
+  },
+  {
+   "q": "Can a young woman get endometrial cancer?",
+   "a": "Yes, especially with Lynch syndrome, tamoxifen exposure, or chronic anovulation."
+  },
+  {
+   "q": "Is a normal ultrasound enough to rule out cancer?",
+   "a": "No; persistent bleeding always requires histologic sampling regardless of ultrasound thickness."
+  }
+ ],
+ "exam": [
+  "What history points differentiate endometrial cancer from benign AUB? — Emphasise post‑menopausal bleeding, risk factors (obesity, tamoxifen, Lynch), and duration of symptoms.",
+  "How would you manage a 62‑year‑old with post‑menopausal bleeding in a district hospital lacking MRI? — Perform pipelle biopsy; if cancer confirmed, arrange referral for hysterectomy; use ultrasound thickness to triage urgency.",
+  "Explain the FIGO stage IIA versus IIB distinction and its impact on treatment. — IIA: cervical stromal invasion without parametrial spread (surgery ± brachytherapy); IIB: parametrial involvement (requires radiotherapy).",
+  "Why is progestin therapy only suitable for selected patients? — It works for low‑grade, early‑stage disease in women desiring fertility; ineffective for high‑grade or deep invasion.",
+  "When is immunotherapy indicated in endometrial cancer? — In metastatic or recurrent tumors with mismatch‑repair deficiency or high microsatellite instability, after standard chemo.",
+  "What red‑flag symptom would prompt urgent referral? — Sudden massive bleeding causing hemodynamic instability or new onset flank pain suggesting ureteric obstruction.",
+  "How does Lynch syndrome alter long‑term management? — Requires lifelong colonoscopic surveillance, consider risk‑reducing hysterectomy, and informs family testing.",
+  "What are the pitfalls of relying on CA‑125 in endometrial cancer? — It is not specific; normal levels do not exclude disease, and elevated levels may reflect other gynecologic conditions."
+ ],
+ "related": [
+  "Endometrial hyperplasia",
+  "Uterine polyps",
+  "Adenomyosis",
+  "Lynch syndrome",
+  "Tamoxifen‑associated gynecologic effects",
+  "Obesity and hormone‑related cancers"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

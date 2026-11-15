@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Atopic Dermatitis in Children",
+ "subject": "Paediatrics",
+ "summary": "Atopic dermatitis is a chronic, relapsing inflammatory skin disease common in African children, often linked with asthma and allergic rhinitis. Diagnosis relies on clinical criteria; severity guides treatment. Low‑resource settings require pragmatic use of available investigations and careful monitoring for infection.",
+ "aka": [
+  "Eczema",
+  "Atopic eczema"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Atopic dermatitis (AD) is a pruritic, chronic inflammatory dermatosis with typical flexural distribution in children. Diagnosis follows the UK Working Party criteria: itchy skin plus three or more of (1) history of flexural rash, (2) personal or family history of atopy, (3) visible dermatitis on the cheeks/forehead or extensor surfaces, (4) dry skin, (5) onset before age 2.",
+   "b": [
+    "Itchy, chronic rash",
+    "Flexural or facial distribution",
+    "History of asthma, allergic rhinitis, or family atopy"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded using the SCORAD or the simpler POEM score; in low‑resource settings the “mild‑moderate‑severe” clinical categories based on extent (>10% BSA), intensity of erythema, edema, oozing, crusting, and impact on sleep are practical.",
+   "b": [
+    "Mild: <10% BSA, limited sleep disturbance",
+    "Moderate: 10‑30% BSA, frequent scratching, sleep loss",
+    "Severe: >30% BSA, intense pruritus, secondary infection, sleep deprivation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "AD results from a combination of skin barrier dysfunction, immune dysregulation, and environmental triggers. In East Africa, common aggravators include house dust mite, pollen, harsh soaps, and frequent use of traditional herbal balms.",
+   "b": [
+    "Filaggrin or other barrier gene mutations",
+    "Th2‑dominant immune response",
+    "Environmental allergens (dust mite, pollen)",
+    "Irritants (detergents, herbal preparations)",
+    "Secondary bacterial infection (Staphylococcus aureus)",
+    "Co‑existing atopic conditions (asthma, allergic rhinitis)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children present with intense pruritus, erythema, papules, and lichenification in flexural areas (elbows, knees) and on the face/neck. Acute flares show weeping, crusting; chronic disease shows thickened, hyperpigmented plaques. Sleep disturbance is a key functional impact.",
+   "b": [
+    "Itch that worsens at night",
+    "Dry, scaly skin",
+    "Lichenified plaques in flexures",
+    "Possible oozing or crusting in acute flares"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited; they aim to confirm diagnosis, assess severity, and detect infection.",
+   "t": [
+    {
+     "a": "Skin swab for bacterial culture",
+     "b": "Is there secondary infection? Positive culture for Staph aureus guides antibiotic choice"
+    },
+    {
+     "a": "Serum IgE (if available)",
+     "b": "Is there atopic sensitisation? Very high IgE supports atopy but is not required"
+    },
+    {
+     "a": "Patch testing (rarely available)",
+     "b": "Identify contact allergens when dermatitis is refractory"
+    },
+    {
+     "a": "Basic CBC with eosinophil count",
+     "b": "Eosinophilia suggests atopic background; normal count does not exclude AD"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from severe inflammation, infection, or systemic effects of chronic disease.",
+   "b": [
+    "Rapidly spreading erythema with fever → cellulitis or sepsis",
+    "Crusting with honey‑coloured crusts → impetigo",
+    "Persistent sleep loss → growth failure",
+    "Signs of allergic sensitisation → anaphylaxis risk with foods"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment follows a step‑wise approach: restore barrier, control inflammation, treat infection, and address pruritus. Education of caregivers is essential.",
+   "b": [
+    "Emollient therapy: liberal use of fragrance‑free moisturisers, especially after bathing",
+    "Topical corticosteroids: low‑potency (hydrocortisone 1%) for mild disease; mid‑potency (betamethasone valerate 0.05%) for moderate‑severe flares",
+    "Topical calcineurin inhibitors (tacrolimus ointment) for steroid‑sparing on face/neck",
+    "Antihistamines (diphenhydramine) for night‑time sedation, not primary itch control",
+    "Oral antibiotics (e.g., amoxicillin) only if bacterial infection is proven or strongly suspected",
+    "Education: avoid harsh soaps, keep nails short, use cotton clothing"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review (every 4‑6 weeks for moderate‑severe disease) monitors control, side‑effects, and infection. Primary prevention focuses on skin barrier maintenance and allergen avoidance.",
+   "b": [
+    "Re‑assess severity with SCORAD/POEM",
+    "Reinforce emollient use",
+    "Screen for new atopic conditions (asthma, allergic rhinitis)",
+    "Vaccinate according to national schedule; consider influenza vaccine"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several dermatoses mimic AD, especially in tropical settings.",
+   "b": [
+    "Seborrheic dermatitis – greasy scales on scalp, less pruritic",
+    "Scabies – burrows, intense nocturnal itch, often in web spaces",
+    "Impetigo – honey‑coloured crusts, bacterial origin",
+    "Contact dermatitis – localized to area of irritant exposure"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and clinical findings may be misleading if interpreted without context.",
+   "b": [
+    "Normal IgE does not exclude AD",
+    "Mild eosinophilia can be seen in many infections",
+    "Negative bacterial culture does not rule out infection if antibiotics were given"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38°C with expanding erythema",
+  "Rapidly worsening skin breakdown with pus",
+  "Severe sleep deprivation causing daytime somnolence",
+  "Signs of anaphylaxis after food exposure"
+ ],
+ "faq": [
+  {
+   "q": "Why are emollients the cornerstone of therapy?",
+   "a": "They restore the defective skin barrier, reduce transepidermal water loss and lower the need for steroids."
+  },
+  {
+   "q": "When should I add a topical calcineurin inhibitor?",
+   "a": "When the face or neck requires anti‑inflammatory treatment and you want to avoid steroid‑induced atrophy."
+  },
+  {
+   "q": "Is a low‑potency steroid enough for a severe flare?",
+   "a": "No; moderate‑potency steroids or a short course of higher potency are needed, followed by tapering."
+  }
+ ],
+ "exam": [
+  "A 2‑year‑old presents with flexural erythema, intense night itch, and a family history of asthma – what diagnostic criteria do you apply and how many must be met? — Use UK Working Party criteria; need itch plus ≥3 of the 5 features.",
+  "During a flare the child has honey‑coloured crusts and fever – what is your next step and why? — Obtain a skin swab, start oral antibiotics for suspected impetigo, and continue topical steroids.",
+  "You have only petroleum jelly available – how do you incorporate it into the management plan? — Use it as an occlusive emollient after washing; it compensates for lack of specialised moisturisers.",
+  "A caregiver reports that the child’s eczema worsened after using a traditional herbal paste – what should you advise? — Explain irritant contact dermatitis, discontinue the paste, and reinforce gentle skin care.",
+  "Explain why antihistamines are not first‑line for itch in AD. — They provide sedation but do not address the inflammatory pathway; steroids or calcineurin inhibitors are primary.",
+  "What red‑flag sign would prompt urgent referral to a higher‑level centre? — Rapidly spreading cellulitis with systemic signs or signs of sepsis.",
+  "How would you differentiate AD from scabies on examination? — Scabies shows burrows in web spaces and linear tracks; AD shows flexural lichenification without burrows.",
+  "A child with severe AD is not responding to topical steroids – what systemic options are available in a low‑resource setting? — Consider short courses of oral prednisolone for acute control, then step down; avoid long‑term systemic steroids due to side‑effects."
+ ],
+ "related": [
+  "Asthma",
+  "Allergic rhinitis",
+  "Food allergy",
+  "Impetigo",
+  "Scabies",
+  "Contact dermatitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

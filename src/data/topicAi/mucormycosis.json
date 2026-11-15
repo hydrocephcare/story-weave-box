@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "title": "Mucormycosis (Zygomycosis)",
+ "subject": "Microbiology & immunology",
+ "summary": "Invasive infection by Mucorales fungi, most often in diabetic ketoacidosis or immunosuppressed patients. Rapid tissue necrosis, angio‑invasion and high mortality demand early recognition and aggressive management.",
+ "aka": [
+  "Zygomycosis",
+  "Mucor infection"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Mucormycosis is a life‑threatening opportunistic fungal infection caused by fungi of the order Mucorales (e.g., Rhizopus, Mucor, Lichtheimia). It thrives in high‑glucose, acidic environments and spreads by angio‑invasion, causing tissue infarction.",
+   "b": [
+    "Most common in diabetic ketoacidosis (DKA) and hematologic malignancy",
+    "Three main clinical forms: rhinocerebral, pulmonary, cutaneous"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Mucorales are broad, ribbon‑like, non‑septate hyphae that grow rapidly at 30‑37 °C. They produce sporangiospores dispersed in air and soil.",
+   "b": [
+    "Hyphae: 5‑15 µm, irregular width, right‑angle branching",
+    "Thermotolerant, thrive in high glucose and iron"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spores are inhaled, ingested, or inoculated through skin breaches. In susceptible hosts they germinate, invade blood vessels and spread hematogenously.",
+   "b": [
+    "Environmental exposure: decaying organic matter, compost",
+    "No human‑to‑human transmission"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical presentation depends on portal of entry. Rhinocerebral disease begins with sinus pain, facial swelling and black eschar; pulmonary disease mimics pneumonia; cutaneous disease follows trauma or burns.",
+   "b": [
+    "Rhinocerebral: periorbital edema, ophthalmoplegia, palate necrosis",
+    "Pulmonary: fever, cough, hemoptysis, cavitary lesions",
+    "Disseminated: multiorgan infarction, high mortality"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical suspicion with imaging and tissue confirmation. Histopathology showing broad, non‑septate hyphae with angio‑invasion is diagnostic.",
+   "t": [
+    {
+     "a": "CT/MRI of sinuses or chest",
+     "b": "Localises disease extent; necrotic tissue appears non‑enhancing"
+    },
+    {
+     "a": "Direct microscopy (KOH prep) of biopsy",
+     "b": "Detects characteristic hyphae; rapid bedside test"
+    },
+    {
+     "a": "Culture on Sabouraud dextrose agar",
+     "b": "Identifies species; guides antifungal choice"
+    },
+    {
+     "a": "Serum iron and glucose",
+     "b": "Elevated iron and uncontrolled diabetes predispose infection"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Urgent surgical debridement plus systemic antifungal therapy. Reverse underlying metabolic or immunologic abnormalities.",
+   "b": [
+    "First‑line drug: Liposomal amphotericin B – broad Mucorales activity",
+    "Posaconazole or isavuconazole for step‑down or intolerance",
+    "Avoid voriconazole – inactive against Mucorales",
+    "Control hyperglycaemia, treat ketoacidosis, reduce steroids"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on risk factors, rapid progression, and the need for combined surgical‑medical therapy.",
+   "b": [
+    "DKA is the classic predisposing condition for rhinocerebral disease",
+    "Black necrotic eschar = tissue infarction from angio‑invasion",
+    "Amphotericin B is the only drug with proven mortality benefit"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden facial swelling, vision loss, or black eschar in a diabetic patient",
+  "Unexplained hemoptysis with fever in an immunocompromised host",
+  "Rapid progression of skin necrosis after trauma"
+ ],
+ "faq": [
+  {
+   "q": "Why does diabetic ketoacidosis predispose to mucormycosis?",
+   "a": "Acidosis impairs phagocyte function and high free iron promotes fungal growth."
+  },
+  {
+   "q": "Can a negative culture rule out mucormycosis?",
+   "a": "No; tissue histology is the gold standard and cultures are often false‑negative."
+  },
+  {
+   "q": "What is the role of iron chelation in treatment?",
+   "a": "Deferoxamine worsens infection (provides iron to fungi); deferasirox may be adjunctive but is not routine."
+  }
+ ],
+ "exam": [
+  "A diabetic patient in DKA presents with periorbital swelling and black palate – what is your immediate management? — Recognise rhinocerebral mucormycosis, start liposomal amphotericin B, correct ketoacidosis, arrange urgent ENT debridement.",
+  "How does mucormycosis differ from invasive aspergillosis on histology? — Mucorales: broad, non‑septate hyphae with right‑angle branching; Aspergillus: narrow, septate, acute‑angle branching.",
+  "Why is voriconazole contraindicated in suspected mucormycosis? — It lacks activity against Mucorales and may allow disease progression.",
+  "In a resource‑limited hospital without CT, how would you confirm diagnosis? — Perform bedside KOH prep of sinus or wound tissue; look for broad, ribbon‑like hyphae; proceed to surgical debridement based on clinical picture.",
+  "What metabolic correction is essential before antifungal therapy? — Rapid reversal of ketoacidosis and strict glucose control to improve host immunity.",
+  "A patient on high‑dose steroids for TB develops pulmonary infiltrates; what clues point to mucormycosis rather than bacterial pneumonia? — Persistent fever despite antibiotics, cavitary lesions with surrounding consolidation, and possible hemoptysis; consider fungal infection.",
+  "Explain why surgical debridement is a cornerstone of therapy. — Angio‑invasion causes necrotic tissue that antifungals cannot penetrate; removing dead tissue reduces fungal burden and improves drug delivery.",
+  "What are the key prognostic factors influencing mortality? — Delay >6 hours to therapy, extent of disease (disseminated worst), uncontrolled diabetes, and lack of surgical intervention."
+ ],
+ "related": [
+  "Invasive aspergillosis",
+  "Candida sepsis",
+  "Diabetic ketoacidosis",
+  "Hematologic malignancy‑related infections",
+  "Cutaneous fungal infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

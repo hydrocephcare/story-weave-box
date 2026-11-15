@@ -1,0 +1,188 @@
+{
+ "medical": true,
+ "title": "Biliary Strictures",
+ "subject": "Medicine",
+ "summary": "Biliary strictures are abnormal narrowings of the extra‑hepatic or intra‑hepatic bile ducts, most often caused by stones, inflammation, or malignancy. They present with jaundice, pruritus, and abdominal pain, and require imaging and, if possible, ERCP or surgery. Early recognition prevents liver failure and cholangiocarcinoma.",
+ "aka": [
+  "Biliary obstruction",
+  "Bile duct narrowing"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A biliary stricture is a focal narrowing of a bile duct that impedes flow of bile from the liver to the duodenum. Diagnosis is based on clinical features and imaging that shows a tapered segment with upstream dilatation.",
+   "b": [
+    "Jaundice, pruritus, dark urine, pale stools",
+    "Abdominal pain (often RUQ), weight loss"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Shows upstream ductal dilatation and a focal narrowing – confirms obstruction but not cause"
+    },
+    {
+     "a": "MRCP",
+     "b": "Non‑invasive imaging of the biliary tree; identifies strictures, stones, and masses"
+    },
+    {
+     "a": "ERCP",
+     "b": "Diagnostic and therapeutic; allows brush cytology, stenting, and stone removal"
+    },
+    {
+     "a": "Serum bilirubin",
+     "b": "Total >34 µmol/L (2 mg/dL) suggests significant obstruction; rising trend indicates worsening"
+    },
+    {
+     "a": "ALP",
+     "b": ">2× upper limit indicates cholestasis; helps differentiate hepatic vs. extrahepatic causes"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Strictures are staged by length, degree of narrowing, and associated complications. The Bismuth classification is used for hilar strictures, while distal strictures are graded by the length of the narrowed segment.",
+   "b": [
+    "Bismuth I–IV for hilar strictures; I = <1 cm, IV = involves both ducts"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the hierarchy of causes reflects local disease burden.",
+   "b": [
+    "Choledocholithiasis (common in gallstone disease)",
+    "Chronic cholecystitis leading to post‑cholecystectomy stricture",
+    "Infectious cholangitis (e.g., tuberculosis, schistosomiasis)",
+    "Primary sclerosing cholangitis (rare but important)",
+    "Pancreatic head carcinoma",
+    "Cholangiocarcinoma",
+    "Metastatic lymphadenopathy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report a triad of jaundice, pruritus, and abdominal pain. Weight loss and anorexia may signal malignancy.",
+   "b": [
+    "Right upper quadrant pain, especially after fatty meals"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Start with inexpensive tests; advance to imaging if available.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Rule out anemia or infection; leukocytosis may suggest cholangitis"
+    },
+    {
+     "a": "LFTs",
+     "b": "Elevated ALP and GGT with normal transaminases indicates cholestasis"
+    },
+    {
+     "a": "Serum IgG4",
+     "b": "Elevated in autoimmune pancreatitis causing stricture"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "First‑line imaging; shows dilated ducts and possible stones"
+    },
+    {
+     "a": "MRCP",
+     "b": "Preferred when available; delineates anatomy and rule out malignancy"
+    },
+    {
+     "a": "ERCP with brush cytology",
+     "b": "Gold standard for diagnosis and treatment of malignant strictures"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent referral is required for signs of acute cholangitis or impending liver failure.",
+   "b": [
+    "Fever, chills, right upper quadrant tenderness (Charcot’s triad) – acute cholangitis"
+   ],
+   "t": [
+    {
+     "a": "Bilirubin >200 µmol/L",
+     "b": "Indicates severe obstruction; risk of hepatic encephalopathy"
+    },
+    {
+     "a": "INR >1.5",
+     "b": "Coagulopathy from liver dysfunction; increases surgical risk"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve obstruction, and monitor liver function.",
+   "b": [
+    "Endoscopic stenting for benign strictures or palliation of malignancy"
+   ],
+   "t": [
+    {
+     "a": "Bile duct stent",
+     "b": "Relieves obstruction; chosen over surgery when anatomy is difficult or patient is unfit for surgery"
+    },
+    {
+     "a": "Antibiotics (e.g., ceftriaxone)",
+     "b": "Used for cholangitis; avoid nephrotoxic drugs in renal impairment"
+    },
+    {
+     "a": "Cholestyramine",
+     "b": "Reduces pruritus by binding bile acids; avoid in severe liver failure"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular imaging and liver function tests are needed to detect recurrence or progression.",
+   "b": [
+    "MRCP every 6–12 months for malignant strictures"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic biliary strictures include gallstones, hepatic abscess, and pancreatic pseudocyst.",
+   "b": [
+    "Choledocholithiasis – stones cause intermittent obstruction"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal bilirubin can occur early; ALP may be normal in small strictures; imaging may miss short strictures.",
+   "b": [
+    "Early cholestasis may have normal LFTs; repeat testing if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever with RUQ pain (acute cholangitis), sudden worsening jaundice, signs of hepatic encephalopathy, or bleeding from varices"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of biliary strictures in East Africa?",
+   "a": "Choledocholithiasis secondary to gallstone disease is the most frequent cause."
+  },
+  {
+   "q": "Can a biliary stricture be asymptomatic?",
+   "a": "Yes, short or mild strictures may be silent until they cause obstruction or complications."
+  },
+  {
+   "q": "Why is ERCP preferred over surgery in many cases?",
+   "a": "ERCP is less invasive, allows simultaneous diagnosis and treatment, and is safer in patients with comorbidities."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man presents with jaundice and RUQ pain. Ultrasound shows a dilated common bile duct with a focal narrowing. What is the next best step? — ERCP for diagnosis and possible stenting.",
+  "A patient with a known pancreatic head tumour develops worsening jaundice. Which imaging modality best defines the extent of biliary involvement? — MRCP.",
+  "A child in a malaria-endemic area has painless jaundice. What infectious cause should be considered? — Tuberculous cholangitis or schistosomiasis.",
+  "You find a 2‑cm stricture at the hepatic hilum. According to Bismuth classification, what type is this? — Type I.",
+  "A patient with a biliary stricture is started on antibiotics for cholangitis. Which drug should be avoided in renal failure? — Nephrotoxic antibiotics such as aminoglycosides.",
+  "A patient has a biliary stricture and pruritus unresponsive to cholestyramine. What is the next therapeutic option? — Endoscopic stenting or percutaneous drainage."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}

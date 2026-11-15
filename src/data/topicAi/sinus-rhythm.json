@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "title": "Normal Sinus Rhythm",
+ "subject": "Medicine",
+ "summary": "Normal sinus rhythm (NSR) is the heart's regular electrical pattern originating from the sino‑atrial node. Recognising NSR and its variations guides diagnosis of arrhythmias and informs urgent management in low‑resource settings.",
+ "aka": [
+  "Sinus rhythm",
+  "Sinus rhythm on ECG"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "NSR is a regular rhythm with a rate of 60‑100 bpm, each P wave preceding a QRS complex, PR interval 0.12‑0.20 s, and consistent QRS morphology.",
+   "b": [
+    "P wave before every QRS",
+    "PR interval 0.12‑0.20 s",
+    "Rate 60‑100 bpm",
+    "Regular R‑R intervals"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "NSR itself is not staged; severity relates to underlying disease (e.g., heart failure) that may alter rate or rhythm stability.",
+   "b": [
+    "Stable NSR – no symptoms, normal vitals",
+    "Tachy‑NSR (>100 bpm) – may indicate fever, anemia, hyperthyroidism",
+    "Brady‑NSR (<60 bpm) – may reflect high vagal tone or drug effect"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "NSR is the default rhythm; deviations arise from reversible or chronic conditions common in low‑resource settings.",
+   "b": [
+    "Fever, malaria, sepsis – raise rate",
+    "Anemia, sickle‑cell crisis – tachycardia",
+    "Hypothyroidism, beta‑blockers – bradycardia",
+    "Electrolyte disturbances (K+, Mg2+) – may precipitate blocks"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with NSR are usually asymptomatic; any symptoms usually stem from the underlying cause rather than the rhythm itself.",
+   "b": [
+    "Palpitations only if rate is at extremes",
+    "Dizziness if bradycardic with low output",
+    "Chest pain if tachycardia from infection"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "Confirms rhythm origin and rate; normal P‑QRS‑T pattern indicates NSR"
+    },
+    {
+     "a": "Pulse check",
+     "b": "Correlates heart rate with ECG; ensures peripheral perfusion"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Detects anemia or infection that may explain tachycardia"
+    },
+    {
+     "a": "Thyroid function test (if available)",
+     "b": "Identifies hypo‑ or hyper‑thyroidism affecting rate"
+    },
+    {
+     "a": "Electrolytes",
+     "b": "Finds K+ or Mg2+ abnormalities that predispose to arrhythmias"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While NSR itself is benign, rapid change in rate or loss of NSR signals impending instability.",
+   "b": [
+    "Sudden tachycardia >130 bpm with hypotension – possible sepsis shock",
+    "Bradycardia <40 bpm with syncope – high‑grade AV block",
+    "NSR with absent pulse – pulseless electrical activity (PEA) arrest"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause; maintain NSR with supportive measures.",
+   "b": [
+    "Treat infection (antibiotics, antimalarials) to lower tachycardia",
+    "Correct anemia with transfusion or iron where indicated",
+    "Adjust medications: reduce beta‑blocker dose if bradycardic",
+    "IV fluids for hypovolemia; monitor electrolytes"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess rhythm after treating the precipitant; educate patients on signs needing urgent review.",
+   "b": [
+    "Repeat ECG after fever resolves",
+    "Monitor heart rate during chronic disease follow‑up (HIV, TB)",
+    "Encourage hydration and malaria prophylaxis in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic NSR on bedside assessment.",
+   "b": [
+    "Sinus tachycardia – same origin but rate >100 bpm",
+    "Sinus bradycardia – rate <60 bpm",
+    "Atrial flutter with 2:1 block – regular but saw‑tooth flutter waves"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting rhythm and related tests.",
+   "b": [
+    "Artifact on ECG may look like regular P‑QRS pattern – verify with pulse",
+    "Low‑output states can give weak pulses despite NSR – check capillary refill",
+    "Electrolyte normalisation may not restore NSR if structural disease present"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of pulse despite ECG showing NSR",
+  "Heart rate >130 bpm with systolic BP <90 mmHg",
+  "Bradycardia <40 bpm with syncope or altered mental status"
+ ],
+ "faq": [
+  {
+   "q": "Is sinus rhythm always safe in heart failure?",
+   "a": "Yes, NSR is preferred because it provides atrial contribution to ventricular filling, but rate control may still be needed."
+  },
+  {
+   "q": "Can a patient be in NSR and still be unstable?",
+   "a": "Yes, if the underlying cause (e.g., severe sepsis) causes hypotension or poor perfusion despite a regular rhythm."
+  },
+  {
+   "q": "What if an ECG machine is unavailable?",
+   "a": "Use a pulse check and bedside cardiac auscultation; a regular rhythm with a palpable pulse strongly suggests NSR."
+  }
+ ],
+ "exam": [
+  "A febrile malaria patient has a heart rate of 115 bpm; what is the next step? — Assess for NSR on ECG, treat malaria, and monitor for dehydration‑related tachycardia.",
+  "You see a regular rhythm on monitor but no peripheral pulse; what does this indicate? — Pulseless electrical activity; start CPR and look for reversible causes.",
+  "How would you differentiate sinus tachycardia from atrial flutter with 2:1 block on a limited ECG? — Look for saw‑tooth flutter waves; sinus tachycardia has distinct P waves before each QRS.",
+  "A patient on chronic beta‑blocker presents with a heart rate of 48 bpm and dizziness; what is your management? — Review medication dose, consider temporary hold, and monitor ECG for NSR stability.",
+  "In a resource‑limited ward, which single test gives the most information about rhythm and rate? — A 12‑lead ECG, if unavailable use a pulse‑oximeter waveform and manual pulse count.",
+  "Why is NSR preferred over atrial fibrillation in patients with left‑ventricular dysfunction? — NSR preserves atrial kick, improving cardiac output and reducing symptoms.",
+  "A child with sickle‑cell disease presents with tachycardia; what causes should you prioritize? — Pain, anemia, infection, and possible hypovolemia; treat underlying trigger and reassess rhythm.",
+  "What red‑flag sign would make you call for urgent senior review in a patient with NSR? — New onset hypotension, altered mental status, or loss of peripheral pulse."
+ ],
+ "related": [
+  "Sinus tachycardia",
+  "Sinus bradycardia",
+  "Atrial fibrillation",
+  "Atrial flutter",
+  "Pulseless electrical activity",
+  "Electrolyte disturbances and arrhythmias"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-15",
+ "reviewed": false
+}
