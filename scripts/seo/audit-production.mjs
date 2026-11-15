@@ -109,6 +109,9 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     const html = await res.text();
     const title = pageTitle(html);
     const pathname = new URL(url).pathname;
+    if (!/<h1\\b[^>]*>/i.test(html)) {
+      return fail(`${url} is missing a primary H1 heading in the crawler response`);
+    }
     if (pathname !== "/" && /^OmpathStudy \\| Medical Notes, MCQs & Exams$/i.test(title)) {
       return fail(`${url} returned the generic app-shell title instead of page-specific metadata`);
     }
