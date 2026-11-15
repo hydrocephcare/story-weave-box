@@ -65,6 +65,29 @@ export function readableSummary(description: string | undefined | null, content:
   return d && !messy(description || "") ? d.slice(0, maxLength) : examSummary(content);
 }
 
+export function buildStaticNoteMeta(note: { title: string; year: number; unit: string; description?: string | null }) {
+  const unit = /obstetrics\s*&\s*gynaecology/i.test(note.unit) ? "O&G" : note.unit;
+  const candidates = [
+    `${note.title} | Year ${note.year} ${unit} Notes`,
+    `${note.title} | Year ${note.year} Notes`,
+    note.title,
+  ];
+  let title = candidates.find((candidate) => candidate.length <= 60) || candidates[candidates.length - 1];
+  if (title.length > 60) {
+    const shortened = title.slice(0, 59);
+    const boundary = shortened.lastIndexOf(" ");
+    title = `${shortened.slice(0, boundary > 40 ? boundary : 59).trimEnd()}…`;
+  }
+  const plain = stripRichText(note.description || "");
+  let description = plain;
+  if (plain.length > 160) {
+    const cut = plain.slice(0, 159);
+    const boundary = cut.lastIndexOf(" ");
+    description = `${cut.slice(0, boundary > 120 ? boundary : 159).replace(/[,:;—-]+$/, "").trimEnd()}…`;
+  }
+  return { title, description };
+}
+
 export function extractFirstImageFromContent(content: string): string | null {
   if (!content) return null;
 

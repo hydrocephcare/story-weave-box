@@ -6,6 +6,10 @@ const sitemap = read("api/sitemap.js");
 const robots = read("public/robots.txt");
 const essayPage = read("src/pages/EssayStudy.tsx");
 const css = read("src/index.css");
+const vercel = JSON.parse(read("vercel.json"));
+const auditScript = read("scripts/seo/audit-production.mjs");
+const seoLib = read("src/lib/seo.ts");
+const staticNotePage = read("src/pages/StaticNote.tsx");
 
 const checks = [
   ["temporary crawler failures use retryable 503 responses", /status:\s*503/.test(meta) && /"retry-after":\s*"300"/.test(meta)],
@@ -18,6 +22,15 @@ const checks = [
   ["essay crawler metadata combines duplicate slug records", meta.includes("source_count: rows.length") && meta.includes('mergeQuestions("short_answer_questions")')],
   ["browser essay lookup uses the same six-to-twelve character ID suffix rule", essayPage.includes("replace(/-[0-9a-f]{6,12}$/i")],
   ["shelf-rise keyframes use valid top-level CSS syntax", css.includes("@keyframes shelf-rise") && !css.includes(".paper-body@keyframes shelf-rise")],
+  ["all crawler rewrites include the audit and production-monitor user agents", (() => {
+    const rules = (vercel.rewrites || []).filter((r) => (r.has || []).some((h) => h.type === "header" && h.key.toLowerCase() === "user-agent"));
+    return rules.length > 0 && rules.every((r) => {
+      const ua = r.has.find((h) => h.type === "header" && h.key.toLowerCase() === "user-agent").value;
+      return ua.includes("OpenSEO-Audit") && ua.includes("OmpathStudySEOMonitor");
+    });
+  })()],
+  ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title") && auditScript.includes("missing a primary H1 heading")],
+  ["static note metadata is length-limited and the AUB page uses concise O&G metadata", seoLib.includes("buildStaticNoteMeta") && staticNotePage.includes("buildStaticNoteMeta(note)") && seoLib.includes("candidate.length <= 60") && seoLib.includes("plain.length > 160")],
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
 ];

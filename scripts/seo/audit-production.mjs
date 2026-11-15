@@ -2,7 +2,7 @@ const BASE = (process.env.SEO_AUDIT_BASE_URL || "https://www.ompathstudy.com").r
 const MAX_URLS = Number(process.env.SEO_AUDIT_MAX_URLS || 1000);
 const CONCURRENCY = Number(process.env.SEO_AUDIT_CONCURRENCY || 10);
 const TIMEOUT_MS = Number(process.env.SEO_AUDIT_TIMEOUT_MS || 15000);
-const UA = "Mozilla/5.0 (compatible; OmpathStudySEOMonitor/1.0; +https://www.ompathstudy.com/) Googlebot";
+const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0";
 
 function normalize(url) {
   const u = new URL(url);
@@ -52,6 +52,9 @@ function extractMeta(html, name) {
   const re = new RegExp(`<meta\\b[^>]*name=["']${name}["'][^>]*content=["']([^"']*)["'][^>]*>`, "i");
   const reverse = new RegExp(`<meta\\b[^>]*content=["']([^"']*)["'][^>]*name=["']${name}["'][^>]*>`, "i");
   return (html.match(re) || html.match(reverse) || [])[1] || "";
+}
+function pageTitle(html) {
+  return (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1]?.replace(/<[^>]+>/g, "").trim() || "";
 }
 function canonical(html) {
   const m = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i)
@@ -104,6 +107,14 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     if ([301, 302, 307, 308].includes(res.status)) return fail(`${url} redirects (HTTP ${res.status}); sitemap URLs must be final canonical URLs`);
     if (res.status !== 200) return fail(`${url} returned HTTP ${res.status}`);
     const html = await res.text();
+    const title = pageTitle(html);
+    const pathname = new URL(url).pathname;
+    if (!/<h1\\b[^>]*>/i.test(html)) {
+      return fail(`${url} is missing a primary H1 heading in the crawler response`);
+    }
+    if (pathname !== "/" && /^OmpathStudy \\| Medical Notes, MCQs & Exams$/i.test(title)) {
+      return fail(`${url} returned the generic app-shell title instead of page-specific metadata`);
+    }
     const can = canonical(html);
     if (!can) return fail(`${url} has no canonical link`);
     const resolved = normalize(new URL(can, url).toString());
