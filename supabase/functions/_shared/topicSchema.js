@@ -79,14 +79,15 @@ export function normalizeTopicPage(raw, meta={}) {
   const c=src.content&&typeof src.content==="object"?src.content:src;
   const p=String(c.p||"").trim(), b=(Array.isArray(c.b)?c.b:[]).map(String).map(x=>x.trim()).filter(Boolean);
   const t=(Array.isArray(c.t)?c.t:[]).map(x=>({a:String(x.a||"").trim(),b:String(x.b||"").trim()})).filter(x=>x.a&&x.b);
-  const images=(Array.isArray(c.images)?c.images:[]).filter(x=>x&&/^https:\/\//i.test(x.url||"")&&x.alt).slice(0,3);
+  const images=[];
   const applicable=src.applicable!==false;
   return {key:spec.key,h:spec.heading,heading:spec.heading,applicable,confidence:["high","medium","low"].includes(src.confidence)?src.confidence:"low",content:applicable?{p,b,t,images}:{p:"",b:[],t:[],images:[]},p,b,t,images};
  });
  const faq=(Array.isArray(raw.faq)?raw.faq:[]).map(x=>({q:String(x.q||x.question||"").trim(),a:String(x.a||x.answer||"").trim()})).filter(x=>x.q.length>7&&x.a.length>10).slice(0,12);
  const exam=(Array.isArray(raw.exam)?raw.exam:[]).map(x=>typeof x==="string"?{q:x.split(" — ")[0],a:x.split(" — ").slice(1).join(" — ")}:{q:String(x.q||""),a:String(x.a||"")}).filter(x=>x.q.length>7&&x.a.length>10).slice(0,20);
- const references=(Array.isArray(raw.references)?raw.references:[]).map(x=>({body:String(x.body||""),title:String(x.title||""),year:Number(x.year)||null,url:/^https:\/\//i.test(x.url||"")?x.url:""})).filter(x=>x.body||x.title).slice(0,20);
- return {medical:true,title:String(raw.title||meta.name||"").slice(0,100),subject:String(raw.subject||meta.category||"Medicine").slice(0,60),topicType:type,summary:String(raw.summary||"").trim(),aka:raw.aka||[],sections,faq,exam,related:raw.related||[],references,model:meta.model||raw.model||"",generatedAt:new Date().toISOString().slice(0,10),reviewStatus:"pending"};
+ const mcqs=(Array.isArray(raw.mcqs)?raw.mcqs:[]).map(x=>({q:String(x.q||"").trim(),options:Array.isArray(x.options)?x.options.map(String).slice(0,4):Array.isArray(x.o)?x.o.map(String).slice(0,4):[],correct:Number.isInteger(x.correct)?x.correct:Number(x.a),explanations:Array.isArray(x.explanations)?x.explanations.map(String).slice(0,4):[]})).filter(x=>x.q.length>12&&x.options.length===4&&x.correct>=0&&x.correct<4&&x.explanations.length===4).slice(0,12);
+ const references=(Array.isArray(raw.references)?raw.references:[]).map(x=>({body:String(x.body||""),title:String(x.title||""),year:Number(x.year)||null,url:""})).filter(x=>x.body||x.title).slice(0,20);
+ return {medical:true,title:String(raw.title||meta.name||"").slice(0,100),subject:String(raw.subject||meta.category||"Medicine").slice(0,60),topicType:type,summary:String(raw.summary||"").trim(),aka:raw.aka||[],sections,faq,exam,mcqs,related:raw.related||[],references,model:meta.model||raw.model||"",generatedAt:new Date().toISOString().slice(0,10),reviewStatus:"pending"};
 }
 export function validateTopicPage(page) {
  const errors=[], schema=schemaForType(page.topicType);
@@ -95,6 +96,7 @@ export function validateTopicPage(page) {
  for(const x of schema)if(!(page.sections||[]).some(s=>s.key===x.key))errors.push({section:x.key,reason:"missing"});
  if((page.faq||[]).length<3)errors.push({section:"faq",reason:"missing_or_thin"});
  if((page.exam||[]).length<6)errors.push({section:"examiner-questions",reason:"missing_or_thin"});
+ if((page.mcqs||[]).length<4)errors.push({section:"mcqs",reason:"missing_or_thin"});
  return errors;
 }
 export function topicRepairPrompt(name,type,sections,errors) {
