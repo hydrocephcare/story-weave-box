@@ -92,6 +92,7 @@ const MyWeek = lazy(() => import("./pages/MyWeek"));
 const AdminDuplicates = lazy(() => import("./pages/AdminDuplicates"));
 const AdminThinTopics = lazy(() => import("./pages/AdminThinTopics"));
 const AdminContentChecks = lazy(() => import("./pages/AdminContentChecks"));
+const AdminTopicReviews = lazy(() => import("./pages/AdminTopicReviews"));
 const AdminAccess = lazy(() => import("./pages/AdminAccess"));
 const OsceStations = lazy(() => import("./pages/OsceStations"));
 const OsceBank2019 = lazy(() => import("./pages/OsceBank2019"));
@@ -346,6 +347,7 @@ const AnimatedRoutes = () => {
             <Route path="/admin/duplicates" element={<AdminPage><AdminDuplicates /></AdminPage>} />
             <Route path="/admin/thin-topics" element={<AdminPage><AdminThinTopics /></AdminPage>} />
             <Route path="/admin/content-checks" element={<AdminPage><AdminContentChecks /></AdminPage>} />
+            <Route path="/admin/topic-reviews" element={<AdminPage><AdminTopicReviews /></AdminPage>} />
             <Route path="/admin/paywall" element={<AdminPage><AdminPaywall /></AdminPage>} />
             <Route path="/admin/billing" element={<AdminPage><AdminBilling /></AdminPage>} />
             <Route path="/admin/onekitty" element={<AdminPage><AdminOneKitty /></AdminPage>} />
