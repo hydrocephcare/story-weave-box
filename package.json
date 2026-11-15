@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/imed/sync-check-marks.mjs && node scripts/topics/run.mjs && node scripts/library/build-note-links.mjs && vite build && node scripts/library/prerender.mjs && node scripts/library/strip-private-data.mjs",
+    "build": "node scripts/seo/check-regressions.mjs && node scripts/imed/sync-check-marks.mjs && node scripts/topics/run.mjs && node scripts/library/build-note-links.mjs && vite build && node scripts/library/prerender.mjs && node scripts/library/strip-private-data.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -14,7 +14,8 @@
     "library:finalize": "node scripts/library/finalize-library.mjs",
     "library:og": "node scripts/library/generate-og.mjs",
     "library:outlines": "node scripts/library/export-outlines.mjs",
-    "mcq:positions": "node scripts/mcq/answer-positions.mjs"
+    "mcq:positions": "node scripts/mcq/answer-positions.mjs",
+    "seo:audit": "node scripts/seo/audit-production.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
