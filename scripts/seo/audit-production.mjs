@@ -54,8 +54,8 @@ function extractMeta(html, name) {
   return (html.match(re) || html.match(reverse) || [])[1] || "";
 }
 function canonical(html) {
-  const m = html.match(/<link\\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i)
-    || html.match(/<link\\b[^>]*href=["']([^"']+)["'][^>]*rel=["']canonical["'][^>]*>/i);
+  const m = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i)
+    || html.match(/<link\b[^>]*href=["']([^"']+)["'][^>]*rel=["']canonical["'][^>]*>/i);
   return m?.[1] || "";
 }
 function fail(msg) { return { ok: false, message: msg }; }
