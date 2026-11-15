@@ -148,12 +148,25 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     if (html.length < 500) return fail(`${url} returned an unusually small HTML document (${html.length} bytes)`);
     const visibleWords = visibleWordCount(html);
     if (visibleWords < MIN_VISIBLE_WORDS) return fail(`${url} is too thin for indexing: ${visibleWords} visible words (minimum ${MIN_VISIBLE_WORDS})`);
-    return { ok: true };
+    return { ok: true, url, title: title.replace(/\\s+/g, " ").trim() };
   } catch (e) {
     return fail(`${url}: ${e instanceof Error ? e.message : String(e)}`);
   }
 });
 for (const result of pageResults) if (!result.ok) errors.push(result);
+
+// Detect duplicate titles across the current sitemap sample. The rotating sample
+// covers the full indexable URL set over successive runs without overloading production.
+const titleOwners = new Map();
+for (const result of pageResults) {
+  if (!result.ok || !result.title) continue;
+  const key = result.title.toLowerCase();
+  if (!titleOwners.has(key)) titleOwners.set(key, []);
+  titleOwners.get(key).push(result.url);
+}
+for (const [title, urls] of titleOwners) {
+  if (urls.length > 1) errors.push(fail(`Duplicate page title "${title}" appears on: ${urls.join(", ")}`));
+}
 const bad = pageResults.filter((r) => !r.ok).length;
 console.log(`Page checks: ${selected.length - bad} passed; ${bad} failed`);
 for (const e of errors.slice(0, 100)) console.error("SEO AUDIT:", e.message);
