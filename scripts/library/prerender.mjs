@@ -121,7 +121,7 @@ try {
         educationalLevel: def.label + " MBChB",
         audience: { "@type": "EducationalAudience", educationalRole: "student" },
         inLanguage: "en",
-        ...(previewRows.length ? { hasPart: previewRows.map(({ file }) => ({ "@type": "CreativeWork", name: prettyTitle(file[1]), description: fileBlurb(file[2], trailNames) + ". " + (registry.seoCredit ?? registry.credit) + ".", educationalLevel: def.label + " MBChB", author: { "@type": "Organization", name: "Ompath Study" } })) } : {}),
+        ...(previewRows.length ? { hasPart: previewRows.map(({ file, trail: fileTrail }) => ({ "@type": "CreativeWork", name: prettyTitle(file[1]), description: fileBlurb(file[2], fileTrail) + ". " + (registry.seoCredit ?? registry.credit) + ".", educationalLevel: def.label + " MBChB", author: { "@type": "Organization", name: "Ompath Study" } })) } : {}),
       };
       const indexable = isIndexableFolder(chain, meta.files);
       write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: meta.keywords, body, jsonLd, noindex: !indexable }), data.updated, indexable);
