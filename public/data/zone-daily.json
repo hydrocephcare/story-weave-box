@@ -1,737 +1,737 @@
 {
- "date": "2026-11-14",
+ "date": "2026-11-15",
  "games": [
   {
-   "id": "2026-11-14-1",
-   "title": "Anatomy and Biochemistry of the Eye: quick quiz",
+   "id": "2026-11-15-1",
+   "title": "PAT 2021: quick quiz",
    "game": "quiz",
-   "topic": "Anatomy and Biochemistry of the Eye",
+   "topic": "PAT 2021",
    "year": 1,
    "blurb": "Quiz for Year 1 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which metabolic pathway accounts for the majority of glucose utilization to generate ATP in the crystalline lens?",
+     "q": "A 24-year-old cyclist falls onto his shoulder, forcefully widening the angle between his neck and shoulder. Physical examination reveals an upper limb hanging by the side, medially rotated, with the forearm pronated. Which root of the brachial plexus is most likely injured in this patient?",
      "options": [
-      "Aerobic glycolysis",
-      "Anaerobic glycolysis",
-      "Pentose phosphate pathway",
-      "Sorbitol pathway"
-     ],
-     "correct": 1,
-     "explanation": "The lens lacks mitochondria in its central fiber cells and relies on anaerobic glycolysis for approximately 80-85% of its ATP production.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "In diabetic patients, excess glucose in the lens is converted into sorbitol by which enzyme, contributing to osmotic swelling and cataract formation?",
-     "options": [
-      "Sorbitol dehydrogenase",
-      "Hexokinase",
-      "Aldose reductase",
-      "Glucose-6-phosphate dehydrogenase"
-     ],
-     "correct": 2,
-     "explanation": "Aldose reductase reduces excess intracellular glucose to sorbitol, which accumulates due to poor membrane permeability and slow conversion to fructose.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "The Pentose Phosphate Pathway (HMP shunt) is highly active in the corneal epithelium primarily to generate which molecule essential for lipid synthesis and glutathione reduction?",
-     "options": [
-      "NADH",
-      "NADPH",
-      "FADH2",
-      "ATP"
-     ],
-     "correct": 1,
-     "explanation": "The hexose monophosphate shunt produces NADPH, which is critical for maintaining reduced glutathione to protect ocular tissues against oxidative damage.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Photoreceptors in the retina consume high levels of glucose and convert much of it to lactate even in the presence of adequate oxygen. What is this metabolic phenomenon called?",
-     "options": [
-      "Pasteur effect",
-      "Warburg effect",
-      "Crabtree effect",
-      "Cori cycle"
-     ],
-     "correct": 1,
-     "explanation": "The Warburg effect describes aerobic glycolysis, a metabolically demanding process characteristic of retinal photoreceptors and tumor cells.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Prolonged corneal hypoxia, such as from contact lens wear during sleep, leads to an accumulation of which metabolite in the corneal stroma, inducing osmotic corneal edema?",
-     "options": [
-      "Pyruvate",
-      "Sorbitol",
-      "Lactate",
-      "Citrate"
-     ],
-     "correct": 2,
-     "explanation": "Under hypoxic conditions, the corneal epithelium shifts to anaerobic metabolism, leading to stromal lactate accumulation and subsequent osmotic swelling.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which glucose transporter (GLUT) isoform is predominantly expressed in the retinal pigment epithelium (RPE) to transport glucose across the outer blood-retinal barrier?",
-     "options": [
-      "GLUT1",
-      "GLUT2",
-      "GLUT4",
-      "SGLT1"
+      "C5",
+      "C7",
+      "C8",
+      "T1"
      ],
      "correct": 0,
-     "explanation": "GLUT1 is the main glucose transporter expressed in endothelial cells of the blood-retinal barrier and the retinal pigment epithelium.",
+     "explanation": "An upper trunk brachial plexus injury (Erb-Duchenne palsy) primarily involves the C5 and C6 nerve roots.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Active secretion of aqueous humor by the ciliary body epithelium relies heavily on ATP driven by Na+/K+-ATPase. Which pathway primarily supplies this ATP in the ciliary body?",
+     "q": "During a procedure, a clinician identifies the femoral triangle to administer a nerve block. Which structure forms the lateral boundary of the femoral triangle?",
      "options": [
-      "Anaerobic glycolysis",
-      "Sorbitol pathway",
-      "Oxidative phosphorylation",
-      "Glycogenolysis"
-     ],
-     "correct": 2,
-     "explanation": "The non-pigmented ciliary epithelium contains high concentrations of mitochondria and relies mainly on aerobic oxidative phosphorylation for ATP production.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Diabetic cataract development occurs partly because the rate of sorbitol synthesis by aldose reductase exceeds its rate of oxidation to fructose by which enzyme?",
-     "options": [
-      "Fructokinase",
-      "Sorbitol dehydrogenase",
-      "Lactate dehydrogenase",
-      "Transketolase"
+      "Adductor longus",
+      "Sartorius",
+      "Inguinal ligament",
+      "Pectineus"
      ],
      "correct": 1,
-     "explanation": "Sorbitol dehydrogenase converts sorbitol into fructose, but its relatively low activity in the lens leads to intracellular sorbitol entrapment.",
+     "explanation": "The femoral triangle is bounded superiorly by the inguinal ligament, medially by the medial border of adductor longus, and laterally by the medial border of sartorius.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "In the human retina, major stores of glycogen utilized during transient hypoglycemia or ischemia are predominantly localized within which cell type?",
+     "q": "A medical student is practicing cardiac auscultation. Where is the optimal landmark to listen to the aortic valve?",
      "options": [
-      "Rod photoreceptors",
-      "Cone photoreceptors",
-      "Ganglion cells",
-      "Müller cells"
+      "Left second intercostal space at the sternal border",
+      "Right second intercostal space at the sternal border",
+      "Left fifth intercostal space in the midclavicular line",
+      "Left fourth intercostal space at the sternal border"
      ],
-     "correct": 3,
-     "explanation": "Müller glia serve as the main glycogen reservoirs in the retina, breaking down glycogen to supply lactate and glucose to neighboring neurons during stress.",
+     "correct": 1,
+     "explanation": "The aortic valve area is best auscultated at the right second intercostal space adjacent to the sternal border.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Deficiency in which rate-limiting enzyme of the pentose phosphate pathway increases ocular susceptibility to oxidative stress and cataractogenesis?",
+     "q": "A 45-year-old male presents with a painful groin swelling diagnosed as an indirect inguinal hernia. Through which anatomical structure does an indirect hernia enter the inguinal canal?",
      "options": [
-      "Glucose-6-phosphate dehydrogenase",
-      "Phosphofructokinase-1",
-      "Transaldolase",
-      "Pyruvate kinase"
+      "Deep inguinal ring",
+      "Superficial inguinal ring",
+      "Femoral ring",
+      "Hesselbach triangle"
      ],
      "correct": 0,
-     "explanation": "Glucose-6-phosphate dehydrogenase is the rate-limiting enzyme of the hexose monophosphate shunt, vital for generating protective NADPH in ocular tissues.",
+     "explanation": "Indirect inguinal hernias enter the inguinal canal laterally to the inferior epigastric vessels via the deep inguinal ring.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "An obstetrician performs a pudendal nerve block prior to an episiotomy. Which bony landmark is palpated transvaginally to guide the needle to the pudendal nerve?",
+     "options": [
+      "Ischial tuberosity",
+      "Ischial spine",
+      "Anterior superior iliac spine",
+      "Pubic tubercle"
+     ],
+     "correct": 1,
+     "explanation": "The pudendal nerve crosses the posterior surface of the ischial spine near its attachment to the sacrospinous ligament.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A patient suffers facial trauma resulting in loss of cutaneous sensation over the tip of the nose. Which nerve provides sensory innervation to this specific region?",
+     "options": [
+      "Ophthalmic division of the trigeminal nerve (V1)",
+      "Maxillary division of the trigeminal nerve (V2)",
+      "Mandibular division of the trigeminal nerve (V3)",
+      "Facial nerve (CN VII)"
+     ],
+     "correct": 0,
+     "explanation": "The skin over the tip of the nose is innervated by the external nasal nerve, a terminal branch of the ophthalmic nerve (V1).",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A mid-shaft fracture of the humerus poses a significant risk of damage to which nerve and arterial pair running together in the radial groove?",
+     "options": [
+      "Axillary nerve and posterior circumflex humeral artery",
+      "Radial nerve and profunda brachii artery",
+      "Median nerve and brachial artery",
+      "Ulnar nerve and superior ulnar collateral artery"
+     ],
+     "correct": 1,
+     "explanation": "The radial nerve and profunda brachii artery travel together in the radial groove along the posterior mid-shaft of the humerus.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A child accidentally swallows a small foreign object which passes into the tracheobronchial tree. Anatomically, why is the object more likely to lodge in the right main bronchus than the left?",
+     "options": [
+      "The right main bronchus is longer and more horizontal",
+      "The right main bronchus is wider, shorter, and more vertical",
+      "The right main bronchus branches directly off the larynx",
+      "The right main bronchus has a smaller diameter"
+     ],
+     "correct": 1,
+     "explanation": "The right main bronchus is wider, shorter, and oriented more vertically than the left main bronchus, making aspirated items more prone to enter it.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which of the following vessels is a direct branch of the celiac trunk?",
+     "options": [
+      "Right gastric artery",
+      "Superior mesenteric artery",
+      "Splenic artery",
+      "Proper hepatic artery"
+     ],
+     "correct": 2,
+     "explanation": "The celiac trunk typically divides into three direct branches: the left gastric artery, the splenic artery, and the common hepatic artery.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Through which structure does cerebrospinal fluid (CSF) flow to travel from the third ventricle directly into the fourth ventricle?",
+     "options": [
+      "Interventricular foramen of Monro",
+      "Cerebral aqueduct",
+      "Lateral aperture of Luschka",
+      "Median aperture of Magendie"
+     ],
+     "correct": 1,
+     "explanation": "The cerebral aqueduct (of Sylvius) connects the third ventricle to the fourth ventricle within the midbrain.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-14-2",
-   "title": "Pneumonia: quick quiz",
+   "id": "2026-11-15-2",
+   "title": "Contraception and Family Planning: quick quiz",
    "game": "quiz",
-   "topic": "Pneumonia",
+   "topic": "Contraception and Family Planning",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which microorganism is the most common overall cause of community-acquired pneumonia (CAP) in adults?",
+     "q": "A 32-year-old woman presents requesting contraception. She has a history of migraine with aura. Which of the following contraceptive methods is classified as UKMEC 4 (unacceptable health risk)?",
      "options": [
-      "Mycoplasma pneumoniae",
-      "Streptococcus pneumoniae",
-      "Haemophilus influenzae",
-      "Legionella pneumophila"
+      "Combined oral contraceptive pill",
+      "Levonorgestrel intrauterine system",
+      "Progestogen-only pill",
+      "Etonogestrel subdermal implant"
+     ],
+     "correct": 0,
+     "explanation": "Combined hormonal contraception is UKMEC 4 (contraindicated) in women with migraine with aura due to a significantly increased risk of ischemic stroke.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 24-year-old woman presents requesting emergency contraception after unprotected sexual intercourse that occurred 96 hours (4 days) ago. She has regular 28-day cycles. Which oral emergency contraceptive option is licensed for use up to 120 hours post-coitus?",
+     "options": [
+      "Levonorgestrel 1.5 mg",
+      "Ulipristal acetate 30 mg",
+      "Ethinylestradiol 50 mcg",
+      "Mifepristone 200 mg"
      ],
      "correct": 1,
-     "explanation": "Streptococcus pneumoniae is the leading cause of community-acquired pneumonia across all adult age groups.",
+     "explanation": "Ulipristal acetate is a progesterone receptor modulator licensed for emergency contraception up to 120 hours (5 days) after unprotected intercourse, whereas levonorgestrel is licensed up to 72 hours.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 68-year-old male presents with pneumonia. His blood urea nitrogen (BUN) is 8 mmol/L (22.4 mg/dL), respiratory rate is 32/min, blood pressure is 85/50 mmHg, and he is fully oriented. What is his CURB-65 score?",
+     "q": "Which of the following is the most effective form of emergency contraception?",
      "options": [
-      "1",
-      "2",
-      "3",
-      "4"
+      "Ulipristal acetate",
+      "Copper intrauterine device (Cu-IUD)",
+      "Levonorgestrel 1.5 mg",
+      "High-dose combined oral contraceptives"
      ],
-     "correct": 3,
-     "explanation": "The patient receives 1 point each for age >= 65, urea > 7 mmol/L, respiratory rate >= 30/min, and blood pressure < 90/60 mmHg, giving a total CURB-65 score of 4.",
+     "correct": 1,
+     "explanation": "The copper intrauterine device is the most effective method of emergency contraception, with a failure rate of less than 0.1%.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 55-year-old woman presents with severe pneumonia, hyponatremia, high fever, and diarrhea after staying at a hotel with a hot tub. Which organism is most likely responsible?",
+     "q": "A 26-year-old woman using depot medroxyprogesterone acetate (DMPA) injections for contraception is concerned about long-term side effects. Which of the following is a recognized effect associated with long-term DMPA use?",
      "options": [
-      "Mycoplasma pneumoniae",
-      "Chlamydia pneumoniae",
-      "Legionella pneumophila",
-      "Klebsiella pneumoniae"
+      "Increased risk of endometrial cancer",
+      "Loss of bone mineral density",
+      "Increased risk of ovarian cancer",
+      "Irreversible secondary amenorrhea"
+     ],
+     "correct": 1,
+     "explanation": "DMPA use is associated with a small, temporary reduction in bone mineral density, which generally recovers after discontinuation.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 22-year-old woman taking a standard monophasic combined oral contraceptive pill (30 mcg ethinylestradiol) missed 2 pills in the first week of her pack (days 1 and 2). She had unprotected sex on day 3. What is the correct management strategy?",
+     "options": [
+      "Take the most recent missed pill, continue the pack, and no extra precautions or emergency contraception are needed",
+      "Take the most recent missed pill, continue the pack, use condoms for 7 days, and seek emergency contraception",
+      "Stop the current pack, wait for withdrawal bleeding, and restart a new pack",
+      "Take all missed pills at once and continue the pack normally"
+     ],
+     "correct": 1,
+     "explanation": "If 2 or more pills are missed in week 1, the patient should take the most recent missed pill, use condoms for 7 days, and obtain emergency contraception if unprotected sex occurred in week 1 or the pill-free interval.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which mechanism represents the primary mode of action of the 52 mg levonorgestrel intrauterine system (LNG-IUS)?",
+     "options": [
+      "Consistent inhibition of follicular ovulation",
+      "Endometrial atrophy and cervical mucus thickening",
+      "Induction of a toxic chemical reaction to sperm via copper ions",
+      "Disruption of fallopian tube peristalsis"
+     ],
+     "correct": 1,
+     "explanation": "The levonorgestrel IUS primarily acts locally by thickening cervical mucus to block sperm passage and suppressing endometrial proliferation.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 28-year-old non-breastfeeding woman delivers a healthy infant. From which postpartum day is effective contraception required to prevent pregnancy?",
+     "options": [
+      "Day 7 postpartum",
+      "Day 14 postpartum",
+      "Day 21 postpartum",
+      "Day 28 postpartum"
      ],
      "correct": 2,
-     "explanation": "Legionella pneumophila classically presents with severe pneumonia accompanied by gastrointestinal symptoms, hyponatremia, and a history of exposure to contaminated water systems.",
+     "explanation": "Contraception is required starting from day 21 postpartum because ovulation does not occur before day 21 after childbirth.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 52-year-old male with chronic alcohol use disorder presents with fever, severe dyspnea, and cough producing thick, red 'currant jelly' sputum. Chest X-ray reveals a cavitating right upper lobe infiltrate with a bulged fissure. What is the most likely pathogen?",
+     "q": "Up to how many days after the calculated earliest estimated date of ovulation can a copper intrauterine device (Cu-IUD) be inserted for emergency contraception?",
      "options": [
-      "Streptococcus pneumoniae",
-      "Klebsiella pneumoniae",
-      "Pseudomonas aeruginosa",
-      "Staphylococcus aureus"
+      "3 days",
+      "5 days",
+      "7 days",
+      "14 days"
      ],
      "correct": 1,
-     "explanation": "Klebsiella pneumoniae pneumonia classically presents with red 'currant jelly' sputum and upper lobe cavitating pneumonia with a bulging fissure, most commonly in chronic alcoholics.",
+     "explanation": "A Cu-IUD can be inserted up to 5 days after unprotected sexual intercourse or up to 5 days after the earliest estimated date of ovulation.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A bedbound patient with severe neurogenic dysphagia aspirates while lying supine. Which lung segment is most commonly affected by aspiration pneumonia in the supine position?",
+     "q": "What is the late-pill threshold window for a desogestrel-only progestogen pill (75 micrograms) before extra contraceptive precautions (e.g., condoms) are required?",
      "options": [
-      "Anterior segment of the upper lobe",
-      "Superior segment of the lower lobe",
-      "Medial segment of the middle lobe",
-      "Apical segment of the upper lobe"
-     ],
-     "correct": 1,
-     "explanation": "When lying supine, gravity directs aspirated material preferentially into the superior segments of the lower lobes or the posterior segments of the upper lobes.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which oral antibiotic is recommended as first-line empiric monotherapy for an uncomplicated outpatient with community-acquired pneumonia who has no comorbidities or risk factors for resistant pathogens?",
-     "options": [
-      "Ciprofloxacin",
-      "Vancomycin",
-      "Amoxicillin",
-      "Ceftriaxone"
+      "3 hours",
+      "6 hours",
+      "12 hours",
+      "24 hours"
      ],
      "correct": 2,
-     "explanation": "High-dose oral amoxicillin is recommended as first-line empiric monotherapy for uncomplicated community-acquired pneumonia in outpatients without significant comorbidities.",
+     "explanation": "Desogestrel-containing progestogen-only pills have a 12-hour delayed-dose window, whereas traditional POPs (e.g., levonorgestrel, norethisterone) have a 3-hour window.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 20-year-old college student presents with a non-productive cough, low-grade fever, fatigue, and bilateral patchy reticular infiltrates on chest X-ray. Laboratory testing demonstrates elevated cold agglutinin titers. Which organism is the most likely cause?",
+     "q": "A 30-year-old woman taking carbamazepine for epilepsy requires highly effective contraception. Which of the following methods is unaffected by liver enzyme-inducing medications?",
      "options": [
-      "Streptococcus pneumoniae",
-      "Coxiella burnetii",
-      "Haemophilus influenzae",
-      "Mycoplasma pneumoniae"
-     ],
-     "correct": 3,
-     "explanation": "Mycoplasma pneumoniae is a common cause of atypical pneumonia in young adults and is frequently associated with IgM cold agglutinins.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 72-year-old male is recovering from influenza infection when he suddenly develops high fever, worsening cough with purulent sputum, and dyspnea. Sputum Gram stain reveals Gram-positive cocci in clusters. Which organism is the most likely cause of this secondary bacterial infection?",
-     "options": [
-      "Streptococcus pneumoniae",
-      "Staphylococcus aureus",
-      "Pseudomonas aeruginosa",
-      "Moraxella catarrhalis"
-     ],
-     "correct": 1,
-     "explanation": "Staphylococcus aureus, identifiable as Gram-positive cocci in clusters, is a classic cause of severe secondary bacterial pneumonia following a primary influenza infection.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Hospital-Acquired Pneumonia (HAP) is defined as a lower respiratory tract infection that develops how long after hospital admission?",
-     "options": [
-      "12 hours or more",
-      "24 hours or more",
-      "48 hours or more",
-      "7 days or more"
+      "Combined oral contraceptive pill",
+      "Etonogestrel subdermal implant",
+      "Levonorgestrel intrauterine system",
+      "Progestogen-only pill"
      ],
      "correct": 2,
-     "explanation": "Hospital-acquired pneumonia is defined as pneumonia occurring 48 hours or more after hospital admission that was not incubating at the time of admission.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which set of physical examination findings over the affected lung area is most characteristic of lobar consolidation?",
-     "options": [
-      "Decreased tactile fremitus, hyperresonance to percussion, vesicular breath sounds",
-      "Increased tactile fremitus, dullness to percussion, bronchial breath sounds",
-      "Increased tactile fremitus, hyperresonance to percussion, absent breath sounds",
-      "Decreased tactile fremitus, dullness to percussion, diminished breath sounds"
-     ],
-     "correct": 1,
-     "explanation": "Lobar consolidation enhances sound transmission through dense fluid-filled tissue, resulting in increased tactile fremitus, dullness to percussion, and bronchial breath sounds.",
+     "explanation": "Intrauterine methods like the LNG-IUS work locally in the uterus and their contraceptive efficacy is unaffected by hepatic enzyme-inducing drugs.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-14-3",
-   "title": "Pharmacology Examination: case showdown",
+   "id": "2026-11-15-3",
+   "title": "General pathology — Past Paper: case showdown",
    "game": "case",
-   "topic": "Pharmacology Examination",
+   "topic": "General pathology — Past Paper",
    "year": 3,
    "blurb": "Case Showdown for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 68-year-old male with atrial fibrillation and chronic kidney disease presents with nausea, visual halos, and fatigue. An electrocardiogram reveals ventricular bigeminy. Which of the following is the most appropriate initial treatment for this patient's drug-induced toxicity?",
+     "q": "A 55-year-old male presents with acute severe left-sided chest pain radiating to his jaw. Troponin levels are markedly elevated, and an ECG confirms an acute myocardial infarction. If tissue from the affected myocardial region were examined 3 days post-event, which type of necrosis would predominate?",
      "options": [
-      "Digoxin-specific antibody fragments",
-      "Hemodialysis",
-      "Atropine administration",
-      "Calcium gluconate infusion"
-     ],
-     "correct": 0,
-     "explanation": "Digoxin-specific antibody fragments are the definitive antidote for severe, life-threatening digoxin toxicity presenting with cardiac arrhythmias.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 45-year-old agricultural worker is brought to the emergency department with severe lacrimation, salivation, diarrhea, bronchospasm, and bradycardia. Physical examination reveals pinpoint pupils and muscle fasciculations. Which of the following medications should be administered immediately to reverse the muscarinic effects of this toxicity?",
-     "options": [
-      "Pralidoxime",
-      "Atropine",
-      "Physostigmine",
-      "Neostigmine"
+      "Liquefactive necrosis",
+      "Coagulative necrosis",
+      "Caseous necrosis",
+      "Fat necrosis"
      ],
      "correct": 1,
-     "explanation": "Atropine is a competitive muscarinic receptor antagonist used immediately to reverse life-threatening muscarinic symptoms caused by organophosphate toxicity.",
+     "explanation": "Myocardial infarction typically results in coagulative necrosis due to sudden ischemia, which preserves the basic cell outline for several days.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 52-year-old female with type 2 diabetes mellitus is prescribed a new glucose-lowering medication. She returns three weeks later complaining of recurrent vulvovaginal candidiasis and increased urinary frequency, but her glycated hemoglobin (HbA1c) level has improved. Which of the following drug classes is most likely responsible for her symptoms?",
+     "q": "A 34-year-old female presents with chronic cough, night sweats, and weight loss. A lung biopsy reveals necrotizing granulomas with central acellular debris surrounded by epithelioid histiocytes and Langhans giant cells. Which of the following is the most likely diagnosis?",
      "options": [
-      "Sulfonylureas",
-      "GLP-1 receptor agonists",
-      "SGLT2 inhibitors",
-      "DPP-4 inhibitors"
+      "Sarcoidosis",
+      "Idiopathic pulmonary fibrosis",
+      "Tuberculosis",
+      "Asbestosis"
      ],
      "correct": 2,
-     "explanation": "SGLT2 inhibitors increase renal glucose excretion, which lowers blood glucose levels but predisposes patients to mycotic genital infections.",
+     "explanation": "Caseating (necrotizing) granulomatous inflammation with Langhans giant cells is characteristically caused by Mycobacterium tuberculosis infection.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 28-year-old female with major depressive disorder managed with sertraline presents to the emergency department after taking an over-the-counter cough suppressant containing dextromethorphan. She exhibits agitation, hyperreflexia, inducible clonus, diaphoresis, and a temperature of 38.8°C (101.8°F). What is the most likely diagnosis?",
+     "q": "A 22-year-old male presents with a raised, hyperpigmented, itchy scar over his sternum that developed 6 months after a minor burn. Physical examination reveals that the lesion extends significantly beyond the original boundaries of the wound. Which of the following best describes this lesion?",
      "options": [
-      "Neuroleptic malignant syndrome",
-      "Serotonin syndrome",
-      "Anticholinergic toxicity",
-      "Malignant hyperthermia"
+      "Hypertrophic scar",
+      "Desmoid tumor",
+      "Granuloma pyogenicum",
+      "Keloid"
      ],
-     "correct": 1,
-     "explanation": "Serotonin syndrome results from combined serotonergic drug action (e.g., SSRI and dextromethorphan) and presents with neuromuscular excitability, autonomic instability, and altered mental status.",
+     "correct": 3,
+     "explanation": "Keloids characteristically extend beyond the margins of the original wound due to excessive collagen synthesis and do not spontaneously regress.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 34-year-old male receiving treatment for pulmonary tuberculosis develops numbness and tingling in a 'glove-and-stocking' distribution in his extremities. He has been taking isoniazid, rifampin, pyrazinamide, and ethambutol for two months. Which of the following co-prescriptions would have prevented this complication?",
+     "q": "A 48-year-old male long-term smoker undergoes an endobronchial biopsy during workup for a chronic cough. Microscopic examination of the bronchial mucosa demonstrates replacement of normal pseudostratified ciliated columnar epithelium by stratified squamous epithelium. Which cellular adaptation is demonstrated in this biopsy?",
      "options": [
-      "Thiamine (Vitamin B1)",
-      "Pyridoxine (Vitamin B6)",
-      "Cyanocobalamin (Vitamin B12)",
-      "Folic acid (Vitamin B9)"
-     ],
-     "correct": 1,
-     "explanation": "Isoniazid promotes pyridoxine deficiency by inhibiting its active metabolite formation, causing peripheral neuropathy that can be prevented by Vitamin B6 co-administration.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 58-year-old male with hypertension presents to the clinic with severe pain and swelling in his left first metatarsophalangeal joint, consistent with acute gout. A review of his medications reveals a recently initiated antihypertensive drug. Which of the following antihypertensive agents is most likely responsible for precipitating this attack?",
-     "options": [
-      "Hydrochlorothiazide",
-      "Lisinopril",
-      "Amlodipine",
-      "Losartan"
+      "Metaplasia",
+      "Dysplasia",
+      "Anaplasia",
+      "Hyperplasia"
      ],
      "correct": 0,
-     "explanation": "Thiazide diuretics such as hydrochlorothiazide inhibit renal uric acid excretion, elevating serum uric acid levels and triggering acute gout flares.",
+     "explanation": "Squamous metaplasia is the reversible conversion of one differentiated adult cell type (columnar) to another (squamous) in response to chronic irritation.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 62-year-old female with severe congestive heart failure is admitted with acute pulmonary edema. She receives a rapid intravenous bolus of a high-dose diuretic, which quickly relieves her dyspnea but causes transient hearing impairment. Which diuretic class is associated with this adverse effect?",
+     "q": "A 28-year-old male suffers a comminuted fracture of the right femur in a motor vehicle accident. Forty-eight hours later, he develops sudden dyspnea, confusion, and a petechial rash over his chest and neck. What is the most likely diagnosis?",
      "options": [
-      "Potassium-sparing diuretics",
-      "Thiazide diuretics",
-      "Loop diuretics",
-      "Carbonic anhydrase inhibitors"
-     ],
-     "correct": 2,
-     "explanation": "Loop diuretics like furosemide can cause ototoxicity, particularly when administered rapidly at high intravenous doses.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 24-year-old female with asthma presents for a routine follow-up. She reports using her short-acting beta-2 agonist inhaler four days per week and waking up twice a month with nocturnal coughing, indicating persistent symptoms. What is the most appropriate next step in her pharmacotherapy?",
-     "options": [
-      "Add a long-acting muscarinic antagonist",
-      "Add a low-dose inhaled corticosteroid",
-      "Initiate oral prednisone daily",
-      "Add a leukotriene receptor antagonist as monotherapy"
+      "Pulmonary thromboembolism",
+      "Fat embolism syndrome",
+      "Air embolism",
+      "Amniotic fluid embolism"
      ],
      "correct": 1,
-     "explanation": "Adding a low-dose inhaled corticosteroid is the standard first-line controller therapy for patients with persistent asthma inadequately managed with short-acting beta-agonists alone.",
+     "explanation": "The classic triad of fat embolism syndrome—hypoxemia, neurological impairment, and petechial rash—typically occurs 24 to 72 hours after major long-bone fractures.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 62-year-old female with a 15-year history of severe rheumatoid arthritis develops nephrotic-range proteinuria and progressive renal failure. A renal biopsy demonstrates extracellular amorphous eosinophilic deposits that exhibit apple-green birefringence under polarized light with Congo red stain. What is the most likely underlying condition?",
+     "options": [
+      "Systemic lupus erythematosus",
+      "Primary amyloidosis (AL)",
+      "Secondary amyloidosis (AA)",
+      "Diabetic glomerulosclerosis"
+     ],
+     "correct": 2,
+     "explanation": "Secondary (AA) amyloidosis arises from chronic systemic inflammation such as rheumatoid arthritis, with Congo red stain demonstrating characteristic apple-green birefringence under polarized light.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 45-year-old female presents with severe abdominal pain and flushing 15 minutes after a bee sting. On examination, she is hypotensive and tachycardic with generalized urticaria and diffuse respiratory wheezing. Which hypersensitivity mechanism is responsible for this presentation?",
+     "options": [
+      "Type I hypersensitivity",
+      "Type II hypersensitivity",
+      "Type III hypersensitivity",
+      "Type IV hypersensitivity"
+     ],
+     "correct": 0,
+     "explanation": "Anaphylaxis triggered by insect stings is a Type I IgE-mediated immediate hypersensitivity reaction caused by mast cell degranulation.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A research study examines tumor cells undergoing apoptosis in response to chemotherapy. Analysis shows mitochondrial outer membrane permeabilization resulting in the leakage of cytochrome c into the cytosol. Which initiator caspase is directly activated as part of this pathway?",
+     "options": [
+      "Caspase-8",
+      "Caspase-3",
+      "Caspase-9",
+      "Caspase-1"
+     ],
+     "correct": 2,
+     "explanation": "In the intrinsic apoptotic pathway, cytosolic cytochrome c binds Apaf-1 to form the apoptosome, which directly recruits and activates initiator Caspase-9.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-14-4",
-   "title": "Common Discomforts of Pregnancy and Their Management: case showdown",
+   "id": "2026-11-15-4",
+   "title": "Protein Energy Malnutrition: case showdown",
    "game": "case",
-   "topic": "Common Discomforts of Pregnancy and Their Management",
+   "topic": "Protein Energy Malnutrition",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 26-year-old G1P0 woman at 8 weeks of gestation presents with persistent nausea and occasional vomiting for 2 weeks. She has been unable to tolerate large meals but has no signs of dehydration, weight loss, or electrolyte imbalance. What is the most appropriate first-line pharmacotherapy if dietary modifications fail?",
+     "q": "A 14-month-old boy is brought to the clinic due to poor weight gain and chronic diarrhea. Physical examination reveals severe muscle wasting, loss of subcutaneous fat resulting in an old-man appearance (\"monkey facies\"), and a weight-for-height Z-score of <-3 SD, but no peripheral edema. What is the most likely diagnosis?",
      "options": [
-      "Doxylamine-pyridoxine combination",
-      "Metoclopramide",
-      "Ondansetron",
-      "Prochlorperazine"
+      "Kwashiorkor",
+      "Marasmus",
+      "Marasmic kwashiorkor",
+      "Celiac disease"
      ],
-     "correct": 0,
-     "explanation": "Doxylamine combined with pyridoxine (Vitamin B6) is recommended as the first-line pharmacological treatment for nausea and vomiting of pregnancy when conservative dietary measures fail.",
+     "correct": 1,
+     "explanation": "Marasmus is characterized by severe wasting of muscle and subcutaneous fat tissue without generalized edema, typically resulting from severe energy deficiency.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 31-year-old G2P1 woman at 28 weeks of gestation presents with a 3-week history of retrosternal burning discomfort, particularly after meals and when lying flat. She has tried eating smaller meals and elevating her head at night without adequate relief. What is the next best step in management?",
+     "q": "An 18-month-old girl presents with lethargy, poor appetite, and progressive swelling over the last three weeks. On examination, she has generalized pitting edema, hair discoloration (\"flag sign\"), hyperpigmented skin lesions that resemble flaky paint, and hepatomegaly. What is the most likely diagnosis?",
      "options": [
-      "Calcium- or magnesium-based antacids",
-      "Oral omeprazole",
-      "Oral metoclopramide",
-      "Sucralfate slurry"
+      "Marasmus",
+      "Kwashiorkor",
+      "Nephrotic syndrome",
+      "Severe acute dehydration"
      ],
-     "correct": 0,
-     "explanation": "When lifestyle modifications fail to control heartburn in pregnancy, antacids or alginates are the initial recommended pharmacotherapy.",
+     "correct": 1,
+     "explanation": "Kwashiorkor presents with generalized edema, dermatosis, hair changes, and hepatomegaly, resulting primarily from severe protein deficiency despite adequate or variable caloric intake.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 28-year-old G1P0 woman at 18 weeks of gestation complains of hard, infrequent bowel movements occurring twice per week for the past month. Physical examination is unremarkable, and she reports no rectal bleeding, fever, or severe abdominal pain. What is the most appropriate initial management step?",
+     "q": "A 2-year-old boy with severe acute malnutrition is admitted to the pediatric ward with lethargy and hypothermia (rectal temperature 35.1°C). Bedside testing shows a blood glucose level of 2.2 mmol/L. What is the immediate next best step in management?",
      "options": [
-      "Increase dietary fiber and fluid intake",
-      "Prescribe bisacodyl suppositories",
-      "Initiate castor oil therapy",
-      "Perform manual disimpaction"
+      "Administer high-calorie feed immediately",
+      "Give 10% dextrose solution orally or IV and rewarm the child",
+      "Administer high-dose oral iron supplementation",
+      "Infuse a 20 mL/kg normal saline bolus over 10 minutes"
      ],
-     "correct": 0,
-     "explanation": "Initial management of mild, uncomplicated constipation in pregnancy focuses on non-pharmacological measures, such as increasing dietary fiber and daily fluid intake.",
+     "correct": 1,
+     "explanation": "Hypoglycemia and hypothermia often coexist in severe acute malnutrition and require immediate treatment with 10% dextrose solution alongside gentle rewarming.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 29-year-old G2P1 woman at 32 weeks of gestation presents with sharp pain over the pubic symphysis that radiates to her inner thighs. The pain is exacerbated by walking, climbing stairs, and turning over in bed, and palpation of the pubic symphysis yields local tenderness. What is the most likely diagnosis?",
+     "q": "A 15-month-old female with marasmic kwashiorkor requires rehydration for mild-to-moderate dehydration secondary to acute watery gastroenteritis. She shows signs of dehydration but has no features of septic shock. Which fluid regimen is most appropriate?",
      "options": [
-      "Pregnancy-related pelvic girdle pain",
-      "Round ligament pain",
-      "Sciatica",
-      "Urinary tract infection"
+      "Standard Oral Rehydration Solution (ORS)",
+      "Rehydration Solution for Malnutrition (ReSoMal)",
+      "Rapid bolus of 0.9% Normal Saline",
+      "5% Dextrose in 0.45% Normal Saline"
      ],
-     "correct": 0,
-     "explanation": "Pregnancy-related pelvic girdle pain (formerly symphysis pubis dysfunction) characteristically causes localized tenderness over the pubic symphysis and difficulty with weight-bearing or asymmetrical movements.",
+     "correct": 1,
+     "explanation": "ReSoMal is specifically formulated for malnourished children because standard ORS contains excess sodium, which can precipitate heart failure in severe acute malnutrition.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 33-year-old G1P0 woman at 30 weeks of gestation presents with numbness, tingling, and pain in her thumb, index, and middle fingers of both hands, which worsens at night. Physical examination reveals a positive Tinel sign at the wrist bilaterally. What is the next best step in management?",
+     "q": "A 20-month-old boy with severe acute malnutrition is admitted to the hospital and started on the stabilization phase of management using F-75 formula. Which of the following routine micronutrient interventions should be EXCLUDED during this initial stabilization phase?",
      "options": [
-      "Wrist splinting in a neutral position",
-      "Oral systemic corticosteroid therapy",
-      "Surgical carpal tunnel release",
-      "Local corticosteroid injection"
+      "Vitamin A supplementation",
+      "Folic acid supplementation",
+      "Iron supplementation",
+      "Zinc supplementation"
      ],
-     "correct": 0,
-     "explanation": "Conservative management with neutral wrist splinting is the preferred first-line treatment for pregnancy-induced carpal tunnel syndrome.",
+     "correct": 2,
+     "explanation": "Iron supplementation must be withheld during the initial stabilization phase because free iron can exacerbate oxidative stress and enhance bacterial growth during active infection.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 24-year-old G1P0 woman at 20 weeks of gestation presents with sudden, sharp bilateral lower abdominal and groin pain triggered by standing up quickly. Vital signs are normal, the uterus is non-tender, and fetal heart tones are reassuring. What is the most appropriate management?",
+     "q": "A 3-year-old girl with severe marasmus is started on rapid high-calorie enteral feeds. Forty-eight hours after initiating feeds, she develops generalized weakness, confusion, tachycardia, and respiratory distress. Which electrolyte abnormality is primarily responsible for her presentation?",
      "options": [
-      "Reassurance and position modifications",
-      "Emergency diagnostic laparoscopy",
-      "Immediate induction of labor",
-      "Broad-spectrum oral antibiotics"
+      "Hyperkalemia",
+      "Hypophosphatemia",
+      "Hypercalcemia",
+      "Hyponatremia"
      ],
-     "correct": 0,
-     "explanation": "Round ligament pain is a benign discomfort of the second trimester caused by stretching of the round ligaments, requiring reassurance and conservative measures like slow position changes.",
+     "correct": 1,
+     "explanation": "Refeeding syndrome occurs when carbohydrate reintroduction triggers insulin release, driving phosphate into cells and causing severe hypophosphatemia.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 30-year-old G2P1 woman at 34 weeks of gestation presents with bilateral lower leg swelling and heavy, aching sensations in her legs by the end of the day. Her blood pressure is 112/70 mmHg, urine dipstick is negative for protein, and examination shows mild bilateral non-pitting pedal edema without focal tenderness. What is the most appropriate management?",
+     "q": "A 13-month-old infant with severe acute malnutrition has completed 5 days of stabilization treatment. His appetite has recovered, facial and pedal edema have resolved, and he is alert and active. What is the next best step in dietary management?",
      "options": [
-      "Leg elevation and graduated compression stockings",
-      "Oral furosemide therapy",
-      "Low-molecular-weight heparin",
-      "Strict bed rest"
+      "Transition from F-75 to F-100 formula or RUTF",
+      "Discharge home on standard cow's milk immediately",
+      "Continue F-75 formula for an additional 4 weeks",
+      "Initiate total parenteral nutrition"
      ],
      "correct": 0,
-     "explanation": "Physiologic leg edema in late pregnancy is managed conservatively with leg elevation, periodic rest, and graduated compression stockings, while diuretics are generally avoided.",
+     "explanation": "Once appetite returns and edema resolves, children progress from the stabilization phase (F-75) to the rehabilitation phase using F-100 or ready-to-use therapeutic food (RUTF).",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 27-year-old G1P0 woman at 26 weeks of gestation presents with painful, involuntary calf muscle spasms occurring primarily at night. Physical examination shows no calf swelling, warmth, or tenderness to palpation. What is the most appropriate immediate action to relieve an active spasm?",
+     "q": "A 16-month-old child with severe acute malnutrition is admitted for inpatient management. He appears lethargic but has a normal body temperature, clear chest, and no localized signs of infection. What is the most appropriate strategy regarding antibiotic coverage?",
      "options": [
-      "Passive dorsiflexion of the foot and calf stretching",
-      "Plantarflexion of the foot",
-      "Intravenous calcium gluconate administration",
-      "Strict immobilization of the leg"
+      "Withhold antibiotics unless blood cultures return positive",
+      "Administer empirical broad-spectrum antibiotic coverage",
+      "Start high-dose IV vancomycin and meropenem",
+      "Prescribe oral fluconazole prophylaxis only"
      ],
-     "correct": 0,
-     "explanation": "Immediate relief of an acute nocturnal calf cramp in pregnancy is achieved by stretching the calf muscle via passive dorsiflexion of the foot.",
+     "correct": 1,
+     "explanation": "Routine empirical broad-spectrum antibiotic treatment is recommended for all admitted children with severe acute malnutrition because clinical signs of infection are frequently masked.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-14-5",
-   "title": "Medical Biochemistry II PAPER A (MBMB 2200): drug duel",
+   "id": "2026-11-15-5",
+   "title": "Gastroesophageal Reflux Disease: drug duel",
    "game": "drug",
-   "topic": "Medical Biochemistry II PAPER A (MBMB 2200)",
-   "year": 2,
-   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which hepatic enzyme is competitively inhibited by atorvastatin to lower plasma LDL-cholesterol levels?",
-     "options": [
-      "HMG-CoA reductase",
-      "Lipoprotein lipase",
-      "Acyl-CoA:cholesterol acyltransferase (ACAT)",
-      "Squalene synthase"
-     ],
-     "correct": 0,
-     "explanation": "Atorvastatin competitively inhibits HMG-CoA reductase, preventing the rate-limiting conversion of HMG-CoA to mevalonate during endogenous cholesterol synthesis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of allopurinol in the pharmacotherapy of hyperuricemia?",
-     "options": [
-      "Inhibition of urate transporter 1 (URAT1)",
-      "Activation of recombinant uricase",
-      "Inhibition of xanthine oxidase",
-      "Inhibition of HGPRT"
-     ],
-     "correct": 2,
-     "explanation": "Allopurinol and its active metabolite oxypurinol inhibit xanthine oxidase, decreasing the conversion of hypoxanthine and xanthine to uric acid.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Metformin lowers blood glucose in type 2 diabetes primarily by activating AMP-activated protein kinase (AMPK). Which hepatic metabolic pathway is directly suppressed as a result?",
-     "options": [
-      "Glycogenesis",
-      "Gluconeogenesis",
-      "Glycolysis",
-      "Lipolysis"
-     ],
-     "correct": 1,
-     "explanation": "Activation of hepatic AMPK by metformin suppresses the gene expression of key enzymes involved in gluconeogenesis, thereby reducing hepatic glucose output.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Methotrexate acts as a competitive inhibitor of dihydrofolate reductase (DHFR). Which biochemical cofactor synthesis is directly depleted by this action?",
-     "options": [
-      "Pyridoxal phosphate",
-      "Nicotinamide adenine dinucleotide (NAD+)",
-      "Riboflavin",
-      "Tetrahydrofolate"
-     ],
-     "correct": 3,
-     "explanation": "Methotrexate inhibits dihydrofolate reductase, blocking the reduction of dihydrofolate to tetrahydrofolate, which is required for one-carbon transfers in purine and thymidylate synthesis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which enzyme in the gastrointestinal tract is inhibited by orlistat to decrease the digestion and absorption of dietary lipids?",
-     "options": [
-      "Pancreatic lipase",
-      "Cholesterol esterase",
-      "Phospholipase A2",
-      "Hepatic lipase"
-     ],
-     "correct": 0,
-     "explanation": "Orlistat forms a covalent bond with the active serine site of gastric and pancreatic lipases, inhibiting the hydrolysis of dietary triglycerides.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Empagliflozin lowers blood glucose concentrations by inhibiting a specific transport protein located in the renal proximal convoluted tubule. Which protein is targeted?",
-     "options": [
-      "GLUT2",
-      "GLUT4",
-      "SGLT1",
-      "SGLT2"
-     ],
-     "correct": 3,
-     "explanation": "Empagliflozin selectively inhibits sodium-glucose cotransporter 2 (SGLT2) in the proximal tubule, reducing renal glucose reabsorption and inducing glucosuria.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Through which nuclear receptor mechanism do fibrates, such as fenofibrate, lower circulating plasma triglyceride levels?",
-     "options": [
-      "Inhibition of PPAR-gamma",
-      "Activation of PPAR-alpha",
-      "Activation of LXR",
-      "Inhibition of FXR"
-     ],
-     "correct": 1,
-     "explanation": "Fibrates act as agonists at peroxisome proliferator-activated receptor-alpha (PPAR-alpha), upregulating lipoprotein lipase expression and increasing fatty acid beta-oxidation.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Acetazolamide causes metabolic acidosis with hyperchloremia by inhibiting carbonic anhydrase in the proximal tubule. What is the characteristic biochemical finding in the urine of patients taking acetazolamide?",
-     "options": [
-      "Urinary acidification and loss of ammonium",
-      "Hypercalciuria without bicarbonate change",
-      "Urinary alkalinization and loss of bicarbonate",
-      "Decreased urinary sodium excretion"
-     ],
-     "correct": 2,
-     "explanation": "Inhibition of proximal tubular carbonic anhydrase by acetazolamide impairs bicarbonate reabsorption, leading to urinary alkalinization and excessive excretion of sodium bicarbonate.",
-     "ai": true,
-     "kind": "drug"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-14-6",
-   "title": "Preconception Care: Preparing for a Healthy Pregnancy: drug duel",
-   "game": "drug",
-   "topic": "Preconception Care: Preparing for a Healthy Pregnancy",
+   "topic": "Gastroesophageal Reflux Disease",
    "year": 4,
    "blurb": "Drug Duel for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 28-year-old woman with epilepsy well-controlled on carbamazepine presents for preconception counseling. What daily dose of folic acid should be recommended prior to conception?",
+     "q": "A 3-year-old child with severe gastroesophageal reflux disease (GERD) unresponsive to conservative measures is prescribed omeprazole. What is the mechanism of action of this drug?",
      "options": [
-      "0.4 mg",
-      "1.0 mg",
-      "5.0 mg",
-      "10.0 mg"
-     ],
-     "correct": 2,
-     "explanation": "Women taking anti-epileptic drugs like carbamazepine require high-dose folic acid (5 mg daily) pre-conceptually and through the first trimester to lower the increased risk of neural tube defects.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 30-year-old woman with bipolar disorder is planning to become pregnant. Which major congenital malformation is most specifically associated with first-trimester exposure to sodium valproate?",
-     "options": [
-      "Ebstein anomaly",
-      "Neural tube defects",
-      "Phocomelia",
-      "Clear cell adenocarcinoma"
-     ],
-     "correct": 1,
-     "explanation": "Sodium valproate is significantly teratogenic, with first-trimester exposure carrying up to a 10-fold increased risk of neural tube defects such as spina bifida.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 34-year-old woman with essential hypertension controlled on enalapril plans to conceive. Which antihypertensive drug should replace enalapril prior to conception to avoid fetal renal dysgenesis?",
-     "options": [
-      "Lisinopril",
-      "Losartan",
-      "Labetalol",
-      "Spironolactone"
-     ],
-     "correct": 2,
-     "explanation": "ACE inhibitors and ARBs are contraindicated in pregnancy due to risks of fetal renal dysgenesis and oligohydramnios, making labetalol a preferred first-line safe alternative.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 25-year-old woman who recently finished a course of oral isotretinoin for severe acne asks when it is safe to attempt conception. What is the minimum recommended waiting period after stopping isotretinoin?",
-     "options": [
-      "1 week",
-      "1 month",
-      "6 months",
-      "12 months"
-     ],
-     "correct": 1,
-     "explanation": "Isotretinoin is highly teratogenic, and effective contraception must be continued for at least 1 month following treatment cessation to ensure adequate drug elimination.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 32-year-old woman with a mechanical heart valve managed on warfarin presents for preconception planning. What is the primary fetal risk associated with warfarin exposure during the first trimester?",
-     "options": [
-      "Fetal warfarin embryopathy (nasal hypoplasia and stippled epiphyses)",
-      "Transposition of the great arteries",
-      "Infantile hypertrophic pyloric stenosis",
-      "Congenital aplasia cutis"
+      "Irreversible inhibition of the H+/K+-ATPase enzyme system in gastric parietal cells",
+      "Competitive antagonism of histamine H2 receptors on parietal cells",
+      "Neutralisation of gastric acid by reacting directly with hydrochloric acid",
+      "Stimulation of gastric motility by activating serotonin 5-HT4 receptors"
      ],
      "correct": 0,
-     "explanation": "Warfarin crosses the placenta during the first trimester and can cause fetal warfarin embryopathy characterized by nasal hypoplasia and stippled epiphyses.",
+     "explanation": "Omeprazole is a proton pump inhibitor that works by irreversibly inhibiting the H+/K+-ATPase pump in gastric parietal cells.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 29-year-old woman with primary hypothyroidism managed on levothyroxine asks about medication management during pregnancy. What adjustment is typically required for levothyroxine once pregnancy is confirmed?",
+     "q": "An 8-month-old infant with GERD shows an initial positive response to famotidine, but the therapeutic response diminishes significantly after 2 weeks of continuous therapy. Which pharmacological concept best explains this reduction in efficacy?",
      "options": [
-      "Discontinue levothyroxine immediately",
-      "Decrease the dose by 25-30%",
-      "Increase the dose by 25-30%",
-      "Switch to propylthiouracil"
+      "First-pass metabolism",
+      "Enzyme induction",
+      "Tachyphylaxis",
+      "Zero-order elimination kinetics"
      ],
      "correct": 2,
-     "explanation": "Increased thyroid-binding globulin and metabolic demands during pregnancy typically necessitate a 25-30% increase in the levothyroxine dose to maintain normal fetal development.",
+     "explanation": "Histamine H2 receptor antagonists like famotidine are known to cause tachyphylaxis, or rapid tolerance, limiting their long-term efficacy.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 31-year-old woman with rheumatoid arthritis managed on methotrexate requests guidance on starting a family. What is the minimum recommended washout period for methotrexate prior to conception?",
+     "q": "Sodium alginate (Infant Gaviscon) is prescribed for a 5-month-old infant with frequent regurgitation. How does this medication primarily function to manage reflux?",
      "options": [
-      "24 hours",
-      "2 weeks",
-      "3 months",
-      "12 months"
+      "Directly suppresses baseline nocturnal acid secretion by blocking parietal cell receptors",
+      "Forms a viscous gel layer floating on top of gastric contents to physically impede reflux",
+      "Accelerates gastric emptying by acting as a peripheral dopamine receptor antagonist",
+      "Binds to mucosal proteins to form a protective barrier over eroded lower oesophageal mucosa"
      ],
-     "correct": 2,
-     "explanation": "Methotrexate is a folate antagonist with teratogenic effects that requires cessation at least 3 months prior to conception for women.",
+     "correct": 1,
+     "explanation": "Sodium alginate reacts with gastric acid to form a viscous raft that floats on gastric contents, physically preventing gastroesophageal reflux.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 27-year-old woman with type 1 diabetes attends a preconception clinic. Which pharmacological agent is considered the first-line gold standard for achieving optimal glycemic control before and during pregnancy?",
+     "q": "Infant Gaviscon (sodium alginate with magnesium alginate) must be used with extreme caution or avoided in dehydrated infants or those with renal impairment primarily due to the risk of which adverse effect?",
      "options": [
-      "Insulin",
-      "Metformin",
-      "Glibenclamide",
-      "Empagliflozin"
+      "Hypokalemia",
+      "QT prolongation",
+      "Extrapyramidal symptoms",
+      "Hypernatremia"
+     ],
+     "correct": 3,
+     "explanation": "Infant Gaviscon contains high levels of sodium, posing a significant risk of hypernatremia in dehydrated infants or those with impaired renal excretion.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 6-year-old child treated for gastroesophageal reflux with metoclopramide presents to the emergency department with an acute dystonic reaction (oculogyric crisis). Which mechanism mediates this side effect?",
+     "options": [
+      "Central D2 dopamine receptor antagonism",
+      "Peripheral muscarinic M3 receptor stimulation",
+      "Central histamine H1 receptor blockade",
+      "Peripheral alpha-1 adrenergic receptor blockade"
      ],
      "correct": 0,
-     "explanation": "Insulin does not cross the placenta in significant amounts and remains the first-line gold standard medication for pre-gestational diabetes management.",
+     "explanation": "Metoclopramide crosses the blood-brain barrier and can induce extrapyramidal side effects like acute dystonia via central D2 dopamine receptor blockade.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Domperidone was historically used as a prokinetic agent for paediatric GERD, but its use is now strictly restricted due to concerns regarding which severe adverse effect?",
+     "options": [
+      "Idiopathic intracranial hypertension",
+      "Cardiac arrhythmias associated with QT prolongation",
+      "Aplastic anaemia",
+      "Severe acute hepatotoxicity"
+     ],
+     "correct": 1,
+     "explanation": "Domperidone carries a well-established risk of serious cardiac side effects, specifically QT interval prolongation and fatal ventricular arrhythmias.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Long-term proton pump inhibitor (PPI) therapy in paediatric patients with GERD is associated with an increased risk of which of the following complications?",
+     "options": [
+      "Hypertrophic pyloric stenosis",
+      "Renal tubular acidosis",
+      "Enteric infections and community-acquired pneumonia",
+      "Peripheral neuropathy due to vitamin C deficiency"
+     ],
+     "correct": 2,
+     "explanation": "Gastric acid suppression from long-term PPI therapy reduces non-immune host defense, predisposing children to enteric infections and respiratory tract infections.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 10-year-old child with severe neurodisability and refractory GERD is prescribed baclofen to reduce reflux episodes. What is the mechanism of action of baclofen in this context?",
+     "options": [
+      "GABA-B receptor agonist that reduces transient lower oesophageal sphincter relaxations",
+      "GABA-A receptor agonist that speeds up gastric emptying time",
+      "Motilin receptor agonist that increases lower oesophageal sphincter basal tone",
+      "Direct proton pump inhibitor that reduces nocturnal acid secretion"
+     ],
+     "correct": 0,
+     "explanation": "Baclofen is a selective GABA-B receptor agonist that reduces gastroesophageal reflux by inhibiting transient lower oesophageal sphincter relaxations (TLESRs).",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-15-6",
+   "title": "Mastering Joint Pathology: Arthritis, OA & Joint Anatomy: drug duel",
+   "game": "drug",
+   "topic": "Mastering Joint Pathology: Arthritis, OA & Joint Anatomy",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which of the following agents is a biologic DMARD that specifically inhibits interleukin-6 (IL-6) receptors and is used in the treatment of rheumatoid arthritis?",
+     "options": [
+      "Adalimumab",
+      "Tocilizumab",
+      "Abatacept",
+      "Rituximab"
+     ],
+     "correct": 1,
+     "explanation": "Tocilizumab is a monoclonal antibody that targets the IL-6 receptor, reducing inflammation in rheumatoid arthritis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of methotrexate when used as a first-line DMARD in rheumatoid arthritis?",
+     "options": [
+      "Calcineurin inhibition",
+      "Dihydrofolate reductase inhibition",
+      "Tumor necrosis factor neutralization",
+      "Cyclooxygenase-2 specific inhibition"
+     ],
+     "correct": 1,
+     "explanation": "Methotrexate acts primarily as a competitive inhibitor of dihydrofolate reductase, leading to decreased synthesis of thymidylate and purines.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which medication used for acute gouty arthritis acts by binding to intracellular tubulin, thereby inhibiting neutrophil motility and migration?",
+     "options": [
+      "Allopurinol",
+      "Colchicine",
+      "Probenecid",
+      "Febuxostat"
+     ],
+     "correct": 1,
+     "explanation": "Colchicine disrupts microtubule polymerization by binding tubulin, inhibiting neutrophil activation and migration into the affected joint.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Long-term high-dose therapy with which of the following non-steroidal anti-inflammatory drugs (NSAIDs) is associated with the highest relative risk of selective COX-2 cardiovascular events?",
+     "options": [
+      "Naproxen",
+      "Ibuprofen",
+      "Celecoxib",
+      "Diclofenac"
+     ],
+     "correct": 3,
+     "explanation": "Diclofenac exhibits a cardiovascular risk profile similar to selective COX-2 inhibitors (coxibs), showing a higher thrombotic risk compared to naproxen.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of allopurinol in the chronic management of gout?",
+     "options": [
+      "Inhibition of xanthine oxidase",
+      "Increased renal excretion of uric acid",
+      "Urate oxidase activity converting uric acid to allantoin",
+      "Inhibition of urate reabsorption in the proximal tubule"
+     ],
+     "correct": 0,
+     "explanation": "Allopurinol and its metabolite oxypurinol inhibit xanthine oxidase, thereby decreasing the metabolic production of uric acid.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which of the following biologic DMARDs is a fusion protein consisting of the extracellular domain of CTLA-4 linked to the Fc portion of human IgG, inhibiting T-cell activation?",
+     "options": [
+      "Infliximab",
+      "Anakinra",
+      "Abatacept",
+      "Rituximab"
+     ],
+     "correct": 2,
+     "explanation": "Abatacept is a selective co-stimulation modulator that binds to CD80 and CD86 on antigen-presenting cells, preventing CD28-mediated T-cell activation.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which characteristic adverse effect is strongly associated with the long-term systemic use of glucocorticoids in the management of inflammatory arthritides?",
+     "options": [
+      "Osteoporosis",
+      "Gastrointestinal bleeding",
+      "Pulmonary fibrosis",
+      "Distal renal tubular acidosis"
+     ],
+     "correct": 0,
+     "explanation": "Glucocorticoids frequently cause secondary osteoporosis by decreasing bone formation and increasing bone resorption.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the mechanism of action of febuxostat, a medication used to lower serum uric acid levels in chronic gout?",
+     "options": [
+      "Non-purine selective inhibitor of xanthine oxidase",
+      "Recombinant uricase enzyme",
+      "Uricosuric agent inhibiting URAT1",
+      "Inhibition of interleukine-1 beta"
+     ],
+     "correct": 0,
+     "explanation": "Febuxostat is a potent, non-purine selective inhibitor of xanthine oxidase used to manage hyperuricemia in gout.",
      "ai": true,
      "kind": "drug"
     }
