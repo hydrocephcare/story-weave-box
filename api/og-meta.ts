@@ -1025,15 +1025,17 @@ export default async function handler(req: Request): Promise<Response> {
       // TopicPage reads these generated JSON files directly. Crawler metadata
       // must use the same source; checking only topic_pages in Supabase wrongly
       // noindexed many valid generated topic pages.
-      try {
-        const topicRes = await fetch(`${origin}/topics/${encodeURIComponent(topicSlug)}.json`, {
-          headers: { accept: "application/json" },
-        });
-        if (topicRes.ok) {
-          const candidate = await topicRes.json() as Record<string, any>;
-          if (candidate?.s === topicSlug && candidate?.n) topicData = candidate;
-        }
-      } catch { /* fall back to the database-backed newly written topic */ }
+      const topicRes = await fetch(`${origin}/topics/${encodeURIComponent(topicSlug)}.json`, {
+        headers: { accept: "application/json" },
+      });
+      if (topicRes.ok) {
+        const candidate = await topicRes.json() as Record<string, any>;
+        if (candidate?.s === topicSlug && candidate?.n) topicData = candidate;
+      } else if (topicRes.status !== 404) {
+        // A temporary asset/CDN failure is not proof that the topic is missing.
+        // Let the outer handler return a retryable 503 rather than accidental noindex.
+        throw new Error(`Topic metadata source unavailable: HTTP ${topicRes.status}`);
+      }
 
       let row: Record<string, any> | null = null;
       if (!topicData) {
