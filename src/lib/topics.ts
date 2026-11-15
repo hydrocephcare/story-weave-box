@@ -16,7 +16,7 @@ export interface AiPage {
   summary: string;
   aka?: string[];
   sections: { key?: string; h: string; heading?: string; applicable?: boolean; confidence?: "high" | "medium" | "low"; content?: { p?: string; b?: string[]; t?: { a: string; b: string }[]; images?: { url: string; alt: string }[] }; p?: string; b?: string[]; t?: { a: string; b: string }[]; images?: { url: string; alt: string }[] }[];
-  exam?: string[];
+  exam?: { q: string; a: string }[];
   mcqs?: { q: string; options: string[]; correct: number; explanations: string[] }[];
   whenToSeekHelp?: string[];
   faq?: { q: string; a: string }[];
@@ -291,7 +291,7 @@ export function useTopicPage(slug: string) {
 export async function writeDeepNotes(slug: string, name: string, category: string, base: AiPage, past: string[] = []): Promise<{ deep: DeepNotes } | { error: "busy" | "failed" | "bot" }> {
   if (looksLikeBot()) return { error: "bot" };
   try {
-    const digest = { sections: base.sections.map((x) => ({ h: x.h, p: x.p, b: (x.b ?? []).slice(0, 4) })), exam: base.exam ?? [] };
+    const digest = { sections: base.sections.map((x) => ({ h: x.h, p: x.p, b: (x.b ?? []).slice(0, 4) })), exam: (base.exam ?? []).map((x) => x.q + " — " + x.a) };
     const r = await fetch("/api/topic-write", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ mode: "deep", name, category, base: digest, past: past.slice(0, 12) }) });
     const j = (await r.json().catch(() => null)) as { status?: string; deep?: DeepNotes } | null;
     if (j?.status === "published" && j.deep) {
