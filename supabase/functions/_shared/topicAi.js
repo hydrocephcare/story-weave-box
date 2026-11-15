@@ -191,10 +191,10 @@ export async function generateTopicPage({ name, category, context, choices, env,
  * Groq first (a few seconds, free, keys in turn), then Gemini (keys in turn) when Groq is out of quota or down.
  * env: { GROQ_API_KEYS, GEMINI_API_KEYS }.
  */
-export async function generateWithFallback(input, env) {
+export async function generateWithFallback(input, env, fetchImpl = fetch) {
   const groq = String(env.GROQ_API_KEYS ?? "").trim();
-  if (groq) { try { return await generateTopicPage({ ...input, timeoutMs: 32000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
-  return generateTopicPage({ ...input, timeoutMs: groq ? 24000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+  if (groq) { try { return await generateTopicPage({ ...input, fetchImpl, timeoutMs: 32000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
+  return generateTopicPage({ ...input, fetchImpl, timeoutMs: groq ? 24000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GEMINI_API_KEY: env.GEMINI_API_KEY, GEMINI_MODELS: env.GEMINI_MODELS, GROQ_API_KEYS: groq, GROQ_API_KEY: env.GROQ_API_KEY, GROQ_MODELS: env.GROQ_MODELS } });
 }
 
 /** The second layer: deep exam notes, written in three focused parts (run in parallel) that build on the revision page without repeating it. */
@@ -326,7 +326,7 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
   const slug = slugOf(name);
   if (!slug || slug.length > 80) return { code: 400, body: { status: "invalid" } };
   const url = env.SUPABASE_URL, svc = env.SUPABASE_SERVICE_ROLE_KEY;
-  const hasModel = env.LOVABLE_API_KEY || env.GEMINI_API_KEY || (env.OMNIROUTE_BASE_URL && env.OMNIROUTE_API_KEY);
+  const hasModel = env.GROQ_API_KEYS || env.GROQ_API_KEY || env.GEMINI_API_KEYS || env.GEMINI_API_KEY || env.LOVABLE_API_KEY || (env.OMNIROUTE_BASE_URL && env.OMNIROUTE_API_KEY);
   if (!url || !svc || !hasModel) return { code: 503, body: { status: "unavailable" } };
 
   const rest = (p, init = {}) => fetchImpl(`${url}/rest/v1/${p}`, { ...init, headers: { apikey: svc, Authorization: `Bearer ${svc}`, "content-type": "application/json", ...(init.headers || {}) } });
@@ -348,10 +348,10 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
 
     await save({ status: "generating" });
     let page;
-    try { page = await generateTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }); }
+    try { page = await generateWithFallback({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), choices: input.choices }, env, fetchImpl); }
     catch { await save({ status: "failed" }); return { code: 502, body: { status: "failed" } }; }
     if (!page.medical) { await save({ status: "rejected" }); return { code: 404, body: { status: "rejected" } }; }
-    await save({ status: "published", content: page, model: page.model, reviewed: false });
+    await save({ status: "published", content: page, model: page.model, topic_type: page.topicType, reviewed: false });
     return { code: 200, body: { status: "published", slug, page } };
   } catch { return { code: 502, body: { status: "failed" } }; }
 }
