@@ -149,7 +149,7 @@ export async function runTopicReviewBatch(env, { limit = 5 } = {}) {
         }
         await saveFindings(env, job.id, job.article_id, lastReview.findings);
         const critical = lastReview.findings.some(isCriticalHigh);
-        const patch = await rewriteAffected(env, env, page, lastReview, pageRow.name).catch((error) => { throw error; });
+        const patch = await rewriteAffected(env, page, lastReview, pageRow.name).catch((error) => { throw error; });
         if (!patch || loops >= 2) { needsReview = true; break; }
         const safeSections = patch.sections.filter((s) => {
           const key = String(s.key || "");
