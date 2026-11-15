@@ -235,6 +235,47 @@ function htmlEscape(s: string): string {
     .replace(/'/g, "&#39;");
 }
 
+
+function storyPlainText(raw: string): string {
+  return String(raw || "")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<img\b[^>]*alt=["']([^"']+)["'][^>]*>/gi, " $1 ")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/(?:p|div|h[1-6]|li|blockquote|section)>/gi, "\n")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\s*\n\s*/g, "\n")
+    .trim();
+}
+
+function storyBodyHtml(raw: string): string {
+  const content = String(raw || "")
+    .replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "")
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/(?:p|div|h[1-6]|li|blockquote|section)>/gi, "\n");
+  const blocks = content.split(/\n+/).map((block) => {
+    const trimmed = block.trim();
+    if (!trimmed) return "";
+    const heading = /^<h[2-6]\b/i.test(trimmed) || /^#{2,6}\s+/.test(trimmed);
+    const listItem = /^<li\b/i.test(trimmed) || /^[-*•]\s+/.test(trimmed);
+    const text = storyPlainText(trimmed);
+    if (!text) return "";
+    if (heading) return "<h2>" + htmlEscape(text.replace(/^#{2,6}\s+/, "")) + "</h2>";
+    if (listItem) return "<p>• " + htmlEscape(text.replace(/^[-*•]\s+/, "")) + "</p>";
+    return "<p>" + htmlEscape(text) + "</p>";
+  }).filter(Boolean);
+  return blocks.join("") || "<p>" + htmlEscape(storyPlainText(raw)) + "</p>";
+}
+
 const UUID_REGEX =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
@@ -1280,29 +1321,43 @@ ${explanationLine}
       const story = await fetchStoryByParam(param);
       if (!story) {
         return new Response(
-          `<html><body><h1>Page not found</h1><p>This story does not exist.</p></body></html>`,
+          "<html><body><h1>Page not found</h1><p>This story does not exist.</p></body></html>",
           { status: 404, headers: { "content-type": "text/html" } }
         );
       }
-      const canonicalStoryPath = story.slug ? `/stories/${story.slug}` : `/stories/${story.id}-${slugify(story.title) || "story"}`;
-      if (canonicalStoryPath !== `/stories/${param}`) {
+      const canonicalStoryPath = story.slug ? "/stories/" + story.slug : "/stories/" + story.id + "-" + (slugify(story.title) || "story");
+      if (canonicalStoryPath !== "/stories/" + param) {
         return permanentRedirect(canonicalStoryPath);
       }
-      title = `${story.title} | Story | Ompath Study`;
-      description =
-        to160(String(story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()) ||
-        "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow.";
-      // the share picture: the writer's own cover, else a card with the title, the writer and their photo (never the plain topic picture)
+      const rawStory = String(story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "");
+      const plainStory = storyPlainText(rawStory);
+      title = toMetaTitle(String(story.meta_title || ""), story.title + " | Story | Ompath Study");
+      description = toMetaDescription(
+        String(story.meta_description || plainStory),
+        "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow."
+      );
+      bodyExtra = "<article>" + storyBodyHtml(rawStory) + "</article>";
       const by = String(story.content || "").match(/^\s*<p><em>By\s+([^<]{1,80}?)\s*(?:·|&middot;|&#183;)\s*([^<]{1,20})<\/em><\/p>/i);
       const who = by && !/^a medical student$/i.test(by[1]) ? by[1].trim() : "";
       const lvl = /^Year\s*(\d)$/i.exec(by ? by[2].trim() : "");
       const photoTag = ((story as { tags?: string[] }).tags || []).find((t) => t.startsWith("photo:"));
       let photo = ""; try { photo = photoTag ? decodeURIComponent(photoTag.slice(6)) : ""; } catch { photo = ""; }
       const own = story.cover_image_url && !/\/og\/stories\//.test(story.cover_image_url) ? story.cover_image_url : "";
-      ogImage = cardUrl(story.title, lvl ? `Year ${lvl[1]}: ${who || "Student story"}` : who || (by ? by[2].trim() : ""), "Student story", "", own || photo);
-      keywords = `OmpathStudy, medical stories, reflective practice, ${story.category || ""}, medical students Kenya`;
+      ogImage = cardUrl(story.title, lvl ? "Year " + lvl[1] + ": " + (who || "Student story") : who || (by ? by[2].trim() : ""), "Student story", "", own || photo);
+      keywords = "OmpathStudy, medical stories, reflective practice, " + (story.category || "") + ", medical students Kenya";
       type = "article";
-
+      schemaJson = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: title,
+        description,
+        articleBody: plainStory.slice(0, 12000),
+        image: ogImage,
+        datePublished: story.created_at,
+        author: { "@type": "Person", name: who || "Medical student" },
+        publisher: { "@type": "Organization", name: "Ompath Study" },
+        mainEntityOfPage: absoluteUrl,
+      });
     } else if (section === "year" && param) {
       const yr = param.replace(/[^0-9]/g, "");
       title = `Year ${yr} Study Materials | Ompath Study`;

@@ -2,6 +2,7 @@ const BASE = (process.env.SEO_AUDIT_BASE_URL || "https://www.ompathstudy.com").r
 const MAX_URLS = Number(process.env.SEO_AUDIT_MAX_URLS || 1000);
 const CONCURRENCY = Number(process.env.SEO_AUDIT_CONCURRENCY || 10);
 const TIMEOUT_MS = Number(process.env.SEO_AUDIT_TIMEOUT_MS || 15000);
+const MIN_VISIBLE_WORDS = Number(process.env.SEO_AUDIT_MIN_VISIBLE_WORDS || 80);
 const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0";
 
 function normalize(url) {
@@ -56,6 +57,22 @@ function extractMeta(html, name) {
 function pageTitle(html) {
   return (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1]?.replace(/<[^>]+>/g, "").trim() || "";
 }
+function visibleWordCount(html) {
+  const text = html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, " ")
+    .replace(/<footer[\s\S]*?<\/footer>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text ? text.split(" ").length : 0;
+}
+
 function canonical(html) {
   const m = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i)
     || html.match(/<link\b[^>]*href=["']([^"']+)["'][^>]*rel=["']canonical["'][^>]*>/i);
@@ -126,6 +143,8 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     const header = (res.headers.get("x-robots-tag") || "").toLowerCase();
     if (/noindex/.test(robotsMeta) || /noindex/.test(header)) return fail(`${url} is listed in a sitemap but sends noindex`);
     if (html.length < 500) return fail(`${url} returned an unusually small HTML document (${html.length} bytes)`);
+    const visibleWords = visibleWordCount(html);
+    if (visibleWords < MIN_VISIBLE_WORDS) return fail(`${url} is too thin for indexing: ${visibleWords} visible words (minimum ${MIN_VISIBLE_WORDS})`);
     return { ok: true };
   } catch (e) {
     return fail(`${url}: ${e instanceof Error ? e.message : String(e)}`);
