@@ -145,6 +145,8 @@ export default async function handler(req, res) {
     }
     // exams are taken at /exams/<slug>/start, a noindex page: the exam list (/exams) is the page for search, so single exams are not listed
     xml = xml.replace(/\s*<url>\s*<loc>https:\/\/www\.ompathstudy\.com\/exams\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "");
+    // Individual clinical simulator cases are interactive/noindex; keep only the public /clinical hub.
+    xml = xml.replace(/\\s*<url>\\s*<loc>https:\\/\\/www\\.ompathstudy\\.com\\/clinical\\/case\\/[^<]+<\\/loc>[\\s\\S]*?<\\/url>/g, "");
     // Interactive clinical case runners are deliberately noindex (see api/og-meta.ts).
     // Do not advertise them in the XML sitemap; the public /clinical hub remains discoverable.
     const isSectionFile = file !== "all.xml";
