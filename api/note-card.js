@@ -39,6 +39,8 @@ export default async function handler(req, res) {
     const svg = await satori(tree, { width: 1200, height: 630, fonts: [{ name: "sans-serif", data: loadFont(), weight: 700, style: "normal" }] });
     const png = new Resvg(svg, { fitTo: { mode: "width", value: 1200 } }).render().asPng();
     res.setHeader("Content-Type", "image/png");
+    // This endpoint generates share-card assets, not standalone search landing pages.
+    res.setHeader("X-Robots-Tag", "noindex");
     res.setHeader("Cache-Control", "public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400");
     res.status(200).send(Buffer.from(png));
   } catch {
