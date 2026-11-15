@@ -49,7 +49,7 @@ try {
     ].join("\n    ");
     if (noindex) html = setTag(html, /<meta name="robots"[^>]*>/, `<meta name="robots" content="noindex,follow" />`);
     html = html.replace("</head>", `    ${extra}\n  </head>`);
-    html = html.replace('<div id="root"></div>', `<div id="root"><div class="prerendered">${body}</div></div>`);
+    html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
     return html;
   }
 
@@ -159,6 +159,21 @@ try {
 
 
 
+  const boundedSeoTitle = (value) => {
+    const clean = String(value || "").replace(/\s+/g, " ").trim();
+    if (clean.length <= 60) return clean;
+    const cut = clean.slice(0, 59);
+    const boundary = cut.lastIndexOf(" ");
+    return cut.slice(0, boundary > 35 ? boundary : 59).trimEnd() + "…";
+  };
+  const boundedSeoDescription = (value) => {
+    const clean = String(value || "").replace(/\s+/g, " ").trim();
+    if (clean.length <= 160) return clean;
+    const cut = clean.slice(0, 159);
+    const boundary = cut.lastIndexOf(" ");
+    return cut.slice(0, boundary > 120 ? boundary : 159).trimEnd() + "…";
+  };
+
   // ---------------- notes that ship with the site ----------------
   try {
     const notes = JSON.parse(fs.readFileSync(path.join(root, "src/data/staticNotes.json"), "utf8"));
@@ -173,9 +188,11 @@ try {
       const notePath = `/notes/${n.slug}`;
       const sibs = notes.filter((o) => !o.unlisted && o.unit === n.unit && o.group === n.group && o.slug !== n.slug);
       const sibHtml = sibs.length ? `<h2>More in ${esc(n.group ?? n.unit)}</h2><ul>${sibs.map((o) => `<li><a href="/notes/${o.slug}">${esc(o.title)}</a></li>`).join("")}</ul><p><a href="/notes">All study notes</a></p>` : "";
-      const title = `${n.title} — Year ${n.year} ${n.unit} Notes | ${registry.brand}`;
+      const unitLabel = /obstetrics\s*&\s*gynaecology/i.test(n.unit) ? "O&G" : n.unit;
+      const title = boundedSeoTitle(n.title + " | Year " + n.year + " " + unitLabel + " Notes");
+      const description = boundedSeoDescription(n.description);
       write(notePath, render({
-        title, description: n.description, path: notePath,
+        title, description, path: notePath,
         // a card with the note's own title, so a link shared on WhatsApp or X shows what it is
         image: `/api/note-card?title=${encodeURIComponent(n.title)}&year=${n.year}&unit=${encodeURIComponent(n.group ?? n.unit)}&kind=${encodeURIComponent(n.paper ? "Past paper" : "Notes")}`,
         keywords: [n.title, `${n.group ?? n.unit} notes`, `Year ${n.year} medical students`, `${n.unit}`, "medical student notes"],
