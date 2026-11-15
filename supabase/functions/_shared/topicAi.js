@@ -172,10 +172,16 @@ export async function generateTopicPage({ name, category, context, choices, env,
     const repairJson = parseTopicJson(fixed.text);
     if (Array.isArray(repairJson?.sections)) {
       const replacements = new Map(repairJson.sections.map((x) => [x.key, x]));
-      const merged = { ...raw, sections: page.sections.map((x) => {
-        const replacement = replacements.get(x.key);
-        return replacement ? { ...replacement, key: x.key, heading: x.heading } : x;
-      }) };
+      const merged = {
+        ...raw,
+        sections: page.sections.map((x) => {
+          const replacement = replacements.get(x.key);
+          return replacement ? { ...replacement, key: x.key, heading: x.heading } : x;
+        }),
+        ...(Array.isArray(repairJson.faq) ? { faq: repairJson.faq } : {}),
+        ...(Array.isArray(repairJson.exam) ? { exam: repairJson.exam } : {}),
+        ...(Array.isArray(repairJson.mcqs) ? { mcqs: repairJson.mcqs } : {}),
+      };
       page = normalizeTopicPage(merged, { name, category, model });
       errors = validateTopicPage(page);
     }
