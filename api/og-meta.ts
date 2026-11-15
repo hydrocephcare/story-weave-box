@@ -685,6 +685,9 @@ function isNoindexPath(path: string): boolean {
   const clean = (path || "/").split("?")[0].replace(/\/+$/, "") || "/";
   if (NOINDEX_PATH_PREFIXES.some((prefix) => clean === prefix || clean.startsWith(prefix))) return true;
   const parts = clean.split("/").filter(Boolean);
+  // Clinical simulator sessions are interactive learning tools, not stable public articles.
+  // Keep individual case-runner URLs out of the index while leaving /clinical discoverable.
+  if (parts[0] === "clinical" && parts[1] === "case") return true;
   if (parts[0] === "exams" && parts.length >= 3 && parts[2] === "start") return true;
   if (parts[0] === "contests" && parts.length >= 2 && ["register", "lobby", "progress", "certificate"].includes(parts[1])) return true;
   if (parts[0] === "contests" && parts.length >= 3 && parts[2] === "round") return true;
@@ -707,6 +710,11 @@ function buildHtml(opts: {
   const img = htmlEscape(opts.ogImage);
   const keywords = opts.keywords ? htmlEscape(opts.keywords) : "";
   const type = opts.type || "website";
+  // buildHtml receives absolute canonical URLs; extract the pathname before testing noindex rules.
+  // Otherwise /search and other utility routes can miss the HTML robots meta tag even when
+  // their response header is correctly marked noindex.
+  let robotsPath = opts.url;
+  try { robotsPath = new URL(opts.url, "https://www.ompathstudy.com").pathname; } catch { /* retain the supplied path */ }
 
   const bodyExtra = opts.bodyExtra ? opts.bodyExtra.slice(0, 120000) : "";
   return `<!doctype html>
@@ -716,7 +724,7 @@ function buildHtml(opts: {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${title}</title>
     <meta name="description" content="${desc}" />
-    ${isNoindexPath(opts.url) ? '<meta name="robots" content="noindex,follow" />' : ""}
+    ${isNoindexPath(robotsPath) ? '<meta name="robots" content="noindex,follow" />' : ""}
     ${keywords ? `<meta name="keywords" content="${keywords}" />` : ""}
     <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${title}" />
@@ -801,6 +809,13 @@ export default async function handler(req: Request): Promise<Response> {
   const ua = req.headers.get("user-agent");
   const url = new URL(req.url);
   const originalPath = url.searchParams.get("path") || "/";
+  // Canonicalise trailing-slash variants for crawler requests before rendering metadata.
+  // Query parameters are deliberately preserved for app behaviour and excluded from canonical URLs.
+  const requestedPath = originalPath.split("?")[0];
+  const normalizedPath = requestedPath.length > 1 ? requestedPath.replace(/\/+$/, "") : "/";
+  if (isCrawler(ua) && requestedPath !== normalizedPath) {
+    return permanentRedirect(normalizedPath);
+  }
   if (/^\/zone\/[A-Za-z0-9-]+\/?$/.test(originalPath.split("?")[0])) {
     if (!isCrawler(ua)) return Response.redirect(new URL(originalPath, url.origin).toString(), 307);
     return new Response(await zoneInviteHtml(originalPath, (url.searchParams.get("n") || "").slice(0, 24)), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=60, s-maxage=60, stale-while-revalidate=120" } });

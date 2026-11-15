@@ -438,6 +438,14 @@ export function dropEmptySections(lines: string[]): string[] {
   return out;
 }
 
+function trimSurroundingAsterisks(value: string): string {
+  let start = 0;
+  let end = value.length;
+  while (start < end && value[start] === "*") start++;
+  while (end > start && value[end - 1] === "*") end--;
+  return value.slice(start, end);
+}
+
 export function cleanHeadingText(value: string): string {
   return value
     .replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu, "")
@@ -918,7 +926,7 @@ export function extractToc(content: string): TocItem[] {
       secNum++;
       items.push({ id: slugify(heading) || `section-${secNum}`, text: heading, level: 2 });
     } else if (isLikelyStandaloneSectionHeading(t, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "")) {
-      const heading = cleanDisplayText(t).replace(/^\\*+|\\*+$/g, "").trim();
+      const heading = trimSurroundingAsterisks(cleanDisplayText(t)).trim();
       if (heading && !META_HEADING.test(heading)) {
         items.push({ id: slugify(heading) || `section-${++secNum}`, text: heading, level: 3 });
       }
