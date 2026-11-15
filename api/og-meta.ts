@@ -294,8 +294,8 @@ const LEGACY_REDIRECT_PATHS = new Set([
 ]);
 
 function tokenScore(target: string, candidate: string): number {
-  const a = new Set(String(target || "").toLowerCase().replace(/[^a-z0-9\\s-]/g, " ").split(/[\\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
-  const b = new Set(String(candidate || "").toLowerCase().replace(/[^a-z0-9\\s-]/g, " ").split(/[\\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
+  const a = new Set(String(target || "").toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/[\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
+  const b = new Set(String(candidate || "").toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/[\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
   if (!a.size || !b.size) return 0;
   let overlap = 0;
   a.forEach((t) => { if (b.has(t)) overlap++; });
