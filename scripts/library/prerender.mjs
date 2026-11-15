@@ -7,7 +7,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { countFiles, fileBlurb, folderMeta, libraryPath, outlineMeta, prettyTitle, timetableMeta } from "../../src/lib/libraryMeta.js";
+import { countFiles, fileBlurb, folderMeta, isIndexableFolder, libraryPath, outlineMeta, prettyTitle, timetableMeta } from "../../src/lib/libraryMeta.js";
 import { mdToHtml } from "../../src/lib/miniMarkdown.js";
 import { splitPaper } from "../../src/lib/paperAnswers.js";
 import { linkDrugs } from "../../src/lib/noteLinks.js";
@@ -80,15 +80,34 @@ try {
       const slugs = chain.map((n) => n.s);
       const trail = [["Home", "/"], [def.label, `/year/${def.year}`], [def.title, libraryPath(def)]];
       chain.forEach((n, i) => trail.push([n.n, i === chain.length - 1 ? null : libraryPath(def, slugs.slice(0, i + 1))]));
-      const folders = nodes.map((n) => `<li><a href="${libraryPath(def, [...slugs, n.s])}">${esc(n.n)}</a> — ${countFiles(n).toLocaleString("en")} files</li>`).join("");
+      const folders = nodes.map((n) => '<li><a href="' + libraryPath(def, [...slugs, n.s]) + '">' + esc(n.n) + '</a> — ' + countFiles(n).toLocaleString("en") + ' files</li>').join("");
       const here = chain.length ? chain[chain.length - 1] : null;
       const trailNames = [def.label, ...chain.map((n) => n.n)];
-      const files = (here?.f ?? []).map((f) => `<li>${esc(prettyTitle(f[1]))} — ${esc(fileBlurb(f[2], trailNames))}</li>`).join("");
+      const previewRows = [];
+      const addFiles = (items, fileTrail) => {
+        for (const f of items ?? []) {
+          if (previewRows.length >= 24) return;
+          previewRows.push({ file: f, trail: fileTrail });
+        }
+      };
+      const collectDescendants = (foldersToVisit, folderTrail) => {
+        for (const folder of foldersToVisit ?? []) {
+          addFiles(folder.f, [...folderTrail, folder.n]);
+          if (previewRows.length >= 24) return;
+          collectDescendants(folder.d, [...folderTrail, folder.n]);
+          if (previewRows.length >= 24) return;
+        }
+      };
+      addFiles(here?.f, trailNames);
+      collectDescendants(nodes, trailNames);
+      const resources = previewRows.map(({ file, trail: fileTrail }) =>
+        '<li>' + esc(prettyTitle(file[1])) + ' — ' + esc(fileBlurb(file[2], fileTrail)) + '</li>'
+      ).join("");
       const body = shell(
         crumbs(trail) +
-        `<h1>${esc(meta.h1)}</h1><p>${esc(meta.description)}</p>` +
-        (folders ? `<h2>Folders</h2><ul>${folders}</ul>` : "") +
-        (files ? `<h2>Files in this folder</h2><ul>${files}</ul>` : "") +
+        '<h1>' + esc(meta.h1) + '</h1><p>' + esc(meta.description) + '</p>' +
+        (folders ? '<h2>Folders</h2><ul>' + folders + '</ul>' : "") +
+        (resources ? '<h2>Selected resources in this section</h2><ul>' + resources + '</ul>' : "") +
         credit,
       );
       const jsonLd = {
@@ -96,15 +115,16 @@ try {
         "@type": "CollectionPage",
         name: meta.h1,
         description: meta.description,
-        url: `${site}${meta.path}`,
+        url: site + meta.path,
         isPartOf: { "@type": "WebSite", name: registry.brand, url: site },
         author: { "@type": "Organization", name: "Ompath Study" },
-        educationalLevel: `${def.label} MBChB`,
+        educationalLevel: def.label + " MBChB",
         audience: { "@type": "EducationalAudience", educationalRole: "student" },
         inLanguage: "en",
-        ...(here?.f?.length ? { hasPart: here.f.slice(0, 150).map((f) => ({ "@type": "CreativeWork", name: prettyTitle(f[1]), description: `${fileBlurb(f[2], trailNames)}. ${(registry.seoCredit ?? registry.credit)}.`, educationalLevel: `${def.label} MBChB`, author: { "@type": "Organization", name: "Ompath Study" } })) } : {}),
+        ...(previewRows.length ? { hasPart: previewRows.map(({ file }) => ({ "@type": "CreativeWork", name: prettyTitle(file[1]), description: fileBlurb(file[2], trailNames) + ". " + (registry.seoCredit ?? registry.credit) + ".", educationalLevel: def.label + " MBChB", author: { "@type": "Organization", name: "Ompath Study" } })) } : {}),
       };
-      write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: meta.keywords, body, jsonLd }), data.updated);
+      const indexable = isIndexableFolder(chain, meta.files);
+      write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: meta.keywords, body, jsonLd, noindex: !indexable }), data.updated, indexable);
       for (const n of nodes) visit(n.d ?? [], [...chain, n]);
     };
     // root page, then every folder below it
