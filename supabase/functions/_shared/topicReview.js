@@ -72,7 +72,7 @@ function normaliseReview(raw) {
 }
 async function rewriteAffected(env, page, review, name) {
   const keys = new Set([
-    ...review.findings.filter((f) => f.severity !== "high" && f.suggested_fix && f.verdict !== "supported").map((f) => f.section),
+    ...review.findings.filter((f) => !isCriticalHigh(f) && f.suggested_fix && f.verdict !== "supported").map((f) => f.section),
     ...review.missing_sections
   ]);
   if (!keys.size) return null;
@@ -142,7 +142,7 @@ export async function runTopicReviewBatch(env, { limit = 5 } = {}) {
       for (; loops <= 2; loops++) {
         const rawReview = reviewer === "gemini" ? await completeGemini(env, reviewPrompt(page, pageRow.name, pageRow.category)) : await completeGroq(env, reviewPrompt(page, pageRow.name, pageRow.category), 9000);
         lastReview = normaliseReview(parseJson(rawReview.text));
-        if (lastReview.verdict === "approved" && lastReview.completeness_score >= 0.9 && lastReview.missing_sections.length === 0 && !lastReview.findings.some(isCriticalHigh)) {
+        if (lastReview.verdict === "approved" && lastReview.completeness_score >= 0.9 && lastReview.missing_sections.length === 0 && !lastReview.findings.some(isCriticalHigh) && !needsReview) {
           approved = true;
           await rest(env, "topic_pages?slug=eq." + encodeURIComponent(job.article_id), { method: "PATCH", prefer: "return=minimal", body: { ai_checked_at: new Date().toISOString(), ai_review_status: "approved", requires_review: false, review_status: "ai_checked", last_reviewed_at: new Date().toISOString(), review_loops: loops } });
           break;
