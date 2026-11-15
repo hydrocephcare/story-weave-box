@@ -807,7 +807,7 @@ export default async function handler(req: Request): Promise<Response> {
   // Canonicalise trailing-slash variants for crawler requests before rendering metadata.
   // Query parameters are deliberately preserved for app behaviour and excluded from canonical URLs.
   const requestedPath = originalPath.split("?")[0];
-  const normalizedPath = requestedPath.length > 1 ? requestedPath.replace(/\\/+$/, "") : "/";
+  const normalizedPath = requestedPath.length > 1 ? requestedPath.replace(/\/+$/, "") : "/";
   if (isCrawler(ua) && requestedPath !== normalizedPath) {
     return permanentRedirect(normalizedPath);
   }
