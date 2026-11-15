@@ -195,6 +195,8 @@ begin
          || case when p_exam is null then '{}'::jsonb else jsonb_build_object('exam',p_exam) end,
          review_loops=greatest(coalesce(p_loop,1),0), updated_at=now()
    where slug=p_slug;
+  update public.audit_findings set status='applied',resolved_at=now()
+   where article_id=p_slug and status='pending' and requires_review=false;
   return jsonb_build_object('ok',true,'sections_changed',jsonb_array_length(coalesce(p_sections,'[]'::jsonb)));
 end;
 $$;
@@ -276,7 +278,7 @@ begin
   values(f.article_id,jsonb_build_object('section',old_section),jsonb_build_object('section',new_section),'Admin applied high-risk AI finding: '||f.claim,'admin',auth.uid());
   perform set_config('app.topic_review_write','true',true);
   update public.topic_pages set content=jsonb_set(content,'{sections}',new_sections,true),updated_at=now(),
-    requires_review=exists(select 1 from public.audit_findings where article_id=f.article_id and status='pending' and id<>f.id)
+    requires_review=exists(select 1 from public.audit_findings where article_id=f.article_id and status='pending' and requires_review=true and id<>f.id)
     where slug=f.article_id;
   update public.audit_findings set status='applied',resolved_at=now(),resolved_by=auth.uid() where id=f.id;
   insert into public.review_jobs(article_id,run_after,status,loop_count,updated_at)
