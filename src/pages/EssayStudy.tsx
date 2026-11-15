@@ -33,8 +33,8 @@ export default function EssayStudy() {
 
     const slugify = (value: string) => String(value || "").toLowerCase().trim()
       .replace(/&/g, " and ")
-      .replace(/[^a-z0-9\\s-]/g, "")
-      .replace(/\\s+/g, "-")
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
       .replace(/-+/g, "-")
       .replace(/^-|-$/g, "");
     const cleanPublicSlug = (rawSlug: string | null | undefined, title: string) => {
@@ -85,9 +85,9 @@ export default function EssayStudy() {
       const merged: { question: string; answer: string }[] = [];
       for (const row of rows) {
         for (const item of Array.isArray(row[field]) ? row[field] : []) {
-          const question = String(item?.question || "").replace(/\\s+/g, " ").trim();
+          const question = String(item?.question || "").replace(/\s+/g, " ").trim();
           if (!question) continue;
-          const answer = String(item?.answer || "").replace(/\\s+/g, " ").trim();
+          const answer = String(item?.answer || "").replace(/\s+/g, " ").trim();
           const key = `${question.toLowerCase()}|${answer.toLowerCase()}`;
           if (seen.has(key)) continue;
           seen.add(key);
