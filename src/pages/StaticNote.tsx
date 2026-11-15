@@ -36,7 +36,7 @@ import { mdToHtml } from "@/lib/miniMarkdown";
 import { linkDrugs, linkTopics } from "@/lib/noteLinks";
 import { useTopicIndex } from "@/lib/topics";
 import { clearNoteReturn, getNoteReturn, setNoteReturn } from "@/lib/noteReturn";
-import { updateMetaTags } from "@/lib/seo";
+import { buildStaticNoteMeta, updateMetaTags } from "@/lib/seo";
 import { logStudy } from "@/lib/studyLog";
 
 interface DrugEntry { id: string; name: string; terms: string[] }
@@ -64,7 +64,7 @@ function StaticNoteView() {
 
   useEffect(() => {
     if (!note) return;
-    updateMetaTags({ title: `${note.title} — Year ${note.year} ${note.unit} Notes | Ompath Study`, description: note.description });
+    updateMetaTags(buildStaticNoteMeta(note));
     let on = true;
     setText(null); setError(false);
     loadStaticNoteText(note.slug).then((t) => { if (on) setText(t); }).catch(() => { if (on) setError(true); });
