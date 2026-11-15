@@ -3,7 +3,7 @@ const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZ
 const BUILTIN_CASES = ["med-acs","med-aki","med-dka","med-gibleed","med-hf","med-malaria","med-mening","med-pe","med-stroke","med-tb","ob-aph","ob-ectopic","ob-labour","ob-pe","ob-pid","ob-pph","pd-asthma","pd-dehyd","pd-malaria","pd-neo","pd-pneu","pd-sam","pd-scd","ps-adhd","ps-delirium","ps-depr","ps-dts","ps-mania","ps-panic","ps-schiz","sg-appy","sg-breast","sg-burn","sg-foot","sg-obstruct","sg-trauma"];
 
 const REMOVED_404 = [
-  // Confirmed 404 examples from Google Search Console (15 Nov 2026).
+  // Confirmed dead URLs and obsolete URLs without published content from GSC exports (15 Nov 2026).
   // Keep these stale addresses out of generated sitemaps until their content is restored
   // or a verified replacement URL is available.
   "/mcqs/37a7a71a-e03e-4ae7-b119-91b05fafcc50",
