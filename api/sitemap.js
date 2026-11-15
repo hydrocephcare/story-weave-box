@@ -145,21 +145,8 @@ export default async function handler(req, res) {
     }
     // exams are taken at /exams/<slug>/start, a noindex page: the exam list (/exams) is the page for search, so single exams are not listed
     xml = xml.replace(/\s*<url>\s*<loc>https:\/\/www\.ompathstudy\.com\/exams\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "");
-    // clinical simulator cases: built-in ones plus every case the AI has written so far, so a new case is listed the day it is made
-    if (/^(pages|all)\.xml$/.test(file) && xml.includes("</urlset>")) {
-      let written = [];
-      try {
-        const k = process.env.SUPABASE_ANON_KEY || ANON;
-        const r = await fetch("https://strfwaqvxvkhjbqrwmla.supabase.co/rest/v1/ai_cases?select=id,created_at&status=eq.published&order=created_at.desc&limit=1000", { headers: { apikey: k, Authorization: "Bearer " + k } });
-        if (r.ok) written = await r.json();
-      } catch { /* the built-in cases are still listed */ }
-      const have = new Set();
-      const rows = [...BUILTIN_CASES.map((id) => ({ id })), ...written]
-        .filter((c) => !have.has(c.id) && have.add(c.id))
-        .map((c) => `  <url><loc>https://www.ompathstudy.com/clinical/case/${c.id}</loc>${c.created_at ? `<lastmod>${String(c.created_at).slice(0, 10)}</lastmod>` : ""}<changefreq>monthly</changefreq><priority>0.5</priority></url>`)
-        .join("\n");
-      if (!xml.includes("/clinical/case/")) xml = xml.replace("</urlset>", rows + "\n</urlset>");
-    }
+    // Interactive clinical case runners are deliberately noindex (see api/og-meta.ts).
+    // Do not advertise them in the XML sitemap; the public /clinical hub remains discoverable.
     const isSectionFile = file !== "all.xml";
 
     res.setHeader("Content-Type", "application/xml; charset=utf-8");
