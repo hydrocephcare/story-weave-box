@@ -7,7 +7,6 @@ const sitemap = read("api/sitemap.js");
 const robots = read("public/robots.txt");
 const essayPage = read("src/pages/EssayStudy.tsx");
 const css = read("src/index.css");
-const vercel = JSON.parse(read("vercel.json"));
 const auditScript = read("scripts/seo/audit-production.mjs");
 const libraryMeta = read("src/lib/libraryMeta.js");
 const libraryPrerender = read("scripts/library/prerender.mjs");
