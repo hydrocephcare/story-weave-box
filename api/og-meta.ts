@@ -551,10 +551,8 @@ async function fetchEssayByIdOrSlug(param: string) {
 async function fetchEssayBySlugOrId(param: string) {
   const decoded = decodeURIComponent(param).trim();
   const cols = "id,title,slug,category,short_answer_questions,long_answer_questions,article_id,created_at,updated_at";
-  const bySlug = await sbFetch("essays",
-    `select=${cols}&slug=eq.${encodeURIComponent(decoded)}&published=eq.true&deleted_at=is.null&limit=1`
-  );
-  if (bySlug && bySlug.length > 0) return bySlug[0];
+
+  // UUID-based legacy links identify one exact record.
   const id = extractUuidFromParam(param);
   if (id) {
     const byId = await sbFetch("essays",
@@ -562,18 +560,58 @@ async function fetchEssayBySlugOrId(param: string) {
     );
     if (byId && byId.length > 0) return byId[0];
   }
-  const candidates = await sbFetch("essays", "select=id,title,slug&published=eq.true&deleted_at=is.null&order=created_at.asc&limit=1000");
+
+  // A clean public slug can represent several records (e.g. the same essay
+  // title imported for more than one unit/year). Resolve all of them in a
+  // stable order and combine their questions instead of silently choosing
+  // an arbitrary duplicate record.
+  const candidates = await sbFetch(
+    "essays",
+    "select=id,title,slug&published=eq.true&deleted_at=is.null&order=created_at.asc&limit=1500"
+  );
   const wanted = decoded.toLowerCase();
-  const match = (candidates || []).find((row: Record<string, string>) =>
+  const matches = (candidates || []).filter((row: Record<string, string>) =>
     cleanPublicSlug(row.slug, row.title, "essay") === wanted ||
     slugify(row.title || "") === wanted ||
     String(row.slug || "").toLowerCase() === wanted
   );
-  if (!match?.id) return null;
-  const byClean = await sbFetch("essays",
-    `select=${cols}&id=eq.${encodeURIComponent(match.id)}&published=eq.true&deleted_at=is.null&limit=1`
+  if (!matches.length) return null;
+
+  const ids = matches.map((row: Record<string, string>) => row.id).filter(Boolean);
+  const rows = await sbFetch(
+    "essays",
+    `select=${cols}&id=in.(${ids.join(",")})&published=eq.true&deleted_at=is.null&order=created_at.asc`
   );
-  return byClean && byClean.length > 0 ? byClean[0] : null;
+  if (!rows?.length) return null;
+  if (rows.length === 1) return rows[0];
+
+  const mergeQuestions = (field: "short_answer_questions" | "long_answer_questions") => {
+    const seen = new Set<string>();
+    const merged: unknown[] = [];
+    for (const row of rows) {
+      const questions = Array.isArray(row[field]) ? row[field] : [];
+      for (const question of questions) {
+        if (!question || typeof question !== "object") continue;
+        const item = question as Record<string, unknown>;
+        const stem = String(item.question || "").replace(/\\s+/g, " ").trim();
+        if (!stem) continue;
+        const answer = String(item.answer || "").replace(/\\s+/g, " ").trim();
+        const key = `${stem.toLowerCase()}|${answer.toLowerCase()}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        merged.push(question);
+      }
+    }
+    return merged;
+  };
+  const categories = [...new Set(rows.map((row: Record<string, string>) => String(row.category || "").trim()).filter(Boolean))];
+  return {
+    ...rows[0],
+    category: categories.join(" · "),
+    short_answer_questions: mergeQuestions("short_answer_questions"),
+    long_answer_questions: mergeQuestions("long_answer_questions"),
+    source_count: rows.length,
+  };
 }
 
 async function fetchStoryByParam(param: string) {
@@ -944,22 +982,69 @@ export default async function handler(req: Request): Promise<Response> {
       keywords = `OmpathStudy, medical contest Kenya, ${contest.title}, live exam competition`;
       type = "website";
     } else if (section === "topic" && param) {
-      // a topic page written on the site since the last deploy has no prepared page yet: its share card comes straight from the database
-      const rows = await sbFetch("topic_pages", `select=slug,name,category,content&slug=eq.${encodeURIComponent(decodeURIComponent(param).toLowerCase())}&status=eq.published&limit=1`).catch(() => []);
-      const row = rows?.[0];
-      if (row) {
-        const c = row.content || {};
-        title = topicTitle(row.name, row.category);
-        description = toMetaDescription(c.summary || `Everything on ${row.name} from Ompath Study.`, `Notes, images and practice questions on ${row.name}.`);
-        ogImage = cardUrl(row.name, row.category, "Topic", c.summary || "");
-        keywords = `${row.name}, ${row.category || "medicine"}, medical students, Ompath Study, study notes, MCQs`;
+      const topicSlug = decodeURIComponent(param).trim().toLowerCase();
+      let topicData: Record<string, any> | null = null;
+      // TopicPage reads these generated JSON files directly. Crawler metadata
+      // must use the same source; checking only topic_pages in Supabase wrongly
+      // noindexed many valid generated topic pages.
+      try {
+        const topicRes = await fetch(`${origin}/topics/${encodeURIComponent(topicSlug)}.json`, {
+          headers: { accept: "application/json" },
+        });
+        if (topicRes.ok) {
+          const candidate = await topicRes.json() as Record<string, any>;
+          if (candidate?.s === topicSlug && candidate?.n) topicData = candidate;
+        }
+      } catch { /* fall back to the database-backed newly written topic */ }
+
+      let row: Record<string, any> | null = null;
+      if (!topicData) {
+        const rows = await sbFetch(
+          "topic_pages",
+          `select=slug,name,category,content&slug=eq.${encodeURIComponent(topicSlug)}&status=eq.published&limit=1`
+        ).catch(() => []);
+        row = rows?.[0] ?? null;
+      }
+
+      if (topicData || row) {
+        const name = String(topicData?.n || row?.name || "Medical topic");
+        const category = String(topicData?.c || row?.category || "Medicine");
+        const content = topicData?.ai || row?.content || {};
+        const summary = String(content.summary || topicData?.lead?.t || `Study notes and clinical revision on ${name}.`);
+        title = topicTitle(name, category);
+        description = toMetaDescription(summary, `Medical study notes, key concepts and practice questions on ${name}.`);
+        ogImage = cardUrl(name, category, "Topic", summary);
+        keywords = `${name}, ${category}, medical students, Ompath Study, clinical study notes, revision questions`;
         type = "article";
-        schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "MedicalWebPage", name: title, url: absoluteUrl, description, image: ogImage, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: origin } });
-        const secs = Array.isArray(c.sections) ? c.sections : [];
-        bodyExtra = `<article><h1>${htmlEscape(row.name)}</h1><p>${htmlEscape(c.summary || "")}</p>${secs.map((x: { h?: string; p?: string; b?: string[] }) => `<h2>${htmlEscape(x.h || "")}</h2>${x.p ? `<p>${htmlEscape(x.p)}</p>` : ""}${Array.isArray(x.b) ? `<ul>${x.b.map((t) => `<li>${htmlEscape(t)}</li>`).join("")}</ul>` : ""}`).join("")}</article>`;
+        schemaJson = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          name: title,
+          url: absoluteUrl,
+          description,
+          image: ogImage,
+          about: { "@type": "Thing", name },
+          isPartOf: { "@type": "WebSite", name: "Ompath Study", url: origin },
+        });
+
+        const sections = Array.isArray(content.sections) && content.sections.length
+          ? content.sections
+          : (Array.isArray(topicData?.sec) ? topicData.sec : []);
+        const sectionHtml = sections.slice(0, 14).map((x: { h?: string; p?: string; b?: string[]; t?: { a?: string; b?: string }[] }) =>
+          `<section><h2>${htmlEscape(x.h || "")}</h2>${x.p ? `<p>${htmlEscape(x.p)}</p>` : ""}${Array.isArray(x.b) && x.b.length ? `<ul>${x.b.slice(0, 10).map((t) => `<li>${htmlEscape(t)}</li>`).join("")}</ul>` : ""}${Array.isArray(x.t) && x.t.length ? `<dl>${x.t.slice(0, 12).map((t) => `<div><dt><strong>${htmlEscape(t.a || "")}</strong></dt><dd>${htmlEscape(t.b || "")}</dd></div>`).join("")}</dl>` : ""}</section>`
+        ).join("");
+        const sources = Array.isArray(topicData?.src) ? topicData.src.filter((x: { u?: string }) => String(x.u || "").startsWith("/")).slice(0, 8) : [];
+        const sourceHtml = sources.length
+          ? `<section><h2>Related study resources</h2><ul>${sources.map((x: { u?: string; t?: string }) => `<li><a href="${htmlEscape(x.u || "#")}">${htmlEscape(x.t || "Related study notes")}</a></li>`).join("")}</ul></section>`
+          : "";
+        const fallbackSections = !sectionHtml && Array.isArray(topicData?.snip)
+          ? `<ul>${topicData.snip.slice(0, 8).map((x: { t?: string }) => `<li>${htmlEscape(x.t || "")}</li>`).join("")}</ul>`
+          : "";
+        bodyExtra = `<article><h1>${htmlEscape(name)}</h1><p>${htmlEscape(summary)}</p>${sectionHtml || fallbackSections}${sourceHtml}</article>`;
       } else {
-        // no written page for this topic: crawlers would get the generic home-page title and read it as a copy of the home page, so keep it out of search results
-        return new Response(buildHtml({ title: "Topic | OmpathStudy", description: "This topic page has no written overview yet.", url: absoluteUrl, ogImage: OG_FALLBACK_IMAGE }).replace("</title>", "</title><meta name=\"robots\" content=\"noindex,follow\" />"), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
+        // Only genuinely missing topic pages are excluded; generated public JSON
+        // pages are recognised above even when they are not in topic_pages.
+        return new Response(buildHtml({ title: "Topic | OmpathStudy", description: "This topic page has no written overview yet.", url: absoluteUrl, ogImage: OG_FALLBACK_IMAGE }).replace("</title>", "</title><meta name="robots" content="noindex,follow" />"), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
       }
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
