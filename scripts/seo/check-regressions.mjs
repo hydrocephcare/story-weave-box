@@ -7,7 +7,7 @@ const robots = read("public/robots.txt");
 
 const checks = [
   ["temporary crawler failures use retryable 503 responses", /status:\s*503/.test(meta) && /"retry-after":\s*"300"/.test(meta)],
-  ["temporary crawler failures do not permanently redirect to a section hub", !/Never return 5XX to crawlers[\s\S]*?return permanentRedirect\(safeSection\)/.test(meta)],
+  ["temporary crawler failures do not permanently redirect to a section hub", !meta.includes("return permanentRedirect(safeSection)") && !meta.includes("const safeSection")],
   ["interactive clinical cases are excluded from the sitemap", sitemap.includes("clinical") && sitemap.includes("case")],
   ["exam start routes are excluded from the sitemap", sitemap.includes("exams") && sitemap.includes("start")],
   ["sitemap filters known removed URLs", sitemap.includes("REMOVED_404")],
