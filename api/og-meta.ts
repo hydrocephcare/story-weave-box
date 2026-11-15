@@ -685,6 +685,9 @@ function isNoindexPath(path: string): boolean {
   const clean = (path || "/").split("?")[0].replace(/\/+$/, "") || "/";
   if (NOINDEX_PATH_PREFIXES.some((prefix) => clean === prefix || clean.startsWith(prefix))) return true;
   const parts = clean.split("/").filter(Boolean);
+  // Clinical simulator sessions are interactive learning tools, not stable public articles.
+  // Keep individual case-runner URLs out of the index while leaving /clinical discoverable.
+  if (parts[0] === "clinical" && parts[1] === "case") return true;
   if (parts[0] === "exams" && parts.length >= 3 && parts[2] === "start") return true;
   if (parts[0] === "contests" && parts.length >= 2 && ["register", "lobby", "progress", "certificate"].includes(parts[1])) return true;
   if (parts[0] === "contests" && parts.length >= 3 && parts[2] === "round") return true;
@@ -801,6 +804,13 @@ export default async function handler(req: Request): Promise<Response> {
   const ua = req.headers.get("user-agent");
   const url = new URL(req.url);
   const originalPath = url.searchParams.get("path") || "/";
+  // Canonicalise trailing-slash variants for crawler requests before rendering metadata.
+  // Query parameters are deliberately preserved for app behaviour and excluded from canonical URLs.
+  const requestedPath = originalPath.split("?")[0];
+  const normalizedPath = requestedPath.length > 1 ? requestedPath.replace(/\\/+$/, "") : "/";
+  if (isCrawler(ua) && requestedPath !== normalizedPath) {
+    return permanentRedirect(normalizedPath);
+  }
   if (/^\/zone\/[A-Za-z0-9-]+\/?$/.test(originalPath.split("?")[0])) {
     if (!isCrawler(ua)) return Response.redirect(new URL(originalPath, url.origin).toString(), 307);
     return new Response(await zoneInviteHtml(originalPath, (url.searchParams.get("n") || "").slice(0, 24)), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=60, s-maxage=60, stale-while-revalidate=120" } });
