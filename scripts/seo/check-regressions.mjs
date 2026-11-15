@@ -8,6 +8,8 @@ const essayPage = read("src/pages/EssayStudy.tsx");
 const css = read("src/index.css");
 const vercel = JSON.parse(read("vercel.json"));
 const auditScript = read("scripts/seo/audit-production.mjs");
+const libraryMeta = read("src/lib/libraryMeta.js");
+const libraryPrerender = read("scripts/library/prerender.mjs");
 const seoLib = read("src/lib/seo.ts");
 const staticNotePage = read("src/pages/StaticNote.tsx");
 
@@ -32,6 +34,9 @@ const checks = [
   })()],
   ["production SEO monitor uses the crawler-specific route and rejects generic page titles", auditScript.includes('const UA = "OpenSEO-Audit/1.0 OmpathStudySEOMonitor/1.0"') && auditScript.includes("generic app-shell title") && auditScript.includes("missing a primary H1 heading")],
   ["static note metadata is length-limited and the AUB page uses concise O&G metadata", seoLib.includes("buildStaticNoteMeta") && staticNotePage.includes("buildStaticNoteMeta(note)") && seoLib.includes("candidate.length <= 60") && seoLib.includes("plain.length > 160")],
+  ["library metadata is capped at search snippet lengths", libraryMeta.includes("boundedTitle") && libraryMeta.includes("boundedDescription") && libraryMeta.includes("value.length <= 60") && libraryMeta.includes("text.length <= 160")],
+  ["thin deep library folders are noindexed and omitted from the sitemap", libraryMeta.includes("chain.length <= 1 || totalFiles >= 3") && libraryPrerender.includes("noindex: !indexable") && libraryPrerender.includes("data.updated, indexable")],
+  ["library pages expose selected descendant resources to crawlers", libraryPrerender.includes("Selected resources in this section") && libraryPrerender.includes("collectDescendants")],
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
 ];
