@@ -98,19 +98,17 @@ export function folderMeta(registry, def, chain, totalFiles = 0) {
   } else {
     const phrase = TYPE_PHRASE[names[1]];
     h1 = def.label + " " + subject + " — " + names.slice(1).join(" › ");
-    // Include the subject and every nested folder in the title. Previously only the
-    // final folder name was used, so "Lecture Slides" and "Notes & Handouts"
-    // collided across Embryology, Gross Anatomy, Histology and Neuroanatomy.
-    if (names.length > 1) {
-      const pathLabel = names.join(" – ");
-      const full = `${def.label}: ${pathLabel} | ${registry.brand}`;
-      const compact = `${names[0]}: ${names.slice(1).join(" – ")} | ${registry.brand}`;
-      const leaf = `${names[0]}: ${last} | ${registry.brand}`;
-      title = [full, compact, leaf].find((candidate) => candidate.length <= 60)
-        ?? boundedTitle(leaf, registry.brand);
-    } else {
-      title = def.label + " " + subject + ": " + last + " | " + registry.brand;
-    }
+    // Keep the subject plus the two most specific folder names. This
+    // distinguishes identical file/folder names stored under different
+    // categories (for example, Lecture Slides vs Notes & Handouts) while
+    // preserving the 60-character search-title limit.
+    const context = names.length > 2 ? names.slice(-2) : names.slice(1);
+    const shortLabel = def.label.replace(/^Year\\s+(\\d+)/i, "Y$1");
+    const withYear = `${shortLabel} ${subject}: ${context.join(" – ")} | ${registry.brand}`;
+    const withoutYear = `${subject}: ${context.join(" – ")} | ${registry.brand}`;
+    const leaf = `${subject}: ${last} | ${registry.brand}`;
+    title = [withYear, withoutYear, leaf].find((candidate) => candidate.length <= 60)
+      ?? boundedTitle(withoutYear, registry.brand);
     description = def.label + " " + subject + ": " + last + ". " + fileText + " of " + (phrase ?? last) + " for MBChB study and revision. " + (registry.seoCredit ?? registry.credit) + ".";
     keywords = [def.label + " " + subject + " " + last, subject + " " + last, last + " notes", last + " MBChB"];
   }
