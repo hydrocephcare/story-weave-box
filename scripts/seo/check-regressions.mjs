@@ -5,6 +5,7 @@ const meta = read("api/og-meta.ts");
 const sitemap = read("api/sitemap.js");
 const robots = read("public/robots.txt");
 const essayPage = read("src/pages/EssayStudy.tsx");
+const css = read("src/index.css");
 
 const checks = [
   ["temporary crawler failures use retryable 503 responses", /status:\s*503/.test(meta) && /"retry-after":\s*"300"/.test(meta)],
@@ -16,6 +17,7 @@ const checks = [
   ["crawler metadata reads generated topic JSON pages", meta.includes("/topics/") && meta.includes("topicSlug")],
   ["essay crawler metadata combines duplicate slug records", meta.includes("source_count: rows.length") && meta.includes('mergeQuestions("short_answer_questions")')],
   ["browser essay lookup uses the same six-to-twelve character ID suffix rule", essayPage.includes("replace(/-[0-9a-f]{6,12}$/i")],
+  ["shelf-rise keyframes use valid top-level CSS syntax", css.includes("@keyframes shelf-rise") && !css.includes(".paper-body@keyframes shelf-rise")],
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
 ];
