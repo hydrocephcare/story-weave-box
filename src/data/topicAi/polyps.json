@@ -155,5 +155,374 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic examination allow you to differentiate colonic, gallbladder and extra‑intestinal polyps, assess size‑related risk and identify red‑flag features that demand urgent referral.",
+    "b": [
+     "Age, sex and ethnicity – African descent increases schistosomal colonic polyps; FAP presents in teens.",
+     "Duration and change of symptoms – new anaemia, fresh rectal bleeding, or RUQ pain suggests recent growth.",
+     "Bleeding pattern – melena or occult blood points to upper GI or colonic source; bright red blood suggests distal colon.",
+     "Bowel habit change – new constipation or diarrhoea, especially with mucus, raises suspicion for large colonic lesions.",
+     "Weight loss, appetite loss or jaundice – possible malignant transformation or obstructing gallbladder polyp.",
+     "Personal or family history of polyposis syndromes, inflammatory bowel disease, gallstones, sickle‑cell disease or schistosomiasis.",
+     "Medication use – NSAIDs, aspirin, anticoagulants, hormonal contraceptives; note that stopping anticoagulants depends on drug and thrombotic risk.",
+     "Pregnancy status – influences imaging choice and timing of polypectomy."
+    ],
+    "t": [
+     {
+      "a": "Abdominal inspection",
+      "b": "Looks for visible masses, distension or scars; a palpable RUQ mass may suggest a large gallbladder polyp but cannot determine size."
+     },
+     {
+      "a": "Palpation of the abdomen",
+      "b": "Tenderness localises pain; a firm, non‑tender RUQ mass warrants ultrasound; palpation cannot differentiate benign from malignant gallbladder polyps."
+     },
+     {
+      "a": "Digital rectal examination (DRE)",
+      "b": "Detects palpable rectal lesions or blood; a positive DRE indicates lower GI source but cannot measure polyp size."
+     },
+     {
+      "a": "Percussion for shifting dullness",
+      "b": "Assesses ascites which may accompany advanced colorectal cancer; does not detect polyps."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Bowel sounds help identify obstruction; hyperactive sounds suggest partial blockage from a large colonic polyp."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on the suspected organ, resource availability and the clinical question. When a test is unavailable, use the next best alternative and refer if needed.",
+    "b": [
+     "Colonoscopy – gold standard for colonic polyps; size measured with open biopsy forceps, morphology (pedunculated vs sessile) and visual classification (Paris). Biopsy required for histology.",
+     "Flexible sigmoidoscopy – useful when full colonoscopy unavailable; evaluates distal colon and rectum.",
+     "Ultrasound of the gallbladder – first‑line for gallbladder polyps; size measured in millimetres, echogenicity, mobility, and presence of stones. ≤5 mm benign, 6‑9 mm watchful, ≥10 mm → cholecystectomy.",
+     "CT abdomen (contrast) – delineates large sessile colonic lesions, assesses extramural spread, and evaluates gallbladder wall invasion when ultrasound equivocal.",
+     "MRI/MRCP – alternative to CT for gallbladder polyps in pregnancy or renal failure; shows polyp morphology and biliary anatomy.",
+     "Stool occult blood test – screens for bleeding; a positive result supports endoscopic evaluation but does not locate the source.",
+     "Serum tumour markers (CEA, CA‑19‑9) – not diagnostic; rising CEA may suggest malignant transformation in known adenomatous polyps.",
+     "Histopathology – determines adenomatous vs hyperplastic, villous component, dysplasia grade, and carcinoma invasion."
+    ],
+    "t": [
+     {
+      "a": "Colonoscopy size measurement",
+      "b": "Answers: What is the polyp size? Size ≥10 mm or villous histology mandates removal and surveillance; <5 mm low risk, 5‑9 mm intermediate."
+     },
+     {
+      "a": "Ultrasound polyp size",
+      "b": "Answers: Is the gallbladder polyp ≥10 mm? ≥10 mm indicates cholecystectomy; 6‑9 mm requires repeat ultrasound in 6‑12 months; ≤5 mm benign."
+     },
+     {
+      "a": "Histology dysplasia grade",
+      "b": "Answers: Is there low‑grade, high‑grade dysplasia or carcinoma? High‑grade dysplasia or carcinoma requires oncologic resection; low‑grade adenoma follows surveillance interval."
+     },
+     {
+      "a": "CT for extramural spread",
+      "b": "Answers: Has the lesion invaded beyond the mucosa? Presence of serosal breach or lymphadenopathy upstages cancer and changes management."
+     },
+     {
+      "a": "Stool occult blood",
+      "b": "Answers: Is there occult GI bleeding? Positive test prompts endoscopic evaluation; negative test does not exclude polyps."
+     },
+     {
+      "a": "When ultrasound unavailable",
+      "b": "Use: Clinical assessment and referral for imaging; if not possible, treat as high‑risk based on size estimation and consider surgical exploration."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates size, morphology and histology for colonic polyps, and size plus imaging features for gallbladder polyps. Staging follows TNM for invasive cancer.",
+    "b": [
+     "Colonic polyp risk categories: <5 mm low risk; 5‑9 mm intermediate; ≥10 mm high risk.",
+     "Histologic risk: hyperplastic (low risk), tubular adenoma (moderate), tubulovillous (higher), villous (>25 % villous) highest malignant potential.",
+     "Dysplasia grade: low‑grade dysplasia – surveillance; high‑grade dysplasia – consider en‑bloc resection or surgery.",
+     "Gallbladder polyp risk: ≤5 mm benign; 6‑9 mm watchful with repeat US 6 months; ≥10 mm or rapid growth → laparoscopic cholecystectomy.",
+     "TNM for colorectal cancer: T1–T4 based on depth of invasion; N0–N2 based on nodal involvement; M0/M1 for distant spread.",
+     "FAP diagnostic criteria: >100 adenomas, usually before age 30, APC gene mutation; cancer risk approaches 100 % by age 40‑50 if untreated.",
+     "Serrated polyposis syndrome: ≥5 serrated polyps proximal to the sigmoid, each ≥5 mm, with at least two ≥10 mm."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several entities mimic polyps clinically or radiologically. Distinguishing features guide appropriate management.",
+    "t": [
+     {
+      "a": "Gallbladder sludge",
+      "b": "Appears as low‑level echogenic material without a discrete mass; moves with patient repositioning, unlike a fixed polyp."
+     },
+     {
+      "a": "Choledochal cyst",
+      "b": "Cystic dilatation of the bile duct seen on US/CT; communicates with biliary tree, whereas polyps are intraluminal protrusions."
+     },
+     {
+      "a": "Inflammatory pseudopolyp (IBD)",
+      "b": "Multiple small sessile lesions in ulcerative colitis; histology shows inflammatory infiltrate without dysplasia, unlike adenomatous polyps."
+     },
+     {
+      "a": "Schistosomal colonic polyp",
+      "b": "Often submucosal, associated with a history of freshwater exposure; biopsy shows granulomas with ova, not dysplastic epithelium."
+     },
+     {
+      "a": "Cervical endocervical polyp",
+      "b": "Presents with vaginal bleeding; visualised on speculum exam, not via GI endoscopy; histology shows endocervical glands."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from initial assessment to definitive therapy, surveillance and timely referral, with drug choices tailored to polyp type and patient context.",
+    "b": [
+     "1. Confirm polyp type and risk: size, morphology, histology (adenomatous, villous, hyperplastic) and location (colon, gallbladder, cervix, nasal).",
+     "2. Stabilise the patient: treat anaemia, correct coagulopathy, optimise nutrition and control infection before any procedure.",
+     "3. Endoscopic removal for colonic polyps: cold snare for ≤5 mm sessile or pedunculated lesions; hot snare or EMR for 6‑9 mm lesions; consider piecemeal EMR for ≥10 mm or villous lesions.",
+     "4. Gallbladder polyps ≥10 mm, rapid growth, or symptomatic: laparoscopic cholecystectomy; 6‑9 mm lesions in low‑risk patients may be observed with repeat ultrasound in 6 months.",
+     "5. Cervical polyps: office‑based excision with forceps or loop; send for histology if >1 cm or atypical appearance.",
+     "6. Nasal polyps causing obstruction: intranasal corticosteroid spray; consider short course oral steroids for severe inflammation; surgery (FESS) if refractory.",
+     "7. Post‑procedure monitoring: observe for bleeding, perforation, infection; check haemoglobin 6‑12 h after colonic polypectomy; wound assessment after cholecystectomy.",
+     "8. Escalate/Refer: uncontrolled bleeding, perforation, suspicion of invasive carcinoma, or inability to complete resection in low‑resource setting – refer to tertiary centre."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacologic adjuncts are used for symptom control, prophylaxis and treatment of complications; awareness of adverse effects prevents harm.",
+    "b": [
+     "Intravenous cefazolin (or ampicillin‑sulbactam) peri‑operative for cholecystectomy – watch for allergic reactions; switch to clindamycin if penicillin allergy.",
+     "Oral ciprofloxacin plus metronidazole after complicated colonic polypectomy with perforation risk – avoid in patients with QT prolongation or severe renal impairment.",
+     "Topical intranasal corticosteroid spray (e.g., fluticasone) – may cause epistaxis; advise gentle technique and humidification.",
+     "Short‑course oral prednisolone for severe nasal polyposis – monitor blood glucose in diabetics and taper to avoid adrenal suppression.",
+     "Iron sucrose IV for iron‑deficiency anaemia pre‑polypectomy – watch for hypotension; give slowly and monitor vitals.",
+     "Proton‑pump inhibitor after gastric polypectomy – reduces ulcer risk; avoid long‑term use in patients with osteoporosis risk."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognising early signs of bleeding, perforation, infection or malignant transformation guides timely escalation.",
+    "b": [
+     "Post‑polypectomy bleeding: fresh rectal bleeding or drop in haemoglobin >2 g/dL within 24 h – apply endoscopic clips or thermal coagulation; if uncontrolled, arrange urgent surgical review.",
+     "Perforation: severe abdominal pain, guarding, tachycardia, peritoneal signs – obtain erect chest X‑ray for free air; immediate surgical consultation for laparoscopic repair.",
+     "Cholecystectomy wound infection: erythema, purulent discharge, fever – start broad‑spectrum antibiotics, culture wound, consider drainage.",
+     "Histology showing high‑grade dysplasia or invasive carcinoma in a resected polyp – refer for oncologic staging (CT abdomen/pelvis, tumour markers) and multidisciplinary team review.",
+     "Persistent nasal obstruction despite steroids, with facial pain or visual changes – suspect sinusitis or fungal infection; obtain CT sinus and refer to ENT."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, investigations and therapeutic choices.",
+    "b": [
+     "HIV infection: lower CD4 may impair wound healing; consider prophylactic antibiotics and delay elective polypectomy until CD4 >200 cells/µL if possible.",
+     "Tuberculosis endemic area: granulomatous inflammation can mimic polyps on imaging; obtain tissue biopsy for acid‑fast stain when atypical.",
+     "Severe malnutrition: hypoalbuminaemia increases bleeding risk; correct with oral/IV nutrition before invasive procedures.",
+     "Pregnancy: avoid ionising radiation; use ultrasound for gallbladder polyps, postpone colonoscopy unless urgent, and use cold snare polypectomy if needed in second trimester.",
+     "Diabetes mellitus: steroids for nasal polyps raise glucose; monitor capillary glucose and adjust insulin.",
+     "Herbal remedies (e.g., garlic, ginkgo): may potentiate bleeding; ask patients to stop 1 week before polypectomy.",
+     "Alcohol use disorder: liver dysfunction alters drug metabolism; avoid acetaminophen overdose and adjust antibiotic dosing.",
+     "Renal failure: dose‑adjust cefazolin and avoid NSAIDs for pain control; use renal‑safe contrast if CT needed.",
+     "Elderly frailty: higher perforation risk; favour cold snare for small lesions and consider limited sedation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches ensure safety and efficacy for vulnerable populations.",
+    "b": [
+     "Children: nasal polyps often associated with cystic fibrosis – obtain sweat test; use low‑dose intranasal steroids; avoid radiation; colonoscopic polypectomy only for symptomatic or large adenomas.",
+     "Pregnancy: gallbladder polyps >10 mm still warrant cholecystectomy in second trimester; use laparoscopic approach with low insufflation pressure; avoid teratogenic drugs.",
+     "Elderly: prioritize minimally invasive techniques; assess frailty (e.g., Clinical Frailty Scale) before anesthesia; use cold snare for ≤5 mm colonic polyps to reduce thermal injury.",
+     "People with HIV: ensure viral suppression; prophylactic antibiotics for invasive procedures; monitor for opportunistic infections that may present as polypoid lesions.",
+     "Low‑resource settings: when endoscopy unavailable, use flexible sigmoidoscopy for distal lesions, refer large or suspicious polyps; rely on ultrasound for gallbladder polyps and repeat at 6‑month intervals if <10 mm."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Colonic polyp size risk: <5 mm low, 5–9 mm intermediate, ≥10 mm high",
+   "Gallbladder polyp: ≤5 mm benign, 6–9 mm watchful, ≥10 mm cholecystectomy",
+   "Adenomatous polyps: 1–2 % malignant, villous >20 %",
+   "Villous histology: 30–40 % dysplasia risk",
+   "Cold snare polypectomy recommended for ≤5 mm sessile lesions",
+   "Hot snare for pedunculated >5 mm",
+   "Endoscopic mucosal resection for large sessile lesions",
+   "FAP: >100 adenomas, nearly 100 % cancer risk by age 40–50",
+   "APC gene mutation in FAP",
+   "MSI-high colorectal cancers linked to Lynch syndrome"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 55‑year‑old farmer has iron‑deficiency anaemia and a 12‑mm sessile colonic polyp. What is the next step?",
+    "a": "Refer for polypectomy and histology; a 12‑mm polyp is high risk and requires removal.",
+    "hot": true
+   },
+   {
+    "q": "A pregnant woman has a 9‑mm gallbladder polyp on ultrasound. What is the management?",
+    "a": "Observe with serial ultrasounds; 9 mm is below the 10 mm threshold for cholecystectomy.",
+    "hot": true
+   },
+   {
+    "q": "During a colon cancer screening, a 6‑mm hyperplastic polyp is found. What is the follow‑up?",
+    "a": "No surveillance needed; hyperplastic polyps <10 mm have negligible cancer risk.",
+    "hot": true
+   },
+   {
+    "q": "A patient presents with melena and positive occult blood. Endoscopy is unavailable. What is the immediate management?",
+    "a": "Stabilise with fluids and blood transfusion, give tranexamic acid if bleeding is brisk, and arrange transfer to a centre with endoscopy.",
+    "hot": true
+   },
+   {
+    "q": "A 40‑year‑old with ulcerative colitis develops an 8‑mm colonic polyp. What is the surveillance interval?",
+    "a": "Endoscopic surveillance every 1–2 years; polyp size <10 mm but in IBD warrants closer follow‑up.",
+    "hot": true
+   },
+   {
+    "q": "A woman has vaginal bleeding and a small cervical growth. How do you differentiate a polyp from a cervical carcinoma?",
+    "a": "Polyp is soft, mobile, covered by normal epithelium; carcinoma is firm, fixed, may ulcerate. Biopsy confirms.",
+    "hot": true
+   },
+   {
+    "q": "After polypectomy, histology shows low‑grade dysplasia. What is the next step?",
+    "a": "Repeat colonoscopy in 3–5 years; low‑grade dysplasia warrants surveillance but not immediate re‑section.",
+    "hot": true
+   },
+   {
+    "q": "A 60‑year‑old man has a gastric polyp with fundic gland cysts lined by oxyntic cells. What is the most common associated condition?",
+    "a": "Gastric fundic gland polyps are most frequently associated with long‑term proton pump inhibitor use.",
+    "past": true
+   },
+   {
+    "q": "A 38‑year‑old with chronic rhinosinusitis and nasal polyps has severe wheezing after ibuprofen. What is the diagnosis?",
+    "a": "Aspirin‑exacerbated respiratory disease (AERD); NSAIDs trigger bronchospasm in patients with nasal polyps.",
+    "past": true
+   },
+   {
+    "q": "A 28‑year‑old with recurrent wheeze and nasal polyps worsens with pain medication. What is the likely drug to avoid?",
+    "a": "NSAIDs, especially aspirin, should be avoided in patients with AERD.",
+    "past": true
+   },
+   {
+    "q": "A 55‑year‑old has a pedunculated polyp removed; histology shows well‑differentiated adenocarcinoma confined to the stalk. What is the prognosis?",
+    "a": "Excellent; clear margins and no vascular invasion mean low recurrence risk.",
+    "past": true
+   },
+   {
+    "q": "A 65‑year‑old has a large sessile villous polyp in the sigmoid colon. What is the key clinical feature?",
+    "a": "High malignant potential; villous architecture and size ≥10 mm increase cancer risk.",
+    "past": true
+   },
+   {
+    "q": "A 25‑year‑old male with >150 adenomatous polyps and family history of early colon cancer. What syndrome?",
+    "a": "Familial adenomatous polyposis; APC gene mutation.",
+    "past": true
+   },
+   {
+    "q": "A 40‑year‑old with colorectal adenocarcinoma has MSI‑high tumour. What hereditary syndrome?",
+    "a": "Lynch syndrome (hereditary non‑polyposis colorectal cancer).",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old farmer has a 12‑mm sessile colonic polyp. Which is the most appropriate next step?",
+    "o": [
+     "Observe for 6 months",
+     "Start aspirin prophylaxis",
+     "Schedule CT colonography",
+     "Refer for polypectomy"
+    ],
+    "a": 3,
+    "e": "Polyp >10 mm requires removal"
+   },
+   {
+    "q": "A 9‑mm gallbladder polyp is found in a pregnant woman. What is the recommended management?",
+    "o": [
+     "Observation with serial US",
+     "Cholecystectomy",
+     "Immediate ERCP",
+     "Start anticoagulation"
+    ],
+    "a": 0,
+    "e": "<10 mm polyp can be observed"
+   },
+   {
+    "q": "Which histology is most associated with malignant transformation in colonic polyps?",
+    "o": [
+     "Hyperplastic",
+     "Adenomatous",
+     "Inflammatory",
+     "Granulomatous"
+    ],
+    "a": 1,
+    "e": "Adenomatous polyps have dysplasia risk"
+   },
+   {
+    "q": "Which of the following is NOT a risk factor for colorectal adenoma?",
+    "o": [
+     "High protein diet",
+     "Smoking",
+     "Inflammatory bowel disease",
+     "Low fibre diet"
+    ],
+    "a": 0,
+    "e": "High protein diet not established risk"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45‑year‑old man presents with painless rectal bleeding and a 7‑mm sessile polyp found on colonoscopy. He has a history of ulcerative colitis.",
+    "qs": [
+     {
+      "q": "What is the surveillance interval for this patient?",
+      "a": "Endoscopic surveillance every 1–2 years due to UC and polyp size <10 mm."
+     },
+     {
+      "q": "Which histology would change management?",
+      "a": "Villous or high‑grade dysplasia would prompt earlier surveillance or re‑section."
+     },
+     {
+      "q": "What lifestyle modification could reduce polyp risk?",
+      "a": "Increase dietary fibre, stop smoking, and maintain a healthy weight."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all polyps <10 mm are benign; villous histology raises risk",
+   "Treating 9‑mm gallbladder polyp with cholecystectomy unnecessarily",
+   "Using hot snare for all ≤5 mm sessile lesions",
+   "Ignoring NSAID avoidance in patients with nasal polyps",
+   "Overlooking the need for surveillance in IBD patients with small polyps",
+   "Misreading ultrasound size due to caliper error",
+   "Failing to differentiate hyperplastic from adenomatous polyps",
+   "Not recognising that FAP patients need annual colonoscopy"
+  ],
+  "exam": [
+   "A 55‑year‑old farmer has iron‑deficiency anaemia and a 12‑mm sessile colonic polyp. What is the next step? — Refer for polypectomy and histology; a 12‑mm polyp is high risk and requires removal.",
+   "A pregnant woman has a 9‑mm gallbladder polyp on ultrasound. What is the management? — Observe with serial ultrasounds; 9 mm is below the 10 mm threshold for cholecystectomy.",
+   "During a colon cancer screening, a 6‑mm hyperplastic polyp is found. What is the follow‑up? — No surveillance needed; hyperplastic polyps <10 mm have negligible cancer risk.",
+   "A patient presents with melena and positive occult blood. Endoscopy is unavailable. What is the immediate management? — Stabilise with fluids and blood transfusion, give tranexamic acid if bleeding is brisk, and arrange transfer to a centre with endoscopy.",
+   "A 40‑year‑old with ulcerative colitis develops an 8‑mm colonic polyp. What is the surveillance interval? — Endoscopic surveillance every 1–2 years; polyp size <10 mm but in IBD warrants closer follow‑up.",
+   "A woman has vaginal bleeding and a small cervical growth. How do you differentiate a polyp from a cervical carcinoma? — Polyp is soft, mobile, covered by normal epithelium; carcinoma is firm, fixed, may ulcerate. Biopsy confirms.",
+   "After polypectomy, histology shows low‑grade dysplasia. What is the next step? — Repeat colonoscopy in 3–5 years; low‑grade dysplasia warrants surveillance but not immediate re‑section.",
+   "A 60‑year‑old man has a gastric polyp with fundic gland cysts lined by oxyntic cells. What is the most common associated condition? — Gastric fundic gland polyps are most frequently associated with long‑term proton pump inhibitor use.",
+   "A 38‑year‑old with chronic rhinosinusitis and nasal polyps has severe wheezing after ibuprofen. What is the diagnosis? — Aspirin‑exacerbated respiratory disease (AERD); NSAIDs trigger bronchospasm in patients with nasal polyps.",
+   "A 28‑year‑old with recurrent wheeze and nasal polyps worsens with pain medication. What is the likely drug to avoid? — NSAIDs, especially aspirin, should be avoided in patients with AERD.",
+   "A 55‑year‑old has a pedunculated polyp removed; histology shows well‑differentiated adenocarcinoma confined to the stalk. What is the prognosis? — Excellent; clear margins and no vascular invasion mean low recurrence risk.",
+   "A 65‑year‑old has a large sessile villous polyp in the sigmoid colon. What is the key clinical feature? — High malignant potential; villous architecture and size ≥10 mm increase cancer risk.",
+   "A 25‑year‑old male with >150 adenomatous polyps and family history of early colon cancer. What syndrome? — Familial adenomatous polyposis; APC gene mutation.",
+   "A 40‑year‑old with colorectal adenocarcinoma has MSI‑high tumour. What hereditary syndrome? — Lynch syndrome (hereditary non‑polyposis colorectal cancer)."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-15",
+  "checked": "2026-11-15",
+  "trimmed": 5
+ }
 }

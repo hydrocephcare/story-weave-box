@@ -109,5 +109,394 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify acetylcholine‑related neuromuscular dysfunction, autonomic imbalance or cholinergic toxicity.",
+    "b": [
+     "Ask about fluctuating muscle weakness, ptosis, diplopia, fatigue worsening with activity, and respiratory difficulty.",
+     "Inquire about dry mouth, dry eyes, constipation, urinary urgency, sweating, bradycardia, and bronchospasm.",
+     "Check for exposure to organophosphates, pesticides, or nerve agents.",
+     "Ask about recent infections, thymic surgery, or autoimmune disease history.",
+     "Review medications that inhibit acetylcholinesterase or block nicotinic receptors.",
+     "Examine cranial nerves for ptosis, extraocular movement restriction, and facial weakness.",
+     "Test for fatigable weakness by repeated finger‑to‑thumb or sustained isometric contraction.",
+     "Assess autonomic function: heart rate variability, blood pressure response to standing, pupil size and reactivity.",
+     "Perform a bedside edrophonium test if MG is suspected (observe rapid improvement).",
+     "Check for signs of cholinergic crisis: salivation, lacrimation, urination, defecation, emesis, and muscle fasciculations."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use laboratory, electrophysiological and imaging tests to confirm diagnosis, gauge severity and guide therapy.",
+    "t": [
+     {
+      "a": "Serum anti‑acetylcholine‑receptor antibodies",
+      "b": "Positive >0.4 nmol/L confirms MG; higher titres correlate with generalized disease."
+     },
+     {
+      "a": "Single‑fiber EMG (SFEMG) jitter",
+      "b": "Jitter >50 µs or blocking >10% is highly sensitive for MG; normal in healthy controls."
+     },
+     {
+      "a": "Repetitive nerve stimulation (RNS)",
+      "b": "Low‑frequency RNS shows decremental response; high‑frequency may reveal incremental response in Lambert‑Eaton."
+     },
+     {
+      "a": "Acetylcholinesterase activity (plasma cholinesterase)",
+      "b": "Level <2000 U/L suggests organophosphate exposure; normal values >3000 U/L."
+     },
+     {
+      "a": "Serum cholinesterase (pseudocholinesterase)",
+      "b": "Low activity indicates susceptibility to succinylcholine or organophosphate poisoning."
+     },
+     {
+      "a": "Chest CT or MRI",
+      "b": "Detect thymic hyperplasia or thymoma; essential for surgical planning."
+     },
+     {
+      "a": "Pulmonary function tests (PFTs)",
+      "b": "Reduced vital capacity or maximal inspiratory pressure indicates respiratory involvement."
+     },
+     {
+      "a": "Serum electrolytes, renal and liver function",
+      "b": "Abnormalities can mimic or worsen cholinergic symptoms; correct before therapy."
+     },
+     {
+      "a": "Urine organophosphate metabolites (if available)",
+      "b": "Confirm exposure when clinical suspicion is high."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply established criteria to classify disease and plan treatment.",
+    "b": [
+     "Generalised MG: anti‑AChR antibodies positive or SFEMG abnormal; ocular MG: antibodies negative, ocular symptoms only.",
+     "Severity grading (MGFA): I (ocular) to V (intubation required).",
+     "Thymic status: normal, hyperplasia, or thymoma – influences surgical decision.",
+     "Acetylcholinesterase inhibitor responsiveness: improvement after pyridostigmine indicates functional receptors.",
+     "Organophosphate poisoning: clinical triad plus low cholinesterase confirms diagnosis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate from other neuromuscular or autonomic disorders.",
+    "t": [
+     {
+      "a": "Lambert‑Eaton Myasthenic Syndrome",
+      "b": "Autonomic symptoms, proximal weakness, incremental response on high‑frequency RNS; antibodies against P/Q‑type Ca²⁺ channels."
+     },
+     {
+      "a": "Botulism",
+      "b": "Descending paralysis, cranial nerve involvement, preserved reflexes, no fatigability; toxin blocks ACh release."
+     },
+     {
+      "a": "Myopathy (e.g., polymyositis)",
+      "b": "Proximal weakness, elevated CK, no fatigability, normal EMG."
+     },
+     {
+      "a": "Peripheral neuropathy",
+      "b": "Sensory loss, distal weakness, absent reflexes, nerve conduction studies abnormal."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach helps treat disorders of acetylcholine transmission such as myasthenia gravis, organophosphate poisoning and cholinergic crisis.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation – give high‑flow O₂ and secure airway if respiratory muscles are weak.",
+     "2. Identify the underlying aetiology (autoimmune, toxic, drug‑induced) with history, exam and targeted tests.",
+     "3. Initiate symptomatic therapy: anticholinesterase (e.g., pyridostigmine) for myasthenia gravis; atropine for cholinergic excess; pralidoxime for organophosphate poisoning.",
+     "4. Start disease‑modifying treatment where appropriate: immunosuppressants (azathioprine, mycophenolate) or thymectomy for generalized myasthenia gravis; decontamination and supportive care for poisoning.",
+     "5. Monitor neuromuscular strength (e.g., quantitative MG score), pupil size, heart rate and secretions; repeat labs (acetylcholinesterase activity, antibody titres) as indicated.",
+     "6. Escalate to intensive care if vital capacity falls below 15 mL/kg, if there is worsening bradycardia, or if refractory cholinergic crisis persists despite anticholinergic therapy.",
+     "7. Refer for specialist input (neurology, toxicology) when diagnosis is uncertain, when thymic imaging shows mass, or when resources for plasma exchange are needed."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions of cholinergic and anticholinergic agents prevents iatrogenic complications.",
+    "b": [
+     "Anticholinesterases may cause muscarinic excess: bradycardia, bronchospasm, diarrhoea, increased salivation – treat with atropine if severe.",
+     "Excessive nicotinic blockade (e.g., curare‑type agents) leads to muscle weakness and respiratory failure – provide ventilatory support and reverse with cholinesterase inhibitor if appropriate.",
+     "Atropine and other antimuscarinics can precipitate tachycardia, urinary retention, dry mouth – avoid in patients with glaucoma or prostatic obstruction.",
+     "Beta‑blockers potentiate bradycardia when combined with cholinergic drugs – monitor heart rate and consider dose reduction.",
+     "Quinidine and other class Ia anti‑arrhythmics increase acetylcholinesterase inhibitor toxicity – avoid co‑administration.",
+     "Herbal cholinesterase inhibitors (e.g., galantamine‑containing extracts) may augment pyridostigmine effects – inquire about traditional medicines.",
+     "Renal or hepatic impairment reduces clearance of pyridostigmine and atropine – adjust frequency and watch for accumulation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from both disease progression and therapy; early recognition triggers escalation.",
+    "b": [
+     "Myasthenic crisis: rapid decline in muscle strength, bulbar weakness, respiratory compromise – move to ICU, start plasma exchange or IVIG, and increase anticholinesterase dose cautiously.",
+     "Cholinergic crisis: excessive salivation, diaphoresis, bradycardia, fasciculations – give atropine, reduce anticholinesterase dose, consider pralidoxime if toxin exposure suspected.",
+     "Thymoma‑related paraneoplastic syndromes (e.g., pure red cell aplasia) – obtain CT chest, refer to thoracic surgery; treat underlying tumour.",
+     "Organophosphate poisoning delayed neuropathy – monitor for peripheral neuropathy weeks after exposure; provide physiotherapy and supportive care.",
+     "Long‑term anticholinesterase therapy may cause cholinergic side‑effects limiting dose – consider immunosuppression or thymectomy as definitive options."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions and environmental factors modify presentation, test results and therapeutic choices.",
+    "b": [
+     "HIV infection can cause opportunistic neuropathies that mimic neuromuscular weakness; CD4 count guides need for prophylactic antibiotics.",
+     "Active tuberculosis may require rifampicin, which induces hepatic enzymes and lowers plasma levels of pyridostigmine – monitor clinical response.",
+     "Severe malnutrition reduces choline stores, potentially lowering acetylcholine synthesis; supplement dietary choline when possible.",
+     "Pregnancy increases plasma volume and renal clearance, possibly reducing anticholinesterase effectiveness – monitor strength more frequently.",
+     "Diabetes mellitus can cause autonomic neuropathy with baseline tachycardia; avoid high‑dose anticholinergics that may worsen orthostatic hypotension.",
+     "Alcohol use potentiates central depressant effects of cholinergic excess – counsel abstinence during crisis periods.",
+     "Renal failure prolongs atropine half‑life; use lower frequency and watch for anticholinergic toxicity.",
+     "Liver failure impairs metabolism of many anticholinesterases; dose adjustments and close monitoring are required."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to vulnerable populations ensures safety and efficacy in low‑resource settings.",
+    "b": [
+     "Children: use weight‑adjusted anticholinesterase dosing; avoid drugs with prolonged QT; monitor growth‑related changes in muscle strength.",
+     "Pregnancy: pyridostigmine is category B and generally safe; avoid high‑dose atropine unless life‑threatening cholinergic crisis.",
+     "Elderly: increased sensitivity to anticholinergic side‑effects; start with low‑dose anticholinesterase and titrate slowly.",
+     "People with HIV: screen for opportunistic infections that can cause weakness; consider drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings: when acetylcholinesterase assays are unavailable, rely on clinical triad (SLUD) for organophosphate poisoning; use readily available atropine and pralidoxime kits; for myasthenia gravis, use bedside single‑fiber EMG if possible, otherwise base diagnosis on antibody titre (>0.4 nmol/L) and clinical pattern."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Anti‑acetylcholine‑receptor antibody titre >0.4 nmol/L supports diagnosis of generalized myasthenia gravis.",
+   "Single‑fiber EMG jitter >50 µs (or blocking >10 %) is the most sensitive electrophysiologic marker for myasthenia gravis.",
+   "Serum cholinesterase <2000 U/L strongly suggests organophosphate poisoning in low‑resource settings.",
+   "Parietal cells express M₃ muscarinic receptors; ACh binding stimulates H⁺/K⁺‑ATPase and gastric acid secretion.",
+   "Nicotinic receptors at the neuromuscular junction are ligand‑gated Na⁺/K⁺ channels; blockade causes a rapid fall in end‑plate potential.",
+   "Muscarinic M₂ receptors dominate in the heart; ACh activation opens K⁺ channels, hyperpolarising SA node and slowing rate.",
+   "Pyridostigmine is a reversible acetylcholinesterase inhibitor used to improve neuromuscular transmission in myasthenia gravis.",
+   "Organophosphate exposure is treated with atropine (muscarinic antagonist) plus pralidoxime (AChE reactivator).",
+   "In Sjögren’s syndrome, pilocarpine (muscarinic agonist) increases salivary and lacrimal secretion.",
+   "ACh synthesis requires choline acetyltransferase and acetyl‑CoA; deficiency of this enzyme is rare but causes congenital myasthenic syndrome."
+  ],
+  "mnemonics": [
+   {
+    "n": "SAME",
+    "t": "Symptoms of ACh excess: Salivation, Abdominal cramps, Miosis, Bradycardia, Bronchospasm – helps recall organophosphate toxicity."
+   },
+   {
+    "n": "M3",
+    "t": "M3 receptors mediate Muscarinic stimulation of gastric acid, smooth muscle contraction, and glandular secretion."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define the primary physiological effect of anti‑acetylcholine‑receptor antibodies at the neuromuscular junction.",
+    "a": "They reduce the number of functional nicotinic receptors, decreasing end‑plate potentials and causing fatigable weakness.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain how acetylcholine decreases heart rate when applied to pacemaker cells.",
+    "a": "ACh activates M₂ receptors, opening G‑protein‑gated K⁺ channels, hyperpolarising SA‑node cells and slowing diastolic depolarisation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What immediate physiological change occurs after a competitive nicotinic blocker is given at the NMJ?",
+    "a": "It prevents ACh from opening the nicotinic channel, causing a rapid fall in end‑plate potential and transient muscle weakness.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which drug increases acetylcholine to treat glandular symptoms of Sjögren’s syndrome?",
+    "a": "Pilocarpine, a muscarinic agonist, stimulates salivary and lacrimal secretion.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What proportion of myasthenia gravis patients have thymic abnormalities?",
+    "a": "Approximately 70 % have thymic hyperplasia or thymoma; thymectomy is considered in many cases.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Identify the receptor subtype on parietal cells that mediates ACh‑induced acid secretion.",
+    "a": "M₃ muscarinic receptors; binding triggers intracellular Ca²⁺ rise and activation of H⁺/K⁺‑ATPase.",
+    "past": true
+   },
+   {
+    "q": "Name the type of receptor that opens a central ion pore upon ACh binding.",
+    "a": "Nicotinic ligand‑gated ion channel receptors.",
+    "past": true
+   },
+   {
+    "q": "State the false statement among typical ACh facts.",
+    "a": "The false statement is that ACh primarily binds M₂ receptors on parietal cells; the correct receptor is M₃.",
+    "past": true
+   },
+   {
+    "q": "What bedside test assesses neuromuscular transmission in suspected myasthenia gravis?",
+    "a": "Repeated‑stimulation EMG showing decremental response; single‑fiber EMG jitter >50 µs is more sensitive."
+   },
+   {
+    "q": "Why is atropine contraindicated in patients with severe bradycardia due to beta‑blocker overdose?",
+    "a": "Atropine blocks vagal tone but does not address beta‑blockade; high‑dose glucagon is preferred."
+   },
+   {
+    "q": "In a patient with organophosphate poisoning, what is the role of pralidoxime?",
+    "a": "It reactivates phosphorylated acetylcholinesterase if given before ‘aging’, restoring ACh breakdown."
+   },
+   {
+    "q": "List three confounding factors that may alter serum cholinesterase levels.",
+    "a": "Liver disease, malnutrition, and chronic exposure to carbamate pesticides can lower levels."
+   },
+   {
+    "q": "What is the first‑line management of myasthenic crisis in a low‑resource hospital?",
+    "a": "Plasma exchange or intravenous immunoglobulin if available; otherwise high‑dose pyridostigmine and supportive ventilation."
+   },
+   {
+    "q": "How does pregnancy affect acetylcholinesterase activity and drug choice?",
+    "a": "Physiologic increase in plasma cholinesterase may reduce efficacy of anticholinesterases; dose adjustment and monitoring are required."
+   },
+   {
+    "q": "Why must anticholinesterase drugs be avoided in patients with asthma?",
+    "a": "Excess ACh can cause bronchoconstriction via muscarinic receptors, worsening airway obstruction."
+   },
+   {
+    "q": "What is the significance of a positive Tensilon test?",
+    "a": "Transient improvement in muscle strength after edrophonium indicates functional ACh receptors, supporting myasthenia gravis."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with organophosphate exposure is given atropine. Which of the following best explains its effect?",
+    "o": [
+     "It reactivates acetylcholinesterase.",
+     "It blocks muscarinic receptors, reducing bronchorrhea and bradycardia.",
+     "It inhibits nicotinic receptors at the NMJ.",
+     "It increases renal excretion of the toxin."
+    ],
+    "a": 1,
+    "e": "Atropine is a muscarinic antagonist, relieving muscarinic signs of poisoning."
+   },
+   {
+    "q": "Which drug would you prescribe to improve dry mouth in a patient with Sjögren’s syndrome?",
+    "o": [
+     "Neostigmine",
+     "Pilocarpine",
+     "Physostigmine",
+     "Bethanechol"
+    ],
+    "a": 1,
+    "e": "Pilocarpine is a muscarinic agonist that stimulates salivary secretion."
+   },
+   {
+    "q": "A patient with myasthenia gravis is started on pyridostigmine. Which adverse effect is most likely?",
+    "o": [
+     "Hypertension",
+     "Bronchospasm",
+     "Diarrhoea",
+     "Tachycardia"
+    ],
+    "a": 2,
+    "e": "Reversible AChE inhibition increases GI motility, causing diarrhoea."
+   },
+   {
+    "q": "During cardiac electrophysiology study, ACh is infused and heart rate falls. The primary ionic mechanism is:",
+    "o": [
+     "Opening of K⁺ channels via M₂ receptors",
+     "Increased Na⁺ influx",
+     "Blockade of L‑type Ca²⁺ channels",
+     "Inhibition of funny current (If)"
+    ],
+    "a": 0,
+    "e": "M₂ activation opens G‑protein‑gated K⁺ channels, hyperpolarising SA node."
+   },
+   {
+    "q": "Which receptor subtype mediates ACh‑induced gastric acid secretion?",
+    "o": [
+     "M₃",
+     "M₂",
+     "M₁",
+     "M₄"
+    ],
+    "a": 0,
+    "e": "Parietal cells express M₃ receptors that stimulate acid secretion."
+   },
+   {
+    "q": "A 30‑year‑old woman with fluctuating ptosis is tested with edrophonium. She improves. Which statement is FALSE?",
+    "o": [
+     "The test confirms myasthenia gravis.",
+     "Edrophonium is a reversible AChE inhibitor.",
+     "Improvement rules out cholinergic crisis.",
+     "The drug has a rapid onset of action."
+    ],
+    "a": 2,
+    "e": "Improvement does not differentiate myasthenic from cholinergic crisis; both may respond."
+   },
+   {
+    "q": "Which of the following is a contraindication to using neostigmine in a postoperative patient?",
+    "o": [
+     "Hyperglycaemia",
+     "Hypertension",
+     "Hypokalaemia",
+     "Bradycardia"
+    ],
+    "a": 3,
+    "e": "Neostigmine increases muscarinic tone and can worsen bradycardia."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 27‑year‑old male farmer presents with sweating, salivation, miosis, and muscle fasciculations after spraying his field with an organophosphate pesticide. Pulse 58/min, BP 100/60 mmHg, respiratory rate 22/min, SpO₂ 94% on room air.",
+    "qs": [
+     {
+      "q": "What is the most appropriate immediate pharmacologic intervention?",
+      "a": "Administer atropine intravenously to antagonise muscarinic effects, followed by pralidoxime if available."
+     },
+     {
+      "q": "If respiratory failure develops, what supportive measure is required?",
+      "a": "Endotracheal intubation and mechanical ventilation until neuromuscular function recovers."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing M₂ with M₃ receptors on parietal cells; the correct subtype for acid secretion is M₃.",
+   "Using >0.5 nmol/L as the positive cut‑off for anti‑AChR antibodies; the validated threshold is >0.4 nmol/L.",
+   "Stating single‑fiber EMG jitter >55 µs as abnormal; the accepted limit is >50 µs.",
+   "Assuming atropine alone reverses organophosphate toxicity; pralidoxime is required for AChE reactivation.",
+   "Prescribing anticholinesterases in uncontrolled asthma; excess ACh can precipitate bronchospasm.",
+   "Neglecting to consider thymic imaging in all myasthenia gravis patients; thymoma detection guides surgical decision."
+  ],
+  "exam": [
+   "Define the primary physiological effect of anti‑acetylcholine‑receptor antibodies at the neuromuscular junction. — They reduce the number of functional nicotinic receptors, decreasing end‑plate potentials and causing fatigable weakness.",
+   "Explain how acetylcholine decreases heart rate when applied to pacemaker cells. — ACh activates M₂ receptors, opening G‑protein‑gated K⁺ channels, hyperpolarising SA‑node cells and slowing diastolic depolarisation.",
+   "What immediate physiological change occurs after a competitive nicotinic blocker is given at the NMJ? — It prevents ACh from opening the nicotinic channel, causing a rapid fall in end‑plate potential and transient muscle weakness.",
+   "Which drug increases acetylcholine to treat glandular symptoms of Sjögren’s syndrome? — Pilocarpine, a muscarinic agonist, stimulates salivary and lacrimal secretion.",
+   "What proportion of myasthenia gravis patients have thymic abnormalities? — Approximately 70 % have thymic hyperplasia or thymoma; thymectomy is considered in many cases.",
+   "Identify the receptor subtype on parietal cells that mediates ACh‑induced acid secretion. — M₃ muscarinic receptors; binding triggers intracellular Ca²⁺ rise and activation of H⁺/K⁺‑ATPase.",
+   "Name the type of receptor that opens a central ion pore upon ACh binding. — Nicotinic ligand‑gated ion channel receptors.",
+   "State the false statement among typical ACh facts. — The false statement is that ACh primarily binds M₂ receptors on parietal cells; the correct receptor is M₃.",
+   "What bedside test assesses neuromuscular transmission in suspected myasthenia gravis? — Repeated‑stimulation EMG showing decremental response; single‑fiber EMG jitter >50 µs is more sensitive.",
+   "Why is atropine contraindicated in patients with severe bradycardia due to beta‑blocker overdose? — Atropine blocks vagal tone but does not address beta‑blockade; high‑dose glucagon is preferred.",
+   "In a patient with organophosphate poisoning, what is the role of pralidoxime? — It reactivates phosphorylated acetylcholinesterase if given before ‘aging’, restoring ACh breakdown.",
+   "List three confounding factors that may alter serum cholinesterase levels. — Liver disease, malnutrition, and chronic exposure to carbamate pesticides can lower levels.",
+   "What is the first‑line management of myasthenic crisis in a low‑resource hospital? — Plasma exchange or intravenous immunoglobulin if available; otherwise high‑dose pyridostigmine and supportive ventilation.",
+   "How does pregnancy affect acetylcholinesterase activity and drug choice? — Physiologic increase in plasma cholinesterase may reduce efficacy of anticholinesterases; dose adjustment and monitoring are required."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-15",
+  "checked": "2026-11-15",
+  "trimmed": 3
+ }
 }

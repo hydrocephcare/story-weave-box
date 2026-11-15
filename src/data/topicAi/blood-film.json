@@ -153,5 +153,377 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify red flags and guide investigations.",
+    "b": [
+     "History: ask about fatigue, pallor, dyspnoea, chest pain, fever, chills, night sweats, weight loss, recent infections, malaria exposure, sickle pain crises, bleeding, drug use, alcohol, pregnancy, HIV status, TB contact, malnutrition.",
+     "History: inquire about dietary iron intake, pica, menstrual history, chronic diarrhoea, hookworm exposure, transfusion history, splenectomy, hereditary haemoglobinopathies, recent travel to endemic areas.",
+     "Exam: inspect for pallor, jaundice, cyanosis, petechiae, bruising, splenomegaly (palpate left upper quadrant, note size, tenderness).",
+     "Exam: auscultate heart for murmurs, gallop, rub; lungs for crackles, wheeze; abdomen for hepatomegaly, ascites (inspection, percussion, shifting dullness).",
+     "Exam: check peripheral pulses, capillary refill, skin temperature; assess for clubbing, cyanosis.",
+     "Exam: perform a simple bedside test – haemoglobinometer (finger‑stick Hb) to estimate severity; note it cannot replace full haematology panel.",
+     "Exam: note that a normal peripheral smear does not exclude early severe malaria; parasitaemia may be low initially."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a tiered approach, prioritising tests that are available and clinically relevant.",
+    "b": [
+     "Reticulocyte count: <2% indicates hypoproliferative anaemia; >3% suggests haemolysis or bleeding.",
+     "Peripheral smear: look for microcytosis, hypochromia, target cells, sickle cells, schistocytes, blasts, parasites; morphology directs differential.",
+     "Iron studies: ferritin <15 ng/mL (or <30 ng/mL if inflammation present) and transferrin saturation <15% confirm iron deficiency.",
+     "Hemoglobin electrophoresis: HbS >80% = sickle disease; 20‑45% with normal HbF = trait; HbA₂ >3.5% = β‑thalassaemia.",
+     "Malaria: thick film for parasitaemia, thin film for species; >5% parasitaemia or any parasitaemia with organ dysfunction = severe malaria.",
+     "Coombs test: positive indicates immune haemolysis; negative suggests non‑immune causes.",
+     "Bone marrow aspirate: used when blasts >20% or unexplained cytopenias; look for dysplasia, blasts, Auer rods."
+    ],
+    "t": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify anaemia and haemolysis using WHO and local guidelines, recognising that thresholds vary by age, pregnancy and comorbidity.",
+    "b": [
+     "Anaemia severity (WHO): <7 g/dL = severe; 7‑9.9 g/dL = moderate; ≥10 g/dL = mild in adults; children and pregnant women have lower cut‑offs.",
+     "Haemolysis severity: schistocytes >1% with falling Hb >2 g/dL in 24 h = microangiopathic haemolysis; consider TTP if ADAMTS13 <10% and neurological signs present.",
+     "Severe malaria: parasitaemia >5% in non‑immune or any parasitaemia with organ dysfunction (renal failure, jaundice, shock).",
+     "Acute leukaemia: blasts ≥20% of nucleated cells on smear; urgent referral for chemotherapy.",
+     "Sickle‑cell crisis: pain episode with Hb drop >2 g/dL, chest pain, or organ dysfunction; treat with hydration and analgesia."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate conditions that mimic key smear findings by integrating clinical context and ancillary tests.",
+    "t": [
+     {
+      "a": "Target cells",
+      "b": "Seen in thalassaemia, liver disease, post‑splenectomy; differentiate by Hb electrophoresis and liver function tests."
+     },
+     {
+      "a": "Schistocytes",
+      "b": "Indicative of mechanical hemolysis, DIC, TTP; rule out by coagulation profile, ADAMTS13 activity, and platelet count."
+     },
+     {
+      "a": "Sickle cells",
+      "b": "Present in sickle disease, not trait unless hypoxic; confirm with Hb electrophoresis and clinical history of pain crises."
+     },
+     {
+      "a": "Parasites",
+      "b": "Falciparum shows ring forms, banana‑shaped gametocytes; vivax shows Schuffner stippling; differentiate by species identification on thin film."
+     },
+     {
+      "a": "Blasts",
+      "b": "Myeloid blasts with Auer rods suggest AML; lymphoid blasts suggest ALL; confirm with flow cytometry and cytogenetics."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic ladder ensures rapid stabilisation, targeted therapy based on film findings, and timely escalation in low‑resource settings.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give oxygen if SpO2 < 92 % and ensure adequate IV access.",
+     "2. Confirm the dominant film pattern (e.g., severe malaria, hemolysis, leukaemia) with rapid bedside tests before definitive therapy.",
+     "3. Initiate disease‑specific treatment: IV artesunate for severe malaria, broad‑spectrum antibiotics for suspected bacterial sepsis with haemolysis, steroids for immune‑mediated hemolysis, or referral for chemotherapy if blasts > 20 %.",
+     "4. Provide supportive care: transfuse packed RBCs only if Hb < 7 g/dL (or < 8 g/dL with cardiac stress), give folic acid for haemolysis, maintain hydration, and treat pain aggressively in sickle‑cell crises.",
+     "5. Monitor: repeat film after 24‑48 h, track Hb, LDH, bilirubin, renal function, and parasitaemia; watch for rising schistocytes or worsening organ dysfunction.",
+     "6. Escalate or refer when: schistocytes > 1 % with ADAMTS13 suspicion, parasitaemia > 5 % with organ failure, blasts > 20 % or rapid Hb fall > 2 g/dL in 24 h, or inability to provide ICU‑level care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse reactions and interactions that frequently arise when treating common film abnormalities.",
+    "b": [
+     "Artesunate may cause delayed hemolysis; check Hb at day 7 and repeat film; if haemolysis persists, consider transfusion and monitor renal function.",
+     "Corticosteroids increase infection risk; give prophylactic antibiotics only if prolonged (> 2 weeks) high‑dose therapy is required.",
+     "Blood transfusion can precipitate allo‑immunisation; use leukoreduced, cross‑matched units and document patient’s antibody screen.",
+     "Aminoglycosides for severe sepsis are nephrotoxic; monitor serum creatinine daily and avoid if baseline renal failure.",
+     "Hydroxyurea for sickle‑cell disease can cause myelosuppression; check full blood count every 4 weeks and hold if neutrophils < 1.5 × 10⁹/L."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening sequelae that demand urgent higher‑level care.",
+    "b": [
+     "Acute hemolytic crisis: Hb drop > 2 g/dL in 24 h, rising LDH, and schistocytes > 1 %; start plasma exchange only if TTP is clinically probable and ADAMTS13 testing is pending.",
+     "Severe malaria: parasitaemia > 5 % with any organ dysfunction (renal failure, cerebral signs, severe anaemia); give IV artesunate, arrange ICU admission, and monitor glucose.",
+     "Leukaemic blast crisis: blasts > 20 % with rising white count; urgent referral to oncology for induction chemotherapy; avoid delay for additional tests if clinical picture is clear.",
+     "Sickle‑cell acute chest syndrome: new infiltrate on chest X‑ray, hypoxia, or fever; start broad‑spectrum antibiotics, give oxygen, consider exchange transfusion if SpO2 < 92 % despite supplemental O₂."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify film interpretation, laboratory values, or therapeutic choices.",
+    "b": [
+     "HIV may cause cytopenias and opportunistic infections that mimic malaria; order CD4 count and consider CMV or mycobacterial smear if film shows atypical inclusions.",
+     "Active TB can cause anaemia of chronic disease; ferritin may be high despite iron deficiency; use soluble transferrin receptor if available.",
+     "Malnutrition lowers ferritin and transferrin saturation; interpret iron studies with C‑reactive protein to assess inflammation.",
+     "Pregnancy physiologically dilutes Hb; target Hb ≥ 11 g/dL in first/third trimester; avoid teratogenic drugs (e.g., methotrexate) and use ACTs safe in pregnancy for malaria.",
+     "Renal failure reduces erythropoietin; film may show normocytic anaemia; give erythropoiesis‑stimulating agents only after dialysis adequacy is confirmed.",
+     "Liver disease elevates bilirubin and may cause target cells; avoid hepatotoxic drugs (e.g., high‑dose paracetamol) and monitor LFTs during therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for vulnerable populations in low‑resource environments.",
+    "b": [
+     "Children: use weight‑based dosing for artesunate; monitor for hypoglycaemia after severe malaria; avoid routine transfusion unless Hb < 7 g/dL or symptomatic.",
+     "Elderly: lower transfusion threshold (Hb < 7 g/dL) unless cardiac disease; watch for drug‑induced marrow suppression; adjust antihypertensives if fluid overload from aggressive hydration.",
+     "People with HIV: screen for drug‑drug interactions between antiretrovirals and antimalarials (e.g., protease inhibitors increase artesunate levels); prophylactic cotrimoxazole may mask bacterial sepsis on film.",
+     "Low‑resource settings: if thin film unavailable, use thick film for parasite detection; when automated counters are absent, rely on manual reticulocyte count and clinical severity scores."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Severe anaemia: Hb < 7 g/dL in stable patients; transfuse if symptomatic or <7 g/dL.",
+   "Moderate anaemia: Hb 7‑9 g/dL; monitor cardiac stress and consider transfusion if comorbidities.",
+   "Iron deficiency ferritin cut‑off: <15 ng/mL (or <30 ng/mL with inflammation).",
+   "Transferrin saturation < 15 % supports iron deficiency; > 45 % suggests overload.",
+   "Schistocytes > 1 % with falling Hb and thrombocytopenia raise suspicion for TTP; confirm with ADAMTS13 if available.",
+   "Severe malaria: parasitaemia >5 % or any parasitaemia with organ dysfunction; treat with IV artesunate.",
+   "Auer rods in blasts confirm myeloid lineage; indicates acute myeloid leukaemia.",
+   "Howell‑Jolly bodies on film indicate functional asplenia, especially in sickle cell disease.",
+   "Target cells suggest thalassaemia or haemoglobinopathies; differentiate by Hb electrophoresis.",
+   "Reticulocyte count > 2 % with anaemia points to haemolysis or blood loss; < 2 % suggests production problem."
+  ],
+  "mnemonics": [
+   {
+    "n": "MALT",
+    "t": "Malaria, Anemia, Leukaemia, Thalassaemia – common causes of abnormal red cell morphology in East Africa."
+   },
+   {
+    "n": "RBC",
+    "t": "Red cell size, shape, colour – systematic review of film findings."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What are the three key steps in a bedside examination of a patient with suspected anaemia?",
+    "a": "Inspect for pallor, assess for jaundice or scleral icterus, palpate for splenomegaly (soft, non‑tender enlargement suggests haemolysis) and check for peripheral edema.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate iron‑deficiency anaemia from anaemia of chronic disease on a peripheral film and basic labs?",
+    "a": "Iron deficiency shows microcytic hypochromic cells, low ferritin (<15 ng/mL) and low transferrin saturation; chronic disease shows normal or high ferritin and low saturation.",
+    "hot": true
+   },
+   {
+    "q": "Why is plasma exchange not automatically started when schistocytes are seen?",
+    "a": "Plasma exchange is reserved for confirmed or strongly suspected TTP, which requires clinical pentad and ADAMTS13 testing; other microangiopathies need different management.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of Howell‑Jolly bodies on a smear?",
+    "a": "They indicate functional asplenia, common in sickle cell disease and post‑splenectomy, and predispose to encapsulated infections."
+   },
+   {
+    "q": "When is IV artesunate indicated for malaria?",
+    "a": "In severe malaria defined by parasitaemia >5 % (or >2 % in non‑immune) with any organ dysfunction, or any parasitaemia with cerebral involvement.",
+    "hot": true
+   },
+   {
+    "q": "A 19‑year‑old with fever, sore throat, atypical lymphocytes and positive heterophile test – which cell is the target of EBV?",
+    "a": "B‑lymphocytes; EBV infects CD21‑positive B cells causing atypical reactive lymphocytes.",
+    "past": true
+   },
+   {
+    "q": "Describe the typical morphology of Plasmodium falciparum gametocytes on a thin film.",
+    "a": "Banana‑shaped, elongated with a curved, slender appearance, often occupying a single RBC without enlarging it.",
+    "past": true
+   },
+   {
+    "q": "Which stain is preferred for air‑dried blood films and why?",
+    "a": "Wright‑Giemsa stain; it provides excellent cytoplasmic detail and differentiates haemoglobinised cells and parasites.",
+    "past": true
+   },
+   {
+    "q": "What film finding is characteristic of functional asplenia in children with HbSS?",
+    "a": "Howell‑Jolly bodies, target cells and Pappenheimer bodies; spherocytes are not typical.",
+    "past": true
+   },
+   {
+    "q": "A dimorphic RBC population suggests which clinical scenario?",
+    "a": "Co‑existing iron deficiency and thalassaemia or haemoglobinopathy, or recent transfusion with mixed donor and recipient cells.",
+    "past": true
+   },
+   {
+    "q": "Name the cytoplasmic inclusion seen in myeloid blasts and its diagnostic relevance.",
+    "a": "Auer rods – needle‑like azurophilic granules confirming acute myeloid leukaemia.",
+    "past": true
+   },
+   {
+    "q": "Which physiological process explains hypersegmented neutrophils in B12 deficiency?",
+    "a": "Impaired DNA synthesis leads to delayed nuclear maturation while cytoplasmic maturation proceeds, producing hypersegmentation.",
+    "past": true
+   },
+   {
+    "q": "How does the presence of Auer rods influence management of acute leukaemia?",
+    "a": "It directs therapy toward AML protocols and excludes lymphoid regimens; urgent referral for cytogenetics is needed.",
+    "past": true
+   },
+   {
+    "q": "Outline the thin versus thick film utility in malaria diagnosis.",
+    "a": "Thin film identifies species and parasite stage; thick film increases sensitivity for low parasitaemia. If thin unavailable, rely on thick for detection, then confirm with rapid test.",
+    "past": true
+   },
+   {
+    "q": "Summarise a systematic approach to anaemia using the peripheral film.",
+    "a": "History → diet, bleeding, infections; exam → pallor, splenomegaly; retic count; MCV; film morphology; targeted labs (iron, B12, folate, haemolysis screen).",
+    "past": true
+   },
+   {
+    "q": "What are the key bone‑marrow findings in Myelodysplastic Syndromes?",
+    "a": "Dyspoietic erythroid, granulocytic and megakaryocytic lineages with ring sideroblasts, increased blasts (<20 %), and cytogenetic abnormalities.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A child from a malaria‑endemic area presents with fever, pallor and a peripheral smear showing 6 % parasitized RBCs. What is the next best step?",
+    "o": [
+     "IV artesunate",
+     "IV quinine",
+     "Oral artemether‑lumefantrine",
+     "Observe and repeat smear in 24 h"
+    ],
+    "a": 0,
+    "e": "Parasitaemia >5 % qualifies as severe malaria; IV artesunate is first‑line."
+   },
+   {
+    "q": "Which of the following film findings most strongly suggests a diagnosis of acute myeloid leukaemia?",
+    "o": [
+     "Howell‑Jolly bodies",
+     "Basophilic stippling",
+     "Auer rods",
+     "Target cells"
+    ],
+    "a": 2,
+    "e": "Auer rods are pathognomonic for myeloid blasts."
+   },
+   {
+    "q": "A patient with sickle cell disease presents with acute chest pain, falling Hb and schistocytes 2 %. Which condition must be ruled out before plasma exchange?",
+    "o": [
+     "Sepsis",
+     "TTP",
+     "DIC",
+     "Acute splenic sequestration"
+    ],
+    "a": 1,
+    "e": "TTP requires plasma exchange; other causes need different treatment."
+   },
+   {
+    "q": "In a pregnant woman (second trimester) with microcytic hypochromic anaemia, which ferritin cut‑off is appropriate to diagnose iron deficiency?",
+    "o": [
+     "<12 ng/mL",
+     "<15 ng/mL",
+     "<30 ng/mL",
+     "<50 ng/mL"
+    ],
+    "a": 2,
+    "e": "Ferritin <30 ng/mL is recommended in pregnancy due to inflammatory changes."
+   },
+   {
+    "q": "Which stain is most suitable for an air‑dried peripheral smear to visualise parasites and cytoplasm?",
+    "o": [
+     "H&E",
+     "Ziehl‑Neelsen",
+     "PAS",
+     "Wright‑Giemsa"
+    ],
+    "a": 3,
+    "e": "Wright‑Giemsa provides excellent cytoplasmic detail for parasites."
+   },
+   {
+    "q": "A 60‑year‑old with macrocytosis, hypersegmented neutrophils and low B12 is evaluated. Which physiological process is impaired?",
+    "o": [
+     "RNA synthesis",
+     "DNA synthesis",
+     "Protein synthesis",
+     "Lipid synthesis"
+    ],
+    "a": 1,
+    "e": "B12 deficiency hampers DNA synthesis, causing nuclear‑cytoplasmic asynchrony."
+   },
+   {
+    "q": "Which peripheral smear finding indicates functional asplenia?",
+    "o": [
+     "Spherocytes",
+     "Schistocytes",
+     "Howell‑Jolly bodies",
+     "Basophilic stippling"
+    ],
+    "a": 2,
+    "e": "Howell‑Jolly bodies persist when the spleen cannot remove nuclear remnants."
+   },
+   {
+    "q": "A dimorphic red cell population is most likely seen in which scenario?",
+    "o": [
+     "Iron deficiency alone",
+     "Recent transfusion",
+     "Beta‑thalassaemia trait",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "Both iron deficiency and thalassaemia or recent transfusion can produce two distinct cell sizes."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman, HIV‑positive, presents with fever, jaundice and dark urine. Hb 6.5 g/dL, retic 5 %. Smear shows numerous schistocytes (2 %), no parasites, and occasional spherocytes. Platelets 80 ×10⁹/L.",
+    "qs": [
+     {
+      "q": "What urgent condition must be considered?",
+      "a": "Thrombotic thrombocytopenic purpura (TTP) – microangiopathic haemolysis with thrombocytopenia."
+     },
+     {
+      "q": "Which bedside test helps assess severity before labs return?",
+      "a": "Neurological exam for confusion or seizures; renal assessment for oliguria."
+     },
+     {
+      "q": "If ADAMTS13 testing is unavailable, what is the immediate management?",
+      "a": "Start plasma exchange urgently while arranging transfer; give steroids as adjunct."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming any palpable spleen in children is normal; any enlargement warrants investigation.",
+   "Using Hb <8 g/dL as a universal transfusion trigger; stable patients often tolerate Hb 7 g/dL.",
+   "Starting plasma exchange solely on schistocytes >1 % without clinical TTP criteria.",
+   "Confusing spherocytes with functional asplenia; the latter shows Howell‑Jolly bodies.",
+   "Relying on ferritin <12 ng/mL for iron deficiency; the correct cut‑off is <15 ng/mL (or <30 ng/mL with inflammation).",
+   "Expecting sickle cells on a routine smear in sickle‑cell trait; they appear only under hypoxia or special tests.",
+   "Treating malaria with oral artemisinin alone when parasitaemia exceeds 5 %; IV artesunate is required."
+  ],
+  "exam": [
+   "What are the three key steps in a bedside examination of a patient with suspected anaemia? — Inspect for pallor, assess for jaundice or scleral icterus, palpate for splenomegaly (soft, non‑tender enlargement suggests haemolysis) and check for peripheral edema.",
+   "How do you differentiate iron‑deficiency anaemia from anaemia of chronic disease on a peripheral film and basic labs? — Iron deficiency shows microcytic hypochromic cells, low ferritin (<15 ng/mL) and low transferrin saturation; chronic disease shows normal or high ferritin and low saturation.",
+   "Why is plasma exchange not automatically started when schistocytes are seen? — Plasma exchange is reserved for confirmed or strongly suspected TTP, which requires clinical pentad and ADAMTS13 testing; other microangiopathies need different management.",
+   "What is the significance of Howell‑Jolly bodies on a smear? — They indicate functional asplenia, common in sickle cell disease and post‑splenectomy, and predispose to encapsulated infections.",
+   "When is IV artesunate indicated for malaria? — In severe malaria defined by parasitaemia >5 % (or >2 % in non‑immune) with any organ dysfunction, or any parasitaemia with cerebral involvement.",
+   "A 19‑year‑old with fever, sore throat, atypical lymphocytes and positive heterophile test – which cell is the target of EBV? — B‑lymphocytes; EBV infects CD21‑positive B cells causing atypical reactive lymphocytes.",
+   "Describe the typical morphology of Plasmodium falciparum gametocytes on a thin film. — Banana‑shaped, elongated with a curved, slender appearance, often occupying a single RBC without enlarging it.",
+   "Which stain is preferred for air‑dried blood films and why? — Wright‑Giemsa stain; it provides excellent cytoplasmic detail and differentiates haemoglobinised cells and parasites.",
+   "What film finding is characteristic of functional asplenia in children with HbSS? — Howell‑Jolly bodies, target cells and Pappenheimer bodies; spherocytes are not typical.",
+   "A dimorphic RBC population suggests which clinical scenario? — Co‑existing iron deficiency and thalassaemia or haemoglobinopathy, or recent transfusion with mixed donor and recipient cells.",
+   "Name the cytoplasmic inclusion seen in myeloid blasts and its diagnostic relevance. — Auer rods – needle‑like azurophilic granules confirming acute myeloid leukaemia.",
+   "Which physiological process explains hypersegmented neutrophils in B12 deficiency? — Impaired DNA synthesis leads to delayed nuclear maturation while cytoplasmic maturation proceeds, producing hypersegmentation.",
+   "How does the presence of Auer rods influence management of acute leukaemia? — It directs therapy toward AML protocols and excludes lymphoid regimens; urgent referral for cytogenetics is needed.",
+   "Outline the thin versus thick film utility in malaria diagnosis. — Thin film identifies species and parasite stage; thick film increases sensitivity for low parasitaemia. If thin unavailable, rely on thick for detection, then confirm with rapid test."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-15",
+  "checked": "2026-11-15",
+  "trimmed": 3
+ }
 }

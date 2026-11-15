@@ -3944,6 +3944,97 @@
    ],
    "model": "gemini-2.5-flash",
    "at": "2026-11-14"
+  },
+  "gynaecology-abnormal-uterine-bleeding": {
+   "hash": "5ea80ab2d1eb",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-15"
+  },
+  "gynaecology-uterine-fibroids": {
+   "hash": "75ad767c4dc5",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-11-15"
+  },
+  "gynaecology-ovarian-cysts": {
+   "hash": "8eb8c7704698",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-15"
+  },
+  "gynaecology-pelvic-inflammatory-disease": {
+   "hash": "838c6d82140f",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-15"
+  },
+  "gynaecology-infertility": {
+   "hash": "974902a01b23",
+   "validated": false,
+   "high": 3,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Definition and terminology",
+     "problem": "The WHO guideline for infertility was published in 2023, not 2025.",
+     "fix": "The WHO guideline for the prevention, diagnosis and treatment of infertility was published in 2023."
+    },
+    {
+     "severity": "high",
+     "where": "References and further reading",
+     "problem": "The WHO guideline for infertility was published in 2023, not 2025.",
+     "fix": "WHO. Guideline for the prevention, diagnosis and treatment of infertility (2023): https://www.who.int/publications/i/item/9789240115774"
+    },
+    {
+     "severity": "high",
+     "where": "References and further reading",
+     "problem": "The Kenya Ministry of Health National Family Planning Guidelines 7th Edition was published in 2023, not 2025.",
+     "fix": "Kenya Ministry of Health. National Family Planning Guidelines, 7th Edition (2023), infertility section: https://www.health.go.ke/sites/default/files/2023-02/Signed%20National%20Family%20Planning%20Guidelines%207th%20Edition%202023%20%281%29.pdf"
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-15"
+  },
+  "gynaecology-endometriosis": {
+   "hash": "5a883dd608cf",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-15"
+  },
+  "gynaecology-vaginal-discharge": {
+   "hash": "78a546bce8e8",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-15"
+  },
+  "gynaecology-pelvic-pain": {
+   "hash": "f39267ab5fd4",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-15"
   }
  },
  "topics": {}

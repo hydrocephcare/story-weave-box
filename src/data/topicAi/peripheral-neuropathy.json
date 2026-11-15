@@ -176,5 +176,387 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-16",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic neurological exam, noting sensory, motor, and autonomic features. Bedside tests reveal functional deficits but cannot quantify axonal loss or differentiate demyelinating from axonal patterns.",
+    "b": [
+     "History: onset, progression, pain quality, distribution, precipitating factors, medication list, alcohol use, diabetes control, TB treatment, ART regimen, nutritional status, pregnancy, renal function"
+    ],
+    "t": [
+     {
+      "a": "Ankle reflex",
+      "b": "Assesses S1/S2 root integrity; absent suggests peripheral neuropathy but cannot distinguish axonal vs demyelinating"
+     },
+     {
+      "a": "Vibration sense",
+      "b": "Loss indicates large‑fiber involvement; normal vibration (>15 s) rules out severe large‑fiber loss but does not exclude small‑fiber disease"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use targeted investigations to confirm etiology, quantify severity, and guide therapy. When resources are limited, bedside surrogates are acceptable.",
+    "b": [
+     "Serum B12 <200 pmol/L (or <270 pg/mL) with raised MMA/homocysteine confirms functional deficiency; normal B12 but high MMA suggests folate deficiency",
+     "HbA1c >7 % indicates poor glycaemic control; target <7 % for neuropathy prevention",
+     "Serum creatinine/eGFR <30 mL/min/1.73 m² signals uremic neuropathy; monitor urea and electrolytes",
+     "Peripheral nerve conduction studies (PNCS): reduced amplitude = axonal loss; slowed conduction = demyelination; normal PNCS with pain suggests small‑fiber neuropathy",
+     "Quantitative sensory testing (QST) for small fibres; abnormal thresholds support small‑fiber involvement",
+     "Skin biopsy for intra‑epidermal nerve fibre density (IENFD) when available; <5 fibres/mm² indicates small‑fiber neuropathy",
+     "Serum protein electrophoresis: any monoclonal spike, even <10 g/L, warrants further workup for paraproteinemia",
+     "HbA1c and fasting glucose if diabetes suspected"
+    ],
+    "t": [
+     {
+      "a": "PNCS",
+      "b": "Answers: Is the neuropathy axonal or demyelinating? Normal PNCS with pain suggests small‑fiber disease"
+     },
+     {
+      "a": "QST",
+      "b": "Answers: Is small‑fiber dysfunction present? Abnormal thresholds indicate small‑fiber neuropathy"
+     },
+     {
+      "a": "Skin biopsy",
+      "b": "Answers: Quantify small‑fiber loss; IENFD <5 fibres/mm² confirms small‑fiber neuropathy"
+     },
+     {
+      "a": "Serum B12",
+      "b": "Answers: Is B12 deficiency present? <200 pmol/L with raised MMA confirms deficiency"
+     },
+     {
+      "a": "Blood lead",
+      "b": "Answers: Is lead exposure likely? >5 µg/dL warrants chelation"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis follows a stepwise approach: clinical features, laboratory confirmation, and electrophysiology. Severity is graded by the Toronto Clinical Scoring System (TCSS).",
+    "b": [
+     "Clinical diagnosis: Symmetric glove‑and‑stocking sensory loss, distal weakness, absent ankle reflexes, and autonomic signs; exclude vascular causes",
+     "Laboratory confirmation: B12, folate, HIV, renal function, lead, electrolytes",
+     "Electrophysiology: PNCS or QST to classify axonal vs demyelinating vs small‑fiber",
+     "TCSS grading: 0–5 mild, 6–11 moderate, ≥12 severe; score derived from symptoms, reflexes, and sensory tests"
+    ],
+    "t": [
+     {
+      "a": "TCSS",
+      "b": "Answers: Severity of neuropathy; guides prognosis and need for referral"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic peripheral neuropathy; distinguishing features are highlighted.",
+    "t": [
+     {
+      "a": "Stroke",
+      "b": "Sudden focal weakness, cranial nerve involvement, and altered consciousness; neuroimaging confirms."
+     },
+     {
+      "a": "Multiple sclerosis",
+      "b": "Relapsing–remitting course, optic neuritis, and MRI lesions; sensory loss is patchy, not glove‑and‑stocking."
+     },
+     {
+      "a": "Vitamin C deficiency (scurvy)",
+      "b": "Bleeding gums, poor wound healing, and bruising; sensory loss is uncommon."
+     },
+     {
+      "a": "Lead poisoning",
+      "b": "Anxiety, abdominal pain, and wrist drop; blood lead >5 µg/dL confirms."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides treatment from reversible causes to symptomatic control, with clear points for monitoring and referral.",
+    "b": [
+     "2. Provide disease‑modifying measures where evidence exists – tight blood pressure control in CKD, treat B12 deficiency with intramuscular cyanocobalamin.",
+     "3. Initiate first‑line symptomatic therapy – duloxetine, amitriptyline, or gabapentin/pregabalin, choosing based on comorbidities and renal function.",
+     "4. Add adjunctive measures – foot care education, protective footwear, smoking cessation, alcohol reduction, physiotherapy for strength and balance.",
+     "5. Monitor response every 3 months with TCSS or pain VAS; document ulcer healing, reflex changes, and medication side‑effects.",
+     "6. Escalate to second‑line agents (e.g., tramadol, capsaicin patches) if pain remains moderate‑severe after 8 weeks of first‑line therapy.",
+     "7. Refer urgently for rapid progression, motor weakness, autonomic crisis, or suspected Guillain‑Barré; also refer to neurology for abnormal NCS/EMG or when diagnosis remains unclear."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions and practical steps to mitigate them.",
+    "b": [
+     "Duloxetine – may raise blood pressure and cause nausea; check BP each visit, avoid in uncontrolled hypertension.",
+     "Amitriptyline – anticholinergic (dry mouth, constipation, urinary retention) and cardiac conduction delay; obtain baseline ECG in patients >60 y or with cardiac disease.",
+     "Gabapentin/pregabalin – dizziness, peripheral oedema; start low, counsel on fall risk, adjust dose if eGFR <30 mL/min/1.73 m².",
+     "Tricyclics + MAO inhibitors – risk of serotonin syndrome; review medication list for antidepressants, linezolid, tramadol.",
+     "NSAIDs – worsen renal function and ulcer risk; avoid in CKD stage 4‑5, use gastro‑protection if needed.",
+     "Opioids (e.g., tramadol) – respiratory depression, dependence; reserve for refractory pain, limit duration, monitor for constipation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from loss of sensation, autonomic dysfunction or disease progression; early recognition triggers referral.",
+    "b": [
+     "Foot ulcer or Charcot joint – inspect feet daily; if ulcer >2 cm, deep, or infected, refer to wound‑care team and consider off‑loading.",
+     "Falls and fractures – assess gait, Romberg, and ankle reflex; arrange physiotherapy and orthotics if balance impaired.",
+     "Autonomic crisis (orthostatic hypotension, gastroparesis) – measure supine and standing BP; treat with fluid, compression stockings, and consider fludrocortisone.",
+     "Rapidly ascending weakness or bulbar signs – suspect Guillain‑Barré; arrange urgent neurology referral and consider IVIG/plasma exchange.",
+     "Severe pain unresponsive to two first‑line agents after 8 weeks – add second‑line analgesic and refer for specialist pain management."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, investigations or therapy.",
+    "b": [
+     "HIV – may cause distal sensory polyneuropathy; viral load and CD4 guide ART change; avoid stavudine and zidovudine.",
+     "TB treatment – isoniazid depletes pyridoxine; give prophylactic pyridoxine to all patients on INH, especially malnourished.",
+     "Malnutrition – B12, thiamine, folate deficiencies mimic neuropathy; check serum B12 (<200 pmol/L) and MMA, treat with appropriate vitamins.",
+     "Alcohol excess – contributes to axonal loss; counsel cessation, assess liver function before prescribing hepatotoxic agents.",
+     "Renal failure – gabapentin/pregabalin require dose reduction; avoid NSAIDs; dialysis patients may have uremic neuropathy, treat with dialysis optimisation.",
+     "Liver disease – limit duloxetine and amitriptyline; monitor transaminases if using tricyclics.",
+     "Age extremes – children have different normal reflex patterns; elderly have higher fall risk and altered drug clearance."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children – neuropathy rare; focus on chemotherapy‑induced or hereditary causes; use age‑appropriate pain scales, avoid tricyclics due to cardiac risk.",
+     "Pregnancy – prioritize non‑pharmacologic measures; if medication required, use low‑dose amitriptyline or duloxetine after risk‑benefit discussion.",
+     "Elderly – start all drugs at lowest effective dose; prefer gabapentin/pregabalin with renal adjustment; monitor cognition and fall risk.",
+     "People with HIV – switch from stavudine to tenofovir‑based regimen; screen for opportunistic infections that can cause neuropathy.",
+     "Low‑resource settings – use bedside tests (monofilament, tuning fork >15 s) when NCS unavailable; pyridoxine supplementation is cheap and essential with INH; prioritize foot care education."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Toronto Clinical Scoring System (TCSS) 0‑5 mild, 6‑11 moderate, ≥12 severe.",
+   "Serum vitamin B12 <200 pmol/L (or <270 pg/mL) defines deficiency.",
+   "Blood lead level >5 µg/dL (0.24 µmol/L) is elevated.",
+   "Vibration sense with 128‑Hz tuning fork normal >15 seconds, abnormal <1 second.",
+   "Ankle reflex (S1‑S2) mediated primarily by the S1 spinal nerve root.",
+   "Isoniazid causes pyridoxine (vitamin B6) deficiency → axonal degeneration.",
+   "First‑line symptomatic agents for painful neuropathy: duloxetine, amitriptyline, gabapentin/pregabalin.",
+   "Stavudine, zidovudine and other d4T‑based regimens cause distal sensory neuropathy.",
+   "Uremic neuropathy associated with serum creatinine >500 µmol/L (stage 5 CKD).",
+   "Alcohol‑related neuropathy linked to >80 g/day ethanol for >5 years."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define peripheral neuropathy and its three clinical domains.",
+    "a": "Dysfunction of peripheral nerves causing sensory (glove‑and‑stocking numbness, burning), motor (distal weakness, foot drop) and autonomic (orthostatic hypotension, gastroparesis) deficits.",
+    "hot": true
+   },
+   {
+    "q": "What is the Toronto Clinical Scoring System and how does it guide prognosis?",
+    "a": "TCSS scores symptoms, reflexes and sensory testing (0‑19). Scores ≥12 predict severe disability and higher ulcer risk; ≤5 predicts mild disease with good recovery.",
+    "hot": true
+   },
+   {
+    "q": "A diabetic patient presents with burning feet and a new ulcer. What investigations do you order first?",
+    "a": "Fasting glucose/HbA1c, serum B12, renal function, nerve conduction study if available, foot X‑ray to assess osteomyelitis, and wound swab for culture.",
+    "hot": true
+   },
+   {
+    "q": "Why is duloxetine considered symptomatic, not disease‑modifying, for diabetic neuropathy?",
+    "a": "It modulates central serotonin/norepinephrine pathways to reduce pain perception but does not halt nerve degeneration."
+   },
+   {
+    "q": "How do you differentiate peripheral neuropathy from peripheral arterial disease at the bedside?",
+    "a": "Peripheral neuropathy shows sensory loss with preserved pulses; PAD shows diminished pulses, cool skin, and pain on exertion relieved by rest.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a serum B12 of 110 pmol/L with normal folate in a vegan patient.",
+    "a": "Deficiency confirmed; start high‑dose oral or IM B12 and assess MMA/homocysteine if available.",
+    "past": true
+   },
+   {
+    "q": "When is urgent referral indicated for peripheral neuropathy?",
+    "a": "Rapidly ascending weakness, autonomic crisis, severe pain unresponsive to analgesia, or suspicion of Guillain‑Barré, vasculitic or infectious cause.",
+    "hot": true
+   },
+   {
+    "q": "A patient on high‑dose isoniazid develops neuropathy. Which vitamin must be supplemented and why?",
+    "a": "Vitamin B6 (pyridoxine) prevents axonal degeneration caused by isoniazid‑induced B6 depletion.",
+    "past": true
+   },
+   {
+    "q": "Explain the mechanism of vincristine‑induced neuropathy.",
+    "a": "Vincristine binds tubulin, inhibiting microtubule polymerisation, which disrupts axonal transport leading to axonal degeneration.",
+    "past": true
+   },
+   {
+    "q": "Which spinal nerve root level mediates the ankle reflex?",
+    "a": "S1 (with contribution from S2).",
+    "past": true
+   },
+   {
+    "q": "What is the key history to ask a patient with suspected toxic neuropathy?",
+    "a": "Duration and dose of offending drug, alcohol intake, nutritional status, HIV/TB status, and recent infections."
+   },
+   {
+    "q": "How does HIV‑related neuropathy differ from diabetic neuropathy?",
+    "a": "Often painful, distal, may involve small fibers early; associated with low CD4 count and stavudine exposure."
+   },
+   {
+    "q": "Why might nerve conduction studies be normal in a patient with severe neuropathic pain?",
+    "a": "Small‑fiber neuropathy affects pain fibers that are not assessed by standard NCS, giving normal results despite severe symptoms."
+   },
+   {
+    "q": "What are red‑flag features that suggest a non‑diabetic cause of neuropathy?",
+    "a": "Rapid progression, asymmetric distribution, prominent autonomic failure, associated systemic illness (e.g., HIV, TB, CKD), or exposure to neurotoxic drugs."
+   },
+   {
+    "q": "What is the recommended approach when a bedside test (e.g., monofilament) is unavailable?",
+    "a": "Use 10‑g Semmes‑Weinstein monofilament substitute (paper clip) or assess protective sensation by pinprick and vibration."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58‑year‑old man with long‑standing type 2 diabetes presents with symmetric stocking‑glove numbness, absent ankle reflexes and a 0‑second vibration sense at the great toe. Which of the following is the most appropriate next step?",
+    "o": [
+     "Start high‑dose insulin immediately",
+     "Prescribe amitriptyline for pain",
+     "Order serum vitamin B12 level",
+     "Refer for urgent nerve biopsy"
+    ],
+    "a": 1,
+    "e": "Amitriptyline is first‑line symptomatic therapy for painful diabetic neuropathy."
+   },
+   {
+    "q": "Which antiretroviral drug is most strongly associated with distal sensory neuropathy?",
+    "o": [
+     "Efavirenz",
+     "Stavudine",
+     "Zidovudine",
+     "Lamivudine"
+    ],
+    "a": 1,
+    "e": "Stavudine (d4T) causes mitochondrial toxicity leading to neuropathy."
+   },
+   {
+    "q": "A 45‑year‑old with CKD stage 5 complains of glove‑and‑stocking numbness. Which finding supports uremic neuropathy?",
+    "o": [
+     "Serum creatinine 300 µmol/L",
+     "Serum B12 250 pmol/L",
+     "Serum creatinine >500 µmol/L",
+     "Serum calcium 2.2 mmol/L"
+    ],
+    "a": 2,
+    "e": "Uremic neuropathy appears in advanced renal failure, typically creatinine >500 µmol/L.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is a microtubule‑disrupting plant‑derived chemotherapy agent that commonly causes severe peripheral neuropathy and paralytic ileus?",
+    "o": [
+     "Vincristine",
+     "Methotrexate",
+     "Cyclophosphamide",
+     "Doxorubicin"
+    ],
+    "a": 0,
+    "e": "Vincristine binds tubulin, disrupting microtubules and causing neuropathy and ileus.",
+    "past": true
+   },
+   {
+    "q": "A vegan patient presents with megaloblastic anemia and peripheral neuropathy. Which metabolic block explains the neuropathy?",
+    "o": [
+     "Reduced heme synthesis",
+     "Defective folate‑dependent thymidylate synthase",
+     "Impaired methylmalonyl‑CoA mutase",
+     "Inhibited pyridoxine‑dependent transaminase"
+    ],
+    "a": 2,
+    "e": "Vitamin B12 deficiency impairs methylmalonyl‑CoA mutase, leading to accumulation of toxic metabolites affecting nerves.",
+    "past": true
+   },
+   {
+    "q": "A patient on high‑dose isoniazid develops neuropathy. Which drug should be given prophylactically to prevent this complication?",
+    "o": [
+     "Vitamin B12",
+     "Vitamin D",
+     "Folic acid",
+     "Vitamin B6 (pyridoxine)"
+    ],
+    "a": 3,
+    "e": "Pyridoxine supplementation prevents isoniazid‑induced B6 deficiency and neuropathy.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "45‑year‑old male, type 2 diabetic for 12 years, presents with burning feet for 6 months, new plantar ulcer, absent ankle reflexes, vibration <1 s at great toe.",
+    "qs": [
+     {
+      "q": "What is the most likely primary diagnosis?",
+      "a": "Diabetic peripheral neuropathy with a neuro‑ulcer."
+     },
+     {
+      "q": "Which investigations are essential now?",
+      "a": "HbA1c, serum B12, renal function, foot X‑ray, wound culture, and if possible nerve conduction study."
+     },
+     {
+      "q": "Outline immediate management steps.",
+      "a": "Optimize glycaemic control, start amitriptyline for pain, debride ulcer, off‑load foot, start appropriate antibiotics if infection, and arrange podiatry follow‑up."
+     }
+    ]
+   },
+   {
+    "v": "30‑year‑old woman, newly diagnosed HIV, on stavudine‑based ART, complains of tingling in both hands and feet, normal ankle reflexes, vibration 2 s, CD4 180 cells/µL.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of her neuropathy?",
+      "a": "Stavudine‑induced distal sensory neuropathy."
+     },
+     {
+      "q": "What modification to her regimen should be considered?",
+      "a": "Switch to a non‑neurotoxic regimen (e.g., tenofovir + lamivudine + efavirenz) and add symptomatic therapy if pain persists."
+     },
+     {
+      "q": "Which bedside test can help confirm large‑fiber involvement?",
+      "a": "128‑Hz tuning fork vibration; <1 s indicates large‑fiber loss."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the normal vibration cut‑off (>15 s) with <8 s; use >15 s as normal.",
+   "Using serum B12 <150 pmol/L as deficiency; correct threshold is <200 pmol/L.",
+   "Stating duloxetine is contraindicated in renal impairment; it requires dose adjustment only when eGFR <30 mL/min.",
+   "Describing gabapentin as only for mixed neuropathic pain; it is first‑line for painful diabetic neuropathy.",
+   "Claiming high‑dose diuretics worsen gabapentin‑induced edema; diuretics may actually manage the edema.",
+   "Suggesting tramadol as first‑line for neuropathic pain; it is not recommended as first‑line in low‑resource settings.",
+   "Attributing isoniazid neuropathy primarily to impaired myelin synthesis; the main mechanism is axonal degeneration due to B6 deficiency.",
+   "Assuming a monofilament test can differentiate arterial from neuropathic disease; pulse examination is required."
+  ],
+  "exam": [
+   "Define peripheral neuropathy and its three clinical domains. — Dysfunction of peripheral nerves causing sensory (glove‑and‑stocking numbness, burning), motor (distal weakness, foot drop) and autonomic (orthostatic hypotension, gastroparesis) deficits.",
+   "What is the Toronto Clinical Scoring System and how does it guide prognosis? — TCSS scores symptoms, reflexes and sensory testing (0‑19). Scores ≥12 predict severe disability and higher ulcer risk; ≤5 predicts mild disease with good recovery.",
+   "A diabetic patient presents with burning feet and a new ulcer. What investigations do you order first? — Fasting glucose/HbA1c, serum B12, renal function, nerve conduction study if available, foot X‑ray to assess osteomyelitis, and wound swab for culture.",
+   "Why is duloxetine considered symptomatic, not disease‑modifying, for diabetic neuropathy? — It modulates central serotonin/norepinephrine pathways to reduce pain perception but does not halt nerve degeneration.",
+   "How do you differentiate peripheral neuropathy from peripheral arterial disease at the bedside? — Peripheral neuropathy shows sensory loss with preserved pulses; PAD shows diminished pulses, cool skin, and pain on exertion relieved by rest.",
+   "Interpret a serum B12 of 110 pmol/L with normal folate in a vegan patient. — Deficiency confirmed; start high‑dose oral or IM B12 and assess MMA/homocysteine if available.",
+   "When is urgent referral indicated for peripheral neuropathy? — Rapidly ascending weakness, autonomic crisis, severe pain unresponsive to analgesia, or suspicion of Guillain‑Barré, vasculitic or infectious cause.",
+   "A patient on high‑dose isoniazid develops neuropathy. Which vitamin must be supplemented and why? — Vitamin B6 (pyridoxine) prevents axonal degeneration caused by isoniazid‑induced B6 depletion.",
+   "Explain the mechanism of vincristine‑induced neuropathy. — Vincristine binds tubulin, inhibiting microtubule polymerisation, which disrupts axonal transport leading to axonal degeneration.",
+   "Which spinal nerve root level mediates the ankle reflex? — S1 (with contribution from S2).",
+   "What is the key history to ask a patient with suspected toxic neuropathy? — Duration and dose of offending drug, alcohol intake, nutritional status, HIV/TB status, and recent infections.",
+   "How does HIV‑related neuropathy differ from diabetic neuropathy? — Often painful, distal, may involve small fibers early; associated with low CD4 count and stavudine exposure.",
+   "Why might nerve conduction studies be normal in a patient with severe neuropathic pain? — Small‑fiber neuropathy affects pain fibers that are not assessed by standard NCS, giving normal results despite severe symptoms.",
+   "What are red‑flag features that suggest a non‑diabetic cause of neuropathy? — Rapid progression, asymmetric distribution, prominent autonomic failure, associated systemic illness (e.g., HIV, TB, CKD), or exposure to neurotoxic drugs."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-15",
+  "checked": "2026-11-15",
+  "trimmed": 8
+ }
 }

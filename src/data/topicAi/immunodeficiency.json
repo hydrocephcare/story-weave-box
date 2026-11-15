@@ -134,5 +134,408 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam reveal the pattern of infections, family clues and organ‑specific signs that point to a primary or secondary immunodeficiency.",
+    "b": [
+     "Onset, frequency and severity of infections – number of episodes per year, need for hospitalisation, pathogen type (catalase‑positive, opportunistic).",
+     "Age at first serious infection; any neonatal sepsis or failure to thrive.",
+     "Family history of early deaths, consanguinity, known immunodeficiency, recurrent infections in siblings.",
+     "Vaccination record – response to routine vaccines, any severe reaction or lack of seroconversion.",
+     "Exposure to HIV risk factors, TB contacts, chronic malaria, malnutrition, steroid or immunosuppressive therapy, herbal remedies.",
+     "Pregnancy, menopause or ageing that may modify immunity."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for growth failure, facial dysmorphism, lymphadenopathy, hepatosplenomegaly; presence suggests chronic immune activation or storage disease, absence does not exclude immunodeficiency."
+     },
+     {
+      "a": "Vital signs",
+      "b": "Persistent fever or tachycardia may indicate ongoing infection; normal vitals do not rule out subclinical immune defect."
+     },
+     {
+      "a": "Skin examination",
+      "b": "Identify eczema, fungal lesions, warts, or ulcerative lesions – suggestive of T‑cell or combined defects; a normal skin exam cannot exclude humoral deficiency."
+     },
+     {
+      "a": "Lymph node palpation",
+      "b": "Enlarged, firm nodes may indicate lymphoid hyperplasia or lymphoma; small nodes are typical in many primary antibody deficiencies."
+     },
+     {
+      "a": "Abdominal exam – shifting dullness",
+      "b": "Detect ascites that can accompany severe protein‑losing enteropathy; a negative test does not rule out early lymphoid disease."
+     },
+     {
+      "a": "Chest auscultation",
+      "b": "Crackles or wheeze point to lower‑respiratory infection; clear lungs do not exclude prior sinopulmonary damage."
+     },
+     {
+      "a": "Joint exam",
+      "b": "Swelling or effusion may signal autoimmune arthritis seen in CVID; absence does not exclude immune dysregulation."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies confirm the type of immune defect, quantify severity and exclude secondary causes; each test answers a specific clinical question.",
+    "b": [
+     "Complete blood count with differential – evaluates neutrophil, lymphocyte and eosinophil counts; neutrophils <0.5 × 10⁹/L suggest severe neutropenia, lymphocytes <1.5 × 10⁹/L indicate lymphopenia.",
+     "Serum immunoglobulins (IgG, IgA, IgM) – low IgG < 2 SD below age‑matched mean supports humoral deficiency; isolated IgA deficiency is a separate entity.",
+     "Specific antibody response – pre‑ and post‑vaccination titres (e.g., tetanus, pneumococcal); a ≥4‑fold rise to protective level confirms functional B‑cell response.",
+     "Flow cytometry for lymphocyte subsets – CD3⁺ T‑cells, CD4⁺, CD8⁺, CD19⁺ B‑cells, CD16/56⁺ NK cells; absent CD19⁺ cells point to agammaglobulinemia, low CD4⁺ (<500 cells/µL) signals T‑cell defect.",
+     "Neutrophil oxidative burst (DHR test) – assesses NADPH‑oxidase function; <10 % fluorescence indicates chronic granulomatous disease.",
+     "Serum complement levels (CH50, C3, C4) – low CH50 with normal C3/C4 suggests classical pathway deficiency.",
+     "HIV ELISA/rapid test – rules out secondary HIV‑related immunodeficiency; a positive test reclassifies the case as secondary.",
+     "TB interferon‑γ release assay – positive result may explain recurrent mycobacterial disease in a secondary setting.",
+     "Chest radiograph – looks for bronchiectasis, infiltrates, thymic shadow; absent thymic shadow supports SCID.",
+     "Abdominal ultrasound – evaluates splenomegaly, lymphadenopathy, thymic tissue; splenomegaly may accompany CVID."
+    ],
+    "t": [
+     {
+      "a": "When a test is unavailable",
+      "b": "Use clinical scoring (infection frequency, growth charts, vaccine response) and basic labs (CBC, serum Ig) to make a provisional diagnosis; arrange referral for specialized testing when possible."
+     },
+     {
+      "a": "Calculated IgG index (IgG/total protein)",
+      "b": "IgG < 0.4 of total protein supports selective IgG deficiency; values above do not exclude functional defects."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (if ascites present)",
+      "b": "Gradient ≥ 1.1 g/dL indicates portal hypertension; low gradient suggests protein‑losing enteropathy that can coexist with immunodeficiency."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates quantitative immunoglobulin levels, lymphocyte subsets and clinical burden to guide treatment intensity.",
+    "b": [
+     "Common Variable Immunodeficiency (CVID) – IgG < 2 SD below mean, IgA and/or IgM reduced, poor vaccine response, >2 sinopulmonary infections per year.",
+     "Severe Combined Immunodeficiency (SCID) – CD3⁺ T‑cells < 300 cells/µL, absent thymic shadow, NK cell count variable, life‑threatening infections before 6 months.",
+     "Agammaglobulinemia (X‑linked) – CD19⁺ B‑cells < 2 % of lymphocytes, IgG, IgA, IgM all markedly low, recurrent bacterial infections after 6 months.",
+     "Chronic Granulomatous Disease – DHR test <10 % activity, recurrent catalase‑positive infections, granuloma formation.",
+     "Staging severity (CVID) – Mild: isolated infections, normal IgG; Moderate: IgG 2–3 SD below mean, ≥2 infections/year; Severe: IgG < 2 SD, life‑threatening infection, bronchiectasis.",
+     "Red‑flag thresholds – neutrophils < 0.5 × 10⁹/L, lymphocytes < 1.0 × 10⁹/L, CD4⁺ < 200 cells/µL in HIV‑negative patient, persistent fever > 48 h despite antibiotics."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑immunodeficiency diseases mimic recurrent infections; a focused work‑up separates them.",
+    "b": [
+     "Chronic lung disease (e.g., cystic fibrosis) – presents with sinopulmonary infections; sweat chloride test and genetic panel differentiate.",
+     "Primary ciliary dyskinesia – recurrent otitis and bronchiectasis; nasal nitric oxide low, electron microscopy of cilia confirms.",
+     "Autoimmune lymphoproliferative syndrome – lymphadenopathy, cytopenias; elevated double‑negative T‑cells on flow cytometry.",
+     "Malignancy (e.g., lymphoma) – B‑symptoms, lymphadenopathy; tissue biopsy required.",
+     "Severe protein‑losing enteropathy – low serum Ig due to loss, not production; stool α‑1 antitrypsin elevated, normal vaccine response.",
+     "HIV infection – CD4⁺ < 500 cells/µL, positive serology; viral load confirms."
+    ],
+    "t": [
+     {
+      "a": "Key discriminators",
+      "b": "Sweat chloride > 60 mmol/L points to cystic fibrosis; nasal NO < 77 nL/min suggests primary ciliary dyskinesia; positive HIV ELISA confirms secondary immunodeficiency; normal vaccine titres rule out humoral defect."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures prompt infection control, correction of immune deficits and prevention of further damage while respecting resource limitations.",
+    "b": [
+     "1. Immediate infection control: obtain cultures, start empiric broad‑spectrum antibiotics covering typical bacteria and, if indicated, antifungals for suspected opportunistic pathogens.",
+     "2. Identify and treat reversible secondary causes: start antiretroviral therapy for HIV, anti‑TB therapy, correct malnutrition, discontinue unnecessary steroids or immunosuppressants.",
+     "3. Replace missing humoral immunity: initiate intravenous immunoglobulin (IVIG) for patients with IgG <2 SD below mean or recurrent severe infections; consider subcutaneous IgG if IV access limited.",
+     "4. Vaccination strategy: give inactivated vaccines (influenza, pneumococcal conjugate, Hib) once infection is controlled; avoid live vaccines in any patient with severe T‑cell defect or on high‑dose steroids.",
+     "6. Monitoring schedule: review clinical status and infection count every 3 months; repeat quantitative immunoglobulins and lymphocyte subsets every 6 months; adjust IVIG dose based on trough IgG levels.",
+     "7. Escalation/referral: refer to immunology centre if infections persist despite optimal IVIG, if lymphocyte subsets show CD4+ <200 cells/µL, or if autoimmune cytopenias or lymphoid malignancy develop."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse reactions and interactions prevents treatment failure and iatrogenic harm.",
+    "b": [
+     "IVIG can cause headache, aseptic meningitis, and renal dysfunction; hydrate, use low‑osmolar preparations and monitor creatinine.",
+     "Trimethoprim‑sulfamethoxazole may cause hypersensitivity, cytopenia, and hyperkalemia; check baseline CBC and electrolytes, stop if severe rash or neutropenia develops.",
+     "Azithromycin can prolong QT interval; avoid in patients on other QT‑prolonging drugs or with known cardiac arrhythmia.",
+     "Broad‑spectrum beta‑lactams may select resistant organisms; de‑escalate based on culture sensitivities within 48‑72 h.",
+     "Live vaccines (e.g., BCG, oral polio) are contraindicated in severe T‑cell deficiency; ensure immune status before administration."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications signal failure of current management and require higher‑level care.",
+    "b": [
+     "Progressive bronchiectasis on chest CT after repeated sinopulmonary infections – refer for physiotherapy and consider surgical resection if focal disease.",
+     "Autoimmune cytopenias (e.g., immune thrombocytopenia) – start corticosteroid sparing agents such as rituximab after infectious causes excluded.",
+     "Enteric or hepatic opportunistic infections (CMV colitis, disseminated histoplasmosis) – initiate disease‑specific antivirals/antifungals and consider hematopoietic stem‑cell transplant (HSCT) referral.",
+     "Lymphoid malignancy (non‑Hodgkin lymphoma) – urgent oncologic assessment; stop immunoglobulin replacement temporarily if chemotherapy planned.",
+     "Severe neutropenia (<0.5 × 10⁹/L) with recurrent bacterial sepsis despite antibiotics – start granulocyte colony‑stimulating factor (G‑CSF) and arrange transplant evaluation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions and external factors can mask or mimic immunodeficiency and alter test results.",
+    "b": [
+     "HIV infection: depresses CD4+ counts, may cause secondary hypogammaglobulinemia; always test HIV ELISA/PCR before labeling primary defect.",
+     "Active TB: can raise inflammatory markers and cause transient lymphopenia; perform GeneXpert if sputum unavailable.",
+     "Malnutrition: lowers serum IgG and albumin, giving false‑low immunoglobulin levels; re‑assess after nutritional rehabilitation.",
+     "Pregnancy: physiologic immunomodulation reduces cell‑mediated immunity; adjust vaccine timing and avoid live vaccines.",
+     "Diabetes mellitus: predisposes to bacterial infections and may impair neutrophil function; optimise glycaemic control.",
+     "Herbal remedies (e.g., high‑dose phytochemicals): can suppress bone marrow; obtain a thorough medication history.",
+     "Renal or hepatic failure: alters drug clearance (IVIG, TMP‑SMX) and may cause secondary immunoglobulin loss; dose adjust or select alternative agents.",
+     "Age extremes: infants have immature immune systems; elderly have immunosenescence with CD4+ <500 cells/µL considered low."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to patient context maximises benefit and safety.",
+    "b": [
+     "Children: use age‑adjusted immunoglobulin reference ranges; prefer subcutaneous IgG if venous access problematic; monitor growth and vaccine schedule closely.",
+     "Pregnancy: avoid live vaccines, use IVIG if severe hypogammaglobulinemia, monitor fetal growth; coordinate with obstetrics for timing of prophylactic antibiotics.",
+     "Elderly: screen for comorbidities, use lower‑threshold CD4+ (<500 cells/µL) for concern, watch for polypharmacy interactions with TMP‑SMX and azithromycin.",
+     "People with HIV: start ART promptly, re‑evaluate immune status after viral suppression; prophylaxis thresholds follow HIV guidelines (CD4+ <200 cells/µL for PCP).",
+     "Low‑resource settings: when quantitative IgG unavailable, use clinical severity and response to trial IVIG; rely on point‑of‑care rapid HIV/TB tests; use oral antibiotics where IV access limited."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam style questions",
+    "p": "Use these prompts to test knowledge of bedside assessment, investigations, management and special considerations.",
+    "b": [
+     "1. List three key history questions to uncover secondary causes of immunodeficiency.",
+     "2. Describe how to perform and interpret shifting dullness when evaluating possible ascites in an immunocompromised patient.",
+     "3. Which laboratory test distinguishes primary from secondary hypogammaglobulinemia when quantitative IgG is unavailable?",
+     "4. Explain the rationale for avoiding live vaccines in a patient with CD4+ 180 cells/µL.",
+     "5. A patient on TMP‑SMX develops a rash and neutropenia; what is your next step?",
+     "6. How would you modify IVIG therapy in a patient with renal insufficiency?",
+     "7. Identify the CD4+ count threshold that triggers PCP prophylaxis in HIV‑negative immunodeficiency.",
+     "8. Outline the investigation pathway when a child presents with absent circulating B cells but normal T cells.",
+     "9. When should a patient with recurrent sinopulmonary infections be referred for HSCT evaluation?",
+     "10. Discuss how malnutrition can falsely lower serum IgG and how to correct this in interpretation."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Lymphopenia in adults: absolute lymphocyte count <1.5×10^9/L",
+   "Adequate vaccine response: ≥4‑fold rise AND protective titre",
+   "Low CD4+ T‑cell count indicating cellular immune defect: <500 cells/µL",
+   "Severe congenital neutropenia: neutrophil count <0.2×10^9/L",
+   "Primary immunodeficiency neutropenia diagnostic threshold: <0.5×10^9/L",
+   "TST induration ≥5 mm is positive in immunocompromised",
+   "Common variable immunodeficiency: IgG <2 SD below mean and recurrent infections",
+   "SCID with common γ‑chain defect: absent T and NK cells",
+   "B‑cell maturation defect in CVID: absent switched memory B cells",
+   "HIV first isolated in 1983 from a patient with lymphadenopathy"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define an adequate antibody response to vaccines in CVID.",
+    "a": "A ≥4‑fold rise in titre AND achieving protective levels",
+    "hot": true
+   },
+   {
+    "q": "When is a CD4+ T‑cell count considered low for cellular immunity?",
+    "a": "<500 cells/µL",
+    "hot": true
+   },
+   {
+    "q": "Explain the management of a child with recurrent pneumonia and low IgG.",
+    "a": "Start IVIG, treat infections, avoid live vaccines, monitor IgG and infection history",
+    "hot": true
+   },
+   {
+    "q": "Why are live vaccines contraindicated in severe immunodeficiency?",
+    "a": "Risk of vaccine‑strain infection causing severe disease",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate CVID from X‑linked agammaglobulinemia?",
+    "a": "CVID has low IgG with normal B‑cell count; X‑linked has absent mature B cells"
+   },
+   {
+    "q": "What is the first‑line treatment for severe neutropenia in low‑resource settings?",
+    "a": "G-CSF if available; otherwise broad‑spectrum antibiotics and infection control"
+   },
+   {
+    "q": "Describe the key history questions for suspected immunodeficiency.",
+    "a": "Frequency, severity, and type of infections; family history; exposure to infections; vaccination history; nutritional status; steroid or herbal use"
+   },
+   {
+    "q": "What bedside sign indicates ascites?",
+    "a": "Shifting dullness: dullness on dependent side, resonant on opposite side"
+   },
+   {
+    "q": "When should you refer a patient with suspected immunodeficiency to a tertiary centre?",
+    "a": "Rapidly progressive infections, failure to respond to antibiotics, opportunistic infections, or lymphoid malignancy",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a normal neutrophil count in early HIV infection?",
+    "a": "May mask immunodeficiency; rely on CD4+ count and clinical context"
+   },
+   {
+    "q": "Why is PCR for CMV useful in low‑resource settings?",
+    "a": "Detects viraemia when culture or antigen tests unavailable"
+   },
+   {
+    "q": "How do you interpret a low IgG with normal IgA and IgM?",
+    "a": "Suggests selective IgG deficiency; consider CVID if recurrent infections"
+   },
+   {
+    "q": "What is the most common secondary cause of immunodeficiency in low‑resource settings?",
+    "a": "HIV infection",
+    "hot": true
+   },
+   {
+    "q": "Explain the role of G‑CSF in congenital neutropenia.",
+    "a": "Stimulates neutrophil production, reducing infection risk"
+   },
+   {
+    "q": "Why is a TST induration of 5 mm considered positive in immunocompromised?",
+    "a": "Immune response is blunted; lower threshold increases sensitivity"
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 4‑year‑old boy has recurrent bacterial infections, low IgG, absent mature B cells, normal T cells. Which mutation is most likely?",
+    "o": [
+     "IL2RG",
+     "STAT3",
+     "BTK",
+     "RAG1"
+    ],
+    "a": 2,
+    "e": "BTK mutation causes X‑linked agammaglobulinemia",
+    "past": true
+   },
+   {
+    "q": "A patient with SCID due to common γ‑chain defect lacks functional T and NK cells. Which cytokine pathway is disrupted?",
+    "o": [
+     "IL‑2 signalling",
+     "IL‑4 signalling",
+     "IL‑10 signalling",
+     "IL‑12 signalling"
+    ],
+    "a": 0,
+    "e": "Common γ‑chain is shared by IL‑2, IL‑4, IL‑7, IL‑9, IL‑15, IL‑21 pathways",
+    "past": true
+   },
+   {
+    "q": "Which congenital immunodeficiency presents with recurrent pyogenic infections and marked deficit in mature B cells?",
+    "o": [
+     "DiGeorge syndrome",
+     "Common variable immunodeficiency",
+     "Severe combined immunodeficiency",
+     "X‑linked agammaglobulinemia"
+    ],
+    "a": 3,
+    "e": "X‑linked agammaglobulinemia shows absent mature B cells",
+    "past": true
+   },
+   {
+    "q": "A patient has absent thymic shadow, hypocalcaemia, and outflow tract heart defects. Which syndrome is this?",
+    "o": [
+     "Chédiak–Higashi",
+     "Wiskott‑Aldrich syndrome",
+     "Chediak‑Higashi syndrome",
+     "DiGeorge syndrome"
+    ],
+    "a": 3,
+    "e": "DiGeorge syndrome (22q11.2 deletion) presents with these features",
+    "past": true
+   },
+   {
+    "q": "Which species of HIV are most common worldwide?",
+    "o": [
+     "HIV‑2 only",
+     "HIV‑1 only",
+     "HIV‑1 and HIV‑2",
+     "HIV‑3"
+    ],
+    "a": 2,
+    "e": "HIV‑1 and HIV‑2 are the two species",
+    "past": true
+   },
+   {
+    "q": "What is the first‑line treatment for severe neutropenia in a child with congenital neutropenia?",
+    "o": [
+     "Broad‑spectrum antibiotics",
+     "G‑CSF",
+     "IVIG",
+     "Antifungals"
+    ],
+    "a": 1,
+    "e": "G‑CSF stimulates neutrophil production"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 6‑year‑old girl presents with 4 episodes of pneumonia in the last 6 months, failure to thrive, and low IgG (0.8 g/L). CBC shows neutrophils 2.5×10^9/L, lymphocytes 1.2×10^9/L.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Common variable immunodeficiency"
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Start IVIG and treat current infection with broad‑spectrum antibiotics"
+     },
+     {
+      "q": "Which vaccine should be avoided?",
+      "a": "Live attenuated vaccines such as MMR and varicella"
+     }
+    ]
+   },
+   {
+    "v": "A 3‑month‑old infant has recurrent skin abscesses and a marked deficit in mature B cells. CBC shows neutrophils 1.8×10^9/L.",
+    "qs": [
+     {
+      "q": "What congenital immunodeficiency is most likely?",
+      "a": "X‑linked agammaglobulinemia"
+     },
+     {
+      "q": "What laboratory test confirms the diagnosis?",
+      "a": "Absent circulating mature B cells (CD19+CD20+) with normal T cells"
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Claiming adequate vaccine response is only a fold rise",
+   "Interpreting TST induration <5 mm as negative in immunocompromised",
+   "Confusing CVID with X‑linked agammaglobulinemia based on B‑cell count alone",
+   "Ignoring the need for protective titres in vaccine response",
+   "Failing to note that live vaccines are contraindicated in severe immunodeficiency",
+   "Mislabeling HIV species as HIV‑3",
+   "Assuming early HIV infection always shows neutropenia"
+  ],
+  "exam": [
+   "Define an adequate antibody response to vaccines in CVID. — A ≥4‑fold rise in titre AND achieving protective levels",
+   "When is a CD4+ T‑cell count considered low for cellular immunity? — <500 cells/µL",
+   "Explain the management of a child with recurrent pneumonia and low IgG. — Start IVIG, treat infections, avoid live vaccines, monitor IgG and infection history",
+   "Why are live vaccines contraindicated in severe immunodeficiency? — Risk of vaccine‑strain infection causing severe disease",
+   "How do you differentiate CVID from X‑linked agammaglobulinemia? — CVID has low IgG with normal B‑cell count; X‑linked has absent mature B cells",
+   "What is the first‑line treatment for severe neutropenia in low‑resource settings? — G-CSF if available; otherwise broad‑spectrum antibiotics and infection control",
+   "Describe the key history questions for suspected immunodeficiency. — Frequency, severity, and type of infections; family history; exposure to infections; vaccination history; nutritional status; steroid or herbal use",
+   "What bedside sign indicates ascites? — Shifting dullness: dullness on dependent side, resonant on opposite side",
+   "When should you refer a patient with suspected immunodeficiency to a tertiary centre? — Rapidly progressive infections, failure to respond to antibiotics, opportunistic infections, or lymphoid malignancy",
+   "What is the significance of a normal neutrophil count in early HIV infection? — May mask immunodeficiency; rely on CD4+ count and clinical context",
+   "Why is PCR for CMV useful in low‑resource settings? — Detects viraemia when culture or antigen tests unavailable",
+   "How do you interpret a low IgG with normal IgA and IgM? — Suggests selective IgG deficiency; consider CVID if recurrent infections",
+   "What is the most common secondary cause of immunodeficiency in low‑resource settings? — HIV infection",
+   "Explain the role of G‑CSF in congenital neutropenia. — Stimulates neutrophil production, reducing infection risk"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-15",
+  "checked": "2026-11-15",
+  "trimmed": 6
+ }
 }
