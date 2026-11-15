@@ -78,11 +78,11 @@ async function rewriteAffected(env, page, review, name) {
   if (!keys.size) return null;
   const affected = (page.sections || []).filter((s) => keys.has(s.key) || keys.has(s.h) || keys.has(s.heading));
   const instructions = review.findings.filter((f) => keys.has(f.section)).map((f) => ({ section: f.section, claim: f.claim, reference: f.reference, correction: f.suggested_fix, severity: f.severity }));
-  const prompt = "You are the Groq medical content generator. Rewrite ONLY the affected sections of the existing " + page.topicType + " page for " + name + ". Return ONLY JSON {\"sections\":[{\"key\":\"\",\"heading\":\"\",\"applicable\":true,\"confidence\":\"high|medium|low\",\"content\":{\"p\":\"complete paragraphs\",\"b\":[],\"t\":[],\"images\":[]}}],\"faq\":[],\"exam\":[]}. Existing affected sections: " + json(affected) + ". Findings: " + json(instructions) + ". Missing sections: " + json(review.missing_sections) + ". Correct only evidence-supported errors, generate missing sections to the schema depth, preserve unrelated correct content, do not invent doses, statistics, classification, URLs or citations, and write complete sentences.";
+  const prompt = "You are the Groq medical content generator. Rewrite ONLY the affected sections of the existing " + page.topicType + " page for " + name + ". Return ONLY JSON {\"sections\":[{\"key\":\"\",\"heading\":\"\",\"applicable\":true,\"confidence\":\"high|medium|low\",\"content\":{\"p\":\"complete paragraphs\",\"b\":[],\"t\":[],\"images\":[]}}.],\"faq\":[],\"exam\":[],\"mcqs\":[]}. Existing affected sections: " + json(affected) + ". Findings: " + json(instructions) + ". Missing sections: " + json(review.missing_sections) + ". Correct only evidence-supported errors, generate missing sections to the schema depth, preserve unrelated correct content, do not invent doses, statistics, classification, URLs or citations, and write complete sentences.";
   const result = await completeGroq(env, prompt, 11000);
   const parsed = parseJson(result.text);
-  if (!parsed || !Array.isArray(parsed.sections)) throw new Error("Groq returned an invalid section patch");
-  return { sections: parsed.sections, faq: Array.isArray(parsed.faq) ? parsed.faq : null, exam: Array.isArray(parsed.exam) ? parsed.exam : null, mcqs: Array.isArray(parsed.mcqs) ? parsed.mcqs : null, model: result.model };
+  if (!parsed || (!Array.isArray(parsed.sections) && !Array.isArray(parsed.faq) && !Array.isArray(parsed.exam) && !Array.isArray(parsed.mcqs))) throw new Error("Groq returned an invalid section patch");
+  return { sections: Array.isArray(parsed.sections) ? parsed.sections : [], faq: Array.isArray(parsed.faq) ? parsed.faq : null, exam: Array.isArray(parsed.exam) ? parsed.exam : null, mcqs: Array.isArray(parsed.mcqs) ? parsed.mcqs : null, model: result.model };
 }
 async function rest(env, path, options = {}) {
   const base = String(env.SUPABASE_URL || "").replace(/\/$/, "");
