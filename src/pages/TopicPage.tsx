@@ -523,7 +523,7 @@ export default function TopicPage() {
     );
   }
 
-  const aiSections = page?.sections ?? [];
+  const aiSections = (page?.sections ?? []).filter((section) => section.applicable !== false);
   // with no written article yet, the introduction found online is the overview, followed by its sections
   const intro = (!aiSections.length && media?.intro ? media.intro.split(/\n+/).filter(Boolean) : []).map((p, i) => (i === 0 && summary && p.startsWith(summary) ? p.slice(summary.length).trim() : p)).filter(Boolean);
   const wikiSections = !aiSections.length ? (media?.sections ?? []) : [];
@@ -615,8 +615,8 @@ export default function TopicPage() {
           {isAdmin && page && (
             <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-dashed border-primary/50 bg-primary/5 px-3 py-2 text-xs font-semibold">
               <span className="text-primary">Admin</span>
-              <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").update({ reviewed: !page.reviewed }).eq("slug", slug); setAdminMsg(r.error ? r.error.message : page.reviewed ? "Marked as not reviewed" : "Marked as reviewed"); }}>{page.reviewed ? "Mark not reviewed" : "Mark reviewed"}</button>
-              <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { if (!window.confirm("Remove this page? It will be written again the next time someone opens it.")) return; const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").delete().eq("slug", slug); setAdminMsg(r.error ? r.error.message : "Removed. It will be rewritten on the next visit."); }}>Remove and rewrite</button>
+              <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { const r = await supabase.rpc("mark_topic_medically_reviewed", { p_slug: slug }); setAdminMsg(r.error ? r.error.message : "Human review recorded."); }}>{page.reviewed ? "Reviewed" : "Mark reviewed"}</button>
+              <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { if (!window.confirm("Remove this page? A revision will be preserved and the page will be generated again on its next visit.")) return; const r = await supabase.rpc("remove_and_rewrite_topic_page", { p_slug: slug }); setAdminMsg(r.error ? r.error.message : "Removed. It will be rewritten on the next visit."); }}>Remove and rewrite</button>
               {adminMsg && <span className="text-muted-foreground">{adminMsg}</span>}
             </div>
           )}
@@ -654,9 +654,9 @@ export default function TopicPage() {
             {aiSections.map((s, i) => (
               <div key={`${s.h}-${i}`}>
                 <Section id={anchor(s.h)} title={s.h} first={i === 0}>
-                  {s.p && <Paras text={s.p} self={slug} />}
-                  {s.t && s.t.length > 0 && <TestTable rows={s.t} />}
-                  {s.b && s.b.length > 0 && <Bullets items={s.b} self={slug} />}
+                  {(s.content?.p ?? s.p) && <Paras text={s.content?.p ?? s.p ?? ""} self={slug} />}
+                  {(s.content?.t ?? s.t)?.length ? <TestTable rows={s.content?.t ?? s.t ?? []} /> : null}
+                  {(s.content?.b ?? s.b)?.length ? <Bullets items={s.content?.b ?? s.b ?? []} self={slug} /> : null}
                 </Section>
                 {i === Math.floor((aiSections.length - 1) / 2) && <div className="mt-12"><Disclaimer disease={isDisease} /></div>}
                 {/* the warning signs come right after the treatment, where a worried reader needs them */}
@@ -770,7 +770,10 @@ export default function TopicPage() {
               <Section id="faq" title="Common questions">
                 <div className="space-y-5">
                   {page.faq.map((f) => (
-                    <details key={f.q} className="group"><summary className="flex cursor-pointer list-none items-start justify-between gap-3 text-[18px] font-semibold"><span>{f.q}</span><ChevronDown className="mt-1.5 h-4 w-4 shrink-0 transition group-open:rotate-180" aria-hidden /></summary><p className="mt-3 text-[17px] text-foreground/85">{f.a}</p></details>
+                    <article key={f.q} className="border-b border-border/70 pb-4 last:border-0">
+                      <h3 className="text-[18px] font-semibold leading-snug">{f.q}</h3>
+                      <p className="mt-2 text-[17px] leading-relaxed text-foreground/85">{f.a}</p>
+                    </article>
                   ))}
                 </div>
               </Section>
