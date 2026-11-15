@@ -127,6 +127,9 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     if (html.includes('class="prerendered"') && (html.includes("clip:rect(0 0 0 0)") || html.includes('class="boot-loader"'))) {
       return fail(`${url} contains prerendered content that is hidden from crawlers`);
     }
+    if (html.includes("clip:rect(0 0 0 0)") || html.includes('class="boot-loader"') || html.includes('class="prerendered"')) {
+      return fail(`${url} contains a hidden prerender wrapper or blocking loader`);
+    }
     const title = pageTitle(html);
     const pathname = new URL(url).pathname;
     if (!/<h1\\b[^>]*>/i.test(html)) {
