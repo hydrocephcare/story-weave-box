@@ -710,6 +710,11 @@ function buildHtml(opts: {
   const img = htmlEscape(opts.ogImage);
   const keywords = opts.keywords ? htmlEscape(opts.keywords) : "";
   const type = opts.type || "website";
+  // buildHtml receives absolute canonical URLs; extract the pathname before testing noindex rules.
+  // Otherwise /search and other utility routes can miss the HTML robots meta tag even when
+  // their response header is correctly marked noindex.
+  let robotsPath = opts.url;
+  try { robotsPath = new URL(opts.url, "https://www.ompathstudy.com").pathname; } catch { /* retain the supplied path */ }
 
   const bodyExtra = opts.bodyExtra ? opts.bodyExtra.slice(0, 120000) : "";
   return `<!doctype html>
@@ -719,7 +724,7 @@ function buildHtml(opts: {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${title}</title>
     <meta name="description" content="${desc}" />
-    ${isNoindexPath(opts.url) ? '<meta name="robots" content="noindex,follow" />' : ""}
+    ${isNoindexPath(robotsPath) ? '<meta name="robots" content="noindex,follow" />' : ""}
     ${keywords ? `<meta name="keywords" content="${keywords}" />` : ""}
     <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${title}" />
