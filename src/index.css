@@ -480,7 +480,7 @@ body.no-copy img {
 .paper-body.note-body h3 + ul > li { margin-top: 0.35rem; padding: 0.5rem 0.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.6rem; background: hsl(var(--card)); font-size: 0.93rem; line-height: 1.5; }
 .paper-body.note-body h3 + ul > li::marker { content: ""; }
 .paper-body.note-body hr { margin: 0.9rem 0; }
-.paper-body@keyframes shelf-rise { 0%, 100% { transform: translateY(0); opacity: 0.85; } 50% { transform: translateY(-14px); opacity: 1; } }
+@keyframes shelf-rise { 0%, 100% { transform: translateY(0); opacity: 0.85; } 50% { transform: translateY(-14px); opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { [style*="shelf-rise"] { animation: none !important; } }
 .note-body blockquote { margin-top: 0.4rem; font-size: 0.97rem; }
 .note-body code { padding: 0.1rem 0.35rem; border-radius: 0.3rem; background: hsl(var(--muted)); font-size: 0.9em; }
