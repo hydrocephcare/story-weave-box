@@ -926,7 +926,7 @@ export function extractToc(content: string): TocItem[] {
       secNum++;
       items.push({ id: slugify(heading) || `section-${secNum}`, text: heading, level: 2 });
     } else if (isLikelyStandaloneSectionHeading(t, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "")) {
-      const heading = cleanDisplayText(t).replace(/^\\*+|\\*+$/g, "").trim();
+      const heading = trimSurroundingAsterisks(cleanDisplayText(t)).trim();
       if (heading && !META_HEADING.test(heading)) {
         items.push({ id: slugify(heading) || `section-${++secNum}`, text: heading, level: 3 });
       }
