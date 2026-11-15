@@ -46,36 +46,68 @@ const TYPE_PHRASE = {
  * @param {LibraryDef} def
  * @param {Folder[]} chain
  */
+export function isIndexableFolder(chain, totalFiles) {
+  // Keep year and subject landing pages indexable. Deep folders with fewer
+  // than three resources remain navigable but do not need their own index entry.
+  return chain.length <= 1 || totalFiles >= 3;
+}
+
+function boundedTitle(value, brand) {
+  if (value.length <= 60) return value;
+  const suffix = " | " + brand;
+  const maxBase = 60 - suffix.length - 1;
+  const base = value.slice(0, maxBase);
+  const boundary = base.lastIndexOf(" ");
+  return base.slice(0, boundary > 24 ? boundary : maxBase).trimEnd() + "…" + suffix;
+}
+
+function boundedDescription(value) {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  if (text.length <= 160) return text;
+  const cut = text.slice(0, 159);
+  const boundary = cut.lastIndexOf(" ");
+  return cut.slice(0, boundary > 120 ? boundary : 159).trimEnd() + "…";
+}
+
+/**
+ * Titles, descriptions and share text for any library page.
+ * @param {{ siteUrl: string, brand: string, credit: string, audience: string }} registry
+ * @param {LibraryDef} def
+ * @param {Folder[]} chain
+ */
 export function folderMeta(registry, def, chain, totalFiles = 0) {
   const names = chain.map((n) => n.n);
   const subject = names[0];
   const last = names[names.length - 1];
   const files = chain.length ? countFiles(chain[chain.length - 1]) : totalFiles;
-  const fileText = files ? `${files.toLocaleString("en")} files` : "files";
+  const fileText = files ? files.toLocaleString("en") + " files" : "files";
   const slugs = chain.map((n) => n.s);
   const path = libraryPath(def, slugs);
   let title, description, h1, keywords;
 
   if (chain.length === 0) {
     h1 = def.title;
-    title = `${def.label} MBChB Notes, Slides & Past Papers | ${registry.brand}`;
-    description = `Free ${def.label} MBChB study library: ${def.tagline}. ${fileText} of lecture slides, notes, textbooks and past papers, sorted by ${def.rootLabel} for ${registry.audience}. ${(registry.seoCredit ?? registry.credit)}.`;
-    keywords = [`${def.label} MBChB notes`, `${def.label} medicine notes`, "medical school past papers Kenya"];
+    title = def.label + " MBChB Notes & Past Papers | " + registry.brand;
+    description = "Free " + def.label + " MBChB library: " + def.tagline + ". " + fileText + " of notes, slides, textbooks and past papers. " + (registry.seoCredit ?? registry.credit) + ".";
+    keywords = [def.label + " MBChB notes", def.label + " medicine notes", "medical school past papers Kenya"];
   } else if (chain.length === 1) {
-    h1 = `${def.label} ${subject} Notes`;
-    title = `${def.label} ${subject} Notes, Slides & Past Papers | ${registry.brand}`;
-    description = `${def.label} MBChB ${subject} notes, lecture slides, textbooks and past papers — ${fileText}, organised by type and topic. ${(registry.seoCredit ?? registry.credit)}.`;
-    keywords = [`${def.label} ${subject} notes`, `${subject} MBChB`, `${subject} past papers`, `${subject} lecture slides`];
+    h1 = def.label + " " + subject + " Notes";
+    title = def.label + " " + subject + " Notes & Past Papers | " + registry.brand;
+    description = def.label + " " + subject + " notes, slides, textbooks and past papers. " + fileText + " organised by topic for MBChB students. " + (registry.seoCredit ?? registry.credit) + ".";
+    keywords = [def.label + " " + subject + " notes", subject + " MBChB", subject + " past papers", subject + " lecture slides"];
   } else {
     const phrase = TYPE_PHRASE[names[1]];
-    h1 = `${def.label} ${subject} — ${names.slice(1).join(" › ")}`;
-    title = `${def.label} ${subject}: ${names.slice(1).join(" › ")} | ${registry.brand}`;
-    description = `${def.label} ${subject} ${names.length > 2 ? last + " " : ""}${phrase ?? names[1]} for MBChB students — ${fileText} to view or download. ${(registry.seoCredit ?? registry.credit)}, shared for ${registry.audience}.`;
-    keywords = [`${def.label} ${subject} ${last}`, `${subject} ${last}`, `${last} notes`, `${last} MBChB`];
+    h1 = def.label + " " + subject + " — " + names.slice(1).join(" › ");
+    title = def.label + " " + subject + ": " + last + " | " + registry.brand;
+    description = def.label + " " + subject + ": " + last + ". " + fileText + " of " + (phrase ?? last) + " for MBChB study and revision. " + (registry.seoCredit ?? registry.credit) + ".";
+    keywords = [def.label + " " + subject + " " + last, subject + " " + last, last + " notes", last + " MBChB"];
   }
+
+  title = boundedTitle(title, registry.brand);
+  description = boundedDescription(description);
   const shareText = chain.length
-    ? `📚 ${def.label} ${subject}${chain.length > 1 ? " – " + names.slice(1).join(" › ") : " notes"}: ${fileText} (slides, past papers & books)\n${(registry.seoCredit ?? registry.credit)} · ${registry.brand}`
-    : `📚 ${def.label} MBChB notes library: ${def.tagline}\n${(registry.seoCredit ?? registry.credit)} · ${registry.brand}`;
+    ? "📚 " + def.label + " " + subject + (chain.length > 1 ? " – " + names.slice(1).join(" › ") : " notes") + ": " + fileText + " (slides, past papers & books)\n" + (registry.seoCredit ?? registry.credit) + " · " + registry.brand
+    : "📚 " + def.label + " MBChB notes library: " + def.tagline + "\n" + (registry.seoCredit ?? registry.credit) + " · " + registry.brand;
   return { title, description, h1, keywords, path, shareText, files, ogImage: ogImagePath(def, slugs[0]) };
 }
 
