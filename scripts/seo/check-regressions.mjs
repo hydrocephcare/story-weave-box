@@ -8,10 +8,11 @@ const essayPage = read("src/pages/EssayStudy.tsx");
 
 const checks = [
   ["temporary crawler failures use retryable 503 responses", /status:\s*503/.test(meta) && /"retry-after":\s*"300"/.test(meta)],
+  ["only allowlisted legacy URLs can use high-confidence redirects", meta.includes("LEGACY_REDIRECT_PATHS") && meta.includes("score >= 0.72") && meta.includes("verifiedLegacyRedirect")],
   ["temporary crawler failures do not permanently redirect to a section hub", !meta.includes("return permanentRedirect(safeSection)") && !meta.includes("const safeSection")],
   ["interactive clinical cases are excluded from the sitemap", sitemap.includes("clinical") && sitemap.includes("case")],
   ["exam start routes are excluded from the sitemap", sitemap.includes("exams") && sitemap.includes("start")],
-  ["sitemap filters known removed URLs", sitemap.includes("REMOVED_404")],
+  ["sitemap filters known removed URLs", sitemap.includes("REMOVED_404") && sitemap.includes("weekly-pathology-exam-april-3-2026-sections-b-and-c")],
   ["crawler metadata reads generated topic JSON pages", meta.includes("/topics/") && meta.includes("topicSlug")],
   ["essay crawler metadata combines duplicate slug records", meta.includes("source_count: rows.length") && meta.includes('mergeQuestions("short_answer_questions")')],
   ["browser essay lookup uses the same six-to-twelve character ID suffix rule", essayPage.includes("replace(/-[0-9a-f]{6,12}$/i")],
