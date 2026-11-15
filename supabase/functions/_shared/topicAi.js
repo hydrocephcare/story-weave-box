@@ -2,6 +2,7 @@
 // has little on) and by scripts/topics/ai-fill.mjs (a few a day in the background). Plain JS with no Deno or Node APIs, so both can import it.
 // Nothing here is clinical advice: the page says so, and every page is saved as "not reviewed" until a person marks it reviewed.
 import { placeNewQuestions, seededRandom } from "./mcqPositions.js";
+import { buildTopicPrompt, normalizeTopicPage, validateTopicPage, parseTopicJson, topicRepairPrompt, classifyTopic } from "./topicSchema.js";
 
 export const DEEP_DISEASE = ["Definition and epidemiology", "Causes and risk factors, most likely first", "How it develops (pathophysiology)", "How it presents", "Bedside: history and how to examine", "Differential diagnosis", "Investigations and how to read them", "Severity and staging", "Complicating and confounding factors", "Management, step by step", "Complications and red flags", "Special groups", "Prognosis, follow-up and prevention", "Where results can mislead"];
 
@@ -52,31 +53,8 @@ DEPTH: this page must be thorough, not a summary. A lecturer should be able to a
 - Special groups: children, pregnancy, the elderly, people with HIV, low-resource settings.
 - "exam": 10 to 12 questions that cover all of the above (bedside, interpreting a result, management, complications, "what would you do next").`;
 
-export function buildPrompt({ name, category, context = "", choices }) {
-  const kind = kindOf(category, name);
-  const ch = cleanChoices(choices);
-  const deep = ch.depth === "full";
-  const headings = deep && kind === "disease" ? DEEP_DISEASE : KINDS[kind];
-  const focus = ch.angles.length ? ` The reader asked for special attention to: ${ch.angles.map((a) => ANGLE_TEXT[a]).join("; ")}.` : "";
-  const setting = ch.setting === "tropical" ? "East African and other low-resource hospitals (common local conditions first, and tests that may not be available)" : "general international practice";
-  return `You are a clinical reasoning tutor. Write an accurate study page about "${name}" (area: ${category || "medicine"}) that teaches a student to think like a clinician, not to recite a list. The reader is ${READER[ch.level]}. Setting: ${setting}.${focus}${deep ? DEEP_RULES : ""}
-
-Interpret misspellings, phonetic spellings, incomplete phrases and mixed-up medical terms generously. If any part of "${name}" clearly identifies a medical topic (for example "jaundice"), do not reject the request just because another word is misspelled or nonsensical. Infer the most likely intended medical topic from the name and context, use its correct textbook title in "title", and explain the correction briefly in the summary when useful. If several meanings are plausible, choose the closest relevant medical topic and state the distinction. Reply {"medical": false} only when the query remains clearly unrelated to medicine or health after reasonable typo correction (such as a person, brand, joke, film or sport).
-
-Otherwise reply with ONLY one JSON object:
-{"medical": true, "title": "the clean title a textbook would give this page: 2 to 8 words, correctly spelled, no typing mistakes and no phrases like 'difference btw' or 'what is'; for a comparison write 'A versus B'", "subject": "ONE of: Anatomy, Physiology, Biochemistry & genetics, Pharmacology, Microbiology & immunology, Pathology, Psychiatry, Paediatrics, Obstetrics & gynaecology, Surgery, Public health, Medicine", "summary": "2-3 plain sentences, under 60 words", "aka": ["other names/abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}], "whenToSeekHelp": ["warning signs needing urgent medical care (diseases only, else [])"], "faq": [{"q": "question", "a": "short answer"}], "exam": ["${deep ? "10-12" : "6-8"} strategic examiner questions, each followed by ' — ' and the key points of a good answer"], "related": ["4-8 related topic names"]}
-
-Section headings, in order (skip one only if it truly does not apply): ${headings.map((h) => `"${h}"`).join(", ")}.
-Reasoning to build in (for diseases): do not stop at the label. Give the diagnostic criteria; stage the severity with the recognised system; categorise where the problem is; list causes by category, most likely first, including infections and conditions common in the tropics and low-resource settings (for example HIV, TB, malaria, hepatitis B, rheumatic heart disease, sickle cell, schistosomiasis, herbal remedies) where relevant; then what could kill the patient soon.
-"Investigations" uses the "t" table: every row is Test -> the question it answers -> what a result means. Never list a test without its reason. Mention what to do when a test is unavailable.
-"Management": treat the cause, then supportive care and monitoring; give drug classes and usual medicine names and say WHY each is chosen and why alternatives are avoided (toxicity, bleeding, interactions). Never give doses.
-"Often confused with" separates look-alike conditions. "Where results can mislead" flags lab values or signs that can be falsely normal or abnormal.
-For anatomy, physiology and other topics, still explain how it works and why it matters clinically, then what goes wrong.
-Each section needs "p", "b" or "t". 3 faq items.
-Plan first, then write. The reader is a clinical-year student, so before you write, decide the angles an examiner would use for this topic: the bedside approach (history, examination, a patient lying in bed), internal medicine, surgery, pathology, pharmacology, complications and look-alike conditions, and the first things to do in an emergency. "exam" must hold ${deep ? "10-12" : "6-8"} strategic, tricky questions across those angles (what would you do next, what distinguishes it from, why is this drug avoided), never plain definitions.
-${ACCURACY_RULES}
-Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics or references. Lab thresholds and diagnostic criteria are welcome. Every bullet under ${deep ? 40 : 28} words. Plain words a first-year student can follow.
-${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
+export function buildPrompt(input) {
+  return buildTopicPrompt({ ...input, type: classifyTopic(input?.name, input?.category) });
 }
 
 /** Checks and tidies whatever the model returned. Returns {medical:false} or a safe page; throws when it is not usable. */
@@ -178,12 +156,35 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
 
 /** Writes a checked page (or {medical:false}). `fetchImpl` is injectable for tests. */
 export async function generateTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
-  const deep = cleanChoices(choices).depth === "full";
-  const { text, model } = await askModel(buildPrompt({ name, category, context, choices }), { env, fetchImpl, timeoutMs: timeoutMs ?? (deep ? 55000 : 50000), maxTokens: deep ? 10000 : 5000 });
-  const json = extractJson(text);
-  if (!json) throw new Error("no JSON in the reply");
-  const page = sanitizePage(json);
-  return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
+  const { text, model } = await askModel(buildPrompt({ name, category, context, choices }), {
+    env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 15000
+  });
+  const raw = parseTopicJson(text);
+  if (!raw) throw new Error("topic JSON could not be parsed");
+  if (raw.medical === false) return { medical: false };
+  let page = normalizeTopicPage(raw, { name, category, model });
+  let errors = validateTopicPage(page);
+  if (errors.length) {
+    const affected = [...new Set(errors.map((x) => x.section))].filter((x) => x !== "summary" && x !== "faq" && x !== "examiner-questions");
+    const current = page.sections.filter((x) => affected.includes(x.key));
+    const repair = topicRepairPrompt(name, page.topicType, current, errors);
+    const fixed = await askModel(repair, { env, fetchImpl, timeoutMs: 45000, maxTokens: 9000 });
+    const repairJson = parseTopicJson(fixed.text);
+    if (Array.isArray(repairJson?.sections)) {
+      const replacements = new Map(repairJson.sections.map((x) => [x.key, x]));
+      const merged = { ...raw, sections: page.sections.map((x) => {
+        const replacement = replacements.get(x.key);
+        return replacement ? { ...replacement, key: x.key, heading: x.heading } : x;
+      }) };
+      page = normalizeTopicPage(merged, { name, category, model });
+      errors = validateTopicPage(page);
+    }
+  }
+  if (errors.length) {
+    const short = errors.slice(0, 12).map((x) => x.section + ":" + x.reason).join(",");
+    throw new Error("topic quality gate failed: " + short);
+  }
+  return page;
 }
 
 /**
