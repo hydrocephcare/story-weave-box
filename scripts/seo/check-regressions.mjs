@@ -2,6 +2,7 @@ import fs from "node:fs";
 
 const read = (p) => fs.readFileSync(p, "utf8");
 const meta = read("api/og-meta.ts");
+const vercel = JSON.parse(read("vercel.json"));
 const sitemap = read("api/sitemap.js");
 const robots = read("public/robots.txt");
 const essayPage = read("src/pages/EssayStudy.tsx");
@@ -22,6 +23,8 @@ const checks = [
   ["exam start routes are excluded from the sitemap", sitemap.includes("exams") && sitemap.includes("start")],
   ["sitemap filters known removed URLs", sitemap.includes("REMOVED_404") && sitemap.includes("weekly-pathology-exam-april-3-2026-sections-b-and-c")],
   ["metadata API recognises both SEO audit user agents as crawlers", meta.includes('ua.includes("openseo-audit")') && meta.includes('ua.includes("ompathstudymonitor")')],
+  ["topic crawlers use the rich static topic prerender instead of thin API metadata", !vercel.rewrites.some((r) => r.source === "/topic/:slug" && r.destination === "/api/og-meta?path=/topic/:slug")],
+  ["story crawler metadata includes sanitised article body content", meta.includes("function storyPlainText") && meta.includes("function storyBodyHtml") && meta.includes("bodyExtra = \"<article>\" + storyBodyHtml(rawStory) + \"</article>\"") && meta.includes("articleBody: plainStory.slice(0, 12000)")],
   ["crawler metadata reads generated topic JSON pages", meta.includes("/topics/") && meta.includes("topicSlug") && meta.includes("topicRes.status !== 404")],
   ["essay crawler metadata combines duplicate slug records", meta.includes("source_count: rows.length") && meta.includes('mergeQuestions("short_answer_questions")')],
   ["browser essay lookup uses the same six-to-twelve character ID suffix rule", essayPage.includes("replace(/-[0-9a-f]{6,12}$/i")],
