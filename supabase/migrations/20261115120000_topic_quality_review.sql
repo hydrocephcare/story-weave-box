@@ -152,7 +152,7 @@ grant execute on function public.claim_topic_review_jobs(integer) to service_rol
 
 -- Save a rollback snapshot before merging section-only corrections into the page JSON.
 create or replace function public.apply_topic_review_sections(
-  p_slug text, p_sections jsonb, p_faq jsonb default null, p_exam jsonb default null,
+  p_slug text, p_sections jsonb, p_faq jsonb default null, p_exam jsonb default null, p_mcqs jsonb default null,
   p_reason text default 'AI review correction', p_source text default 'topic review', p_loop integer default 1
 ) returns jsonb
 language plpgsql
@@ -189,17 +189,19 @@ begin
     end if;
     section_idx := null;
   end loop;
-  old_snapshot := jsonb_build_object('sections',old_sections,'faq',current_row.content->'faq','exam',current_row.content->'exam');
+  old_snapshot := jsonb_build_object('sections',old_sections,'faq',current_row.content->'faq','exam',current_row.content->'exam','mcqs',current_row.content->'mcqs');
   new_snapshot := jsonb_build_object('sections',new_sections,
     'faq',case when p_faq is null then current_row.content->'faq' else p_faq end,
-    'exam',case when p_exam is null then current_row.content->'exam' else p_exam end);
+    'exam',case when p_exam is null then current_row.content->'exam' else p_exam end,
+    'mcqs',case when p_mcqs is null then current_row.content->'mcqs' else p_mcqs end);
   insert into public.article_revisions(article_id,old_text,new_text,reason,source)
   values(p_slug,old_snapshot,new_snapshot,p_reason,p_source);
   perform set_config('app.topic_review_write','true',true);
   update public.topic_pages
      set content = content || jsonb_build_object('sections',new_sections)
          || case when p_faq is null then '{}'::jsonb else jsonb_build_object('faq',p_faq) end
-         || case when p_exam is null then '{}'::jsonb else jsonb_build_object('exam',p_exam) end,
+         || case when p_exam is null then '{}'::jsonb else jsonb_build_object('exam',p_exam) end
+         || case when p_mcqs is null then '{}'::jsonb else jsonb_build_object('mcqs',p_mcqs) end,
          review_loops=greatest(coalesce(p_loop,1),0), updated_at=now()
    where slug=p_slug;
   update public.audit_findings set status='applied',resolved_at=now()
@@ -207,7 +209,7 @@ begin
   return jsonb_build_object('ok',true,'sections_changed',jsonb_array_length(coalesce(p_sections,'[]'::jsonb)));
 end;
 $$;
-revoke all on function public.apply_topic_review_sections(text,jsonb,jsonb,jsonb,text,text,integer) from public, anon, authenticated;
+revoke all on function public.apply_topic_review_sections(text,jsonb,jsonb,jsonb,jsonb,text,text,integer) from public, anon, authenticated;
 grant execute on function public.apply_topic_review_sections(text,jsonb,jsonb,jsonb,text,text,integer) to service_role;
 
 create or replace function public.mark_topic_medically_reviewed(p_slug text)
