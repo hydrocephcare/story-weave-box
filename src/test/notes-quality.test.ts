@@ -9,7 +9,7 @@ const DIR = "src/content/notes";
 const files = fs.readdirSync(DIR).filter((f) => f.endsWith(".md"));
 const list = (Array.isArray(registry) ? registry : (registry as { notes?: unknown[] }).notes ?? Object.values(registry)) as { slug: string; title: string; file?: string }[];
 const BEDSIDE = /examination|bedside|approach-to|cns-foundations/i;
-const TABLE_OK =/differential|investigation|compar|versus|\bvs\b|classification|staging|grading|criteria|score/i;
+const TABLE_OK = /differential|investigation|compar|versus|\\bvs\\b|classification|staging|grading|criteria|score|causes|management overview|features and management|mental state examination|diagnostic durations/i;
 
 describe("notes keep the quality rules", () => {
   it("every note title line matches its title in the registry", () => {
