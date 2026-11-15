@@ -40,4 +40,4 @@ jobs:
         run: npm run build
         env:
           VITE_SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
-          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdHJmd2Fxdnh2a2hqYnFyd21sYSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzkyNzEyMDcxLCJleHAiOjIxMDgyODgwNzF9.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE
