@@ -301,6 +301,41 @@ try {
     write(i.p, render({ title: i.t, description: i.d, path: i.p, image: `/api/note-card?title=${encodeURIComponent(i.h)}&kind=Ompath+Study`, keywords: [i.h, "Ompath Study", "medical students"], body: shell(crumbs([["Home", "/"], [i.h, null]]) + `<h1>${esc(i.h)}</h1><p>${esc(i.d)}</p><p><a href="/topics">Browse topics</a> · <a href="/new-notes">Recently added</a> · <a href="/contact">Contact</a></p>`), jsonLd: { "@context": "https://schema.org", "@type": "WebPage", name: i.t, url: `${site}${i.p}`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } } }), new Date().toISOString().slice(0, 10));
   }
 
+  // ---------------- homepage (server-rendered for crawlers and no-JS clients) ----------------
+  const homepageDescription = "Free medical notes, past papers, MCQs and flashcards for MBChB and health-science students, organised by year, subject and topic.";
+  const libraryLinks = registry.libraries.map((def) =>
+    '<li><a href="' + libraryPath(def) + '">' + esc(def.label + " MBChB notes library") + '</a> — ' + esc(def.tagline) + '</li>'
+  ).join("");
+  const homepageBody = shell(
+    crumbs([["Home", null]]) +
+    '<h1>Free medical notes, MCQs and exam resources for MBChB students</h1>' +
+    '<p>OmpathStudy is a structured medical education library for MBChB and health-science students. Resources are organised by academic year, subject and topic, helping learners move from lecture notes and reference books to past papers, question banks, flashcards and timed practice.</p>' +
+    '<h2>Browse the medical library</h2><p>Choose a year to explore the available study collections:</p><ul>' + libraryLinks + '</ul>' +
+    '<h2>Practise and revise</h2><p>Use medical MCQs with answers and explanations, active-recall flashcards, structured essay questions and timed exam practice. These resources support recall, application and preparation for clinical assessments.</p>' +
+    '<h2>Study by topic</h2><p>Explore topic-based medical notes across anatomy, physiology, biochemistry, pathology, pharmacology, microbiology, internal medicine, surgery, paediatrics, obstetrics and gynaecology, and psychiatry.</p>' +
+    '<h2>Make a focused study plan</h2><p>Start with your academic year, select a subject, review the relevant notes, then test your understanding with questions and flashcards. Use the course outlines to track topics as you revise.</p>' +
+    '<p><a href="/blog">Medical study notes</a> · <a href="/mcqs">MCQs</a> · <a href="/flashcards">Flashcards</a> · <a href="/exams">Timed exams</a> · <a href="/course-outlines">Course outlines</a></p>' +
+    credit
+  );
+  write("/", render({
+    title: "OmpathStudy | Free Medical Notes, MCQs & Exams",
+    description: homepageDescription,
+    path: "/",
+    image: "/og-default.png",
+    keywords: ["OmpathStudy", "free medical notes", "MBChB notes", "medical MCQs", "medical past papers", "medical flashcards"],
+    body: homepageBody,
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: registry.brand,
+      url: site,
+      description: homepageDescription,
+      publisher: { "@type": "EducationalOrganization", name: registry.brand, url: site },
+      audience: { "@type": "EducationalAudience", educationalRole: "student" },
+      inLanguage: "en",
+    },
+  }), new Date().toISOString().slice(0, 10), false);
+
   // ---------------- sitemap ----------------
   const today = new Date().toISOString().slice(0, 10);
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${written
