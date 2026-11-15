@@ -1,5 +1,3 @@
-import { setTimeout as delay } from "node:timers/promises";
-
 const BASE = (process.env.SEO_AUDIT_BASE_URL || "https://www.ompathstudy.com").replace(/\/$/, "");
 const MAX_URLS = Number(process.env.SEO_AUDIT_MAX_URLS || 1000);
 const CONCURRENCY = Number(process.env.SEO_AUDIT_CONCURRENCY || 10);
@@ -75,6 +73,9 @@ for (const sitemapUrl of sitemapUrls) {
   catch (e) { errors.push(fail(e.message)); }
 }
 const unique = [...new Set(all.map((u) => normalize(u)))];
+for (const url of unique) {
+  if (new URL(url).hostname !== "www.ompathstudy.com") errors.push(fail(`Unexpected sitemap host: ${url}`));
+}
 if (!unique.length) throw new Error("No page URLs were found in the declared sitemaps");
 const duplicateCount = all.length - unique.length;
 if (duplicateCount) errors.push(fail(`${duplicateCount} duplicate URL entries exist across the sitemaps`));
@@ -87,7 +88,7 @@ const indexable = unique.filter((u) => {
     && !/^\/contests\/[^/]+\/(?:register|lobby|progress|round|certificate)(?:\/|$)/.test(p);
 });
 const day = Math.floor(Date.now() / 86400000);
-const start = day % indexable.length;
+const start = (day * MAX_URLS) % indexable.length;
 const rotated = [...indexable.slice(start), ...indexable.slice(0, start)];
 const selected = MAX_URLS >= rotated.length ? rotated : rotated.slice(0, MAX_URLS);
 console.log(`Sitemaps: ${sitemapUrls.length}; sitemap URLs: ${all.length}; unique: ${unique.length}; audited this run: ${selected.length}`);
