@@ -2,6 +2,21 @@
 const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const BUILTIN_CASES = ["med-acs","med-aki","med-dka","med-gibleed","med-hf","med-malaria","med-mening","med-pe","med-stroke","med-tb","ob-aph","ob-ectopic","ob-labour","ob-pe","ob-pid","ob-pph","pd-asthma","pd-dehyd","pd-malaria","pd-neo","pd-pneu","pd-sam","pd-scd","ps-adhd","ps-delirium","ps-depr","ps-dts","ps-mania","ps-panic","ps-schiz","sg-appy","sg-breast","sg-burn","sg-foot","sg-obstruct","sg-trauma"];
 
+const REMOVED_404 = [
+  // Confirmed 404 examples from Google Search Console (15 Nov 2026).
+  // Keep these stale addresses out of generated sitemaps until their content is restored
+  // or a verified replacement URL is available.
+  "/mcqs/37a7a71a-e03e-4ae7-b119-91b05fafcc50",
+  "/mcqs/general-pathology",
+  "/mcqs/medical-bacteriology-and-parasitology-end-year-20242025",
+  "/flashcards/inhibitors-of-transcription-flashcards",
+  "/essays/biliary-tract-disease-essay-questions",
+  "/blog/9ef3c5cd-004e-4b7d-af80-899f384ec14a-pathology-mcqs-cell-injury-cell-death-and-adaptations",
+  "/mcqs/mycology-mcqs-review-be10adc6",
+  "/mcqs/microbiology-mcq-bank-fb9e1a91",
+  "/mcqs/mcq-ba7772df",
+];
+
 const REDIRECTED = ["/blog/amebiasis-pathogenic-free-living-amebae-guide","/blog/entamoeba-histolytica-amoebiasis","/blog/liver-tumors-benign-and-malignant-overview","/blog/lymphoma-overview-classification","/blog/liver-tumors-summary-notes","/blog/non-hodgkin-lymphoma","/blog/pleural-effusion-lights-criteria-y4","/blog/pneumothorax-clinical-management-y4","/blog/bronchial-asthma-internal-medicine-y4","/mcqs/medical-bacteriology-mcqs","/mcqs/chemical-pathology-mcqs","/mcqs/cardiovascular-pathology-mcqs","/mcqs/respiratory-pathology-mcqs","/mcqs/glomerular-diseases-mcqs","/mcqs/sickle-cell-anaemia-mcqs","/mcqs/infective-endocarditis-mcqs","/mcqs/biliary-tract-disease-mcqs","/mcqs/rheumatic-heart-disease-mcqs","/mcqs/paed-2021-mcqs","/mcqs/congenital-heart-disease-mcqs","/mcqs/gout-mcqs","/mcqs/pneumonia-mcqs","/mcqs/osteoarthritis-presentation-mcqs","/mcqs/fibromyalgia-presentation-mcqs","/mcqs/crystal-arthropathies-mcqs","/mcqs/sepsis-mcqs","/mcqs/hepatic-amoebiasis-mcqs","/mcqs/blood-transfusion-mcqs","/essays/congenital-heart-disease-essay-questions"];
 
 async function extraSitemap(req, res, mode) {
@@ -49,6 +64,8 @@ export default async function handler(req, res) {
       "https://www.ompathstudy.com/blog/victory-school-club-membership-system-project-guide",
       // addresses that answer with a redirect (old copies of a page): a sitemap must list only the final, indexable address
       ...REDIRECTED.map((p) => "https://www.ompathstudy.com" + p),
+      // confirmed 404s from Search Console: do not advertise dead URLs in any sitemap
+      ...REMOVED_404.map((p) => "https://www.ompathstudy.com" + p),
     ];
     let xml = excluded.reduce((body, loc) => {
       const escaped = loc.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
