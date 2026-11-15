@@ -538,6 +538,7 @@ export default function TopicPage() {
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
     ...wikiSections.map((w) => ({ id: anchor(w.h), t: w.h })),
     ...(page?.exam?.length ? [{ id: "examiner", t: "Examiner questions" }] : []),
+    ...(page?.mcqs?.length ? [{ id: "mcqs", t: "Clinical MCQs" }] : []),
     ...(page?.whenToSeekHelp?.length ? [{ id: "seek-help", t: "When to seek help" }] : []),
     ...(media?.more.length ? [{ id: "web-images", t: "Pictures" }] : []),
     ...(topic?.sec?.length ? [{ id: "notes-say", t: "In our notes" }] : []),
@@ -683,6 +684,25 @@ export default function TopicPage() {
               <Section id="examiner" title="Questions an examiner may ask">
                 <ol className="space-y-5">{page.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
                 <p className="text-sm text-muted-foreground">Try answering aloud before you scroll back up.</p>
+              </Section>
+            )}
+            {page?.mcqs && page.mcqs.length > 0 && (
+              <Section id="mcqs" title="Clinical MCQs with explained answers">
+                <ol className="space-y-8">
+                  {page.mcqs.map((mcq, index) => (
+                    <li key={mcq.q} className="border-b border-border/70 pb-6 last:border-0">
+                      <p className="font-semibold">{index + 1}. {mcq.q}</p>
+                      <ol className="mt-3 space-y-2">
+                        {mcq.options.map((option, optionIndex) => (
+                          <li key={optionIndex} className={optionIndex === mcq.correct ? "rounded-lg bg-emerald-500/10 p-2 text-foreground" : "p-2 text-foreground/85"}>
+                            <span className="font-semibold">{String.fromCharCode(65 + optionIndex)}.</span> {option}
+                            <p className="mt-1 text-sm text-muted-foreground">{mcq.explanations[optionIndex]}</p>
+                          </li>
+                        ))}
+                      </ol>
+                    </li>
+                  ))}
+                </ol>
               </Section>
             )}
 
