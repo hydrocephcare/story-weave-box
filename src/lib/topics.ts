@@ -15,7 +15,7 @@ export interface TopicEssay { q: string; m: string; k: number | null; u: string;
 export interface AiPage {
   summary: string;
   aka?: string[];
-  sections: { h: string; p?: string; b?: string[]; t?: { a: string; b: string }[] }[];
+  sections: { key?: string; h: string; heading?: string; applicable?: boolean; confidence?: "high" | "medium" | "low"; content?: { p?: string; b?: string[]; t?: { a: string; b: string }[]; images?: { url: string; alt: string }[] }; p?: string; b?: string[]; t?: { a: string; b: string }[]; images?: { url: string; alt: string }[] }[];
   exam?: string[];
   whenToSeekHelp?: string[];
   faq?: { q: string; a: string }[];
@@ -25,6 +25,13 @@ export interface AiPage {
   model?: string;
   generatedAt?: string;
   reviewed?: boolean;
+  topicType?: string;
+  references?: { body: string; title: string; year: number | null; url: string }[];
+  reviewStatus?: string;
+  ai_review_status?: string;
+  requires_review?: boolean;
+  reviewedByName?: string | null;
+  reviewedAt?: string | null;
   /** The deep exam notes: written once, on request, from what the revision page lacks. */
   deep?: DeepNotes;
 }
@@ -144,8 +151,17 @@ export const slugFromName = (name: string) => name.toLowerCase().replace(/&/g, "
 
 export async function loadStoredPage(slug: string): Promise<AiPage | null> {
   try {
-    const { data } = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").select("content,reviewed").eq("slug", slug).eq("status", "published").maybeSingle();
-    return data?.content ? { ...(data.content as AiPage), reviewed: Boolean(data.reviewed) } : null;
+    const { data } = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").select("content,reviewed,topic_type,ai_review_status,requires_review,reviewed_by_name,reviewed_at").eq("slug", slug).eq("status", "published").maybeSingle();
+    return data?.content ? {
+      ...(data.content as AiPage),
+      reviewed: Boolean(data.reviewed),
+      topicType: data.topic_type || (data.content as AiPage).topicType,
+      ai_review_status: data.ai_review_status,
+      reviewStatus: data.ai_review_status || (data.content as AiPage).reviewStatus,
+      requires_review: Boolean(data.requires_review),
+      reviewedByName: data.reviewed_by_name || null,
+      reviewedAt: data.reviewed_at || null,
+    } : null;
   } catch { return null; }
 }
 
