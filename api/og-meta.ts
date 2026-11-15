@@ -261,9 +261,41 @@ function cleanPublicSlug(rawSlug: string | null | undefined, fallbackTitle: stri
 
 const STOP_WORDS = new Set(["the", "and", "for", "with", "from", "into", "onto", "this", "that", "notes", "note", "mcq", "mcqs", "quiz", "questions", "study"]);
 
+const LEGACY_REDIRECT_PATHS = new Set([
+  "/blog/amebiasis-pathogenic-free-living-amebae-guide",
+  "/blog/entamoeba-histolytica-amoebiasis",
+  "/blog/liver-tumors-benign-and-malignant-overview",
+  "/blog/lymphoma-overview-classification",
+  "/blog/liver-tumors-summary-notes",
+  "/blog/non-hodgkin-lymphoma",
+  "/blog/pleural-effusion-lights-criteria-y4",
+  "/blog/pneumothorax-clinical-management-y4",
+  "/blog/bronchial-asthma-internal-medicine-y4",
+  "/mcqs/medical-bacteriology-mcqs",
+  "/mcqs/chemical-pathology-mcqs",
+  "/mcqs/cardiovascular-pathology-mcqs",
+  "/mcqs/respiratory-pathology-mcqs",
+  "/mcqs/glomerular-diseases-mcqs",
+  "/mcqs/sickle-cell-anaemia-mcqs",
+  "/mcqs/infective-endocarditis-mcqs",
+  "/mcqs/biliary-tract-disease-mcqs",
+  "/mcqs/rheumatic-heart-disease-mcqs",
+  "/mcqs/paed-2021-mcqs",
+  "/mcqs/congenital-heart-disease-mcqs",
+  "/mcqs/gout-mcqs",
+  "/mcqs/pneumonia-mcqs",
+  "/mcqs/osteoarthritis-presentation-mcqs",
+  "/mcqs/fibromyalgia-presentation-mcqs",
+  "/mcqs/crystal-arthropathies-mcqs",
+  "/mcqs/sepsis-mcqs",
+  "/mcqs/hepatic-amoebiasis-mcqs",
+  "/mcqs/blood-transfusion-mcqs",
+  "/essays/congenital-heart-disease-essay-questions",
+]);
+
 function tokenScore(target: string, candidate: string): number {
-  const a = new Set(String(target || "").toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/[\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
-  const b = new Set(String(candidate || "").toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/[\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
+  const a = new Set(String(target || "").toLowerCase().replace(/[^a-z0-9\\s-]/g, " ").split(/[\\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
+  const b = new Set(String(candidate || "").toLowerCase().replace(/[^a-z0-9\\s-]/g, " ").split(/[\\s-]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t)));
   if (!a.size || !b.size) return 0;
   let overlap = 0;
   a.forEach((t) => { if (b.has(t)) overlap++; });
@@ -282,10 +314,16 @@ async function closestLivePath(table: string, param: string, prefix: "/blog" | "
       score = nextScore;
     }
   }
-  return best && score >= 0.28 ? `${prefix}/${cleanPublicSlug(best.slug, best.title, fallback)}` : null;
+  // Only pre-approved legacy URLs may use this high-confidence fallback.
+  // Unknown/missing slugs must return 410, not a misleading permanent redirect.
+  return best && score >= 0.72 ? `${prefix}/${cleanPublicSlug(best.slug, best.title, fallback)}` : null;
 }
 
-/** A close live page to send an old address to, or a clear "gone" answer when there is none. */
+async function verifiedLegacyRedirect(path: string, table: string, param: string, prefix: "/blog" | "/mcqs" | "/flashcards" | "/essays", fallback: string): Promise<string | null> {
+  if (!LEGACY_REDIRECT_PATHS.has(path)) return null;
+  return closestLivePath(table, param, prefix, fallback);
+}
+
 function redirectOrGone(path: string | null, hub: string, self = ""): Response {
   // a redirect to the same address is a loop: answer "gone" instead
   if (path && path !== self) return permanentRedirect(path);
@@ -1049,7 +1087,7 @@ export default async function handler(req: Request): Promise<Response> {
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
       if (!article) {
-        return redirectOrGone(await closestLivePath("articles", param, "/blog", "article"), "/blog", `/blog/${param}`);
+        return redirectOrGone(await verifiedLegacyRedirect(`/blog/${param}`, "articles", param, "/blog", "article"), "/blog", `/blog/${param}`);
       }
       // The requested param may be a stale/UUID/near-match variant of this
       // article's slug. Always 301 to the article's own true canonical path
@@ -1092,7 +1130,7 @@ export default async function handler(req: Request): Promise<Response> {
     } else if (section === "mcqs" && param) {
       const mcq = await fetchMcqSetBySlugOrId(param);
       if (!mcq) {
-        return redirectOrGone(await closestLivePath("mcq_sets", param, "/mcqs", "quiz"), "/mcqs", `/mcqs/${param}`);
+        return redirectOrGone(await verifiedLegacyRedirect(`/mcqs/${param}`, "mcq_sets", param, "/mcqs", "quiz"), "/mcqs", `/mcqs/${param}`);
       }
       const canonicalMcqPath = `/mcqs/${cleanPublicSlug(mcq.slug, mcq.title, "quiz")}`;
       if (canonicalMcqPath !== `/mcqs/${param}`) {
@@ -1163,7 +1201,7 @@ ${explanationLine}
     } else if (section === "flashcards" && param) {
       const set = await fetchFlashcardSetBySlugOrId(param);
       if (!set) {
-        return redirectOrGone(await closestLivePath("flashcard_sets", param, "/flashcards", "flashcards"), "/flashcards", `/flashcards/${param}`);
+        return redirectOrGone(await verifiedLegacyRedirect(`/flashcards/${param}`, "flashcard_sets", param, "/flashcards", "flashcards"), "/flashcards", `/flashcards/${param}`);
       }
       const canonicalFlashcardPath = `/flashcards/${cleanPublicSlug(set.slug, set.title, "flashcards")}`;
       if (canonicalFlashcardPath !== `/flashcards/${param}`) {
@@ -1216,7 +1254,7 @@ ${explanationLine}
 
     } else if (section === "essays" && param) {
       const essay = await fetchEssayBySlugOrId(param);
-      if (!essay) return redirectOrGone(await closestLivePath("essays", param, "/essays", "essay"), "/essays", `/essays/${param}`);
+      if (!essay) return redirectOrGone(await verifiedLegacyRedirect(`/essays/${param}`, "essays", param, "/essays", "essay"), "/essays", `/essays/${param}`);
       const canonicalEssayPath = `/essays/${cleanPublicSlug(essay.slug, essay.title, "essay")}`;
       if (canonicalEssayPath !== `/essays/${param}`) return permanentRedirect(canonicalEssayPath);
       const saq = Array.isArray(essay.short_answer_questions) ? essay.short_answer_questions : [];
