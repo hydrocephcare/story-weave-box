@@ -1216,14 +1216,20 @@ ${explanationLine}
       },
     });
   } catch (err) {
-    // Never return 5XX to crawlers — soft-redirect to the section root so
-    // pages are removed/consolidated cleanly in Google + Ahrefs reports.
-    const safeSection = (() => {
-      const seg = (new URL(req.url).searchParams.get("path") || "/").split("?")[0].split("/").filter(Boolean)[0] || "";
-      if (["blog", "mcqs", "flashcards", "stories", "exams", "essays", "contests"].includes(seg)) return `/${seg}`;
-      return "/";
-    })();
-    console.error("og-meta soft-redirect:", err instanceof Error ? err.message : String(err));
-    return permanentRedirect(safeSection);
+    // A temporary database/network failure is not evidence that a public page has moved.
+    // Never issue a permanent redirect to a section hub here: Google can cache that 301
+    // and replace a valid article's canonical URL with the hub. Return a retryable 503.
+    console.error("og-meta temporary failure:", err instanceof Error ? err.message : String(err));
+    return new Response(
+      "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>Temporarily unavailable | OmpathStudy</title></head><body><h1>Temporarily unavailable</h1><p>Please retry this page shortly.</p></body></html>",
+      {
+        status: 503,
+        headers: {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "no-store",
+          "retry-after": "300",
+        },
+      },
+    );
   }
 }
