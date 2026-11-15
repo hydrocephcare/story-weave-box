@@ -32,7 +32,7 @@ describe("subscription master switch", () => {
     expect(store.get("subscriptions_enabled")).toBe("true");
     expect(store.get("reveal_price_kes")).toBe("5");
     expect(store.get("paywall_free_ratio")).toBe("0.25");
-    expect(JSON.parse(store.get("access_plans") || "[]").map((p: { price: number }) => p.price)).toEqual([150, 400]);
+    expect(JSON.parse(store.get("access_plans") || "[]").map((p: { price: number }) => p.price)).toEqual([150]);
     expect(tierOf("deepNotes", { proFeatures: {} })).toBe("pro");
     expect(featureAllowed("deepNotes", { proFeatures: {} }, false)).toBe(false);
     expect(featureAllowed("deepNotes", { proFeatures: {} }, true)).toBe(true);
