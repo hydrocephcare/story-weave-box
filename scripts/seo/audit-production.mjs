@@ -69,7 +69,12 @@ if (!sitemapUrls.length) throw new Error("robots.txt does not declare any sitema
 
 const all = [];
 for (const sitemapUrl of sitemapUrls) {
-  try { all.push(...await getSitemap(sitemapUrl)); }
+  try {
+    const entries = await getSitemap(sitemapUrl);
+    // Image sitemaps intentionally repeat page URLs to attach image metadata.
+    // Validate their XML, but do not count their locs as duplicate page URLs.
+    if (!/image-sitemap/i.test(new URL(sitemapUrl).pathname)) all.push(...entries);
+  }
   catch (e) { errors.push(fail(e.message)); }
 }
 const unique = [...new Set(all.map((u) => normalize(u)))];
