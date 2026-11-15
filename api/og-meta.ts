@@ -299,7 +299,7 @@ function tokenScore(target: string, candidate: string): number {
   if (!a.size || !b.size) return 0;
   let overlap = 0;
   a.forEach((t) => { if (b.has(t)) overlap++; });
-  return overlap / (new Set([...a, ...b]).size || 1);
+  return (2 * overlap) / (a.size + b.size);
 }
 
 async function closestLivePath(table: string, param: string, prefix: "/blog" | "/mcqs" | "/flashcards" | "/essays" | "/contests", fallback: string): Promise<string | null> {
