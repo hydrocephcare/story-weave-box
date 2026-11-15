@@ -9,7 +9,7 @@ const css = read("src/index.css");
 
 const checks = [
   ["temporary crawler failures use retryable 503 responses", /status:\s*503/.test(meta) && /"retry-after":\s*"300"/.test(meta)],
-  ["only allowlisted legacy URLs can use high-confidence redirects", meta.includes("LEGACY_REDIRECT_PATHS") && meta.includes("score >= 0.72") && meta.includes("verifiedLegacyRedirect")],
+  ["only allowlisted legacy URLs can use high-confidence redirects", meta.includes("LEGACY_REDIRECT_PATHS") && meta.includes("score >= 0.72") && meta.includes("2 * overlap") && meta.includes("verifiedLegacyRedirect")],
   ["temporary crawler failures do not permanently redirect to a section hub", !meta.includes("return permanentRedirect(safeSection)") && !meta.includes("const safeSection")],
   ["interactive clinical cases are excluded from the sitemap", sitemap.includes("clinical") && sitemap.includes("case")],
   ["exam start routes are excluded from the sitemap", sitemap.includes("exams") && sitemap.includes("start")],
