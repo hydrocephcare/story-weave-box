@@ -295,6 +295,7 @@ const previous = (() => { try { return { index: JSON.parse(fs.readFileSync(path.
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 const aiDir = "src/data/topicAi";
+const readyAi = (p) => Boolean(p?.medical !== false && p?.aiReview?.status === "passed" && String(p?.summary || "").length >= 100 && (p?.sections?.length || 0) >= 9 && (p?.exam?.length || 0) >= 8 && (p?.faq?.length || 0) >= 3 && JSON.stringify(p).split(/\s+/).length >= 700);
 const publishedPages = new Map((await loadPublishedTopicPages()).map((r) => [r.slug, r]));
 console.log("published topic pages from the database:", publishedPages.size);
 const index = [];
@@ -315,7 +316,10 @@ topics.forEach((t, i) => {
   const cond = conditions.find((c) => key(c.name.replace(/\([^)]*\)/g, "")) === t.k || key(c.name).startsWith(t.k + " ") || t.k.startsWith(key(c.name) + " "));
   const aiFile = path.join(aiDir, `${t.slug}.json`);
   const fromDb = publishedPages.get(t.slug);
-  const ai = fromDb?.content ? { ...fromDb.content, reviewed: Boolean(fromDb.reviewed) } : fs.existsSync(aiFile) ? JSON.parse(fs.readFileSync(aiFile, "utf8")) : null;
+  const dbAi = fromDb?.content ? { ...fromDb.content, reviewed: Boolean(fromDb.reviewed) } : null;
+  const localAi = fs.existsSync(aiFile) ? JSON.parse(fs.readFileSync(aiFile, "utf8")) : null;
+  const candidates = [localAi, dbAi].filter(Boolean).sort((a, b) => Number(readyAi(b)) - Number(readyAi(a)) || JSON.stringify(b).length - JSON.stringify(a).length);
+  const ai = candidates[0] || null;
   const acr = [...t.c.acronyms];
   const body = {
     s: t.slug, n: t.name, c: domain, y: years, a: acr, docs: t.nd,
@@ -326,7 +330,7 @@ topics.forEach((t, i) => {
     ai: ai ? { ...ai, reviewed: Boolean(ai.reviewed) } : null,
   };
   fs.writeFileSync(path.join(OUT, `${t.slug}.json`), JSON.stringify(body));
-  index.push({ s: t.slug, n: t.name, c: domain, y: years, d: t.nd, q: qs.length + es.length, i: imgs.length, a: acr, ai: ai ? 1 : 0 });
+  index.push({ s: t.slug, n: t.name, c: domain, y: years, d: t.nd, q: qs.length + es.length, i: imgs.length, a: acr, ai: readyAi(ai) ? 1 : 0 });
   for (const a of acr) aliasMap[a.toLowerCase()] = t.slug;
   aliasMap[slugify(t.name)] = t.slug;
 });
@@ -338,7 +342,7 @@ for (const [slug, r] of publishedPages) {
   const aka = Array.isArray(ai.aka) ? ai.aka.slice(0, 4) : [];
   const body = { s: slug, n: r.name, c: r.category && r.category.length > 2 ? r.category : "Medicine", y: [], a: aka, docs: 0, lead: null, sec: [], src: [], sets: [], snip: [], imgs: [], qs: [], es: [], rel: [], rx: null, ai };
   fs.writeFileSync(path.join(OUT, `${slug}.json`), JSON.stringify(body));
-  index.push({ s: slug, n: r.name, c: body.c, y: [], d: 0, q: 0, i: 0, a: aka, ai: 1 });
+  index.push({ s: slug, n: r.name, c: body.c, y: [], d: 0, q: 0, i: 0, a: aka, ai: readyAi(ai) ? 1 : 0 });
   aliasMap[slugify(r.name)] = slug;
   for (const a of aka) aliasMap[String(a).toLowerCase()] = slug;
 }
