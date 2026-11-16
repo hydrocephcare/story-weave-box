@@ -57,7 +57,7 @@ describe("Groq topic generation boundary", () => {
     expect(fetchImpl).toHaveBeenCalledTimes(1);
     expect(fetchImpl.mock.calls[0][0]).toBe("https://api.groq.com/openai/v1/chat/completions");
     expect(new Headers(fetchImpl.mock.calls[0][1]?.headers).get("Authorization")).toBe("Bearer groq-test-key");
-    expect(result).toEqual({ text: '{"medical":true}', model: "openai/gpt-oss-120b" });
+    expect(result).toEqual({ text: '{"medical":true}', model: "openai/gpt-oss-20b" });
   });
 
   it("does not fall back to Gemini when Groq is not configured", async () => {
@@ -185,7 +185,7 @@ describe("Groq topic generation boundary", () => {
     expect(saved.status).toBe("published");
     expect(saved.ai_review_status).toBe("passed");
     expect(saved.ai_review_model).toBeTruthy();
-    expect(saved.generator_model).toBe("openai/gpt-oss-120b");
+    expect(saved.generator_model).toBe("openai/gpt-oss-20b");
     expect(saved.ai_review_fix_rounds).toBe(0);
     expect(saved.reviewed).toBe(false);
     expect(saved.content.aiReview.status).toBe("passed");
