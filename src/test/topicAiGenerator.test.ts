@@ -3,12 +3,11 @@ import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 
 describe("Groq topic generation boundary", () => {
   it("sends generation requests only to Groq and returns the model used", async () => {
-    const fetchImpl = vi.fn(async () => ({
-      ok: true,
-      json: async () => ({
+    const fetchImpl = vi.fn(async (_url: RequestInfo | URL, _init?: RequestInit) =>
+      new Response(JSON.stringify({
         choices: [{ message: { content: '{"medical":true}' } }],
-      }),
-    }) as Response);
+      }), { status: 200, headers: { "Content-Type": "application/json" } }),
+    );
 
     const result = await askGroqModel("Write a topic page", {
       env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" },
