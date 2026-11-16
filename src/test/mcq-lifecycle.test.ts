@@ -119,11 +119,15 @@ describe("clinical questions (written with the right answer first)", () => {
 
 describe("topic page deep notes", () => {
   it("deal their MCQ answers evenly whatever letter the model used, and keep each answer", () => {
-    const section = (h: string) => ({ h, p: "A short paragraph about this part of the topic that is long enough.", b: ["A first bullet point", "A second bullet point"] });
-    const sections = { sections: ["One", "Two", "Three", "Four", "Five", "Six"].map((x) => section(`Part ${x}`)) };
-    const mcqs = Array.from({ length: 8 }, (_, i) => ({ q: `A 40-year-old patient number ${i} presents with cough, what is the next step?`, o: [`Right step ${i}`, `Other ${i} b`, `Other ${i} c`, `Other ${i} d`], a: 0, e: `Because right step ${i}.` }));
-    const vivas = Array.from({ length: 9 }, (_, i) => ({ q: `Examiner question number ${i}, what would you do next?`, a: `The key points of answer ${i}.` }));
-    const out = sanitizeDeep([sections, { vivas, mcqs }], "Pneumonia");
+    const longText = "This section explains the relevant physiology, pathophysiology, clinical reasoning, investigation and management decisions in detail. ".repeat(12);
+    const section = (h: string) => ({ h, p: longText, b: ["A first clinically useful point", "A second clinically useful point"] });
+    const sections = { sections: ["One", "Two", "Three", "Four", "Five", "Six", "Seven"].map((x) => section("Part " + x)) };
+    const mcqs = Array.from({ length: 8 }, (_, i) => ({ q: "A 40-year-old patient number " + i + " presents with cough, what is the next step?", o: ["Right step " + i, "Other " + i + " b", "Other " + i + " c", "Other " + i + " d"], a: 0, e: "Because right step " + i + "." }));
+    const vivas = Array.from({ length: 12 }, (_, i) => ({ q: "Examiner question number " + i + ", what would you do next?", a: "The key points of answer " + i + " with clinical reasoning." }));
+    const cases = [1, 2].map((n) => ({ v: "Clinical case " + n + " with relevant findings.", qs: [{ q: "What is the diagnosis?", a: "Use the clinical pattern." }, { q: "What next?", a: "Select a relevant investigation." }] }));
+    const facts = Array.from({ length: 6 }, (_, i) => "Important fact " + (i + 1));
+    const mistakes = ["Missed red flags", "Poor investigation choice", "Ignoring contraindications", "Failure to reassess", "Wrong differential"];
+    const out = sanitizeDeep([sections, { vivas, mcqs, cases, facts, mistakes }], "Pneumonia");
     expect(out.mcqs).toHaveLength(8);
     out.mcqs.forEach((m: { o: string[]; a: number }, i: number) => expect(m.o[m.a]).toBe(`Right step ${i}`));
     expect(auditBank(out.mcqs.map((m: { q: string; o: string[]; a: number }) => ({ question: m.q, options: m.o, correct_answer: m.a }))).counts).toEqual([2, 2, 2, 2]);
