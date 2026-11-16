@@ -28,8 +28,8 @@ export default function AdminContentChecks() {
               <span className="text-xs text-muted-foreground">{e.at} · {e.model}</span>
             </div>
             <ul className="mt-3 space-y-2 text-[15px]">
-              {e.repairStatus === "auto-repaired" && <p className="mt-2 text-sm font-semibold text-emerald-700 dark:text-emerald-300">Automatically corrected and re-checked.</p>}
-              {e.repairStatus && e.repairStatus !== "clean" && e.repairStatus !== "auto-repaired" && <p className="mt-2 text-sm text-amber-700 dark:text-amber-300">Automatic correction status: {e.repairStatus}. This note remains queued for another attempt.</p>}
+              {e.repairStatus === "auto-repaired" && <li className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Automatically corrected and re-checked.</li>}
+              {e.repairStatus && e.repairStatus !== "clean" && e.repairStatus !== "auto-repaired" && <li className="text-sm text-amber-700 dark:text-amber-300">Automatic correction status: {e.repairStatus}. This note remains queued for another attempt.</li>}
               {e.issues.filter((i) => i.severity !== "low").map((i, k) => (
                 <li key={k}><span className="font-bold">{i.severity === "high" ? "Serious" : "Review"}:</span> {i.problem}<br /><span className="text-muted-foreground">In: {i.where}</span><br /><span className="text-emerald-700 dark:text-emerald-300">Suggested: {i.fix}</span></li>
               ))}
