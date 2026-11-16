@@ -18,7 +18,6 @@ export default async function handler(req, res) {
   };
   const hasGemini = Object.values(geminiEnv).some((value) => value.trim());
   const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
-  if (!groq.trim() || !hasGemini) return res.status(503).json({ status: "unavailable" });
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
   const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
@@ -30,7 +29,8 @@ export default async function handler(req, res) {
   const name = String(body.name ?? "").trim();
   if (!validName(name)) return res.status(400).json({ status: "invalid" });
   if (body.mode === "deep") {
-    // the deep exam notes: a second write that builds on the revision page it is given
+    // Preserve the existing deep-notes generator and its original provider fallback.
+    if (!groq.trim() && !hasGemini) return res.status(503).json({ status: "unavailable" });
     try {
       const base = body.base && typeof body.base === "object" ? body.base : {};
       const past = (Array.isArray(body.past) ? body.past : []).map((x) => String(x).slice(0, 240)).slice(0, 12);
@@ -40,6 +40,7 @@ export default async function handler(req, res) {
       return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed", reason: String(e?.message ?? "").slice(0, 240) });
     }
   }
+  if (!groq.trim() || !hasGemini) return res.status(503).json({ status: "unavailable" });
   try {
     const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), choices: body.choices && typeof body.choices === "object" ? body.choices : undefined };
     const { page } = await generateReviewedTopicPage(input, { env: { GROQ_API_KEYS: groq, ...geminiEnv }, fetchImpl: fetch });
