@@ -205,6 +205,28 @@ function toMetaTitle(input: string, fallback = "Medical Study Resource"): string
   return cut.slice(0, Math.max(30, cut.lastIndexOf(" "))).replace(/[\s,:;&–-]+$/, ""); // end on a whole word, no dangling "..."
 }
 
+function cleanResourceBaseTitle(input: string): string {
+  return String(input || "")
+    .replace(/\\s*[|–—-]\\s*Ompath\\s*Study(?:\\s*Kenya)?\\s*$/i, "")
+    .replace(/\\s*(?:[|:–—-]\\s*)?(?:MCQs?|Flashcards?)\\s*$/i, "")
+    .replace(/\\s*(?:[|:–—-]\\s*)?(?:MCQs?|Flashcards?)\\s*$/i, "")
+    .replace(/\\s+/g, " ")
+    .trim() || "Medical revision";
+}
+
+function resourceMetaTitle(input: string, slug: string, category: string, kind: "MCQs" | "Flashcards"): string {
+  const base = cleanResourceBaseTitle(input);
+  const baseTokens = slugify(base).split("-").filter(Boolean);
+  const excluded = new Set(["mcq", "mcqs", "quiz", "questions", "flashcard", "flashcards", "and", "the", "for", "of", "in", "on", "to", "set"]);
+  const extras = String(slug || "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).filter((token) => !baseTokens.includes(token) && !excluded.has(token));
+  const rawCategory = String(category || "").trim();
+  const year = rawCategory.match(/^Year\\s*([1-6])\\s*:?\\s*(.*)$/i);
+  const categoryLabel = year ? `Y${year[1]} ${year[2]}`.trim() : rawCategory;
+  const descriptor = (extras.length ? `Set ${extras.join(" ")}` : categoryLabel || "Revision").slice(0, 18);
+  const shortBase = base.length > 32 ? base.slice(0, 32).replace(/\\s+\\S*$/, "") : base;
+  return `${shortBase} (${descriptor}) ${kind} | Ompath Study`;
+}
+
 function toMetaDescription(input: string, fallback: string): string {
   const clean = cleanForMetaSnippet(input || fallback)
     .replace(/\s*[-–—]{2,}\s*/g, " — ")
@@ -1185,16 +1207,17 @@ export default async function handler(req: Request): Promise<Response> {
       const parsed = rawQuestions.map(parseQuestion).filter((p): p is ParsedQuestion => p !== null);
       const qCount = rawQuestions.length;
 
-      title = toMetaTitle(mcq.meta_title || `${mcq.title} MCQs`, mcq.title);
+      const mcqTitleBase = cleanResourceBaseTitle(mcq.meta_title || mcq.title);
+      title = resourceMetaTitle(mcqTitleBase, mcq.slug || param, mcq.category, "MCQs");
       description = toMetaDescription(
-        mcq.meta_description || `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`,
-        `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`
+        mcq.meta_description || `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcqTitleBase}. Review answers, explanations and exam-focused clinical concepts.`,
+        `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcqTitleBase}. Review answers, explanations and exam-focused clinical concepts.`
       );
       // an exam is shared with its own card ("Weekly Year 4: Internal Medicine Exam · 30 MCQs · timed"), so the picture itself invites people to try it
       ogImage = /^Weekly Exam/i.test(String(mcq.category || ""))
         ? cardUrl(`${String(mcq.title || "").replace(/\s*\(Section A:[^)]*\)\s*/i, "").replace(/^Weekly\s+/i, "")} · ${qCount || 30} MCQs`, String(mcq.category).replace(/^Weekly Exam:\s*/i, ""), "Exam")
         : mcq.og_image_url || cardUrl(mcq.title, mcq.category, "MCQs");
-      keywords = `OmpathStudy, MCQs Kenya, ${mcq.title || ""}, ${mcq.category || ""}, oncology MCQs, pathology MCQs, medical quizzes, exam practice, ${GEO_KEYWORDS}`;
+      keywords = `OmpathStudy, MCQs Kenya, ${mcqTitleBase || ""}, ${mcq.category || ""}, oncology MCQs, pathology MCQs, medical quizzes, exam practice, ${GEO_KEYWORDS}`;
       type = "article";
 
       if (parsed.length > 0) {
@@ -1255,11 +1278,12 @@ ${explanationLine}
       const cards: unknown[] = Array.isArray(set.cards) ? set.cards : [];
       const cardCount = cards.length;
 
-      title = `${set.title} | Flashcards | Ompath Study`;
+      const flashcardTitleBase = cleanResourceBaseTitle(set.title);
+      title = resourceMetaTitle(flashcardTitleBase, set.slug || param, set.category, "Flashcards");
       description = to160(
-        `Study ${cardCount > 0 ? cardCount + " " : ""}flashcards on ${set.title} with OmpathStudy. Quick, focused revision for medical and health students, by unit and year.`
+        `Study ${cardCount > 0 ? cardCount + " " : ""}flashcards on ${flashcardTitleBase} with OmpathStudy. Quick, focused revision for medical and health students, by unit and year.`
       );
-      ogImage = cardUrl(set.title, set.category, "Flashcards");
+      ogImage = cardUrl(flashcardTitleBase, set.category, "Flashcards");
       keywords = `OmpathStudy, flashcards Kenya, ${set.category || ""}, medical revision, nursing revision, exam prep, medical education Kenya`;
       type = "article";
 
