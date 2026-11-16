@@ -4,7 +4,7 @@ import checks from "@/data/contentChecks.json";
 import marks from "@/data/contentMarks.json";
 
 type Issue = { severity: "high" | "medium" | "low"; where: string; problem: string; fix: string };
-type Entry = { at: string; model: string; validated: boolean; high: number; medium: number; issues: Issue[] };
+type Entry = { at: string; model: string; validated: boolean; high: number; medium: number; issues: Issue[]; repairStatus?: string; repairAttempts?: number; lastAttempt?: string };
 
 /**
  * /admin/content-checks: what the second AI found when it cross-checked each note. A note with no serious issue carries the "AI cross-checked" mark;
@@ -18,7 +18,7 @@ export default function AdminContentChecks() {
     <main className="mx-auto max-w-3xl px-5 py-10">
       <Link to="/admin/tools" className="text-sm font-semibold text-primary hover:underline">← Admin tools</Link>
       <h1 className="mt-2 font-serif text-4xl font-bold">Content checks</h1>
-      <p className="mt-2 text-[16px] text-muted-foreground">A second AI (a different model from the writer) cross-checks the notes a few at a time every day. {all.length} checked so far; {marked.size} carry the “AI cross-checked” mark. The check is a safety net and is not a doctor’s review.</p>
+      <p className="mt-2 text-[16px] text-muted-foreground">Groq automatically corrects flagged or thin notes, then Gemini independently re-checks the result. Passed corrections are saved automatically; unresolved notes remain unchanged and are retried in later runs. {all.length} checked so far; {marked.size} carry the “AI cross-checked” mark. This is not a doctor’s review.</p>
       <ul className="mt-6 space-y-4">
         {withIssues.map(([slug, e]) => (
           <li key={slug} className="rounded-2xl border border-border p-4">
@@ -28,6 +28,8 @@ export default function AdminContentChecks() {
               <span className="text-xs text-muted-foreground">{e.at} · {e.model}</span>
             </div>
             <ul className="mt-3 space-y-2 text-[15px]">
+              {e.repairStatus === "auto-repaired" && <p className="mt-2 text-sm font-semibold text-emerald-700 dark:text-emerald-300">Automatically corrected and re-checked.</p>}
+              {e.repairStatus && e.repairStatus !== "clean" && e.repairStatus !== "auto-repaired" && <p className="mt-2 text-sm text-amber-700 dark:text-amber-300">Automatic correction status: {e.repairStatus}. This note remains queued for another attempt.</p>}
               {e.issues.filter((i) => i.severity !== "low").map((i, k) => (
                 <li key={k}><span className="font-bold">{i.severity === "high" ? "Serious" : "Review"}:</span> {i.problem}<br /><span className="text-muted-foreground">In: {i.where}</span><br /><span className="text-emerald-700 dark:text-emerald-300">Suggested: {i.fix}</span></li>
               ))}
