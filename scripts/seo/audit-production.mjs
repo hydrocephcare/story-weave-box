@@ -162,7 +162,12 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     if (/noindex/.test(robotsMeta) || /noindex/.test(header)) return fail(`${url} is listed in a sitemap but sends noindex`);
     if (html.length < 500) return fail(`${url} returned an unusually small HTML document (${html.length} bytes)`);
     const visibleWords = visibleWordCount(html);
-    if (visibleWords < MIN_VISIBLE_WORDS) return fail(`${url} is too thin for indexing: ${visibleWords} visible words (minimum ${MIN_VISIBLE_WORDS})`);
+    // Past-paper, handbook and official-notice pages are document/resource landing
+    // pages, not explanatory articles. Their value is the attached source document;
+    // keep their HTTP, canonical, title and robots checks, but don't apply the
+    // explanatory-article word-count threshold to them.
+    const documentResource = /(?:-past-papers?(?:-|$)|-handbook(?:-|$)|notice-to-all-students)/i.test(pathname);
+    if (!documentResource && visibleWords < MIN_VISIBLE_WORDS) return fail(`${url} is too thin for indexing: ${visibleWords} visible words (minimum ${MIN_VISIBLE_WORDS})`);
     return { ok: true, url, title: title.replace(/\s+/g, " ").trim() };
   } catch (e) {
     return fail(`${url}: ${e instanceof Error ? e.message : String(e)}`);
