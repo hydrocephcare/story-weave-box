@@ -33,7 +33,7 @@ const sb = async (path, { method = "GET", body, headers = {} } = {}) => {
 const rows = [];
 for (let o = 0; o < 4000; o += 500) {
   const r = await sb(`articles?select=id,title,category,content,original_notes&published=eq.true&deleted_at=is.null&password_protected=eq.false&order=created_at.asc&offset=${o}&limit=500`);
-  if (!r.ok || !Array.isArray(r.json)) { console.log("Could not read the articles:", r.status, r.text.slice(0, 120)); process.exit(0); }
+  if (!r.ok || !Array.isArray(r.json)) throw new Error("Could not read published articles: " + r.status + " " + r.text.slice(0, 160));
   rows.push(...r.json); if (r.json.length < 500) break;
 }
 const have = await sb("blog_polish?select=article_id,status,updated_at,ai_review_status&limit=5000");
@@ -61,6 +61,11 @@ for (const a of queue) {
   if (!claim.json?.length) continue; // someone else has it
   try {
     const r = await polishArticle(a, ask, { chunk: true });
+    if (r.verdict === "irrelevant") {
+      await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: { title: r.title, description: r.description, verdict: r.verdict, reason: r.reason || "Not medical study material; not AI-verified.", status: "done", ai_review_status: "held", ai_review_model: null, ai_reviewed_at: new Date().toISOString(), ai_review_issues: [{ severity: "medium", where: "content type", problem: "Not medical study material.", fix: "No medical verification badge is applied." }], updated_at: new Date().toISOString() } });
+      kept++; console.log("not medical study material: " + a.title.slice(0, 65));
+      continue;
+    }
     if (r.status !== "done") {
       await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: { status: "partial", content: null, reason: r.reason || "The writer was interrupted; the daily queue will retry.", ai_review_status: null, updated_at: new Date().toISOString() } });
       failed++; strikes++;
@@ -68,14 +73,15 @@ for (const a of queue) {
       continue;
     }
     const review = await verifyBlogContent(a, r.content, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, { allowRepair: true, timeoutMs: 50000 });
-    await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: {
+    const saved = await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: {
       title: r.title, description: r.description, image_query: r.image_query,
       content: review.status === "passed" ? review.content : null,
       verdict: r.verdict, reason: review.status === "held" ? "Gemini verification held: " + (review.issues?.[0]?.problem || "review did not pass") : (r.reason || null),
       status: "done", model: "groq", ai_review_status: review.status, ai_review_model: review.model,
       ai_reviewed_at: review.at, ai_review_issues: review.issues || [], updated_at: new Date().toISOString()
     } });
-    strikes = review.status === "passed" ? 0 : strikes + 1;
+    if (!saved.ok) throw new Error("Could not save the Gemini review: " + saved.text.slice(0, 160));
+    strikes = 0;
     if (review.status === "passed" && r.content) { done++; console.log("verified and polished: " + a.title.slice(0, 70)); }
     else if (review.status === "passed") { kept++; console.log("verified; original retained: " + a.title.slice(0, 65)); }
     else { failed++; console.log("held for automatic retry: " + a.title.slice(0, 65)); }
