@@ -16,9 +16,18 @@ if (!env.GEMINI_API_KEYS || !env.GROQ_API_KEYS) throw new Error("Both GROQ_API_K
 fs.mkdirSync(DIR, { recursive: true });
 
 const index = JSON.parse(fs.readFileSync("public/topics/index.json", "utf8"));
-const todo = index.filter((t) => !fs.existsSync(path.join(DIR, `${t.s}.json`)) && !t.ai).sort((a, b) => (b.d + b.q * 2 + b.i) - (a.d + a.q * 2 + a.i)).slice(0, COUNT);
-console.log(`${todo.length} topics to write, ${PAR} at a time`);
-const contextOf = (t) => [t.lead?.t, ...(t.sec ?? []).flatMap((s) => [s.h, ...s.b]), ...(t.snip ?? []).map((s) => s.t)].filter(Boolean).join("\n").slice(0, 3000);
+const todo = index.filter((t) => {
+  const file = path.join(DIR, `${t.s}.json`);
+  if (!fs.existsSync(file)) return !t.ai;
+  try {
+    const p = JSON.parse(fs.readFileSync(file, "utf8"));
+    if (p.medical === false) return false;
+    const ready = p.aiReview?.status === "passed" && (p.sections?.length || 0) >= 9 && (p.exam?.length || 0) >= 8 && (p.faq?.length || 0) >= 3 && Boolean(p.summary);
+    return !ready;
+  } catch { return true; }
+}).sort((a, b) => (b.d + b.q * 2 + b.i) - (a.d + a.q * 2 + a.i)).slice(0, COUNT);
+console.log(`${todo.length} new or thin/unverified topics to write, ${PAR} at a time`);
+const contextOf = (t, p = {}) => [t.lead?.t, ...(t.sec ?? []).flatMap((s) => [s.h, ...s.b]), ...(t.snip ?? []).map((s) => s.t), p.summary, ...(p.sections ?? []).flatMap((s) => [s.h, ...(s.b ?? [])]), ...(p.exam ?? [])].filter(Boolean).join("\n").slice(0, 5000);
 
 let done = 0, skipped = 0, failed = 0, next = 0;
 async function worker() {
@@ -26,9 +35,10 @@ async function worker() {
     const it = todo[next++];
     try {
       const t = JSON.parse(fs.readFileSync(path.join("public/topics", `${it.s}.json`), "utf8"));
+      const existing = fs.existsSync(path.join(DIR, `${it.s}.json`)) ? JSON.parse(fs.readFileSync(path.join(DIR, `${it.s}.json`), "utf8")) : {};
       let page = null;
       for (let attempt = 0; attempt < 5 && !page; attempt++) {
-        try { page = (await generateReviewedTopicPage({ name: t.n, category: t.c, context: contextOf(t) }, { env })).page; } catch (e) { await new Promise((r) => setTimeout(r, 8000 * (attempt + 1))); }
+        try { page = (await generateReviewedTopicPage({ name: t.n, category: t.c, context: contextOf(t, existing) }, { env })).page; } catch (e) { await new Promise((r) => setTimeout(r, 8000 * (attempt + 1))); }
       }
       if (!page) { failed++; console.log("failed", t.n); continue; }
       if (!page.medical) { skipped++; console.log("not medical", t.n); continue; }
