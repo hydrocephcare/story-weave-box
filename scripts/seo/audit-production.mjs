@@ -90,9 +90,13 @@ const sitemapUrls = [...robots.matchAll(/^Sitemap:\s*(\S+)/gim)].map((m) => m[1]
 if (!sitemapUrls.length) throw new Error("robots.txt does not declare any sitemap URLs");
 
 const all = [];
+// robots.txt may declare both a sitemap index and one or more of the same child
+// sitemaps directly. Share the visited-file set across roots so the same XML
+// document is audited once, rather than falsely counting its URLs as duplicates.
+const visitedSitemapFiles = new Set();
 for (const sitemapUrl of sitemapUrls) {
   try {
-    const entries = await getSitemap(sitemapUrl);
+    const entries = await getSitemap(sitemapUrl, visitedSitemapFiles);
     // Image sitemaps intentionally repeat page URLs to attach image metadata.
     // Validate their XML, but do not count their locs as duplicate page URLs.
     if (!/image-sitemap/i.test(new URL(sitemapUrl).pathname)) all.push(...entries);
