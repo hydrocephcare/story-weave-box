@@ -129,7 +129,7 @@ function ActionLink({ to, children }: { to: string; children: ReactNode }) {
 }
 
 function SectionTitle({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
-  return <div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">{eyebrow}</p><h2 className="mt-2 font-serif text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{title}</h2><p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{description}</p></div>;
+  return <div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">{eyebrow}</p><h1 className="mt-2 font-serif text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{title}</h1><p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{description}</p></div>;
 }
 
 export default function ResearchHub() {
