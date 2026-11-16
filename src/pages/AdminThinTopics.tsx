@@ -4,7 +4,7 @@ import { Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 type Db = { from: (t: string) => any };
 interface Row { slug: string; name: string; category: string | null; deepReady: boolean; aiReviewed: boolean; up: number; down: number }
-const isDeepReady = (deep: any) => Boolean(deep?.checked) && Array.isArray(deep?.sections) && deep.sections.length >= 5 && Array.isArray(deep?.vivas) && deep.vivas.length >= 8 && Array.isArray(deep?.exam) && deep.exam.length >= 8;
+const isDeepReady = (deep: any) => Boolean(deep?.checked) && Array.isArray(deep?.sections) && deep.sections.length >= 7 && Array.isArray(deep?.vivas) && deep.vivas.length >= 12 && Array.isArray(deep?.mcqs) && deep.mcqs.length >= 6 && Array.isArray(deep?.cases) && deep.cases.length >= 2 && Array.isArray(deep?.facts) && deep.facts.length >= 6 && Array.isArray(deep?.mistakes) && deep.mistakes.length >= 5 && Array.isArray(deep?.exam) && deep.exam.length >= 12;
 export default function AdminThinTopics() {
   const db = supabase as unknown as Db;
   const [rows, setRows] = useState<Row[]>([]), [busy, setBusy] = useState(true), [error, setError] = useState("");
