@@ -11,7 +11,7 @@ const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 10);
 const ONLY = (process.argv.find((a) => a.startsWith("--slug=")) || "").split("=")[1];
 const local = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
 const env = { GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local(".gemini-keys.local")].filter(Boolean).join(","), GROQ_API_KEYS: [process.env.GROQ_API_KEYS, local(".groq-keys.local")].filter(Boolean).join(",") };
-if (!env.GEMINI_API_KEYS && !env.GROQ_API_KEYS) { console.log("No AI keys set: nothing to do."); process.exit(0); }
+if (!env.GROQ_API_KEYS || !env.GEMINI_API_KEYS) { console.log("Both GROQ_API_KEYS and GEMINI_API_KEYS are required for independent generation and review."); process.exit(0); }
 if (!fs.existsSync("public/topics/index.json") || !fs.existsSync(DIR)) { console.log("No topic pages yet."); process.exit(0); }
 
 const index = JSON.parse(fs.readFileSync("public/topics/index.json", "utf8"));
