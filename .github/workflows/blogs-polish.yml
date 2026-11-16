@@ -5,6 +5,16 @@ on:
     # The batch script still applies its per-run time and count limits.
     - cron: "0 3,9,15,21 * * *"
   workflow_dispatch:
+  # Run the article pipeline immediately when its safeguards or prompts change.
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/blogs-polish.yml"
+      - "scripts/blogs/polish-batch.mjs"
+      - "api/_lib/blogPolish.js"
+      - "api/_lib/blogPolishRun.js"
+      - "api/_lib/blogPolishVerify.js"
+      - "api/_lib/blogPolishPrompts.js"
     inputs:
       count:
         description: "How many published articles to process"
