@@ -97,6 +97,7 @@ const EXCLUDED_PATHS = new Set<string>([
   "/sitemap.xml",
   "/sitemap-dynamic.xml",
   "/blog/victory-school-club-membership-system-project-guide",
+  "/mcqs/fundamentals-of-tb-mcqs",
 ]);
 
 function sitemapFilterFromFile(file: string | null) {
@@ -119,6 +120,19 @@ function matchesYear(category: string | null | undefined, year: string | null) {
   if (!year) return true;
   if (year === "other") return !/^Year\s+[1-6]\s*:/i.test(String(category || ""));
   return new RegExp(`^Year\\s+${year}\\s*:`, "i").test(String(category || ""));
+}
+
+// Each resource URL belongs in one year/other sitemap only. Rows are already
+// ordered newest-first, so the newest published record owns a duplicated slug.
+function preferredYearMap(rows: any[], pathOf: (row: any) => string): Map<string, string> {
+  const result = new Map<string, string>();
+  for (const row of rows || []) {
+    const path = pathOf(row);
+    if (!path || EXCLUDED_PATHS.has(path) || result.has(path)) continue;
+    const match = String(row.category || "").match(/^Year\s+([1-6])\s*:/i);
+    result.set(path, match?.[1] || "other");
+  }
+  return result;
 }
 
 async function fetchAllPublished(sb: any, table: string, select: string, orderColumn = "updated_at", soft = true) {
@@ -167,6 +181,10 @@ serve(async (req) => {
       const m = (item.category || "").match(/^Year (\d)/);
       if (m) years.add(parseInt(m[1]));
     });
+    const preferredBlogYear = preferredYearMap(articles || [], (a) => `/blog/${cleanPublicSlug(a.slug, a.title, "article")}`);
+    const isTimedMcq = (m: any) => /exam/i.test(m.title || "") || /^weekly exam/i.test(m.category || "") || m.source_type === "past_paper" || Boolean(m.exam_year);
+    const preferredMcqYear = preferredYearMap((mcqs || []).filter((m: any) => !isTimedMcq(m)), (m) => `/mcqs/${cleanPublicSlug(m.slug, m.title, "quiz")}`);
+    const preferredFlashcardYear = preferredYearMap(flashcards || [], (f) => `/flashcards/${cleanPublicSlug(f.slug, f.title, "flashcards")}`);
 
     const includePages = filter.section === "all" || filter.section === "pages";
     const includeBlog = filter.section === "all" || filter.section === "blog";
@@ -211,6 +229,7 @@ serve(async (req) => {
       if (!includeBlog || !matchesYear(a.category, filter.year)) continue;
       const articleSlug = cleanPublicSlug(a.slug, a.title, "article");
       const path = `/blog/${articleSlug}`;
+      if (filter.year && preferredBlogYear.get(path) !== filter.year) continue;
       if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
       emittedPaths.add(path);
       const lastmod = (a.updated_at || a.created_at) ? new Date(a.updated_at || a.created_at).toISOString().split("T")[0] : "";
@@ -276,6 +295,7 @@ ${lm ? `    <lastmod>${lm}</lastmod>
       if (!includeMcqs || !matchesYear(m.category, filter.year)) continue;
       const mcqSlug = cleanPublicSlug(m.slug, m.title, "quiz");
       const path = `/mcqs/${mcqSlug}`;
+      if (filter.year && preferredMcqYear.get(path) !== filter.year) continue;
       if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
       emittedPaths.add(path);
       const lastmod = (m.updated_at || m.created_at) ? new Date(m.updated_at || m.created_at).toISOString().split("T")[0] : "";
@@ -293,6 +313,7 @@ ${lm ? `    <lastmod>${lm}</lastmod>
       if (!includeFlashcards || !matchesYear(f.category, filter.year)) continue;
       const flashcardSlug = cleanPublicSlug(f.slug, f.title, "flashcards");
       const path = `/flashcards/${flashcardSlug}`;
+      if (filter.year && preferredFlashcardYear.get(path) !== filter.year) continue;
       if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
       emittedPaths.add(path);
       const lastmod = (f.updated_at || f.created_at) ? new Date(f.updated_at || f.created_at).toISOString().split("T")[0] : "";
