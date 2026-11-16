@@ -480,7 +480,8 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
   if (!slug || slug.length > 80) return { code: 400, body: { status: "invalid" } };
   const url = env.SUPABASE_URL, svc = env.SUPABASE_SERVICE_ROLE_KEY;
   const hasModel = env.GROQ_API_KEYS || env.GROQ_API_KEY;
-  if (!url || !svc || !hasModel) return { code: 503, body: { status: "unavailable" } };
+  const hasReviewer = env.GEMINI_API_KEYS || env.GEMINI_API_KEY || env.GEMINI_API_KEY_2 || env.GEMINI_API_KEY_3;
+  if (!url || !svc || !hasModel || !hasReviewer) return { code: 503, body: { status: "unavailable" } };
 
   const rest = (p, init = {}) => fetchImpl(`${url}/rest/v1/${p}`, { ...init, headers: { apikey: svc, Authorization: `Bearer ${svc}`, "content-type": "application/json", ...(init.headers || {}) } });
   const save = (row) => rest("topic_pages?on_conflict=slug", { method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=minimal" }, body: JSON.stringify({ slug, name, category: input.category ?? null, updated_at: new Date().toISOString(), ...row }) });
