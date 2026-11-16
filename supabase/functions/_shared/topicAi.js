@@ -434,7 +434,7 @@ export function sanitizeDeep(parts, name = "this topic") {
 
 export async function generateDeepNotes({ name, category, base, past = [], fixes = [], env, fetchImpl = fetch, timeoutMs }) {
   const run = async (part) => {
-    const { text, model } = await askModel(buildDeepPrompt({ name, category, base, part, past, fixes }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
+    const { text, model } = await askGroqModel(buildDeepPrompt({ name, category, base, part, past, fixes }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
     const json = extractJson(text);
     if (!json) throw new Error("no JSON in the reply");
     return { json, model };
@@ -443,11 +443,12 @@ export async function generateDeepNotes({ name, category, base, past = [], fixes
   return { ...sanitizeDeep(done.map((d) => d.json), name), model: done[0].model, generatedAt: new Date().toISOString().slice(0, 10) };
 }
 
-/** Groq first (free), then Gemini, the same order as the revision page. */
+/**
+ * Deep-note generation is Groq-only. Gemini is reserved for the independent
+ * clinical review performed by generateCheckedDeep.
+ */
 export async function generateDeepWithFallback(input, env) {
-  const groq = String(env.GROQ_API_KEYS ?? "").trim();
-  if (groq) { try { return await generateDeepNotes({ ...input, timeoutMs: 34000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
-  return generateDeepNotes({ ...input, timeoutMs: groq ? 22000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+  return generateDeepNotes({ ...input, timeoutMs: input.timeoutMs ?? 55000, env: { GROQ_API_KEYS: env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "" } });
 }
 
 /** The first complete JSON object in a model's reply (text before or after it, or a second object, is ignored). Returns null when there is none. */
