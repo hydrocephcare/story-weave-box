@@ -480,7 +480,7 @@ function InArticleRelated({ articles }: { articles: any[] }) {
 }
 
 /* ─── Classic magazine-style article hero ─── */
-function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string; paperLine?: string; band?: boolean }) {
+function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string; paperLine?: string; band?: boolean; aiReviewStatus?: string }) {
   return <ClassicHeroInner {...props} />;
 }
 
@@ -517,8 +517,8 @@ async function findClosestArticle(slugOrParam: string): Promise<{ id: string; ti
 
 /* ─── Classic hero: cinematic image with title + description overlaid ─── */
 function ClassicHeroInner({
-  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, articleId, minutes, paperLine, band,
-}: { band?: boolean; paperLine?: string; imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, articleId, minutes, paperLine, band, aiReviewStatus,
+}: { band?: boolean; paperLine?: string; imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string; aiReviewStatus?: string }) {
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
   const topicImage = useTopicThumbnailInfo(title, category, !specificImage, imageHint || null);
   const heroImage = paperLine ? "" : specificImage || topicImage?.url || ""; // a past paper is a working page: no stock picture, straight to the questions
@@ -548,6 +548,7 @@ function ClassicHeroInner({
           <span className="inline-flex items-center gap-1.5"><Check className="h-4 w-4 text-emerald-500" aria-hidden /> Updated {date}</span>
           {minutes ? <span>· {minutes} min read</span> : null}
           {year ? <span>· Year {year}</span> : null}
+          {aiReviewStatus === "passed" ? <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300"><Check className="h-3.5 w-3.5" aria-hidden /> AI cross-checked by Gemini · not clinician-reviewed</span> : null}
         </p>
         <ShareButtons url={shareUrl} title={title} description={description} variant="full" className="mt-5" />
       </div>
@@ -2060,6 +2061,7 @@ export default function BlogPost() {
       description={cleanMetaDescription(article)}
       category={article.category}
       paperLine={paperLine}
+      aiReviewStatus={(article as any).ai_review_status}
     />
   );
   return (
