@@ -4,10 +4,12 @@ import { kindOf } from "./blogPolishCore.js";
 
 const thinnessIssues = (text) => {
   if (kindOf(text) !== "note") return [];
-  const words = String(text).trim().split(/\s+/).filter(Boolean).length;
-  const headings = (String(text).match(/^#{1,3}\s+/gm) || []).length;
-  if (words >= 300 && headings >= 6) return [];
-  return [{ severity: "medium", where: "overall structure", problem: "The article is too short or lacks enough substantive sections for a comprehensive medical learning note.", fix: "Expand with topic-specific mechanisms, types, clinical relevance, investigations, management and pharmacology where relevant; keep it accurate and accessible." }];
+  const source = String(text);
+  const words = source.trim().split(/\s+/).filter(Boolean).length;
+  const sections = (source.match(/^##\s+\d+\.\s+.+/gm) || []).length;
+  const questions = (source.match(/^###\s+Question\s+\d+/gim) || []).length;
+  if (words >= 750 && sections >= 8 && questions >= 8) return [];
+  return [{ severity: "medium", where: "overall structure", problem: "The article does not meet the comprehensive-note standard: it needs at least 750 words, eight substantive numbered sections and eight taught practice questions.", fix: "Expand with topic-specific physiology, types/classification, mechanisms, clinical relevance, investigations and interpretation, management, pharmacology, complications and prevention where relevant; add eight answered practice questions." }];
 };
 
 export async function verifyBlogContent(article, candidate, env, { allowRepair = false, timeoutMs = 35000 } = {}) {
