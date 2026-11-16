@@ -18,7 +18,7 @@ import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
 import { useAccess } from "@/lib/access";
 import { useFeatures } from "@/lib/features";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
-import { DOMAIN_STYLE, imageCaption, writeDeepNotes, type AiPage, type DeepNotes, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
+import { DOMAIN_STYLE, imageCaption, type DeepNotes, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
 import HeroAurora from "@/components/HeroAurora";
 import { Answer } from "@/components/ai/AnswerText";
@@ -219,18 +219,11 @@ function DrillMode({ slug, items, onClose }: { slug: string; items: { q: string;
 const DEEP_BAND = "rounded-3xl border border-primary/20 bg-primary/5 p-5 sm:p-7";
 
 /** The deep exam notes: shown when they exist; otherwise one button writes them once (builds on the revision page, and on past-paper questions) and saves them for everyone. */
-function DeepView({ slug, name, category, page, deep, onDone, canRead, past }: { slug: string; name: string; category: string; page: AiPage; deep: DeepNotes | null; onDone: (d: DeepNotes) => void; canRead: boolean; past: string[] }) {
-  const [busy, setBusy] = useState(false);
-  const [err, setErr] = useState("");
+function DeepView({ slug, name, deep, canRead }: { slug: string; name: string; deep: DeepNotes | null; canRead: boolean }) {
   const [drill, setDrill] = useState(false);
-  const write = async () => {
-    setBusy(true); setErr("");
-    const r = await writeDeepNotes(slug, name, category, page, past);
-    setBusy(false);
-    if ("deep" in r) onDone(r.deep); else setErr(r.error === "busy" ? "The writer is busy right now. Try again in a minute." : r.error === "bot" ? "Open this page in a normal browser to write the deep notes." : "The deep notes could not be written just now. Try again in a minute.");
-  };
+  const deepReady = Boolean(deep?.checked) && (deep?.sections?.length ?? 0) >= 5 && (deep?.vivas?.length ?? 0) >= 8 && (deep?.exam?.length ?? 0) >= 8;
   const unlock = () => openSubscribePrompt("Deep exam notes are a Pro feature: bedside examination step by step, how to read every test, a management ladder, numbers and mnemonics to memorise, 15 or more viva questions with answers, MCQs and cases, with the questions most likely to be asked marked.");
-  if (!deep && !canRead) {
+  if (!deepReady && !canRead) {
     return (
       <section id="deep-start" data-deep="1" className={DEEP_BAND}>
         <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary"><Lock className="h-3.5 w-3.5" aria-hidden /> Pro · Deep exam notes</p>
@@ -240,15 +233,13 @@ function DeepView({ slug, name, category, page, deep, onDone, canRead, past }: {
       </section>
     );
   }
-  if (!deep) {
+  if (!deepReady) {
     return (
       <section id="deep-start" data-deep="1" className={DEEP_BAND}>
         <p className="text-xs font-bold uppercase tracking-wider text-primary">Deep exam notes</p>
-        <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">Go deeper on {name}</h2>
-        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The writer reads the revision page and the past-paper questions on this topic, then adds what is missing: the bedside examination, how to read each test, a management ladder, numbers to memorise, 15+ viva questions with answers, MCQs and two cases.</p>
-        <button type="button" onClick={() => void write()} disabled={busy} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95 disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Sparkles className="h-4 w-4" aria-hidden />} {busy ? "Writing, about 15 seconds..." : "Write the deep exam notes"}</button>
-        <p className="mt-3 text-sm text-muted-foreground">Written once, then saved for everyone. AI-written, cross-checked, and not reviewed by a doctor.</p>
-        {err && <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{err}</p>}
+        <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">Comprehensive notes for {name} are being prepared</h2>
+        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The site prepares the full exam layer automatically: mechanisms, clinical reasoning, investigations and interpretation, management and pharmacology, complications, applied questions, MCQs and cases. Groq drafts the material; Gemini independently checks it. If a check is not passed, the page stays in the queue and is retried.</p>
+        <p className="mt-3 text-sm text-muted-foreground">AI-generated content is not a substitute for clinician review or current local guidelines.</p>
       </section>
     );
   }
@@ -264,13 +255,7 @@ function DeepView({ slug, name, category, page, deep, onDone, canRead, past }: {
         {counts.filter(([n]) => n > 0).map(([n, l]) => <span key={l} className="rounded-full border border-border bg-muted/40 px-3.5 py-1.5 text-sm font-semibold"><strong className="font-extrabold text-primary">{n}</strong> {l}</span>)}
         {canRead && vivas.some((v) => v.a) && !drill && <button type="button" onClick={() => setDrill(true)} className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground shadow-sm hover:opacity-95"><Zap className="h-4 w-4" aria-hidden /> Drill me</button>}
       </div>
-      {canRead && !deep.vivas?.length && (
-        <div className="no-print mb-8 flex flex-wrap items-center gap-3 rounded-2xl border border-amber-500/40 bg-amber-500/10 px-5 py-4">
-          <p className="min-w-0 flex-1 text-[16px] font-semibold">These are the first version of the deep notes. The full version adds numbers to memorise, 15+ viva questions with answers, MCQs and cases.</p>
-          <button type="button" onClick={() => void write()} disabled={busy} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Sparkles className="h-4 w-4" aria-hidden />} {busy ? "Writing, about 15 seconds..." : "Write the full version"}</button>
-          {err && <p role="alert" className="w-full text-sm font-semibold text-red-600">{err}</p>}
-        </div>
-      )}
+
       {canRead && drill && <DrillMode slug={slug} items={vivas.filter((v) => v.a)} onClose={() => setDrill(false)} />}
       {canRead && ((deep.facts?.length ?? 0) > 0 || (deep.mnemonics?.length ?? 0) > 0) && (
         <section id="deep-memorise" data-deep="1" className={`${DEEP_BAND} mb-10 grid gap-6 sm:grid-cols-2`}>
@@ -453,10 +438,8 @@ export default function TopicPage() {
   const [adminMsg, setAdminMsg] = useState("");
   const [showFresh, setShowFresh] = useState(false);
   const [view, setView] = useState<"revision" | "deep">("revision");
-  const [deepLocal, setDeepLocal] = useState<DeepNotes | null>(null);
-  useEffect(() => { setView("revision"); setDeepLocal(null); }, [slug]);
-  const deep = deepLocal ?? page?.deep ?? null;
-  const past = [...(topic?.qs ?? []).map((x) => x.q), ...(topic?.es ?? []).map((x) => x.q)].slice(0, 12);
+  useEffect(() => { setView("revision"); }, [slug]);
+  const deep = page?.deep ?? null;
   const access = useAccess();
   const canRead = useFeatures(isAdmin || access.hasPass).can("deepNotes");
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
@@ -573,6 +556,7 @@ export default function TopicPage() {
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><button type="button" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/topics"))} className="mr-2 inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-foreground/80 hover:border-primary/60"><ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back</button><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>
             <h1 className={cn("mt-5 font-serif font-bold leading-[1.05] tracking-tight text-foreground [overflow-wrap:anywhere]", Math.max(...name.split(/\s+/).map((w) => w.length)) > 12 ? "text-[2.15rem] sm:text-6xl lg:text-7xl" : "text-5xl sm:text-6xl lg:text-7xl")}>{name}</h1>
             {aka.length > 0 && <p className="mt-3 text-lg text-muted-foreground">Also called {aka.join(", ")}</p>}
+            {(page as any)?.aiReview?.status === "passed" && <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1.5 text-sm font-semibold text-emerald-700 dark:text-emerald-300">AI cross-checked by Gemini · not clinician-reviewed</p>}
             {summary ? <p className="mt-6 max-w-2xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]">{summary}</p> : writing ? <div className="mt-6 max-w-2xl space-y-3" aria-hidden><div className="h-5 w-full animate-pulse rounded bg-foreground/10" /><div className="h-5 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-5 w-2/3 animate-pulse rounded bg-foreground/10" /></div> : null}
             <OutlineLine title={name} className="mt-5 max-w-2xl" />
             {(summary || aiSections.length > 0) && <StudyTools className="mt-6 max-w-2xl" title={name} path={topicPath(slug)} pictures={subject === "Anatomy" || /anatom|embryo|histolog/i.test(subject)} text={[name, summary, ...aiSections.map((s) => [s.h, s.p, ...(s.b ?? [])].filter(Boolean).join("\n"))].filter(Boolean).join("\n")} />}
@@ -643,7 +627,7 @@ export default function TopicPage() {
                 <button type="button" onClick={() => window.print()} className="mb-2.5 ml-auto inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-primary"><Printer className="h-4 w-4" aria-hidden /> Print or save as PDF</button>
               </div>
             )}
-            {view === "deep" && page && <DeepView slug={slug} name={name} category={topic?.c ?? ""} page={page} deep={deep} onDone={setDeepLocal} canRead={canRead} past={past} />}
+            {view === "deep" && page && <DeepView slug={slug} name={name} deep={deep} canRead={canRead} />}
 
             {intro.length > 0 && (
               <Section id="overview" title="Overview" first>
