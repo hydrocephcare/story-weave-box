@@ -60,6 +60,14 @@ jobs:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
         run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '25' }} --parallel=3
+      - name: Rebuild static topic pages with the new comprehensive AI content
+        id: merge_new_topics
+        continue-on-error: true
+        run: node scripts/topics/build-topics.mjs --fresh
+      - name: Rebuild picture sitemap after new topic generation
+        id: image_sitemap_after_topics
+        continue-on-error: true
+        run: node scripts/seo/image-sitemap.mjs
       - name: Save new topic pages immediately
         if: always()
         run: node scripts/git/commit-generated.mjs "Daily comprehensive topic pages" public/topics src/data/topicAi public/image-sitemap.xml
@@ -94,6 +102,14 @@ jobs:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
         run: node scripts/topics/deep-fill.mjs 20
+      - name: Merge generated deep exam notes into the static topic pages
+        id: merge_deep
+        continue-on-error: true
+        run: node scripts/topics/build-topics.mjs --fresh
+      - name: Rebuild final picture sitemap
+        id: final_image_sitemap
+        continue-on-error: true
+        run: node scripts/seo/image-sitemap.mjs
       - name: Cross-check library notes
         id: note_check
         continue-on-error: true
@@ -122,9 +138,11 @@ jobs:
           LIVE_DEEP: ${{ steps.live_deep.outcome }}
           STATIC_DEEP: ${{ steps.static_deep.outcome }}
           NOTE_CHECK: ${{ steps.note_check.outcome }}
+          MERGE_NEW: ${{ steps.merge_new_topics.outcome }}
+          MERGE_DEEP: ${{ steps.merge_deep.outcome }}
         run: |
           failed=0
-          for value in "$REBUILD" "$TOPICS" "$LEGACY_REVIEW" "$LIVE_DEEP" "$STATIC_DEEP" "$NOTE_CHECK"; do
+          for value in "$REBUILD" "$TOPICS" "$LEGACY_REVIEW" "$LIVE_DEEP" "$STATIC_DEEP" "$NOTE_CHECK" "$MERGE_NEW" "$MERGE_DEEP"; do
             echo "$value"
             if [ "$value" != "success" ]; then failed=1; fi
           done
