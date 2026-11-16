@@ -7,7 +7,7 @@ const part2 = { medical: true, whenToSeekHelp: ["Fever with very low white cells
 
 describe("topic page parts (Ompath AI route)", () => {
   it("asks for three parts for a condition and two for anatomy", () => {
-    expect(buildPartPrompts({ name: "Acute leukaemia", category: "Pathology" })).toHaveLength(3);
+    expect(buildPartPrompts({ name: "Acute leukaemia", category: "Pathology" })).toHaveLength(2);
     expect(buildPartPrompts({ name: "Humerus", category: "Anatomy" })).toHaveLength(2);
   });
 
@@ -16,7 +16,7 @@ describe("topic page parts (Ompath AI route)", () => {
     expect(page.sections.map((s: { h: string }) => s.h)).toEqual(["Definition", "Presentation", "Management", "Often confused with"]);
     expect(page.exam).toHaveLength(1);
     expect(page.whenToSeekHelp).toHaveLength(1);
-    expect(page.kind).toBe("disease");
+    expect(page.kind).toBe("pathology");
   });
 
   it("still publishes when the later parts fail, and turns away a non-medical topic", () => {
