@@ -44,6 +44,7 @@ jobs:
           node --check scripts/zone/daily.mjs
           node --check scripts/topics/bulk-fill.mjs
           node --check scripts/topics/deep-fill.mjs
+          node --check scripts/topics/merge-ai.mjs
           node --check scripts/topics/deep-fill-database.mjs
           node --check scripts/topics/review-database-pages.mjs
           node --check scripts/seo/audit-production.mjs
