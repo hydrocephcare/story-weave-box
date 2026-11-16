@@ -279,7 +279,7 @@ export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeou
 /** Generates and sanitizes a topic page using Groq, without Gemini generation fallback. */
 export async function generateGroqTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
   const deep = cleanChoices(choices).depth === "full";
-  const { text, model } = await askGroqModel(buildPrompt({ name, category, context, choices }), {
+  const { text, model } = await askGroqModel(buildPrompt({ name, category, context, choices, fixes }), {
     env,
     fetchImpl,
     timeoutMs: timeoutMs ?? (deep ? 55000 : 50000),
@@ -310,7 +310,7 @@ PAGE:
 ${JSON.stringify({ title: page.title, summary: page.summary, sections: page.sections, whenToSeekHelp: page.whenToSeekHelp, faq: page.faq, exam: page.exam }).slice(0, 24000)}`;
     const result = await askGeminiModel(reviewPrompt, { env, fetchImpl, timeoutMs: timeoutMs ?? 50000, maxTokens: 3500 });
     const parsed = extractJson(result.text);
-    if (!parsed || !Array.isArray(parsed.issues) || !["ok", "issues"].includes(parsed.verdict)) {
+    if (!parsed || !Array.isArray(parsed.issues) || !["ok", "issues"].includes(parsed.verdict) || (parsed.verdict === "issues" && parsed.issues.length === 0)) {
       throw new Error("Gemini clinical review returned an invalid response; page held back.");
     }
     const issues = parsed.issues.map((x) => ({
