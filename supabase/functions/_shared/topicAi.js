@@ -159,7 +159,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
   }
   // Groq: a free backup that takes over when every Gemini key is out of quota. Keys in GROQ_API_KEYS (comma separated), used in turn.
   const groqKeys = [...new Set(String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
-  const groqModels = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
+  const groqModels = String(env.GROQ_MODELS ?? "openai/gpt-oss-20b,openai/gpt-oss-120b").split(",").map((m) => m.trim()).filter(Boolean);
   const gStart = groqKeys.length ? turn++ % groqKeys.length : 0;
   for (let i = 0; i < groqKeys.length; i++) {
     const key = groqKeys[(gStart + i) % groqKeys.length];
@@ -286,8 +286,8 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
   const { text, model } = await askGroqModel(buildPrompt({ name, category, context, choices, fixes }), {
     env,
     fetchImpl,
-    timeoutMs: timeoutMs ?? (deep ? 55000 : 50000),
-    maxTokens: deep ? 10000 : 5000,
+    timeoutMs: timeoutMs ?? (deep ? 40000 : 35000),
+    maxTokens: deep ? 8500 : 4500,
   });
   const json = extractJson(text);
   if (!json) throw new Error("Groq returned no valid JSON.");
@@ -296,11 +296,11 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
 }
 
 /**
- * Groq drafts; Gemini independently reviews. A maximum of two targeted rewrites
+ * Groq drafts; Gemini independently reviews. A maximum of one targeted rewrite
  * are allowed. Any unresolved clinical issue or unavailable reviewer holds the
  * page back: topicAiCore must never save an unreviewed draft as published.
  */
-export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 2, timeoutMs } = {}) {
+export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs } = {}) {
   const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
   const fixes = [];
   let page;
@@ -317,7 +317,7 @@ CATEGORY: ${input.category ?? "unspecified"}
 SELECTED SCOPE: ${page.clinicalScope ?? "not stated"}
 PAGE:
 ${JSON.stringify({ title: page.title, clinicalScope: page.clinicalScope, summary: page.summary, sections: page.sections, whenToSeekHelp: page.whenToSeekHelp, faq: page.faq, exam: page.exam }).slice(0, 24000)}`;
-    const result = await askGeminiModel(reviewPrompt, { env, fetchImpl, timeoutMs: timeoutMs ?? 50000, maxTokens: 3500 });
+    const result = await askGeminiModel(reviewPrompt, { env, fetchImpl, timeoutMs: timeoutMs ?? 35000, maxTokens: 2200 });
     const parsed = extractJson(result.text);
     if (!parsed || !Array.isArray(parsed.issues) || !["ok", "issues"].includes(parsed.verdict) || (parsed.verdict === "issues" && parsed.issues.length === 0) || (parsed.verdict === "ok" && parsed.issues.length !== 0)) {
       throw new Error("Gemini clinical review returned an invalid response; page held back.");
