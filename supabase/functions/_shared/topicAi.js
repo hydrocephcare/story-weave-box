@@ -503,7 +503,8 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
 
     await save({ status: "generating" });
     let page;
-    try { const result = await generateReviewedTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }, { env, fetchImpl });\n      page = result.page; }
+    try { const result = await generateReviewedTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }, { env, fetchImpl });
+      page = result.page; }
     catch { await save({ status: "failed" }); return { code: 502, body: { status: "failed" } }; }
     if (!page.medical) { await save({ status: "rejected" }); return { code: 404, body: { status: "rejected" } }; }
     await save({ status: "published", content: page, model: page.model, reviewed: false });
