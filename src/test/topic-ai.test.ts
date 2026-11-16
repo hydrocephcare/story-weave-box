@@ -3,7 +3,7 @@ import { generateTopicPage, kindOf, sanitizePage, slugOf, topicAiCore, validName
 
 const headings = ["Definition and diagnosis", "Severity and staging", "Causes and risk factors", "Mechanisms and pathophysiology", "Clinical presentation", "Investigations and interpretation", "Management principles", "Pharmacology and safety", "Complications and prognosis", "Follow-up and prevention", "Special populations", "Differential diagnosis", "Clinical examples"];
 const fullPage = (title = "Oppositional defiant disorder", subject = "Psychiatry", count = 13) => {
-  const explanatory = Array.from({ length: 90 }, (_, i) => title + " clinical explanation " + (i + 1) + " describes the mechanism, clinical relevance, diagnostic reasoning, management principles and how findings are interpreted in context.").join(" ");
+  const explanatory = Array.from({ length: 8 }, (_, i) => title + " clinical explanation " + (i + 1) + " describes the mechanism, clinical relevance, diagnostic reasoning, management principles and how findings are interpreted in context.").join(" ");
   return {
     medical: true,
     title,
