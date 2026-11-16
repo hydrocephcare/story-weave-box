@@ -58,7 +58,7 @@ for (const [kind, minYear] of plan) {
   if (questions.length < 5) { console.warn("  too few valid questions, skipped"); continue; }
   games.push({ id: `${today}-${games.length + 1}`, title: kind === "quiz" ? `${t.name}: quick quiz` : kind === "case" ? `${t.name}: case showdown` : `${t.name}: drug duel`, game: kind, topic: t.name, year: t.year, blurb: `${LABEL[kind]} for Year ${t.year} and above, written fresh today.`, questions });
 }
-if (games.length < 2) { console.error("The AI wrote too few games today; keeping yesterday's file."); process.exit(0); }
+if (games.length < 4) { console.error("The AI wrote fewer than four usable games; keeping yesterday's file."); process.exit(1); }
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify({ date: today, games }, null, 1) + "\n");
 console.log(`Wrote ${games.length} games to public/data/zone-daily.json`);
