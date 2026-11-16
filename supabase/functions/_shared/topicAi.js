@@ -176,6 +176,69 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
   throw lastErr;
 }
 
+/**
+ * Calls Groq only. This provider boundary is deliberate: content generation and
+ * independent Gemini review must never silently become the same model family.
+ */
+export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000 } = {}) {
+  const keys = [...new Set(String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").split(/[\\s,]+/).map((k) => k.trim()).filter(Boolean))];
+  const models = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
+  if (!keys.length) throw new Error("Groq generation is not configured (GROQ_API_KEYS).");
+  if (!models.length) throw new Error("No Groq generation model is configured.");
+
+  const start = turn++ % keys.length;
+  let lastError = new Error("All Groq generation attempts failed.");
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[(start + i) % keys.length];
+    for (const model of models) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", {
+          method: "POST",
+          signal: controller.signal,
+          headers: { "content-type": "application/json", Authorization: "Bearer " + key },
+          body: JSON.stringify({
+            model,
+            temperature: 0.3,
+            max_tokens: maxTokens,
+            reasoning_effort: "low",
+            response_format: { type: "json_object" },
+            messages: [{ role: "user", content: prompt }],
+          }),
+        });
+        if (!response.ok) {
+          lastError = new Error("Groq generation failed (" + response.status + ").");
+          continue;
+        }
+        const text = (await response.json())?.choices?.[0]?.message?.content;
+        if (typeof text === "string" && text.trim()) return { text, model };
+        lastError = new Error("Groq returned an empty generation.");
+      } catch (error) {
+        lastError = error instanceof Error ? error : new Error(String(error));
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+  }
+  throw lastError;
+}
+
+/** Generates and sanitizes a topic page using Groq, without Gemini generation fallback. */
+export async function generateGroqTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
+  const deep = cleanChoices(choices).depth === "full";
+  const { text, model } = await askGroqModel(buildPrompt({ name, category, context, choices }), {
+    env,
+    fetchImpl,
+    timeoutMs: timeoutMs ?? (deep ? 55000 : 50000),
+    maxTokens: deep ? 10000 : 5000,
+  });
+  const json = extractJson(text);
+  if (!json) throw new Error("Groq returned no valid JSON.");
+  const page = sanitizePage(json);
+  return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
+}
+
 /** Writes a checked page (or {medical:false}). `fetchImpl` is injectable for tests. */
 export async function generateTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
   const deep = cleanChoices(choices).depth === "full";
@@ -191,9 +254,9 @@ export async function generateTopicPage({ name, category, context, choices, env,
  * env: { GROQ_API_KEYS, GEMINI_API_KEYS }.
  */
 export async function generateWithFallback(input, env) {
-  const groq = String(env.GROQ_API_KEYS ?? "").trim();
-  if (groq) { try { return await generateTopicPage({ ...input, timeoutMs: 32000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
-  return generateTopicPage({ ...input, timeoutMs: groq ? 24000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+  // Keep the historical export name for callers, but do not fall back to Gemini:
+  // Gemini is reserved for the independent review stage.
+  return generateGroqTopicPage({ ...input, env });
 }
 
 /** The second layer: deep exam notes, written in three focused parts (run in parallel) that build on the revision page without repeating it. */
@@ -325,7 +388,7 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
   const slug = slugOf(name);
   if (!slug || slug.length > 80) return { code: 400, body: { status: "invalid" } };
   const url = env.SUPABASE_URL, svc = env.SUPABASE_SERVICE_ROLE_KEY;
-  const hasModel = env.LOVABLE_API_KEY || env.GEMINI_API_KEY || (env.OMNIROUTE_BASE_URL && env.OMNIROUTE_API_KEY);
+  const hasModel = env.GROQ_API_KEYS || env.GROQ_API_KEY;
   if (!url || !svc || !hasModel) return { code: 503, body: { status: "unavailable" } };
 
   const rest = (p, init = {}) => fetchImpl(`${url}/rest/v1/${p}`, { ...init, headers: { apikey: svc, Authorization: `Bearer ${svc}`, "content-type": "application/json", ...(init.headers || {}) } });
@@ -347,7 +410,7 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
 
     await save({ status: "generating" });
     let page;
-    try { page = await generateTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }); }
+    try { page = await generateGroqTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }); }
     catch { await save({ status: "failed" }); return { code: 502, body: { status: "failed" } }; }
     if (!page.medical) { await save({ status: "rejected" }); return { code: 404, body: { status: "rejected" } }; }
     await save({ status: "published", content: page, model: page.model, reviewed: false });
