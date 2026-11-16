@@ -214,7 +214,7 @@ function cleanResourceBaseTitle(input: string): string {
     .trim() || "Medical revision";
 }
 
-function resourceMetaTitle(input: string, slug: string, category: string, kind: "MCQs" | "Flashcards"): string {
+function resourceMetaTitle(input: string, slug: string | null | undefined, category: string | null | undefined, kind: "MCQs" | "Flashcards"): string {
   const base = cleanResourceBaseTitle(input);
   const baseTokens = slugify(base).split("-").filter(Boolean);
   const excluded = new Set(["mcq", "mcqs", "quiz", "questions", "flashcard", "flashcards", "and", "the", "for", "of", "in", "on", "to", "set"]);
