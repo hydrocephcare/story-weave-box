@@ -26,7 +26,7 @@ const worker = async () => {
       const deep = await generateCheckedDeep({ name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
         { GROQ_API_KEYS: GROQ, GEMINI_API_KEYS: GEMINI }, fetch, 240000);
       const content = { ...(row.content || {}), deep };
-      const result = await request("topic_pages?slug=eq." + encodeURIComponent(row.slug) + "&status=eq.published&content->deep->>checked=is.null", {
+      const result = await request("topic_pages?slug=eq." + encodeURIComponent(row.slug) + "&status=eq.published", {
         method: "PATCH", headers: { Prefer: "return=representation" },
         body: JSON.stringify({ content, updated_at: new Date().toISOString() }),
       });
