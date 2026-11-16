@@ -15,11 +15,11 @@ on:
       deep:
         description: "How many live topic pages to receive deep exam notes"
         required: false
-        default: "30"
+        default: "40"
       check:
         description: "How many library notes to cross-check"
         required: false
-        default: "20"
+        default: "40"
 permissions:
   contents: write
 concurrency:
@@ -85,23 +85,23 @@ jobs:
       - name: Generate comprehensive deep exam notes for live topic pages
         id: live_deep
         continue-on-error: true
-        timeout-minutes: 35
+        timeout-minutes: 60
         env:
           SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || '30' }}
+          TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || '40' }}
           TOPIC_DEEP_DB_PARALLEL: "2"
         run: node scripts/topics/deep-fill-database.mjs
       - name: Fill the static topic corpus deep-note queue
         id: static_deep
         continue-on-error: true
-        timeout-minutes: 25
+        timeout-minutes: 45
         env:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-        run: node scripts/topics/deep-fill.mjs 30
+        run: node scripts/topics/deep-fill.mjs 40
       - name: Merge generated deep exam notes into the static topic pages
         id: merge_deep
         continue-on-error: true
@@ -113,11 +113,11 @@ jobs:
       - name: Cross-check library notes
         id: note_check
         continue-on-error: true
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '20' }}
+        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '40' }}
       - name: Write page summaries
         id: summaries
         continue-on-error: true
