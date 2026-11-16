@@ -12,7 +12,7 @@ const PAR = Number((process.argv.find((a) => a.startsWith("--parallel=")) || "--
 const local = fs.existsSync(".gemini-keys.local") ? fs.readFileSync(".gemini-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const groq = fs.existsSync(".groq-keys.local") ? fs.readFileSync(".groq-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const env = { GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local].filter(Boolean).join(","), GROQ_API_KEYS: [process.env.GROQ_API_KEYS, groq].filter(Boolean).join(",") };
-if (!env.GEMINI_API_KEYS || !env.GROQ_API_KEYS) { console.log("Both GROQ_API_KEYS and GEMINI_API_KEYS are required; no unreviewed pages will be generated."); process.exit(0); }
+if (!env.GEMINI_API_KEYS || !env.GROQ_API_KEYS) throw new Error("Both GROQ_API_KEYS and GEMINI_API_KEYS are required; no pages were written.");
 fs.mkdirSync(DIR, { recursive: true });
 
 const index = JSON.parse(fs.readFileSync("public/topics/index.json", "utf8"));
@@ -40,3 +40,4 @@ async function worker() {
 }
 await Promise.all(Array.from({ length: PAR }, worker));
 console.log(`finished: ${done} written, ${skipped} not medical, ${failed} failed`);
+if (failed) process.exitCode = 1;
