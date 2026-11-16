@@ -61,9 +61,24 @@ for (const a of queue) {
   if (!claim.json?.length) continue; // someone else has it
   try {
     const r = await polishArticle(a, ask, { chunk: true });
-    await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: { title: r.title, description: r.description, image_query: r.image_query, content: r.content, verdict: r.verdict, reason: r.reason || null, status: r.status, model: "ai", updated_at: new Date().toISOString() } });
-    strikes = 0;
-    if (r.content) { done++; console.log(`polished: ${a.title.slice(0, 70)}`); } else { kept++; console.log(`kept as it was (${r.verdict}): ${a.title.slice(0, 60)} | ${r.reason.slice(0, 80)}`); }
+    if (r.status !== "done") {
+      await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: { status: "partial", content: null, reason: r.reason || "The writer was interrupted; the daily queue will retry.", ai_review_status: null, updated_at: new Date().toISOString() } });
+      failed++; strikes++;
+      console.log("partial: " + a.title.slice(0, 65));
+      continue;
+    }
+    const review = await verifyBlogContent(a, r.content, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, { allowRepair: true, timeoutMs: 50000 });
+    await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: {
+      title: r.title, description: r.description, image_query: r.image_query,
+      content: review.status === "passed" ? review.content : null,
+      verdict: r.verdict, reason: review.status === "held" ? "Gemini verification held: " + (review.issues?.[0]?.problem || "review did not pass") : (r.reason || null),
+      status: "done", model: "groq", ai_review_status: review.status, ai_review_model: review.model,
+      ai_reviewed_at: review.at, ai_review_issues: review.issues || [], updated_at: new Date().toISOString()
+    } });
+    strikes = review.status === "passed" ? 0 : strikes + 1;
+    if (review.status === "passed" && r.content) { done++; console.log("verified and polished: " + a.title.slice(0, 70)); }
+    else if (review.status === "passed") { kept++; console.log("verified; original retained: " + a.title.slice(0, 65)); }
+    else { failed++; console.log("held for automatic retry: " + a.title.slice(0, 65)); }
   } catch (e) {
     failed++; strikes++;
     await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: { status: "failed", reason: String(e?.message ?? "failed").slice(0, 200), updated_at: new Date().toISOString() } });
