@@ -14,7 +14,7 @@ const fullPage = (title = "Oppositional defiant disorder", subject = "Psychiatry
     sections: Array.from({ length: count }, (_, i) => ({
       h: headings[i] || ("Clinical consideration " + (i + 1)),
       p: explanatory,
-      b: ["Recognise the relevant clinical pattern and explain why it occurs.", "Interpret findings in the context of the whole patient and available resources."],
+      b: ["Recognise the relevant clinical pattern and explain why it occurs.", "Interpret findings in the context of the whole patient and available resources.", "Connect the underlying physiology to the observed clinical features.", "Explain how the evidence changes the investigation or management plan."],
     })),
     whenToSeekHelp: ["Behaviour that puts the child or others at risk"],
     faq: [
