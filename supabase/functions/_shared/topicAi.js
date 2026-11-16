@@ -52,7 +52,7 @@ DEPTH: this page must be thorough, not a summary. A lecturer should be able to a
 - Special groups: children, pregnancy, the elderly, people with HIV, low-resource settings.
 - "exam": 10 to 12 questions that cover all of the above (bedside, interpreting a result, management, complications, "what would you do next").`;
 
-export function buildPrompt({ name, category, context = "", choices }) {
+export function buildPrompt({ name, category, context = "", choices, fixes = [] }) {
   const kind = kindOf(category, name);
   const ch = cleanChoices(choices);
   const deep = ch.depth === "full";
@@ -76,7 +76,7 @@ Each section needs "p", "b" or "t". 3 faq items.
 Plan first, then write. The reader is a clinical-year student, so before you write, decide the angles an examiner would use for this topic: the bedside approach (history, examination, a patient lying in bed), internal medicine, surgery, pathology, pharmacology, complications and look-alike conditions, and the first things to do in an emergency. "exam" must hold ${deep ? "10-12" : "6-8"} strategic, tricky questions across those angles (what would you do next, what distinguishes it from, why is this drug avoided), never plain definitions.
 ${ACCURACY_RULES}
 Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics or references. Lab thresholds and diagnostic criteria are welcome. Every bullet under ${deep ? 40 : 28} words. Plain words a first-year student can follow.
-${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
+${fixes.length ? `\nA CLINICAL REVIEWER FOUND THESE ERRORS IN THE PREVIOUS DRAFT. Correct them precisely and do not repeat them:\n- ${fixes.map((x) => clip(x, 400)).join("\n- ")}\n` : ""}${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
 }
 
 /** Checks and tidies whatever the model returned. Returns {medical:false} or a safe page; throws when it is not usable. */
@@ -291,6 +291,45 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
   return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
 }
 
+/**
+ * Groq drafts; Gemini independently reviews. A maximum of two targeted rewrites
+ * are allowed. Any unresolved clinical issue or unavailable reviewer holds the
+ * page back: topicAiCore must never save an unreviewed draft as published.
+ */
+export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 2, timeoutMs } = {}) {
+  const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
+  const fixes = [];
+  let page;
+  let review;
+  for (let round = 0; round <= rounds; round++) {
+    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
+    const reviewPrompt = `You are an independent senior clinical reviewer for medical students in Kenya. Review the complete page for clinically important errors only: incorrect diagnostic criteria or thresholds, wrong drug or management advice, unsafe omissions, inaccurate examination signs, contradictory facts, and incorrect exam answers. Do not flag style or optional additions. Be conservative: only report demonstrable errors. If none, return exactly {"verdict":"ok","issues":[]}. Otherwise return {"verdict":"issues","issues":[{"severity":"high|medium","where":"section and short exact quote","problem":"specific error","fix":"clinically correct replacement"}]}.
+TITLE: ${input.name}
+PAGE:
+${JSON.stringify({ title: page.title, summary: page.summary, sections: page.sections, whenToSeekHelp: page.whenToSeekHelp, faq: page.faq, exam: page.exam }).slice(0, 24000)}`;
+    const result = await askGeminiModel(reviewPrompt, { env, fetchImpl, timeoutMs: timeoutMs ?? 50000, maxTokens: 3500 });
+    const parsed = extractJson(result.text);
+    if (!parsed || !Array.isArray(parsed.issues) || !["ok", "issues"].includes(parsed.verdict)) {
+      throw new Error("Gemini clinical review returned an invalid response; page held back.");
+    }
+    const issues = parsed.issues.map((x) => ({
+      severity: x?.severity === "high" ? "high" : "medium",
+      where: clip(x?.where, 140),
+      problem: clip(x?.problem, 300),
+      fix: clip(x?.fix, 300),
+    })).filter((x) => x.where && x.problem.length >= 8 && x.fix.length >= 8).slice(0, 12);
+    review = { status: issues.length ? "issues" : "passed", model: result.model, rounds: round, issues };
+    if (!issues.length) {
+      return { page: { ...page, aiReview: { status: "passed", model: result.model, reviewedAt: new Date().toISOString().slice(0, 10), fixRounds: round } }, review };
+    }
+    if (round === rounds) break;
+    fixes.push(...issues.map((x) => `[${x.severity}] ${x.where}: ${x.problem}. Correct statement: ${x.fix}`));
+  }
+  const summary = (review?.issues ?? []).map((x) => `${x.where}: ${x.problem}`).join(" | ").slice(0, 500);
+  throw new Error("Clinical review held this page back after targeted correction attempts: " + summary);
+}
+
 /** Writes a checked page (or {medical:false}). `fetchImpl` is injectable for tests. */
 export async function generateTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
   const deep = cleanChoices(choices).depth === "full";
@@ -462,10 +501,10 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
 
     await save({ status: "generating" });
     let page;
-    try { page = await generateGroqTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }); }
+    try { const result = await generateReviewedTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }, { env, fetchImpl });\n      page = result.page; }
     catch { await save({ status: "failed" }); return { code: 502, body: { status: "failed" } }; }
     if (!page.medical) { await save({ status: "rejected" }); return { code: 404, body: { status: "rejected" } }; }
-    await save({ status: "published", content: page, model: page.model, reviewed: false });
+    await save({ status: "published", content: page, model: page.model, reviewed: false, ai_reviewed: true });
     return { code: 200, body: { status: "published", slug, page } };
   } catch { return { code: 502, body: { status: "failed" } }; }
 }
