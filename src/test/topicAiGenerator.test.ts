@@ -80,4 +80,34 @@ describe("Groq topic generation boundary", () => {
       { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl, maxFixRounds: 0 },
     )).rejects.toThrow();
   });
+
+  it("performs a targeted Groq rewrite when Gemini identifies a clinical issue", async () => {
+    const page = {
+      medical: true, title: "Asthma", subject: "Medicine",
+      summary: "Asthma is a chronic inflammatory disease of the airways.",
+      sections: [
+        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
+        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
+        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
+      ],
+      whenToSeekHelp: [], faq: [], exam: [], related: [],
+    };
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"issues","issues":[{"severity":"high","where":"Management: inhaled treatment","problem":"The statement omits the required clinical safety qualification.","fix":"State the appropriate guideline-based safety qualification."}]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await generateReviewedTopicPage(
+      { name: "Asthma", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl },
+    );
+
+    expect(fetchImpl).toHaveBeenCalledTimes(4);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("generativelanguage.googleapis.com");
+    expect(String(fetchImpl.mock.calls[2][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[2][1]?.body)).toContain("appropriate guideline-based safety qualification");
+    expect(result.page.aiReview.fixRounds).toBe(1);
+  });
 });
