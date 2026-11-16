@@ -3,6 +3,13 @@ on:
   schedule:
     - cron: "30 2 * * *"
   workflow_dispatch:
+  # Run immediately when this generator or its workflow is repaired.
+  # Generated data commits do not match these paths, so this cannot loop.
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/zone-daily.yml"
+      - "scripts/zone/daily.mjs"
 permissions:
   contents: write
 concurrency:
