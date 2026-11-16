@@ -39,9 +39,9 @@ describe("topic page writer", () => {
   });
 
   it("drops anything that looks like a drug dose", () => {
-    const p = sanitizePage({ ...goodPage, sections: [...goodPage.sections, { h: "Medicines", b: ["Give 500 mg twice daily", "Antibiotics may be needed"] }] });
+    const p = sanitizePage({ ...goodPage, sections: [...goodPage.sections, { h: "Medicines", b: ["Give 500 mg twice daily", "Antibiotics may be needed", "Check contraindications and monitor for adverse effects"] }] });
     const meds = p.sections.find((s: { h: string }) => s.h === "Medicines");
-    expect(meds.b).toEqual(["Antibiotics may be needed"]);
+    expect(meds.b).toEqual(["Antibiotics may be needed", "Check contraindications and monitor for adverse effects"]);
     expect(() => sanitizePage({ ...goodPage, summary: "Give 10 mg of the drug every day to every child with this condition, always." })).toThrow();
   });
 
