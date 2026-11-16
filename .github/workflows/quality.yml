@@ -24,6 +24,25 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Validate automation script syntax
+        run: |
+          node --check scripts/imed/validate-notes.mjs
+          node --check scripts/blogs/polish-batch.mjs
+          node --check scripts/zone/daily.mjs
+          node --check scripts/topics/bulk-fill.mjs
+          node --check scripts/topics/deep-fill.mjs
+          node --check scripts/topics/deep-fill-database.mjs
+          node --check scripts/topics/review-database-pages.mjs
+          node --check scripts/seo/audit-production.mjs
+          node --check scripts/library/prerender.mjs
+          node --check scripts/git/commit-generated.mjs
+          node --check api/_lib/blogPolish.js
+          node --check api/_lib/blogPolishVerify.js
+          node --check api/_lib/blogPolishRun.js
+          node --check api/_lib/blogPolishPrompts.js
+          node --check supabase/functions/_shared/topicAi.js
+          node --check supabase/functions/_shared/contentCheck.js
+
       - name: Unit tests
         run: npm test -- --reporter=dot
       - name: Production build (reuse committed topic corpus; do not reread Supabase)
