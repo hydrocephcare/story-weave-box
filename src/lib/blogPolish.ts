@@ -1,4 +1,4 @@
-// The polished copy of a Year 1 to 3 blog (clear title, search description, tidier text), made by the server the first time anyone opens the page
+// The polished copy of a public blog (clear title, search description, comprehensive text), made by the server the first time anyone opens the page
 // and kept for everyone (table blog_polish, see /api/ai-polish). The stored article is never changed. Nothing here may break a page: every step
 // that fails simply leaves the page as it was.
 import { supabase } from "@/integrations/supabase/client";
@@ -32,7 +32,7 @@ const store = (id: string, v: Polish | null) => {
   } catch { /* storage full or blocked: the page still works */ }
 };
 
-export const wantsPolish = (a: { category?: string | null; password_protected?: boolean | null }) =>
+export const wantsPolish = (a: { category?: string | null; password_protected?: boolean | null }) => !a.password_protected;
   /^Year\s*[1-6]\b/i.test(a.category ?? "") && !a.password_protected;
 
 /** The saved polished copy, or null when there is none yet. `fresh` skips what this device remembers. */
