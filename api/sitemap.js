@@ -49,23 +49,12 @@ async function extraSitemap(req, res, mode) {
     res.setHeader("Cache-Control","public, s-maxage=3600, stale-while-revalidate=86400");
     return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
   }
-  const DB="https://strfwaqvxvkhjbqrwmla.supabase.co";
-  const KEY=process.env.SUPABASE_ANON_KEY||ANON;
+  // Topic detail pages are emitted as static HTML by the daily topic builder and production build.
+  // Database-only pages have no static crawler response yet, so listing them creates thin SPA-shell URLs.
+  // They enter the sitemap automatically after the daily builder commits their complete static topic pages.
   res.setHeader("Content-Type","application/xml; charset=utf-8");
-  try {
-    const [rows,ir]=await Promise.all([
-      fetchPublicRows("/rest/v1/topic_pages?select=slug,updated_at&status=eq.published&order=updated_at.desc"),
-      fetch(`${SITE}/topics/index.json`)
-    ]);
-    const indexed=new Set(ir.ok&&(ir.headers.get("content-type")||"").includes("json")?(await ir.json()).map(t=>t.s):[]);
-    const fresh=rows.filter(x=>x.slug&&!indexed.has(x.slug));
-    const urls=[`<url><loc>${SITE}/topics</loc><changefreq>daily</changefreq><priority>0.7</priority></url>`,...fresh.map(x=>`<url><loc>${SITE}/topic/${encodeURIComponent(x.slug)}</loc><lastmod>${String(x.updated_at).slice(0,10)}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`)].join("");
-    res.setHeader("Cache-Control","public, s-maxage=900, stale-while-revalidate=86400");
-    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
-  } catch {
-    res.setHeader("Cache-Control","no-store");
-    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${SITE}/topics</loc></url></urlset>`);
-  }
+  res.setHeader("Cache-Control","public, s-maxage=900, stale-while-revalidate=86400");
+  return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE + '/topics</loc><changefreq>daily</changefreq><priority>0.7</priority></url></urlset>');
 }
 export default async function handler(req, res) {
   const mode = typeof req.query?.mode === "string" ? req.query.mode : "";
