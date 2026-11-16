@@ -1,11 +1,10 @@
-// POST /api/ai-polish { id }: polishes one Year 1 to 3 blog the first time anyone opens it, and keeps the result for everyone.
+// POST /api/ai-polish { id }: polishes a public medical education blog the first time anyone opens it, and keeps the result for everyone.
 //   - a clear title and a search description
 //   - notes in the style of the Year 4 notes (intro, numbered sections, practice questions); question banks and papers only laid out properly
 //   - a verdict (keep / review / irrelevant) that the admin can act on; nothing is ever deleted here
 // Very long pages are left to the batch job (scripts/blogs/polish-batch.mjs). The stored article is never changed: the result is saved in
 // blog_polish, which the page reads. Writing needs POLISH_WRITE_KEY in Vercel (made on /admin/polish): the database checks it, so the Supabase service key is not needed.
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
-import { yearOf } from "./blogPolishCore.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
 
@@ -44,10 +43,10 @@ export default async function handler(req, res) {
   const id = String(body.id ?? "");
   if (!UUID.test(id)) return res.status(400).json({ status: "invalid" });
 
-  // only public, published Year 1 to 3 blogs
+  // only public, published blogs
   const got = await sb(`articles?select=id,title,category,content,original_notes,published,deleted_at,password_protected&id=eq.${id}`);
   const a = got.json?.[0];
-  if (!a || !a.published || a.deleted_at || a.password_protected || ![1, 2, 3, 4, 5, 6].includes(yearOf(a.category))) return res.status(404).json({ status: "invalid" });
+  if (!a || !a.published || a.deleted_at || a.password_protected) return res.status(404).json({ status: "invalid" });
 
   // already finished, or being worked on: nothing to do. A finished page is never polished again.
   // (progress on a long page is kept at the top of its saved text as <!--parts:N-->, so no extra database column is needed)
