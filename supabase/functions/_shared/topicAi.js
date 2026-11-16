@@ -182,7 +182,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
  */
 export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 3500 } = {}) {
   const keys = [...new Set([
-    ...String(env.GEMINI_API_KEYS ?? "").split(/[\\s,]+/),
+    ...String(env.GEMINI_API_KEYS ?? "").split(/[\s,]+/),
     env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3,
   ].map((key) => String(key ?? "").trim()).filter(Boolean))];
   const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
