@@ -37,7 +37,7 @@ permissions:
   contents: write
 concurrency:
   group: topics-daily
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   topics:
     runs-on: ubuntu-latest
