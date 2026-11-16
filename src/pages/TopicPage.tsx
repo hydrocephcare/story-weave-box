@@ -233,7 +233,7 @@ function DeepView({ slug, name, deep, canRead }: { slug: string; name: string; d
       </section>
     );
   }
-  if (!deepReady) {
+  if (!deep || !deepReady) {
     return (
       <section id="deep-start" data-deep="1" className={DEEP_BAND}>
         <p className="text-xs font-bold uppercase tracking-wider text-primary">Deep exam notes</p>
