@@ -5,6 +5,7 @@ import fs from "node:fs";
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "../../api/_lib/blogPolishCore.js";
 import { polishArticle } from "../../api/_lib/blogPolishRun.js";
+import { verifyBlogContent } from "../../api/_lib/blogPolishVerify.js";
 
 const SB = process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
 const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY; // optional: the write key does the job without it
@@ -49,7 +50,7 @@ const order = (a) => [0, 2, 1, 3, 4, 5, 6].indexOf(yearOf(a.category));
 const queue = rows.filter((a) => (ONLY ? yearOf(a.category) === ONLY : [1, 2, 3, 4, 5, 6].includes(yearOf(a.category))) && eligible(a)).sort((a, b) => order(a) - order(b));
 console.log(`${queue.length} blogs still to polish; doing up to ${COUNT} (about ${MINUTES} minutes).`);
 
-const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env: { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
+const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env: { GROQ_API_KEYS: groq }, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
 let done = 0, kept = 0, failed = 0, strikes = 0;
 for (const a of queue) {
   if (done + kept + failed >= COUNT || (Date.now() - started) / 60000 > MINUTES || strikes >= 3) break;
