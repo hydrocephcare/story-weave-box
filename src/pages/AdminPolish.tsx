@@ -42,7 +42,7 @@ export default function AdminPolish() {
     if (error) setMsg(error.message); else setRows((x) => x.filter((y) => y.article_id !== r.article_id));
   };
 
-  const total = Object.values(counts).reduce((a, b) => a + b, 0);
+  const total = (counts.done ?? 0) + (counts.partial ?? 0) + (counts.working ?? 0) + (counts.failed ?? 0);
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Admin</p>
@@ -64,7 +64,7 @@ export default function AdminPolish() {
           <ul className="mt-8 space-y-8">
             {rows.map((r) => (
               <li key={r.article_id}>
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">{r.verdict === "irrelevant" ? "Not study material" : "Weak or unclear"} · {r.articles?.category ?? ""}</p>
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">{r.verdict === "irrelevant" ? "Not study material" : r.ai_review_status === "held" ? "AI review held · automatic retry" : "Weak or unclear"} · {r.articles?.category ?? ""}</p>
                 <p className="mt-1 font-serif text-2xl font-bold">{r.articles?.title ?? r.article_id}</p>
                 {r.reason && <p className="mt-1 text-[15px] text-muted-foreground">{r.reason}</p>}
                 {r.ai_review_status === "held" && <p className="mt-2 text-sm text-amber-700 dark:text-amber-300">Gemini did not clear this article. The original remains visible; the daily job will attempt an automatic correction and re-check.</p>}
