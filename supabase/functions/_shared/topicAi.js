@@ -345,6 +345,20 @@ export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch,
   for (let round = 0; round <= rounds; round++) {
     page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
+    const pageText = [
+      page.summary,
+      ...(page.sections ?? []).flatMap((x) => [x.h, x.p, ...(x.b ?? []), ...(x.t ?? []).flatMap((r) => [r.a, r.b])]),
+      ...(page.exam ?? []),
+      ...(page.faq ?? []).flatMap((x) => [x.q, x.a]),
+    ].filter(Boolean).join(" ");
+    const pageWords = pageText.trim().split(/\s+/).filter(Boolean).length;
+    if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3 || String(page.summary || "").length < 100 || pageWords < 700) {
+      if (round < rounds) {
+        fixes.push("The draft is too thin. Write at least nine substantive topic-specific sections, at least 700 meaningful words, eight examiner questions and three FAQs. Include the relevant physiology, mechanisms, types/classification, clinical application, investigations and interpretation, management and pharmacology where applicable. Do not pad or invent facts.");
+        continue;
+      }
+      throw new Error("Topic page did not meet the minimum comprehensive-note standard after the correction round.");
+    }
     const reviewKind = kindOf(input.category ?? "", input.name ?? "");
     const reviewHeadings = cleanChoices(input.choices).depth === "full" ? DEEP_KINDS[reviewKind] : KINDS[reviewKind];
     const reviewMinimumSections = cleanChoices(input.choices).depth === "full" ? Math.max(9, reviewHeadings.length - 1) : Math.max(3, reviewHeadings.length - 1);
