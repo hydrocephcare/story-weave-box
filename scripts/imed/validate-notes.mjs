@@ -6,10 +6,10 @@ import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 
 const OUT = "src/data/contentChecks.json";
-const COUNT = Math.max(1, Math.min(30, Number(process.argv.find((a) => /^\d+$/.test(a)) || 12)));
+const COUNT = Math.max(1, Math.min(40, Number(process.argv.find((a) => /^\d+$/.test(a)) || 12)));
 const only = (process.argv.find((a) => a.startsWith("--slug=")) || "").split("=")[1];
 const force = process.argv.includes("--force");
-const local = (f) => fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n).map((s) => s.trim()).filter(Boolean).join(",") : "";
+const local = (f) => fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const env = {
   GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local(".gemini-keys.local")].filter(Boolean).join(","),
   GROQ_API_KEYS: [process.env.GROQ_API_KEYS, local(".groq-keys.local")].filter(Boolean).join(","),
@@ -54,7 +54,7 @@ for (const item of todo) {
   try {
     const parts = splitFrontmatter(item.text);
     const first = await checkContent({ title: n.title, kind: "study note", text: parts.body, env });
-    const isThin = (text) => text.trim().split(/\s+/).filter(Boolean).length < 300 || (text.match(/^#{1,3}\s+/gm) || []).length < 6;
+    const isThin = (text) => text.trim().split(/\s+/).filter(Boolean).length < 750 || (text.match(/^#{1,3}\s+/gm) || []).length < 8;
     if (isThin(parts.body)) { first.validated = false; first.medium = Number(first.medium || 0) + 1; first.issues = [...(first.issues || []), { severity: "medium", where: "overall structure", problem: "This study note is too thin for the comprehensive library standard.", fix: "Expand to at least 8 substantive sections with topic-specific physiology, types, mechanisms, clinical relevance, investigations, management and pharmacology where relevant." }]; }
     let final = first, repairStatus = "clean", newText = item.text;
     let attempts = Number(prior.repairAttempts || 0);
