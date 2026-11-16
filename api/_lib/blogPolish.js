@@ -7,6 +7,7 @@
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "./blogPolishCore.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
+import { verifyBlogContent } from "./blogPolishVerify.js";
 
 const SB = process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
 const ANON = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE"; // the public key every visitor's browser already has
@@ -30,7 +31,7 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
   const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
   const gem = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-  if (!(process.env.SUPABASE_SERVICE_ROLE_KEY || WRITE_KEY()) || (!groq.trim() && !gem.trim())) return res.status(503).json({ status: "unavailable" });
+  if (!(process.env.SUPABASE_SERVICE_ROLE_KEY || WRITE_KEY()) || !groq.trim() || !gem.trim()) return res.status(503).json({ status: "unavailable" });
 
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
@@ -50,7 +51,7 @@ export default async function handler(req, res) {
 
   // already finished, or being worked on: nothing to do. A finished page is never polished again.
   // (progress on a long page is kept at the top of its saved text as <!--parts:N-->, so no extra database column is needed)
-  const existing = (await sb(`blog_polish?select=status,updated_at,content,title,reason&article_id=eq.${id}`)).json?.[0];
+  const existing = (await sb(`blog_polish?select=status,updated_at,content,title,reason,ai_review_status&article_id=eq.${id}`)).json?.[0];
   const ageS = existing ? (now - new Date(existing.updated_at).getTime()) / 1000 : 0;
   const long = a.content.length > 14000;
   const marker = /^<!--parts:(\d+)(?::(\d+))?-->\n?/;
@@ -63,7 +64,8 @@ export default async function handler(req, res) {
   const lateStart = existing?.status === "done" && !existing.content && long && /left for later|too long|rejected in part/i.test(existing.reason ?? "");
   // a long page that had saved progress when the AI hiccuped carries on after a minute; any other failure waits twelve hours
   const resumeFailed = existing?.status === "failed" && long && doneParts > 0 && ageS > 60;
-  const retry = resumeFailed || (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
+  const retryUnreviewed = existing?.status === "done" && existing.ai_review_status !== "passed" && ageS > 12 * 3600;
+  const retry = resumeFailed || retryUnreviewed || (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
   if (existing && !(carryOn || lateStart || retry)) return res.status(200).json({ status: existing.status, more: false });
 
   // only when the AI has room: if several pages failed in the last half hour the keys have run out, so nobody is made to wait for nothing
@@ -83,27 +85,48 @@ export default async function handler(req, res) {
   else claimed = await sb("blog_polish?on_conflict=article_id", { method: "POST", body: { article_id: id, status: "working" }, headers: { Prefer: "resolution=ignore-duplicates,return=representation" } });
   if (!claimed.json?.length) return res.status(200).json({ status: "working", more: false });
 
-  const env = { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem };
+  const env = { GROQ_API_KEYS: groq };
   const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
   const save = (row) => sb(`blog_polish?article_id=eq.${id}`, { method: "PATCH", body: { ...row, updated_at: new Date().toISOString() } });
 
   try {
     if (!long) {
       const r = await polishArticle(a, ask, { chunk: false });
-      await save({ title: r.title, description: r.description, image_query: r.image_query, content: r.content, verdict: r.verdict, reason: r.reason || null, status: r.status, model: "ai" });
-      return res.status(200).json({ status: r.status, more: false });
+      if (r.status !== "done") {
+        await save({ title: r.title, description: r.description, image_query: r.image_query, content: null, verdict: r.verdict, reason: r.reason || null, status: "partial", ai_review_status: null, model: "groq" });
+        return res.status(200).json({ status: "partial", more: false });
+      }
+      const review = await verifyBlogContent(a, r.content, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, { allowRepair: false, timeoutMs: 22000 });
+      const reason = review.status === "held" ? "Gemini review held for automatic correction: " + (review.issues?.[0]?.problem || "review did not pass") : (r.reason || null);
+      await save({ title: r.title, description: r.description, image_query: r.image_query,
+        content: review.status === "passed" ? review.content : null, verdict: r.verdict, reason,
+        status: "done", model: "groq", ai_review_status: review.status, ai_review_model: review.model,
+        ai_reviewed_at: review.at, ai_review_issues: review.issues || [] });
+      return res.status(200).json({ status: "done", verified: review.status === "passed", more: false });
     }
     // a long page: its title and description first (a small request), then a couple of pieces of the text on each visit
     let row = {};
     if (!existing?.title) {
       const m = await metaFor(a, ask);
       row = { title: m.title, description: m.description, image_query: m.image_query, verdict: m.verdict, reason: m.reason || null, model: "ai" };
-      if (m.verdict === "irrelevant") { await save({ ...row, status: "done" }); return res.status(200).json({ status: "done", more: false }); }
+      if (m.verdict === "irrelevant") {
+        await save({ ...row, status: "done", ai_review_status: "held", ai_review_model: null, ai_reviewed_at: new Date().toISOString(),
+          ai_review_issues: [{ severity: "medium", where: "content type", problem: "This page was classified as not medical study material.", fix: "No medical verification or public-facing AI badge is applied." }] });
+        return res.status(200).json({ status: "done", more: false });
+      }
     }
     const step = await polishStep(a, ask, { parts_done: doneParts, raw: rawParts, content: saved }, { budgetMs: existing?.title ? 36000 : 22000 });
     const why = step.reason ? [step.reason].filter(Boolean).join(" | ") : (existing?.reason ?? null);
-    await save({ ...row, content: step.finished ? step.content : `<!--parts:${step.parts_done}:${step.raw ?? 0}-->\n${step.content ?? ""}`, status: step.finished ? "done" : "partial", reason: (why ?? "").slice(0, 400) || null });
-    return res.status(200).json({ status: step.finished ? "done" : "partial", more: !step.finished, hiccup: Boolean(step.hiccup), progress: `${step.parts_done}/${step.total}` });
+    if (!step.finished) {
+      const partialText = "<!--parts:" + step.parts_done + ":" + (step.raw ?? 0) + "-->\n" + (step.content ?? "");
+      await save({ ...row, content: partialText, status: "partial", reason: (why ?? "").slice(0, 400) || null, ai_review_status: null });
+      return res.status(200).json({ status: "partial", more: true, hiccup: Boolean(step.hiccup), progress: step.parts_done + "/" + step.total });
+    }
+    const review = await verifyBlogContent(a, step.content, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, { allowRepair: false, timeoutMs: 22000 });
+    const reason = review.status === "held" ? "Gemini review held for automatic correction: " + (review.issues?.[0]?.problem || "review did not pass") : (why || null);
+    await save({ ...row, content: review.status === "passed" ? review.content : null, status: "done", reason,
+      ai_review_status: review.status, ai_review_model: review.model, ai_reviewed_at: review.at, ai_review_issues: review.issues || [] });
+    return res.status(200).json({ status: "done", verified: review.status === "passed", more: false, progress: step.parts_done + "/" + step.total });
   } catch (e) {
     // what is already done stays saved; the page is tried again later
     // a long page keeps its progress and carries on; any other page waits before it is tried again
