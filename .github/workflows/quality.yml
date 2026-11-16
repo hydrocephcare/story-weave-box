@@ -26,5 +26,7 @@ jobs:
       - run: npm ci
       - name: Unit tests
         run: npm test -- --reporter=dot
-      - name: Production build
+      - name: Production build (reuse committed topic corpus; do not reread Supabase)
+        env:
+          VERCEL: "1"
         run: npm run build
