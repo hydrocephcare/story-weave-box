@@ -19,11 +19,11 @@ const weight = new Map(index.map((t) => [t.s, (t.d ?? 0) + (t.q ?? 0) * 2 + (t.i
 const names = new Map(index.map((t) => [t.s, t]));
 const todo = fs.readdirSync(DIR).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, ""))
   .filter((slug) => !ONLY || slug === ONLY)
-  .filter((slug) => { try { const p = JSON.parse(fs.readFileSync(path.join(DIR, `${slug}.json`), "utf8")); return p.medical !== false && Array.isArray(p.sections) && p.sections.length >= 3 && (!p.deep || !p.deep.vivas); } catch { return false; } })
+  .filter((slug) => { try { const p = JSON.parse(fs.readFileSync(path.join(DIR, `${slug}.json`), "utf8")); const d = p.deep; return p.medical !== false && Array.isArray(p.sections) && p.sections.length >= 3 && (!d?.checked || (d.sections?.length || 0) < 5 || (d.vivas?.length || 0) < 8 || (d.exam?.length || 0) < 8); } catch { return false; } })
   .sort((a, b) => (weight.get(b) ?? 0) - (weight.get(a) ?? 0)).slice(0, COUNT);
 console.log(`${todo.length} topic(s) get deep notes today.`);
 
-let written = 0, misses = 0;
+let written = 0, misses = 0, failed = 0;
 for (const slug of todo) {
   const file = path.join(DIR, `${slug}.json`);
   const page = JSON.parse(fs.readFileSync(file, "utf8"));
@@ -37,9 +37,9 @@ for (const slug of todo) {
     written++; misses = 0;
     console.log(`deep notes: ${slug}`);
   } catch (e) {
-    console.log(`failed ${slug}: ${e.message}`);
+    failed++; console.log(`failed ${slug}: ${e.message}`);
     if (++misses >= 3) { console.log("Three failures in a row: the AI keys are probably out of credits. Stopping until tomorrow."); break; }
   }
 }
 console.log(`${written} deep note set(s) written.`);
-if (misses) process.exitCode = 1;
+if (failed) process.exitCode = 1;
