@@ -15,6 +15,10 @@ const REMOVED_404 = [
   "/mcqs/mycology-mcqs-review-be10adc6",
   "/mcqs/microbiology-mcq-bank-fb9e1a91",
   "/mcqs/mcq-ba7772df",
+  "/blog/year-4-internal-medicine-ecg-made-easy-1",
+  "/blog/year-4-internal-medicine-acs-presentation",
+  "/blog/year-4-paediatrics-paeds-4-kudra",
+  "/blog/year-4-paediatrics-instructions",
   // Legacy weekly-exam slugs that no longer have a published essay record.
   "/essays/weekly-pathology-exam-april-3-2026-sections-b-and-c",
   "/essays/weekly-year-2-git-physiology-exam-april-10-2026-sections-b-and-c",
