@@ -489,10 +489,17 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
   if (!url || !svc || !hasModel || !hasReviewer) return { code: 503, body: { status: "unavailable" } };
 
   const rest = (p, init = {}) => fetchImpl(`${url}/rest/v1/${p}`, { ...init, headers: { apikey: svc, Authorization: `Bearer ${svc}`, "content-type": "application/json", ...(init.headers || {}) } });
-  const save = async (row) => {
-    const response = await rest("topic_pages?on_conflict=slug", { method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=minimal" }, body: JSON.stringify({ slug, name, category: input.category ?? null, updated_at: new Date().toISOString(), ...row }) });
+  const save = async (row, createIfMissing = false) => {
+    const path = createIfMissing
+      ? "topic_pages?on_conflict=slug"
+      : `topic_pages?slug=eq.${encodeURIComponent(slug)}&status=neq.published`;
+    const response = await rest(path, {
+      method: createIfMissing ? "POST" : "PATCH",
+      headers: { Prefer: createIfMissing ? "resolution=ignore-duplicates,return=minimal" : "return=representation" },
+      body: JSON.stringify({ slug, name, category: input.category ?? null, updated_at: new Date().toISOString(), ...row }),
+    });
     if (!response.ok) throw new Error(`topic_pages write failed (${response.status})`);
-    return response;
+    return createIfMissing ? [] : response.json();
   };
   try {
     const found = await rest(`topic_pages?slug=eq.${encodeURIComponent(slug)}&select=status,content,updated_at`);
@@ -510,7 +517,7 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
     if (!count.ok) throw new Error(`topic_pages count failed (${count.status})`);
     if (Number((count.headers.get("content-range") || "").split("/")[1] || 0) >= cap) return { code: 429, body: { status: "busy" } };
 
-    await save({ status: "generating" });
+    await save({ status: "generating" }, !have);
     let page;
     try {
       const result = await generateReviewedTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }, { env, fetchImpl });
@@ -528,7 +535,7 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
       return { code: 502, body: { status: "failed" } };
     }
     const reviewedAt = new Date().toISOString();
-    await save({
+    const saved = await save({
       status: "published",
       content: page,
       model: page.model,
@@ -539,6 +546,13 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
       ai_review_fix_rounds: Math.max(0, Math.min(2, Number(page.aiReview.fixRounds) || 0)),
       reviewed: false,
     });
+    if (!saved?.length) {
+      const latest = await rest(`topic_pages?slug=eq.${encodeURIComponent(slug)}&select=status,content`);
+      if (!latest.ok) throw new Error("Could not confirm the published topic page.");
+      const current = (await latest.json())[0];
+      if (current?.status === "published" && current.content) return { code: 200, body: { status: "published", slug, page: current.content } };
+      throw new Error("Topic page was not persisted.");
+    }
     return { code: 200, body: { status: "published", slug, page } };
   } catch {
     return { code: 502, body: { status: "failed" } };
