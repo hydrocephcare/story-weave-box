@@ -355,12 +355,15 @@ try {
 
   // ---------------- sitemap ----------------
   const today = new Date().toISOString().slice(0, 10);
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${written
+  // The same folder/topic route can be discovered through more than one library branch.
+  // Keep one sitemap entry per canonical URL; the last generated version supplies lastmod.
+  const sitemapRows = [...new Map(written.map((w) => [w.urlPath, w])).values()];
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRows
     .map((w) => `  <url><loc>${site}${w.urlPath}</loc><lastmod>${w.lastmod ?? today}</lastmod><changefreq>monthly</changefreq><priority>${w.urlPath.split("/").length <= 3 ? "0.8" : "0.6"}</priority></url>`)
     .join("\n")}\n</urlset>\n`;
   fs.writeFileSync(path.join(dist, "library-sitemap.xml"), xml);
 
-  console.log(`prerendered ${written.length} pages + library-sitemap.xml`);
+  console.log(`prerendered ${written.length} pages; ${sitemapRows.length} unique sitemap URLs + library-sitemap.xml`);
 } catch (err) {
   console.warn("[prerender-library] skipped:", err instanceof Error ? err.message : err);
 }
