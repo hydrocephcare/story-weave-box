@@ -15,8 +15,10 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
     if (!fs.existsSync(file)) continue;
     const t = JSON.parse(fs.readFileSync(file, "utf8"));
     const title = topicTitle(t.n, t.c);
-    // only a topic with its own written page is offered to search engines; a page built from note fragments, or a phrase that is not a subject, stays out until it has one
-    const indexable = !!t.ai && !isJunkTopic(t.n);
+    // Only a complete, Gemini-passed page is indexable; thin fragments and unverified drafts remain out of search.
+    const aiReady = Boolean(t.ai?.medical !== false && t.ai?.aiReview?.status === "passed" && String(t.ai?.summary || "").length >= 100 &&
+      (t.ai?.sections?.length || 0) >= 9 && (t.ai?.exam?.length || 0) >= 8 && (t.ai?.faq?.length || 0) >= 3 && JSON.stringify(t.ai).split(/\s+/).length >= 700);
+    const indexable = aiReady && !isJunkTopic(t.n);
     // the page's own definition when there is one; otherwise a clear line (a sentence lifted from an exam question makes a poor preview)
     const description = (t.ai?.summary || `${t.n}: a clear overview with causes, tests, management, pictures and practice questions. Free from Ompath Study.`).slice(0, 158);
     const path1 = `/topic/${t.s}`;
