@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { askGroqModel, buildPrompt, generateReviewedTopicPage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
 const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
 const makePage = (title: string, subject: string, count = 13) => {
-  const explanation = Array.from({ length: 85 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
+  const explanation = Array.from({ length: 8 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
   return {
     medical: true, title, subject, clinicalScope: title + " in the stated clinical context.",
     summary: title + " is a medical topic that requires understanding of mechanisms, clinical presentation, diagnosis and appropriate management. This overview explains the subject for the public and medical learners.",
