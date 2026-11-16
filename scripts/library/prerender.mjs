@@ -49,7 +49,7 @@ try {
     ].join("\n    ");
     if (noindex) html = setTag(html, /<meta name="robots"[^>]*>/, `<meta name="robots" content="noindex,follow" />`);
     html = html.replace("</head>", `    ${extra}\n  </head>`);
-    html = html.replace(/<div id="root">[\\s\\S]*?(?=<script type="module")/, `<div id="root">${body}</div>\n    `);
+    html = html.replace(/<div id="root">[\s\S]*?(?=<script type="module")/, `<div id="root">${body}</div>\n    `);
     return html;
   }
 
