@@ -128,7 +128,7 @@ describe("Groq topic generation boundary", () => {
       .mockResolvedValueOnce(new Response(null, { status: 204 }))
       .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
       .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
-      .mockResolvedValueOnce(new Response(null, { status: 204 }));
+      .mockResolvedValueOnce(new Response(JSON.stringify([{ slug: "asthma" }]), { status: 200, headers: { "Content-Type": "application/json" } }));
 
     const result = await topicAiCore(
       { name: "Asthma", category: "Medicine" },
