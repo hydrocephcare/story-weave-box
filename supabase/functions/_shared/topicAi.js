@@ -277,7 +277,7 @@ export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeou
 }
 
 /** Generates and sanitizes a topic page using Groq, without Gemini generation fallback. */
-export async function generateGroqTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
+export async function generateGroqTopicPage({ name, category, context, choices, fixes = [], env, fetchImpl = fetch, timeoutMs }) {
   const deep = cleanChoices(choices).depth === "full";
   const { text, model } = await askGroqModel(buildPrompt({ name, category, context, choices, fixes }), {
     env,
@@ -310,7 +310,7 @@ PAGE:
 ${JSON.stringify({ title: page.title, summary: page.summary, sections: page.sections, whenToSeekHelp: page.whenToSeekHelp, faq: page.faq, exam: page.exam }).slice(0, 24000)}`;
     const result = await askGeminiModel(reviewPrompt, { env, fetchImpl, timeoutMs: timeoutMs ?? 50000, maxTokens: 3500 });
     const parsed = extractJson(result.text);
-    if (!parsed || !Array.isArray(parsed.issues) || !["ok", "issues"].includes(parsed.verdict) || (parsed.verdict === "issues" && parsed.issues.length === 0)) {
+    if (!parsed || !Array.isArray(parsed.issues) || !["ok", "issues"].includes(parsed.verdict) || (parsed.verdict === "issues" && parsed.issues.length === 0) || (parsed.verdict === "ok" && parsed.issues.length !== 0)) {
       throw new Error("Gemini clinical review returned an invalid response; page held back.");
     }
     const issues = parsed.issues.map((x) => ({
@@ -319,6 +319,7 @@ ${JSON.stringify({ title: page.title, summary: page.summary, sections: page.sect
       problem: clip(x?.problem, 300),
       fix: clip(x?.fix, 300),
     })).filter((x) => x.where && x.problem.length >= 8 && x.fix.length >= 8).slice(0, 12);
+    if (parsed.verdict === "issues" && issues.length === 0) throw new Error("Gemini returned malformed clinical findings; page held back.");
     review = { status: issues.length ? "issues" : "passed", model: result.model, rounds: round, issues };
     if (!issues.length) {
       return { page: { ...page, aiReview: { status: "passed", model: result.model, reviewedAt: new Date().toISOString().slice(0, 10), fixRounds: round } }, review };
@@ -434,7 +435,7 @@ export function sanitizeDeep(parts, name = "this topic") {
 
 export async function generateDeepNotes({ name, category, base, past = [], fixes = [], env, fetchImpl = fetch, timeoutMs }) {
   const run = async (part) => {
-    const { text, model } = await askGroqModel(buildDeepPrompt({ name, category, base, part, past, fixes }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
+    const { text, model } = await askModel(buildDeepPrompt({ name, category, base, part, past, fixes }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
     const json = extractJson(text);
     if (!json) throw new Error("no JSON in the reply");
     return { json, model };
@@ -447,8 +448,11 @@ export async function generateDeepNotes({ name, category, base, past = [], fixes
  * Deep-note generation is Groq-only. Gemini is reserved for the independent
  * clinical review performed by generateCheckedDeep.
  */
+/** Groq first (free), then Gemini, the same order as the revision page. */
 export async function generateDeepWithFallback(input, env) {
-  return generateDeepNotes({ ...input, timeoutMs: input.timeoutMs ?? 55000, env: { GROQ_API_KEYS: env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "" } });
+  const groq = String(env.GROQ_API_KEYS ?? "").trim();
+  if (groq) { try { return await generateDeepNotes({ ...input, timeoutMs: 34000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
+  return generateDeepNotes({ ...input, timeoutMs: groq ? 22000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
 }
 
 /** The first complete JSON object in a model's reply (text before or after it, or a second object, is ignored). Returns null when there is none. */
@@ -485,29 +489,58 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
   if (!url || !svc || !hasModel || !hasReviewer) return { code: 503, body: { status: "unavailable" } };
 
   const rest = (p, init = {}) => fetchImpl(`${url}/rest/v1/${p}`, { ...init, headers: { apikey: svc, Authorization: `Bearer ${svc}`, "content-type": "application/json", ...(init.headers || {}) } });
-  const save = (row) => rest("topic_pages?on_conflict=slug", { method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=minimal" }, body: JSON.stringify({ slug, name, category: input.category ?? null, updated_at: new Date().toISOString(), ...row }) });
+  const save = async (row) => {
+    const response = await rest("topic_pages?on_conflict=slug", { method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=minimal" }, body: JSON.stringify({ slug, name, category: input.category ?? null, updated_at: new Date().toISOString(), ...row }) });
+    if (!response.ok) throw new Error(`topic_pages write failed (${response.status})`);
+    return response;
+  };
   try {
     const found = await rest(`topic_pages?slug=eq.${encodeURIComponent(slug)}&select=status,content,updated_at`);
-    const have = (found.ok ? await found.json() : [])[0];
+    if (!found.ok) throw new Error(`topic_pages lookup failed (${found.status})`);
+    const have = (await found.json())[0];
     if (have?.status === "published" && have.content) return { code: 200, body: { status: "published", slug, page: have.content } };
     if (have?.status === "rejected") return { code: 404, body: { status: "rejected" } };
     const age = have ? Date.now() - Date.parse(have.updated_at || 0) : Infinity;
     if (have?.status === "generating" && age < 3 * 60_000) return { code: 202, body: { status: "generating" } };
     if (have?.status === "failed" && age < 10 * 60_000) return { code: 502, body: { status: "failed" } };
 
-    // a daily limit keeps the AI bill small even if a crawler or a joker walks the site
     const cap = Number(env.TOPIC_AI_DAILY_CAP || 60);
     const since = new Date(Date.now() - 86_400_000).toISOString();
     const count = await rest(`topic_pages?created_at=gte.${encodeURIComponent(since)}&select=slug`, { headers: { Prefer: "count=exact", Range: "0-0" } });
+    if (!count.ok) throw new Error(`topic_pages count failed (${count.status})`);
     if (Number((count.headers.get("content-range") || "").split("/")[1] || 0) >= cap) return { code: 429, body: { status: "busy" } };
 
     await save({ status: "generating" });
     let page;
-    try { const result = await generateReviewedTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }, { env, fetchImpl });
-      page = result.page; }
-    catch { await save({ status: "failed" }); return { code: 502, body: { status: "failed" } }; }
-    if (!page.medical) { await save({ status: "rejected" }); return { code: 404, body: { status: "rejected" } }; }
-    await save({ status: "published", content: page, model: page.model, reviewed: false });
+    try {
+      const result = await generateReviewedTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }, { env, fetchImpl });
+      page = result.page;
+    } catch {
+      await save({ status: "failed" });
+      return { code: 502, body: { status: "failed" } };
+    }
+    if (!page.medical) {
+      await save({ status: "rejected" });
+      return { code: 404, body: { status: "rejected" } };
+    }
+    if (page.aiReview?.status !== "passed" || !page.aiReview?.model) {
+      await save({ status: "failed" });
+      return { code: 502, body: { status: "failed" } };
+    }
+    const reviewedAt = new Date().toISOString();
+    await save({
+      status: "published",
+      content: page,
+      model: page.model,
+      generator_model: page.model,
+      ai_review_status: "passed",
+      ai_review_model: page.aiReview.model,
+      ai_reviewed_at: reviewedAt,
+      ai_review_fix_rounds: Math.max(0, Math.min(2, Number(page.aiReview.fixRounds) || 0)),
+      reviewed: false,
+    });
     return { code: 200, body: { status: "published", slug, page } };
-  } catch { return { code: 502, body: { status: "failed" } }; }
+  } catch {
+    return { code: 502, body: { status: "failed" } };
+  }
 }
