@@ -166,7 +166,7 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     // pages, not explanatory articles. Their value is the attached source document;
     // keep their HTTP, canonical, title and robots checks, but don't apply the
     // explanatory-article word-count threshold to them.
-    const documentResource = /(?:-past-papers?(?:-|$)|-handbook(?:-|$)|notice-to-all-students)/i.test(pathname);
+    const documentResource = /(?:-past-papers?(?:-|$)|-handbook(?:-|$)|notice-to-all-students|weekly-[^/]*-exam)/i.test(pathname);
     if (!documentResource && visibleWords < MIN_VISIBLE_WORDS) return fail(`${url} is too thin for indexing: ${visibleWords} visible words (minimum ${MIN_VISIBLE_WORDS})`);
     return { ok: true, url, title: title.replace(/\s+/g, " ").trim() };
   } catch (e) {
