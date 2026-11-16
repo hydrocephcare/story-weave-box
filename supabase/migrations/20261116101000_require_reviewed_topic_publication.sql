@@ -47,7 +47,7 @@ begin
   generator := left(coalesce(nullif(p_content->>'model', ''), p_model, 'groq'), 60);
 
   as_text := p_content::text;
-  if as_text ~* '(https?:|www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text)' then
+  if as_text ~* '(https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text)' then
     return jsonb_build_object('ok', false, 'reason', 'unsafe');
   end if;
 
