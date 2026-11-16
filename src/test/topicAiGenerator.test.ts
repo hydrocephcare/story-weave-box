@@ -16,9 +16,7 @@ describe("Groq topic generation boundary", () => {
 
     expect(fetchImpl).toHaveBeenCalledTimes(1);
     expect(fetchImpl.mock.calls[0][0]).toBe("https://api.groq.com/openai/v1/chat/completions");
-    expect(fetchImpl.mock.calls[0][1]?.headers).toMatchObject({
-      Authorization: "Bearer groq-test-key",
-    });
+    expect(new Headers(fetchImpl.mock.calls[0][1]?.headers).get("Authorization")).toBe("Bearer groq-test-key");
     expect(result).toEqual({ text: '{"medical":true}', model: "openai/gpt-oss-120b" });
   });
 
