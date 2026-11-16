@@ -177,6 +177,58 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
 }
 
 /**
+ * Calls Google's Gemini API directly. This is the independent review boundary:
+ * no Lovable/OmniRoute gateway and no Groq fallback are permitted here.
+ */
+export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 3500 } = {}) {
+  const keys = [...new Set([
+    ...String(env.GEMINI_API_KEYS ?? "").split(/[\\s,]+/),
+    env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3,
+  ].map((key) => String(key ?? "").trim()).filter(Boolean))];
+  const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
+  if (!keys.length) throw new Error("Gemini review is not configured (GEMINI_API_KEYS).");
+  if (!models.length) throw new Error("No Gemini review model is configured.");
+
+  const start = turn++ % keys.length;
+  let lastError = new Error("All Gemini review attempts failed.");
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[(start + i) % keys.length];
+    for (const model of models) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+          method: "POST",
+          signal: controller.signal,
+          headers: { "content-type": "application/json", "x-goog-api-key": key },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: {
+              temperature: 0.2,
+              maxOutputTokens: maxTokens,
+              responseMimeType: "application/json",
+              ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+            },
+          }),
+        });
+        if (!response.ok) {
+          lastError = new Error(`Gemini review failed (${response.status}).`);
+          continue;
+        }
+        const text = (await response.json())?.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("");
+        if (typeof text === "string" && text.trim()) return { text, model };
+        lastError = new Error("Gemini returned an empty review.");
+      } catch (error) {
+        lastError = error instanceof Error ? error : new Error(String(error));
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+  }
+  throw lastError;
+}
+
+/**
  * Calls Groq only. This provider boundary is deliberate: content generation and
  * independent Gemini review must never silently become the same model family.
  */
