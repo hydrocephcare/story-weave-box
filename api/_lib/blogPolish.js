@@ -51,7 +51,7 @@ export default async function handler(req, res) {
 
   // already finished, or being worked on: nothing to do. A finished page is never polished again.
   // (progress on a long page is kept at the top of its saved text as <!--parts:N-->, so no extra database column is needed)
-  const existing = (await sb(`blog_polish?select=status,updated_at,content,title,reason,ai_review_status&article_id=eq.${id}`)).json?.[0];
+  const existing = (await sb(`blog_polish?select=status,updated_at,content,title,reason,ai_review_status,verdict&article_id=eq.${id}`)).json?.[0];
   const ageS = existing ? (now - new Date(existing.updated_at).getTime()) / 1000 : 0;
   const long = a.content.length > 14000;
   const marker = /^<!--parts:(\d+)(?::(\d+))?-->\n?/;
@@ -64,7 +64,7 @@ export default async function handler(req, res) {
   const lateStart = existing?.status === "done" && !existing.content && long && /left for later|too long|rejected in part/i.test(existing.reason ?? "");
   // a long page that had saved progress when the AI hiccuped carries on after a minute; any other failure waits twelve hours
   const resumeFailed = existing?.status === "failed" && long && doneParts > 0 && ageS > 60;
-  const retryUnreviewed = existing?.status === "done" && existing.ai_review_status !== "passed" && ageS > 12 * 3600;
+  const retryUnreviewed = existing?.status === "done" && existing.verdict !== "irrelevant" && existing.ai_review_status !== "passed" && ageS > 12 * 3600;
   const retry = resumeFailed || retryUnreviewed || (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
   if (existing && !(carryOn || lateStart || retry)) return res.status(200).json({ status: existing.status, more: false });
 
