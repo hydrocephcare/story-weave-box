@@ -112,39 +112,32 @@
    "hash": "8847228595f8",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Section 6: Clinical features of a major depressive episode",
-     "problem": "The text states that 'psychotic depression' is a feature that points toward bipolar rather than unipolar depression, but psychotic depression can occur in both unipolar and bipolar depression.",
-     "fix": "Features that point toward bipolar rather than unipolar depression include early age of onset, many episodes, atypical features, psychomotor retardation, postpartum episodes, family history of bipolar disorder, and a history of antidepressant-induced switch or poor response to antidepressants."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-17"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-16",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-16T12:32:42.080Z"
   },
   "pneumonia": {
    "hash": "137fad200293",
    "validated": false,
-   "high": 2,
+   "high": 1,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Q1. A patient with community‑acquired pneumonia is tachypnoeic (RR 32) but has a normal blood pressure and no confusion. What is the next st",
-     "problem": "The CURB-65 score calculation is incorrect for inpatient admission criteria.",
-     "fix": "A CURB-65 score of 2 or more warrants hospitalisation. A score of 1 (respiratory rate ≥ 30) does not automatically require inpatient admission; it suggests consideration for hospital admission or close outpatient management."
-    },
-    {
-     "severity": "high",
-     "where": "Q5. A patient with aspiration pneumonia shows right lower‑lobe consolidation and foul‑smelling sputum. Which organism group is most likely,",
-     "problem": "Metronidazole is not routinely recommended as an add-on for aspiration pneumonia in current guidelines unless there is evidence of empyema or lung abscess.",
-     "fix": "For aspiration pneumonia, amoxicillin-clavulanate is often sufficient, or a combination of a beta-lactam (e.g., amoxicillin) with a beta-lactamase inhibitor (e.g., clavulanate) or clindamycin, which covers anaerobes without needing metronidazole as an add-on."
+     "where": "PCP (HIV) | High‑dose co‑trimoxazole (TMP 15 mg/kg + SMX 75 mg/kg) + steroids if SpO₂ < 70 %",
+     "problem": "The oxygen saturation threshold for adding adjunctive corticosteroids in Pneumocystis jirovecii pneumonia is PaO₂ < 70 mmHg (or SpO₂ < 92% on room air), not SpO₂ < 70%.",
+     "fix": "High‑dose co‑trimoxazole (TMP 15 mg/kg + SMX 75 mg/kg) + steroids if SpO₂ < 92 % (or PaO₂ < 70 mmHg)."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-18"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-16",
+   "repairStatus": "held",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-16T12:33:57.688Z"
   },
   "pleural-effusion": {
    "hash": "da6d35e11d1e",
@@ -211,47 +204,27 @@
   },
   "interstitial-lung-disease": {
    "hash": "c7f8db7a5fe4",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "works as a stone‑cutter... No occupational exposure to asbestos, no recent drug changes... IPF",
-     "problem": "The clinical case states the patient works as a stone-cutter but diagnoses idiopathic pulmonary fibrosis (IPF), ignoring significant silica exposure which causes silicosis and precludes an 'idiopathic' diagnosis.",
-     "fix": "Remove the stone-cutter occupation or clarify that occupational and environmental exposure histories (including silica) were negative before diagnosing IPF."
-    }
-   ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-10-19"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-16",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-16T12:34:48.341Z"
   },
   "occupational-lung-disease": {
    "hash": "6aeceb80a52e",
-   "validated": false,
-   "high": 1,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Positive test + compatible CXR → silico‑TB; warrants chemoprophylaxis",
-     "problem": "Compatible chest X-ray findings alongside a positive IGRA/TST in a symptomatic patient indicate active tuberculosis (silico-TB), which requires full multidrug anti-TB treatment, not chemoprophylaxis.",
-     "fix": "Positive test + compatible CXR/symptoms indicates active silico-TB requiring full anti-TB therapy; chemoprophylaxis (TPT) is reserved for latent TB without active disease."
-    },
-    {
-     "severity": "medium",
-     "where": "Progressive massive fibrosis (PMF): Coalescence of nodules → dense collagenous mass, usually in upper zones (silica, coal) or lower zones (a",
-     "problem": "Progressive massive fibrosis (PMF) refers specifically to large confluent fibrotic masses in silicosis or coal workers' pneumoconiosis (characteristically upper zones), not asbestosis.",
-     "fix": "Remove the reference to asbestos causing PMF, as PMF is a complication of coal workers' pneumoconiosis and silicosis, while advanced asbestosis produces diffuse interstitial pulmonary fibrosis and honeycombing predominantly in the lower zones."
-    },
-    {
-     "severity": "medium",
-     "where": "stone‑cutting with use of asbestos‑containing cutting fluids",
-     "problem": "Cutting fluids (coolants/lubricants) do not contain asbestos; stone-cutting generates silica exposure, making this clinical mechanism fabricated.",
-     "fix": "Attribute asbestos exposure to realistic historical sources such as insulation, construction materials, or friction products rather than cutting fluids."
-    }
-   ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-10-19"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-16",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-16T12:34:53.014Z"
   },
   "dvt-vte-pulmonary-embolism": {
    "hash": "27a229d77f64",
