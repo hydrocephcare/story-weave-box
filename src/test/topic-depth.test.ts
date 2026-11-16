@@ -10,11 +10,13 @@ const management = { sections: ["Management step by step", "Complications and wh
 const exam = { facts: ["Number one to memorise", "Number two to memorise"], vivas: Array.from({ length: 9 }, (_, i) => viva(i + 1)), mcqs: [mcq(1), mcq(2)], cases: [{ v: "A 30-year-old woman presents with fever and cough for three weeks.", qs: [{ q: "What is the diagnosis?", a: "The most likely diagnosis is X." }, { q: "What is the next step?", a: "Do the test Y first." }] }], mistakes: ["Forgetting to check the second thing"] };
 
 describe("revision page and deep exam notes", () => {
-  it("the revision page is written short, as before (6-8 questions, no deep rules)", () => {
+  it("the default topic page is comprehensive, with full depth and no quick-mode default", () => {
     const p = buildPrompt({ name: "Ascites", category: "Medicine" });
-    expect(p).toContain("6-8");
-    expect(p).not.toContain("DEPTH:");
-    expect(cleanChoices({ level: "x", depth: "y" })).toMatchObject({ depth: "quick" });
+    expect(p).toContain("10-12");
+    expect(p).toContain("DEPTH:");
+    expect(p).toContain("pharmacokinetics");
+    expect(p).toContain("plain language");
+    expect(cleanChoices({ level: "x", depth: "y" })).toMatchObject({ depth: "full" });
   });
 
   it("each part of the deep notes prompt shows what the revision page has and asks for something different", () => {

@@ -36,7 +36,7 @@ export function sanitizeCheck(raw) {
   const high = issues.filter((x) => x.severity === "high").length;
   const medium = issues.filter((x) => x.severity === "medium").length;
   // a page is "validated" only when nothing serious was found
-  return { validated: high === 0, high, medium, issues };
+  return { validated: high === 0 && medium === 0, high, medium, issues };
 }
 
 /** A second look at what the first pass claimed: each claim is kept only if a fresh read agrees it is a real error in the text. */
@@ -135,7 +135,6 @@ export async function generateCheckedDeep(input, env, fetchImpl = fetch, budgetM
     if (last.validated) return { ...deep, checked: last.at };
     fixes = last.issues.filter((x) => x.severity !== "low").map((x) => x.problem + " Correct: " + x.fix);
   }
-  const { deep: trimmed, removed } = dropFlagged(deep, last.issues.filter((x) => x.severity === "high"));
-  if (!removed || (trimmed.sections?.length ?? 0) < 5 || (trimmed.vivas?.length ?? 0) < 8) throw new Error("deep notes held back: " + fixes.join(" | ").slice(0, 300));
-  return { ...trimmed, checked: last.at, trimmed: removed };
+  const unresolved = (last?.issues ?? []).map((x) => `[${x.severity}] ${x.where}: ${x.problem} — ${x.fix}`).join(" | ");
+  throw new Error("Deep notes held back: Gemini did not clear every high/medium finding after correction. " + unresolved.slice(0, 500));
 }

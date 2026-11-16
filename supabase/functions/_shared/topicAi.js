@@ -9,17 +9,34 @@ export const KINDS = {
   disease: ["Definition and diagnosis", "Severity and staging", "Causes, most likely first", "How it presents", "Investigations", "Red flags and complications", "Management", "Follow-up and prevention", "Often confused with", "Where results can mislead"],
   anatomy: ["Overview", "Location and structure", "Relations", "Blood supply", "Nerve supply", "Function", "Clinical relevance and injuries", "Exam pearls"],
   physiology: ["Overview", "How it works", "Regulation", "What goes wrong", "Clinical relevance", "Exam pearls"],
-  microbe: ["Overview", "Features of the organism", "Transmission and life cycle", "Disease it causes", "Diagnosis", "Treatment and control", "Exam pearls"],
-  general: ["Overview", "Key concepts", "Clinical relevance", "Exam pearls", "Common mistakes"],
+  pharmacology: ["Drug class and classification", "Mechanism of action", "Clinical uses", "Adverse effects", "Contraindications and interactions", "Monitoring", "Exam pearls"],
+  pathology: ["Definition and classification", "Causes", "Pathogenesis", "Morphology", "Clinical features", "Investigations", "Complications", "Exam pearls"],
+  microbe: ["Overview", "Features of the organism", "Transmission and life cycle", "Pathogenesis", "Disease it causes", "Diagnosis", "Treatment and control", "Exam pearls"],
+  biochemistry: ["Overview", "Key molecules and enzymes", "Pathway or mechanism", "Regulation", "Clinical relevance", "Laboratory assessment", "Exam pearls"],
+  publicHealth: ["Overview", "Epidemiology", "Determinants", "Prevention and control", "Implementation", "Monitoring and evaluation", "Exam pearls"],
+  general: ["Overview", "Key concepts", "Mechanisms and processes", "Clinical relevance", "Applications", "Common mistakes", "Exam pearls"],
 };
-
-/** Which layout a topic gets, from the subject the site filed it under. */
+export const DEEP_KINDS = {
+  disease: DEEP_DISEASE,
+  anatomy: ["Definition and anatomical overview", "Embryological development", "Gross anatomy and relations", "Blood supply", "Nerve supply and lymphatic drainage", "Histology and microanatomy", "Functions and biomechanics", "Applied anatomy and clinical correlations", "Common injuries and pathology", "Imaging and examination", "Variations and congenital anomalies", "Exam approach"],
+  physiology: ["Overview and homeostasis", "Normal physiology step by step", "Cellular and molecular mechanisms", "Regulation and feedback", "Integration across organ systems", "Factors affecting normal function", "Pathophysiology: what goes wrong", "Clinical manifestations", "Investigations and interpretation", "Clinical applications", "Common misconceptions", "Exam approach"],
+  pharmacology: ["Drug class and classification", "Prototypes and structure-activity relationships", "Mechanism of action", "Pharmacokinetics", "Pharmacodynamics", "Indications and clinical selection", "Contraindications and precautions", "Adverse effects and toxicity", "Interactions", "Monitoring and special populations", "Resistance and stewardship", "Exam approach"],
+  pathology: ["Definition and classification", "Aetiology and risk factors", "Pathogenesis step by step", "Gross morphology", "Microscopic morphology", "Clinical manifestations", "Investigations and diagnostic criteria", "Grading and staging", "Complications and prognosis", "Treatment principles", "Clinical-pathological correlations", "Exam approach"],
+  microbe: ["Classification and overview", "Morphology and structure", "Virulence factors", "Transmission and epidemiology", "Pathogenesis and host response", "Clinical manifestations", "Laboratory diagnosis and interpretation", "Treatment and antimicrobial pharmacology", "Resistance", "Prevention and public health", "Complications", "Exam approach"],
+  biochemistry: ["Overview and biological role", "Structure and key components", "Pathway or mechanism step by step", "Enzymes and cofactors", "Regulation", "Integration and energy balance", "Clinical and disease correlations", "Laboratory assessment and interpretation", "Disorders and consequences", "Therapeutic implications", "Common errors", "Exam approach"],
+  publicHealth: ["Definition and scope", "Epidemiology and burden", "Determinants and risk factors", "Surveillance and data interpretation", "Screening and prevention", "Interventions and implementation", "Health systems and policy", "Equity and community engagement", "Monitoring and evaluation", "Clinical relevance", "Common limitations", "Exam approach"],
+  general: ["Definition and scope", "Core concepts", "Mechanisms and processes", "Types and classification", "Clinical or practical applications", "Measurement and interpretation", "Examples and case applications", "Limitations and common errors", "Related concepts", "Exam approach"],
+};
 export function kindOf(category = "", name = "") {
   const c = `${category} ${name}`.toLowerCase();
   if (/anatom|embryolog|histolog/.test(c)) return "anatomy";
+  if (/pharmac|drug class|pharmacokinetic|pharmacodynamic/.test(c)) return "pharmacology";
+  if (/patholog|histopath|morpholog/.test(c)) return "pathology";
   if (/microbio|parasit|bacteri|virus|virolog|mycolog|entomolog/.test(c)) return "microbe";
-  if (/physiolog|biochem|molecular|genetic/.test(c)) return "physiology";
-  if (/patholog|medicine|psychiatr|paediatr|obstet|gynae|surger|pharmac|public health|disease|disorder|syndrome/.test(c)) return "disease";
+  if (/biochem|molecular|genetic|metabolic pathway/.test(c)) return "biochemistry";
+  if (/public health|epidemiolog|community health|health promotion/.test(c)) return "publicHealth";
+  if (/physiolog|homeostasis|physiological/.test(c)) return "physiology";
+  if (/medicine|psychiatr|paediatr|obstet|gynae|surger|disease|disorder|syndrome|clinical/.test(c)) return "disease";
   return "general";
 }
 
@@ -34,7 +51,7 @@ export function cleanChoices(c) {
     level: pick(c?.level, ["year3", "year4", "year5"], "year4"),
     angles: (Array.isArray(c?.angles) ? c.angles : []).filter((a) => Object.hasOwn(ANGLE_TEXT, a)).slice(0, 6),
     setting: pick(c?.setting, ["tropical", "general"], "tropical"),
-    depth: pick(c?.depth, ["quick", "full"], "quick"),
+    depth: "full",
   };
 }
 const ANGLE_TEXT = { bedside: "the bedside (history, how to examine, named signs and how to elicit them)", medicine: "internal medicine reasoning", surgery: "surgical angles and when to operate", pathology: "pathology and mechanisms", drugs: "pharmacology (why each drug, why others are avoided, monitoring)", emergency: "emergency first steps" };
@@ -44,23 +61,29 @@ const ACCURACY_RULES = `
 ACCURACY RULES (read before you write): every number, cut-off, drug and sign must match standard current guidelines. Name a sign, score or eponym only if you are certain of the name and of what it shows; otherwise describe it in plain words. Write each threshold the same way every time it appears (for example always "250 or more", never "over 250" in one place and "250 or more" in another). Describe examination signs by what actually happens (for example in shifting dullness the fluid falls to the dependent flank, so that flank is dull and the upper flank is resonant). If you are not sure of a fact, leave it out. Do not invent statistics.`;
 
 const DEEP_RULES = `
-DEPTH: this page must be thorough, not a summary. A lecturer should be able to ask a dozen different questions on this topic and find each answer here. Write 4 to 8 bullets or a rich paragraph in every section. Where they apply to this topic, include:
-- Bedside: the key history questions, then the examination step by step: each named sign, how to elicit it, what a positive result means (for example for ascites: inspection, flank dullness, shifting dullness, fluid thrill, and why each is done), and what a bedside test cannot tell you.
-- Investigations: every test with the question it answers and how to read the result, including calculated indices and diagnostic criteria (for example the serum-ascites albumin gradient and what a high or low value means), and the thresholds that change management. Say what to do when a test is unavailable.
-- Complicating and confounding factors: HIV, TB, malnutrition, pregnancy, diabetes, drugs and herbal remedies, alcohol, renal or liver failure, age extremes, and anything else that changes the picture, the results or the treatment.
-- Management, step by step: first things first, definitive treatment, monitoring, escalation and when to refer. Name drug classes and medicines and the reason for each choice; say what to avoid and why. No doses.
-- Special groups: children, pregnancy, the elderly, people with HIV, low-resource settings.
-- "exam": 10 to 12 questions that cover all of the above (bedside, interpreting a result, management, complications, "what would you do next").`;
+DEPTH: for a complete topic overview, follow the minimum section count supplied by the caller; for a focused deep-note part, follow the requested 3-5 sections. Each section must contain 4-8 meaningful bullets, a useful comparison table, or a genuinely explanatory paragraph plus bullets. Never pad with repetition.
+AUDIENCE: teach two audiences together. Begin the summary in plain language that an interested member of the public can understand; then add the accurate technical framing needed by a medical student. Define specialist terms at first use, use a short real-world example or clinical vignette where it clarifies the idea, and keep patient-facing explanations distinct from professional clinical decisions.
+DISEASES: cover definition, epidemiology, causes and risk factors, mechanisms, presentation, history and examination, differentials, investigations with interpretation and thresholds, severity/staging, management rationale, pharmacology, complications, special groups, follow-up and prevention.
+ANATOMY: cover development, gross anatomy, relations, blood supply, innervation, lymphatics, histology, function, applied anatomy, common injuries/variants, examination and imaging.
+PHYSIOLOGY: explain normal function step by step, cellular mechanisms, feedback regulation, integration with other systems, factors that alter function, pathophysiology and clinical/laboratory correlations.
+PHARMACOLOGY: cover classification and prototypes, mechanism, pharmacokinetics, pharmacodynamics, indications, contraindications, adverse effects, interactions, toxicity, monitoring, special populations and stewardship where relevant.
+PATHOLOGY: cover aetiology, pathogenesis, gross and microscopic morphology, clinical manifestations, diagnostic tests, grading/staging, complications, prognosis and treatment principles.
+MICROBIOLOGY: cover classification, morphology, virulence, transmission, pathogenesis, host response, clinical syndromes, specimen choice, laboratory diagnosis, treatment, resistance and prevention.
+BIOCHEMISTRY: explain molecules, enzymes, pathways, rate-limiting steps, cofactors, regulation, integration, laboratory assessment and disease correlations.
+PUBLIC HEALTH: cover epidemiology, determinants, surveillance, prevention, screening, interventions, implementation, health systems, equity and evaluation.
+CLINICAL REASONING: for clinical topics, include bedside history/examination, investigation interpretation, management decisions, drug rationale, escalation, complications and follow-up. Include tropical and low-resource considerations only where relevant.
+EXAMPLES: use illustrative examples and short cases, clearly label hypothetical examples, and never invent prevalence figures, patient outcomes or references.
+EXAM: for a complete overview include 10-12 strategic questions testing mechanisms, interpretation, management choices, contraindications, complications and application—not simple definitions.`;
 
 export function buildPrompt({ name, category, context = "", choices, fixes = [] }) {
   const kind = kindOf(category, name);
   const ch = cleanChoices(choices);
   const deep = ch.depth === "full";
-  const headings = deep && kind === "disease" ? DEEP_DISEASE : KINDS[kind];
-  const minimumSections = Math.max(3, headings.length - 1);
+  const headings = deep ? DEEP_KINDS[kind] : KINDS[kind];
+  const minimumSections = deep ? Math.max(9, headings.length - 1) : Math.max(3, headings.length - 1);
   const focus = ch.angles.length ? ` The reader asked for special attention to: ${ch.angles.map((a) => ANGLE_TEXT[a]).join("; ")}.` : "";
   const setting = ch.setting === "tropical" ? "East African and other low-resource hospitals (common local conditions first, and tests that may not be available)" : "general international practice";
-  return `You are a clinical reasoning tutor. Write an accurate study page about "${name}" (area: ${category || "medicine"}) that teaches a student to think like a clinician, not to recite a list. The reader is ${READER[ch.level]}. Setting: ${setting}.${focus}${deep ? DEEP_RULES : ""}
+  return `You are a clinical reasoning tutor. Write an accurate study page about "${name}" (area: ${category || "medicine"}) that teaches a student to think like a clinician, not to recite a list. The reader is ${READER[ch.level]}. Setting: ${setting}.${focus}${deep ? DEEP_RULES : ""} The summary must start in plain language for the public, then give the precise clinical or scientific meaning.
 
 PRE-GENERATION CLINICAL ENTITY DISAMBIGUATION (mandatory, before drafting): First classify the exact clinical entity intended by the topic name, subject/category and supplied context. If the name can refer to multiple entities, select the entity that best matches the subject/category and clinical setting; state that chosen scope explicitly in the FIRST sentence of the summary and in the new clinicalScope field. Put the other entity/entities under "Often confused with" and explain the distinguishing features. Never blend causes, presentation, investigations or management across entities. Example: for "umbilical vein thrombosis" filed under Paediatrics/neonatal, write about neonatal umbilical vein thrombosis, especially umbilical venous catheter (UVC)-associated thrombosis; do not mix it with antenatal umbilical cord thrombosis. Put antenatal cord thrombosis under "Often confused with". If the intended entity remains genuinely unclear after considering category and context, state the ambiguity rather than inventing a scope.
 
@@ -84,7 +107,7 @@ ${fixes.length ? `\nA CLINICAL REVIEWER FOUND THESE ERRORS IN THE PREVIOUS DRAFT
 }
 
 /** Checks and tidies whatever the model returned. Returns {medical:false} or a safe page; throws when it is not usable. */
-export function sanitizePage(raw) {
+export function sanitizePage(raw, options = {}) {
   if (!raw || typeof raw !== "object") throw new Error("not an object");
   if (raw.medical === false) return { medical: false };
   const summary = clip(raw.summary, 500);
@@ -98,6 +121,20 @@ export function sanitizePage(raw) {
     return h && (p || b.length || t.length) ? { h, ...(p ? { p } : {}), ...(b.length ? { b } : {}), ...(t.length ? { t } : {}) } : null;
   }).filter(Boolean);
   if (sections.length < 3) throw new Error("too few sections");
+  const full = Boolean(options.name || options.category) && cleanChoices(options.choices).depth === "full";
+  if (full) {
+    const expected = DEEP_KINDS[kindOf(options.category ?? "", options.name ?? "")] ?? DEEP_KINDS.general;
+    const minimum = Math.max(9, expected.length - 1);
+    if (sections.length < minimum) throw new Error(`thin topic page: ${sections.length} sections; ${minimum} required`);
+    const thin = sections.filter((section) => {
+      const structured = (section.b?.length ?? 0) + (section.t?.length ?? 0);
+      const words = (section.p ?? "").split(/\\s+/).filter(Boolean).length;
+      return structured < 4 && words < 65;
+    });
+    if (thin.length) throw new Error(`thin sections: ${thin.map((section) => section.h).slice(0, 4).join(", ")}`);
+    if ((raw.exam ?? []).filter((x) => String(x).includes("—")).length < 8) throw new Error("full topic page needs at least 8 applied examiner questions");
+    if ((Array.isArray(raw.faq) ? raw.faq.filter((x) => clip(x?.q, 200).length >= 8 && clip(x?.a, 500).length >= 8).length : 0) < 3) throw new Error("full topic page needs at least 3 useful FAQs");
+  }
   const list = (a, n, max) => (Array.isArray(a) ? a : []).map((x) => okText(x, max)).filter((x) => x.length >= 4).slice(0, n);
   const faq = (Array.isArray(raw.faq) ? raw.faq : []).map((f) => ({ q: clip(f?.q, 200), a: okText(f?.a, 500) })).filter((f) => f.q.length >= 8 && f.a.length >= 8).slice(0, 6);
   const title = clip(raw.title, 80).replace(/[<>]/g, "");
@@ -291,7 +328,7 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
   });
   const json = extractJson(text);
   if (!json) throw new Error("Groq returned no valid JSON.");
-  const page = sanitizePage(json);
+  const page = sanitizePage(json, { name, category, choices });
   return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
 }
 
@@ -309,9 +346,9 @@ export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch,
     page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const reviewKind = kindOf(input.category ?? "", input.name ?? "");
-    const reviewHeadings = cleanChoices(input.choices).depth === "full" && reviewKind === "disease" ? DEEP_DISEASE : KINDS[reviewKind];
-    const reviewMinimumSections = Math.max(3, reviewHeadings.length - 1);
-    const reviewPrompt = `You are an independent senior clinical reviewer for medical students in Kenya. Review the complete page for clinical accuracy AND completeness. You MUST: (1) verify the selected clinical entity against the topic name, category and context; flag mixed entities, especially causes/features/management borrowed from a different population or condition; (2) verify that the first summary sentence and clinicalScope identify the selected entity; (3) flag any section whose content does not match its heading (for example investigations placed under Clinical relevance); (4) perform a topic-type missing-sections and minimum-depth check. Expected section headings: ${reviewHeadings.join("; ")}. At least ${reviewMinimumSections} substantive sections are required; flag a page that is substantially shorter, omits a central cause/mechanism, presentation, appropriate investigations, management decision, complications or follow-up for this topic type; (5) check incorrect diagnostic criteria or thresholds, wrong drug or management advice, unsafe omissions, inaccurate examination signs, contradictory facts and incorrect exam answers. Do not flag style or optional additions. Do not pass a page just because the prose is fluent. Be conservative about clinical claims, but strict about missing core content. If none, return exactly {"verdict":"ok","issues":[]}. Otherwise return {"verdict":"issues","issues":[{"severity":"high|medium","where":"section and short exact quote","problem":"specific error or omission","fix":"clinically correct replacement or specific missing content to add"}]}.
+    const reviewHeadings = cleanChoices(input.choices).depth === "full" ? DEEP_KINDS[reviewKind] : KINDS[reviewKind];
+    const reviewMinimumSections = cleanChoices(input.choices).depth === "full" ? Math.max(9, reviewHeadings.length - 1) : Math.max(3, reviewHeadings.length - 1);
+    const reviewPrompt = `You are an independent senior clinical and scientific reviewer for a public-facing health education site and medical students in Kenya. Review the complete page for accuracy, accessibility AND completeness. Do not demand disease-only sections from anatomy, physiology, pharmacology, pathology, microbiology, biochemistry or public-health topics. You MUST: (1) verify the selected clinical entity against the topic name, category and context; flag mixed entities, especially causes/features/management borrowed from a different population or condition; (2) verify that the first summary sentence and clinicalScope identify the selected entity; (3) flag any section whose content does not match its heading (for example investigations placed under Clinical relevance); (4) perform a topic-type missing-sections and minimum-depth check. Expected section headings: ${reviewHeadings.join("; ")}. At least ${reviewMinimumSections} substantive sections are required; flag a page that is substantially shorter, omits a central cause/mechanism, presentation, appropriate investigations, management decision, complications or follow-up for this topic type; (5) check incorrect diagnostic criteria or thresholds, wrong drug or management advice, unsafe omissions, inaccurate examination signs, contradictory facts and incorrect exam answers. Do not flag style or optional additions. Do not pass a page just because the prose is fluent. Be conservative about clinical claims, but strict about missing core content. If none, return exactly {"verdict":"ok","issues":[]}. Otherwise return {"verdict":"issues","issues":[{"severity":"high|medium","where":"section and short exact quote","problem":"specific error or omission","fix":"clinically correct replacement or specific missing content to add"}]}.
 TITLE: ${input.name}
 CATEGORY: ${input.category ?? "unspecified"}
 SELECTED SCOPE: ${page.clinicalScope ?? "not stated"}
@@ -341,13 +378,9 @@ ${JSON.stringify({ title: page.title, clinicalScope: page.clinicalScope, summary
 }
 
 /** Writes a checked page (or {medical:false}). `fetchImpl` is injectable for tests. */
-export async function generateTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
-  const deep = cleanChoices(choices).depth === "full";
-  const { text, model } = await askModel(buildPrompt({ name, category, context, choices }), { env, fetchImpl, timeoutMs: timeoutMs ?? (deep ? 55000 : 50000), maxTokens: deep ? 10000 : 5000 });
-  const json = extractJson(text);
-  if (!json) throw new Error("no JSON in the reply");
-  const page = sanitizePage(json);
-  return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
+export async function generateTopicPage(input) {
+  const result = await generateReviewedTopicPage(input, { env: input.env, fetchImpl: input.fetchImpl ?? fetch, timeoutMs: input.timeoutMs, maxFixRounds: 1 });
+  return result.page;
 }
 
 /**
@@ -459,9 +492,9 @@ export async function generateDeepNotes({ name, category, base, past = [], fixes
  */
 /** Groq first (free), then Gemini, the same order as the revision page. */
 export async function generateDeepWithFallback(input, env) {
-  const groq = String(env.GROQ_API_KEYS ?? "").trim();
-  if (groq) { try { return await generateDeepNotes({ ...input, timeoutMs: 34000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
-  return generateDeepNotes({ ...input, timeoutMs: groq ? 22000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+  const groq = String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").trim();
+  if (!groq) throw new Error("GROQ_API_KEYS is required for deep-note generation; Gemini is reserved for verification.");
+  return generateDeepNotes({ ...input, timeoutMs: input.timeoutMs ?? 55000, env: { GROQ_API_KEYS: groq, GROQ_MODELS: env.GROQ_MODELS } });
 }
 
 /** The first complete JSON object in a model's reply (text before or after it, or a second object, is ignored). Returns null when there is none. */
