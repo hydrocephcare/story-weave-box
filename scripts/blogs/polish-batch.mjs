@@ -1,4 +1,4 @@
-// Polishes Year 1 to 3 blogs in bulk (the page-open endpoint does one at a time). Long pages are done piece by piece.
+// Polishes all public published blogs in bulk (the page-open endpoint does one at a time). Long pages are done piece by piece.
 //   node scripts/blogs/polish-batch.mjs [count] [--year N] [--minutes M]
 // Needs POLISH_WRITE_KEY (made on /admin/polish) plus GROQ_API_KEYS and/or GEMINI_API_KEYS in the environment. Results go to the blog_polish table, never into the articles.
 import fs from "node:fs";
@@ -47,8 +47,8 @@ const eligible = (a) => {
   return (s.status === "failed" && hours(s) > 12) || (s.status === "partial" && hours(s) > 1) || (s.status === "working" && hours(s) > 0.5) || (s.status === "done" && s.ai_review_status !== "passed" && hours(s) > 12);
 };
 // Year 2 and Year 1 first, then Year 3 and the rest
-const order = (a) => [0, 2, 1, 3, 4, 5, 6].indexOf(yearOf(a.category));
-const queue = rows.filter((a) => (ONLY ? yearOf(a.category) === ONLY : [1, 2, 3, 4, 5, 6].includes(yearOf(a.category))) && eligible(a)).sort((a, b) => order(a) - order(b));
+const order = (a) => { const y = yearOf(a.category); return y ? [0, 2, 1, 3, 4, 5, 6].indexOf(y) : 7; };
+const queue = rows.filter((a) => (ONLY ? yearOf(a.category) === ONLY : true) && eligible(a)).sort((a, b) => order(a) - order(b));
 console.log(`${queue.length} blogs still to polish; doing up to ${COUNT} (about ${MINUTES} minutes).`);
 
 const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env: { GROQ_API_KEYS: groq }, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
