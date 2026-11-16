@@ -34,7 +34,7 @@ begin
     return jsonb_build_object('ok', false, 'reason', 'shape');
   end if;
   -- Only a successful independent Gemini review may enter the public topic table.
-  if p_content->'aiReview'->>'status' <> 'passed'
+  if coalesce(p_content->'aiReview'->>'status', '') <> 'passed'
      or nullif(btrim(p_content->'aiReview'->>'model'), '') is null then
     return jsonb_build_object('ok', false, 'reason', 'review');
   end if;
