@@ -1,4 +1,6 @@
 import { serve } from "./shim.js";
+import { askGroqModel } from "../../../../supabase/functions/_shared/topicAi.js";
+import { checkContent } from "../../../../supabase/functions/_shared/contentCheck.js";
 import { callOmniRoute, omniRouteConfig } from "../../../../supabase/functions/_shared/omniroute.ts";
 import { chatText } from "../../../../supabase/functions/_shared/aiChat.js";
 import { placeNewQuestions } from "../../../../supabase/functions/_shared/mcqPositions.js";
@@ -131,6 +133,44 @@ function normalizeArticleOutput(raw: string): { title: string; content: string }
 
   return { title, content };
 }
+
+/**
+ * Medical articles use a strict two-model pipeline: Groq drafts, Gemini checks.
+ * Up to two targeted rewrites are permitted. If Gemini cannot review or issues
+ * remain after the final pass, the article is not returned for publication.
+ */
+async function generateReviewedArticle(messages: any[], customTitle: string): Promise<any> {
+  const env = Deno.env.toObject();
+  const basePrompt = messages.map((message) => `${message.role.toUpperCase()}:
+${String(message.content ?? "")}`).join("\n\n");
+  let corrections: string[] = [];
+  for (let round = 0; round <= 2; round++) {
+    const prompt = `${basePrompt}${corrections.length ? `
+
+CLINICAL REVIEW FINDINGS FROM THE PREVIOUS DRAFT — CORRECT EACH ITEM:
+- ${corrections.join("\n- ")}
+Do not repeat these errors. Preserve the article structure and correct only what is necessary.` : ""}`;
+    const generated = await askGroqModel(prompt, { env, maxTokens: 8000, timeoutMs: 60000 });
+    const article = normalizeArticleOutput(generated.text);
+    if (customTitle) article.title = customTitle;
+    const review = await checkContent({
+      title: article.title,
+      kind: "medical education article",
+      text: article.content,
+      env,
+      timeoutMs: 50000,
+    });
+    if (!review.issues.length) {
+      return { ...article, aiReview: { status: "passed", generator: generated.model, reviewer: review.model, reviewedAt: review.at, fixRounds: round } };
+    }
+    if (round === 2) {
+      throw new Error("Clinical review held the article back after two correction rounds: " + review.issues.map((issue) => `${issue.where}: ${issue.problem}`).join(" | ").slice(0, 500));
+    }
+    corrections = review.issues.map((issue) => `[${issue.severity}] ${issue.where}: ${issue.problem}. Correct statement: ${issue.fix}`);
+  }
+  throw new Error("Clinical review did not approve this article.");
+}
+
 
 function parseAndNormalizeMcqs(raw: string, expectedCount: number) {
   const jsonMatch = raw.match(/\[[\s\S]*\]/);
@@ -713,6 +753,13 @@ Return ONLY valid JSON array: [{"question":"...","answer":"..."}]`;
             : safeNotes,
       },
     ];
+
+    if (type === "article") {
+      const result = await generateReviewedArticle(messages, customTitle);
+      return new Response(JSON.stringify(result), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
 
     const text = await callAI(messages, geminiKey, allKeys);
 
