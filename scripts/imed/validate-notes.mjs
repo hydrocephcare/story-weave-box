@@ -38,7 +38,7 @@ console.log(todo.length + " note(s) queued for automatic checking and correction
 const repairPrompt = (n, body, issues) => [
   "You are the medical editor correcting a medical-school learning note for OmpathStudy.",
   "Correct every factual or clinical issue listed below. Preserve every correct original fact, number, unit, drug name, warning, table, diagram, image markdown and link. Do not shorten the note or remove valid teaching content.",
-  "Add missing explanations where needed to make the note accurate and understandable. Explain relevant physiology, mechanisms, types/classification, clinical features, investigations and interpretation, management, pharmacology, complications and prevention when appropriate to this topic. Adapt the structure; do not force irrelevant disease headings.",
+  "Add missing explanations where needed to make the note accurate and understandable. For a thin note, expand it into at least 8 substantive topic-specific sections, with useful explanations rather than short one-line bullets. Explain relevant physiology, mechanisms, types/classification, clinical features, investigations and interpretation, management, pharmacology, complications and prevention when appropriate to this topic. Adapt the structure; do not force irrelevant disease headings.",
   "Use standard accepted medical knowledge only. Never invent statistics, references, local guideline claims or drug doses. If uncertain, qualify or omit. Use British spelling and define specialist terms at first use.",
   "Do not claim a clinician has reviewed the note. Output only the complete corrected Markdown body, without YAML frontmatter or code fences.",
   "NOTE: " + n.title,
@@ -54,6 +54,8 @@ for (const item of todo) {
   try {
     const parts = splitFrontmatter(item.text);
     const first = await checkContent({ title: n.title, kind: "study note", text: parts.body, env });
+    const isThin = (text) => text.trim().split(/\\s+/).filter(Boolean).length < 300 || (text.match(/^#{1,3}\\s+/gm) || []).length < 6;
+    if (isThin(parts.body)) { first.validated = false; first.medium = Number(first.medium || 0) + 1; first.issues = [...(first.issues || []), { severity: "medium", where: "overall structure", problem: "This study note is too thin for the comprehensive library standard.", fix: "Expand to at least 8 substantive sections with topic-specific physiology, types, mechanisms, clinical relevance, investigations, management and pharmacology where relevant." }]; }
     let final = first, repairStatus = "clean", newText = item.text;
     let attempts = Number(prior.repairAttempts || 0);
     if (!first.validated) {
@@ -66,6 +68,7 @@ for (const item of todo) {
         fixed = splitFrontmatter(fixed).body;
         if (fixed && fixed.length >= Math.min(500, parts.body.length * 0.65)) {
           const second = await checkContent({ title: n.title, kind: "study note", text: fixed, env });
+          if (isThin(fixed)) { second.validated = false; second.medium = Number(second.medium || 0) + 1; second.issues = [...(second.issues || []), { severity: "medium", where: "overall structure", problem: "The corrected note is still too thin.", fix: "Add substantive topic-specific teaching sections before marking it complete." }]; }
           final = second;
           if (second.validated) {
             newText = parts.frontmatter + fixed + "\n";
