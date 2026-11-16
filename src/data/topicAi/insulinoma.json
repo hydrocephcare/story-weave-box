@@ -1,0 +1,133 @@
+{
+ "medical": true,
+ "clinicalScope": "Insulinoma in adult patients presenting to low‑resource East African hospitals",
+ "title": "Insulinoma",
+ "subject": "Biochemistry & genetics",
+ "summary": "Insulinoma is a rare pancreatic β‑cell tumour that causes inappropriate insulin secretion, leading to recurrent hypoglycaemia. Diagnosis rests on Whipple's triad and supervised fasting, but limited resources require pragmatic alternatives.",
+ "aka": [
+  "Pancreatic β‑cell tumour",
+  "Islet cell tumour (functional)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Insulinoma is the most common functional pancreatic neuroendocrine tumour, usually benign and solitary, occurring in 1–4 per million people, often in the fourth decade.",
+   "b": [
+    "Incidence peaks 30‑50 years; slight female predominance",
+    "Most are sporadic; 10 % linked to MEN1 syndrome",
+    "Tumour size <2 cm in >80 % of cases"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Normal β‑cells release insulin in response to rising plasma glucose, promoting peripheral glucose uptake and hepatic glycogen synthesis. Insulinoma cells lose glucose‑sensing control, secreting insulin continuously.",
+   "b": [
+    "Insulin binds IR → PI3K‑Akt pathway → GLUT4 translocation",
+    "Result: ↑ peripheral glucose uptake, ↓ hepatic gluconeogenesis",
+    "Loss of feedback → hypoglycaemia despite low glucose"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Physiologic insulin release is suppressed by low glucose, catecholamines, glucagon, and somatostatin. Insulinoma cells often lack functional K‑ATP channels, rendering them unresponsive to glucose‑mediated inhibition.",
+   "b": [
+    "K‑ATP channel mutations (rare) mimic sulfonylurea effect",
+    "Somatostatin analogues can blunt secretion when needed"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Autonomous insulin secretion drives recurrent fasting hypoglycaemia, producing neuroglycopenic and autonomic symptoms.",
+   "b": [
+    "Whipple's triad: symptoms, low plasma glucose, symptom relief after glucose",
+    "Neuroglycopenic: confusion, seizures, coma",
+    "Autonomic: sweating, palpitations, tremor, hunger"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In low‑resource settings, insulinoma may be mistaken for malaria, TB, or malnutrition‑related hypoglycaemia; careful history and bedside glucose testing are essential.",
+   "b": [
+    "Typical presentation: fasting hypoglycaemia episodes, often nocturnal",
+    "Weight gain common due to frequent carbohydrate intake",
+    "Rarely, malignant insulinoma with metastases to liver or lymph nodes"
+   ],
+   "t": [
+    {
+     "a": "Supervised 72‑hour fast",
+     "b": "Does the patient develop symptomatic hypoglycaemia with inappropriately high insulin? → Diagnosis if glucose <2.8 mmol/L, insulin ≥3 µU/mL, C‑peptide ≥0.2 nmol/L"
+    },
+    {
+     "a": "Random bedside capillary glucose",
+     "b": "Is the patient symptomatic with glucose <2.8 mmol/L? → Immediate treatment; supports suspicion when fasting test unavailable"
+    },
+    {
+     "a": "Serum insulin, C‑peptide, pro‑insulin",
+     "b": "High insulin with high C‑peptide rules out exogenous insulin use"
+    },
+    {
+     "a": "Abdominal ultrasound (if available)",
+     "b": "Detects tumour >1 cm in tail or head; limited sensitivity"
+    },
+    {
+     "a": "CT/MRI (if referral possible)",
+     "b": "Localises tumour for surgery; preferred imaging"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on pattern of hypoglycaemia, exclusion of surreptitious insulin, and localisation strategies suitable for resource‑limited environments.",
+   "b": [
+    "Always confirm Whipple's triad before ordering costly imaging",
+    "In absence of fasting test, document at least two episodes with documented low glucose and symptom relief after glucose",
+    "When imaging unavailable, consider intra‑operative palpation of pancreas"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe neuroglycopenic symptoms (seizure, loss of consciousness)",
+  "Refractory hypoglycaemia despite glucose administration"
+ ],
+ "faq": [
+  {
+   "q": "Can sulfonylurea ingestion mimic insulinoma?",
+   "a": "Yes; both raise insulin and C‑peptide, but sulfonylurea levels can be measured if available."
+  },
+  {
+   "q": "Is MEN1 common in East Africa?",
+   "a": "MEN1 is rare worldwide; consider only if family history of pituitary or parathyroid tumours."
+  },
+  {
+   "q": "What is the first emergency step?",
+   "a": "Give rapid IV glucose (50 % dextrose) and monitor consciousness."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old farmer presents with nocturnal tremor and confusion; capillary glucose 2.4 mmol/L. What is your next diagnostic step? — Perform a supervised fast if feasible; otherwise document a second episode with documented low glucose.",
+  "How does Whipple's triad differentiate insulinoma from malaria‑related hypoglycaemia? — Malaria may cause low glucose but not reproducible fasting hypoglycaemia with relief after glucose.",
+  "Why is C‑peptide measurement essential when insulinoma is suspected? — It distinguishes endogenous insulin secretion from exogenous insulin administration.",
+  "In a centre without CT, how would you localise an insulinoma? — Use high‑resolution abdominal ultrasound and, if surgery is planned, intra‑operative palpation of the pancreas.",
+  "What feature on history suggests a malignant insulinoma? — Rapid weight loss, persistent hypoglycaemia despite tumour resection, or imaging showing liver lesions.",
+  "Why are somatostatin analogues rarely first‑line for insulinoma? — They control symptoms but do not cure the tumour; surgery remains definitive.",
+  "A patient on sulfonylureas has hypoglycaemia; how do you rule out insulinoma? — Stop sulfonylurea, repeat fasting test; persistent inappropriate insulin points to tumour.",
+  "What urgent complication can arise from untreated insulinoma? — Recurrent severe hypoglycaemia leading to irreversible brain injury or death."
+ ],
+ "related": [
+  "Hypoglycaemia – non‑tumour causes",
+  "Pancreatic neuroendocrine tumours",
+  "MEN1 syndrome",
+  "Sulfonylurea overdose",
+  "Neuroglycopenia"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

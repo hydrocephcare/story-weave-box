@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "clinicalScope": "Primary open‑angle glaucoma in adults presenting to low‑resource East African hospitals",
+ "subject": "Medicine",
+ "summary": "Primary open‑angle glaucoma (POAG) is a chronic optic neuropathy caused by impaired aqueous outflow, leading to progressive visual field loss. In low‑resource settings, diagnosis relies on bedside assessment and simple tonometry, while treatment focuses on affordable IOP‑lowering eye drops and laser where available.",
+ "aka": [
+  "POAG",
+  "chronic glaucoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "POAG is a slowly progressive optic nerve disease characterised by elevated intra‑ocular pressure (IOP) with an open anterior chamber angle.",
+   "b": [
+    "IOP > 21 mmHg on at least two readings",
+    "Normal‑looking angle on gonioscopy (if available)",
+    "Typical optic disc cupping (vertical cup‑disc ratio ≥0.6 or asymmetry ≥0.2)",
+    "Corresponding visual field defect"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging guides urgency of treatment and follow‑up frequency.",
+   "b": [
+    "Early: IOP 22‑30 mmHg, mild cupping, no visual field loss",
+    "Moderate: IOP 31‑40 mmHg, cup‑disc ratio 0.7‑0.8, early peripheral field loss",
+    "Advanced: IOP >40 mmHg, cup‑disc ratio >0.8, central field loss, vision <20/200"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In primary disease the outflow resistance is idiopathic; secondary causes are common in the tropics and must be excluded.",
+   "b": [
+    "Idiopathic trabecular meshwork dysfunction (most common)",
+    "Pigment dispersion (young men)",
+    "Pseudoexfoliation (elderly, especially with cataract)",
+    "Steroid‑induced (topical or systemic steroids)",
+    "Traumatic angle recession (post‑ocular injury)",
+    "Neovascular glaucoma (diabetic retinopathy, ocular TB, HIV‑related retinopathy)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often notice peripheral vision loss before any pain, making early detection difficult.",
+   "b": [
+    "Gradual, painless loss of peripheral vision",
+    "Tunnel vision in advanced disease",
+    "Occasional halos around lights when IOP spikes",
+    "Rarely, acute ocular pain if angle closure supervenes"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focus on tests that can be performed with limited equipment.",
+   "t": [
+    {
+     "a": "Applanation tonometry (Goldmann or handheld Schiötz)",
+     "b": "Is IOP elevated? – Confirms pressure component; if unavailable, use palpation to estimate high pressure."
+    },
+    {
+     "a": "Direct ophthalmoscopy",
+     "b": "Is there optic disc cupping? – Detects structural damage."
+    },
+    {
+     "a": "Visual field testing (Humphrey or confrontation)",
+     "b": "Are there characteristic field defects? – Confirms functional loss."
+    },
+    {
+     "a": "Gonioscopy (if available)",
+     "b": "Is the angle open? – Differentiates POAG from angle‑closure."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition prevents irreversible blindness.",
+   "b": [
+    "Sudden IOP rise with severe eye pain → possible angle‑closure emergency",
+    "Rapid visual field loss over weeks",
+    "Neovascularisation of the iris (rubeosis iridis) → secondary glaucoma",
+    "Progressive optic disc pallor despite treatment"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Goal: lower IOP to a level that halts progression, using the most accessible options first.",
+   "b": [
+    "First‑line topical beta‑blocker (timolol 0.5 %) – reduces aqueous production; avoid in asthma or severe COPD.",
+    "Adjunct prostaglandin analogue (latanoprost) – increases uveoscleral outflow; cheap generic versions are preferred.",
+    "If drops unavailable, consider oral carbonic anhydrase inhibitor (acetazolamide) for acute spikes; monitor renal function.",
+    "Laser trabeculoplasty (if laser available) – improves outflow, useful when adherence to drops is poor.",
+    "Surgical trabeculectomy reserved for refractory cases; requires postoperative follow‑up."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring detects progression early and reinforces adherence.",
+   "b": [
+    "IOP check every 3 months in early disease, every 1‑2 months if uncontrolled",
+    "Annual optic disc and visual field assessment",
+    "Educate patients on medication adherence and side‑effects",
+    "Screen first‑degree relatives over age 40",
+    "Avoid corticosteroid eye drops unless essential"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic POAG either by similar visual loss or by raised IOP.",
+   "b": [
+    "Angle‑closure glaucoma – presents with acute pain, mid‑dilated pupil, and a closed angle on gonioscopy.",
+    "Optic neuritis – painful eye movement, central scotoma, normal IOP.",
+    "Retinal detachment – sudden curtain‑like visual loss, normal IOP, peripheral retinal breaks."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of false‑negative or misleading findings.",
+   "b": [
+    "Normal IOP does not rule out normal‑tension glaucoma, especially in thin‑skinned African patients.",
+    "Cupping may be congenital; compare with fellow eye and look for progressive change.",
+    "Confrontation visual fields can miss early defects; rely on formal testing when possible."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe eye pain with halos and blurred vision",
+  "Rapid loss of vision over days",
+  "New onset of double vision or eye redness with pain"
+ ],
+ "faq": [
+  {
+   "q": "Why is glaucoma called the 'silent thief of sight'?",
+   "a": "Because visual field loss occurs gradually and painlessly until central vision is affected."
+  },
+  {
+   "q": "Can normal‑tension glaucoma occur in African patients?",
+   "a": "Yes; IOP may be within normal range, so optic disc assessment and fields are essential."
+  },
+  {
+   "q": "Are beta‑blocker eye drops safe in patients with asthma?",
+   "a": "Topical timolol can be absorbed systemically; avoid or use prostaglandin analogue instead in severe asthma."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old farmer presents with peripheral vision loss but no pain – what is your next diagnostic step? — Perform applanation tonometry to assess IOP and examine the optic disc.",
+  "How does primary open‑angle glaucoma differ from angle‑closure glaucoma on gonioscopy? — POAG shows an open angle; angle‑closure shows peripheral anterior synechiae and a closed angle.",
+  "A patient on timolol reports wheezing – what should you do? — Switch to a prostaglandin analogue because beta‑blockers can exacerbate bronchospasm.",
+  "Explain why laser trabeculoplasty is useful in low‑resource settings. — It reduces dependence on daily drops and can be performed with a single device for many patients.",
+  "What red‑flag symptom would prompt urgent referral to an ophthalmic surgeon? — Sudden severe eye pain with a cloudy cornea suggesting acute angle‑closure.",
+  "How would you screen a sibling of a patient with POAG? — Measure IOP, perform optic disc examination, and arrange visual field testing if IOP is elevated.",
+  "Why might a normal IOP not exclude glaucoma in this population? — African patients can develop normal‑tension glaucoma; structural optic nerve changes are more reliable.",
+  "What is the rationale for avoiding chronic steroid eye drops in glaucoma patients? — Steroids increase trabecular meshwork resistance, raising IOP."
+ ],
+ "related": [
+  "Angle‑Closure Glaucoma",
+  "Normal‑Tension Glaucoma",
+  "Ocular Hypertension",
+  "Neovascular Glaucoma",
+  "Optic Neuropathy",
+  "Diabetic Retinopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

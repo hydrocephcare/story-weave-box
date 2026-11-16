@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "clinicalScope": "Suture material selection for adult surgical patients in low‑resource East African hospitals",
+ "title": "Suture Materials Selection in Surgery",
+ "subject": "Surgery",
+ "summary": "Choosing sutures depends on tissue type, required support time, wound contamination, and mechanical stress. In low‑resource settings, material availability and infection risk shape decisions. Understanding properties helps clinicians optimise healing and minimise complications.",
+ "aka": [
+  "suture choice",
+  "suture selection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Suture materials are classified by composition (absorbable vs non‑absorbable), structure (monofilament vs multifilament), and tissue reaction. Diagnosis is the clinical assessment of the wound that guides material choice.",
+   "b": [
+    "Absorbable: lose tensile strength by hydrolysis or enzymatic degradation (e.g., polyglactin 910).",
+    "Non‑absorbable: retain strength indefinitely unless removed (e.g., nylon, polypropylene).",
+    "Monofilament: single strand, low infection risk, less knot security.",
+    "Multifilament (braided): higher flexibility, better knot security, higher infection risk."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Wound contamination is staged using the CDC classification, which directly influences suture choice.",
+   "b": [
+    "Clean: uninfected operative wound, no entry into respiratory, alimentary, genital, or urinary tracts.",
+    "Clean‑contaminated: controlled entry into those tracts without spillage.",
+    "Contaminated: open, fresh accidental wounds, major breaks in sterile technique, or gross spillage.",
+    "Dirty/infected: old traumatic wounds with retained devitalised tissue, or existing infection."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Factors that drive suture selection in the typical East African surgical environment.",
+   "b": [
+    "Tissue type – skin, fascia, vascular, gastrointestinal, ophthalmic.",
+    "Contamination level – higher risk demands less bacterial adherence.",
+    "Tension – high‑tension closures need stronger, slower‑absorbing material.",
+    "Availability and cost – synthetic monofilaments may be scarce; catgut is cheap but less ideal."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinician encounters a wound needing closure; key observations guide material choice.",
+   "b": [
+    "Wound location and depth (skin vs deep fascia).",
+    "Degree of contamination noted intra‑operatively.",
+    "Patient factors: HIV, diabetes, malnutrition, or anticoagulation.",
+    "Available suture stock in the theatre."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "If laboratory facilities are unavailable, rely on clinical assessment of contamination and patient comorbidities.",
+   "t": [
+    {
+     "a": "Wound swab culture (if time permits)",
+     "b": "Identifies bacterial flora; a polymicrobial or resistant pattern favours non‑absorbable monofilament to reduce infection risk."
+    },
+    {
+     "a": "Blood glucose (point‑of‑care)",
+     "b": "Detects hyperglycaemia; uncontrolled diabetes raises infection risk, prompting use of monofilament or delayed closure."
+    },
+    {
+     "a": "HIV rapid test (if status unknown)",
+     "b": "Confirms immunosuppression; may influence choice of absorbable synthetic material to limit foreign body reaction."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications linked to inappropriate suture choice are common in low‑resource settings.",
+   "b": [
+    "Suture line infection – higher with braided, non‑absorbable material in contaminated wounds.",
+    "Suture sinus or granuloma – especially with natural absorbables like catgut.",
+    "Wound dehiscence – from insufficient tensile strength or early absorption.",
+    "Foreign‑body reaction – more frequent with silk or catgut."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Practical steps for selecting and using sutures safely.",
+   "b": [
+    "Clean wounds: non‑absorbable monofilament (nylon, polypropylene) or absorbable synthetic (polyglactin) for deep layers; skin may use nylon or sterile adhesive strips.",
+    "Clean‑contaminated: absorbable synthetic (polyglactin 910, polyglycolic acid) for fascia; monofilament for skin if long‑term support needed.",
+    "Contaminated: prefer slowly absorbing synthetic (polyglactin 910) for deep layers; skin closure with monofilament or staples to limit bacterial harbouring.",
+    "Dirty/infected: use absorbable synthetic with low tissue reaction (polyglactin 910) for deep layers; skin may be left open or closed with monofilament after thorough irrigation.",
+    "High‑tension fascia in any wound: consider slowly absorbing synthetic (polydioxanone) or reinforced non‑absorbable (polypropylene) if long‑term strength required.",
+    "Patients with HIV or diabetes: avoid natural absorbables; choose synthetic monofilament or slowly absorbing synthetic for deep layers."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitoring and measures to minimise suture‑related problems.",
+   "b": [
+    "Inspect wound on post‑op day 3–5 for erythema, discharge, or dehiscence.",
+    "Educate patients on wound hygiene and signs of infection.",
+    "Remove non‑absorbable skin sutures or staples on day 7–10 in clean wounds.",
+    "In contaminated wounds, consider delayed primary closure if infection develops.",
+    "Document suture type used for future reference if re‑exploration is needed."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other topics that may be mistaken for suture material selection.",
+   "b": [
+    "Suture technique (simple, interrupted, continuous) – technique is how sutures are placed, not what they are made of.",
+    "Wound dressing choice – dressings protect the wound after closure; they do not replace sutures."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting information that may affect suture choice.",
+   "b": [
+    "A negative wound swab does not rule out infection in high‑risk patients; clinical judgement prevails.",
+    "Normal blood glucose on a single point‑of‑care test may miss peri‑operative hyperglycaemia; consider HbA1c if available.",
+    "HIV rapid test false‑negative early in infection – treat as immunocompromised if risk factors present."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid wound dehiscence with active bleeding",
+  "Severe sepsis signs (fever >38.5 °C, tachycardia, hypotension) after closure",
+  "Visible suture line abscess or necrotising tissue"
+ ],
+ "faq": [
+  {
+   "q": "Why avoid catgut in contaminated wounds?",
+   "a": "Catgut triggers a strong inflammatory response and absorbs quickly, increasing infection risk and loss of tensile strength."
+  },
+  {
+   "q": "When is a monofilament preferred over a braided suture?",
+   "a": "In contaminated or dirty wounds because its smooth surface harbours fewer bacteria."
+  },
+  {
+   "q": "Can I use the same suture for skin and fascia?",
+   "a": "Usually not; fascia needs stronger, slower‑absorbing material, while skin can use finer, less tensile sutures or staples."
+  }
+ ],
+ "exam": [
+  "A patient with a dirty abdominal wound requires fascial closure – which suture is optimal and why? — Polyglactin 910 or polydioxanone; they provide prolonged strength while being absorbable, reducing foreign‑body infection risk.",
+  "You find a contaminated scalp laceration in a diabetic patient – what suture choice and postoperative care do you plan? — Use synthetic absorbable for deep layers, nylon or staples for skin; ensure tight glucose control and early wound inspection.",
+  "During a cesarean section the uterine incision is contaminated – which suture material should you use? — Polydioxanone (slowly absorbable) for uterine closure to maintain tensile strength for weeks while avoiding long‑term foreign material.",
+  "A rural theatre only has silk and nylon; the wound is clean‑contaminated. Which should you pick and why? — Nylon monofilament; lower infection risk than silk, acceptable for clean‑contaminated skin closure.",
+  "A HIV‑positive patient presents with a postoperative wound infection – how does this affect suture selection for any re‑closure? — Prefer synthetic absorbable (polyglactin) for deep layers and monofilament for skin; avoid natural absorbables that provoke extra inflammation.",
+  "You must close a high‑tension tendon repair in a malaria‑endemic area with limited supplies – what suture properties are essential? — High tensile strength, low stretch, minimal tissue reaction; choose non‑absorbable monofilament (polypropylene) if available, otherwise polydioxanone.",
+  "A child with sickle cell disease needs an oral mucosal repair – which suture is safest? — Absorbable synthetic (polyglactin) to avoid need for removal and reduce infection risk in immunocompromised tissue.",
+  "After a laparotomy the wound looks clean but the patient is on anticoagulants – how does this influence suture choice? — Use non‑absorbable monofilament for skin to allow precise removal; ensure deep layers are closed with slowly absorbable synthetic to maintain strength despite possible bleeding."
+ ],
+ "related": [
+  "Wound classification",
+  "Suture technique",
+  "Surgical site infection prevention",
+  "Tissue healing phases",
+  "Antibiotic prophylaxis in surgery",
+  "Post‑operative wound care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

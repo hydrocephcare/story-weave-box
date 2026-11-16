@@ -1,0 +1,186 @@
+{
+ "medical": true,
+ "clinicalScope": "Left-sided varicocele in adult males presenting to low‑resource East African surgical wards",
+ "title": "Varicocele in Adult Males",
+ "subject": "Surgery",
+ "summary": "A dilated pampiniform plexus caused by incompetent valves, most often on the left. It presents as a gravity‑dependent scrotal swelling and may impair fertility. Diagnosis relies on history, physical exam and, when available, Doppler ultrasound.",
+ "aka": [
+  "Bag of worms",
+  "Varicoceles"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Varicocele is a tortuous, dilated pampiniform venous plexus of the spermatic cord. It is usually left‑sided due to the angle of the left testicular vein.",
+   "b": [
+    "Occurs in 15–20% of adult men",
+    "Often asymptomatic"
+   ],
+   "t": [
+    {
+     "a": "History of scrotal heaviness, pain, or infertility",
+     "b": "Identifies typical symptoms and prompts further assessment"
+    },
+    {
+     "a": "Physical exam with patient standing and Valsalva",
+     "b": "Positive if a palpable, soft, cord‑like swelling increases with strain"
+    },
+    {
+     "a": "Doppler ultrasound (if available)",
+     "b": "Confirms venous dilation, valve incompetence and excludes other masses"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Dubin–Anderson grading system classifies varicoceles from I (palpable only) to III (visible and palpable).",
+   "b": [
+    "Grade I – palpable only",
+    "Grade II – palpable and visible",
+    "Grade III – visible, no need for Valsalva"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary cause is valve incompetence in the pampiniform plexus. Secondary causes include retroperitoneal masses, renal cell carcinoma, or pelvic congestion.",
+   "b": [
+    "Left testicular vein joins left renal vein at right angle",
+    "Right‑sided or non‑reducing varicocele suggests obstruction"
+   ],
+   "t": [
+    {
+     "a": "Renal ultrasound",
+     "b": "Detects renal tumours that may compress the vein"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a dragging ache, heaviness, or a visible swelling that worsens with standing or Valsalva. Infertility is a common long‑term complaint.",
+   "b": [
+    "Pain is usually dull and improves with rest",
+    "Swelling disappears when lying flat"
+   ],
+   "t": [
+    {
+     "a": "Scrotal exam",
+     "b": "Assesses size, consistency, and presence of a cord‑like mass"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, a focused history and bedside exam are primary. Ultrasound with Doppler confirms diagnosis and rules out malignancy.",
+   "b": [
+    "CBC and renal function – rule out systemic disease"
+   ],
+   "t": [
+    {
+     "a": "Semen analysis",
+     "b": "Evaluates fertility impact; abnormal sperm count supports treatment decision"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Non‑reducing or right‑sided varicocele warrants imaging for malignancy. Untreated varicocele can lead to infertility, testicular atrophy, or pain.",
+   "b": [
+    "Right‑sided swelling",
+    "Non‑reducing mass"
+   ],
+   "t": [
+    {
+     "a": "CT abdomen",
+     "b": "Detects retroperitoneal tumours"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat symptomatic or infertile patients with microsurgical subinguinal varicocelectomy or laparoscopic ligation. Embolisation is an alternative when surgery is unavailable.",
+   "b": [
+    "Microsurgical varicocelectomy – highest success, least recurrence"
+   ],
+   "t": [
+    {
+     "a": "Pain relief (NSAIDs)",
+     "b": "Alleviates discomfort while awaiting definitive treatment"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Post‑operative assessment at 1–3 months for recurrence and testicular size. Counsel on avoiding heavy lifting and prolonged standing.",
+   "b": [
+    "Repeat scrotal exam",
+    "Semen analysis if infertility was present"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Epididymal cysts, hydrocele, testicular tumour, and inguinal hernia can mimic varicocele.",
+   "b": [
+    "Hydrocele – fluid collection, transilluminates",
+    "Epididymal cyst – discrete, non‑compressible",
+    "Testicular tumour – hard, non‑compressible mass"
+   ],
+   "t": [
+    {
+     "a": "Scrotal ultrasound",
+     "b": "Differentiates cystic from vascular lesions"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal Doppler may miss a small varicocele; a negative Valsalva does not exclude a grade I lesion.",
+   "b": [
+    "Low‑resolution ultrasound – may underestimate size"
+   ],
+   "t": [
+    {
+     "a": "Repeat exam after 24 hours",
+     "b": "Improves detection of intermittent swelling"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Non‑reducing swelling",
+  "Right‑sided varicocele",
+  "Sudden increase in pain or size"
+ ],
+ "faq": [
+  {
+   "q": "Can varicocele cause infertility?",
+   "a": "Yes, increased scrotal temperature impairs spermatogenesis."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "Only if symptomatic, infertile, or suspicious for malignancy; many are managed conservatively."
+  },
+  {
+   "q": "What is the best surgical approach in low‑resource settings?",
+   "a": "Subinguinal microsurgical varicocelectomy is effective and can be performed with basic operative microscopes."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old man reports a dragging ache in the left scrotum that worsens when standing. What is the most appropriate first step? — History of Valsalva, physical exam, and if available, Doppler ultrasound to confirm varicocele.",
+  "A patient with a left varicocele presents with sudden right‑sided scrotal swelling. What is the next investigation? — CT abdomen to rule out retroperitoneal tumour.",
+  "Why is a left‑sided varicocele more common than right‑sided? — The left testicular vein joins the left renal vein at a right angle, predisposing to valve incompetence.",
+  "What is the gold‑standard treatment for a symptomatic grade II varicocele in a low‑resource setting? — Microsurgical subinguinal varicocelectomy.",
+  "A patient with a varicocele is concerned about fertility. What investigation should you order? — Semen analysis to assess sperm count and motility.",
+  "Why might a Doppler ultrasound appear normal in a patient with a clinically evident varicocele? — Small or intermittent dilatations may be missed; repeat imaging or a higher‑resolution scan is needed."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

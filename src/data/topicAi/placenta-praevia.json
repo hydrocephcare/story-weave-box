@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "clinicalScope": "Placenta praevia in pregnant women in low‑resource East African hospitals",
+ "title": "Placenta Praevia",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Placenta praevia is a low‑lying or covering placenta that causes painless ante‑partum bleeding. Diagnosis relies on history, bedside exam and limited ultrasound. Management centres on avoiding digital exam, planning delivery and controlling bleeding.",
+ "aka": [
+  "Placenta covering the os",
+  "Low‑lying placenta"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Placenta praevia is the placenta lying over or within 2 cm of the internal cervical os. It presents with painless, bright‑red bleeding after 20 weeks. Diagnosis is clinical, confirmed by transabdominal or transvaginal ultrasound when available.",
+   "b": [
+    "Painless, bright‑red bleeding",
+    "No pain on palpation",
+    "Bleeding after 20 weeks"
+   ],
+   "t": [
+    {
+     "a": "Transabdominal ultrasound",
+     "b": "Placenta over os = praevia; within 2 cm = low‑lying"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Placenta praevia is staged by distance from the os:",
+   "b": [
+    "Grade I – placenta over os, <2 cm from os",
+    "Grade II – placenta 2–3 cm from os",
+    "Grade III – placenta 3–5 cm from os",
+    "Grade IV – placenta >5 cm from os (low‑lying)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Risk factors are cumulative and often overlap in low‑resource settings.",
+   "b": [
+    "Previous caesarean section or uterine surgery",
+    "Multiparity (≥3 births)",
+    "Advanced maternal age (>35 y)",
+    "History of placenta praevia",
+    "Previous uterine curettage",
+    "Use of herbal uterotonics",
+    "Infections causing uterine scarring (e.g., TB, schistosomiasis) – less common but present"
+   ],
+   "t": [
+    {
+     "a": "History of uterine surgery",
+     "b": "Higher risk of praevia"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic presentation is painless, bright‑red bleeding that may stop and start. Patients are usually well‑tolerated until bleeding is massive.",
+   "b": [
+    "Painless, bright‑red bleeding",
+    "No abdominal pain or cramping",
+    "Bleeding may be intermittent"
+   ],
+   "t": [
+    {
+     "a": "Vital signs",
+     "b": "Hypotension, tachycardia = significant blood loss"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited by resource availability. Prioritise those that change management.",
+   "b": [
+    "CBC – haemoglobin to gauge blood loss",
+    "Transabdominal ultrasound – placental location",
+    "Blood group & crossmatch – prepare for transfusion"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Guides need for transfusion"
+    },
+    {
+     "a": "Transabdominal ultrasound",
+     "b": "If unavailable, rely on history and exam"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags require immediate transfer to a higher‑level facility.",
+   "b": [
+    "Continuous heavy bleeding",
+    "Fetal distress on monitoring",
+    "Maternal haemodynamic instability",
+    "Signs of placenta accreta (e.g., previous scar, abnormal ultrasound)"
+   ],
+   "t": [
+    {
+     "a": "Fetal heart rate monitoring",
+     "b": "Abnormal tracing = urgent delivery"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is staged by severity and resource setting.",
+   "b": [
+    "Avoid digital vaginal examination until praevia excluded",
+    "If bleeding stops, hospitalise and monitor",
+    "For Grade I–II: plan elective caesarean at 36–37 weeks",
+    "For Grade III–IV or uncontrolled bleeding: emergency caesarean",
+    "Use oxytocin infusion post‑delivery to prevent PPH",
+    "Avoid prostaglandins before delivery – they may induce contractions and worsen bleeding"
+   ],
+   "t": [
+    {
+     "a": "Oxytocin infusion",
+     "b": "Start 10 U in 1 L saline, 1 mL/min, titrate to tone"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑delivery care focuses on haemostasis and counselling for future pregnancies.",
+   "b": [
+    "Transfuse if anaemic",
+    "Monitor for infection",
+    "Counsel on avoiding uterotonics before labour",
+    "Plan repeat caesarean in future pregnancies if placenta praevia recurs"
+   ],
+   "t": [
+    {
+     "a": "Post‑partum haemoglobin",
+     "b": "<9 g/dL warrants transfusion"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Continuous heavy bleeding",
+  "Maternal hypotension or tachycardia",
+  "Fetal distress on monitoring"
+ ],
+ "faq": [
+  {
+   "q": "Why is digital vaginal examination contraindicated in suspected placenta praevia?",
+   "a": "It can trigger massive bleeding by disturbing the placenta over the os."
+  },
+  {
+   "q": "What is the safest uterotonic after caesarean for placenta praevia?",
+   "a": "Oxytocin infusion – it promotes uterine contraction without stimulating the uterus before delivery."
+  },
+  {
+   "q": "Can a low‑lying placenta be managed expectantly?",
+   "a": "Only if it is >5 cm from the os and the patient is haemodynamically stable; otherwise delivery is planned."
+  }
+ ],
+ "exam": [
+  "What is the first step in a woman with painless bleeding after 24 weeks? — Obtain history, avoid digital exam, arrange ultrasound; early identification prevents catastrophic bleeding.",
+  "How would you differentiate placenta praevia from retained products of conception? — Placenta praevia shows placenta over os on ultrasound; retained products respond to curettage and show no placenta on scan.",
+  "Why is oxytocin preferred over prostaglandins for uterine contraction after delivery in placenta praevia? — Oxytocin contracts the uterus without stimulating it before delivery, reducing risk of bleeding.",
+  "What is the management of a patient with Grade II placenta praevia who is haemodynamically unstable? — Emergency caesarean with blood products ready; avoid digital exam.",
+  "What is the role of tranexamic acid in placenta praevia? — Given within 3 h of delivery it reduces blood loss and need for transfusion.",
+  "How do you counsel a woman who had placenta praevia about future pregnancies? — Advise planned caesarean at 36–37 weeks and discuss risks of accreta and uterine rupture."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

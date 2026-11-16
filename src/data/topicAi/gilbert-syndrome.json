@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "clinicalScope": "Gilbert syndrome in adult patients in low‑resource East African hospitals",
+ "title": "Gilbert Syndrome",
+ "subject": "Pathology",
+ "summary": "A benign, autosomal‑recessive disorder of bilirubin conjugation causing mild, episodic unconjugated hyperbilirubinaemia. It worsens with fasting, infection or stress and is usually asymptomatic.",
+ "aka": [
+  "UGT1A1 deficiency",
+  "Benign unconjugated hyperbilirubinaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gilbert syndrome is a mild, inherited defect in UDP‑glucuronosyltransferase (UGT1A1) activity, leading to impaired conjugation of bilirubin.",
+   "b": [
+    "Autosomal‑recessive inheritance",
+    "Usually asymptomatic",
+    "Episodes of jaundice during stress"
+   ],
+   "t": [
+    {
+     "a": "Serum total bilirubin",
+     "b": "Suggests Gilbert syndrome when other causes excluded"
+    },
+    {
+     "a": "Direct (conjugated) bilirubin",
+     "b": "Rules out cholestatic disease"
+    },
+    {
+     "a": "Liver function tests (AST, ALT, ALP, GGT)",
+     "b": "Supports non‑hepatitic cause"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by peak bilirubin levels and frequency of jaundice episodes.",
+   "b": [
+    "Mild: <3 mg/dL (51 µmol/L)",
+    "Moderate: 3–6 mg/dL (51–102 µmol/L)",
+    "Severe: >6 mg/dL (102 µmol/L)"
+   ],
+   "t": [
+    {
+     "a": "Peak serum bilirubin",
+     "b": "Guides counselling and monitoring"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary defect is reduced UGT1A1 activity due to a promoter mutation.",
+   "b": [
+    "UGT1A1*28 allele",
+    "Other rare mutations (UGT1A1*6, *37)"
+   ],
+   "t": [
+    {
+     "a": "Genetic testing",
+     "b": "Not routinely available in low‑resource settings"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients are usually asymptomatic; jaundice appears during fasting, infection, strenuous exercise or pregnancy.",
+   "b": [
+    "Sudden yellowing of sclera and skin",
+    "No pruritus or abdominal pain",
+    "No hepatomegaly"
+   ],
+   "t": [
+    {
+     "a": "History of episodic jaundice",
+     "b": "Key for diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to exclude other causes of unconjugated hyperbilirubinaemia.",
+   "b": [
+    "CBC with reticulocyte count – rules out haemolysis",
+    "Peripheral smear – looks for spherocytes or schistocytes",
+    "Serum LDH – elevated in haemolysis"
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin (total & direct)",
+     "b": "Elevated unconjugated with normal direct suggests Gilbert"
+    },
+    {
+     "a": "Liver ultrasound",
+     "b": "Usually normal in Gilbert"
+    },
+    {
+     "a": "Hepatitis serology (HBV, HCV, HAV)",
+     "b": "Positive result changes management"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are rare but include severe jaundice during pregnancy or prolonged fasting.",
+   "b": [
+    "Severe hyperbilirubinaemia (>10 mg/dL) can cause kernicterus in neonates"
+   ],
+   "t": [
+    {
+     "a": "Newborn screening",
+     "b": "Requires phototherapy if >15 mg/dL"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "No specific treatment is required; focus is on reassurance and avoiding precipitating factors.",
+   "b": [
+    "Advise regular meals, avoid prolonged fasting",
+    "Manage infections promptly",
+    "Avoid hepatotoxic drugs"
+   ],
+   "t": [
+    {
+     "a": "Phenobarbital",
+     "b": "Avoid in pregnancy and low‑resource settings"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular follow‑up is usually unnecessary; counsel patients on lifestyle.",
+   "b": [
+    "Educate on triggers",
+    "Re‑check bilirubin if jaundice recurs"
+   ],
+   "t": [
+    {
+     "a": "Periodic bilirubin measurement",
+     "b": "Normal in asymptomatic patients"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe jaundice (>10 mg/dL) in adults",
+  "Jaundice with abdominal pain or dark urine",
+  "Newborn with jaundice >15 mg/dL"
+ ],
+ "faq": [
+  {
+   "q": "Can Gilbert syndrome cause liver damage?",
+   "a": "No, it is a benign disorder with normal liver enzymes."
+  },
+  {
+   "q": "Is genetic testing necessary?",
+   "a": "Not required for diagnosis; useful only in research or uncertain cases."
+  },
+  {
+   "q": "Can pregnancy worsen Gilbert syndrome?",
+   "a": "Yes, hormonal changes can increase bilirubin levels; monitor closely."
+  }
+ ],
+ "exam": [
+  "What is the most likely cause of mild, episodic jaundice in a 28‑year‑old man with normal liver enzymes? — Reduced UGT1A1 activity (Gilbert syndrome).",
+  "Which investigation would best rule out haemolysis in this patient? — Reticulocyte count and peripheral smear.",
+  "A patient with Gilbert syndrome develops severe jaundice during pregnancy. What is the most appropriate management? — Reassurance, avoid fasting, monitor bilirubin, consider phototherapy if newborn.",
+  "Why is phenobarbital not routinely used in low‑resource settings for Gilbert syndrome? — It induces UGT1A1 but has limited availability and potential side effects.",
+  "What laboratory finding would distinguish Gilbert syndrome from Crigler‑Najjar syndrome? — In Crigler‑Najjar, bilirubin >20 mg/dL with no response to phenobarbital.",
+  "A patient presents with unconjugated hyperbilirubinaemia and a history of malaria. Which condition must be excluded first? — Hemolytic anaemia secondary to malaria."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

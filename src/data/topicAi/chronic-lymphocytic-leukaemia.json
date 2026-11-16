@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "clinicalScope": "Chronic lymphocytic leukaemia (CLL) in adult patients presenting to low‑resource East African hospitals",
+ "title": "Chronic Lymphocytic Leukaemia",
+ "subject": "Pathology",
+ "summary": "CLL is a clonal proliferation of CD5⁺ B‑cells causing progressive lymphocytosis, lymphadenopathy and immunodeficiency. Diagnosis relies on peripheral blood morphology and immunophenotype; staging guides treatment in settings where targeted therapy is limited.",
+ "aka": [
+  "Small lymphocytic lymphoma (when nodal)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "CLL is a mature B‑cell neoplasm characterised by ≥5 × 10⁹/L clonal lymphocytes in peripheral blood, smudge cells on smear, and a CD5⁺ CD20⁺ immunophenotype.",
+   "b": [
+    "Peripheral smear: abundant small mature lymphocytes with smudge cells",
+    "Flow cytometry: CD5⁺ CD19⁺ CD20⁺ CD23⁺ surface Ig low",
+    "Bone‑marrow biopsy (if available): interstitial infiltration by small lymphocytes"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Rai and Binet systems are used; they rely on clinical findings rather than expensive labs, making them suitable for low‑resource settings.",
+   "b": [
+    "Rai stage 0–IV based on lymphocytosis, adenopathy, organomegaly, anaemia, thrombocytopenia",
+    "Binet A‑C based on number of lymphoid areas involved and cytopenias"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "CLL is usually sporadic; however, certain infections and environmental factors increase risk in East Africa.",
+   "b": [
+    "Age >60 years (most common risk factor)",
+    "Chronic immune stimulation (e.g., HIV, malaria) – modest association",
+    "Exposure to agricultural pesticides – reported in rural cohorts",
+    "Family history of lymphoid malignancy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with painless lymphadenopathy, splenomegaly, and fatigue from anaemia or infections.",
+   "b": [
+    "Generalised or cervical/axillary lymphadenopathy",
+    "Splenomegaly causing early satiety",
+    "Recurrent bacterial infections due to hypogammaglobulinaemia",
+    "Incidental lymphocytosis on routine CBC"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that answer specific clinical questions; when a test is unavailable, use the next best alternative.",
+   "t": [
+    {
+     "a": "Complete blood count with differential",
+     "b": "Is there lymphocytosis and cytopenia? – Lymphocyte count ≥5 × 10⁹/L confirms suspicion; anaemia/thrombocytopenia upstage disease"
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Are smudge cells present? – Numerous smudge cells support CLL; absence prompts search for other leukaemias"
+    },
+    {
+     "a": "Flow cytometry (if available)",
+     "b": "Does the immunophenotype match CLL? – CD5⁺ CD19⁺ CD20⁺ CD23⁺ confirms diagnosis; lack of CD5 suggests other B‑cell disorders"
+    },
+    {
+     "a": "Serum immunoglobulins",
+     "b": "Is hypogammaglobulinaemia present? – Low IgG explains infection risk; guides need for IVIG"
+    },
+    {
+     "a": "Ultrasound abdomen (or clinical exam)",
+     "b": "Is splenomegaly present? – Palpable spleen >2 cm below costal margin indicates advanced stage"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications often dictate urgent referral.",
+   "b": [
+    "Rapidly rising lymphocyte count (>50 % in 1 month) – suggests transformation (Richter’s)",
+    "Severe anaemia (Hb <8 g/dL) or thrombocytopenia (<30 × 10⁹/L) – risk of bleeding or cardiac strain",
+    "Autoimmune haemolytic anaemia or immune thrombocytopenia – requires immunosuppression",
+    "Infections with opportunistic organisms (e.g., Pneumocystis) – treat promptly"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Therapy is guided by stage, symptoms and resource availability; watch‑and‑wait is appropriate for early disease.",
+   "b": [
+    "Watch‑and‑wait for Rai 0‑I or Binet A without symptoms",
+    "Chemoimmunotherapy (e.g., chlorambucil + anti‑CD20 monoclonal antibody) when disease progresses – chosen for oral administration and tolerability",
+    "Avoid fludarabine in HIV‑positive patients due to profound immunosuppression",
+    "Supportive care: prophylactic antibiotics, immunoglobulin replacement for recurrent infections, vaccination (influenza, pneumococcal) before therapy"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring detects progression and treatment toxicity.",
+   "b": [
+    "CBC every 3 months for stage 0‑I, every 1–2 months after therapy initiation",
+    "Physical exam for new lymphadenopathy or organomegaly each visit",
+    "Educate patients on infection signs and prompt reporting",
+    "Vaccinate against hepatitis B and HPV where feasible to reduce secondary malignancy risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several haematologic and solid‑tumour conditions mimic CLL.",
+   "b": [
+    "Waldenström macroglobulinaemia – IgM paraprotein, hyperviscosity, no CD5 expression",
+    "Hairy cell leukaemia – TRAP‑positive cells, splenomegaly with dry tap, CD25⁺ CD103⁺",
+    "Acute lymphoblastic leukaemia – blasts on smear, TdT⁺, rapid progression"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls common in low‑resource labs.",
+   "b": [
+    "Smudge cells may be over‑reported in poorly prepared slides – correlate with absolute lymphocyte count",
+    "Flow cytometry gating errors can miss low‑level CD5 expression – repeat if clinical suspicion high",
+    "Serum Ig levels can be normal early in disease – repeat if infections recur"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of fever with neutropenia",
+  "Severe dyspnoea or chest pain suggesting pulmonary embolism or infection",
+  "Unexplained bruising or bleeding with platelets <30 × 10⁹/L",
+  "Rapidly enlarging lymph nodes causing airway compromise"
+ ],
+ "faq": [
+  {
+   "q": "Why is watch‑and‑wait safe in early CLL?",
+   "a": "Early disease is indolent; treatment does not improve survival and adds toxicity, so observation avoids unnecessary side effects."
+  },
+  {
+   "q": "What is the significance of smudge cells?",
+   "a": "They are fragile lymphocytes that rupture during slide preparation; abundant smudge cells are a classic clue to CLL."
+  },
+  {
+   "q": "How does HIV affect CLL management?",
+   "a": "HIV‑related immunosuppression increases infection risk; fludarabine is avoided and regimens with lower myelosuppression are preferred."
+  }
+ ],
+ "exam": [
+  "A 68‑year‑old farmer presents with painless cervical nodes and a lymphocyte count of 7 × 10⁹/L. What is your next diagnostic step? — Order a peripheral smear and flow cytometry to confirm CLL immunophenotype.",
+  "Why would you choose chlorambucil over fludarabine in this patient? — Chlorambucil is oral, less myelosuppressive, and safer in settings with limited infection control.",
+  "A patient on watch‑and‑wait develops new anaemia (Hb 7 g/dL). How does this change management? — Progresses to treatment indication; start chemoimmunotherapy and evaluate for autoimmune haemolysis.",
+  "What clinical feature distinguishes CLL from Waldenström macroglobulinaemia? — Presence of IgM paraprotein and hyperviscosity symptoms in Waldenström, absent in CLL.",
+  "How would you monitor for Richter’s transformation in a low‑resource hospital? — Look for rapid lymph node growth, B symptoms, and rising LDH; confirm with tissue biopsy if feasible.",
+  "A patient with CLL develops recurrent sinopulmonary infections. What supportive measure is indicated? — Provide immunoglobulin replacement therapy and vaccinate against encapsulated organisms.",
+  "Explain why a high lymphocyte count alone does not always mean treatment is required. — Treatment is based on symptoms, cytopenias, and organ involvement, not just count.",
+  "What red‑flag laboratory result would prompt urgent referral? — Platelet count <30 × 10⁹/L or haemoglobin <8 g/dL indicating severe cytopenia."
+ ],
+ "related": [
+  "Acute lymphoblastic leukaemia",
+  "Waldenström macroglobulinaemia",
+  "Richter’s transformation",
+  "Hypogammaglobulinaemia",
+  "Infectious complications of haematologic malignancies"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

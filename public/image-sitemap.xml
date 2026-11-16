@@ -2012,6 +2012,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/albinism</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q03-e6e9815a.jpg</image:loc>
+      <image:caption>Embryo with limb bud (A) and somites (B) alongside photos of albinism (C) and a scaly-skin condition (D)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n22-b432260b.jpg</image:loc>
+      <image:caption>Number 22 - seven photographs of congenital skin and hair anomalies</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/albumin</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-11-054f4257.jpg</image:loc>
@@ -2429,11 +2440,45 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/carpal-bones</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q16-74cba8c8.jpg</image:loc>
+      <image:caption>Wrist and hand radiograph with carpal bones A-H labelled</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q19-a0e6b469.jpg</image:loc>
+      <image:caption>Q19 - wrist X-ray with carpal bones numbered</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q27-645c5f9d.jpg</image:loc>
+      <image:caption>Q27 - wrist skeleton with a carpal bone tagged X</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q19-f1ce7ac3.jpg</image:loc>
+      <image:caption>Q19 - wrist X-ray with carpal bones numbered</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q27-3fef12b9.jpg</image:loc>
+      <image:caption>Q27 - wrist skeleton with a carpal bone tagged X</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-cubital-fossa-7631981f.jpg</image:loc>
+      <image:caption>Dissection of the cubital fossa with the biceps tendon, brachial artery and median nerve labelled</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/carpal-tunnel</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q23-2e7d4981.jpg</image:loc>
       <image:caption>Q23 - diagram of the palm with a fascial space labelled X</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q30-c4fc2e6a.jpg</image:loc>
+      <image:caption>Q30 - nerve at the wrist crease</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/carpal-tunnel-syndrome</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q30-c4fc2e6a.jpg</image:loc>
       <image:caption>Q30 - nerve at the wrist crease</image:caption>
@@ -2515,6 +2560,21 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s34-1-c26fd5c1.jpg</image:loc>
       <image:caption>The safe triangle for chest drain insertion</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/chest-x-ray</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-06-96aa24ec.jpg</image:loc>
+      <image:caption>Pleural effusion on chest X-ray</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s22-1-a93d5864.jpg</image:loc>
+      <image:caption>Small pneumothorax on chest X-ray</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s21-1-a9eeced2.jpg</image:loc>
+      <image:caption>Chest X-ray in erect and supine positions</image:caption>
     </image:image>
   </url>
   <url>

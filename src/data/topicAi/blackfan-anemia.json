@@ -1,0 +1,185 @@
+{
+ "medical": true,
+ "clinicalScope": "Diamond‑Blackfan anemia in infants and young children in low‑resource East African hospitals",
+ "subject": "Paediatrics",
+ "summary": "A rare congenital erythroid‑lineage failure presenting in infancy with macrocytic anaemia, physical anomalies and a risk of bone‑marrow failure. Diagnosis relies on blood counts, reticulocyte count and exclusion of other causes. Management centres on transfusion, erythropoietin and, if needed, stem‑cell transplant.",
+ "aka": [
+  "Congenital hypoplastic anaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Diamond‑Blackfan anemia (DBA) is an inherited bone‑marrow failure syndrome characterised by isolated erythroid hypoplasia.",
+   "b": [
+    "Macrocytic anaemia with low reticulocytes",
+    "Normal neutrophils and platelets",
+    "Normal iron studies"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Low retic <1% in anaemia"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Confirms ineffective erythropoiesis"
+    },
+    {
+     "a": "Bone marrow aspirate",
+     "b": "Diagnostic gold standard"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by haemoglobin level and transfusion dependence.",
+   "b": [
+    "Mild: Hb 8–10 g/dL, transfusion‑free",
+    "Moderate: Hb 6–8 g/dL, occasional transfusions",
+    "Severe: Hb <6 g/dL, regular transfusions"
+   ],
+   "t": [
+    {
+     "a": "Hb",
+     "b": "<6 g/dL requires regular transfusion"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Genetic mutations in ribosomal protein genes (RPS19, RPL5, RPL11) are most common.",
+   "b": [
+    "Autosomal dominant with variable penetrance",
+    "De novo mutations in ~50% of cases"
+   ],
+   "t": [
+    {
+     "a": "Genetic testing",
+     "b": "Confirms diagnosis and informs family counselling"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Classic triad: macrocytic anaemia, physical anomalies and growth retardation.",
+   "b": [
+    "Facial dysmorphism (high‑arched palate, micrognathia)",
+    "Skeletal anomalies (rib or limb defects)",
+    "Growth delay"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Supports clinical suspicion"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Work‑up focuses on ruling out other causes of anaemia and confirming DBA.",
+   "b": [
+    "CBC with retic count",
+    "Peripheral smear",
+    "Iron studies",
+    "Coombs test",
+    "Bone marrow aspirate",
+    "Genetic testing"
+   ],
+   "t": [
+    {
+     "a": "Coombs test",
+     "b": "Negative in DBA"
+    },
+    {
+     "a": "Iron studies",
+     "b": "Normal ferritin and transferrin saturation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from chronic transfusion and disease progression.",
+   "b": [
+    "Growth failure and endocrine dysfunction"
+   ],
+   "t": [
+    {
+     "a": "Ferritin",
+     "b": "Requires chelation"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment aims to maintain haemoglobin, minimise transfusion burden and address complications.",
+   "b": [
+    "Supportive care: folic acid, infection prophylaxis"
+   ],
+   "t": [
+    {
+     "a": "EPO",
+     "b": "Avoids transfusion complications"
+    },
+    {
+     "a": "Stem‑cell transplant",
+     "b": "Requires matched donor and conditioning"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of blood counts, iron status and growth is essential.",
+   "b": [
+    "Genetic counselling for family planning"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anaemia with Hb <6 g/dL and signs of hypoxia",
+  "Uncontrolled bleeding after transfusion",
+  "Signs of iron overload (hepatomegaly, cardiac dysfunction)"
+ ],
+ "faq": [
+  {
+   "q": "Why is reticulocyte count low in DBA?",
+   "a": "Because erythroid precursors are absent, so few new red cells are released."
+  },
+  {
+   "q": "Can DBA be treated with steroids?",
+   "a": "No; steroids are ineffective as the defect is in erythroid progenitors."
+  },
+  {
+   "q": "What is the role of genetic counselling?",
+   "a": "It informs recurrence risk and guides family planning."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in an infant with suspected DBA? — CBC with reticulocyte count; low retic confirms ineffective erythropoiesis.",
+  "How would you differentiate DBA from congenital dyserythropoietic anaemia? — Look for dyserythropoiesis on smear; DBA shows normal morphology.",
+  "Why is iron chelation indicated in some DBA patients? — Chronic transfusions cause iron overload; ferritin >800 ng/mL triggers chelation.",
+  "What is the mainstay of treatment for transfusion‑dependent DBA? — Allogeneic stem‑cell transplant; it is curative.",
+  "Why is erythropoietin used in DBA? — It stimulates erythroid progenitors, reducing transfusion needs.",
+  "What complication is most feared with long‑term transfusion? — Iron overload leading to organ damage.",
+  "When is a bone‑marrow aspirate essential? — To confirm erythroid hypoplasia and exclude other marrow failures."
+ ],
+ "related": [
+  "Congenital dyserythropoietic anaemia",
+  "Fanconi anaemia",
+  "Aplastic anaemia",
+  "Iron‑deficiency anaemia",
+  "Stem‑cell transplantation",
+  "Erythropoietin therapy",
+  "Iron chelation therapy",
+  "Genetic counselling"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "clinicalScope": "Adolescent idiopathic and secondary scoliosis in children and adolescents presenting to low‑resource East African hospitals",
+ "title": "Scoliosis in Children and Adolescents",
+ "subject": "Paediatrics",
+ "summary": "Scoliosis is a three‑dimensional spinal curvature >10° on standing radiograph. In low‑resource settings it is often discovered incidentally or when deformity progresses, and may be idiopathic or secondary to neurofibromatosis, infection or trauma.",
+ "aka": [
+  "Spinal curvature",
+  "Lateral scoliosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A structural lateral curvature of the spine with rotation, measured by the Cobb angle on a standing AP radiograph.",
+   "b": [
+    "Cobb angle ≥10° confirms scoliosis",
+    "Rotation evident on the rib hump or vertebral pedicle asymmetry",
+    "Standing posture required for accurate measurement"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides monitoring versus intervention.",
+   "b": [
+    "Mild: Cobb 10‑24°, observe with serial exams",
+    "Moderate: Cobb 25‑44°, consider bracing",
+    "Severe: Cobb ≥45°, surgical referral",
+    "Progression risk highest during growth spurt (Risser 0‑2)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the majority are idiopathic; secondary causes must be sought when red flags appear.",
+   "b": [
+    "Idiopathic (≈80% of cases, peak 10‑16 y)",
+    "Neurofibromatosis type 1 (NF1) – café‑au‑lait spots, neurofibromas",
+    "Congenital vertebral anomalies (hemivertebrae)",
+    "Post‑infectious (spinal TB, pyogenic spondylitis)",
+    "Traumatic vertebral fracture"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients or caregivers notice asymmetry; physical exam confirms.",
+   "b": [
+    "Shoulder height difference, scapular prominence",
+    "Waist asymmetry, trunk shift",
+    "Rib hump on forward bend (Adam’s test)",
+    "Occasional back pain or leg length discrepancy",
+    "Neurologic symptoms only if severe rotation or associated lesion"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging confirms curvature, assesses etiology and progression.",
+   "t": [
+    {
+     "a": "Standing AP & lateral spine X‑ray",
+     "b": "Measures Cobb angle and rotation; defines severity"
+    },
+    {
+     "a": "MRI of the spine (if available)",
+     "b": "Detects intraspinal lesions (tumour, syrinx, TB abscess); essential when neurologic signs present"
+    },
+    {
+     "a": "Ultrasound of the abdomen (if leg length discrepancy)",
+     "b": "Rules out pelvic or renal causes of asymmetry"
+    },
+    {
+     "a": "Genetic testing for NF1 (clinical criteria often sufficient)",
+     "b": "Confirms NF1 when skin findings equivocal"
+    },
+    {
+     "a": "If MRI unavailable, refer for CT or clinical monitoring",
+     "b": "CT can show bony anomalies; if not possible, base decisions on X‑ray and exam"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients needing urgent referral.",
+   "b": [
+    "Rapid progression >5° in 3 months during growth spurt",
+    "Neurologic deficit (weakness, sensory loss, bladder/bowel changes)",
+    "Severe thoracic curve >70° risking cardiopulmonary compromise",
+    "Associated NF1 lesions causing pain or functional loss",
+    "Signs of spinal infection (fever, night pain, weight loss)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, then halt progression and correct deformity.",
+   "b": [
+    "Idiopathic mild: observation every 6 months, physiotherapy for core strength",
+    "Moderate curves in growing child: thoracolumbosacral orthosis (TLSO) worn ≥18 h/day; monitor Cobb every 4‑6 months",
+    "Severe or progressive despite bracing: refer for posterior spinal fusion (if surgical services exist)",
+    "NF1‑related scoliosis: earlier surgical referral, avoid aggressive bracing if vertebral dysplasia present",
+    "Infection‑related scoliosis: anti‑TB regimen (rifampicin, isoniazid, ethambutol, pyrazinamide) for 6‑9 months, then orthopaedic correction"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular surveillance prevents irreversible deformity.",
+   "b": [
+    "Clinic review every 6 months until skeletal maturity (Risser 5)",
+    "Repeat standing X‑ray if growth spurt ongoing or brace compliance doubtful",
+    "Educate families on brace wear, posture, and activity modification",
+    "Screen NF1 patients yearly for new spinal curves",
+    "Encourage nutrition and vitamin D to support bone health"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish scoliosis from other spinal deformities.",
+   "b": [
+    "Kyphosis – sagittal hyper‑lordosis without lateral curvature; thoracic hump on lateral view",
+    "Pott disease (spinal TB) – vertebral collapse, gibbus, systemic symptoms; MRI shows abscess",
+    "Congenital scoliosis – fixed structural anomaly present at birth, often hemivertebrae"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Mild Cobb angles may be under‑estimated on poor‑quality films; repeat if doubt",
+    "Absence of neurologic signs does not exclude intraspinal tumour; MRI still indicated if rapid progression",
+    "Normal X‑ray does not rule out early vertebral infection; consider ESR/CRP and clinical picture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset back pain with fever",
+  "New weakness, numbness, or bladder/bowel dysfunction",
+  "Rapid curve progression >5° in 3 months",
+  "Severe thoracic curve >70° causing breathing difficulty"
+ ],
+ "faq": [
+  {
+   "q": "What is the minimum Cobb angle to call a curve scoliosis?",
+   "a": "A Cobb angle of 10° or more on a standing AP radiograph."
+  },
+  {
+   "q": "Why is bracing less effective after skeletal maturity?",
+   "a": "Growth plates have closed, so the spine no longer remodels; curves become fixed."
+  },
+  {
+   "q": "Can physiotherapy replace a brace?",
+   "a": "Physiotherapy improves muscle balance but does not halt progression of moderate‑to‑severe curves without a brace."
+  }
+ ],
+ "exam": [
+  "A 13‑year‑old girl with a 30° thoracic curve and Risser 1 asks about treatment — discuss bracing indications, goals, and monitoring.",
+  "You see a 9‑year‑old with NF1 and a 15° curve; what surveillance schedule would you recommend and why?",
+  "A patient presents with rapid curve progression and new leg weakness; what is your next diagnostic step and its rationale?",
+  "Explain how you would differentiate idiopathic scoliosis from early spinal TB on clinical grounds.",
+  "During a ward round you find a 45° lumbar curve in a 15‑year‑old still growing; outline the surgical referral criteria and pre‑operative considerations.",
+  "A child cannot tolerate a TLSO; what alternative management options exist and their limitations?",
+  "Describe the Adam’s forward‑bend test and what a positive finding indicates.",
+  "Why is a standing radiograph essential for measuring Cobb angle, and what error occurs if a supine film is used?"
+ ],
+ "related": [
+  "Kyphosis",
+  "Spinal tuberculosis (Pott disease)",
+  "Neurofibromatosis type 1",
+  "Congenital vertebral anomalies",
+  "Thoracolumbosacral orthosis",
+  "Posterior spinal fusion"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

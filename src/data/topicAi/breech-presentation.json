@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "clinicalScope": "Breech presentation in pregnant women at term or near term presenting to low‑resource obstetric services in East Africa",
+ "title": "Breech Presentation",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Breech presentation is when the fetal buttocks or feet present first. It occurs in 3‑4% of term pregnancies and requires careful diagnosis and planning for safe delivery, especially where resources are limited.",
+ "aka": [
+  "Breech",
+  "Breech lie"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A breech presentation is any fetal position where the presenting part is the buttocks, feet, or a combination, rather than the skull.",
+   "b": [
+    "Firm, round head felt high in the fundus (ballotable) suggests breech",
+    "Soft, broad presenting part palpable above the maternal umbilicus",
+    "Ultrasound (if available) confirms fetal orientation and type"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Breech is classified by the relationship of hips and knees, which guides delivery planning.",
+   "b": [
+    "Frank breech – hips flexed, knees extended (≈65% of breeches)",
+    "Complete breech – hips and knees flexed",
+    "Footling/incomplete breech – one or both feet presenting"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most breeches are idiopathic, but several maternal, fetal and uterine factors increase risk.",
+   "b": [
+    "Prematurity (<37 weeks) – higher incidence at 28 weeks (20‑25%)",
+    "Multiple gestation – limited space for cephalic turn",
+    "Uterine anomalies or fibroids – mechanical obstruction",
+    "Polyhydramnios – excess fluid allows fetal movement",
+    "Placenta praevia or low‑lying placenta – prevents head descent",
+    "Fetal anomalies (e.g., hydrocephalus, spinal dysraphism) – abnormal tone or size",
+    "Maternal pelvic contraction (e.g., previous pelvic fracture) – reduced capacity"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be unaware; the presentation is usually discovered during routine antenatal visits.",
+   "b": [
+    "Absence of fetal skull palpation in the lower abdomen",
+    "High fetal heart tone on Doppler because the presenting part is lower",
+    "Maternal report of unusual fetal movements (e.g., kicking higher)",
+    "In low‑resource settings, presentation may be suspected by visual inspection of the abdomen"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "If ultrasound is unavailable, rely on careful abdominal palpation and a high‑quality Doppler; refer for ultrasound when possible before deciding on delivery mode.",
+   "t": [
+    {
+     "a": "Obstetric ultrasound",
+     "b": "Confirms fetal orientation, type of breech, and looks for placental location, fetal anomalies, amniotic fluid volume"
+    },
+    {
+     "a": "Transabdominal fetal heart Doppler",
+     "b": "Ensures fetal well‑being before any manipulation; a normal rate (110‑160 bpm) is required"
+    },
+    {
+     "a": "Pelvic examination (if no contraindication)",
+     "b": "Assesses uterine size, fundal height, and rules out placenta praevia by palpation"
+    },
+    {
+     "a": "Maternal blood group and Rh typing",
+     "b": "Needed before any invasive procedure or delivery planning"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify situations that demand urgent delivery or referral.",
+   "b": [
+    "Sustained fetal tachycardia (>160 bpm for >10 min) or bradycardia (<110 bpm) with reduced variability",
+    "Ruptured membranes with prolapsed cord",
+    "Maternal hemorrhage or severe pre‑eclampsia",
+    "Non‑reassuring fetal status on cardiotocography despite lack of a specific breech pattern",
+    "Failed external cephalic version after two attempts"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management balances attempts to turn the fetus with safe delivery planning.",
+   "b": [
+    "External cephalic version (ECV) at 36‑37 weeks if no contraindication; success 50‑70% in low‑resource settings due to limited tocolysis and operator skill",
+    "Tocolysis with nifedipine or beta‑agonist (if available) to relax uterus during ECV",
+    "If ECV fails or is contraindicated, plan for cesarean section for frank/complete breech; consider vaginal breech delivery only for selected footling breeches, small fetus (<3.5 kg), and experienced provider",
+    "In labour, continuous fetal monitoring; avoid prolonged second stage – consider assisted delivery (e.g., Mauriceau‑Smellie‑Veit manoeuvre) only by trained staff",
+    "Administer prophylactic antibiotics for cesarean section and for prolonged rupture of membranes"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After delivery, assess both mother and neonate; counsel for future pregnancies.",
+   "b": [
+    "Neonatal exam for head injury, brachial plexus palsy, and adrenal hemorrhage (especially after difficult breech delivery)",
+    "Maternal pelvic exam to document any trauma",
+    "Educate about early presentation for antenatal care in subsequent pregnancies",
+    "If a previous breech, discuss planned ECV at 36 weeks in the next pregnancy"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that may mimic or be mistaken for breech presentation.",
+   "b": [
+    "Transverse lie – fetus lies horizontally; diagnosis requires ultrasound; differs by absence of a single presenting part",
+    "Shoulder dystocia – occurs in cephalic presentation; presents with failure of shoulder delivery after head emergence, not relevant to breech"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "A non‑reactive NST may be due to fetal sleep, maternal anemia, or equipment artefact; it still warrants immediate reassessment and possible delivery, not simple repeat after correcting anemia",
+    "Palpation of a high fundal head may be misread as a normal cephalic lie; confirm with Doppler or ultrasound before dismissing breech"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of fetal heart tones",
+  "Persistent fetal tachycardia or bradycardia with decelerations",
+  "Cord prolapse or uterine rupture"
+ ],
+ "faq": [
+  {
+   "q": "Can a breech baby be delivered vaginally?",
+   "a": "Only in selected cases (footling breech, fetal weight <3.5 kg, experienced provider, and no maternal or fetal contraindications)."
+  },
+  {
+   "q": "What is the main contraindication to external cephalic version?",
+   "a": "Placenta praevia, active labour, ruptured membranes, or fetal distress."
+  },
+  {
+   "q": "Why is a high fetal heart tone heard in breech presentation?",
+   "a": "The presenting part is lower, so the Doppler picks up the fetal heart more directly."
+  }
+ ],
+ "exam": [
+  "A 28‑week pregnant woman presents with a firm, round head high in the fundus. What is the most likely diagnosis and next step? — Identify breech presentation; arrange ultrasound to confirm type and assess for contraindications to ECV.",
+  "You are planning an ECV at 36 weeks in a district hospital without continuous fetal monitoring. What precautions are essential? — Use tocolysis, obtain informed consent, have emergency C‑section capability, and monitor fetal heart before and after the attempt.",
+  "During labour a frank breech fetus shows prolonged second stage with fetal heart decelerations. What is the immediate management? — Stop labour, call for senior obstetrician, prepare for emergency cesarean section.",
+  "A mother with a previous cesarean scar presents at 38 weeks with a footling breech. What delivery option is safest? — Offer repeat cesarean section; vaginal breech is high‑risk with uterine scar.",
+  "What are the key neonatal injuries to look for after a vaginal breech delivery? — Check for head trauma, brachial plexus palsy, and adrenal hemorrhage; assess APGAR and initiate resuscitation if needed.",
+  "Explain why shoulder dystocia is not a concern in breech delivery. — Shoulder dystocia occurs when the fetal shoulders are impacted after a cephalic head delivery; breech delivery involves delivering the hips/feet first, so the problem is delivery of the after‑coming head, not the shoulders.",
+  "A woman in labour has a breech presentation and polyhydramnios. How does polyhydramnios affect management? — Increases risk of uterine over‑distension and failed ECV; consider earlier delivery planning and monitor for cord prolapse.",
+  "What maternal condition common in East Africa would make ECV unsafe? — Placenta praevia or active ante‑partum hemorrhage, which are more prevalent with high rates of malaria‑related anemia and uterine infections."
+ ],
+ "related": [
+  "External Cephalic Version",
+  "Cesarean Section",
+  "Placenta Praevia",
+  "Fetal Presentation",
+  "Neonatal Birth Trauma",
+  "Partograph"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

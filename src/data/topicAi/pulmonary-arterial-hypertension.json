@@ -1,0 +1,232 @@
+{
+ "medical": true,
+ "clinicalScope": "Pulmonary arterial hypertension (PAH) in adult patients in low‑resource East African hospitals, focusing on common tropical causes and limited investigations",
+ "title": "Pulmonary Arterial Hypertension",
+ "subject": "Medicine",
+ "summary": "PAH is a progressive vasculopathy of the pulmonary arteries causing right‑ventricular failure. In low‑resource settings, HIV, schistosomiasis, and congenital heart disease are frequent drivers. Early recognition and risk‑adapted therapy improve survival.",
+ "aka": [
+  "Group 1 pulmonary hypertension"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PAH is defined by a mean pulmonary arterial pressure ≥25 mmHg at rest, pulmonary capillary wedge pressure ≤15 mmHg, and pulmonary vascular resistance >3 WU on right‑heart catheterisation. In many centres, a transthoracic echo with a systolic PAP >35 mmHg plus clinical suspicion is used as a pragmatic screen.",
+   "b": [
+    "Mean PAP ≥25 mmHg",
+    "PCWP ≤15 mmHg",
+    "PVR >3 WU"
+   ],
+   "t": [
+    {
+     "a": "Transthoracic echo",
+     "b": "Estimate systolic PAP and assess RV size/function – a PAP >35 mmHg suggests PAH"
+    },
+    {
+     "a": "Right‑heart cath",
+     "b": "Confirm haemodynamics and calculate PVR – definitive diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The REVEAL 2.0 score and WHO functional class guide prognosis and therapy. In resource‑limited settings, WHO class and echo findings are often used to stratify risk.",
+   "b": [
+    "WHO FC I–IV",
+    "REVEAL 2.0 risk score"
+   ],
+   "t": [
+    {
+     "a": "WHO functional class",
+     "b": "Assesses symptom burden – FC III/IV indicates high risk"
+    },
+    {
+     "a": "Echo RV size",
+     "b": "Enlarged RV predicts worse outcome"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the top causes are HIV infection, schistosomiasis, and untreated congenital heart disease. Other tropical infections and rheumatic heart disease can also contribute.",
+   "b": [
+    "HIV/AIDS",
+    "Schistosoma mansoni",
+    "Uncorrected VSD/PDA/ASD (Eisenmenger)",
+    "Rheumatic heart disease"
+   ],
+   "t": [
+    {
+     "a": "HIV viral load",
+     "b": "High VL correlates with PAH risk – consider antiretroviral optimisation"
+    },
+    {
+     "a": "Schistosoma serology",
+     "b": "Positive IgG suggests chronic infection – treat with praziquantel"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report progressive exertional dyspnoea, fatigue, and peripheral oedema. Early signs include a loud P2, right‑sided heart failure, and syncope.",
+   "b": [
+    "Exertional dyspnoea",
+    "Right‑sided oedema",
+    "Loud P2",
+    "Syncope"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for RV heave, displaced apex, and raised JVP – indicates RV strain"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A pragmatic workup uses history, exam, echo, basic labs, and targeted imaging. Advanced tests may be unavailable; alternatives are outlined.",
+   "b": [
+    "History of HIV, TB, schistosomiasis",
+    "Echo for PAP and RV assessment",
+    "Basic labs: CBC, LFTs, HIV RNA, Schistosoma serology",
+    "Chest X‑ray for lung disease"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Rule out interstitial lung disease or large pulmonary emboli – normal in isolated PAH"
+    },
+    {
+     "a": "Spirometry",
+     "b": "Exclude COPD/ILD – normal FEV1/FVC suggests PAH"
+    },
+    {
+     "a": "D‑dimer",
+     "b": "Exclude acute pulmonary embolism – normal value reduces suspicion of CTEPH"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Acute right‑ventricular failure, haemoptysis, and sudden death are life‑threatening. Watch for signs of RV decompensation and bleeding.",
+   "b": [
+    "Sudden worsening dyspnoea",
+    "Chest pain/haemoptysis",
+    "Right‑sided JVD",
+    "Hypotension"
+   ],
+   "t": [
+    {
+     "a": "Hemoptysis",
+     "b": "May indicate ruptured pulmonary artery aneurysm – urgent imaging and airway protection"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying causes first, then initiate PAH‑specific therapy based on risk. In low‑resource settings, generic endothelin receptor antagonists and PDE‑5 inhibitors are preferred when available.",
+   "b": [
+    "Antiretroviral therapy for HIV",
+    "Praziquantel for schistosomiasis",
+    "Correction of congenital shunts if feasible"
+   ],
+   "t": [
+    {
+     "a": "Bosentan",
+     "b": "Oral endothelin receptor antagonist – improves exercise capacity"
+    },
+    {
+     "a": "Tadalafil",
+     "b": "Oral PDE‑5 inhibitor – improves haemodynamics and symptoms"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor clinical status, echo, and biomarkers every 3–6 months in high‑risk patients. Preventive measures include HIV counselling, schistosomiasis control, and early CHD repair.",
+   "b": [
+    "Clinical review every 3–6 months"
+   ],
+   "t": [
+    {
+     "a": "Echo",
+     "b": "Assess PAP and RV size – changes guide therapy adjustment"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pulmonary hypertension due to left‑heart disease (Group 2) and chronic thromboembolic pulmonary hypertension (CTEPH) can mimic PAH but have different treatments.",
+   "b": [
+    "Left‑heart disease – treat LV failure first"
+   ],
+   "t": [
+    {
+     "a": "PCWP",
+     "b": "Elevated in left‑heart disease – distinguishes from PAH"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal D‑dimer does not exclude CTEPH; a normal chest X‑ray may miss small emboli. Spirometry may be normal in early PAH.",
+   "b": [
+    "D‑dimer false negative in CTEPH"
+   ],
+   "t": [
+    {
+     "a": "D‑dimer",
+     "b": "Normal value does not rule out CTEPH – proceed to V/Q scan if suspicion remains"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe dyspnoea or chest pain",
+  "Unexplained haemoptysis",
+  "Rapidly worsening oedema or hypotension"
+ ],
+ "faq": [
+  {
+   "q": "Why is HIV a risk factor for PAH?",
+   "a": "HIV causes chronic inflammation and endothelial dysfunction, promoting pulmonary vascular remodeling."
+  },
+  {
+   "q": "Can PAH be cured?",
+   "a": "No; treatment slows progression and improves quality of life, but the underlying vasculopathy is irreversible."
+  },
+  {
+   "q": "What is the first drug to start in a low‑resource setting?",
+   "a": "An oral endothelin receptor antagonist like bosentan, if available, or a PDE‑5 inhibitor such as tadalafil."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old HIV‑positive man presents with progressive dyspnoea. What is the next best investigation? — Echo to estimate PAP and assess RV function; if high, proceed to right‑heart cath.",
+  "A patient with PAH develops sudden haemoptysis. What is the most likely complication and immediate management? — Pulmonary artery aneurysm rupture; secure airway, give oxygen, and arrange urgent CT angiography.",
+  "You suspect PAH in a patient with a normal chest X‑ray and normal spirometry. What is the most appropriate next step? — Right‑heart catheterisation to confirm haemodynamics.",
+  "A patient with WHO FC III PAH is stable on bosentan. Which drug should you add if symptoms persist? — A PDE‑5 inhibitor such as tadalafil to improve exercise capacity.",
+  "In a setting without a cath lab, how would you diagnose PAH? — Use echo criteria (PAP >35 mmHg) plus clinical assessment and risk stratification.",
+  "A patient with PAH is on bosentan but develops liver enzyme elevation. What is the next step? — Discontinue bosentan, monitor LFTs, and consider switching to a PDE‑5 inhibitor.",
+  "What is the main difference between PAH and CTEPH on imaging? — CTEPH shows organised thrombus in pulmonary arteries on CT or V/Q scan; PAH shows normal pulmonary arteries but elevated pressures.",
+  "Why is a normal D‑dimer not sufficient to rule out CTEPH? — D‑dimer can be normal in chronic thromboembolic disease; a V/Q scan is required for diagnosis."
+ ],
+ "related": [
+  "Pulmonary hypertension",
+  "Right‑ventricular failure",
+  "HIV‑associated cardiomyopathy",
+  "Schistosomiasis",
+  "Congenital heart disease",
+  "Chronic thromboembolic pulmonary hypertension",
+  "Endothelin receptor antagonists",
+  "PDE‑5 inhibitors"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

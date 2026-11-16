@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "clinicalScope": "Envenoming from venomous snake bites in humans presenting to low‑resource East African hospitals",
+ "title": "Snake Bite Envenoming",
+ "subject": "Surgery",
+ "summary": "Snake bite envenoming is a common emergency in rural East Africa, often caused by vipers (cytotoxic/haemorrhagic) or cobras (neurotoxic). Prompt first‑aid, recognition of systemic signs, and antivenom are the cornerstones of care.",
+ "aka": [
+  "Ophidian envenomation",
+  "Snake bite"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Envenoming occurs when venom is injected into the victim’s tissue, producing local and/or systemic effects. Diagnosis is clinical, supported by bedside clotting tests.",
+   "b": [
+    "History of bite, time, and snake identification if possible",
+    "Visible fang marks or puncture wounds",
+    "Progressive swelling, pain, or systemic signs"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the presence of local tissue injury, systemic neuro‑ or haemotoxic signs, and laboratory coagulopathy.",
+   "b": [
+    "Mild: local pain, minimal swelling, no systemic signs",
+    "Moderate: expanding oedema, early neuro‑signs, abnormal 20‑WBCT",
+    "Severe: neuro‑paralysis, severe coagulopathy, renal failure, shock"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the two main venom types are cytotoxic/haemorrhagic (viperidae) and neurotoxic (elapidae).",
+   "b": [
+    "Viper bites (e.g., Puff‑adder, Bitis arietans) – cytotoxic, cause tissue necrosis and coagulopathy",
+    "Cobra bites (Naja spp.) – neurotoxic, cause descending paralysis",
+    "Mambas and other elapids – primarily neurotoxic",
+    "Rarely, non‑venomous bites or dry bites"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation evolves from the bite site outward, then systemically if venom spreads.",
+   "b": [
+    "Local: pain, swelling, bruising, blistering, necrosis",
+    "Haemotoxic: bleeding gums, ecchymoses, prolonged clotting, haematuria",
+    "Neurotoxic: ptosis, diplopia, dysphagia, descending flaccid paralysis",
+    "Renal: oliguria, rising creatinine, dark urine"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations guide severity assessment and monitor complications; many are feasible in low‑resource settings.",
+   "t": [
+    {
+     "a": "20‑minute whole blood clotting time (20‑WBCT)",
+     "b": "Detects venom‑induced coagulopathy; un‑clotted blood after 20 min indicates systemic haemotoxicity"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Shows anaemia, leukocytosis, platelet trends; falling platelets suggest consumptive coagulopathy"
+    },
+    {
+     "a": "Serum creatinine & electrolytes",
+     "b": "Monitors acute kidney injury; rising creatinine signals renal involvement"
+    },
+    {
+     "a": "Prothrombin time / INR (if lab available)",
+     "b": "Quantifies coagulation defect; prolonged PT/INR confirms systemic coagulopathy"
+    },
+    {
+     "a": "Neurological exam (serial)",
+     "b": "Tracks progression of neuro‑toxicity; worsening bulbar signs demand airway protection"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications may develop hours to days after the bite and can be fatal if missed.",
+   "b": [
+    "Airway compromise from neuro‑paralysis",
+    "Severe coagulopathy with uncontrolled bleeding",
+    "Compartment syndrome after massive swelling",
+    "Acute kidney injury from haemoglobinuria or direct nephrotoxicity",
+    "Secondary infection of necrotic tissue"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows ABCs, early antivenom, and targeted supportive care.",
+   "b": [
+    "Immobilise the limb with a splint; keep at heart level; reassure patient",
+    "Give antivenom as soon as systemic signs appear or 20‑WBCT is abnormal; repeat doses until clinical improvement",
+    "Treat coagulopathy primarily with antivenom; give fresh frozen plasma or cryoprecipitate only if bleeding persists after antivenom",
+    "Provide analgesia, tetanus prophylaxis, and wound care; consider antibiotics for secondary infection",
+    "Monitor airway; intubate early if bulbar signs progress",
+    "Correct hypotension with crystalloid bolus; avoid excessive fluids if renal failure suspected"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After the acute phase, watch for delayed toxicity and educate on avoidance.",
+   "b": [
+    "Re‑assess limb swelling, neuro‑signs, and coagulation every 6–12 h for at least 48 h",
+    "Monitor renal function daily for 5 days; intervene early for AKI",
+    "Educate on wearing protective boots, using torches at night, and safe snake‑handling practices",
+    "Encourage community awareness of local venomous species and prompt transport to health facilities"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic snake‑bite envenoming.",
+   "b": [
+    "Cellulitis – lacks rapid progression, systemic neuro‑signs, and abnormal 20‑WBCT",
+    "Deep vein thrombosis – presents with unilateral swelling but no bite mark or coagulopathy",
+    "Acute compartment syndrome from trauma – no venom‑induced coagulopathy; antivenom is unnecessary"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain bedside tests may give false reassurance.",
+   "b": [
+    "A normal 20‑WBCT early after bite does not rule out delayed haemotoxicity; repeat after 30 min if suspicion remains",
+    "Platelet count may be normal initially despite evolving consumptive coagulopathy"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive airway obstruction",
+  "Uncontrolled bleeding or rapidly falling haemoglobin",
+  "Signs of compartment syndrome (pain out of proportion, tense swelling)",
+  "Oliguria or rising creatinine"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step after a snake bite?",
+   "a": "Immobilise the bitten limb, reassure the patient, remove tight clothing or jewellery, and arrange rapid transport while maintaining ABCs."
+  },
+  {
+   "q": "When can antivenom be stopped?",
+   "a": "Continue antivenom until clinical signs of envenoming (e.g., swelling, neuro‑signs, abnormal 20‑WBCT) improve and coagulation normalises; then no further doses are needed."
+  },
+  {
+   "q": "Why is fresh frozen plasma not the primary treatment for venom‑induced coagulopathy?",
+   "a": "Antivenom neutralises the venom causing the coagulopathy; blood products only support bleeding and are used if haemorrhage persists after antivenom."
+  }
+ ],
+ "exam": [
+  "A farmer presents 2 h after a puff‑adder bite with rapidly expanding leg swelling and a prolonged 20‑WBCT. What is the next best step? — Administer antivenom immediately; monitor coagulation and limb swelling.",
+  "How does neuro‑toxic envenoming differ from cytotoxic envenoming on examination? — Neuro‑toxic shows descending paralysis, ptosis, and respiratory muscle weakness; cytotoxic shows intense local swelling, bruising, and coagulopathy.",
+  "Why is the 20‑minute whole blood clotting test essential in low‑resource settings? — It detects systemic haemotoxicity without laboratory equipment, guiding antivenom use.",
+  "A patient develops tense calf swelling 12 h after a viper bite but has normal coagulation after antivenom. What should you consider? — Compartment syndrome; measure compartment pressure and consider fasciotomy only after correcting any residual coagulopathy.",
+  "What are the contraindications to giving antivenom in a snake‑bite patient? — Known severe IgE‑mediated allergy to antivenom; otherwise, clinical signs dictate use.",
+  "Explain why tetanus prophylaxis is given to all snake‑bite victims. — Bite wounds are contaminated; tetanus risk is high in rural settings, and prophylaxis prevents a potentially fatal infection.",
+  "A child presents with a dry bite (no signs of envenoming). What is the appropriate management? — Observe for at least 24 h, immobilise limb, educate caregivers; antivenom is not indicated without systemic signs.",
+  "Which laboratory test is least useful for immediate decision‑making in a low‑resource snake‑bite setting? — Serum creatinine; while important for AKI monitoring, it does not guide acute antivenom administration."
+ ],
+ "related": [
+  "Toxin‑induced coagulopathy",
+  "Acute compartment syndrome",
+  "Neurotoxic paralysis",
+  "Acute kidney injury",
+  "Tetanus prophylaxis",
+  "First aid for venomous bites"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

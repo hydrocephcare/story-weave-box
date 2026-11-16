@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "clinicalScope": "Acute and chronic subdural haematoma in adults presenting to low‑resource hospitals in East Africa",
+ "title": "Subdural Haematoma",
+ "subject": "Medicine",
+ "summary": "Subdural haematoma (SDH) is a collection of blood between the dura mater and arachnoid, usually from torn bridging veins after head trauma. It can be acute (hours‑days) or chronic (weeks‑months) and presents with evolving neurological decline.",
+ "aka": [
+  "subdural bleed"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A subdural haematoma is a crescent‑shaped accumulation of blood in the subdural space, identified by neuro‑imaging or, where unavailable, by clinical syndrome after trauma.",
+   "b": [
+    "Acute SDH: symptoms within 72 h of injury.",
+    "Chronic SDH: symptoms develop >3 weeks after injury."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by thickness on imaging and midline shift; clinically by Glasgow Coma Scale (GCS).",
+   "b": [
+    "Thin (<5 mm) or no shift – monitor.",
+    "Moderate (5‑10 mm) or shift 5‑10 mm – consider evacuation.",
+    "Thick (>10 mm) or shift >10 mm – urgent surgical evacuation."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the dominant cause is blunt head trauma, often from falls, road‑traffic accidents, or assault.",
+   "b": [
+    "Torn bridging veins – most common mechanism.",
+    "Coagulopathy (e.g., warfarin, severe malaria‑induced thrombocytopenia).",
+    "Alcohol‑related falls – frequent in young adults.",
+    "Child abuse (shaken‑baby syndrome) – pediatric subset.",
+    "Rare: venous sinus thrombosis, neoplasm erosion."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation evolves with the haematoma’s age and size, ranging from rapid deterioration to subtle cognitive change.",
+   "b": [
+    "Acute: headache, vomiting, decreasing GCS, unilateral pupil dilation.",
+    "Chronic: progressive headache, confusion, gait disturbance, focal weakness, fluctuating consciousness.",
+    "Late‑onset seizures – especially in chronic SDH."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging confirms diagnosis; bedside tools help when CT is unavailable.",
+   "t": [
+    {
+     "a": "CT head (non‑contrast)",
+     "b": "Is there a bleed and its size? – Crescent‑shaped hyperdensity (acute) or mixed density (chronic)."
+    },
+    {
+     "a": "MRI brain (if CT unavailable and scanner present)",
+     "b": "Detects chronic or isodense SDH not seen on CT."
+    },
+    {
+     "a": "Focused neurological exam (GCS, pupil size, motor response)",
+     "b": "Assesses clinical severity and guides urgency of evacuation."
+    },
+    {
+     "a": "Coagulation profile (PT/INR, platelets)",
+     "b": "Identifies reversible coagulopathy; correct before surgery."
+    },
+    {
+     "a": "Portable ultrasound through temporal bone (rare, operator‑dependent)",
+     "b": "May show midline shift when CT unavailable; use only as adjunct."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from mass effect, re‑bleeding, or treatment‑related issues.",
+   "b": [
+    "Rapid GCS fall >2 points in 1 h – impending herniation.",
+    "Fixed, dilated pupil – uncal herniation.",
+    "Seizure activity – treat promptly.",
+    "Re‑accumulation after drainage – may need repeat burr‑hole.",
+    "Infection of burr‑hole site – monitor wound."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management balances urgent evacuation with stabilization, especially where neurosurgical capacity is limited.",
+   "b": [
+    "Stabilize airway, breathing, circulation; raise head 30°.",
+    "Reverse coagulopathy: vitamin K, fresh frozen plasma, platelets.",
+    "Acute SDH with thickness >10 mm, shift >5 mm, or GCS ≤8 – craniotomy if neurosurgeon available.",
+    "Chronic SDH – burr‑hole drainage with closed‑system drain; irrigation with normal saline.",
+    "Seizure prophylaxis (e.g., levetiracetam) if cortical irritation evident.",
+    "Avoid high‑dose steroids – no proven benefit and risk of infection."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After evacuation, monitor for re‑accumulation and address modifiable risk factors.",
+   "b": [
+    "Repeat CT 24‑48 h post‑op if neurologic status changes.",
+    "Educate on fall prevention, helmet use, alcohol moderation.",
+    "Screen for chronic anticoagulant use; consider alternative agents.",
+    "Vaccinate against meningitis and malaria to reduce indirect trauma risk."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other extra‑axial bleeds and mimics can look similar on presentation.",
+   "b": [
+    "Epidural haematoma – arterial bleed, lens‑shaped on CT, rapid lucid interval then collapse.",
+    "Intracerebral haemorrhage – intraparenchymal, not crescent‑shaped, often hypertensive.",
+    "Subarachnoid haemorrhage – blood in sulci, presents with thunderclap headache."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging and labs may be falsely reassuring.",
+   "b": [
+    "Isodense chronic SDH on early CT may be missed – consider MRI or repeat scan if suspicion high.",
+    "Normal PT/INR does not exclude platelet dysfunction from malaria or herbal toxins.",
+    "Mild pupil asymmetry can be early herniation; repeat exam frequently."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Rapid decline in GCS",
+  "Fixed, dilated pupil",
+  "New onset seizures"
+ ],
+ "faq": [
+  {
+   "q": "Why does a subdural bleed have a crescent shape?",
+   "a": "Blood spreads under the dura but is limited by the sutures, creating a crescent that conforms to the convexity of the brain."
+  },
+  {
+   "q": "Can a chronic subdural present without a clear trauma history?",
+   "a": "Yes; minor falls in the elderly or anticoagulated patients may be forgotten, yet bridging veins can still rupture."
+  },
+  {
+   "q": "Is surgery always required for chronic subdural haematoma?",
+   "a": "No; small, asymptomatic chronic SDH can be observed with serial exams and repeat imaging."
+  }
+ ],
+ "exam": [
+  "A 70‑year‑old farmer with a fall 3 weeks ago now has progressive headache and confusion — what is the most likely diagnosis and why? — Chronic subdural haematoma; delayed symptom onset after minor trauma is classic.",
+  "CT shows a 12 mm crescent‑shaped bleed with 6 mm midline shift in a patient with GCS 9 — what is the next step? — Urgent surgical evacuation (burr‑hole or craniotomy) because thickness >10 mm and shift >5 mm indicate mass effect.",
+  "A patient on warfarin presents with acute head injury and a thin subdural on CT — how do you prepare for possible surgery? — Reverse anticoagulation with vitamin K and fresh frozen plasma; correct platelets if low.",
+  "During bedside exam the patient’s left pupil is 4 mm, right pupil 2 mm, both reactive — what does this suggest? — Early uncal herniation; monitor closely and arrange immediate imaging.",
+  "Why is levetiracetam preferred over phenytoin for seizure prophylaxis after SDH evacuation in a malaria‑endemic area? — Levetiracetam has fewer drug‑interactions with antimalarials and does not affect hepatic enzymes.",
+  "What are key differences between acute epidural and acute subdural haematoma on CT? — Epidural: biconvex, arterial, often with lucid interval; Subdural: crescent, venous, crosses suture lines.",
+  "A patient with chronic SDH is stable but has a platelet count of 80 × 10⁹/L due to malaria — what should you do before drainage? — Transfuse platelets to achieve >100 × 10⁹/L to reduce re‑bleeding risk.",
+  "After burr‑hole drainage the patient’s headache recurs 48 h later, CT shows residual collection — what is the appropriate management? — Re‑insert drain or perform repeat burr‑hole; monitor for infection."
+ ],
+ "related": [
+  "Epidural haematoma",
+  "Intracerebral haemorrhage",
+  "Subarachnoid haemorrhage",
+  "Traumatic brain injury",
+  "Coagulopathy in malaria",
+  "Neurosurgical evacuation techniques"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

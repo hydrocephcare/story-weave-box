@@ -1,0 +1,193 @@
+{
+ "medical": true,
+ "clinicalScope": "Microcytic anaemia in children and adults presenting to low‑resource East African hospitals, with emphasis on iron‑deficiency, thalassaemia trait, anaemia of chronic disease and sideroblastic anaemia",
+ "title": "Microcytic Anaemia",
+ "subject": "Medicine",
+ "summary": "Microcytic anaemia is defined by a reduced mean corpuscular volume (MCV) and a low haemoglobin concentration. In low‑resource East African settings the most common causes are iron‑deficiency, thalassaemia trait, anaemia of chronic disease and, less frequently, sideroblastic anaemia.",
+ "aka": [
+  "Microcytosis",
+  "Small‑cell anaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Microcytic anaemia is present when the MCV is below age‑adjusted cut‑offs and the haemoglobin is below normal for age and sex.",
+   "b": [
+    "Children <6 months: MCV <70 fL",
+    "Children 6 months–2 years: MCV <75 fL",
+    "Children 2–6 years: MCV <77 fL",
+    "Children 6–12 years: MCV <80 fL",
+    "Children >12 years and adults: MCV <80 fL",
+    "Hb below WHO cut‑offs (e.g., <11 g/dL in children 6–59 months, <12 g/dL in non‑pregnant women, <13 g/dL in men)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides urgency of treatment and need for transfusion.",
+   "b": [
+    "Mild: Hb 10–11 g/dL (adults) or age‑appropriate mild drop",
+    "Moderate: Hb 7–9.9 g/dL",
+    "Severe: Hb <7 g/dL or symptomatic (tachycardia, hypotension, chest pain)",
+    "Very severe (life‑threatening): Hb <5 g/dL or signs of cardiac failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the most probable aetiology based on epidemiology, diet, chronic disease and family history.",
+   "b": [
+    "Iron‑deficiency anaemia – poor dietary iron, chronic intestinal blood loss, hookworm infection, heavy menstrual bleeding",
+    "Thalassaemia trait – family history, ethnic background (East African, Mediterranean, South Asian), very low MCV with normal Hb",
+    "Anaemia of chronic disease – HIV, tuberculosis, chronic kidney disease, rheumatic heart disease",
+    "Sideroblastic anaemia – alcohol excess, lead exposure, isoniazid, congenital X‑linked forms",
+    "Rare causes – congenital haemoglobinopathies (e.g., HbE), copper deficiency"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect reduced oxygen‑carrying capacity and, occasionally, the underlying disease.",
+   "b": [
+    "Fatigue, weakness, pallor, reduced exercise tolerance",
+    "Pica, restless legs, brittle nails (iron deficiency)",
+    "Mild jaundice or splenomegaly (thalassaemia trait)",
+    "Weight loss, night sweats, cough (TB or HIV‑related disease)",
+    "Abdominal pain, neuropathy (lead‑related sideroblastic anaemia)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer the key diagnostic questions; note alternatives when resources are limited.",
+   "t": [
+    {
+     "a": "Full blood count with red‑cell indices",
+     "b": "Confirms microcytosis and quantifies anaemia; low MCV and low MCH support microcytic aetiology"
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Answers: Is iron stores depleted? Low ferritin (<30 µg/L) confirms iron‑deficiency; normal/high ferritin suggests other causes"
+    },
+    {
+     "a": "Serum transferrin saturation (if ferritin unavailable)",
+     "b": "Answers: Is iron utilisation low? Saturation <15 % supports iron‑deficiency; >20 % points away from it"
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Answers: What is red‑cell morphology? Hypochromic microcytes suggest iron‑deficiency; target cells and basophilic stippling suggest thalassaemia or sideroblastic anaemia"
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Answers: Is marrow response adequate? Low retic (<1 %) in iron‑deficiency; normal/high in haemolysis"
+    },
+    {
+     "a": "C‑reactive protein or ESR",
+     "b": "Answers: Is there inflammation? Elevated values support anaemia of chronic disease"
+    },
+    {
+     "a": "Stool occult blood (if adult) or stool microscopy for ova",
+     "b": "Answers: Is there gastrointestinal blood loss or helminth infection? Positive results guide treatment"
+    },
+    {
+     "a": "Hemoglobin electrophoresis (if thalassaemia suspected)",
+     "b": "Answers: Is a haemoglobinopathy present? Detects HbA2 elevation in β‑thalassaemia trait"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise features that demand urgent intervention.",
+   "b": [
+    "Severe Hb <7 g/dL with cardiovascular compromise",
+    "Rapid fall in Hb (>2 g/dL in 48 h)",
+    "Signs of heart failure (pulmonary oedema, peripheral oedema)",
+    "Persistent tachycardia >120 bpm at rest",
+    "Neurological symptoms in lead‑related sideroblastic anaemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then correct the anaemia.",
+   "b": [
+    "Iron‑deficiency – oral ferrous salts (e.g., ferrous sulfate) for 3–6 months; give with vitamin C; monitor for GI side‑effects",
+    "Parenteral iron – consider if oral iron not tolerated, malabsorption, or rapid correction needed (e.g., late pregnancy, severe anaemia)",
+    "Thalassaemia trait – no specific therapy; counsel on genetics; avoid unnecessary iron",
+    "Anaemia of chronic disease – optimise control of HIV, TB, CKD; erythropoiesis‑stimulating agents only in selected CKD patients",
+    "Blood transfusion – reserve for severe or symptomatic anaemia; use packed RBCs, monitor for overload"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Track response and prevent recurrence.",
+   "b": [
+    "Re‑check Hb and MCV 4–6 weeks after starting iron; expect Hb rise ≥1 g/dL if iron‑deficiency",
+    "For anaemia of chronic disease – monitor Hb together with disease activity; improvement follows disease control",
+    "Educate on iron‑rich diet (meat, beans, fortified cereals) and deworming every 6 months in endemic areas",
+    "Screen family members for thalassaemia trait if index case identified",
+    "Avoid routine iron supplementation in thalassaemia trait or anaemia of chronic disease"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that may mimic microcytic anaemia but have distinct features.",
+   "b": [
+    "Macrocytic anaemia with laboratory error – MCV is genuinely high; repeat sample if discrepancy suspected",
+    "Hemolytic anaemia – typically normocytic or macrocytic with high retic count and elevated LDH",
+    "Anemia of acute blood loss – normocytic initially, becomes microcytic only after iron stores are exhausted"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation, especially in low‑resource settings.",
+   "b": [
+    "Ferritin is an acute‑phase reactant; inflammation can raise ferritin masking iron‑deficiency – combine with CRP/ESR",
+    "Peripheral smear may show microcytosis from thalassaemia trait; RDW is often normal, unlike iron‑deficiency where RDW is raised",
+    "Transferrin saturation can be low in anaemia of chronic disease; interpret with ferritin and inflammatory markers"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden Hb drop below 7 g/dL",
+  "Signs of cardiac failure (dyspnoea, chest pain, peripheral oedema)",
+  "Persistent tachycardia >120 bpm despite fluids",
+  "Neurological changes suggesting lead toxicity"
+ ],
+ "faq": [
+  {
+   "q": "Why is iron deficiency still common despite fortification programmes?",
+   "a": "Poor dietary intake, chronic intestinal parasites and limited access to fortified foods keep iron stores low in many low‑resource settings."
+  },
+  {
+   "q": "Can a normal ferritin rule out iron deficiency?",
+   "a": "No; in the presence of infection or inflammation ferritin may be normal or high despite depleted iron stores."
+  },
+  {
+   "q": "When is a blood transfusion indicated for microcytic anaemia?",
+   "a": "When Hb is <7 g/dL or the patient is symptomatic with cardiovascular compromise, after other causes have been addressed."
+  }
+ ],
+ "exam": [
+  "A 9‑year‑old girl from a rural Kenyan clinic has Hb 9 g/dL, MCV 72 fL, and a stool exam positive for hookworm. What is the next step? — Start oral iron therapy and give albendazole; arrange follow‑up Hb in 4 weeks.",
+  "A patient with known β‑thalassaemia trait has Hb 11 g/dL, MCV 65 fL, normal ferritin. Should you give iron? — No; iron would not improve Hb and may cause overload.",
+  "In a malaria‑endemic area, a child with Hb 9 g/dL, MCV 68 fL, and a negative malaria smear is found to have low ferritin. What is the priority treatment? — Oral iron supplementation; malaria treatment only if smear becomes positive.",
+  "A pregnant woman in her third trimester has Hb 6.5 g/dL, MCV 78 fL, and cannot tolerate oral iron due to vomiting. What is appropriate? — Consider parenteral iron (e.g., iron sucrose) after ruling out infection.",
+  "A 45‑year‑old farmer presents with anaemia, MCV 75 fL, basophilic stippling, and a history of lead‑based paint exposure. What specific therapy should be added? — Pyridoxine trial and removal of lead exposure; chelation if blood lead >45 µg/dL.",
+  "How does RDW help differentiate iron‑deficiency from thalassaemia trait? — RDW is markedly increased in iron‑deficiency but usually normal in thalassaemia trait.",
+  "What is the most important monitoring parameter after starting oral iron in a child? — Rise in haemoglobin of at least 1 g/dL after 4 weeks, together with improvement in symptoms."
+ ],
+ "related": [
+  "Iron‑deficiency anaemia",
+  "Thalassaemia trait",
+  "Anaemia of chronic disease",
+  "Sideroblastic anaemia",
+  "Hookworm infection",
+  "Lead poisoning"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

@@ -1,0 +1,185 @@
+{
+ "medical": true,
+ "clinicalScope": "Post‑operative care for adult surgical patients in low‑resource East African hospitals, focusing on common procedures and limited diagnostic resources",
+ "subject": "Surgery",
+ "summary": "Post‑operative care aims to prevent, detect and treat complications after surgery, especially where investigations and intensive care are limited. It integrates vigilant monitoring, judicious use of antibiotics, early nutrition and safe drain management to reduce morbidity and mortality.",
+ "aka": [
+  "Post‑op care",
+  "Post‑operative management"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Post‑operative care is the systematic set of interventions from the end of the operation until discharge, designed to identify early signs of complications and support recovery.",
+   "b": [
+    "Includes airway, breathing, circulation, pain, fluid balance, wound and drain assessment.",
+    "Diagnosis is clinical: recognise deviation from expected post‑op course."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Complications are graded by the Clavien‑Dindo classification, which is practical even without advanced labs.",
+   "b": [
+    "Grade I: deviation requiring only bedside treatment (e.g., nausea).",
+    "Grade II: pharmacologic treatment needed (e.g., infection needing antibiotics).",
+    "Grade III: requires surgical, endoscopic or radiologic intervention.",
+    "Grade IV: life‑threatening organ dysfunction, often needing ICU.",
+    "Grade V: death."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the most frequent drivers of post‑op morbidity are infection, fluid imbalance and anaesthetic complications.",
+   "b": [
+    "Surgical site infection – especially with contaminated wounds, HIV, diabetes, or poor sterility.",
+    "Anastomotic leak – common after gastrointestinal surgery; risk increased by malnutrition, steroids, TB peritonitis.",
+    "Hypovolaemia or overload – from inadequate replacement or excessive IV fluids.",
+    "Pulmonary complications – atelectasis, pneumonia, especially in patients with malaria‑related anaemia or sickle cell disease.",
+    "Thrombo‑embolic events – deep vein thrombosis in immobile patients, heightened by sickle cell or HIV‑associated hypercoagulability."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early recognition relies on systematic bedside checks performed every 2‑4 hours for the first 24 hours, then every 8 hours.",
+   "b": [
+    "Fever >38 °C, tachycardia, wound erythema → infection.",
+    "Increasing abdominal pain, tachypnoea, distension → leak or intra‑abdominal collection.",
+    "Decreased urine output <0.5 mL/kg/h → hypovolaemia or renal impairment.",
+    "Oxygen saturation <92 % on room air → pulmonary complication.",
+    "New neurological deficit or confusion → metabolic derangement or stroke."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When tests are unavailable, clinical surrogates guide decisions; when available, use low‑cost, high‑yield studies.",
+   "t": [
+    {
+     "a": "Temperature and pulse check",
+     "b": "Is there systemic inflammatory response? → Fever or tachycardia suggests infection or leak."
+    },
+    {
+     "a": "Urine output chart",
+     "b": "Is renal perfusion adequate? → Low output signals hypovolaemia or renal injury."
+    },
+    {
+     "a": "Chest X‑ray (if portable)",
+     "b": "Is there pneumothorax, pleural effusion, or atelectasis? → Guides chest drain management."
+    },
+    {
+     "a": "Wound swab (Gram stain only if microscopy available)",
+     "b": "Is there bacterial growth? → Directs antibiotic choice; if unavailable, treat empirically."
+    },
+    {
+     "a": "Contrast swallow (water‑soluble Gastrografin) on day 5‑10 after GI anastomosis",
+     "b": "Is there extravasation? → Positive test confirms leak; delay oral intake."
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if present)",
+     "b": "Is there free fluid or abscess? → Detects intra‑abdominal collections when CT is unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt escalation is required for any sign of systemic deterioration.",
+   "b": [
+    "Uncontrolled sepsis: fever >38 °C, HR >120, hypotension despite fluids.",
+    "Anastomotic leak: sudden abdominal pain, tachypnoea, rising white cell count, or peritoneal signs.",
+    "Bleeding: drop in haemoglobin >2 g/dL, tachycardia, hypotension, expanding drain output.",
+    "Respiratory failure: SpO₂ <90 % on supplemental O₂, increasing work of breathing.",
+    "Renal failure: oliguria <0.5 mL/kg/h for >6 h, rising creatinine."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a stepwise algorithm: secure airway, optimise fluids, treat infection, and support nutrition.",
+   "b": [
+    "Airway/oxygen: give supplemental O₂, consider CPAP if available; intubate only for airway protection.",
+    "Fluid therapy: start crystalloids 20 mL/kg bolus for hypovolaemia; avoid overload—re‑assess urine output.",
+    "Antibiotics: give broad‑spectrum (e.g., ampicillin‑sulbactam) for suspected SSI; de‑escalate when cultures return.",
+    "Analgesia: use paracetamol and low‑dose opioids; avoid NSAIDs in renal impairment or after bowel anastomosis.",
+    "Drain care: record output, ensure patency, remove when <30 mL/24 h and no air leak.",
+    "Nutrition: start NG feeds on day 4 if bowel sounds present; advance to oral diet after negative contrast swallow.",
+    "Mobilisation: encourage sitting up and ambulation from day 1 to reduce DVT risk."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Structured discharge planning reduces readmission.",
+   "b": [
+    "Review wound on day 3 and day 7; educate patient on signs of infection.",
+    "Schedule clinic visit within 7‑10 days for suture removal and wound check.",
+    "Vaccinate against hepatitis B and tetanus if not up‑to‑date before elective surgery.",
+    "Provide prophylactic anticoagulation (e.g., low‑dose heparin) for high‑risk patients if resources allow.",
+    "Document nutrition plan and arrange community health worker follow‑up for malnourished patients."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Post‑operative ileus vs. anastomotic leak.",
+   "b": [
+    "Ileus: diffuse abdominal distension, absent bowel sounds, no systemic toxicity; resolves with supportive care.",
+    "Leak: localized pain, peritoneal signs, fever, tachycardia, often positive contrast study."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings some investigations may give false reassurance.",
+   "b": [
+    "Normal temperature early after surgery does not exclude infection; monitor trends.",
+    "A negative wound swab does not rule out infection if microscopy is unavailable.",
+    "Chest X‑ray may miss small pneumothorax; correlate with clinical breath sounds."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent fever >38 °C with tachycardia >120 bpm",
+  "Sudden abdominal pain with guarding or peritoneal signs",
+  "Rapid drop in haemoglobin or increasing drain output",
+  "Oxygen saturation <90 % despite supplemental oxygen",
+  "Urine output <0.5 mL/kg/h for more than 6 hours"
+ ],
+ "faq": [
+  {
+   "q": "When can oral feeding be safely started after bowel surgery?",
+   "a": "After a negative water‑soluble contrast swallow (usually day 5‑10) and return of bowel sounds."
+  },
+  {
+   "q": "What is the first step if a chest drain suddenly stops bubbling?",
+   "a": "Check for obstruction, ensure the water seal is intact, and assess the patient’s respiratory status."
+  },
+  {
+   "q": "Why are NSAIDs avoided immediately after gastrointestinal anastomosis?",
+   "a": "They impair mucosal healing and increase the risk of anastomotic leak."
+  }
+ ],
+ "exam": [
+  "What bedside observations would alert you to an anastomotic leak on day 3 post‑colorectal surgery? — Look for tachycardia, fever, abdominal tenderness, and increasing drain output; confirm with contrast swallow if possible.",
+  "A patient with HIV is recovering from an emergency laparotomy and develops a fever on day 2. How do you prioritize investigations? — Start with temperature, wound inspection, urine output, and a bedside chest X‑ray; obtain wound swab and consider early broad‑spectrum antibiotics.",
+  "Explain why you would give a water‑soluble contrast study before restarting oral intake after upper GI surgery. — It detects leaks without risking mediastinal contamination; a negative study permits safe feeding.",
+  "How does postoperative ileus differ from a surgical site infection in presentation and management? — Ileus shows diffuse distension without systemic signs; management is supportive. SSI shows localized pain, erythema, fever; requires antibiotics and possibly drainage.",
+  "A patient’s urine output falls to 0.3 mL/kg/h despite adequate fluids. What is your next step? — Assess for hypovolaemia, check for obstructive causes, and consider renal injury; adjust fluids and monitor electrolytes.",
+  "Why is early mobilisation emphasized even in low‑resource hospitals? — It reduces DVT, improves pulmonary function, and accelerates bowel motility, all without needing expensive equipment.",
+  "When is prophylactic anticoagulation indicated after orthopedic surgery in a setting without LMWH? — Use low‑dose unfractionated heparin if available; otherwise employ mechanical compression devices and early ambulation.",
+  "Describe the management of a chest drain that shows increasing serous output but no air leak. — Record volume, ensure patency, keep the patient in a semi‑recumbent position, and remove the drain when output <30 mL/24 h."
+ ],
+ "related": [
+  "Surgical Site Infection",
+  "Anastomotic Leak",
+  "Post‑operative Ileus",
+  "Fluid Management in Surgery",
+  "Chest Drain Care",
+  "Enhanced Recovery After Surgery (ERAS)",
+  "Infection Control in Low‑Resource Settings"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

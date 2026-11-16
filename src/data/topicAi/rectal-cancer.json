@@ -1,0 +1,184 @@
+{
+ "medical": true,
+ "clinicalScope": "Adult rectal adenocarcinoma presenting in low‑resource East African hospitals",
+ "title": "Rectal Cancer (Surgical Management)",
+ "subject": "Surgery",
+ "summary": "Rectal adenocarcinoma is a malignant tumour of the distal colon that requires careful staging and surgery. In low‑resource settings, clinicians must rely on limited imaging and adapt operative techniques to local expertise and equipment.",
+ "aka": [
+  "Rectal adenocarcinoma",
+  "Carcinoma of the rectum"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Rectal cancer is a malignant epithelial tumour arising within 15 cm of the anal verge, most often adenocarcinoma.",
+   "b": [
+    "Diagnosed by histology of a biopsy obtained during flexible sigmoidoscopy or rigid proctoscopy.",
+    "In low‑resource hospitals, a punch biopsy with a standard forceps is acceptable when endoscopy is unavailable."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the TNM (AJCC/UICC) system, with MRI as the reference for local (T) stage and CT for distant (M) stage.",
+   "b": [
+    "T1‑T2: tumour confined to submucosa or muscularis propria – may be amenable to local excision.",
+    "T3‑T4: invasion through muscularis into perirectal fat or adjacent organs – requires total mesorectal excision (TME).",
+    "N0‑N2: based on number of regional nodes involved; MRI or endorectal ultrasound can assess nodal size >5 mm.",
+    "M0‑M1: distant metastases, most commonly liver; if MRI unavailable, abdominal ultrasound can screen for large lesions."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Rectal cancer shares risk factors with colon cancer, but some are amplified in East Africa.",
+   "b": [
+    "Chronic inflammatory bowel disease (ulcerative colitis) – rare but important.",
+    "Diet low in fibre, high in red meat and processed foods.",
+    "Human papillomavirus (HPV) infection – emerging evidence for distal colorectal tumours.",
+    "HIV infection – immunosuppression may accelerate tumour progression.",
+    "Schistosoma mansoni infection – chronic colonic inflammation can predispose."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present late because of limited screening and overlapping benign conditions.",
+   "b": [
+    "Rectal bleeding mixed with stool and mucus – usually painless.",
+    "Change in bowel habit (narrowing of stool, tenesmus).",
+    "Unexplained weight loss and anorexia.",
+    "Occult anemia leading to fatigue.",
+    "Occasional palpable mass on digital rectal exam (DRE) for low tumours."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer the key clinical questions of diagnosis, staging and operability.",
+   "t": [
+    {
+     "a": "Digital rectal examination (DRE)",
+     "b": "Is the tumour palpable and how far from the anal verge? – Determines feasibility of sphincter‑preserving surgery."
+    },
+    {
+     "a": "Flexible sigmoidoscopy with biopsy",
+     "b": "Confirms histology and provides tumour location – Guides surgical planning."
+    },
+    {
+     "a": "Pelvic MRI (or endorectal ultrasound if MRI unavailable)",
+     "b": "What is the depth of invasion and circumferential resection margin? – Stages T and assesses nodal involvement."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Are there liver metastases? – Detects large lesions when CT/MRI not accessible."
+    },
+    {
+     "a": "Carcino‑embryonic antigen (CEA) level",
+     "b": "Baseline tumour marker for follow‑up; may be normal in early disease."
+    },
+    {
+     "a": "Full blood count and iron studies",
+     "b": "Is there iron‑deficiency anemia? – Supports chronic blood loss and guides transfusion need."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise features that demand urgent intervention.",
+   "b": [
+    "Obstructive symptoms with colonic dilation – risk of perforation.",
+    "Severe anemia (Hb < 8 g/dL) causing hemodynamic instability.",
+    "Fistula formation or perineal skin breakdown in low tumours.",
+    "Rapid weight loss (>10 % in 3 months).",
+    "Signs of metastatic disease (e.g., hepatic tenderness, jaundice)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Surgery is the cornerstone; neoadjuvant therapy is used when resources allow.",
+   "b": [
+    "Upper/mid rectal tumours (≥10 cm from anal verge): anterior resection with total mesorectal excision (TME).",
+    "Low tumours (≤5 cm) involving sphincter: abdominoperineal resection (APR) with permanent colostomy.",
+    "Very low tumours (<2 cm) with good sphincter function: colo‑anal anastomosis plus temporary loop ileostomy.",
+    "T1 well‑differentiated tumours <3 cm: transanal local excision if MRI shows no nodal disease.",
+    "Neoadjuvant long‑course radiotherapy ± 5‑FU‑based chemotherapy for T3/T4 or threatened circumferential margin – may be omitted where radiotherapy is unavailable, proceeding directly to surgery.",
+    "Post‑operative care: monitor for anastomotic leak (fever, tachycardia, peritoneal signs), manage with drainage or re‑operation."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance detects recurrence and new primaries.",
+   "b": [
+    "Clinical review and CEA every 3‑6 months for the first 2 years, then every 6‑12 months up to 5 years.",
+    "Colonoscopy at 1 year post‑resection, then every 3‑5 years.",
+    "Abdominal ultrasound annually for liver metastasis surveillance when CT/MRI not feasible.",
+    "Lifestyle advice: high‑fibre diet, limit red meat, quit smoking, treat HIV aggressively.",
+    "Vaccination against HPV where available."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic rectal cancer clinically or endoscopically.",
+   "b": [
+    "Rectal adenoma – benign polyp; biopsy shows dysplasia without invasive carcinoma.",
+    "Inflammatory bowel disease (ulcerative colitis) – chronic ulceration and pseudopolyps; histology shows inflammatory changes.",
+    "Rectal prolapse – external protrusion of rectal wall, no mass on DRE.",
+    "Anal fissure – painful bleeding, but pain on defecation and a visible fissure on inspection."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation that are common in low‑resource settings.",
+   "b": [
+    "Normal CEA does not exclude cancer – up to 30 % of early tumours are CEA‑negative.",
+    "Ultrasound may miss small liver metastases; a negative scan does not rule out micrometastatic disease.",
+    "Biopsy sampling error – superficial biopsies can miss deeper invasive carcinoma; repeat if suspicion persists."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe rectal bleeding with hemodynamic instability",
+  "Acute bowel obstruction with vomiting and abdominal distension",
+  "Signs of anastomotic leak after surgery (fever, tachycardia, abdominal pain)",
+  "New onset severe abdominal pain suggesting perforation"
+ ],
+ "faq": [
+  {
+   "q": "Why is MRI preferred for local staging?",
+   "a": "MRI accurately shows depth of tumour invasion, circumferential margin and nodal size, which dictate the surgical approach."
+  },
+  {
+   "q": "Can a patient with a low tumour avoid a permanent colostomy?",
+   "a": "Yes, if the tumour is >1 cm above the sphincter and sphincter function is intact, a colo‑anal anastomosis with a temporary ileostomy may be performed."
+  },
+  {
+   "q": "What is the role of neoadjuvant therapy in low‑resource hospitals?",
+   "a": "When radiotherapy is available, it downstages T3/T4 tumours, increasing the chance of sphincter‑preserving surgery; otherwise, surgery proceeds directly."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old man presents with painless rectal bleeding and weight loss; DRE feels a firm mass 4 cm from the anal verge. What is the next best step? — Obtain flexible sigmoidoscopy with biopsy to confirm diagnosis before staging.",
+  "MRI shows a T3 tumour with threatened circumferential margin but no distant metastases. How does this influence surgical planning? — Recommend neoadjuvant chemoradiotherapy to improve resectability and reduce local recurrence.",
+  "During postoperative day 5 after low anterior resection, the patient develops fever, tachycardia and abdominal tenderness. What complication should you suspect and what is the immediate management? — Suspect an anastomotic leak; obtain CT with contrast if possible, start broad‑spectrum antibiotics and arrange urgent surgical review.",
+  "A patient with HIV presents with rectal cancer. Which additional pre‑operative consideration is essential? — Optimize CD4 count and antiretroviral therapy to reduce postoperative infection risk.",
+  "Why is a temporary loop ileostomy often created after low anterior resection in low‑resource settings? — It diverts feces, protecting the distal anastomosis while healing, reducing leak‑related morbidity where intensive care is limited.",
+  "What surveillance strategy is feasible where CT is unavailable? — Annual abdominal ultrasound for liver metastases, CEA monitoring, and colonoscopy at 1 year then every 3‑5 years.",
+  "A 40‑year‑old woman with a 2 cm T1 rectal tumour asks about local excision. What criteria must be met? — Tumour ≤3 cm, well‑differentiated, no nodal disease on MRI/ultrasound, and adequate distal margin.",
+  "How does schistosomiasis potentially contribute to rectal cancer in East Africa? — Chronic colonic inflammation from S. mansoni eggs can promote dysplasia and malignant transformation."
+ ],
+ "related": [
+  "Colon Cancer",
+  "Inflammatory Bowel Disease",
+  "Abdominoperineal Resection",
+  "Total Mesorectal Excision",
+  "Colorectal Liver Metastases",
+  "Pelvic Radiotherapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

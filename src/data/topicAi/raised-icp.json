@@ -1,0 +1,189 @@
+{
+ "medical": true,
+ "clinicalScope": "Raised intracranial pressure (ICP) in patients of all ages presenting to low‑resource East African hospitals",
+ "title": "Raised Intracranial Pressure",
+ "subject": "Pathology",
+ "summary": "Raised ICP is a life‑threatening rise in pressure within the skull caused by mass effect, edema or impaired CSF flow. Prompt bedside assessment, targeted investigations and early measures to lower pressure are essential, especially where neuro‑imaging is limited.",
+ "aka": [
+  "ICP elevation",
+  "intracranial hypertension"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Raised ICP is a sustained intracranial pressure above 20 mm Hg in adults (15 mm Hg in children) that threatens cerebral perfusion.",
+   "b": [
+    "Diagnosis is clinical first: headache, vomiting, altered consciousness, papilloedema, and Cushing’s triad.",
+    "Confirm with bedside tools (optic nerve sheath diameter ultrasound, fundoscopy) when CT/MRI unavailable."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by neurological status and pressure estimates.",
+   "b": [
+    "Mild: ICP 20‑30 mm Hg, GCS ≥ 13, no focal deficit.",
+    "Moderate: ICP 30‑40 mm Hg, GCS 12‑13, early Cushing’s signs.",
+    "Severe: ICP > 40 mm Hg, GCS ≤ 11, bradycardia, hypertension, irregular respirations."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the commonest precipitants are infections and vascular lesions.",
+   "b": [
+    "Cerebral malaria (parasite sequestration → edema).",
+    "Tuberculous meningitis (exudate obstructing CSF flow).",
+    "Bacterial meningitis (inflammation, pus).",
+    "Space‑occupying lesions: neurocysticercosis, brain abscess, primary tumour.",
+    "Traumatic brain injury (contusion, hematoma).",
+    "Hypertensive encephalopathy (vasogenic edema).",
+    "Post‑operative or post‑LP CSF leak causing low pressure – opposite problem, but can mask raised ICP."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The presentation reflects rising pressure on brain tissue and meninges.",
+   "b": [
+    "Progressive headache, worse when supine, relieved by sitting.",
+    "Nausea/vomiting without abdominal cause, often projectile.",
+    "Altered mental status ranging from confusion to coma.",
+    "Papilloedema on fundoscopy (may be absent early).",
+    "Cushing’s triad: hypertension, bradycardia, irregular respirations.",
+    "Focal neurological deficits if a mass compresses a tract."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer the key clinical questions; adapt when imaging is unavailable.",
+   "t": [
+    {
+     "a": "Fundoscopy",
+     "b": "Is papilloedema present? → Confirms chronic or sub‑acute raised ICP; absence does not exclude early rise."
+    },
+    {
+     "a": "Optic nerve sheath diameter (ONSD) ultrasound",
+     "b": "Is ONSD > 5 mm? → Suggests ICP > 20 mm Hg; useful when CT unavailable."
+    },
+    {
+     "a": "CT brain (if accessible)",
+     "b": "Is there a mass, hydrocephalus, or edema? → Guides definitive cause and need for neurosurgery."
+    },
+    {
+     "a": "Lumbar puncture (only if no contraindications)",
+     "b": "Is opening pressure > 250 mm H₂O? → Confirms raised ICP; avoid if papilloedema, focal deficit, GCS < 10."
+    },
+    {
+     "a": "Basic labs (CBC, glucose, electrolytes, malaria smear, HIV test)",
+     "b": "Are there infections or metabolic derangements contributing? → Directs antimicrobial or corrective therapy."
+    },
+    {
+     "a": "Point‑of‑care ultrasound for brain midline shift (transcranial Doppler)",
+     "b": "Is there asymmetry in flow velocities? → Suggests mass effect when CT not possible."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked ICP leads to irreversible brain injury.",
+   "b": [
+    "Rapid decline in GCS (< 8).",
+    "New focal deficit or seizures.",
+    "Fixed, dilated pupil.",
+    "Signs of brain herniation (decerebrate posturing, respiratory irregularity).",
+    "Secondary ischemia from cerebral perfusion pressure < 60 mm Hg."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause while immediately lowering ICP.",
+   "b": [
+    "Airway protection: intubate if GCS ≤ 8 or cannot protect airway.",
+    "Head elevation 30°–45°; avoid neck flexion.",
+    "Sedation with short‑acting agents (e.g., propofol) to reduce metabolic demand.",
+    "Hyperosmolar therapy: mannitol 20 % bolus if signs of herniation; consider hypertonic saline 3 % if mannitol unavailable.",
+    "Controlled ventilation to keep PaCO₂ 35‑38 mm Hg (normocapnia).",
+    "Treat infection: antimalarials for cerebral malaria, anti‑TB drugs for TB meningitis, appropriate antibiotics for bacterial meningitis.",
+    "Surgical decompression (craniotomy, ventricular drain) for large mass or refractory hydrocephalus – arrange transfer if not locally available."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute control, monitor for recurrence and address modifiable risk factors.",
+   "b": [
+    "Serial neurological exams and bedside ICP surrogates (ONSD).",
+    "Repeat imaging when feasible to document resolution.",
+    "Ensure complete treatment of infection (e.g., full anti‑TB course).",
+    "Educate on malaria prophylaxis, HIV care, and trauma prevention.",
+    "Vaccinate against meningococcus and pneumococcus where possible."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic raised ICP but have distinct pathophysiology.",
+   "b": [
+    "Low CSF pressure headache (post‑LP): orthostatic headache, normal papilloedema, low opening pressure.",
+    "Migraine with brainstem aura: throbbing headache, photophobia, no papilloedema, normal ICP.",
+    "Septic encephalopathy: altered mental status without focal signs or papilloedema, improves with sepsis control."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative or misleading findings.",
+   "b": [
+    "Papilloedema may be absent in early or hyperacute ICP rise.",
+    "ONSD ultrasound operator‑dependence can give false‑low values.",
+    "CT may miss early diffuse edema; normal scan does not exclude raised ICP."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Fixed, dilated pupil",
+  "Rapidly worsening GCS",
+  "New focal neurological deficit",
+  "Severe Cushing’s triad"
+ ],
+ "faq": [
+  {
+   "q": "Can lumbar puncture be done if papilloedema is present?",
+   "a": "No – papilloedema indicates raised ICP and LP risks herniation."
+  },
+  {
+   "q": "Why is head elevation important?",
+   "a": "It improves venous outflow, lowering intracranial pressure without compromising cerebral perfusion."
+  },
+  {
+   "q": "When is mannitol preferred over hypertonic saline?",
+   "a": "Mannitol is first‑line when rapid osmotic diuresis is needed and renal function is adequate; hypertonic saline is used if mannitol is contraindicated or unavailable."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old with cerebral malaria develops projectile vomiting and a GCS of 12 – what is your immediate management? — Secure airway, elevate head, give hyperosmolar therapy, start antimalarial, arrange transfer for possible ventilation.",
+  "A patient with suspected TB meningitis has papilloedema; why is a lumbar puncture contraindicated? — Papilloedema signals raised ICP; LP could cause transtentorial herniation.",
+  "How does optic nerve sheath diameter ultrasound help in a setting without CT? — An ONSD > 5 mm correlates with ICP > 20 mm Hg, guiding urgent ICP‑lowering measures.",
+  "What distinguishes Cushing’s triad from simple hypertension? — The triad includes bradycardia and irregular respirations, indicating brainstem compression.",
+  "A trauma patient has a GCS of 9 and unilateral dilated pupil – what is the next step? — Intubate, elevate head, prepare for emergent neurosurgical decompression.",
+  "Why is rapid correction of hyponatraemia dangerous in raised ICP? — Over‑rapid correction can cause osmotic demyelination and worsen cerebral edema.",
+  "In a resource‑limited hospital, what is the best first‑line drug to lower ICP when mannitol is unavailable? — 3 % hypertonic saline bolus, monitoring serum sodium.",
+  "What are the key components of secondary injury prevention in raised ICP? — Avoid hypoxia, hypotension, hyperthermia, seizures, hyponatraemia, and maintain normocapnia."
+ ],
+ "related": [
+  "Cerebral malaria",
+  "Tuberculous meningitis",
+  "Brain abscess",
+  "Neurocysticercosis",
+  "Traumatic brain injury",
+  "Hypertensive encephalopathy",
+  "Papilloedema",
+  "Cushing’s triad"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

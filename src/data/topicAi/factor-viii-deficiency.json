@@ -1,0 +1,196 @@
+{
+ "medical": true,
+ "clinicalScope": "Factor VIII deficiency (Haemophilia A) in male patients in low‑resource East African hospitals",
+ "title": "Factor VIII Deficiency",
+ "subject": "Pathology",
+ "summary": "Haemophilia A is an X‑linked recessive bleeding disorder caused by low factor VIII. In East Africa, it presents with spontaneous joint bleeds and prolonged bleeding after trauma or surgery. Diagnosis relies on clotting tests and clinical severity grading.",
+ "aka": [
+  "Haemophilia A",
+  "Factor VIII deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Haemophilia A is a congenital deficiency of coagulation factor VIII, leading to impaired intrinsic pathway clotting. Diagnosis is confirmed by a prolonged activated partial thromboplastin time (aPTT) that corrects with normal plasma and a factor VIII activity <50%.",
+   "b": [
+    "X‑linked recessive inheritance; males mainly affected",
+    "Factor VIII activity <50% = mild, 5‑<50% = moderate, <5% = severe"
+   ],
+   "t": [
+    {
+     "a": "aPTT",
+     "b": "Is the clotting time prolonged? A prolonged aPTT suggests intrinsic pathway defect."
+    },
+    {
+     "a": "Factor VIII activity assay",
+     "b": "Measures functional factor VIII level; <50% confirms haemophilia A."
+    },
+    {
+     "a": "Mixing study",
+     "b": "Corrects aPTT when mixed with normal plasma, indicating a factor deficiency rather than inhibitor."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by factor VIII activity and clinical bleeding history. The World Federation of Hemophilia (WFH) scale classifies mild (5‑<50%), moderate (1‑<5%) and severe (<1%).",
+   "b": [
+    "Mild: spontaneous bleeding rare, usually after trauma or surgery",
+    "Moderate: frequent spontaneous bleeding, especially joints",
+    "Severe: spontaneous bleeding, frequent joint and muscle bleeds"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is a genetic mutation in the F8 gene. In low‑resource settings, secondary causes such as liver disease, vitamin K deficiency, or acute bleeding disorders may mimic or worsen haemophilia A.",
+   "b": [
+    "X‑linked recessive mutation in F8 gene",
+    "Acute liver disease or cirrhosis reducing factor VIII synthesis",
+    "Vitamin K deficiency from malnutrition or antibiotics"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with spontaneous joint or muscle bleeding, prolonged bleeding after minor injury, and easy bruising. In children, hemarthroses are common; in adults, chronic joint disease may develop.",
+   "b": [
+    "Spontaneous hemarthrosis (knee, ankle)",
+    "Prolonged bleeding after circumcision or dental work",
+    "Easy bruising, petechiae, or prolonged epistaxis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline coagulation tests, factor VIII activity, and inhibitor screen are essential. In resource‑limited settings, aPTT and mixing study are often the only available tests.",
+   "b": [
+    "aPTT – prolonged indicates intrinsic pathway defect",
+    "Mixing study – correction suggests factor deficiency",
+    "Factor VIII activity – confirms diagnosis and severity"
+   ],
+   "t": [
+    {
+     "a": "aPTT",
+     "b": "Is the clotting time prolonged? A prolonged aPTT suggests intrinsic pathway defect."
+    },
+    {
+     "a": "Mixing study",
+     "b": "Corrects aPTT when mixed with normal plasma, indicating a factor deficiency rather than inhibitor."
+    },
+    {
+     "a": "Factor VIII activity assay",
+     "b": "Measures functional factor VIII level; <50% confirms haemophilia A."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of bleeding episodes is vital. Complications include joint arthropathy, intracranial haemorrhage, and inhibitor development.",
+   "b": [
+    "Recurrent hemarthroses leading to chronic joint disease",
+    "Intracranial bleeding after head injury",
+    "Development of factor VIII inhibitors in 5‑10% of patients"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Acute bleeding is treated with factor VIII concentrate or cryoprecipitate. Long‑term prophylaxis with factor VIII concentrates reduces bleeding. In low‑resource settings, fresh frozen plasma or cryoprecipitate may be used.",
+   "b": [
+    "Replace factor VIII to achieve activity >50% for acute bleed",
+    "Use cryoprecipitate if concentrates unavailable – 10 mL/kg gives ~10 IU/kg factor VIII",
+    "Avoid antifibrinolytics unless bleeding is uncontrolled"
+   ],
+   "t": [
+    {
+     "a": "Factor VIII concentrate",
+     "b": "Provides high‑dose replacement; aim for >50% activity to stop bleeding."
+    },
+    {
+     "a": "Cryoprecipitate",
+     "b": "Each unit gives ~10 IU/kg factor VIII; useful when concentrates are scarce."
+    },
+    {
+     "a": "Antifibrinolytics (e.g., tranexamic acid)",
+     "b": "Adjunct for mucosal bleeding; not first line for joint bleeds."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of factor levels, joint health, and inhibitor screening is essential. Vaccination against hepatitis B and safe injection practices reduce infection risk.",
+   "b": [
+    "Annual factor VIII activity check",
+    "Physical therapy for joint protection",
+    "Screen for inhibitors every 6 months"
+   ],
+   "t": [
+    {
+     "a": "Factor VIII activity",
+     "b": "Tracks response to therapy and guides dosing."
+    },
+    {
+     "a": "Inhibitor screen (Bethesda assay)",
+     "b": "Detects antibodies that neutralise factor VIII, altering treatment strategy."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Haemophilia B (factor IX deficiency) and acquired von Willebrand disease can mimic haemophilia A but differ in factor levels and inheritance.",
+   "b": [
+    "Acquired von Willebrand disease – prolonged aPTT, normal factor VIII, bleeding after mucosal trauma"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In liver disease, factor VIII may be falsely normal or elevated, masking haemophilia. Acute phase reactants can also affect aPTT.",
+   "b": [
+    "Acute inflammation shortens aPTT, masking intrinsic pathway defects"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled bleeding after minor injury",
+  "Headache with neck stiffness after head trauma",
+  "Rapidly worsening joint swelling or pain"
+ ],
+ "faq": [
+  {
+   "q": "Can women have haemophilia A?",
+   "a": "Yes, if they inherit the mutated gene from a carrier mother, but they usually have milder disease due to lyonisation."
+  },
+  {
+   "q": "Is factor VIII concentrate safe?",
+   "a": "Yes, but monitor for inhibitor development and allergic reactions."
+  },
+  {
+   "q": "What if factor VIII concentrate is unavailable?",
+   "a": "Use cryoprecipitate or fresh frozen plasma as interim replacement."
+  }
+ ],
+ "exam": [
+  "What is the first laboratory test you would order for a boy with suspected haemophilia A? — aPTT; prolonged aPTT suggests intrinsic pathway defect.",
+  "A patient with a prolonged aPTT corrects with normal plasma. What does this indicate? — Factor deficiency (not inhibitor).",
+  "You have a child with haemophilia A who develops a sudden joint bleed. What is the immediate treatment? — Give factor VIII concentrate to raise activity >50%.",
+  "A patient on factor VIII replacement develops a sudden rise in bleeding. What complication should you suspect? — Inhibitor development; order Bethesda assay.",
+  "In a low‑resource setting, which blood product can be used if factor VIII concentrate is not available? — Cryoprecipitate (10 mL/kg gives ~10 IU/kg factor VIII).",
+  "A haemophilia A patient presents with a sudden headache after a fall. What is the most urgent concern? — Intracranial haemorrhage; urgent neuroimaging and factor replacement."
+ ],
+ "related": [
+  "Hemophilia B",
+  "Acquired von Willebrand disease",
+  "Factor IX deficiency",
+  "Bleeding disorders in liver disease",
+  "Inhibitor development in haemophilia",
+  "Prophylactic factor replacement",
+  "Joint arthropathy in haemophilia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash-lite",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

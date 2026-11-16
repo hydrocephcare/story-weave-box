@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "clinicalScope": "Fat Embolism Syndrome in adult trauma patients (especially long‑bone fractures) presenting in low‑resource East African hospitals",
+ "title": "Fat Embolism Syndrome",
+ "subject": "Pathology",
+ "summary": "Fat embolism syndrome (FES) is a rapid, potentially fatal complication of long‑bone fracture or other fat‑rich trauma, characterised by respiratory distress, neurological change and petechial rash. Diagnosis relies on clinical criteria; early supportive care determines outcome.",
+ "aka": [
+  "fat embolism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "FES is the clinical syndrome that follows the entry of fat globules into the bloodstream, causing microvascular occlusion and inflammatory injury.",
+   "b": [
+    "Gurd and Wilson criteria: ≥2 major (respiratory distress, cerebral signs, petechiae) + ≥4 minor (tachycardia, fever, anaemia, thrombocytopenia, elevated ESR, fat globules in urine/sputum).",
+    "Diagnosis is clinical; imaging and labs support but are not required."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of hypoxaemia and organ dysfunction, using the Gurd and Wilson score and PaO2/FiO2 ratio.",
+   "b": [
+    "Mild: PaO2/FiO2 200–300 mmHg, no organ failure.",
+    "Moderate: PaO2/FiO2 150–200 mmHg, transient neurological symptoms.",
+    "Severe: PaO2/FiO2 <150 mmHg or need for mechanical ventilation, multi‑organ failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases follow trauma that releases marrow fat; non‑traumatic triggers are recognised in low‑resource settings.",
+   "b": [
+    "Long‑bone fracture (femur, tibia) – classic cause.",
+    "Pelvic or vertebral fracture – similar risk.",
+    "Severe pancreatitis – indirect inflammatory release of fat.",
+    "Sepsis (e.g., gram‑negative) – systemic inflammation.",
+    "Aspiration of fatty material (e.g., oil‑based laxatives)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic triad appears 24–72 h after the inciting event, but any component may dominate.",
+   "b": [
+    "Respiratory: tachypnoea, dyspnoea, diffuse crackles, hypoxaemia.",
+    "Neurological: agitation, confusion, seizures, coma.",
+    "Dermatological: petechiae on conjunctiva, oral mucosa, chest, especially in dependent areas.",
+    "Other: fever, tachycardia, anaemia, thrombocytopenia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are used to confirm the clinical picture and exclude mimics; in low‑resource settings, reliance on bedside tools is essential.",
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Is there hypoxaemia? – PaO2 <80 mmHg or PaO2/FiO2 <300 confirms respiratory involvement."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "What pattern is present? – Diffuse bilateral infiltrates support FES; a normal film early does not exclude it."
+    },
+    {
+     "a": "D‑dimer",
+     "b": "Is it elevated? – Often raised in FES, helps differentiate from isolated PE when imaging unavailable."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Are platelets falling? – Thrombocytopenia (<150 ×10⁹/L) is a minor criterion."
+    },
+    {
+     "a": "Serum triglycerides (if available)",
+     "b": "Is there hypertriglyceridaemia? – May suggest pancreatitis‑related FES."
+    },
+    {
+     "a": "CT pulmonary angiography (if available)",
+     "b": "Is there a central embolus? – Negative study supports FES over PE."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of severe disease prevents irreversible organ damage.",
+   "b": [
+    "Rapid fall in PaO2/FiO2 <150 mmHg.",
+    "Progressive neurological decline (GCS ≤8).",
+    "Unexplained shock or refractory hypotension.",
+    "Development of acute respiratory distress syndrome (ARDS).",
+    "Renal failure from micro‑vascular occlusion."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Supportive care is the mainstay; specific therapies are limited in low‑resource settings.",
+   "b": [
+    "Oxygen therapy: nasal cannula up to 6 L/min; advance to CPAP or mechanical ventilation if PaO2/FiO2 <150.",
+    "Fluid management: isotonic crystalloids titrated to maintain MAP ≥ 65 mmHg, avoid overload.",
+    "Analgesia: paracetamol or low‑dose opioids; adequate pain control reduces catecholamine surge.",
+    "Corticosteroids: high‑dose methylprednisolone (controversial) may be considered when resources allow, but evidence is limited.",
+    "VTE prophylaxis: low‑molecular‑weight heparin if no bleeding risk, to prevent secondary thrombo‑embolism.",
+    "Treat underlying cause: early fracture fixation, antibiotics for sepsis, supportive care for pancreatitis."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After discharge, monitor for late sequelae and implement measures to reduce recurrence.",
+   "b": [
+    "Neurological review at 1 month and 3 months for cognitive or motor deficits.",
+    "Pulmonary function testing if dyspnoea persists.",
+    "Ensure definitive fracture fixation within 24–48 h to limit fat release.",
+    "Educate patients on early mobilisation and wound care to avoid infection.",
+    "Vaccinate against influenza and pneumococcus to reduce secondary lung injury."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several acute conditions mimic FES, especially where imaging is scarce.",
+   "b": [
+    "Pulmonary embolism – both cause sudden dyspnoea; PE lacks petechial rash and usually has a normal platelet count.",
+    "Acute respiratory distress syndrome from sepsis – ARDS has similar infiltrates but no fat‑related rash or early thrombocytopenia.",
+    "Severe anemia or hemorrhage – can cause hypoxia but does not produce neurological signs or petechiae.",
+    "Meningitis – altered mental status present, but fever and neck stiffness dominate, and respiratory findings are minimal."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, some investigations may give false reassurance.",
+   "b": [
+    "Normal chest X‑ray early in FES – may delay diagnosis; rely on clinical criteria.",
+    "Normal coagulation profile – early FES may not yet affect PT/aPTT; watch platelet trend.",
+    "Elevated D‑dimer – also rises in infection and trauma; interpret with clinical picture."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden drop in oxygen saturation below 90% despite oxygen therapy",
+  "Rapid decline in consciousness (GCS ≤8)",
+  "Uncontrolled hypotension or shock"
+ ],
+ "faq": [
+  {
+   "q": "Why does a fracture cause fat emboli?",
+   "a": "Marrow fat is released into torn venules, travels to the lungs and systemic circulation, causing micro‑vascular occlusion and inflammation."
+  },
+  {
+   "q": "Can FES occur without a fracture?",
+   "a": "Yes, severe pancreatitis, sepsis, or massive lipid infusion can release fat into the bloodstream."
+  },
+  {
+   "q": "Is corticosteroid therapy recommended?",
+   "a": "It remains controversial; some centres use high‑dose steroids early, but evidence is limited and risks must be weighed."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old male with a femur fracture develops tachypnoea and petechiae 48 h later. What is the most likely diagnosis and which criteria confirm it? — Fat embolism syndrome; Gurd and Wilson criteria (≥2 major + ≥4 minor).",
+  "In a patient with suspected FES, the chest X‑ray is normal. How should you proceed? — Rely on clinical criteria; obtain ABG and monitor PaO2/FiO2, start supportive care.",
+  "What distinguishes FES from pulmonary embolism on bedside examination? — Presence of petechial rash and thrombocytopenia favors FES; PE lacks these features.",
+  "A trauma patient is hypoxic with PaO2/FiO2 = 130. What is the severity stage and immediate management step? — Severe FES; initiate CPAP or mechanical ventilation and aggressive fluid resuscitation.",
+  "Why is early fracture fixation important in preventing FES? — Stabilises marrow, reduces ongoing fat release, and limits systemic inflammation.",
+  "When is corticosteroid therapy appropriate in FES, and what is a key concern? — May be considered early in severe cases; risk of infection and hyperglycaemia limits use.",
+  "What long‑term complication should you monitor after recovery from FES? — Cognitive or motor neurological deficits; arrange neuro‑rehabilitation follow‑up.",
+  "A patient with sepsis and respiratory distress has an elevated D‑dimer. How do you differentiate PE from FES? — Look for petechiae, thrombocytopenia, and timing after trauma; use bedside ultrasound if available."
+ ],
+ "related": [
+  "Long‑bone fracture management",
+  "Acute respiratory distress syndrome",
+  "Pulmonary embolism",
+  "Sepsis-induced coagulopathy",
+  "Pancreatitis complications"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

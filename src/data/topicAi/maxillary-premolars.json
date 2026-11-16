@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "clinicalScope": "Anatomy of maxillary premolars in adult patients in low‑resource East African settings",
+ "title": "Maxillary Premolars",
+ "subject": "Anatomy",
+ "summary": "Maxillary premolars are two‑cusped teeth located between the canine and molar. Their root morphology varies, influencing endodontic and restorative treatment in resource‑limited hospitals.",
+ "aka": [
+  "Upper premolars",
+  "Maxillary premolars"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Maxillary premolars are the second set of teeth in the upper arch, positioned between the canine and first molar. They are two‑cusped and serve as a bridge between anterior and posterior teeth.",
+   "b": [
+    "Maxillary first premolars typically have two roots (buccal and palatal), while maxillary second premolars usually have one root.",
+    "Root morphology is confirmed clinically by probing and radiographically by periapical or bitewing films."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Root morphology can be classified by number of roots and root canal systems, which affects endodontic prognosis.",
+   "b": [
+    "Two‑rooted first premolars: buccal and palatal canals.",
+    "One‑rooted second premolars: single canal, sometimes with accessory canal."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Anatomical variation is congenital; developmental disturbances such as hypodontia or hyperdontia can alter number of cusps or roots.",
+   "b": [
+    "Genetic factors influence root number and canal configuration.",
+    "Environmental factors (e.g., malnutrition) may affect tooth development."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinically, premolars are identified by their position, two cusps, and relatively small crown size.",
+   "b": [
+    "Palatal cusp is usually higher than buccal cusp.",
+    "Root morphology can be inferred from tooth shape and periodontal probing."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Radiographic assessment is essential for root morphology and pathology.",
+   "t": [
+    {
+     "a": "Periapical radiograph",
+     "b": "Shows root number, canal configuration, and periapical pathology; a radiolucent area extending into dentine suggests cavitation."
+    },
+    {
+     "a": "Bitewing radiograph",
+     "b": "Detects interproximal caries; subtle radiolucency confined to enamel indicates early caries."
+    },
+    {
+     "a": "Panoramic radiograph",
+     "b": "Provides overview of all teeth; useful when multiple premolars are involved."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Anomalous root morphology can complicate endodontic treatment and increase risk of root fracture.",
+   "b": [
+    "Multiple canals may be missed, leading to persistent infection.",
+    "Root fracture can occur during extraction if root is thin or malformed."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment focuses on preserving tooth structure and managing pathology.",
+   "b": [
+    "Restorative: use composite or amalgam for carious lesions.",
+    "Endodontic: treat all canals; avoid systemic antibiotics unless infection spreads.",
+    "Extraction: indicated for non‑restorable teeth or severe periodontal loss."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular dental check‑ups help detect early pathology and guide preventive care.",
+   "b": [
+    "Regular dental check‑ups (e.g., annually or bi‑annually, as per risk assessment)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Maxillary first molars are often mistaken for premolars due to similar position.",
+   "b": [
+    "Maxillary first molars typically have four or five cusps and three roots.",
+    "Premolars have only two cusps and usually one or two roots."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Radiographic detection of enamel lesions may be delayed due to limited resolution.",
+   "b": [
+    "Enamel lesions appear radiolucent only after significant mineral loss; early enamel caries may be missed on standard bitewing films."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain indicating pulpal necrosis or abscess",
+  "Rapid swelling suggesting spreading infection",
+  "Uncontrolled bleeding after extraction"
+ ],
+ "faq": [
+  {
+   "q": "How many roots does a maxillary first premolar usually have?",
+   "a": "Typically two roots: buccal and palatal."
+  },
+  {
+   "q": "What is the most common root canal configuration in a maxillary second premolar?",
+   "a": "A single canal, though accessory canals can occur."
+  },
+  {
+   "q": "Can a premolar be extracted without antibiotics?",
+   "a": "Yes, if the extraction is simple and infection is localized; antibiotics are reserved for spreading infections."
+  }
+ ],
+ "exam": [
+  "What radiographic sign indicates early enamel caries? — Subtle radiolucency confined to enamel on a bitewing.",
+  "How would you manage a patient with a mobile maxillary premolar? — Assess periodontal status; if mobility >1 mm, consider root canal therapy or extraction based on root morphology and periodontal support.",
+  "Which root morphology is most likely to complicate endodontic treatment of a maxillary first premolar? — Two‑rooted configuration with separate buccal and palatal canals.",
+  "When is systemic antibiotic therapy indicated for a maxillary premolar infection? — When there is spreading cellulitis, facial swelling, or fever.",
+  "What is the typical number of cusps on a maxillary premolar? — Two cusps.",
+  "Why is a bitewing radiograph preferred for interproximal caries detection in premolars? — It provides high‑resolution images of the contact areas.",
+  "How does root morphology affect extraction technique for a maxillary premolar? — Thin or malformed roots increase fracture risk; careful sectioning may be needed.",
+  "What is the recommended follow‑up interval for a patient with a restored maxillary premolar in a low‑resource setting? — Annual or bi‑annual dental check‑ups, depending on risk."
+ ],
+ "related": [
+  "Dental Caries",
+  "Root Canal Anatomy",
+  "Periodontal Disease",
+  "Dental Extraction Techniques",
+  "Radiographic Imaging in Dentistry"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 1
+ },
+ "reviewed": false
+}

@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "clinicalScope": "Airway management in adult surgical patients in low‑resource East African hospitals, focusing on emergency and peri‑operative situations",
+ "subject": "Surgery",
+ "summary": "Airway management is the process of ensuring a patent, protected airway during surgical emergencies and peri‑operative care. In low‑resource settings clinicians must combine clinical assessment with limited equipment, prioritising rapid decisions that prevent hypoxia and aspiration.",
+ "aka": [
+  "Airway control",
+  "Ventilatory support"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Airway management comprises the assessment, protection and maintenance of a patient’s airway to allow adequate oxygenation and ventilation.",
+   "b": [
+    "Clinical diagnosis is made by evaluating consciousness, airway patency, respiratory effort and risk of aspiration.",
+    "Key bedside signs: stridor, hoarseness, inability to speak full sentences, use of accessory muscles, cyanosis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the patient’s ability to maintain oxygenation and protect the airway.",
+   "b": [
+    "Stage I – Fully conscious, airway patent, SpO2 ≥ 94% on room air.",
+    "Stage II – Altered mental status, partial obstruction, SpO2 90‑93% or increasing work of breathing.",
+    "Stage III – Unable to protect airway, severe obstruction or failure, SpO2 < 90% despite oxygen."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In the surgical ward and emergency department, the most common precipitants are:",
+   "b": [
+    "Upper airway obstruction from facial or neck trauma, burns, or swelling (e.g., anaphylaxis, angioedema).",
+    "Aspiration of gastric contents in full‑stomach patients or after vomiting.",
+    "Severe sepsis or septic shock causing altered consciousness.",
+    "Neuromuscular blockade from toxins (organophosphates) or drugs.",
+    "Obstructive sleep‑apnoea exacerbated by opioids."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with a spectrum of signs that reflect the underlying cause and severity.",
+   "b": [
+    "Stridor that worsens when lying flat.",
+    "Drooling, inability to swallow, or a ‘hot potato’ voice.",
+    "Cyanosis, tachypnoea, and use of intercostal or neck muscles.",
+    "Decreased or absent breath sounds on one side if obstruction is unilateral.",
+    "Altered level of consciousness (GCS < 8) indicating loss of protective reflexes."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by what they answer; when a test is unavailable, rely on clinical judgment.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygenation adequate? – SpO2 < 90% signals need for immediate airway support."
+    },
+    {
+     "a": "Capnography (if available)",
+     "b": "Is ventilation effective? – Absent end‑tidal CO2 after intubation indicates misplaced tube."
+    },
+    {
+     "a": "Chest X‑ray (portable if possible)",
+     "b": "Is there pneumothorax, aspiration, or tube malposition? – Look for lung collapse or mediastinal shift."
+    },
+    {
+     "a": "Bedside ultrasound (if skill present)",
+     "b": "Is there airway edema or fluid? – Thickened airway walls suggest edema; absence of lung sliding suggests pneumothorax."
+    },
+    {
+     "a": "Arterial blood gas (if lab available)",
+     "b": "Is ventilation adequate? – PaCO2 > 45 mmHg indicates hypoventilation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of these signs prevents rapid deterioration.",
+   "b": [
+    "Rapid desaturation (SpO2 < 90% within minutes).",
+    "Loss of airway reflexes (GCS ≤ 8).",
+    "Severe facial or neck swelling that progresses despite positioning.",
+    "Cardiac arrest during attempted airway manipulation.",
+    "Post‑intubation aspiration pneumonia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a stepwise algorithm: assess, call for help, secure airway, then treat the cause.",
+   "b": [
+    "Call senior clinician or anaesthesia team immediately; use a dedicated emergency number.",
+    "Position patient: head‑tilt‑chin‑lift if no cervical spine injury; jaw‑thrust if trauma suspected.",
+    "Apply high‑flow oxygen (15 L/min) via non‑rebreather mask while preparing equipment.",
+    "If obstruction persists, perform a surgical airway (cricothyrotomy) – preferred in low‑resource settings because it requires minimal equipment.",
+    "Rapid sequence induction (RSI) with ketamine (preserves airway reflexes) plus a short‑acting paralytic (succinylcholine) if skilled provider present.",
+    "Confirm tube placement with capnography, auscultation, and chest rise; secure tube.",
+    "Treat underlying cause: give epinephrine for anaphylaxis, antacids/PPI for reflux, antibiotics for suspected aspiration pneumonia.",
+    "Maintain sedation and analgesia (e.g., fentanyl) to reduce agitation and oxygen consumption."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After airway is secured, ongoing care prevents re‑obstruction and complications.",
+   "b": [
+    "Ventilate with low tidal volumes (6‑8 mL/kg) and monitor plateau pressures.",
+    "Daily sedation holiday and spontaneous breathing trial when stable.",
+    "Elevate head of bed 30‑45° to reduce aspiration risk.",
+    "Provide gastric protection (PPI) and consider nasogastric decompression if stomach is full.",
+    "Educate staff on early recognition of airway compromise and proper cricothyrotomy technique."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic airway obstruction but require different management.",
+   "b": [
+    "Bronchospasm – presents with wheeze and prolonged expiration; treat with bronchodilators, not intubation unless severe.",
+    "Pulmonary oedema – pink frothy sputum, crackles; primary treatment is diuretics and CPAP, not airway surgery.",
+    "Severe hypoglycaemia – altered consciousness, but airway is usually patent; treat with glucose."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may give a false sense of security.",
+   "b": [
+    "Normal SpO2 on room air can be misleading in carbon‑monoxide poisoning; obtain carboxy‑Hb if suspicion exists.",
+    "Absent breath sounds may be due to poor auscultation technique rather than obstruction; confirm with chest X‑ray or ultrasound.",
+    "Capnography may show a waveform despite esophageal intubation if there is gastric air; always verify tube depth and chest rise."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive desaturation despite oxygen",
+  "Inability to speak full sentences",
+  "Visible neck or facial swelling that worsens",
+  "GCS ≤ 8",
+  "Failed airway attempts after two tries"
+ ],
+ "faq": [
+  {
+   "q": "What is the first manoeuvre for a suspected airway obstruction?",
+   "a": "Head‑tilt‑chin‑lift if no cervical spine concern; otherwise jaw‑thrust."
+  },
+  {
+   "q": "When is a cricothyrotomy preferred over intubation?",
+   "a": "When intubation fails or is impossible due to severe facial trauma, massive swelling, or lack of equipment."
+  },
+  {
+   "q": "Why is ketamine often chosen for rapid sequence induction in low‑resource settings?",
+   "a": "It preserves airway reflexes, maintains blood pressure, and is readily available without needing complex monitoring."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old male with facial burns presents with stridor and SpO2 88% – what is your immediate next step? — Position, high‑flow O2, call for help, prepare cricothyrotomy.",
+  "During RSI the patient’s chest does not rise and capnography is flat – what does this indicate and how do you respond? — Possible esophageal intubation; withdraw tube, re‑oxygenate, attempt laryngoscopy again or surgical airway.",
+  "A pregnant woman in labour vomits and becomes drowsy – how does pregnancy alter your airway plan? — Higher aspiration risk, airway edema; use rapid sequence induction with cricoid pressure and consider lower tube size.",
+  "You have no capnograph; how can you confirm endotracheal tube placement? — Auscultate bilateral breath sounds, observe chest rise, check for condensation, and obtain a portable chest X‑ray if possible.",
+  "What are the key differences between bronchospasm and upper airway obstruction on exam? — Bronchospasm gives wheeze and prolonged expiration; upper obstruction gives stridor, inspiratory noise, and no wheeze.",
+  "Why is succinylcholine contraindicated in a patient with severe burns? — Up‑regulation of acetylcholine receptors can cause hyperkalaemia; use rocuronium instead.",
+  "A patient develops sudden swelling of the tongue after antivenom – what airway manoeuvre should you perform? — Early cricothyrotomy if bag‑mask ventilation fails.",
+  "After successful intubation, the patient develops hypotension – which drug class should you avoid and why? — Avoid high‑dose propofol because it can worsen hypotension; use modest doses of ketamine or phenylephrine."
+ ],
+ "related": [
+  "Rapid Sequence Induction",
+  "Cricothyrotomy Technique",
+  "Aspiration Pneumonia",
+  "Traumatic Airway Injuries",
+  "Anaphylaxis Management",
+  "Ventilator‑Associated Pneumonia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}

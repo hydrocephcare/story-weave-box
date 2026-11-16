@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "clinicalScope": "Enterobius vermicularis infection (enterobiasis) in children and adolescents presenting to low‑resource East African hospitals",
+ "title": "Enterobius vermicularis Infection",
+ "subject": "Microbiology & immunology",
+ "summary": "Pinworm infection is the commonest intestinal helminthiasis worldwide, especially in school‑aged children. It spreads by fecal‑oral transmission of eggs and causes perianal itching, irritability and secondary sleep disturbance.",
+ "aka": [
+  "Enterobiasis",
+  "Pinworm infection",
+  "Enterobius vermicularis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Enterobius vermicularis is a small, white nematode that lives in the human colon and rectum. Adult females migrate nocturnally to the perianal skin to lay thousands of eggs, which cause the classic pruritus.",
+   "b": [
+    "Most prevalent helminth in children; prevalence up to 30 % in some East African schools",
+    "Transmission is fecal‑oral; eggs survive on fomites for 2–3 weeks",
+    "Outbreaks occur in crowded settings – schools, orphanages, refugee camps"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "A female pinworm measures 8–13 mm; the male is half that size. Eggs are ovoid, 50‑60 µm, with a characteristic flattened side that adheres to skin and fabrics.",
+   "b": [
+    "Life cycle completed in 4‑6 weeks",
+    "No intermediate host – direct human‑to‑human spread",
+    "Eggs become infective within 4‑6 h after being laid"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Ingestion of embryonated eggs leads to hatching in the duodenum; larvae mature in the colon. Female worms exit the anus at night to deposit eggs on perianal skin, which are then transferred by scratching or contaminated objects.",
+   "b": [
+    "Key risk behaviours: nail‑biting, thumb‑sucking, sharing bedding",
+    "Autoinfection common; reinfection from household members frequent",
+    "Eggs resist drying, allowing survival on clothing, toys, toilet seats"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Enterobiasis is usually mild but can cause significant discomfort and secondary complications, especially in malnourished or immunocompromised children.",
+   "b": [
+    "Perianal pruritus, worse at night – hallmark symptom",
+    "Secondary bacterial infection of scratched skin",
+    "Rare complications: vulvovaginitis, urinary tract infection, appendicitis‑like pain",
+    "Behavioural impact: irritability, sleep loss, reduced school performance"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis relies on detecting characteristic eggs on perianal swab (Scotch‑tape test) performed in the early morning before washing.",
+   "b": [
+    "If tape test unavailable, treat empirically in a typical clinical picture",
+    "Repeat tape test on three consecutive mornings to increase sensitivity"
+   ],
+   "t": [
+    {
+     "a": "Scotch‑tape (cellophane) test",
+     "b": "Does the patient have pinworm eggs? Positive microscopy confirms infection; negative does not rule out if sampling is poor"
+    },
+    {
+     "a": "Direct stool microscopy",
+     "b": "Are eggs present in stool? Low sensitivity; useful when tape test unavailable"
+    },
+    {
+     "a": "History of nocturnal perianal itching",
+     "b": "Is the clinical picture compatible? Guides need for empirical treatment when tests are absent"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Single‑dose oral albendazole or mebendazole eradicates adult worms; a second dose 2 weeks later eliminates newly hatched larvae. Environmental hygiene prevents reinfection.",
+   "b": [
+    "Repeat dose after 2 weeks to cover the life cycle",
+    "Treat all household contacts simultaneously to break transmission",
+    "Wash bedding, underwear, and nightclothes in hot water; clean surfaces with bleach",
+    "Educate on nail hygiene and hand‑washing after toilet use"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Examiners test understanding of the life cycle, diagnostic nuances, and public‑health control measures.",
+   "b": [
+    "Key clue: nocturnal perianal itching in a child",
+    "Scotch‑tape test is the gold‑standard; timing matters",
+    "Empirical treatment is acceptable when resources are limited",
+    "Re‑treatment after 2 weeks prevents reinfection from eggs laid after the first dose",
+    "Differentiating pinworm from other helminths hinges on egg size and lack of systemic symptoms"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain mimicking appendicitis",
+  "Signs of secondary bacterial infection (cellulitis, fever)",
+  "Persistent urinary symptoms suggesting urethral involvement"
+ ],
+ "faq": [
+  {
+   "q": "Why is the tape test done in the early morning?",
+   "a": "Female worms lay eggs at night; early‑morning sampling catches the maximum number before washing removes them."
+  },
+  {
+   "q": "Can pinworm infection cause anemia?",
+   "a": "Rarely; the worm burden is low and blood loss is minimal, unlike hookworm."
+  },
+  {
+   "q": "Is a single dose of albendazole enough?",
+   "a": "One dose kills adult worms, but a second dose 2 weeks later is needed to eradicate larvae that hatch after the first treatment."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old presents with night‑time perianal itching; what is your next diagnostic step? — Perform a Scotch‑tape test on three consecutive mornings; if unavailable, start empirical therapy.",
+  "Explain why a second dose of albendazole is given 2 weeks after the first. — To eliminate larvae that hatch from eggs laid after the initial dose, breaking the life cycle.",
+  "How would you differentiate enterobiasis from trichuriasis in a low‑resource setting? — Pinworm causes nocturnal perianal itching and eggs are detected by tape test; Trichuris causes dysentery‑like symptoms and eggs are seen in stool.",
+  "A child from a refugee camp has perianal itching and a low‑grade fever; what complications must you watch for? — Secondary bacterial infection of scratched skin, possible vulvovaginitis or urinary tract infection.",
+  "What infection control measures reduce reinfection rates in a school outbreak? — Treat all children and staff, wash bedding in hot water, daily cleaning of toilets with bleach, promote hand‑washing after toileting.",
+  "Why is stool microscopy less reliable than the tape test for pinworm? — Eggs are deposited on perianal skin, not consistently shed into stool; thus stool exams miss many infections.",
+  "In a HIV‑positive adolescent with chronic pinworm infection, what additional concern is there? — Higher risk of secondary bacterial infection and possible more intense pruritus due to immune dysregulation."
+ ],
+ "related": [
+  "Ascaris lumbricoides infection",
+  "Trichuris trichiura infection",
+  "Strongyloides stercoralis",
+  "Helminthic control programmes",
+  "Childhood malnutrition and parasitic infections",
+  "Hygiene education in schools"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-16",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-2.5-flash",
+  "reviewedAt": "2026-11-16",
+  "fixRounds": 0
+ },
+ "reviewed": false
+}
