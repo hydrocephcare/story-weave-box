@@ -6,7 +6,7 @@ const makePage = (title: string, subject: string, count = 13) => {
   return {
     medical: true, title, subject, clinicalScope: title + " in the stated clinical context.",
     summary: title + " is a medical topic that requires understanding of mechanisms, clinical presentation, diagnosis and appropriate management. This overview explains the subject for the public and medical learners.",
-    sections: Array.from({ length: count }, (_, i) => ({ h: sectionNames[i] || ("Clinical consideration " + (i + 1)), p: explanation, b: ["Recognise the relevant clinical pattern and explain why it occurs.", "Interpret findings in the context of the whole patient and available resources."] })),
+    sections: Array.from({ length: count }, (_, i) => ({ h: sectionNames[i] || ("Clinical consideration " + (i + 1)), p: explanation, b: ["Recognise the relevant clinical pattern and explain why it occurs.", "Interpret findings in the context of the whole patient and available resources.", "Connect the underlying physiology to the observed clinical features.", "Explain how the evidence changes the investigation or management plan."] })),
     whenToSeekHelp: ["Seek urgent clinical assessment when severe or rapidly worsening symptoms occur."],
     faq: [{ q: "What is the central point?", a: "Understand the mechanism, clinical features and evidence-based management." }, { q: "How is it assessed?", a: "Use history, examination and appropriately selected investigations." }, { q: "What should be remembered?", a: "Interpret each finding in its clinical context." }],
     exam: Array.from({ length: 10 }, (_, i) => "Examiner question " + (i + 1) + " — explain the reasoning, interpretation and management implications."),
