@@ -98,62 +98,8 @@ export default async function handler(req, res) {
       xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/finalists</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>\n</urlset>");
       xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/share-your-story</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>");
     }
-    // OmpathStudy Research Hub: public, substantive pages only. University directory pages
-    // remain noindex until institution-specific requirements have been independently verified.
-    if (/^(pages|all)\.xml$/.test(file) && xml.includes("</urlset>")) {
-      const researchPages = [
-        ["/research", "weekly", "0.9"],
-        ["/research/services", "monthly", "0.8"],
-        ["/research/topics", "weekly", "0.8"],
-        ["/research/resources", "weekly", "0.8"],
-        ["/research/pricing", "monthly", "0.7"],
-        ["/research/process", "monthly", "0.7"],
-        ["/research/faq", "monthly", "0.6"],
-        ["/research/request-support", "monthly", "0.6"],
-        ["/research/academic-integrity", "yearly", "0.6"],
-        ["/research/universities", "monthly", "0.7"],
-        ["/research/universities/mku", "monthly", "0.7"],
-        ["/research/universities/university-of-nairobi", "monthly", "0.7"],
-        ["/research/universities/jkuat", "monthly", "0.7"],
-        ["/research/universities/kenyatta-university", "monthly", "0.7"],
-        ["/research/universities/moi-university", "monthly", "0.7"],
-        ["/research/universities/maseno-university", "monthly", "0.7"],
-        ["/research/universities/aga-khan-university", "monthly", "0.7"],
-        ["/research/universities/other-universities", "monthly", "0.7"],
-        ["/research/services/research-topic-consultation", "monthly", "0.7"],
-        ["/research/services/proposal-review", "monthly", "0.7"],
-        ["/research/services/methodology-support", "monthly", "0.7"],
-        ["/research/services/questionnaire-development", "monthly", "0.7"],
-        ["/research/services/data-analysis-support", "monthly", "0.7"],
-        ["/research/services/spss-support", "monthly", "0.7"],
-        ["/research/services/academic-editing", "monthly", "0.7"],
-        ["/research/services/research-defence-preparation", "monthly", "0.7"],
-        ["/research/guides/research-problem-statement", "yearly", "0.7"],
-        ["/research/guides/research-objectives-questions-hypotheses", "yearly", "0.7"],
-        ["/research/guides/quantitative-qualitative-mixed-methods", "yearly", "0.7"],
-        ["/research/guides/cross-sectional-cohort-case-control-studies", "yearly", "0.7"],
-        ["/research/guides/sampling-methods-and-sample-size", "yearly", "0.7"],
-        ["/research/guides/research-ethics-informed-consent", "yearly", "0.7"],
-        ["/research/guides/questionnaire-design-validity-reliability", "yearly", "0.7"],
-        ["/research/guides/descriptive-statistics-and-data-analysis", "yearly", "0.7"],
-        ["/research/guides/writing-results-and-discussion", "yearly", "0.7"],
-        ["/research/guides/sample-size-calculation-prevalence-studies", "yearly", "0.7"],
-        ["/research/guides/pico-framework-clinical-research-questions", "yearly", "0.7"],
-        ["/research/guides/literature-review-search-strategy", "yearly", "0.7"],
-        ["/research/guides/confounding-and-bias-clinical-research", "yearly", "0.7"],
-        ["/research/guides/odds-ratios-risk-ratios-confidence-intervals", "yearly", "0.7"],
-        ["/research/guides/chi-square-t-tests-logistic-regression", "yearly", "0.7"],
-        ["/research/guides/data-cleaning-spss", "yearly", "0.7"],
-        ["/research/guides/vancouver-referencing-medical-research", "yearly", "0.7"],
-        ["/research/guides/writing-research-abstract", "yearly", "0.7"],
-        ["/research/guides/research-defence-presentation-preparation", "yearly", "0.7"],
-      ];
-      const additions = researchPages
-        .filter(([path]) => !xml.includes(`https://www.ompathstudy.com${path}</loc>`))
-        .map(([path, frequency, priority]) => `  <url><loc>https://www.ompathstudy.com${path}</loc><changefreq>${frequency}</changefreq><priority>${priority}</priority></url>`)
-        .join("\n");
-      if (additions) xml = xml.replace("</urlset>", additions + "\n</urlset>");
-    }
+    // Research pages are served by their dedicated research-sitemap.xml only.
+    // Do not repeat them in all.xml, which robots.txt also discovers independently.
 
     // stories live at /stories/<title-slug>: the function still lists the older id-first form
     if (/(^|\W)(stories|all)\.xml$/.test(file) && xml.includes("/stories/")) {
