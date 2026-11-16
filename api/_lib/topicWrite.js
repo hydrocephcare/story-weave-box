@@ -1,6 +1,6 @@
 // POST /api/topic-write { name, category, context }: writes a topic page with Gemini and returns it. The browser then saves it with the
 // publish_topic_page database function. Keys live only here, in the GEMINI_API_KEYS setting (comma separated); they take turns.
-import { generateWithFallback, validName } from "../../supabase/functions/_shared/topicAi.js";
+import { generateReviewedTopicPage, validName } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
   }
   try {
     const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), choices: body.choices && typeof body.choices === "object" ? body.choices : undefined };
-    const page = await generateWithFallback(input, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys });
+    const { page } = await generateReviewedTopicPage(input, { env: { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys }, fetchImpl: fetch });
     if (!page.medical) return res.status(200).json({ status: "rejected" });
     return res.status(200).json({ status: "published", page: { ...page, subject: pickSubject(page.subject, `${name} ${body.category ?? ""}`) } });
   } catch (e) {
