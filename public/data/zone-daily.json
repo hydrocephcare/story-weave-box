@@ -1,741 +1,642 @@
 {
- "date": "2026-11-15",
+ "date": "2026-11-16",
  "games": [
   {
-   "id": "2026-11-15-1",
-   "title": "PAT 2021: quick quiz",
+   "id": "2026-11-16-1",
+   "title": "Basics of Biosafety: quick quiz",
    "game": "quiz",
-   "topic": "PAT 2021",
-   "year": 1,
-   "blurb": "Quiz for Year 1 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 24-year-old cyclist falls onto his shoulder, forcefully widening the angle between his neck and shoulder. Physical examination reveals an upper limb hanging by the side, medially rotated, with the forearm pronated. Which root of the brachial plexus is most likely injured in this patient?",
-     "options": [
-      "C5",
-      "C7",
-      "C8",
-      "T1"
-     ],
-     "correct": 0,
-     "explanation": "An upper trunk brachial plexus injury (Erb-Duchenne palsy) primarily involves the C5 and C6 nerve roots.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "During a procedure, a clinician identifies the femoral triangle to administer a nerve block. Which structure forms the lateral boundary of the femoral triangle?",
-     "options": [
-      "Adductor longus",
-      "Sartorius",
-      "Inguinal ligament",
-      "Pectineus"
-     ],
-     "correct": 1,
-     "explanation": "The femoral triangle is bounded superiorly by the inguinal ligament, medially by the medial border of adductor longus, and laterally by the medial border of sartorius.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A medical student is practicing cardiac auscultation. Where is the optimal landmark to listen to the aortic valve?",
-     "options": [
-      "Left second intercostal space at the sternal border",
-      "Right second intercostal space at the sternal border",
-      "Left fifth intercostal space in the midclavicular line",
-      "Left fourth intercostal space at the sternal border"
-     ],
-     "correct": 1,
-     "explanation": "The aortic valve area is best auscultated at the right second intercostal space adjacent to the sternal border.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 45-year-old male presents with a painful groin swelling diagnosed as an indirect inguinal hernia. Through which anatomical structure does an indirect hernia enter the inguinal canal?",
-     "options": [
-      "Deep inguinal ring",
-      "Superficial inguinal ring",
-      "Femoral ring",
-      "Hesselbach triangle"
-     ],
-     "correct": 0,
-     "explanation": "Indirect inguinal hernias enter the inguinal canal laterally to the inferior epigastric vessels via the deep inguinal ring.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "An obstetrician performs a pudendal nerve block prior to an episiotomy. Which bony landmark is palpated transvaginally to guide the needle to the pudendal nerve?",
-     "options": [
-      "Ischial tuberosity",
-      "Ischial spine",
-      "Anterior superior iliac spine",
-      "Pubic tubercle"
-     ],
-     "correct": 1,
-     "explanation": "The pudendal nerve crosses the posterior surface of the ischial spine near its attachment to the sacrospinous ligament.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A patient suffers facial trauma resulting in loss of cutaneous sensation over the tip of the nose. Which nerve provides sensory innervation to this specific region?",
-     "options": [
-      "Ophthalmic division of the trigeminal nerve (V1)",
-      "Maxillary division of the trigeminal nerve (V2)",
-      "Mandibular division of the trigeminal nerve (V3)",
-      "Facial nerve (CN VII)"
-     ],
-     "correct": 0,
-     "explanation": "The skin over the tip of the nose is innervated by the external nasal nerve, a terminal branch of the ophthalmic nerve (V1).",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A mid-shaft fracture of the humerus poses a significant risk of damage to which nerve and arterial pair running together in the radial groove?",
-     "options": [
-      "Axillary nerve and posterior circumflex humeral artery",
-      "Radial nerve and profunda brachii artery",
-      "Median nerve and brachial artery",
-      "Ulnar nerve and superior ulnar collateral artery"
-     ],
-     "correct": 1,
-     "explanation": "The radial nerve and profunda brachii artery travel together in the radial groove along the posterior mid-shaft of the humerus.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A child accidentally swallows a small foreign object which passes into the tracheobronchial tree. Anatomically, why is the object more likely to lodge in the right main bronchus than the left?",
-     "options": [
-      "The right main bronchus is longer and more horizontal",
-      "The right main bronchus is wider, shorter, and more vertical",
-      "The right main bronchus branches directly off the larynx",
-      "The right main bronchus has a smaller diameter"
-     ],
-     "correct": 1,
-     "explanation": "The right main bronchus is wider, shorter, and oriented more vertically than the left main bronchus, making aspirated items more prone to enter it.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which of the following vessels is a direct branch of the celiac trunk?",
-     "options": [
-      "Right gastric artery",
-      "Superior mesenteric artery",
-      "Splenic artery",
-      "Proper hepatic artery"
-     ],
-     "correct": 2,
-     "explanation": "The celiac trunk typically divides into three direct branches: the left gastric artery, the splenic artery, and the common hepatic artery.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Through which structure does cerebrospinal fluid (CSF) flow to travel from the third ventricle directly into the fourth ventricle?",
-     "options": [
-      "Interventricular foramen of Monro",
-      "Cerebral aqueduct",
-      "Lateral aperture of Luschka",
-      "Median aperture of Magendie"
-     ],
-     "correct": 1,
-     "explanation": "The cerebral aqueduct (of Sylvius) connects the third ventricle to the fourth ventricle within the midbrain.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
+   "topic": "Basics of Biosafety",
+   "year": 2,
+   "blurb": "Quiz for Year 2 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "Which of the following best defines biosafety in a clinical laboratory setting?",
+      "options": [
+       "The practice of preventing contamination of the environment by pathogens",
+       "The use of personal protective equipment only",
+       "The disposal of all specimens in a standard trash bin",
+       "The sterilization of all instruments before use"
+      ],
+      "correct": 0,
+      "explanation": "Biosafety encompasses measures to prevent release of pathogens into the environment.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "What is the primary purpose of a biosafety level (BSL) classification?",
+      "options": [
+       "To determine the cost of laboratory equipment",
+       "To guide the design of laboratory ventilation systems",
+       "To specify the containment precautions required for a given organism",
+       "To dictate the number of staff allowed in a lab"
+      ],
+      "correct": 2,
+      "explanation": "BSL levels dictate containment practices based on organism risk.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is a key component of BSL-3 containment?",
+      "options": [
+       "Use of a biosafety cabinet type I",
+       "Negative pressure ventilation",
+       "Positive pressure suits",
+       "No need for eye protection"
+      ],
+      "correct": 1,
+      "explanation": "Negative pressure ventilation is essential for BSL‑3 labs to prevent escape of aerosols.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "In epidemiology, the term \"incidence\" refers to:",
+      "options": [
+       "The proportion of a population that has a disease at a specific time",
+       "The number of new cases occurring in a defined period",
+       "The total number of cases ever recorded",
+       "The severity of a disease outbreak"
+      ],
+      "correct": 1,
+      "explanation": "Incidence measures new cases over a period.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which statistical measure is most appropriate for describing the central tendency of a normally distributed continuous variable?",
+      "options": [
+       "Median",
+       "Mode",
+       "Mean",
+       "Range"
+      ],
+      "correct": 2,
+      "explanation": "The mean best represents the center of a normal distribution.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 95% confidence interval for a proportion that is 0.30 with a margin of error of ±0.05 indicates that:",
+      "options": [
+       "We are 95% confident the true proportion lies between 0.25 and 0.35",
+       "The sample proportion is 95% accurate",
+       "The true proportion is exactly 0.30",
+       "The interval is too wide to be useful"
+      ],
+      "correct": 0,
+      "explanation": "The CI expresses where the true proportion likely falls.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is NOT a recommended practice for handling potentially infectious blood specimens?",
+      "options": [
+       "Using a biosafety cabinet for all manipulations",
+       "Labeling specimens clearly with a biohazard symbol",
+       "Storing specimens at room temperature for extended periods",
+       "Using a closed system for transport"
+      ],
+      "correct": 2,
+      "explanation": "Blood specimens should not be stored at room temperature for long periods.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "In a case‑control study, the odds ratio is used to estimate:",
+      "options": [
+       "Relative risk",
+       "Attributable risk",
+       "Population attributable fraction",
+       "Incidence rate"
+      ],
+      "correct": 0,
+      "explanation": "The odds ratio approximates relative risk in case‑control designs.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following best describes the term \"pathogenicity\"?",
+      "options": [
+       "The ability of a microorganism to survive in the environment",
+       "The capacity of a microorganism to cause disease",
+       "The speed at which a disease spreads",
+       "The resistance of a pathogen to antibiotics"
+      ],
+      "correct": 1,
+      "explanation": "Pathogenicity refers to disease-causing potential.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "The primary goal of a biosafety training program for laboratory personnel is to:",
+      "options": [
+       "Increase laboratory productivity",
+       "Reduce the cost of PPE",
+       "Ensure compliance with regulatory standards",
+       "Eliminate all risk of infection"
+      ],
+      "correct": 2,
+      "explanation": "Training ensures adherence to safety regulations and reduces risk.",
+      "ai": true,
+      "kind": "mcq"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
   },
   {
-   "id": "2026-11-15-2",
-   "title": "Contraception and Family Planning: quick quiz",
+   "id": "2026-11-16-2",
+   "title": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and: quick quiz",
    "game": "quiz",
-   "topic": "Contraception and Family Planning",
+   "topic": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 32-year-old woman presents requesting contraception. She has a history of migraine with aura. Which of the following contraceptive methods is classified as UKMEC 4 (unacceptable health risk)?",
-     "options": [
-      "Combined oral contraceptive pill",
-      "Levonorgestrel intrauterine system",
-      "Progestogen-only pill",
-      "Etonogestrel subdermal implant"
-     ],
-     "correct": 0,
-     "explanation": "Combined hormonal contraception is UKMEC 4 (contraindicated) in women with migraine with aura due to a significantly increased risk of ischemic stroke.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 24-year-old woman presents requesting emergency contraception after unprotected sexual intercourse that occurred 96 hours (4 days) ago. She has regular 28-day cycles. Which oral emergency contraceptive option is licensed for use up to 120 hours post-coitus?",
-     "options": [
-      "Levonorgestrel 1.5 mg",
-      "Ulipristal acetate 30 mg",
-      "Ethinylestradiol 50 mcg",
-      "Mifepristone 200 mg"
-     ],
-     "correct": 1,
-     "explanation": "Ulipristal acetate is a progesterone receptor modulator licensed for emergency contraception up to 120 hours (5 days) after unprotected intercourse, whereas levonorgestrel is licensed up to 72 hours.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which of the following is the most effective form of emergency contraception?",
-     "options": [
-      "Ulipristal acetate",
-      "Copper intrauterine device (Cu-IUD)",
-      "Levonorgestrel 1.5 mg",
-      "High-dose combined oral contraceptives"
-     ],
-     "correct": 1,
-     "explanation": "The copper intrauterine device is the most effective method of emergency contraception, with a failure rate of less than 0.1%.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 26-year-old woman using depot medroxyprogesterone acetate (DMPA) injections for contraception is concerned about long-term side effects. Which of the following is a recognized effect associated with long-term DMPA use?",
-     "options": [
-      "Increased risk of endometrial cancer",
-      "Loss of bone mineral density",
-      "Increased risk of ovarian cancer",
-      "Irreversible secondary amenorrhea"
-     ],
-     "correct": 1,
-     "explanation": "DMPA use is associated with a small, temporary reduction in bone mineral density, which generally recovers after discontinuation.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 22-year-old woman taking a standard monophasic combined oral contraceptive pill (30 mcg ethinylestradiol) missed 2 pills in the first week of her pack (days 1 and 2). She had unprotected sex on day 3. What is the correct management strategy?",
-     "options": [
-      "Take the most recent missed pill, continue the pack, and no extra precautions or emergency contraception are needed",
-      "Take the most recent missed pill, continue the pack, use condoms for 7 days, and seek emergency contraception",
-      "Stop the current pack, wait for withdrawal bleeding, and restart a new pack",
-      "Take all missed pills at once and continue the pack normally"
-     ],
-     "correct": 1,
-     "explanation": "If 2 or more pills are missed in week 1, the patient should take the most recent missed pill, use condoms for 7 days, and obtain emergency contraception if unprotected sex occurred in week 1 or the pill-free interval.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which mechanism represents the primary mode of action of the 52 mg levonorgestrel intrauterine system (LNG-IUS)?",
-     "options": [
-      "Consistent inhibition of follicular ovulation",
-      "Endometrial atrophy and cervical mucus thickening",
-      "Induction of a toxic chemical reaction to sperm via copper ions",
-      "Disruption of fallopian tube peristalsis"
-     ],
-     "correct": 1,
-     "explanation": "The levonorgestrel IUS primarily acts locally by thickening cervical mucus to block sperm passage and suppressing endometrial proliferation.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 28-year-old non-breastfeeding woman delivers a healthy infant. From which postpartum day is effective contraception required to prevent pregnancy?",
-     "options": [
-      "Day 7 postpartum",
-      "Day 14 postpartum",
-      "Day 21 postpartum",
-      "Day 28 postpartum"
-     ],
-     "correct": 2,
-     "explanation": "Contraception is required starting from day 21 postpartum because ovulation does not occur before day 21 after childbirth.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Up to how many days after the calculated earliest estimated date of ovulation can a copper intrauterine device (Cu-IUD) be inserted for emergency contraception?",
-     "options": [
-      "3 days",
-      "5 days",
-      "7 days",
-      "14 days"
-     ],
-     "correct": 1,
-     "explanation": "A Cu-IUD can be inserted up to 5 days after unprotected sexual intercourse or up to 5 days after the earliest estimated date of ovulation.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What is the late-pill threshold window for a desogestrel-only progestogen pill (75 micrograms) before extra contraceptive precautions (e.g., condoms) are required?",
-     "options": [
-      "3 hours",
-      "6 hours",
-      "12 hours",
-      "24 hours"
-     ],
-     "correct": 2,
-     "explanation": "Desogestrel-containing progestogen-only pills have a 12-hour delayed-dose window, whereas traditional POPs (e.g., levonorgestrel, norethisterone) have a 3-hour window.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 30-year-old woman taking carbamazepine for epilepsy requires highly effective contraception. Which of the following methods is unaffected by liver enzyme-inducing medications?",
-     "options": [
-      "Combined oral contraceptive pill",
-      "Etonogestrel subdermal implant",
-      "Levonorgestrel intrauterine system",
-      "Progestogen-only pill"
-     ],
-     "correct": 2,
-     "explanation": "Intrauterine methods like the LNG-IUS work locally in the uterus and their contraceptive efficacy is unaffected by hepatic enzyme-inducing drugs.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
+   "questions": {
+    "questions": [
+     {
+      "q": "Which of the following is the most common indication for a permanent colostomy in the left colon?",
+      "options": [
+       "A. Crohn's disease involving the terminal ileum",
+       "B. Ulcerative colitis with pancolitis",
+       "C. Colorectal cancer involving the sigmoid colon",
+       "D. Ischemic colitis of the ascending colon"
+      ],
+      "correct": 2,
+      "explanation": "Colorectal cancer of the sigmoid colon is the most frequent pathology that ultimately requires a permanent colostomy in the left colon.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 45‑year‑old man with ulcerative colitis presents with toxic megacolon. Which surgical procedure is most appropriate?",
+      "options": [
+       "A. Right hemicolectomy",
+       "B. Total colectomy with ileostomy",
+       "C. Left hemicolectomy",
+       "D. Subtotal colectomy with ileorectal anastomosis"
+      ],
+      "correct": 1,
+      "explanation": "Total colectomy with ileostomy is the definitive treatment for toxic megacolon, removing the diseased colon and preventing perforation.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is a contraindication to performing a loop ileostomy?",
+      "options": [
+       "A. Small bowel obstruction",
+       "B. Severe malnutrition",
+       "C. Severe sepsis",
+       "D. Low output ileostomy"
+      ],
+      "correct": 2,
+      "explanation": "Severe sepsis is a contraindication to creating a loop ileostomy because the patient’s systemic condition is too unstable for the procedure.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "What is the primary purpose of a diverting ileostomy in patients undergoing low anterior resection for rectal cancer?",
+      "options": [
+       "A. To prevent anastomotic leak",
+       "B. To reduce postoperative ileus",
+       "C. To allow early enteral feeding",
+       "D. To decrease postoperative pain"
+      ],
+      "correct": 0,
+      "explanation": "A diverting ileostomy reduces the risk of anastomotic leak by diverting fecal stream away from the distal anastomosis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is the most common complication of a colostomy?",
+      "options": [
+       "A. Peristomal hernia",
+       "B. Stoma prolapse",
+       "C. Stoma necrosis",
+       "D. Stoma obstruction"
+      ],
+      "correct": 0,
+      "explanation": "Peristomal hernia is the most frequent mechanical complication of colostomies, occurring when abdominal contents herniate through the stoma opening.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A patient with an ileostomy has a daily output of 1.5 L. Which of the following is the first step in management?",
+      "options": [
+       "A. Increase fluid intake",
+       "B. Reduce fiber intake",
+       "C. Initiate octreotide",
+       "D. Perform a stoma revision"
+      ],
+      "correct": 0,
+      "explanation": "High‑output ileostomies are first managed by aggressive fluid and electrolyte replacement to prevent dehydration.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is a key component of stoma care education for patients?",
+      "options": [
+       "A. How to perform a stoma reversal",
+       "B. How to identify stoma skin irritation",
+       "C. How to perform a colonoscopy",
+       "D. How to manage constipation"
+      ],
+      "correct": 1,
+      "explanation": "Patients must learn to recognize and treat stoma skin irritation, which is a common issue that can lead to complications if not managed promptly.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A loop colostomy is most often created in which part of the colon?",
+      "options": [
+       "A. Ascending colon",
+       "B. Transverse colon",
+       "C. Descending colon",
+       "D. Sigmoid colon"
+      ],
+      "correct": 3,
+      "explanation": "Loop colostomies are usually placed in the sigmoid colon for diverting purposes, providing a convenient and low‑risk site.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is a contraindication to performing a permanent ileostomy?",
+      "options": [
+       "A. Severe malnutrition",
+       "B. Small bowel obstruction",
+       "C. Severe sepsis",
+       "D. All of the above"
+      ],
+      "correct": 3,
+      "explanation": "All listed conditions are contraindications to a permanent ileostomy because they indicate a patient who is not a suitable candidate for a long‑term stoma.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "What is the most appropriate timing for reversal of a loop ileostomy created for a low anterior resection?",
+      "options": [
+       "A. 2–4 weeks postoperatively",
+       "B. 6–8 weeks postoperatively",
+       "C. 3–4 months postoperatively",
+       "D. 6–12 months postoperatively"
+      ],
+      "correct": 1,
+      "explanation": "Reversal is typically performed 6–8 weeks after the initial surgery once the patient has recovered and the anastomosis is well healed.",
+      "ai": true,
+      "kind": "mcq"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
   },
   {
-   "id": "2026-11-15-3",
-   "title": "General pathology — Past Paper: case showdown",
+   "id": "2026-11-16-3",
+   "title": "Fluid and Electrolyte Disorders: case showdown",
    "game": "case",
-   "topic": "General pathology — Past Paper",
-   "year": 3,
-   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 55-year-old male presents with acute severe left-sided chest pain radiating to his jaw. Troponin levels are markedly elevated, and an ECG confirms an acute myocardial infarction. If tissue from the affected myocardial region were examined 3 days post-event, which type of necrosis would predominate?",
-     "options": [
-      "Liquefactive necrosis",
-      "Coagulative necrosis",
-      "Caseous necrosis",
-      "Fat necrosis"
-     ],
-     "correct": 1,
-     "explanation": "Myocardial infarction typically results in coagulative necrosis due to sudden ischemia, which preserves the basic cell outline for several days.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 34-year-old female presents with chronic cough, night sweats, and weight loss. A lung biopsy reveals necrotizing granulomas with central acellular debris surrounded by epithelioid histiocytes and Langhans giant cells. Which of the following is the most likely diagnosis?",
-     "options": [
-      "Sarcoidosis",
-      "Idiopathic pulmonary fibrosis",
-      "Tuberculosis",
-      "Asbestosis"
-     ],
-     "correct": 2,
-     "explanation": "Caseating (necrotizing) granulomatous inflammation with Langhans giant cells is characteristically caused by Mycobacterium tuberculosis infection.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 22-year-old male presents with a raised, hyperpigmented, itchy scar over his sternum that developed 6 months after a minor burn. Physical examination reveals that the lesion extends significantly beyond the original boundaries of the wound. Which of the following best describes this lesion?",
-     "options": [
-      "Hypertrophic scar",
-      "Desmoid tumor",
-      "Granuloma pyogenicum",
-      "Keloid"
-     ],
-     "correct": 3,
-     "explanation": "Keloids characteristically extend beyond the margins of the original wound due to excessive collagen synthesis and do not spontaneously regress.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 48-year-old male long-term smoker undergoes an endobronchial biopsy during workup for a chronic cough. Microscopic examination of the bronchial mucosa demonstrates replacement of normal pseudostratified ciliated columnar epithelium by stratified squamous epithelium. Which cellular adaptation is demonstrated in this biopsy?",
-     "options": [
-      "Metaplasia",
-      "Dysplasia",
-      "Anaplasia",
-      "Hyperplasia"
-     ],
-     "correct": 0,
-     "explanation": "Squamous metaplasia is the reversible conversion of one differentiated adult cell type (columnar) to another (squamous) in response to chronic irritation.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 28-year-old male suffers a comminuted fracture of the right femur in a motor vehicle accident. Forty-eight hours later, he develops sudden dyspnea, confusion, and a petechial rash over his chest and neck. What is the most likely diagnosis?",
-     "options": [
-      "Pulmonary thromboembolism",
-      "Fat embolism syndrome",
-      "Air embolism",
-      "Amniotic fluid embolism"
-     ],
-     "correct": 1,
-     "explanation": "The classic triad of fat embolism syndrome—hypoxemia, neurological impairment, and petechial rash—typically occurs 24 to 72 hours after major long-bone fractures.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 62-year-old female with a 15-year history of severe rheumatoid arthritis develops nephrotic-range proteinuria and progressive renal failure. A renal biopsy demonstrates extracellular amorphous eosinophilic deposits that exhibit apple-green birefringence under polarized light with Congo red stain. What is the most likely underlying condition?",
-     "options": [
-      "Systemic lupus erythematosus",
-      "Primary amyloidosis (AL)",
-      "Secondary amyloidosis (AA)",
-      "Diabetic glomerulosclerosis"
-     ],
-     "correct": 2,
-     "explanation": "Secondary (AA) amyloidosis arises from chronic systemic inflammation such as rheumatoid arthritis, with Congo red stain demonstrating characteristic apple-green birefringence under polarized light.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 45-year-old female presents with severe abdominal pain and flushing 15 minutes after a bee sting. On examination, she is hypotensive and tachycardic with generalized urticaria and diffuse respiratory wheezing. Which hypersensitivity mechanism is responsible for this presentation?",
-     "options": [
-      "Type I hypersensitivity",
-      "Type II hypersensitivity",
-      "Type III hypersensitivity",
-      "Type IV hypersensitivity"
-     ],
-     "correct": 0,
-     "explanation": "Anaphylaxis triggered by insect stings is a Type I IgE-mediated immediate hypersensitivity reaction caused by mast cell degranulation.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A research study examines tumor cells undergoing apoptosis in response to chemotherapy. Analysis shows mitochondrial outer membrane permeabilization resulting in the leakage of cytochrome c into the cytosol. Which initiator caspase is directly activated as part of this pathway?",
-     "options": [
-      "Caspase-8",
-      "Caspase-3",
-      "Caspase-9",
-      "Caspase-1"
-     ],
-     "correct": 2,
-     "explanation": "In the intrinsic apoptotic pathway, cytosolic cytochrome c binds Apaf-1 to form the apoptosome, which directly recruits and activates initiator Caspase-9.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-15-4",
-   "title": "Protein Energy Malnutrition: case showdown",
-   "game": "case",
-   "topic": "Protein Energy Malnutrition",
+   "topic": "Fluid and Electrolyte Disorders",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 14-month-old boy is brought to the clinic due to poor weight gain and chronic diarrhea. Physical examination reveals severe muscle wasting, loss of subcutaneous fat resulting in an old-man appearance (\"monkey facies\"), and a weight-for-height Z-score of <-3 SD, but no peripheral edema. What is the most likely diagnosis?",
-     "options": [
-      "Kwashiorkor",
-      "Marasmus",
-      "Marasmic kwashiorkor",
-      "Celiac disease"
-     ],
-     "correct": 1,
-     "explanation": "Marasmus is characterized by severe wasting of muscle and subcutaneous fat tissue without generalized edema, typically resulting from severe energy deficiency.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An 18-month-old girl presents with lethargy, poor appetite, and progressive swelling over the last three weeks. On examination, she has generalized pitting edema, hair discoloration (\"flag sign\"), hyperpigmented skin lesions that resemble flaky paint, and hepatomegaly. What is the most likely diagnosis?",
-     "options": [
-      "Marasmus",
-      "Kwashiorkor",
-      "Nephrotic syndrome",
-      "Severe acute dehydration"
-     ],
-     "correct": 1,
-     "explanation": "Kwashiorkor presents with generalized edema, dermatosis, hair changes, and hepatomegaly, resulting primarily from severe protein deficiency despite adequate or variable caloric intake.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 2-year-old boy with severe acute malnutrition is admitted to the pediatric ward with lethargy and hypothermia (rectal temperature 35.1°C). Bedside testing shows a blood glucose level of 2.2 mmol/L. What is the immediate next best step in management?",
-     "options": [
-      "Administer high-calorie feed immediately",
-      "Give 10% dextrose solution orally or IV and rewarm the child",
-      "Administer high-dose oral iron supplementation",
-      "Infuse a 20 mL/kg normal saline bolus over 10 minutes"
-     ],
-     "correct": 1,
-     "explanation": "Hypoglycemia and hypothermia often coexist in severe acute malnutrition and require immediate treatment with 10% dextrose solution alongside gentle rewarming.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 15-month-old female with marasmic kwashiorkor requires rehydration for mild-to-moderate dehydration secondary to acute watery gastroenteritis. She shows signs of dehydration but has no features of septic shock. Which fluid regimen is most appropriate?",
-     "options": [
-      "Standard Oral Rehydration Solution (ORS)",
-      "Rehydration Solution for Malnutrition (ReSoMal)",
-      "Rapid bolus of 0.9% Normal Saline",
-      "5% Dextrose in 0.45% Normal Saline"
-     ],
-     "correct": 1,
-     "explanation": "ReSoMal is specifically formulated for malnourished children because standard ORS contains excess sodium, which can precipitate heart failure in severe acute malnutrition.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 20-month-old boy with severe acute malnutrition is admitted to the hospital and started on the stabilization phase of management using F-75 formula. Which of the following routine micronutrient interventions should be EXCLUDED during this initial stabilization phase?",
-     "options": [
-      "Vitamin A supplementation",
-      "Folic acid supplementation",
-      "Iron supplementation",
-      "Zinc supplementation"
-     ],
-     "correct": 2,
-     "explanation": "Iron supplementation must be withheld during the initial stabilization phase because free iron can exacerbate oxidative stress and enhance bacterial growth during active infection.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 3-year-old girl with severe marasmus is started on rapid high-calorie enteral feeds. Forty-eight hours after initiating feeds, she develops generalized weakness, confusion, tachycardia, and respiratory distress. Which electrolyte abnormality is primarily responsible for her presentation?",
-     "options": [
-      "Hyperkalemia",
-      "Hypophosphatemia",
-      "Hypercalcemia",
-      "Hyponatremia"
-     ],
-     "correct": 1,
-     "explanation": "Refeeding syndrome occurs when carbohydrate reintroduction triggers insulin release, driving phosphate into cells and causing severe hypophosphatemia.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 13-month-old infant with severe acute malnutrition has completed 5 days of stabilization treatment. His appetite has recovered, facial and pedal edema have resolved, and he is alert and active. What is the next best step in dietary management?",
-     "options": [
-      "Transition from F-75 to F-100 formula or RUTF",
-      "Discharge home on standard cow's milk immediately",
-      "Continue F-75 formula for an additional 4 weeks",
-      "Initiate total parenteral nutrition"
-     ],
-     "correct": 0,
-     "explanation": "Once appetite returns and edema resolves, children progress from the stabilization phase (F-75) to the rehabilitation phase using F-100 or ready-to-use therapeutic food (RUTF).",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 16-month-old child with severe acute malnutrition is admitted for inpatient management. He appears lethargic but has a normal body temperature, clear chest, and no localized signs of infection. What is the most appropriate strategy regarding antibiotic coverage?",
-     "options": [
-      "Withhold antibiotics unless blood cultures return positive",
-      "Administer empirical broad-spectrum antibiotic coverage",
-      "Start high-dose IV vancomycin and meropenem",
-      "Prescribe oral fluconazole prophylaxis only"
-     ],
-     "correct": 1,
-     "explanation": "Routine empirical broad-spectrum antibiotic treatment is recommended for all admitted children with severe acute malnutrition because clinical signs of infection are frequently masked.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
+   "questions": {
+    "questions": [
+     {
+      "q": "A 68‑year‑old man with a history of chronic kidney disease presents with confusion, lethargy, and a serum sodium of 128 mmol/L. He reports decreased oral intake and has a urine osmolality of 350 mOsm/kg. What is the most likely diagnosis?",
+      "options": [
+       "Hyponatremia due to SIADH",
+       "Hypothyroidism",
+       "Hypovolemic hyponatremia",
+       "Psychogenic polydipsia"
+      ],
+      "correct": 2,
+      "explanation": "Low serum sodium with relatively concentrated urine in a CKD patient suggests hypovolemic hyponatremia due to volume depletion.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 45‑year‑old woman with a history of type 2 diabetes presents with polyuria, polydipsia, and a serum potassium of 3.0 mmol/L. Her serum bicarbonate is 18 mmol/L. What is the next best step in management?",
+      "options": [
+       "Start insulin therapy",
+       "Administer intravenous potassium chloride",
+       "Prescribe a low‑potassium diet",
+       "Give oral bicarbonate"
+      ],
+      "correct": 0,
+      "explanation": "Hyperglycemia drives osmotic diuresis and potassium loss; insulin will correct hyperglycemia and shift potassium intracellularly.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 22‑year‑old man is admitted for severe vomiting and abdominal pain. On examination, he has dry mucous membranes and a heart rate of 110 bpm. His serum sodium is 140 mmol/L and serum osmolality is 260 mOsm/kg. What is the most likely diagnosis?",
+      "options": [
+       "Hypovolemic hyponatremia",
+       "Euvolemic hyponatremia",
+       "Hypervolemic hyponatremia",
+       "Syndrome of inappropriate ADH secretion"
+      ],
+      "correct": 0,
+      "explanation": "Dehydration from vomiting causes hypovolemic hyponatremia with low serum osmolality.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 60‑year‑old woman with heart failure presents with worsening dyspnea. Her serum sodium is 132 mmol/L. Which of the following is the most appropriate next step?",
+      "options": [
+       "Initiate loop diuretic therapy",
+       "Start vasopressin antagonist",
+       "Add thiazide diuretic",
+       "Give hypertonic saline"
+      ],
+      "correct": 0,
+      "explanation": "Loop diuretics reduce fluid overload and improve hyponatremia in heart failure.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 30‑year‑old man with a recent diagnosis of nephrotic syndrome has a serum sodium of 138 mmol/L and a serum osmolality of 280 mOsm/kg. He is euvolemic. What is the most likely cause of his hyponatremia?",
+      "options": [
+       "Syndrome of inappropriate ADH secretion",
+       "Hypothyroidism",
+       "Primary adrenal insufficiency",
+       "Renal salt wasting"
+      ],
+      "correct": 0,
+      "explanation": "Nephrotic syndrome can cause SIADH leading to euvolemic hyponatremia.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 55‑year‑old woman presents with muscle cramps and a serum potassium of 2.8 mmol/L. She reports taking a thiazide diuretic for hypertension. What is the most appropriate next step?",
+      "options": [
+       "Switch to a loop diuretic",
+       "Add potassium‑sparing diuretic",
+       "Increase dietary potassium",
+       "Administer intravenous potassium chloride"
+      ],
+      "correct": 1,
+      "explanation": "Adding a potassium‑sparing diuretic (e.g., spironolactone) helps prevent thiazide‑induced hypokalemia.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 70‑year‑old man with chronic liver disease presents with confusion and a serum sodium of 125 mmol/L. His serum osmolality is 270 mOsm/kg. What is the most likely diagnosis?",
+      "options": [
+       "Hepatorenal syndrome",
+       "Syndrome of inappropriate ADH secretion",
+       "Adrenal crisis",
+       "Hyperaldosteronism"
+      ],
+      "correct": 1,
+      "explanation": "Hepatic encephalopathy with hyponatremia is often due to SIADH in cirrhosis.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 50‑year‑old woman with a history of chronic pancreatitis presents with abdominal pain and a serum bicarbonate of 12 mmol/L. Her serum sodium is 138 mmol/L. What is the most likely diagnosis?",
+      "options": [
+       "Metabolic acidosis due to pancreatic insufficiency",
+       "Renal tubular acidosis type 1",
+       "Diabetic ketoacidosis",
+       "Lactic acidosis"
+      ],
+      "correct": 0,
+      "explanation": "Pancreatic exocrine insufficiency can cause malabsorption and metabolic acidosis.",
+      "ai": true,
+      "kind": "case"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
   },
   {
-   "id": "2026-11-15-5",
-   "title": "Gastroesophageal Reflux Disease: drug duel",
-   "game": "drug",
-   "topic": "Gastroesophageal Reflux Disease",
+   "id": "2026-11-16-4",
+   "title": "Paed 2021: case showdown",
+   "game": "case",
+   "topic": "Paed 2021",
    "year": 4,
-   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 3-year-old child with severe gastroesophageal reflux disease (GERD) unresponsive to conservative measures is prescribed omeprazole. What is the mechanism of action of this drug?",
-     "options": [
-      "Irreversible inhibition of the H+/K+-ATPase enzyme system in gastric parietal cells",
-      "Competitive antagonism of histamine H2 receptors on parietal cells",
-      "Neutralisation of gastric acid by reacting directly with hydrochloric acid",
-      "Stimulation of gastric motility by activating serotonin 5-HT4 receptors"
-     ],
-     "correct": 0,
-     "explanation": "Omeprazole is a proton pump inhibitor that works by irreversibly inhibiting the H+/K+-ATPase pump in gastric parietal cells.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "An 8-month-old infant with GERD shows an initial positive response to famotidine, but the therapeutic response diminishes significantly after 2 weeks of continuous therapy. Which pharmacological concept best explains this reduction in efficacy?",
-     "options": [
-      "First-pass metabolism",
-      "Enzyme induction",
-      "Tachyphylaxis",
-      "Zero-order elimination kinetics"
-     ],
-     "correct": 2,
-     "explanation": "Histamine H2 receptor antagonists like famotidine are known to cause tachyphylaxis, or rapid tolerance, limiting their long-term efficacy.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Sodium alginate (Infant Gaviscon) is prescribed for a 5-month-old infant with frequent regurgitation. How does this medication primarily function to manage reflux?",
-     "options": [
-      "Directly suppresses baseline nocturnal acid secretion by blocking parietal cell receptors",
-      "Forms a viscous gel layer floating on top of gastric contents to physically impede reflux",
-      "Accelerates gastric emptying by acting as a peripheral dopamine receptor antagonist",
-      "Binds to mucosal proteins to form a protective barrier over eroded lower oesophageal mucosa"
-     ],
-     "correct": 1,
-     "explanation": "Sodium alginate reacts with gastric acid to form a viscous raft that floats on gastric contents, physically preventing gastroesophageal reflux.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Infant Gaviscon (sodium alginate with magnesium alginate) must be used with extreme caution or avoided in dehydrated infants or those with renal impairment primarily due to the risk of which adverse effect?",
-     "options": [
-      "Hypokalemia",
-      "QT prolongation",
-      "Extrapyramidal symptoms",
-      "Hypernatremia"
-     ],
-     "correct": 3,
-     "explanation": "Infant Gaviscon contains high levels of sodium, posing a significant risk of hypernatremia in dehydrated infants or those with impaired renal excretion.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 6-year-old child treated for gastroesophageal reflux with metoclopramide presents to the emergency department with an acute dystonic reaction (oculogyric crisis). Which mechanism mediates this side effect?",
-     "options": [
-      "Central D2 dopamine receptor antagonism",
-      "Peripheral muscarinic M3 receptor stimulation",
-      "Central histamine H1 receptor blockade",
-      "Peripheral alpha-1 adrenergic receptor blockade"
-     ],
-     "correct": 0,
-     "explanation": "Metoclopramide crosses the blood-brain barrier and can induce extrapyramidal side effects like acute dystonia via central D2 dopamine receptor blockade.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Domperidone was historically used as a prokinetic agent for paediatric GERD, but its use is now strictly restricted due to concerns regarding which severe adverse effect?",
-     "options": [
-      "Idiopathic intracranial hypertension",
-      "Cardiac arrhythmias associated with QT prolongation",
-      "Aplastic anaemia",
-      "Severe acute hepatotoxicity"
-     ],
-     "correct": 1,
-     "explanation": "Domperidone carries a well-established risk of serious cardiac side effects, specifically QT interval prolongation and fatal ventricular arrhythmias.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Long-term proton pump inhibitor (PPI) therapy in paediatric patients with GERD is associated with an increased risk of which of the following complications?",
-     "options": [
-      "Hypertrophic pyloric stenosis",
-      "Renal tubular acidosis",
-      "Enteric infections and community-acquired pneumonia",
-      "Peripheral neuropathy due to vitamin C deficiency"
-     ],
-     "correct": 2,
-     "explanation": "Gastric acid suppression from long-term PPI therapy reduces non-immune host defense, predisposing children to enteric infections and respiratory tract infections.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 10-year-old child with severe neurodisability and refractory GERD is prescribed baclofen to reduce reflux episodes. What is the mechanism of action of baclofen in this context?",
-     "options": [
-      "GABA-B receptor agonist that reduces transient lower oesophageal sphincter relaxations",
-      "GABA-A receptor agonist that speeds up gastric emptying time",
-      "Motilin receptor agonist that increases lower oesophageal sphincter basal tone",
-      "Direct proton pump inhibitor that reduces nocturnal acid secretion"
-     ],
-     "correct": 0,
-     "explanation": "Baclofen is a selective GABA-B receptor agonist that reduces gastroesophageal reflux by inhibiting transient lower oesophageal sphincter relaxations (TLESRs).",
-     "ai": true,
-     "kind": "drug"
-    }
-   ]
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "A 4‑year‑old boy presents with a 3‑day history of fever, sore throat, and a sudden, painless swelling of the left tonsil. Examination reveals a firm, non‑tender mass with a bluish hue and a normal cervical lymph node count. What is the most likely diagnosis?",
+      "options": [
+       "Adenoid hypertrophy",
+       "Peritonsillar abscess",
+       "Lymphoma",
+       "Tonsillar cyst"
+      ],
+      "correct": 2,
+      "explanation": "A firm, non‑tender, bluish tonsillar mass in a child is classic for a tonsillar lymphoma (often a non‑Hodgkin lymphoma). Adenoid hypertrophy and tonsillar cysts are usually soft and may be tender, while a peritonsillar abscess is painful and often tender.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 2‑year‑old girl is brought in with a 2‑day history of cough, nasal congestion, and a high fever. On examination she has a red, bulging tympanic membrane and a low‑pitch, “whooping” cough. What is the next best step in management?",
+      "options": [
+       "Administer oral amoxicillin",
+       "Give oral azithromycin",
+       "Start oral prednisolone",
+       "Provide supportive care only"
+      ],
+      "correct": 1,
+      "explanation": "The presentation is classic for pertussis. The first‑line treatment is a macrolide antibiotic, such as oral azithromycin (or erythromycin). Penicillin G is no longer recommended for pertussis.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 6‑month‑old infant presents with a sudden onset of vomiting, lethargy, and a high fever. He has a history of recent upper respiratory infection. Examination reveals a bulging fontanelle and a rapid, irregular heartbeat. What is the most likely diagnosis?",
+      "options": [
+       "Acute otitis media",
+       "Sepsis",
+       "Meningitis",
+       "Bronchiolitis"
+      ],
+      "correct": 2,
+      "explanation": "Bulging fontanelle, lethargy, and tachycardia in an infant are classic signs of meningitis. Sepsis can also present similarly, but the presence of a bulging fontanelle strongly points to meningitis.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 9‑year‑old boy has a 4‑week history of intermittent abdominal pain, weight loss, and occasional bloody stools. He also reports fatigue and a mild fever. Physical examination shows pallor and a tender, enlarged spleen. Which investigation should be performed first?",
+      "options": [
+       "Abdominal ultrasound",
+       "Colonoscopy with biopsy",
+       "Complete blood count",
+       "Celiac serology"
+      ],
+      "correct": 2,
+      "explanation": "The first step in evaluating a child with abdominal pain, weight loss, bloody stools, anemia, and splenomegaly is a complete blood count to assess for anemia, leukocytosis, and eosinophilia, which can guide further work‑up for inflammatory bowel disease or other causes.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 3‑year‑old girl presents with a sudden onset of high fever, rash, and a swollen, tender right knee. She has a history of a recent upper respiratory infection. Examination shows a red, hot knee with limited range of motion. What is the most likely diagnosis?",
+      "options": [
+       "Septic arthritis",
+       "Juvenile idiopathic arthritis",
+       "Pediatric Lyme disease",
+       "Gonococcal arthritis"
+      ],
+      "correct": 0,
+      "explanation": "Acute, painful, swollen joint following a URI in a toddler is most consistent with septic arthritis, which requires urgent joint aspiration and antibiotics. Juvenile idiopathic arthritis is usually chronic, Lyme disease would have a characteristic rash, and gonococcal arthritis is rare in this age group.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 7‑year‑old boy is brought in with a 1‑day history of fever, sore throat, and a sudden, painless swelling of the left tonsil. Examination reveals a firm, non‑tender mass with a bluish hue and a normal cervical lymph node count. What is the most likely diagnosis?",
+      "options": [
+       "Adenoid hypertrophy",
+       "Peritonsillar abscess",
+       "Lymphoma",
+       "Tonsillar cyst"
+      ],
+      "correct": 2,
+      "explanation": "The presentation is characteristic of a tonsillar lymphoma. Adenoid hypertrophy and tonsillar cysts are usually soft and may be tender, while a peritonsillar abscess is painful.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 5‑year‑old girl presents with a 2‑day history of fever, cough, and a sudden onset of a high‑pitch, “whooping” cough. Examination reveals a red, bulging tympanic membrane. What is the next best step in management?",
+      "options": [
+       "Administer oral amoxicillin",
+       "Give oral azithromycin",
+       "Start oral prednisolone",
+       "Provide supportive care only"
+      ],
+      "correct": 1,
+      "explanation": "Pertussis is treated with a macrolide antibiotic such as oral azithromycin. Penicillin G is no longer the first‑line agent for pertussis.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 10‑month‑old infant presents with a sudden onset of vomiting, lethargy, and a high fever. He has a history of recent upper respiratory infection. Examination reveals a bulging fontanelle and a rapid, irregular heartbeat. What is the most likely diagnosis?",
+      "options": [
+       "Acute otitis media",
+       "Sepsis",
+       "Meningitis",
+       "Bronchiolitis"
+      ],
+      "correct": 2,
+      "explanation": "Bulging fontanelle, lethargy, and tachycardia are classic signs of meningitis in an infant.",
+      "ai": true,
+      "kind": "case"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
   },
   {
-   "id": "2026-11-15-6",
-   "title": "Mastering Joint Pathology: Arthritis, OA & Joint Anatomy: drug duel",
+   "id": "2026-11-16-5",
+   "title": "Expert Immunohematology Assessment: drug duel",
    "game": "drug",
-   "topic": "Mastering Joint Pathology: Arthritis, OA & Joint Anatomy",
+   "topic": "Expert Immunohematology Assessment",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which of the following agents is a biologic DMARD that specifically inhibits interleukin-6 (IL-6) receptors and is used in the treatment of rheumatoid arthritis?",
-     "options": [
-      "Adalimumab",
-      "Tocilizumab",
-      "Abatacept",
-      "Rituximab"
-     ],
-     "correct": 1,
-     "explanation": "Tocilizumab is a monoclonal antibody that targets the IL-6 receptor, reducing inflammation in rheumatoid arthritis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of methotrexate when used as a first-line DMARD in rheumatoid arthritis?",
-     "options": [
-      "Calcineurin inhibition",
-      "Dihydrofolate reductase inhibition",
-      "Tumor necrosis factor neutralization",
-      "Cyclooxygenase-2 specific inhibition"
-     ],
-     "correct": 1,
-     "explanation": "Methotrexate acts primarily as a competitive inhibitor of dihydrofolate reductase, leading to decreased synthesis of thymidylate and purines.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which medication used for acute gouty arthritis acts by binding to intracellular tubulin, thereby inhibiting neutrophil motility and migration?",
-     "options": [
-      "Allopurinol",
-      "Colchicine",
-      "Probenecid",
-      "Febuxostat"
-     ],
-     "correct": 1,
-     "explanation": "Colchicine disrupts microtubule polymerization by binding tubulin, inhibiting neutrophil activation and migration into the affected joint.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Long-term high-dose therapy with which of the following non-steroidal anti-inflammatory drugs (NSAIDs) is associated with the highest relative risk of selective COX-2 cardiovascular events?",
-     "options": [
-      "Naproxen",
-      "Ibuprofen",
-      "Celecoxib",
-      "Diclofenac"
-     ],
-     "correct": 3,
-     "explanation": "Diclofenac exhibits a cardiovascular risk profile similar to selective COX-2 inhibitors (coxibs), showing a higher thrombotic risk compared to naproxen.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of allopurinol in the chronic management of gout?",
-     "options": [
-      "Inhibition of xanthine oxidase",
-      "Increased renal excretion of uric acid",
-      "Urate oxidase activity converting uric acid to allantoin",
-      "Inhibition of urate reabsorption in the proximal tubule"
-     ],
-     "correct": 0,
-     "explanation": "Allopurinol and its metabolite oxypurinol inhibit xanthine oxidase, thereby decreasing the metabolic production of uric acid.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which of the following biologic DMARDs is a fusion protein consisting of the extracellular domain of CTLA-4 linked to the Fc portion of human IgG, inhibiting T-cell activation?",
-     "options": [
-      "Infliximab",
-      "Anakinra",
-      "Abatacept",
-      "Rituximab"
-     ],
-     "correct": 2,
-     "explanation": "Abatacept is a selective co-stimulation modulator that binds to CD80 and CD86 on antigen-presenting cells, preventing CD28-mediated T-cell activation.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which characteristic adverse effect is strongly associated with the long-term systemic use of glucocorticoids in the management of inflammatory arthritides?",
-     "options": [
-      "Osteoporosis",
-      "Gastrointestinal bleeding",
-      "Pulmonary fibrosis",
-      "Distal renal tubular acidosis"
-     ],
-     "correct": 0,
-     "explanation": "Glucocorticoids frequently cause secondary osteoporosis by decreasing bone formation and increasing bone resorption.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the mechanism of action of febuxostat, a medication used to lower serum uric acid levels in chronic gout?",
-     "options": [
-      "Non-purine selective inhibitor of xanthine oxidase",
-      "Recombinant uricase enzyme",
-      "Uricosuric agent inhibiting URAT1",
-      "Inhibition of interleukine-1 beta"
-     ],
-     "correct": 0,
-     "explanation": "Febuxostat is a potent, non-purine selective inhibitor of xanthine oxidase used to manage hyperuricemia in gout.",
-     "ai": true,
-     "kind": "drug"
-    }
-   ]
+   "questions": {
+    "questions": [
+     {
+      "q": "Which drug is most commonly used as a first‑line agent for the treatment of immune thrombocytopenia (ITP) in adults?",
+      "options": [
+       "A. Rituximab",
+       "B. Intravenous immunoglobulin (IVIG)",
+       "C. Prednisone",
+       "D. Eltrombopag"
+      ],
+      "correct": 2,
+      "explanation": "Prednisone (or other corticosteroids) is the standard first‑line therapy for newly diagnosed adult ITP. IVIG is reserved for rapid platelet elevation or when steroids are contraindicated.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the primary mechanism of action of eculizumab in the management of paroxysmal nocturnal hemoglobinuria (PNH)?",
+      "options": [
+       "A. Inhibition of platelet aggregation",
+       "B. Blockade of the C5 complement protein",
+       "C. Induction of erythroid progenitor proliferation",
+       "D. Chelation of free iron"
+      ],
+      "correct": 1,
+      "explanation": "Eculizumab binds to complement protein C5, preventing its cleavage and the formation of the membrane attack complex, thereby reducing intravascular hemolysis.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which of the following drugs is a thrombopoietin receptor agonist used in refractory ITP?",
+      "options": [
+       "A. Romiplostim",
+       "B. Vincristine",
+       "C. Prednisone",
+       "D. Hydroxyurea"
+      ],
+      "correct": 0,
+      "explanation": "Romiplostim is a thrombopoietin receptor agonist that stimulates megakaryocyte proliferation and platelet production, used in refractory ITP.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the characteristic side effect of rituximab that warrants pre‑medication with acetaminophen and antihistamine?",
+      "options": [
+       "A. Hypersensitivity reactions",
+       "B. Hypertension",
+       "C. Hyperglycemia",
+       "D. Neutropenia"
+      ],
+      "correct": 0,
+      "explanation": "Rituximab can cause infusion‑related hypersensitivity reactions; pre‑medication with acetaminophen and antihistamine helps prevent these events.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is indicated for the treatment of severe aplastic anemia when a matched sibling donor is unavailable?",
+      "options": [
+       "A. Cyclosporine",
+       "B. Azathioprine",
+       "C. Methotrexate",
+       "D. Mycophenolate mofetil"
+      ],
+      "correct": 0,
+      "explanation": "Cyclosporine combined with antithymocyte globulin is the standard immunosuppressive regimen for severe aplastic anemia when a matched sibling donor is not available.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which agent is a complement inhibitor used in atypical hemolytic uremic syndrome (aHUS)?",
+      "options": [
+       "A. Eculizumab",
+       "B. Eltrombopag",
+       "C. Daratumumab",
+       "D. Thalidomide"
+      ],
+      "correct": 0,
+      "explanation": "Eculizumab blocks terminal complement activation (C5) and is indicated for aHUS.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the main indication for the use of danazol in hematology?",
+      "options": [
+       "A. Treatment of iron deficiency anemia",
+       "B. Management of hereditary spherocytosis",
+       "C. Refractory immune thrombocytopenia",
+       "D. Prevention of transfusion‑transmitted infections"
+      ],
+      "correct": 2,
+      "explanation": "Danazol has been used historically in refractory ITP and autoimmune hemolytic anemia, not for suppressing erythropoiesis in thalassemia.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is a potent inhibitor of platelet glycoprotein IIb/IIIa receptors used in acute coronary syndromes?",
+      "options": [
+       "A. Clopidogrel",
+       "B. Ticagrelor",
+       "C. Eptifibatide",
+       "D. Aspirin"
+      ],
+      "correct": 2,
+      "explanation": "Eptifibatide is a reversible GP IIb/IIIa antagonist that prevents platelet aggregation in acute coronary syndromes.",
+      "ai": true,
+      "kind": "drug"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
   }
  ]
 }
