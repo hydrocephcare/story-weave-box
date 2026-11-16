@@ -207,10 +207,10 @@ function toMetaTitle(input: string, fallback = "Medical Study Resource"): string
 
 function cleanResourceBaseTitle(input: string): string {
   return String(input || "")
-    .replace(/\\s*[|–—-]\\s*Ompath\\s*Study(?:\\s*Kenya)?\\s*$/i, "")
-    .replace(/\\s*(?:[|:–—-]\\s*)?(?:MCQs?|Flashcards?)\\s*$/i, "")
-    .replace(/\\s*(?:[|:–—-]\\s*)?(?:MCQs?|Flashcards?)\\s*$/i, "")
-    .replace(/\\s+/g, " ")
+    .replace(/\s*[|–—-]\s*Ompath\s*Study(?:\s*Kenya)?\s*$/i, "")
+    .replace(/\s*(?:[|:–—-]\s*)?(?:MCQs?|Flashcards?)\s*$/i, "")
+    .replace(/\s*(?:[|:–—-]\s*)?(?:MCQs?|Flashcards?)\s*$/i, "")
+    .replace(/\s+/g, " ")
     .trim() || "Medical revision";
 }
 
@@ -220,10 +220,10 @@ function resourceMetaTitle(input: string, slug: string, category: string, kind: 
   const excluded = new Set(["mcq", "mcqs", "quiz", "questions", "flashcard", "flashcards", "and", "the", "for", "of", "in", "on", "to", "set"]);
   const extras = String(slug || "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).filter((token) => !baseTokens.includes(token) && !excluded.has(token));
   const rawCategory = String(category || "").trim();
-  const year = rawCategory.match(/^Year\\s*([1-6])\\s*:?\\s*(.*)$/i);
+  const year = rawCategory.match(/^Year\s*([1-6])\s*:?\s*(.*)$/i);
   const categoryLabel = year ? `Y${year[1]} ${year[2]}`.trim() : rawCategory;
   const descriptor = (extras.length ? `Set ${extras.join(" ")}` : categoryLabel || "Revision").slice(0, 18);
-  const shortBase = base.length > 32 ? base.slice(0, 32).replace(/\\s+\\S*$/, "") : base;
+  const shortBase = base.length > 32 ? base.slice(0, 32).replace(/\s+\S*$/, "") : base;
   return `${shortBase} (${descriptor}) ${kind} | Ompath Study`;
 }
 
