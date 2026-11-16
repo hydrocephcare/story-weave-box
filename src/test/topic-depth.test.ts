@@ -2,13 +2,19 @@ import { describe, expect, it } from "vitest";
 import { buildPrompt, buildDeepPrompt, sanitizeDeep, cleanChoices } from "../../supabase/functions/_shared/topicAi.js";
 import { deepToText } from "../../supabase/functions/_shared/contentCheck.js";
 
-const sec = (h: string) => ({ h, b: [`${h}: a clear point to learn`, `${h}: a second point to learn`] });
-const viva = (i: number) => ({ q: `Examiner question number ${i}, what would you do next?`, a: `The key points of answer ${i}.` });
-const mcq = (i: number) => ({ q: `A 40-year-old patient number ${i} presents with cough, what is the next step?`, o: ["Option one", "Option two", "Option three", "Option four"], a: 1, e: "Because option two is right." });
+const longText = "This section explains the relevant physiology, pathophysiology, clinical reasoning, investigation and management decisions in detail. ".repeat(12);
+const sec = (h: string) => ({ h, p: longText, b: [h + ": a clear point to learn", h + ": a second point to learn"] });
+const viva = (i: number) => ({ q: "Examiner question number " + i + ", what would you do next?", a: "The key points of answer " + i + " with clinical reasoning and interpretation." });
+const mcq = (i: number) => ({ q: "A 40-year-old patient number " + i + " presents with cough, what is the next step?", o: ["Option one", "Option two", "Option three", "Option four"], a: 1, e: "Because option two is right." });
 const clinical = { sections: ["Bedside: history and how to examine", "Investigations and how to read them", "Diagnosis, staging and severity"].map(sec) };
-const management = { sections: ["Management step by step", "Complications and when to escalate"].map(sec) };
-const exam = { facts: ["Number one to memorise", "Number two to memorise"], vivas: Array.from({ length: 9 }, (_, i) => viva(i + 1)), mcqs: [mcq(1), mcq(2)], cases: [{ v: "A 30-year-old woman presents with fever and cough for three weeks.", qs: [{ q: "What is the diagnosis?", a: "The most likely diagnosis is X." }, { q: "What is the next step?", a: "Do the test Y first." }] }], mistakes: ["Forgetting to check the second thing"] };
-
+const management = { sections: ["Management step by step", "Complications and when to escalate", "Pharmacology and treatment safety", "Follow-up and prevention"].map(sec) };
+const exam = {
+  facts: Array.from({ length: 6 }, (_, i) => "Number " + (i + 1) + " to memorise"),
+  vivas: Array.from({ length: 12 }, (_, i) => viva(i + 1)),
+  mcqs: Array.from({ length: 6 }, (_, i) => mcq(i + 1)),
+  cases: [1, 2].map((n) => ({ v: "A clinical case " + n + " with relevant findings.", qs: [{ q: "What is the diagnosis?", a: "Use the clinical pattern." }, { q: "What is the next step?", a: "Choose an investigation that answers the clinical question." }] })),
+  mistakes: ["Forgetting the clinical context", "Ignoring red flags", "Ordering tests without a question", "Missing contraindications", "Failing to reassess"],
+};
 describe("revision page and deep exam notes", () => {
   it("the default topic page is comprehensive, with full depth and no quick-mode default", () => {
     const p = buildPrompt({ name: "Ascites", category: "Medicine" });
@@ -34,15 +40,15 @@ describe("revision page and deep exam notes", () => {
 
   it("the three parts are merged and checked: no doses, a real MCQ shape, and 'exam' lines for older readers", () => {
     const ok = sanitizeDeep([clinical, management, exam], "Ascites");
-    expect(ok.sections).toHaveLength(5);
-    expect(ok.vivas).toHaveLength(9);
-    expect(ok.mcqs).toHaveLength(2);
-    expect(ok.cases).toHaveLength(1);
+    expect(ok.sections).toHaveLength(7);
+    expect(ok.vivas).toHaveLength(12);
+    expect(ok.mcqs).toHaveLength(6);
+    expect(ok.cases).toHaveLength(2);
     expect(ok.exam[0]).toContain(" — ");
     const dosed = sanitizeDeep([clinical, { sections: [...management.sections, { h: "Drugs", b: ["Give 500 mg twice daily", "Spironolactone is first line"] }] }, exam], "Ascites");
     expect(JSON.stringify(dosed)).not.toContain("500 mg");
-    const badMcq = sanitizeDeep([clinical, management, { ...exam, mcqs: [{ ...mcq(1), a: 7 }, { ...mcq(2), o: ["Same", "Same", "Same", "Same"] }, mcq(3)] }], "Ascites");
-    expect(badMcq.mcqs).toHaveLength(1);
+    const badMcq = sanitizeDeep([clinical, management, { ...exam, mcqs: [...exam.mcqs, { ...mcq(7), a: 7 }, { ...mcq(8), o: ["Same", "Same", "Same", "Same"] }] }], "Ascites");
+    expect(badMcq.mcqs).toHaveLength(6);
   });
 
   it("deep notes that are too thin are refused, and a section made out of questions is dropped", () => {
@@ -57,9 +63,9 @@ describe("revision page and deep exam notes", () => {
     expect(JSON.stringify(d)).not.toMatch(/<[A-Za-z]/);
   });
 
-  it("the first version of the deep notes (sections + exam lines) still reads", () => {
-    const old = sanitizeDeep([{ sections: [...clinical.sections, ...management.sections], exam: Array.from({ length: 9 }, (_, i) => `Question ${i + 1} what next? — answer ${i + 1}`) }], "Ascites");
-    expect(old.vivas).toHaveLength(9);
+  it("refuses legacy section-and-exam-only notes until missing practice material is generated", () => {
+    const old = [{ sections: [...clinical.sections, ...management.sections], exam: Array.from({ length: 12 }, (_, i) => "Question " + (i + 1) + " what next? — answer " + (i + 1)) }];
+    expect(() => sanitizeDeep(old, "Ascites")).toThrow();
   });
 
   it("the text sent to the cross-check holds every part of the deep notes", () => {
