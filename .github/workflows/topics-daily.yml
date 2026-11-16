@@ -7,19 +7,19 @@ on:
       count:
         description: "How many new comprehensive topic pages to write"
         required: false
-        default: "25"
+        default: "40"
       review:
         description: "How many legacy topic pages to regenerate and Gemini-review"
         required: false
-        default: "20"
+        default: "40"
       deep:
         description: "How many live topic pages to receive deep exam notes"
         required: false
-        default: "20"
+        default: "30"
       check:
         description: "How many library notes to cross-check"
         required: false
-        default: "12"
+        default: "20"
 permissions:
   contents: write
 concurrency:
@@ -59,7 +59,7 @@ jobs:
         env:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-        run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '25' }} --parallel=3
+        run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '40' }} --parallel=3
       - name: Rebuild static topic pages with the new comprehensive AI content
         id: merge_new_topics
         continue-on-error: true
@@ -80,7 +80,7 @@ jobs:
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          TOPIC_REVIEW_COUNT: ${{ inputs.review || '20' }}
+          TOPIC_REVIEW_COUNT: ${{ inputs.review || '40' }}
         run: node scripts/topics/review-database-pages.mjs
       - name: Generate comprehensive deep exam notes for live topic pages
         id: live_deep
@@ -91,7 +91,7 @@ jobs:
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || '20' }}
+          TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || '30' }}
           TOPIC_DEEP_DB_PARALLEL: "2"
         run: node scripts/topics/deep-fill-database.mjs
       - name: Fill the static topic corpus deep-note queue
@@ -101,7 +101,7 @@ jobs:
         env:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-        run: node scripts/topics/deep-fill.mjs 20
+        run: node scripts/topics/deep-fill.mjs 30
       - name: Merge generated deep exam notes into the static topic pages
         id: merge_deep
         continue-on-error: true
@@ -117,7 +117,7 @@ jobs:
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '12' }}
+        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '20' }}
       - name: Write page summaries
         id: summaries
         continue-on-error: true
