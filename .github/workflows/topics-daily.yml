@@ -1,37 +1,30 @@
 name: Daily topic pages and AI overviews
-
-# Every day at 05:00 Nairobi time (02:00 UTC):
-#   1. the topic pages are rebuilt from the notes, MCQs and essays (so new notes show up on their topic pages),
-#   2. every morning 25 more topics get a full page (Groq drafts; Gemini independently reviews; both GROQ_API_KEYS and GEMINI_API_KEYS secrets are required),
-#   2b. up to 12 topics get their deep exam notes (the Pro layer, written ahead of time so nobody waits or spends credits),
-#   3. the new overviews are committed, which redeploys the site and refreshes the sitemap.
-# Run it yourself any time: GitHub > Actions > "Daily topic pages and AI overviews" > Run workflow.
-# AI overviews are saved as "not reviewed" and say so on the page. To mark one as checked by a doctor, set "reviewed": true in src/data/topicAi/<topic>.json.
 on:
   schedule:
     - cron: "0 2 * * *"
   workflow_dispatch:
     inputs:
       count:
-        description: "How many topic pages to write this run"
+        description: "How many new comprehensive topic pages to write"
         required: false
         default: "25"
-      deep:
-        description: "How many topics get deep exam notes this run"
+      review:
+        description: "How many legacy topic pages to regenerate and Gemini-review"
         required: false
-        default: "12"
+        default: "20"
+      deep:
+        description: "How many live topic pages to receive deep exam notes"
+        required: false
+        default: "20"
       check:
-        description: "How many notes the second AI cross-checks this run"
+        description: "How many library notes to cross-check"
         required: false
         default: "8"
-
 permissions:
   contents: write
-
 concurrency:
   group: topics-daily
   cancel-in-progress: false
-
 jobs:
   topics:
     runs-on: ubuntu-latest
@@ -40,87 +33,101 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
       - name: Install
         run: npm ci
-
-      - name: Restore yesterday's reading of the library (so only what changed is read from the database)
+      - name: Restore yesterday's reading of the library
         uses: actions/cache@v4
         with:
           path: .cache/topics-corpus.json
           key: topics-corpus-${{ github.run_id }}
           restore-keys: topics-corpus-
-
-      - name: Rebuild the topic pages
+      - name: Rebuild topic pages from the library
+        id: rebuild
+        continue-on-error: true
         run: node scripts/topics/build-topics.mjs --fresh
-
-      - name: Rebuild the picture sitemap (every picture on the site, under its page)
+      - name: Rebuild the picture sitemap
+        id: image_sitemap
         continue-on-error: true
         run: node scripts/seo/image-sitemap.mjs
-
-      - name: Write today's topic pages
+      - name: Write new comprehensive topic pages (Groq)
+        id: topic_pages
+        continue-on-error: true
         env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
         run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '25' }} --parallel=3
-
-      # Saved straight away: the slower steps below once ran past the time limit and the day's finished pages were thrown away
-      - name: Save the new topic pages now
-        run: |
-          if [ -n "$(git status --porcelain public/topics src/data/topicAi public/image-sitemap.xml)" ]; then
-            git config user.name "ompath-bot"
-            git config user.email "ompath-bot@users.noreply.github.com"
-            git add -f public/topics src/data/topicAi public/image-sitemap.xml
-            git commit -m "Daily AI topic overviews"
-            git pull --rebase origin main
-            git push origin main
-          fi
-
-      - name: Write today's deep exam notes (stops by itself when the AI keys run out)
+      - name: Save new topic pages immediately
+        if: always()
+        run: node scripts/git/commit-generated.mjs "Daily comprehensive topic pages" public/topics src/data/topicAi public/image-sitemap.xml
+      - name: Regenerate and Gemini-review legacy published topics
+        id: legacy_review
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          TOPIC_REVIEW_COUNT: ${{ inputs.review || '20' }}
+        run: node scripts/topics/review-database-pages.mjs
+      - name: Generate comprehensive deep exam notes for live topic pages
+        id: live_deep
+        continue-on-error: true
+        timeout-minutes: 35
+        env:
+          SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || '20' }}
+          TOPIC_DEEP_DB_PARALLEL: "2"
+        run: node scripts/topics/deep-fill-database.mjs
+      - name: Fill the static topic corpus deep-note queue
+        id: static_deep
         continue-on-error: true
         timeout-minutes: 25
         env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-        run: node scripts/topics/deep-fill.mjs ${{ inputs.deep || '12' }}
-
-      - name: Cross-check notes with a second AI (marks the clean ones, lists the rest in Admin > Content checks)
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+        run: node scripts/topics/deep-fill.mjs 20
+      - name: Cross-check library notes
+        id: note_check
         continue-on-error: true
         timeout-minutes: 15
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '8' }}
-
-      - name: Write today's page summaries
+      - name: Write page summaries
+        id: summaries
         continue-on-error: true
         timeout-minutes: 15
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/summaries/fill.mjs 25 --parallel=2
-
-      - name: Save the new overviews
+      - name: Save generated topic and review data
         if: always()
-        run: |
-          if [ -z "$(git status --porcelain public/topics src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json)" ]; then
-            echo "No new overviews today."
-          else
-            git config user.name "ompath-bot"
-            git config user.email "ompath-bot@users.noreply.github.com"
-            git add -f public/topics src/data/topicAi public/image-sitemap.xml src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json
-            git commit -m "Daily AI topic overviews"
-            git pull --rebase origin main
-            git push origin main
-          fi
-
-      - name: Redeploy the site (so the sitemap and topic pages pick up new notes)
+        run: node scripts/git/commit-generated.mjs "Daily AI topic and note updates" public/topics src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json public/image-sitemap.xml
+      - name: Report incomplete automation stages
+        if: always()
         env:
-          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+          REBUILD: ${{ steps.rebuild.outcome }}
+          TOPICS: ${{ steps.topic_pages.outcome }}
+          LEGACY_REVIEW: ${{ steps.legacy_review.outcome }}
+          LIVE_DEEP: ${{ steps.live_deep.outcome }}
+          STATIC_DEEP: ${{ steps.static_deep.outcome }}
+          NOTE_CHECK: ${{ steps.note_check.outcome }}
         run: |
-          if [ -n "$HOOK" ]; then curl -fsS -X POST "$HOOK" && echo "Redeploy requested."; else echo "No VERCEL_DEPLOY_HOOK secret: skipping redeploy."; fi
+          failed=0
+          for value in "$REBUILD" "$TOPICS" "$LEGACY_REVIEW" "$LIVE_DEEP" "$STATIC_DEEP" "$NOTE_CHECK"; do
+            echo "$value"
+            if [ "$value" != "success" ]; then failed=1; fi
+          done
+          exit "$failed"
