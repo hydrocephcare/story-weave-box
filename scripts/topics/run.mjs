@@ -5,10 +5,16 @@
 import fs from "node:fs";
 import { spawnSync } from "node:child_process";
 
-// Deploys must not read the whole library from the database (about 70 MB each time: that is what used up the free data limit). The topic pages are rebuilt
-// once a day by the GitHub workflow and committed in public/topics, so a deploy just uses them. Set FORCE_TOPICS=1 to rebuild during a deploy anyway.
+// Deploys must not read the whole library from Supabase. The daily workflow commits the corpus;
+// this deploy-time merge only attaches complete, Gemini-passed local topic JSON to the static pages.
 if (process.env.VERCEL && !process.env.FORCE_TOPICS && fs.existsSync("public/topics/index.json")) {
-  console.log("[topics] using the committed topic pages (rebuilt daily by the workflow); no database read during this deploy");
+  const merged = spawnSync(process.execPath, ["scripts/topics/merge-ai.mjs"], { encoding: "utf8", env: { ...process.env }, maxBuffer: 16 * 1024 * 1024 });
+  if (merged.stdout) process.stdout.write(merged.stdout);
+  if (merged.stderr) process.stderr.write(merged.stderr);
+  if (merged.status !== 0) {
+    console.error("[topics] could not merge the committed verified AI pages; refusing to build stale topic HTML.");
+    process.exit(merged.status || 1);
+  }
   process.exit(0);
 }
 
