@@ -36,13 +36,14 @@ for (let o = 0; o < 4000; o += 500) {
   if (!r.ok || !Array.isArray(r.json)) throw new Error("Could not read published articles: " + r.status + " " + r.text.slice(0, 160));
   rows.push(...r.json); if (r.json.length < 500) break;
 }
-const have = await sb("blog_polish?select=article_id,status,updated_at,ai_review_status&limit=5000");
+const have = await sb("blog_polish?select=article_id,status,updated_at,ai_review_status,verdict&limit=5000");
 if (!have.ok) throw new Error("The blog_polish AI verification migration is not ready: " + have.text.slice(0, 160));
 const state = new Map((have.json ?? []).map((x) => [x.article_id, x]));
 const hours = (x) => (Date.now() - new Date(x.updated_at).getTime()) / 3_600_000;
 const eligible = (a) => {
   const s = state.get(a.id);
   if (!s) return true;
+  if (s.verdict === "irrelevant") return false;
   return (s.status === "failed" && hours(s) > 12) || (s.status === "partial" && hours(s) > 1) || (s.status === "working" && hours(s) > 0.5) || (s.status === "done" && s.ai_review_status !== "passed" && hours(s) > 12);
 };
 // Year 2 and Year 1 first, then Year 3 and the rest
