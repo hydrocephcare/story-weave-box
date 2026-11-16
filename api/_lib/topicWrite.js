@@ -1,5 +1,5 @@
-// POST /api/topic-write { name, category, context }: writes a topic page with Gemini and returns it. The browser then saves it with the
-// publish_topic_page database function. Keys live only here, in the GEMINI_API_KEYS setting (comma separated); they take turns.
+// POST /api/topic-write { name, category, context }: Groq drafts a topic page and Gemini independently reviews it. The browser then saves it with the
+// publish_topic_page database function. Provider keys remain server-side; Gemini review is mandatory before a page is returned.
 import { generateReviewedTopicPage, validName } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
