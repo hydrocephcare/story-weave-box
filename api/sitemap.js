@@ -19,6 +19,14 @@ const REMOVED_404 = [
   "/blog/year-4-internal-medicine-acs-presentation",
   "/blog/year-4-paediatrics-paeds-4-kudra",
   "/blog/year-4-paediatrics-instructions",
+  // Confirmed HTTP 410 legacy Year 1 resources; do not advertise dead pages in sitemaps.
+  "/blog/year-1-anatomy-topnotch-thorax-anatomy-mcqs-saqs",
+  "/blog/year-1-oral-biology-4-maxillary-premolars",
+  "/blog/year-1-anatomy-abdomen-spot",
+  "/blog/year-1-anatomy-histology-flashcards",
+  "/blog/year-1-physiology-151021-lecture-1-cell",
+  "/blog/year-1-anatomy-pat-2021",
+  "/blog/year-1-anatomy-pat-14-with-ans-3",
   // Legacy weekly-exam slugs that no longer have a published essay record.
   "/essays/weekly-pathology-exam-april-3-2026-sections-b-and-c",
   "/essays/weekly-year-2-git-physiology-exam-april-10-2026-sections-b-and-c",
