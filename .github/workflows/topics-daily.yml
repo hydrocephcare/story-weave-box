@@ -19,7 +19,7 @@ on:
       check:
         description: "How many library notes to cross-check"
         required: false
-        default: "8"
+        default: "12"
 permissions:
   contents: write
 concurrency:
@@ -102,7 +102,7 @@ jobs:
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '8' }}
+        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '12' }}
       - name: Write page summaries
         id: summaries
         continue-on-error: true
