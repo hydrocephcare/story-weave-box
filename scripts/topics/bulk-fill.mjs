@@ -22,7 +22,7 @@ const todo = index.filter((t) => {
   try {
     const p = JSON.parse(fs.readFileSync(file, "utf8"));
     if (p.medical === false) return false;
-    const ready = p.aiReview?.status === "passed" && (p.sections?.length || 0) >= 9 && (p.exam?.length || 0) >= 8 && (p.faq?.length || 0) >= 3 && Boolean(p.summary);
+    const ready = p.aiReview?.status === "passed" && String(p.summary || "").length >= 100 && (p.sections?.length || 0) >= 9 && (p.exam?.length || 0) >= 8 && (p.faq?.length || 0) >= 3 && JSON.stringify(p).split(/\s+/).length >= 700;
     return !ready;
   } catch { return true; }
 }).sort((a, b) => (b.d + b.q * 2 + b.i) - (a.d + a.q * 2 + a.i)).slice(0, COUNT);
