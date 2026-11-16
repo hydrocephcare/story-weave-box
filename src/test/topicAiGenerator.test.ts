@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 
 describe("Groq topic generation boundary", () => {
   it("sends generation requests only to Groq and returns the model used", async () => {
@@ -31,5 +31,53 @@ describe("Groq topic generation boundary", () => {
     ).rejects.toThrow("Groq generation is not configured");
 
     expect(fetchImpl).not.toHaveBeenCalled();
+  });
+
+  it("publishes only after Gemini approves the Groq-generated page", async () => {
+    const page = {
+      medical: true, title: "Asthma", subject: "Medicine",
+      summary: "Asthma is a chronic inflammatory disease of the airways.",
+      sections: [
+        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
+        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
+        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
+      ],
+      whenToSeekHelp: [], faq: [], exam: [], related: [],
+    };
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await generateReviewedTopicPage(
+      { name: "Asthma", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl },
+    );
+
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.page.aiReview.status).toBe("passed");
+    expect(result.review.status).toBe("passed");
+  });
+
+  it("holds a page back when Gemini cannot review it", async () => {
+    const page = {
+      medical: true, title: "Asthma", subject: "Medicine",
+      summary: "Asthma is a chronic inflammatory disease of the airways.",
+      sections: [
+        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
+        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
+        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
+      ],
+      whenToSeekHelp: [], faq: [], exam: [], related: [],
+    };
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response("review unavailable", { status: 503 }));
+
+    await expect(generateReviewedTopicPage(
+      { name: "Asthma", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl, maxFixRounds: 0 },
+    )).rejects.toThrow();
   });
 });
