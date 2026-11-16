@@ -2,6 +2,19 @@ name: Daily topic pages and AI overviews
 on:
   schedule:
     - cron: "0 2 * * *"
+  # Re-run the complete pipeline when generation, verification or deep-note safeguards change.
+  # Generated outputs are deliberately excluded, preventing an automation loop.
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/topics-daily.yml"
+      - "scripts/topics/bulk-fill.mjs"
+      - "scripts/topics/deep-fill.mjs"
+      - "scripts/topics/deep-fill-database.mjs"
+      - "scripts/topics/review-database-pages.mjs"
+      - "scripts/topics/build-topics.mjs"
+      - "supabase/functions/_shared/topicAi.js"
+      - "supabase/functions/_shared/contentCheck.js"
   workflow_dispatch:
     inputs:
       count:
