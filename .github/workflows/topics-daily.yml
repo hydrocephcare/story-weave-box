@@ -72,7 +72,7 @@ jobs:
         env:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-        run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '40' }} --parallel=3
+        run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || (github.event_name == 'push' && '4') || '40' }} --parallel=3
       - name: Rebuild static topic pages with the new comprehensive AI content
         id: merge_new_topics
         continue-on-error: true
@@ -93,7 +93,7 @@ jobs:
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          TOPIC_REVIEW_COUNT: ${{ inputs.review || '40' }}
+          TOPIC_REVIEW_COUNT: ${{ inputs.review || (github.event_name == 'push' && '4') || '40' }}
         run: node scripts/topics/review-database-pages.mjs
       - name: Generate comprehensive deep exam notes for live topic pages
         id: live_deep
@@ -104,7 +104,7 @@ jobs:
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || '40' }}
+          TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || (github.event_name == 'push' && '4') || '40' }}
           TOPIC_DEEP_DB_PARALLEL: "2"
         run: node scripts/topics/deep-fill-database.mjs
       - name: Fill the static topic corpus deep-note queue
@@ -114,7 +114,7 @@ jobs:
         env:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-        run: node scripts/topics/deep-fill.mjs 40
+        run: node scripts/topics/deep-fill.mjs ${{ inputs.deep || (github.event_name == 'push' && '4') || '40' }}
       - name: Merge generated deep exam notes into the static topic pages
         id: merge_deep
         continue-on-error: true
@@ -130,7 +130,7 @@ jobs:
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '40' }}
+        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || (github.event_name == 'push' && '4') || '40' }}
       - name: Write page summaries
         id: summaries
         continue-on-error: true
