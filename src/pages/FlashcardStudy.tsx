@@ -12,6 +12,7 @@ import { useHashFlash } from "@/lib/deep-link";
 import { markFlashcardVisited } from "@/lib/progress-store";
 import { SITE_URL, stripRichText, updateMetaTags } from "@/lib/seo";
 import { useTopicThumbnail } from "@/lib/topicThumbnail";
+import { resourceSeoTitle } from "@/lib/resourceSeoTitle";
 
 
 export default function FlashcardStudy() {
@@ -31,11 +32,11 @@ export default function FlashcardStudy() {
           markFlashcardVisited(s.id);
           const canonical = buildFlashcardPath(s);
           if (location.pathname !== canonical) navigate(canonical, { replace: true });
-          const metaTitle = s.meta_title?.trim() || s.title;
+          const metaTitle = resourceSeoTitle(s.meta_title?.trim() || s.title, s.slug, s.category, "Flashcards");
           const metaDesc = s.meta_description?.trim()
             || `Study ${s.title} flashcards. Interactive medical study cards for health students.`;
           updateMetaTags({
-            title: `${metaTitle} – Flashcards`,
+            title: metaTitle,
             description: metaDesc,
             image: s.og_image_url || `${SITE_URL}/og-default.png`,
             url: `${SITE_URL}${canonical}`,
