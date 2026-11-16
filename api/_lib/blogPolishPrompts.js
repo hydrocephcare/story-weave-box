@@ -21,45 +21,41 @@ Rules:
 
 const COMMON = `Never change the medicine. COPY THE AUTHOR'S SENTENCES NEARLY WORD FOR WORD: you may split a long sentence, join two short ones, move a sentence into the right section, turn a run of items into a list or table, and fix typing mistakes, but you must NOT summarise, shorten, paraphrase or leave anything out. Every fact, number, unit, drug name, abbreviation and every picture line (a line starting with ![ ) must stay exactly.`;
 
-export const NOTE_PROMPT = (a, content) => `You are rewriting a medical study note into the house style of the best notes on the website (the Year 4 notes). ${COMMON}
+const NOTE_COMMON = `Preserve every correct original fact, number, unit, drug name, warning, table, and image line. You may explain and expand the source using standard accepted medical knowledge, but never invent statistics, references, guideline recommendations or drug doses. Do not remove valid source material. If a detail is uncertain, qualify it or leave it out.`;
+
+export const NOTE_PROMPT = (a, content) => `You are the senior medical editor of OmpathStudy. Turn this source into a comprehensive, accurate teaching article for BOTH the general public and MBChB medical students. This is not a short summary. ${NOTE_COMMON}
 Title: "${a.title}" (${a.category}).
 
+First classify the subject correctly (disease, anatomy, physiology, pharmacology, pathology, microbiology, biochemistry, public health or another topic) and adapt the headings. Do not force irrelevant disease sections onto a non-disease topic.
+
 Write the page in this order:
-1. One italic sentence, specific to this note, saying what it covers and what the student will be able to do afterwards (use only what the note says). For example: *The kidney filters blood and balances water, salts and acid; this note follows the nephron from the hilum to the collecting duct.* Never write generic words such as "why it matters to a student".
-2. A line starting **In short:** with the whole idea in one or two sentences, or a **The reasoning chain:** line for clinical topics.
-3. The body in numbered "## 1. Heading", "## 2. Heading" sections (3 to 9 of them, plain headings). Use "### " only for real sub-sections. Paragraphs of at most three sentences. Bullet lists for lists and sequences. A table only where the note compares things (keep the table's facts).
-4. Bold ("**") only the few terms a student must remember, never more than two in a paragraph.
-5. Finish with "## Practice questions": 5 to 7 multiple-choice questions made ONLY from facts that are in the note, written the way a clinical-year examiner would ask them. Plan first: pick the points of the note an examiner is most likely to test, then make at least half of the questions short clinical scenarios (a patient lying in bed with these findings) that ask what to do next, which finding separates two conditions, or why one choice is avoided. Do not ask plain definitions. Use exactly this form:
+1. One clear opening paragraph in plain language for an interested member of the public, followed by the accurate technical definition.
+2. **In short:** a concise plain-language explanation, then a precise medical/scientific summary.
+3. At least 8 substantive numbered sections (normally 8-14). Use topic-specific headings, not generic filler. Each section needs a genuinely explanatory paragraph and/or 4-8 useful bullets; avoid one-line sections.
+4. Include classification and types where they exist. Explain normal physiology and mechanisms before explaining what goes wrong. For clinical topics cover causes/risk factors, pathophysiology, presentation, history and examination, differential diagnoses, investigations with interpretation, management rationale, relevant pharmacology, contraindications, adverse effects, complications, follow-up and prevention. For anatomy cover development, relations, blood/nerve supply, histology, function and applied anatomy. For pharmacology cover classes, prototypes, mechanism, pharmacokinetics, pharmacodynamics, indications, contraindications, adverse effects, interactions and monitoring. For public-health topics include implementation, health systems, equity and evaluation.
+5. Include a comparison table where it genuinely clarifies types, differentials, drugs, tests or management choices.
+6. Add one or two short, clearly labelled hypothetical examples or clinical cases. Explain the reasoning, not just the answer.
+7. Explain technical terms at first use. Use British spelling. Avoid unexplained abbreviations. No invented prevalence figures, sources or doses; when dosing is needed, say it must follow the current local guideline and patient-specific prescription.
+8. Finish with **Practice questions**: 8-10 multiple-choice questions, at least half based on short clinical or practical scenarios. Include the answer and a useful explanation grounded in the article. Do not test facts that the article has not taught.
 
-### Question 1
-Question text
+Use numbered "## 1. Heading" sections and "### " only for real subsections. Paragraphs should normally be 2-4 sentences. Use bullets for lists and processes. Bold only key terms, not whole sentences. Keep all original image markdown and URLs unchanged.
+Do not add a title line. Output ONLY the finished Markdown, no commentary, no code fences.
 
-A. option
-B. option
-C. option
-D. option
-
-Answer: B. the correct option text
-Explanation: one sentence from the note.
-
-Other rules:
-- Fix typing and grammar mistakes and remove chat leftovers ("Got it, here are the notes"), page markers and stray symbols. Keep the author's words. Do not add new medical facts.
-- If the note already ends with practice questions, keep them (in the form above) and do not add more.
-- Do not add a title line. Output ONLY the finished markdown, no commentary, no code fences.
-
-NOTE:
+SOURCE:
 """
 ${content}
 """`;
 
-/** One piece of a long note: layout and wording only, no intro and no questions (those belong to the whole page). */
-export const CHUNK_PROMPT = (a, content, first) => `You are tidying one part of a long medical study note into the house style of the Year 4 notes. ${COMMON}
-Title: "${a.title}" (${a.category}).${first ? "\nThis is the FIRST part: begin with one italic sentence saying what the whole note covers (use only what the text says), then a line starting **In short:**." : ""}
+/** Long-note part: retain every original point while adding the explanation needed to make that part teachable. */
+export const CHUNK_PROMPT = (a, content, first) => `You are expanding and organising one part of a long medical education article. ${NOTE_COMMON}
+Title: "${a.title}" (${a.category}).${first ? "\nThis is the first part: start with a plain-language opening sentence and a short **In short:** explanation." : ""}
 
 Rules:
-- Numbered "## 1. Heading" sections where the part has natural sections (keep the part's own heading order and numbering if it has one), "### " for sub-sections, short paragraphs (at most three sentences), bullet lists for lists, a table only where the text compares things.
-- Fix typing and grammar, remove chat leftovers, page markers, duplicated lines and stray symbols. Bold only a few key terms (at most two per paragraph). Do not add facts, questions or a title line.
-- Output ONLY the finished markdown, no commentary, no code fences.
+- Keep the source's heading order and every valid fact. Add concise explanations for mechanisms, terminology, clinical relevance, test interpretation or management rationale only where they belong in this part.
+- Do not create a duplicate introduction or conclusion in later parts. Use meaningful numbered headings, 2-4 sentence paragraphs and structured bullets. Explain the "why", not just lists.
+- Include the relevant physiology, classification, pharmacology or implementation detail when this part concerns those subjects.
+- Preserve all original image markdown and URLs exactly. Do not invent doses, statistics, references or guideline claims.
+- Output ONLY the finished Markdown, no commentary, no code fences.
 
 PART:
 """
