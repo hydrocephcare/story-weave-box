@@ -504,7 +504,7 @@ export async function topicAiCore(input, { env, fetchImpl = fetch }) {
     try { const result = await generateReviewedTopicPage({ name, category: String(input.category ?? ""), context: String(input.context ?? "").slice(0, 3500), env, fetchImpl }, { env, fetchImpl });\n      page = result.page; }
     catch { await save({ status: "failed" }); return { code: 502, body: { status: "failed" } }; }
     if (!page.medical) { await save({ status: "rejected" }); return { code: 404, body: { status: "rejected" } }; }
-    await save({ status: "published", content: page, model: page.model, reviewed: false, ai_reviewed: true });
+    await save({ status: "published", content: page, model: page.model, reviewed: false });
     return { code: 200, body: { status: "published", slug, page } };
   } catch { return { code: 502, body: { status: "failed" } }; }
 }
