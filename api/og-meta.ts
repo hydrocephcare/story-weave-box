@@ -237,6 +237,27 @@ function toMetaDescription(input: string, fallback: string): string {
   return enriched.length <= 155 ? enriched : enriched.slice(0, 152).trimEnd() + "...";
 }
 
+function articleMetaTitle(article: Record<string, string>): string {
+  const raw = article.meta_title && !(article.meta_title.length >= 58 && String(article.title || "").startsWith(article.meta_title))
+    ? article.meta_title
+    : article.title;
+  const base = cleanForMetaSnippet(raw || article.title || "Medical study notes")
+    .replace(/\s*[|–—-]\s*Ompath\s*Study(?:\s*Kenya)?\s*$/i, "")
+    .replace(/\s*[|–—:]\s*part\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim() || "Medical study notes";
+  const slug = String(article.slug || "").toLowerCase();
+  const part = slug.match(/(?:^|-)part-(\d+)(?:-|$)/i);
+  const stop = new Set(["the", "and", "for", "of", "in", "on", "to", "a", "an", "with", "blog", "notes", "note", "study", "medical", "mcq", "mcqs", "past", "paper", "article"]);
+  const baseTokens = new Set(slugify(base).split("-").filter(Boolean));
+  const extras = slug.split(/[^a-z0-9]+/).filter((token) => token && !baseTokens.has(token) && !stop.has(token) && !/^[0-9a-f]{8}$/.test(token));
+  const descriptor = part ? `Part ${part[1]}` : extras.length ? extras.slice(-2).map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join(" ") : `Ref ${String(article.id || slug).replace(/[^a-z0-9]/gi, "").slice(-6).toUpperCase()}`;
+  const suffix = ` — ${descriptor} | OmpathStudy`;
+  const maxBase = Math.max(20, 62 - suffix.length);
+  const shortBase = base.length > maxBase ? base.slice(0, maxBase).replace(/\s+\S*$/, "") : base;
+  return `${shortBase}${suffix}`;
+}
+
 function articleDescription(article: Record<string, string>): string {
   const title = cleanForMetaSnippet(article.title || "");
   const fallback = `${title} study notes with key clinical points, exam-focused explanations and revision support for medical students.`;
@@ -1164,12 +1185,9 @@ export default async function handler(req: Request): Promise<Response> {
       if (canonicalBlogPath !== `/blog/${param}`) {
         return permanentRedirect(canonicalBlogPath);
       }
-      const rawTitle = article.meta_title && !(article.meta_title.length >= 58 && String(article.title || "").startsWith(article.meta_title))
-        ? article.meta_title
-        : article.title;
       const cleanDesc = articleDescription(article);
 
-      title = toMetaTitle(rawTitle, article.title);
+      title = articleMetaTitle(article);
       description = cleanDesc;
       // always the branded card (it carries "OMPATH STUDY"); the page's own picture goes on it when it is a good one, never a scanned page
       ogImage = cardUrl(article.title, article.category, "Notes", "", goodShareImage(article.title, article.og_image_url, (String(article.content || "").match(/!\[[^\]]*\]\(([^)\s]+)/) || [])[1]));
