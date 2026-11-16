@@ -1,10 +1,10 @@
-// Writes topic pages ahead of time with Gemini, so readers and search engines find the text already there.
-// Keys: GEMINI_API_KEYS (comma separated) or one key per line in .gemini-keys.local (never committed). They are used in turn.
+// Groq drafts topic pages; Gemini independently reviews them before they are saved.
+// Keys: GROQ_API_KEYS for generation and GEMINI_API_KEYS for independent review (local key files are never committed).
 // Pages go to src/data/topicAi/<slug>.json and are folded into the static pages by build-topics.mjs.
 //   node scripts/topics/bulk-fill.mjs [count] [--parallel=4]
 import fs from "node:fs";
 import path from "node:path";
-import { generateWithFallback } from "../../supabase/functions/_shared/topicAi.js";
+import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 
 const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 1000);
@@ -12,7 +12,7 @@ const PAR = Number((process.argv.find((a) => a.startsWith("--parallel=")) || "--
 const local = fs.existsSync(".gemini-keys.local") ? fs.readFileSync(".gemini-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const groq = fs.existsSync(".groq-keys.local") ? fs.readFileSync(".groq-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const env = { GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local].filter(Boolean).join(","), GROQ_API_KEYS: [process.env.GROQ_API_KEYS, groq].filter(Boolean).join(",") };
-if (!env.GEMINI_API_KEYS && !env.GROQ_API_KEYS) { console.log("No Gemini keys: set GEMINI_API_KEYS or fill .gemini-keys.local"); process.exit(0); }
+if (!env.GEMINI_API_KEYS || !env.GROQ_API_KEYS) { console.log("Both GROQ_API_KEYS and GEMINI_API_KEYS are required; no unreviewed pages will be generated."); process.exit(0); }
 fs.mkdirSync(DIR, { recursive: true });
 
 const index = JSON.parse(fs.readFileSync("public/topics/index.json", "utf8"));
@@ -28,7 +28,7 @@ async function worker() {
       const t = JSON.parse(fs.readFileSync(path.join("public/topics", `${it.s}.json`), "utf8"));
       let page = null;
       for (let attempt = 0; attempt < 5 && !page; attempt++) {
-        try { page = await generateWithFallback({ name: t.n, category: t.c, context: contextOf(t) }, env); } catch (e) { await new Promise((r) => setTimeout(r, 8000 * (attempt + 1))); }
+        try { page = (await generateReviewedTopicPage({ name: t.n, category: t.c, context: contextOf(t) }, { env })).page; } catch (e) { await new Promise((r) => setTimeout(r, 8000 * (attempt + 1))); }
       }
       if (!page) { failed++; console.log("failed", t.n); continue; }
       if (!page.medical) { skipped++; console.log("not medical", t.n); continue; }
