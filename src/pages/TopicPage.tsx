@@ -218,7 +218,7 @@ function DrillMode({ slug, items, onClose }: { slug: string; items: { q: string;
 
 const DEEP_BAND = "rounded-3xl border border-primary/20 bg-primary/5 p-5 sm:p-7";
 
-/** The deep exam notes: shown when they exist; otherwise one button writes them once (builds on the revision page, and on past-paper questions) and saves them for everyone. */
+/** Deep exam notes are generated and independently checked by the scheduled content pipeline. */
 function DeepView({ slug, name, deep, canRead }: { slug: string; name: string; deep: DeepNotes | null; canRead: boolean }) {
   const [drill, setDrill] = useState(false);
   const deepReady = Boolean(deep?.checked) && (deep?.sections?.length ?? 0) >= 5 && (deep?.vivas?.length ?? 0) >= 8 && (deep?.exam?.length ?? 0) >= 8;
