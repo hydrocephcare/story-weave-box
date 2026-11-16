@@ -1,5 +1,19 @@
 import { describe, expect, it, vi } from "vitest";
 import { askGroqModel, buildPrompt, generateReviewedTopicPage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
+const makePage = (title: string, subject: string, count = 13) => {
+  const explanation = Array.from({ length: 85 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
+  return {
+    medical: true, title, subject, clinicalScope: title + " in the stated clinical context.",
+    summary: title + " is a medical topic that requires understanding of mechanisms, clinical presentation, diagnosis and appropriate management. This overview explains the subject for the public and medical learners.",
+    sections: Array.from({ length: count }, (_, i) => ({ h: sectionNames[i] || ("Clinical consideration " + (i + 1)), p: explanation, b: ["Recognise the relevant clinical pattern and explain why it occurs.", "Interpret findings in the context of the whole patient and available resources."] })),
+    whenToSeekHelp: ["Seek urgent clinical assessment when severe or rapidly worsening symptoms occur."],
+    faq: [{ q: "What is the central point?", a: "Understand the mechanism, clinical features and evidence-based management." }, { q: "How is it assessed?", a: "Use history, examination and appropriately selected investigations." }, { q: "What should be remembered?", a: "Interpret each finding in its clinical context." }],
+    exam: Array.from({ length: 10 }, (_, i) => "Examiner question " + (i + 1) + " — explain the reasoning, interpretation and management implications."),
+    related: ["Related clinical topic", "Relevant physiology"],
+  };
+};
+
 
 describe("Groq topic generation boundary", () => {
   it("disambiguates neonatal umbilical vein thrombosis and requires a sufficiently deep page", () => {
@@ -8,22 +22,13 @@ describe("Groq topic generation boundary", () => {
     expect(prompt).toContain("PRE-GENERATION CLINICAL ENTITY DISAMBIGUATION");
     expect(prompt).toContain("umbilical venous catheter (UVC)-associated thrombosis");
     expect(prompt).toContain("antenatal umbilical cord thrombosis");
-    expect(prompt).toContain("MINIMUM DEPTH: provide at least 9 substantive sections");
+    expect(prompt).toContain("DEPTH: for a complete topic overview");
+    expect(prompt).toContain("AUDIENCE: teach two audiences together");
     expect(prompt).toContain('"clinicalScope"');
   });
 
   it("instructs Gemini to check entity mixing, heading accuracy and missing sections", async () => {
-    const page = {
-      medical: true, title: "Umbilical Vein Thrombosis", subject: "Paediatrics",
-      clinicalScope: "Neonatal umbilical vein thrombosis, usually associated with an umbilical venous catheter.",
-      summary: "Neonatal umbilical vein thrombosis is a catheter-associated thrombotic condition.",
-      sections: [
-        { h: "Definition", p: "A clot in the neonatal umbilical vein." },
-        { h: "Causes", p: "Umbilical venous catheter-associated endothelial injury and infection." },
-        { h: "Management", p: "Management depends on extent and progression." },
-      ],
-      whenToSeekHelp: [], faq: [], exam: [], related: [],
-    };
+    const page = makePage("Umbilical Vein Thrombosis", "Paediatrics", 13);
     const fetchImpl = vi.fn()
       .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
       .mockImplementationOnce(async (_url: RequestInfo | URL, init?: RequestInit) => {
@@ -74,16 +79,7 @@ describe("Groq topic generation boundary", () => {
   });
 
   it("publishes only after Gemini approves the Groq-generated page", async () => {
-    const page = {
-      medical: true, title: "Asthma", subject: "Medicine",
-      summary: "Asthma is a chronic inflammatory disease of the airways.",
-      sections: [
-        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
-        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
-        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
-      ],
-      whenToSeekHelp: [], faq: [], exam: [], related: [],
-    };
+    const page = makePage("Asthma", "Medicine", 13);
     const fetchImpl = vi.fn()
       .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
       .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
@@ -101,16 +97,7 @@ describe("Groq topic generation boundary", () => {
   });
 
   it("holds a page back when Gemini cannot review it", async () => {
-    const page = {
-      medical: true, title: "Asthma", subject: "Medicine",
-      summary: "Asthma is a chronic inflammatory disease of the airways.",
-      sections: [
-        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
-        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
-        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
-      ],
-      whenToSeekHelp: [], faq: [], exam: [], related: [],
-    };
+    const page = makePage("Asthma", "Medicine", 13);
     const fetchImpl = vi.fn()
       .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
       .mockResolvedValueOnce(new Response("review unavailable", { status: 503 }));
@@ -122,16 +109,7 @@ describe("Groq topic generation boundary", () => {
   });
 
   it("performs a targeted Groq rewrite when Gemini identifies a clinical issue", async () => {
-    const page = {
-      medical: true, title: "Asthma", subject: "Medicine",
-      summary: "Asthma is a chronic inflammatory disease of the airways.",
-      sections: [
-        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
-        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
-        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
-      ],
-      whenToSeekHelp: [], faq: [], exam: [], related: [],
-    };
+    const page = makePage("Asthma", "Medicine", 13);
     const fetchImpl = vi.fn()
       .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
       .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"issues","issues":[{"severity":"high","where":"Management: inhaled treatment","problem":"The statement omits the required clinical safety qualification.","fix":"State the appropriate guideline-based safety qualification."}]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
@@ -152,16 +130,7 @@ describe("Groq topic generation boundary", () => {
   });
 
   it("persists AI review metadata without marking the page as human-reviewed", async () => {
-    const page = {
-      medical: true, title: "Asthma", subject: "Medicine",
-      summary: "Asthma is a chronic inflammatory disease of the airways.",
-      sections: [
-        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
-        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
-        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
-      ],
-      whenToSeekHelp: [], faq: [], exam: [], related: [],
-    };
+    const page = makePage("Asthma", "Medicine", 13);
     const fetchImpl = vi.fn()
       .mockResolvedValueOnce(new Response("[]", { status: 200, headers: { "Content-Type": "application/json" } }))
       .mockResolvedValueOnce(new Response("[]", { status: 200, headers: { "Content-Range": "0-0/0" } }))
@@ -192,16 +161,7 @@ describe("Groq topic generation boundary", () => {
   });
 
   it("fails closed when Gemini labels findings but supplies no usable correction", async () => {
-    const page = {
-      medical: true, title: "Asthma", subject: "Medicine",
-      summary: "Asthma is a chronic inflammatory disease of the airways.",
-      sections: [
-        { h: "Definition", p: "Asthma is a chronic inflammatory airway disorder." },
-        { h: "Causes", p: "Common triggers include allergens and respiratory infections." },
-        { h: "Management", p: "Management includes inhaled anti-inflammatory treatment." },
-      ],
-      whenToSeekHelp: [], faq: [], exam: [], related: [],
-    };
+    const page = makePage("Asthma", "Medicine", 13);
     const fetchImpl = vi.fn()
       .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
       .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"issues","issues":[{"severity":"high","where":"","problem":"Error","fix":""}]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
