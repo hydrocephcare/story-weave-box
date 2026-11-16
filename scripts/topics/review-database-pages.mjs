@@ -1,6 +1,6 @@
 import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 const SB = (process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co").replace(/\/$/, "");
-const KEY = process.env.SUPABASE_ANON_KEY || "";
+const KEY = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdHJmd2Fxdnh2a2hqYnFyd21sYSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzkyNzEyMDcxLCJleHAiOjIxMDgyODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const WRITE = process.env.POLISH_WRITE_KEY || "";
 const GROQ = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
 const GEMINI = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
