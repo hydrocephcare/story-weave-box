@@ -10,7 +10,7 @@ import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const OUT = path.join(ROOT, "public/data/zone-daily.json");
 const URL_ = process.env.VITE_SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
-const KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdHJmd2Fxdnh2a2hqYnFyd21sYSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzkyNzEyMDcxLCJleHAiOjIxMDgyODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
+const KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const GROQ = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
 const GEMINI = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
 if (!KEY || !GROQ || !GEMINI) throw new Error("Supabase public key, GROQ_API_KEYS and GEMINI_API_KEYS are required.");
