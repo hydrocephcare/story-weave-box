@@ -39,14 +39,14 @@ describe("topic page writer", () => {
   });
 
   it("drops anything that looks like a drug dose", () => {
-    const p = sanitizePage({ ...goodPage, sections: [...goodPage.sections, { h: "Medicines", b: ["Give 500 mg twice daily", "Antibiotics may be needed", "Check contraindications and monitor for adverse effects"] }] });
+    const p = sanitizePage({ ...goodPage, sections: [...goodPage.sections, { h: "Medicines", b: ["Give 500 mg twice daily", "Antibiotics may be needed", "Check contraindications and monitor for adverse effects", "Explain expected benefits and treatment monitoring", "Review interactions and patient-specific risks"] }] });
     const meds = p.sections.find((s: { h: string }) => s.h === "Medicines");
-    expect(meds.b).toEqual(["Antibiotics may be needed", "Check contraindications and monitor for adverse effects"]);
+    expect(meds.b).toEqual(["Antibiotics may be needed", "Check contraindications and monitor for adverse effects", "Explain expected benefits and treatment monitoring", "Review interactions and patient-specific risks"]);
     expect(() => sanitizePage({ ...goodPage, summary: "Give 10 mg of the drug every day to every child with this condition, always." })).toThrow();
   });
 
   it("keeps lab thresholds and test tables, and examiner questions", () => {
-    const p = sanitizePage({ ...goodPage, exam: ["What is the KDIGO creatinine criterion?"], sections: [...goodPage.sections, { h: "Investigations", t: [{ a: "Creatinine", b: "How severe is it? A rise of 26.5 µmol/L (0.3 mg/dL) in 48 h fits AKI; K+ above 6.5 mmol/L is dangerous" }, { a: "HBV DNA", b: "Treat above 20,000 IU/mL with raised ALT" }] }] });
+    const p = sanitizePage({ ...goodPage, exam: ["What is the KDIGO creatinine criterion?"], sections: [...goodPage.sections, { h: "Investigations", p: "Select investigations to answer a clinical question and interpret results in context.", b: ["Check the clinical indication before ordering each test.", "Interpret results alongside symptoms and examination.", "Consider baseline values and trends over time.", "Use abnormal results to guide safe next steps."], t: [{ a: "Creatinine", b: "How severe is it? A rise of 26.5 µmol/L (0.3 mg/dL) in 48 h fits AKI; K+ above 6.5 mmol/L is dangerous" }, { a: "HBV DNA", b: "Treat above 20,000 IU/mL with raised ALT" }] }] });
     const inv = p.sections.find((s: { h: string }) => s.h === "Investigations");
     expect(inv.t).toHaveLength(2);
     expect(p.exam).toHaveLength(1);
