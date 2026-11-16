@@ -10,6 +10,8 @@ on:
     paths:
       - ".github/workflows/zone-daily.yml"
       - "scripts/zone/daily.mjs"
+      - "supabase/functions/_shared/topicAi.js"
+      - "supabase/functions/_shared/contentCheck.js"
 permissions:
   contents: write
 concurrency:
