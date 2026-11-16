@@ -7,7 +7,7 @@ on:
       count:
         description: "How many published articles to process"
         required: false
-        default: "30"
+        default: "40"
       year:
         description: "Only this year (1 to 6); leave empty for all"
         required: false
@@ -33,7 +33,7 @@ jobs:
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          COUNT: ${{ github.event.inputs.count || '30' }}
+          COUNT: ${{ github.event.inputs.count || '40' }}
           YEAR: ${{ github.event.inputs.year }}
         run: |
           if [ -n "$YEAR" ]; then node scripts/blogs/polish-batch.mjs "$COUNT" --year "$YEAR" --minutes 50; else node scripts/blogs/polish-batch.mjs "$COUNT" --minutes 50; fi
