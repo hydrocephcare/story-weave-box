@@ -155,5 +155,482 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam are essential to raise suspicion of infective endocarditis (IE) and to identify red‑flag features that prompt urgent investigation and treatment.",
+    "b": [
+     "History:",
+     "• Fever, chills, night sweats, weight loss – ask onset, pattern, and associated symptoms.",
+     "• New or changing heart murmur – ask about previous murmurs, surgeries, or rheumatic disease.",
+     "• IV drug use, indwelling catheters, recent dental or surgical procedures – ask for timing and details.",
+     "• HIV status, TB exposure, malnutrition, diabetes, pregnancy – ask about treatment and control.",
+     "• Constitutional symptoms: fatigue, dyspnoea, palpitations, syncope – ask severity and triggers.",
+     "• Peripheral embolic signs: petechiae, Osler nodes, Janeway lesions, splinter haemorrhages – ask for recent skin or nail changes.",
+     "• Renal or hepatic dysfunction – ask for oedema, jaundice, or altered urine output.",
+     "• Medication history – antibiotics, anticoagulants, herbal remedies – ask for recent changes.",
+     "Examination:",
+     "• Inspection – look for pallor, cyanosis, oedema, skin lesions (petechiae, Janeway lesions).",
+     "• Palpation – locate apex beat, assess for displaced PMI, assess for S3/S4 gallop.",
+     "• Auscultation – listen for new holosystolic murmur at apex (mitral regurg), systolic ejection murmur at right upper sternal border (aortic regurg), or diastolic rumble (tricuspid stenosis).",
+     "• Peripheral signs – check for splenomegaly by abdominal palpation, look for Osler nodes (tender nodules on finger pads), Janeway lesions (non‑tender macules on palms/soles).",
+     "• Cardiovascular – assess for signs of heart failure: jugular venous distension, peripheral oedema, pulmonary crackles.",
+     "• Neurologic – check for focal deficits, seizures, or new headaches suggesting emboli."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "When a test is unavailable, rely on the modified Duke criteria and empirical broad‑spectrum antibiotics while arranging transfer to a higher‑level facility.",
+    "t": [
+     {
+      "a": "Blood cultures (x3, 30–60 min apart, different sites)",
+      "b": "Detects causative organism; ≥2 positive cultures = major criterion. If negative after 5 days, consider fastidious organisms and repeat with enriched media."
+     },
+     {
+      "a": "Serum pro‑calcitonin",
+      "b": "High levels (>0.5 ng/mL) support bacterial infection; values >2 ng/mL are suggestive but not diagnostic. Useful when cultures are negative."
+     },
+     {
+      "a": "Complete blood count",
+      "b": "Leukocytosis (>12×10^9/L) indicates active infection; leukopenia may signal poor prognosis or marrow suppression."
+     },
+     {
+      "a": "Serum creatinine & eGFR",
+      "b": "Baseline renal function guides aminoglycoside dosing; a rise >0.5 mg/dL warrants dose adjustment."
+     },
+     {
+      "a": "Serum albumin",
+      "b": "Low albumin (<30 g/L) predicts poorer outcomes and may influence antibiotic choice."
+     },
+     {
+      "a": "Echocardiography (TTE, TEE if needed)",
+      "b": "Detects vegetations, abscesses, valve perforation, and regurgitation. Vegetation >15 mm or mobile >10 mm is a surgical indication."
+     },
+     {
+      "a": "Transesophageal echocardiography (TEE)",
+      "b": "Higher sensitivity for prosthetic valves and small vegetations; recommended if TTE is negative but clinical suspicion remains high."
+     },
+     {
+      "a": "Serology for fastidious organisms (e.g., Bartonella, Coxiella, HACEK)",
+      "b": "Positive titres support culture‑negative IE; guide targeted therapy."
+     },
+     {
+      "a": "Antistreptolysin O (ASO) titre",
+      "b": "High titres indicate recent Group A streptococcal infection; useful in rheumatic heart disease but not diagnostic for IE."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Shows pulmonary infiltrates, effusion, or cardiomegaly; may reveal septic emboli."
+     },
+     {
+      "a": "Urinalysis",
+      "b": "Detects hematuria or proteinuria suggesting renal emboli or immune complex deposition."
+     },
+     {
+      "a": "Coagulation profile (INR, aPTT)",
+      "b": "Baseline for anticoagulation in prosthetic valve IE; monitor for bleeding risk with antibiotics."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "IE is classified by the modified Duke criteria and clinical status, guiding urgency of treatment and surgical referral.",
+    "b": [
+     "Definite IE:",
+     "• 2 major criteria (positive blood culture for typical organism, evidence of endocardial involvement on echo)",
+     "• 1 major + 3 minor criteria (fever, vascular phenomena, immunologic phenomena, microbiological evidence, pre‑existing heart condition)",
+     "• 5 minor criteria alone",
+     "Possible IE:",
+     "• 1 major + 1 minor or 3 minor criteria",
+     "Severity staging (clinical):",
+     "• Early (≤7 days) – high fever, rapid heart failure, large vegetations, high embolic risk",
+     "• Late (≥8 days) – subacute presentation, smaller vegetations, slower progression",
+     "Complication risk score (e.g., EuroSCORE II for surgery) – informs timing of operative intervention"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑infectious or alternative infectious processes mimic IE; distinguishing features guide appropriate management.",
+    "t": [
+     {
+      "a": "Rheumatic fever",
+      "b": "History of sore throat, migratory arthritis, fever; ASO titre high; echocardiogram shows pancarditis without vegetations."
+     },
+     {
+      "a": "Viral myocarditis",
+      "b": "Recent viral prodrome, elevated troponin, diffuse ST changes; echo shows global hypokinesia, no vegetations."
+     },
+     {
+      "a": "Non‑infective (culture‑negative) endocarditis (e.g., Libman–Sacks)",
+      "b": "Associated with systemic lupus erythematosus; negative cultures, sterile vegetations on both sides of valve; treated with immunosuppression."
+     },
+     {
+      "a": "Septic pulmonary emboli from right‑sided IE",
+      "b": "Cough, pleuritic chest pain, haemoptysis; CT shows wedge‑shaped infiltrates; requires right‑sided valve source."
+     },
+     {
+      "a": "Cardiac tumors (myxoma)",
+      "b": "Mobility on echo, often left atrium; may cause emboli but no fever or positive cultures."
+     },
+     {
+      "a": "Endocardial calcification in rheumatic disease",
+      "b": "Fixed thickened valves on echo, no vegetations, normal inflammatory markers."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder from initial resuscitation to definitive therapy and escalation.",
+    "b": [
+     "1. Secure airway, breathing, circulation; give IV access and start broad‑spectrum empiric therapy after obtaining 3 sets of blood cultures 30–60 min apart.",
+     "2. Initiate empiric antibiotics covering MRSA, streptococci and enterococci (e.g., vancomycin plus ceftriaxone or cefepime) before culture results.",
+     "3. Once organism identified, tailor therapy: MSSA – nafcillin/oxacillin; MRSA – vancomycin; streptococci – penicillin/ceftriaxone; enterococci – ampicillin + gentamicin if susceptible.",
+     "4. Monitor clinical status (temperature, vitals, urine output) and laboratory markers (CRP, ESR, leukocyte count) daily; repeat blood cultures at 48 h to confirm clearance.",
+     "5. Assess for complications (heart failure, emboli, valve dysfunction) and consider surgical referral if vegetation >15 mm, persistent emboli, uncontrolled infection, or severe regurgitation."
+    ],
+    "t": [
+     {
+      "a": "Empiric antibiotics",
+      "b": "Cover MRSA, streptococci, enterococci; start before culture results to reduce mortality."
+     },
+     {
+      "a": "Blood cultures",
+      "b": "Obtain 3 sets 30–60 min apart from different sites; repeat at 48 h to confirm bacteremia clearance."
+     },
+     {
+      "a": "Surgical referral",
+      "b": "Indicated for large vegetations, heart failure, uncontrolled infection, or prosthetic valve involvement."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, interactions and management actions for common IE antibiotics.",
+    "b": [
+     "Vancomycin – nephrotoxicity, ototoxicity; monitor serum troughs and renal function; avoid concomitant nephrotoxins.",
+     "Gentamicin – ototoxicity, nephrotoxicity; use only when indicated; monitor troughs and adjust dose.",
+     "Beta‑lactams (penicillin, ceftriaxone) – rash, anaphylaxis; stop immediately if severe reaction and consider desensitisation.",
+     "Cefepime – neurotoxicity in renal failure; avoid in severe CKD.",
+     "Rifampicin – induces CYP450, reduces levels of warfarin, azole antifungals; monitor INR and adjust anticoagulants."
+    ],
+    "t": [
+     {
+      "a": "Vancomycin nephrotoxicity",
+      "b": "Check serum creatinine daily; adjust dose or switch if rise >0.5 mg/dL from baseline."
+     },
+     {
+      "a": "Gentamicin ototoxicity",
+      "b": "Perform audiometry if prolonged therapy; discontinue if hearing loss develops."
+     },
+     {
+      "a": "Beta‑lactam hypersensitivity",
+      "b": "Stop drug, treat with alternative (e.g., vancomycin) and consider desensitisation if no alternative."
+     },
+     {
+      "a": "Rifampicin drug interactions",
+      "b": "Adjust warfarin dose, monitor INR closely; avoid concurrent azole antifungals."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escal",
+    "p": "Clinical red flags that mandate urgent escalation or surgical intervention.",
+    "b": [
+     "New or worsening heart failure symptoms (dyspnoea, orthopnoea, peripheral oedema).",
+     "Evidence of embolic events (stroke, splenic infarct, pulmonary embolism).",
+     "Persistent fever >48 h despite appropriate antibiotics.",
+     "Rapidly enlarging vegetation on repeat echo (>15 mm).",
+     "Severe valvular regurgitation causing haemodynamic compromise."
+    ],
+    "t": [
+     {
+      "a": "Heart failure",
+      "b": "Urgent cardiology review; consider inotropes, diuretics, and early surgery if refractory."
+     },
+     {
+      "a": "Embolic event",
+      "b": "Neuroimaging for stroke; anticoagulation not routinely used unless mechanical valve or atrial thrombus."
+     },
+     {
+      "a": "Persistent fever",
+      "b": "Repeat blood cultures, assess for prosthetic material, abscess, or drug resistance."
+     },
+     {
+      "a": "Vegetation growth",
+      "b": "Surgical consultation for valve replacement or debridement."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that alter presentation, diagnostics or therapy in IE.",
+    "b": [
+     "HIV – higher rates of Staphylococcus aureus and fungal IE; monitor CD4 and viral load; consider antifungal coverage if CD4 <200.",
+     "TB – can cause mycobacterial endocarditis; use PCR and acid-fast stains; treat with anti‑TB drugs concurrently.",
+     "Malnutrition – impairs immune response; ensure adequate protein and micronutrient support.",
+     "Pregnancy – avoid nephrotoxic drugs; use penicillin or ceftriaxone; monitor fetal growth.",
+     "Diabetes – increases risk of enterococcal IE; control glucose; watch for ketoacidosis.",
+     "Herbal remedies – may contain nephrotoxins or anticoagulants; inquire about use.",
+     "Alcohol – chronic use worsens liver function; avoid hepatotoxic antibiotics; monitor INR if on warfarin.",
+     "Renal failure – adjust aminoglycoside dosing; avoid nephrotoxic agents; consider alternative agents.",
+     "Liver failure – limit hepatotoxic drugs; monitor drug levels; use beta‑lactams preferentially.",
+     "Elderly – higher prevalence of prosthetic valves; monitor for atypical presentations; adjust dosing for frailty."
+    ],
+    "t": [
+     {
+      "a": "HIV status",
+      "b": "Screen all IE patients; tailor antibiotic choice and duration; consider prophylactic antifungals if severe immunosuppression."
+     },
+     {
+      "a": "TB co‑infection",
+      "b": "Order PCR and cultures; treat with standard 6‑month regimen; monitor for drug interactions."
+     },
+     {
+      "a": "Renal impairment",
+      "b": "Avoid gentamicin; use vancomycin with therapeutic drug monitoring; consider daptomycin if renal failure severe."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Prefer penicillin/ceftriaxone; avoid vancomycin and aminoglycosides unless necessary."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored management for vulnerable populations in low‑resource settings.",
+    "b": [
+     "Children – high incidence of viridans streptococci and Staphylococcus aureus; use ceftriaxone plus vancomycin empirically; consider shorter duration if culture negative.",
+     "Pregnancy – avoid nephrotoxins; use penicillin or ceftriaxone; monitor fetal growth; consider early delivery if severe heart failure.",
+     "Elderly – higher prosthetic valve rates; monitor for atypical symptoms; use lower antibiotic doses; watch for drug interactions.",
+     "HIV – frequent Staphylococcus aureus; use vancomycin; monitor for drug resistance; consider antiretroviral therapy integration.",
+     "Low‑resource settings – limited imaging; rely on clinical criteria; use affordable antibiotics (penicillin, ceftriaxone, vancomycin); prioritize early surgery referral when possible."
+    ],
+    "t": [
+     {
+      "a": "Children",
+      "b": "Empiric ceftriaxone + vancomycin; shorter courses if culture negative; monitor growth and development."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Use penicillin or ceftriaxone; avoid nephrotoxins; monitor fetal wellbeing."
+     },
+     {
+      "a": "Elderly",
+      "b": "Adjust doses for renal function; monitor for polypharmacy interactions."
+     },
+     {
+      "a": "Low‑resource",
+      "b": "Use clinical Duke criteria; rely on bedside echo; choose affordable antibiotics; refer early for surgery if available."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Definite IE: 2 major OR 1 major + 3 minor OR 5 minor criteria (modified Duke).",
+   "Possible IE: 1 major + 1 minor OR 3 minor criteria.",
+   "Blood cultures: obtain 3 sets from separate sites, each 30‑60 min apart; if subacute, may be spread over 24 h.",
+   "Vegetation size >15 mm warrants surgical consideration, especially with embolic risk.",
+   "Native‑valve Staphylococcus aureus IE: empiric vancomycin (or oxacillin/nafcillin if MSSA) 4‑6 weeks.",
+   "Prosthetic‑valve IE regimen: vancomycin + gentamicin + rifampicin for 6 weeks (or carbapenem instead of gentamicin).",
+   "Right‑sided IE commonly presents with septic pulmonary emboli; classic murmur is a holosystolic tricuspid regurgitation.",
+   "Key bedside signs: new/changed murmur, Osler nodes, Janeway lesions, Roth spots, splinter hemorrhages, petechiae."
+  ],
+  "mnemonics": [
+   {
+    "n": "Duke",
+    "t": "Major: positive blood cultures, evidence of endocardial involvement; Minor: predisposition, fever, vascular, immunologic, echo findings."
+   },
+   {
+    "n": "VINDICATE",
+    "t": "Differential for fever and murmur: Vascular, Infectious, Neoplastic, Drugs, Iatrogenic, Collagen, Autoimmune, Trauma, Endocrine."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What are the major criteria in the modified Duke system?",
+    "a": "Positive blood cultures for typical organisms and evidence of endocardial involvement on echocardiography (vegetation, abscess, new regurgitation).",
+    "hot": true
+   },
+   {
+    "q": "A 28‑year‑old IV drug user presents with fever, cough and a new holosystolic murmur at the left lower sternal border. What is the most likely organism?",
+    "a": "Staphylococcus aureus, which causes acute right‑sided IE in IV drug users.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which organism most commonly causes native‑valve IE in children?",
+    "a": "Viridans streptococci and Staphylococcus aureus are both common; viridans is classic for subacute disease after dental procedures.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why might a patient with aortic cusp perforation not have a widened pulse pressure?",
+    "a": "Severe aortic regurgitation may be masked by low cardiac output from heart failure, reducing the pulse pressure difference.",
+    "hot": true
+   },
+   {
+    "q": "Which cardiac layer is primarily inflamed in infective endocarditis?",
+    "a": "The endocardium, specifically the valve leaflets and chordae, where vegetations form.",
+    "past": true
+   },
+   {
+    "q": "What is the pathological hallmark lesion of IE?",
+    "a": "A vegetation composed of fibrin, platelets, inflammatory cells and organisms attached to the valve surface.",
+    "past": true
+   },
+   {
+    "q": "On which valve does IE occur most frequently in native‑valve disease?",
+    "a": "The mitral valve, especially in rheumatic heart disease, followed by the aortic valve.",
+    "past": true
+   },
+   {
+    "q": "List the key bedside history questions for suspected IE.",
+    "a": "Onset/duration of fever, IV drug use, recent dental or invasive procedures, known valve disease, prosthetic valve, immunosuppression, embolic symptoms (e.g., dyspnea, limb pain)."
+   },
+   {
+    "q": "How do you perform a thorough cardiac exam for IE?",
+    "a": "Inspect for peripheral stigmata, palpate for thrills, auscultate all valve areas for new/changed murmurs, listen for S3/S4, examine extremities for Janeway lesions, Osler nodes, splinter hemorrhages."
+   },
+   {
+    "q": "What does a negative transthoracic echo mean in a high‑risk patient?",
+    "a": "It does not exclude IE; a transesophageal echo is required if suspicion remains, especially for prosthetic valves or small vegetations."
+   },
+   {
+    "q": "Why is procalcitonin not a definitive test for IE?",
+    "a": "Elevated levels suggest bacterial infection but lack a specific cutoff for IE and can be normal in subacute or culture‑negative disease."
+   },
+   {
+    "q": "How does HIV infection alter the microbiology of IE?",
+    "a": "Higher rates of Staphylococcus aureus and opportunistic organisms (e.g., Candida, Mycobacterium tuberculosis) especially with CD4 <200 cells/µL."
+   },
+   {
+    "q": "What are the indications for surgical intervention in IE?",
+    "a": "Heart failure from valve dysfunction, uncontrolled infection despite antibiotics, vegetations >15 mm with embolic risk, prosthetic valve dehiscence, or abscess formation."
+   },
+   {
+    "q": "Explain the difference between acute and subacute IE.",
+    "a": "Acute IE: rapid onset, high‑virulence organisms (S. aureus), large vegetations, severe sepsis; subacute IE: slower course, low‑virulence organisms (viridans streptococci), smaller vegetations, often on previously damaged valves."
+   },
+   {
+    "q": "What is the role of serology in culture‑negative IE?",
+    "a": "Serology helps identify fastidious organisms (Coxiella, Bartonella, Brucella) when blood cultures remain negative after 5 days."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 35‑year‑old man with a prosthetic mitral valve presents with fever, night sweats and a new murmur. Blood cultures are negative after 48 h. Which next step is most appropriate?",
+    "o": [
+     "Start vancomycin alone.",
+     "Begin empiric antifungal therapy.",
+     "Obtain transesophageal echocardiography.",
+     "Repeat blood cultures after 24 h."
+    ],
+    "a": 2,
+    "e": "TEE is the most sensitive test for prosthetic‑valve IE when cultures are negative."
+   },
+   {
+    "q": "Which of the following is a minor Duke criterion?",
+    "o": [
+     "Positive blood culture for S. aureus.",
+     "New valvular regurgitation.",
+     "Fever ≥38 °C.",
+     "Evidence of intracardiac abscess on echo."
+    ],
+    "a": 2,
+    "e": "Fever ≥38 °C is listed as a minor criterion."
+   },
+   {
+    "q": "A 22‑year‑old IV drug user has fever, cough, and a holosystolic murmur at the left lower sternal border. Blood cultures grow methicillin‑sensitive S. aureus. What is the optimal regimen?",
+    "o": [
+     "Oxacillin (or nafcillin) 4–6 weeks.",
+     "Vancomycin 4 weeks.",
+     "Ceftriaxone plus gentamicin.",
+     "Rifampicin monotherapy."
+    ],
+    "a": 0,
+    "e": "MSSA is treated with oxacillin/nafcillin for 4–6 weeks; vancomycin is reserved for MRSA.",
+    "past": true
+   },
+   {
+    "q": "Which vegetation size threshold most strongly predicts embolic events and prompts surgical referral?",
+    "o": [
+     "5 mm",
+     "10 mm",
+     "15 mm",
+     "20 mm"
+    ],
+    "a": 2,
+    "e": "Vegetations >15 mm are associated with higher embolic risk and are a surgical indication."
+   },
+   {
+    "q": "In a pregnant woman with IE caused by Enterococcus faecalis, which antibiotic combination is safest?",
+    "o": [
+     "Vancomycin + gentamicin.",
+     "Linezolid alone.",
+     "Penicillin G + streptomycin.",
+     "Ampicillin + ceftriaxone."
+    ],
+    "a": 3,
+    "e": "Ampicillin plus ceftriaxone is effective and safe in pregnancy; gentamicin is avoided due to ototoxicity."
+   },
+   {
+    "q": "A patient with IE develops new-onset heart failure. What is the immediate next step?",
+    "o": [
+     "Increase vancomycin dose.",
+     "Arrange urgent cardiac surgery.",
+     "Add high‑dose steroids.",
+     "Start diuretics only."
+    ],
+    "a": 1,
+    "e": "Severe valve dysfunction causing heart failure is an indication for urgent surgical evaluation."
+   },
+   {
+    "q": "Which laboratory test helps differentiate bacterial from fungal IE when cultures are negative?",
+    "o": [
+     "Serum procalcitonin.",
+     "Erythrocyte sedimentation rate.",
+     "C‑reactive protein.",
+     "(1→3)-β‑D‑glucan assay."
+    ],
+    "a": 3,
+    "e": "(1→3)-β‑D‑glucan is elevated in invasive fungal infections and aids diagnosis of fungal IE."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Starting antibiotics before obtaining three separate blood cultures.",
+   "Assuming a negative transthoracic echo rules out IE; a TEE is required in high‑risk cases.",
+   "Confusing the minor‑criterion threshold for possible IE (3 minor) with that for definite IE.",
+   "Using a fixed 8‑hour interval for repeat cultures; cultures should be drawn as sets, not timed intervals.",
+   "Relying on a procalcitonin cut‑off of >2 ng/mL to diagnose IE; it is not specific.",
+   "Neglecting to assess for embolic complications (e.g., fundoscopic exam for Roth spots).",
+   "Overlooking special populations (HIV, pregnancy, children) when choosing empiric antibiotics."
+  ],
+  "exam": [
+   "What are the major criteria in the modified Duke system? — Positive blood cultures for typical organisms and evidence of endocardial involvement on echocardiography (vegetation, abscess, new regurgitation).",
+   "A 28‑year‑old IV drug user presents with fever, cough and a new holosystolic murmur at the left lower sternal border. What is the most likely organism? — Staphylococcus aureus, which causes acute right‑sided IE in IV drug users.",
+   "Which organism most commonly causes native‑valve IE in children? — Viridans streptococci and Staphylococcus aureus are both common; viridans is classic for subacute disease after dental procedures.",
+   "Why might a patient with aortic cusp perforation not have a widened pulse pressure? — Severe aortic regurgitation may be masked by low cardiac output from heart failure, reducing the pulse pressure difference.",
+   "Which cardiac layer is primarily inflamed in infective endocarditis? — The endocardium, specifically the valve leaflets and chordae, where vegetations form.",
+   "What is the pathological hallmark lesion of IE? — A vegetation composed of fibrin, platelets, inflammatory cells and organisms attached to the valve surface.",
+   "On which valve does IE occur most frequently in native‑valve disease? — The mitral valve, especially in rheumatic heart disease, followed by the aortic valve.",
+   "List the key bedside history questions for suspected IE. — Onset/duration of fever, IV drug use, recent dental or invasive procedures, known valve disease, prosthetic valve, immunosuppression, embolic symptoms (e.g., dyspnea, limb pain).",
+   "How do you perform a thorough cardiac exam for IE? — Inspect for peripheral stigmata, palpate for thrills, auscultate all valve areas for new/changed murmurs, listen for S3/S4, examine extremities for Janeway lesions, Osler nodes, splinter hemorrhages.",
+   "What does a negative transthoracic echo mean in a high‑risk patient? — It does not exclude IE; a transesophageal echo is required if suspicion remains, especially for prosthetic valves or small vegetations.",
+   "Why is procalcitonin not a definitive test for IE? — Elevated levels suggest bacterial infection but lack a specific cutoff for IE and can be normal in subacute or culture‑negative disease.",
+   "How does HIV infection alter the microbiology of IE? — Higher rates of Staphylococcus aureus and opportunistic organisms (e.g., Candida, Mycobacterium tuberculosis) especially with CD4 <200 cells/µL.",
+   "What are the indications for surgical intervention in IE? — Heart failure from valve dysfunction, uncontrolled infection despite antibiotics, vegetations >15 mm with embolic risk, prosthetic valve dehiscence, or abscess formation.",
+   "Explain the difference between acute and subacute IE. — Acute IE: rapid onset, high‑virulence organisms (S. aureus), large vegetations, severe sepsis; subacute IE: slower course, low‑virulence organisms (viridans streptococci), smaller vegetations, often on previously damaged valves."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-16",
+  "checked": "2026-11-16",
+  "trimmed": 6
+ }
 }

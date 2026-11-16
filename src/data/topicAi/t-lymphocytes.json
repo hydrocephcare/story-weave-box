@@ -114,5 +114,382 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a systematic physical exam reveal clues to T‑cell quantity, function and the pattern of opportunistic disease in low‑resource settings.",
+    "b": [
+     "Duration of symptoms and any recent opportunistic infection (e.g., cough, fever, skin lesions, oral thrush).",
+     "Known HIV status, CD4+ count (if known), ART adherence, recent viral load, or other immunosuppressive conditions (malnutrition, chemotherapy, steroids).",
+     "Weight loss, growth failure in children, recurrent sinopulmonary infections, or unusual skin lesions suggesting Th1, Th2 or Th17 deficiency.",
+     "Vaccination history (BCG, measles, varicella) and prior prophylaxis (TMP‑SMX, fluconazole).",
+     "Exposure history: TB contacts, endemic helminths, fungal spores, or recent travel to high‑risk areas."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for wasting, lymphadenopathy, oral thrush, or skin rashes; suggests chronic T‑cell depletion or specific subset dysfunction."
+     },
+     {
+      "a": "Palpation of lymph nodes (cervical, axillary, inguinal)",
+      "b": "Enlarged, firm nodes may indicate chronic infection (TB) or lymphoma; soft, tender nodes suggest acute viral infection."
+     },
+     {
+      "a": "Oral examination",
+      "b": "Scraping reveals white plaques that can be wiped (candida) versus ulcerative lesions (HSV, CMV); candida points to CD4+ <200 cells/µL."
+     },
+     {
+      "a": "Chest auscultation",
+      "b": "Crackles or wheeze may indicate TB (Th1) or asthma/helminth‑related eosinophilia (Th2); auscultation cannot differentiate pathogen."
+     },
+     {
+      "a": "Skin examination for papules, nodules, or depigmented patches",
+      "b": "Hypopigmented halo around a melanoma suggests CTL‑mediated immune attack; cannot confirm specific T‑cell subset."
+     },
+     {
+      "a": "Neurological exam (fundoscopy, reflexes)",
+      "b": "Signs of cryptococcal meningitis (headache, papilledema) hint at CD4+ <50 cells/µL; bedside exam cannot measure CD4+ directly."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests answer whether T‑cell numbers are low, whether function is impaired, and which opportunistic infection is present.",
+    "b": [
+     "Full blood count with differential – lymphopenia (<1 000 cells/µL) supports T‑cell loss; neutrophilia may point to bacterial superinfection.",
+     "CD4+ T‑cell count (flow cytometry) – <200 cells/µL triggers PCP prophylaxis; <50 cells/µL triggers cryptococcal antigen screening; <100 cells/µL (or <50 in endemic areas) triggers fluconazole prophylaxis.",
+     "CD4/CD8 ratio – ratio <1.0 in chronic HIV suggests advanced disease; normal ratio does not exclude early depletion.",
+     "Serum cryptococcal antigen – positive at any CD4+ level warrants pre‑emptive fluconazole; negative does not rule out early infection.",
+     "GeneXpert MTB/RIF on sputum – detects TB in Th1‑dominant disease; a positive result guides anti‑TB therapy regardless of CD4+ count.",
+     "Serum IgE and eosinophil count – elevated values suggest Th2‑driven helminth infection or allergic asthma; does not measure T‑cell function.",
+     "IL‑2 receptor (sCD25) – elevated in active immune activation (e.g., severe HIV); not routinely available, use clinical surrogates if absent."
+    ],
+    "t": [
+     {
+      "a": "CD4+ count",
+      "b": "Answers quantitative T‑cell status; >500 cells/µL is normal, 200‑499 moderate, <200 severe, <50 very severe. If flow cytometer unavailable, use clinical scoring (weight, opportunistic infections)."
+     },
+     {
+      "a": "CD8+ count",
+      "b": "Helps calculate CD4/CD8 ratio; high CD8+ with low CD4+ may indicate chronic viral infection. Not diagnostic alone."
+     },
+     {
+      "a": "Serum beta‑D‑glucan",
+      "b": "Screen for invasive fungal disease (e.g., PCP) when CD4+ <200; positive supports PCP but needs confirmatory microscopy."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Identifies interstitial infiltrates typical of PCP, cavitary lesions of TB, or lymphadenopathy; cannot specify pathogen."
+     },
+     {
+      "a": "Sputum microscopy (Ziehl‑Neelsen)",
+      "b": "Detects acid‑fast bacilli; positive confirms TB in Th1‑dominant disease."
+     },
+     {
+      "a": "Skin biopsy with immunohistochemistry",
+      "b": "Shows CD8+ infiltrate in melanoma regression; confirms CTL activity but not systemic T‑cell count."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical, laboratory and imaging data to stage T‑cell immunodeficiency and prioritize management.",
+    "b": [
+     "Diagnose T‑cell deficiency when CD4+ <200 cells/µL or when recurrent opportunistic infections occur despite normal absolute lymphocyte count.",
+     "Stage HIV‑related T‑cell loss: Stage 1 CD4+ ≥500, Stage 2 350‑499, Stage 3 200‑349, Stage 4 <200 cells/µL (AIDS‑defining).",
+     "Severity of opportunistic infection: PCP mild (outpatient), moderate (hospitalised, O₂ < 94 %), severe (respiratory failure).",
+     "TB severity: pulmonary vs disseminated; use WHO clinical classification (Category I vs II) plus CD4+ count for adjunctive steroids.",
+     "Malnutrition grading (WHO): moderate (weight‑for‑age Z‑score –2 to –3) may lower CD4+ by ~20 %; severe (<‑3) may require urgent nutritional rehabilitation before ART."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic T‑cell deficiency or present with similar opportunistic patterns; careful differentiation avoids mismanagement.",
+    "t": [
+     {
+      "a": "Primary immunodeficiency (e.g., DiGeorge syndrome)",
+      "b": "Presents with low CD4+ from birth, facial anomalies, thymic hypoplasia; differentiate by congenital features and absence of HIV risk factors."
+     },
+     {
+      "a": "B‑cell deficiency (e.g., X‑linked agammaglobulinemia)",
+      "b": "Normal CD4+ count, recurrent bacterial infections, absent serum Ig; differentiate by normal T‑cell function tests and low immunoglobulins."
+     },
+     {
+      "a": "Chronic steroid use",
+      "b": "Causes functional T‑cell suppression with normal CD4+ count; look for medication history and reversible lymphopenia after taper."
+     },
+     {
+      "a": "Severe malnutrition without HIV",
+      "b": "Low CD4+ but no HIV antibodies; differentiate by negative rapid HIV test and presence of kwashiorkor/ marasmus signs."
+     },
+     {
+      "a": "Acute viral infection (e.g., EBV mononucleosis)",
+      "b": "Transient lymphocytosis with atypical lymphocytes; CD4+ may be normal; differentiate by heterophile antibody test and self‑limited course."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with rapid assessment, confirm T‑cell deficiency, then initiate definitive therapy, monitor response, and decide when to refer to specialist care.",
+    "b": [
+     "1. Immediate history of infections, vaccination, travel, drug use and family history of immunodeficiency.",
+     "2. Physical exam: lymphadenopathy, splenomegaly, skin lesions, oral thrush, respiratory signs.",
+     "3. Confirm diagnosis: CD4+ count, CD4/CD8 ratio, flow cytometry if available; otherwise use clinical surrogates (e.g., persistent thrush).",
+     "4. Start definitive treatment: antiretroviral therapy for HIV; nutritional rehabilitation for malnutrition; immunoglobulin if hypogammaglobulinemia; consider prophylaxis per CD4 thresholds.",
+     "5. Initiate prophylaxis: trimethoprim‑sulfamethoxazole for CD4+ <200; fluconazole for CD4+ <50; consider azithromycin for MAC if CD4+ <50.",
+     "6. Monitor: repeat CD4+ every 3–6 months, clinical review for new infections, drug side‑effects, adherence.",
+     "7. Escalate: if CD4+ <200 and no improvement, refer to infectious disease or transplant centre; if severe cytopenia or organ failure, consider hematology referral.",
+     "8. Avoid high‑dose steroids unless life‑threatening; avoid live vaccines; avoid nephrotoxic drugs in renal impairment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, interactions and management strategies for common drugs used in T‑cell deficiency.",
+    "b": [
+     "1. Trimethoprim‑sulfamethoxazole: rash, Stevens‑Johnson, hyperkalemia, nephrotoxicity; monitor renal function, electrolytes, CBC; avoid in severe renal failure.",
+     "2. Fluconazole: hepatotoxicity, drug interactions with CYP3A4 inhibitors/inducers; monitor LFTs, avoid in severe hepatic disease.",
+     "3. Antiretroviral therapy: lipodystrophy, neuropathy, hepatotoxicity, myopathy; monitor LFTs, CBC, lipid profile; avoid nephrotoxic ART in renal failure.",
+     "4. Immunoglobulin: anaphylaxis, aseptic meningitis, volume overload; pre‑test for IgA deficiency, monitor vitals during infusion.",
+     "5. Corticosteroids: immunosuppression, hyperglycaemia, hypertension; use lowest effective dose, taper slowly, monitor glucose and BP.",
+     "6. Herbal remedies: St. John’s wort, ginseng may reduce ART levels; counsel patients to avoid or disclose use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Recognise early signs of serious complications and know when to refer or intensify therapy.",
+    "b": [
+     "1. Persistent fever >48h despite antibiotics: suspect opportunistic infection; refer for imaging and microbiology.",
+     "2. New neurological deficits: consider cryptococcal meningitis or CNS lymphoma; urgent lumbar puncture and referral.",
+     "3. Severe cytopenia (ANC <500, platelets <50k): consider marrow failure; refer to haematology.",
+     "4. Uncontrolled hyperglycaemia or hypertension in steroid therapy: adjust dose, refer to endocrinology.",
+     "5. Hepatic dysfunction with rising transaminases on fluconazole or ART: stop drug, refer to hepatology.",
+     "6. Recurrent infections despite prophylaxis: evaluate adherence, drug levels, consider alternative prophylaxis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that alter presentation, investigations or treatment in T‑cell deficiency.",
+    "b": [
+     "1. HIV: accelerates CD4 decline, alters drug metabolism, increases risk of TB and fungal infections.",
+     "2. TB: may mask or mimic opportunistic infections; requires concurrent ATT and careful drug interaction monitoring.",
+     "3. Malnutrition: reduces thymic output, blunts vaccine response, increases drug toxicity; provide protein‑rich diet and micronutrients.",
+     "4. Pregnancy: altered immune state, some ART teratogenic, avoid live vaccines, monitor fetal growth.",
+     "5. Diabetes: increases infection risk, complicates steroid use, monitor glucose closely.",
+     "6. Herbal remedies: can induce CYP enzymes, reducing ART efficacy; counsel patients.",
+     "7. Alcohol: hepatotoxic, interferes with ART metabolism, increases risk of pancreatitis.",
+     "8. Renal or hepatic failure: dose adjustments for ART, TMP‑SMX, fluconazole; avoid nephrotoxic drugs.",
+     "9. Age extremes: infants have immature immunity, elderly have comorbidities; tailor monitoring and drug choice."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored management for key populations with T‑cell deficiency.",
+    "b": [
+     "1. Children: use weight‑based dosing, monitor growth, consider early vaccination schedules, avoid live vaccines if CD4+ <200.",
+     "2. Pregnancy: prefer efavirenz‑based ART after first trimester, avoid fluconazole >200 mg/day, monitor fetal growth, counsel on breastfeeding.",
+     "3. Elderly: higher risk of drug toxicity, monitor renal/hepatic function, adjust ART doses, consider drug–drug interactions with polypharmacy.",
+     "4. People with HIV: integrate ART with prophylaxis, monitor viral load, counsel on adherence, screen for TB and hepatitis.",
+     "5. Low‑resource settings: use point‑of‑care CD4 testing, rely on clinical surrogates, prioritize TMP‑SMX and fluconazole, use generic ART, involve community health workers."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "CD4+ count <200 cells/µL: start PCP prophylaxis with TMP‑SMX",
+   "Normal CD4/CD8 ratio in healthy adults is 1.5–2.5; inversion (<1.0) is typical in chronic HIV",
+   "Th1 cells produce IFN‑γ, essential for macrophage activation against TB and leishmaniasis",
+   "Th2 cells produce IL‑4, IL‑5, IL‑13, driving IgE and eosinophilia in asthma and helminths",
+   "Th17 cells secrete IL‑17, recruiting neutrophils for fungal infections",
+   "Treg cells produce IL‑10 and TGF‑β, maintaining self‑tolerance",
+   "IL‑2 is required for T‑cell proliferation after antigen recognition"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Why is high‑dose corticosteroid therapy contraindicated in a patient with active TB and a low CD4+ count?",
+    "a": "Steroids further suppress cell‑mediated immunity, increasing risk of disseminated TB and opportunistic infections",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A malnourished child has persistent oral thrush despite antifungal therapy. Which immune parameter is most likely deficient?",
+    "a": "Low CD4+ T‑cell count due to impaired thymic output from malnutrition",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain how a Th1‑dominant response protects against intracellular bacteria and name the pivotal cytokine.",
+    "a": "IFN‑γ activates macrophages to kill ingested bacteria; IFN‑γ is the key cytokine",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with severe asthma shows high eosinophil count and elevated IgE. Which T‑cell subset is driving this response?",
+    "a": "Th2 cells, producing IL‑4, IL‑5, IL‑13",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 4‑year‑old boy has recurrent bacterial sinopulmonary infections, low gamma globulin, normal T‑cell counts. What defect is most likely?",
+    "a": "B‑cell (humoral) immunodeficiency, e.g., X‑linked agammaglobulinemia",
+    "past": true
+   },
+   {
+    "q": "In tumor immunity, which molecule on a cytotoxic T lymphocyte mediates target cell killing?",
+    "a": "Perforin and granzymes released via the immunological synapse",
+    "past": true
+   },
+   {
+    "q": "Which clinical feature is characteristic of T‑lymphocyte defects, whether congenital or acquired?",
+    "a": "Recurrent viral infections, especially herpesviruses, and poor vaccine responses",
+    "past": true
+   },
+   {
+    "q": "A 19‑year‑old presents with fever, pharyngitis, lymphadenopathy, splenomegaly, atypical lymphocytes. What is the primary host cell type destroyed?",
+    "a": "CD4+ T lymphocytes are the main target of Epstein‑Barr virus",
+    "past": true
+   },
+   {
+    "q": "A 25‑year‑old with a pigmented skin lesion shows a surrounding zone of depigmentation. Histology shows loss of melanocytes. What is the likely diagnosis?",
+    "a": "Tinea versicolor (Malassezia), but the depigmentation suggests pityriasis versicolor; however, the question likely refers to vitiligo secondary to autoimmune T‑cell attack",
+    "past": true
+   },
+   {
+    "q": "A chronic viral infection causes liver damage primarily by cytotoxic T lymphocytes. Which virus is most likely?",
+    "a": "Hepatitis B virus, where CTLs mediate hepatocyte destruction",
+    "past": true
+   },
+   {
+    "q": "Which subtype of T lymphocytes directly targets and destroys infected or cancerous cells presenting foreign antigens?",
+    "a": "Cytotoxic CD8+ T lymphocytes (CTLs)",
+    "past": true
+   },
+   {
+    "q": "Which type of immunity is primarily mediated by T lymphocytes targeting intracellular pathogens and tumor cells?",
+    "a": "Cell‑mediated immunity",
+    "past": true
+   },
+   {
+    "q": "What bedside sign would you look for to assess for ascites in a patient with suspected liver disease?",
+    "a": "Shifting dullness: percussion over the abdomen shows dullness that shifts with position, indicating fluid"
+   },
+   {
+    "q": "If a patient has a CD4+ count of 150 cells/µL but no infections, what is the likely explanation?",
+    "a": "Recent ART initiation leading to CD4+ rise, or transient lymphopenia due to stress or infection"
+   },
+   {
+    "q": "Why is fluconazole prophylaxis recommended only when CD4+ <50 cells/µL?",
+    "a": "Risk of cryptococcal meningitis rises sharply below 50 cells/µL; prophylaxis reduces incidence"
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old HIV patient with CD4+ 180 cells/µL presents with cough. Which prophylaxis is indicated?",
+    "o": [
+     "Fluconazole for cryptococcal",
+     "Azithromycin for atypical pneumonia",
+     "TMP‑SMX for PCP",
+     "Isoniazid for latent TB"
+    ],
+    "a": 2,
+    "e": "PCP prophylaxis starts at <200 cells/µL",
+    "past": true
+   },
+   {
+    "q": "A patient with a CD4+ count of 45 cells/µL is at risk for which opportunistic infection?",
+    "o": [
+     "Pneumocystis jirovecii",
+     "Cryptococcus neoformans",
+     "Mycobacterium avium complex",
+     "Herpes zoster"
+    ],
+    "a": 1,
+    "e": "Cryptococcal meningitis risk rises below 50 cells/µL",
+    "past": true
+   },
+   {
+    "q": "Which cytokine is produced by Th1 cells to activate macrophages?",
+    "o": [
+     "IFN‑γ",
+     "IL‑5",
+     "IL‑4",
+     "IL‑17"
+    ],
+    "a": 0,
+    "e": "IFN‑γ activates macrophages"
+   },
+   {
+    "q": "A 35‑year‑old with severe asthma has high IgE. Which T‑cell subset is responsible?",
+    "o": [
+     "Th1",
+     "Th2",
+     "Th17",
+     "Treg"
+    ],
+    "a": 1,
+    "e": "Th2 cells drive IgE and eosinophilia"
+   },
+   {
+    "q": "Which drug is NOT used for PCP prophylaxis?",
+    "o": [
+     "TMP‑SMX",
+     "Doxycycline",
+     "Azithromycin",
+     "Bacitracin"
+    ],
+    "a": 3,
+    "e": "Bacitracin is not an antibiotic for PCP"
+   },
+   {
+    "q": "A patient with a CD4/CD8 ratio <1.0 in early HIV infection indicates?",
+    "o": [
+     "Acute infection",
+     "Non‑infectious cause",
+     "Immune reconstitution",
+     "Chronic infection"
+    ],
+    "a": 3,
+    "e": "Inversion occurs in chronic HIV"
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Confusing CD4+ count thresholds for PCP and cryptococcal prophylaxis",
+   "Assuming CD4/CD8 inversion is universal in early HIV",
+   "Overlooking the need for fluconazole prophylaxis when CD4+ <50 cells/µL",
+   "Misidentifying Th2 cytokines as Th1 cytokines",
+   "Using steroids in active TB without considering immunosuppression",
+   "Failing to recognize that atypical lymphocytes indicate EBV infection",
+   "Misattributing low gamma globulin to T‑cell defect instead of B‑cell defect",
+   "Assuming all opportunistic infections occur only when CD4+ <200 cells/µL"
+  ],
+  "exam": [
+   "Why is high‑dose corticosteroid therapy contraindicated in a patient with active TB and a low CD4+ count? — Steroids further suppress cell‑mediated immunity, increasing risk of disseminated TB and opportunistic infections",
+   "A malnourished child has persistent oral thrush despite antifungal therapy. Which immune parameter is most likely deficient? — Low CD4+ T‑cell count due to impaired thymic output from malnutrition",
+   "Explain how a Th1‑dominant response protects against intracellular bacteria and name the pivotal cytokine. — IFN‑γ activates macrophages to kill ingested bacteria; IFN‑γ is the key cytokine",
+   "A patient with severe asthma shows high eosinophil count and elevated IgE. Which T‑cell subset is driving this response? — Th2 cells, producing IL‑4, IL‑5, IL‑13",
+   "A 4‑year‑old boy has recurrent bacterial sinopulmonary infections, low gamma globulin, normal T‑cell counts. What defect is most likely? — B‑cell (humoral) immunodeficiency, e.g., X‑linked agammaglobulinemia",
+   "In tumor immunity, which molecule on a cytotoxic T lymphocyte mediates target cell killing? — Perforin and granzymes released via the immunological synapse",
+   "Which clinical feature is characteristic of T‑lymphocyte defects, whether congenital or acquired? — Recurrent viral infections, especially herpesviruses, and poor vaccine responses",
+   "A 19‑year‑old presents with fever, pharyngitis, lymphadenopathy, splenomegaly, atypical lymphocytes. What is the primary host cell type destroyed? — CD4+ T lymphocytes are the main target of Epstein‑Barr virus",
+   "A 25‑year‑old with a pigmented skin lesion shows a surrounding zone of depigmentation. Histology shows loss of melanocytes. What is the likely diagnosis? — Tinea versicolor (Malassezia), but the depigmentation suggests pityriasis versicolor; however, the question likely refers to vitiligo secondary to autoimmune T‑cell attack",
+   "A chronic viral infection causes liver damage primarily by cytotoxic T lymphocytes. Which virus is most likely? — Hepatitis B virus, where CTLs mediate hepatocyte destruction",
+   "Which subtype of T lymphocytes directly targets and destroys infected or cancerous cells presenting foreign antigens? — Cytotoxic CD8+ T lymphocytes (CTLs)",
+   "Which type of immunity is primarily mediated by T lymphocytes targeting intracellular pathogens and tumor cells? — Cell‑mediated immunity",
+   "What bedside sign would you look for to assess for ascites in a patient with suspected liver disease? — Shifting dullness: percussion over the abdomen shows dullness that shifts with position, indicating fluid",
+   "If a patient has a CD4+ count of 150 cells/µL but no infections, what is the likely explanation? — Recent ART initiation leading to CD4+ rise, or transient lymphopenia due to stress or infection"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-16",
+  "checked": "2026-11-16",
+  "trimmed": 2
+ }
 }
