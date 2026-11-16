@@ -35,7 +35,7 @@ async function getSitemap(url, seen = new Set()) {
     const nested = await Promise.all(entries.map((entry) => getSitemap(entry, seen)));
     return nested.flat();
   }
-  return entries;
+  return entries.map((entry) => ({ url: entry, source: url }));
 }
 async function mapLimit(items, limit, fn) {
   const results = new Array(items.length);
@@ -90,26 +90,38 @@ const sitemapUrls = [...robots.matchAll(/^Sitemap:\s*(\S+)/gim)].map((m) => m[1]
 if (!sitemapUrls.length) throw new Error("robots.txt does not declare any sitemap URLs");
 
 const all = [];
-// robots.txt may declare both a sitemap index and one or more of the same child
-// sitemaps directly. Share the visited-file set across roots so the same XML
-// document is audited once, rather than falsely counting its URLs as duplicates.
+// robots.txt may declare both a sitemap index and its child files. Share the
+// visited-file set across roots so each XML document is read once.
 const visitedSitemapFiles = new Set();
 for (const sitemapUrl of sitemapUrls) {
   try {
     const entries = await getSitemap(sitemapUrl, visitedSitemapFiles);
-    // Image sitemaps intentionally repeat page URLs to attach image metadata.
-    // Validate their XML, but do not count their locs as duplicate page URLs.
-    if (!/image-sitemap/i.test(new URL(sitemapUrl).pathname)) all.push(...entries);
+    // Image sitemaps are nested inside indexes as well as declared directly.
+    // Validate them, but do not count their repeated page locs as page duplicates.
+    all.push(...entries.filter((entry) => !/image-sitemap/i.test(new URL(entry.source).pathname)));
   }
   catch (e) { errors.push(fail(e.message)); }
 }
-const unique = [...new Set(all.map((u) => normalize(u)))];
+const normalizedEntries = all.map((entry) => ({ url: normalize(entry.url), source: entry.source }));
+const unique = [...new Set(normalizedEntries.map((entry) => entry.url))];
 for (const url of unique) {
   if (new URL(url).hostname !== "www.ompathstudy.com") errors.push(fail(`Unexpected sitemap host: ${url}`));
 }
 if (!unique.length) throw new Error("No page URLs were found in the declared sitemaps");
-const duplicateCount = all.length - unique.length;
-if (duplicateCount) errors.push(fail(`${duplicateCount} duplicate URL entries exist across the sitemaps`));
+const byUrl = new Map();
+for (const entry of normalizedEntries) {
+  const sources = byUrl.get(entry.url) || [];
+  sources.push(entry.source);
+  byUrl.set(entry.url, sources);
+}
+const duplicateEntries = [...byUrl].filter(([, sources]) => sources.length > 1);
+const duplicateCount = normalizedEntries.length - unique.length;
+if (duplicateCount) {
+  errors.push(fail(`${duplicateCount} duplicate URL entries exist across the sitemaps`));
+  for (const [url, sources] of duplicateEntries.slice(0, 20)) {
+    console.log(`SEO DUPLICATE SOURCE: ${url} appears in ${[...new Set(sources)].join(", ")}`);
+  }
+}
 
 const indexable = unique.filter((u) => {
   const p = new URL(u).pathname;
@@ -122,7 +134,7 @@ const day = Math.floor(Date.now() / 86400000);
 const start = (day * MAX_URLS) % indexable.length;
 const rotated = [...indexable.slice(start), ...indexable.slice(0, start)];
 const selected = MAX_URLS >= rotated.length ? rotated : rotated.slice(0, MAX_URLS);
-console.log(`Sitemaps: ${sitemapUrls.length}; sitemap URLs: ${all.length}; unique: ${unique.length}; audited this run: ${selected.length}`);
+console.log(`Sitemaps: ${sitemapUrls.length}; page sitemap URLs: ${normalizedEntries.length}; unique: ${unique.length}; audited this run: ${selected.length}`);
 
 const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
   try {
