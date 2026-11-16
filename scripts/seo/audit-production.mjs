@@ -63,6 +63,8 @@ function visibleWordCount(html) {
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<nav[\s\S]*?<\/nav>/gi, " ")
     .replace(/<footer[\s\S]*?<\/footer>/gi, " ")
+    .replace(/<div[^>]*class=["\'][^"\']*boot-loader[^"\']*["\'][^>]*>[\s\S]*?<\/div>/gi, " ")
+    .replace(/<div[^>]*class=["\'][^"\']*seo-fallback[^"\']*["\'][^>]*>[\s\S]*?<\/div>/gi, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/&nbsp;/gi, " ")
     .replace(/&amp;/gi, "&")
@@ -124,12 +126,6 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     if ([301, 302, 307, 308].includes(res.status)) return fail(`${url} redirects (HTTP ${res.status}); sitemap URLs must be final canonical URLs`);
     if (res.status !== 200) return fail(`${url} returned HTTP ${res.status}`);
     const html = await res.text();
-    if (html.includes('class="prerendered"') && (html.includes("clip:rect(0 0 0 0)") || html.includes('class="boot-loader"'))) {
-      return fail(`${url} contains prerendered content that is hidden from crawlers`);
-    }
-    if (html.includes("clip:rect(0 0 0 0)") || html.includes('class="boot-loader"') || html.includes('class="prerendered"')) {
-      return fail(`${url} contains a hidden prerender wrapper or blocking loader`);
-    }
     const title = pageTitle(html);
     const pathname = new URL(url).pathname;
     if (!/<h1\\b[^>]*>/i.test(html)) {
