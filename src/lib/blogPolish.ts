@@ -3,7 +3,7 @@
 // that fails simply leaves the page as it was.
 import { supabase } from "@/integrations/supabase/client";
 
-export interface Polish { title: string | null; description: string | null; content: string | null; image_query?: string | null; reason?: string | null; verdict: string | null; status: string }
+export interface Polish { title: string | null; description: string | null; content: string | null; image_query?: string | null; reason?: string | null; verdict: string | null; status: string; ai_review_status?: "passed" | "held" | null; ai_review_model?: string | null; ai_reviewed_at?: string | null; ai_review_issues?: unknown[] }
 
 /** Pages whose polished copy has been applied: the rule-tidied copy must not replace it afterwards. */
 export const polishedIds = new Set<string>();
@@ -44,9 +44,9 @@ export async function getPolish(id: string, fresh = false): Promise<Polish | nul
   }
   try {
     const table = supabase as unknown as { from: (t: string) => { select: (c: string) => { eq: (k: string, v: string) => { maybeSingle: () => Promise<{ data: Polish | null; error: unknown }> } } } };
-    let { data, error } = await table.from("blog_polish").select("title,description,content,image_query,reason,verdict,status").eq("article_id", id).maybeSingle();
+    let { data, error } = await table.from("blog_polish").select("title,description,content,image_query,reason,verdict,status,ai_review_status,ai_review_model,ai_reviewed_at,ai_review_issues").eq("article_id", id).maybeSingle();
     // a table made before the picture column existed: ask again without it
-    if (error) ({ data, error } = await table.from("blog_polish").select("title,description,content,reason,verdict,status").eq("article_id", id).maybeSingle());
+    if (error) ({ data, error } = await table.from("blog_polish").select("title,description,content,reason,verdict,status,ai_review_status,ai_review_model,ai_reviewed_at,ai_review_issues").eq("article_id", id).maybeSingle());
     if (error) return null; // the table may not exist yet: the page carries on as before
     const row = data && (data.status === "done" || data.status === "partial") ? data : null;
     store(id, row);
@@ -76,6 +76,9 @@ export function applyPolish<T extends { id: string; title?: string | null; conte
   if (p.title) { out.title = p.title; out.meta_title = p.title; }
   if (p.description) out.meta_description = p.description;
   if (p.image_query) (out as { image_query?: string }).image_query = p.image_query;
+  (out as any).ai_review_status = p.ai_review_status ?? null;
+  (out as any).ai_review_model = p.ai_review_model ?? null;
+  (out as any).ai_reviewed_at = p.ai_reviewed_at ?? null;
   // the text only replaces the page when the whole page is done (a long page is polished a few pieces at a time)
   if (p.status === "done" && p.content && p.content.trim().length > 200) {
     // a label the AI left empty ("**In short:**" with nothing after it) is not shown
