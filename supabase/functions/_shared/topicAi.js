@@ -181,7 +181,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
  * independent Gemini review must never silently become the same model family.
  */
 export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000 } = {}) {
-  const keys = [...new Set(String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").split(/[\\s,]+/).map((k) => k.trim()).filter(Boolean))];
+  const keys = [...new Set(String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
   const models = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
   if (!keys.length) throw new Error("Groq generation is not configured (GROQ_API_KEYS).");
   if (!models.length) throw new Error("No Groq generation model is configured.");
