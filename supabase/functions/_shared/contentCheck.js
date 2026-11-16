@@ -1,7 +1,7 @@
 // A second AI reads medical study material the way a strict senior clinician would and lists what is wrong. It is used on the notes, the topic pages
 // and the deep exam notes, so a page that carries a wrong threshold, a wrong first-line drug or an MCQ whose marked answer is wrong does not get the
 // "AI cross-checked" mark. This is a safety net, not a doctor's review, and the site says so. Plain JS (no Deno or Node APIs) so scripts and edge code share it.
-import { askModel, extractJson, generateDeepWithFallback } from "./topicAi.js";
+import { askGeminiModel, extractJson, generateDeepWithFallback } from "./topicAi.js";
 
 export const CHECK_RULES = `Check for these errors and nothing else:
 - a wrong number, unit or threshold (for example a diagnostic cut-off, a duration, a ratio) compared with current standard guidelines (WHO, Kenya MoH, EASL/AASLD, KDIGO, ESC/AHA, BTS and similar);
@@ -52,9 +52,8 @@ TEXT:
 ${String(text).slice(0, 15000)}
 
 Reply with ONLY one JSON object: {"real": [numbers of the claims that are real errors]}`;
-  // the verifier is a DIFFERENT model family from the first reader when the keys allow (Groq if the first pass used Gemini), so one model's habit is not repeated
-  const other = env.GROQ_API_KEYS && env.GEMINI_API_KEYS ? { GROQ_API_KEYS: env.GROQ_API_KEYS } : env;
-  const r = await askModel(prompt, { env: other, fetchImpl, timeoutMs, maxTokens: 800 });
+  // Re-check with Gemini directly; the verifier must remain independent of Groq generation.
+  const r = await askGeminiModel(prompt, { env, fetchImpl, timeoutMs, maxTokens: 800 });
   const json = extractJson(r.text);
   if (!json) return issues;
   const keep = new Set((json.real ?? []).map(Number));
@@ -79,7 +78,7 @@ export async function checkContent({ title, kind = "note", text, env, fetchImpl 
   let model = "";
   const pieces = chunkText(text).filter((p) => p.trim());
   const results = await Promise.all(pieces.map(async (piece) => {
-    const r = await askModel(buildCheckPrompt({ title, kind, text: piece }), { env, fetchImpl, timeoutMs, maxTokens: 3500 });
+    const r = await askGeminiModel(buildCheckPrompt({ title, kind, text: piece }), { env, fetchImpl, timeoutMs, maxTokens: 3500 });
     model = r.model;
     const json = extractJson(r.text);
     if (!json) throw new Error("no JSON in the reply");
