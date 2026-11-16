@@ -1,7 +1,47 @@
 import { describe, expect, it, vi } from "vitest";
-import { askGroqModel, generateReviewedTopicPage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, buildPrompt, generateReviewedTopicPage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
 
 describe("Groq topic generation boundary", () => {
+  it("disambiguates neonatal umbilical vein thrombosis and requires a sufficiently deep page", () => {
+    const prompt = buildPrompt({ name: "Umbilical Vein Thrombosis", category: "Paediatrics / Neonatal" });
+
+    expect(prompt).toContain("PRE-GENERATION CLINICAL ENTITY DISAMBIGUATION");
+    expect(prompt).toContain("umbilical venous catheter (UVC)-associated thrombosis");
+    expect(prompt).toContain("antenatal umbilical cord thrombosis");
+    expect(prompt).toContain("MINIMUM DEPTH: provide at least 9 substantive sections");
+    expect(prompt).toContain('"clinicalScope"');
+  });
+
+  it("instructs Gemini to check entity mixing, heading accuracy and missing sections", async () => {
+    const page = {
+      medical: true, title: "Umbilical Vein Thrombosis", subject: "Paediatrics",
+      clinicalScope: "Neonatal umbilical vein thrombosis, usually associated with an umbilical venous catheter.",
+      summary: "Neonatal umbilical vein thrombosis is a catheter-associated thrombotic condition.",
+      sections: [
+        { h: "Definition", p: "A clot in the neonatal umbilical vein." },
+        { h: "Causes", p: "Umbilical venous catheter-associated endothelial injury and infection." },
+        { h: "Management", p: "Management depends on extent and progression." },
+      ],
+      whenToSeekHelp: [], faq: [], exam: [], related: [],
+    };
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(page) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockImplementationOnce(async (_url: RequestInfo | URL, init?: RequestInit) => {
+        const body = JSON.parse(String(init?.body));
+        const prompt = body.contents[0].parts[0].text;
+        expect(prompt).toContain("flag mixed entities");
+        expect(prompt).toContain("section whose content does not match its heading");
+        expect(prompt).toContain("topic-type missing-sections and minimum-depth check");
+        expect(prompt).toContain("Paediatrics / Neonatal");
+        return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } });
+      });
+
+    await generateReviewedTopicPage(
+      { name: "Umbilical Vein Thrombosis", category: "Paediatrics / Neonatal" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl, maxFixRounds: 0 },
+    );
+  });
+
   it("sends generation requests only to Groq and returns the model used", async () => {
     const fetchImpl = vi.fn(async (_url: RequestInfo | URL, _init?: RequestInit) =>
       new Response(JSON.stringify({
