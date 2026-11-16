@@ -28,7 +28,7 @@ concurrency:
 jobs:
   topics:
     runs-on: ubuntu-latest
-    timeout-minutes: 80
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
         with:
@@ -69,7 +69,6 @@ jobs:
         timeout-minutes: 30
         env:
           SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
