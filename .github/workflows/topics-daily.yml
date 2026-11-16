@@ -80,7 +80,6 @@ jobs:
         timeout-minutes: 35
         env:
           SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
