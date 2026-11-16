@@ -15,13 +15,13 @@ const KEY = SERVICE || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR
 const fromFile = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
 const groq = [process.env.GROQ_API_KEYS, fromFile(".groq-keys.local")].filter(Boolean).join(",");
 const gem = [process.env.GEMINI_API_KEYS, fromFile(".gemini-keys.local")].filter(Boolean).join(",");
-if (!SERVICE && !WRITE) { console.log("POLISH_WRITE_KEY is not set: nothing to do."); process.exit(0); }
-if (!groq.trim() && !gem.trim()) { console.log("No AI keys: nothing to do."); process.exit(0); }
+if (!SERVICE && !WRITE) throw new Error("POLISH_WRITE_KEY or SUPABASE_SERVICE_ROLE_KEY is required.");
+if (!groq.trim() || !gem.trim()) throw new Error("Both GROQ_API_KEYS and GEMINI_API_KEYS are required.");
 
 const yi = process.argv.indexOf("--year"), mi = process.argv.indexOf("--minutes");
 const ONLY = yi >= 0 ? Number(process.argv[yi + 1]) : 0;
 const MINUTES = mi >= 0 ? Number(process.argv[mi + 1]) : 50;
-const COUNT = Number(process.argv.find((a, i) => /^\d+$/.test(a) && i !== yi + 1 && i !== mi + 1) || 20);
+const COUNT = Number(process.argv.find((a, i) => /^\d+$/.test(a) && i !== yi + 1 && i !== mi + 1) || 30);
 const started = Date.now();
 
 const sb = async (path, { method = "GET", body, headers = {} } = {}) => {
@@ -36,14 +36,14 @@ for (let o = 0; o < 4000; o += 500) {
   if (!r.ok || !Array.isArray(r.json)) { console.log("Could not read the articles:", r.status, r.text.slice(0, 120)); process.exit(0); }
   rows.push(...r.json); if (r.json.length < 500) break;
 }
-const have = await sb("blog_polish?select=article_id,status,updated_at&limit=5000");
-if (!have.ok) { console.log("The blog_polish table is not set up yet (run the SQL first):", have.text.slice(0, 120)); process.exit(0); }
+const have = await sb("blog_polish?select=article_id,status,updated_at,ai_review_status&limit=5000");
+if (!have.ok) throw new Error("The blog_polish AI verification migration is not ready: " + have.text.slice(0, 160));
 const state = new Map((have.json ?? []).map((x) => [x.article_id, x]));
 const hours = (x) => (Date.now() - new Date(x.updated_at).getTime()) / 3_600_000;
 const eligible = (a) => {
   const s = state.get(a.id);
   if (!s) return true;
-  return (s.status === "failed" && hours(s) > 12) || (s.status === "partial" && hours(s) > 1) || (s.status === "working" && hours(s) > 0.5);
+  return (s.status === "failed" && hours(s) > 12) || (s.status === "partial" && hours(s) > 1) || (s.status === "working" && hours(s) > 0.5) || (s.status === "done" && s.ai_review_status !== "passed" && hours(s) > 12);
 };
 // Year 2 and Year 1 first, then Year 3 and the rest
 const order = (a) => [0, 2, 1, 3, 4, 5, 6].indexOf(yearOf(a.category));
