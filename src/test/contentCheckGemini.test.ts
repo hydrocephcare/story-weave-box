@@ -18,7 +18,7 @@ describe("Gemini clinical review boundary", () => {
     expect(fetchImpl).toHaveBeenCalledTimes(1);
     expect(fetchImpl.mock.calls[0][0]).toBe("https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent");
     expect(new Headers(fetchImpl.mock.calls[0][1]?.headers).get("x-goog-api-key")).toBe("gemini-test-key");
-    expect(result.model).toBe("gemini-2.5-flash");
+    expect(result.model).toBe("gemini-3.8-flash");
   });
 
   it("does not use Groq when Gemini review credentials are missing", async () => {
