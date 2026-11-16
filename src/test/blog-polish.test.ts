@@ -54,10 +54,10 @@ describe("blog polish helpers", () => {
 });
 
 describe("applying a polish on the page", () => {
-  it("only polishes Year 1 to 3 and never a protected page", () => {
+  it("polishes every public article and never a protected page", () => {
     expect(wantsPolish({ category: "Year 2: Clinical Biochemistry" })).toBe(true);
     expect(wantsPolish({ category: "Year 5: Surgery" })).toBe(true);
-    expect(wantsPolish({ category: "Uncategorized" })).toBe(false);
+    expect(wantsPolish({ category: "Uncategorized" })).toBe(true);
     expect(wantsPolish({ category: "Year 3: X", password_protected: true })).toBe(false);
   });
 
