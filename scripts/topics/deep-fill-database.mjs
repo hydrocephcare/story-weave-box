@@ -1,6 +1,6 @@
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 const SB = (process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co").replace(/\/$/, "");
-const KEY = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdHJmd2Fxdnh2a2hqYnFyd21sYSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzkyNzEyMDcxLCJleHAiOjIxMDgyODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE", WRITE = process.env.POLISH_WRITE_KEY || "";
+const KEY = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE", WRITE = process.env.POLISH_WRITE_KEY || "";
 const GROQ = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "", GEMINI = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
 const COUNT = Math.max(1, Math.min(40, Number(process.env.TOPIC_DEEP_DB_COUNT || process.argv[2] || 40)));
 const PARALLEL = Math.max(1, Math.min(3, Number(process.env.TOPIC_DEEP_DB_PARALLEL || 2)));
