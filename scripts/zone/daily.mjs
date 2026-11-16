@@ -72,7 +72,7 @@ for (const [kind, minYear] of plan) {
   if (!t) continue;
   console.log(`${LABEL[kind]}: ${t.name} (Year ${t.year})`);
   const questions = await write(kind, t);
-  if (questions.length < 5) { console.warn("  too few valid questions, skipped"); continue; }
+  if (!questions || questions.length < 5) { console.warn("  too few valid questions, skipped"); continue; }
   games.push({ id: `${today}-${games.length + 1}`, title: kind === "quiz" ? `${t.name}: quick quiz` : kind === "case" ? `${t.name}: case showdown` : `${t.name}: drug duel`, game: kind, topic: t.name, year: t.year, blurb: `${LABEL[kind]} for Year ${t.year} and above, written fresh today.`, questions });
 }
 if (games.length < 4) { console.error("The AI wrote fewer than four usable games; keeping yesterday's file."); process.exit(1); }
