@@ -4,7 +4,7 @@ const KEY = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVC
 const WRITE = process.env.POLISH_WRITE_KEY || "";
 const GROQ = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
 const GEMINI = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-const COUNT = Math.max(1, Math.min(40, Number(process.env.TOPIC_REVIEW_COUNT || process.argv[2] || 20)));
+const COUNT = Math.max(1, Math.min(40, Number(process.env.TOPIC_REVIEW_COUNT || process.argv[2] || 40)));
 const PARALLEL = Math.max(1, Math.min(3, Number(process.env.TOPIC_REVIEW_PARALLEL || 2)));
 if (!KEY || !WRITE) throw new Error("SUPABASE_ANON_KEY and POLISH_WRITE_KEY are required for secure topic updates.");
 if (!GROQ.trim() || !GEMINI.trim()) throw new Error("Both GROQ_API_KEYS (writer) and GEMINI_API_KEYS (reviewer) are required.");
@@ -15,9 +15,10 @@ async function request(path, options = {}) {
   if (!r.ok) throw new Error("Supabase " + r.status + ": " + body.slice(0, 350));
   return json;
 }
-const rows = await request("topic_pages?select=slug,name,category,content,updated_at&status=eq.published&ai_review_status=is.null&order=updated_at.asc&limit=1000");
-const queue = (Array.isArray(rows) ? rows : []).slice(0, COUNT);
-console.log("Published topic pages awaiting independent AI review: " + rows.length + "; processing " + queue.length + ".");
+const rows = await request("topic_pages?select=slug,name,category,content,updated_at,ai_review_status&status=eq.published&order=updated_at.asc&limit=1000");
+const ready = (p) => Boolean(p?.aiReview?.status === "passed") && String(p?.summary || "").length >= 100 && (p?.sections?.length || 0) >= 9 && (p?.exam?.length || 0) >= 8 && (p?.faq?.length || 0) >= 3 && JSON.stringify(p).split(/\s+/).length >= 700;
+const queue = (Array.isArray(rows) ? rows : []).filter((r) => r.ai_review_status !== "passed" || !ready(r.content)).slice(0, COUNT);
+console.log("Published topic pages needing a comprehensive Groq rewrite and Gemini review: " + rows.length + "; processing " + queue.length + ".");
 let next = 0, passed = 0, failed = 0;
 const worker = async () => {
   while (true) {
@@ -31,7 +32,7 @@ const worker = async () => {
         { env: { GROQ_API_KEYS: GROQ, GEMINI_API_KEYS: GEMINI }, maxFixRounds: 1, timeoutMs: 55000 });
       if (!result.page?.medical || result.review?.status !== "passed") throw new Error("Gemini review did not pass.");
       const page = result.page, reviewedAt = new Date().toISOString();
-      const saved = await request("topic_pages?slug=eq." + encodeURIComponent(row.slug) + "&status=eq.published&ai_review_status=is.null", {
+      const saved = await request("topic_pages?slug=eq." + encodeURIComponent(row.slug) + "&status=eq.published", {
         method: "PATCH", headers: { Prefer: "return=representation" },
         body: JSON.stringify({ content: page, model: page.model || "groq", reviewed: false, updated_at: reviewedAt,
           generator_model: page.model || "groq", ai_review_status: "passed", ai_review_model: result.review.model,
