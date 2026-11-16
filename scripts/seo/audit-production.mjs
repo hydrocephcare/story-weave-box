@@ -128,13 +128,13 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     const html = await res.text();
     const title = pageTitle(html);
     const pathname = new URL(url).pathname;
-    if (/class=["\'][^"\']*prerendered[^"\']*["\']/i.test(html) && /(clip:rect\\(0 0 0 0\\)|visibility\\s*:\\s*hidden|display\\s*:\\s*none)/i.test(html)) {
+    if (/class=["\'][^"\']*prerendered[^"\']*["\']/i.test(html) && /(clip:rect\(0 0 0 0\)|visibility\s*:\s*hidden|display\s*:\s*none)/i.test(html)) {
       return fail(`${url} has prerendered content hidden from crawlers: hidden prerender wrapper or blocking loader`);
     }
-    if (!/<h1\\b[^>]*>/i.test(html)) {
+    if (!/<h1\b[^>]*>/i.test(html)) {
       return fail(`${url} is missing a primary H1 heading in the crawler response`);
     }
-    if (pathname !== "/" && /^OmpathStudy \\| Medical Notes, MCQs & Exams$/i.test(title)) {
+    if (pathname !== "/" && /^OmpathStudy \| Medical Notes, MCQs & Exams$/i.test(title)) {
       return fail(`${url} returned the generic app-shell title instead of page-specific metadata`);
     }
     const can = canonical(html);
@@ -147,7 +147,7 @@ const pageResults = await mapLimit(selected, CONCURRENCY, async (url) => {
     if (html.length < 500) return fail(`${url} returned an unusually small HTML document (${html.length} bytes)`);
     const visibleWords = visibleWordCount(html);
     if (visibleWords < MIN_VISIBLE_WORDS) return fail(`${url} is too thin for indexing: ${visibleWords} visible words (minimum ${MIN_VISIBLE_WORDS})`);
-    return { ok: true, url, title: title.replace(/\\s+/g, " ").trim() };
+    return { ok: true, url, title: title.replace(/\s+/g, " ").trim() };
   } catch (e) {
     return fail(`${url}: ${e instanceof Error ? e.message : String(e)}`);
   }
