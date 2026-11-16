@@ -4,10 +4,13 @@
 const ALLOWED = /^\/rest\/v1\/(articles|mcq_sets|flashcard_sets|stories|essays|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|semesters|units|syllabus_topics|site_flags|article_comments|note_comments|slide_corrections|paper_answers|paper_seo|paper_similar|blog_polish|category_counts|search_aliases|pending_institutions|contest_university_results|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds|rpc\/exam_catalog)(\?|$)/;
 const RPC = /^\/rest\/v1\/rpc\/(home_recent|category_counts|flashcard_catalog|exam_catalog)$/; // read-only functions, called with POST
 const SHORT = /^\/rest\/v1\/(contests|contest_universities|contest_rounds|app_settings|site_flags|article_comments|note_comments)(\?|$)/; // things that change: 1 minute
-const ONE = /[?&](id|slug)=eq\./;                                                                  // one article or set: 3 hours
-const ttl = (p, build) => build && !SHORT.test(p) ? 6 * 3600 * 1000 : (RPC.test(p) ? 10 * 60 : SHORT.test(p) ? 60 : ONE.test(p) ? 3 * 3600 : 15 * 60) * 1000; // lists: 15 minutes; the website build (bt=1) accepts a 6 hour old copy
+const ONE = /[?&](id|slug)=eq\./;
+const TOPIC_PAGES = /^\/rest\/v1\/topic_pages\?/;
+const TOPIC_ONE = (p) => TOPIC_PAGES.test(p) && /[?&]slug=eq\./.test(p);
+// Public topic detail: one hour. Topic lists: five minutes. Other public tables retain their existing TTLs.
+const ttl = (p, build) => build && !SHORT.test(p) ? 6 * 3600 * 1000 : TOPIC_ONE(p) ? 3600 * 1000 : TOPIC_PAGES.test(p) ? 5 * 60 * 1000 : (RPC.test(p) ? 10 * 60 : SHORT.test(p) ? 60 : ONE.test(p) ? 3 * 3600 : 15 * 60) * 1000;
 
-const maxAge = (p) => (RPC.test(p) ? 120 : SHORT.test(p) ? 30 : ONE.test(p) ? 900 : 300); // seconds the browser keeps it
+const maxAge = (p) => TOPIC_ONE(p) ? 3600 : TOPIC_PAGES.test(p) ? 300 : (RPC.test(p) ? 120 : SHORT.test(p) ? 30 : ONE.test(p) ? 900 : 300);
 const cors = (req, env) => {
   const o = req.headers.get("Origin") || "";
   const ok = env.ALLOWED_ORIGINS.split(",").includes(o) || /^http:\/\/localhost(:\d+)?$/.test(o);
@@ -43,7 +46,7 @@ export default {
     const key = `v1/${await sha(`${path}|${acc}|${rg}|${pf}|${rpcBody}`)}`;
     const hit = await env.CACHE.get(key);
     const age = hit ? Date.now() - Number(hit.customMetadata?.t || 0) : Infinity;
-    const out = (body, type, state, cr, status = 200) => { const resp = new Response(body, { status, headers: { ...c, ...(cr ? { "Content-Range": cr } : {}), "Content-Type": type, "Cache-Control": `public, max-age=${maxAge(path)}, stale-while-revalidate=86400`, "X-Ompath-Cache": state } });
+    const out = (body, type, state, cr, status = 200) => { const resp = new Response(body, { status, headers: { ...c, ...(cr ? { "Content-Range": cr } : {}), "Content-Type": type, "Cache-Control": `public, max-age=${maxAge(path)}, s-maxage=${maxAge(path)}, stale-while-revalidate=86400`, "X-Ompath-Cache": state } });
       if (state !== "stale") if (status === 200) ctx.waitUntil(edge.put(edgeKey, resp.clone()).catch(() => {})); return resp; };
     if (hit && age < ttl(path, url.searchParams.get("bt") === "1")) return out(hit.body, hit.customMetadata.ct, "hit", hit.customMetadata.cr, Number(hit.customMetadata.st || 200));
 

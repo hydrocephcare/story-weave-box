@@ -75,7 +75,7 @@ export function loadTopicIndex(): Promise<TopicIndexItem[]> {
   indexPromise ??= (async () => {
     const built = await getJson<TopicIndexItem[]>("/topics/index.json").catch(() => [] as TopicIndexItem[]);
     try {
-      const { data } = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").select("slug,name,category,updated_at").eq("status", "published").order("updated_at", { ascending: false }).limit(1500);
+      const { data } = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").select("slug,name,category,updated_at").eq("status", "published").order("updated_at", { ascending: false }).limit(20);
       const have = new Set(built.map((t) => t.s));
       const fresh = ((data ?? []) as { slug: string; name: string; category: string | null }[])
         .filter((r) => r.slug && r.name && !have.has(r.slug))

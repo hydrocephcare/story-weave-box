@@ -21,6 +21,23 @@ const REMOVED_404 = [
   "/essays/weekly-year-2-git-physiology-exam-april-17-2026-sections-b-and-c",
 ];
 
+const PUBLIC_CACHE = "https://ompath-sb-cache.hydrocephcare.workers.dev";
+
+async function fetchPublicRows(path, maxPages = 250) {
+  const rows = [];
+  for (let page = 0; page < maxPages; page++) {
+    const offset = page * 20;
+    const query = /[?]/.test(path) ? `${path}&limit=20&offset=${offset}` : `${path}?limit=20&offset=${offset}`;
+    const response = await fetch(`${PUBLIC_CACHE}/?u=${encodeURIComponent(query)}`);
+    if (!response.ok) break;
+    const batch = await response.json();
+    if (!Array.isArray(batch)) break;
+    rows.push(...batch);
+    if (batch.length < 20) break;
+  }
+  return rows;
+}
+
 const REDIRECTED = ["/blog/amebiasis-pathogenic-free-living-amebae-guide","/blog/entamoeba-histolytica-amoebiasis","/blog/liver-tumors-benign-and-malignant-overview","/blog/lymphoma-overview-classification","/blog/liver-tumors-summary-notes","/blog/non-hodgkin-lymphoma","/blog/pleural-effusion-lights-criteria-y4","/blog/pneumothorax-clinical-management-y4","/blog/bronchial-asthma-internal-medicine-y4","/mcqs/medical-bacteriology-mcqs","/mcqs/chemical-pathology-mcqs","/mcqs/cardiovascular-pathology-mcqs","/mcqs/respiratory-pathology-mcqs","/mcqs/glomerular-diseases-mcqs","/mcqs/sickle-cell-anaemia-mcqs","/mcqs/infective-endocarditis-mcqs","/mcqs/biliary-tract-disease-mcqs","/mcqs/rheumatic-heart-disease-mcqs","/mcqs/paed-2021-mcqs","/mcqs/congenital-heart-disease-mcqs","/mcqs/gout-mcqs","/mcqs/pneumonia-mcqs","/mcqs/osteoarthritis-presentation-mcqs","/mcqs/fibromyalgia-presentation-mcqs","/mcqs/crystal-arthropathies-mcqs","/mcqs/sepsis-mcqs","/mcqs/hepatic-amoebiasis-mcqs","/mcqs/blood-transfusion-mcqs","/essays/congenital-heart-disease-essay-questions"];
 
 async function extraSitemap(req, res, mode) {
@@ -36,11 +53,10 @@ async function extraSitemap(req, res, mode) {
   const KEY=process.env.SUPABASE_ANON_KEY||ANON;
   res.setHeader("Content-Type","application/xml; charset=utf-8");
   try {
-    const [rr,ir]=await Promise.all([
-      fetch(`${DB}/rest/v1/topic_pages?select=slug,updated_at&status=eq.published&order=updated_at.desc&limit=2000`,{headers:{apikey:KEY,Authorization:`Bearer ${KEY}`}}),
+    const [rows,ir]=await Promise.all([
+      fetchPublicRows("/rest/v1/topic_pages?select=slug,updated_at&status=eq.published&order=updated_at.desc"),
       fetch(`${SITE}/topics/index.json`)
     ]);
-    const rows=rr.ok?await rr.json():[];
     const indexed=new Set(ir.ok&&(ir.headers.get("content-type")||"").includes("json")?(await ir.json()).map(t=>t.s):[]);
     const fresh=rows.filter(x=>x.slug&&!indexed.has(x.slug));
     const urls=[`<url><loc>${SITE}/topics</loc><changefreq>daily</changefreq><priority>0.7</priority></url>`,...fresh.map(x=>`<url><loc>${SITE}/topic/${encodeURIComponent(x.slug)}</loc><lastmod>${String(x.updated_at).slice(0,10)}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`)].join("");

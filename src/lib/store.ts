@@ -592,26 +592,36 @@ export function isPublicStudyArticle(article: Pick<Article, "title">): boolean {
   return isPublicStudyTitle(article?.title);
 }
 
+async function readInPages<T>(query: any, pageSize = 20): Promise<T[]> {
+  const rows: T[] = [];
+  for (let offset = 0; offset < 100_000; offset += pageSize) {
+    const { data, error } = await query.range(offset, offset + pageSize - 1);
+    if (error) throw error;
+    const page = (data || []) as T[];
+    rows.push(...page);
+    if (page.length < pageSize) break;
+  }
+  return rows;
+}
+
 export async function getArticles(): Promise<Article[]> {
-  const { data, error } = await supabase
+  const query = supabase
     .from("articles")
-    .select("*")
+    .select(ARTICLE_DETAIL_COLUMNS)
     .is("deleted_at", null)
     .order("updated_at", { ascending: false });
-  if (error) throw error;
-  return (data || []) as Article[];
+  return readInPages<Article>(query);
 }
 
 export async function getPublishedArticles(): Promise<Article[]> {
-  const { data, error } = await supabase
-     .from("articles")
+  const query = supabase
+    .from("articles")
     .select("id,title,category,created_at,updated_at,published,slug,meta_description,og_image_url,tags,featured_image,content_kind,content_type,semester_number")
     .eq("published", true)
     .or("is_raw.is.null,is_raw.eq.false")
     .is("deleted_at", null)
     .order("updated_at", { ascending: false });
-  if (error) throw error;
-  return ((data || []) as Article[]).filter(isPublicStudyArticle);
+  return (await readInPages<Article>(query)).filter(isPublicStudyArticle);
 }
 
 export async function getPublishedArticleSummaries(year?: string): Promise<Article[]> {
@@ -634,9 +644,8 @@ export async function getPublishedArticleSummaries(year?: string): Promise<Artic
       : query.like("category", `${year}:%`);
   }
 
-  const { data, error } = await query;
-  if (error) throw error;
-  const result = (data || []).map((row) => toArticlePreview(row)).filter(isPublicStudyArticle);
+  const data = await readInPages<any>(query);
+  const result = data.map((row) => toArticlePreview(row)).filter(isPublicStudyArticle);
 
   if (!year) setCachedSummaries(result);
   return result;
@@ -656,7 +665,7 @@ export async function searchPublishedArticles(queryText: string, year?: string, 
     .is("deleted_at", null)
     .or(`title.ilike.%${safeQ}%,category.ilike.%${safeQ}%,meta_description.ilike.%${safeQ}%,content_fts.fts.${tsQuery || safeQ}`)
     .order("updated_at", { ascending: false })
-    .limit(160); // ranked by relevance on the page, so more candidates are fetched than shown
+    .limit(20); // keep public search payloads bounded; the UI can request a narrower query
 
   if (year && /^Year [1-6]$/.test(year)) {
     query = query.like("category", `${year}:%`);
@@ -1151,8 +1160,9 @@ export async function getCategories(): Promise<{ name: string; count: number }[]
 export async function getArticleCategories(): Promise<ArticleCategory[]> {
   const { data, error } = await (supabase as any)
     .from("article_categories")
-    .select("*")
-    .order("name", { ascending: true });
+    .select("id,name,created_at")
+    .order("name", { ascending: true })
+    .limit(20);
   if (error) throw error;
   return (data || []) as unknown as ArticleCategory[];
 }
