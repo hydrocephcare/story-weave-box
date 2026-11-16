@@ -1,27 +1,22 @@
-name: Polish the blogs
-
-# Blogs are normally polished by the site itself, the first time someone opens each one (and only while the AI has room), so nothing is polished
-# for nobody and nothing is polished twice. This job is only for doing a batch by hand when you want to: GitHub > Actions > "Polish the blogs" >
-# Run workflow (pick how many and which year). Needs POLISH_WRITE_KEY (made on /admin/polish), GROQ_API_KEYS and GEMINI_API_KEYS.
+name: Polish and verify published articles
 on:
+  schedule:
+    - cron: "0 3 * * *"
   workflow_dispatch:
     inputs:
       count:
-        description: "How many blogs to polish this run"
+        description: "How many published articles to process"
         required: false
-        default: "25"
+        default: "30"
       year:
         description: "Only this year (1 to 6); leave empty for all"
         required: false
         default: ""
-
 permissions:
   contents: read
-
 concurrency:
   group: blogs-polish
   cancel-in-progress: false
-
 jobs:
   polish:
     runs-on: ubuntu-latest
@@ -30,17 +25,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-
-      - name: Polish the next blogs
+      - name: Generate comprehensive note copy with Groq and independently verify with Gemini
         env:
           POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          COUNT: ${{ github.event.inputs.count || '25' }}
+          COUNT: ${{ github.event.inputs.count || '30' }}
           YEAR: ${{ github.event.inputs.year }}
         run: |
           if [ -n "$YEAR" ]; then node scripts/blogs/polish-batch.mjs "$COUNT" --year "$YEAR" --minutes 50; else node scripts/blogs/polish-batch.mjs "$COUNT" --minutes 50; fi
