@@ -183,3 +183,10 @@ export async function getHealthGuideToken(token) {
   });
   return row;
 }
+/** Daily cron retention: remove expired bearer tokens, then expired encounters. */
+export async function deleteExpiredHealthData() {
+  const now = encodeURIComponent(new Date().toISOString());
+  const expiredTokens = await db("lite_health_guide_tokens?expires_at=lt." + now, { method: "DELETE" });
+  const expiredEncounters = await db("lite_health_encounters?expires_at=lt." + now, { method: "DELETE" });
+  return { expiredTokens: expiredTokens.length, expiredEncounters: expiredEncounters.length };
+}
