@@ -83,8 +83,8 @@ async function ussd(req,res){
      patch:{concern_category:categories[flow[3]],original_message:description,status:"intake_started"}
     });
     return reply(res,language==="sw"
-     ?"Asante. Ombi lako limepokelewa kwa majaribio ya mfumo. Tathmini ya kitabibu haijafanywa. Ikiwa una dalili kali au zinazozidi, tafuta huduma ya afya mara moja. Piga tena kwa menyu kuu."
-     :"Thank you. Your request has been recorded for service testing. No clinical assessment has been performed yet. If symptoms are severe or worsening, seek medical care immediately. Dial again for the main menu.",true);
+     ?"Kwanza, tujue kama kuna dharura. Je, una shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka sasa?\\n1. Ndiyo  2. Hapana"
+     :"First, let's check for an emergency. Are you having severe difficulty breathing, chest pain, fainting, a seizure, heavy bleeding, or severe/worsening pain right now?\\n1. Yes  2. No");
    }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
@@ -119,7 +119,7 @@ async function ussd(req,res){
       {id:"care",en:"Have you already received medical care for this concern?",sw:"Je, tayari umepata huduma ya afya kwa tatizo hili?"}
      ])
     ];
-    const answers=Array.isArray(encounter.clarification_answers)?encounter.clarification_answers:[];
+    const answers=flow.slice(6,-1).map((value,index)=>({question_id:questions[index]?.id,answer:value})).filter(item=>item.question_id);
     const answerIndex=flow.length-7;
     const currentQuestion=questions[answerIndex];
     if(!currentQuestion)return reply(res,"Your answers have been recorded. No diagnosis or clinical assessment has been generated. Please seek care if symptoms persist or worsen.",true);
