@@ -18,13 +18,14 @@ export default async function liteAdmin(req,res){
   const user=await who.json();
   const roles=await fetch(`${url.replace(/\/$/,"")}/rest/v1/rpc/has_role`,{method:"POST",headers:{apikey:serviceKey,Authorization:`Bearer ${serviceKey}`,"Content-Type":"application/json"},body:JSON.stringify({_user_id:user.id,_role:"admin"})});
   if(!roles.ok||await roles.json()!==true)return json(res,403,{error:"Administrator access required."});
-  const [students,sets,units,attempts]=await Promise.all([
+  const [students,sets,units,attempts,summary]=await Promise.all([
    request("lite_students?select=id,phone_number,full_name,study_level,sms_opt_in,created_at&order=created_at.desc&limit=200",serviceKey),
-   request("mcq_sets?select=id,title,category,unit,unit_id,university,school,updated_at,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=200",serviceKey),
+   request("mcq_sets?select=id,title,category,unit,unit_id,university,school,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=200",serviceKey),
    request("units?select=id,name,short_name,course_code,published&published=eq.true&order=display_order.asc&limit=200",serviceKey),
-   request("lite_attempts?select=id,student_id,mcq_set_id,question_index,selected_option,is_correct,attempted_at&order=attempted_at.desc&limit=1000",serviceKey)
+   request("lite_attempts?select=id,student_id,mcq_set_id,question_index,selected_option,is_correct,attempted_at&order=attempted_at.desc&limit=1000",serviceKey),
+   request("rpc/lite_library_summary",serviceKey)
   ]);
-  const questionSets=sets.map(s=>({id:s.id,title:s.title,category:s.category,unit:s.unit,unit_id:s.unit_id,university:s.university,school:s.school,updated_at:s.updated_at,question_count:Array.isArray(s.questions)?s.questions.length:0}));
-  return json(res,200,{students,sets:questionSets,units,attempts,stats:{students:students.length,optedIn:students.filter(s=>s.sms_opt_in).length,sets:sets.length,questions:sets.reduce((n,s)=>n+(Array.isArray(s.questions)?s.questions.length:0),0),attempts:attempts.length,correct:attempts.filter(a=>a.is_correct).length}});
+  const library=Array.isArray(summary)&&summary[0]?summary[0]:{set_count:sets.length,question_count:0};
+  return json(res,200,{students,sets,units,attempts,stats:{students:students.length,optedIn:students.filter(s=>s.sms_opt_in).length,sets:Number(library.set_count),questions:Number(library.question_count),attempts:attempts.length,correct:attempts.filter(a=>a.is_correct).length}});
  }catch(e){console.error("Lite admin API:",e);return json(res,500,{error:"Could not load OmpathStudy Lite data."});}
 }
