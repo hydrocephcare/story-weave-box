@@ -7,7 +7,10 @@ const corsHeaders = {
 };
 
 function extractMpesaCode(input: string): string {
-  const cleanInput = (input || "").trim().toUpperCase();
+  const trimmed = (input || "").trim();
+  // Preserve case-sensitive provider references (UUIDs and OMP-... Paystack refs).
+  if (trimmed.includes("-") && /^[A-Za-z0-9-]{12,100}$/.test(trimmed)) return trimmed;
+  const cleanInput = trimmed.toUpperCase();
   if (!cleanInput) return "";
 
   if (/^[A-Z0-9]{8,12}$/.test(cleanInput)) return cleanInput;
