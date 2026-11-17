@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { Loader2, ArrowLeft, Clock, BookOpen, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -19,7 +19,9 @@ import AuthorCard from "@/components/AuthorCard";
 import StoryActions from "@/components/StoryActions";
 import AuthorChip from "@/components/AuthorChip";
 import { StoryComments, StoryReads } from "@/components/StorySocial";
-import { authorFromContent } from "@/lib/storyAuthor";
+import { authorFromContent, photoTag } from "@/lib/storyAuthor";
+import { uploadStoryImage } from "@/lib/storyImage";
+import { useAuth } from "@/hooks/useAuth";
 import StoryMore from "@/components/StoryMore";
 
 export default function StoryRead() {
@@ -32,6 +34,9 @@ export default function StoryRead() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [reloadKey, setReloadKey] = useState(0);
   const [editing, setEditing] = useState(false);
+  const [authorPhotoBusy, setAuthorPhotoBusy] = useState(false);
+  const authorPhotoInput = useRef<HTMLInputElement>(null);
+  const { isAdmin } = useAuth();
   const ownerTag = useOwnerTag();
   const isOwner = Boolean(ownerTag && story?.tags?.includes(ownerTag));
 
@@ -280,6 +285,46 @@ export default function StoryRead() {
         >
           <ArrowLeft className="h-3.5 w-3.5" /> Back to stories
         </Link>
+
+        {/* Admin-only author photo override. The original owner tag remains unchanged. */}
+        {isAdmin && (
+          <div className="mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-amber-500/30 bg-amber-500/5 px-4 py-3">
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-bold text-foreground">Story author photo</p>
+              <p className="text-xs text-muted-foreground">Upload the writer’s profile photo shown beside the byline and in the author card. This does not transfer story ownership.</p>
+            </div>
+            <input
+              ref={authorPhotoInput}
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif"
+              className="hidden"
+              onChange={async (event) => {
+                const file = event.currentTarget.files?.[0];
+                event.currentTarget.value = "";
+                if (!file) return;
+                setAuthorPhotoBusy(true);
+                try {
+                  const url = await uploadStoryImage(file);
+                  const nextTags = (story.tags ?? []).filter((tag: string) => !tag.startsWith("photo:"));
+                  const tag = photoTag(url);
+                  if (!tag) throw new Error("The uploaded image URL could not be saved.");
+                  const { error } = await supabase.from("stories").update({ tags: [...nextTags, tag] }).eq("id", story.id);
+                  if (error) throw error;
+                  setStory((current: any) => current ? { ...current, tags: [...nextTags, tag] } : current);
+                  window.alert("The story author photo has been updated.");
+                } catch (error) {
+                  window.alert(error instanceof Error ? error.message : "Could not update the author photo. Please try again.");
+                } finally {
+                  setAuthorPhotoBusy(false);
+                }
+              }}
+            />
+            <button type="button" disabled={authorPhotoBusy} onClick={() => authorPhotoInput.current?.click()} className="inline-flex items-center gap-2 rounded-lg bg-primary px-3.5 py-2 text-sm font-bold text-primary-foreground disabled:opacity-60">
+              {authorPhotoBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Pencil className="h-4 w-4" />}
+              {authorPhotoBusy ? "Uploading…" : "Change author photo"}
+            </button>
+          </div>
+        )}
 
         {/* Header */}
         {isOwner && (
