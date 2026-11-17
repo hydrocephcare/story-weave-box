@@ -41,6 +41,11 @@ const subjectOf=s=>{
 const yearMatches=(s,year)=>new RegExp(`\\bYear\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`);
 function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}
 function languagePrompt(language,q){return language==="sw"?q.sw:q.en;}
+function assessmentReply(assessment, language, emergency = false) {
+ const impression=shortText(assessment?.provisional_diagnosis||"Cause not yet clear; clinical assessment is needed.",105);
+ if(language==="sw") return (emergency?"DHARURA: Nenda hospitali sasa. ":"Tathmini ya awali: ")+impression+". Si utambuzi wa mwisho.";
+ return (emergency?"EMERGENCY: Go to hospital now. ":"Likely cause: ")+impression+". Provisional only; clinician confirmation needed.";
+}
 async function ussd(req,res){
  let payload=req.body||{};
  if(typeof payload==="string")payload=Object.fromEntries(new URLSearchParams(payload));
@@ -180,8 +185,10 @@ async function ussd(req,res){
      ["severity","worsening"].includes(currentQuestion.id)?["1","2","3"]:["1","2","3"];
     if(!allowedAnswers.includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\nChoose one of the numbered options shown.\n0. Back");
     if(answerIndex===0&&answer==="1"){
-     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:[...answers,{question_id:currentQuestion.id,answer}],red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],status:"referred_urgent",urgency_level:"emergency"}});
-     return reply(res,encounter.preferred_language==="sw"?"Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni. Ikiwa unaweza, mwombe mtu akusindikize.":"Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment. If possible, ask someone to accompany you.",true);
+     const emergencyAnswers=[...answers,{question_id:currentQuestion.id,answer}];
+     const emergencyAssessment=buildPreliminaryAssessment({encounter,answers:emergencyAnswers,emergencyFlags:[...(encounter.red_flag_results||[]),{rule:"self_reported_emergency_symptom",positive:true}]});
+     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:emergencyAnswers,red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],assessment:emergencyAssessment,status:"referred_urgent",urgency_level:"emergency"}});
+     return reply(res,assessmentReply(emergencyAssessment,encounter.preferred_language,true),true);
     }
     if(answerIndex===0&&answer==="3"){
      const uncertainAnswers=[...answers,{question_id:currentQuestion.id,answer}];
@@ -192,9 +199,7 @@ async function ussd(req,res){
       urgency_level:"urgent",
       status:"referred_urgent"
      }});
-     return reply(res,encounter.preferred_language==="sw"
-      ?"Ikiwa huna uhakika kuhusu dalili hizi, tafuta huduma ya afya sasa. Dalili kali? Nenda hospitali mara moja."
-      :"If unsure about these emergency signs, seek urgent in-person care now. If any are present, go to hospital immediately.",true);
+     return reply(res,assessmentReply(assessment,encounter.preferred_language,true),true);
     }
     const nextAnswers=[...answers,{question_id:currentQuestion.id,answer}];
     const nextIndex=answerIndex+1;
@@ -206,14 +211,8 @@ async function ussd(req,res){
       urgency_level:assessment.urgency_level,
       status:encounter.sms_consent===true?"guide_pending":"complete"
      }});
-     const urgent=assessment.urgency_level==="urgent";
-     const swMessage=urgent
-      ?"Tumepokea. Nenda kituo cha afya leo kwa uchunguzi. Huu si utambuzi. Dalili zikizidi, nenda hospitali sasa."
-      :"Tumepokea. Panga kuonana na mhudumu wa afya mapema. Huu si utambuzi. Dalili kali? Nenda hospitali sasa.";
-     const enMessage=urgent
-      ?"Received. Seek in-person care urgently today. This is not a diagnosis. If symptoms worsen, go to hospital now."
-      :"Received. Arrange an in-person health assessment promptly. Not a diagnosis. Severe symptoms? Go to hospital now.";
-     return reply(res,encounter.preferred_language==="sw"?swMessage:enMessage,true);
+     const emergency=assessment.urgency_level==="emergency";
+     return reply(res,assessmentReply(assessment,encounter.preferred_language,emergency),true);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
     const nextQuestions=adaptPregnancyQuestions(questions,category,nextAnswers);
