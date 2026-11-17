@@ -75,4 +75,10 @@ describe("OmpathStudy Lite emergency phrase screening", () => {
     );
   });
 
+  it("flags severe epigastric or upper abdominal pain", () => {
+    expect(detectEmergencyLanguage("I have severe epigastric pain")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "severe_epigastric_or_upper_abdominal_pain", positive: true })]),
+    );
+  });
+
 });
