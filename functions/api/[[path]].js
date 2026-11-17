@@ -5,6 +5,8 @@ const routes = {
   "ompath-lite": "lite",
   "ompath-lite-sms": "lite-sms",
   "ompath-lite-admin": "lite-admin",
+  "ompath-lite-guide": "health-guide",
+  "ompath-lite-cleanup": "health-cleanup",
 };
 
 export async function onRequest(context) {
