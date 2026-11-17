@@ -7,6 +7,9 @@ const patterns = [
   ["severe_bleeding", /\b(?:heavy bleeding|bleeding heavily|bleeding won't stop|uncontrolled bleeding|soaking (?:a )?pad in an hour|damu nyingi sana|kutokwa damu nyingi|damu haikomi)\b/i],
   ["severe_pain", /\b(?:unbearable pain|worst pain|severe sudden pain|severe (?:abdominal|stomach|head|pelvic) pain|maumivu makali sana|maumivu makali ya (?:tumbo|kichwa|nyonga)|maumivu yasiyovumilika)\b/i],
   ["severe_allergic_reaction", /\b(?:throat closing|tongue swelling|swollen tongue|face swelling with breathing|koo linafunga|ulimi kuvimba na kupumua)\b/i],
+  ["severe_headache_or_visual_symptoms", /\b(?:sudden severe headache|worst headache|severe headache with (?:blurred vision|visual changes)|blurred vision with severe headache|kuumwa kichwa sana ghafla|kuona ukungu na maumivu makali ya kichwa)\b/i],
+  ["stroke_signs", /\b(?:face drooping|one[- ]sided weakness|slurred speech|sudden weakness on one side|uso kupinda|mkono mmoja kuwa dhaifu|maneno kutatizika)\b/i],
+  ["poisoning_or_overdose", /\b(?:swallowed poison|drank poison|overdose|taken an overdose|nimekunywa sumu|amekunywa sumu)\b/i],
   ["suicidal_immediate_danger", /\b(?:about to kill myself|going to kill myself|taken poison to die|nimekunywa sumu ili kufa|nataka kujiua sasa)\b/i],
 ];
 
@@ -131,6 +134,15 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
       differentials = ["Threatened pregnancy loss (depending on gestation)", "Placental abruption", "Preterm prelabour rupture of membranes"];
       rationale = "Bleeding or fluid leakage during pregnancy needs maternity assessment; the cause depends on gestational age and examination.";
       urgency = urgency === "emergency" ? urgency : "urgent";
+    } else if (answerFor("pregnancy_status") === "2") {
+      leadingImpression = "Pregnancy is not confirmed; the reported symptom needs assessment for a non-pregnancy-related cause";
+      differentials = ["Gynaecological or pelvic condition", "Urinary tract infection", "Other abdominal or systemic condition"];
+      rationale = "Pregnancy was denied. The symptom should be assessed on its own merits, and pregnancy testing may still be appropriate if the history is uncertain.";
+    } else if (answerFor("pregnancy_status") === "3") {
+      leadingImpression = "Possible pregnancy-related symptom — pregnancy status is uncertain";
+      differentials = ["Pregnancy-related complication if pregnant", "Urinary tract infection", "Gynaecological or pelvic condition"];
+      rationale = "Pregnancy status is uncertain. A pregnancy test and clinical assessment are needed before pregnancy-related causes can be confirmed or excluded.";
+      if (positive("pregnancy_bleeding_or_fluid")) urgency = urgency === "emergency" ? urgency : "urgent";
     } else {
       leadingImpression = "Pregnancy-related symptom requiring obstetric assessment";
       differentials = ["Urinary tract infection", "Normal pregnancy-related changes", "Obstetric complication depending on the symptom"];
@@ -154,7 +166,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     leadingImpression = fever ? "Vaginal discharge with fever — pelvic inflammatory disease (PID) must be considered" : "Vaginitis or cervicitis causing vaginal discharge";
     differentials = ["Bacterial vaginosis", "Vulvovaginal candidiasis", "Trichomoniasis or other sexually transmitted infection", "Cervicitis/PID"];
     rationale = "Discharge characteristics, pelvic pain, examination and appropriate swabs/urine tests are needed to distinguish causes.";
-    if (fever) urgency = urgency === "emergency" ? urgency : "urgent";
+    if (fever || positive("severity")) urgency = urgency === "emergency" ? urgency : "urgent";
   } else if (category === "Menstrual problem") {
     leadingImpression = "Menstrual disturbance (abnormal uterine bleeding or dysmenorrhoea, depending on the symptom)";
     differentials = ["Pregnancy-related bleeding", "Ovulatory dysfunction", "Uterine fibroids", "Endometriosis"];
@@ -162,7 +174,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
       differentials.unshift("Ectopic pregnancy or miscarriage must be excluded");
       urgency = urgency === "emergency" ? urgency : "urgent";
     }
-    rationale = "Cycle pattern, bleeding volume, pain, pregnancy status and examination determine the likely cause.";
+    rationale = "Cycle pattern, bleeding volume, pain, pregnancy status and examination determine the likely cause.";\n    if (positive("severity")) urgency = urgency === "emergency" ? urgency : "urgent";
   } else if (category === "Bleeding") {
     leadingImpression = "Abnormal bleeding of undetermined source; pregnancy-related bleeding must be excluded where relevant";
     differentials = ["Pregnancy loss or ectopic pregnancy", "Abnormal uterine bleeding", "Cervical or vaginal cause"];
@@ -175,6 +187,17 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
 
   if (urgency === "emergency") rationale += " A reported danger sign takes priority over further remote assessment.";
 
+  const recommendedEvaluation = category === "Pregnancy-related concern"
+    ? ["Maternal vital signs and obstetric examination.", "Confirm gestational age and assess fetal wellbeing as appropriate for gestation.", "Urine testing and ultrasound or other investigations when clinically indicated."]
+    : category === "Lower abdominal pain"
+      ? ["Vital signs and focused abdominal/pelvic examination.", "Pregnancy test where biologically possible; urinalysis and further blood tests or ultrasound according to findings."]
+      : category === "Vaginal discharge"
+        ? ["Focused sexual and gynaecological history and examination, with consent.", "Vaginal/cervical swabs or STI nucleic-acid testing where indicated; pregnancy testing if relevant."]
+        : category === "Menstrual problem"
+          ? ["Pregnancy test where relevant and assessment of bleeding volume.", "Full blood count if bleeding is heavy or prolonged; pelvic ultrasound or endocrine tests when indicated."]
+          : category === "Bleeding"
+            ? ["Assess vital signs, bleeding volume and haemodynamic stability.", "Pregnancy test where relevant, full blood count and pelvic examination/ultrasound as clinically indicated."]
+            : ["A clinician should take a focused history, examine the affected system and select investigations based on the symptoms."];
   const nextSteps = urgency === "emergency"
     ? ["Seek emergency medical care now. Do not wait for an SMS or online assessment."]
     : urgency === "urgent"
@@ -196,7 +219,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     reasons,
     possible_causes: [],
     clinical_examination: "Not performed",
-    investigations: "Not performed",
+    investigations: "Not performed",\n    recommended_evaluation: recommendedEvaluation,
     limitations: [
       "This is an automated intake summary, not a diagnosis or a substitute for examination by a qualified health professional.",
       "No physical examination, vital signs, pregnancy test or investigations were available.",
