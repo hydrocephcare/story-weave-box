@@ -112,4 +112,27 @@ describe("Lite Health Support web API", () => {
     expect(res.statusCode).toBe(400);
     expect(fetchStub).not.toHaveBeenCalled();
   });
+  it("rejects follow-up answers that do not match the selected pathway", async () => {
+    const fetchStub = vi.fn();
+    vi.stubGlobal("fetch", fetchStub);
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174003",
+        concern_category: "Pregnancy-related concern",
+        consent_given: true,
+        answers: [
+          { question_id: "emergency_screen", answer: "2" },
+          { question_id: "pregnancy_status", answer: "2" },
+          { question_id: "gestation", answer: "2" },
+          { question_id: "pregnancy_bleeding_or_fluid", answer: "2" },
+        ],
+      },
+    }, res);
+    expect(res.statusCode).toBe(400);
+    expect(fetchStub).not.toHaveBeenCalled();
+  });
+
 });
