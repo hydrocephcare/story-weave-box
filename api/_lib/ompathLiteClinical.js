@@ -55,7 +55,8 @@ export async function interpretHealthConcern({ originalMessage, preferredLanguag
     original_message: original,
   });
 
-  const provider = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY ? "groq" : "gemini";\n  const result = await askJson([
+  const provider = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY ? "groq" : "gemini";
+  const result = await askJson([
     { role: "system", content: system },
     { role: "user", content: prompt },
   ], { fast: true, prefer: provider, providerOnly: provider, singleAttempt: true, temperature: 0.1, maxTokens: 650 });
