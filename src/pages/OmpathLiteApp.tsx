@@ -3,7 +3,7 @@ import { Activity, ArrowRight, BookOpen, CheckCircle2, ChevronLeft, ChevronRight
 import "./ompath-lite.css";
 
 type Profile = { phone_number: string; full_name: string; study_level: string; preferred_subject?: string | null; sms_opt_in?: boolean };
-type Question = { question: string; options: string[]; correct_answer: number; explanation?: string };
+type Question = { question: string; options: string[]; explanation?: string };
 type SetItem = { id: string; title: string; category?: string; subject: string; question_count: number; questions?: Question[] };
 type Library = { subjects: { name: string; sets: SetItem[] }[]; totals: { sets: number; questions: number } };
 type Result = { correct: boolean; correctIndex: number; explanation: string };
