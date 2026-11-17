@@ -68,7 +68,7 @@ export async function createHealthEncounter({
 
   // Repeated USSD callbacks must never reset an encounter or its consent.
   const existing = await db(
-    \`lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.\${encodeURIComponent(session_id)}&limit=1\`,
+    `lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
   );
   if (existing[0]) {
     if (existing[0].phone_number !== phone_number || existing[0].consent_given !== true) {
@@ -87,7 +87,7 @@ export async function createHealthEncounter({
   } catch {
     // A concurrent callback may have inserted first; read it, never upsert.
     const raced = await db(
-      \`lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.\${encodeURIComponent(session_id)}&limit=1\`,
+      `lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
     );
     if (raced[0]?.phone_number === phone_number && raced[0]?.consent_given === true) return raced[0];
     throw new Error("We could not securely start this health enquiry.");
