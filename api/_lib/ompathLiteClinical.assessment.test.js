@@ -109,4 +109,30 @@ describe("OmpathStudy Lite preliminary assessment", () => {
     });
     expect(result.urgency_level).toBe("urgent");
   });
+  it("does not imply pregnancy when the caller says pregnancy is not possible", () => {
+    const result = buildPreliminaryAssessment({
+      encounter,
+      answers: [
+        { question_id: "pregnancy_status", answer: "2" },
+        { question_id: "pregnancy_bleeding_or_fluid", answer: "1" },
+      ],
+    });
+    expect(result.provisional_diagnosis).toMatch(/non-pregnancy-related cause/i);
+    expect(result.differential_diagnoses).not.toContain("Threatened pregnancy loss (depending on gestation)");
+  });
+
+  it("escalates severe or worsening lower abdominal pain", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Lower abdominal pain", original_message: "Lower abdominal pain" },
+      answers: [{ question_id: "severity", answer: "1" }],
+    });
+    expect(result.urgency_level).toBe("urgent");
+  });
+
+  it("provides clinician-directed evaluation suggestions without claiming tests were done", () => {
+    const result = buildPreliminaryAssessment({ encounter, answers: [] });
+    expect(result.investigations).toBe("Not performed");
+    expect(result.recommended_evaluation.length).toBeGreaterThan(0);
+  });
+
 });
