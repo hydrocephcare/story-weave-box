@@ -46,7 +46,7 @@ async function ussd(req,res){
    if(!yearSets.length)return reply(res,`No published Year ${year} MCQs found yet. Please explore OmpathStudy online.`,true);
    const grouped=new Map();
    for(const s of yearSets){const subject=subjectOf(s);if(!grouped.has(subject))grouped.set(subject,[]);grouped.get(subject).push(s);}
-   for(const [name,items] of grouped){const seen=new Set();grouped.set(name,items.filter(item=>{const key=String(item.title||"").trim().toLowerCase().replace(/\\s+/g," ");if(seen.has(key))return false;seen.add(key);return true;}));}
+   for(const [name,items] of grouped){const seen=new Set();grouped.set(name,items.filter(item=>{const key=String(item.title||"").trim().toLowerCase().replace(/\s+/g," ");if(seen.has(key))return false;seen.add(key);return true;}));}
    const subjects=[...grouped.keys()].sort((a,b)=>a.localeCompare(b));
    if(student.preferred_subject&&subjects.includes(student.preferred_subject)){subjects.splice(subjects.indexOf(student.preferred_subject),1);subjects.unshift(student.preferred_subject);}
    const tokens=parts.slice(1);
@@ -80,7 +80,7 @@ async function ussd(req,res){
     const q=questions[qNo-1];
     if(!q||!Array.isArray(q.options)||q.options.length<2)return reply(res,"This question is unavailable. Please report it on OmpathStudy.",true);
     const stem=clean(q.question,2000);
-    const chunks=stem.match(/[\\s\\S]{1,125}/g)||["Question text unavailable."];
+    const chunks=stem.match(/[\s\S]{1,125}/g)||["Question text unavailable."];
     for(let page=0;page<chunks.length;page++){
      if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length}\n${chunks[page]}\n1. ${page<chunks.length-1?"More":"Show options"}`);
      if(tokens[cursor++]!=="1")return reply(res,"Enter 1 to continue reading this question.",true);
