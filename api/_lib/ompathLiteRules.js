@@ -174,7 +174,8 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
       differentials.unshift("Ectopic pregnancy or miscarriage must be excluded");
       urgency = urgency === "emergency" ? urgency : "urgent";
     }
-    rationale = "Cycle pattern, bleeding volume, pain, pregnancy status and examination determine the likely cause.";\n    if (positive("severity")) urgency = urgency === "emergency" ? urgency : "urgent";
+    rationale = "Cycle pattern, bleeding volume, pain, pregnancy status and examination determine the likely cause.";
+    if (positive("severity")) urgency = urgency === "emergency" ? urgency : "urgent";
   } else if (category === "Bleeding") {
     leadingImpression = "Abnormal bleeding of undetermined source; pregnancy-related bleeding must be excluded where relevant";
     differentials = ["Pregnancy loss or ectopic pregnancy", "Abnormal uterine bleeding", "Cervical or vaginal cause"];
@@ -219,7 +220,8 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     reasons,
     possible_causes: [],
     clinical_examination: "Not performed",
-    investigations: "Not performed",\n    recommended_evaluation: recommendedEvaluation,
+    investigations: "Not performed",
+    recommended_evaluation: recommendedEvaluation,
     limitations: [
       "This is an automated intake summary, not a diagnosis or a substitute for examination by a qualified health professional.",
       "No physical examination, vital signs, pregnancy test or investigations were available.",
