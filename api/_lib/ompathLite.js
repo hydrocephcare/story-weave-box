@@ -280,11 +280,12 @@ async function ussd(req,res){
      if(tokens[cursor++]!=="1")return reply(res,"Enter 1 to continue reading this question.",true);
     }
     const optionList=optionsOf(q).slice(0,4);
-    const optionPages=Math.max(1,Math.ceil(optionList.length/2));
+    const optionPageSize=/[^\x00-\x7F]/.test(optionList.join(" "))?1:2;
+    const optionPages=Math.max(1,Math.ceil(optionList.length/optionPageSize));
     let optionPage=0;
     while(true){
-     const optionRows=optionList.slice(optionPage*2,optionPage*2+2)
-      .map((option,index)=>String(optionPage*2+index+1)+". "+shortText(option,24)).join("\n");
+     const optionRows=optionList.slice(optionPage*optionPageSize,optionPage*optionPageSize+optionPageSize)
+      .map((option,index)=>String(optionPage*optionPageSize+index+1)+". "+shortText(option,24)).join("\n");
      const optionPrompt="Q"+qNo+"/"+questions.length+" options "+(optionPage+1)+"/"+optionPages+":\n"+optionRows;
      if(cursor>=tokens.length)return reply(res,optionPrompt+(optionPage<optionPages-1?"\n9. More options":"\nChoose 1-4")+(optionPage>0?"\n0. Previous":""));
      const optionAction=tokens[cursor];
