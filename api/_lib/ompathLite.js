@@ -9,14 +9,14 @@ const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const shortText = (value,max=40) => {
  const text=clean(value,2000).replace(/\s+/g," ");
- max=/[^\\x00-\\x7F]/.test(text)?Math.min(max,18):max;
+ max=/[^\x00-\x7F]/.test(text)?Math.min(max,18):max;
  if(text.length<=max)return text;
  const cut=text.slice(0,max+1),boundary=cut.lastIndexOf(" ");
  return (boundary>Math.floor(max*0.55)?cut.slice(0,boundary):text.slice(0,max)).replace(/[.,;: -]+$/,"")+"...";
 };
 function splitWords(value,max=105){
  const source=String(value??"");
- if(/[^\\x00-\\x7F]/.test(source))max=Math.min(max,48);
+ if(/[^\x00-\x7F]/.test(source))max=Math.min(max,48);
  const words=source.trim().split(/\s+/).filter(Boolean),chunks=[];
  let line="";
  for(const word of words){
@@ -276,15 +276,15 @@ async function ussd(req,res){
     let optionPage=0;
     while(true){
      const optionRows=optionList.slice(optionPage*2,optionPage*2+2)
-      .map((option,index)=>\`${optionPage*2+index+1}. \${shortText(option,24)}\`).join("\\n");
-     const optionPrompt=\`Q\${qNo}/\${questions.length} options \${optionPage+1}/\${optionPages}:\\n\${optionRows}\`;
+      .map((option,index)=>String(optionPage*2+index+1)+". "+shortText(option,24)).join("\\n");
+     const optionPrompt="Q"+qNo+"/"+questions.length+" options "+(optionPage+1)+"/"+optionPages+":\\n"+optionRows;
      if(cursor>=tokens.length)return reply(res,optionPrompt+(optionPage<optionPages-1?"\\n9. More options":"\\nChoose 1-4")+(optionPage>0?"\\n0. Previous":""));
      const optionAction=tokens[cursor];
      if(optionAction==="9"&&optionPage<optionPages-1){cursor++;optionPage++;continue;}
      if(optionAction==="0"&&optionPage>0){cursor++;optionPage--;continue;}
      break;
     }
-        const selected=Number(tokens[cursor++]);
+    const selected=Number(tokens[cursor++]);
     if(!Number.isInteger(selected)||selected<1||selected>Math.min(4,q.options.length))return reply(res,"Invalid answer. Enter one of the option numbers shown.",true);
     const rawCorrect=Number(q.correct_answer),correctIndex=rawCorrect>=0&&rawCorrect<q.options.length?rawCorrect:rawCorrect-1;
     if(!Number.isInteger(correctIndex)||correctIndex<0||correctIndex>=q.options.length)return reply(res,"Answer key needs review. Please report this question.",true);
