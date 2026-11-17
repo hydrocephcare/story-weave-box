@@ -12,7 +12,6 @@ export default function OmpathLiteAdmin(){
  const {session}=useAuth();const [data,setData]=useState<Data|null>(null);const [loading,setLoading]=useState(true);const [error,setError]=useState("");const [tab,setTab]=useState<"library"|"students"|"activity">("library");const [unitFilter,setUnitFilter]=useState("all");
  const refresh=useCallback(async()=>{setLoading(true);setError("");try{if(!session?.access_token)throw new Error("Sign in required.");const r=await fetch("/api/ompath-lite-admin",{headers:{Authorization:`Bearer ${session.access_token}`}});const j=await r.json();if(!r.ok)throw new Error(j.error||"Could not load Lite data.");setData(j);}catch(e){setError(e instanceof Error?e.message:"Could not load Lite data.");}finally{setLoading(false);}},[session?.access_token]);
  useEffect(()=>{void refresh();},[refresh]);
- const units=useMemo(()=>new Map((data?.units||[]).map(u=>[u.id,u])),[data?.units]);
  const visibleSets=useMemo(()=>data?.sets.filter(s=>unitFilter==="all"||s.unit_id===unitFilter)||[],[data?.sets,unitFilter]);
  const setMap=useMemo(()=>new Map((data?.sets||[]).map(s=>[s.id,s.title])),[data?.sets]);
  const accuracy=data?.stats.attempts?Math.round(data.stats.correct/data.stats.attempts*100):0;
