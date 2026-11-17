@@ -58,10 +58,11 @@ export async function onRequest({ request }) {
       height: 630,
       fonts: [{ name: "sans-serif", data: font, weight: 700, style: "normal" }],
     });
-    const png = new Resvg(svg, {
+    const renderer = await Resvg.async(svg, {
       fitTo: { mode: "width", value: 1200 },
       font: { fontBuffers: [font] },
-    }).render().asPng();
+    });
+    const png = renderer.render().asPng();
     return new Response(png, {
       headers: {
         "Content-Type": "image/png",
