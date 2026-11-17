@@ -109,7 +109,7 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   if (typeof patch.normalized_summary === "string") allowed.normalized_summary = clean(patch.normalized_summary, 1200);
   if (Array.isArray(patch.clarification_answers)) allowed.clarification_answers = patch.clarification_answers.slice(0, 5);
   if (Array.isArray(patch.red_flag_results)) allowed.red_flag_results = patch.red_flag_results.slice(0, 30);
-  if (["intake_started", "awaiting_clarification", "ready_for_assessment", "referred_urgent", "guide_pending", "complete", "abandoned"].includes(patch.status)) {
+  if (["not_assessed", "emergency", "urgent", "prompt", "routine", "uncertain"].includes(patch.urgency_level)) allowed.urgency_level = patch.urgency_level;\n  if (["intake_started", "awaiting_clarification", "ready_for_assessment", "referred_urgent", "guide_pending", "complete", "abandoned"].includes(patch.status)) {
     allowed.status = patch.status;
   }
   allowed.updated_at = new Date().toISOString();
