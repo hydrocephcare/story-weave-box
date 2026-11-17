@@ -162,6 +162,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/ompath-lite",
+      "destination": "/api/ai?task=lite"
+    },
+    {
       "source": "/api/ai-chat",
       "destination": "/api/ai?task=chat"
     },
