@@ -112,8 +112,15 @@ async function inbound(req,res){
  if(!from||!raw)return res.status(200).send("Missing sender or message.");
  const students=await db(`lite_students?select=id,sms_opt_in&phone_number=eq.${encodeURIComponent(from)}&limit=1`);
  if(raw==="STOP"||raw==="UNSUBSCRIBE"||raw==="CANCEL"){
-  if(students[0])await db(`lite_students?id=eq.${students[0].id}`,{method:"PATCH",body:JSON.stringify({sms_opt_in:false,sms_opt_in_at:null,updated_at:new Date().toISOString()})});
-  return res.status(200).send("You have been unsubscribed from OmpathStudy Lite SMS.");
+  if(students[0])await db(\`lite_students?id=eq.\${students[0].id}\`,{method:"PATCH",body:JSON.stringify({sms_opt_in:false,sms_opt_in_at:null,updated_at:new Date().toISOString()})});
+  const encounters=await db(\`lite_health_encounters?select=id&phone_number=eq.\${encodeURIComponent(from)}&sms_consent=eq.true&limit=100\`);
+  const ids=encounters.map(row=>row.id).filter(id=>/^[0-9a-f-]{36}$/i.test(String(id)));
+  if(ids.length){
+   const idFilter="in.("+ids.join(",")+")";
+   await db("lite_health_encounters?id="+idFilter,{method:"PATCH",body:JSON.stringify({sms_consent:false,updated_at:new Date().toISOString()})});
+   await db("lite_health_guide_tokens?encounter_id="+idFilter+"&revoked_at=is.null",{method:"PATCH",body:JSON.stringify({revoked_at:new Date().toISOString()})});
+  }
+  return res.status(200).send("You have been unsubscribed from OmpathStudy Lite SMS. Any active private health-guide links have been revoked.");
  }
  if(raw==="START"||raw==="SUBSCRIBE"){
   if(!students[0])return res.status(200).send("Register through OmpathStudy Lite first, then opt in to SMS.");
