@@ -83,8 +83,8 @@ async function ussd(req,res){
      patch:{concern_category:categories[flow[3]],original_message:description,status:"intake_started"}
     });
     return reply(res,language==="sw"
-     ?"Kwanza, tujue kama kuna dharura. Je, una shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka sasa?\\n1. Ndiyo  2. Hapana"
-     :"First, let's check for an emergency. Are you having severe difficulty breathing, chest pain, fainting, a seizure, heavy bleeding, or severe/worsening pain right now?\\n1. Yes  2. No");
+     ?"Kwanza, tujue kama kuna dharura. Je, una shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka sasa?\n1. Ndiyo  2. Hapana"
+     :"First, let's check for an emergency. Are you having severe difficulty breathing, chest pain, fainting, a seizure, heavy bleeding, or severe/worsening pain right now?\n1. Yes  2. No");
    }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
@@ -124,7 +124,7 @@ async function ussd(req,res){
     const currentQuestion=questions[answerIndex];
     if(!currentQuestion)return reply(res,"Your answers have been recorded. No diagnosis or clinical assessment has been generated. Please seek care if symptoms persist or worsen.",true);
     const answer=flow[flow.length-1];
-    if(!["1","2","3","4"].includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\\nChoose one of the numbered options.\\n0. Back");
+    if(!["1","2","3","4"].includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\nChoose one of the numbered options.\n0. Back");
     if(answerIndex===0&&answer==="1"){
      await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:[...answers,{question_id:currentQuestion.id,answer}],red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],status:"referred_urgent",urgency_level:"emergency"}});
      return reply(res,encounter.preferred_language==="sw"?"Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni. Ikiwa unaweza, mwombe mtu akusindikize.":"Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment. If possible, ask someone to accompany you.",true);
@@ -133,7 +133,7 @@ async function ussd(req,res){
     const nextIndex=answerIndex+1;
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:nextIndex>=questions.length?"ready_for_assessment":"awaiting_clarification"}});
     if(nextIndex>=questions.length)return reply(res,encounter.preferred_language==="sw"?"Asante. Majibu yako yamehifadhiwa. Tathmini ya kitabibu bado haijatolewa. Tafuta huduma ya afya ikiwa dalili zinaendelea au zinazidi.":"Thank you. Your answers have been saved. A clinical assessment has not yet been generated. Seek medical care if symptoms persist or worsen.",true);
-    return reply(res,languagePrompt(encounter.preferred_language,questions[nextIndex])+"\\n1. Yes  2. No  3. Not sure\\n0. Back");
+    return reply(res,languagePrompt(encounter.preferred_language,questions[nextIndex])+"\n"+(questions[nextIndex].id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure / not pregnant":questions[nextIndex].id==="duration"||questions[nextIndex].id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
   }
