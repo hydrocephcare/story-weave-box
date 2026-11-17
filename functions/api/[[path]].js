@@ -144,22 +144,32 @@ async function invoke(handler, request, url, body, streaming = false) {
     },
   };
 
+  if (streaming) {
+    Promise.resolve()
+      .then(() => handler(req, res))
+      .then(() => { if (!completed) res.end(); })
+      .catch(() => {
+        if (streamController) {
+          try { streamController.enqueue(encoder.encode("\\n\\ndata: [ERROR]\\n\\n")); streamController.close(); } catch {}
+          completed = true;
+        } else {
+          status = 500;
+          headers.set("content-type", "application/json; charset=utf-8");
+          payload = JSON.stringify({ error: "Request could not be completed." });
+          completed = true;
+          resolveReady(new Response(payload, { status, headers }));
+        }
+      });
+    return responseReady;
+  }
   try {
     await handler(req, res);
     if (!completed) res.end();
-  } catch (error) {
-    if (streaming && streamController) {
-      try { streamController.enqueue(encoder.encode("\n\ndata: [ERROR]\n\n")); streamController.close(); } catch {}
-      completed = true;
-    } else {
-      status = 500;
-      headers.set("content-type", "application/json; charset=utf-8");
-      payload = JSON.stringify({ error: "Request could not be completed." });
-      completed = true;
-      if (streaming) resolveReady(new Response(payload, { status, headers }));
-    }
+  } catch {
+    status = 500;
+    headers.set("content-type", "application/json; charset=utf-8");
+    payload = JSON.stringify({ error: "Request could not be completed." });
   }
-  if (streaming) return responseReady;
   return new Response(payload == null ? null : payload, { status, headers });
 }
 
