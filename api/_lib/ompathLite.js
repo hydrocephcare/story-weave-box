@@ -171,23 +171,6 @@ async function ussd(req,res){
      ["duration","onset"].includes(currentQuestion.id)?["1","2","3"]:
      ["severity","worsening"].includes(currentQuestion.id)?["1","2","3"]:["1","2","3"];
     if(!allowedAnswers.includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\nChoose one of the numbered options shown.\n0. Back");
-    if(answerIndex===0&&answer==="1"){
-     const emergencyAnswers=[...answers,{question_id:currentQuestion.id,answer}];
-     const emergencyAssessment=buildPreliminaryAssessment({encounter,answers:emergencyAnswers,emergencyFlags:[...(encounter.red_flag_results||[]),{rule:"self_reported_emergency_symptom",positive:true}]});
-     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:emergencyAnswers,red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],assessment:emergencyAssessment,status:"referred_urgent",urgency_level:"emergency"}});
-     return reply(res,assessmentReply(emergencyAssessment,encounter.preferred_language,true),true);
-    }
-    if(answerIndex===0&&answer==="3"){
-     const uncertainAnswers=[...answers,{question_id:currentQuestion.id,answer}];
-     const assessment=buildPreliminaryAssessment({encounter,answers:uncertainAnswers,emergencyFlags:encounter.red_flag_results||[]});
-     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{
-      clarification_answers:uncertainAnswers,
-      assessment,
-      urgency_level:"urgent",
-      status:"referred_urgent"
-     }});
-     return reply(res,assessmentReply(assessment,encounter.preferred_language,true),true);
-    }
     const nextAnswers=[...answers,{question_id:currentQuestion.id,answer}];
     const nextIndex=answerIndex+1;
     if(nextIndex>=questions.length){
@@ -217,4 +200,4 @@ async function ussd(req,res){
   return reply(res,mainMenu);
  }catch(e){console.error("OmpathStudy Lite USSD:",e);return reply(res,"We could not process your request. Please try again shortly.",true);}
 }
-export default async function ompathLite(req,res){if(req.method==="GET")return res.status(200).json({name:"OmpathStudy Lite",status:"ok",source:"OmpathStudy published MCQ library"});if(req.method!=="POST")return res.status(405).json({error:"Method not allowed"});return ussd(req,res);}
+export default async function ompathLite(req,res){if(req.method==="GET")return res.status(200).json({name:"OmpathStudy Lite",status:"ok",source:"Health Support"});if(req.method!=="POST")return res.status(405).json({error:"Method not allowed"});return ussd(req,res);}
