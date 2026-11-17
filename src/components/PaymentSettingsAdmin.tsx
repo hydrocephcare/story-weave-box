@@ -21,6 +21,7 @@ export default function PaymentSettingsAdmin() {
   const [guestSlideView, setGuestSlideView] = useState<"all" | "half">("all");
   const [redacted, setRedacted] = useState(DEFAULT_SITE_SETTINGS.redactedNames.join(", "));
   const [showCounts, setShowCounts] = useState(false);
+  const [paystackEnabled, setPaystackEnabled] = useState(false);
   const subsOn = useSubscriptionMode();
   const [switching, setSwitching] = useState(false);
   const flip = async (next: boolean) => {
@@ -43,7 +44,8 @@ export default function PaymentSettingsAdmin() {
       getSetting("guest_slide_view"),
       getSetting("redacted_names"),
       getSetting("show_content_counts"),
-    ]).then(([p, rp, r, d, pl, fv, gsv, rn, sc]) => {
+      getSetting("paystack_enabled"),
+    ]).then(([p, rp, r, d, pl, fv, gsv, rn, sc, pe]) => {
       setPrice(p || "0");
       setRevealPrice(rp === "" ? "5" : (rp || "5"));
       setRatio(r || "0.25");
@@ -52,6 +54,7 @@ export default function PaymentSettingsAdmin() {
       setGuestSlideView(gsv === "half" ? "half" : "all");
       setRedacted((rn ?? "").trim() || DEFAULT_SITE_SETTINGS.redactedNames.join(", "));
       setShowCounts(sc === "true");
+      setPaystackEnabled(pe === "true");
       try {
         const parsed = JSON.parse(pl || "[]");
         if (Array.isArray(parsed) && parsed.length) setPlans(parsed);
@@ -77,6 +80,7 @@ export default function PaymentSettingsAdmin() {
       await saveSetting("guest_slide_view", guestSlideView);
       await saveSetting("redacted_names", redacted);
       await saveSetting("show_content_counts", showCounts ? "true" : "false");
+      await saveSetting("paystack_enabled", paystackEnabled ? "true" : "false");
       await loadPaymentSettings(true);
       await loadSiteSettings(true);
       toast({ title: "Payment settings saved" });
@@ -120,6 +124,20 @@ export default function PaymentSettingsAdmin() {
           <p className="text-xs text-muted-foreground">{subsOn ? "Reveal, Pro features, daily limits and the subscribe prompts follow the settings below." : "Everything is free for everyone. Switching on restores the original defaults: Reveal KSh 5, 25% of locked pages free, Aponerosis KSh 150 (90 days), Annual KSh 400, Pro features."}</p>
         </div>
         <button type="button" disabled={switching} onClick={() => flip(!subsOn)} className="rounded-full bg-primary px-4 py-2 text-xs font-bold text-primary-foreground disabled:opacity-60">{switching ? "Saving…" : subsOn ? "Switch off" : "Switch on with defaults"}</button>
+      </div>
+
+      <div className="rounded-xl border border-border bg-card p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="min-w-0">
+            <p className="inline-flex items-center gap-2 text-sm font-bold text-foreground"><ShieldCheck className="h-4 w-4 text-primary" /> Paystack payments</p>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Master switch for Paystack checkout on OmpathStudy. When off, new card, M-Pesa and Airtel payments are blocked. Existing OneKitty and PalPlus integrations are unaffected.</p>
+          </div>
+          <label className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-foreground">
+            <input type="checkbox" checked={paystackEnabled} onChange={(e) => setPaystackEnabled(e.target.checked)} className="h-4 w-4 accent-primary" />
+            {paystackEnabled ? "Active" : "Inactive"}
+          </label>
+        </div>
+        <p className="mt-2 text-[11px] text-muted-foreground">Save settings below to apply the change. The server also checks this setting before accepting a payment request.</p>
       </div>
 
       <div className="rounded-xl border border-border bg-card p-5">
