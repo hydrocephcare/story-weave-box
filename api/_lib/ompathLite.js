@@ -48,36 +48,45 @@ async function ussd(req,res){
    for(const s of yearSets){const subject=subjectOf(s);if(!grouped.has(subject))grouped.set(subject,[]);grouped.get(subject).push(s);}
    const subjects=[...grouped.keys()].sort((a,b)=>a.localeCompare(b));
    if(student.preferred_subject&&subjects.includes(student.preferred_subject)){subjects.splice(subjects.indexOf(student.preferred_subject),1);subjects.unshift(student.preferred_subject);}
-   const subjectNo=parts.length>1?Number(parts[1]):0;
-   if(!subjectNo)return reply(res,`Year ${year} subjects:\n${subjects.slice(0,8).map((s,i)=>`${i+1}. ${clean(s,42)}`).join("\n")}\n0. Main menu`);
-   if(subjectNo===0)return reply(res,mainMenu,true);
-   const subject=subjects[subjectNo-1];
-   if(!subject)return reply(res,"Invalid subject. Dial again and choose a listed number.",true);
+   const tokens=parts.slice(1);
+   let cursor=0,subjectPage=0;
+   while(tokens[cursor]==="9"){subjectPage++;cursor++;}
+   const showSubjects=(page)=>reply(res,`Year ${year} subjects (page ${page+1}):\\n${subjects.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s,38)}`).join("\\n")}${(page+1)*7<subjects.length?"\\n9. Next page":""}\\n0. ${page>0?"Previous page":"Main menu"}`);
+   if(cursor>=tokens.length)return showSubjects(0);
+   if(tokens[cursor]==="0")return subjectPage>0?showSubjects(subjectPage-1):reply(res,mainMenu,true);
+   const subjectNo=Number(tokens[cursor++]);
+   if(!Number.isInteger(subjectNo)||subjectNo<1||subjectNo>7)return reply(res,"Choose a listed subject number, 9 for next page or 0 to go back.",true);
+   const subject=subjects[subjectPage*7+subjectNo-1];
+   if(!subject)return reply(res,"No subject at that position. Go back and choose another.",true);
    await db(`lite_students?id=eq.${student.id}`,{method:"PATCH",body:JSON.stringify({preferred_subject:subject})});
    const subjectSets=grouped.get(subject)||[];
-   const setNo=parts.length>2?Number(parts[2]):0;
-   if(!setNo)return reply(res,`${clean(subject,55)}\nChoose a question set:\n${subjectSets.slice(0,7).map((s,i)=>`${i+1}. ${clean(s.title,48)}`).join("\n")}\n0. Back to subjects`);
-   if(setNo===0)return reply(res,`Year ${year} subjects:\n${subjects.slice(0,8).map((s,i)=>`${i+1}. ${clean(s,42)}`).join("\n")}`);
-   const listed=subjectSets[setNo-1];
-   if(!listed)return reply(res,"Invalid question set. Dial again and choose a listed number.",true);
+   let setPage=0;
+   while(tokens[cursor]==="9"){setPage++;cursor++;}
+   const showSets=(page)=>reply(res,`${clean(subject,42)} (page ${page+1}):\\nChoose a question set:\\n${subjectSets.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s.title,42)}`).join("\\n")}${(page+1)*7<subjectSets.length?"\\n9. Next page":""}\\n0. ${page>0?"Previous page":"Back to subjects"}`);
+   if(cursor>=tokens.length)return showSets(0);
+   if(tokens[cursor]==="0")return setPage>0?showSets(setPage-1):showSubjects(subjectPage);
+   const setNo=Number(tokens[cursor++]);
+   if(!Number.isInteger(setNo)||setNo<1||setNo>7)return reply(res,"Choose a listed set number, 9 for next page or 0 to go back.",true);
+   const listed=subjectSets[setPage*7+setNo-1];
+   if(!listed)return reply(res,"No question set at that position. Go back and choose another.",true);
    const full=await getSet(listed.id),set=full[0];
    if(!set)return reply(res,"This MCQ set is no longer published.",true);
    const questions=Array.isArray(set.questions)?set.questions:[];
-   const qNo=parts.length>3?Number(parts[3]):1,qIndex=qNo-1,q=questions[qIndex];
-   if(!q||!Array.isArray(q.options)||q.options.length<2)return reply(res,"Question unavailable. Choose another set.",true);
-   if(parts.length<5){
-    const opts=optionsOf(q).slice(0,5).map((o,i)=>`${i+1}. ${clean(o,55)}`).join("\n");
-    return reply(res,`${clean(set.title,45)}\nQ${qNo}/${questions.length}: ${clean(q.question,170)}\n${opts}\nReply with answer number.`);
+   const qNo=tokens[cursor]!==undefined?Number(tokens[cursor++]):1,qIndex=qNo-1,q=questions[qIndex];
+   if(!Number.isInteger(qNo)||qNo<1||!q||!Array.isArray(q.options)||q.options.length<2)return reply(res,"Question unavailable. Choose another question set.",true);
+   if(cursor>=tokens.length){
+    const opts=optionsOf(q).slice(0,5).map((o,i)=>`${i+1}. ${clean(o,48)}`).join("\\n");
+    return reply(res,`${clean(set.title,40)}\\nQ${qNo}/${questions.length}: ${clean(q.question,145)}\\n${opts}\\nReply with answer number.`);
    }
-   const selected=Number(parts[4]);
+   const selected=Number(tokens[cursor]);
    if(!Number.isInteger(selected)||selected<1||selected>Math.min(5,q.options.length))return reply(res,"Invalid answer. Enter one of the listed option numbers.",true);
    const rawCorrect=Number(q.correct_answer),correctIndex=rawCorrect>=0&&rawCorrect<q.options.length?rawCorrect:rawCorrect-1;
    if(!Number.isInteger(correctIndex)||correctIndex<0||correctIndex>=q.options.length)return reply(res,"This question needs an answer-key review. Please report it on OmpathStudy.",true);
    const isCorrect=selected-1===correctIndex;
    await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qIndex,selected_option:selected,is_correct:isCorrect})});
-   const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",300);
-   const next=qIndex+1<questions.length? `\nNext: dial again, choose 2, then this subject and set, question ${qNo+1}.`:"\nYou have completed this set.";
-   return reply(res,`${isCorrect?"Correct!":"Not quite."}\nAnswer: ${correctIndex+1}. ${clean(q.options[correctIndex],90)}\n${explanation}${next}`,true);
+   const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",260);
+   const next=qIndex+1<questions.length?`\\nNext question: dial again, choose 2, then repeat this subject and set; enter question ${qNo+1}.`:"\\nYou have completed this set.";
+   return reply(res,`${isCorrect?"Correct!":"Not quite."}\\nAnswer: ${correctIndex+1}. ${clean(q.options[correctIndex],75)}\\n${explanation}${next}`,true);
   }
   if(parts[0]==="3")return reply(res,"Study with existing OmpathStudy MCQs by year and subject. Your answers and scores are tracked.",true);
   if(parts[0]==="4"){
