@@ -1,6 +1,6 @@
 # OmpathStudy Lite — USSD MVP
 
-A low-bandwidth medical-learning channel for students using basic phones. This module is isolated from the main OmpathStudy web experience.
+A low-bandwidth medical-learning channel for students using basic phones. This module is isolated from the main OmpathStudy web experience and reuses the existing serverless API multiplexer.
 
 ## MVP scope
 - Africa's Talking USSD menu and callback.
@@ -8,33 +8,29 @@ A low-bandwidth medical-learning channel for students using basic phones. This m
 - Daily MCQ retrieval, answer submission and explanation.
 - Attempt records for later learner progress summaries.
 
-## 1. Database
+## Database
 Apply `supabase/migrations/202611170001_ompathstudy_lite.sql` to the OmpathStudy Supabase project. It creates three isolated `lite_*` tables and seeds one demonstration question.
 
-## 2. Server environment
-Set these in the Vercel project environment (never in frontend code):
-- `SUPABASE_URL`
-- `SUPABASE_SERVICE_ROLE_KEY`
+## Server environment
+Ensure the Vercel project has `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` configured server-side. Never expose the service-role key in frontend code.
 
-The Africa's Talking USSD callback currently needs no AT API key; the key will be needed for outbound SMS in the next milestone.
-
-## 3. Africa's Talking configuration
+## Africa's Talking configuration
 Create a USSD service code in the Africa's Talking dashboard/sandbox and set its callback URL to:
 
 `https://YOUR-DEPLOYMENT/api/ompath-lite`
 
-Configure the callback to send the standard fields `sessionId`, `serviceCode`, `phoneNumber` and `text`. The service code itself is provisioned by Africa's Talking; `*384#` is only an illustrative code and is not assumed to be assigned.
+The Vercel rewrite forwards this to the existing API function. Configure the callback to send `sessionId`, `serviceCode`, `phoneNumber` and `text`. The service code is provisioned by Africa's Talking; `*384#` is illustrative only and is not assumed to be assigned.
 
-## 4. Test flow
-1. Dial the sandbox service code.
-2. Select Register, enter a name, then choose a study level.
-3. Return to the main menu and choose Daily medical MCQ.
-4. Select an answer from 1–4 and confirm feedback.
-5. Confirm rows are created in `lite_students` and `lite_attempts`.
+## Test flow
+1. Apply the SQL migration.
+2. Deploy the branch to a preview environment.
+3. Create/configure a USSD service code with the preview callback URL.
+4. Dial the sandbox service code, register, then dial again.
+5. Choose Daily medical MCQ and submit an answer.
+6. Confirm rows in `lite_students` and `lite_attempts`.
 
-## Security and deployment notes
-- The handler uses the Supabase service-role key only on the server.
+## Security and clinical quality
 - RLS is enabled and no browser-facing policies are created.
-- Do not enable public database access to student phone numbers or attempts.
-- Add rate limiting, duplicate-session handling and consent/privacy wording before production launch.
-- This is a learning prototype, not a source of clinical decision support. Questions require review by a qualified medical educator before publication.
+- Database access uses the service-role key only in the serverless handler.
+- Add callback verification where supported, rate limiting, consent/privacy wording and session replay protection before production launch.
+- This is an educational prototype, not clinical decision support. A qualified medical educator must review questions and explanations before publication.
