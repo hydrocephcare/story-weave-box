@@ -64,21 +64,32 @@ export async function createHealthEncounter({
   if (!["en", "sw", "other"].includes(preferredLanguage)) throw new Error("Unsupported language preference.");
   if (!["ussd", "sms", "web"].includes(channel)) throw new Error("Unsupported channel.");
 
-  const rows = await db("lite_health_encounters?on_conflict=session_id", {
-    method: "POST",
-    headers: { Prefer: "resolution=merge-duplicates,return=representation" },
-    body: JSON.stringify({
-      session_id,
-      phone_number,
-      channel,
-      consent_given: true,
-      consented_at: new Date().toISOString(),
-      sms_consent: smsConsent === true,
-      preferred_language: preferredLanguage,
-      updated_at: new Date().toISOString(),
-    }),
-  });
-  return rows[0] || null;
+  // Repeated USSD callbacks must never reset an encounter or its consent.
+  const existing = await db(
+    \`lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.\${encodeURIComponent(session_id)}&limit=1\`,
+  );
+  if (existing[0]) {
+    if (existing[0].phone_number !== phone_number || existing[0].consent_given !== true) {
+      throw new Error("This health session cannot be resumed.");
+    }
+    return existing[0];
+  }
+  const payload = {
+    session_id, phone_number, channel, consent_given: true,
+    consented_at: new Date().toISOString(), sms_consent: smsConsent === true,
+    preferred_language, updated_at: new Date().toISOString(),
+  };
+  try {
+    const rows = await db("lite_health_encounters", { method: "POST", body: JSON.stringify(payload) });
+    return rows[0] || null;
+  } catch {
+    // A concurrent callback may have inserted first; read it, never upsert.
+    const raced = await db(
+      \`lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.\${encodeURIComponent(session_id)}&limit=1\`,
+    );
+    if (raced[0]?.phone_number === phone_number && raced[0]?.consent_given === true) return raced[0];
+    throw new Error("We could not securely start this health enquiry.");
+  }
 }
 
 /** Retrieve only the encounter matching both the session and caller's phone. */
@@ -87,7 +98,7 @@ export async function getHealthEncounter({ sessionId, phoneNumber }) {
   const phone_number = normalizePhone(phoneNumber);
   if (!phone_number) throw new Error("A valid mobile number is required.");
   const rows = await db(
-    `lite_health_encounters?select=*&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}&limit=1`,
+    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}&limit=1`,
   );
   return rows[0] || null;
 }
@@ -107,9 +118,26 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   if (typeof patch.concern_category === "string") allowed.concern_category = clean(patch.concern_category, 80);
   if (typeof patch.original_message === "string") allowed.original_message = clean(patch.original_message, 1200);
   if (typeof patch.normalized_summary === "string") allowed.normalized_summary = clean(patch.normalized_summary, 1200);
-  if (Array.isArray(patch.clarification_answers)) allowed.clarification_answers = patch.clarification_answers.slice(0, 5);
-  if (Array.isArray(patch.red_flag_results)) allowed.red_flag_results = patch.red_flag_results.slice(0, 30);
-  if (patch.assessment && typeof patch.assessment === "object" && !Array.isArray(patch.assessment)) allowed.assessment = patch.assessment;
+  if (Array.isArray(patch.clarification_answers) && patch.clarification_answers.length <= 5 &&
+      patch.clarification_answers.every((item) => item && typeof item === "object" && !Array.isArray(item) &&
+        typeof item.question_id === "string" && item.question_id.length <= 60 &&
+        (typeof item.answer === "string" || typeof item.answer === "number"))) {
+    allowed.clarification_answers = patch.clarification_answers.map((item) => ({
+      question_id: clean(item.question_id, 60), answer: clean(item.answer, 40),
+    }));
+  }
+  if (Array.isArray(patch.red_flag_results) && patch.red_flag_results.length <= 30 &&
+      patch.red_flag_results.every((item) => item && typeof item === "object" && !Array.isArray(item) &&
+        typeof item.rule === "string" && typeof item.positive === "boolean")) {
+    allowed.red_flag_results = patch.red_flag_results.map((item) => ({
+      rule: clean(item.rule, 80), positive: item.positive,
+      ...(typeof item.evidence === "string" ? { evidence: clean(item.evidence, 180) } : {}),
+    }));
+  }
+  if (patch.assessment && typeof patch.assessment === "object" && !Array.isArray(patch.assessment) &&
+      JSON.stringify(patch.assessment).length <= 12000) {
+    allowed.assessment = patch.assessment;
+  }
   if (["not_assessed", "emergency", "urgent", "prompt", "routine", "uncertain"].includes(patch.urgency_level)) allowed.urgency_level = patch.urgency_level;
   if (["intake_started", "awaiting_clarification", "ready_for_assessment", "referred_urgent", "guide_pending", "complete", "abandoned"].includes(patch.status)) {
     allowed.status = patch.status;
