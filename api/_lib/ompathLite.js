@@ -81,8 +81,8 @@ async function ussd(req,res){
    if(flow.length===2){
     if(!["1","2"].includes(flow[1]))return reply(res,"Choose 1 for English or 2 for Kiswahili.\n0. Back");
     return reply(res,flow[1]==="2"
-     ?"Nambari na majibu ya afya huhifadhiwa salama siku 30. SMS ukikubali tu. Si utambuzi wala dharura. Usiandike jina.\n1. Nakubali\n2. Sitaki\n0. Rudi"
-     :"Phone and health answers stored securely 30 days. SMS only if you agree. Not diagnosis or emergency care. No names.\n1. Agree\n2. Cancel\n0. Back");
+     ?"Nambari na majibu ya afya huhifadhiwa salama kwa siku 30. Hakuna SMS itakayotumwa. Si huduma ya dharura wala utambuzi wa mwisho. Usiandike jina.\n1. Nakubali\n2. Sitaki\n0. Rudi"
+     :"Your phone number and health answers are stored securely for 30 days. No SMS will be sent. Not emergency care or a confirmed diagnosis. Do not enter names.\n1. Agree\n2. Cancel\n0. Back");
    }
    if(flow.length===3){
     if(flow[2]==="2")return reply(res,"Cancelled. No health information was saved.",true);
