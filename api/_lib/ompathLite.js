@@ -55,6 +55,7 @@ async function ussd(req,res){
  const parts=text?text.split("*"):[];
  try{
   if(!text)return reply(res,mainMenu);
+  if(parts[0]==="2")return reply(res,"OmpathStudy Lite provides health support and preliminary symptom assessment. For medical notes, MCQs, past papers and full learning resources, visit https://www.ompathstudy.com",true);
   if(parts[0]==="1"){
    // Resolve back navigation within this flow. 0 removes one prior selection;
    // 00 clears the health flow and returns to the Lite main menu.
@@ -65,7 +66,7 @@ async function ussd(req,res){
     if(token==="0"){if(flow.length===1)returnedToIntro=true;flow.pop();continue;}
     flow.push(token);
    }
-   if(!flow.length){if(returnedToIntro)return reply(res,"Health support (pilot)\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support (pilot)\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
+   if(!flow.length){if(returnedToIntro)return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support (pilot)\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
     if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
