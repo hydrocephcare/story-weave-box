@@ -125,6 +125,9 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
   if (emergencyFlags.length || positive("emergency_screen")) {
     urgency = "emergency";
     reasons.push("A possible emergency warning sign was reported.");
+  } else if (answerFor("emergency_screen") === "3") {
+    urgency = "urgent";
+    reasons.push("The emergency screening answer was uncertain; urgent in-person assessment is the safer next step.");
   } else if (
     category === "Pregnancy-related concern" &&
     (positive("pregnancy_bleeding_or_fluid") || positive("pregnancy_movement"))
