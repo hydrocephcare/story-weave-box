@@ -71,32 +71,38 @@ async function ussd(req,res){
    if(!flow.length){if(returnedToIntro)return reply(res,"Health support (pilot)\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support (pilot)\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
-    if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
-    return reply(res,"Your answers are sensitive health data and may be processed by an automated AI system and stored securely for up to 30 days. SMS is sent only if you opt in. This is not a diagnosis or emergency service. Do not enter your name.\nMajibu yako ni taarifa nyeti za afya; yanaweza kuchakatwa na mfumo wa AI na kuhifadhiwa kwa usalama hadi siku 30. SMS itatumwa tu ukikubali. Huu si utambuzi wala huduma ya dharura. Usiandike jina lako.\n1. I agree / Nakubali\n2. Cancel / Sitaki\n0. Back / Rudi nyuma");
+    if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\\n0. Back");
+    return reply(res,"Choose language:\\n1. English\\n2. Kiswahili\\n0. Back");
    }
    if(flow.length===2){
-    if(flow[1]!=="1")return reply(res,"Consent is required to continue.\n1. I agree\n2. Cancel\n0. Back",true);
-    return reply(res,"Choose your preferred language:\n1. English\n2. Kiswahili\n0. Back");
+    if(!["1","2"].includes(flow[1]))return reply(res,"Choose 1 for English or 2 for Kiswahili.\\n0. Back");
+    return reply(res,flow[1]==="2"
+     ?"Majibu ya afya yatahifadhiwa salama hadi siku 30. SMS itatumwa tu ukikubali. Si huduma ya dharura.\\n1. Nakubali\\n2. Sitaki\\n0. Rudi"
+     :"Health answers are stored securely for up to 30 days. SMS is sent only if you agree. Not emergency care.\\n1. Agree\\n2. Cancel\\n0. Back");
    }
    if(flow.length===3){
-    if(!["1","2"].includes(flow[2]))return reply(res,"Choose 1 for English or 2 for Kiswahili.\n0. Back");
-    return reply(res,"What is your main concern?\n1. Pregnancy-related concern\n2. Menstrual problem\n3. Lower abdominal pain\n4. Vaginal discharge\n5. Bleeding\n6. Other health concern\n0. Back");
+    if(flow[2]!=="1")return reply(res,"Consent is required to continue.\\n1. Agree\\n2. Cancel\\n0. Back",true);
+    return reply(res,flow[1]==="2"
+     ?"Chagua tatizo kuu:\\n1. Ujauzito\\n2. Hedhi\\n3. Maumivu ya tumbo la chini\\n4. Uchafu ukeni\\n5. Kutokwa damu\\n6. Nyingine"
+     :"Choose your main concern:\\n1. Pregnancy\\n2. Period problem\\n3. Lower tummy pain\\n4. Vaginal discharge\\n5. Bleeding\\n6. Other");
    }
    if(flow.length===4){
-    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose an option from 1 to 6.\n0. Back");
-    return reply(res,flow[2]==="2"
-     ?"Eleza dalili zako kwa maneno machache (au bonyeza 1 kuruka).\n0. Rudi nyuma"
-     :"Briefly describe what is troubling you in your own words, including mixed language if needed. Enter 1 to skip.\n0. Back");
+    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose a number from 1 to 6.\\n0. Back");
+    return reply(res,flow[1]==="2"
+     ?"Eleza dalili kwa kifupi. Andika 1 kuruka.\\n0. Rudi"
+     :"Briefly describe your symptoms. Enter 1 to skip.\\n0. Back");
    }
    if(flow.length===5){
-    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?\n1. Yes, send SMS\n2. No SMS\n0. Back");
+    return reply(res,flow[1]==="2"
+     ?"Ungependa kiungo cha mwongozo kitumwe kwa SMS?\\n1. Ndiyo\\n2. Hapana\\n0. Rudi"
+     :"Send a guide link by SMS if one is available?\\n1. Yes\\n2. No\\n0. Back");
    }
    if(flow.length===6){
-    if(!["1","2"].includes(flow[5]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\n0. Back");
-    const language=flow[2]==="2"?"sw":"en";
+    if(!["1","2"].includes(flow[5]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\\n0. Back");
+    const language=flow[1]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
-    // Screen the caller's own words for explicit emergency phrases before AI interpretation.
+    // Deterministic phrase screening runs locally; no AI call is made in the USSD response window.
     const emergencyFlags=detectEmergencyLanguage(description);
     const encounter=await createHealthEncounter({
      sessionId:session,
@@ -108,8 +114,8 @@ async function ussd(req,res){
     });
     if(encounter?.assessment||encounter?.status==="referred_urgent"){
      return reply(res,language==="sw"
-      ?"Tayari ulipokea majibu ya huduma hii. Ikiwa una dalili kali au zinazidi, tafuta huduma ya dharura sasa."
-      :"This health enquiry has already been processed. If symptoms are severe or worsening, seek emergency care now.",true);
+      ?"Tayari ulipokea majibu. Dalili kali zikizidi, tafuta huduma ya dharura sasa."
+      :"This enquiry was already processed. Seek emergency care if symptoms are severe or worsening.",true);
     }
     await updateHealthEncounter({
      id:encounter.id,
@@ -125,11 +131,11 @@ async function ussd(req,res){
      }
     });
     if(emergencyFlags.length)return reply(res,language==="sw"
-      ?"Umetaja dalili inayoweza kuashiria dharura. Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni."
-      :"Your description includes a possible emergency warning sign. Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment.",true);
+      ?"Dalili ulizotaja zinaweza kuwa za dharura. Nenda hospitali sasa. Usisubiri SMS."
+      :"You reported a possible emergency warning sign. Go to hospital now. Do not wait for SMS.",true);
     return reply(res,language==="sw"
-     ?"Kwanza, tujue kama kuna dharura. Je, una shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka sasa?\n1. Ndiyo  2. Hapana  3. Sina uhakika"
-     :"First, let's check for an emergency. Are you having severe difficulty breathing, chest pain, fainting, a seizure, heavy bleeding, or severe/worsening pain right now?\n1. Yes  2. No  3. Not sure");
+     ?"Dharura: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali sasa?\\n1. Ndiyo  2. Hapana  3. Sina uhakika"
+     :"Emergency check: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain now?\\n1. Yes  2. No  3. Not sure");
    }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
