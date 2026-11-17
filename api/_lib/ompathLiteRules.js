@@ -19,10 +19,12 @@ export function detectEmergencyLanguage(input) {
   const text = clean(input).toLowerCase();
   if (!text) return [];
   return patterns.flatMap(([rule, regex]) => {
-    const match = regex.exec(text);
-    return match && !isNegated(text, match.index)
-      ? [{ rule, positive: true, evidence: match[0] }]
-      : [];
+    const matcher = new RegExp(regex.source, regex.flags.includes("g") ? regex.flags : regex.flags + "g");
+    let match;
+    while ((match = matcher.exec(text)) !== null) {
+      if (!isNegated(text, match.index)) return [{ rule, positive: true, evidence: match[0] }];
+    }
+    return [];
   });
 }
 
