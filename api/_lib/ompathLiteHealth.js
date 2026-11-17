@@ -21,6 +21,7 @@ async function db(path, options = {}) {
   if (!base || !key) throw new Error("Health encounter storage is not configured.");
   const response = await fetch(`${base.replace(/\/$/, "")}/rest/v1/${path}`, {
     ...options,
+    signal: options.signal || AbortSignal.timeout(2500),
     headers: {
       apikey: key,
       Authorization: `Bearer ${key}`,
