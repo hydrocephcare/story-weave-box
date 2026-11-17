@@ -6,7 +6,7 @@ import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from
 import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteRules.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 import { shortUssdText, splitUssdWords } from "./ompathLiteUssdFormat.js";
-const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
+const mainMenu = "OmpathStudy Lite\n1. Health support\n2. Help and information";
 const clean = (v,n=180)=>String(v??"").replace(/<br\s*\/?>/gi," ").replace(/<\/(?:p|div|li|h[1-6])\s*>/gi," ").replace(/<[^>]*>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;/gi,"'").replace(/\s+/g," ").trim().slice(0,n);
 const shortText=(value,max)=>shortUssdText(clean(value,2000),max);
 const splitWords=splitUssdWords;
@@ -19,7 +19,7 @@ const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain
 async function db(path,options={}){
  const base=process.env.SUPABASE_URL,key=process.env.SUPABASE_SERVICE_ROLE_KEY;
  if(!base||!key)throw new Error("Missing Supabase server configuration");
- const r=await fetch(`${base.replace(/\/$/,"")}/rest/v1/${path}`,{...options,signal:options.signal||AbortSignal.timeout(2500),headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers}});
+ const r=await fetch(`${base.replace(/\/$/,"")}/rest/v1/${path}`,{...options,signal:options.signal||AbortSignal.timeout(6000),headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers}});
  const body=await r.text();if(!r.ok)throw new Error(`Supabase request failed (${r.status})`);return body?JSON.parse(body):[];
 }
 const queryCache=new Map();
@@ -55,7 +55,7 @@ async function ussd(req,res){
  const parts=text?text.split("*"):[];
  try{
   if(!text)return reply(res,mainMenu);
-  if(parts[0]==="5"){
+  if(parts[0]==="1"){
    // Resolve back navigation within this flow. 0 removes one prior selection;
    // 00 clears the health flow and returns to the Lite main menu.
    const flow=[];
