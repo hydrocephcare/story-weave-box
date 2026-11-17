@@ -3,7 +3,7 @@
  * Uses the existing /api/ai multiplexer to avoid adding another Vercel function.
  * Server environment: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
  */
-const mainMenu = "Welcome to OmpathStudy Lite\n1. Register\n2. Daily medical MCQ\n3. Help";
+const mainMenu = "Welcome to OmpathStudy Lite\n1. Register\n2. Daily medical MCQ\n3. Help\\n4. SMS preferences";
 const clean = (value, max = 120) => String(value ?? "").trim().replace(/[<>]/g, "").slice(0, max);
 const reply = (res, message, end = false) => {
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
@@ -74,6 +74,21 @@ async function ussd(req, res) {
     }
 
     if (parts[0] === "3") return reply(res, "Short medical learning activities for basic phones. Register, then choose Daily medical MCQ.", true);
+
+    if (parts[0] === "4") {
+      const students = await db(`lite_students?select=id,sms_opt_in&phone_number=eq.${encodeURIComponent(phone)}&limit=1`);
+      if (!students[0]) return reply(res, "Please register first using option 1.", true);
+      if (parts.length === 1) return reply(res, "SMS learning preferences\\n1. Subscribe to daily MCQs\\n2. Unsubscribe from SMS");
+      if (parts[1] === "1") {
+        await db(`lite_students?id=eq.${students[0].id}`, { method: "PATCH", body: JSON.stringify({ sms_opt_in: true, sms_opt_in_at: new Date().toISOString() }) });
+        return reply(res, "You are subscribed to daily medical MCQs by SMS. Reply STOP to any SMS to unsubscribe.", true);
+      }
+      if (parts[1] === "2") {
+        await db(`lite_students?id=eq.${students[0].id}`, { method: "PATCH", body: JSON.stringify({ sms_opt_in: false, sms_opt_in_at: null }) });
+        return reply(res, "You have unsubscribed from daily SMS learning.", true);
+      }
+      return reply(res, "Choose 1 to subscribe or 2 to unsubscribe.", true);
+    }
     return reply(res, mainMenu);
   } catch (error) {
     console.error("OmpathStudy Lite USSD error:", error);
