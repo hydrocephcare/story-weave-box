@@ -177,7 +177,7 @@ export async function sendHealthGuideLink({ to, link, language = "en", smsConsen
  * worker, never from the interactive USSD request.
  */
 export async function processPendingHealthGuideSms(limit = 10) {
- const pending = await db("lite_health_encounters?select=id,phone_number,preferred_language,concern_category,original_message,sms_consent,status,sms_sent_at&status=eq.guide_pending&sms_consent=eq.true&sms_sent_at=is.null&order=created_at.asc&limit=" + Math.min(20, Math.max(1, Number(limit) || 10)));
+ const pending = await db("lite_health_encounters?select=id,phone_number,preferred_language,concern_category,original_message,sms_consent,status,sms_sent_at&status=eq.guide_pending&sms_consent=eq.true&preferred_language=eq.en&sms_sent_at=is.null&order=created_at.asc&limit=" + Math.min(20, Math.max(1, Number(limit) || 10)));
  let sent = 0, waiting = 0, failed = 0;
  if (!pending.length) return { checked: 0, sent, waiting, failed };
  const settingsRows = await db("lite_sms_settings?select=enabled,environment&id=eq.1&limit=1");
@@ -197,14 +197,7 @@ export async function processPendingHealthGuideSms(limit = 10) {
     });
    if (!claim.length) continue;
    claimed = true;
-   // Only English patient guides have been approved for delivery so far.
-   if (encounter.preferred_language !== "en") {
-    await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id), {
-     method: "PATCH", body: JSON.stringify({ status: "guide_pending" }),
-    });
-    waiting++;
-    continue;
-   }
+   // The queue query selects only English until Kiswahili guides are approved.
    const guides = await searchReviewedPatientResources({
     query: [encounter.concern_category || "", encounter.original_message || ""].join(" "),
     language: "en",
