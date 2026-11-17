@@ -3,7 +3,7 @@
  * POST /api/ompath-lite-sms?mode=send (Cloudflare Cron Worker; CRON_SECRET)
  * POST /api/ompath-lite-sms?mode=inbound&key=<AT_INBOUND_SECRET> (Africa's Talking inbox callback)
  */
-import { randomBytes, timingSafeEqual } from "node:crypto";
+import { createHash, randomBytes, timingSafeEqual } from "node:crypto";
 import { createHealthGuideToken } from "./ompathLiteHealth.js";
 import { searchReviewedPatientResources } from "./ompathLiteResources.js";
 
@@ -179,17 +179,54 @@ export async function sendHealthGuideLink({ to, link, language = "en", smsConsen
 export async function processPendingHealthGuideSms(limit = 10) {
  const pending = await db("lite_health_encounters?select=id,phone_number,preferred_language,concern_category,original_message,sms_consent,status,sms_sent_at&status=eq.guide_pending&sms_consent=eq.true&sms_sent_at=is.null&order=created_at.asc&limit=" + Math.min(20, Math.max(1, Number(limit) || 10)));
  let sent = 0, waiting = 0, failed = 0;
+ if (!pending.length) return { checked: 0, sent, waiting, failed };
+ const settingsRows = await db("lite_sms_settings?select=enabled,environment&id=eq.1&limit=1");
+ const settings = settingsRows[0];
+ if (!settings?.enabled || settings.environment !== "production" || !process.env.AT_LIVE_USERNAME || !process.env.AT_LIVE_API_KEY) {
+  return { checked: pending.length, sent, waiting: pending.length, failed, disabled: true };
+ }
  for (const encounter of pending) {
+  let tokenHash = null;
+  let claimed = false;
   try {
+   // Claim the row with a conditional status change to prevent overlapping cron runs sending twice.
+   const claim = await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id) +
+    "&status=eq.guide_pending&sms_consent=eq.true&sms_sent_at=is.null", {
+     method: "PATCH",
+     body: JSON.stringify({ status: "complete" }),
+    });
+   if (!claim.length) continue;
+   claimed = true;
    // Only English patient guides have been approved for delivery so far.
-   if (encounter.preferred_language !== "en") { waiting++; continue; }
+   if (encounter.preferred_language !== "en") {
+    await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id), {
+     method: "PATCH", body: JSON.stringify({ status: "guide_pending" }),
+    });
+    waiting++;
+    continue;
+   }
    const guides = await searchReviewedPatientResources({
     query: [encounter.concern_category || "", encounter.original_message || ""].join(" "),
     language: "en",
     limit: 1,
    });
-   if (!guides.length || !guides[0].slug) { waiting++; continue; }
+   if (!guides.length || !guides[0].slug) {
+    await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id), {
+     method: "PATCH", body: JSON.stringify({ status: "guide_pending" }),
+    });
+    waiting++;
+    continue;
+   }
    const issued = await createHealthGuideToken({ encounterId: encounter.id, resourceSlug: guides[0].slug });
+   tokenHash = createHash("sha256").update(issued.token).digest("hex");
+   // Recheck consent after guide creation so STOP received during processing blocks delivery.
+   const current = await db("lite_health_encounters?select=sms_consent,status&id=eq." + encodeURIComponent(encounter.id) + "&limit=1");
+   if (current[0]?.sms_consent !== true) {
+    await db("lite_health_guide_tokens?token_hash=eq." + tokenHash, {
+     method: "PATCH", body: JSON.stringify({ revoked_at: new Date().toISOString() }),
+    });
+    continue;
+   }
    const link = "https://lite.ompathstudy.com/api/ompath-lite-guide?token=" + issued.token;
    const delivery = await sendHealthGuideLink({
     to: encounter.phone_number,
@@ -197,16 +234,36 @@ export async function processPendingHealthGuideSms(limit = 10) {
     language: "en",
     smsConsent: encounter.sms_consent,
    });
-   if (!delivery.sent) { waiting++; continue; }
+   if (!delivery.sent) {
+    await db("lite_health_guide_tokens?token_hash=eq." + tokenHash, {
+     method: "PATCH", body: JSON.stringify({ revoked_at: new Date().toISOString() }),
+    });
+    await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id), {
+     method: "PATCH", body: JSON.stringify({ status: "guide_pending" }),
+    });
+    waiting++;
+    continue;
+   }
    const updated = await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id) +
-    "&status=eq.guide_pending&sms_sent_at=is.null", {
+    "&sms_consent=eq.true&status=eq.complete&sms_sent_at=is.null", {
      method: "PATCH",
-     body: JSON.stringify({ sms_sent_at: new Date().toISOString(), status: "complete" }),
+     body: JSON.stringify({ sms_sent_at: new Date().toISOString() }),
     });
    if (updated.length) sent++;
-   else waiting++;
+   else {
+    await db("lite_health_guide_tokens?token_hash=eq." + tokenHash, {
+     method: "PATCH", body: JSON.stringify({ revoked_at: new Date().toISOString() }),
+    });
+    waiting++;
+   }
   } catch {
    failed++;
+   if (tokenHash) {
+    try { await db("lite_health_guide_tokens?token_hash=eq." + tokenHash, { method: "PATCH", body: JSON.stringify({ revoked_at: new Date().toISOString() }) }); } catch {}
+   }
+   if (claimed) {
+    try { await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id), { method: "PATCH", body: JSON.stringify({ status: "guide_pending" }) }); } catch {}
+   }
    console.error("Background patient-guide delivery failed.");
   }
  }
