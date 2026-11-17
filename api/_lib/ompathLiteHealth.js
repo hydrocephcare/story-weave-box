@@ -1,3 +1,4 @@
+import { createHash, randomBytes } from "node:crypto";
 /**
  * OmpathStudy Lite — private health encounter persistence.
  *
@@ -118,6 +119,8 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   if (typeof patch.concern_category === "string") allowed.concern_category = clean(patch.concern_category, 80);
   if (typeof patch.original_message === "string") allowed.original_message = clean(patch.original_message, 1200);
   if (typeof patch.normalized_summary === "string") allowed.normalized_summary = clean(patch.normalized_summary, 1200);
+  if (typeof patch.guide_url === "string" && patch.guide_url.startsWith("https://lite.ompathstudy.com/api/lite?task=health-guide&token=")) allowed.guide_url = patch.guide_url.slice(0, 500);
+  if (typeof patch.sms_sent_at === "string" && !Number.isNaN(Date.parse(patch.sms_sent_at))) allowed.sms_sent_at = patch.sms_sent_at;
   if (Array.isArray(patch.clarification_answers) && patch.clarification_answers.length <= 5 &&
       patch.clarification_answers.every((item) => item && typeof item === "object" && !Array.isArray(item) &&
         typeof item.question_id === "string" && item.question_id.length <= 60 &&
@@ -149,4 +152,35 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
     { method: "PATCH", body: JSON.stringify(allowed) },
   );
   return rows[0] || null;
+}
+
+/** Issue an unguessable, seven-day link for a reviewed patient resource. */
+export async function createHealthGuideToken({ encounterId, resourceSlug }) {
+  if (!/^[0-9a-f-]{36}$/i.test(clean(encounterId, 36)) || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(clean(resourceSlug, 180))) {
+    throw new Error("Invalid patient guide reference.");
+  }
+  const token = randomBytes(32).toString("base64url");
+  const tokenHash = createHash("sha256").update(token).digest("hex");
+  const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+  await db("lite_health_guide_tokens", {
+    method: "POST",
+    body: JSON.stringify({ encounter_id: encounterId, resource_slug: resourceSlug, token_hash: tokenHash, expires_at: expiresAt }),
+  });
+  return { token, expiresAt };
+}
+
+/** Resolve a bearer token using only its SHA-256 digest. */
+export async function getHealthGuideToken(token) {
+  const raw = clean(token, 100);
+  if (!/^[A-Za-z0-9_-]{40,60}$/.test(raw)) return null;
+  const tokenHash = createHash("sha256").update(raw).digest("hex");
+  const path = "lite_health_guide_tokens?select=id,resource_slug,expires_at,revoked_at&token_hash=eq." + tokenHash + "&revoked_at=is.null&expires_at=gt." + encodeURIComponent(new Date().toISOString()) + "&limit=1";
+  const rows = await db(path);
+  const row = rows[0];
+  if (!row) return null;
+  await db("lite_health_guide_tokens?id=eq." + encodeURIComponent(row.id), {
+    method: "PATCH",
+    body: JSON.stringify({ last_accessed_at: new Date().toISOString(), access_count: 1 }),
+  });
+  return row;
 }
