@@ -94,11 +94,11 @@ async function ussd(req,res){
    }
    if(flow.length===5){
     return reply(res,flow[1]==="2"
-     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\\n1. Ndiyo  2. Hapana  3. Sina uhakika\\n0. Rudi"
-     :"Emergency signs right now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\\n1. Yes  2. No  3. Not sure\\n0. Back");
+     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\n1. Ndiyo  2. Hapana  3. Sina uhakika\n0. Rudi"
+     :"Emergency signs right now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\n1. Yes  2. No  3. Not sure\n0. Back");
    }
    if(flow.length===6){
-    if(!["1","2","3"].includes(flow[5]))return reply(res,flow[1]==="2"?"Chagua 1, 2 au 3.\\n0. Rudi":"Choose 1, 2 or 3.\\n0. Back");
+    if(!["1","2","3"].includes(flow[5]))return reply(res,flow[1]==="2"?"Chagua 1, 2 au 3.\n0. Rudi":"Choose 1, 2 or 3.\n0. Back");
     const language=flow[1]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
@@ -140,15 +140,15 @@ async function ussd(req,res){
     });
     if(needsUrgentCare)return reply(res,assessmentReply(preliminary,language,true),true);
     const firstQuestion=flow[3]==="1"
-     ?"Are you pregnant?\\n1. Yes  2. No  3. Not sure"
+     ?"Are you pregnant?\n1. Yes  2. No  3. Not sure"
      :flow[3]==="2"||flow[3]==="4"
-      ?"How long has this been happening?\\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
+      ?"How long has this been happening?\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
       :flow[3]==="3"
-       ?"When did the pain start?\\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
+       ?"When did the pain start?\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
        :flow[3]==="5"
-        ?"Is the bleeding heavy (one pad/hour) or have you felt faint?\\n1. Yes  2. No  3. Not sure"
-        :"How long has this been happening?\\n1. Under 1 day  2. 1-7 days  3. Over 7 days";
-    return reply(res,language==="sw"?"Tafadhali jibu swali lifuatalo kwa kuchagua nambari.\\n"+firstQuestion:"Please answer the next question by choosing a number.\\n"+firstQuestion+"\\n0. Back");
+        ?"Is the bleeding heavy (one pad/hour) or have you felt faint?\n1. Yes  2. No  3. Not sure"
+        :"How long has this been happening?\n1. Under 1 day  2. 1-7 days  3. Over 7 days";
+    return reply(res,language==="sw"?"Tafadhali jibu swali lifuatalo kwa kuchagua nambari.\n"+firstQuestion:"Please answer the next question by choosing a number.\n"+firstQuestion+"\n0. Back");
    }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
