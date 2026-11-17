@@ -143,3 +143,22 @@ export default async function handler(req,res){
  try{if(mode==="send")return await sendDaily(req,res);if(mode==="test")return await sendTest(req,res);if(mode==="inbound")return await inbound(req,res);return res.status(400).json({error:"Set mode=send, mode=test, or mode=inbound"});}
  catch(e){console.error("Lite SMS error",e);return res.status(500).json({error:"SMS processing failed"});}
 }
+
+/** Send a discreet private guide link only after explicit encounter SMS consent. */
+export async function sendHealthGuideLink({ to, link, language = "en", smsConsent = false }) {
+ if (smsConsent !== true) throw new Error("SMS consent is required.");
+ const phone = normalizePhone(to);
+ if (!phone || typeof link !== "string" || !/^https:\/\/lite\.ompathstudy\.com\/api\/lite\?task=health-guide&token=[A-Za-z0-9_-]{40,60}$/.test(link)) {
+  throw new Error("Invalid private guide delivery details.");
+ }
+ const rows = await db("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1");
+ const settings = rows[0] || { enabled: false, environment: "sandbox", sender_id: null };
+ // Never send patient links through sandbox or while the administrator has paused SMS.
+ if (!settings.enabled || settings.environment !== "production") return { sent: false, reason: "sms_not_live" };
+ if (!process.env.AT_LIVE_USERNAME || !process.env.AT_LIVE_API_KEY) return { sent: false, reason: "live_provider_not_configured" };
+ const message = language === "sw"
+  ? "OmpathStudy: Uliomba taarifa za afya. Fungua kiungo hiki kwa usalama: " + link + " Kiungo kitaisha baada ya siku 7. Usishiriki kiungo hiki."
+  : "OmpathStudy: Your requested health information is ready. Open your private link: " + link + " This link expires in 7 days. Do not share it.";
+ const recipient = await sendSms(phone, message, settings);
+ return { sent: true, status: recipient.status || "Accepted", messageId: recipient.messageId || null };
+}
