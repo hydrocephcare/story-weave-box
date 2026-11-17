@@ -1,142 +1,142 @@
 {
- "date": "2026-11-16",
+ "date": "2026-11-17",
  "games": [
   {
-   "id": "2026-11-16-1",
-   "title": "Basics of Biosafety: quick quiz",
+   "id": "2026-11-17-1",
+   "title": "Molecular Biology Exam Review: quick quiz",
    "game": "quiz",
-   "topic": "Basics of Biosafety",
+   "topic": "Molecular Biology Exam Review",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which of the following best defines biosafety in a clinical laboratory setting?",
+      "q": "Which of the following best describes the role of the 5' cap in eukaryotic mRNA?",
       "options": [
-       "The practice of preventing contamination of the environment by pathogens",
-       "The use of personal protective equipment only",
-       "The disposal of all specimens in a standard trash bin",
-       "The sterilization of all instruments before use"
-      ],
-      "correct": 0,
-      "explanation": "Biosafety encompasses measures to prevent release of pathogens into the environment.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "What is the primary purpose of a biosafety level (BSL) classification?",
-      "options": [
-       "To determine the cost of laboratory equipment",
-       "To guide the design of laboratory ventilation systems",
-       "To specify the containment precautions required for a given organism",
-       "To dictate the number of staff allowed in a lab"
-      ],
-      "correct": 2,
-      "explanation": "BSL levels dictate containment practices based on organism risk.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is a key component of BSL-3 containment?",
-      "options": [
-       "Use of a biosafety cabinet type I",
-       "Negative pressure ventilation",
-       "Positive pressure suits",
-       "No need for eye protection"
+       "A. It signals for polyadenylation",
+       "B. It protects mRNA from exonucleases and aids ribosome binding",
+       "C. It marks the mRNA for nuclear export",
+       "D. It initiates transcription by RNA polymerase II"
       ],
       "correct": 1,
-      "explanation": "Negative pressure ventilation is essential for BSL‑3 labs to prevent escape of aerosols.",
+      "explanation": "The 5' cap protects mRNA from degradation and facilitates ribosome recognition.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "In epidemiology, the term \"incidence\" refers to:",
+      "q": "What is the primary function of the ribosomal RNA (rRNA) within the ribosome?",
       "options": [
-       "The proportion of a population that has a disease at a specific time",
-       "The number of new cases occurring in a defined period",
-       "The total number of cases ever recorded",
-       "The severity of a disease outbreak"
-      ],
-      "correct": 1,
-      "explanation": "Incidence measures new cases over a period.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which statistical measure is most appropriate for describing the central tendency of a normally distributed continuous variable?",
-      "options": [
-       "Median",
-       "Mode",
-       "Mean",
-       "Range"
-      ],
-      "correct": 2,
-      "explanation": "The mean best represents the center of a normal distribution.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A 95% confidence interval for a proportion that is 0.30 with a margin of error of ±0.05 indicates that:",
-      "options": [
-       "We are 95% confident the true proportion lies between 0.25 and 0.35",
-       "The sample proportion is 95% accurate",
-       "The true proportion is exactly 0.30",
-       "The interval is too wide to be useful"
+       "A. Catalyze peptide bond formation",
+       "B. Provide structural support only",
+       "C. Act as a transcription factor",
+       "D. Bind tRNA anticodons"
       ],
       "correct": 0,
-      "explanation": "The CI expresses where the true proportion likely falls.",
+      "explanation": "rRNA contains the peptidyl transferase active site that catalyses peptide bond formation.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is NOT a recommended practice for handling potentially infectious blood specimens?",
+      "q": "Which enzyme is responsible for removing the 5' cap during mRNA decay?",
       "options": [
-       "Using a biosafety cabinet for all manipulations",
-       "Labeling specimens clearly with a biohazard symbol",
-       "Storing specimens at room temperature for extended periods",
-       "Using a closed system for transport"
-      ],
-      "correct": 2,
-      "explanation": "Blood specimens should not be stored at room temperature for long periods.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "In a case‑control study, the odds ratio is used to estimate:",
-      "options": [
-       "Relative risk",
-       "Attributable risk",
-       "Population attributable fraction",
-       "Incidence rate"
+       "A. Decapping enzyme Dcp2",
+       "B. Exonuclease Xrn1",
+       "C. Endonuclease RNase H",
+       "D. Poly(A) polymerase"
       ],
       "correct": 0,
-      "explanation": "The odds ratio approximates relative risk in case‑control designs.",
+      "explanation": "Dcp2 removes the 5' cap, initiating 5'‑to‑3' decay.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following best describes the term \"pathogenicity\"?",
+      "q": "During DNA replication, which enzyme synthesises the RNA primer?",
       "options": [
-       "The ability of a microorganism to survive in the environment",
-       "The capacity of a microorganism to cause disease",
-       "The speed at which a disease spreads",
-       "The resistance of a pathogen to antibiotics"
-      ],
-      "correct": 1,
-      "explanation": "Pathogenicity refers to disease-causing potential.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "The primary goal of a biosafety training program for laboratory personnel is to:",
-      "options": [
-       "Increase laboratory productivity",
-       "Reduce the cost of PPE",
-       "Ensure compliance with regulatory standards",
-       "Eliminate all risk of infection"
+       "A. DNA polymerase III",
+       "B. DNA polymerase I",
+       "C. Primase",
+       "D. DNA ligase"
       ],
       "correct": 2,
-      "explanation": "Training ensures adherence to safety regulations and reduces risk.",
+      "explanation": "Primase synthesises short RNA primers that DNA polymerases extend.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is NOT a component of the spliceosome?",
+      "options": [
+       "A. U1 snRNA",
+       "B. U2 snRNA",
+       "C. U3 snoRNA",
+       "D. U5 snRNA"
+      ],
+      "correct": 2,
+      "explanation": "U3 is a small nucleolar RNA, not part of the spliceosome.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "What is the main consequence of a mutation that introduces a premature stop codon in a protein-coding gene?",
+      "options": [
+       "A. Increased protein stability",
+       "B. Truncated protein with potential loss of function",
+       "C. Enhanced translation efficiency",
+       "D. No effect due to nonsense-mediated decay"
+      ],
+      "correct": 1,
+      "explanation": "A premature stop codon yields a truncated, usually non‑functional protein.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which DNA repair pathway repairs double‑strand breaks using a homologous template?",
+      "options": [
+       "A. Base excision repair",
+       "B. Nucleotide excision repair",
+       "C. Homologous recombination",
+       "D. Mismatch repair"
+      ],
+      "correct": 2,
+      "explanation": "Homologous recombination uses a sister chromatid as a template for accurate repair.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "In the lac operon, what is the role of the lac repressor protein?",
+      "options": [
+       "A. Activates transcription of lac genes",
+       "B. Binds to the operator to block RNA polymerase in absence of lactose",
+       "C. Degrades lactose",
+       "D. Phosphorylates lactose for transport"
+      ],
+      "correct": 1,
+      "explanation": "The lac repressor binds the operator, preventing transcription when lactose is absent.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following best describes the function of the 3' poly(A) tail?",
+      "options": [
+       "A. Enhances nuclear export of mRNA",
+       "B. Serves as a binding site for ribosomes",
+       "C. Protects mRNA from exonucleases and aids translation",
+       "D. Signals for DNA replication initiation"
+      ],
+      "correct": 2,
+      "explanation": "The poly(A) tail stabilises mRNA and promotes translation initiation.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which protein is directly involved in the proofreading of DNA during replication?",
+      "options": [
+       "A. DNA polymerase I",
+       "B. DNA polymerase III epsilon subunit",
+       "C. DNA ligase",
+       "D. Primase"
+      ],
+      "correct": 1,
+      "explanation": "The epsilon subunit of DNA polymerase III has 3'→5' exonuclease proofreading activity.",
       "ai": true,
       "kind": "mcq"
      }
@@ -145,141 +145,141 @@
    }
   },
   {
-   "id": "2026-11-16-2",
-   "title": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and: quick quiz",
+   "id": "2026-11-17-2",
+   "title": "Occupational and environmental lung diseases 2019-2: quick quiz",
    "game": "quiz",
-   "topic": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and",
+   "topic": "Occupational and environmental lung diseases 2019-2",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which of the following is the most common indication for a permanent colostomy in the left colon?",
+      "q": "A 45‑year‑old man with a 20‑pack‑year smoking history presents with chronic productive cough and dyspnea. High‑resolution CT shows centrilobular nodules and a tree‑in‑bud pattern. Which occupational exposure is most likely responsible?",
       "options": [
-       "A. Crohn's disease involving the terminal ileum",
-       "B. Ulcerative colitis with pancolitis",
-       "C. Colorectal cancer involving the sigmoid colon",
-       "D. Ischemic colitis of the ascending colon"
+       "Silica dust",
+       "Coal dust",
+       "Asbestos fibers",
+       "Beryllium"
+      ],
+      "correct": 1,
+      "explanation": "Coal workers’ pneumoconiosis typically presents with centrilobular nodules and a tree‑in‑bud pattern on HRCT, reflecting endobronchial spread of inflammation.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is the most specific serologic test for diagnosing hypersensitivity pneumonitis?",
+      "options": [
+       "Anti‑dsDNA antibodies",
+       "Serum precipitating IgG antibodies to the offending antigen",
+       "Anti‑myeloperoxidase antibodies",
+       "Anti‑nuclear antibodies"
+      ],
+      "correct": 1,
+      "explanation": "Serum precipitating IgG antibodies (precipitins) to the specific antigen are the most specific serologic test for hypersensitivity pneumonitis, although sensitivity is variable.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 60‑year‑old farmer presents with progressive dyspnea. Pulmonary function tests show a restrictive pattern with reduced DLCO. Chest X‑ray shows diffuse reticulonodular infiltrates. The most likely diagnosis is:",
+      "options": [
+       "Bronchiolitis obliterans organizing pneumonia",
+       "Chronic beryllium disease",
+       "Idiopathic pulmonary fibrosis",
+       "Silicosis"
       ],
       "correct": 2,
-      "explanation": "Colorectal cancer of the sigmoid colon is the most frequent pathology that ultimately requires a permanent colostomy in the left colon.",
+      "explanation": "Diffuse reticulonodular infiltrates with a restrictive defect and reduced DLCO are classic for idiopathic pulmonary fibrosis, especially in the absence of a clear occupational exposure.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 45‑year‑old man with ulcerative colitis presents with toxic megacolon. Which surgical procedure is most appropriate?",
+      "q": "Which of the following is the most common cause of occupational asthma in the United States?",
       "options": [
-       "A. Right hemicolectomy",
-       "B. Total colectomy with ileostomy",
-       "C. Left hemicolectomy",
-       "D. Subtotal colectomy with ileorectal anastomosis"
+       "Isocyanates",
+       "Polyvinyl chloride dust",
+       "Silica dust",
+       "Asbestos"
       ],
-      "correct": 1,
-      "explanation": "Total colectomy with ileostomy is the definitive treatment for toxic megacolon, removing the diseased colon and preventing perforation.",
+      "correct": 0,
+      "explanation": "Isocyanates are the leading cause of occupational asthma in the United States, followed by flour dust and other proteinaceous agents.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is a contraindication to performing a loop ileostomy?",
+      "q": "A 35‑year‑old textile worker presents with cough and wheeze. Spirometry shows reversible obstruction after bronchodilator. Which inhaled agent is most likely responsible?",
       "options": [
-       "A. Small bowel obstruction",
-       "B. Severe malnutrition",
-       "C. Severe sepsis",
-       "D. Low output ileostomy"
+       "Silica",
+       "Asbestos",
+       "Cotton dust",
+       "Cobalt"
       ],
       "correct": 2,
-      "explanation": "Severe sepsis is a contraindication to creating a loop ileostomy because the patient’s systemic condition is too unstable for the procedure.",
+      "explanation": "Cotton dust (byssinosis) is the classic organic dust exposure in textile workers that can cause an asthma‑like reversible obstruction.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "What is the primary purpose of a diverting ileostomy in patients undergoing low anterior resection for rectal cancer?",
+      "q": "Which of the following is the most characteristic radiographic finding in asbestosis?",
       "options": [
-       "A. To prevent anastomotic leak",
-       "B. To reduce postoperative ileus",
-       "C. To allow early enteral feeding",
-       "D. To decrease postoperative pain"
-      ],
-      "correct": 0,
-      "explanation": "A diverting ileostomy reduces the risk of anastomotic leak by diverting fecal stream away from the distal anastomosis.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is the most common complication of a colostomy?",
-      "options": [
-       "A. Peristomal hernia",
-       "B. Stoma prolapse",
-       "C. Stoma necrosis",
-       "D. Stoma obstruction"
-      ],
-      "correct": 0,
-      "explanation": "Peristomal hernia is the most frequent mechanical complication of colostomies, occurring when abdominal contents herniate through the stoma opening.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A patient with an ileostomy has a daily output of 1.5 L. Which of the following is the first step in management?",
-      "options": [
-       "A. Increase fluid intake",
-       "B. Reduce fiber intake",
-       "C. Initiate octreotide",
-       "D. Perform a stoma revision"
-      ],
-      "correct": 0,
-      "explanation": "High‑output ileostomies are first managed by aggressive fluid and electrolyte replacement to prevent dehydration.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is a key component of stoma care education for patients?",
-      "options": [
-       "A. How to perform a stoma reversal",
-       "B. How to identify stoma skin irritation",
-       "C. How to perform a colonoscopy",
-       "D. How to manage constipation"
+       "Upper lobe reticulonodular infiltrates",
+       "Lower lobe reticulonodular infiltrates",
+       "Diffuse ground‑glass opacity",
+       "Cavitary lesions"
       ],
       "correct": 1,
-      "explanation": "Patients must learn to recognize and treat stoma skin irritation, which is a common issue that can lead to complications if not managed promptly.",
+      "explanation": "Asbestosis typically shows lower lobe reticulonodular infiltrates with pleural plaques, reflecting the predilection for the lower lung zones.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A loop colostomy is most often created in which part of the colon?",
+      "q": "A 50‑year‑old construction worker presents with progressive dyspnea. HRCT shows upper‑lobe predominant reticular opacities with honeycombing. Which occupational exposure is most likely?",
       "options": [
-       "A. Ascending colon",
-       "B. Transverse colon",
-       "C. Descending colon",
-       "D. Sigmoid colon"
+       "Silica",
+       "Coal dust",
+       "Beryllium",
+       "Asbestos"
       ],
-      "correct": 3,
-      "explanation": "Loop colostomies are usually placed in the sigmoid colon for diverting purposes, providing a convenient and low‑risk site.",
+      "correct": 0,
+      "explanation": "Silica exposure leads to upper‑lobe predominant fibrosis with progressive massive fibrosis and honeycombing, whereas asbestosis usually involves lower lobes.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is a contraindication to performing a permanent ileostomy?",
+      "q": "Which of the following is the best initial test to diagnose beryllium disease?",
       "options": [
-       "A. Severe malnutrition",
-       "B. Small bowel obstruction",
-       "C. Severe sepsis",
-       "D. All of the above"
+       "Serum IgE level",
+       "Bronchoalveolar lavage eosinophil count",
+       "Beryllium lymphocyte proliferation test",
+       "Pulmonary function test"
       ],
-      "correct": 3,
-      "explanation": "All listed conditions are contraindications to a permanent ileostomy because they indicate a patient who is not a suitable candidate for a long‑term stoma.",
+      "correct": 2,
+      "explanation": "The beryllium lymphocyte proliferation test (BeLPT) is the diagnostic test of choice for chronic beryllium disease.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "What is the most appropriate timing for reversal of a loop ileostomy created for a low anterior resection?",
+      "q": "A 55‑year‑old shipyard worker presents with cough and dyspnea. Chest X‑ray shows pleural plaques. Which of the following is the most likely associated cancer?",
       "options": [
-       "A. 2–4 weeks postoperatively",
-       "B. 6–8 weeks postoperatively",
-       "C. 3–4 months postoperatively",
-       "D. 6–12 months postoperatively"
+       "Lung adenocarcinoma",
+       "Mesothelioma",
+       "Liver carcinoma",
+       "Bladder cancer"
       ],
       "correct": 1,
-      "explanation": "Reversal is typically performed 6–8 weeks after the initial surgery once the patient has recovered and the anastomosis is well healed.",
+      "explanation": "Pleural plaques are strongly associated with asbestos exposure and are a marker for increased risk of malignant mesothelioma.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is the most common cause of occupational lung disease worldwide?",
+      "options": [
+       "Asbestos exposure",
+       "Coal dust exposure",
+       "Silica exposure",
+       "Beryllium exposure"
+      ],
+      "correct": 2,
+      "explanation": "Silica exposure is the most common cause of occupational lung disease worldwide, leading to silicosis and increased risk of tuberculosis.",
       "ai": true,
       "kind": "mcq"
      }
@@ -288,115 +288,115 @@
    }
   },
   {
-   "id": "2026-11-16-3",
-   "title": "Fluid and Electrolyte Disorders: case showdown",
+   "id": "2026-11-17-3",
+   "title": "Neonatal Jaundice: case showdown",
    "game": "case",
-   "topic": "Fluid and Electrolyte Disorders",
+   "topic": "Neonatal Jaundice",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "A 68‑year‑old man with a history of chronic kidney disease presents with confusion, lethargy, and a serum sodium of 128 mmol/L. He reports decreased oral intake and has a urine osmolality of 350 mOsm/kg. What is the most likely diagnosis?",
+      "q": "A 2‑day‑old full‑term male infant presents with yellowing of the sclera and skin. His mother reports that the baby has been feeding well but has had only one bowel movement in the last 24 hours. Physical exam shows a mild hepatomegaly (2 cm below the costal margin). What is the most likely diagnosis?",
       "options": [
-       "Hyponatremia due to SIADH",
-       "Hypothyroidism",
-       "Hypovolemic hyponatremia",
-       "Psychogenic polydipsia"
+       "A. Breast‑milk jaundice",
+       "B. Physiologic jaundice",
+       "C. Hemolytic disease of the newborn",
+       "D. Crigler‑Najjar syndrome"
+      ],
+      "correct": 1,
+      "explanation": "Physiologic jaundice peaks at 3–5 days and resolves by 1 week; hepatomegaly and minimal stool are typical.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 3‑day‑old female infant born at 38 weeks has conjugated hyperbilirubinemia (total bilirubin 12 mg/dL, direct 6 mg/dL). She is lethargic and has a palpable gallbladder. Which of the following is the next best step in management?",
+      "options": [
+       "A. Start phototherapy",
+       "B. Obtain abdominal ultrasound",
+       "C. Administer intravenous steroids",
+       "D. Perform a liver biopsy"
+      ],
+      "correct": 1,
+      "explanation": "Conjugated hyperbilirubinemia with gallbladder enlargement suggests biliary atresia; ultrasound is the diagnostic next step.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 1‑week‑old preterm infant (GA 30 weeks) has a total serum bilirubin of 15 mg/dL. He has a positive direct Coombs test and a hemoglobin of 18 g/dL. What is the most likely cause of his jaundice?",
+      "options": [
+       "A. Breast‑milk jaundice",
+       "B. Hemolytic disease due to Rh incompatibility",
+       "C. Physiologic jaundice",
+       "D. Neonatal hepatitis"
+      ],
+      "correct": 1,
+      "explanation": "Positive Coombs and high hemoglobin indicate hemolysis from Rh incompatibility.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 4‑day‑old full‑term male infant presents with jaundice that has worsened over the past 24 hours. He has a dark urine, pale stools, and a total bilirubin of 18 mg/dL with a direct fraction of 10 mg/dL. Which of the following is the most likely diagnosis?",
+      "options": [
+       "A. Neonatal sepsis",
+       "B. Crigler‑Najjar syndrome type I",
+       "C. Biliary atresia",
+       "D. Gilbert syndrome"
       ],
       "correct": 2,
-      "explanation": "Low serum sodium with relatively concentrated urine in a CKD patient suggests hypovolemic hyponatremia due to volume depletion.",
+      "explanation": "Dark urine, pale stools, and conjugated hyperbilirubinemia point to biliary atresia.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 45‑year‑old woman with a history of type 2 diabetes presents with polyuria, polydipsia, and a serum potassium of 3.0 mmol/L. Her serum bicarbonate is 18 mmol/L. What is the next best step in management?",
+      "q": "A 2‑day‑old infant has a total bilirubin of 8 mg/dL. He is feeding well, has normal stool frequency, and his skin appears mildly yellow. Which of the following is the most appropriate next step?",
       "options": [
-       "Start insulin therapy",
-       "Administer intravenous potassium chloride",
-       "Prescribe a low‑potassium diet",
-       "Give oral bicarbonate"
-      ],
-      "correct": 0,
-      "explanation": "Hyperglycemia drives osmotic diuresis and potassium loss; insulin will correct hyperglycemia and shift potassium intracellularly.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 22‑year‑old man is admitted for severe vomiting and abdominal pain. On examination, he has dry mucous membranes and a heart rate of 110 bpm. His serum sodium is 140 mmol/L and serum osmolality is 260 mOsm/kg. What is the most likely diagnosis?",
-      "options": [
-       "Hypovolemic hyponatremia",
-       "Euvolemic hyponatremia",
-       "Hypervolemic hyponatremia",
-       "Syndrome of inappropriate ADH secretion"
-      ],
-      "correct": 0,
-      "explanation": "Dehydration from vomiting causes hypovolemic hyponatremia with low serum osmolality.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 60‑year‑old woman with heart failure presents with worsening dyspnea. Her serum sodium is 132 mmol/L. Which of the following is the most appropriate next step?",
-      "options": [
-       "Initiate loop diuretic therapy",
-       "Start vasopressin antagonist",
-       "Add thiazide diuretic",
-       "Give hypertonic saline"
-      ],
-      "correct": 0,
-      "explanation": "Loop diuretics reduce fluid overload and improve hyponatremia in heart failure.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 30‑year‑old man with a recent diagnosis of nephrotic syndrome has a serum sodium of 138 mmol/L and a serum osmolality of 280 mOsm/kg. He is euvolemic. What is the most likely cause of his hyponatremia?",
-      "options": [
-       "Syndrome of inappropriate ADH secretion",
-       "Hypothyroidism",
-       "Primary adrenal insufficiency",
-       "Renal salt wasting"
-      ],
-      "correct": 0,
-      "explanation": "Nephrotic syndrome can cause SIADH leading to euvolemic hyponatremia.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 55‑year‑old woman presents with muscle cramps and a serum potassium of 2.8 mmol/L. She reports taking a thiazide diuretic for hypertension. What is the most appropriate next step?",
-      "options": [
-       "Switch to a loop diuretic",
-       "Add potassium‑sparing diuretic",
-       "Increase dietary potassium",
-       "Administer intravenous potassium chloride"
+       "A. Initiate phototherapy",
+       "B. Repeat bilirubin in 24 hours",
+       "C. Order a Coombs test",
+       "D. Start oral phenobarbital"
       ],
       "correct": 1,
-      "explanation": "Adding a potassium‑sparing diuretic (e.g., spironolactone) helps prevent thiazide‑induced hypokalemia.",
+      "explanation": "Physiologic jaundice at 8 mg/dL in a well‑appearing infant requires no treatment; repeat measurement is appropriate.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 70‑year‑old man with chronic liver disease presents with confusion and a serum sodium of 125 mmol/L. His serum osmolality is 270 mOsm/kg. What is the most likely diagnosis?",
+      "q": "A 5‑day‑old male infant born to a mother with a history of hepatitis B presents with jaundice and a total bilirubin of 20 mg/dL. His hepatitis B surface antigen is positive. What is the most likely cause of his jaundice?",
       "options": [
-       "Hepatorenal syndrome",
-       "Syndrome of inappropriate ADH secretion",
-       "Adrenal crisis",
-       "Hyperaldosteronism"
+       "A. Breast‑milk jaundice",
+       "B. Neonatal hepatitis due to hepatitis B infection",
+       "C. Physiologic jaundice",
+       "D. Hemolytic disease of the newborn"
       ],
       "correct": 1,
-      "explanation": "Hepatic encephalopathy with hyponatremia is often due to SIADH in cirrhosis.",
+      "explanation": "Positive hepatitis B surface antigen in the infant indicates neonatal hepatitis.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 50‑year‑old woman with a history of chronic pancreatitis presents with abdominal pain and a serum bicarbonate of 12 mmol/L. Her serum sodium is 138 mmol/L. What is the most likely diagnosis?",
+      "q": "A 3‑day‑old full‑term female infant has a total bilirubin of 12 mg/dL. She has a normal stool pattern, normal urine color, and a negative direct Coombs test. Which of the following is the most likely diagnosis?",
       "options": [
-       "Metabolic acidosis due to pancreatic insufficiency",
-       "Renal tubular acidosis type 1",
-       "Diabetic ketoacidosis",
-       "Lactic acidosis"
+       "A. Breast‑milk jaundice",
+       "B. Physiologic jaundice",
+       "C. Hemolytic disease of the newborn",
+       "D. Crigler‑Najjar syndrome type II"
+      ],
+      "correct": 1,
+      "explanation": "Normal stool and urine with a moderate bilirubin level in a well‑appearing infant is typical of physiologic jaundice.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 6‑day‑old male infant presents with jaundice that has progressed rapidly over the past 12 hours. He has a total bilirubin of 25 mg/dL and a direct bilirubin of 12 mg/dL. He is lethargic and has a palpable gallbladder. Which of the following is the next best diagnostic test?",
+      "options": [
+       "A. Abdominal ultrasound",
+       "B. Liver function tests",
+       "C. Hemoglobin electrophoresis",
+       "D. Serum ceruloplasmin"
       ],
       "correct": 0,
-      "explanation": "Pancreatic exocrine insufficiency can cause malabsorption and metabolic acidosis.",
+      "explanation": "Rapid rise in conjugated bilirubin with gallbladder enlargement suggests biliary atresia; ultrasound is the first diagnostic step.",
       "ai": true,
       "kind": "case"
      }
@@ -405,115 +405,115 @@
    }
   },
   {
-   "id": "2026-11-16-4",
-   "title": "Paed 2021: case showdown",
+   "id": "2026-11-17-4",
+   "title": "Post-operative Care and Complications of Surgery: case showdown",
    "game": "case",
-   "topic": "Paed 2021",
+   "topic": "Post-operative Care and Complications of Surgery",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "A 4‑year‑old boy presents with a 3‑day history of fever, sore throat, and a sudden, painless swelling of the left tonsil. Examination reveals a firm, non‑tender mass with a bluish hue and a normal cervical lymph node count. What is the most likely diagnosis?",
+      "q": "A 68‑year‑old man underwent an elective laparoscopic cholecystectomy. On postoperative day 2 he develops a sudden, sharp, right upper quadrant pain radiating to the back, with a temperature of 38.5°C and a heart rate of 110/min. His white cell count is 18,000/µL. What is the most likely diagnosis?",
       "options": [
-       "Adenoid hypertrophy",
-       "Peritonsillar abscess",
-       "Lymphoma",
-       "Tonsillar cyst"
-      ],
-      "correct": 2,
-      "explanation": "A firm, non‑tender, bluish tonsillar mass in a child is classic for a tonsillar lymphoma (often a non‑Hodgkin lymphoma). Adenoid hypertrophy and tonsillar cysts are usually soft and may be tender, while a peritonsillar abscess is painful and often tender.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 2‑year‑old girl is brought in with a 2‑day history of cough, nasal congestion, and a high fever. On examination she has a red, bulging tympanic membrane and a low‑pitch, “whooping” cough. What is the next best step in management?",
-      "options": [
-       "Administer oral amoxicillin",
-       "Give oral azithromycin",
-       "Start oral prednisolone",
-       "Provide supportive care only"
+       "A. Surgical site infection",
+       "B. Acute pancreatitis",
+       "C. Bile duct injury",
+       "D. Pulmonary embolism"
       ],
       "correct": 1,
-      "explanation": "The presentation is classic for pertussis. The first‑line treatment is a macrolide antibiotic, such as oral azithromycin (or erythromycin). Penicillin G is no longer recommended for pertussis.",
+      "explanation": "The combination of sudden RUQ pain radiating to the back, fever, tachycardia, and leukocytosis is classic for acute pancreatitis, which is a common postoperative complication after gallbladder surgery.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 6‑month‑old infant presents with a sudden onset of vomiting, lethargy, and a high fever. He has a history of recent upper respiratory infection. Examination reveals a bulging fontanelle and a rapid, irregular heartbeat. What is the most likely diagnosis?",
+      "q": "A 45‑year‑old woman has a laparoscopic hysterectomy. On postoperative day 1 she reports sudden onset of shortness of breath and pleuritic chest pain. Her oxygen saturation is 88% on room air. Which is the next best step?",
       "options": [
-       "Acute otitis media",
-       "Sepsis",
-       "Meningitis",
-       "Bronchiolitis"
+       "A. Administer intravenous antibiotics",
+       "B. Order a chest X‑ray",
+       "C. Perform a CT pulmonary angiogram",
+       "D. Give subcutaneous heparin"
       ],
       "correct": 2,
-      "explanation": "Bulging fontanelle, lethargy, and tachycardia in an infant are classic signs of meningitis. Sepsis can also present similarly, but the presence of a bulging fontanelle strongly points to meningitis.",
+      "explanation": "Sudden dyspnea and pleuritic chest pain after major surgery are highly suggestive of pulmonary embolism; a CT pulmonary angiogram is the definitive diagnostic test.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 9‑year‑old boy has a 4‑week history of intermittent abdominal pain, weight loss, and occasional bloody stools. He also reports fatigue and a mild fever. Physical examination shows pallor and a tender, enlarged spleen. Which investigation should be performed first?",
+      "q": "A 52‑year‑old man had an open appendectomy. On postoperative day 3 he has a fever of 39.0°C, a tender abdomen, and a leukocyte count of 20,000/µL. Which complication is most likely?",
       "options": [
-       "Abdominal ultrasound",
-       "Colonoscopy with biopsy",
-       "Complete blood count",
-       "Celiac serology"
+       "A. Surgical site infection",
+       "B. Anastomotic leak",
+       "C. Ileus",
+       "D. Deep vein thrombosis"
       ],
-      "correct": 2,
-      "explanation": "The first step in evaluating a child with abdominal pain, weight loss, bloody stools, anemia, and splenomegaly is a complete blood count to assess for anemia, leukocytosis, and eosinophilia, which can guide further work‑up for inflammatory bowel disease or other causes.",
+      "correct": 1,
+      "explanation": "Fever, abdominal tenderness, and marked leukocytosis after abdominal surgery most commonly indicate an intra‑abdominal abscess or anastomotic leak rather than a superficial surgical site infection.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 3‑year‑old girl presents with a sudden onset of high fever, rash, and a swollen, tender right knee. She has a history of a recent upper respiratory infection. Examination shows a red, hot knee with limited range of motion. What is the most likely diagnosis?",
+      "q": "A 30‑year‑old woman underwent a cesarean section. On postoperative day 4 she reports a sudden, severe headache, neck stiffness, and photophobia. Her blood pressure is 140/90 mmHg. What is the most likely diagnosis?",
       "options": [
-       "Septic arthritis",
-       "Juvenile idiopathic arthritis",
-       "Pediatric Lyme disease",
-       "Gonococcal arthritis"
+       "A. Post‑operative hypertension",
+       "B. Subarachnoid hemorrhage",
+       "C. Post‑operative infection",
+       "D. Pulmonary embolism"
+      ],
+      "correct": 1,
+      "explanation": "The classic triad of headache, neck stiffness, and photophobia after surgery points to subarachnoid hemorrhage.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 70‑year‑old man had a total hip replacement. On postoperative day 2 he develops a sudden, painless swelling of the left calf and a positive Homan's sign. What is the next best step?",
+      "options": [
+       "A. Order an ultrasound Doppler of the leg",
+       "B. Start oral antibiotics",
+       "C. Perform a chest X‑ray",
+       "D. Give oral analgesics"
       ],
       "correct": 0,
-      "explanation": "Acute, painful, swollen joint following a URI in a toddler is most consistent with septic arthritis, which requires urgent joint aspiration and antibiotics. Juvenile idiopathic arthritis is usually chronic, Lyme disease would have a characteristic rash, and gonococcal arthritis is rare in this age group.",
+      "explanation": "Sudden calf swelling with a positive Homan's sign suggests deep vein thrombosis; Doppler ultrasound is the diagnostic test.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 7‑year‑old boy is brought in with a 1‑day history of fever, sore throat, and a sudden, painless swelling of the left tonsil. Examination reveals a firm, non‑tender mass with a bluish hue and a normal cervical lymph node count. What is the most likely diagnosis?",
+      "q": "A 55‑year‑old woman underwent a laparoscopic sleeve gastrectomy. On postoperative day 1 she has a sudden, severe epigastric pain and a drop in blood pressure to 90/60 mmHg. Her heart rate is 120/min. What is the most likely complication?",
       "options": [
-       "Adenoid hypertrophy",
-       "Peritonsillar abscess",
-       "Lymphoma",
-       "Tonsillar cyst"
+       "A. Gastric leak",
+       "B. Pulmonary embolism",
+       "C. Hemorrhagic shock",
+       "D. Pulmonary embolism"
       ],
-      "correct": 2,
-      "explanation": "The presentation is characteristic of a tonsillar lymphoma. Adenoid hypertrophy and tonsillar cysts are usually soft and may be tender, while a peritonsillar abscess is painful.",
+      "correct": 0,
+      "explanation": "Sudden severe epigastric pain with hypotension after bariatric surgery is most consistent with a gastric leak causing peritonitis.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 5‑year‑old girl presents with a 2‑day history of fever, cough, and a sudden onset of a high‑pitch, “whooping” cough. Examination reveals a red, bulging tympanic membrane. What is the next best step in management?",
+      "q": "A 60‑year‑old man had an open right hemicolectomy. On postoperative day 5 he reports a sudden onset of chest pain that worsens with inspiration. His oxygen saturation is 92% on room air. Which is the most likely diagnosis?",
       "options": [
-       "Administer oral amoxicillin",
-       "Give oral azithromycin",
-       "Start oral prednisolone",
-       "Provide supportive care only"
+       "A. Pneumothorax",
+       "B. Pulmonary embolism",
+       "C. Myocardial infarction",
+       "D. Surgical site infection"
       ],
       "correct": 1,
-      "explanation": "Pertussis is treated with a macrolide antibiotic such as oral azithromycin. Penicillin G is no longer the first‑line agent for pertussis.",
+      "explanation": "Pleuritic chest pain after abdominal surgery is most commonly due to pulmonary embolism rather than a pneumothorax.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 10‑month‑old infant presents with a sudden onset of vomiting, lethargy, and a high fever. He has a history of recent upper respiratory infection. Examination reveals a bulging fontanelle and a rapid, irregular heartbeat. What is the most likely diagnosis?",
+      "q": "A 40‑year‑old woman underwent a laparoscopic cholecystectomy. On postoperative day 2 she has a fever of 38.3°C, a mild leukocytosis, and a tender incision site. Her wound is erythematous but not purulent. What is the next best step?",
       "options": [
-       "Acute otitis media",
-       "Sepsis",
-       "Meningitis",
-       "Bronchiolitis"
+       "A. Start intravenous broad‑spectrum antibiotics",
+       "B. Perform a wound culture",
+       "C. Apply a sterile dressing and observe",
+       "D. Schedule a surgical debridement"
       ],
       "correct": 2,
-      "explanation": "Bulging fontanelle, lethargy, and tachycardia are classic signs of meningitis in an infant.",
+      "explanation": "A mild, non‑purulent, erythematous wound with fever suggests a superficial wound infection; observation with dressing changes is appropriate.",
       "ai": true,
       "kind": "case"
      }
@@ -522,115 +522,232 @@
    }
   },
   {
-   "id": "2026-11-16-5",
-   "title": "Expert Immunohematology Assessment: drug duel",
+   "id": "2026-11-17-5",
+   "title": "Medical Mycology Q&A: Fungal Pathogens, Drugs, & Diseases: drug duel",
    "game": "drug",
-   "topic": "Expert Immunohematology Assessment",
+   "topic": "Medical Mycology Q&A: Fungal Pathogens, Drugs, & Diseases",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which drug is most commonly used as a first‑line agent for the treatment of immune thrombocytopenia (ITP) in adults?",
+      "q": "Which antifungal drug is a triazole that inhibits cytochrome P450 14α‑sterol demethylase and is primarily used for invasive aspergillosis?",
       "options": [
-       "A. Rituximab",
-       "B. Intravenous immunoglobulin (IVIG)",
-       "C. Prednisone",
-       "D. Eltrombopag"
-      ],
-      "correct": 2,
-      "explanation": "Prednisone (or other corticosteroids) is the standard first‑line therapy for newly diagnosed adult ITP. IVIG is reserved for rapid platelet elevation or when steroids are contraindicated.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the primary mechanism of action of eculizumab in the management of paroxysmal nocturnal hemoglobinuria (PNH)?",
-      "options": [
-       "A. Inhibition of platelet aggregation",
-       "B. Blockade of the C5 complement protein",
-       "C. Induction of erythroid progenitor proliferation",
-       "D. Chelation of free iron"
+       "Amphotericin B",
+       "Voriconazole",
+       "Caspofungin",
+       "Fluconazole"
       ],
       "correct": 1,
-      "explanation": "Eculizumab binds to complement protein C5, preventing its cleavage and the formation of the membrane attack complex, thereby reducing intravascular hemolysis.",
+      "explanation": "Voriconazole is the first‑line triazole for invasive aspergillosis. It inhibits the 14α‑sterol demethylase enzyme, blocking ergosterol synthesis.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which of the following drugs is a thrombopoietin receptor agonist used in refractory ITP?",
+      "q": "Voriconazole is associated with which characteristic adverse effect that can be monitored by serum drug levels?",
       "options": [
-       "A. Romiplostim",
-       "B. Vincristine",
-       "C. Prednisone",
-       "D. Hydroxyurea"
+       "Hepatotoxicity",
+       "Nephrotoxicity",
+       "Pulmonary fibrosis",
+       "Ophthalmologic toxicity"
+      ],
+      "correct": 3,
+      "explanation": "Voriconazole can cause visual disturbances and retinal changes. Monitoring serum levels helps prevent toxicity and ensures therapeutic exposure.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which echinocandin is administered exclusively by the intravenous route?",
+      "options": [
+       "Anidulafungin",
+       "Caspofungin",
+       "Micafungin",
+       "None of the above"
+      ],
+      "correct": 3,
+      "explanation": "All echinocandins (anidulafungin, caspofungin, micafungin) are available only as intravenous formulations; none are given orally.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Posaconazole is a broad‑spectrum triazole that is particularly effective against which fungal pathogen causing chronic pulmonary disease in cystic fibrosis patients?",
+      "options": [
+       "Candida albicans",
+       "Aspergillus fumigatus",
+       "Cryptococcus neoformans",
+       "Histoplasma capsulatum"
+      ],
+      "correct": 1,
+      "explanation": "Posaconazole has strong activity against Aspergillus fumigatus, the predominant pathogen in chronic pulmonary infections in cystic fibrosis.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is a polyene that binds to ergosterol, forming pores in the fungal cell membrane and is the treatment of choice for cryptococcal meningitis?",
+      "options": [
+       "Amphotericin B",
+       "Flucytosine",
+       "Voriconazole",
+       "Itraconazole"
       ],
       "correct": 0,
-      "explanation": "Romiplostim is a thrombopoietin receptor agonist that stimulates megakaryocyte proliferation and platelet production, used in refractory ITP.",
+      "explanation": "Amphotericin B binds ergosterol and creates pores in the fungal cell membrane; it is the gold standard for induction therapy of cryptococcal meningitis.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "What is the characteristic side effect of rituximab that warrants pre‑medication with acetaminophen and antihistamine?",
+      "q": "Flucytosine is a pyrimidine analog that is primarily used in combination therapy for which fungal infection?",
       "options": [
-       "A. Hypersensitivity reactions",
-       "B. Hypertension",
-       "C. Hyperglycemia",
-       "D. Neutropenia"
-      ],
-      "correct": 0,
-      "explanation": "Rituximab can cause infusion‑related hypersensitivity reactions; pre‑medication with acetaminophen and antihistamine helps prevent these events.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug is indicated for the treatment of severe aplastic anemia when a matched sibling donor is unavailable?",
-      "options": [
-       "A. Cyclosporine",
-       "B. Azathioprine",
-       "C. Methotrexate",
-       "D. Mycophenolate mofetil"
-      ],
-      "correct": 0,
-      "explanation": "Cyclosporine combined with antithymocyte globulin is the standard immunosuppressive regimen for severe aplastic anemia when a matched sibling donor is not available.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which agent is a complement inhibitor used in atypical hemolytic uremic syndrome (aHUS)?",
-      "options": [
-       "A. Eculizumab",
-       "B. Eltrombopag",
-       "C. Daratumumab",
-       "D. Thalidomide"
-      ],
-      "correct": 0,
-      "explanation": "Eculizumab blocks terminal complement activation (C5) and is indicated for aHUS.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the main indication for the use of danazol in hematology?",
-      "options": [
-       "A. Treatment of iron deficiency anemia",
-       "B. Management of hereditary spherocytosis",
-       "C. Refractory immune thrombocytopenia",
-       "D. Prevention of transfusion‑transmitted infections"
+       "Candidiasis",
+       "Aspergillosis",
+       "Cryptococcosis",
+       "Histoplasmosis"
       ],
       "correct": 2,
-      "explanation": "Danazol has been used historically in refractory ITP and autoimmune hemolytic anemia, not for suppressing erythropoiesis in thalassemia.",
+      "explanation": "Flucytosine is combined with amphotericin B for the treatment of cryptococcal meningitis to improve efficacy and reduce relapse.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which drug is a potent inhibitor of platelet glycoprotein IIb/IIIa receptors used in acute coronary syndromes?",
+      "q": "Which antifungal drug is a first‑generation triazole with excellent oral bioavailability and good CNS penetration, making it suitable for cryptococcal meningitis consolidation therapy?",
       "options": [
-       "A. Clopidogrel",
-       "B. Ticagrelor",
-       "C. Eptifibatide",
-       "D. Aspirin"
+       "Fluconazole",
+       "Itraconazole",
+       "Voriconazole",
+       "Posaconazole"
       ],
-      "correct": 2,
-      "explanation": "Eptifibatide is a reversible GP IIb/IIIa antagonist that prevents platelet aggregation in acute coronary syndromes.",
+      "correct": 0,
+      "explanation": "Fluconazole has excellent bioavailability and penetrates the CNS well; it is used for consolidation therapy in cryptococcal meningitis.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is a 5‑fluorocytosine derivative that is a prodrug converted to 5‑fluorouracil in fungal cells, leading to inhibition of DNA synthesis?",
+      "options": [
+       "Amphotericin B",
+       "Flucytosine",
+       "Voriconazole",
+       "Micafungin"
+      ],
+      "correct": 1,
+      "explanation": "Flucytosine is a prodrug that is converted to 5‑fluorouracil within fungal cells, inhibiting DNA synthesis.",
+      "ai": true,
+      "kind": "drug"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
+  },
+  {
+   "id": "2026-11-17-6",
+   "title": "Department Of Pathology — Course Outline: drug duel",
+   "game": "drug",
+   "topic": "Department Of Pathology — Course Outline",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "Which drug is most commonly used in the treatment of acute bacterial meningitis in adults, and what is its mechanism of action?",
+      "options": [
+       "A) Ceftriaxone – inhibits bacterial cell wall synthesis",
+       "B) Amoxicillin – inhibits bacterial protein synthesis",
+       "C) Vancomycin – inhibits bacterial cell wall synthesis",
+       "D) Ciprofloxacin – inhibits bacterial DNA gyrase"
+      ],
+      "correct": 0,
+      "explanation": "Ceftriaxone is a third‑generation cephalosporin that inhibits bacterial cell wall synthesis and penetrates the CSF effectively.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "In the management of acute ischemic stroke, which drug is administered within 4.5 hours of symptom onset and what is its main indication?",
+      "options": [
+       "A) Alteplase – thrombolysis",
+       "B) Aspirin – antiplatelet",
+       "C) Clopidogrel – antiplatelet",
+       "D) Tenecteplase – thrombolysis"
+      ],
+      "correct": 0,
+      "explanation": "Alteplase is a tissue plasminogen activator used for thrombolysis in acute ischemic stroke within the therapeutic window.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which medication is the first-line treatment for severe sepsis with septic shock and what is its characteristic side effect?",
+      "options": [
+       "A) Hydrocortisone – hyperglycaemia",
+       "B) Dopamine – arrhythmias",
+       "C) Norepinephrine – peripheral vasoconstriction",
+       "D) Epinephrine – tachycardia"
+      ],
+      "correct": 0,
+      "explanation": "Hydrocortisone is used in septic shock and can cause hyperglycaemia as a notable side effect.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "In a patient with acute pancreatitis, which drug is used to reduce pancreatic exocrine secretion and what is its mechanism?",
+      "options": [
+       "A) Octreotide – inhibits hormone secretion",
+       "B) Pancrelipase – replaces enzymes",
+       "C) Gabexate – protease inhibition",
+       "D) Naltrexone – opioid antagonism"
+      ],
+      "correct": 0,
+      "explanation": "Octreotide is a somatostatin analogue that inhibits pancreatic exocrine secretion.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is indicated for the treatment of severe hypertriglyceridemia and what is its main mechanism of action?",
+      "options": [
+       "A) Gemfibrozil – activates PPAR-α",
+       "B) Atorvastatin – inhibits HMG‑CoA reductase",
+       "C) Niacin – inhibits lipolysis",
+       "D) Omega‑3 fatty acids – reduces VLDL synthesis"
+      ],
+      "correct": 0,
+      "explanation": "Gemfibrozil activates PPAR‑α, increasing lipoprotein lipase activity and lowering triglycerides.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "For a patient with acute decompensated heart failure, which drug is used to reduce preload and what is its characteristic side effect?",
+      "options": [
+       "A) Furosemide – electrolyte loss",
+       "B) Digoxin – arrhythmias",
+       "C) Spironolactone – hyperkalaemia",
+       "D) Nitroglycerin – headache"
+      ],
+      "correct": 0,
+      "explanation": "Furosemide is a loop diuretic that reduces preload and can cause electrolyte loss, especially potassium.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which medication is the preferred first‑line treatment for acute gout flare and what is its main mechanism?",
+      "options": [
+       "A) Colchicine – inhibits microtubule polymerisation",
+       "B) Indomethacin – COX inhibition",
+       "C) Prednisone – anti‑inflammatory",
+       "D) Allopurinol – xanthine oxidase inhibition"
+      ],
+      "correct": 0,
+      "explanation": "Colchicine disrupts microtubule polymerisation, reducing neutrophil activity during a gout flare.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "In the management of severe asthma exacerbation, which drug is administered intravenously and what is its characteristic side effect?",
+      "options": [
+       "A) Salbutamol – tremor",
+       "B) Ipratropium – dry mouth",
+       "C) Hydrocortisone – hyperglycaemia",
+       "D) Magnesium sulfate – flushing"
+      ],
+      "correct": 0,
+      "explanation": "Intravenous salbutamol is a β2‑agonist used in severe asthma and can cause tremor as a side effect.",
       "ai": true,
       "kind": "drug"
      }
