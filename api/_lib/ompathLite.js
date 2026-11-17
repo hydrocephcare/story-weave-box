@@ -306,7 +306,11 @@ async function ussd(req,res){
     const rawCorrect=Number(q.correct_answer),correctIndex=rawCorrect>=0&&rawCorrect<q.options.length?rawCorrect:rawCorrect-1;
     if(!Number.isInteger(correctIndex)||correctIndex<0||correctIndex>=q.options.length)return reply(res,"Answer key needs review. Please report this question.",true);
     const isCorrect=selected-1===correctIndex;
-    await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qNo-1,selected_option:selected,is_correct:isCorrect})});
+    try{
+     await db("lite_attempts",{method:"POST",signal:AbortSignal.timeout(1200),body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qNo-1,selected_option:selected,is_correct:isCorrect})});
+    }catch{
+     // Feedback uses the stored answer key; analytics must not block it.
+    }
     const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",1200);
     const explanationLimit=/[^\x00-\x7F]/.test(explanation)?22:60;
     const explanationChunks=splitWords(explanation,explanationLimit);
