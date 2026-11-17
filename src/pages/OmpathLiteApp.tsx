@@ -37,6 +37,7 @@ export default function OmpathLiteApp() {
   const [registerYear,setRegisterYear]=useState(year);
   const [mobileMenu,setMobileMenu]=useState(false);
   const [attempts,setAttempts]=useState<{title:string;correct:boolean;attempted_at:string}[]>([]);
+  useEffect(()=>{ document.title="OmpathStudy Lite | Focused Medical Learning"; let meta=document.querySelector('meta[name="description"]'); if(!meta){meta=document.createElement("meta");meta.setAttribute("name","description");document.head.appendChild(meta);} meta.setAttribute("content","A lightweight way to access OmpathStudy medical MCQs, practise by study year and review explanations."); let theme=document.querySelector('meta[name="theme-color"]'); if(theme)theme.setAttribute("content","#173a32"); },[]);
 
   const loadLibrary=useCallback(async(y:number)=>{
     setLoading(true);setError("");
