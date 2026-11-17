@@ -283,9 +283,20 @@ async function ussd(req,res){
     if(!Number.isInteger(correctIndex)||correctIndex<0||correctIndex>=q.options.length)return reply(res,"Answer key needs review. Please report this question.",true);
     const isCorrect=selected-1===correctIndex;
     await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qNo-1,selected_option:selected,is_correct:isCorrect})});
-    const explanation=shortText(q.explanation||"Review the full explanation on OmpathStudy.",58);
-    const feedback=`${isCorrect?"Correct!":"Incorrect."}\nAnswer: ${correctIndex+1}. ${shortText(q.options[correctIndex],30)}\n${explanation}`;
-    if(cursor>=tokens.length)return reply(res,`${feedback}\n1. Next question\n0. Finish set`);
+    const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",1200);
+    const explanationLimit=/[^\\x00-\\x7F]/.test(explanation)?26:78;
+    const explanationChunks=splitWords(explanation,explanationLimit);
+    let explanationPage=0;
+    while(true){
+     const pageText=explanationPage===0
+      ?`${isCorrect?"Correct!":"Incorrect."}
+Answer: ${correctIndex+1}. ${shortText(q.options[correctIndex],30)}
+${explanationChunks[0]}`
+      :"Explanation "+(explanationPage+1)+"/"+explanationChunks.length+":\\n"+explanationChunks[explanationPage];
+     if(cursor>=tokens.length)return reply(res,pageText+(explanationPage<explanationChunks.length-1?"\\n9. More explanation":"\\n1. Next question\\n0. Finish set"));
+     if(tokens[cursor]==="9"&&explanationPage<explanationChunks.length-1){cursor++;explanationPage++;continue;}
+     break;
+    }
     const action=tokens[cursor++];
     if(action==="0")return reply(res,"Set finished. Thank you for studying with OmpathStudy Lite.",true);
     if(action!=="1")return reply(res,"Enter 1 for the next question or 0 to finish.",true);
