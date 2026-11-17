@@ -137,7 +137,8 @@ function Bank({ set }: { set: McqSetRow }) {
                   <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4">
                     <p className="text-sm font-semibold text-foreground">This question and its answer are part of the locked section.</p>
                     <p className="mt-1 text-xs text-muted-foreground">The first {freeLimit} questions in this bank are free. Unlock the full bank to attempt this question and view its explanation.</p>
-                    {!access.loading && <Paywall settings={access.settings} hiddenCount={Math.max(1, qs.length - freeLimit)} label="MCQ bank" onUnlocked={access.applyPass} headline="Unlock the full MCQ bank" blurb="Get access to every question, correct answer and explanation in this bank." />}
+                    {!access.loading && i === freeLimit && <Paywall settings={access.settings} hiddenCount={Math.max(1, qs.length - freeLimit)} label="MCQ bank" onUnlocked={access.applyPass} headline="Unlock the full MCQ bank" blurb="Get access to every question, correct answer and explanation in this bank." />}
+                    {i !== freeLimit && <p className="mt-3 text-xs font-semibold text-primary">Use the unlock panel at the start of the locked section.</p>}
                   </div>
                 ) : <>
                 <div className="mt-3 space-y-1" role="group" aria-label={`Options for question ${i + 1}`}>
