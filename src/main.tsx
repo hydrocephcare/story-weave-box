@@ -74,7 +74,7 @@ if (!isLiteHost && "serviceWorker" in navigator) {
 }
 
 const root = createRoot(document.getElementById("root")!);
-const litePath = window.location.pathname.replace(/\\/+$/, "") || "/";
+const litePath = window.location.pathname.endsWith("/") ? window.location.pathname.slice(0, -1) || "/" : window.location.pathname;
 const useFullAppOnLiteHost = isLiteHost && (
   litePath === "/login" ||
   litePath === "/auth/callback" ||
