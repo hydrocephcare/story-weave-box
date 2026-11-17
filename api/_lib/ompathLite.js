@@ -108,7 +108,7 @@ async function ussd(req,res){
      {id:"emergency_screen",en:"Are you experiencing any emergency symptom now: severe difficulty breathing, chest pain, fainting, seizure, heavy bleeding, or severe/worsening pain?",sw:"Je, una dalili ya dharura sasa: kupumua kwa shida sana, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka?"},
      ...(category==="Pregnancy-related concern"?[
       {id:"pregnancy_status",en:"Are you currently pregnant?",sw:"Je, una ujauzito kwa sasa?"},
-      {id:"gestation",en:"If pregnant, do you know how many weeks pregnant you are? Choose: 1. Under 20 weeks  2. 20–27 weeks  3. 28 weeks or more  4. Not sure / not pregnant",sw:"Ikiwa una ujauzito, una wiki ngapi? 1. Chini ya wiki 20  2. Wiki 20–27  3. Wiki 28 au zaidi  4. Sina uhakika / sina ujauzito"},
+      {id:"gestation",en:"If pregnant, do you know how many weeks pregnant you are? Choose: 1. Under 20 weeks  2. 20–27 weeks  3. 28 weeks or more  4. Not sure",sw:"Ikiwa una ujauzito, una wiki ngapi? 1. Chini ya wiki 20  2. Wiki 20–27  3. Wiki 28 au zaidi  4. Sina uhakika"},
       {id:"pregnancy_bleeding_or_fluid",en:"Are you having vaginal bleeding or fluid leaking from the vagina?",sw:"Je, unatoka damu ukeni au maji yanavuja ukeni?"},
       {id:"pregnancy_movement",en:"If you are far enough along to feel movement, are the baby's movements reduced or absent?",sw:"Ikiwa ujauzito umefikia hatua ya kuhisi mtoto akisogea, je, miondoko imepungua au haipo?"}
      ]:category==="Menstrual problem"||category==="Vaginal discharge"?[
@@ -190,7 +190,7 @@ async function ussd(req,res){
     }
     const nextQuestion=nextQuestions[nextIndex];
     if(!nextQuestion)return reply(res,"Your answers have been recorded. Please arrange an in-person health assessment.",true);
-    return reply(res,languagePrompt(encounter.preferred_language,nextQuestion)+"\n"+(nextQuestion.id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure / not pregnant":nextQuestion.id==="duration"||nextQuestion.id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
+    return reply(res,languagePrompt(encounter.preferred_language,nextQuestion)+"\n"+(nextQuestion.id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure":nextQuestion.id==="duration"||nextQuestion.id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
   }
