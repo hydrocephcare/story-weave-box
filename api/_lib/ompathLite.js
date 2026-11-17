@@ -2,7 +2,7 @@
  * OmpathStudy Lite — Africa's Talking USSD adapter.
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
-import { createHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
@@ -20,7 +20,7 @@ const subjectOf=s=>{
  return raw.replace(/^weekly\s+exam\s*:\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/\s+exam\s*[-–—:].*$/i,"").replace(/\s*[-–—]\s*(section\s+[a-z]|november\s+\d+).*$/i,"").trim()||"General medical MCQs";
 };
 const yearMatches=(s,year)=>new RegExp(`\\bYear\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`);
-function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}
+function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}\nfunction languagePrompt(language,q){return language==="sw"?q.sw:q.en;}
 async function ussd(req,res){
  let payload=req.body||{};
  if(typeof payload==="string")payload=Object.fromEntries(new URLSearchParams(payload));
@@ -85,6 +85,55 @@ async function ussd(req,res){
     return reply(res,language==="sw"
      ?"Asante. Ombi lako limepokelewa kwa majaribio ya mfumo. Tathmini ya kitabibu haijafanywa. Ikiwa una dalili kali au zinazozidi, tafuta huduma ya afya mara moja. Piga tena kwa menyu kuu."
      :"Thank you. Your request has been recorded for service testing. No clinical assessment has been performed yet. If symptoms are severe or worsening, seek medical care immediately. Dial again for the main menu.",true);
+   }
+   if(flow.length>=7&&flow.length<=11){
+    const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
+    if(!encounter)return reply(res,"Your health session expired. Please start again from the main menu.",true);
+    const category=encounter.concern_category||"Other health concern";
+    const questions=[
+     {id:"emergency_screen",en:"Are you experiencing any emergency symptom now: severe difficulty breathing, chest pain, fainting, seizure, heavy bleeding, or severe/worsening pain?",sw:"Je, una dalili ya dharura sasa: kupumua kwa shida sana, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka?"},
+     ...(category==="Pregnancy-related concern"?[
+      {id:"pregnancy_status",en:"Are you currently pregnant?",sw:"Je, una ujauzito kwa sasa?"},
+      {id:"gestation",en:"If pregnant, do you know how many weeks pregnant you are? Choose: 1. Under 20 weeks  2. 20–27 weeks  3. 28 weeks or more  4. Not sure / not pregnant",sw:"Ikiwa una ujauzito, una wiki ngapi? 1. Chini ya wiki 20  2. Wiki 20–27  3. Wiki 28 au zaidi  4. Sina uhakika / sina ujauzito"},
+      {id:"pregnancy_bleeding_or_fluid",en:"Are you having vaginal bleeding or fluid leaking from the vagina?",sw:"Je, unatoka damu ukeni au maji yanavuja ukeni?"},
+      {id:"pregnancy_movement",en:"If you are far enough along to feel movement, are the baby's movements reduced or absent?",sw:"Ikiwa ujauzito umefikia hatua ya kuhisi mtoto akisogea, je, miondoko imepungua au haipo?"}
+     ]:category==="Menstrual problem"||category==="Vaginal discharge"?[
+      {id:"duration",en:"How long has this problem been present? 1. Less than 1 day  2. 1–7 days  3. More than 7 days",sw:"Tatizo hili limekuwepo kwa muda gani? 1. Chini ya siku 1  2. Siku 1–7  3. Zaidi ya siku 7"},
+      {id:"fever",en:"Do you also have fever or chills?",sw:"Je, pia una homa au kutetemeka kwa baridi?"},
+      {id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Je, kuna uwezekano wa kuwa mjamzito?"},
+      {id:"severity",en:"Is the problem getting worse? 1. Yes  2. No  3. Not sure",sw:"Je, tatizo linaendelea kuwa baya zaidi? 1. Ndiyo  2. Hapana  3. Sina uhakika"}
+     ]:category==="Lower abdominal pain"?[
+      {id:"onset",en:"When did the pain start? 1. Today  2. 1–7 days ago  3. More than 7 days ago",sw:"Maumivu yalianza lini? 1. Leo  2. Siku 1–7 zilizopita  3. Zaidi ya siku 7 zilizopita"},
+      {id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Je, kuna uwezekano wa kuwa mjamzito?"},
+      {id:"fever_vomiting",en:"Do you have fever or repeated vomiting?",sw:"Je, una homa au kutapika mara kwa mara?"},
+      {id:"severity",en:"Is the pain severe or getting worse?",sw:"Je, maumivu ni makali au yanaongezeka?"}
+     ]:category==="Bleeding"?[
+      {id:"bleeding_amount",en:"Is the bleeding heavy (for example, soaking a pad in an hour), or are you feeling faint?",sw:"Je, damu ni nyingi (kwa mfano, pedi kujaa ndani ya saa moja), au unahisi kuzimia?"},
+      {id:"pregnancy_possibility",en:"Could you be pregnant or have you recently given birth?",sw:"Je, unaweza kuwa mjamzito au umejifungua hivi karibuni?"},
+      {id:"duration",en:"When did the bleeding start? 1. Today  2. 1–7 days ago  3. More than 7 days ago",sw:"Damu ilianza lini? 1. Leo  2. Siku 1–7 zilizopita  3. Zaidi ya siku 7 zilizopita"},
+      {id:"pain",en:"Do you also have significant abdominal or pelvic pain?",sw:"Je, pia una maumivu makubwa ya tumbo au nyonga?"}
+     ]:[
+      {id:"duration",en:"How long has this concern been present? 1. Less than 1 day  2. 1–7 days  3. More than 7 days",sw:"Tatizo hili limekuwepo kwa muda gani? 1. Chini ya siku 1  2. Siku 1–7  3. Zaidi ya siku 7"},
+      {id:"fever",en:"Do you have fever?",sw:"Je, una homa?"},
+      {id:"worsening",en:"Are your symptoms getting worse?",sw:"Je, dalili zinaendelea kuwa mbaya zaidi?"},
+      {id:"care",en:"Have you already received medical care for this concern?",sw:"Je, tayari umepata huduma ya afya kwa tatizo hili?"}
+     ])
+    ];
+    const answers=Array.isArray(encounter.clarification_answers)?encounter.clarification_answers:[];
+    const answerIndex=flow.length-7;
+    const currentQuestion=questions[answerIndex];
+    if(!currentQuestion)return reply(res,"Your answers have been recorded. No diagnosis or clinical assessment has been generated. Please seek care if symptoms persist or worsen.",true);
+    const answer=flow[flow.length-1];
+    if(!["1","2","3","4"].includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\\nChoose one of the numbered options.\\n0. Back");
+    if(answerIndex===0&&answer==="1"){
+     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:[...answers,{question_id:currentQuestion.id,answer}],red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],status:"referred_urgent",urgency_level:"emergency"}});
+     return reply(res,encounter.preferred_language==="sw"?"Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni. Ikiwa unaweza, mwombe mtu akusindikize.":"Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment. If possible, ask someone to accompany you.",true);
+    }
+    const nextAnswers=[...answers,{question_id:currentQuestion.id,answer}];
+    const nextIndex=answerIndex+1;
+    await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:nextIndex>=questions.length?"ready_for_assessment":"awaiting_clarification"}});
+    if(nextIndex>=questions.length)return reply(res,encounter.preferred_language==="sw"?"Asante. Majibu yako yamehifadhiwa. Tathmini ya kitabibu bado haijatolewa. Tafuta huduma ya afya ikiwa dalili zinaendelea au zinazidi.":"Thank you. Your answers have been saved. A clinical assessment has not yet been generated. Seek medical care if symptoms persist or worsen.",true);
+    return reply(res,languagePrompt(encounter.preferred_language,questions[nextIndex])+"\\n1. Yes  2. No  3. Not sure\\n0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
   }
