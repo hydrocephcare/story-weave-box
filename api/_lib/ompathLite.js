@@ -18,7 +18,7 @@ const subjectOf=s=>{
  const raw=clean(s.category||s.title,120);
  return raw.replace(/^weekly\s+exam\s*:\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/\s+exam\s*[-–—:].*$/i,"").replace(/\s*[-–—]\s*(section\s+[a-z]|november\s+\d+).*$/i,"").trim()||"General medical MCQs";
 };
-const yearMatches=(s,year)=>new RegExp(`\\bYear\\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`);
+const yearMatches=(s,year)=>new RegExp(`\\bYear\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`);
 function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}
 async function ussd(req,res){
  let payload=req.body||{};
@@ -30,8 +30,8 @@ async function ussd(req,res){
  try{
   if(!text)return reply(res,mainMenu);
   if(parts[0]==="1"){
-   if(parts.length===1)return reply(res,"Select your study year:\\n1. Year 1\\n2. Year 2\\n3. Year 3\\n4. Year 4\\n5. Year 5\\n6. Year 6");
-   const choice=parts.slice(1).findLast(v=>/^\\s*(?:year\\s*)?[1-6]\\s*$/i.test(v));
+   if(parts.length===1)return reply(res,"Select your study year:\n1. Year 1\n2. Year 2\n3. Year 3\n4. Year 4\n5. Year 5\n6. Year 6");
+   const choice=parts.slice(1).findLast(v=>/^\s*(?:year\s*)?[1-6]\s*$/i.test(v));
    const yearMatch=choice?.match(/[1-6]/);
    const year=yearMatch?Number(yearMatch[0]):NaN;
    if(!Number.isInteger(year)||year<1||year>6)return reply(res,"Invalid choice. Select a year from 1 to 6. Dial again and choose 1.",true);
@@ -52,7 +52,7 @@ async function ussd(req,res){
    const tokens=parts.slice(1);
    let cursor=0,subjectPage=0;
    while(tokens[cursor]==="9"){subjectPage++;cursor++;}
-   const showSubjects=(page)=>reply(res,`Year ${year} subjects (page ${page+1}):\\n${subjects.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s,38)}`).join("\\n")}${(page+1)*7<subjects.length?"\\n9. Next page":""}\\n0. ${page>0?"Previous page":"Main menu"}`);
+   const showSubjects=(page)=>reply(res,`Year ${year} subjects (page ${page+1}):\n${subjects.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s,38)}`).join("\n")}${(page+1)*7<subjects.length?"\n9. Next page":""}\n0. ${page>0?"Previous page":"Main menu"}`);
    if(cursor>=tokens.length)return showSubjects(subjectPage);
    if(tokens[cursor]==="0")return subjectPage>0?showSubjects(subjectPage-1):reply(res,mainMenu,true);
    const subjectNo=Number(tokens[cursor++]);
@@ -63,7 +63,7 @@ async function ussd(req,res){
    const subjectSets=grouped.get(subject)||[];
    let setPage=0;
    while(tokens[cursor]==="9"){setPage++;cursor++;}
-   const showSets=(page)=>reply(res,`${clean(subject,42)} (page ${page+1}):\\nChoose a question set:\\n${subjectSets.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s.title,42)}`).join("\\n")}${(page+1)*7<subjectSets.length?"\\n9. Next page":""}\\n0. ${page>0?"Previous page":"Back to subjects"}`);
+   const showSets=(page)=>reply(res,`${clean(subject,42)} (page ${page+1}):\nChoose a question set:\n${subjectSets.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s.title,42)}`).join("\n")}${(page+1)*7<subjectSets.length?"\n9. Next page":""}\n0. ${page>0?"Previous page":"Back to subjects"}`);
    if(cursor>=tokens.length)return showSets(setPage);
    if(tokens[cursor]==="0")return setPage>0?showSets(setPage-1):showSubjects(subjectPage);
    const setNo=Number(tokens[cursor++]);
@@ -76,8 +76,8 @@ async function ussd(req,res){
    const qNo=tokens[cursor]!==undefined?Number(tokens[cursor++]):1,qIndex=qNo-1,q=questions[qIndex];
    if(!Number.isInteger(qNo)||qNo<1||!q||!Array.isArray(q.options)||q.options.length<2)return reply(res,"Question unavailable. Choose another question set.",true);
    if(cursor>=tokens.length){
-    const opts=optionsOf(q).slice(0,5).map((o,i)=>`${i+1}. ${clean(o,48)}`).join("\\n");
-    return reply(res,`${clean(set.title,40)}\\nQ${qNo}/${questions.length}: ${clean(q.question,145)}\\n${opts}\\nReply with answer number.`);
+    const opts=optionsOf(q).slice(0,5).map((o,i)=>`${i+1}. ${clean(o,48)}`).join("\n");
+    return reply(res,`${clean(set.title,40)}\nQ${qNo}/${questions.length}: ${clean(q.question,145)}\n${opts}\nReply with answer number.`);
    }
    const selected=Number(tokens[cursor]);
    if(!Number.isInteger(selected)||selected<1||selected>Math.min(5,q.options.length))return reply(res,"Invalid answer. Enter one of the listed option numbers.",true);
@@ -86,8 +86,8 @@ async function ussd(req,res){
    const isCorrect=selected-1===correctIndex;
    await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qIndex,selected_option:selected,is_correct:isCorrect})});
    const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",260);
-   const next=qIndex+1<questions.length?`\\nNext question: dial again, choose 2, then repeat this subject and set; enter question ${qNo+1}.`:"\\nYou have completed this set.";
-   return reply(res,`${isCorrect?"Correct!":"Not quite."}\\nAnswer: ${correctIndex+1}. ${clean(q.options[correctIndex],75)}\\n${explanation}${next}`,true);
+   const next=qIndex+1<questions.length?`\nNext question: dial again, choose 2, then repeat this subject and set; enter question ${qNo+1}.`:"\nYou have completed this set.";
+   return reply(res,`${isCorrect?"Correct!":"Not quite."}\nAnswer: ${correctIndex+1}. ${clean(q.options[correctIndex],75)}\n${explanation}${next}`,true);
   }
   if(parts[0]==="3")return reply(res,"Study with existing OmpathStudy MCQs by year and subject. Your answers and scores are tracked.",true);
   if(parts[0]==="4"){
