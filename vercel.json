@@ -162,6 +162,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/ompath-lite-admin",
+      "destination": "/api/ai?task=lite-admin"
+    },
+    {
       "source": "/api/ompath-lite",
       "destination": "/api/ai?task=lite"
     },
