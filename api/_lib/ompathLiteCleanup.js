@@ -4,7 +4,7 @@ import { processPendingHealthGuideSms } from "./ompathLiteSms.js";
 
 function authorized(req) {
   const expected = process.env.CRON_SECRET || "";
-  const provided = String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "");
+  const provided = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
   if (!expected || !provided) return false;
   const a = Buffer.from(expected);
   const b = Buffer.from(provided);
