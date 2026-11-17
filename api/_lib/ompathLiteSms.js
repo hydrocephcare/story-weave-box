@@ -20,8 +20,7 @@ async function sendSms(to,message){
  const body=await r.text();if(!r.ok)throw new Error(`Africa's Talking ${r.status}: ${body.slice(0,200)}`);return JSON.parse(body);
 }
 const matchesYear=(s,year)=>new RegExp(`\\bYear\\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`);
-async function pickQuestion(year){
- const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
+async function pickQuestion(year,sets){
  const pool=[];
  for(const set of sets.filter(s=>matchesYear(s,year))){
   const questions=Array.isArray(set.questions)?set.questions:[];
@@ -40,6 +39,7 @@ async function sendDaily(req,res){
  const secret=String(req.headers.authorization||"").replace(/^Bearer\s+/i,"");
  if(!process.env.CRON_SECRET||secret!==process.env.CRON_SECRET)return res.status(401).json({error:"Unauthorized"});
  const students=await db("lite_students?select=id,phone_number,study_level&sms_opt_in=eq.true&sms_opt_in_at=not.is.null&limit=500");
+ const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
  const delivered=await db(`lite_sms_deliveries?select=student_id&delivery_date=eq.${today()}&limit=1000`);
  const already=new Set(delivered.map(x=>x.student_id));
  let sent=0,skipped=0,failed=0;
@@ -48,7 +48,7 @@ async function sendDaily(req,res){
   const year=String(s.study_level||"").match(/[1-6]/)?.[0];
   if(!year){skipped++;continue;}
   try{
-   const item=await pickQuestion(year);if(!item){skipped++;continue;}
+   const item=await pickQuestion(year,sets);if(!item){skipped++;continue;}
    const code=item.set.id.replace(/-/g,"").slice(0,4)+item.index.toString(16).padStart(4,"0");
    const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,65)}`).join("\n");
    const message=`OmpathStudy Daily MCQ\n${clean(item.q.question,190)}\n${options}\nReply: ${code} 1-${item.q.options.length}. STOP to unsubscribe.`;
