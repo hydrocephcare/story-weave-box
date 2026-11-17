@@ -13,7 +13,7 @@ const splitWords=splitUssdWords;
 const setLabel=(set,subject)=>{
  let label=clean(set.title,180).replace(/^weekly\s+year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").trim();
  if(!label||label.toLowerCase()===subject.toLowerCase())label="Weekly "+subject;
- return shortText(label,22);
+ return shortText(label,34);
 };
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
 async function db(path,options={}){
