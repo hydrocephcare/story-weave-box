@@ -57,4 +57,22 @@ describe("OmpathStudy Lite emergency phrase screening", () => {
       expect.arrayContaining([expect.objectContaining({ rule: "chest_pain", positive: true })]),
     );
   });
+  it("flags severe headache with visual changes", () => {
+    expect(detectEmergencyLanguage("I have a severe headache with blurred vision")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "severe_headache_or_visual_symptoms", positive: true })]),
+    );
+  });
+
+  it("flags stroke warning signs", () => {
+    expect(detectEmergencyLanguage("My speech is slurred and one-sided weakness started suddenly")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "stroke_signs", positive: true })]),
+    );
+  });
+
+  it("flags possible poisoning or overdose", () => {
+    expect(detectEmergencyLanguage("I swallowed poison")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "poisoning_or_overdose", positive: true })]),
+    );
+  });
+
 });
