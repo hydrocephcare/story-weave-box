@@ -30,10 +30,9 @@ async function ussd(req,res){
  try{
   if(!text)return reply(res,mainMenu);
   if(parts[0]==="1"){
-   if(parts.length===1)return reply(res,"Select your study year:\n1. Year 1\n2. Year 2\n3. Year 3\n4. Year 4\n5. Year 5\n6. Year 6");
-   const choice=parts.slice(1).findLast(v=>/^\s*(?:year\s*)?[1-6]\s*$/i.test(v));
-   const yearMatch=choice?.match(/[1-6]/);
-   const year=yearMatch?Number(yearMatch[0]):NaN;
+   if(parts.length===1)return reply(res,`Select your study year:\n1. Year 1\n2. Year 2\n3. Year 3\n4. Year 4\n5. Year 5\n6. Year 6`);
+   const choice=parts.slice(1).map(v=>clean(v,30).replace(/\s+/g,"").toLowerCase()).findLast(v=>/^(?:year)?[1-6]$/.test(v));
+   const year=choice?Number(choice.replace(/^year/,"")):NaN;
    if(!Number.isInteger(year)||year<1||year>6)return reply(res,"Invalid choice. Select a year from 1 to 6. Dial again and choose 1.",true);
    await db("lite_students?on_conflict=phone_number",{method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({phone_number:phone,full_name:"Student",study_level:`Year ${year}`,updated_at:new Date().toISOString()})});
    return reply(res,`Registration successful. Year ${year} selected. Dial again and choose 2 to study.`,true);
