@@ -94,29 +94,37 @@ async function ussd(req,res){
    }
    if(flow.length===5){
     return reply(res,flow[1]==="2"
-     ?"Ungependa kiungo cha mwongozo kitumwe kwa SMS?\n1. Ndiyo\n2. Hapana\n0. Rudi"
-     :"Send a guide link by SMS if one is available?\n1. Yes\n2. No\n0. Back");
+     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\\n1. Ndiyo  2. Hapana  3. Sina uhakika\\n0. Rudi"
+     :"Emergency signs right now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\\n1. Yes  2. No  3. Not sure\\n0. Back");
    }
    if(flow.length===6){
-    if(!["1","2"].includes(flow[5]))return reply(res,flow[1]==="2"?"Chagua 1 kwa SMS au 2 bila SMS.\n0. Rudi":"Choose 1 for SMS or 2 for no SMS.\n0. Back");
+    if(!["1","2","3"].includes(flow[5]))return reply(res,flow[1]==="2"?"Chagua 1, 2 au 3.\\n0. Rudi":"Choose 1, 2 or 3.\\n0. Back");
     const language=flow[1]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
-    // Deterministic phrase screening runs locally; no AI call is made in the USSD response window.
+    const emergencyAnswer=flow[5];
     const emergencyFlags=detectEmergencyLanguage(description);
+    if(emergencyAnswer==="1")emergencyFlags.push({rule:"self_reported_emergency_symptom",positive:true});
     const encounter=await createHealthEncounter({
      sessionId:session,
      phoneNumber:phone,
      consentGiven:true,
-     smsConsent:flow[5]==="1",
+     smsConsent:false,
      preferredLanguage:language,
      channel:"ussd"
     });
-    if(encounter?.assessment||encounter?.status==="referred_urgent"){
+    if(encounter?.assessment||["complete","referred_urgent"].includes(encounter?.status)){
      return reply(res,language==="sw"
-      ?"Tayari ulipokea majibu. Dalili kali zikizidi, tafuta huduma ya dharura sasa."
-      :"This enquiry was already processed. Seek emergency care if symptoms are severe or worsening.",true);
+      ?"Tathmini hii tayari ilikamilishwa. Ikiwa dalili zimezidi, nenda hospitali sasa."
+      :"This enquiry has already been assessed. If symptoms are worsening, seek care now.",true);
     }
+    const emergencyAnswers=[{question_id:"emergency_screen",answer:emergencyAnswer}];
+    const preliminary=buildPreliminaryAssessment({
+     encounter:{concern_category:categories[flow[3]],original_message:description},
+     answers:emergencyAnswers,
+     emergencyFlags
+    });
+    const needsUrgentCare=emergencyAnswer!=="2"||emergencyFlags.length>0;
     await updateHealthEncounter({
      id:encounter.id,
      sessionId:session,
@@ -125,17 +133,22 @@ async function ussd(req,res){
       concern_category:categories[flow[3]],
       original_message:description,
       normalized_summary:"",
+      clarification_answers:emergencyAnswers,
       red_flag_results:emergencyFlags,
-      status:emergencyFlags.length?"referred_urgent":"intake_started",
-      urgency_level:emergencyFlags.length?"emergency":"not_assessed"
+      ...(needsUrgentCare?{assessment:preliminary,urgency_level:preliminary.urgency_level,status:"referred_urgent"}:{urgency_level:"not_assessed",status:"awaiting_clarification"})
      }
     });
-    if(emergencyFlags.length)return reply(res,language==="sw"
-      ?"Dalili ulizotaja zinaweza kuwa za dharura. Nenda hospitali sasa. Usisubiri SMS."
-      :"You reported a possible emergency warning sign. Go to hospital now. Do not wait for SMS.",true);
-    return reply(res,language==="sw"
-     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\n1. Ndiyo  2. Hapana  3. Sina uhakika"
-     :"Emergency now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\n1. Yes  2. No  3. Not sure");
+    if(needsUrgentCare)return reply(res,assessmentReply(preliminary,language,true),true);
+    const firstQuestion=flow[3]==="1"
+     ?"Are you pregnant?\\n1. Yes  2. No  3. Not sure"
+     :flow[3]==="2"||flow[3]==="4"
+      ?"How long has this been happening?\\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
+      :flow[3]==="3"
+       ?"When did the pain start?\\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
+       :flow[3]==="5"
+        ?"Is the bleeding heavy (one pad/hour) or have you felt faint?\\n1. Yes  2. No  3. Not sure"
+        :"How long has this been happening?\\n1. Under 1 day  2. 1-7 days  3. Over 7 days";
+    return reply(res,language==="sw"?"Tafadhali jibu swali lifuatalo kwa kuchagua nambari.\\n"+firstQuestion:"Please answer the next question by choosing a number.\\n"+firstQuestion+"\\n0. Back");
    }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
@@ -175,10 +188,10 @@ async function ussd(req,res){
       {id:"care",en:"Have you received medical care?",sw:"Umepata huduma ya afya?"}
      ])
     ];
-    const priorAnswers=flow.slice(6,-1);
+    const priorAnswers=flow.slice(5,-1);
     questions=adaptPregnancyQuestions(questions,category,priorAnswers);
     const answers=priorAnswers.map((value,index)=>({question_id:questions[index]?.id,answer:value})).filter(item=>item.question_id);
-    const answerIndex=flow.length-7;
+    const answerIndex=flow.length-6;
     const currentQuestion=questions[answerIndex];
     if(!currentQuestion)return reply(res,"Your answers have been recorded. No diagnosis or clinical assessment has been generated. Please seek care if symptoms persist or worsen.",true);
     const answer=flow[flow.length-1];
