@@ -9,14 +9,32 @@ const shortText=(value,max)=>shortUssdText(clean(value,2000),max);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
 function languagePrompt(language,q){return language==="sw"?q.sw:q.en;}
 function assessmentReply(assessment, language) {
- const impression=shortText(assessment?.provisional_diagnosis||"Cause not yet clear; clinical assessment is needed.",105);
+ const impression=assessment?.provisional_diagnosis||"Cause not yet clear; clinical assessment is needed.";
  const level=assessment?.urgency_level;
  if(language==="sw") {
+  const translations={
+   "Pregnancy with vaginal bleeding or possible rupture of membranes":"Ujauzito wenye kutokwa damu ukeni au kuvuja kwa maji ya uzazi",
+   "Reduced fetal movement after 20 weeks":"Kupungua kwa miondoko ya mtoto baada ya wiki 20",
+   "Pregnancy-related symptom requiring obstetric assessment":"Dalili zinazohusiana na ujauzito zinazohitaji tathmini ya uzazi",
+   "Pregnancy is not confirmed; the reported symptom needs assessment for a non-pregnancy-related cause":"Ujauzito haujathibitishwa; dalili zinahitaji uchunguzi wa sababu nyingine",
+   "Possible pregnancy-related symptom — pregnancy status is uncertain":"Dalili zinaweza kuhusiana na ujauzito; hali ya ujauzito haijulikani",
+   "Lower abdominal pain with fever or vomiting":"Maumivu ya tumbo la chini pamoja na homa au kutapika",
+   "Lower abdominal pain with possible pregnancy":"Maumivu ya tumbo la chini; ujauzito unawezekana",
+   "Lower abdominal pain — cause not yet established":"Maumivu ya tumbo la chini — chanzo bado hakijabainika",
+   "Vaginal discharge with fever — pelvic infection must be excluded":"Uchafu ukeni pamoja na homa — maambukizi ya nyonga lazima yaondolewe",
+   "Vaginal discharge — infection or inflammation needs assessment":"Uchafu ukeni — maambukizi au uvimbe unahitaji uchunguzi",
+   "Menstrual problem with possible pregnancy":"Tatizo la hedhi na uwezekano wa ujauzito",
+   "Menstrual problem — abnormal uterine bleeding or cycle disturbance":"Tatizo la hedhi — kutokwa damu kusiko kawaida au mabadiliko ya mzunguko",
+   "Bleeding with possible pregnancy":"Kutokwa damu na uwezekano wa ujauzito",
+   "Bleeding requiring assessment":"Kutokwa damu kunahitaji uchunguzi",
+   "Unclassified symptom presentation — provisional cause cannot yet be narrowed":"Dalili hazijaainishwa — chanzo bado hakijabainika",
+  };
+  const translated=translations[impression]||"Dalili zinahitaji tathmini ya mhudumu wa afya.";
   const heading=level==="emergency"?"DHARURA: Nenda hospitali sasa. ":level==="urgent"?"HARAKA: Tafuta huduma ya afya leo. ":"Tathmini ya awali: ";
-  return heading+impression+". Si utambuzi wa mwisho.";
+  return heading+shortText(translated,100)+". Si utambuzi wa mwisho; tathmini ya mhudumu wa afya inahitajika.";
  }
  const heading=level==="emergency"?"EMERGENCY: Go to hospital now. ":level==="urgent"?"URGENT: Attend a health facility today. ":"Preliminary impression: ";
- return heading+impression+". Not a confirmed diagnosis; clinician assessment is required.";
+ return heading+shortText(impression,105)+". Not a confirmed diagnosis; clinician assessment is required.";
 }
 async function ussd(req,res){
  let payload=req.body||{};
