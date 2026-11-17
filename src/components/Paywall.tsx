@@ -75,7 +75,7 @@ export function Paywall({
 
   const pollPayment = async (transactionId: string, selectedPlanId = plan.id) => {
     for (let i = 0; i < 40; i++) {
-      await new Promise((r) => setTimeout(r, 3000));
+      await new Promise((r) => setTimeout(r, 5000));
       try {
         const { data: json, error } = await supabase.functions.invoke("check-payment", {
           body: { transaction_id: transactionId },
@@ -385,7 +385,7 @@ export function Paywall({
                 <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-primary/15">
                   <div className="h-full w-1/3 animate-[pulse_1.4s_ease-in-out_infinite] rounded-full bg-primary" />
                 </div>
-                <p className="mt-2 text-[11px] text-muted-foreground">Keep this page open. It can take up to a minute.</p>
+                <p className="mt-2 text-[11px] text-muted-foreground">Keep this page open. Mobile-money confirmation can take up to 3 minutes.</p>
               </div>
             )}
           </>
