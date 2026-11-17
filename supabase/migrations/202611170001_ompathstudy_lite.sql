@@ -33,3 +33,19 @@ alter table public.lite_students enable row level security;
 alter table public.lite_attempts enable row level security;
 revoke all on public.lite_students from anon, authenticated;
 revoke all on public.lite_attempts from anon, authenticated;
+
+-- Compact aggregate for the Lite dashboard without downloading full MCQ JSON.
+create or replace function public.lite_library_summary()
+returns table(set_count bigint, question_count bigint)
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select count(*)::bigint,
+         coalesce(sum(jsonb_array_length(case when jsonb_typeof(questions)='array' then questions else '[]'::jsonb end)),0)::bigint
+  from public.mcq_sets
+  where published = true and deleted_at is null;
+$$;
+revoke all on function public.lite_library_summary() from public, anon, authenticated;
+grant execute on function public.lite_library_summary() to service_role;
