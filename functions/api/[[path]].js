@@ -1,4 +1,4 @@
-import handler from "../../api/ai.js";
+import handler from "../../api/lite.js";
 
 const routes = {
   "ompath-lite-web": "lite-web",
