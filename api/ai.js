@@ -1,5 +1,4 @@
-// All the site's AI endpoints in one serverless function (the Hobby plan allows twelve functions in total).
-// /api/ai-chat, /api/topic-write, /api/outline-parse and /api/page-study and /api/ai-polish are rewritten to /api/ai?task=chat|topic|outline|study|polish (vercel.json).
+// All the site's AI and learning endpoints in one serverless function (Hobby plan function limit).
 import chat from "./_lib/aiChat.js";
 import topic from "./_lib/topicWrite.js";
 import outline from "./_lib/outlineParse.js";
@@ -12,8 +11,9 @@ import write from "./_lib/adminWrite.js";
 import sb from "./_lib/sbCache.js";
 import transcribe from "./_lib/transcribe.js";
 import assist from "./_lib/storyAssist.js";
+import ompathLite from "./_lib/ompathLite.js";
 
-const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo, write, sb, transcribe, assist };
+const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo, write, sb, transcribe, assist, lite: ompathLite };
 
 export default async function handler(req, res) {
   const task = String(Array.isArray(req.query?.task) ? req.query.task[0] : req.query?.task ?? "");
