@@ -184,7 +184,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
   return {
     assessment_type: "preliminary_intake_summary",
     generated_at: new Date().toISOString(),
-    status: "provisional_assessment",
+    status: "not_a_diagnosis",
     provisional_diagnosis: leadingImpression,
     diagnostic_confidence: "limited",
     differential_diagnoses: differentials,
@@ -194,7 +194,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     clarification_answers: mapped,
     urgency_level: urgency,
     reasons,
-    possible_causes: differentials,
+    possible_causes: [],
     clinical_examination: "Not performed",
     investigations: "Not performed",
     limitations: [
