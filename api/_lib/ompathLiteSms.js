@@ -70,6 +70,20 @@ async function sendDaily(req,res){
  }
  return res.status(200).json({sent,skipped,failed,date:today()});
 }
+async function sendTest(req,res){
+ if(!authorized(req))return res.status(401).json({error:"Unauthorized"});
+ if(process.env.AT_ENV!=="sandbox")return res.status(403).json({error:"Test SMS is disabled outside Africa's Talking sandbox."});
+ const p=req.body&&typeof req.body==="object"?req.body:{};
+ const to=normalizePhone(p.to);
+ if(!to)return res.status(400).json({error:"Provide a valid international phone number."});
+ const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
+ const item=await pickQuestion("4",sets);
+ if(!item)return res.status(404).json({error:"No eligible published Year 4 MCQ was found."});
+ const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\\n");
+ const message=`OmpathStudy Lite | SMS TEST\\n${clean(item.q.question,170)}\\n${options}\\nThis is a sandbox test. Reply is not recorded.`;
+ const recipient=await sendSms(to,message);
+ return res.status(200).json({ok:true,environment:"sandbox",to,status:recipient.status||"Accepted",messageId:recipient.messageId||null});
+}
 function parseBody(req){if(typeof req.body==="string")return Object.fromEntries(new URLSearchParams(req.body));if(req.body&&typeof req.body==="object")return req.body;if(typeof req.rawBody==="string")return Object.fromEntries(new URLSearchParams(req.rawBody));return {};}
 async function inbound(req,res){
  const secret=String(req.query?.key||"");
@@ -107,6 +121,6 @@ export default async function handler(req,res){
  if(req.method==="GET")return res.status(200).json({name:"OmpathStudy Lite SMS",status:"ok",provider:"Africa's Talking"});
  if(req.method!=="POST")return res.status(405).json({error:"Method not allowed"});
  const mode=String(req.query?.mode||"");
- try{if(mode==="send")return await sendDaily(req,res);if(mode==="inbound")return await inbound(req,res);return res.status(400).json({error:"Set mode=send or mode=inbound"});}
+ try{if(mode==="send")return await sendDaily(req,res);if(mode==="test")return await sendTest(req,res);if(mode==="inbound")return await inbound(req,res);return res.status(400).json({error:"Set mode=send, mode=test, or mode=inbound"});}
  catch(e){console.error("Lite SMS error",e);return res.status(500).json({error:"SMS processing failed"});}
 }
