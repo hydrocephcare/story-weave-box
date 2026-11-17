@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildPreliminaryAssessment } from "./ompathLiteClinical.js";
+import { buildPreliminaryAssessment } from "./ompathLiteRules.js";
 
 const encounter = { concern_category: "Pregnancy-related concern", original_message: "I am pregnant and have bleeding." };
 
