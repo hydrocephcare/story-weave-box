@@ -2,7 +2,8 @@
  * OmpathStudy Lite — Africa's Talking USSD adapter.
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
-const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences";
+import { createHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+const mainMenu = "OmpathStudy Lite\\n1. Register\\n2. Study by subject\\n3. Help\\n4. SMS preferences\\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
 async function db(path,options={}){
@@ -29,6 +30,56 @@ async function ussd(req,res){
  const parts=text?text.split("*"):[];
  try{
   if(!text)return reply(res,mainMenu);
+  if(parts[0]==="5"){
+   // Resolve back navigation within this flow. 0 removes one prior selection;
+   // 00 clears the health flow and returns to the Lite main menu.
+   const flow=[];
+   for(const token of parts.slice(1)){
+    if(token==="00"){flow.length=0;continue;}
+    if(token==="0"){flow.pop();continue;}
+    flow.push(token);
+   }
+   if(!flow.length)return reply(res,"Health support\\nThis service is being prepared. It is not an emergency service.\\n1. Continue\\n2. Cancel\\n0. Main menu");
+   if(flow.length===1){
+    if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\\n0. Back");
+    return reply(res,"Before continuing: your answers may include sensitive health information. They will be used to prepare health guidance. This is not a diagnosis or emergency service.\\n1. I agree\\n2. Cancel\\n0. Back");
+   }
+   if(flow.length===2){
+    if(flow[1]!=="1")return reply(res,"Consent is required to continue.\\n1. I agree\\n2. Cancel\\n0. Back",true);
+    return reply(res,"Choose your preferred language:\\n1. English\\n2. Kiswahili\\n0. Back");
+   }
+   if(flow.length===3){
+    if(!["1","2"].includes(flow[2]))return reply(res,"Choose 1 for English or 2 for Kiswahili.\\n0. Back");
+    return reply(res,"What is your main concern?\\n1. Pregnancy-related concern\\n2. Menstrual problem\\n3. Lower abdominal pain\\n4. Vaginal discharge\\n5. Bleeding\\n6. Other health concern\\n0. Back");
+   }
+   if(flow.length===4){
+    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose an option from 1 to 6.\\n0. Back");
+    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?\\n1. Yes, send SMS\\n2. No SMS\\n0. Back");
+   }
+   if(flow.length===5){
+    if(!["1","2"].includes(flow[4]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\\n0. Back");
+    const language=flow[2]==="2"?"sw":"en";
+    const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
+    const encounter=await createHealthEncounter({
+     sessionId:session,
+     phoneNumber:phone,
+     consentGiven:true,
+     smsConsent:flow[4]==="1",
+     preferredLanguage:language,
+     channel:"ussd"
+    });
+    await updateHealthEncounter({
+     id:encounter.id,
+     sessionId:session,
+     phoneNumber:phone,
+     patch:{concern_category:categories[flow[3]],status:"intake_started"}
+    });
+    return reply(res,language==="sw"
+     ?"Asante. Ombi lako limepokelewa kwa majaribio ya mfumo. Tathmini ya kitabibu haijafanywa. Ikiwa una dalili kali au zinazozidi, tafuta huduma ya afya mara moja. Piga tena kwa menyu kuu."
+     :"Thank you. Your request has been recorded for service testing. No clinical assessment has been performed yet. If symptoms are severe or worsening, seek medical care immediately. Dial again for the main menu.",true);
+   }
+   return reply(res,"Health support session complete. Dial again for the main menu.",true);
+  }
   if(parts[0]==="1"){
    if(parts.length===1)return reply(res,`Select your study year:\n1. Year 1\n2. Year 2\n3. Year 3\n4. Year 4\n5. Year 5\n6. Year 6`);
    const choice=parts.slice(1).map(v=>clean(v,30).replace(/\s+/g,"").toLowerCase()).findLast(v=>/^(?:year)?[1-6]$/.test(v));
