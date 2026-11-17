@@ -284,7 +284,7 @@ async function ussd(req,res){
     const isCorrect=selected-1===correctIndex;
     await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qNo-1,selected_option:selected,is_correct:isCorrect})});
     const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",1200);
-    const explanationLimit=/[^\x00-\x7F]/.test(explanation)?26:78;
+    const explanationLimit=/[^\x00-\x7F]/.test(explanation)?22:78;
     const explanationChunks=splitWords(explanation,explanationLimit);
     let explanationPage=0;
     while(true){
