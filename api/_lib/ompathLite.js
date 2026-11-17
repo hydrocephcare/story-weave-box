@@ -245,7 +245,7 @@ async function ussd(req,res){
    if(student.preferred_subject&&subjects.includes(student.preferred_subject)){subjects.splice(subjects.indexOf(student.preferred_subject),1);subjects.unshift(student.preferred_subject);}
    const tokens=parts.slice(1);
    let cursor=0,subjectPage=0;
-   while(tokens[cursor]==="9"){subjectPage++;cursor++;}
+   while(tokens[cursor]==="9"){subjectPage=Math.min(subjectPage+1,Math.max(0,Math.ceil(subjects.length/2)-1));cursor++;}
    const showSubjects=(page)=>reply(res,`Year ${year} subjects ${page+1}:\n${subjects.slice(page*2,page*2+2).map((s,i)=>`${i+1}. ${shortText(s,22)}`).join("\n")}${(page+1)*2<subjects.length?"\n9. More subjects":""}\n0. ${page>0?"Previous":"Main menu"}`);
    if(cursor>=tokens.length)return showSubjects(subjectPage);
    if(tokens[cursor]==="0")return subjectPage>0?showSubjects(subjectPage-1):reply(res,mainMenu,true);
@@ -256,7 +256,7 @@ async function ussd(req,res){
    await db(`lite_students?id=eq.${student.id}`,{method:"PATCH",body:JSON.stringify({preferred_subject:subject})});
    const subjectSets=grouped.get(subject)||[];
    let setPage=0;
-   while(tokens[cursor]==="9"){setPage++;cursor++;}
+   while(tokens[cursor]==="9"){setPage=Math.min(setPage+1,Math.max(0,Math.ceil(subjectSets.length/2)-1));cursor++;}
    const showSets=(page)=>reply(res,`${shortText(subject,22)} sets ${page+1}:\n${subjectSets.slice(page*2,page*2+2).map((s,i)=>`${i+1}. ${setLabel(s,subject)}`).join("\n")}${(page+1)*2<subjectSets.length?"\n9. More sets":""}\n0. ${page>0?"Previous":"Subjects"}`);
    if(cursor>=tokens.length)return showSets(setPage);
    if(tokens[cursor]==="0")return setPage>0?showSets(setPage-1):showSubjects(subjectPage);
