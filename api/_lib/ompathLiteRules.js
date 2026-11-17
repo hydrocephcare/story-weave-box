@@ -118,7 +118,6 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
   const pregnancyPossible = ["1", "3"].includes(answerFor("pregnancy_status") || answerFor("pregnancy_possibility"));
   const pregnancyConfirmed = answerFor("pregnancy_status") === "1";
   const fever = positive("fever") || positive("fever_vomiting");
-  const pain = positive("pain") || positive("severity") || positive("fever_vomiting");
   let leadingImpression = "Undifferentiated " + category.toLowerCase() + "; more clinical information is needed to narrow the cause.";
   let differentials = [];
   let rationale = "The impression is based on the reported concern and the limited answers collected.";
@@ -148,6 +147,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
       differentials = ["Urinary tract infection", "Normal pregnancy-related changes", "Obstetric complication depending on the symptom"];
     }
   } else if (category === "Lower abdominal pain") {
+    if (positive("severity")) urgency = urgency === "emergency" ? urgency : "urgent";
     if (pregnancyPossible) {
       leadingImpression = "Lower abdominal pain with possible pregnancy — ectopic pregnancy must be excluded";
       differentials = ["Ectopic pregnancy", "Pelvic inflammatory disease", "Appendicitis", "Urinary tract infection"];
