@@ -1,135 +1,303 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Activity, ArrowRight, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, GraduationCap, HelpCircle, Menu, MessageSquare, Phone, RefreshCw, ShieldCheck, Sparkles, X } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Activity, AlertTriangle, ArrowRight, CheckCircle2, ExternalLink, HeartPulse, ShieldCheck, Stethoscope } from "lucide-react";
 import "./ompath-lite.css";
 
-type Profile = { phone_number: string; full_name: string; study_level: string; preferred_subject?: string | null; sms_opt_in?: boolean };
-type Question = { question: string; options: string[]; explanation?: string };
-type SetItem = { id: string; title: string; category?: string; subject: string; question_count: number; questions?: Question[] };
-type Library = { subjects: { name: string; sets: SetItem[] }[]; totals: { sets: number; questions: number } };
-type Result = { correct: boolean; correctIndex: number; explanation: string };
+type Assessment = {
+  provisional_diagnosis: string;
+  differential_diagnoses: string[];
+  diagnostic_rationale: string;
+  urgency_level: "emergency" | "urgent" | "prompt" | "routine" | "uncertain";
+  reasons: string[];
+  next_steps: string[];
+  limitations: string[];
+  concern_category: string;
+  presenting_concern: string | null;
+};
+type Resource = { title: string; slug: string; summary: string; url: string };
+type Choice = { value: string; label: string };
+type Question = { id: string; label: string; options: Choice[]; hint?: string };
 
-const API = "/api/ai?task=lite-web";
-const years = [1,2,3,4,5,6];
-async function request<T>(body: Record<string, unknown>): Promise<T> {
-  const response = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(payload.error || "We could not complete that request. Please try again.");
-  return payload as T;
+const API = "/api/ompath-lite-web";
+const yesNoUnsure: Choice[] = [
+  { value: "1", label: "Yes" },
+  { value: "2", label: "No" },
+  { value: "3", label: "Not sure" },
+];
+const duration: Choice[] = [
+  { value: "1", label: "Today / less than 24 hours" },
+  { value: "2", label: "1–7 days" },
+  { value: "3", label: "More than 7 days" },
+];
+const categories = [
+  ["Pregnancy-related concern", "Pregnancy and maternity symptoms"],
+  ["Menstrual problem", "Periods, cycle changes or menstrual pain"],
+  ["Lower abdominal pain", "Pain in the lower abdomen or pelvis"],
+  ["Vaginal discharge", "Unusual vaginal discharge or odour"],
+  ["Bleeding", "Unexpected or heavy bleeding"],
+  ["Other health concern", "Another symptom or health concern"],
+] as const;
+
+function questionsFor(category: string, answers: Record<string, string>): Question[] {
+  const emergency: Question = {
+    id: "emergency_screen",
+    label: "Are you experiencing any emergency warning sign right now?",
+    hint: "Examples: severe difficulty breathing, chest pain, fainting, seizure, heavy bleeding or severe sudden pain.",
+    options: yesNoUnsure,
+  };
+  if (answers.emergency_screen === "1") return [emergency];
+  if (category === "Pregnancy-related concern") {
+    const status: Question = { id: "pregnancy_status", label: "Is the pregnancy confirmed?", options: yesNoUnsure };
+    if (!answers.pregnancy_status) return [emergency, status];
+    const bleeding: Question = { id: "pregnancy_bleeding_or_fluid", label: "Are you having vaginal bleeding or leaking fluid?", options: yesNoUnsure };
+    if (answers.pregnancy_status !== "1") return [emergency, status, bleeding];
+    const gestation: Question = {
+      id: "gestation", label: "How far along is the pregnancy?",
+      options: [
+        { value: "1", label: "Under 20 weeks" },
+        { value: "2", label: "20–27 weeks" },
+        { value: "3", label: "28 weeks or more" },
+        { value: "4", label: "Not sure" },
+      ],
+    };
+    if (!answers.gestation) return [emergency, status, gestation, bleeding];
+    const movement: Question = { id: "pregnancy_movement", label: "If 20 weeks or more, are the baby's movements reduced or absent?", options: yesNoUnsure };
+    return ["2", "3", "4"].includes(answers.gestation)
+      ? [emergency, status, gestation, bleeding, movement]
+      : [emergency, status, gestation, bleeding];
+  }
+  const fever: Question = { id: "fever", label: "Do you have fever or chills?", options: yesNoUnsure };
+  const possiblePregnancy: Question = { id: "pregnancy_possibility", label: "Could you be pregnant, or have you recently given birth?", options: yesNoUnsure };
+  const worsening: Question = { id: "severity", label: "Is the pain or symptom severe or getting worse?", options: yesNoUnsure };
+  if (category === "Lower abdominal pain") return [
+    emergency,
+    { id: "onset", label: "When did the pain start?", options: duration },
+    possiblePregnancy,
+    { id: "fever_vomiting", label: "Do you have fever or repeated vomiting?", options: yesNoUnsure },
+    worsening,
+  ];
+  if (category === "Bleeding") return [
+    emergency,
+    { id: "bleeding_amount", label: "Is the bleeding heavy (about one pad an hour), or have you felt faint?", options: yesNoUnsure },
+    possiblePregnancy,
+    { id: "duration", label: "When did the bleeding start?", options: duration },
+    { id: "pain", label: "Do you have severe abdominal or pelvic pain?", options: yesNoUnsure },
+  ];
+  if (category === "Vaginal discharge") return [
+    emergency,
+    { id: "duration", label: "How long have you had the discharge?", options: duration },
+    fever,
+    { id: "pregnancy_possibility", label: "Could you be pregnant?", options: yesNoUnsure },
+    worsening,
+  ];
+  if (category === "Menstrual problem") return [
+    emergency,
+    { id: "duration", label: "How long has this menstrual problem been happening?", options: duration },
+    fever,
+    { id: "pregnancy_possibility", label: "Could you be pregnant?", options: yesNoUnsure },
+    worsening,
+  ];
+  return [
+    emergency,
+    { id: "duration", label: "How long has this been happening?", options: duration },
+    fever,
+    { id: "worsening", label: "Are the symptoms getting worse?", options: yesNoUnsure },
+    { id: "care", label: "Have you already received medical care for this problem?", options: yesNoUnsure },
+  ];
 }
-const getStored = (): Profile | null => { try { const v=localStorage.getItem("ompath-lite-profile"); return v?JSON.parse(v):null; } catch { return null; } };
+
+function urgencyLabel(value: Assessment["urgency_level"]) {
+  return ({
+    emergency: "Emergency — seek care now",
+    urgent: "Urgent — assessment today",
+    prompt: "Arrange an in-person assessment",
+    routine: "Routine follow-up",
+    uncertain: "More assessment is needed",
+  })[value] || "Assessment needed";
+}
+
+async function postAssessment(payload: Record<string, unknown>) {
+  const response = await fetch(API, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ action: "health-assess", ...payload }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.error || "We could not complete your health assessment. Please try again.");
+  return data as { assessment: Assessment; resources: Resource[]; reference: string };
+}
 
 export default function OmpathLiteApp() {
-  const [profile,setProfile]=useState<Profile|null>(()=>getStored());
-  const [screen,setScreen]=useState<"home"|"library"|"practice"|"progress"|"help">("home");
-  const [library,setLibrary]=useState<Library|null>(null);
-  const [loading,setLoading]=useState(false);
-  const [error,setError]=useState("");
-  const [year,setYear]=useState(profile?Number(profile.study_level.match(/[1-6]/)?.[0]||1):1);
-  const [subject,setSubject]=useState("");
-  const [setItem,setSetItem]=useState<SetItem|null>(null);
-  const [questionIndex,setQuestionIndex]=useState(0);
-  const [answer,setAnswer]=useState<number|null>(null);
-  const [result,setResult]=useState<Result|null>(null);
-  const [saving,setSaving]=useState(false);
-  const [showRegister,setShowRegister]=useState(false);
-  const [name,setName]=useState(profile?.full_name||"");
-  const [phone,setPhone]=useState(profile?.phone_number||"");
-  const [registerYear,setRegisterYear]=useState(year);
-  const [mobileMenu,setMobileMenu]=useState(false);
-  const [attempts,setAttempts]=useState<{title:string;correct:boolean;attempted_at:string}[]>([]);
-  useEffect(()=>{
-    document.title="OmpathStudy Lite | Focused Medical Learning";
-    const description="A lightweight way to access OmpathStudy medical MCQs, practise by study year and review explanations.";
-    let meta=document.querySelector('meta[name="description"]');
-    if(!meta){meta=document.createElement("meta");meta.setAttribute("name","description");document.head.appendChild(meta);}
-    meta.setAttribute("content",description);
-    const theme=document.querySelector('meta[name="theme-color"]');if(theme)theme.setAttribute("content","#173a32");
-    const canonical=document.querySelector('link[rel="canonical"]')||document.createElement("link");
-    canonical.setAttribute("rel","canonical");canonical.setAttribute("href","https://lite.ompathstudy.com/");document.head.appendChild(canonical);
-    document.querySelector('meta[property="og:url"]')?.setAttribute("content","https://lite.ompathstudy.com/");
-    document.querySelector('meta[property="og:title"]')?.setAttribute("content","OmpathStudy Lite | Focused Medical Learning");
-    document.querySelector('meta[property="og:description"]')?.setAttribute("content",description);
-    document.querySelector('meta[name="twitter:title"]')?.setAttribute("content","OmpathStudy Lite | Focused Medical Learning");
-    document.querySelector('meta[name="twitter:description"]')?.setAttribute("content",description);
-  },[]);
+  const [category, setCategory] = useState("");
+  const [description, setDescription] = useState("");
+  const [phone, setPhone] = useState("");
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [consent, setConsent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [result, setResult] = useState<{ assessment: Assessment; resources: Resource[]; reference: string } | null>(null);
+  const questions = useMemo(() => questionsFor(category, answers), [category, answers]);
+  const answered = questions.filter((question) => Boolean(answers[question.id])).length;
+  const emergencyReported = answers.emergency_screen === "1";
+  const canSubmit = Boolean(category && phone.trim() && consent && answers.emergency_screen && (emergencyReported || (questions.length > 1 && questions.every((question) => Boolean(answers[question.id])))));
 
-  const loadLibrary=useCallback(async(y:number)=>{
-    setLoading(true);setError("");
-    try { const data=await request<Library>({action:"library",year:y}); setLibrary(data); }
-    catch(e){setError(e instanceof Error?e.message:"Could not load the OmpathStudy question bank.");}
-    finally{setLoading(false);}
-  },[]);
-  useEffect(()=>{ if(profile) void loadLibrary(year); },[profile,year,loadLibrary]);
-  useEffect(()=>{ if(profile && screen==="progress") void request<{attempts:typeof attempts}>({action:"progress",phone:profile.phone_number}).then(d=>setAttempts(d.attempts||[])).catch(e=>setError(e.message)); },[profile,screen]);
-
-  const currentSubject=useMemo(()=>library?.subjects.find(s=>s.name===subject),[library,subject]);
-  const question=setItem?.questions?.[questionIndex];
-  const totalQuestions=setItem?.question_count||0;
-  const answeredCount=attempts.length;
-
-  const register=async()=>{
-    setSaving(true);setError("");
-    try{
-      const normalized=phone.replace(/[\s()-]/g,"");
-      const data=await request<{profile:Profile}>({action:"register",full_name:name,phone_number:normalized,study_year:registerYear});
-      setProfile(data.profile);localStorage.setItem("ompath-lite-profile",JSON.stringify(data.profile));setYear(registerYear);setShowRegister(false);setScreen("library");
-    }catch(e){setError(e instanceof Error?e.message:"Registration failed.");}
-    finally{setSaving(false);}
+  const setAnswer = (id: string, value: string) => {
+    setAnswers((current) => {
+      const next = { ...current, [id]: value };
+      if (id === "pregnancy_status" && value !== "1") {
+        delete next.gestation;
+        delete next.pregnancy_movement;
+      }
+      if (id === "gestation" && value === "1") delete next.pregnancy_movement;
+      return next;
+    });
   };
-  const chooseSet=async(s:SetItem)=>{
-    setLoading(true);setError("");
-    try{const data=await request<{set:SetItem}>({action:"set",set_id:s.id,year});setSetItem(data.set);setQuestionIndex(0);setAnswer(null);setResult(null);setScreen("practice");}
-    catch(e){setError(e instanceof Error?e.message:"Could not open this question set.");}
-    finally{setLoading(false);}
-  };
-  const submitAnswer=async()=>{
-    if(!profile||!setItem||answer===null||!question)return;
-    setSaving(true);setError("");
-    try{
-      const data=await request<{correct:boolean;correctIndex:number;explanation:string}>({action:"answer",phone:profile.phone_number,set_id:setItem.id,question_index:questionIndex,selected_option:answer+1});
+
+  const submit = async () => {
+    if (!canSubmit || loading) return;
+    setLoading(true);
+    setError("");
+    try {
+      const orderedAnswers = questions
+        .filter((question) => Boolean(answers[question.id]))
+        .map((question) => ({ question_id: question.id, answer: answers[question.id] }));
+      const data = await postAssessment({
+        phone_number: phone.trim(),
+        session_id: crypto.randomUUID(),
+        concern_category: category,
+        original_message: description.trim(),
+        answers: orderedAnswers,
+        consent_given: true,
+      });
       setResult(data);
-      setAttempts(prev=>[{title:setItem.title,correct:data.correct,attempted_at:new Date().toISOString()},...prev]);
-    }catch(e){setError(e instanceof Error?e.message:"Your answer could not be saved.");}
-    finally{setSaving(false);}
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "The service is temporarily unavailable. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
-  const nextQuestion=()=>{if(questionIndex+1<totalQuestions){setQuestionIndex(v=>v+1);setAnswer(null);setResult(null);}else{setScreen("progress");setSetItem(null);}};
-  const changeSms=async(enabled:boolean)=>{
-    if(!profile)return;
-    setSaving(true);setError("");
-    try{const data=await request<{profile:Profile}>({action:"sms-preference",phone:profile.phone_number,enabled});setProfile(data.profile);localStorage.setItem("ompath-lite-profile",JSON.stringify(data.profile));}
-    catch(e){setError(e instanceof Error?e.message:"Could not update SMS preference.");}
-    finally{setSaving(false);}
-  };
-  const logout=()=>{localStorage.removeItem("ompath-lite-profile");setProfile(null);setLibrary(null);setScreen("home");setShowRegister(false);};
 
-  return <div className="lite-shell">
-    <header className="lite-topbar"><a className="lite-brand" href="/" aria-label="OmpathStudy Lite home"><span className="lite-brand-mark">O<span>+</span></span><span>OMPATH<span className="lite-brand-light">LITE</span><small>MEDICAL LEARNING, MADE ACCESSIBLE</small></span></a>
-      <nav className="lite-nav">{profile&&<><button className={screen==="library"?"active":""} onClick={()=>setScreen("library")}>Question bank</button><button className={screen==="progress"?"active":""} onClick={()=>setScreen("progress")}>My progress</button><button className={screen==="help"?"active":""} onClick={()=>setScreen("help")}>Help</button></>}</nav>
-      <div className="lite-account">{profile?<><span className="lite-avatar">{profile.full_name.slice(0,1).toUpperCase()}</span><span className="lite-account-name">{profile.full_name.split(" ")[0]}<small>{profile.study_level}</small></span><button className="lite-quiet-btn" onClick={logout}>Sign out</button></>:<button className="lite-signin" onClick={()=>setShowRegister(true)}>Get started <ArrowRight size={15}/></button>}</div>
-      <button className="lite-mobile-menu" onClick={()=>setMobileMenu(v=>!v)} aria-label="Toggle navigation">{mobileMenu?<X/>:<Menu/>}</button>
-    </header>
-    {mobileMenu&&<div className="lite-mobile-nav"><button onClick={()=>{setScreen("library");setMobileMenu(false)}}>Question bank</button><button onClick={()=>{setScreen("progress");setMobileMenu(false)}}>My progress</button><button onClick={()=>{setScreen("help");setMobileMenu(false)}}>Help</button></div>}
-    <main className="lite-main">
-      {error&&<div className="lite-alert" role="alert">{error}<button onClick={()=>setError("")} aria-label="Dismiss"><X size={16}/></button></div>}
-      {!profile&&<section className="lite-hero">
-        <div className="lite-hero-copy"><div className="lite-eyebrow"><span/> THE LIGHTWEIGHT LEARNING CHANNEL</div><h1>Your medical learning.<br/><em>Without the barriers.</em></h1><p>Access thousands of existing OmpathStudy MCQs, practise by study year, and learn from clear explanations. Designed for a fast, focused experience on any device.</p><div className="lite-hero-actions"><button className="lite-primary" onClick={()=>setShowRegister(true)}>Create free learner profile <ArrowRight size={17}/></button><a href="https://www.ompathstudy.com" target="_blank" rel="noreferrer">Explore full OmpathStudy <ArrowRight size={14}/></a></div><div className="lite-trust"><ShieldCheck size={17}/> Uses OmpathStudy's existing published learning library</div></div>
-        <div className="lite-hero-art"><div className="lite-art-orbit orbit-one"/><div className="lite-art-orbit orbit-two"/><div className="lite-study-card"><div className="lite-card-head"><span>DAILY PRACTICE</span><span className="lite-live-dot"/></div><div className="lite-card-icon"><GraduationCap size={28}/></div><strong>Build clinical confidence.</strong><p>One question at a time.</p><div className="lite-progress-line"><i/></div><div className="lite-card-foot"><span>Learn</span><span>Practise</span><span>Improve</span></div></div><div className="lite-float-note"><CheckCircle2 size={16}/> Understand every answer</div></div>
-        <div className="lite-hero-stats"><div><strong>1,500+</strong><span>MCQ sets in the parent library</span></div><div><strong>6 years</strong><span>Medical study levels</span></div><div><strong>One source</strong><span>No duplicated question banks</span></div></div>
-      </section>}
-      {profile&&screen==="home"&&<section className="lite-welcome"><div><div className="lite-eyebrow"><span/> YOUR STUDY SPACE</div><h1>Welcome back, {profile.full_name.split(" ")[0]}.</h1><p>Your {profile.study_level} learning space is ready. Pick up where you left off.</p><button className="lite-primary" onClick={()=>setScreen("library")}>Explore your question bank <ArrowRight size={17}/></button></div><div className="lite-welcome-graphic"><BookOpen size={66}/><span>LEARN · PRACTISE · GROW</span></div></section>}
-      {profile&&screen==="library"&&<section className="lite-content"><div className="lite-section-heading"><div><div className="lite-eyebrow"><span/> THE QUESTION BANK</div><h1>Choose what to study.</h1><p>Browse published MCQ sets already available in OmpathStudy.</p></div><label className="lite-year-select">Study year<select value={year} onChange={e=>{setYear(Number(e.target.value));setSubject("");}}>{years.map(y=><option key={y} value={y}>Year {y}</option>)}</select></label></div>
-        {loading?<div className="lite-loading"><RefreshCw className="spin"/> Loading your question bank…</div>:library&&<><div className="lite-library-summary"><div><BookOpen/><strong>{library.totals.sets.toLocaleString()}</strong><span>question sets</span></div><div><GraduationCap/><strong>{library.totals.questions.toLocaleString()}</strong><span>questions available</span></div><div><Sparkles/><strong>Year {year}</strong><span>your selected level</span></div></div>
-        {!subject?<div className="lite-subject-grid">{library.subjects.map((s,i)=><button className="lite-subject-card" key={s.name} onClick={()=>setSubject(s.name)}><span className="lite-subject-number">{String(i+1).padStart(2,"0")}</span><strong>{s.name}</strong><span>{s.sets.length} question sets <ArrowRight size={15}/></span></button>)}{!library.subjects.length&&<p>No published sets were found for this year yet. Try another study year or visit the full library.</p>}</div>:<><button className="lite-back-link" onClick={()=>setSubject("")}><ChevronLeft size={16}/> All subjects</button><h2 className="lite-subject-title">{subject}</h2><div className="lite-set-list">{(currentSubject?.sets||[]).map(s=><button key={s.id} className="lite-set-row" onClick={()=>void chooseSet(s)}><span className="lite-set-icon"><BookOpen/></span><span><strong>{s.title}</strong><small>{s.question_count} questions · Published OmpathStudy content</small></span><ArrowRight/></button>)}</div></>}</>}
-      </section>}
-      {profile&&screen==="practice"&&setItem&&<section className="lite-practice"><button className="lite-back-link" onClick={()=>setScreen("library")}><ChevronLeft size={16}/> Back to question bank</button><div className="lite-practice-head"><div><div className="lite-eyebrow"><span/> PRACTICE SESSION</div><h1>{setItem.title}</h1><p>Question {questionIndex+1} of {totalQuestions}</p></div><div className="lite-question-progress"><span style={{width:`${((questionIndex+1)/Math.max(totalQuestions,1))*100}%`}}/></div></div>
-        {question?<div className="lite-question-card"><div className="lite-question-label">QUESTION {questionIndex+1}</div><h2>{question.question}</h2><div className="lite-options">{question.options.map((option,i)=><button key={i} disabled={!!result} className={`lite-option ${answer===i?"selected":""} ${result&&i===result.correctIndex?"correct":result&&answer===i&&!result.correct?"incorrect":""}`} onClick={()=>setAnswer(i)}><span>{String.fromCharCode(65+i)}</span>{option}{result&&i===result.correctIndex&&<CheckCircle2 size={18}/>}</button>)}</div>
-          {result?<div className={`lite-feedback ${result.correct?"is-correct":"is-incorrect"}`}><strong>{result.correct?"Correct. Well done.":"Not quite. Let's review."}</strong><p>{result.explanation||"Review the correct answer and continue practising."}</p><button className="lite-primary" onClick={nextQuestion}>{questionIndex+1<totalQuestions?"Next question":"Finish session"} <ArrowRight size={16}/></button></div>:<button className="lite-primary lite-submit" disabled={answer===null||saving} onClick={()=>void submitAnswer()}>{saving?"Checking…":"Check my answer"} <ArrowRight size={16}/></button>}
-        </div>:<div className="lite-alert">This question is not available in the selected set.</div>}
-      </section>}
-      {profile&&screen==="progress"&&<section className="lite-content"><div className="lite-eyebrow"><span/> YOUR LEARNING RECORD</div><h1>Progress that matters.</h1><p className="lite-section-intro">Your practice history is recorded against the original OmpathStudy question sets.</p><div className="lite-library-summary"><div><Activity/><strong>{answeredCount}</strong><span>answers recorded this visit</span></div><div><CheckCircle2/><strong>{attempts.filter(a=>a.correct).length}</strong><span>correct answers this visit</span></div><div><GraduationCap/><strong>{profile.study_level}</strong><span>your study level</span></div></div><div className="lite-preferences"><div><div><strong>Daily learning SMS</strong><p>Choose whether you want to receive learning messages when the SMS service is configured.</p></div><label className="lite-switch"><input type="checkbox" checked={!!profile.sms_opt_in} onChange={e=>void changeSms(e.target.checked)} disabled={saving}/><span/></label></div><p className="lite-muted">You can unsubscribe at any time. SMS delivery depends on the service being enabled.</p></div><h2 className="lite-subject-title">Recent practice</h2>{attempts.length?<div className="lite-set-list">{attempts.map((a,i)=><div className="lite-set-row static" key={i}><span className={`lite-result-icon ${a.correct?"good":"bad"}`}>{a.correct?<CheckCircle2/>:<X/>}</span><span><strong>{a.title}</strong><small>{new Date(a.attempted_at).toLocaleString()}</small></span><b>{a.correct?"Correct":"Incorrect"}</b></div>)}</div>:<p className="lite-muted">Your answers will appear here after your first practice session.</p>}</section>}
-      {profile&&screen==="help"&&<section className="lite-content"><div className="lite-eyebrow"><span/> SUPPORT</div><h1>How Lite works.</h1><div className="lite-help-grid"><article><Phone/><h3>Access by phone</h3><p>Register and study using the Africa's Talking USSD channel once its service code has been activated.</p></article><article><BookOpen/><h3>Use existing questions</h3><p>Lite reads published OmpathStudy MCQ sets. It does not create a second, conflicting question bank.</p></article><article><MessageSquare/><h3>SMS learning</h3><p>SMS preferences are stored with your learner profile. Delivery requires the SMS provider and daily schedule to be configured.</p></article><article><HelpCircle/><h3>Need more detail?</h3><p>Visit the full platform for notes, flashcards, past papers and additional learning tools.</p><a href="https://www.ompathstudy.com" target="_blank" rel="noreferrer">Open OmpathStudy <ArrowRight size={14}/></a></article></div></section>}
-    </main>
-    <footer className="lite-footer"><div className="lite-brand small"><span className="lite-brand-mark">O<span>+</span></span><span>OMPATH<span className="lite-brand-light">LITE</span><small>MEDICAL LEARNING, MADE ACCESSIBLE</small></span></div><p>A focused learning channel by OmpathStudy. Existing content, one shared source of truth.</p><a href="https://www.ompathstudy.com" target="_blank" rel="noreferrer">Full OmpathStudy <ArrowRight size={14}/></a><span>© {new Date().getFullYear()} OmpathStudy</span></footer>
-    {showRegister&&<div className="lite-modal-backdrop" role="presentation" onMouseDown={e=>{if(e.target===e.currentTarget)setShowRegister(false)}}><section className="lite-modal" role="dialog" aria-modal="true" aria-labelledby="lite-register-title"><button className="lite-modal-close" onClick={()=>setShowRegister(false)} aria-label="Close"><X/></button><div className="lite-eyebrow"><span/> GET STARTED</div><h2 id="lite-register-title">Create your learner profile.</h2><p>Use the same phone number you will use for USSD learning.</p><label>Full name<input value={name} onChange={e=>setName(e.target.value)} placeholder="Your full name" autoComplete="name"/></label><label>Mobile number<input value={phone} onChange={e=>setPhone(e.target.value)} placeholder="+2547XXXXXXXX" autoComplete="tel"/></label><small className="lite-muted">Include your country code, e.g. +254 for Kenya.</small><label>Medical study year<select value={registerYear} onChange={e=>setRegisterYear(Number(e.target.value))}>{years.map(y=><option key={y} value={y}>Year {y}</option>)}</select></label><button className="lite-primary full" disabled={saving||name.trim().length<2||phone.replace(/\D/g,"").length<9} onClick={()=>void register()}>{saving?"Creating profile…":"Create learner profile"} <ArrowRight size={16}/></button><p className="lite-privacy"><ShieldCheck size={14}/> Your profile is used to save your learning progress and preferences.</p></section></div>}
-  </div>;
+  const reset = () => {
+    setCategory("");
+    setDescription("");
+    setPhone("");
+    setAnswers({});
+    setConsent(false);
+    setError("");
+    setResult(null);
+  };
+
+  return (
+    <div className="health-shell">
+      <header className="health-header">
+        <a className="health-brand" href="/" aria-label="OmpathStudy Lite home">
+          <span className="health-brand-mark">O<span>+</span></span>
+          <span><strong>OMPATH<span> LITE</span></strong><small>HEALTH SUPPORT</small></span>
+        </a>
+        <a className="health-main-link" href="https://www.ompathstudy.com" target="_blank" rel="noreferrer">
+          Main OmpathStudy <ExternalLink size={15} />
+        </a>
+      </header>
+
+      <main className="health-main">
+        {!result ? (
+          <>
+            <section className="health-hero">
+              <div className="health-eyebrow"><HeartPulse size={15} /> HEALTH SUPPORT</div>
+              <h1>Understand your symptoms.<br /><em>Know what to do next.</em></h1>
+              <p>Describe what is troubling you. OmpathStudy Health Support will screen for warning signs, ask relevant questions and provide a preliminary assessment with safe next steps.</p>
+              <div className="health-hero-note"><ShieldCheck size={18} /> Private intake · English · Designed for mobile and low-bandwidth access</div>
+            </section>
+
+            <section className="health-panel">
+              <div className="health-panel-heading">
+                <div><span className="health-step">01</span><div><h2>Tell us what is happening</h2><p>Do not include your name or another person's identifying details.</p></div></div>
+                <span className="health-required">Required fields *</span>
+              </div>
+
+              <label className="health-field">
+                <span>Main concern *</span>
+                <select value={category} onChange={(event) => { setCategory(event.target.value); setAnswers({}); setError(""); }}>
+                  <option value="">Choose the closest match</option>
+                  {categories.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                </select>
+              </label>
+
+              <label className="health-field">
+                <span>Describe your symptoms</span>
+                <textarea value={description} onChange={(event) => setDescription(event.target.value)} maxLength={1200} rows={4} placeholder="For example: I have lower abdominal pain that started yesterday, with fever..." />
+                <small>{description.length}/1,200 characters. Include when it started and what makes it better or worse, if known.</small>
+              </label>
+
+              {category && (
+                <div className="health-questions">
+                  <div className="health-subheading"><span className="health-step">02</span><div><h2>Safety and follow-up questions</h2><p>Questions change according to the concern you selected.</p></div></div>
+                  {questions.map((question, index) => (
+                    <fieldset className="health-question" key={question.id}>
+                      <legend><span>{index + 1}.</span> {question.label}</legend>
+                      {question.hint && <p>{question.hint}</p>}
+                      <div className="health-options">
+                        {question.options.map((option) => (
+                          <label key={option.value} className={answers[question.id] === option.value ? "selected" : ""}>
+                            <input type="radio" name={question.id} value={option.value} checked={answers[question.id] === option.value} onChange={() => setAnswer(question.id, option.value)} />
+                            <span>{option.label}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </fieldset>
+                  ))}
+                  <div className="health-progress"><span style={{ width: questions.length ? (answered / questions.length * 100) + "%" : "0%" }} /></div>
+                  <small className="health-progress-label">{answered} of {questions.length} questions answered</small>
+                </div>
+              )}
+
+              <div className="health-contact">
+                <div className="health-subheading"><span className="health-step">03</span><div><h2>Secure your assessment</h2><p>Your mobile number identifies this private health enquiry.</p></div></div>
+                <label className="health-field"><span>Mobile number with country code *</span><input value={phone} onChange={(event) => setPhone(event.target.value)} type="tel" autoComplete="tel" placeholder="+2547XXXXXXXX" /></label>
+                <label className="health-consent">
+                  <input type="checkbox" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
+                  <span>I consent to OmpathStudy storing my phone number and health answers securely for up to 30 days to provide this service. I understand this is not emergency care or a confirmed diagnosis.</span>
+                </label>
+              </div>
+
+              {error && <div className="health-error" role="alert"><AlertTriangle size={18} /> {error}</div>}
+              <button className="health-submit" disabled={!canSubmit || loading} onClick={() => void submit()}>
+                {loading ? "Preparing your assessment…" : "Submit for preliminary assessment"} <ArrowRight size={18} />
+              </button>
+              <p className="health-privacy"><ShieldCheck size={15} /> Your answers are not used to create a definitive diagnosis. Do not delay emergency care to complete this form.</p>
+            </section>
+
+            <section className="health-disclaimer">
+              <AlertTriangle size={20} />
+              <div><strong>Need emergency help?</strong><p>If you have severe difficulty breathing, chest pain, fainting, a seizure, severe bleeding, severe sudden pain or feel in immediate danger, go to the nearest emergency department now. Do not wait for an online response.</p></div>
+            </section>
+          </>
+        ) : (
+          <section className="health-result">
+            <div className="health-result-top"><div className="health-eyebrow"><CheckCircle2 size={15} /> ASSESSMENT COMPLETED</div><button className="health-reset" onClick={reset}>Start another enquiry</button></div>
+            <h1>Your preliminary assessment</h1>
+            <div className={"health-urgency " + result.assessment.urgency_level}>
+              <AlertTriangle size={21} /><div><strong>{urgencyLabel(result.assessment.urgency_level)}</strong><p>{result.assessment.urgency_level === "emergency" ? "Seek emergency care immediately. Do not wait for further messages." : result.assessment.urgency_level === "urgent" ? "Please attend a health facility today for an in-person assessment." : "This assessment is limited. Arrange an in-person clinical review."}</p></div>
+            </div>
+            <article className="health-result-card">
+              <span className="health-result-label"><Stethoscope size={16} /> PRELIMINARY CLINICAL IMPRESSION</span>
+              <h2>{result.assessment.provisional_diagnosis}</h2>
+              <p>{result.assessment.diagnostic_rationale}</p>
+            </article>
+            {result.assessment.differential_diagnoses?.length > 0 && <article className="health-result-card"><h2>Possible causes to consider</h2><ul>{result.assessment.differential_diagnoses.map((item) => <li key={item}>{item}</li>)}</ul></article>}
+            {result.assessment.reasons?.length > 0 && <article className="health-result-card"><h2>Why this level of care was advised</h2><ul>{result.assessment.reasons.map((item) => <li key={item}>{item}</li>)}</ul></article>}
+            <article className="health-result-card"><h2>Recommended next steps</h2><ul>{result.assessment.next_steps.map((item) => <li key={item}>{item}</li>)}</ul></article>
+            {result.resources.length > 0 && <article className="health-result-card"><h2>Reviewed OmpathStudy information</h2><p>These patient-facing resources have been reviewed for publication.</p>{result.resources.map((resource) => <a className="health-resource" key={resource.slug} href={resource.url} target="_blank" rel="noreferrer"><span><strong>{resource.title}</strong><small>{resource.summary}</small></span><ExternalLink size={16} /></a>)}</article>}
+            <article className="health-limitations"><strong>Important limitations</strong><ul>{result.assessment.limitations.map((item) => <li key={item}>{item}</li>)}</ul><p>Reference: {result.reference}</p></article>
+            <button className="health-submit" onClick={reset}>Finish <CheckCircle2 size={18} /></button>
+          </section>
+        )}
+      </main>
+
+      <footer className="health-footer">
+        <div><strong>OmpathStudy Lite</strong><span>Focused health support by OmpathStudy.</span></div>
+        <a href="https://www.ompathstudy.com" target="_blank" rel="noreferrer">For medical learning, visit the main OmpathStudy website <ArrowRight size={15} /></a>
+        <small>Automated preliminary support is not a substitute for a qualified clinician, physical examination or investigations.</small>
+      </footer>
+    </div>
+  );
 }
