@@ -37,7 +37,21 @@ export default function OmpathLiteApp() {
   const [registerYear,setRegisterYear]=useState(year);
   const [mobileMenu,setMobileMenu]=useState(false);
   const [attempts,setAttempts]=useState<{title:string;correct:boolean;attempted_at:string}[]>([]);
-  useEffect(()=>{ document.title="OmpathStudy Lite | Focused Medical Learning"; let meta=document.querySelector('meta[name="description"]'); if(!meta){meta=document.createElement("meta");meta.setAttribute("name","description");document.head.appendChild(meta);} meta.setAttribute("content","A lightweight way to access OmpathStudy medical MCQs, practise by study year and review explanations."); let theme=document.querySelector('meta[name="theme-color"]'); if(theme)theme.setAttribute("content","#173a32"); },[]);
+  useEffect(()=>{
+    document.title="OmpathStudy Lite | Focused Medical Learning";
+    const description="A lightweight way to access OmpathStudy medical MCQs, practise by study year and review explanations.";
+    let meta=document.querySelector('meta[name="description"]');
+    if(!meta){meta=document.createElement("meta");meta.setAttribute("name","description");document.head.appendChild(meta);}
+    meta.setAttribute("content",description);
+    const theme=document.querySelector('meta[name="theme-color"]');if(theme)theme.setAttribute("content","#173a32");
+    const canonical=document.querySelector('link[rel="canonical"]')||document.createElement("link");
+    canonical.setAttribute("rel","canonical");canonical.setAttribute("href","https://lite.ompathstudy.com/");document.head.appendChild(canonical);
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content","https://lite.ompathstudy.com/");
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content","OmpathStudy Lite | Focused Medical Learning");
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content",description);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute("content","OmpathStudy Lite | Focused Medical Learning");
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute("content",description);
+  },[]);
 
   const loadLibrary=useCallback(async(y:number)=>{
     setLoading(true);setError("");
