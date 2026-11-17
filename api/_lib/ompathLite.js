@@ -8,7 +8,7 @@ import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 import { shortUssdText, splitUssdWords } from "./ompathLiteUssdFormat.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").replace(/<br\s*\/?>/gi," ").replace(/<\/(?:p|div|li|h[1-6])\s*>/gi," ").replace(/<[^>]*>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;/gi,"'").replace(/\s+/g," ").trim().slice(0,n);
-const shortText=shortUssdText;
+const shortText=(value,max)=>shortUssdText(clean(value,2000),max);
 const splitWords=splitUssdWords;
 const setLabel=(set,subject)=>{
  let label=clean(set.title,180).replace(/^weekly\s+year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").trim();
