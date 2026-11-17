@@ -7,7 +7,7 @@ import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLit
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 import { shortUssdText, splitUssdWords } from "./ompathLiteUssdFormat.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
-const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
+const clean = (v,n=180)=>String(v??"").replace(/<br\\s*\\/?>(?=.)/gi," ").replace(/<\\/(?:p|div|li|h[1-6])\\s*>/gi," ").replace(/<[^>]*>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;/gi,"'").replace(/\\s+/g," ").trim().slice(0,n);
 const shortText=shortUssdText;
 const splitWords=splitUssdWords;
 const setLabel=(set,subject)=>{
