@@ -180,7 +180,7 @@ export async function getHealthGuideToken(token) {
   if (!row) return null;
   await db("lite_health_guide_tokens?id=eq." + encodeURIComponent(row.id), {
     method: "PATCH",
-    body: JSON.stringify({ last_accessed_at: new Date().toISOString(), access_count: 1 }),
+    body: JSON.stringify({ last_accessed_at: new Date().toISOString() }),
   });
   return row;
 }
