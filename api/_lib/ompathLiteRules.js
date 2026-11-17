@@ -1,7 +1,7 @@
 const clean = (value, max = 1200) => String(value ?? "").replace(/[<>]/g, "").trim().slice(0, max);
 const patterns = [
   ["severe_breathing_difficulty", /\b(?:cannot breathe|can't breathe|unable to breathe|shortness of breath|breathless|severe(?:ly)? difficult(?:y)? breathing|struggling to breathe|siwezi kupumua|nashindwa kupumua|kupumua kwa shida sana|napumua kwa shida sana|pumzi imekata)\b/i],
-  ["chest_pain", /\b(?:chest pain|crushing chest pain|chest tightness|maumivu ya kifua|kubanwa kifua)\b/i],
+  ["chest_pain", /\b(?:chest pain|crushing chest pain|chest tightness|maumivu (?:makali )?ya kifua|kubanwa kifua)\b/i],
   ["loss_of_consciousness", /\b(?:unconscious|passed out|fainted|not waking up|kupoteza fahamu|amepoteza fahamu|kuzimia)\b/i],
   ["seizure", /\b(?:seizure|convulsion|fitting|degedege|kifafa)\b/i],
   ["severe_bleeding", /\b(?:heavy bleeding|bleeding heavily|bleeding won't stop|uncontrolled bleeding|soaking (?:a )?pad in an hour|damu nyingi sana|kutokwa damu nyingi|damu haikomi)\b/i],
@@ -12,7 +12,7 @@ const patterns = [
 
 function isNegated(text, index) {
   const before = text.slice(Math.max(0, index - 48), index);
-  return /(?:\b(?:do not have|don't have|does not have|doesn't have|not experiencing|no sign of)\s*$|\b(?:no|not|without|denies|sina|hakuna|sio|si)\s*(?:any\s+)?(?:severe\s+)?$)/i.test(before);
+  return /(?:\b(?:do not have|don't have|does not have|doesn't have|not experiencing|no sign of)\b(?:\s+\w+){0,3}\s*$|\b(?:no|not|without|denies|sina|hakuna|sio|si)\s*(?:any\s+)?(?:severe\s+)?$)/i.test(before);
 }
 
 export function detectEmergencyLanguage(input) {
