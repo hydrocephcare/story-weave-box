@@ -85,4 +85,28 @@ describe("OmpathStudy Lite preliminary assessment", () => {
     });
     expect(result.urgency_level).toBe("urgent");
   });
+
+  it("escalates lower abdominal pain with fever or repeated vomiting", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Lower abdominal pain", original_message: "Abdominal pain" },
+      answers: [{ question_id: "fever_vomiting", answer: "1" }],
+    });
+    expect(result.urgency_level).toBe("urgent");
+  });
+
+  it("escalates bleeding with significant abdominal or pelvic pain", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Bleeding", original_message: "Bleeding" },
+      answers: [{ question_id: "pain", answer: "1" }],
+    });
+    expect(result.urgency_level).toBe("urgent");
+  });
+
+  it("escalates fever with vaginal discharge for same-day assessment", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Vaginal discharge", original_message: "Discharge and fever" },
+      answers: [{ question_id: "fever", answer: "1" }],
+    });
+    expect(result.urgency_level).toBe("urgent");
+  });
 });
