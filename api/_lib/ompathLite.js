@@ -3,7 +3,7 @@
  * Uses the existing /api/ai multiplexer to avoid adding another Vercel function.
  * Server environment: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
  */
-const mainMenu = "Welcome to OmpathStudy Lite\n1. Register\n2. Daily medical MCQ\n3. Help\\n4. SMS preferences";
+const mainMenu = "Welcome to OmpathStudy Lite\n1. Register\n2. Daily medical MCQ\n3. Help\n4. SMS preferences";
 const clean = (value, max = 120) => String(value ?? "").trim().replace(/[<>]/g, "").slice(0, max);
 const reply = (res, message, end = false) => {
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
@@ -28,7 +28,12 @@ async function db(path, options = {}) {
   return body ? JSON.parse(body) : [];
 }
 async function ussd(req, res) {
-  const payload = req.body || {};
+  let payload = req.body || {};
+  if (typeof payload === "string") {
+    payload = Object.fromEntries(new URLSearchParams(payload));
+  } else if (!Object.keys(payload).length && typeof req.rawBody === "string") {
+    payload = Object.fromEntries(new URLSearchParams(req.rawBody));
+  }
   const phone = clean(payload.phoneNumber, 24);
   const sessionId = clean(payload.sessionId, 100);
   const text = clean(payload.text, 300);
