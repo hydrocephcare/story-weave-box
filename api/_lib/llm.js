@@ -12,14 +12,14 @@ const GROQ_MODELS = () => list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-1
 const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-3.5-flash,gemini-flash-lite-latest,gemini-2.5-flash,gemini-2.5-flash-lite");
 
 async function viaGroq(msgs, opt, why) {
-  const keys = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY); if (!keys.length) { why.push("no Groq key"); return null; }
+  const allKeys = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY); if (!allKeys.length) { why.push("no Groq key"); return null; } const keys = opt.singleAttempt ? allKeys.slice(0, 1) : allKeys;
   const start = turn++ % keys.length;
   const tooBig = new Set();   // a request that is too large for a model is too large on every key: do not repeat it
-  const models = opt.fast ? ["openai/gpt-oss-20b", ...GROQ_MODELS().filter((m) => m !== "openai/gpt-oss-20b")] : GROQ_MODELS();
+  const models = opt.singleAttempt ? [GROQ_MODELS()[0]] : opt.fast ? ["openai/gpt-oss-20b", ...GROQ_MODELS().filter((m) => m !== "openai/gpt-oss-20b")] : GROQ_MODELS();
   for (let i = 0; i < keys.length; i++) for (const model of models) {
     const cid = `groq:${model}:${(start + i) % keys.length}`;
     if (tooBig.has(model) || cooled(cid)) continue;
-    for (const json of [true, false]) {
+    for (const json of (opt.singleAttempt ? [true] : [true, false])) {
       try {
         const body = { model, messages: msgs, temperature: opt.temperature ?? 0.3, max_tokens: opt.maxTokens ?? 4000, ...(opt.fast && /^openai\/gpt-oss/.test(model) ? { reasoning_effort: "low" } : {}), ...(json ? { response_format: { type: "json_object" } } : {}) };
         const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal: AbortSignal.timeout(opt.fast ? 9000 : 30000), headers: { "content-type": "application/json", Authorization: `Bearer ${keys[(start + i) % keys.length]}` }, body: JSON.stringify(body) });
@@ -36,11 +36,11 @@ async function viaGroq(msgs, opt, why) {
 }
 
 async function viaGemini(msgs, opt, why) {
-  const keys = list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY); if (!keys.length) { why.push("no Gemini key"); return null; }
+  const allKeys = list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY); if (!allKeys.length) { why.push("no Gemini key"); return null; } const keys = opt.singleAttempt ? allKeys.slice(0, 1) : allKeys;
   const system = msgs[0].content;
   const contents = msgs.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = turn++ % keys.length;
-  for (let i = 0; i < keys.length; i++) for (const model of GEMINI_MODELS()) {
+  for (let i = 0; i < keys.length; i++) for (const model of (opt.singleAttempt ? GEMINI_MODELS().slice(0, 1) : GEMINI_MODELS())) {
     const cid = `gemini:${model}:${(start + i) % keys.length}`;
     if (cooled(cid)) continue;
     try {
@@ -57,9 +57,9 @@ async function viaGemini(msgs, opt, why) {
  * Returns { text } or { error } where error says what went wrong in plain words.
  */
 export async function askJson(msgs, opt = {}) {
-  const order = opt.prefer === "gemini" ? [viaGemini, viaGroq] : [viaGroq, viaGemini];
+  const order = opt.providerOnly === "gemini" ? [viaGemini] : opt.providerOnly === "groq" ? [viaGroq] : opt.prefer === "gemini" ? [viaGemini, viaGroq] : [viaGroq, viaGemini];
   const why = [];
-  for (let round = 0; round < 2; round++) {
+  for (let round = 0; round < (opt.singleAttempt ? 1 : 2); round++) {
     for (const via of order) { const t = await via(msgs, opt, why); if (t) return { text: t }; }
     if (!why.some((w) => /rate limit|429/.test(w))) break;  // only a rate limit is worth waiting for
     await sleep(2500);
