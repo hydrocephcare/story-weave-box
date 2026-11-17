@@ -94,3 +94,93 @@ export async function interpretHealthConcern({ originalMessage, preferredLanguag
     return { emergencyFlags, normalizedSummary: patientResources.length ? JSON.stringify({ concepts: [], resourceMatches: patientResources.map(({ id, title, slug, summary }) => ({ id, title, slug, summary })) }) : "", patientResources, language: preferredLanguage, aiStatus: "invalid_response" };
   }
 }
+
+
+const ANSWER_LABELS = {
+  "1": "Yes",
+  "2": "No",
+  "3": "Not sure",
+  "4": "Not sure / not pregnant",
+};
+
+/**
+ * Builds a conservative, rule-based intake summary. It deliberately does not
+ * generate diagnoses or treatment plans. Clinical urgency is raised only by
+ * explicit high-risk answers; uncertainty defaults to in-person assessment.
+ */
+export function buildPreliminaryAssessment({ encounter, answers = [], emergencyFlags = [] } = {}) {
+  const category = clean(encounter?.concern_category, 100) || "Unspecified concern";
+  const original = clean(encounter?.original_message, 1200);
+  const mapped = answers.slice(0, 5).map((item) => ({
+    question: clean(item.question_id, 60),
+    answer: ANSWER_LABELS[String(item.answer)] || clean(item.answer, 30),
+  }));
+
+  const answerFor = (id) => String(answers.find((item) => item.question_id === id)?.answer || "");
+  const positive = (id) => answerFor(id) === "1";
+  const unsure = (id) => answerFor(id) === "3" || answerFor(id) === "4";
+
+  let urgency = "prompt";
+  const reasons = [];
+  if (emergencyFlags.length || positive("emergency_screen")) {
+    urgency = "emergency";
+    reasons.push("A possible emergency warning sign was reported.");
+  } else if (
+    category === "Pregnancy-related concern" &&
+    (positive("pregnancy_bleeding_or_fluid") || positive("pregnancy_movement"))
+  ) {
+    urgency = "urgent";
+    reasons.push("Bleeding, fluid leakage or reduced fetal movement during pregnancy needs urgent maternity assessment.");
+  } else if (
+    category === "Bleeding" &&
+    (positive("bleeding_amount") || positive("pregnancy_possibility"))
+  ) {
+    urgency = "urgent";
+    reasons.push("The reported bleeding pattern or possible pregnancy warrants urgent in-person assessment.");
+  } else if (
+    category === "Lower abdominal pain" &&
+    positive("pregnancy_possibility")
+  ) {
+    urgency = "urgent";
+    reasons.push("Lower abdominal pain with possible pregnancy needs urgent assessment to exclude time-critical causes.");
+  } else if (
+    (category === "Vaginal discharge" || category === "Menstrual problem") &&
+    positive("fever")
+  ) {
+    urgency = "prompt";
+    reasons.push("Fever accompanying a genital or menstrual concern needs prompt clinical assessment.");
+  } else {
+    reasons.push("The available information is insufficient to establish a cause.");
+  }
+
+  if (mapped.some((item) => item.answer === "Not sure" || item.answer === "Not sure / not pregnant")) {
+    reasons.push("One or more answers were uncertain; this limits interpretation.");
+  }
+
+  const nextSteps = urgency === "emergency"
+    ? ["Seek emergency medical care now. Do not wait for an SMS or online assessment."]
+    : urgency === "urgent"
+      ? ["Attend a health facility urgently today for in-person assessment.", "If symptoms become severe, seek emergency care immediately."]
+      : ["Arrange an in-person assessment at a health facility, preferably promptly.", "Seek emergency care immediately if severe pain, heavy bleeding, fainting, seizures or breathing difficulty develops."];
+
+  return {
+    assessment_type: "preliminary_intake_summary",
+    generated_at: new Date().toISOString(),
+    status: "not_a_diagnosis",
+    concern_category: category,
+    presenting_concern: original || null,
+    clarification_answers: mapped,
+    urgency_level: urgency,
+    reasons,
+    possible_causes: [],
+    clinical_examination: "Not performed",
+    investigations: "Not performed",
+    limitations: [
+      "This is an automated intake summary, not a diagnosis or a substitute for examination by a qualified health professional.",
+      "No physical examination, vital signs, pregnancy test or investigations were available.",
+      "A negative emergency screen does not rule out a serious condition.",
+    ],
+    next_steps: nextSteps,
+    source_policy: "No unreviewed study notes or unsupported diagnostic claims were used.",
+  };
+}
