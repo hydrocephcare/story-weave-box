@@ -41,4 +41,48 @@ describe("OmpathStudy Lite preliminary assessment", () => {
     expect(result.clinical_examination).toBe("Not performed");
     expect(result.limitations.length).toBeGreaterThan(0);
   });
+
+  it("labels gestational age and duration numerically rather than as yes/no", () => {
+    const result = buildPreliminaryAssessment({
+      encounter,
+      answers: [
+        { question_id: "gestation", answer: "2" },
+        { question_id: "duration", answer: "3" },
+      ],
+    });
+    expect(result.clarification_answers).toEqual([
+      { question: "gestation", answer: "20-27 weeks" },
+      { question: "duration", answer: "More than 7 days" },
+    ]);
+  });
+
+  it("does not label vaginal bleeding as pregnancy bleeding when pregnancy is denied", () => {
+    const result = buildPreliminaryAssessment({
+      encounter,
+      answers: [
+        { question_id: "pregnancy_status", answer: "2" },
+        { question_id: "pregnancy_bleeding_or_fluid", answer: "1" },
+      ],
+    });
+    expect(result.urgency_level).toBe("prompt");
+  });
+
+  it("escalates bleeding when pregnancy status is uncertain", () => {
+    const result = buildPreliminaryAssessment({
+      encounter,
+      answers: [
+        { question_id: "pregnancy_status", answer: "3" },
+        { question_id: "pregnancy_bleeding_or_fluid", answer: "1" },
+      ],
+    });
+    expect(result.urgency_level).toBe("urgent");
+  });
+
+  it("escalates lower abdominal pain when pregnancy is possible but uncertain", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Lower abdominal pain", original_message: "Lower abdominal pain" },
+      answers: [{ question_id: "pregnancy_possibility", answer: "3" }],
+    });
+    expect(result.urgency_level).toBe("urgent");
+  });
 });
