@@ -22,9 +22,18 @@ async function db(path,options={}){
  const r=await fetch(`${base.replace(/\/$/,"")}/rest/v1/${path}`,{...options,signal:options.signal||AbortSignal.timeout(2500),headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers}});
  const body=await r.text();if(!r.ok)throw new Error(`Supabase request failed (${r.status})`);return body?JSON.parse(body):[];
 }
-const getStudent=phone=>db(`lite_students?select=id,full_name,study_level,preferred_subject&phone_number=eq.${encodeURIComponent(phone)}&limit=1`);
-const getSets=year=>db("mcq_sets?select=id,title,category,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&or="+encodeURIComponent(`(title.ilike.*Year ${year}*,category.ilike.*Year ${year}*)`)+"&limit=500");
-const getSet=id=>db(`mcq_sets?select=id,title,questions&id=eq.${encodeURIComponent(id)}&published=eq.true&deleted_at=is.null&limit=1`);
+const queryCache=new Map();
+async function cachedQuery(key,ttl,loader){
+ const now=Date.now(),hit=queryCache.get(key);
+ if(hit&&hit.expiresAt>now)return hit.value;
+ const value=await loader();
+ queryCache.set(key,{value,expiresAt:now+ttl});
+ if(queryCache.size>150)queryCache.delete(queryCache.keys().next().value);
+ return value;
+}
+const getStudent=phone=>cachedQuery("student:"+phone,5000,()=>db(`lite_students?select=id,full_name,study_level,preferred_subject&phone_number=eq.${encodeURIComponent(phone)}&limit=1`));
+const getSets=year=>cachedQuery("sets:"+year,30000,()=>db("mcq_sets?select=id,title,category,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&or="+encodeURIComponent(`(title.ilike.*Year ${year}*,category.ilike.*Year ${year}*)`)+"&limit=500"));
+const getSet=id=>cachedQuery("set:"+id,60000,()=>db(`mcq_sets?select=id,title,questions&id=eq.${encodeURIComponent(id)}&published=eq.true&deleted_at=is.null&limit=1`));
 const subjectOf=s=>{
  const raw=clean(s.category||s.title,120);
  return raw.replace(/^weekly\s+exam\s*:\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/\s+exam\s*[-–—:].*$/i,"").replace(/\s*[-–—]\s*(section\s+[a-z]|november\s+\d+).*$/i,"").trim()||"General medical MCQs";
@@ -213,6 +222,7 @@ async function ussd(req,res){
    const year=choice?Number(choice.replace(/^year/,"")):NaN;
    if(!Number.isInteger(year)||year<1||year>6)return reply(res,"Invalid choice. Select a year from 1 to 6. Dial again and choose 1.",true);
    await db("lite_students?on_conflict=phone_number",{method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({phone_number:phone,full_name:"Student",study_level:`Year ${year}`,updated_at:new Date().toISOString()})});
+   queryCache.delete("student:"+phone);
    return reply(res,`Registration successful. Year ${year} selected. Dial again and choose 2 to study.`,true);
   }
   if(parts[0]==="2"){
@@ -238,6 +248,7 @@ async function ussd(req,res){
    const subject=subjects[subjectPage*2+subjectNo-1];
    if(!subject)return reply(res,"No subject at that position. Go back and choose another.",true);
    await db(`lite_students?id=eq.${student.id}`,{method:"PATCH",body:JSON.stringify({preferred_subject:subject})});
+   queryCache.delete("student:"+phone);
    const subjectSets=grouped.get(subject)||[];
    let setPage=0;
    while(tokens[cursor]==="9"){setPage=Math.min(setPage+1,Math.max(0,Math.ceil(subjectSets.length/2)-1));cursor++;}
