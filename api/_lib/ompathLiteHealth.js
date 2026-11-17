@@ -177,10 +177,12 @@ export async function getHealthGuideToken(token) {
   const rows = await db(path);
   const row = rows[0];
   if (!row) return null;
-  await db("lite_health_guide_tokens?id=eq." + encodeURIComponent(row.id), {
-    method: "PATCH",
-    body: JSON.stringify({ last_accessed_at: new Date().toISOString() }),
-  });
+  const stillValid = await db(
+    "lite_health_guide_tokens?id=eq." + encodeURIComponent(row.id) +
+      "&revoked_at=is.null&expires_at=gt." + encodeURIComponent(new Date().toISOString()),
+    { method: "PATCH", body: JSON.stringify({ last_accessed_at: new Date().toISOString() }) },
+  );
+  if (!stillValid[0]) return null;
   return row;
 }
 /** Daily cron retention: remove expired bearer tokens, then expired encounters. */
