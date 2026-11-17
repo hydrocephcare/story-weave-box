@@ -3,7 +3,7 @@
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
 import { createHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
-const mainMenu = "OmpathStudy Lite\\n1. Register\\n2. Study by subject\\n3. Help\\n4. SMS preferences\\n5. Health support";
+const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
 async function db(path,options={}){
@@ -35,29 +35,30 @@ async function ussd(req,res){
    // 00 clears the health flow and returns to the Lite main menu.
    const flow=[];
    for(const token of parts.slice(1)){
-    if(token==="00"){flow.length=0;continue;}
+    if(token==="00")return reply(res,mainMenu);
     if(token==="0"){flow.pop();continue;}
     flow.push(token);
    }
-   if(!flow.length)return reply(res,"Health support\\nThis service is being prepared. It is not an emergency service.\\n1. Continue\\n2. Cancel\\n0. Main menu");
+   if(!flow.length)return reply(res,parts.length>1?mainMenu:"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
    if(flow.length===1){
-    if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\\n0. Back");
-    return reply(res,"Before continuing: your answers may include sensitive health information. They will be used to prepare health guidance. This is not a diagnosis or emergency service.\\n1. I agree\\n2. Cancel\\n0. Back");
+    if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
+    if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
+    return reply(res,"Before continuing: your answers may include sensitive health information. They will be used to prepare health guidance. This is not a diagnosis or emergency service.\n1. I agree\n2. Cancel\n0. Back");
    }
    if(flow.length===2){
-    if(flow[1]!=="1")return reply(res,"Consent is required to continue.\\n1. I agree\\n2. Cancel\\n0. Back",true);
-    return reply(res,"Choose your preferred language:\\n1. English\\n2. Kiswahili\\n0. Back");
+    if(flow[1]!=="1")return reply(res,"Consent is required to continue.\n1. I agree\n2. Cancel\n0. Back",true);
+    return reply(res,"Choose your preferred language:\n1. English\n2. Kiswahili\n0. Back");
    }
    if(flow.length===3){
-    if(!["1","2"].includes(flow[2]))return reply(res,"Choose 1 for English or 2 for Kiswahili.\\n0. Back");
-    return reply(res,"What is your main concern?\\n1. Pregnancy-related concern\\n2. Menstrual problem\\n3. Lower abdominal pain\\n4. Vaginal discharge\\n5. Bleeding\\n6. Other health concern\\n0. Back");
+    if(!["1","2"].includes(flow[2]))return reply(res,"Choose 1 for English or 2 for Kiswahili.\n0. Back");
+    return reply(res,"What is your main concern?\n1. Pregnancy-related concern\n2. Menstrual problem\n3. Lower abdominal pain\n4. Vaginal discharge\n5. Bleeding\n6. Other health concern\n0. Back");
    }
    if(flow.length===4){
-    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose an option from 1 to 6.\\n0. Back");
-    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?\\n1. Yes, send SMS\\n2. No SMS\\n0. Back");
+    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose an option from 1 to 6.\n0. Back");
+    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?\n1. Yes, send SMS\n2. No SMS\n0. Back");
    }
    if(flow.length===5){
-    if(!["1","2"].includes(flow[4]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\\n0. Back");
+    if(!["1","2"].includes(flow[4]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\n0. Back");
     const language=flow[2]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const encounter=await createHealthEncounter({
