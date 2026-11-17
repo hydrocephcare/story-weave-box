@@ -40,7 +40,7 @@ async function ussd(req,res){
     if(token==="0"){if(flow.length===1)returnedToIntro=true;flow.pop();continue;}
     flow.push(token);
    }
-   if(!flow.length)return reply(res,parts.length>1?mainMenu:"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
+   if(!flow.length){if(returnedToIntro)return reply(res,"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
     if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
