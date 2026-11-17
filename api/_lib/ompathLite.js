@@ -284,7 +284,7 @@ async function ussd(req,res){
     const isCorrect=selected-1===correctIndex;
     await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qNo-1,selected_option:selected,is_correct:isCorrect})});
     const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",1200);
-    const explanationLimit=/[^\x00-\x7F]/.test(explanation)?22:78;
+    const explanationLimit=/[^\x00-\x7F]/.test(explanation)?22:60;
     const explanationChunks=splitWords(explanation,explanationLimit);
     let explanationPage=0;
     while(true){
@@ -293,7 +293,7 @@ async function ussd(req,res){
 Answer: ${correctIndex+1}. ${shortText(q.options[correctIndex],30)}
 ${explanationChunks[0]}`
       :"Explanation "+(explanationPage+1)+"/"+explanationChunks.length+":\n"+explanationChunks[explanationPage];
-     if(cursor>=tokens.length)return reply(res,pageText+(explanationPage<explanationChunks.length-1?"\n9. More explanation":"\n1. Next question\n0. Finish set"));
+     if(cursor>=tokens.length)return reply(res,pageText+(explanationPage<explanationChunks.length-1?"\n9. More explanation\n1. Next question\n0. Finish set":"\n1. Next question\n0. Finish set"));
      if(tokens[cursor]==="9"&&explanationPage<explanationChunks.length-1){cursor++;explanationPage++;continue;}
      break;
     }
