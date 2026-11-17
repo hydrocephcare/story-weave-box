@@ -53,7 +53,7 @@ async function sendDaily(req,res){
  if(!authorized(req))return res.status(401).json({error:"Unauthorized"});
  const settingRows=await db("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1");
  const settings=settingRows[0]||{enabled:false,environment:"sandbox",sender_id:null};
- if(!settings.enabled)return res.status(200).json({sent:0,skipped:0,failed:0,date:today(),disabled:true});
+ if(!settings.enabled||settings.environment!=="production")return res.status(200).json({sent:0,skipped:0,failed:0,date:today(),disabled:true,reason:settings.environment!=="production"?"sandbox":"paused"});
  const students=await db("lite_students?select=id,phone_number,study_level&sms_opt_in=eq.true&sms_opt_in_at=not.is.null&limit=500");
  const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
  const delivered=await db(`lite_sms_deliveries?select=student_id&delivery_date=eq.${today()}&limit=1000`);
