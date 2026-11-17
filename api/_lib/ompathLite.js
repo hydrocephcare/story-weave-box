@@ -133,7 +133,21 @@ async function ussd(req,res){
       {id:"care",en:"Have you already received medical care for this concern?",sw:"Je, tayari umepata huduma ya afya kwa tatizo hili?"}
      ])
     ];
-    const answers=flow.slice(6,-1).map((value,index)=>({question_id:questions[index]?.id,answer:value})).filter(item=>item.question_id);
+    const priorAnswers=flow.slice(6,-1);
+    if(category==="Pregnancy-related concern"&&priorAnswers[1]==="2"){
+     questions.splice(questions.findIndex(q=>q.id==="gestation"),1);
+     const movementIndex=questions.findIndex(q=>q.id==="pregnancy_movement");
+     if(movementIndex>=0)questions.splice(movementIndex,1);
+     const bleedingQuestion=questions.find(q=>q.id==="pregnancy_bleeding_or_fluid");
+     if(bleedingQuestion){
+      bleedingQuestion.en="Are you having vaginal bleeding?";
+      bleedingQuestion.sw="Je, unatokwa damu ukeni?";
+     }
+    }else if(category==="Pregnancy-related concern"&&["1","4"].includes(priorAnswers[2])){
+     const movementIndex=questions.findIndex(q=>q.id==="pregnancy_movement");
+     if(movementIndex>=0)questions.splice(movementIndex,1);
+    }
+    const answers=priorAnswers.map((value,index)=>({question_id:questions[index]?.id,answer:value})).filter(item=>item.question_id);
     const answerIndex=flow.length-7;
     const currentQuestion=questions[answerIndex];
     if(!currentQuestion)return reply(res,"Your answers have been recorded. No diagnosis or clinical assessment has been generated. Please seek care if symptoms persist or worsen.",true);
