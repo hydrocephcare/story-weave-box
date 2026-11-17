@@ -67,7 +67,7 @@ export default async function liteWeb(req,res){
    const set=rows[0];if(!set)return send(res,404,{error:"This question set is no longer published."});
    if(!new RegExp(`\\bYear\\s*${y}\\b`,"i").test(`${set.title||""} ${set.category||""}`))return send(res,403,{error:"This set is not listed for your selected study year."});
    const questions=Array.isArray(set.questions)?set.questions:[];
-   return send(res,200,{set:{id:set.id,title:clean(set.title,180),subject:subjectOf(set),question_count:questions.length,questions:questions.map(q=>({question:clean(q.question,2500),options:Array.isArray(q.options)?q.options.slice(0,5).map(o=>clean(o,500)):[],correct_answer:Number(q.correct_answer),explanation:clean(q.explanation,1800)}))}});
+   return send(res,200,{set:{id:set.id,title:clean(set.title,180),subject:subjectOf(set),question_count:questions.length,questions:questions.map(q=>({question:clean(q.question,2500),options:Array.isArray(q.options)?q.options.slice(0,5).map(o=>clean(o,500)):[],explanation:clean(q.explanation,1800)}))}});
   }
   if(action==="answer"){
    const setId=clean(p.set_id,64),question_index=Number(p.question_index),selected=Number(p.selected_option);
