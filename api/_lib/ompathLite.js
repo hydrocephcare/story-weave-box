@@ -65,7 +65,7 @@ async function ussd(req,res){
     if(token==="0"){if(flow.length===1)returnedToIntro=true;flow.pop();continue;}
     flow.push(token);
    }
-   if(!flow.length){if(returnedToIntro)return reply(res,"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
+   if(!flow.length){if(returnedToIntro)return reply(res,"Health support (pilot)\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support (pilot)\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
     if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
@@ -239,7 +239,7 @@ async function ussd(req,res){
    if(cursor>=tokens.length)return showSubjects(subjectPage);
    if(tokens[cursor]==="0")return subjectPage>0?showSubjects(subjectPage-1):reply(res,mainMenu,true);
    const subjectNo=Number(tokens[cursor++]);
-   if(!Number.isInteger(subjectNo)||subjectNo<1||subjectNo>4)return reply(res,"Choose 1-4, 9 for more or 0 to go back.",true);
+   if(!Number.isInteger(subjectNo)||subjectNo<1||subjectNo>2)return reply(res,"Choose 1-4, 9 for more or 0 to go back.",true);
    const subject=subjects[subjectPage*2+subjectNo-1];
    if(!subject)return reply(res,"No subject at that position. Go back and choose another.",true);
    await db(`lite_students?id=eq.${student.id}`,{method:"PATCH",body:JSON.stringify({preferred_subject:subject})});
@@ -250,7 +250,7 @@ async function ussd(req,res){
    if(cursor>=tokens.length)return showSets(setPage);
    if(tokens[cursor]==="0")return setPage>0?showSets(setPage-1):showSubjects(subjectPage);
    const setNo=Number(tokens[cursor++]);
-   if(!Number.isInteger(setNo)||setNo<1||setNo>4)return reply(res,"Choose 1-4, 9 for more or 0 to go back.",true);
+   if(!Number.isInteger(setNo)||setNo<1||setNo>2)return reply(res,"Choose 1-4, 9 for more or 0 to go back.",true);
    const listed=subjectSets[setPage*2+setNo-1];
    if(!listed)return reply(res,"No question set at that position. Go back and choose another.",true);
    const full=await getSet(listed.id),set=full[0];
