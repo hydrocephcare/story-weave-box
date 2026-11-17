@@ -74,9 +74,17 @@ if (!isLiteHost && "serviceWorker" in navigator) {
 }
 
 const root = createRoot(document.getElementById("root")!);
-if (isLiteHost) {
-  // Load only the Lite experience on its own hostname; do not download the
-  // full OmpathStudy route tree, navigation, providers or global stylesheet.
+const litePath = window.location.pathname.replace(/\\/+$/, "") || "/";
+const useFullAppOnLiteHost = isLiteHost && (
+  litePath === "/login" ||
+  litePath === "/auth/callback" ||
+  litePath === "/admin" ||
+  litePath.startsWith("/admin/")
+);
+
+if (isLiteHost && !useFullAppOnLiteHost) {
+  // The public Lite experience stays lightweight. Authentication and admin
+  // URLs use the shared OmpathStudy router so those real routes are available.
   import("./pages/OmpathLiteApp").then(({ default: LiteApp }) => root.render(<LiteApp />)).catch((error) => {
     console.error("OmpathStudy Lite failed to start", error);
     root.render(<div style={{ padding: 32, fontFamily: "sans-serif" }}>OmpathStudy Lite could not load. Please refresh the page.</div>);
