@@ -130,7 +130,7 @@ export default function OmpathLiteAdmin() {
             <tbody>{data.healthEncounters.map((item) => <tr key={item.id} className="border-t border-border">
               <td className="p-3 font-medium">{item.concern_category || "Not specified"}</td>
               <td className="p-3"><span className={item.urgency_level === "emergency" ? "font-semibold text-destructive" : item.urgency_level === "urgent" ? "font-semibold text-amber-700" : "text-muted-foreground"}>{item.urgency_level}</span></td>
-              <td className="p-3">{item.status.replaceAll("_", " ")}</td>
+              <td className="p-3">{item.status.replace(/_/g, " ")}</td>
               <td className="p-3 uppercase text-xs">{item.channel}</td>
               <td className="p-3 text-muted-foreground">{new Date(item.created_at).toLocaleString()}</td>
             </tr>)}</tbody>
