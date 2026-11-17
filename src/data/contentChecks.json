@@ -257,17 +257,13 @@
    "hash": "b48da60fbf85",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 3. Outline the components of a birth plan, point 5",
-     "problem": "Identifying a specific blood donor is not a standard or recommended component of a birth plan in most guidelines, as blood banks and emergency services are expected to provide blood.",
-     "fix": "Instead of identifying a specific blood donor, the birth plan should focus on awareness of potential complications like haemorrhage and the availability of emergency services, including blood transfusion facilities."
-    }
-   ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-10-19"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:28:59.610Z"
   },
   "papers-obstetrics-rh1-cat-november-2018": {
    "hash": "0a55bdf481b0",
@@ -282,65 +278,49 @@
    "hash": "be5d9d939638",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 6. Define",
-     "problem": "The definition of 'Near miss' is incomplete. It should specify that the woman survived a severe complication, not just 'a complication'.",
-     "fix": "Near miss: a woman who nearly died but survived a *severe* complication of pregnancy, childbirth or termination within 42 days."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-22"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:29:48.378Z"
   },
   "papers-obstetrics-rh2-cat-mbog-4223": {
    "hash": "f04e7a00da00",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "4. Contractions: shade 3 squares (3 in 10 minutes) with the 20 to 40 second band at 14:00",
-     "problem": "The given clinical vignette states contractions were '2 in 10 minutes, each 20 seconds' at 14:00, not 3 in 10 minutes.",
-     "fix": "At 14:00 shade 2 squares (2 in 10 minutes) with dots (<20 seconds or diagonal stripes for 20-40 seconds), and shade 3 squares with solid shading (>40 seconds) at 18:00."
-    }
-   ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-10-22"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:29:57.595Z"
   },
   "papers-gynaecology-cat-30-november-2018": {
    "hash": "cf56468fda17",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "normal: cycle 24 to 38 days... Polymenorrhoea: cycles shorter than 21 days. (Oligomenorrhoea, over 35 days",
-     "problem": "The text gives internally contradictory diagnostic thresholds for normal cycle length (24 to 38 days per FIGO 2018) versus traditional definitions (polymenorrhoea < 21 days and oligomenorrhoea > 35 days) without clarifying the transition in terminology.",
-     "fix": "Align definitions with current FIGO nomenclature where frequent menstrual bleeding is defined as a cycle length under 24 days and infrequent menstrual bleeding is over 38 days (or note traditional definitions of <21 and >35 days consistently)."
-    }
-   ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-10-22"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:30:54.789Z"
   },
   "papers-gynaecology-cat-13-december-2019": {
    "hash": "2ab4723a6365",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 2: (a) cycle shorter than 24 or longer than 38 days ... (b) Oligomenorrhoea: ... longer than 35 days",
-     "problem": "The text gives conflicting upper thresholds for normal cycle length/oligomenorrhoea (38 days under FIGO definition vs 35 days under traditional definition) within the same question.",
-     "fix": "Harmonize the thresholds by using > 38 days according to current FIGO definitions (or noting > 35 to 38 days depending on classification system)."
-    }
-   ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-10-22"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:31:01.097Z"
   },
   "papers-gynaecology-cat-1-2-july-2021": {
    "hash": "c9fa6d591cfd",
@@ -364,35 +344,13 @@
    "hash": "0aa4f10a19ec",
    "validated": true,
    "high": 0,
-   "medium": 4,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 27",
-     "problem": "The statement that surgical repair is the only mode of treatment for vesicovaginal fistula is incorrect, as small fresh fistulas can be treated with continuous catheter drainage.",
-     "fix": "While surgical repair is common, small fresh vesicovaginal fistulas can be treated with continuous catheter drainage."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 35",
-     "problem": "The statement that oestrogens are responsible for general ureteric relaxation in pregnancy is incorrect; progesterone is the primary hormone responsible.",
-     "fix": "Progesterone is primarily responsible for ureteric relaxation in pregnancy."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 37",
-     "problem": "The administration time for oxytocin in active management of the third stage of labour is stated as within 10 minutes, but the standard is within 1 minute of delivery.",
-     "fix": "Administration of 10 IU oxytocin IM within one minute of delivery of the baby is a key step in active management of the third stage of labour."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 38",
-     "problem": "The management for severe pre-eclampsia with symptoms is described, but it does not explicitly state that delivery should occur within 24-48 hours after initial stabilization.",
-     "fix": "Management for severe pre-eclampsia with symptoms includes BP control, magnesium sulphate, antenatal steroids, and delivery within 24 to 48 hours."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-22"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:31:53.787Z"
   },
   "papers-surgery-cat-2-4-october-2021": {
    "hash": "9d28f883c58f",
@@ -432,31 +390,15 @@
   },
   "papers-integrated-cases-medicine-surgery-gynaecology-paediatrics": {
    "hash": "bcc3a2f3d926",
-   "validated": false,
-   "high": 3,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Case 1 (f) Treatment and drug mechanism",
-     "problem": "The starting dose of levothyroxine for older patients or those with heart disease is typically lower than 25-50 micrograms.",
-     "fix": "Start at 12.5 to 25 micrograms in older patients or with heart disease, and increase every 4 to 6 weeks."
-    },
-    {
-     "severity": "high",
-     "where": "Case 2 (3. Investigations) Male: semen analysis",
-     "problem": "The WHO lower limit for semen volume is 1.5 ml, not 1.4 ml.",
-     "fix": "Male: semen analysis (WHO lower limits: volume 1.5 ml, concentration 16 million/ml, total motility 42%, morphology 4%), and hormones, karyotype and scrotal ultrasound if abnormal."
-    },
-    {
-     "severity": "high",
-     "where": "Case 4 (d) Treatment plan",
-     "problem": "The advice to induce labour within 24 hours for PROM at term is outdated; current guidelines recommend induction within 12 hours.",
-     "fix": "At term, induce labour (oxytocin or prostaglandin) within about 12 hours, as the risk of infection rises with time."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-25"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:32:28.789Z"
   },
   "papers-infectious-disease-treatment-quiz": {
    "hash": "44af8bc727c8",
@@ -487,171 +429,75 @@
   },
   "papers-internal-medicine-respiratory-cat-1": {
    "hash": "31532ed068aa",
-   "validated": false,
-   "high": 1,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Q20. What drug therapy should be available to ALL asthma patients (intermittent and persistent)?",
-     "problem": "Current GINA guidelines (since 2019) recommend low-dose ICS-formoterol as the preferred reliever for all adult and adolescent asthma patients, not PRN SABA alone.",
-     "fix": "Current guidelines recommend low-dose ICS-formoterol as the preferred reliever for all adult and adolescent asthma patients, or PRN SABA with concurrent low-dose ICS."
-    },
-    {
-     "severity": "medium",
-     "where": "Q23. Which is an indirect injury to the lung?",
-     "problem": "The question is weak because fat embolism and distant trauma are also indirect causes of ARDS, making 'Sepsis' not the only correct answer.",
-     "fix": "Sepsis is a common indirect cause of ARDS, but fat embolism and distant trauma are also indirect lung injuries, making the question ambiguous."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-25"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:32:33.242Z"
   },
   "papers-internal-medicine-cat-1-mbim-6112-2019-2020": {
    "hash": "91a3165ec131",
-   "validated": false,
-   "high": 1,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "3(iii). Describe Reiter's syndrome",
-     "problem": "Reiter's syndrome is an outdated eponym and should be referred to by its modern name.",
-     "fix": "The condition should be referred to as 'reactive arthritis'."
-    },
-    {
-     "severity": "medium",
-     "where": "4(iii). Discuss the early management of acute pancreatitis",
-     "problem": "The recommendation of pethidine for analgesia in acute pancreatitis is outdated and potentially harmful.",
-     "fix": "Opioids like morphine are now considered safe and effective for pain relief in acute pancreatitis, and pethidine is generally avoided due to its toxic metabolite (norpethidine) which can accumulate and cause neurotoxicity, especially with renal impairment."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-26"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:33:27.797Z"
   },
   "papers-internal-medicine-cat-1-mbchb-4-2022-gastroenterology": {
    "hash": "ba50e653e01a",
-   "validated": false,
-   "high": 5,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "1. An alcoholic man has pale stools, dark urine, right upper quadrant pain, AST 2000, ALP 100, bilirubin 50, vomiting and diarrhoea. The mos",
-     "problem": "The marked answer E (Alcoholic cirrhosis) is incorrect given the AST of 2000 IU/L and ALP of 100 IU/L, which strongly indicates hepatocellular injury (e.g., viral or drug-induced hepatitis) rather than typical alcoholic liver disease or obstructive jaundice.",
-     "fix": "Given the AST of 2000 IU/L and ALP of 100 IU/L, the most likely diagnosis is viral hepatitis or drug-induced hepatitis, making B or A more appropriate than E for a hepatocellular pattern."
-    },
-    {
-     "severity": "high",
-     "where": "2. A known alcoholic with anorexia and nausea has become jaundiced, with dark urine and pale faeces and discomfort in the right hypochondriu",
-     "problem": "The marked answer A (Withdrawal of alcohol) is the best treatment for alcoholic hepatitis, but the AST of 2000 IU/L with a normal ALP is highly atypical for alcoholic hepatitis, which usually has an AST/ALT ratio >2 but with absolute values rarely exceeding 500 IU/L; this lab pattern suggests a diff",
-     "fix": "While withdrawal of alcohol is crucial for alcoholic liver disease, the AST of 2000 IU/L with a normal ALP is atypical for alcoholic hepatitis and suggests a different primary diagnosis (e.g., viral or drug-induced hepatitis) that would require specific treatment beyond just alcohol withdrawal."
-    },
-    {
-     "severity": "medium",
-     "where": "9. Fat digestion is facilitated by:",
-     "problem": "The answer states that bile juice emulsifies fat so lipase can digest it, and pancreatic lipase does the digesting, but the question asks what facilitates fat digestion, and both bile juice (for emulsification) and pancreatic juice (for lipase) are essential.",
-     "fix": "Fat digestion is facilitated by both bile juice (for emulsification) and pancreatic juice (for lipase), making options A and B both correct, or a combined option necessary."
-    },
-    {
-     "severity": "high",
-     "where": "11. A gasless abdomen on X-ray is a sign of:",
-     "problem": "A gasless abdomen on X-ray is not a specific sign of intussusception; it can be seen in various conditions causing fluid-filled bowel loops or severe vomiting, and intussusception more typically shows signs like a target sign on ultrasound or specific bowel gas patterns on X-ray, not necessarily a c",
-     "fix": "A gasless abdomen on X-ray can indicate various conditions with fluid-filled bowel loops or severe vomiting, and is not a specific or primary diagnostic sign for intussusception."
-    },
-    {
-     "severity": "high",
-     "where": "16. The symptoms are recurrent episodes of variable amounts of watery non-bloody diarrhoea (amounts can be massive). Physical findings show",
-     "problem": "While Cryptosporidium can cause profuse watery diarrhoea and biliary disease in AIDS, the description of 'recurrent episodes' and 'severe upper quadrant abdominal pain with biliary tract involvement' in a general context (not specified as AIDS) makes other conditions like chronic pancreatitis or gia",
-     "fix": "Given the symptoms of recurrent watery diarrhoea, weight loss, and severe upper quadrant abdominal pain with biliary tract involvement, chronic pancreatitis or giardiasis with cholangitis could also be strong possibilities, making Cryptosporidium not definitively the 'BEST' fit without further conte"
-    },
-    {
-     "severity": "medium",
-     "where": "23. Which of the following statements is NOT true about primary biliary cirrhosis?",
-     "problem": "The explanation correctly identifies C as incorrect (median age of 30 years), but also states that A (Ursodeoxycholic acid is the only approved treatment) is 'not strictly true' because obeticholic acid is also approved, making the question have two incorrect statements and thus being weak.",
-     "fix": "Both option A (Ursodeoxycholic acid is the only approved treatment) and option C (Median age of 30 years at the time of diagnosis) are incorrect statements regarding primary biliary cholangitis (PBC), as obeticholic acid is also an approved treatment and the median age of diagnosis is typically arou"
-    },
-    {
-     "severity": "high",
-     "where": "30. Which statement about myelodysplasia is incorrect?",
-     "problem": "The explanation states that both B (RAEB: good prognosis) and C (5q- syndrome: poor prognosis) are incorrect, meaning the question has two wrong statements, which is a flaw for an MCQ asking for 'the' incorrect statement.",
-     "fix": "Both option B (RAEB: good prognosis) and option C (5q- syndrome: poor prognosis) are incorrect statements regarding myelodysplastic syndromes; RAEB has a poor prognosis, and 5q- syndrome typically has a good prognosis."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-26"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:34:24.454Z"
   },
   "papers-internal-medicine-endocrinology-cat": {
-   "hash": "8e40b7a4d71a",
-   "validated": false,
-   "high": 1,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "15. What biochemical abnormality is possible in an Addisonian crisis?",
-     "problem": "The marked answer E is incorrect because hypokalaemia (option B) is not a feature of Addisonian crisis, making E (All of the above) an invalid answer.",
-     "fix": "The correct answer should exclude hypokalaemia, as hyperkalaemia is typical in Addisonian crisis. Therefore, E is not a defensible answer."
-    },
-    {
-     "severity": "medium",
-     "where": "19. Which is false regarding the treatment of myxoedema coma?",
-     "problem": "The explanation for option B is misleading regarding the initial dosage of thyroxine.",
-     "fix": "Thyroxine should be given IV initially, but in a full loading dose (e.g., 200-500 mcg) without waiting for blood results, then adjusted based on clinical response and age/comorbidities."
-    },
-    {
-     "severity": "medium",
-     "where": "28. All the following are causes of primary hypothyroidism EXCEPT:",
-     "problem": "Graves' disease (option D) is a cause of hyperthyroidism, not primary hypothyroidism, and should be flagged as an exception.",
-     "fix": "Both Hypopituitarism (C) and Graves' disease (D) are not causes of primary hypothyroidism. Hypopituitarism causes secondary hypothyroidism, and Graves' disease causes hyperthyroidism. Therefore, the question has two defensible answers."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-26"
+   "hash": "9ba3ea6c4e54",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "auto-repaired",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-17T10:35:40.752Z"
   },
   "papers-internal-medicine-main-exam-paper-one-31-january-2024": {
    "hash": "fcc9c487ffad",
-   "validated": false,
-   "high": 1,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 22",
-     "problem": "The question asks for aetiologies of dilated cardiomyopathy EXCEPT, and the answer states 'c) Haemochromatosis' because it classically causes restrictive cardiomyopathy. However, haemochromatosis can lead to dilated cardiomyopathy, especially in late stages, making the exclusion less absolute.",
-     "fix": "Haemochromatosis can cause dilated cardiomyopathy, particularly in advanced disease, and is not a definitive exclusion."
-    },
-    {
-     "severity": "high",
-     "where": "Question 37",
-     "problem": "The question asks what does NOT describe 1 unit of whole blood for transfusion, and the answer is 'b) 100 ml of anticoagulant'. The fix states 'A unit has about 63 mL of anticoagulant-preservative.' While 100ml is incorrect, the problem is the implication that the amount of anticoagulant is a defini",
-     "fix": "A unit of whole blood contains approximately 63 mL of anticoagulant-preservative solution."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 52",
-     "problem": "The question asks what is NOT true regarding the physiology of portal hypertension. The provided answer is 'a) Both the portal blood flow and portal resistance increase'. The fix states 'Blood flow towards the portal vein increases because the systemic venous pressure increases.' This fix is confusi",
-     "fix": "In portal hypertension, portal resistance increases, and portal blood flow is typically reduced or normal, not increased."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-26"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:36:31.811Z"
   },
   "papers-internal-medicine-main-exam-paper-one-3-july-2019": {
    "hash": "f85132b58c0d",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 57",
-     "problem": "The question refers to a 'patient described above' and a 'right pulmonary embolus' which are not present in the provided text, making it impossible to answer correctly.",
-     "fix": "The question needs to provide the clinical scenario for the patient with pulmonary embolism."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-26"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:37:22.463Z"
   },
   "papers-internal-medicine-supplementary-exam-paper-two-14-august-2019": {
    "hash": "4fa0fa6c52c2",
@@ -664,259 +510,101 @@
   },
   "papers-internal-medicine-cat-4th-year-first-semester-gi-hepatology": {
    "hash": "d2254be247c7",
-   "validated": false,
-   "high": 5,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "5. Which one of the following statements is true of HIV-hepatitis B co-infection?",
-     "problem": "The HIV resistance mutation M164V is a typo for M184V, which is a critical error in a medical context.",
-     "fix": "Entecavir has some activity against HIV, so used alone it can select the HIV resistance mutation M184V."
-    },
-    {
-     "severity": "high",
-     "where": "11. The following statements on varices caused by portal hypertension are true. Which one is NOT?",
-     "problem": "The HVPG threshold for variceal rupture is incorrectly stated as 5 mmHg.",
-     "fix": "Varices form at an HVPG of about 10 mmHg and bleed at about 12 mmHg or above, not 5 mmHg."
-    },
-    {
-     "severity": "medium",
-     "where": "13. The following statements are true of liver function tests. Which one is NOT?",
-     "problem": "Option E is described as circular and not a true statement, but the explanation for GGT's role is also partially incorrect.",
-     "fix": "GGT is used to confirm that a raised ALP is of hepatic origin, not to evaluate the source of GGT itself. The statement 'GGT is necessary to evaluate the source of GGT' is indeed circular and incorrect."
-    },
-    {
-     "severity": "high",
-     "where": "21. Which of the following seromarkers is correctly matched with its role?",
-     "problem": "The question has two correct answers (B and C), which is a flaw in a multiple-choice question.",
-     "fix": "To have only one correct answer, option C should be the unique correct match: HBeAg: active replication of virus. HBsAb indicates immunity, but HBeAg is a more specific marker for active replication."
-    },
-    {
-     "severity": "high",
-     "where": "25. The statements below are true of acute pancreatitis. Which one is NOT?",
-     "problem": "The statement about haematocrit predicting necrosis is incorrect; it's a marker of hemoconcentration and severity, not specifically necrosis.",
-     "fix": "Haematocrit above 44% (or 47% in some guidelines) at admission or 24 hours, or a rising haematocrit, predicts severity and fluid sequestration, not specifically necrosis."
-    },
-    {
-     "severity": "high",
-     "where": "25. The statements below are true of acute pancreatitis. Which one is NOT?",
-     "problem": "Pethidine is not a first-line narcotic for acute pancreatitis due to its potential for neurotoxicity and spasm of the sphincter of Oddi.",
-     "fix": "Opioids like fentanyl or hydromorphone are preferred for pain management in acute pancreatitis, as pethidine is generally avoided."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-26"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:38:13.163Z"
   },
   "papers-paediatrics-senior-clerkship-end-of-2nd-semester-4-october-2021": {
    "hash": "08cef9d5bdca",
-   "validated": false,
-   "high": 1,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "16. Concerning the condition in question 15, which statement is true?",
-     "problem": "There is a clear typo in the question referring to the wrong question number.",
-     "fix": "The paper should say 'The paper says \"number 15\", which is a typo for 15.'"
-    },
-    {
-     "severity": "medium",
-     "where": "22. Concerning pulmonary haemorrhagic syndromes, which statement is true?",
-     "problem": "The explanation for option A is partially incorrect regarding the capacity of the bronchial circulation.",
-     "fix": "The bronchial circulation is a high-pressure, low-capacity systemic supply to the conducting airways. The explanation correctly states 'low capacity' but then says 'high-pressure, low-capacity', which is redundant and slightly confusing. The initial statement 'The bronchial circulation is low capaci"
-    },
-    {
-     "severity": "high",
-     "where": "32. A one-week-old neonate has about 12 scattered pustules on the face and head. Choose the correct statement.",
-     "problem": "The marked answer for question 32 is incorrect as flucloxacillin is not the best first-line intervention for scattered pustules in a neonate.",
-     "fix": "Multiple pustules in a newborn are often benign neonatal pustular melanosis or erythema toxicum neonatorum, which do not require antibiotics. If staphylococcal infection is suspected, topical antibiotics are usually sufficient for scattered lesions, or systemic antibiotics if there are signs of syst"
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-26"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:38:32.828Z"
   },
   "papers-paediatrics-year-4-mbchb-end-of-semester-cat-newborn-triage-growth": {
    "hash": "168359a0ec5f",
    "validated": false,
-   "high": 4,
+   "high": 1,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Priority signs in triage of children",
-     "problem": "The mnemonic TPR MOB is not a widely recognized or standard mnemonic for priority signs in paediatric triage.",
-     "fix": "Use a widely recognized mnemonic such as ETAT (Emergency Triage Assessment and Treatment) priority signs, which include obstructed breathing, severe respiratory distress, central cyanosis, signs of shock, coma, convulsions, severe dehydration, and severe malnutrition."
-    },
-    {
-     "severity": "high",
-     "where": "Priority signs in triage of children, point 2",
-     "problem": "Very high temperature is not a standalone priority sign; it needs context such as signs of severe infection or shock.",
-     "fix": "A very high temperature, especially in a young infant, is a danger sign, but the priority sign is 'fever with danger signs' or 'fever in a young infant' rather than just 'very high temperature'."
-    },
-    {
-     "severity": "high",
-     "where": "Priority signs in triage of children, point 7",
-     "problem": "Respiratory distress (not severe) is not a priority sign; severe respiratory distress is a priority sign.",
-     "fix": "The priority sign is 'severe respiratory distress'."
-    },
-    {
-     "severity": "high",
-     "where": "Essential newborn care, point 5",
-     "problem": "Tetracycline 1% eye ointment is not the universally recommended first-line prophylactic for ophthalmia neonatorum in many settings, including WHO guidelines, which often recommend erythromycin or povidone-iodine.",
-     "fix": "Use erythromycin 0.5% eye ointment or 2.5% povidone-iodine solution for eye care to prevent ophthalmia neonatorum, as per WHO recommendations."
+     "where": "Answer: A. Up to 8 hours at room temperature, and longer in a refrigerator.",
+     "problem": "Expressed breast milk can only be stored safely at room temperature (16-25°C) for up to 4 hours according to current WHO and UNICEF guidelines.",
+     "fix": "Expressed breast milk can be stored at room temperature for up to 4 hours."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-27"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-17T10:38:49.320Z"
   },
   "papers-paediatrics-special-supplementary-exam-august-2019-paper-one": {
    "hash": "44347d07ae47",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 15",
-     "problem": "The explanation for the answer states that the mutation load varies between tissues, so the affected tissue usually has to be tested, which contradicts the statement in option E.",
-     "fix": "Detection of a mitochondrial genome mutation may require sampling of affected tissue due to heteroplasmy, where mutation load varies between tissues."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-27"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:39:43.228Z"
   },
   "papers-paediatrics-end-of-first-trimester-exam-27-november-2018": {
    "hash": "4311f709191f",
    "validated": false,
-   "high": 3,
+   "high": 1,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Question 20",
-     "problem": "The question has two defensible answers.",
-     "fix": "Both B and E are true statements regarding childhood tuberculosis, making the question ambiguous for a single best answer."
-    },
-    {
-     "severity": "high",
-     "where": "Question 26",
-     "problem": "The marked answer for the most likely diagnosis is incorrect given the clinical scenario.",
-     "fix": "The baby most likely has meconium aspiration syndrome, which is a specific cause of respiratory distress in a term baby with meconium-stained liquor."
-    },
-    {
-     "severity": "high",
-     "where": "Question 28",
-     "problem": "The question has two defensible answers.",
-     "fix": "Both B (increased severity in further pregnancies) and D (reduced haemoglobin on the first day of life) are typically NOT characteristic of ABO incompatibility, making the question ambiguous for a single best answer."
+     "where": "Question 26, Answer: A.",
+     "problem": "Meconium aspiration syndrome is misidentified as respiratory distress syndrome.",
+     "fix": "The baby most likely has meconium aspiration syndrome."
     }
    ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-27"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-17T10:41:14.749Z"
   },
   "papers-paediatrics-end-of-second-semester-exam-4-october-2022": {
    "hash": "0b53060c77ec",
-   "validated": false,
-   "high": 8,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "2. Congenital causes of cyanotic heart disease include the following EXCEPT:",
-     "problem": "The question is poorly worded and the marked answer is not the only correct one.",
-     "fix": "VSD, ASD, and AV canal defects are acyanotic unless the shunt reverses, and aortic stenosis is acyanotic too. The question should be rephrased to ask for a condition that is *always* acyanotic, or the options adjusted."
-    },
-    {
-     "severity": "high",
-     "where": "9. For a child diagnosed with acute rheumatic fever, choose the most correct statement.",
-     "problem": "The duration of secondary prophylaxis for rheumatic heart disease without carditis is at least 5 years or until 21 years of age, whichever is longer, not 'at least 5 years or until 18'.",
-     "fix": "Children without valvular involvement should receive prophylaxis for at least 5 years or until 21 years of age, whichever is longer."
-    },
-    {
-     "severity": "high",
-     "where": "9. For a child diagnosed with acute rheumatic fever, choose the most correct statement.",
-     "problem": "Statement A is not entirely correct as 'lifelong' is not always the case; it depends on the severity of residual heart disease.",
-     "fix": "Children with valvular damage should be on monthly benzathine penicillin prophylaxis for at least 10 years or until 40 years of age, or lifelong in cases of severe residual heart disease, whichever is longer."
-    },
-    {
-     "severity": "high",
-     "where": "20. The ideal PR interval should be:",
-     "problem": "The question asks for 'ideal PR interval' and provides '0.12 seconds' as the answer, but the normal range is 0.12 to 0.20 seconds, making 0.12 seconds the lower limit, not necessarily the 'ideal'.",
-     "fix": "The normal PR interval is 0.12 to 0.20 seconds. An 'ideal' single value is not typically defined, but 0.12 seconds is the lower limit of normal."
-    },
-    {
-     "severity": "high",
-     "where": "33. With regards to HBV laboratory testing, which statement is true?",
-     "problem": "The question asks for 'which statement is true' but lists multiple true statements (A, C, E), making it a poorly constructed multiple-choice question with more than one correct answer.",
-     "fix": "Statements A, C, and E are all true. The question should be rephrased to have only one unequivocally correct answer, or specify the *most* correct statement in a particular context."
-    },
-    {
-     "severity": "high",
-     "where": "34. Preventing perinatal HBV transmission includes all the following EXCEPT:",
-     "problem": "Antiviral therapy is initiated for *mothers* with high viral loads during pregnancy to reduce perinatal transmission, not for *exposed infants*.",
-     "fix": "Prompt initiation of antiviral therapy for mothers with high viral loads during pregnancy is a strategy to prevent perinatal transmission, but exposed infants receive immunoprophylaxis, not antiviral therapy or pegylated interferons."
-    },
-    {
-     "severity": "high",
-     "where": "35. Risk factors for gastro-oesophageal reflux in children include all EXCEPT:",
-     "problem": "Prone and left lateral sleeping positions are protective against reflux, not risk factors.",
-     "fix": "Prone positioning and left lateral sleeping position reduce episodes of reflux and are therefore not risk factors."
-    },
-    {
-     "severity": "high",
-     "where": "37. As pertains to the management of GERD in children, choose the most correct statement.",
-     "problem": "The question is incomplete, cutting off option D and E, and the marked answer is not provided.",
-     "fix": "The question and options must be complete to be assessed."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-27"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:42:09.883Z"
   },
   "papers-paediatrics-main-exam-24-january-2022-paper-one": {
    "hash": "1c8eed7d9455",
-   "validated": false,
-   "high": 1,
-   "medium": 5,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 2, Answer B",
-     "problem": "Staphylococcus aureus is not the most common organism causing infective endocarditis on a native valve in children; Viridans streptococci remain the most common cause in children, especially with pre-existing heart disease.",
-     "fix": "The most common organism that causes infective endocarditis on a native valve in children is Streptococcus viridans."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 10, Answer E",
-     "problem": "The description of 'pistol shots at the brachial pulse' in option B is loosely worded, but pistol shots over the femoral artery (Duroziez's sign) are a recognized sign of aortic regurgitation. Corrigan's sign is also a sign of aortic regurgitation. Having two correct answers (B and E, depending on i",
-     "fix": "Option B should be rephrased to 'Pistol shots over the femoral artery' or removed to ensure only one unequivocally correct answer."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 14, Answer D",
-     "problem": "Option D includes 'RBC and WBC casts', which typically indicate a glomerular or renal parenchymal process (like pyelonephritis or glomerulonephritis), not a simple lower urinary tract infection as suggested by the clinical picture of 'lower abdominal pain, painful micturition and a low-grade fever'.",
-     "fix": "A more appropriate answer for a typical UTI would focus on pyuria and bacteriuria without necessarily including casts, or the clinical scenario should be modified to strongly suggest pyelonephritis."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 16, Answer C",
-     "problem": "The statement 'The incidence of GN is approximately 50% in persons with pharyngitis and 35% in those with skin infections' is incorrect. The incidence of PSGN after pharyngitis or skin infection is much lower, typically less than 15%.",
-     "fix": "The incidence of PSGN is much lower, typically under 15% in persons with pharyngitis or skin infections caused by nephritogenic strains."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 20, Answer C",
-     "problem": "The text states 'Option B is also partly true (hyperlipidaemia and a clotting tendency occur together), so the question is loosely worded.' This acknowledges a flaw in the question, as two options could be considered correct or partially correct, making it a poor MCQ.",
-     "fix": "Option B should be rephrased or removed to ensure only one unequivocally correct answer, or the question should be revised to ask for the *most* true statement if multiple are partially true."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 37, Answer B",
-     "problem": "The text states 'Option E is also true, so the question is lo'. This acknowledges a flaw in the question, as two options (B and E) could be considered correct, making it a poor MCQ.",
-     "fix": "Option E should be rephrased or removed to ensure only one unequivocally correct answer, or the question should be revised to ask for the *most* true statement if multiple are partially true."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-27"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:43:07.522Z"
   },
   "papers-paediatrics-end-of-3rd-trimester-exam-11-january-2022-cardiology-and-nephrology": {
    "hash": "d95819fceeeb",
@@ -940,75 +628,25 @@
    "hash": "957ed1f544f0",
    "validated": true,
    "high": 0,
-   "medium": 8,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Question 2",
-     "problem": "The answer states that intravenous immunoglobulin is still given once spasm has started, but the question asks what is true of tetanus and option D states it is of no benefit once spasm has started.",
-     "fix": "Option D should be corrected to state that intravenous immunoglobulin is of benefit once spasm has started."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 10",
-     "problem": "The explanation states that option A is close to the true average incubation period of 6 to 7 weeks, but the option states 7 to 9 weeks, which is a significant difference and not 'close'.",
-     "fix": "The explanation should acknowledge that the stated incubation period of 7 to 9 weeks is outside the typical range of 2 to 26 weeks, with an average of 6 to 7 weeks."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 13",
-     "problem": "The explanation states that a haploid cell has 23 chromosomes, which is correct, but then states that triploidy has 69 chromosomes, which is also correct, but the question states a foetus with triploidy will have 47 chromosomes, which is incorrect.",
-     "fix": "The explanation should state that a foetus with triploidy has 69 chromosomes, not 47."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 21",
-     "problem": "The explanation states that crystalline penicillin and benzyl penicillin are the same drug, which is true, but the question lists both as separate options (B and A), implying they are distinct choices.",
-     "fix": "The question should either combine options A and B into a single option or ensure they represent distinct formulations if intended."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 26",
-     "problem": "The explanation states that Toxocara eggs are also swallowed, making option D another exception, but the question asks for what EXCEPT enters the body by piercing the skin, and the marked answer is E.",
-     "fix": "The explanation should clarify that while Toxocara eggs are swallowed, the question asks for what *enters by piercing the skin*, and Entamoeba histolytica is the correct exception as it is swallowed."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 31",
-     "problem": "The explanation states that a TB effusion is an exudate (protein above 3 g/dL), but option C states the protein level will be less than 3 g/dL if tuberculosis is the cause, which is the opposite of what the explanation says.",
-     "fix": "The explanation should state that a TB effusion is an exudate with a protein level typically above 3 g/dL, making option C incorrect."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 32",
-     "problem": "The explanation states that the intraosseous site is the tibia, but option C suggests the proximal fibula as an alternative site after failed IV attempts.",
-     "fix": "The explanation should acknowledge that while the tibia is a common site, the proximal fibula can also be used for intraosseous access."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 35",
-     "problem": "The question text is cut off, making it impossible to evaluate the options and the provided answer.",
-     "fix": "The full text of question 35 and its options needs to be provided for accurate evaluation."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-27"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:44:03.049Z"
   },
   "papers-gynaecology-cat-15-march-2019-mcqs": {
    "hash": "23fa590dc6d9",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 2: Which one of the following is NOT a mechanism of action of Depo-Provera (DMPA)?",
-     "problem": "The marked answer B is incorrect, as DMPA does inhibit secretion of gonadotropins (specifically, the LH surge and keeping FSH low).",
-     "fix": "DMPA inhibits the secretion of gonadotropins (LH and FSH) to prevent ovulation and follicular maturation. The correct answer should be D, as inhibition of ovulation is a direct mechanism, not something that is NOT a mechanism."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-28"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:45:01.712Z"
   },
   "papers-gynaecology-year-6-cat-1-mbog-6511-13-december-2019": {
    "hash": "fa61001211ae",
@@ -1048,59 +686,27 @@
   },
   "papers-psychiatry-year-6-cat-october-2023-violence-defences-and-sleep": {
    "hash": "c48e9c6f5726",
-   "validated": false,
-   "high": 3,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 2 Answer",
-     "problem": "The explanation states that self-harm is the best-documented finding for lesbian and bisexual women, implying it is more documented than suicide attempts.",
-     "fix": "Rates of attempted suicide are also higher in lesbian and bisexual women, and both self-harm and suicide attempts are well-documented findings associated with the stress of stigma."
-    },
-    {
-     "severity": "high",
-     "where": "Question 10 Answer",
-     "problem": "Obsessions are described as a disorder of 'possession or content of thought'.",
-     "fix": "Obsessions are intrusive, unwanted thoughts (a disorder of content of thought), and not of its form."
-    },
-    {
-     "severity": "high",
-     "where": "Question 20 Answer",
-     "problem": "The explanation incorrectly states that the ventrolateral preoptic sleep promoter is triggered to release GABA in the tuberomammillary nucleus, which increases wakefulness.",
-     "fix": "The ventrolateral preoptic sleep promoter is triggered to release GABA in the tuberomammillary nucleus, which inhibits wakefulness."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-28"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:45:26.289Z"
   },
   "papers-gynaecology-year-4-cat-30-november-2018-ovarian-cysts-pid-and-menstruation": {
    "hash": "289183741ab9",
-   "validated": false,
-   "high": 3,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "MCQ 5, Answer C explanation",
-     "problem": "The normal menstrual blood loss is stated as under 80 ml, but the option in the MCQ states 150 ml.",
-     "fix": "Normal menstrual blood loss is usually 30-80 ml. The option D (150 ml) is incorrect."
-    },
-    {
-     "severity": "high",
-     "where": "Question 1 (d) Ultrasound features, Benign",
-     "problem": "A size under 5 cm is listed as a benign feature, but functional cysts can be up to 10 cm and still be considered benign.",
-     "fix": "Benign ovarian cysts can be up to 10 cm in diameter. Larger sizes or rapid growth are more concerning."
-    },
-    {
-     "severity": "high",
-     "where": "Question 4 (c) Treatment of a pelvic abscess, point 2",
-     "problem": "The duration of antibiotic treatment for pelvic abscess is stated as 14 days in all, which is too short for a pelvic abscess.",
-     "fix": "Antibiotic treatment for a pelvic abscess should typically be continued for a longer duration, often 2-3 weeks, or until clinical resolution."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-28"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:45:49.626Z"
   },
   "paediatrics-history-taking-and-examination": {
    "hash": "61524e8d5d68",
@@ -1214,45 +820,25 @@
    "hash": "a06d1a44c439",
    "validated": true,
    "high": 0,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "FibroScan (transient elastography)",
-     "problem": "The FibroScan cut-off for significant fibrosis is inconsistent with current guidelines.",
-     "fix": "Stiffness > 7 kPa (approx) = significant fibrosis; > 12 kPa = cirrhosis."
-    },
-    {
-     "severity": "medium",
-     "where": "Practice questions, Question 3",
-     "problem": "The option E states that Pegylated interferon-α is used for neither Hepatitis C nor Hepatitis B, which is incorrect as it is used for Hepatitis C.",
-     "fix": "Ribavirin is used for Hepatitis C but not typically for Hepatitis B."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-30"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:45:55.522Z"
   },
   "heart-murmurs": {
-   "hash": "7747f239b4a3",
+   "hash": "173a88a47a17",
    "validated": true,
    "high": 0,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Mitral regurgitation: Pansystolic murmur, radiates to axilla, soft S1, louder on inspiration",
-     "problem": "Mitral regurgitation murmurs are typically not louder on inspiration; this is a characteristic of right-sided murmurs.",
-     "fix": "Mitral regurgitation murmurs are typically not louder on inspiration."
-    },
-    {
-     "severity": "medium",
-     "where": "VSD (large) | Continuous \"machinery\" murmur, best at left sternal border, louder on inspiration",
-     "problem": "A VSD murmur is typically not louder on inspiration; this is a characteristic of right-sided murmurs.",
-     "fix": "A VSD murmur is typically not louder on inspiration."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-30"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "auto-repaired",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-17T10:47:29.855Z"
   },
   "heart-failure-which-tests": {
    "hash": "2e04c59e34cf",
@@ -1276,47 +862,13 @@
    "hash": "611619afe1fb",
    "validated": true,
    "high": 0,
-   "medium": 6,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Definition: three things must be present",
-     "problem": "The blood glucose threshold for DKA is stated as 'above about 11 mmol/L (200 mg/dL)' but standard guidelines often use a slightly higher threshold for diagnosis.",
-     "fix": "Hyperglycaemia: blood glucose above 13.9 mmol/L (250 mg/dL), or known diabetes (it can be lower in 'euglycaemic' DKA, which is seen with SGLT2 inhibitors and in pregnancy)."
-    },
-    {
-     "severity": "medium",
-     "where": "Definition: three things must be present",
-     "problem": "The severity classification for DKA by pH is missing the bicarbonate criteria for each category, which is typically included in standard guidelines.",
-     "fix": "Severity (by pH and bicarbonate): mild pH 7.25 to 7.30 or bicarbonate 15-18 mmol/L; moderate pH 7.00 to 7.24 or bicarbonate 10-<15 mmol/L; severe pH below 7.00 or bicarbonate below 10 mmol/L, together with drowsiness or coma."
-    },
-    {
-     "severity": "medium",
-     "where": "Pathophysiology",
-     "problem": "The statement 'in DKA rapid osmotic shifts predispose to cerebral oedema' is misleading as cerebral oedema in DKA is more commonly associated with treatment, particularly rapid fluid correction, rather than the initial osmotic shifts of DKA itself.",
-     "fix": "High glucose + dehydration → ↑ plasma osmolality → cellular dehydration → altered mental status; in HHS, gradual onset allows cerebral adaptation, whereas in DKA, cerebral oedema risk rises when fluids are over-replaced or corrected too rapidly."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis and how to tell them apart",
-     "problem": "The distinguishing feature for Starvation ketosis is listed as 'mild hyperglycaemia', which is incorrect; starvation ketosis typically presents with normal or low glucose levels.",
-     "fix": "Starvation ketosis: Recent prolonged fasting, normal or low glucose, ketonuria."
-    },
-    {
-     "severity": "medium",
-     "where": "Management: fluid first, then insulin, watch potassium",
-     "problem": "The instruction to monitor 'ketones and gas every 2 hours' is less frequent than typically recommended in initial DKA management, where hourly or every 1-2 hour monitoring is common.",
-     "fix": "Monitor: glucose hourly, ketones and gas every 1-2 hours, potassium regularly, urine output, mental state."
-    },
-    {
-     "severity": "medium",
-     "where": "Before discharge",
-     "problem": "The recommended overlap time for subcutaneous insulin with the infusion ('at least 30 to 60 minutes') is at the lower end of typical recommendations; a longer overlap is often advised to prevent relapse.",
-     "fix": "Restart subcutaneous insulin and overlap it with the infusion for at least 1-2 hours (or until the first dose of long-acting insulin has taken effect)."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-30"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:47:32.876Z"
   },
   "sepsis-and-septic-shock": {
    "hash": "bdf069196990",
@@ -1329,59 +881,27 @@
   },
   "hypertension": {
    "hash": "0b4c68f1dcca",
-   "validated": false,
-   "high": 3,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Investigations: what each test answers",
-     "problem": "The diagnostic threshold for office BP is stated as '≥140/90 mmHg (or 130/80 in high‑risk) confirms diagnosis', which incorrectly suggests 130/80 mmHg in office can confirm diagnosis in high-risk patients.",
-     "fix": "Office BP ≥140/90 mmHg confirms diagnosis. The 130/80 mmHg threshold is typically for ambulatory or home readings, or a treatment target in high-risk patients, not a diagnostic threshold for office BP."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations: what each test answers",
-     "problem": "The threshold for micro-albuminuria is stated as '>30 mg/mmol', which is incorrect.",
-     "fix": "Micro-albuminuria is defined as a urine albumin-creatinine ratio between 3 and 30 mg/mmol (or 30-300 mg/g)."
-    },
-    {
-     "severity": "high",
-     "where": "Differential diagnosis and how to tell them apart",
-     "problem": "The distinguishing feature for renal artery stenosis states 'Doppler US shows >70 % stenosis', which is a degree of stenosis, not a Doppler finding.",
-     "fix": "Doppler US shows a peak systolic velocity >200 cm/s or a renal-aortic ratio >3.5:1."
-    },
-    {
-     "severity": "high",
-     "where": "Clinical case, Question 1 Model Answer",
-     "problem": "The model answer states 'Elevated renin drives the juxtaglomerular apparatus to convert angiotensin‑I to angiotensin‑II', which is incorrect. Renin converts angiotensinogen to angiotensin I, and ACE converts angiotensin I to angiotensin II.",
-     "fix": "Elevated renin converts angiotensinogen to angiotensin I, which is then converted to angiotensin II by ACE (angiotensin-converting enzyme)."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-31"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:47:36.377Z"
   },
   "approach-to-anaemia": {
    "hash": "ca508ff73944",
-   "validated": false,
-   "high": 1,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Iron‑deficiency anaemia",
-     "problem": "The ferritin threshold for iron deficiency is too high for a highly specific marker.",
-     "fix": "Ferritin < 15 µg/L is highly specific for iron deficiency; response to oral iron within 2 weeks."
-    },
-    {
-     "severity": "high",
-     "where": "B12 deficiency: B12 injections (oral for dietary lack only). Give folate only if B12 is replaced or absent, or neurological damage can worse",
-     "problem": "The advice on oral B12 for dietary lack is too restrictive and potentially harmful if not clarified.",
-     "fix": "B12 deficiency: B12 injections (oral B12 can be effective for dietary lack, but high doses are needed and monitoring is crucial; parenteral is preferred for severe deficiency or malabsorption). Give folate only if B12 is replaced or absent, or neurological damage can worsen."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-31"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:47:42.427Z"
   },
   "upper-gi-bleeding": {
    "hash": "51f864a3e47d",
@@ -1394,37 +914,15 @@
   },
   "nephrotic-and-nephritic-syndromes": {
    "hash": "496f23f092fc",
-   "validated": false,
-   "high": 3,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Differential diagnosis and how to tell them apart - Rapidly progressive GN (anti-GBM)",
-     "problem": "The statement 'no significant proteinuria' for RPGN (anti-GBM) is incorrect.",
-     "fix": "RPGN can present with significant proteinuria, often in the nephrotic range, especially if there is severe glomerular damage."
-    },
-    {
-     "severity": "high",
-     "where": "Differential diagnosis and how to tell them apart - Malaria-associated nephropathy",
-     "problem": "The statement 'no hypertension' for malaria-associated nephropathy is incorrect.",
-     "fix": "Malaria-associated nephropathy can present with hypertension, especially in cases of severe or chronic disease."
-    },
-    {
-     "severity": "high",
-     "where": "Differential diagnosis and how to tell them apart - Schistosomiasis-associated GN",
-     "problem": "The statement 'no proteinuria >3.5 g/day' for schistosomiasis-associated GN is incorrect.",
-     "fix": "Schistosomiasis-associated GN can cause nephrotic range proteinuria (>3.5 g/day), particularly with Schistosoma mansoni infection."
-    },
-    {
-     "severity": "medium",
-     "where": "Management - Nephrotic syndrome - Prevent complications",
-     "problem": "The text states 'loss of antithrombin in the urine' as the sole reason for considering anticoagulation, which is incomplete.",
-     "fix": "Anticoagulation in high-risk nephrotic patients is considered due to a hypercoagulable state resulting from urinary loss of antithrombin III, protein C, and protein S, increased levels of procoagulant factors (e.g., fibrinogen), and platelet abnormalities."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-10-31"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:47:48.230Z"
   },
   "assessment-of-the-obstetric-patient": {
    "hash": "3325e9c5da24",
@@ -1448,197 +946,85 @@
    "hash": "66237d628dd5",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Section 6. Interventions - Prophylaxis - Folic acid",
-     "problem": "The text states a higher dose of folic acid is used for women with epilepsy on anticonvulsants, but does not specify the dose.",
-     "fix": "A higher dose of folic acid (typically 5 mg daily) is used for women with epilepsy on anticonvulsants, diabetes, or obesity, or a previous neural tube defect."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-10-31"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:48:36.069Z"
   },
   "diagnosis-of-pregnancy": {
    "hash": "bd317bbdd594",
-   "validated": false,
-   "high": 1,
-   "medium": 3,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Trimesters",
-     "problem": "The third trimester duration is incorrectly stated.",
-     "fix": "Third trimester: 28 to 40 weeks."
-    },
-    {
-     "severity": "medium",
-     "where": "First trimester: symptoms",
-     "problem": "Hartman's sign is not a widely recognized or taught term for slight bleeding at the expected period in early pregnancy.",
-     "fix": "Slight bleeding at the expected period in the first 12 weeks is sometimes referred to as implantation bleeding."
-    },
-    {
-     "severity": "high",
-     "where": "First trimester: signs",
-     "problem": "The statement that breast signs are only diagnostic in a first pregnancy is incorrect and misleading.",
-     "fix": "Breast signs are suggestive but not diagnostic of pregnancy, regardless of parity, as similar changes can occur with hormonal fluctuations or previous pregnancies."
-    },
-    {
-     "severity": "medium",
-     "where": "Third trimester (29 to 40 weeks)",
-     "problem": "The fundus reaching the xiphisternum at term is typically around 36-38 weeks, not specifically 36 weeks.",
-     "fix": "The fundus rises to the xiphisternum at about 36-38 weeks."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-01"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:49:25.238Z"
   },
   "physiological-changes-in-pregnancy": {
    "hash": "290ec0944852",
-   "validated": false,
-   "high": 2,
-   "medium": 3,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "A PaCO₂ of 40 mmHg is abnormal in pregnancy and means respiratory failure is near.",
-     "problem": "A PaCO₂ of 40 mmHg in pregnancy is abnormal, but it does not necessarily mean respiratory failure is near; it indicates a deviation from the normal physiological respiratory alkalosis.",
-     "fix": "A PaCO₂ of 40 mmHg is abnormal in pregnancy and indicates a failure to maintain the expected respiratory alkalosis."
-    },
-    {
-     "severity": "high",
-     "where": "Total cortisol rises; free cortisol is unchanged",
-     "problem": "While total cortisol rises significantly, free cortisol also rises, albeit to a lesser extent, due to increased cortisol-binding globulin.",
-     "fix": "Total cortisol rises significantly, and free cortisol also rises, though to a lesser extent."
-    },
-    {
-     "severity": "medium",
-     "where": "The heart is enlarged and pushed up and to the left, so ECG and chest X-ray changes (left axis deviation, flattened T waves, a larger heart",
-     "problem": "Left axis deviation is not a typical ECG change in normal pregnancy; rather, there can be a slight leftward shift of the QRS axis, but true left axis deviation (beyond -30 degrees) is usually pathological.",
-     "fix": "The heart is enlarged and pushed up and to the left, so ECG and chest X-ray changes (a slight leftward shift of the QRS axis, flattened T waves, a larger heart shadow) can look pathological."
-    },
-    {
-     "severity": "medium",
-     "where": "The range is unchanged (can fall slightly: gestational thrombocytopenia)",
-     "problem": "The statement 'The range is unchanged' is inconsistent with 'can fall slightly'.",
-     "fix": "Platelet count typically remains within the normal non-pregnant range, though a slight physiological decrease can occur, leading to gestational thrombocytopenia."
-    },
-    {
-     "severity": "medium",
-     "where": "The woman breathes faster in volume (not rate) and has a mild respiratory alkalosis (PaCO₂ about 30 mmHg, bicarbonate lower at about 20 mmol",
-     "problem": "The statement 'breathes faster in volume (not rate)' is misleading; minute ventilation increases due to an increase in both tidal volume and respiratory rate, though the increase in tidal volume is more prominent.",
-     "fix": "The woman increases her minute ventilation by breathing deeper (increased tidal volume) and often slightly faster (increased respiratory rate), leading to a mild respiratory alkalosis."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-01"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:50:10.797Z"
   },
   "antenatal-care": {
    "hash": "018e585e3039",
-   "validated": false,
-   "high": 1,
-   "medium": 5,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Fourth: 36–38 weeks — Assess well-being; repeat the HIV test; exclude PIH, anaemia, multiple pregnancy and malpresentation; review the plan;",
-     "problem": "Repeating the HIV test at 36-38 weeks is not the standard recommendation for all pregnant women.",
-     "fix": "Repeat the HIV test at 32 weeks, or in the third trimester, for women who tested negative at the first visit, especially in high-prevalence settings, or if there is new risk exposure."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations",
-     "problem": "Asymptomatic bacterial vaginosis and Group B Streptococcus screening are not routinely recommended for all pregnant women in low-resource settings as first-visit investigations.",
-     "fix": "Asymptomatic bacterial vaginosis and Group B Streptococcus screening are not standard first-visit investigations for all pregnant women; screening for GBS is typically done at 35-37 weeks if indicated."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations",
-     "problem": "Stool microscopy for worms is not a routine first-visit investigation for all pregnant women.",
-     "fix": "Stool microscopy for worms is not a routine first-visit investigation for all pregnant women; presumptive deworming is often given in endemic areas."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations",
-     "problem": "OGTT (oral glucose tolerance test) for gestational diabetes is not a routine first-visit investigation for all pregnant women; it is typically done later in pregnancy or for high-risk individuals.",
-     "fix": "OGTT (oral glucose tolerance test) for gestational diabetes is typically performed at 24-28 weeks gestation, or earlier for women with risk factors."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations",
-     "problem": "Amniocentesis and chorionic villus sampling are not routine investigations for all pregnant women; they are invasive diagnostic procedures for specific indications.",
-     "fix": "Amniocentesis and chorionic villus sampling are invasive diagnostic procedures offered for specific indications, not routine investigations for all pregnant women."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations",
-     "problem": "Fetal blood sampling, L/S ratio, and phosphatidylglycerol are not routine investigations for all pregnant women; they are specialized tests for specific fetal conditions or lung maturity assessment.",
-     "fix": "Fetal blood sampling, L/S ratio, and phosphatidylglycerol are specialized tests used for specific fetal conditions or lung maturity assessment, not routine investigations for all pregnant women."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-01"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:51:01.602Z"
   },
   "safe-motherhood-and-maternal-newborn-health": {
    "hash": "97499e8cf561",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Emergency obstetric care (EmOC): the \"signal functions\"",
-     "problem": "The text lists all basic and comprehensive EmOC signal functions together without clearly distinguishing between them, which is misleading for a student learning the definitions.",
-     "fix": "Basic EmOC signal functions are: parenteral antibiotics, uterotonics (oxytocin), parenteral anticonvulsants (magnesium sulphate), manual removal of the placenta, removal of retained products, assisted vaginal delivery, and newborn resuscitation. Comprehensive EmOC includes all basic functions plus c"
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-01"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:51:52.481Z"
   },
   "abortion-and-miscarriage": {
    "hash": "53d0a7fa5295",
-   "validated": false,
-   "high": 1,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Definitions",
-     "problem": "The viability cut-off for abortion in Kenya is stated as 28 weeks, which is incorrect.",
-     "fix": "In Kenya, the viability cut-off for abortion is 24 weeks of gestation or a fetus weighing 500g or more, consistent with WHO guidelines."
-    },
-    {
-     "severity": "medium",
-     "where": "Septic abortion",
-     "problem": "The management of septic abortion states evacuation within 4 to 6 hours of starting antibiotics, which is a specific timeframe that may not always be feasible or strictly necessary in all cases.",
-     "fix": "Evacuate the uterus as soon as the patient is stable and antibiotics have been initiated, typically within hours, but the exact timeframe can vary based on clinical response and resources."
-    },
-    {
-     "severity": "medium",
-     "where": "Recurrent miscarriage: find the cause",
-     "problem": "The text states that inherited thrombophilia should be investigated, but current guidelines do not recommend routine screening for inherited thrombophilias in recurrent miscarriage unless there is a personal history of thrombosis.",
-     "fix": "Screening for inherited thrombophilia (protein C and S deficiency, factor V Leiden, prothrombin mutation) is generally not recommended for recurrent miscarriage unless there is a personal history of venous thromboembolism."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-01"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:52:43.303Z"
   },
   "ectopic-pregnancy": {
    "hash": "17b569751112",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Management - Medical: methotrexate",
-     "problem": "The advice to avoid NSAIDs during methotrexate treatment for ectopic pregnancy is incorrect and potentially harmful.",
-     "fix": "Advise her to avoid NSAIDs, folic acid supplements, alcohol, sun, and sexual intercourse during treatment, and to avoid pregnancy for 3 months. NSAIDs are generally safe and can be used for pain relief during methotrexate treatment."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-01"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:53:34.177Z"
   },
   "year-4-imed-revision-roadmap": {
    "hash": "1b6b24096829",
@@ -1653,23 +1039,13 @@
    "hash": "015fc10cd7b0",
    "validated": true,
    "high": 0,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Valvular regurgitation (e.g., MR) table row",
-     "problem": "The statement 'pansystolic murmur intensity unchanged with respiration' is incorrect for mitral regurgitation. The intensity of mitral regurgitation murmur can be affected by respiration, specifically it may decrease with inspiration due to reduced left ventricular preload.",
-     "fix": "Echo shows regurgitant jet, LV dilation; the pansystolic murmur intensity may decrease with inspiration due to reduced left ventricular preload."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 15: How do you assess postural hypotension?",
-     "problem": "The definition of orthostatic hypotension should include a heart rate increase.",
-     "fix": "A fall of at least 20 mmHg systolic, 10 mmHg diastolic, or an increase in heart rate of 20 bpm within 3 minutes supports orthostatic hypotension."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-01"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:54:15.052Z"
   },
   "tuberculosis": {
    "hash": "6eaf300c1c91",
@@ -1682,47 +1058,27 @@
   },
   "respiratory-failure-and-abg": {
    "hash": "356325e1ff0d",
-   "validated": false,
-   "high": 2,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Examination findings and why each occurs: General appearance",
-     "problem": "The threshold for deoxyhaemoglobin causing cyanosis is stated as >5g/dL, which is a common but not universally accepted or precise threshold, and can be misleading in anemic patients.",
-     "fix": "State that cyanosis is a sign of severe hypoxemia, typically when there is a significant amount of deoxygenated haemoglobin, but acknowledge it may be less apparent in anemic patients."
-    },
-    {
-     "severity": "high",
-     "where": "Management: Oxygen Therapy Targets",
-     "problem": "The general oxygen saturation target of 94-98% is too high and potentially harmful, especially for patients not at risk of Type 2 RF, according to current guidelines (e.g., BTS).",
-     "fix": "The general oxygen saturation target should be 92-96% for most acutely unwell patients, and 88-92% for those at risk of hypercapnic respiratory failure (e.g., COPD)."
-    },
-    {
-     "severity": "high",
-     "where": "When to Intubate",
-     "problem": "The GCS threshold for intubation is typically 8 or less, not strictly less than 8.",
-     "fix": "When to Intubate: Failure of NIV, severe hypoxemia despite maximal oxygen, severe acidosis (pH < 7.25), apnoea, GCS ≤ 8, inability to protect airway, haemodynamic instability, severe work of breathing with exhaustion."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-02"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:55:12.532Z"
   },
   "pulmonary-oedema-and-ards": {
    "hash": "916d6c230f23",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Clinical features - Examination - Respiratory System - Auscultation",
-     "problem": "The description of 'cardiac asthma' as bronchoconstriction from interstitial oedema is misleading; it refers to wheezing heard in cardiogenic pulmonary oedema, often due to compression of airways by oedema.",
-     "fix": "Wheeze in cardiogenic pulmonary oedema, sometimes termed 'cardiac asthma', can be due to compression of airways by interstitial oedema."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-02"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-17",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-17T10:56:03.770Z"
   },
   "pulmonary-hypertension-and-cor-pulmonale": {
    "hash": "e6532cb55d3a",
