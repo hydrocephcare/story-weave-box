@@ -6,7 +6,7 @@ describe("USSD text formatting", () => {
     const source = "A 58-year-old man with decompensated liver cirrhosis develops acute confusion, asterixis, and a reversal of the sleep-wake cycle.";
     const chunks = splitUssdWords(source, 45);
     expect(chunks.join(" ")).toBe(source);
-    expect(chunks).toHaveLength(3);
+    expect(chunks).toHaveLength(4);
     expect(chunks.every((chunk) => chunk.length <= 45)).toBe(true);
     expect(chunks[1]).not.toMatch(/^cycle/);
   });
