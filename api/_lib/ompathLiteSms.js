@@ -13,7 +13,7 @@ function normalizePhone(v){let p=clean(v,32).replace(/[\s()-]/g,"");if(/^0\d{9}$
 async function db(path,options={}){
  const url=process.env.SUPABASE_URL,key=process.env.SUPABASE_SERVICE_ROLE_KEY;
  if(!url||!key)throw new Error("Missing Supabase server configuration");
- const r=await fetch(`${url.replace(/\/$/,"")}/rest/v1/${path}`,{...options,headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers}});
+ const r=await fetch(`${url.replace(/\/$/,"")}/rest/v1/${path}`,{...options,signal:options.signal||AbortSignal.timeout(7000),headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers}});
  const body=await r.text();if(!r.ok){console.error("Lite SMS database error",r.status,body.slice(0,250));throw new Error("SMS database request failed");}return body?JSON.parse(body):[];
 }
 async function sendSms(to,message,settings){
@@ -24,7 +24,7 @@ async function sendSms(to,message,settings){
  const form=new URLSearchParams({username,to,message});
  const sender=settings?.sender_id||process.env.AT_SENDER_ID;
  if(sender)form.set("from",sender);
- const r=await fetch(sandbox?"https://api.sandbox.africastalking.com/version1/messaging":"https://api.africastalking.com/version1/messaging",{method:"POST",headers:{"apiKey":apiKey,Accept:"application/json","Content-Type":"application/x-www-form-urlencoded"},body:form});
+ const r=await fetch(sandbox?"https://api.sandbox.africastalking.com/version1/messaging":"https://api.africastalking.com/version1/messaging",{method:"POST",signal:AbortSignal.timeout(8000),headers:{"apiKey":apiKey,Accept:"application/json","Content-Type":"application/x-www-form-urlencoded"},body:form});
  const body=await r.text();if(!r.ok)throw new Error(`Africa's Talking ${r.status}: ${body.slice(0,200)}`);
  const data=JSON.parse(body),recipient=data?.SMSMessageData?.Recipients?.[0];
  if(!recipient||Number(recipient.statusCode)>=400)throw new Error(recipient?.status||data?.SMSMessageData?.Message||"Africa's Talking did not accept the SMS");
