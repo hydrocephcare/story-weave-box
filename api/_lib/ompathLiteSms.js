@@ -4,6 +4,8 @@
  * POST /api/ompath-lite-sms?mode=inbound&key=<AT_INBOUND_SECRET> (Africa's Talking inbox callback)
  */
 import { randomBytes, timingSafeEqual } from "node:crypto";
+import { createHealthGuideToken } from "./ompathLiteHealth.js";
+import { searchReviewedPatientResources } from "./ompathLiteResources.js";
 
 const clean=(v,n=500)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const today=()=>new Date().toISOString().slice(0,10);
@@ -168,4 +170,45 @@ export async function sendHealthGuideLink({ to, link, language = "en", smsConsen
   : "OmpathStudy: Your requested health information is ready. Open your private link: " + link + " This link expires in 7 days. Do not share it. Reply STOP to opt out.";
  const recipient = await sendSms(phone, message, settings);
  return { sent: true, status: recipient.status || "Accepted", messageId: recipient.messageId || null };
+}
+
+/**
+ * Background queue processor. This is deliberately called by the scheduled
+ * worker, never from the interactive USSD request.
+ */
+export async function processPendingHealthGuideSms(limit = 10) {
+ const pending = await db("lite_health_encounters?select=id,phone_number,preferred_language,concern_category,original_message,sms_consent,status,sms_sent_at&status=eq.guide_pending&sms_consent=eq.true&sms_sent_at=is.null&order=created_at.asc&limit=" + Math.min(20, Math.max(1, Number(limit) || 10)));
+ let sent = 0, waiting = 0, failed = 0;
+ for (const encounter of pending) {
+  try {
+   // Only English patient guides have been approved for delivery so far.
+   if (encounter.preferred_language !== "en") { waiting++; continue; }
+   const guides = await searchReviewedPatientResources({
+    query: [encounter.concern_category || "", encounter.original_message || ""].join(" "),
+    language: "en",
+    limit: 1,
+   });
+   if (!guides.length || !guides[0].slug) { waiting++; continue; }
+   const issued = await createHealthGuideToken({ encounterId: encounter.id, resourceSlug: guides[0].slug });
+   const link = "https://lite.ompathstudy.com/api/ompath-lite-guide?token=" + issued.token;
+   const delivery = await sendHealthGuideLink({
+    to: encounter.phone_number,
+    link,
+    language: "en",
+    smsConsent: encounter.sms_consent,
+   });
+   if (!delivery.sent) { waiting++; continue; }
+   const updated = await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id) +
+    "&status=eq.guide_pending&sms_sent_at=is.null", {
+     method: "PATCH",
+     body: JSON.stringify({ sms_sent_at: new Date().toISOString(), status: "complete" }),
+    });
+   if (updated.length) sent++;
+   else waiting++;
+  } catch {
+   failed++;
+   console.error("Background patient-guide delivery failed.");
+  }
+ }
+ return { checked: pending.length, sent, waiting, failed };
 }
