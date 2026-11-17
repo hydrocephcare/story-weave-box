@@ -3,7 +3,7 @@
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
 import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
-import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteClinical.js";
+import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteRules.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 import { shortUssdText, splitUssdWords } from "./ompathLiteUssdFormat.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
