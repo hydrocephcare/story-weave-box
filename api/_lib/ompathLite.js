@@ -2,7 +2,8 @@
  * OmpathStudy Lite — Africa's Talking USSD adapter.
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
-import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";\nimport { interpretHealthConcern } from "./ompathLiteClinical.js";
+import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+import { interpretHealthConcern } from "./ompathLiteClinical.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
