@@ -12,7 +12,7 @@ async function db(path,options={}){
  const body=await r.text();if(!r.ok)throw new Error(`Supabase request failed (${r.status})`);return body?JSON.parse(body):[];
 }
 const getStudent=phone=>db(`lite_students?select=id,full_name,study_level,preferred_subject&phone_number=eq.${encodeURIComponent(phone)}&limit=1`);
-const getSets=()=>db("mcq_sets?select=id,title,category,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=200");
+const getSets=year=>db("mcq_sets?select=id,title,category,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&or="+encodeURIComponent(`(title.ilike.*Year ${year}*,category.ilike.*Year ${year}*)`)+"&limit=500");
 const getSet=id=>db(`mcq_sets?select=id,title,questions&id=eq.${encodeURIComponent(id)}&published=eq.true&deleted_at=is.null&limit=1`);
 const subjectOf=s=>{
  const raw=clean(s.category||s.title,120);
@@ -42,7 +42,7 @@ async function ussd(req,res){
    if(!student)return reply(res,"Please register first. Dial again and choose 1.",true);
    const match=String(student.study_level||"").match(/[1-6]/),year=match?match[0]:null;
    if(!year)return reply(res,"Your study year is missing. Please register again.",true);
-   const all=await getSets(),yearSets=all.filter(s=>yearMatches(s,year));
+   const yearSets=await getSets(year);
    if(!yearSets.length)return reply(res,`No published Year ${year} MCQs found yet. Please explore OmpathStudy online.`,true);
    const grouped=new Map();
    for(const s of yearSets){const subject=subjectOf(s);if(!grouped.has(subject))grouped.set(subject,[]);grouped.get(subject).push(s);}
