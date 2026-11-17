@@ -2,12 +2,14 @@ import ompathLite from "./_lib/ompathLite.js";
 import ompathLiteSms from "./_lib/ompathLiteSms.js";
 import ompathLiteAdmin from "./_lib/ompathLiteAdmin.js";
 import ompathLiteWeb from "./_lib/ompathLiteWeb.js";
+import ompathLiteGuide from "./_lib/ompathLiteGuide.js";
 
 const TASKS = {
   "lite": ompathLite,
   "lite-sms": ompathLiteSms,
   "lite-admin": ompathLiteAdmin,
   "lite-web": ompathLiteWeb,
+  "health-guide": ompathLiteGuide,
 };
 
 export default async function handler(req, res) {
