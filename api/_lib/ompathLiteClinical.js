@@ -102,6 +102,12 @@ const ANSWER_LABELS = {
   "3": "Not sure",
   "4": "Not sure",
 };
+function labelAnswer(questionId, answer) {
+  const value = String(answer);
+  if (questionId === "gestation") return ({ "1": "Under 20 weeks", "2": "20-27 weeks", "3": "28 weeks or more", "4": "Not sure" })[value] || "Not sure";
+  if (["duration", "onset"].includes(questionId)) return ({ "1": "Less than 1 day / Today", "2": "1-7 days", "3": "More than 7 days" })[value] || "Not sure";
+  return ANSWER_LABELS[value] || clean(answer, 30);
+}
 
 /**
  * Builds a conservative, rule-based intake summary. It deliberately does not
@@ -113,7 +119,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
   const original = clean(encounter?.original_message, 1200);
   const mapped = answers.slice(0, 5).map((item) => ({
     question: clean(item.question_id, 60),
-    answer: ANSWER_LABELS[String(item.answer)] || clean(item.answer, 30),
+    answer: labelAnswer(item.question_id, item.answer),
   }));
 
   const answerFor = (id) => String(answers.find((item) => item.question_id === id)?.answer || "");
@@ -129,19 +135,20 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     reasons.push("The emergency screening answer was uncertain; urgent in-person assessment is the safer next step.");
   } else if (
     category === "Pregnancy-related concern" &&
-    (positive("pregnancy_bleeding_or_fluid") || positive("pregnancy_movement"))
+    (positive("pregnancy_bleeding_or_fluid") || positive("pregnancy_movement")) &&
+    ["1", "3"].includes(answerFor("pregnancy_status"))
   ) {
     urgency = "urgent";
-    reasons.push("Bleeding, fluid leakage or reduced fetal movement during pregnancy needs urgent maternity assessment.");
+    reasons.push("Bleeding, fluid leakage or reduced fetal movement with confirmed or possible pregnancy needs urgent maternity assessment.");
   } else if (
     category === "Bleeding" &&
-    (positive("bleeding_amount") || positive("pregnancy_possibility"))
+    (positive("bleeding_amount") || ["1", "3"].includes(answerFor("pregnancy_possibility")))
   ) {
     urgency = "urgent";
     reasons.push("The reported bleeding pattern or possible pregnancy warrants urgent in-person assessment.");
   } else if (
     category === "Lower abdominal pain" &&
-    positive("pregnancy_possibility")
+    ["1", "3"].includes(answerFor("pregnancy_possibility"))
   ) {
     urgency = "urgent";
     reasons.push("Lower abdominal pain with possible pregnancy needs urgent assessment to exclude time-critical causes.");
@@ -155,7 +162,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     reasons.push("The available information is insufficient to establish a cause.");
   }
 
-  if (mapped.some((item) => item.answer === "Not sure" || item.answer === "Not sure / not pregnant")) {
+  if (mapped.some((item) => item.answer === "Not sure")) {
     reasons.push("One or more answers were uncertain; this limits interpretation.");
   }
 
