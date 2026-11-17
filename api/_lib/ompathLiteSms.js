@@ -65,8 +65,10 @@ async function inbound(req,res){
  const [,short,choice]=match;
  const students=await db(`lite_students?select=id&phone_number=eq.${encodeURIComponent(from)}&limit=1`);
  if(!students[0])return res.status(200).send("Please register through OmpathStudy Lite USSD before answering.");
- const qs=await db(`lite_questions?select=id,correct_option,explanation&id=like.${short.slice(0,8)}*&limit=1`);
- if(!qs[0])return res.status(200).send("That question code has expired. Please wait for the next daily question.");
+ const deliveries=await db(`lite_sms_deliveries?select=question_id&student_id=eq.${students[0].id}&short_code=eq.${short}&order=delivery_date.desc&limit=1`);
+ if(!deliveries[0])return res.status(200).send("That question code has expired. Please wait for the next daily question.");
+ const qs=await db(`lite_questions?select=id,correct_option,explanation&id=eq.${deliveries[0].question_id}&limit=1`);
+ if(!qs[0])return res.status(200).send("That question is no longer available.");
  const q=qs[0],correct=Number(choice)===Number(q.correct_option);
  await db("lite_attempts?on_conflict=student_id,question_id",{method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=minimal"},body:JSON.stringify({student_id:students[0].id,question_id:q.id,selected_option:Number(choice),is_correct:correct})});
  return res.status(200).send(`${correct?"Correct!":"Not quite. Correct answer: "+q.correct_option+"."} ${clean(q.explanation,300)}`);
