@@ -9,6 +9,7 @@ import { createHash, randomBytes } from "node:crypto";
 const clean = (value, max = 500) => String(value ?? "").trim().replace(/[<>]/g, "").slice(0, max);
 
 function normalizePhone(value) {
+  if (value === null || value === undefined || value === "") return null;
   let phone = clean(value, 32).replace(/[\s()-]/g, "");
   if (/^0\d{9}$/.test(phone)) phone = "+254" + phone.slice(1);
   else if (/^254\d{9}$/.test(phone)) phone = "+" + phone;
@@ -61,7 +62,8 @@ export async function createHealthEncounter({
 }) {
   const session_id = validateSession(sessionId);
   const phone_number = normalizePhone(phoneNumber);
-  if (!phone_number) throw new Error("A valid mobile number is required.");
+  if (channel === "ussd" && !phone_number) throw new Error("A valid mobile number is required.");
+  if (phoneNumber && !phone_number) throw new Error("A valid mobile number is required.");
   if (consentGiven !== true) throw new Error("Consent is required before saving a health enquiry.");
   if (!["en", "sw", "other"].includes(preferredLanguage)) throw new Error("Unsupported language preference.");
   if (!["ussd", "sms", "web"].includes(channel)) throw new Error("Unsupported channel.");
@@ -101,9 +103,10 @@ export async function createHealthEncounter({
 export async function getHealthEncounter({ sessionId, phoneNumber }) {
   const session_id = validateSession(sessionId);
   const phone_number = normalizePhone(phoneNumber);
-  if (!phone_number) throw new Error("A valid mobile number is required.");
+  if (phoneNumber && !phone_number) throw new Error("A valid mobile number is required.");
+  const phoneFilter = phone_number ? "&phone_number=eq." + encodeURIComponent(phone_number) : "";
   const rows = await db(
-    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
+    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
   );
   return rows[0] || null;
 }
@@ -112,7 +115,7 @@ export async function getHealthEncounter({ sessionId, phoneNumber }) {
 export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch = {} }) {
   const session_id = validateSession(sessionId);
   const phone_number = normalizePhone(phoneNumber);
-  if (!phone_number || !/^[0-9a-f-]{36}$/i.test(clean(id, 36))) {
+  if ((phoneNumber && !phone_number) || !/^[0-9a-f-]{36}$/i.test(clean(id, 36))) {
     throw new Error("Invalid health encounter reference.");
   }
 
@@ -150,8 +153,9 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   }
   allowed.updated_at = new Date().toISOString();
 
+  const phoneFilter = phone_number ? "&phone_number=eq." + encodeURIComponent(phone_number) : "";
   const rows = await db(
-    `lite_health_encounters?id=eq.${encodeURIComponent(id)}&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}`,
+    `lite_health_encounters?id=eq.${encodeURIComponent(id)}&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}`,
     { method: "PATCH", body: JSON.stringify(allowed) },
   );
   return rows[0] || null;
