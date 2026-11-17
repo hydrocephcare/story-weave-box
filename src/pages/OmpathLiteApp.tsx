@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AlertTriangle, ArrowRight, CheckCircle2, ExternalLink, HeartPulse, ShieldCheck, Stethoscope } from "lucide-react";
 import "./ompath-lite.css";
 
@@ -128,6 +128,17 @@ async function postAssessment(payload: Record<string, unknown>) {
 }
 
 export default function OmpathLiteApp() {
+  useEffect(() => {
+    document.title = "OmpathStudy Lite | Health Support";
+    const description = "OmpathStudy Lite provides symptom intake, emergency warning-sign screening and preliminary health guidance.";
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute("content", description);
+  }, []);
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
   const [phone, setPhone] = useState("");
