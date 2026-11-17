@@ -1,0 +1,120 @@
+import { afterEach, describe, expect, it, vi } from "vitest";
+import ompathLite from "./ompathLite.js";
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.unstubAllEnvs();
+});
+
+function responseSink() {
+  return {
+    statusCode: 200,
+    body: "",
+    headers: {},
+    setHeader(name, value) { this.headers[name] = value; },
+    status(code) { this.statusCode = code; return this; },
+    send(value) { this.body = value; return this; },
+    json(value) { this.body = value; return this; },
+  };
+}
+
+function stubEncounterStorage() {
+  let row = null;
+  const id = "11111111-1111-4111-8111-111111111111";
+  vi.stubEnv("SUPABASE_URL", "https://example.supabase.co");
+  vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "server-only-test-key");
+  vi.stubGlobal("fetch", vi.fn(async (url, options = {}) => {
+    const address = String(url);
+    if (address.includes("/rest/v1/lite_health_encounters") && options.method === "POST") {
+      const payload = JSON.parse(options.body);
+      row = {
+        id,
+        ...payload,
+        status: "intake_started",
+        assessment: null,
+        expires_at: new Date(Date.now() + 30 * 86400000).toISOString(),
+      };
+      return new Response(JSON.stringify([row]), { status: 201 });
+    }
+    if (address.includes("/rest/v1/lite_health_encounters") && options.method === "PATCH") {
+      row = { ...row, ...JSON.parse(options.body) };
+      return new Response(JSON.stringify([row]), { status: 200 });
+    }
+    if (address.includes("/rest/v1/lite_health_encounters?") && !options.method) {
+      if (address.includes("session_id=eq.")) return new Response(JSON.stringify(row ? [row] : []), { status: 200 });
+      return new Response("[]", { status: 200 });
+    }
+    throw new Error("Unexpected health storage request in test");
+  }));
+  return () => row;
+}
+
+async function sendUssd(text, res = responseSink()) {
+  await ompathLite({
+    method: "POST",
+    body: { phoneNumber: "+254712345678", sessionId: "ATUid_test123", text },
+  }, res);
+  return res;
+}
+
+describe("OmpathStudy Lite USSD Health Support", () => {
+  it("completes the lower abdominal pain pathway and returns a preliminary impression", async () => {
+    const getRow = stubEncounterStorage();
+    const prefix = "1*1*1*1*3*Lower abdominal pain since yesterday";
+    await sendUssd("1");
+    await sendUssd("1*1");
+    await sendUssd("1*1*1");
+    await sendUssd("1*1*1*1");
+    await sendUssd("1*1*1*1*3");
+    await sendUssd(prefix);
+    await sendUssd(prefix + "*2");
+    await sendUssd(prefix + "*2*2");
+    await sendUssd(prefix + "*2*2*2");
+    await sendUssd(prefix + "*2*2*2*2");
+    const final = await sendUssd(prefix + "*2*2*2*2*2");
+
+    expect(final.statusCode).toBe(200);
+    expect(final.body).toContain("END Preliminary impression:");
+    expect(final.body).toContain("Not a confirmed diagnosis");
+    expect(getRow().status).toBe("complete");
+    expect(getRow().assessment.status).toBe("not_a_diagnosis");
+    expect(getRow().clarification_answers).toHaveLength(5);
+  });
+
+  it("escalates reduced fetal movement after 20 weeks in the pregnancy pathway", async () => {
+    const getRow = stubEncounterStorage();
+    const prefix = "1*1*1*1*1*I am 30 weeks pregnant and the baby's movements are reduced";
+    await sendUssd("1");
+    await sendUssd("1*1");
+    await sendUssd("1*1*1");
+    await sendUssd("1*1*1*1");
+    await sendUssd("1*1*1*1*1");
+    await sendUssd(prefix);
+    await sendUssd(prefix + "*2");
+    await sendUssd(prefix + "*2*1");
+    await sendUssd(prefix + "*2*1*3");
+    await sendUssd(prefix + "*2*1*3*2");
+    const final = await sendUssd(prefix + "*2*1*3*2*1");
+
+    expect(final.body).toContain("END URGENT:");
+    expect(getRow().status).toBe("referred_urgent");
+    expect(getRow().assessment.provisional_diagnosis).toMatch(/reduced fetal movements/i);
+    expect(getRow().assessment.urgency_level).toBe("urgent");
+  });
+
+  it("interrupts routine questions when the emergency screen is positive", async () => {
+    const getRow = stubEncounterStorage();
+    const prefix = "1*1*1*1*6*I cannot breathe";
+    await sendUssd("1");
+    await sendUssd("1*1");
+    await sendUssd("1*1*1");
+    await sendUssd("1*1*1*1");
+    await sendUssd("1*1*1*1*6");
+    await sendUssd(prefix);
+    const final = await sendUssd(prefix + "*1");
+
+    expect(final.body).toContain("END EMERGENCY:");
+    expect(getRow().status).toBe("referred_urgent");
+    expect(getRow().assessment.urgency_level).toBe("emergency");
+  });
+});
