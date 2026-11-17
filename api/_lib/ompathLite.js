@@ -2,7 +2,7 @@
  * OmpathStudy Lite — Africa's Talking USSD adapter.
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
-import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";\nimport { interpretHealthConcern } from "./ompathLiteClinical.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
@@ -69,6 +69,8 @@ async function ussd(req,res){
     const language=flow[2]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
+    // Screen the caller's own words for explicit emergency phrases before AI interpretation.
+    const clinical=await interpretHealthConcern({originalMessage:description,preferredLanguage:language});
     const encounter=await createHealthEncounter({
      sessionId:session,
      phoneNumber:phone,
@@ -81,8 +83,18 @@ async function ussd(req,res){
      id:encounter.id,
      sessionId:session,
      phoneNumber:phone,
-     patch:{concern_category:categories[flow[3]],original_message:description,status:"intake_started"}
+     patch:{
+      concern_category:categories[flow[3]],
+      original_message:description,
+      normalized_summary:clinical.normalizedSummary,
+      red_flag_results:clinical.emergencyFlags,
+      status:clinical.emergencyFlags.length?"referred_urgent":"intake_started",
+      urgency_level:clinical.emergencyFlags.length?"emergency":"not_assessed"
+     }
     });
+    if(clinical.emergencyFlags.length)return reply(res,language==="sw"
+      ?"Umetaja dalili inayoweza kuashiria dharura. Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni."
+      :"Your description includes a possible emergency warning sign. Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment.",true);
     return reply(res,language==="sw"
      ?"Kwanza, tujue kama kuna dharura. Je, una shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka sasa?\n1. Ndiyo  2. Hapana"
      :"First, let's check for an emergency. Are you having severe difficulty breathing, chest pain, fainting, a seizure, heavy bleeding, or severe/worsening pain right now?\n1. Yes  2. No");
