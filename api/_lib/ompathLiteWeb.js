@@ -40,7 +40,7 @@ export default async function liteWeb(req,res){
   const originalMessage=clean(payload.original_message,1200);
   const sessionId=clean(payload.session_id,120);
   const allowedCategories=["Pregnancy-related concern","Menstrual problem","Lower abdominal pain","Vaginal discharge","Bleeding","Other health concern"];
-  const answers=Array.isArray(payload.answers)?payload.answers.slice(0,5):[];
+  const answers=Array.isArray(payload.answers)?payload.answers:[];
   if(!/^[A-Za-z0-9._:-]{6,120}$/.test(sessionId))return send(res,400,{error:"Your health session could not be started. Refresh and try again."});
   if(!allowedCategories.includes(category))return send(res,400,{error:"Choose the main health concern."});
   if(payload.consent_given!==true)return send(res,400,{error:"Consent is required before health information can be stored."});
