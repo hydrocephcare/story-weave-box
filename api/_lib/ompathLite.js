@@ -49,7 +49,7 @@ async function ussd(req,res){
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
     if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
-    return reply(res,"Your answers are sensitive health data and will be processed by an automated AI system and stored securely for up to 30 days. SMS is sent only if you opt in. This is not a diagnosis or emergency service. Do not enter your name.\nMajibu yako ni taarifa nyeti za afya; yatachakatwa na mfumo wa AI na kuhifadhiwa kwa usalama hadi siku 30. SMS itatumwa tu ukikubali. Huu si utambuzi wala huduma ya dharura. Usiandike jina lako.\n1. I agree / Nakubali\n2. Cancel / Sitaki\n0. Back / Rudi nyuma");
+    return reply(res,"Your answers are sensitive health data and may be processed by an automated AI system and stored securely for up to 30 days. SMS is sent only if you opt in. This is not a diagnosis or emergency service. Do not enter your name.\nMajibu yako ni taarifa nyeti za afya; yanaweza kuchakatwa na mfumo wa AI na kuhifadhiwa kwa usalama hadi siku 30. SMS itatumwa tu ukikubali. Huu si utambuzi wala huduma ya dharura. Usiandike jina lako.\n1. I agree / Nakubali\n2. Cancel / Sitaki\n0. Back / Rudi nyuma");
    }
    if(flow.length===2){
     if(flow[1]!=="1")return reply(res,"Consent is required to continue.\n1. I agree\n2. Cancel\n0. Back",true);
