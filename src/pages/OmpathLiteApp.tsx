@@ -141,7 +141,6 @@ export default function OmpathLiteApp() {
   }, []);
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
-  const [phone, setPhone] = useState("");
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [consent, setConsent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -150,7 +149,7 @@ export default function OmpathLiteApp() {
   const questions = useMemo(() => questionsFor(category, answers), [category, answers]);
   const answered = questions.filter((question) => Boolean(answers[question.id])).length;
   const emergencyReported = answers.emergency_screen === "1";
-  const canSubmit = Boolean(category && phone.trim() && consent && answers.emergency_screen && (emergencyReported || (questions.length > 1 && questions.every((question) => Boolean(answers[question.id])))));
+  const canSubmit = Boolean(category && consent && answers.emergency_screen && (emergencyReported || (questions.length > 1 && questions.every((question) => Boolean(answers[question.id])))));
 
   const setAnswer = (id: string, value: string) => {
     setAnswers((current) => {
@@ -173,7 +172,6 @@ export default function OmpathLiteApp() {
         .filter((question) => Boolean(answers[question.id]))
         .map((question) => ({ question_id: question.id, answer: answers[question.id] }));
       const data = await postAssessment({
-        phone_number: phone.trim(),
         session_id: crypto.randomUUID(),
         concern_category: category,
         original_message: description.trim(),
@@ -191,7 +189,6 @@ export default function OmpathLiteApp() {
   const reset = () => {
     setCategory("");
     setDescription("");
-    setPhone("");
     setAnswers({});
     setConsent(false);
     setError("");
@@ -263,11 +260,10 @@ export default function OmpathLiteApp() {
               )}
 
               <div className="health-contact">
-                <div className="health-subheading"><span className="health-step">03</span><div><h2>Secure your assessment</h2><p>Your contact number is stored with this enquiry; it is not an account sign-in or identity verification.</p></div></div>
-                <label className="health-field"><span>Mobile number with country code *</span><input value={phone} onChange={(event) => setPhone(event.target.value)} type="tel" autoComplete="tel" placeholder="+2547XXXXXXXX" /></label>
+                <div className="health-subheading"><span className="health-step">03</span><div><h2>Consent and privacy</h2><p>No name or phone number is required for this web assessment.</p></div></div>
                 <label className="health-consent">
                   <input type="checkbox" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
-                  <span>I consent to OmpathStudy storing my phone number and health answers securely for up to 30 days to provide this service. I understand this is not emergency care or a confirmed diagnosis.</span>
+                  <span>I consent to OmpathStudy storing my health answers securely for up to 30 days to provide this service. I understand this is not emergency care or a confirmed diagnosis.</span>
                 </label>
               </div>
 
