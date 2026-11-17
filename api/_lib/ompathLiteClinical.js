@@ -153,11 +153,23 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     urgency = "urgent";
     reasons.push("Lower abdominal pain with possible pregnancy needs urgent assessment to exclude time-critical causes.");
   } else if (
+    category === "Lower abdominal pain" &&
+    positive("fever_vomiting")
+  ) {
+    urgency = "urgent";
+    reasons.push("Lower abdominal pain with fever or repeated vomiting needs urgent in-person assessment.");
+  } else if (
+    category === "Bleeding" &&
+    positive("pain")
+  ) {
+    urgency = "urgent";
+    reasons.push("Bleeding with significant abdominal or pelvic pain needs urgent in-person assessment.");
+  } else if (
     (category === "Vaginal discharge" || category === "Menstrual problem") &&
     positive("fever")
   ) {
-    urgency = "prompt";
-    reasons.push("Fever accompanying a genital or menstrual concern needs prompt clinical assessment.");
+    urgency = "urgent";
+    reasons.push("Fever accompanying a genital or menstrual concern needs same-day clinical assessment.");
   } else {
     reasons.push("The available information is insufficient to establish a cause.");
   }
