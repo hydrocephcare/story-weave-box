@@ -8,6 +8,7 @@ const patterns = [
   ["severe_pain", /\b(?:unbearable pain|worst pain|severe sudden pain|severe (?:abdominal|stomach|head|pelvic) pain|maumivu makali sana|maumivu makali ya (?:tumbo|kichwa|nyonga)|maumivu yasiyovumilika)\b/i],
   ["severe_allergic_reaction", /\b(?:throat closing|tongue swelling|swollen tongue|face swelling with breathing|koo linafunga|ulimi kuvimba na kupumua)\b/i],
   ["severe_headache_or_visual_symptoms", /\b(?:sudden severe headache|worst headache|severe headache with (?:blurred vision|visual changes)|blurred vision with severe headache|kuumwa kichwa sana ghafla|kuona ukungu na maumivu makali ya kichwa)\b/i],
+  ["severe_epigastric_or_upper_abdominal_pain", /\b(?:severe (?:upper abdominal|epigastric|right upper quadrant) pain|severe pain under (?:the )?ribs|maumivu makali upande wa juu wa tumbo)\b/i],
   ["stroke_signs", /\b(?:face drooping|one[- ]sided weakness|slurred speech|sudden weakness on one side|uso kupinda|mkono mmoja kuwa dhaifu|maneno kutatizika)\b/i],
   ["poisoning_or_overdose", /\b(?:swallowed poison|drank poison|overdose|taken an overdose|nimekunywa sumu|amekunywa sumu)\b/i],
   ["suicidal_immediate_danger", /\b(?:about to kill myself|going to kill myself|taken poison to die|nimekunywa sumu ili kufa|nataka kujiua sasa)\b/i],
