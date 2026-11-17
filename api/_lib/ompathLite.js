@@ -147,32 +147,32 @@ async function ussd(req,res){
     }
     const category=encounter.concern_category||"Other health concern";
     let questions=[
-     {id:"emergency_screen",en:"Are you experiencing any emergency symptom now: severe difficulty breathing, chest pain, fainting, seizure, heavy bleeding, or severe/worsening pain?",sw:"Je, una dalili ya dharura sasa: kupumua kwa shida sana, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka?"},
+     {id:"emergency_screen",en:"Emergency signs now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?",sw:"Dharura sasa: shida ya kupumua, maumivu ya kifua, kuzimia, degedege au damu nyingi?"},
      ...(category==="Pregnancy-related concern"?[
-      {id:"pregnancy_status",en:"Are you currently pregnant?",sw:"Je, una ujauzito kwa sasa?"},
-      {id:"gestation",en:"If pregnant, do you know how many weeks pregnant you are? Choose: 1. Under 20 weeks  2. 20–27 weeks  3. 28 weeks or more  4. Not sure",sw:"Ikiwa una ujauzito, una wiki ngapi? 1. Chini ya wiki 20  2. Wiki 20–27  3. Wiki 28 au zaidi  4. Sina uhakika"},
-      {id:"pregnancy_bleeding_or_fluid",en:"Are you having vaginal bleeding or fluid leaking from the vagina?",sw:"Je, unatoka damu ukeni au maji yanavuja ukeni?"},
-      {id:"pregnancy_movement",en:"If you are far enough along to feel movement, are the baby's movements reduced or absent?",sw:"Ikiwa ujauzito umefikia hatua ya kuhisi mtoto akisogea, je, miondoko imepungua au haipo?"}
+      {id:"pregnancy_status",en:"Are you pregnant?",sw:"Una ujauzito?"},
+      {id:"gestation",en:"How many weeks pregnant?",sw:"Una ujauzito wa wiki ngapi?"},
+      {id:"pregnancy_bleeding_or_fluid",en:"Any vaginal bleeding or fluid leak?",sw:"Unatoka damu au maji ukeni?"},
+      {id:"pregnancy_movement",en:"At 20+ weeks, are baby movements reduced or absent?",sw:"Wiki 20 au zaidi: mtoto anasogea kidogo au hasogei?"}
      ]:category==="Menstrual problem"||category==="Vaginal discharge"?[
-      {id:"duration",en:"How long has this problem been present? 1. Less than 1 day  2. 1–7 days  3. More than 7 days",sw:"Tatizo hili limekuwepo kwa muda gani? 1. Chini ya siku 1  2. Siku 1–7  3. Zaidi ya siku 7"},
-      {id:"fever",en:"Do you also have fever or chills?",sw:"Je, pia una homa au kutetemeka kwa baridi?"},
-      {id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Je, kuna uwezekano wa kuwa mjamzito?"},
-      {id:"severity",en:"Is the problem getting worse? 1. Yes  2. No  3. Not sure",sw:"Je, tatizo linaendelea kuwa baya zaidi? 1. Ndiyo  2. Hapana  3. Sina uhakika"}
+      {id:"duration",en:"How long? ",sw:"Kwa muda gani?"},
+      {id:"fever",en:"Fever or chills?",sw:"Una homa au baridi?"},
+      {id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Unaweza kuwa mjamzito?"},
+      {id:"severity",en:"Is it getting worse?",sw:"Hali inazidi kuwa mbaya?"}
      ]:category==="Lower abdominal pain"?[
-      {id:"onset",en:"When did the pain start? 1. Today  2. 1–7 days ago  3. More than 7 days ago",sw:"Maumivu yalianza lini? 1. Leo  2. Siku 1–7 zilizopita  3. Zaidi ya siku 7 zilizopita"},
-      {id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Je, kuna uwezekano wa kuwa mjamzito?"},
-      {id:"fever_vomiting",en:"Do you have fever or repeated vomiting?",sw:"Je, una homa au kutapika mara kwa mara?"},
-      {id:"severity",en:"Is the pain severe or getting worse?",sw:"Je, maumivu ni makali au yanaongezeka?"}
+      {id:"onset",en:"When did the pain start?",sw:"Maumivu yalianza lini?"},
+      {id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Unaweza kuwa mjamzito?"},
+      {id:"fever_vomiting",en:"Fever or repeated vomiting?",sw:"Homa au kutapika mara kwa mara?"},
+      {id:"severity",en:"Is the pain severe or worsening?",sw:"Maumivu ni makali au yanaongezeka?"}
      ]:category==="Bleeding"?[
-      {id:"bleeding_amount",en:"Is the bleeding heavy (for example, soaking a pad in an hour), or are you feeling faint?",sw:"Je, damu ni nyingi (kwa mfano, pedi kujaa ndani ya saa moja), au unahisi kuzimia?"},
-      {id:"pregnancy_possibility",en:"Could you be pregnant or have you recently given birth?",sw:"Je, unaweza kuwa mjamzito au umejifungua hivi karibuni?"},
-      {id:"duration",en:"When did the bleeding start? 1. Today  2. 1–7 days ago  3. More than 7 days ago",sw:"Damu ilianza lini? 1. Leo  2. Siku 1–7 zilizopita  3. Zaidi ya siku 7 zilizopita"},
-      {id:"pain",en:"Do you also have significant abdominal or pelvic pain?",sw:"Je, pia una maumivu makubwa ya tumbo au nyonga?"}
+      {id:"bleeding_amount",en:"Heavy bleeding (pad/hour) or faint?",sw:"Damu nyingi (pedi kwa saa) au kuzimia?"},
+      {id:"pregnancy_possibility",en:"Pregnant or recently gave birth?",sw:"Mjamzito au umejifungua hivi karibuni?"},
+      {id:"duration",en:"When did bleeding start?",sw:"Damu ilianza lini?"},
+      {id:"pain",en:"Severe abdominal or pelvic pain?",sw:"Maumivu makali ya tumbo au nyonga?"}
      ]:[
-      {id:"duration",en:"How long has this concern been present? 1. Less than 1 day  2. 1–7 days  3. More than 7 days",sw:"Tatizo hili limekuwepo kwa muda gani? 1. Chini ya siku 1  2. Siku 1–7  3. Zaidi ya siku 7"},
-      {id:"fever",en:"Do you have fever?",sw:"Je, una homa?"},
-      {id:"worsening",en:"Are your symptoms getting worse?",sw:"Je, dalili zinaendelea kuwa mbaya zaidi?"},
-      {id:"care",en:"Have you already received medical care for this concern?",sw:"Je, tayari umepata huduma ya afya kwa tatizo hili?"}
+      {id:"duration",en:"How long has this been happening?",sw:"Tatizo limekuwepo kwa muda gani?"},
+      {id:"fever",en:"Do you have fever?",sw:"Una homa?"},
+      {id:"worsening",en:"Are symptoms getting worse?",sw:"Dalili zinazidi kuwa mbaya?"},
+      {id:"care",en:"Have you received medical care?",sw:"Umepata huduma ya afya?"}
      ])
     ];
     const priorAnswers=flow.slice(6,-1);
@@ -217,7 +217,12 @@ async function ussd(req,res){
     const nextQuestions=adaptPregnancyQuestions(questions,category,nextAnswers);
     const nextQuestion=nextQuestions[nextIndex];
     if(!nextQuestion)return reply(res,"Your answers have been recorded. Please arrange an in-person health assessment.",true);
-    return reply(res,languagePrompt(encounter.preferred_language,nextQuestion)+"\n"+(nextQuestion.id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure":nextQuestion.id==="duration"||nextQuestion.id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
+    const optionText=nextQuestion.id==="gestation"
+     ?(encounter.preferred_language==="sw"?"1. Chini ya 20  2. 20-27  3. 28+  4. Sina uhakika":"1. Under 20  2. 20-27  3. 28+  4. Not sure")
+     :["duration","onset"].includes(nextQuestion.id)
+      ?(encounter.preferred_language==="sw"?"1. Chini ya siku 1  2. Siku 1-7  3. Zaidi ya 7":"1. Under 1 day  2. 1-7 days  3. Over 7 days")
+      :(encounter.preferred_language==="sw"?"1. Ndiyo  2. Hapana  3. Sina uhakika":"1. Yes  2. No  3. Not sure");
+    return reply(res,languagePrompt(encounter.preferred_language,nextQuestion)+"\n"+optionText+"\n0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
   }
