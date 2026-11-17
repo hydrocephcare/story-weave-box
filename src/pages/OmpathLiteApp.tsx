@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Activity, AlertTriangle, ArrowRight, CheckCircle2, ExternalLink, HeartPulse, ShieldCheck, Stethoscope } from "lucide-react";
+import { AlertTriangle, ArrowRight, CheckCircle2, ExternalLink, HeartPulse, ShieldCheck, Stethoscope } from "lucide-react";
 import "./ompath-lite.css";
 
 type Assessment = {
