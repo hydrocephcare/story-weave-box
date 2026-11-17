@@ -1,4 +1,5 @@
-/** Admin API for the Lite channel. The source MCQ library remains public.mcq_sets. */\nimport { sendAdminSandboxTest } from "./ompathLiteSms.js";
+/** Admin API for the Lite channel. The source MCQ library remains public.mcq_sets. */
+import { sendAdminSandboxTest } from "./ompathLiteSms.js";
 const json=(res,status,body)=>res.status(status).json(body);
 async function request(path,key){
  const base=process.env.SUPABASE_URL;
@@ -19,8 +20,14 @@ export default async function liteAdmin(req,res){
   const roles=await fetch(`${url.replace(/\/$/,"")}/rest/v1/rpc/has_role`,{method:"POST",headers:{apikey:serviceKey,Authorization:`Bearer ${serviceKey}`,"Content-Type":"application/json"},body:JSON.stringify({_user_id:user.id,_role:"admin"})});
   if(!roles.ok||await roles.json()!==true)return json(res,403,{error:"Administrator access required."});
   if(req.method==="POST"){
-   const result=await sendAdminSandboxTest();
-   return json(res,200,result);
+   if(req.body?.action!=="sandbox-test")return json(res,400,{error:"Unsupported admin action."});
+   try{
+    const result=await sendAdminSandboxTest();
+    return json(res,200,result);
+   }catch(e){
+    console.error("Lite sandbox SMS test:",e);
+    return json(res,500,{error:e instanceof Error?e.message:"Sandbox test SMS failed."});
+   }
   }
   const [students,sets,units,attempts,summary]=await Promise.all([
    request("lite_students?select=id,phone_number,full_name,study_level,preferred_subject,sms_opt_in,created_at&order=created_at.desc&limit=200",serviceKey),
