@@ -3,8 +3,8 @@ import { createHash, randomBytes } from "node:crypto";
  * OmpathStudy Lite — private health encounter persistence.
  *
  * Server-side only. Do not import this module into browser code or expose
- * SUPABASE_SERVICE_ROLE_KEY. Clinical interpretation and patient-facing
- * assessments are deliberately handled by later, separately reviewed stages.
+ * SUPABASE_SERVICE_ROLE_KEY. Clinical assessment logic is kept in the
+ * separately tested rules module and all writes remain server-side.
  */
 const clean = (value, max = 500) => String(value ?? "").trim().replace(/[<>]/g, "").slice(0, max);
 
@@ -49,8 +49,8 @@ function validateSession(sessionId) {
 }
 
 /**
- * Create a record only after the caller has obtained explicit consent.
- * Phone number is stored only for the agreed service purpose (e.g. requested SMS).
+ * Create a record only after explicit consent. USSD uses the carrier-provided
+ * number to bind callbacks; the browser flow stores no phone number.
  */
 export async function createHealthEncounter({
   sessionId,
