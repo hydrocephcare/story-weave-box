@@ -100,7 +100,7 @@ const ANSWER_LABELS = {
   "1": "Yes",
   "2": "No",
   "3": "Not sure",
-  "4": "Not sure / not pregnant",
+  "4": "Not sure",
 };
 
 /**
@@ -118,7 +118,6 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
 
   const answerFor = (id) => String(answers.find((item) => item.question_id === id)?.answer || "");
   const positive = (id) => answerFor(id) === "1";
-  const unsure = (id) => answerFor(id) === "3" || answerFor(id) === "4";
 
   let urgency = "prompt";
   const reasons = [];
