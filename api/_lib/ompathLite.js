@@ -183,7 +183,7 @@ async function ussd(req,res){
        });
        if(encounter.preferred_language==="en"&&guides.length&&guides[0].slug){
         const issued=await createHealthGuideToken({encounterId:encounter.id,resourceSlug:guides[0].slug});
-        const guideUrl="https://lite.ompathstudy.com/api/lite?task=health-guide&token="+issued.token;
+        const guideUrl="https://lite.ompathstudy.com/api/ompath-lite-guide?token="+issued.token;
         await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{status:"guide_pending"}});
         const delivery=await sendHealthGuideLink({
          to:phone,
