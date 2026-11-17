@@ -288,6 +288,7 @@ export function useAccess() {
     pass,
     isFree,
     hasPass,
+    isAdmin: ownerAccess,
     /** General paywall can still use admin access. */
     unlocked: isFree || hasPass || ownerAccess,
     /** Reveal is free only when admin sets Reveal price to 0; otherwise subscription required. */
