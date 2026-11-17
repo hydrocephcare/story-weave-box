@@ -9,7 +9,8 @@ type Assessment = {
   urgency_level: "emergency" | "urgent" | "prompt" | "routine" | "uncertain";
   reasons: string[];
   next_steps: string[];
-  limitations: string[];\n  recommended_evaluation: string[];
+  limitations: string[];
+  recommended_evaluation: string[];
   concern_category: string;
   presenting_concern: string | null;
 };
@@ -285,7 +286,8 @@ export default function OmpathLiteApp() {
             </article>
             {result.assessment.differential_diagnoses?.length > 0 && <article className="health-result-card"><h2>Possible causes to consider</h2><ul>{result.assessment.differential_diagnoses.map((item) => <li key={item}>{item}</li>)}</ul></article>}
             {result.assessment.reasons?.length > 0 && <article className="health-result-card"><h2>Why this level of care was advised</h2><ul>{result.assessment.reasons.map((item) => <li key={item}>{item}</li>)}</ul></article>}
-            <article className="health-result-card"><h2>Recommended next steps</h2><ul>{result.assessment.next_steps.map((item) => <li key={item}>{item}</li>)}</ul></article>\n            <article className="health-result-card"><h2>What a clinician may need to assess</h2><ul>{result.assessment.recommended_evaluation.map((item) => <li key={item}>{item}</li>)}</ul></article>
+            <article className="health-result-card"><h2>Recommended next steps</h2><ul>{result.assessment.next_steps.map((item) => <li key={item}>{item}</li>)}</ul></article>
+            <article className="health-result-card"><h2>What a clinician may need to assess</h2><ul>{result.assessment.recommended_evaluation.map((item) => <li key={item}>{item}</li>)}</ul></article>
             {result.resources.length > 0 && <article className="health-result-card"><h2>Reviewed OmpathStudy information</h2><p>These patient-facing resources have been reviewed for publication.</p>{result.resources.map((resource) => <a className="health-resource" key={resource.slug} href={resource.url} target="_blank" rel="noreferrer"><span><strong>{resource.title}</strong><small>{resource.summary}</small></span><ExternalLink size={16} /></a>)}</article>}
             <article className="health-limitations"><strong>Important limitations</strong><ul>{result.assessment.limitations.map((item) => <li key={item}>{item}</li>)}</ul><p>Reference: {result.reference}</p></article>
             <button className="health-submit" onClick={reset}>Finish <CheckCircle2 size={18} /></button>
