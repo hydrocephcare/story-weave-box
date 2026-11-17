@@ -2,13 +2,33 @@
  * OmpathStudy Lite — Africa's Talking USSD adapter.
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
-import { createHealthEncounter, getHealthEncounter, updateHealthEncounter, createHealthGuideToken } from "./ompathLiteHealth.js";
-import { interpretHealthConcern, buildPreliminaryAssessment } from "./ompathLiteClinical.js";
+import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteClinical.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
-import { searchReviewedPatientResources } from "./ompathLiteResources.js";
-import { sendHealthGuideLink } from "./ompathLiteSms.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
+const shortText = (value,max=40) => {
+ const text=clean(value,2000).replace(/\s+/g," ");
+ if(text.length<=max)return text;
+ const cut=text.slice(0,max+1),boundary=cut.lastIndexOf(" ");
+ return (boundary>Math.floor(max*0.55)?cut.slice(0,boundary):text.slice(0,max)).replace(/[.,;: -]+$/,"")+"...";
+};
+function splitWords(value,max=105){
+ const words=String(value??"").trim().split(/\s+/).filter(Boolean),chunks=[];
+ let line="";
+ for(const word of words){
+  if(!line){line=word;continue;}
+  if((line+" "+word).length<=max)line+=" "+word;
+  else{chunks.push(line);line=word;}
+ }
+ if(line)chunks.push(line);
+ return chunks.length?chunks:["Question text unavailable."];
+}
+const setLabel=(set,subject)=>{
+ let label=clean(set.title,180).replace(/^weekly\s+year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").trim();
+ if(!label||label.toLowerCase()===subject.toLowerCase())label="Weekly "+subject;
+ return shortText(label,22);
+};
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
 async function db(path,options={}){
  const base=process.env.SUPABASE_URL,key=process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -74,7 +94,7 @@ async function ussd(req,res){
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
     // Screen the caller's own words for explicit emergency phrases before AI interpretation.
-    const clinical=await interpretHealthConcern({originalMessage:description,preferredLanguage:language});
+    const emergencyFlags=detectEmergencyLanguage(description);
     const encounter=await createHealthEncounter({
      sessionId:session,
      phoneNumber:phone,
@@ -83,8 +103,7 @@ async function ussd(req,res){
      preferredLanguage:language,
      channel:"ussd"
     });
-    const existingEncounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
-    if(existingEncounter?.assessment||existingEncounter?.status==="referred_urgent"){
+    if(encounter?.assessment||encounter?.status==="referred_urgent"){
      return reply(res,language==="sw"
       ?"Tayari ulipokea majibu ya huduma hii. Ikiwa una dalili kali au zinazidi, tafuta huduma ya dharura sasa."
       :"This health enquiry has already been processed. If symptoms are severe or worsening, seek emergency care now.",true);
@@ -96,13 +115,13 @@ async function ussd(req,res){
      patch:{
       concern_category:categories[flow[3]],
       original_message:description,
-      normalized_summary:clinical.normalizedSummary,
-      red_flag_results:clinical.emergencyFlags,
-      status:clinical.emergencyFlags.length?"referred_urgent":"intake_started",
-      urgency_level:clinical.emergencyFlags.length?"emergency":"not_assessed"
+      normalized_summary:"",
+      red_flag_results:emergencyFlags,
+      status:emergencyFlags.length?"referred_urgent":"intake_started",
+      urgency_level:emergencyFlags.length?"emergency":"not_assessed"
      }
     });
-    if(clinical.emergencyFlags.length)return reply(res,language==="sw"
+    if(emergencyFlags.length)return reply(res,language==="sw"
       ?"Umetaja dalili inayoweza kuashiria dharura. Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni."
       :"Your description includes a possible emergency warning sign. Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment.",true);
     return reply(res,language==="sw"
@@ -170,37 +189,9 @@ async function ussd(req,res){
       clarification_answers:nextAnswers,
       assessment,
       urgency_level:assessment.urgency_level,
-      status:"complete"
+      status:encounter.sms_consent===true?"guide_pending":"complete"
      }});
-     let guideSent=false;
-     let guideUnavailable=false;
-     if(encounter.sms_consent===true){
-      try{
-       const guides=await searchReviewedPatientResources({
-        query:[category,encounter.original_message||""].join(" "),
-        language:encounter.preferred_language,
-        limit:1
-       });
-       if(encounter.preferred_language==="en"&&guides.length&&guides[0].slug){
-        const issued=await createHealthGuideToken({encounterId:encounter.id,resourceSlug:guides[0].slug});
-        const guideUrl="https://lite.ompathstudy.com/api/ompath-lite-guide?token="+issued.token;
-        await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{status:"guide_pending"}});
-        const delivery=await sendHealthGuideLink({
-         to:phone,
-         link:guideUrl,
-         language:encounter.preferred_language,
-         smsConsent:encounter.sms_consent
-        });
-        guideSent=delivery.sent===true;
-        if(guideSent){
-         await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_sent_at:new Date().toISOString(),status:"complete"}});
-        }else guideUnavailable=true;
-       }else guideUnavailable=true;
-      }catch(error){
-       guideUnavailable=true;
-       console.error("Private patient guide delivery unavailable.");
-      }
-     }
+     const guideQueued=encounter.sms_consent===true;
      const urgent=assessment.urgency_level==="urgent";
      const swMessage=urgent
       ?"Majibu yako yamepokelewa. Tafuta tathmini ya afya katika kituo cha afya haraka leo. Huu si utambuzi. Dalili zikizidi au ukitokwa damu nyingi, ukizimia au kupata shida ya kupumua, tafuta huduma ya dharura sasa."
@@ -208,11 +199,9 @@ async function ussd(req,res){
      const enMessage=urgent
       ?"Your answers have been received. Attend a health facility urgently today for an in-person assessment. This is not a diagnosis. If symptoms worsen or you develop heavy bleeding, fainting or breathing difficulty, seek emergency care now."
       :"Your answers have been received. Please arrange an in-person assessment with a health professional promptly. This is not a diagnosis. Seek emergency care now if severe pain, heavy bleeding, fainting or breathing difficulty develops.";
-     const deliveryNote=guideSent
-      ?(encounter.preferred_language==="sw"?" Kiungo cha taarifa za afya kimetumwa kwa SMS.":" A private patient information link has been sent by SMS.")
-      :guideUnavailable
-       ?(encounter.preferred_language==="sw"?" Kwa sasa hakuna mwongozo wa mgonjwa uliothibitishwa unaoweza kutumwa.":" No approved patient guide could be sent at this time.")
-       :"";
+     const deliveryNote=guideQueued
+      ?(encounter.preferred_language==="sw"?" Ikiwa mwongozo uliothibitishwa utapatikana, kiungo kitatumwa kwa SMS.":" If an approved patient guide is available, its link will be sent by SMS.")
+      :"";
      return reply(res,(encounter.preferred_language==="sw"?swMessage:enMessage)+deliveryNote,true);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
@@ -246,23 +235,23 @@ async function ussd(req,res){
    const tokens=parts.slice(1);
    let cursor=0,subjectPage=0;
    while(tokens[cursor]==="9"){subjectPage++;cursor++;}
-   const showSubjects=(page)=>reply(res,`Year ${year} subjects ${page+1}:\n${subjects.slice(page*4,page*4+4).map((s,i)=>`${i+1}. ${clean(s,28)}`).join("\n")}${(page+1)*4<subjects.length?"\n9. More subjects":""}\n0. ${page>0?"Previous":"Main menu"}`);
+   const showSubjects=(page)=>reply(res,`Year ${year} subjects ${page+1}:\n${subjects.slice(page*2,page*2+2).map((s,i)=>`${i+1}. ${shortText(s,22)}`).join("\n")}${(page+1)*2<subjects.length?"\n9. More subjects":""}\n0. ${page>0?"Previous":"Main menu"}`);
    if(cursor>=tokens.length)return showSubjects(subjectPage);
    if(tokens[cursor]==="0")return subjectPage>0?showSubjects(subjectPage-1):reply(res,mainMenu,true);
    const subjectNo=Number(tokens[cursor++]);
    if(!Number.isInteger(subjectNo)||subjectNo<1||subjectNo>4)return reply(res,"Choose 1-4, 9 for more or 0 to go back.",true);
-   const subject=subjects[subjectPage*4+subjectNo-1];
+   const subject=subjects[subjectPage*2+subjectNo-1];
    if(!subject)return reply(res,"No subject at that position. Go back and choose another.",true);
    await db(`lite_students?id=eq.${student.id}`,{method:"PATCH",body:JSON.stringify({preferred_subject:subject})});
    const subjectSets=grouped.get(subject)||[];
    let setPage=0;
    while(tokens[cursor]==="9"){setPage++;cursor++;}
-   const showSets=(page)=>reply(res,`${clean(subject,28)} sets ${page+1}:\n${subjectSets.slice(page*4,page*4+4).map((s,i)=>`${i+1}. ${clean(s.title,30)}`).join("\n")}${(page+1)*4<subjectSets.length?"\n9. More sets":""}\n0. ${page>0?"Previous":"Subjects"}`);
+   const showSets=(page)=>reply(res,`${shortText(subject,22)} sets ${page+1}:\n${subjectSets.slice(page*2,page*2+2).map((s,i)=>`${i+1}. ${setLabel(s,subject)}`).join("\n")}${(page+1)*2<subjectSets.length?"\n9. More sets":""}\n0. ${page>0?"Previous":"Subjects"}`);
    if(cursor>=tokens.length)return showSets(setPage);
    if(tokens[cursor]==="0")return setPage>0?showSets(setPage-1):showSubjects(subjectPage);
    const setNo=Number(tokens[cursor++]);
    if(!Number.isInteger(setNo)||setNo<1||setNo>4)return reply(res,"Choose 1-4, 9 for more or 0 to go back.",true);
-   const listed=subjectSets[setPage*4+setNo-1];
+   const listed=subjectSets[setPage*2+setNo-1];
    if(!listed)return reply(res,"No question set at that position. Go back and choose another.",true);
    const full=await getSet(listed.id),set=full[0];
    if(!set)return reply(res,"This MCQ set is no longer published.",true);
@@ -274,12 +263,12 @@ async function ussd(req,res){
     const q=questions[qNo-1];
     if(!q||!Array.isArray(q.options)||q.options.length<2)return reply(res,"This question is unavailable. Please report it on OmpathStudy.",true);
     const stem=clean(q.question,2000);
-    const chunks=stem.match(/[\s\S]{1,125}/g)||["Question text unavailable."];
+    const chunks=splitWords(stem,105);
     for(let page=0;page<chunks.length;page++){
      if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length}\n${chunks[page]}\n1. ${page<chunks.length-1?"More":"Show options"}`);
      if(tokens[cursor++]!=="1")return reply(res,"Enter 1 to continue reading this question.",true);
     }
-    const opts=optionsOf(q).slice(0,4).map((o,i)=>`${i+1}. ${clean(o,30)}`).join("\n");
+    const opts=optionsOf(q).slice(0,4).map((o,i)=>`${i+1}. ${shortText(o,24)}`).join("\n");
     if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length} - Choose answer:\n${opts}\nEnter 1-${Math.min(4,q.options.length)}`);
     const selected=Number(tokens[cursor++]);
     if(!Number.isInteger(selected)||selected<1||selected>Math.min(4,q.options.length))return reply(res,"Invalid answer. Enter one of the option numbers shown.",true);
@@ -287,8 +276,8 @@ async function ussd(req,res){
     if(!Number.isInteger(correctIndex)||correctIndex<0||correctIndex>=q.options.length)return reply(res,"Answer key needs review. Please report this question.",true);
     const isCorrect=selected-1===correctIndex;
     await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qNo-1,selected_option:selected,is_correct:isCorrect})});
-    const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",95);
-    const feedback=`${isCorrect?"Correct!":"Incorrect."}\nAnswer: ${correctIndex+1}. ${clean(q.options[correctIndex],48)}\n${explanation}`;
+    const explanation=shortText(q.explanation||"Review the full explanation on OmpathStudy.",58);
+    const feedback=`${isCorrect?"Correct!":"Incorrect."}\nAnswer: ${correctIndex+1}. ${shortText(q.options[correctIndex],30)}\n${explanation}`;
     if(cursor>=tokens.length)return reply(res,`${feedback}\n1. Next question\n0. Finish set`);
     const action=tokens[cursor++];
     if(action==="0")return reply(res,"Set finished. Thank you for studying with OmpathStudy Lite.",true);
