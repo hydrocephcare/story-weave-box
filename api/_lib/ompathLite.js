@@ -133,7 +133,7 @@ async function ussd(req,res){
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
     if(!encounter)return reply(res,"Your health session expired. Please start again from the main menu.",true);
-    if(["complete","guide_pending"].includes(encounter.status)&&encounter.assessment){
+    if(["complete","guide_pending","referred_urgent"].includes(encounter.status)&&encounter.assessment){
      return reply(res,encounter.preferred_language==="sw"
       ?"Tathmini yako ya awali tayari imekamilika. Tafadhali fuata ushauri uliotolewa na mhudumu wa afya. Ikiwa dalili ni kali au zinazidi, tafuta huduma ya dharura sasa."
       :"Your preliminary assessment has already been completed. Please follow the care advice provided. If symptoms are severe or worsening, seek emergency care now.",true);
@@ -183,6 +183,19 @@ async function ussd(req,res){
      await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:[...answers,{question_id:currentQuestion.id,answer}],red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],status:"referred_urgent",urgency_level:"emergency"}});
      return reply(res,encounter.preferred_language==="sw"?"Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni. Ikiwa unaweza, mwombe mtu akusindikize.":"Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment. If possible, ask someone to accompany you.",true);
     }
+    if(answerIndex===0&&answer==="3"){
+     const uncertainAnswers=[...answers,{question_id:currentQuestion.id,answer}];
+     const assessment=buildPreliminaryAssessment({encounter,answers:uncertainAnswers,emergencyFlags:encounter.red_flag_results||[]});
+     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{
+      clarification_answers:uncertainAnswers,
+      assessment,
+      urgency_level:"urgent",
+      status:"referred_urgent"
+     }});
+     return reply(res,encounter.preferred_language==="sw"
+      ?"Ikiwa huna uhakika kuhusu dalili hizi, tafuta huduma ya afya sasa. Dalili kali? Nenda hospitali mara moja."
+      :"If unsure about these emergency signs, seek urgent in-person care now. If any are present, go to hospital immediately.",true);
+    }
     const nextAnswers=[...answers,{question_id:currentQuestion.id,answer}];
     const nextIndex=answerIndex+1;
     if(nextIndex>=questions.length){
@@ -193,7 +206,6 @@ async function ussd(req,res){
       urgency_level:assessment.urgency_level,
       status:encounter.sms_consent===true?"guide_pending":"complete"
      }});
-     const guideQueued=encounter.sms_consent===true;
      const urgent=assessment.urgency_level==="urgent";
      const swMessage=urgent
       ?"Tumepokea. Nenda kituo cha afya leo kwa uchunguzi. Huu si utambuzi. Dalili zikizidi, nenda hospitali sasa."
