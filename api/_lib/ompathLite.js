@@ -4,6 +4,7 @@
  */
 import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
 import { interpretHealthConcern, buildPreliminaryAssessment } from "./ompathLiteClinical.js";
+import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
@@ -104,7 +105,7 @@ async function ussd(req,res){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
     if(!encounter)return reply(res,"Your health session expired. Please start again from the main menu.",true);
     const category=encounter.concern_category||"Other health concern";
-    const questions=[
+    let questions=[
      {id:"emergency_screen",en:"Are you experiencing any emergency symptom now: severe difficulty breathing, chest pain, fainting, seizure, heavy bleeding, or severe/worsening pain?",sw:"Je, una dalili ya dharura sasa: kupumua kwa shida sana, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka?"},
      ...(category==="Pregnancy-related concern"?[
       {id:"pregnancy_status",en:"Are you currently pregnant?",sw:"Je, una ujauzito kwa sasa?"},
@@ -134,19 +135,7 @@ async function ussd(req,res){
      ])
     ];
     const priorAnswers=flow.slice(6,-1);
-    if(category==="Pregnancy-related concern"&&["2","3"].includes(priorAnswers[1])){
-     questions.splice(questions.findIndex(q=>q.id==="gestation"),1);
-     const movementIndex=questions.findIndex(q=>q.id==="pregnancy_movement");
-     if(movementIndex>=0)questions.splice(movementIndex,1);
-     const bleedingQuestion=questions.find(q=>q.id==="pregnancy_bleeding_or_fluid");
-     if(bleedingQuestion){
-      bleedingQuestion.en="Are you having vaginal bleeding?";
-      bleedingQuestion.sw="Je, unatokwa damu ukeni?";
-     }
-    }else if(category==="Pregnancy-related concern"&&["1","4"].includes(priorAnswers[2])){
-     const movementIndex=questions.findIndex(q=>q.id==="pregnancy_movement");
-     if(movementIndex>=0)questions.splice(movementIndex,1);
-    }
+    questions=adaptPregnancyQuestions(questions,category,priorAnswers);
     const answers=priorAnswers.map((value,index)=>({question_id:questions[index]?.id,answer:value})).filter(item=>item.question_id);
     const answerIndex=flow.length-7;
     const currentQuestion=questions[answerIndex];
@@ -180,14 +169,7 @@ async function ussd(req,res){
      return reply(res,encounter.preferred_language==="sw"?swMessage:enMessage,true);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
-    const nextQuestions=questions.slice();
-    if(category==="Pregnancy-related concern"&&["2","3"].includes(nextAnswers[1])){
-     for(const id of ["gestation","pregnancy_movement"]){const i=nextQuestions.findIndex(q=>q.id===id);if(i>=0)nextQuestions.splice(i,1);}
-     const bleed=nextQuestions.find(q=>q.id==="pregnancy_bleeding_or_fluid");
-     if(bleed){bleed.en="Are you having vaginal bleeding?";bleed.sw="Je, unatokwa damu ukeni?";}
-    }else if(category==="Pregnancy-related concern"&&["1","4"].includes(nextAnswers[2])){
-     const i=nextQuestions.findIndex(q=>q.id==="pregnancy_movement");if(i>=0)nextQuestions.splice(i,1);
-    }
+    const nextQuestions=adaptPregnancyQuestions(questions,category,nextAnswers);
     const nextQuestion=nextQuestions[nextIndex];
     if(!nextQuestion)return reply(res,"Your answers have been recorded. Please arrange an in-person health assessment.",true);
     return reply(res,languagePrompt(encounter.preferred_language,nextQuestion)+"\n"+(nextQuestion.id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure":nextQuestion.id==="duration"||nextQuestion.id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
