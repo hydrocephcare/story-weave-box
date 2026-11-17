@@ -5,28 +5,11 @@
 import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
 import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteClinical.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
+import { shortUssdText, splitUssdWords } from "./ompathLiteUssdFormat.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
-const shortText = (value,max=40) => {
- const text=clean(value,2000).replace(/\s+/g," ");
- max=/[^\x00-\x7F]/.test(text)?Math.min(max,14):max;
- if(text.length<=max)return text;
- const cut=text.slice(0,max+1),boundary=cut.lastIndexOf(" ");
- return (boundary>Math.floor(max*0.55)?cut.slice(0,boundary):text.slice(0,max)).replace(/[.,;: -]+$/,"")+"...";
-};
-function splitWords(value,max=105){
- const source=String(value??"");
- if(/[^\x00-\x7F]/.test(source))max=Math.min(max,48);
- const words=source.trim().split(/\s+/).filter(Boolean),chunks=[];
- let line="";
- for(const word of words){
-  if(!line){line=word;continue;}
-  if((line+" "+word).length<=max)line+=" "+word;
-  else{chunks.push(line);line=word;}
- }
- if(line)chunks.push(line);
- return chunks.length?chunks:["Question text unavailable."];
-}
+const shortText=shortUssdText;
+const splitWords=splitUssdWords;
 const setLabel=(set,subject)=>{
  let label=clean(set.title,180).replace(/^weekly\s+year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").trim();
  if(!label||label.toLowerCase()===subject.toLowerCase())label="Weekly "+subject;
