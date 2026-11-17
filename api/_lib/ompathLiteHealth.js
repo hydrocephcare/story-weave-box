@@ -119,7 +119,6 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   if (typeof patch.concern_category === "string") allowed.concern_category = clean(patch.concern_category, 80);
   if (typeof patch.original_message === "string") allowed.original_message = clean(patch.original_message, 1200);
   if (typeof patch.normalized_summary === "string") allowed.normalized_summary = clean(patch.normalized_summary, 1200);
-  if (typeof patch.guide_url === "string" && patch.guide_url.startsWith("https://lite.ompathstudy.com/api/lite?task=health-guide&token=")) allowed.guide_url = patch.guide_url.slice(0, 500);
   if (typeof patch.sms_sent_at === "string" && !Number.isNaN(Date.parse(patch.sms_sent_at))) allowed.sms_sent_at = patch.sms_sent_at;
   if (Array.isArray(patch.clarification_answers) && patch.clarification_answers.length <= 5 &&
       patch.clarification_answers.every((item) => item && typeof item === "object" && !Array.isArray(item) &&
