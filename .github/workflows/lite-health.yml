@@ -54,7 +54,8 @@ jobs:
           api/_lib/ompathLiteHealth.guide.test.js
           api/_lib/ompathLiteResources.test.js
           api/_lib/ompathLiteUssdFormat.test.js
-          api/_lib/ompathLiteWeb.test.js\n          api/_lib/ompathLite.test.js
+          api/_lib/ompathLiteWeb.test.js
+          api/_lib/ompathLite.test.js
       - name: Build Lite frontend and Pages functions
         env:
           VERCEL: "1"
