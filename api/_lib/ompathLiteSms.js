@@ -251,9 +251,8 @@ export async function processPendingHealthGuideSms(limit = 10) {
    }
   } catch {
    failed++;
-   if (tokenHash) {
-    try { await db("lite_health_guide_tokens?token_hash=eq." + tokenHash, { method: "PATCH", body: JSON.stringify({ revoked_at: new Date().toISOString() }) }); } catch {}
-   }
+   // A provider timeout may happen after it accepted the SMS. Keep the token
+   // valid so a message already in flight never contains a dead link.
    if (claimed) {
     try { await db("lite_health_encounters?id=eq." + encodeURIComponent(encounter.id), { method: "PATCH", body: JSON.stringify({ status: "guide_pending" }) }); } catch {}
    }
