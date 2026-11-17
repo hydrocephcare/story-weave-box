@@ -1,122 +1,114 @@
-# OmpathStudy Health Assist — implementation blueprint
+# OmpathStudy Lite — Health Support specification
 
 ## Product definition
 
-OmpathStudy Lite is the low-bandwidth access channel. The main OmpathStudy platform remains the source of published medical knowledge, patient-facing articles, MCQs and learning resources. Health Assist is initially focused on women's and maternal health, with an architecture that can later support broader health concerns. The learning pathway remains available to anyone.
+OmpathStudy Lite is a focused, low-bandwidth Health Support channel. Its public home page and USSD main menu lead directly to symptom intake and preliminary triage. It is not a medical-learning portal.
+
+The main OmpathStudy website remains the learning platform and the source of medical notes, MCQs, past papers, flashcards and full study resources. Lite links learners to https://www.ompathstudy.com rather than duplicating those features.
+
+The first structured pathways focus on pregnancy and maternity concerns, menstrual problems, lower abdominal pain, vaginal discharge and bleeding. Other symptoms receive a conservative intake summary and clear referral advice; they are not forced into a false diagnosis.
 
 ## User journeys
 
+### Lite home page
+
+1. Health Support intake.
+2. Emergency warning-sign screen.
+3. Adaptive symptom questions based on the selected concern.
+4. Preliminary clinical impression, differential diagnoses, urgency and recommended next steps.
+5. Links to reviewed patient-facing OmpathStudy resources where relevant.
+6. Link to the main OmpathStudy website for medical learning.
+
+No MCQ bank, learner registration, learning progress or daily learning SMS is presented in Lite.
+
 ### Main USSD menu
 
-1. Health support / report a concern
-2. Pregnancy and maternal health
-3. Women's reproductive health
-4. Learn about health
-5. Practise MCQs
-6. My activity / saved links
-7. Register / preferences
+1. Health support.
+2. Help and information.
 
-Registration must be lightweight and must not require a name unless it is genuinely needed. Use the caller's verified phone number as the channel identifier, subject to informed consent.
+The health intake obtains consent, language preference and the minimum information needed for the current enquiry. It does not ask for a person's name. Health answers are retained for up to 30 days. The current web experience is English; the USSD flow supports English and Kiswahili.
 
 ### Navigation contract
 
 - 0: go back exactly one menu step.
 - 00: return to the main menu.
-- 9: next page where pagination is available.
-- 8: previous page where pagination is available.
-- Numeric options are the default; use letters only where they make a menu shorter or clearer.
+- Numeric options are the default.
 - Every screen states the valid inputs.
 - Invalid input redisplays the same screen with a concise correction.
 - Back navigation preserves prior answers and selections.
 - Do not silently discard a completed encounter when a USSD session expires.
 - Keep menus short and within Africa's Talking/USSD display constraints.
 
-### Health concern journey
+## Health assessment workflow
 
-1. Obtain consent and preferred language.
-2. Accept the user's description in supported natural language, including misspellings, incomplete phrases, mixed English/Kiswahili/Sheng and poorly ordered words where text input is supported.
-3. Detect language and normalise meaning without changing or inventing clinical facts.
-4. Run deterministic emergency red-flag screening before routine AI clarification.
-5. Search relevant OmpathStudy resources and approved clinical guidance.
-6. Ask up to five adaptive, symptom-specific clarification questions. Ask fewer when sufficient information is available. Questions should use short numeric options by default; permit a short free-text response only when necessary.
-7. Re-check red flags after every answer. An emergency response interrupts the ordinary flow and gives clear urgent-care instructions.
-8. Generate a preliminary assessment: possible explanations, uncertainty, urgency/level of care, and safe next steps. Never present it as a confirmed diagnosis.
-9. Generate or select a patient-friendly guide on the main OmpathStudy domain.
-10. Send an SMS containing the secure OmpathStudy link, concise safety advice and a verified support contact where available.
+1. Obtain explicit consent before storing health information.
+2. Capture the main concern and a short symptom description. Do not request names or unnecessary identifiers.
+3. Run deterministic emergency phrase screening before routine clarification.
+4. Ask a short emergency warning-sign question. A positive or uncertain answer interrupts routine questioning and provides urgent-care advice.
+5. Ask no more than four additional adaptive questions (five total including the emergency screen). Questions must use answer formats that match the options displayed.
+6. Re-evaluate urgency using the original symptom description and structured answers.
+7. Generate a preliminary clinical impression, relevant differentials, rationale, urgency, recommended next steps and likely clinician evaluation.
+8. Retrieve only published, reviewed patient-facing OmpathStudy resources. Medical-school notes, MCQs and past papers are not patient-care references.
+9. Clearly state what is unknown and that no examination, vital signs or investigations have been performed.
 
-### Learning journey
+## Clinical safety and interpretation
 
-- Keep existing registration, year/subject/set selection, MCQs, answer feedback, explanations and attempt tracking.
-- Health support must not displace or hide the learning/MCQ journey.
-- The same published OmpathStudy MCQ sets remain the only source of questions and explanations.
+The current assessment engine is deterministic and rule-based. It does not make a confirmed diagnosis and does not use a generative AI model to diagnose a patient. Its output is an intake-level clinical impression and triage aid.
 
-## AI and clinical architecture
+The engine must:
+- Distinguish reported facts from unknown information.
+- Never infer pregnancy, gestational age, severity, duration or other facts that the user has not supplied.
+- Never downgrade an emergency flag because of a later reassuring answer.
+- Escalate uncertainty when it affects safety.
+- Avoid listing a differential as though it were confirmed.
+- Recommend examination and investigations only as clinician-directed possibilities, not as tests already performed.
+- Never prescribe treatment or tell a user to delay emergency care to finish the intake.
 
-Separate the AI into explicit stages:
-1. Language understanding and symptom extraction.
-2. Structured encounter representation with provenance and uncertainty.
-3. Deterministic safety rules for emergency signs.
-4. Retrieval from approved OmpathStudy resources and reviewed clinical sources.
-5. Adaptive question selection (maximum five routine clarification questions).
-6. Preliminary assessment generation.
-7. Patient-friendly article generation in the user's preferred language.
+The initial structured pathways are not a substitute for clinician validation. They require review by qualified clinicians before broad production use, and should be expanded only with test cases and clinical sign-off.
 
-The AI must distinguish reported facts, inferred interpretations and unknown information. It must not infer pregnancy, gestational age, severity, duration or other clinical facts that the user has not supplied. If information is insufficient, it must say so and recommend appropriate assessment rather than force a diagnosis.
+## Patient resources and SMS
 
-Medical-school notes are not automatically patient-ready. Use them as retrieval sources, then generate patient-facing explanations against reviewed content templates and clinical safety rules. High-risk pathways and patient-facing templates require qualified clinical review before production use.
-
-## Article and SMS contract
-
-- All guides live on the main OmpathStudy domain, never on the Lite subdomain.
-- Public reviewed educational articles and private encounter-specific guides are separate content types.
-- Private guides use random, unguessable, expiring access tokens; do not put phone numbers or symptoms in URLs.
-- Opening an SMS link first verifies access, displays a brief “Thank you” page, then redirects to the guide. Provide a manual Open guide link if redirect is unavailable.
-- SMS must use discreet wording and avoid revealing sensitive symptoms in notification previews.
+- Reviewed patient-facing guides are retrieved from the main OmpathStudy content source.
+- Private guide links use random, unguessable, expiring access tokens; do not put phone numbers or symptoms in URLs.
+- SMS delivery is not offered in the current web intake or USSD flow. Do not promise an SMS unless the user explicitly opts in and the live provider credentials and scheduled delivery path have been verified.
+- If patient-guide SMS is enabled later, use discreet wording, honour STOP/opt-out, and revoke active guide tokens on opt-out.
 - Include a support number only after OmpathStudy designates and verifies a staffed contact. Do not imply 24/7 clinical coverage unless it exists.
-- SMS sending requires explicit consent; STOP/opt-out must be honoured.
-
-## Language and accessibility
-
-- First validate English and Kiswahili end-to-end.
-- Add Sheng and additional Kenyan languages only after translation and clinical terminology review.
-- Keep the original user message alongside the normalised interpretation for audit.
-- Ask a clarification question when translation confidence is low or a phrase has materially different clinical meanings.
-- Respond in the user's selected/preferred language.
-- Use numeric options as the default for speed and compatibility with basic phones.
 
 ## Privacy, security and governance
 
-- Obtain informed consent before collecting or processing health information and before sending personalised SMS links.
+- Obtain informed consent before collecting or processing health information.
 - Collect only information required for the current purpose.
-- Keep health encounters separate from ordinary learning profiles where feasible.
-- Enforce server-side access control, least privilege, RLS where applicable, and never expose Supabase service-role credentials to clients.
-- Encrypt transport, restrict staff access, log access to private guides, set retention/deletion rules and provide a privacy contact.
+- Health encounter tables remain server-only with RLS enabled and no anon/authenticated table access.
+- Keep Supabase service-role credentials server-side.
+- Use least-privilege admin access. Admin activity views should avoid displaying phone numbers and symptom narratives unless a separately approved clinical-review workflow requires them.
+- Retain health encounters for no more than 30 days unless a documented legal/clinical requirement requires otherwise.
 - Do not use encounter content for marketing or unrelated profiling.
 - Do not make emergency care conditional on completing questions or receiving an SMS.
 - The service is informational and does not replace clinical examination, testing, diagnosis or treatment.
 
 ## Delivery sequence
 
-1. Establish schema, consent, encounter persistence, navigation state and test fixtures.
-2. Implement the USSD menu and shared navigation engine without regressing existing MCQs.
-3. Implement the deterministic emergency screening layer and reviewed symptom pathways.
-4. Connect language interpretation, OmpathStudy retrieval and adaptive questions.
-5. Add preliminary assessment and patient-friendly guide generation on the main domain.
-6. Add secure guide access, thank-you/redirect experience and SMS delivery.
-7. Add admin review, audit, analytics, monitoring and clinical governance.
-8. Validate with clinicians and users, test language variants and USSD session edge cases, then enable production traffic gradually.
+1. Preserve the main OmpathStudy deployment on Vercel and the existing Supabase project.
+2. Make Health Support the Lite home page and USSD main menu.
+3. Remove the Lite learning/MCQ experience and redirect learners to the main website.
+4. Integrate encounter persistence, consent, red-flag screening and the structured assessment engine.
+5. Test every concern pathway, adaptive branch, emergency response, invalid answer and USSD back-navigation case.
+6. Add admin monitoring with de-identified encounter metadata.
+7. Verify resource retrieval, retention cleanup and any explicitly enabled patient-guide SMS queue.
+8. Obtain clinical review before expanding diagnostic scope or enabling broad production use.
 
 ## Acceptance criteria
 
-- A user can reach either health support or MCQ learning from the main menu.
-- 0 goes back one step and 00 returns to the main menu throughout all menus and question flows.
-- Numeric selections are the default and invalid input does not lose progress.
-- Up to five adaptive clarification questions are asked; fewer are used when appropriate.
-- Emergency red flags interrupt routine questioning and trigger urgent-care advice.
-- Mixed-language, misspelt and incomplete descriptions are interpreted conservatively, with uncertainty preserved.
-- A preliminary assessment is never labelled a confirmed diagnosis.
-- A guide is served from the main OmpathStudy domain using a protected link.
-- The link shows a thank-you state and then opens the guide.
-- SMS is sent only with consent and contains the guide link plus verified support contact details when available.
-- Existing MCQ content and attempt tracking continue to work.
-- No change is made to the main production deployment or unrelated DNS/Cloudflare resources as part of Lite development.
+- Lite opens directly to Health Support.
+- No MCQ, study-year, learning-progress or daily learning SMS experience is available in Lite.
+- The main OmpathStudy website remains the learning destination.
+- USSD has only Health Support and Help/Information at the main menu.
+- Consent is obtained before health information is stored.
+- Emergency warning signs interrupt routine questioning.
+- Question answer formats match the options presented, and adaptive pregnancy questions remain correctly aligned with their answers.
+- Up to five questions are asked, including the emergency screen.
+- Completed assessments include an impression, differential diagnoses, urgency, rationale, recommended next steps and clinician evaluation suggestions.
+- The assessment is never labelled a confirmed diagnosis.
+- Reviewed patient-facing resources are linked when relevant.
+- Health encounters are protected by server-side access and expire after 30 days.
+- No change is made to the main production deployment, main domain or unrelated Cloudflare resources as part of Lite development.
