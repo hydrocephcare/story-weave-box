@@ -25,11 +25,11 @@ async function ussd(req,res){
   if(!text) return reply(res,mainMenu);
   if(parts[0]==="1"){
    if(parts.length===1) return reply(res,"Enter your full name:");
-   if(parts.length===2) return reply(res,"Select your MBChB year:\n1. Year 1\n2. Year 2\n3. Year 3\n4. Year 4\n5. Year 5\n6. Year 6");
+   if(parts.length===2) return reply(res,"Select your study year:\n1. Year 1\n2. Year 2\n3. Year 3\n4. Year 4\n5. Year 5\n6. Year 6");
    const name=clean(parts[1],80), year=Number(parts[2]);
    if(!name||year<1||year>6) return reply(res,"Invalid details. Dial again to register.",true);
-   await db("lite_students?on_conflict=phone_number",{method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({phone_number:phone,full_name:name,study_level:`MBChB Year ${year}`,updated_at:new Date().toISOString()})});
-   return reply(res,`Welcome to OmpathStudy Lite, ${name}. Your MBChB Year ${year} profile is saved. Dial again to study.`,true);
+   await db("lite_students?on_conflict=phone_number",{method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({phone_number:phone,full_name:name,study_level:`Year ${year}`,updated_at:new Date().toISOString()})});
+   return reply(res,`Welcome to OmpathStudy Lite, ${name}. Your Year ${year} profile is saved. Dial again to study.`,true);
   }
   if(parts[0]==="2"){
    const sets=await getSets();
