@@ -41,10 +41,15 @@ const subjectOf=s=>{
 const yearMatches=(s,year)=>new RegExp(`\\bYear\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`);
 function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}
 function languagePrompt(language,q){return language==="sw"?q.sw:q.en;}
-function assessmentReply(assessment, language, emergency = false) {
+function assessmentReply(assessment, language) {
  const impression=shortText(assessment?.provisional_diagnosis||"Cause not yet clear; clinical assessment is needed.",105);
- if(language==="sw") return (emergency?"DHARURA: Nenda hospitali sasa. ":"Tathmini ya awali: ")+impression+". Si utambuzi wa mwisho.";
- return (emergency?"EMERGENCY: Go to hospital now. ":"Likely cause: ")+impression+". Provisional only; clinician confirmation needed.";
+ const level=assessment?.urgency_level;
+ if(language==="sw") {
+  const heading=level==="emergency"?"DHARURA: Nenda hospitali sasa. ":level==="urgent"?"HARAKA: Tafuta huduma ya afya leo. ":"Tathmini ya awali: ";
+  return heading+impression+". Si utambuzi wa mwisho.";
+ }
+ const heading=level==="emergency"?"EMERGENCY: Go to hospital now. ":level==="urgent"?"URGENT: Attend a health facility today. ":"Preliminary impression: ";
+ return heading+impression+". Not a confirmed diagnosis; clinician assessment is required.";
 }
 async function ussd(req,res){
  let payload=req.body||{};
