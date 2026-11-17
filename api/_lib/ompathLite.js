@@ -178,7 +178,7 @@ async function ussd(req,res){
        if(guides.length&&guides[0].slug){
         const issued=await createHealthGuideToken({encounterId:encounter.id,resourceSlug:guides[0].slug});
         const guideUrl="https://lite.ompathstudy.com/api/lite?task=health-guide&token="+issued.token;
-        await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{guide_url:guideUrl,status:"guide_pending"}});
+        await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{status:"guide_pending"}});
         const delivery=await sendHealthGuideLink({
          to:phone,
          link:guideUrl,
@@ -192,7 +192,7 @@ async function ussd(req,res){
        }else guideUnavailable=true;
       }catch(error){
        guideUnavailable=true;
-       console.error("Private patient guide delivery unavailable:",error.message);
+       console.error("Private patient guide delivery unavailable.");
       }
      }
      const urgent=assessment.urgency_level==="urgent";
