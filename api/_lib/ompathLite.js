@@ -279,6 +279,7 @@ async function ussd(req,res){
     }
     const selected=Number(tokens[cursor++]);
     if(!Number.isInteger(selected)||selected<1||selected>Math.min(4,q.options.length))return reply(res,"Invalid answer. Enter one of the option numbers shown.",true);
+    if(q.correct_answer===null||q.correct_answer===undefined||String(q.correct_answer).trim()==="")return reply(res,"Answer key needs review. Please report this question.",true);
     const rawCorrect=Number(q.correct_answer),correctIndex=rawCorrect>=0&&rawCorrect<q.options.length?rawCorrect:rawCorrect-1;
     if(!Number.isInteger(correctIndex)||correctIndex<0||correctIndex>=q.options.length)return reply(res,"Answer key needs review. Please report this question.",true);
     const isCorrect=selected-1===correctIndex;
