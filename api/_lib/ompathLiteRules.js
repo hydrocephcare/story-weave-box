@@ -182,6 +182,7 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     if (pregnancyPossible || positive("bleeding_amount") || positive("pain")) urgency = urgency === "emergency" ? urgency : "urgent";
     rationale = "The source, amount, pregnancy status, recent delivery and associated pain determine the differential diagnosis.";
   } else {
+    if (positive("worsening")) urgency = urgency === "emergency" ? urgency : "urgent";
     leadingImpression = "Unclassified symptom presentation — provisional cause cannot yet be narrowed";
     differentials = ["Infection or inflammation", "A condition affecting the relevant organ system", "Medication-related or other systemic cause"];
   }
