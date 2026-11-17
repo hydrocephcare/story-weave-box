@@ -181,7 +181,7 @@ async function ussd(req,res){
         language:encounter.preferred_language,
         limit:1
        });
-       if(guides.length&&guides[0].slug){
+       if(encounter.preferred_language==="en"&&guides.length&&guides[0].slug){
         const issued=await createHealthGuideToken({encounterId:encounter.id,resourceSlug:guides[0].slug});
         const guideUrl="https://lite.ompathstudy.com/api/lite?task=health-guide&token="+issued.token;
         await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{status:"guide_pending"}});
