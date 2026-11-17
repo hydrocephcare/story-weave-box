@@ -14,12 +14,14 @@ async function db(path,options={}){
  const r=await fetch(`${url.replace(/\/$/,"")}/rest/v1/${path}`,{...options,headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers}});
  const body=await r.text();if(!r.ok){console.error("Lite SMS database error",r.status,body.slice(0,250));throw new Error("SMS database request failed");}return body?JSON.parse(body):[];
 }
-async function sendSms(to,message){
- const username=process.env.AT_USERNAME,apiKey=process.env.AT_API_KEY;
- if(!username||!apiKey)throw new Error("Africa's Talking SMS credentials are not configured");
- const sandbox=process.env.AT_ENV==="sandbox";
+async function sendSms(to,message,settings){
+ const sandbox=settings?.environment!=="production";
+ const username=sandbox?process.env.AT_USERNAME:process.env.AT_LIVE_USERNAME;
+ const apiKey=sandbox?process.env.AT_API_KEY:process.env.AT_LIVE_API_KEY;
+ if(!username||!apiKey)throw new Error(sandbox?"Sandbox credentials are not configured in Cloudflare.":"Live credentials are not configured in Cloudflare.");
  const form=new URLSearchParams({username,to,message});
- if(process.env.AT_SENDER_ID)form.set("from",process.env.AT_SENDER_ID);
+ const sender=settings?.sender_id||process.env.AT_SENDER_ID;
+ if(sender)form.set("from",sender);
  const r=await fetch(sandbox?"https://api.sandbox.africastalking.com/version1/messaging":"https://api.africastalking.com/version1/messaging",{method:"POST",headers:{"apiKey":apiKey,Accept:"application/json","Content-Type":"application/x-www-form-urlencoded"},body:form});
  const body=await r.text();if(!r.ok)throw new Error(`Africa's Talking ${r.status}: ${body.slice(0,200)}`);
  const data=JSON.parse(body),recipient=data?.SMSMessageData?.Recipients?.[0];
@@ -49,6 +51,9 @@ function authorized(req){
 }
 async function sendDaily(req,res){
  if(!authorized(req))return res.status(401).json({error:"Unauthorized"});
+ const settingRows=await db("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1");
+ const settings=settingRows[0]||{enabled:false,environment:"sandbox",sender_id:null};
+ if(!settings.enabled)return res.status(200).json({sent:0,skipped:0,failed:0,date:today(),disabled:true});
  const students=await db("lite_students?select=id,phone_number,study_level&sms_opt_in=eq.true&sms_opt_in_at=not.is.null&limit=500");
  const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
  const delivered=await db(`lite_sms_deliveries?select=student_id&delivery_date=eq.${today()}&limit=1000`);
@@ -63,7 +68,7 @@ async function sendDaily(req,res){
    const code=randomBytes(4).toString("hex").toUpperCase();
    const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\n");
    const message=`OmpathStudy Lite | Daily MCQ\n${clean(item.q.question,170)}\n${options}\nReply: ${code} 1-${item.q.options.length}. STOP to unsubscribe.`;
-   const recipient=await sendSms(s.phone_number,message);
+   const recipient=await sendSms(s.phone_number,message,settings);
    await db("lite_sms_deliveries",{method:"POST",body:JSON.stringify({student_id:s.id,mcq_set_id:item.set.id,question_index:item.index,delivery_date:today(),short_code:code,provider_status:recipient.status||"Accepted",provider_message_id:recipient.messageId||null})});
    sent++;
   }catch(e){failed++;console.error("Lite SMS send failed",s.id,e.message);}
@@ -86,14 +91,16 @@ async function sendTest(req,res){
 }
 /** One fixed-recipient sandbox test, callable only after the Lite admin API verifies an administrator. */
 export async function sendAdminSandboxTest(){
- if(process.env.AT_ENV!=="sandbox")throw new Error("Test SMS is disabled unless Africa's Talking is in sandbox mode.");
+ const rows=await db("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1");
+ const settings=rows[0]||{enabled:false,environment:"sandbox",sender_id:null};
+ if(settings.environment!=="sandbox")throw new Error("Sandbox test is available only when the Lite SMS environment is set to Sandbox.");
  const to="+254115475543";
  const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
  const item=await pickQuestion("4",sets);
  if(!item)throw new Error("No eligible published Year 4 MCQ was found.");
  const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\n");
  const message=`OmpathStudy Lite | SMS TEST\n${clean(item.q.question,170)}\n${options}\nThis is a sandbox test. Reply is not recorded.`;
- const recipient=await sendSms(to,message);
+ const recipient=await sendSms(to,message,settings);
  return {ok:true,environment:"sandbox",to,status:recipient.status||"Accepted",messageId:recipient.messageId||null};
 }
 function parseBody(req){if(typeof req.body==="string")return Object.fromEntries(new URLSearchParams(req.body));if(req.body&&typeof req.body==="object")return req.body;if(typeof req.rawBody==="string")return Object.fromEntries(new URLSearchParams(req.rawBody));return {};}
