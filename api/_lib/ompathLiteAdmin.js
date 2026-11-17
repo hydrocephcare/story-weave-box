@@ -23,6 +23,7 @@ export default async function liteAdmin(req,res){
    if(req.body?.action==="save-settings"){
     const environment=req.body.environment==="production"?"production":"sandbox";
     const enabled=req.body.enabled===true;
+    if(enabled&&environment!=="production")return json(res,400,{error:"Scheduled learner SMS can only be enabled in Live/Production. Sandbox is reserved for one-recipient tests."});
     const senderId=String(req.body.sender_id||"").trim().slice(0,32)||null;
     if(enabled&&environment==="production"&&(!process.env.AT_LIVE_USERNAME||!process.env.AT_LIVE_API_KEY))
      return json(res,400,{error:"Live SMS cannot be enabled until AT_LIVE_USERNAME and AT_LIVE_API_KEY are configured as Cloudflare Pages secrets."});
