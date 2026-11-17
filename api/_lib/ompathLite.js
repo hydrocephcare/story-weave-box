@@ -11,7 +11,8 @@ async function db(path, options={}) {
   const r=await fetch(`${base.replace(/\/$/,"")}/rest/v1/${path}`,{...options,headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers}});
   const body=await r.text(); if(!r.ok) throw new Error(`Supabase request failed (${r.status})`); return body?JSON.parse(body):[];
 }
-const getSets=()=>db("mcq_sets?select=id,title,category,unit,questions,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=8");
+const getSets=()=>db("mcq_sets?select=id,title,category,unit,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=8");
+const getSet=(id)=>db(`mcq_sets?select=id,title,questions&id=eq.${encodeURIComponent(id)}&published=eq.true&deleted_at=is.null&limit=1`);
 function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}
 async function ussd(req,res){
  let payload=req.body||{};
@@ -39,8 +40,10 @@ async function ussd(req,res){
    }
    const setNo=Number(parts[1]);
    if(setNo===0) return reply(res,mainMenu,true);
-   const set=sets[setNo-1];
-   if(!set) return reply(res,"Invalid set. Dial again and choose a listed number.",true);
+   const listed=sets[setNo-1];
+   if(!listed) return reply(res,"Invalid set. Dial again and choose a listed number.",true);
+   const full=await getSet(listed.id); const set=full[0];
+   if(!set) return reply(res,"This MCQ set is no longer published.",true);
    const questions=Array.isArray(set.questions)?set.questions:[];
    if(!questions.length) return reply(res,"This set has no available questions.",true);
    const qIndex=parts.length>=3?Number(parts[2])-1:0;
