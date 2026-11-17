@@ -29,4 +29,26 @@ describe("OmpathStudy Lite emergency phrase screening", () => {
   it("does not invent an emergency from a mild symptom", () => {
     expect(detectEmergencyLanguage("I have a mild headache")).toHaveLength(0);
   });
+
+  it("flags common shortness-of-breath wording", () => {
+    expect(detectEmergencyLanguage("I have shortness of breath")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "severe_breathing_difficulty", positive: true })]),
+    );
+  });
+
+  it("flags chest pain even when the caller does not describe its severity", () => {
+    expect(detectEmergencyLanguage("I have chest pain")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "chest_pain", positive: true })]),
+    );
+  });
+
+  it("does not flag explicitly denied chest pain", () => {
+    expect(detectEmergencyLanguage("I do not have chest pain")).toHaveLength(0);
+  });
+
+  it("flags common Kiswahili inability-to-breathe wording", () => {
+    expect(detectEmergencyLanguage("Siwezi kupumua")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "severe_breathing_difficulty", positive: true })]),
+    );
+  });
 });
