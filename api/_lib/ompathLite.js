@@ -64,13 +64,14 @@ async function ussd(req,res){
      :"Phone and health answers are stored securely for 30 days. SMS only if you agree. Not emergency care. No names.\n1. Agree\n2. Cancel\n0. Back");
    }
    if(flow.length===3){
-    if(flow[2]!=="1")return reply(res,"Consent is required to continue.\n1. Agree\n2. Cancel\n0. Back",true);
+    if(flow[2]==="2")return reply(res,"Cancelled. No health information was saved.",true);
+    if(flow[2]!=="1")return reply(res,flow[1]==="2"?"Chagua 1 kukubali au 2 kukataa.\\n0. Rudi":"Choose 1 to agree or 2 to cancel.\\n0. Back");
     return reply(res,flow[1]==="2"
      ?"Chagua tatizo kuu:\n1. Ujauzito\n2. Hedhi\n3. Maumivu ya tumbo la chini\n4. Uchafu ukeni\n5. Kutokwa damu\n6. Nyingine"
      :"Choose your main concern:\n1. Pregnancy\n2. Period problem\n3. Lower tummy pain\n4. Vaginal discharge\n5. Bleeding\n6. Other");
    }
    if(flow.length===4){
-    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose a number from 1 to 6.\n0. Back");
+    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,flow[1]==="2"?"Chagua namba 1 hadi 6.\n0. Rudi":"Choose a number from 1 to 6.\n0. Back");
     return reply(res,flow[1]==="2"
      ?"Eleza dalili kwa kifupi. Andika 1 kuruka.\n0. Rudi"
      :"Briefly describe your symptoms. Enter 1 to skip.\n0. Back");
@@ -81,7 +82,7 @@ async function ussd(req,res){
      :"Send a guide link by SMS if one is available?\n1. Yes\n2. No\n0. Back");
    }
    if(flow.length===6){
-    if(!["1","2"].includes(flow[5]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\n0. Back");
+    if(!["1","2"].includes(flow[5]))return reply(res,flow[1]==="2"?"Chagua 1 kwa SMS au 2 bila SMS.\n0. Rudi":"Choose 1 for SMS or 2 for no SMS.\n0. Back");
     const language=flow[1]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
