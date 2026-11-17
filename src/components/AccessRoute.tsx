@@ -33,9 +33,13 @@ export function SignedInRoute({ children }: { children: ReactNode }) {
 
 export function AdminRoute({ children }: { children: ReactNode }) {
   const { user, isAdmin, loading } = useAuth();
+  const location = useLocation();
 
   if (loading) return <AccessLoader />;
-  if (!user) return <Navigate to="/login" replace />;
+  if (!user) {
+    const from = `${location.pathname}${location.search}${location.hash}`;
+    return <Navigate to={`/login?redirect=${encodeURIComponent(from)}`} replace />;
+  }
   if (!isAdmin) return <Navigate to="/" replace />;
 
   return <>{children}</>;
