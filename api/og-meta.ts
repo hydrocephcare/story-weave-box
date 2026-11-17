@@ -738,9 +738,24 @@ async function fetchEssayBySlugOrId(param: string) {
   };
 }
 
+function publicStoryImage(...values: unknown[]): string {
+  const hosts = new Set(["cdn.ompathstudy.com", "ompathstudy.com", "www.ompathstudy.com", "strfwaqvxvkhjbqrwmla.supabase.co"]);
+  for (const value of values) {
+    try {
+      const image = new URL(String(value || ""));
+      if (image.protocol !== "https:" || !hosts.has(image.hostname)) continue;
+      if (!/\\.(?:jpe?g|png)$/i.test(image.pathname)) continue;
+      return image.toString();
+    } catch {
+      // Ignore malformed or non-public image URLs.
+    }
+  }
+  return "";
+}
+
 async function fetchStoryByParam(param: string) {
   const storyId = extractUuidFromParam(param);
-  const cols = "id,title,slug,content,category,cover_image_url,created_at,tags";
+  const cols = "id,title,slug,content,category,cover_image_url,og_image_url,meta_title,meta_description,created_at,tags";
   const rows = await sbFetch(
     "stories",
     `select=${cols}&${storyId ? `id=eq.${encodeURIComponent(storyId)}` : `slug=eq.${encodeURIComponent(param)}`}&published=eq.true&deleted_at=is.null&limit=1`
@@ -861,6 +876,9 @@ function buildHtml(opts: {
   description: string;
   url: string;
   ogImage: string;
+  ogImageType?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
   keywords?: string;
   type?: string;
   schemaJson?: string;
@@ -894,8 +912,9 @@ function buildHtml(opts: {
     <meta property="og:type" content="${type}" />
     <meta property="og:url" content="${url}" />
     <meta property="og:image" content="${img}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:secure_url" content="${img}" />
+    ${opts.ogImageType ? `<meta property="og:image:type" content="${htmlEscape(opts.ogImageType)}" />` : ""}
+    ${(opts.ogImageWidth && opts.ogImageHeight) ? `<meta property="og:image:width" content="${opts.ogImageWidth}" /><meta property="og:image:height" content="${opts.ogImageHeight}" />` : (opts.ogImage.includes("/api/note-card?") ? '<meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />' : "")}
     <meta property="og:image:alt" content="${title}" />
     <meta property="og:site_name" content="OmpathStudy" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -1039,6 +1058,9 @@ export default async function handler(req: Request): Promise<Response> {
     let description =
       "OmpathStudy helps medical and health students study smarter with notes, flashcards, MCQs and exams by year and unit.";
     let ogImage = OG_FALLBACK_IMAGE;
+    let ogImageType = "";
+    let ogImageWidth = 0;
+    let ogImageHeight = 0;
     let keywords =
       "OmpathStudy, medical students Kenya, nursing students Kenya, clinical notes, MCQs, flashcards, exam preparation, medical education Kenya";
     let type = "website";
@@ -1384,8 +1406,20 @@ ${explanationLine}
       const lvl = /^Year\s*(\d)$/i.exec(by ? by[2].trim() : "");
       const photoTag = ((story as { tags?: string[] }).tags || []).find((t) => t.startsWith("photo:"));
       let photo = ""; try { photo = photoTag ? decodeURIComponent(photoTag.slice(6)) : ""; } catch { photo = ""; }
-      const own = story.cover_image_url && !/\/og\/stories\//.test(story.cover_image_url) ? story.cover_image_url : "";
-      ogImage = cardUrl(story.title, lvl ? "Year " + lvl[1] + ": " + (who || "Student story") : who || (by ? by[2].trim() : ""), "Student story", "", own || photo);
+      // WhatsApp and other messaging crawlers are more reliable with the original
+      // public story image than with a generated API URL. Prefer the actual cover.
+      const own = publicStoryImage(story.cover_image_url, story.og_image_url, photo);
+      if (own) {
+        ogImage = own;
+        ogImageType = /\.png$/i.test(new URL(own).pathname) ? "image/png" : "image/jpeg";
+        const dimensions = new URL(own).pathname.match(/(?:^|[-_])(\\d{3,5})x(\\d{3,5})(?:[-_.])/i);
+        if (dimensions) {
+          ogImageWidth = Number(dimensions[1]);
+          ogImageHeight = Number(dimensions[2]);
+        }
+      } else {
+        ogImage = cardUrl(story.title, lvl ? "Year " + lvl[1] + ": " + (who || "Student story") : who || (by ? by[2].trim() : ""), "Student story", "", photo);
+      }
       keywords = "OmpathStudy, medical stories, reflective practice, " + (story.category || "") + ", medical students Kenya";
       type = "article";
       schemaJson = JSON.stringify({
@@ -1426,6 +1460,9 @@ ${explanationLine}
       description,
       url: absoluteUrl,
       ogImage,
+      ogImageType,
+      ogImageWidth,
+      ogImageHeight,
       keywords,
       type,
       schemaJson,
