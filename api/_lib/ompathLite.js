@@ -134,7 +134,7 @@ async function ussd(req,res){
      ])
     ];
     const priorAnswers=flow.slice(6,-1);
-    if(category==="Pregnancy-related concern"&&priorAnswers[1]==="2"){
+    if(category==="Pregnancy-related concern"&&["2","3"].includes(priorAnswers[1])){
      questions.splice(questions.findIndex(q=>q.id==="gestation"),1);
      const movementIndex=questions.findIndex(q=>q.id==="pregnancy_movement");
      if(movementIndex>=0)questions.splice(movementIndex,1);
@@ -181,7 +181,7 @@ async function ussd(req,res){
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
     const nextQuestions=questions.slice();
-    if(category==="Pregnancy-related concern"&&nextAnswers[1]==="2"){
+    if(category==="Pregnancy-related concern"&&["2","3"].includes(nextAnswers[1])){
      for(const id of ["gestation","pregnancy_movement"]){const i=nextQuestions.findIndex(q=>q.id===id);if(i>=0)nextQuestions.splice(i,1);}
      const bleed=nextQuestions.find(q=>q.id==="pregnancy_bleeding_or_fluid");
      if(bleed){bleed.en="Are you having vaginal bleeding?";bleed.sw="Je, unatokwa damu ukeni?";}
