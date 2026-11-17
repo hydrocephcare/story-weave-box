@@ -135,4 +135,29 @@ describe("Lite Health Support web API", () => {
     expect(fetchStub).not.toHaveBeenCalled();
   });
 
+  it("accepts the complete adaptive pregnancy pathway and escalates reduced fetal movement", async () => {
+    stubHealthStorage();
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174004",
+        concern_category: "Pregnancy-related concern",
+        original_message: "I am 30 weeks pregnant",
+        consent_given: true,
+        answers: [
+          { question_id: "emergency_screen", answer: "2" },
+          { question_id: "pregnancy_status", answer: "1" },
+          { question_id: "gestation", answer: "3" },
+          { question_id: "pregnancy_bleeding_or_fluid", answer: "2" },
+          { question_id: "pregnancy_movement", answer: "1" },
+        ],
+      },
+    }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.assessment.urgency_level).toBe("urgent");
+    expect(res.body.assessment.provisional_diagnosis).toMatch(/reduced fetal movements/i);
+  });
+
 });
