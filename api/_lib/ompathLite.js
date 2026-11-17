@@ -65,7 +65,7 @@ async function ussd(req,res){
    }
    if(flow.length===3){
     if(flow[2]==="2")return reply(res,"Cancelled. No health information was saved.",true);
-    if(flow[2]!=="1")return reply(res,flow[1]==="2"?"Chagua 1 kukubali au 2 kukataa.\\n0. Rudi":"Choose 1 to agree or 2 to cancel.\\n0. Back");
+    if(flow[2]!=="1")return reply(res,flow[1]==="2"?"Chagua 1 kukubali au 2 kukataa.\n0. Rudi":"Choose 1 to agree or 2 to cancel.\n0. Back");
     return reply(res,flow[1]==="2"
      ?"Chagua tatizo kuu:\n1. Ujauzito\n2. Hedhi\n3. Maumivu ya tumbo la chini\n4. Uchafu ukeni\n5. Kutokwa damu\n6. Nyingine"
      :"Choose your main concern:\n1. Pregnancy\n2. Period problem\n3. Lower tummy pain\n4. Vaginal discharge\n5. Bleeding\n6. Other");
