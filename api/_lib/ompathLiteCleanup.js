@@ -17,7 +17,7 @@ export default async function handler(req, res) {
   try {
     const [retention, guideDelivery] = await Promise.all([
       deleteExpiredHealthData(),
-      processPendingHealthGuideSms(10),
+      processPendingHealthGuideSms(3),
     ]);
     return res.status(200).json({ ok: true, retention, guideDelivery });
   } catch {
