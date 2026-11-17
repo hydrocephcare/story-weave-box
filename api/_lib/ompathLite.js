@@ -276,9 +276,9 @@ async function ussd(req,res){
     let optionPage=0;
     while(true){
      const optionRows=optionList.slice(optionPage*2,optionPage*2+2)
-      .map((option,index)=>String(optionPage*2+index+1)+". "+shortText(option,24)).join("\\n");
-     const optionPrompt="Q"+qNo+"/"+questions.length+" options "+(optionPage+1)+"/"+optionPages+":\\n"+optionRows;
-     if(cursor>=tokens.length)return reply(res,optionPrompt+(optionPage<optionPages-1?"\\n9. More options":"\\nChoose 1-4")+(optionPage>0?"\\n0. Previous":""));
+      .map((option,index)=>String(optionPage*2+index+1)+". "+shortText(option,24)).join("\n");
+     const optionPrompt="Q"+qNo+"/"+questions.length+" options "+(optionPage+1)+"/"+optionPages+":\n"+optionRows;
+     if(cursor>=tokens.length)return reply(res,optionPrompt+(optionPage<optionPages-1?"\n9. More options":"\nChoose 1-4")+(optionPage>0?"\n0. Previous":""));
      const optionAction=tokens[cursor];
      if(optionAction==="9"&&optionPage<optionPages-1){cursor++;optionPage++;continue;}
      if(optionAction==="0"&&optionPage>0){cursor++;optionPage--;continue;}
