@@ -164,8 +164,8 @@ export async function sendHealthGuideLink({ to, link, language = "en", smsConsen
  if (!settings.enabled || settings.environment !== "production") return { sent: false, reason: "sms_not_live" };
  if (!process.env.AT_LIVE_USERNAME || !process.env.AT_LIVE_API_KEY) return { sent: false, reason: "live_provider_not_configured" };
  const message = language === "sw"
-  ? "OmpathStudy: Uliomba taarifa za afya. Fungua kiungo hiki kwa usalama: " + link + " Kiungo kitaisha baada ya siku 7. Usishiriki kiungo hiki."
-  : "OmpathStudy: Your requested health information is ready. Open your private link: " + link + " This link expires in 7 days. Do not share it.";
+  ? "OmpathStudy: Uliomba taarifa za afya. Fungua kiungo hiki kwa usalama: " + link + " Kiungo kitaisha baada ya siku 7. Usishiriki kiungo hiki. Jibu STOP kujiondoa."
+  : "OmpathStudy: Your requested health information is ready. Open your private link: " + link + " This link expires in 7 days. Do not share it. Reply STOP to opt out.";
  const recipient = await sendSms(phone, message, settings);
  return { sent: true, status: recipient.status || "Accepted", messageId: recipient.messageId || null };
 }
