@@ -118,8 +118,8 @@ async function ussd(req,res){
       ?"Dalili ulizotaja zinaweza kuwa za dharura. Nenda hospitali sasa. Usisubiri SMS."
       :"You reported a possible emergency warning sign. Go to hospital now. Do not wait for SMS.",true);
     return reply(res,language==="sw"
-     ?"Dharura sasa? Shida ya kupumua, maumivu ya kifua, kuzimia, degedege au damu nyingi?\n1. Ndiyo  2. Hapana  3. Sina uhakika"
-     :"Emergency now? Severe breathing trouble, chest pain, fainting, seizure or heavy bleeding?\n1. Yes  2. No  3. Not sure");
+     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\n1. Ndiyo  2. Hapana  3. Sina uhakika"
+     :"Emergency now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\n1. Yes  2. No  3. Not sure");
    }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
