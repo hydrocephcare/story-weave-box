@@ -1,4 +1,5 @@
 import { askJson } from "./llm.js";
+import { searchReviewedPatientResources } from "./ompathLiteResources.js";
 
 const clean = (value, max = 1200) => String(value ?? "").replace(/[<>]/g, "").trim().slice(0, max);
 const patterns = [
@@ -36,8 +37,9 @@ export async function interpretHealthConcern({ originalMessage, preferredLanguag
   const original = clean(originalMessage);
   const emergencyFlags = detectEmergencyLanguage(original);
   if (!original) {
-    return { emergencyFlags, normalizedSummary: "", language: preferredLanguage, aiStatus: "no_description" };
+    return { emergencyFlags, normalizedSummary: "", patientResources: [], language: preferredLanguage, aiStatus: "no_description" };
   }
+  const patientResources = await searchReviewedPatientResources({ query: original, language: preferredLanguage, limit: 3 });
 
   const system = [
     "You are a conservative clinical-language normalisation component for a health intake service.",
@@ -62,7 +64,7 @@ export async function interpretHealthConcern({ originalMessage, preferredLanguag
   ], { fast: true, prefer: provider, providerOnly: provider, singleAttempt: true, temperature: 0.1, maxTokens: 650 });
 
   if (!result?.text) {
-    return { emergencyFlags, normalizedSummary: "", language: preferredLanguage, aiStatus: "unavailable" };
+    return { emergencyFlags, normalizedSummary: patientResources.length ? JSON.stringify({ concepts: [], resourceMatches: patientResources.map(({ id, title, slug, summary }) => ({ id, title, slug, summary })) }) : "", patientResources, language: preferredLanguage, aiStatus: "unavailable" };
   }
 
   try {
@@ -79,11 +81,16 @@ export async function interpretHealthConcern({ originalMessage, preferredLanguag
     const detected = ["en", "sw", "mixed", "other"].includes(parsed.detected_language)
       ? parsed.detected_language
       : preferredLanguage;
-    const normalizedSummary = verified.length
-      ? JSON.stringify({ interpretation_language: detected, concepts: verified, source: "AI-assisted; each concept linked to original wording" })
+    const normalizedSummary = verified.length || patientResources.length
+      ? JSON.stringify({
+          interpretation_language: detected,
+          concepts: verified,
+          resourceMatches: patientResources.map(({ id, title, slug, summary }) => ({ id, title, slug, summary })),
+          source: "AI-assisted concepts are linked to original wording; resources are reviewed patient-facing content only",
+        })
       : "";
-    return { emergencyFlags, normalizedSummary, language: detected, aiStatus: "ok" };
+    return { emergencyFlags, normalizedSummary, patientResources, language: detected, aiStatus: "ok" };
   } catch {
-    return { emergencyFlags, normalizedSummary: "", language: preferredLanguage, aiStatus: "invalid_response" };
+    return { emergencyFlags, normalizedSummary: patientResources.length ? JSON.stringify({ concepts: [], resourceMatches: patientResources.map(({ id, title, slug, summary }) => ({ id, title, slug, summary })) }) : "", patientResources, language: preferredLanguage, aiStatus: "invalid_response" };
   }
 }
