@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { detectEmergencyLanguage } from "./ompathLiteClinical.js";
+import { detectEmergencyLanguage } from "./ompathLiteRules.js";
 
 describe("OmpathStudy Lite emergency phrase screening", () => {
   it("flags explicit severe breathing difficulty", () => {
