@@ -12,8 +12,9 @@ import sb from "./_lib/sbCache.js";
 import transcribe from "./_lib/transcribe.js";
 import assist from "./_lib/storyAssist.js";
 import ompathLite from "./_lib/ompathLite.js";
+import ompathLiteSms from "./_lib/ompathLiteSms.js";
 
-const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo, write, sb, transcribe, assist, lite: ompathLite };
+const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo, write, sb, transcribe, assist, lite: ompathLite, "lite-sms": ompathLiteSms };
 
 export default async function handler(req, res) {
   const task = String(Array.isArray(req.query?.task) ? req.query.task[0] : req.query?.task ?? "");
