@@ -19,6 +19,14 @@ describe("OmpathStudy Lite preliminary assessment", () => {
     expect(result.urgency_level).toBe("emergency");
   });
 
+  it("escalates an uncertain emergency-screen answer for urgent review", () => {
+    const result = buildPreliminaryAssessment({
+      encounter,
+      answers: [{ question_id: "emergency_screen", answer: "3" }],
+    });
+    expect(result.urgency_level).toBe("urgent");
+  });
+
   it("treats lower abdominal pain with possible pregnancy as urgent", () => {
     const result = buildPreliminaryAssessment({
       encounter: { concern_category: "Lower abdominal pain", original_message: "Pain low in my abdomen" },
