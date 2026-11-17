@@ -120,7 +120,7 @@ export function Paywall({
     const digits = phone.replace(/\D/g, "");
     const detected = detectCountry(phone);
     if (digits.length < 9) { setState("error"); setMessage("Enter a complete mobile number."); return; }
-    const resolvedCountry = detected === "OTHER" ? countryCode : detected;
+    const resolvedCountry = detected === "OTHER" ? "OTHER" : detected;
     const internationalPhone = phone.trim().startsWith("+") || /^(254|255|256|250|257|243)/.test(digits)
       ? digits : (countries[resolvedCountry]?.dial || "") + digits.replace(/^0/, "");
     const selectedMethod = resolvedCountry === "KE" ? paymentMethod : "card";
@@ -350,6 +350,9 @@ export function Paywall({
                       setCountryCode(detected);
                       if (detected !== "KE") setPaymentMethod("card");
                       else if (paymentMethod === "card") setPaymentMethod("mpesa");
+                    } else if (next.trim().startsWith("+")) {
+                      setCountryCode("OTHER");
+                      setPaymentMethod("card");
                     }
                     setState("idle"); setMessage("");
                   }} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX or +254..." className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/70" />
