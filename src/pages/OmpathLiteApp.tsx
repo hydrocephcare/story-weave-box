@@ -9,7 +9,7 @@ type Assessment = {
   urgency_level: "emergency" | "urgent" | "prompt" | "routine" | "uncertain";
   reasons: string[];
   next_steps: string[];
-  limitations: string[];
+  limitations: string[];\n  recommended_evaluation: string[];
   concern_category: string;
   presenting_concern: string | null;
 };
@@ -251,7 +251,7 @@ export default function OmpathLiteApp() {
               )}
 
               <div className="health-contact">
-                <div className="health-subheading"><span className="health-step">03</span><div><h2>Secure your assessment</h2><p>Your mobile number identifies this private health enquiry.</p></div></div>
+                <div className="health-subheading"><span className="health-step">03</span><div><h2>Secure your assessment</h2><p>Your contact number is stored with this enquiry; it is not an account sign-in or identity verification.</p></div></div>
                 <label className="health-field"><span>Mobile number with country code *</span><input value={phone} onChange={(event) => setPhone(event.target.value)} type="tel" autoComplete="tel" placeholder="+2547XXXXXXXX" /></label>
                 <label className="health-consent">
                   <input type="checkbox" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
@@ -285,7 +285,7 @@ export default function OmpathLiteApp() {
             </article>
             {result.assessment.differential_diagnoses?.length > 0 && <article className="health-result-card"><h2>Possible causes to consider</h2><ul>{result.assessment.differential_diagnoses.map((item) => <li key={item}>{item}</li>)}</ul></article>}
             {result.assessment.reasons?.length > 0 && <article className="health-result-card"><h2>Why this level of care was advised</h2><ul>{result.assessment.reasons.map((item) => <li key={item}>{item}</li>)}</ul></article>}
-            <article className="health-result-card"><h2>Recommended next steps</h2><ul>{result.assessment.next_steps.map((item) => <li key={item}>{item}</li>)}</ul></article>
+            <article className="health-result-card"><h2>Recommended next steps</h2><ul>{result.assessment.next_steps.map((item) => <li key={item}>{item}</li>)}</ul></article>\n            <article className="health-result-card"><h2>What a clinician may need to assess</h2><ul>{result.assessment.recommended_evaluation.map((item) => <li key={item}>{item}</li>)}</ul></article>
             {result.resources.length > 0 && <article className="health-result-card"><h2>Reviewed OmpathStudy information</h2><p>These patient-facing resources have been reviewed for publication.</p>{result.resources.map((resource) => <a className="health-resource" key={resource.slug} href={resource.url} target="_blank" rel="noreferrer"><span><strong>{resource.title}</strong><small>{resource.summary}</small></span><ExternalLink size={16} /></a>)}</article>}
             <article className="health-limitations"><strong>Important limitations</strong><ul>{result.assessment.limitations.map((item) => <li key={item}>{item}</li>)}</ul><p>Reference: {result.reference}</p></article>
             <button className="health-submit" onClick={reset}>Finish <CheckCircle2 size={18} /></button>
