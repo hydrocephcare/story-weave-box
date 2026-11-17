@@ -99,9 +99,52 @@ serve(async (req) => {
       );
     }
 
+    const isPaystackPayment = String(payment.provider_txn_id || "").startsWith("paystack:");
+    if (payment.payment_status === "pending" && isPaystackPayment) {
+      const paystackSecret = Deno.env.get("PAYSTACK_SECRET_KEY");
+      if (paystackSecret) {
+        try {
+          const reference = String(payment.transaction_id || "").trim();
+          const response = await fetch("https://api.paystack.co/transaction/verify/" + encodeURIComponent(reference), {
+            headers: { Authorization: "Bearer " + paystackSecret, Accept: "application/json" },
+          });
+          const body = await response.json().catch(() => ({})), txn = body?.data;
+          if (response.ok && body?.status === true && txn && String(txn.reference || "") === reference &&
+              Number(txn.amount) === Math.round(Number(payment.amount) * 100) && String(txn.currency || "").toUpperCase() === "KES") {
+            const remoteStatus = String(txn.status || "").toLowerCase();
+            if (remoteStatus === "success" || remoteStatus === "failed") {
+              const { data: updated } = await supabase.from("payments").update({
+                payment_status: remoteStatus === "success" ? "completed" : "failed", updated_at: new Date().toISOString()
+              }).eq("id", payment.id).eq("payment_status", "pending").select().maybeSingle();
+              if (updated) payment = updated;
+            }
+          }
+        } catch (e) { console.error("Paystack payment verification failed:", e); }
+      }
+    }
+
+    // Verify OneKitty hosted checkout directly if its webhook has not arrived.
+    if (payment.payment_status === "pending") {
+      const key = Deno.env.get("ONEKITTY_DEVELOPER_API_KEY");
+      const kittyId = Number(Deno.env.get("ONEKITTY_KITTY_ID") || 0);
+      if (key && Number.isInteger(kittyId) && kittyId > 0) {
+        try {
+          const q = new URLSearchParams({ kitty_id: String(kittyId), reference: String(payment.transaction_id), page: "0", page_size: "20", sort: "-id" });
+          const response = await fetch("https://apisalticon.onekitty.co.ke/developer/v1/transactions/?" + q.toString(), { headers: { Authorization: "Bearer " + key, Accept: "application/json" } });
+          const body = await response.json().catch(() => ({}));
+          const items = Array.isArray(body?.data?.items) ? body.data.items : [];
+          const txn = items.find((item: Record<string, unknown>) => String(item.external_ref || "") === String(payment.transaction_id) && Number(item.kitty_id) === kittyId && Number(item.amount) === Number(payment.amount) && String(item.currency || "").toUpperCase() === "KES" && String(item.status || "").toUpperCase() === "SUCCESS" && String(item.type_in_out || "").toUpperCase() === "IN");
+          if (response.ok && body?.status === true && txn) {
+            const { data: updated } = await supabase.from("payments").update({ payment_status: "completed", mpesa_code: String(txn.transaction_code || "").slice(0, 100) || null, updated_at: new Date().toISOString() }).eq("id", payment.id).select().maybeSingle();
+            if (updated) payment = updated;
+          }
+        } catch (e) { console.error("OneKitty payment poll failed:", e); }
+      }
+    }
+
     // Still pending? Ask Palpluss directly (webhook may not have landed yet).
     const PALPLUSS_API_KEY = Deno.env.get("PALPLUSS_API_KEY");
-    if (payment.payment_status === "pending" && payment.provider_txn_id && PALPLUSS_API_KEY) {
+    if (payment.payment_status === "pending" && !isPaystackPayment && payment.provider_txn_id && PALPLUSS_API_KEY) {
       try {
         const res = await fetch(`https://api.palpluss.com/v1/transactions/${payment.provider_txn_id}`, {
           // PalPlus uses the API key itself as the Basic credential value.
