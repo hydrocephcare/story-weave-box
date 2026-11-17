@@ -170,6 +170,10 @@
       "destination": "/api/ai?task=lite-admin"
     },
     {
+      "source": "/api/ompath-lite-web",
+      "destination": "/api/ai?task=lite-web"
+    },
+    {
       "source": "/api/ompath-lite",
       "destination": "/api/ai?task=lite"
     },
