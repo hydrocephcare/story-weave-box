@@ -83,6 +83,12 @@ async function ussd(req,res){
      preferredLanguage:language,
      channel:"ussd"
     });
+    const existingEncounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
+    if(existingEncounter?.assessment||existingEncounter?.status==="referred_urgent"){
+     return reply(res,language==="sw"
+      ?"Tayari ulipokea majibu ya huduma hii. Ikiwa una dalili kali au zinazidi, tafuta huduma ya dharura sasa."
+      :"This health enquiry has already been processed. If symptoms are severe or worsening, seek emergency care now.",true);
+    }
     await updateHealthEncounter({
      id:encounter.id,
      sessionId:session,
