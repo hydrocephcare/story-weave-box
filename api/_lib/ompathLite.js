@@ -9,7 +9,7 @@ const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const shortText = (value,max=40) => {
  const text=clean(value,2000).replace(/\s+/g," ");
- max=/[^\x00-\x7F]/.test(text)?Math.min(max,18):max;
+ max=/[^\x00-\x7F]/.test(text)?Math.min(max,14):max;
  if(text.length<=max)return text;
  const cut=text.slice(0,max+1),boundary=cut.lastIndexOf(" ");
  return (boundary>Math.floor(max*0.55)?cut.slice(0,boundary):text.slice(0,max)).replace(/[.,;: -]+$/,"")+"...";
@@ -203,15 +203,12 @@ async function ussd(req,res){
      const guideQueued=encounter.sms_consent===true;
      const urgent=assessment.urgency_level==="urgent";
      const swMessage=urgent
-      ?"Majibu yako yamepokelewa. Tafuta tathmini ya afya katika kituo cha afya haraka leo. Huu si utambuzi. Dalili zikizidi au ukitokwa damu nyingi, ukizimia au kupata shida ya kupumua, tafuta huduma ya dharura sasa."
-      :"Majibu yako yamepokelewa. Tafadhali panga kuonana na mhudumu wa afya haraka ili uchunguzwe. Huu si utambuzi. Ukipata maumivu makali, damu nyingi, kuzimia au shida ya kupumua, tafuta huduma ya dharura sasa.";
+      ?"Tumepokea. Nenda kituo cha afya leo kwa uchunguzi. Huu si utambuzi. Dalili zikizidi, nenda hospitali sasa."
+      :"Tumepokea. Panga kuonana na mhudumu wa afya mapema. Huu si utambuzi. Dalili kali? Nenda hospitali sasa.";
      const enMessage=urgent
-      ?"Your answers have been received. Attend a health facility urgently today for an in-person assessment. This is not a diagnosis. If symptoms worsen or you develop heavy bleeding, fainting or breathing difficulty, seek emergency care now."
-      :"Your answers have been received. Please arrange an in-person assessment with a health professional promptly. This is not a diagnosis. Seek emergency care now if severe pain, heavy bleeding, fainting or breathing difficulty develops.";
-     const deliveryNote=guideQueued
-      ?(encounter.preferred_language==="sw"?" Ikiwa mwongozo uliothibitishwa utapatikana, kiungo kitatumwa kwa SMS.":" If an approved patient guide is available, its link will be sent by SMS.")
-      :"";
-     return reply(res,(encounter.preferred_language==="sw"?swMessage:enMessage)+deliveryNote,true);
+      ?"Received. Seek in-person care urgently today. This is not a diagnosis. If symptoms worsen, go to hospital now."
+      :"Received. Arrange an in-person health assessment promptly. Not a diagnosis. Severe symptoms? Go to hospital now.";
+     return reply(res,encounter.preferred_language==="sw"?swMessage:enMessage,true);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
     const nextQuestions=adaptPregnancyQuestions(questions,category,nextAnswers);
