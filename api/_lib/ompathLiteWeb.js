@@ -2,6 +2,9 @@
  * All learner writes use the server-side service key; it is never sent to the browser.
  * The existing published mcq_sets table remains the single question source.
  */
+import { createHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+import { buildPreliminaryAssessment, detectEmergencyLanguage } from "./ompathLiteRules.js";
+import { searchReviewedPatientResources } from "./ompathLiteResources.js";
 const send=(res,status,payload)=>res.status(status).json(payload);
 const clean=(v,n=300)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 async function db(path,options={}){
@@ -47,6 +50,38 @@ export default async function liteWeb(req,res){
    const rows=await db("lite_students?on_conflict=phone_number",{method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({phone_number,full_name,study_level:`Year ${study_year}`,updated_at:new Date().toISOString()})});
    const s=rows[0]||await student(phone_number);
    return send(res,200,{profile:s});
+  }
+  if(action==="health-assess"){
+   const phone_number=normalizePhone(p.phone_number);
+   const category=clean(p.concern_category,80);
+   const original_message=clean(p.original_message,1200);
+   const session_id=clean(p.session_id,120);
+   const allowedCategories=["Pregnancy-related concern","Menstrual problem","Lower abdominal pain","Vaginal discharge","Bleeding","Other health concern"];
+   if(!phone_number)return send(res,400,{error:"Enter a valid mobile number with country code, e.g. +2547XXXXXXXX."});
+   if(!/^[A-Za-z0-9._:-]{6,120}$/.test(session_id))return send(res,400,{error:"Your session could not be started. Refresh and try again."});
+   if(!allowedCategories.includes(category))return send(res,400,{error:"Choose the main concern you want help with."});
+   if(p.consent_given!==true)return send(res,400,{error:"Consent is required before health information can be stored."});
+   const allowedIds=new Set(["emergency_screen","pregnancy_status","gestation","pregnancy_bleeding_or_fluid","pregnancy_movement","duration","fever","pregnancy_possibility","severity","onset","fever_vomiting","bleeding_amount","pain","worsening","care"]);
+   const answers=Array.isArray(p.answers)?p.answers.slice(0,5):[];
+   if(answers.length!==5||answers.some(a=>!a||!allowedIds.has(a.question_id)||!["1","2","3","4"].includes(String(a.answer))))return send(res,400,{error:"Please complete all five safety and symptom questions."});
+   const emergencyFlags=detectEmergencyLanguage(original_message);
+   if(String(answers.find(a=>a.question_id==="emergency_screen")?.answer)==="1")emergencyFlags.push({rule:"self_reported_emergency_symptom",positive:true});
+   const encounter=await createHealthEncounter({sessionId:session_id,phoneNumber:phone_number,consentGiven:true,smsConsent:false,preferredLanguage:"en",channel:"web"});
+   const assessment=buildPreliminaryAssessment({encounter:{concern_category:category,original_message},answers,emergencyFlags});
+   const resources=await searchReviewedPatientResources({query:[category,original_message].filter(Boolean).join(" "),language:"en",limit:3});
+   const status=assessment.urgency_level==="emergency"||assessment.urgency_level==="urgent"?"referred_urgent":"complete";
+   const saved=await updateHealthEncounter({id:encounter.id,sessionId:session_id,phoneNumber:phone_number,patch:{
+    concern_category:category,
+    original_message,
+    normalized_summary:"",
+    clarification_answers:answers,
+    red_flag_results:emergencyFlags,
+    assessment,
+    urgency_level:assessment.urgency_level,
+    status
+   }});
+   if(!saved)throw new Error("The assessment could not be securely saved. Please try again.");
+   return send(res,200,{assessment,resources:resources.map(({title,slug,summary,updatedAt})=>({title,slug,summary,updated_at:updatedAt,url:"https://www.ompathstudy.com/blog/"+encodeURIComponent(slug)})),reference:encounter.id});
   }
   const phone=normalizePhone(p.phone);
   if(!phone)return send(res,400,{error:"A valid registered mobile number is required."});
