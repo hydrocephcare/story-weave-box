@@ -34,9 +34,10 @@ async function ussd(req,res){
    // Resolve back navigation within this flow. 0 removes one prior selection;
    // 00 clears the health flow and returns to the Lite main menu.
    const flow=[];
+   let returnedToIntro=false;
    for(const token of parts.slice(1)){
     if(token==="00")return reply(res,mainMenu);
-    if(token==="0"){flow.pop();continue;}
+    if(token==="0"){if(flow.length===1)returnedToIntro=true;flow.pop();continue;}
     flow.push(token);
    }
    if(!flow.length)return reply(res,parts.length>1?mainMenu:"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
