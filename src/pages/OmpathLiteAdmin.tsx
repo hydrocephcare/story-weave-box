@@ -1,46 +1,144 @@
-import { useCallback,useEffect,useMemo,useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Activity,ArrowLeft,BookOpen,CheckCircle2,GraduationCap,Loader2,MessageSquare,RefreshCw,Send,Users } from "lucide-react";
+import { AlertTriangle, ArrowLeft, CheckCircle2, Clock3, Loader2, RefreshCw, ShieldCheck } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 
-type SetItem={id:string;title:string;category:string|null;unit:string|null;unit_id:string|null;university:string|null;school:string|null;updated_at:string};
-type Student={id:string;phone_number:string;full_name:string;study_level:string;preferred_subject:string|null;sms_opt_in:boolean;created_at:string};
-type Unit={id:string;name:string;short_name:string|null;course_code:string|null;published:boolean};
-type Attempt={id:string;student_id:string;mcq_set_id:string;question_index:number;selected_option:number;is_correct:boolean;attempted_at:string};
-type SmsSettings={enabled:boolean;environment:"sandbox"|"production";sender_id:string|null;updated_at?:string};
-type Data={students:Student[];sets:SetItem[];units:Unit[];attempts:Attempt[];smsSettings:SmsSettings;smsCredentials:{sandbox:boolean;production:boolean};stats:{students:number;optedIn:number;sets:number;questions:number;attempts:number;correct:number}};
-export default function OmpathLiteAdmin(){
- const {session}=useAuth();const [data,setData]=useState<Data|null>(null);const [loading,setLoading]=useState(true);const [error,setError]=useState("");const [tab,setTab]=useState<"library"|"students"|"activity"|"settings">("settings");const [smsSettings,setSmsSettings]=useState<SmsSettings>({enabled:false,environment:"sandbox",sender_id:""});const [savingSettings,setSavingSettings]=useState(false);const [settingsMessage,setSettingsMessage]=useState("");const [unitFilter,setUnitFilter]=useState("all");const [testSending,setTestSending]=useState(false);const [testResult,setTestResult]=useState<{ok:boolean;message:string}|null>(null);
- const refresh=useCallback(async()=>{setLoading(true);setError("");try{if(!session?.access_token)throw new Error("Sign in required.");const r=await fetch("/api/ompath-lite-admin",{headers:{Authorization:`Bearer ${session.access_token}`}});const j=await r.json();if(!r.ok)throw new Error(j.error||"Could not load Lite data.");setData(j);setSmsSettings(j.smsSettings||{enabled:false,environment:"sandbox",sender_id:""});}catch(e){setError(e instanceof Error?e.message:"Could not load Lite data.");}finally{setLoading(false);}},[session?.access_token]);
- useEffect(()=>{void refresh();},[refresh]);
- const visibleSets=useMemo(()=>data?.sets.filter(s=>unitFilter==="all"||s.unit_id===unitFilter)||[],[data?.sets,unitFilter]);
- const setMap=useMemo(()=>new Map((data?.sets||[]).map(s=>[s.id,s.title])),[data?.sets]);
- const accuracy=data?.stats.attempts?Math.round(data.stats.correct/data.stats.attempts*100):0;
- return <div className="mx-auto min-h-screen w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-  <div className="mb-7 flex flex-wrap items-center justify-between gap-3"><div><Link to="/admin" className="mb-3 inline-flex items-center gap-2 text-sm text-muted-foreground"><ArrowLeft className="h-4 w-4"/> Main admin</Link><p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">OmpathStudy · Lite channel</p><h1 className="mt-1 font-serif text-3xl font-bold text-foreground sm:text-4xl">OmpathStudy Lite</h1><p className="mt-2 max-w-2xl text-sm text-muted-foreground">Manage access to the existing OmpathStudy medical library through USSD and SMS. Content is not copied or duplicated.</p></div><button onClick={()=>void refresh()} className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm"><RefreshCw className="h-4 w-4"/> Refresh</button></div>
-  {error&&<div role="alert" className="mb-5 rounded-xl border border-destructive/40 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>} 
-  {loading?<div className="flex min-h-48 items-center justify-center gap-3 text-muted-foreground"><Loader2 className="h-5 w-5 animate-spin"/> Loading existing OmpathStudy content…</div>:data&&<>
-   <div className="mb-7 grid grid-cols-2 gap-3 lg:grid-cols-4">{[{label:"Lite learners",value:data.stats.students,sub:`${data.stats.optedIn} SMS subscribers`,icon:Users},{label:"Existing MCQ sets",value:data.stats.sets,sub:"Published OmpathStudy sets",icon:BookOpen},{label:"Available questions",value:data.stats.questions,sub:"Read directly from the library",icon:GraduationCap},{label:"Answer accuracy",value:`${accuracy}%`,sub:`${data.stats.attempts} Lite answers recorded`,icon:CheckCircle2}].map(x=><div key={x.label} className="rounded-2xl border border-border bg-card p-4 sm:p-5"><div className="flex items-center justify-between text-muted-foreground"><span className="text-xs sm:text-sm">{x.label}</span><x.icon className="h-4 w-4"/></div><p className="mt-3 text-3xl font-bold tabular-nums">{x.value}</p><p className="mt-1 text-xs text-muted-foreground">{x.sub}</p></div>)}</div>
-   <div className="mb-5 flex flex-wrap gap-2 border-b border-border pb-3">{(["settings","library","students","activity"] as const).map(t=><button key={t} onClick={()=>setTab(t)} className={`rounded-lg px-4 py-2 text-sm font-medium capitalize ${tab===t?"bg-primary text-primary-foreground":"text-muted-foreground hover:bg-muted"}`}>{t==="library"?"Existing MCQ library":t==="activity"?"Learning activity":t}</button>)}</div>
-   {tab==="settings"&&<section className="space-y-5">
-    <div className="rounded-2xl border border-border bg-card p-5"><h2 className="text-lg font-semibold">SMS channel configuration</h2><p className="mt-1 text-sm text-muted-foreground">Choose the environment and control whether the daily SMS scheduler may send to opted-in learners. SMS is paused by default.</p>
-     <div className="mt-5 grid gap-4 sm:grid-cols-2">
-      <label className="block text-sm font-medium">Environment<select value={smsSettings.environment} onChange={e=>setSmsSettings(v=>({...v,environment:e.target.value as "sandbox"|"production",enabled:false}))} className="mt-2 w-full rounded-lg border border-border bg-background px-3 py-2.5"><option value="sandbox">Sandbox</option><option value="production">Live / Production</option></select></label>
-      <label className="block text-sm font-medium">Sender ID (optional)<input value={smsSettings.sender_id||""} onChange={e=>setSmsSettings(v=>({...v,sender_id:e.target.value}))} maxLength={32} placeholder="Approved sender ID" className="mt-2 w-full rounded-lg border border-border bg-background px-3 py-2.5"/></label>
-     </div>
-     <div className="mt-5 rounded-xl border border-border p-4"><p className="text-sm font-semibold">Credential readiness</p><div className="mt-3 grid gap-2 sm:grid-cols-2"><p className="text-sm">{data.smsCredentials.sandbox?"✓":"○"} Sandbox credentials {data.smsCredentials.sandbox?"installed":"not installed"}</p><p className="text-sm">{data.smsCredentials.production?"✓":"○"} Live credentials {data.smsCredentials.production?"installed":"not installed"}</p></div><p className="mt-3 text-xs text-muted-foreground">Credentials are kept in Cloudflare Pages secrets. Configure AT_USERNAME and AT_API_KEY for Sandbox, and AT_LIVE_USERNAME and AT_LIVE_API_KEY for Live. Never paste API keys into this page.</p></div>
-     <label className="flex items-start gap-3 rounded-xl border border-border p-4"><input type="checkbox" checked={smsSettings.enabled} disabled={smsSettings.environment!=="production"} onChange={e=>setSmsSettings(v=>({...v,enabled:e.target.checked}))} className="mt-1 h-4 w-4 disabled:opacity-40"/><span><span className="block text-sm font-semibold">Enable scheduled SMS</span><span className="mt-1 block text-xs text-muted-foreground">When enabled, the daily scheduler can send to learners who have explicitly opted in. Turning this off pauses scheduled learner messages. This switch is available only in Live / Production; Sandbox is reserved for one-recipient tests.</span></span></label>
-     <div className="flex flex-wrap items-center gap-3"><button type="button" disabled={savingSettings||!session?.access_token} onClick={async()=>{setSavingSettings(true);setSettingsMessage("");try{const r=await fetch("/api/ompath-lite-admin",{method:"POST",headers:{Authorization:`Bearer ${session!.access_token}`,"Content-Type":"application/json"},body:JSON.stringify({action:"save-settings",...smsSettings})});const j=await r.json();if(!r.ok)throw new Error(j.error||"Could not save settings.");setSmsSettings(j.settings);setSettingsMessage("SMS settings saved.");}catch(e){setSettingsMessage(e instanceof Error?e.message:"Could not save settings.");}finally{setSavingSettings(false);}}} className="rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50">{savingSettings?"Saving…":"Save SMS settings"}</button>{settingsMessage&&<p role="status" className="text-sm text-muted-foreground">{settingsMessage}</p>}</div>
+type Encounter = {
+  id: string;
+  concern_category: string | null;
+  status: string;
+  urgency_level: string;
+  channel: string;
+  created_at: string;
+  updated_at: string;
+};
+type SmsSettings = { enabled: boolean; environment: "sandbox" | "production"; sender_id: string | null; updated_at?: string };
+type Data = {
+  healthEncounters: Encounter[];
+  smsSettings: SmsSettings;
+  smsCredentials: { production: boolean };
+  stats: { encounters: number; emergency: number; urgent: number; awaiting: number; completed: number };
+};
+
+export default function OmpathLiteAdmin() {
+  const { session } = useAuth();
+  const [data, setData] = useState<Data | null>(null);
+  const [settings, setSettings] = useState<SmsSettings>({ enabled: false, environment: "sandbox", sender_id: "" });
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+
+  const refresh = useCallback(async () => {
+    setLoading(true);
+    setError("");
+    try {
+      if (!session?.access_token) throw new Error("Sign in as an administrator.");
+      const response = await fetch("/api/ompath-lite-admin", { headers: { Authorization: `Bearer ${session.access_token}` } });
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.error || "Could not load Health Support data.");
+      setData(payload);
+      setSettings(payload.smsSettings || { enabled: false, environment: "sandbox", sender_id: "" });
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Could not load Health Support data.");
+    } finally {
+      setLoading(false);
+    }
+  }, [session?.access_token]);
+
+  useEffect(() => { void refresh(); }, [refresh]);
+
+  const saveSettings = async () => {
+    if (!session?.access_token) return;
+    setSaving(true);
+    setError("");
+    setMessage("");
+    try {
+      const response = await fetch("/api/ompath-lite-admin", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${session.access_token}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "save-settings", ...settings }),
+      });
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.error || "Could not save settings.");
+      setSettings(payload.settings);
+      setMessage("Patient guide SMS settings saved.");
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Could not save settings.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return <div className="mx-auto min-h-screen w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mb-7 flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <Link to="/admin" className="mb-3 inline-flex items-center gap-2 text-sm text-muted-foreground"><ArrowLeft className="h-4 w-4" /> Main admin</Link>
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">OmpathStudy · Lite Health Support</p>
+        <h1 className="mt-1 font-serif text-3xl font-bold text-foreground sm:text-4xl">Health Support operations</h1>
+        <p className="mt-2 max-w-2xl text-sm text-muted-foreground">Monitor de-identified intake activity and control delivery of reviewed patient information. Clinical details and phone numbers are not shown in this dashboard.</p>
+      </div>
+      <button onClick={() => void refresh()} className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm"><RefreshCw className="h-4 w-4" /> Refresh</button>
     </div>
-    <div className="rounded-2xl border border-border bg-card p-5"><p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">One-recipient verification</p><h3 className="mt-1 font-semibold">Send one sandbox test SMS</h3><p className="mt-1 text-sm text-muted-foreground">Sends one Year 4 MCQ to the fixed test number +254 115 475 543. Sandbox messages appear in the Africa's Talking simulator, not on a handset. This does not message learners or create attempt records.</p><button type="button" disabled={testSending||loading||!data||smsSettings.environment!=="sandbox"||!data.smsCredentials.sandbox} onClick={async()=>{setTestSending(true);setTestResult(null);try{if(!session?.access_token)throw new Error("Sign in required.");const r=await fetch("/api/ompath-lite-admin",{method:"POST",headers:{Authorization:`Bearer ${session.access_token}`,"Content-Type":"application/json"},body:JSON.stringify({action:"sandbox-test"})});const j=await r.json();if(!r.ok)throw new Error(j.error||"Test SMS was not accepted.");setTestResult({ok:true,message:`Sandbox accepted one SMS for ${j.to}. Provider status: ${j.status}.`});}catch(e){setTestResult({ok:false,message:e instanceof Error?e.message:"Test SMS failed."});}finally{setTestSending(false);}}} className="mt-4 inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50"><Send className="h-4 w-4"/>{testSending?"Sending test…":"Send sandbox test SMS"}</button>{testResult&&<p className="mt-3 text-sm">{testResult.message}</p>}</div>
-   </section>}
-   {tab==="library"&&<section className="space-y-4"><div className="flex flex-wrap items-center justify-between gap-3"><div><h2 className="text-lg font-semibold">Published OmpathStudy MCQs</h2><p className="text-xs text-muted-foreground">These are the original sets, questions, answer keys and explanations. Lite reads them live.</p></div><select value={unitFilter} onChange={e=>setUnitFilter(e.target.value)} className="rounded-lg border border-border bg-background px-3 py-2 text-sm"><option value="all">All topics and units</option>{data.units.map(u=><option key={u.id} value={u.id}>{u.course_code?u.course_code+" · ":""}{u.name}</option>)}</select></div>
-    {visibleSets.map(s=><article key={s.id} className="rounded-xl border border-border bg-card p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div className="min-w-0"><h3 className="font-medium leading-relaxed">{s.title}</h3><p className="mt-1 text-xs text-muted-foreground">{s.category||"Medical MCQs"}{s.unit?" · "+s.unit:""}{s.university?" · "+s.university:""}</p></div><span className="shrink-0 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">Available on Lite</span></div></article>)}
-    {!visibleSets.length&&<p className="rounded-xl border border-dashed border-border p-6 text-sm text-muted-foreground">No published MCQ sets match this unit filter.</p>}
-   </section>}
-   {tab==="students"&&<section className="overflow-hidden rounded-2xl border border-border bg-card"><div className="border-b border-border p-4"><h2 className="font-semibold">Lite learner registrations</h2><p className="mt-1 text-xs text-muted-foreground">Phone number, study level and SMS consent collected through USSD.</p></div><div className="overflow-x-auto"><table className="w-full min-w-[650px] text-left text-sm"><thead className="bg-muted/50 text-xs text-muted-foreground"><tr><th className="p-3">Learner</th><th className="p-3">Phone</th><th className="p-3">Study level</th><th className="p-3">Preferred subject</th><th className="p-3">SMS consent</th><th className="p-3">Registered</th></tr></thead><tbody>{data.students.map(s=><tr key={s.id} className="border-t border-border"><td className="p-3 font-medium">{s.full_name}</td><td className="p-3 tabular-nums">{s.phone_number}</td><td className="p-3">{s.study_level}</td><td className="p-3">{s.preferred_subject||"Not selected"}</td><td className="p-3">{s.sms_opt_in?"Subscribed":"Not subscribed"}</td><td className="p-3 text-muted-foreground">{new Date(s.created_at).toLocaleDateString()}</td></tr>)}</tbody></table>{!data.students.length&&<p className="p-6 text-sm text-muted-foreground">No Lite registrations yet.</p>}</div></section>}
-   {tab==="activity"&&<section className="rounded-2xl border border-border bg-card p-5"><div className="mb-4 flex items-center gap-2"><Activity className="h-5 w-5 text-primary"/><h2 className="font-semibold">Recent USSD answers</h2></div>{data.attempts.length?<div className="space-y-3">{data.attempts.slice(0,50).map(a=><div key={a.id} className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-3 last:border-0"><div><p className="text-sm font-medium">{setMap.get(a.mcq_set_id)||"OmpathStudy MCQ set"}</p><p className="mt-1 text-xs text-muted-foreground">Question {a.question_index+1} · Option {a.selected_option} · {new Date(a.attempted_at).toLocaleString()}</p></div><span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${a.is_correct?"bg-emerald-500/10 text-emerald-700":"bg-amber-500/10 text-amber-700"}`}>{a.is_correct?"Correct":"Incorrect"}</span></div>)}</div>:<p className="text-sm text-muted-foreground">No Lite answers recorded yet.</p>}</section>}
-  </>}
-  <div className="mt-8 flex items-center gap-2 text-xs text-muted-foreground"><MessageSquare className="h-4 w-4"/> The Lite channel is a delivery interface. OmpathStudy remains the single source of medical learning content.</div>
- </div>;
+
+    {error && <div role="alert" className="mb-5 rounded-xl border border-destructive/40 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>}
+    {message && <div role="status" className="mb-5 rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-4 text-sm text-emerald-700">{message}</div>}
+
+    {loading ? <div className="flex min-h-48 items-center justify-center gap-3 text-muted-foreground"><Loader2 className="h-5 w-5 animate-spin" /> Loading Health Support activity…</div> : data && <>
+      <div className="mb-7 grid grid-cols-2 gap-3 lg:grid-cols-5">
+        {[
+          { label: "Recent enquiries", value: data.stats.encounters, icon: Clock3 },
+          { label: "Emergency", value: data.stats.emergency, icon: AlertTriangle },
+          { label: "Urgent", value: data.stats.urgent, icon: AlertTriangle },
+          { label: "Awaiting action", value: data.stats.awaiting, icon: Clock3 },
+          { label: "Completed", value: data.stats.completed, icon: CheckCircle2 },
+        ].map((item) => <div key={item.label} className="rounded-2xl border border-border bg-card p-4">
+          <div className="flex items-center justify-between gap-2 text-muted-foreground"><span className="text-xs">{item.label}</span><item.icon className="h-4 w-4" /></div>
+          <p className="mt-3 text-3xl font-bold tabular-nums">{item.value}</p>
+        </div>)}
+      </div>
+
+      <section className="mb-6 rounded-2xl border border-border bg-card p-5">
+        <div className="flex items-center gap-2"><ShieldCheck className="h-5 w-5 text-primary" /><h2 className="text-lg font-semibold">Patient information SMS</h2></div>
+        <p className="mt-1 text-sm text-muted-foreground">Only send a private link when the caller explicitly consents. Links are generated from reviewed patient-facing OmpathStudy resources, expire after seven days and can be revoked through STOP.</p>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <label className="block text-sm font-medium">Provider environment
+            <select value={settings.environment} onChange={(event) => setSettings((current) => ({ ...current, environment: event.target.value as "sandbox" | "production", enabled: false }))} className="mt-2 w-full rounded-lg border border-border bg-background px-3 py-2.5">
+              <option value="sandbox">Sandbox / paused</option><option value="production">Live / Production</option>
+            </select>
+          </label>
+          <label className="block text-sm font-medium">Sender ID (optional)
+            <input value={settings.sender_id || ""} onChange={(event) => setSettings((current) => ({ ...current, sender_id: event.target.value }))} maxLength={32} placeholder="Approved sender ID" className="mt-2 w-full rounded-lg border border-border bg-background px-3 py-2.5" />
+          </label>
+        </div>
+        <div className="mt-4 rounded-xl border border-border p-4">
+          <p className="text-sm font-semibold">Live credentials</p>
+          <p className="mt-1 text-sm text-muted-foreground">{data.smsCredentials.production ? "Live Africa's Talking credentials are configured." : "Live credentials are not configured. Add AT_LIVE_USERNAME and AT_LIVE_API_KEY as Cloudflare Pages production secrets before enabling SMS."}</p>
+        </div>
+        <label className="mt-4 flex items-start gap-3 rounded-xl border border-border p-4">
+          <input type="checkbox" checked={settings.enabled} disabled={settings.environment !== "production" || !data.smsCredentials.production} onChange={(event) => setSettings((current) => ({ ...current, enabled: event.target.checked }))} className="mt-1 h-4 w-4 disabled:opacity-40" />
+          <span><span className="block text-sm font-semibold">Enable consented patient-guide SMS</span><span className="mt-1 block text-xs text-muted-foreground">When enabled, the background queue can deliver reviewed guide links to users who explicitly requested SMS. No marketing or MCQ messages are sent by Lite.</span></span>
+        </label>
+        <button type="button" disabled={saving || !session?.access_token} onClick={() => void saveSettings()} className="mt-4 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50">{saving ? "Saving…" : "Save SMS settings"}</button>
+      </section>
+
+      <section className="overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="border-b border-border p-4"><h2 className="font-semibold">Recent de-identified enquiries</h2><p className="mt-1 text-xs text-muted-foreground">Only category, urgency, channel and timestamps are shown. No phone number or symptom narrative is exposed here.</p></div>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[620px] text-left text-sm">
+            <thead className="bg-muted/50 text-xs text-muted-foreground"><tr><th className="p-3">Concern</th><th className="p-3">Urgency</th><th className="p-3">Status</th><th className="p-3">Channel</th><th className="p-3">Received</th></tr></thead>
+            <tbody>{data.healthEncounters.map((item) => <tr key={item.id} className="border-t border-border">
+              <td className="p-3 font-medium">{item.concern_category || "Not specified"}</td>
+              <td className="p-3"><span className={item.urgency_level === "emergency" ? "font-semibold text-destructive" : item.urgency_level === "urgent" ? "font-semibold text-amber-700" : "text-muted-foreground"}>{item.urgency_level}</span></td>
+              <td className="p-3">{item.status.replaceAll("_", " ")}</td>
+              <td className="p-3 uppercase text-xs">{item.channel}</td>
+              <td className="p-3 text-muted-foreground">{new Date(item.created_at).toLocaleString()}</td>
+            </tr>)}</tbody>
+          </table>
+          {!data.healthEncounters.length && <p className="p-6 text-sm text-muted-foreground">No health enquiries have been recorded yet.</p>}
+        </div>
+      </section>
+    </>}
+    <div className="mt-8 text-xs text-muted-foreground">OmpathStudy Lite is a health-support intake channel. All medical learning remains on the main OmpathStudy website.</div>
+  </div>;
 }
