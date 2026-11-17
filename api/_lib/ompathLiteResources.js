@@ -25,7 +25,7 @@ export async function searchReviewedPatientResources({ query, language = "en", l
     deleted_at: "is.null",
     requires_review: "eq.false",
     verification_status: "in.(reviewed,verified)",
-    content_type: `in.(${PATIENT_CONTENT_TYPES.join(",")})`,
+    content_type: `in.(${PATIENT_CONTENT_TYPES.map((type) => `"${type}"`).join(",")})`,
     order: "updated_at.desc",
     limit: String(Math.min(5, Math.max(1, Number(limit) || 4))),
   });
