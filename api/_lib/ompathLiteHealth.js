@@ -21,7 +21,7 @@ async function db(path, options = {}) {
   if (!base || !key) throw new Error("Health encounter storage is not configured.");
   const response = await fetch(`${base.replace(/\/$/, "")}/rest/v1/${path}`, {
     ...options,
-    signal: options.signal || AbortSignal.timeout(2500),
+    signal: options.signal || AbortSignal.timeout(6000),
     headers: {
       apikey: key,
       Authorization: `Bearer ${key}`,
@@ -68,7 +68,7 @@ export async function createHealthEncounter({
 
   // Repeated USSD callbacks must never reset an encounter or its consent.
   const existing = await db(
-    `lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
+    `lite_health_encounters?select=id,session_id,phone_number,consent_given,status,assessment&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
   );
   if (existing[0]) {
     if (existing[0].phone_number !== phone_number || existing[0].consent_given !== true) {
