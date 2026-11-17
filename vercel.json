@@ -162,6 +162,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/ompath-lite-sms",
+      "destination": "/api/ai?task=lite-sms"
+    },
+    {
       "source": "/api/ompath-lite-admin",
       "destination": "/api/ai?task=lite-admin"
     },
@@ -680,5 +684,11 @@
     "api/note-card.js": {
       "includeFiles": "api/_assets/**"
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/ompath-lite-sms?mode=send",
+      "schedule": "0 6 * * *"
+    }
+  ]
 }
