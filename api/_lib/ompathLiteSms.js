@@ -79,8 +79,8 @@ async function sendTest(req,res){
  const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
  const item=await pickQuestion("4",sets);
  if(!item)return res.status(404).json({error:"No eligible published Year 4 MCQ was found."});
- const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\\n");
- const message=`OmpathStudy Lite | SMS TEST\\n${clean(item.q.question,170)}\\n${options}\\nThis is a sandbox test. Reply is not recorded.`;
+ const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\n");
+ const message=`OmpathStudy Lite | SMS TEST\n${clean(item.q.question,170)}\n${options}\nThis is a sandbox test. Reply is not recorded.`;
  const recipient=await sendSms(to,message);
  return res.status(200).json({ok:true,environment:"sandbox",to,status:recipient.status||"Accepted",messageId:recipient.messageId||null});
 }
@@ -91,8 +91,8 @@ export async function sendAdminSandboxTest(){
  const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
  const item=await pickQuestion("4",sets);
  if(!item)throw new Error("No eligible published Year 4 MCQ was found.");
- const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\\n");
- const message=`OmpathStudy Lite | SMS TEST\\n${clean(item.q.question,170)}\\n${options}\\nThis is a sandbox test. Reply is not recorded.`;
+ const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\n");
+ const message=`OmpathStudy Lite | SMS TEST\n${clean(item.q.question,170)}\n${options}\nThis is a sandbox test. Reply is not recorded.`;
  const recipient=await sendSms(to,message);
  return {ok:true,environment:"sandbox",to,status:recipient.status||"Accepted",messageId:recipient.messageId||null};
 }
