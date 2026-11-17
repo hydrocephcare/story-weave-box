@@ -1,11 +1,9 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-import { HelmetProvider } from "react-helmet-async";
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
 import { installErrorReporting } from "@/lib/errorReport";
 
-installErrorReporting();
+const isLiteHost = window.location.hostname === "lite.ompathstudy.com";
+if (!isLiteHost) installErrorReporting();
 
 // Auto-recover from stale chunk loads after a deploy. When the cached
 // index.html refers to chunk hashes that no longer exist (or the cached
@@ -48,8 +46,8 @@ window.addEventListener("unhandledrejection", (e) => {
   }
 });
 
-// Register service worker for offline caching
-if ("serviceWorker" in navigator) {
+// Only the full OmpathStudy app owns the original offline cache and service worker.
+if (!isLiteHost && "serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("/sw.js").then(() => {
       // Pre-warm offline cache: fetch core lists in the background so they're
@@ -75,8 +73,19 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-createRoot(document.getElementById("root")!).render(
-  <HelmetProvider>
-    <App />
-  </HelmetProvider>
-);
+const root = createRoot(document.getElementById("root")!);
+if (isLiteHost) {
+  // Load only the Lite experience on its own hostname; do not download the
+  // full OmpathStudy route tree, navigation, providers or global stylesheet.
+  import("./pages/OmpathLiteApp").then(({ default: LiteApp }) => root.render(<LiteApp />)).catch((error) => {
+    console.error("OmpathStudy Lite failed to start", error);
+    root.render(<div style={{ padding: 32, fontFamily: "sans-serif" }}>OmpathStudy Lite could not load. Please refresh the page.</div>);
+  });
+} else {
+  Promise.all([import("./App.tsx"), import("./index.css"), import("react-helmet-async")]).then(([app, , helmet]) => {
+    root.render(<helmet.HelmetProvider><app.default /></helmet.HelmetProvider>);
+  }).catch((error) => {
+    console.error("OmpathStudy failed to start", error);
+    root.render(<div style={{ padding: 32, fontFamily: "sans-serif" }}>OmpathStudy could not load. Please refresh the page.</div>);
+  });
+}
