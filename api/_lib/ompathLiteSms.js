@@ -36,7 +36,7 @@ async function pickQuestion(year,sets){
  for(const set of sets.filter(s=>matchesYear(s,year))){
   const questions=Array.isArray(set.questions)?set.questions:[];
   questions.forEach((q,index)=>{
-   if(Array.isArray(q.options)&&q.options.length>=2&&q.options.length<=4){
+   if(Array.isArray(q.options)&&q.options.length>=2&&q.options.length<=4&&q.correct_answer!==null&&q.correct_answer!==undefined&&String(q.correct_answer).trim()!==""){
     const correct=Number(q.correct_answer);
     if(Number.isInteger(correct)&&correct>=0&&correct<q.options.length)pool.push({set,index,q,correct});
    }
