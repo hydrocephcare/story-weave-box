@@ -12,7 +12,7 @@ describe("USSD text formatting", () => {
   });
 
   it("uses a shorter budget for non-ASCII UCS-2 text", () => {
-    const chunks = splitUssdWords("Mgonjwa ana maumivu makali ya tumbo na kichefuchefu kinachoendelea", 105);
+    const chunks = splitUssdWords("Mgonjwa ana maumivu makali ya tumbo — na kichefuchefu kinachoendelea", 105);
     expect(chunks.every((chunk) => chunk.length <= 48)).toBe(true);
   });
 
@@ -21,6 +21,6 @@ describe("USSD text formatting", () => {
   });
 
   it("uses compact labels for non-ASCII screens", () => {
-    expect(shortUssdText("Maumivu ya tumbo la chini", 24).length).toBeLessThanOrEqual(21);
+    expect(shortUssdText("Maumivu ya tumbo la chini – sasa", 24).length).toBeLessThanOrEqual(21);
   });
 });
