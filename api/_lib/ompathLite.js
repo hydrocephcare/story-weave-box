@@ -2,9 +2,11 @@
  * OmpathStudy Lite — Africa's Talking USSD adapter.
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
-import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+import { createHealthEncounter, getHealthEncounter, updateHealthEncounter, createHealthGuideToken } from "./ompathLiteHealth.js";
 import { interpretHealthConcern, buildPreliminaryAssessment } from "./ompathLiteClinical.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
+import { searchReviewedPatientResources } from "./ompathLiteResources.js";
+import { sendHealthGuideLink } from "./ompathLiteSms.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
@@ -104,6 +106,11 @@ async function ussd(req,res){
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
     if(!encounter)return reply(res,"Your health session expired. Please start again from the main menu.",true);
+    if(["complete","guide_pending"].includes(encounter.status)&&encounter.assessment){
+     return reply(res,encounter.preferred_language==="sw"
+      ?"Tathmini yako ya awali tayari imekamilika. Tafadhali fuata ushauri uliotolewa na mhudumu wa afya. Ikiwa dalili ni kali au zinazidi, tafuta huduma ya dharura sasa."
+      :"Your preliminary assessment has already been completed. Please follow the care advice provided. If symptoms are severe or worsening, seek emergency care now.",true);
+    }
     const category=encounter.concern_category||"Other health concern";
     let questions=[
      {id:"emergency_screen",en:"Are you experiencing any emergency symptom now: severe difficulty breathing, chest pain, fainting, seizure, heavy bleeding, or severe/worsening pain?",sw:"Je, una dalili ya dharura sasa: kupumua kwa shida sana, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka?"},
@@ -159,6 +166,35 @@ async function ussd(req,res){
       urgency_level:assessment.urgency_level,
       status:"complete"
      }});
+     let guideSent=false;
+     let guideUnavailable=false;
+     if(encounter.sms_consent===true){
+      try{
+       const guides=await searchReviewedPatientResources({
+        query:[category,encounter.original_message||""].join(" "),
+        language:encounter.preferred_language,
+        limit:1
+       });
+       if(guides.length&&guides[0].slug){
+        const issued=await createHealthGuideToken({encounterId:encounter.id,resourceSlug:guides[0].slug});
+        const guideUrl="https://lite.ompathstudy.com/api/lite?task=health-guide&token="+issued.token;
+        await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{guide_url:guideUrl,status:"guide_pending"}});
+        const delivery=await sendHealthGuideLink({
+         to:phone,
+         link:guideUrl,
+         language:encounter.preferred_language,
+         smsConsent:encounter.sms_consent
+        });
+        guideSent=delivery.sent===true;
+        if(guideSent){
+         await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_sent_at:new Date().toISOString(),status:"complete"}});
+        }else guideUnavailable=true;
+       }else guideUnavailable=true;
+      }catch(error){
+       guideUnavailable=true;
+       console.error("Private patient guide delivery unavailable:",error.message);
+      }
+     }
      const urgent=assessment.urgency_level==="urgent";
      const swMessage=urgent
       ?"Majibu yako yamepokelewa. Tafuta tathmini ya afya katika kituo cha afya haraka leo. Huu si utambuzi. Dalili zikizidi au ukitokwa damu nyingi, ukizimia au kupata shida ya kupumua, tafuta huduma ya dharura sasa."
@@ -166,7 +202,12 @@ async function ussd(req,res){
      const enMessage=urgent
       ?"Your answers have been received. Attend a health facility urgently today for an in-person assessment. This is not a diagnosis. If symptoms worsen or you develop heavy bleeding, fainting or breathing difficulty, seek emergency care now."
       :"Your answers have been received. Please arrange an in-person assessment with a health professional promptly. This is not a diagnosis. Seek emergency care now if severe pain, heavy bleeding, fainting or breathing difficulty develops.";
-     return reply(res,encounter.preferred_language==="sw"?swMessage:enMessage,true);
+     const deliveryNote=guideSent
+      ?(encounter.preferred_language==="sw"?" Kiungo cha taarifa za afya kimetumwa kwa SMS.":" A private patient information link has been sent by SMS.")
+      :guideUnavailable
+       ?(encounter.preferred_language==="sw"?" Kwa sasa hakuna mwongozo wa mgonjwa uliothibitishwa unaoweza kutumwa.":" No approved patient guide could be sent at this time.")
+       :"";
+     return reply(res,(encounter.preferred_language==="sw"?swMessage:enMessage)+deliveryNote,true);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
     const nextQuestions=adaptPregnancyQuestions(questions,category,nextAnswers);
