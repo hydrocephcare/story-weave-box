@@ -27,6 +27,15 @@ function assessmentReply(assessment, language) {
    "Menstrual problem — abnormal uterine bleeding or cycle disturbance":"Tatizo la hedhi — kutokwa damu kusiko kawaida au mabadiliko ya mzunguko",
    "Bleeding with possible pregnancy":"Kutokwa damu na uwezekano wa ujauzito",
    "Bleeding requiring assessment":"Kutokwa damu kunahitaji uchunguzi",
+   "Reduced fetal movements in pregnancy (possible fetal compromise)":"Kupungua kwa miondoko ya mtoto tumboni; tathmini ya dharura ya uzazi inahitajika",
+   "Lower abdominal pain with possible pregnancy — ectopic pregnancy must be excluded":"Maumivu ya tumbo la chini na uwezekano wa ujauzito; mimba nje ya kizazi lazima iondolewe",
+   "Lower abdominal pain with systemic symptoms; infection or acute abdominal pathology is possible":"Maumivu ya tumbo la chini pamoja na dalili za mwili mzima; maambukizi au tatizo la dharura la tumbo linawezekana",
+   "Undifferentiated lower abdominal pain":"Maumivu ya tumbo la chini; chanzo bado hakijabainika",
+   "Vaginal discharge with fever — pelvic inflammatory disease (PID) must be considered":"Uchafu ukeni pamoja na homa; maambukizi ya nyonga yanapaswa kuchunguzwa",
+   "Vaginitis or cervicitis causing vaginal discharge":"Uchafu ukeni unaoweza kusababishwa na maambukizi au uvimbe wa uke au mlango wa kizazi",
+   "Menstrual disturbance (abnormal uterine bleeding or dysmenorrhoea, depending on the symptom)":"Mabadiliko ya hedhi au maumivu ya hedhi; uchunguzi zaidi unahitajika",
+   "Abnormal bleeding of undetermined source; pregnancy-related bleeding must be excluded where relevant":"Kutokwa damu kusiko kawaida; sababu zinazohusiana na ujauzito lazima zichunguzwe inapofaa",
+   "Undifferentiated pregnancy-related concern; more clinical information is needed to narrow the cause":"Dalili zinazoweza kuhusiana na ujauzito; taarifa zaidi za kitabibu zinahitajika",
    "Unclassified symptom presentation — provisional cause cannot yet be narrowed":"Dalili hazijaainishwa — chanzo bado hakijabainika",
   };
   const translated=translations[impression]||"Dalili zinahitaji tathmini ya mhudumu wa afya.";
