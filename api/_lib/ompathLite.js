@@ -52,7 +52,7 @@ async function ussd(req,res){
    let cursor=0,subjectPage=0;
    while(tokens[cursor]==="9"){subjectPage++;cursor++;}
    const showSubjects=(page)=>reply(res,`Year ${year} subjects (page ${page+1}):\\n${subjects.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s,38)}`).join("\\n")}${(page+1)*7<subjects.length?"\\n9. Next page":""}\\n0. ${page>0?"Previous page":"Main menu"}`);
-   if(cursor>=tokens.length)return showSubjects(0);
+   if(cursor>=tokens.length)return showSubjects(subjectPage);
    if(tokens[cursor]==="0")return subjectPage>0?showSubjects(subjectPage-1):reply(res,mainMenu,true);
    const subjectNo=Number(tokens[cursor++]);
    if(!Number.isInteger(subjectNo)||subjectNo<1||subjectNo>7)return reply(res,"Choose a listed subject number, 9 for next page or 0 to go back.",true);
@@ -63,7 +63,7 @@ async function ussd(req,res){
    let setPage=0;
    while(tokens[cursor]==="9"){setPage++;cursor++;}
    const showSets=(page)=>reply(res,`${clean(subject,42)} (page ${page+1}):\\nChoose a question set:\\n${subjectSets.slice(page*7,page*7+7).map((s,i)=>`${i+1}. ${clean(s.title,42)}`).join("\\n")}${(page+1)*7<subjectSets.length?"\\n9. Next page":""}\\n0. ${page>0?"Previous page":"Back to subjects"}`);
-   if(cursor>=tokens.length)return showSets(0);
+   if(cursor>=tokens.length)return showSets(setPage);
    if(tokens[cursor]==="0")return setPage>0?showSets(setPage-1):showSubjects(subjectPage);
    const setNo=Number(tokens[cursor++]);
    if(!Number.isInteger(setNo)||setNo<1||setNo>7)return reply(res,"Choose a listed set number, 9 for next page or 0 to go back.",true);
