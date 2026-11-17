@@ -37,6 +37,7 @@ import TopicPeekHost from "@/components/TopicPeek";
 import PageHelpers from "@/components/PageHelpers";
 import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRoute";
 import AdminShell from "@/components/admin/AdminShell";
+import OmpathLiteApp from "@/pages/OmpathLiteApp";
 
 const ShareYourStory = lazy(() => import("./pages/ShareYourStory"));
 /** A short exam link, /exams/<slug>, opens the exam. */
@@ -408,7 +409,13 @@ const AIPage = lazy(() => import("@/pages/OmpathAIPage"));
 
 const AdminPage = ({ children }: { children: React.ReactNode }) => <AdminRoute><AdminShell>{children}</AdminShell></AdminRoute>;
 
-const App = () => (
+const App = () => {
+  // The Lite hostname is a separate product surface. Keep the full OmpathStudy
+  // application and all its providers/routes exclusive to the primary domain.
+  if (typeof window !== "undefined" && window.location.hostname === "lite.ompathstudy.com") {
+    return <OmpathLiteApp />;
+  }
+  return (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
@@ -449,6 +456,7 @@ const App = () => (
       </AuthProvider>
     </QueryClientProvider>
   </ThemeProvider>
-);
+  );
+};
 
 export default App;
