@@ -19,7 +19,7 @@ export default async function liteAdmin(req,res){
   const roles=await fetch(`${url.replace(/\/$/,"")}/rest/v1/rpc/has_role`,{method:"POST",headers:{apikey:serviceKey,Authorization:`Bearer ${serviceKey}`,"Content-Type":"application/json"},body:JSON.stringify({_user_id:user.id,_role:"admin"})});
   if(!roles.ok||await roles.json()!==true)return json(res,403,{error:"Administrator access required."});
   const [students,sets,units,attempts,summary]=await Promise.all([
-   request("lite_students?select=id,phone_number,full_name,study_level,sms_opt_in,created_at&order=created_at.desc&limit=200",serviceKey),
+   request("lite_students?select=id,phone_number,full_name,study_level,preferred_subject,sms_opt_in,created_at&order=created_at.desc&limit=200",serviceKey),
    request("mcq_sets?select=id,title,category,unit,unit_id,university,school,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=200",serviceKey),
    request("units?select=id,name,short_name,course_code,published&published=eq.true&order=display_order.asc&limit=200",serviceKey),
    request("lite_attempts?select=id,student_id,mcq_set_id,question_index,selected_option,is_correct,attempted_at&order=attempted_at.desc&limit=1000",serviceKey),
