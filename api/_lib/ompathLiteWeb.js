@@ -23,8 +23,8 @@ async function student(phone){
  return rows[0]||null;
 }
 async function library(year){
- const rows=await db("mcq_sets?select=id,title,category,updated_at,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
- const yearRows=rows.filter(s=>new RegExp(`\\bYear\\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`));
+ const yearFilter=encodeURIComponent(`(title.ilike.*Year ${year}*,category.ilike.*Year ${year}*)`);
+ const yearRows=await db(`mcq_sets?select=id,title,category,updated_at,questions&published=eq.true&deleted_at=is.null&or=${yearFilter}&order=updated_at.desc&limit=500`);
  const groups=new Map();let questionCount=0;
  for(const s of yearRows){
   const subject=subjectOf(s),questions=Array.isArray(s.questions)?s.questions:[];
