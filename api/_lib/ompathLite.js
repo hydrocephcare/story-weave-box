@@ -46,7 +46,7 @@ async function ussd(req,res){
    if(!yearSets.length)return reply(res,`No published Year ${year} MCQs found yet. Please explore OmpathStudy online.`,true);
    const grouped=new Map();
    for(const s of yearSets){const subject=subjectOf(s);if(!grouped.has(subject))grouped.set(subject,[]);grouped.get(subject).push(s);}
-   const subjects=[...grouped.keys()].sort((a,b)=>a.localeCompare(b));
+   const subjects=[...grouped.keys()].sort((a,b)=>a.localeCompare(b));\n   if(student.preferred_subject&&subjects.includes(student.preferred_subject)){subjects.splice(subjects.indexOf(student.preferred_subject),1);subjects.unshift(student.preferred_subject);}
    const subjectNo=parts.length>1?Number(parts[1]):0;
    if(!subjectNo)return reply(res,`Year ${year} subjects:\n${subjects.slice(0,8).map((s,i)=>`${i+1}. ${clean(s,42)}`).join("\n")}\n0. Main menu`);
    if(subjectNo===0)return reply(res,mainMenu,true);
