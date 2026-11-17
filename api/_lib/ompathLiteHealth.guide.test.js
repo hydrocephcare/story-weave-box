@@ -21,7 +21,7 @@ describe("private patient guide bearer tokens", () => {
         expect(body.resource_slug).toBe("pregnancy-warning-signs");
         return new Response(JSON.stringify([{ id: "token-row" }]), { status: 201 });
       }
-      if (options.method === "PATCH") return new Response("[]", { status: 200 });
+      if (options.method === "PATCH") return new Response(JSON.stringify([{ id: "token-row" }]), { status: 200 });
       return new Response(JSON.stringify([{
         id: "token-row",
         resource_slug: "pregnancy-warning-signs",
