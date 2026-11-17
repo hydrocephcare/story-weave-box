@@ -55,17 +55,23 @@ async function ussd(req,res){
    }
    if(flow.length===4){
     if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose an option from 1 to 6.\n0. Back");
-    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?\n1. Yes, send SMS\n2. No SMS\n0. Back");
+    return reply(res,flow[2]==="2"
+     ?"Eleza dalili zako kwa maneno machache (au bonyeza 1 kuruka).\n0. Rudi nyuma"
+     :"Briefly describe what is troubling you in your own words, including mixed language if needed. Enter 1 to skip.\n0. Back");
    }
    if(flow.length===5){
-    if(!["1","2"].includes(flow[4]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\n0. Back");
+    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?\n1. Yes, send SMS\n2. No SMS\n0. Back");
+   }
+   if(flow.length===6){
+    if(!["1","2"].includes(flow[5]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\n0. Back");
     const language=flow[2]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
+    const description=flow[4]==="1"?"":clean(flow[4],1200);
     const encounter=await createHealthEncounter({
      sessionId:session,
      phoneNumber:phone,
      consentGiven:true,
-     smsConsent:flow[4]==="1",
+     smsConsent:flow[5]==="1",
      preferredLanguage:language,
      channel:"ussd"
     });
@@ -73,7 +79,7 @@ async function ussd(req,res){
      id:encounter.id,
      sessionId:session,
      phoneNumber:phone,
-     patch:{concern_category:categories[flow[3]],status:"intake_started"}
+     patch:{concern_category:categories[flow[3]],original_message:description,status:"intake_started"}
     });
     return reply(res,language==="sw"
      ?"Asante. Ombi lako limepokelewa kwa majaribio ya mfumo. Tathmini ya kitabibu haijafanywa. Ikiwa una dalili kali au zinazozidi, tafuta huduma ya afya mara moja. Piga tena kwa menyu kuu."
