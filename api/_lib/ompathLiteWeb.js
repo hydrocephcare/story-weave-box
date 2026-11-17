@@ -63,7 +63,7 @@ export default async function liteWeb(req,res){
    if(p.consent_given!==true)return send(res,400,{error:"Consent is required before health information can be stored."});
    const allowedIds=new Set(["emergency_screen","pregnancy_status","gestation","pregnancy_bleeding_or_fluid","pregnancy_movement","duration","fever","pregnancy_possibility","severity","onset","fever_vomiting","bleeding_amount","pain","worsening","care"]);
    const answers=Array.isArray(p.answers)?p.answers.slice(0,5):[];
-   if(answers.length!==5||answers.some(a=>!a||!allowedIds.has(a.question_id)||!["1","2","3","4"].includes(String(a.answer))))return send(res,400,{error:"Please complete all five safety and symptom questions."});
+   if(answers.length<1||answers.length>5||answers[0]?.question_id!=="emergency_screen"||(String(answers[0]?.answer)!=="1"&&answers.length<2)||answers.some(a=>!a||!allowedIds.has(a.question_id)||!["1","2","3","4"].includes(String(a.answer))))return send(res,400,{error:"Please complete the safety screen and the relevant symptom questions."});
    const emergencyFlags=detectEmergencyLanguage(original_message);
    if(String(answers.find(a=>a.question_id==="emergency_screen")?.answer)==="1")emergencyFlags.push({rule:"self_reported_emergency_symptom",positive:true});
    const encounter=await createHealthEncounter({sessionId:session_id,phoneNumber:phone_number,consentGiven:true,smsConsent:false,preferredLanguage:"en",channel:"web"});
