@@ -1,36 +1,33 @@
-# OmpathStudy Lite — USSD MVP
+# OmpathStudy Lite — USSD and SMS access channel
 
-A low-bandwidth medical-learning channel for students using basic phones. This module is isolated from the main OmpathStudy web experience and reuses the existing serverless API multiplexer.
+OmpathStudy Lite is an alternative low-bandwidth interface to the existing OmpathStudy learning platform. It does not maintain a separate MCQ or topic library.
 
-## MVP scope
-- Africa's Talking USSD menu and callback.
-- Phone-number registration and study-level capture.
-- Daily MCQ retrieval, answer submission and explanation.
-- Attempt records for later learner progress summaries.
+## Content source of truth
+- Published questions are read directly from `public.mcq_sets`.
+- Question options, correct answers and explanations come from the existing `questions` JSONB array.
+- Published topics and units are read from the existing OmpathStudy catalogue.
+- Lite answer attempts reference the original `mcq_sets.id` and question index.
+- No duplicate MCQ table is created and Lite administrators do not re-enter questions.
 
-## Database
-Apply `supabase/migrations/202611170001_ompathstudy_lite.sql` to the OmpathStudy Supabase project. It creates three isolated `lite_*` tables and seeds one demonstration question.
+## Lite-specific data
+The migration creates only:
+- `lite_students`: phone-based USSD learner registrations and SMS consent.
+- `lite_attempts`: answers submitted through the Lite channel, linked to the original OmpathStudy MCQ set and question index.
+
+It also creates a restricted aggregate function for the admin dashboard to count published MCQs without downloading all question JSON.
 
 ## Server environment
-Ensure the Vercel project has `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` configured server-side. Never expose the service-role key in frontend code.
+Vercel requires `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` server-side. The admin API additionally validates the signed-in user's Supabase session and checks the existing `has_role(admin)` function. Never expose the service-role key in frontend code.
 
-## Africa's Talking configuration
-Create a USSD service code in the Africa's Talking dashboard/sandbox and set its callback URL to:
+## Africa's Talking
+Configure the USSD callback to `https://YOUR-DEPLOYMENT/api/ompath-lite`. The service code is provisioned by Africa's Talking; do not assume a short code has been assigned.
 
-`https://YOUR-DEPLOYMENT/api/ompath-lite`
+## Testing
+1. Apply `supabase/migrations/202611170001_ompathstudy_lite.sql` to the correct OmpathStudy Supabase project.
+2. Deploy a Vercel preview and configure the Africa's Talking sandbox callback.
+3. Register a test learner, browse an existing published MCQ set and answer a question.
+4. Verify that the attempt stores the original MCQ set ID and question index.
+5. Visit `/admin/ompath-lite` as an administrator to inspect library coverage, learners and answer activity.
 
-The Vercel rewrite forwards this to the existing API function. Configure the callback to send `sessionId`, `serviceCode`, `phoneNumber` and `text`. The service code is provisioned by Africa's Talking; `*384#` is illustrative only and is not assumed to be assigned.
-
-## Test flow
-1. Apply the SQL migration.
-2. Deploy the branch to a preview environment.
-3. Create/configure a USSD service code with the preview callback URL.
-4. Dial the sandbox service code, register, then dial again.
-5. Choose Daily medical MCQ and submit an answer.
-6. Confirm rows in `lite_students` and `lite_attempts`.
-
-## Security and clinical quality
-- RLS is enabled and no browser-facing policies are created.
-- Database access uses the service-role key only in the serverless handler.
-- Add callback verification where supported, rate limiting, consent/privacy wording and session replay protection before production launch.
-- This is an educational prototype, not clinical decision support. A qualified medical educator must review questions and explanations before publication.
+## Safety
+This is an educational channel, not clinical decision support. Use the same reviewed/published OmpathStudy content and its existing answer explanations. Add provider callback verification, rate limiting and explicit SMS consent handling before production launch.
