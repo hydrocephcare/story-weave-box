@@ -8,12 +8,6 @@ import { searchReviewedPatientResources } from "./ompathLiteResources.js";
 
 const send=(res,status,payload)=>res.status(status).json(payload);
 const clean=(value,max=1200)=>String(value??"").replace(/[<>]/g,"").trim().slice(0,max);
-function normalizePhone(value){
- let phone=clean(value,30).replace(/[\s()-]/g,"");
- if(/^0\d{9}$/.test(phone))phone="+254"+phone.slice(1);
- else if(/^254\d{9}$/.test(phone))phone="+"+phone;
- return /^\+[1-9]\d{8,14}$/.test(phone)?phone:null;
-}
 
 export default async function liteWeb(req,res){
  if(req.method==="GET")return send(res,200,{name:"OmpathStudy Lite Health Support",status:"ok",mode:"health_support"});
@@ -21,27 +15,25 @@ export default async function liteWeb(req,res){
  const payload=typeof req.body==="string"?Object.fromEntries(new URLSearchParams(req.body)):req.body||{};
  if(clean(payload.action,40)!=="health-assess")return send(res,410,{error:"Learning and MCQ services have moved to https://www.ompathstudy.com. Lite now provides Health Support only."});
  try{
-  const phoneNumber=normalizePhone(payload.phone_number);
   const category=clean(payload.concern_category,80);
   const originalMessage=clean(payload.original_message,1200);
   const sessionId=clean(payload.session_id,120);
   const allowedCategories=["Pregnancy-related concern","Menstrual problem","Lower abdominal pain","Vaginal discharge","Bleeding","Other health concern"];
   const allowedIds=new Set(["emergency_screen","pregnancy_status","gestation","pregnancy_bleeding_or_fluid","pregnancy_movement","duration","fever","pregnancy_possibility","severity","onset","fever_vomiting","bleeding_amount","pain","worsening","care"]);
   const answers=Array.isArray(payload.answers)?payload.answers.slice(0,5):[];
-  if(!phoneNumber)return send(res,400,{error:"Enter a valid mobile number with country code, for example +2547XXXXXXXX."});
   if(!/^[A-Za-z0-9._:-]{6,120}$/.test(sessionId))return send(res,400,{error:"Your health session could not be started. Refresh and try again."});
   if(!allowedCategories.includes(category))return send(res,400,{error:"Choose the main health concern."});
   if(payload.consent_given!==true)return send(res,400,{error:"Consent is required before health information can be stored."});
   if(answers.length<1||answers.length>5||answers[0]?.question_id!=="emergency_screen"||(String(answers[0]?.answer)!=="1"&&answers.length<2)||answers.some(answer=>!answer||!allowedIds.has(answer.question_id)||!["1","2","3","4"].includes(String(answer.answer))))return send(res,400,{error:"Complete the emergency screen and all relevant follow-up questions."});
   const emergencyFlags=detectEmergencyLanguage(originalMessage);
   if(String(answers[0].answer)==="1")emergencyFlags.push({rule:"self_reported_emergency_symptom",positive:true});
-  const encounter=await createHealthEncounter({sessionId,phoneNumber,consentGiven:true,smsConsent:false,preferredLanguage:"en",channel:"web"});
+  const encounter=await createHealthEncounter({sessionId,phoneNumber:null,consentGiven:true,smsConsent:false,preferredLanguage:"en",channel:"web"});
   if(encounter?.assessment)return send(res,409,{error:"This health enquiry has already been assessed. Start a new enquiry if you need further help."});
   const assessment=buildPreliminaryAssessment({encounter:{concern_category:category,original_message:originalMessage},answers,emergencyFlags});
   const resources=await searchReviewedPatientResources({query:[category,originalMessage].filter(Boolean).join(" "),language:"en",limit:3});
   const status=["emergency","urgent"].includes(assessment.urgency_level)?"referred_urgent":"complete";
   const saved=await updateHealthEncounter({
-   id:encounter.id,sessionId,phoneNumber,
+   id:encounter.id,sessionId,phoneNumber:null,
    patch:{
     concern_category:category,
     original_message:originalMessage,
