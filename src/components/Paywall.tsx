@@ -6,6 +6,7 @@ import { AccessPass, AccessPlan, PaymentSettings, issuePassForPayment, normalize
 import { useAuth } from "@/hooks/useAuth";
 import { signInWithGoogle } from "@/lib/social-auth";
 import { savePurchaseIntent } from "@/lib/purchase-intent";
+import { getSetting } from "@/lib/store";
 
 /**
  * Paywall shown where the free portion of a page ends. Two ways in:
@@ -55,6 +56,9 @@ export function Paywall({
   const [renameMsg, setRenameMsg] = useState("");
   const { user, loading: authLoading } = useAuth();
   const [signingIn, setSigningIn] = useState(false);
+  const [paystackEnabled, setPaystackEnabled] = useState(false);
+
+  useEffect(() => { let active = true; void getSetting("paystack_enabled").then((value) => { if (active) setPaystackEnabled(value === "true"); }); return () => { active = false; }; }, []);
 
   const startGoogle = async () => {
     setSigningIn(true);
@@ -373,7 +377,8 @@ export function Paywall({
                 <div className="flex items-center gap-3 rounded-2xl border border-border bg-muted/40 p-4"><CreditCard className="h-5 w-5 shrink-0 text-primary" /><div><p className="text-sm font-semibold text-foreground">Paystack card checkout</p><p className="text-xs text-muted-foreground">Use secure Paystack card checkout for this country.</p></div></div>
               )}
               <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" || countryCode !== "KE" ? "Card payments redirect to secure Paystack checkout." : "Mobile-money prompts stay on OmpathStudy. Approve the prompt using your PIN."}</p>
-              <button type="button" onClick={startPaystackPayment} disabled={busy || !user || phone.replace(/\D/g, "").length < 9} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" || countryCode !== "KE" ? `Continue to Paystack checkout · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
+              {!paystackEnabled && <p role="status" className="rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs font-medium text-amber-700 dark:text-amber-300">Paystack payments are currently disabled. Please try again later or use an existing pass code.</p>}
+              <button type="button" onClick={startPaystackPayment} disabled={busy || !user || !paystackEnabled || phone.replace(/\D/g, "").length < 9} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" || countryCode !== "KE" ? `Continue to Paystack checkout · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
             </div>
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
