@@ -149,7 +149,7 @@ export default async function handler(req,res){
  if(req.method==="GET")return res.status(200).json({name:"OmpathStudy Lite SMS",status:"ok",provider:"Africa's Talking"});
  if(req.method!=="POST")return res.status(405).json({error:"Method not allowed"});
  const mode=String(req.query?.mode||"");
- try{if(mode==="send")return await sendDaily(req,res);if(mode==="test")return await sendTest(req,res);if(mode==="inbound")return await inbound(req,res);return res.status(400).json({error:"Set mode=send, mode=test, or mode=inbound"});}
+ try{if(mode==="send"||mode==="test")return res.status(410).json({error:"Lite is now Health Support only. Daily MCQ SMS has been retired."});if(mode==="inbound")return await inbound(req,res);return res.status(400).json({error:"Set mode=send, mode=test, or mode=inbound"});}
  catch(e){console.error("Lite SMS error",e);return res.status(500).json({error:"SMS processing failed"});}
 }
 
@@ -177,7 +177,7 @@ export async function sendHealthGuideLink({ to, link, language = "en", smsConsen
  * worker, never from the interactive USSD request.
  */
 export async function processPendingHealthGuideSms(limit = 10) {
- const pending = await db("lite_health_encounters?select=id,phone_number,preferred_language,concern_category,original_message,sms_consent,status,sms_sent_at&status=eq.guide_pending&sms_consent=eq.true&preferred_language=eq.en&sms_sent_at=is.null&order=created_at.asc&limit=" + Math.min(20, Math.max(1, Number(limit) || 10)));
+ const pending = await db("lite_health_encounters?select=id,phone_number,preferred_language,concern_category,original_message,sms_consent,status,sms_sent_at&status=eq.guide_pending&sms_consent=eq.true&sms_sent_at=is.null&order=created_at.asc&limit=" + Math.min(20, Math.max(1, Number(limit) || 10)));
  let sent = 0, waiting = 0, failed = 0;
  if (!pending.length) return { checked: 0, sent, waiting, failed };
  const settingsRows = await db("lite_sms_settings?select=enabled,environment&id=eq.1&limit=1");
