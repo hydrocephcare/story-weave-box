@@ -180,7 +180,17 @@ async function ussd(req,res){
      return reply(res,encounter.preferred_language==="sw"?swMessage:enMessage,true);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
-    return reply(res,languagePrompt(encounter.preferred_language,questions[nextIndex])+"\n"+(questions[nextIndex].id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure / not pregnant":questions[nextIndex].id==="duration"||questions[nextIndex].id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
+    const nextQuestions=questions.slice();
+    if(category==="Pregnancy-related concern"&&nextAnswers[1]==="2"){
+     for(const id of ["gestation","pregnancy_movement"]){const i=nextQuestions.findIndex(q=>q.id===id);if(i>=0)nextQuestions.splice(i,1);}
+     const bleed=nextQuestions.find(q=>q.id==="pregnancy_bleeding_or_fluid");
+     if(bleed){bleed.en="Are you having vaginal bleeding?";bleed.sw="Je, unatokwa damu ukeni?";}
+    }else if(category==="Pregnancy-related concern"&&["1","4"].includes(nextAnswers[2])){
+     const i=nextQuestions.findIndex(q=>q.id==="pregnancy_movement");if(i>=0)nextQuestions.splice(i,1);
+    }
+    const nextQuestion=nextQuestions[nextIndex];
+    if(!nextQuestion)return reply(res,"Your answers have been recorded. Please arrange an in-person health assessment.",true);
+    return reply(res,languagePrompt(encounter.preferred_language,nextQuestion)+"\n"+(nextQuestion.id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure / not pregnant":nextQuestion.id==="duration"||nextQuestion.id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
   }
