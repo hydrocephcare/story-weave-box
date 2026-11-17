@@ -68,11 +68,14 @@ export async function createHealthEncounter({
 
   // Repeated USSD callbacks must never reset an encounter or its consent.
   const existing = await db(
-    `lite_health_encounters?select=id,session_id,phone_number,consent_given,status,assessment&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
+    `lite_health_encounters?select=id,session_id,phone_number,consent_given,status,assessment,expires_at&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
   );
   if (existing[0]) {
     if (existing[0].phone_number !== phone_number || existing[0].consent_given !== true) {
       throw new Error("This health session cannot be resumed.");
+    }
+    if (Date.parse(existing[0].expires_at) <= Date.now()) {
+      throw new Error("This health session has expired. Please start a new enquiry.");
     }
     return existing[0];
   }
@@ -87,9 +90,9 @@ export async function createHealthEncounter({
   } catch {
     // A concurrent callback may have inserted first; read it, never upsert.
     const raced = await db(
-      `lite_health_encounters?select=id,session_id,phone_number,consent_given&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
+      `lite_health_encounters?select=id,session_id,phone_number,consent_given,status,assessment,expires_at&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
     );
-    if (raced[0]?.phone_number === phone_number && raced[0]?.consent_given === true) return raced[0];
+    if (raced[0]?.phone_number === phone_number && raced[0]?.consent_given === true && Date.parse(raced[0].expires_at) > Date.now()) return raced[0];
     throw new Error("We could not securely start this health enquiry.");
   }
 }
@@ -100,7 +103,7 @@ export async function getHealthEncounter({ sessionId, phoneNumber }) {
   const phone_number = normalizePhone(phoneNumber);
   if (!phone_number) throw new Error("A valid mobile number is required.");
   const rows = await db(
-    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}&limit=1`,
+    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
   );
   return rows[0] || null;
 }
@@ -148,7 +151,7 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   allowed.updated_at = new Date().toISOString();
 
   const rows = await db(
-    `lite_health_encounters?id=eq.${encodeURIComponent(id)}&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}`,
+    `lite_health_encounters?id=eq.${encodeURIComponent(id)}&session_id=eq.${encodeURIComponent(session_id)}&phone_number=eq.${encodeURIComponent(phone_number)}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}`,
     { method: "PATCH", body: JSON.stringify(allowed) },
   );
   return rows[0] || null;
