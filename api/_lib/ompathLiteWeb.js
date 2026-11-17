@@ -23,14 +23,13 @@ async function student(phone){
  return rows[0]||null;
 }
 async function library(year){
- const yearFilter=encodeURIComponent(`(title.ilike.*Year ${year}*,category.ilike.*Year ${year}*)`);
- const yearRows=await db(`mcq_sets?select=id,title,category,updated_at,questions&published=eq.true&deleted_at=is.null&or=${yearFilter}&order=updated_at.desc&limit=500`);
+ const yearRows=await db("rpc/lite_sets_for_year",{method:"POST",body:JSON.stringify({p_year:year})});
  const groups=new Map();let questionCount=0;
  for(const s of yearRows){
-  const subject=subjectOf(s),questions=Array.isArray(s.questions)?s.questions:[];
+  const subject=subjectOf(s),count=Number(s.question_count)||0;
   if(!groups.has(subject))groups.set(subject,[]);
-  groups.get(subject).push({id:s.id,title:clean(s.title,180),category:clean(s.category,120),subject,question_count:questions.length});
-  questionCount+=questions.length;
+  groups.get(subject).push({id:s.id,title:clean(s.title,180),category:clean(s.category,120),subject,question_count:count});
+  questionCount+=count;
  }
  return {subjects:[...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0])).map(([name,sets])=>({name,sets})),totals:{sets:yearRows.length,questions:questionCount}};
 }
