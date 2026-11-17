@@ -106,8 +106,8 @@ export function Paywall({
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const ref = params.get("onekitty_ref");
-    const returnedPlan = params.get("onekitty_plan") || plan.id;
+    const ref = params.get("paystack_ref") || params.get("onekitty_ref");
+    const returnedPlan = params.get("paystack_plan") || params.get("onekitty_plan") || plan.id;
     if (!ref) return;
     window.history.replaceState({}, "", window.location.pathname + window.location.hash);
     setState("waiting");
@@ -115,7 +115,7 @@ export function Paywall({
     void pollPayment(ref, returnedPlan);
   }, []);
 
-  const startOneKittyPayment = async () => {
+  const startPaystackPayment = async () => {
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
     const digits = phone.replace(/\D/g, "");
     const detected = detectCountry(phone);
@@ -125,12 +125,28 @@ export function Paywall({
       ? digits : (countries[resolvedCountry]?.dial || "") + digits.replace(/^0/, "");
     const selectedMethod = resolvedCountry === "KE" ? paymentMethod : "card";
     setState("sending"); setMessage("");
-    const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
-      body: { method: selectedMethod, amount: plan.price || settings.price, package_type: plan.id, phone: internationalPhone, country_code: resolvedCountry },
+    const { data, error } = await supabase.functions.invoke("initiate-paystack", {
+      body: {
+        method: selectedMethod,
+        amount: plan.price || settings.price,
+        package_type: plan.id,
+        phone: internationalPhone,
+        country_code: resolvedCountry,
+        return_url: window.location.href,
+      },
     });
-    if (error || !data?.success) { setState("error"); setMessage(data?.error || error?.message || "Could not start the payment."); return; }
-    if (selectedMethod === "card") { if (!data.checkout_url) { setState("error"); setMessage("OneKitty did not return a card checkout link."); return; } window.location.assign(data.checkout_url); return; }
-    setState("waiting"); setMessage(data.provider_message || "Payment prompt sent. Approve it on your phone; you can stay on this page.");
+    if (error || !data?.success) {
+      setState("error");
+      setMessage(data?.error || error?.message || "Could not start the Paystack payment.");
+      return;
+    }
+    if (selectedMethod === "card") {
+      if (!data.checkout_url) { setState("error"); setMessage("Paystack did not return a secure checkout link."); return; }
+      window.location.assign(data.checkout_url);
+      return;
+    }
+    setState("waiting");
+    setMessage(data.provider_message || "Payment prompt sent. Approve it on your phone; you can stay on this page.");
     void pollPayment(data.transaction_id, plan.id);
   };
   const pay = async () => {
@@ -351,10 +367,10 @@ export function Paywall({
                   </div>
                 </div>
               ) : (
-                <div className="flex items-center gap-3 rounded-2xl border border-border bg-muted/40 p-4"><CreditCard className="h-5 w-5 shrink-0 text-primary" /><div><p className="text-sm font-semibold text-foreground">Card checkout</p><p className="text-xs text-muted-foreground">Use OneKitty hosted checkout for this country.</p></div></div>
+                <div className="flex items-center gap-3 rounded-2xl border border-border bg-muted/40 p-4"><CreditCard className="h-5 w-5 shrink-0 text-primary" /><div><p className="text-sm font-semibold text-foreground">Paystack card checkout</p><p className="text-xs text-muted-foreground">Use secure Paystack card checkout for this country.</p></div></div>
               )}
-              <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" || countryCode !== "KE" ? "Only card payments redirect to OneKitty hosted checkout." : "Mobile-money prompts stay on OmpathStudy. Approve the prompt using your PIN."}</p>
-              <button type="button" onClick={startOneKittyPayment} disabled={busy || !user || phone.replace(/\D/g, "").length < 9} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" || countryCode !== "KE" ? `Continue to card checkout · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
+              <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" || countryCode !== "KE" ? "Card payments redirect to secure Paystack checkout." : "Mobile-money prompts stay on OmpathStudy. Approve the prompt using your PIN."}</p>
+              <button type="button" onClick={startPaystackPayment} disabled={busy || !user || phone.replace(/\D/g, "").length < 9} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" || countryCode !== "KE" ? `Continue to Paystack checkout · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
             </div>
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
