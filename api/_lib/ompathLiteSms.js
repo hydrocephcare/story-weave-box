@@ -84,6 +84,18 @@ async function sendTest(req,res){
  const recipient=await sendSms(to,message);
  return res.status(200).json({ok:true,environment:"sandbox",to,status:recipient.status||"Accepted",messageId:recipient.messageId||null});
 }
+/** One fixed-recipient sandbox test, callable only after the Lite admin API verifies an administrator. */
+export async function sendAdminSandboxTest(){
+ if(process.env.AT_ENV!=="sandbox")throw new Error("Test SMS is disabled unless Africa's Talking is in sandbox mode.");
+ const to="+254115475543";
+ const sets=await db("mcq_sets?select=id,title,category,questions&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000");
+ const item=await pickQuestion("4",sets);
+ if(!item)throw new Error("No eligible published Year 4 MCQ was found.");
+ const options=item.q.options.map((o,i)=>`${i+1}) ${clean(o,55)}`).join("\\n");
+ const message=`OmpathStudy Lite | SMS TEST\\n${clean(item.q.question,170)}\\n${options}\\nThis is a sandbox test. Reply is not recorded.`;
+ const recipient=await sendSms(to,message);
+ return {ok:true,environment:"sandbox",to,status:recipient.status||"Accepted",messageId:recipient.messageId||null};
+}
 function parseBody(req){if(typeof req.body==="string")return Object.fromEntries(new URLSearchParams(req.body));if(req.body&&typeof req.body==="object")return req.body;if(typeof req.rawBody==="string")return Object.fromEntries(new URLSearchParams(req.rawBody));return {};}
 async function inbound(req,res){
  const secret=String(req.query?.key||"");
