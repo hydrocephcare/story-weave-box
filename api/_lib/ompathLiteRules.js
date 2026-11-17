@@ -110,6 +110,71 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     reasons.push("One or more answers were uncertain; this limits interpretation.");
   }
 
+  // Every completed intake receives a symptom-matched provisional impression.
+  // These are triage-level hypotheses, not confirmed diagnoses.
+  const pregnancyPossible = ["1", "3"].includes(answerFor("pregnancy_status") || answerFor("pregnancy_possibility"));
+  const pregnancyConfirmed = answerFor("pregnancy_status") === "1";
+  const fever = positive("fever") || positive("fever_vomiting");
+  const pain = positive("pain") || positive("severity") || positive("fever_vomiting");
+  let leadingImpression = "Undifferentiated " + category.toLowerCase() + "; more clinical information is needed to narrow the cause.";
+  let differentials = [];
+  let rationale = "The impression is based on the reported concern and the limited answers collected.";
+
+  if (category === "Pregnancy-related concern") {
+    if (pregnancyConfirmed && positive("pregnancy_movement")) {
+      leadingImpression = "Reduced fetal movements in pregnancy (possible fetal compromise)";
+      differentials = ["Fetal sleep cycle", "Fetal growth restriction", "Placental insufficiency"];
+      rationale = "Reduced or absent fetal movement after 20 weeks requires prompt fetal wellbeing assessment.";
+      urgency = urgency === "emergency" ? urgency : "urgent";
+    } else if (pregnancyConfirmed && positive("pregnancy_bleeding_or_fluid")) {
+      leadingImpression = "Pregnancy with vaginal bleeding or possible rupture of membranes";
+      differentials = ["Threatened pregnancy loss (depending on gestation)", "Placental abruption", "Preterm prelabour rupture of membranes"];
+      rationale = "Bleeding or fluid leakage during pregnancy needs maternity assessment; the cause depends on gestational age and examination.";
+      urgency = urgency === "emergency" ? urgency : "urgent";
+    } else {
+      leadingImpression = "Pregnancy-related symptom requiring obstetric assessment";
+      differentials = ["Urinary tract infection", "Normal pregnancy-related changes", "Obstetric complication depending on the symptom"];
+    }
+  } else if (category === "Lower abdominal pain") {
+    if (pregnancyPossible) {
+      leadingImpression = "Lower abdominal pain with possible pregnancy — ectopic pregnancy must be excluded";
+      differentials = ["Ectopic pregnancy", "Pelvic inflammatory disease", "Appendicitis", "Urinary tract infection"];
+      urgency = urgency === "emergency" ? urgency : "urgent";
+      rationale = "Pregnancy possibility changes the risk assessment; a pregnancy test and clinical examination are needed urgently.";
+    } else if (fever || positive("fever_vomiting")) {
+      leadingImpression = "Lower abdominal pain with systemic symptoms; infection or acute abdominal pathology is possible";
+      differentials = ["Appendicitis", "Pelvic inflammatory disease", "Urinary tract infection/pyelonephritis", "Gastroenteritis"];
+      rationale = "Pain with fever or repeated vomiting can indicate an infection or surgical abdominal condition.";
+      urgency = urgency === "emergency" ? urgency : "urgent";
+    } else {
+      leadingImpression = "Undifferentiated lower abdominal pain";
+      differentials = ["Urinary tract infection", "Dysmenorrhoea", "Constipation", "Pelvic inflammatory disease"];
+    }
+  } else if (category === "Vaginal discharge") {
+    leadingImpression = fever ? "Vaginal discharge with fever — pelvic inflammatory disease (PID) must be considered" : "Vaginitis or cervicitis causing vaginal discharge";
+    differentials = ["Bacterial vaginosis", "Vulvovaginal candidiasis", "Trichomoniasis or other sexually transmitted infection", "Cervicitis/PID"];
+    rationale = "Discharge characteristics, pelvic pain, examination and appropriate swabs/urine tests are needed to distinguish causes.";
+    if (fever) urgency = urgency === "emergency" ? urgency : "urgent";
+  } else if (category === "Menstrual problem") {
+    leadingImpression = "Menstrual disturbance (abnormal uterine bleeding or dysmenorrhoea, depending on the symptom)";
+    differentials = ["Pregnancy-related bleeding", "Ovulatory dysfunction", "Uterine fibroids", "Endometriosis"];
+    if (pregnancyPossible) {
+      differentials.unshift("Ectopic pregnancy or miscarriage must be excluded");
+      urgency = urgency === "emergency" ? urgency : "urgent";
+    }
+    rationale = "Cycle pattern, bleeding volume, pain, pregnancy status and examination determine the likely cause.";
+  } else if (category === "Bleeding") {
+    leadingImpression = "Abnormal bleeding of undetermined source; pregnancy-related bleeding must be excluded where relevant";
+    differentials = ["Pregnancy loss or ectopic pregnancy", "Abnormal uterine bleeding", "Cervical or vaginal cause"];
+    if (pregnancyPossible || positive("bleeding_amount") || positive("pain")) urgency = urgency === "emergency" ? urgency : "urgent";
+    rationale = "The source, amount, pregnancy status, recent delivery and associated pain determine the differential diagnosis.";
+  } else {
+    leadingImpression = "Unclassified symptom presentation — provisional cause cannot yet be narrowed";
+    differentials = ["Infection or inflammation", "A condition affecting the relevant organ system", "Medication-related or other systemic cause"];
+  }
+
+  if (urgency === "emergency") rationale += " A reported danger sign takes priority over further remote assessment.";
+
   const nextSteps = urgency === "emergency"
     ? ["Seek emergency medical care now. Do not wait for an SMS or online assessment."]
     : urgency === "urgent"
@@ -119,13 +184,17 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
   return {
     assessment_type: "preliminary_intake_summary",
     generated_at: new Date().toISOString(),
-    status: "not_a_diagnosis",
+    status: "provisional_assessment",
+    provisional_diagnosis: leadingImpression,
+    diagnostic_confidence: "limited",
+    differential_diagnoses: differentials,
+    diagnostic_rationale: rationale,
     concern_category: category,
     presenting_concern: original || null,
     clarification_answers: mapped,
     urgency_level: urgency,
     reasons,
-    possible_causes: [],
+    possible_causes: differentials,
     clinical_examination: "Not performed",
     investigations: "Not performed",
     limitations: [
@@ -134,6 +203,6 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
       "A negative emergency screen does not rule out a serious condition.",
     ],
     next_steps: nextSteps,
-    source_policy: "No unreviewed study notes or unsupported diagnostic claims were used.",
+    source_policy: "Symptom-based provisional clinical reasoning; requires clinician confirmation.",
   };
 }
