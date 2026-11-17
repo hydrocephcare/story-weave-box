@@ -3,7 +3,7 @@
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
 import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
-import { interpretHealthConcern } from "./ompathLiteClinical.js";
+import { interpretHealthConcern, buildPreliminaryAssessment } from "./ompathLiteClinical.js";
 const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
@@ -138,15 +138,34 @@ async function ussd(req,res){
     const currentQuestion=questions[answerIndex];
     if(!currentQuestion)return reply(res,"Your answers have been recorded. No diagnosis or clinical assessment has been generated. Please seek care if symptoms persist or worsen.",true);
     const answer=flow[flow.length-1];
-    if(!["1","2","3","4"].includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\nChoose one of the numbered options.\n0. Back");
+    const allowedAnswers=currentQuestion.id==="gestation"?["1","2","3","4"]:
+     ["duration","onset"].includes(currentQuestion.id)?["1","2","3"]:
+     ["severity","worsening"].includes(currentQuestion.id)?["1","2","3"]:["1","2","3"];
+    if(!allowedAnswers.includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\nChoose one of the numbered options shown.\n0. Back");
     if(answerIndex===0&&answer==="1"){
      await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:[...answers,{question_id:currentQuestion.id,answer}],red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],status:"referred_urgent",urgency_level:"emergency"}});
      return reply(res,encounter.preferred_language==="sw"?"Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni. Ikiwa unaweza, mwombe mtu akusindikize.":"Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment. If possible, ask someone to accompany you.",true);
     }
     const nextAnswers=[...answers,{question_id:currentQuestion.id,answer}];
     const nextIndex=answerIndex+1;
-    await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:nextIndex>=questions.length?"ready_for_assessment":"awaiting_clarification"}});
-    if(nextIndex>=questions.length)return reply(res,encounter.preferred_language==="sw"?"Asante. Majibu yako yamehifadhiwa. Tathmini ya kitabibu bado haijatolewa. Tafuta huduma ya afya ikiwa dalili zinaendelea au zinazidi.":"Thank you. Your answers have been saved. A clinical assessment has not yet been generated. Seek medical care if symptoms persist or worsen.",true);
+    if(nextIndex>=questions.length){
+     const assessment=buildPreliminaryAssessment({encounter,answers:nextAnswers,emergencyFlags:encounter.red_flag_results||[]});
+     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{
+      clarification_answers:nextAnswers,
+      assessment,
+      urgency_level:assessment.urgency_level,
+      status:"complete"
+     }});
+     const urgent=assessment.urgency_level==="urgent";
+     const swMessage=urgent
+      ?"Majibu yako yamepokelewa. Tafuta tathmini ya afya katika kituo cha afya haraka leo. Huu si utambuzi. Dalili zikizidi au ukitokwa damu nyingi, ukizimia au kupata shida ya kupumua, tafuta huduma ya dharura sasa."
+      :"Majibu yako yamepokelewa. Tafadhali panga kuonana na mhudumu wa afya haraka ili uchunguzwe. Huu si utambuzi. Ukipata maumivu makali, damu nyingi, kuzimia au shida ya kupumua, tafuta huduma ya dharura sasa.";
+     const enMessage=urgent
+      ?"Your answers have been received. Attend a health facility urgently today for an in-person assessment. This is not a diagnosis. If symptoms worsen or you develop heavy bleeding, fainting or breathing difficulty, seek emergency care now."
+      :"Your answers have been received. Please arrange an in-person assessment with a health professional promptly. This is not a diagnosis. Seek emergency care now if severe pain, heavy bleeding, fainting or breathing difficulty develops.";
+     return reply(res,encounter.preferred_language==="sw"?swMessage:enMessage,true);
+    }
+    await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
     return reply(res,languagePrompt(encounter.preferred_language,questions[nextIndex])+"\n"+(questions[nextIndex].id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure / not pregnant":questions[nextIndex].id==="duration"||questions[nextIndex].id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
