@@ -1,4 +1,4 @@
-/** Admin API for the Lite channel. The source MCQ library remains public.mcq_sets. */
+/** Admin API for the Lite channel. The source MCQ library remains public.mcq_sets. */\nimport { sendAdminSandboxTest } from "./ompathLiteSms.js";
 const json=(res,status,body)=>res.status(status).json(body);
 async function request(path,key){
  const base=process.env.SUPABASE_URL;
@@ -11,13 +11,17 @@ export default async function liteAdmin(req,res){
  if(!url||!serviceKey||!anonKey)return json(res,503,{error:"Lite admin is not configured."});
  const token=String(req.headers.authorization||"").replace(/^Bearer\s+/i,"");
  if(!token)return json(res,401,{error:"Sign in required."});
- if(req.method!=="GET")return json(res,405,{error:"Method not allowed."});
+ if(req.method!=="GET"&&req.method!=="POST")return json(res,405,{error:"Method not allowed."});
  try{
   const who=await fetch(`${url.replace(/\/$/,"")}/auth/v1/user`,{headers:{apikey:anonKey,Authorization:`Bearer ${token}`}});
   if(!who.ok)return json(res,401,{error:"Session expired. Sign in again."});
   const user=await who.json();
   const roles=await fetch(`${url.replace(/\/$/,"")}/rest/v1/rpc/has_role`,{method:"POST",headers:{apikey:serviceKey,Authorization:`Bearer ${serviceKey}`,"Content-Type":"application/json"},body:JSON.stringify({_user_id:user.id,_role:"admin"})});
   if(!roles.ok||await roles.json()!==true)return json(res,403,{error:"Administrator access required."});
+  if(req.method==="POST"){
+   const result=await sendAdminSandboxTest();
+   return json(res,200,result);
+  }
   const [students,sets,units,attempts,summary]=await Promise.all([
    request("lite_students?select=id,phone_number,full_name,study_level,preferred_subject,sms_opt_in,created_at&order=created_at.desc&limit=200",serviceKey),
    request("mcq_sets?select=id,title,category,unit,unit_id,university,school,updated_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=200",serviceKey),
