@@ -217,6 +217,10 @@ export default function OmpathLiteApp() {
               <div className="health-hero-note"><ShieldCheck size={18} /> Private intake · English · Designed for mobile and low-bandwidth access</div>
             </section>
 
+            <section className="health-disclaimer">
+              <AlertTriangle size={20} />
+              <div><strong>Need emergency help?</strong><p>If you have severe difficulty breathing, chest pain, fainting, a seizure, severe bleeding, severe sudden pain or feel in immediate danger, go to the nearest emergency department now. Do not wait for an online response.</p></div>
+            </section>
             <section className="health-panel">
               <div className="health-panel-heading">
                 <div><span className="health-step">01</span><div><h2>Tell us what is happening</h2><p>Do not include your name or another person's identifying details.</p></div></div>
@@ -274,10 +278,6 @@ export default function OmpathLiteApp() {
               <p className="health-privacy"><ShieldCheck size={15} /> Your answers are not used to create a definitive diagnosis. Do not delay emergency care to complete this form.</p>
             </section>
 
-            <section className="health-disclaimer">
-              <AlertTriangle size={20} />
-              <div><strong>Need emergency help?</strong><p>If you have severe difficulty breathing, chest pain, fainting, a seizure, severe bleeding, severe sudden pain or feel in immediate danger, go to the nearest emergency department now. Do not wait for an online response.</p></div>
-            </section>
           </>
         ) : (
           <section className="health-result">
