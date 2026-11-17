@@ -260,7 +260,7 @@ async function ussd(req,res){
     const stem=clean(q.question,2000);
     const chunks=splitWords(stem,105);
     for(let page=0;page<chunks.length;page++){
-     if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length}\n${chunks[page]}\n1. ${page<chunks.length-1?"More":"Show options"}`);
+     if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length}\n${chunks[page]}\n1. ${page<chunks.length-1?"Continue":"Show options"}`);
      if(tokens[cursor++]!=="1")return reply(res,"Enter 1 to continue reading this question.",true);
     }
     const optionList=optionsOf(q).slice(0,4);
