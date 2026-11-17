@@ -3,7 +3,12 @@
  * Published OmpathStudy mcq_sets remain the only MCQ source of truth.
  */
 import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
-const mainMenu = "OmpathStudy Lite\n1. Register\n2. Study by subject\n3. Help\n4. SMS preferences\n5. Health support";
+const mainMenu = "OmpathStudy Lite
+1. Register
+2. Study by subject
+3. Help
+4. SMS preferences
+5. Health support";
 const clean = (v,n=180)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,n);
 const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
 async function db(path,options={}){
@@ -20,7 +25,8 @@ const subjectOf=s=>{
  return raw.replace(/^weekly\s+exam\s*:\s*/i,"").replace(/^year\s*[1-6]\s*[:\-–—]?\s*/i,"").replace(/\s+exam\s*[-–—:].*$/i,"").replace(/\s*[-–—]\s*(section\s+[a-z]|november\s+\d+).*$/i,"").trim()||"General medical MCQs";
 };
 const yearMatches=(s,year)=>new RegExp(`\\bYear\s*${year}\\b`,"i").test(`${s.title||""} ${s.category||""}`);
-function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}\nfunction languagePrompt(language,q){return language==="sw"?q.sw:q.en;}
+function optionsOf(q){return Array.isArray(q?.options)?q.options:[];}
+function languagePrompt(language,q){return language==="sw"?q.sw:q.en;}
 async function ussd(req,res){
  let payload=req.body||{};
  if(typeof payload==="string")payload=Object.fromEntries(new URLSearchParams(payload));
@@ -40,31 +46,64 @@ async function ussd(req,res){
     if(token==="0"){if(flow.length===1)returnedToIntro=true;flow.pop();continue;}
     flow.push(token);
    }
-   if(!flow.length){if(returnedToIntro)return reply(res,"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support\nThis service is being prepared. It is not an emergency service.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
+   if(!flow.length){if(returnedToIntro)return reply(res,"Health support
+This service is being prepared. It is not an emergency service.
+1. Continue
+2. Cancel
+0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support
+This service is being prepared. It is not an emergency service.
+1. Continue
+2. Cancel
+0. Main menu",parts.length>1);}
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
-    if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
-    return reply(res,"Before continuing: your answers may include sensitive health information. They will be used to prepare health guidance. This is not a diagnosis or emergency service.\n1. I agree\n2. Cancel\n0. Back");
+    if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.
+0. Back");
+    return reply(res,"Before continuing: your answers may include sensitive health information. They will be used to prepare health guidance. This is not a diagnosis or emergency service.
+1. I agree
+2. Cancel
+0. Back");
    }
    if(flow.length===2){
-    if(flow[1]!=="1")return reply(res,"Consent is required to continue.\n1. I agree\n2. Cancel\n0. Back",true);
-    return reply(res,"Choose your preferred language:\n1. English\n2. Kiswahili\n0. Back");
+    if(flow[1]!=="1")return reply(res,"Consent is required to continue.
+1. I agree
+2. Cancel
+0. Back",true);
+    return reply(res,"Choose your preferred language:
+1. English
+2. Kiswahili
+0. Back");
    }
    if(flow.length===3){
-    if(!["1","2"].includes(flow[2]))return reply(res,"Choose 1 for English or 2 for Kiswahili.\n0. Back");
-    return reply(res,"What is your main concern?\n1. Pregnancy-related concern\n2. Menstrual problem\n3. Lower abdominal pain\n4. Vaginal discharge\n5. Bleeding\n6. Other health concern\n0. Back");
+    if(!["1","2"].includes(flow[2]))return reply(res,"Choose 1 for English or 2 for Kiswahili.
+0. Back");
+    return reply(res,"What is your main concern?
+1. Pregnancy-related concern
+2. Menstrual problem
+3. Lower abdominal pain
+4. Vaginal discharge
+5. Bleeding
+6. Other health concern
+0. Back");
    }
    if(flow.length===4){
-    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose an option from 1 to 6.\n0. Back");
+    if(!["1","2","3","4","5","6"].includes(flow[3]))return reply(res,"Choose an option from 1 to 6.
+0. Back");
     return reply(res,flow[2]==="2"
-     ?"Eleza dalili zako kwa maneno machache (au bonyeza 1 kuruka).\n0. Rudi nyuma"
-     :"Briefly describe what is troubling you in your own words, including mixed language if needed. Enter 1 to skip.\n0. Back");
+     ?"Eleza dalili zako kwa maneno machache (au bonyeza 1 kuruka).
+0. Rudi nyuma"
+     :"Briefly describe what is troubling you in your own words, including mixed language if needed. Enter 1 to skip.
+0. Back");
    }
    if(flow.length===5){
-    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?\n1. Yes, send SMS\n2. No SMS\n0. Back");
+    return reply(res,"Would you like OmpathStudy to send you a link by SMS when your guide is available?
+1. Yes, send SMS
+2. No SMS
+0. Back");
    }
    if(flow.length===6){
-    if(!["1","2"].includes(flow[5]))return reply(res,"Choose 1 for SMS or 2 for no SMS.\n0. Back");
+    if(!["1","2"].includes(flow[5]))return reply(res,"Choose 1 for SMS or 2 for no SMS.
+0. Back");
     const language=flow[2]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
@@ -83,8 +122,10 @@ async function ussd(req,res){
      patch:{concern_category:categories[flow[3]],original_message:description,status:"intake_started"}
     });
     return reply(res,language==="sw"
-     ?"Kwanza, tujue kama kuna dharura. Je, una shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka sasa?\n1. Ndiyo  2. Hapana"
-     :"First, let's check for an emergency. Are you having severe difficulty breathing, chest pain, fainting, a seizure, heavy bleeding, or severe/worsening pain right now?\n1. Yes  2. No");
+     ?"Kwanza, tujue kama kuna dharura. Je, una shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, kutokwa damu nyingi, au maumivu makali yanayoongezeka sasa?
+1. Ndiyo  2. Hapana"
+     :"First, let's check for an emergency. Are you having severe difficulty breathing, chest pain, fainting, a seizure, heavy bleeding, or severe/worsening pain right now?
+1. Yes  2. No");
    }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
@@ -124,7 +165,9 @@ async function ussd(req,res){
     const currentQuestion=questions[answerIndex];
     if(!currentQuestion)return reply(res,"Your answers have been recorded. No diagnosis or clinical assessment has been generated. Please seek care if symptoms persist or worsen.",true);
     const answer=flow[flow.length-1];
-    if(!["1","2","3","4"].includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\nChoose one of the numbered options.\n0. Back");
+    if(!["1","2","3","4"].includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"
+Choose one of the numbered options.
+0. Back");
     if(answerIndex===0&&answer==="1"){
      await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:[...answers,{question_id:currentQuestion.id,answer}],red_flag_results:[{rule:"self_reported_emergency_symptom",positive:true}],status:"referred_urgent",urgency_level:"emergency"}});
      return reply(res,encounter.preferred_language==="sw"?"Tafuta huduma ya dharura sasa au nenda hospitali iliyo karibu. Usisubiri ujumbe au tathmini ya mtandaoni. Ikiwa unaweza, mwombe mtu akusindikize.":"Seek emergency medical care now or go to the nearest hospital. Do not wait for an SMS or online assessment. If possible, ask someone to accompany you.",true);
@@ -133,12 +176,20 @@ async function ussd(req,res){
     const nextIndex=answerIndex+1;
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:nextIndex>=questions.length?"ready_for_assessment":"awaiting_clarification"}});
     if(nextIndex>=questions.length)return reply(res,encounter.preferred_language==="sw"?"Asante. Majibu yako yamehifadhiwa. Tathmini ya kitabibu bado haijatolewa. Tafuta huduma ya afya ikiwa dalili zinaendelea au zinazidi.":"Thank you. Your answers have been saved. A clinical assessment has not yet been generated. Seek medical care if symptoms persist or worsen.",true);
-    return reply(res,languagePrompt(encounter.preferred_language,questions[nextIndex])+"\n"+(questions[nextIndex].id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure / not pregnant":questions[nextIndex].id==="duration"||questions[nextIndex].id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"\n0. Back");
+    return reply(res,languagePrompt(encounter.preferred_language,questions[nextIndex])+"
+"+(questions[nextIndex].id==="gestation"?"1. Under 20 weeks  2. 20–27 weeks  3. 28+ weeks  4. Not sure / not pregnant":questions[nextIndex].id==="duration"||questions[nextIndex].id==="onset"?"1. Less than 1 day  2. 1–7 days  3. More than 7 days":"1. Yes  2. No  3. Not sure")+"
+0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
   }
   if(parts[0]==="1"){
-   if(parts.length===1)return reply(res,`Select your study year:\n1. Year 1\n2. Year 2\n3. Year 3\n4. Year 4\n5. Year 5\n6. Year 6`);
+   if(parts.length===1)return reply(res,`Select your study year:
+1. Year 1
+2. Year 2
+3. Year 3
+4. Year 4
+5. Year 5
+6. Year 6`);
    const choice=parts.slice(1).map(v=>clean(v,30).replace(/\s+/g,"").toLowerCase()).findLast(v=>/^(?:year)?[1-6]$/.test(v));
    const year=choice?Number(choice.replace(/^year/,"")):NaN;
    if(!Number.isInteger(year)||year<1||year>6)return reply(res,"Invalid choice. Select a year from 1 to 6. Dial again and choose 1.",true);
@@ -160,7 +211,11 @@ async function ussd(req,res){
    const tokens=parts.slice(1);
    let cursor=0,subjectPage=0;
    while(tokens[cursor]==="9"){subjectPage++;cursor++;}
-   const showSubjects=(page)=>reply(res,`Year ${year} subjects ${page+1}:\n${subjects.slice(page*4,page*4+4).map((s,i)=>`${i+1}. ${clean(s,28)}`).join("\n")}${(page+1)*4<subjects.length?"\n9. More subjects":""}\n0. ${page>0?"Previous":"Main menu"}`);
+   const showSubjects=(page)=>reply(res,`Year ${year} subjects ${page+1}:
+${subjects.slice(page*4,page*4+4).map((s,i)=>`${i+1}. ${clean(s,28)}`).join("
+")}${(page+1)*4<subjects.length?"
+9. More subjects":""}
+0. ${page>0?"Previous":"Main menu"}`);
    if(cursor>=tokens.length)return showSubjects(subjectPage);
    if(tokens[cursor]==="0")return subjectPage>0?showSubjects(subjectPage-1):reply(res,mainMenu,true);
    const subjectNo=Number(tokens[cursor++]);
@@ -171,7 +226,11 @@ async function ussd(req,res){
    const subjectSets=grouped.get(subject)||[];
    let setPage=0;
    while(tokens[cursor]==="9"){setPage++;cursor++;}
-   const showSets=(page)=>reply(res,`${clean(subject,28)} sets ${page+1}:\n${subjectSets.slice(page*4,page*4+4).map((s,i)=>`${i+1}. ${clean(s.title,30)}`).join("\n")}${(page+1)*4<subjectSets.length?"\n9. More sets":""}\n0. ${page>0?"Previous":"Subjects"}`);
+   const showSets=(page)=>reply(res,`${clean(subject,28)} sets ${page+1}:
+${subjectSets.slice(page*4,page*4+4).map((s,i)=>`${i+1}. ${clean(s.title,30)}`).join("
+")}${(page+1)*4<subjectSets.length?"
+9. More sets":""}
+0. ${page>0?"Previous":"Subjects"}`);
    if(cursor>=tokens.length)return showSets(setPage);
    if(tokens[cursor]==="0")return setPage>0?showSets(setPage-1):showSubjects(subjectPage);
    const setNo=Number(tokens[cursor++]);
@@ -190,11 +249,16 @@ async function ussd(req,res){
     const stem=clean(q.question,2000);
     const chunks=stem.match(/[\s\S]{1,125}/g)||["Question text unavailable."];
     for(let page=0;page<chunks.length;page++){
-     if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length}\n${chunks[page]}\n1. ${page<chunks.length-1?"More":"Show options"}`);
+     if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length}
+${chunks[page]}
+1. ${page<chunks.length-1?"More":"Show options"}`);
      if(tokens[cursor++]!=="1")return reply(res,"Enter 1 to continue reading this question.",true);
     }
-    const opts=optionsOf(q).slice(0,4).map((o,i)=>`${i+1}. ${clean(o,30)}`).join("\n");
-    if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length} - Choose answer:\n${opts}\nEnter 1-${Math.min(4,q.options.length)}`);
+    const opts=optionsOf(q).slice(0,4).map((o,i)=>`${i+1}. ${clean(o,30)}`).join("
+");
+    if(cursor>=tokens.length)return reply(res,`Q${qNo}/${questions.length} - Choose answer:
+${opts}
+Enter 1-${Math.min(4,q.options.length)}`);
     const selected=Number(tokens[cursor++]);
     if(!Number.isInteger(selected)||selected<1||selected>Math.min(4,q.options.length))return reply(res,"Invalid answer. Enter one of the option numbers shown.",true);
     const rawCorrect=Number(q.correct_answer),correctIndex=rawCorrect>=0&&rawCorrect<q.options.length?rawCorrect:rawCorrect-1;
@@ -202,8 +266,12 @@ async function ussd(req,res){
     const isCorrect=selected-1===correctIndex;
     await db("lite_attempts",{method:"POST",body:JSON.stringify({student_id:student.id,mcq_set_id:set.id,question_index:qNo-1,selected_option:selected,is_correct:isCorrect})});
     const explanation=clean(q.explanation||"Review the full explanation on OmpathStudy.",95);
-    const feedback=`${isCorrect?"Correct!":"Incorrect."}\nAnswer: ${correctIndex+1}. ${clean(q.options[correctIndex],48)}\n${explanation}`;
-    if(cursor>=tokens.length)return reply(res,`${feedback}\n1. Next question\n0. Finish set`);
+    const feedback=`${isCorrect?"Correct!":"Incorrect."}
+Answer: ${correctIndex+1}. ${clean(q.options[correctIndex],48)}
+${explanation}`;
+    if(cursor>=tokens.length)return reply(res,`${feedback}
+1. Next question
+0. Finish set`);
     const action=tokens[cursor++];
     if(action==="0")return reply(res,"Set finished. Thank you for studying with OmpathStudy Lite.",true);
     if(action!=="1")return reply(res,"Enter 1 for the next question or 0 to finish.",true);
@@ -215,7 +283,9 @@ async function ussd(req,res){
   if(parts[0]==="4"){
    const students=await getStudent(phone),student=students[0];
    if(!student)return reply(res,"Please register first using option 1.",true);
-   if(parts.length===1)return reply(res,"SMS preferences\n1. Subscribe to daily MCQs\n2. Unsubscribe");
+   if(parts.length===1)return reply(res,"SMS preferences
+1. Subscribe to daily MCQs
+2. Unsubscribe");
    if(parts[1]==="1"){await db(`lite_students?id=eq.${student.id}`,{method:"PATCH",body:JSON.stringify({sms_opt_in:true,sms_opt_in_at:new Date().toISOString()})});return reply(res,"Subscribed to daily OmpathStudy MCQs. Reply STOP to unsubscribe.",true);}
    if(parts[1]==="2"){await db(`lite_students?id=eq.${student.id}`,{method:"PATCH",body:JSON.stringify({sms_opt_in:false,sms_opt_in_at:null})});return reply(res,"You have unsubscribed from SMS learning.",true);}
    return reply(res,"Choose 1 to subscribe or 2 to unsubscribe.",true);
