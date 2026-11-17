@@ -7,6 +7,8 @@ create table if not exists public.lite_students (
   phone_number text not null unique,
   full_name text not null,
   study_level text not null,
+  sms_opt_in boolean not null default false,
+  sms_opt_in_at timestamptz,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
