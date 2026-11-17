@@ -51,4 +51,10 @@ describe("OmpathStudy Lite emergency phrase screening", () => {
       expect.arrayContaining([expect.objectContaining({ rule: "severe_breathing_difficulty", positive: true })]),
     );
   });
+
+  it("does not let an earlier negated symptom hide a later positive report", () => {
+    expect(detectEmergencyLanguage("I do not have chest pain, but now I have chest pain")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "chest_pain", positive: true })]),
+    );
+  });
 });
