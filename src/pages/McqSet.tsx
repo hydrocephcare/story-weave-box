@@ -10,6 +10,9 @@ import { openAI } from "@/lib/aiEvents";
 import { isExamLike, resolveMcqSet, shuffleOptions, type McqSetRow } from "@/lib/mcqSet";
 import { examUnit, examYear, shortTitle } from "@/lib/examMeta";
 import { resourceSeoTitle } from "@/lib/resourceSeoTitle";
+import { getSetting } from "@/lib/store";
+import { useAccess } from "@/lib/access";
+import { Paywall } from "@/components/Paywall";
 
 const LETTERS = "ABCDEF";
 const mixOrder = <T,>(a: T[]): T[] => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -19,7 +22,21 @@ const mixOrder = <T,>(a: T[]): T[] => { const b = [...a]; for (let i = b.length 
  * Your score counts the first try only, so retrying teaches without inflating it.
  */
 function Bank({ set }: { set: McqSetRow }) {
-  const [qs, setQs] = useState(set.questions);   // Reset mixes the questions and their options again, so positions cannot be memorised
+  const [qs, setQs] = useState(set.questions);
+  const access = useAccess();
+  const [mcqPaywallEnabled, setMcqPaywallEnabled] = useState(false);
+  const [freeLimit, setFreeLimit] = useState(15);
+  useEffect(() => {
+    let active = true;
+    Promise.all([getSetting("mcq_paywall_enabled"), getSetting("mcq_free_limit")]).then(([enabled, limit]) => {
+      if (!active) return;
+      setMcqPaywallEnabled(enabled === "true");
+      const parsed = Number(limit);
+      setFreeLimit(Number.isFinite(parsed) ? Math.max(0, Math.min(500, Math.floor(parsed))) : 15);
+    }).catch(() => { if (active) setMcqPaywallEnabled(false); });
+    return () => { active = false; };
+  }, []);
+  const isLocked = (index: number) => mcqPaywallEnabled && index >= freeLimit && !access.hasPass && !access.isAdmin;   // Reset mixes the questions and their options again, so positions cannot be memorised
   const [first, setFirst] = useState<Map<number, number>>(new Map());          // the first choice made on each question (this is what is scored)
   const [wrong, setWrong] = useState<Map<number, number[]>>(new Map());        // wrong choices already tried, per question
   const [solved, setSolved] = useState<Set<number>>(new Set());               // answered correctly (on any try)
@@ -28,6 +45,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const [panelOpen, setPanelOpen] = useState(false);
 
   const pick = useCallback((i: number, oi: number) => {
+    if (isLocked(i)) return;
     if (solved.has(i) || shown.has(i) || (wrong.get(i) ?? []).includes(oi)) return;
     const q = qs[i];
     if (!first.has(i)) {
@@ -37,7 +55,7 @@ function Bank({ set }: { set: McqSetRow }) {
     }
     if (oi === q.correct_answer) setSolved((s) => new Set(s).add(i));
     else setWrong((m) => new Map(m).set(i, [...(m.get(i) ?? []), oi]));
-  }, [solved, shown, wrong, first, qs, set.id]);
+  }, [solved, shown, wrong, first, qs, set.id, mcqPaywallEnabled, freeLimit, access.hasPass, access.isAdmin]);
 
   const done = new Set([...solved, ...shown]);
   const answered = done.size;
@@ -70,7 +88,7 @@ function Bank({ set }: { set: McqSetRow }) {
             })}
           </div>
           <div className="mt-4 flex gap-4 text-xs font-bold">
-            <button type="button" onClick={() => setShown(allShown ? new Set() : new Set(qs.map((_, i) => i)))} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground">{allShown ? <EyeOff className="h-3.5 w-3.5" aria-hidden /> : <Eye className="h-3.5 w-3.5" aria-hidden />} {allShown ? "Hide all" : "Reveal all"}</button>
+            <button type="button" onClick={() => setShown(allShown ? new Set() : new Set(qs.map((_, i) => i).filter((i) => !isLocked(i))))} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground">{allShown ? <EyeOff className="h-3.5 w-3.5" aria-hidden /> : <Eye className="h-3.5 w-3.5" aria-hidden />} {allShown ? "Hide all" : "Reveal all"}</button>
             <button type="button" onClick={reset} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"><RotateCcw className="h-3.5 w-3.5" aria-hidden /> Start over</button>
           </div>
     </div>
@@ -110,10 +128,18 @@ function Bank({ set }: { set: McqSetRow }) {
           )}
           {indices.map((i) => {
             const q = qs[i]; const tries = wrong.get(i) ?? []; const open = solved.has(i) || shown.has(i);
+            const locked = isLocked(i);
             return (
               <article key={i} id={`q${i + 1}`} className="scroll-mt-24 border-t border-border py-6 first:border-t-0 first:pt-0">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Question {i + 1}</p>
                 <h2 className="mt-1.5 font-serif text-lg font-bold leading-snug sm:text-xl">{q.question}</h2>
+                {locked ? (
+                  <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4">
+                    <p className="text-sm font-semibold text-foreground">This question and its answer are part of the locked section.</p>
+                    <p className="mt-1 text-xs text-muted-foreground">The first {freeLimit} questions in this bank are free. Unlock the full bank to attempt this question and view its explanation.</p>
+                    {!access.loading && <Paywall settings={access.settings} hiddenCount={Math.max(1, qs.length - freeLimit)} label="MCQ bank" onUnlocked={access.applyPass} headline="Unlock the full MCQ bank" blurb="Get access to every question, correct answer and explanation in this bank." />}
+                  </div>
+                ) : <>
                 <div className="mt-3 space-y-1" role="group" aria-label={`Options for question ${i + 1}`}>
                   {q.options.map((opt, oi) => {
                     const right = oi === q.correct_answer, was = tries.includes(oi);
@@ -138,6 +164,7 @@ function Bank({ set }: { set: McqSetRow }) {
                     <button type="button" onClick={() => openAI(`Explain this question like I am a medical student and tell me what the examiner wants:\n${q.question}\nOptions: ${q.options.map((o, k) => `${LETTERS[k]}. ${o}`).join(" | ")}\nAnswer: ${LETTERS[q.correct_answer]}`)} className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"><OmpathMark className="h-4 w-4" /> Explain this with Ompath AI</button>
                   </div>
                 )}
+                </>}
               </article>
             );
           })}
