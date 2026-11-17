@@ -1,6 +1,6 @@
 /** OmpathStudy Lite SMS channel.
  * Daily questions and explanations are read from the existing published MCQ bank.
- * POST /api/ompath-lite-sms?mode=send (Vercel Cron; CRON_SECRET)
+ * POST /api/ompath-lite-sms?mode=send (Cloudflare Cron Worker; CRON_SECRET)
  * POST /api/ompath-lite-sms?mode=inbound&key=<AT_INBOUND_SECRET> (Africa's Talking inbox callback)
  */
 import { randomBytes, timingSafeEqual } from "node:crypto";
