@@ -9,11 +9,14 @@ create table if not exists public.lite_students (
   study_level text not null,
   sms_opt_in boolean not null default false,
   sms_opt_in_at timestamptz,
+  preferred_subject text,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
 
 -- Attempts point directly to the existing MCQ set and question index.
+alter table public.lite_students add column if not exists preferred_subject text;
+
 create table if not exists public.lite_attempts (
   id uuid primary key default gen_random_uuid(),
   student_id uuid not null references public.lite_students(id) on delete cascade,
