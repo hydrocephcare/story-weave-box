@@ -82,8 +82,10 @@ if (isLiteHost) {
     root.render(<div style={{ padding: 32, fontFamily: "sans-serif" }}>OmpathStudy Lite could not load. Please refresh the page.</div>);
   });
 } else {
-  Promise.all([import("./App.tsx"), import("./index.css"), import("react-helmet-async")]).then(([app, , helmet]) => {
-    root.render(<helmet.HelmetProvider><app.default /></helmet.HelmetProvider>);
+  Promise.all([import("./App.tsx"), import("./index.css"), import("react-helmet-async")]).then(([appModule, , helmetModule]) => {
+    const App = appModule.default;
+    const HelmetProvider = helmetModule.HelmetProvider;
+    root.render(<HelmetProvider><App /></HelmetProvider>);
   }).catch((error) => {
     console.error("OmpathStudy failed to start", error);
     root.render(<div style={{ padding: 32, fontFamily: "sans-serif" }}>OmpathStudy could not load. Please refresh the page.</div>);
