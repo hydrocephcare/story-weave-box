@@ -51,7 +51,7 @@ async function sendSms(to,message,settings){
 export async function sendHealthGuideLink({to,link,language="en",smsConsent=false}){
  if(smsConsent!==true)throw new Error("Explicit SMS consent is required.");
  const phone=normalizePhone(to);
- if(!phone||typeof link!=="string"||!/^https:\/\/lite\.ompathstudy\.com\/api\/lite\?task=health-guide&token=[A-Za-z0-9_-]{40,60}&welcome=1$/.test(link))throw new Error("Invalid private guide delivery details.");
+ if(!phone||typeof link!=="string"||!/^https:\/\/lite\.ompathstudy\.com\/api\/ompath-lite-guide\?token=[A-Za-z0-9_-]{40,60}&welcome=1$/.test(link))throw new Error("Invalid private guide delivery details.");
  const rows=await db("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1");
  const settings=rows[0]||{enabled:false,environment:"sandbox",sender_id:null};
  if(!settings.enabled||settings.environment!=="production")return {sent:false,reason:"sms_not_live"};
@@ -94,7 +94,7 @@ export async function processPendingHealthGuideSms(limit=10){
     await db("lite_health_guide_tokens?token_hash=eq."+tokenHash,{method:"PATCH",body:JSON.stringify({revoked_at:new Date().toISOString()})});
     continue;
    }
-   const link="https://lite.ompathstudy.com/api/lite?task=health-guide&token="+issued.token+"&welcome=1";
+   const link="https://lite.ompathstudy.com/api/ompath-lite-guide?token="+issued.token+"&welcome=1";
    const delivery=await sendHealthGuideLink({to:encounter.phone_number,link,language:encounter.preferred_language||"en",smsConsent:encounter.sms_consent});
    if(!delivery.sent){
     await db("lite_health_guide_tokens?token_hash=eq."+tokenHash,{method:"PATCH",body:JSON.stringify({revoked_at:new Date().toISOString()})});
