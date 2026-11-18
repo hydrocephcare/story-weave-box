@@ -185,4 +185,23 @@ describe("Lite Health Support web API", () => {
     expect(res.body.assessment.next_steps[0]).toMatch(/emergency medical care now/i);
   });
 
+  it("short-circuits routine questions when symptom text contains an emergency red flag", async () => {
+    stubHealthStorage();
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174006",
+        concern_category: "Other health concern",
+        original_message: "I cannot breathe properly",
+        consent_given: true,
+        answers: [{ question_id: "emergency_screen", answer: "2" }],
+      },
+    }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.assessment.urgency_level).toBe("emergency");
+    expect(res.body.assessment.next_steps[0]).toMatch(/emergency medical care now/i);
+  });
+
 });
