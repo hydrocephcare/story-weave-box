@@ -4,6 +4,7 @@ import { createHealthEncounter, getHealthEncounter, getResumableHealthEncounter,
 import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteRules.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 import { interpretSymptomText } from "../../shared/ompathLiteLanguage.js";
+import { interpretLiteWithAi } from "./ompathLiteAi.js";
 import { shortUssdText } from "./ompathLiteUssdFormat.js";
 const mainMenu = "OmpathStudy Lite\n1. Health support\n2. Help and information";
 const clean = (v,n=180)=>String(v??"").replace(/<br\s*\/?>/gi," ").replace(/<\/(?:p|div|li|h[1-6])\s*>/gi," ").replace(/<[^>]*>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;/gi,"'").replace(/\s+/g," ").trim().slice(0,n);
@@ -46,6 +47,42 @@ function assessmentReply(assessment, language) {
  }
  const heading=level==="emergency"?"EMERGENCY: Go to hospital now. ":level==="urgent"?"URGENT: Attend a health facility today. ":"Preliminary impression: ";
  return heading+shortText(impression,105)+". Not a confirmed diagnosis; clinician assessment is required.";
+}
+
+/**
+ * Schedule optional language extraction after the USSD response is committed.
+ * AI output is stored only as an explicitly unverified annotation; it never
+ * changes the deterministic emergency screen or clinical assessment.
+ */
+function scheduleLiteAiInterpretation({ req, encounter, session, phone, description, normalizedSummary }) {
+ if (process.env.LITE_AI_INTERPRETATION_ENABLED !== "true" ||
+     encounter?.status !== "intake_started" ||
+     typeof req.executionContext?.waitUntil !== "function" ||
+     !String(description || "").trim()) return;
+ const task = (async () => {
+  try {
+   const result = await interpretLiteWithAi(description);
+   if (!result?.ok) return;
+   const annotation = {
+    source: "ai_extraction_unverified",
+    ...result.interpretation,
+   };
+   const base = String(normalizedSummary || "").slice(0, 650);
+   const combined = (base + (base ? "\n" : "") +
+    "AI extraction (unverified): " + JSON.stringify(annotation)).slice(0, 1200);
+   await updateHealthEncounter({
+    id: encounter.id,
+    sessionId: session,
+    phoneNumber: phone,
+    patch: { normalized_summary: combined },
+   });
+  } catch (error) {
+   // Never log the patient's text, phone number, or model output.
+   console.error("Lite background language extraction failed:", String(error?.message || error).slice(0, 120));
+  }
+ })();
+ try { req.executionContext.waitUntil(task); }
+ catch { /* Keep the synchronous USSD pathway independent of AI. */ }
 }
 
 function trustedResumeCallback(req) {
@@ -244,6 +281,7 @@ async function ussd(req,res){
       ...(needsUrgentCare?{assessment:preliminary,urgency_level:preliminary.urgency_level,status:"referred_urgent"}:{urgency_level:"not_assessed",status:"awaiting_clarification"})
      }
     });
+    if(!needsUrgentCare)scheduleLiteAiInterpretation({req,encounter,session,phone,description,normalizedSummary:interpretation.normalized_summary});
     if(needsUrgentCare)return reply(res,assessmentReply(preliminary,language,true),true);
     const firstQuestion=flow[3]==="1"
      ?"Are you pregnant?\n1. Yes\n2. No\n3. Not sure"
