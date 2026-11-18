@@ -120,13 +120,13 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     const restored = await sendUssd("1*2", responseSink(), newSession, callbackKey);
     expect(restored.body).toContain("Your previous enquiry has been restored");
     expect(restored.body).toContain("Could you be pregnant?");
-    const next = await sendUssd("1*2*3", responseSink(), newSession, callbackKey);
+    const next = await sendUssd("1*2*2", responseSink(), newSession, callbackKey);
     expect(next.body).toContain("Fever or repeated vomiting?");
-    const finalQuestion = await sendUssd("1*2*3*2", responseSink(), newSession, callbackKey);
+    const finalQuestion = await sendUssd("1*2*2*2", responseSink(), newSession, callbackKey);
     expect(finalQuestion.body).toContain("Is the pain severe or worsening?");
-    const assessment = await sendUssd("1*2*3*2*2", responseSink(), newSession, callbackKey);
+    const assessment = await sendUssd("1*2*2*2*2", responseSink(), newSession, callbackKey);
     expect(assessment.body).toContain("Receive a health guide by SMS?");
-    const finished = await sendUssd("1*2*3*2*2*2", responseSink(), newSession, callbackKey);
+    const finished = await sendUssd("1*2*2*2*2*2", responseSink(), newSession, callbackKey);
     expect(finished.body).toContain("END Assessment saved. No SMS will be sent.");
     expect(getRow().session_id).toBe(newSession);
     expect(getRow().clarification_answers).toHaveLength(4);
