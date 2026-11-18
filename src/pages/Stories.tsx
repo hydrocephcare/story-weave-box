@@ -88,7 +88,8 @@ function FeaturedCard({ story }: { story: Story }) {
         <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
           <div>
             <Meta story={story} />
-            <h2 className="mt-3 font-serif text-2xl font-bold leading-snug transition-colors group-hover:text-primary sm:text-3xl">{story.title}</h2>\n            <AuthorLine story={story} />
+            <h2 className="mt-3 font-serif text-2xl font-bold leading-snug transition-colors group-hover:text-primary sm:text-3xl">{story.title}</h2>
+            <AuthorLine story={story} />
             <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{story.meta_description}</p>
           </div>
           <span className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-primary">Read story <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
@@ -105,7 +106,8 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
         <Cover story={story} className="aspect-[16/9] w-full transition-transform duration-500 group-hover:scale-[1.03]" />
         <div className="flex flex-1 flex-col p-4">
           <Meta story={story} />
-          <h3 className="mb-0 mt-2.5 line-clamp-2 font-serif text-base font-bold leading-snug transition-colors group-hover:text-primary">{story.title}</h3>\n          <AuthorLine story={story} />
+          <h3 className="mb-0 mt-2.5 line-clamp-2 font-serif text-base font-bold leading-snug transition-colors group-hover:text-primary">{story.title}</h3>
+          <AuthorLine story={story} />
           <p className="line-clamp-3 flex-1 text-xs leading-relaxed text-muted-foreground">{story.meta_description}</p>
           <p className="mt-3 flex items-center gap-1 text-[11px] text-muted-foreground"><Clock className="h-3 w-3" /> {story.reading_time_minutes ? `${story.reading_time_minutes} min read` : "Student story"}</p>
         </div>
