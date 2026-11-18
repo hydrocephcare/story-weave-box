@@ -31,6 +31,16 @@ describe("multilingual symptom phrase normalisation", () => {
     expect(result.suggested_category).toBe("Vaginal discharge");
   });
 
+  it("keeps explicitly negated symptoms out of the positive summary", () => {
+    const result = interpretSymptomText("Sina homa na sina maumivu ya kifua");
+    expect(result.symptoms).toEqual(expect.arrayContaining([
+      expect.objectContaining({ id: "fever", negated: true }),
+      expect.objectContaining({ id: "chest_pain", negated: true }),
+    ]));
+    expect(result.normalized_summary).toBe("");
+    expect(result.suggested_category).toBeNull();
+  });
+
   it("does not invent a symptom when the wording is not recognised", () => {
     const result = interpretSymptomText("Sijui vizuri kueleza kinachoendelea");
     expect(result.symptoms).toEqual([]);
