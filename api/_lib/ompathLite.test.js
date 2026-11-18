@@ -123,7 +123,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     const next = await sendUssd("1*2*3", responseSink(), newSession, callbackKey);
     expect(next.body).toContain("Fever or repeated vomiting?");
     expect(getRow().session_id).toBe(newSession);
-    expect(getRow().clarification_answers).toHaveLength(3);
+    expect(getRow().clarification_answers).toHaveLength(2);
   });
 
   it("records explicit consent when the caller chooses a patient-guide SMS", async () => {
