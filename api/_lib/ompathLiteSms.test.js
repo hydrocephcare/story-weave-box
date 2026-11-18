@@ -18,7 +18,7 @@ describe("private patient-guide SMS consent and link validation", () => {
     const token = "A".repeat(43);
     const result = await sendHealthGuideLink({
       to: "+254712345678",
-      link: "https://lite.ompathstudy.com/api/lite?task=health-guide&token=" + token + "&welcome=1",
+      link: "https://lite.ompathstudy.com/api/ompath-lite-guide?token=" + token + "&welcome=1",
       smsConsent: true,
     });
     expect(result).toEqual({ sent: false, reason: "sms_not_live" });
