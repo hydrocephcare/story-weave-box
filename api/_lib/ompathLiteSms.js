@@ -51,7 +51,7 @@ async function sendSms(to,message,settings){
 export async function sendHealthGuideLink({to,link,language="en",smsConsent=false}){
  if(smsConsent!==true)throw new Error("Explicit SMS consent is required.");
  const phone=normalizePhone(to);
- if(!phone||typeof link!=="string"||!/^https:\/\/lite\.ompathstudy\.com\/api\/ompath-lite-guide\?token=[A-Za-z0-9_-]{40,60}$/.test(link))throw new Error("Invalid private guide delivery details.");
+ if(!phone||typeof link!=="string"||!/^https:\/\/lite\.ompathstudy\.com\/api\/lite\?task=health-guide&token=[A-Za-z0-9_-]{40,60}&welcome=1$/.test(link))throw new Error("Invalid private guide delivery details.");
  const rows=await db("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1");
  const settings=rows[0]||{enabled:false,environment:"sandbox",sender_id:null};
  if(!settings.enabled||settings.environment!=="production")return {sent:false,reason:"sms_not_live"};
