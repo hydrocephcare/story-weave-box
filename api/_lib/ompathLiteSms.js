@@ -94,7 +94,7 @@ export async function processPendingHealthGuideSms(limit=10){
     await db("lite_health_guide_tokens?token_hash=eq."+tokenHash,{method:"PATCH",body:JSON.stringify({revoked_at:new Date().toISOString()})});
     continue;
    }
-   const link="https://lite.ompathstudy.com/api/ompath-lite-guide?token="+issued.token;
+   const link="https://lite.ompathstudy.com/api/lite?task=health-guide&token="+issued.token+"&welcome=1";
    const delivery=await sendHealthGuideLink({to:encounter.phone_number,link,language:encounter.preferred_language||"en",smsConsent:encounter.sms_consent});
    if(!delivery.sent){
     await db("lite_health_guide_tokens?token_hash=eq."+tokenHash,{method:"PATCH",body:JSON.stringify({revoked_at:new Date().toISOString()})});
