@@ -1187,103 +1187,71 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Serum Cryptococcal Antigen (CrAg) ... Positive in CD4 below 200 warrants immediate lumbar puncture",
-     "problem": "WHO recommends CrAg screening and lumbar puncture for CD4 ≤100 cells/µL, not ≤200.",
-     "fix": "Positive CrAg in patients with CD4 ≤100 cells/µL warrants immediate lumbar puncture to assess for cryptococcal meningitis."
+     "where": "Question 3",
+     "problem": "The question describes a patient who deteriorates with a rash 2 days after starting trimethoprim-sulfamethoxazole, and attributes this to IRIS, which is clinically incorrect (it is a drug side effect/hypersensitivity reaction, and IRIS does not occur 2 days after starting antibiotics without ART).",
+     "fix": "The correct explanation for worsening symptoms and a rash 2 days after starting trimethoprim-sulfamethoxazole is a drug hypersensitivity reaction or adverse drug effect."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-03"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:03:49.340Z"
   },
   "malaria": {
    "hash": "750296e7ccfd",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Severity Assessment list: \"High Parasitaemia: >10%\" and \"Hyperparasitaemia: >20%\"",
-     "problem": "WHO defines severe malaria by parasitaemia >10%; a separate >20% threshold is not a distinct WHO criterion and creates inconsistency.",
-     "fix": "List only one severe malaria criterion: Peripheral blood parasitaemia >10% (for P. falciparum); remove the separate >20% hyperparasitaemia entry."
-    }
-   ],
-   "model": "openai/gpt-oss-120b",
-   "at": "2026-11-03"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:03:56.756Z"
   },
   "meningitis": {
    "hash": "b44008c1540d",
-   "validated": false,
-   "high": 5,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Common Etiological Agents",
-     "problem": "Herpes simplex virus-1 (HSV-1) and Cerebral malaria are listed as common bacterial agents, which is incorrect.",
-     "fix": "Common Etiological Agents (Adults): *Streptococcus pneumoniae*, *Neisseria meningitidis*."
-    },
-    {
-     "severity": "high",
-     "where": "Immunocompromised / Elderly",
-     "problem": "Cryptococcus neoformans and Mycobacterium tuberculosis are listed as common bacterial agents, which is incorrect.",
-     "fix": "Immunocompromised / Elderly: *Listeria monocytogenes*, Gram-negative bacilli."
-    },
-    {
-     "severity": "high",
-     "where": "Basilar skull fracture / Post-trauma",
-     "problem": "Rabies virus is listed as a common bacterial agent, which is incorrect.",
-     "fix": "Basilar skull fracture / Post-trauma: *Streptococcus pneumoniae*, *Staphylococcus aureus*."
-    },
-    {
-     "severity": "high",
-     "where": "Post-neurosurgery / Shunts",
-     "problem": "Abscess or subdural empyema are listed as common bacterial agents, which is incorrect.",
-     "fix": "Post-neurosurgery / Shunts: *Staphylococcus epidermidis*, *Pseudomonas aeruginosa*."
-    },
-    {
-     "severity": "high",
-     "where": "Lumbar Puncture: Contraindicated in signs of raised intracranial pressure (papilledema, focal neurological deficits, GCS <10, new-onset seiz",
-     "problem": "A GCS <10 is not an absolute contraindication to LP; the threshold for concern is typically GCS <12 or <13.",
-     "fix": "Lumbar Puncture: Contraindicated in signs of raised intracranial pressure (papilledema, focal neurological deficits, GCS <12 or <13, new-onset seizures) or coagulopathy."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-04"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:04:00.363Z"
   },
   "enteric": {
    "hash": "94554aea3936",
    "validated": false,
    "high": 2,
-   "medium": 2,
+   "medium": 1,
    "issues": [
     {
-     "severity": "medium",
-     "where": "First-line: Ceftriaxone is often the preferred empirical choice due to its broad spectrum, efficacy, and favourable safety profile. It penet",
-     "problem": "While ceftriaxone is a valid choice, the statement 'often the preferred empirical choice' is not universally true for first-line treatment of uncomplicated enteric fever in Kenya, where oral options like azithromycin or ciprofloxacin (if susceptible) are often preferred for uncomplicated cases.",
-     "fix": "For uncomplicated enteric fever, oral azithromycin or ciprofloxacin (if susceptible based on local resistance patterns) are often preferred first-line empirical choices. Ceftriaxone is a preferred empirical choice for severe or complicated enteric fever, or when oral therapy is not tolerated, due to"
-    },
-    {
-     "severity": "medium",
-     "where": "Duration of Treatment: A typical course lasts for 10-14 days, but this can be extended in complicated cases or if there is a poor clinical r",
-     "problem": "The typical duration of treatment for uncomplicated enteric fever is often shorter than 10-14 days with modern antibiotics like azithromycin or fluoroquinolones.",
-     "fix": "The duration of treatment varies by antibiotic and severity: 5-7 days for azithromycin or fluoroquinolones in uncomplicated cases, and 10-14 days (or longer) for ceftriaxone or in complicated cases."
+     "severity": "high",
+     "where": "Fluoroquinolones (e.g., Ciprofloxacin) or azithromycin",
+     "problem": "Fluoroquinolones are no longer first-line or recommended alternatives in many settings including Kenya due to widespread high-level nalidixic acid resistance and fluoroquinolone resistance.",
+     "fix": "Azithromycin is the preferred oral agent where susceptible, and outpatient or step-down fluoroquinolones should be guided by local susceptibility testing."
     },
     {
      "severity": "high",
-     "where": "Clinical Case, Model Answers, Q1 explanation",
-     "problem": "The text implies relative bradycardia is present in the clinical case and Q1, but the vital signs provided do not support this.",
-     "fix": "Relative bradycardia is a pulse rate that is lower than expected for the degree of fever. In the clinical case (39.5°C, tachycardic) and Q1 (39°C, pulse 90 bpm), the pulse rates are not relatively bradycardic."
+     "where": "Avoid in children due to potential cartilage damage.",
+     "problem": "Blanket avoidance of fluoroquinolones in children is outdated; WHO and Kenyan guidelines permit their use when indicated for severe or multi-drug resistant infections where no safer alternative exists.",
+     "fix": "Fluoroquinolones may be used in children when clinically indicated and no safer alternative is available, weighing risks against benefits."
     },
     {
-     "severity": "high",
-     "where": "Practice Questions, Question 5, Answer and Explanation",
-     "problem": "The statement that fluoroquinolones are generally avoided in children due to arthropathy is outdated and not aligned with current guidelines for severe infections like enteric fever.",
-     "fix": "Fluoroquinolones are generally considered safe and effective in children for severe infections like enteric fever, especially when other first-line options are not suitable or resistance is suspected, and are recommended by WHO and other guidelines."
+     "severity": "medium",
+     "where": "Ceftriaxone is often the preferred empirical choice",
+     "problem": "While ceftriaxone is used for severe disease, oral azithromycin or designated oral agents are often preferred for uncomplicated enteric fever given rising extended-spectrum beta-lactamase risks and stewardship.",
+     "fix": "Ceftriaxone is reserved for severe or complicated enteric fever, whereas azithromycin is preferred for uncomplicated cases."
     }
    ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-04"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:04:24.638Z"
   },
   "renal-approach": {
    "hash": "ce0f7e7eb9a0",
@@ -1305,37 +1273,15 @@
   },
   "amr": {
    "hash": "f220b97d3b67",
-   "validated": false,
-   "high": 1,
-   "medium": 3,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Fixed Duration",
-     "problem": "The duration for uncomplicated pyelonephritis is stated as 7 days, which is not universally correct.",
-     "fix": "For uncomplicated pyelonephritis, the duration of therapy can vary. While 7 days is often cited for fluoroquinolones, other agents like trimethoprim-sulfamethoxazole may require 14 days, and some guidelines suggest 5-7 days for certain agents. It should be stated as 'e.g., 5–7 days for uncomplicated"
-    },
-    {
-     "severity": "medium",
-     "where": "Cephalosporins (3rd/4th gen)",
-     "problem": "Stating 'High ESBL induction risk' for 3rd/4th gen cephalosporins is an oversimplification and potentially misleading.",
-     "fix": "While 3rd generation cephalosporins can select for ESBL-producing organisms, stating 'High ESBL induction risk' is not entirely accurate. They are more accurately described as strong selective agents for existing ESBL producers rather than direct inducers of ESBL enzymes in the same way some other b"
-    },
-    {
-     "severity": "medium",
-     "where": "Co-trimoxazole",
-     "problem": "The description of co-trimoxazole toxicity is incomplete.",
-     "fix": "Co-trimoxazole can cause hyperkalaemia, bone marrow suppression, and severe cutaneous adverse reactions. It should also mention 'crystalluria' and 'folate deficiency' as other important considerations, especially in susceptible populations. The fix should be: 'Hyperkalaemia, bone marrow suppression"
-    },
-    {
-     "severity": "high",
-     "where": "Question 1 - Practice Questions",
-     "problem": "The marked answer for Question 1 is not the most appropriate first-line empiric choice in all settings, and there could be a defensible alternative.",
-     "fix": "While meropenem is a strong option for suspected ESBL, amikacin monotherapy (option C) could also be considered for severe pyelonephritis in a patient with recent cephalosporin exposure and septic shock, especially in settings where carbapenem resistance is a concern or carbapenems are strictly rese"
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-05"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:04:28.655Z"
   },
   "fungal-parasitic": {
    "hash": "cb2f70b0614b",
@@ -1348,65 +1294,27 @@
   },
   "dialysis": {
    "hash": "07f5edcbb63d",
-   "validated": false,
-   "high": 2,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Diagnosis and severity",
-     "problem": "The KDIGO staging for AKI is incorrectly applied to CKD, and the eGFR thresholds for stages 1 and 2 are wrong for CKD.",
-     "fix": "The KDIGO classification for AKI and CKD are distinct. For CKD, Stage 1 is GFR ≥ 90, Stage 2 is GFR 60-89, Stage 3 is GFR 30-59, Stage 4 is GFR 15-29, and Stage 5 is GFR < 15 ml/min/1.73 m²."
-    },
-    {
-     "severity": "high",
-     "where": "Diagnosis and severity",
-     "problem": "The severity grading uses 'eGFR 15-29 ml/min/1.73 m²' for Stage 1 and '< 15 ml/min/1.73 m²' for Stage 2, which is inconsistent with KDIGO CKD staging and the previous definition of CKD-5.",
-     "fix": "The severity grading should align with KDIGO CKD stages: Stage 4 (eGFR 15-29 ml/min/1.73 m²) and Stage 5 (eGFR < 15 ml/min/1.73 m²), with dialysis indications based on complications, not just GFR stage."
-    },
-    {
-     "severity": "medium",
-     "where": "Severe, refractory, or rapidly rising hyperkalaemia ($> 6.5 ext{ mmol/L}$) with or without ECG changes.",
-     "problem": "The threshold for hyperkalaemia indication for dialysis is given as > 6.5 mmol/L, but KDIGO guidelines suggest > 6.0 mmol/L or rapidly rising.",
-     "fix": "Severe, refractory, or rapidly rising hyperkalaemia ($> 6.0 ext{ mmol/L}$) with or without ECG changes is an indication for dialysis."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 1, Answer C. Place a temporary dialysis catheter and initiate urgent haemodialysis",
-     "problem": "The explanation for Question 1 is incomplete as it does not mention the fluid overload as a concurrent indication for dialysis.",
-     "fix": "The patient has severe hyperkalaemia refractory to medical temporising measures combined with acute pulmonary fluid overload, which constitutes an absolute indication for emergency dialysis."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-05"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:04:37.255Z"
   },
   "skin-infection": {
    "hash": "c5da78d87f74",
-   "validated": false,
-   "high": 2,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Examiner bedside questions",
-     "problem": "Homan's sign is an unreliable and potentially harmful test for DVT and should not be taught as a differentiating feature.",
-     "fix": "Do not mention Homan's sign as a diagnostic feature for DVT."
-    },
-    {
-     "severity": "medium",
-     "where": "Clinical case, Question 2",
-     "problem": "The answer states 'Polymicrobial flora including Staphylococcus aureus (including MRSA) and anaerobes such as Bacteroides spp.' but does not mention Gram-negative bacteria, which are also very common in diabetic foot infections.",
-     "fix": "The answer should also include Gram-negative bacteria as likely pathogens in diabetic patients."
-    },
-    {
-     "severity": "high",
-     "where": "Practice questions, Question 4",
-     "problem": "The explanation for the answer incorrectly states that a tender, cord-like thrombosed vein is Homan's sign. Homan's sign is pain in the calf on dorsiflexion of the foot, which is an unreliable and potentially harmful test.",
-     "fix": "The explanation should not refer to Homan's sign. A tender cord along the medial aspect of the calf is suggestive of superficial thrombophlebitis, not necessarily DVT, and Homan's sign is not a reliable indicator for DVT."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-05"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:04:45.527Z"
   },
   "acid-base": {
    "hash": "9e1dc7048be7",
@@ -1419,127 +1327,58 @@
   },
   "uti": {
    "hash": "fe8daa956eee",
-   "validated": false,
-   "high": 4,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Management - Definitive antimicrobial therapy - Uncomplicated cystitis in non-pregnant adult",
-     "problem": "Fluoroquinolones are not the first-line treatment for uncomplicated cystitis due to increasing resistance and side effects.",
-     "fix": "First-line treatment for uncomplicated cystitis in non-pregnant adults should be nitrofurantoin or trimethoprim-sulfamethoxazole (if local resistance allows), or fosfomycin."
-    },
-    {
-     "severity": "high",
-     "where": "Management - Definitive antimicrobial therapy - Pregnant woman",
-     "problem": "Ampicillin + gentamicin is not the first-line oral treatment for pregnant women with UTI, and amoxicillin is not the first-line oral continuation for pyelonephritis in pregnancy.",
-     "fix": "For pyelonephritis in pregnancy, IV ceftriaxone or cefepime are preferred. For oral continuation, options include oral cephalexin or amoxicillin-clavulanate, guided by susceptibility."
-    },
-    {
-     "severity": "high",
-     "where": "Management - Safety / Contra-indications",
-     "problem": "Fluoroquinolones are generally not contraindicated in pregnancy for life-threatening infections if no safer alternative exists, but should be avoided if possible.",
-     "fix": "Fluoroquinolones should generally be avoided in pregnancy due to potential fetal cartilage damage, but may be considered in severe, life-threatening infections where safer alternatives are ineffective or contraindicated."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Mid-stream clean-catch urine microscopy & culture",
-     "problem": "The diagnostic cut-off of ≥10⁵ CFU/mL for significant infection is primarily for uncomplicated cystitis; lower counts can be significant in pyelonephritis or complicated UTI.",
-     "fix": "For pyelonephritis or complicated UTI, a count of ≥10³ CFU/mL (or even lower in some cases) can be significant, especially in symptomatic patients."
-    },
-    {
-     "severity": "medium",
-     "where": "Management - Definitive antimicrobial therapy - Complicated UTI / pyelonephritis",
-     "problem": "Trimethoprim-sulfamethoxazole or nitrofurantoin are listed as oral options for complicated UTI/pyelonephritis, but nitrofurantoin is generally not recommended for pyelonephritis due to poor tissue penetration.",
-     "fix": "For complicated UTI/pyelonephritis, oral step-down therapy should be guided by susceptibility, with fluoroquinolones or oral beta-lactams (e.g., amoxicillin-clavulanate, cefixime) being more appropriate than nitrofurantoin for pyelonephritis."
-    },
-    {
-     "severity": "high",
-     "where": "Clinical case, Question 1 Answer",
-     "problem": "Ampicillin and gentamicin is not a standard first-line combination for pyelonephritis in pregnancy.",
-     "fix": "The most appropriate initial management for a pregnant patient with suspected pyelonephritis is to obtain a clean-catch urine sample for culture, start IV ceftriaxone after blood cultures, give IV fluids, and monitor vitals."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-05"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:04:52.408Z"
   },
   "fluid-balance": {
    "hash": "d6a7edf9500a",
-   "validated": false,
-   "high": 2,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Hypovolaemia (SBP < 90 mmHg, tachycardia): Rapid isotonic crystalloid bolus (e.g. normal saline) via large‑bore IV; reassess haemodynamics a",
-     "problem": "The initial bolus volume for hypovolaemia is too small for an adult.",
-     "fix": "Rapid isotonic crystalloid bolus (e.g. normal saline) via large‑bore IV; reassess haemodynamics after 500 ml (or 10-20 ml/kg) in adults."
-    },
-    {
-     "severity": "high",
-     "where": "Severe hyponatraemia with seizures or coma: Hypertonic saline (3 %) bolus under cardiac monitoring — Raises serum Na + rapidly enough to sto",
-     "problem": "The text does not specify the dose or rate of hypertonic saline, which is crucial to prevent osmotic demyelination syndrome.",
-     "fix": "Severe hyponatraemia with seizures or coma: Hypertonic saline (3%) bolus (e.g., 100 mL over 10-20 minutes) under cardiac and neurological monitoring, aiming for a rapid but controlled rise in serum Na+."
-    },
-    {
-     "severity": "medium",
-     "where": "Daily weight; bedside fluid balance (wet‑dry weight).",
-     "problem": "The term 'wet-dry weight' is not a standard medical term for bedside fluid balance.",
-     "fix": "Daily weight; bedside fluid balance (e.g., comparing current weight to a known 'dry' weight or baseline weight)."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-05"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:04:57.577Z"
   },
   "pud": {
    "hash": "be4803e7b12c",
-   "validated": false,
-   "high": 2,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Systemic disease: Sickle cell disease (gastric ischaemia), rheumatic fever (auto‑immune gastritis), chronic malaria (stress ulcer risk)",
-     "problem": "Rheumatic fever is not a cause of auto-immune gastritis; auto-immune gastritis is a distinct condition.",
-     "fix": "Systemic disease: Sickle cell disease (gastric ischaemia), auto-immune gastritis (e.g., associated with pernicious anaemia), chronic malaria (stress ulcer risk)."
-    },
-    {
-     "severity": "high",
-     "where": "Pathophysiology: 1. H. pylori infection → bacterial urease ↑ → gastric pH ↑ → bacterial colonisation → chronic gastritis → mucosal damage →",
-     "problem": "H. pylori infection leads to a decrease in gastric pH due to inflammation and reduced acid secretion, not an increase.",
-     "fix": "H. pylori infection → bacterial urease ↑ → gastric acid secretion ↓ → gastric pH ↑ → bacterial colonisation → chronic gastritis → mucosal damage → ulcer."
-    },
-    {
-     "severity": "medium",
-     "where": "Practice questions, Question 4",
-     "problem": "Persistent dyspepsia for more than 6 weeks is considered an alarm feature that warrants investigation, not a reason to defer endoscopy.",
-     "fix": "Persistent dyspepsia for more than 6 weeks, especially in older patients or those with risk factors, is an alarm feature that warrants investigation."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-05"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:05:03.691Z"
   },
   "hep-enceph": {
    "hash": "a0901af7fadb",
    "validated": false,
    "high": 1,
-   "medium": 1,
+   "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Complications and prognosis",
-     "problem": "The 1-year mortality for Grade III-IV HE is significantly higher than 50%.",
-     "fix": "Grade III–IV HE predicts 1-year mortality > 75%."
-    },
-    {
-     "severity": "medium",
-     "where": "Clinical case, Question 2",
-     "problem": "While hyponatraemia is a trigger, the most likely precipitating factor in a patient with tense ascites and alcoholic cirrhosis is often spontaneous bacterial peritonitis (SBP), which should be ruled out.",
-     "fix": "The most likely precipitating factor is often spontaneous bacterial peritonitis (SBP), given the tense ascites, which should be investigated, in addition to hyponatraemia secondary to diuretic overuse and reduced oral intake."
+     "where": "IV lactulose, aggressive infection control",
+     "problem": "Lactulose is never administered intravenously as it can cause severe, life-threatening complications and is only given orally or rectally.",
+     "fix": "Oral or rectal (enema) lactulose, aggressive infection control"
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-06"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:05:13.770Z"
   },
   "ibd": {
    "hash": "e988b70c4e2b",
@@ -1551,172 +1390,47 @@
    "at": "2026-11-06"
   },
   "hrs": {
-   "hash": "358b21cc6e9b",
-   "validated": false,
-   "high": 6,
-   "medium": 4,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Causes and risk factors - Rheumatic fever with cardiorenal involvement",
-     "problem": "Rheumatic fever does not typically cause cardiorenal involvement that precipitates HRS.",
-     "fix": "Rheumatic fever is not a typical precipitant for hepatorenal syndrome and should be removed from this list."
-    },
-    {
-     "severity": "high",
-     "where": "Causes and risk factors - Sickle cell disease crises",
-     "problem": "Sickle cell crises do not typically worsen hepatic congestion and renal flow in a way that precipitates HRS.",
-     "fix": "Sickle cell disease crises are not a typical precipitant for hepatorenal syndrome and should be removed from this list."
-    },
-    {
-     "severity": "high",
-     "where": "Differential diagnosis - Hepatorenal syndrome – type 1",
-     "problem": "The BUN/Cr ratio is not mentioned for HRS type 1, but it is a key differentiator from prerenal azotemia.",
-     "fix": "Add 'BUN/Cr >20' to the 'Points toward it' column for Hepatorenal syndrome – type 1, as it is a feature of functional renal failure."
-    },
-    {
-     "severity": "high",
-     "where": "Investigations - Serum creatinine & urea",
-     "problem": "The BUN/Cr ratio for HRS is typically elevated, not '<20'.",
-     "fix": "Change 'BUN/Cr <20' to 'BUN/Cr >20' for Hepatorenal syndrome."
-    },
-    {
-     "severity": "high",
-     "where": "Diagnosis and severity - Severity grading - Type 1 (rapid)",
-     "problem": "The creatinine threshold for Type 1 HRS is stated as '>2.5' but should be '≥2.5'.",
-     "fix": "Change '>2.5' to '≥2.5' mg/dL for Type 1 HRS."
-    },
-    {
-     "severity": "high",
-     "where": "Management - Definitive treatment - Splanchnic vasoconstriction",
-     "problem": "Midodrine and octreotide are not first-line or as effective as terlipressin or norepinephrine for HRS.",
-     "fix": "Midodrine and octreotide are less effective and not considered first-line treatment for HRS compared to terlipressin or norepinephrine."
-    },
-    {
-     "severity": "medium",
-     "where": "Anatomy and physiology you need - Lymphatic drainage of abdomen",
-     "problem": "Ascites primarily impairs renal blood flow by increasing intra-abdominal pressure, not directly through lymphatic drainage.",
-     "fix": "Ascites contributes to intra-abdominal pressure, which directly impairs renal blood flow, rather than lymphatic drainage being the primary mechanism."
-    },
-    {
-     "severity": "medium",
-     "where": "Causes and risk factors - Common precipitants in the Kenyan context - Spontaneous bacterial peritonitis (SBP)",
-     "problem": "The reason for high prevalence of SBP is not 'limited early presentation'.",
-     "fix": "The high prevalence of SBP is due to the high prevalence of ascites, not 'limited early presentation'."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis - Hepatorenal syndrome – type 2",
-     "problem": "The 'Points toward it' column for HRS type 2 is incomplete.",
-     "fix": "Add 'Creatinine 1.5-2.5 mg/dL' to the 'Points toward it' column for Hepatorenal syndrome – type 2."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Serum creatinine & urea",
-     "problem": "The text states 'BUN/Cr <20' for HRS, which is incorrect as it should be >20.",
-     "fix": "The BUN/Cr ratio in HRS is typically >20, reflecting a prerenal pattern."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-06"
+   "hash": "8543bff56c44",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "auto-repaired",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:05:40.478Z"
   },
   "iron-deficiency": {
    "hash": "21b8895dfefa",
-   "validated": false,
-   "high": 2,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Diagnosis and severity",
-     "problem": "The diagnostic cut-off for serum ferritin in the presence of inflammation is stated as < 30 µg/L, which is incorrect for diagnosing iron deficiency.",
-     "fix": "In the Kenyan setting, a ferritin < 100 µg/L is often used as the cut-off when inflammation is present, with transferrin saturation < 20% also considered."
-    },
-    {
-     "severity": "medium",
-     "where": "Management",
-     "problem": "The instruction to continue oral iron for at least 3 months after haemoglobin normalises to replenish stores is an underestimation of the required duration.",
-     "fix": "Continue oral iron for at least 3-6 months after haemoglobin normalises to adequately replenish iron stores."
-    },
-    {
-     "severity": "high",
-     "where": "Case: A 28-year-old Kenyan woman, gravida 2 para 1, presents with a 3-month history of progressive fatigue, exertional dyspnoea, and heavy m",
-     "problem": "The patient is described as gravida 2 para 1, but the answer to question 1 states she is pregnant, which is not explicitly mentioned in the case description.",
-     "fix": "The case description should explicitly state if the patient is currently pregnant to justify the answer to question 1."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-06"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:05:49.698Z"
   },
   "megaloblastic": {
    "hash": "083afd711747",
    "validated": false,
-   "high": 2,
-   "medium": 8,
+   "high": 1,
+   "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Gastro-intestinal mucosa",
-     "problem": "The primary site of folate absorption is not the duodenum.",
-     "fix": "The primary site of folate absorption is the jejunum."
-    },
-    {
-     "severity": "high",
-     "where": "Monitoring - Watch for hyper‑reflexia or neuropathy worsening after B12 therapy (rare “rebound” phenomenon).",
-     "problem": "The described 'rebound' phenomenon of hyper-reflexia or neuropathy worsening after B12 therapy is not a recognized complication and could be misinterpreted.",
-     "fix": "Watch for hypokalemia, which can occur due to rapid erythropoiesis after B12 therapy, and can cause muscle weakness or cardiac arrhythmias."
-    },
-    {
-     "severity": "medium",
-     "where": "Causes and risk factors - Chronic infections: HIV (direct marrow effect, opportunistic infections), TB (granulomatous infiltration), malaria",
-     "problem": "The mechanism by which TB causes B12 malabsorption is not always granulomatous infiltration of the ileum.",
-     "fix": "TB can cause B12 malabsorption through various mechanisms, including small bowel involvement or drug-induced effects."
-    },
-    {
-     "severity": "medium",
-     "where": "Drug / dietary exposure: Use of methotrexate, antiepileptics (phenytoin, carbamazepine), sulfasalazine, trimethoprim‑sulfamethoxazole, oral",
-     "problem": "Isoniazid is mentioned as a drug that increases folate demand in another section but is missing from this list of drugs causing deficiency.",
-     "fix": "Drug / dietary exposure: Use of methotrexate, antiepileptics (phenytoin, carbamazepine), sulfasalazine, trimethoprim‑sulfamethoxazole, oral contraceptives, isoniazid, chronic alcohol, strict vegan diet, prolonged parenteral nutrition — Many drugs antagonise folate metabolism; dietary lack is common"
-    },
-    {
-     "severity": "medium",
-     "where": "Infectious / systemic: HIV status, TB treatment (especially isoniazid), malaria episodes, chronic rheumatic disease, sickle‑cell disease, ga",
-     "problem": "The statement that malaria and sickle-cell disease cause hemolysis that can mask macrocytosis is misleading.",
-     "fix": "Malaria and sickle-cell disease cause hemolysis, which increases folate demand and can exacerbate megaloblastic anemia, but they do not mask macrocytosis."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis - Iron‑deficiency anemia - How to separate from megaloblastic anemia - absent macro‑ovalocytes.",
-     "problem": "The statement 'absent macro-ovalocytes' is not always true in iron deficiency anemia.",
-     "fix": "Iron deficiency anemia typically presents with microcytosis and hypochromia, and macro-ovalocytes are not characteristic."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis - Hemolytic anemia (e.g., sickle‑cell, G6PD) - How to separate from megaloblastic anemia - normal B12/folate.",
-     "problem": "Hemolytic anemias, especially chronic ones like sickle cell, can lead to folate deficiency due to increased turnover.",
-     "fix": "Hemolytic anemias can lead to folate deficiency due to increased red cell turnover, so B12/folate levels may not always be normal."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Homocysteine - Interpretation - Elevated in both B12 and folate deficiency.",
-     "problem": "The interpretation of homocysteine levels is incomplete, as it can also be elevated in other conditions.",
-     "fix": "Elevated in both B12 and folate deficiency, but also in renal failure and genetic disorders of methionine metabolism."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Methylmalonic acid (MMA) - Interpretation - Elevated → B12‑deficiency; normal in folate deficiency.",
-     "problem": "The interpretation of MMA levels is incomplete, as it can also be elevated in other conditions.",
-     "fix": "Elevated → B12‑deficiency; normal in folate deficiency, but can also be elevated in renal failure."
-    },
-    {
-     "severity": "medium",
-     "where": "Definitive therapy – folate deficiency: • Start oral folic acid (tablet once daily) immediately; switch to parenteral folate (e.g., folinic",
-     "problem": "The statement that folate repletion reverses macro-ovalocytosis within 5-7 days is inaccurate; it refers to reticulocytosis.",
-     "fix": "Folate repletion leads to a reticulocyte response within 5-7 days, while macro-ovalocytosis resolves more slowly as new red cells are produced."
+     "where": "Question 1",
+     "problem": "Isoniazid causes sideroblastic anaemia (microcytic), not megaloblastic anaemia due to folate metabolism interference; pyridoxine (B6) is the correct treatment.",
+     "fix": "Change the question scenario or correct the answer to pyridoxine (vitamin B6) for isoniazid-induced sideroblastic anaemia."
     }
    ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-06"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:05:55.299Z"
   },
   "ckd": {
    "hash": "c0a17b6c9c65",
@@ -1738,175 +1452,58 @@
   },
   "cirrhosis": {
    "hash": "d37eee58ffa7",
-   "validated": false,
-   "high": 1,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Causes and risk factors - Drug-induced",
-     "problem": "Nevirapine is listed as an antiretroviral especially causing drug-induced liver injury, but it is no longer a first-line antiretroviral in Kenya and other similar settings due to its toxicity profile.",
-     "fix": "While nevirapine can cause liver injury, current first-line antiretroviral regimens in Kenya typically use dolutegravir, which has a better safety profile. Emphasize current first-line drugs that can cause DILI, such as efavirenz (though less common now) or specific second-line agents if relevant."
-    },
-    {
-     "severity": "high",
-     "where": "Investigations - Transient elastography (FibroScan)",
-     "problem": "The cut-off for cirrhosis using FibroScan is generally >12.5 kPa, not >12 kPa.",
-     "fix": "Transient elastography (FibroScan) values >12.5 kPa generally indicate cirrhosis."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-06"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:06:09.322Z"
   },
   "pancreatitis": {
    "hash": "8d257352739a",
-   "validated": false,
-   "high": 8,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Hypertriglyceridaemia",
-     "problem": "The diagnostic cut-off for hypertriglyceridemia-induced pancreatitis is too high.",
-     "fix": "TG >500 mg/dL (or >5.6 mmol/L) is the generally accepted threshold for hypertriglyceridemia-induced pancreatitis, though symptoms often appear at >1000 mg/dL."
-    },
-    {
-     "severity": "high",
-     "where": "SIRS (temperature >38 °C or <36 °C, HR >90, RR >20, WBC >12 × 10⁹/L) → predicts severe disease.",
-     "problem": "The SIRS criteria are incorrectly listed; they require two or more criteria to be met, not just one.",
-     "fix": "SIRS is defined by the presence of two or more of the following: temperature >38 °C or <36 °C, HR >90 bpm, RR >20 breaths/min or PaCO2 <32 mmHg, WBC >12 × 10⁹/L or <4 × 10⁹/L or >10% immature forms."
-    },
-    {
-     "severity": "high",
-     "where": "Elevated hematocrit on admission (>44 %) → hemoconcentration, higher risk of necrosis.",
-     "problem": "Elevated hematocrit on admission is a risk factor, but a rising hematocrit or failure to decrease after resuscitation is a stronger predictor of severe disease.",
-     "fix": "Elevated hematocrit on admission (>44%) or failure of hematocrit to decrease with fluid resuscitation is associated with a higher risk of necrosis and severe disease."
-    },
-    {
-     "severity": "high",
-     "where": "BUN rise >5 mg/dL within 24 h → renal hypoperfusion, marker of severe disease.",
-     "problem": "The BUN rise threshold for predicting severe disease is incorrect.",
-     "fix": "A BUN rise >5 mg/dL (or >1.8 mmol/L) within 24 hours is a marker of severe disease and increased mortality risk."
-    },
-    {
-     "severity": "high",
-     "where": "Aggressive isotonic crystalloid (e.g., normal saline) – give until urine output ≥0.5 mL/kg/h",
-     "problem": "The target for fluid resuscitation in acute pancreatitis is not solely urine output; it also includes heart rate and mean arterial pressure.",
-     "fix": "Aggressive isotonic crystalloid (e.g., normal saline) – give until urine output ≥0.5 mL/kg/h, heart rate <120 bpm, and mean arterial pressure 65-85 mmHg."
-    },
-    {
-     "severity": "high",
-     "where": "Fluid optimisation continued for 48 h, then switch to maintenance once stable.",
-     "problem": "Fluid resuscitation should be continued for 24-48 hours, but then reassessed based on clinical status, not automatically switched to maintenance.",
-     "fix": "Fluid optimisation continued for 24-48 h, then reassess based on clinical status and adjust as needed."
-    },
-    {
-     "severity": "high",
-     "where": "Enteral nutrition within 24–48 h (nasogastric or naso‑jejunal) – lowers infection risk compared with parenteral feeding.",
-     "problem": "Early enteral nutrition should be initiated within 24 hours, not 24-48 hours, for optimal benefit.",
-     "fix": "Enteral nutrition within 24 h (nasogastric or naso‑jejunal) – lowers infection risk compared with parenteral feeding."
-    },
-    {
-     "severity": "high",
-     "where": "Pancreatic enzyme suppression – avoid routine use of octreotide; reserved for refractory cases.",
-     "problem": "Octreotide is not indicated for pancreatic enzyme suppression in acute pancreatitis and is not reserved for refractory cases; its use is generally discouraged.",
-     "fix": "Pancreatic enzyme suppression – octreotide is not recommended for routine use in acute pancreatitis as it has not shown benefit."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-07"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:07:00.633Z"
   },
   "malabsorption": {
    "hash": "1c81e762646f",
    "validated": false,
-   "high": 3,
-   "medium": 4,
+   "high": 1,
+   "medium": 0,
    "issues": [
     {
-     "severity": "medium",
-     "where": "Jejunum",
-     "problem": "The jejunum is the principal site for carbohydrate and amino acid absorption, but not most vitamin absorption.",
-     "fix": "Jejunum: Principal site for carbohydrate, amino‑acid absorption, and some vitamins."
-    },
-    {
      "severity": "high",
-     "where": "Tropical / haematologic",
-     "problem": "Rheumatic fever is not a cause of malabsorption.",
-     "fix": "Tropical / haematologic: Sickle‑cell disease (recurrent vaso‑occlusive gut ischemia) — Repeated ischemic injury."
-    },
-    {
-     "severity": "high",
-     "where": "Dermatitis or hyperpigmented skin",
-     "problem": "Dermatitis or hyperpigmented skin is not a sign of Vitamin A deficiency.",
-     "fix": "Dermatitis or hyperpigmented skin: Niacin (pellagra) or zinc deficiency — Impaired absorption of these micronutrients."
-    },
-    {
-     "severity": "high",
-     "where": "Stool fat quantification (72‑hour collection)",
-     "problem": "The diagnostic cut-off for significant fat malabsorption is >7g/24 hours, not >7g/day.",
-     "fix": ">7 g fat/24 hours = significant fat malabsorption."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 1",
-     "problem": "The explanation for Question 1 is incomplete and does not fully address other potential causes of persistent diarrhea in celiac disease.",
-     "fix": "Persistent symptoms after a gluten-free diet can be due to refractory celiac disease, but also consider other causes like microscopic colitis or small intestinal bacterial overgrowth."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 4",
-     "problem": "The explanation for Question 4 is incomplete as it does not mention that fluoroquinolones can also be associated with C. difficile infection.",
-     "fix": "Fluoroquinolones should be avoided due to tendon toxicity risk in immunocompromised patients and their limited efficacy against common HIV-related protozoa, as well as the risk of C. difficile infection."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 5",
-     "problem": "The explanation for Question 5 is too simplistic and does not acknowledge that ongoing TB infection or drug resistance can also cause persistent malabsorption.",
-     "fix": "Persistent steatorrhea after intestinal TB treatment could be due to co-existent pancreatic insufficiency, ongoing active TB, or drug resistance."
+     "where": "Practice Question 1 explanation: persistent symptoms after adequate diet raise suspicion for refractory celiac",
+     "problem": "Refractory celiac disease is generally only diagnosed after 6 to 12 months (or up to 12 months) of a strict gluten-free diet, not 4 weeks.",
+     "fix": "Refractory celiac disease is defined by persistent symptoms and villous atrophy despite 6 to 12 months of a strict gluten-free diet, so dietary indiscretion or other causes should be checked first at 4 weeks."
     }
    ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-07"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:07:53.647Z"
   },
   "haemolytic": {
    "hash": "562dc3dd6c2a",
-   "validated": false,
-   "high": 3,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "RBC membrane",
-     "problem": "The description of cytoskeleton defects causing intravascular rupture is incorrect; these defects typically lead to extravascular destruction.",
-     "fix": "Cytoskeleton (spectrin, ankyrin): Mutations alter deformability → splenic sequestration (extravascular destruction)."
-    },
-    {
-     "severity": "medium",
-     "where": "Pruritus after bathing",
-     "problem": "Pruritus in hemolysis is due to unconjugated bilirubin, not biliary salts, which are associated with cholestasis (conjugated hyperbilirubinemia).",
-     "fix": "Pruritus after bathing: Unconjugated bilirubin can deposit in skin, causing pruritus, though it is less common than in cholestasis."
-    },
-    {
-     "severity": "medium",
-     "where": "Haptoglobin",
-     "problem": "Haptoglobin is low/undetectable in intravascular hemolysis, but can also be low in severe extravascular hemolysis due to increased RBC destruction.",
-     "fix": "Haptoglobin: Low/undetectable in intravascular hemolysis; can also be low in severe extravascular hemolysis."
-    },
-    {
-     "severity": "high",
-     "where": "Severe anaemia (Hb < 6 g/dL)",
-     "problem": "The threshold for severe anemia requiring transfusion is generally Hb < 7 g/dL, not < 6 g/dL, in most acute settings.",
-     "fix": "Severe anaemia (Hb < 7 g/dL): Transfuse packed red cells (type‑specific, cross‑matched) — Restores oxygen‑carrying capacity; avoid over‑transfusion in chronic hemolysis."
-    },
-    {
-     "severity": "high",
-     "where": "Blood transfusion: avoid in patients with known severe allo‑antibody mediated hemolysis unless lifesaving; use washed cells if IgG‑mediated.",
-     "problem": "Using washed cells for IgG-mediated allo-antibody hemolysis is not the standard approach; instead, antigen-negative blood is preferred.",
-     "fix": "Blood transfusion: avoid in patients with known severe allo‑antibody mediated hemolysis unless lifesaving; use antigen-negative blood if allo-antibodies are identified."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-07"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:08:56.055Z"
   },
   "sickle-cell": {
    "hash": "5f915c763ef9",
@@ -1927,132 +1524,64 @@
    "at": "2026-11-07"
   },
   "leukaemia": {
-   "hash": "0bfc91fd3fd2",
-   "validated": false,
-   "high": 1,
-   "medium": 3,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Management - Contraindications & safety",
-     "problem": "The text states 'ATRA contraindicated in severe coagulopathy without aggressive supportive care', but ATRA is not absolutely contraindicated in severe coagulopathy and is often used in APL with coagulopathy, requiring close monitoring and supportive care.",
-     "fix": "ATRA should be used with caution and aggressive supportive care in patients with severe coagulopathy, as it can be associated with differentiation syndrome."
-    },
-    {
-     "severity": "high",
-     "where": "Question 2: “7 + 3” induction (anthracycline + cytarabine) plus ATRA because of Auer rods suggesting acute promyelocytic leukemia.",
-     "problem": "The combination of '7+3' induction chemotherapy with ATRA is not the standard first-line treatment for acute promyelocytic leukemia (APL), which is typically treated with ATRA and arsenic trioxide or ATRA and idarubicin.",
-     "fix": "Standard induction for APL includes ATRA and arsenic trioxide or ATRA and idarubicin, not '7+3' chemotherapy."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 1 Answer: Allopurinol – it reduces uric acid production and helps prevent tumour lysis syndrome prior to cytotoxic therapy.",
-     "problem": "While allopurinol reduces uric acid production, the preferred agent for preventing tumour lysis syndrome in the context of high uric acid levels and chemotherapy initiation is often rasburicase, which degrades existing uric acid.",
-     "fix": "Rasburicase is preferred over allopurinol for rapid reduction of uric acid levels to prevent tumour lysis syndrome before chemotherapy."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 3 Answer: Switch to a second-generation BCR-ABL inhibitor – indicates resistance or suboptimal response to first-line TKI.",
-     "problem": "Increasing the imatinib dose can be a valid step for patients with CML who have suboptimal response or resistance, before switching to a second-generation TKI.",
-     "fix": "Increasing the imatinib dose should be considered before switching to a second-generation BCR-ABL inhibitor for suboptimal response or resistance."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-07"
+   "hash": "2116f3e9e96d",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "auto-repaired",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:10:42.256Z"
   },
   "lymphoma": {
    "hash": "202d315a38a8",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 2 – drug causing pulmonary toxicity in a patient on CHOP",
-     "problem": "Bleomycin is not part of the CHOP regimen, so it cannot be the cause of pulmonary toxicity in this scenario.",
-     "fix": "Replace the answer with “None of the listed drugs; pulmonary toxicity is unlikely with CHOP – consider infection or other causes.”"
-    }
-   ],
-   "model": "openai/gpt-oss-120b",
-   "at": "2026-11-07"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:10:47.197Z"
   },
   "myeloma": {
    "hash": "3a8e36ca73eb",
-   "validated": false,
-   "high": 2,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 1: What is the most urgent management step?",
-     "problem": "Giving a bisphosphonate infusion as the most urgent step for hypercalcaemia is incorrect, as bisphosphonates have a delayed onset of action.",
-     "fix": "Initiate aggressive IV hydration and consider calcitonin for rapid calcium lowering, followed by a bisphosphonate infusion."
-    },
-    {
-     "severity": "high",
-     "where": "Question 1 (Practice questions)",
-     "problem": "Immediate surgical decompression is not always the first step for spinal cord compression; high-dose steroids should be initiated immediately.",
-     "fix": "Start high-dose steroids immediately and arrange urgent surgical decompression or radiotherapy based on the extent of compression and neurological deficit."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-08"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:11:38.022Z"
   },
   "platelets": {
    "hash": "11f0e3ae8b1a",
    "validated": true,
    "high": 0,
-   "medium": 4,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Pathophysiology - Immune thrombocytopenia",
-     "problem": "The text states auto-antibodies bind platelet GPIIb/IIIa in immune thrombocytopenia, but they can also bind to other platelet antigens.",
-     "fix": "In immune thrombocytopenia, auto-antibodies bind to platelet surface antigens, leading to Fc-mediated splenic phagocytosis."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis - ITP",
-     "problem": "The key discriminator for ITP states 'rapid response to IVIG or steroids', but this is a treatment, not a diagnostic discriminator.",
-     "fix": "Key discriminators for ITP include normal bone marrow, absence of splenomegaly, and response to immunosuppressive therapy."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis - Malaria-associated thrombocytopenia",
-     "problem": "The key discriminator for malaria-associated thrombocytopenia states 'rapid platelet rise after antimalarial therapy', which is a treatment outcome, not a discriminator.",
-     "fix": "Key discriminators for malaria-associated thrombocytopenia include a positive malaria smear and resolution of thrombocytopenia after antimalarial treatment."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis - HELLP syndrome / gestational thrombocytopenia",
-     "problem": "The key discriminator for HELLP syndrome/gestational thrombocytopenia states 'resolves postpartum', which is an outcome, not a discriminator.",
-     "fix": "Key discriminators for HELLP syndrome/gestational thrombocytopenia include associated pre-eclampsia features and resolution postpartum."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-08"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:11:41.603Z"
   },
   "coagulation": {
    "hash": "302cf2a37e33",
-   "validated": false,
-   "high": 1,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Pathophysiology",
-     "problem": "The statement 'splenic infarction → thrombocytopenia → bleeding' for sickle cell disease is incorrect and could mislead students regarding the cause of bleeding in this condition.",
-     "fix": "In sickle cell disease, splenic sequestration can lead to thrombocytopenia and bleeding, but splenic infarction typically leads to functional asplenia and increased infection risk, not directly thrombocytopenia and bleeding."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis table, 'Acquired factor inhibitor'",
-     "problem": "The distinguishing feature 'Unexpected bleeding on anticoagulant therapy' is misleading as acquired factor inhibitors can cause bleeding independently of anticoagulant therapy.",
-     "fix": "The distinguishing feature for acquired factor inhibitor is 'Unexpected bleeding, often severe, not explained by other causes or anticoagulant therapy'."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-08"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:12:32.220Z"
   },
   "transfusion": {
    "hash": "02b18ad9efb5",
@@ -2062,19 +1591,22 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Question 3",
-     "problem": "The marked answer for Question 3 (A. Blood culture of the remaining unit) is incorrect for the described symptoms of fever, chills, and a diffuse maculopapular rash, especially after receiving washed RBCs. This presentation is more suggestive of an allergic reaction, making serum IgA level (C) a mor",
-     "fix": "The most useful investigation for fever, chills, and a diffuse maculopapular rash after transfusion, especially with washed RBCs, would be a serum IgA level if IgA deficiency is suspected, or a direct Coombs test if a delayed hemolytic reaction is considered."
+     "where": "Practice Questions, Question 1",
+     "problem": "The explanation misdiagnoses TACO as TRALI while correctly identifying that the patient has heart failure, normal-to-high BP (130/80), and bibasal crackles.",
+     "fix": "The presentation is classic for TACO (Transfusion-Associated Circulatory Overload); diuretics are appropriate here."
     },
     {
      "severity": "high",
-     "where": "Question 3 Answer",
-     "problem": "The marked answer for Question 3 is incorrect. Fever with rash after transfusion is less likely to be bacterial contamination, especially with washed RBCs. An allergic reaction is more probable.",
-     "fix": "C. Serum IgA level"
+     "where": "Practice Questions, Question 3",
+     "problem": "Fever and maculopapular rash after washed RBCs is described as bacterial contamination, ignoring the typical presentation of a mild allergic or febrile reaction, and blood culture is wrongly marked as the most useful test for a rash.",
+     "fix": "Fever and rash after transfusion point towards a mild allergic or febrile non-hemolytic reaction, managed supportively rather than culturing for bacteria."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-08"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:12:44.823Z"
   },
   "diabetes": {
    "hash": "be59d63c843a",
@@ -2086,174 +1618,103 @@
    "at": "2026-11-08"
   },
   "hypoglycaemia": {
-   "hash": "2c16c495ae11",
+   "hash": "40d820f8ab51",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "auto-repaired",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:13:40.125Z"
+  },
+  "thyroid": {
+   "hash": "7066f972ba59",
    "validated": false,
-   "high": 6,
+   "high": 3,
    "medium": 1,
    "issues": [
     {
      "severity": "high",
-     "where": "Definition",
-     "problem": "The diagnostic cut-off for hypoglycaemia is inconsistent with current WHO and ADA guidelines.",
-     "fix": "In practice, a capillary glucose < 3.9 mmol/L (≈70 mg/dL) is considered the alert value, with < 3.0 mmol/L (≈54 mg/dL) indicating clinically significant hypoglycaemia, or any level that produces symptoms that resolve with glucose administration."
-    },
-    {
-     "severity": "high",
-     "where": "Diagnosis and severity",
-     "problem": "The diagnostic cut-off for Whipple's triad is inconsistent with current WHO and ADA guidelines.",
-     "fix": "Whipple’s triad: (a) symptoms consistent with low glucose, (b) measured plasma glucose ≤ 3.9 mmol/L, (c) relief of symptoms after glucose administration."
-    },
-    {
-     "severity": "high",
-     "where": "Classify severity (based on clinical state and glucose level)",
-     "problem": "The severity classification thresholds are inconsistent with current WHO and ADA guidelines.",
-     "fix": "Mild: 3.0 – 3.9 mmol/L — Autonomic symptoms only; patient alert, able to cooperate. Moderate: < 3.0 mmol/L — Neuroglycopenic signs (confusion, dysarthria) but still responsive. Severe: Requires assistance from another person to administer carbohydrates, glucagon, or take other corrective actions; of"
-    },
-    {
-     "severity": "high",
-     "where": "Immediate stabilisation",
-     "problem": "The threshold for confirming hypoglycaemia before treatment is inconsistent with current WHO and ADA guidelines.",
-     "fix": "Confirms true hypoglycaemia (≤ 3.9 mmol/L) before treatment."
-    },
-    {
-     "severity": "high",
-     "where": "Immediate stabilisation",
-     "problem": "The threshold for repeating treatment is inconsistent with current WHO and ADA guidelines.",
-     "fix": "Re‑measure glucose after 15 min; repeat step 3/4 if still ≤ 3.9 mmol/L."
-    },
-    {
-     "severity": "high",
-     "where": "Acute neuronal injury",
-     "problem": "The threshold for prolonged glucose causing neuronal injury is too low and inconsistent with current guidelines.",
-     "fix": "Prolonged glucose < 3.0 mmol/L can cause seizures, coma, permanent cognitive deficits."
+     "where": "Methimazole preferred; propylthiouracil in first trimester or severe hepatic disease",
+     "problem": "Propylthiouracil is hepatotoxic and contraindicated in severe hepatic disease, and this directly contradicts Section 10.4.",
+     "fix": "Change to state that propylthiouracil is preferred in the first trimester of pregnancy or thyroid storm, and is contraindicated in liver disease."
     },
     {
      "severity": "medium",
-     "where": "Examiner bedside question",
-     "problem": "The advice to stop a dextrose infusion when the glucometer reads 2.5 mmol/L is potentially harmful, as 2.5 mmol/L is still hypoglycaemic and requires continued treatment.",
-     "fix": "Answer: Continue the infusion, re-check with a laboratory sample, and treat as true hypoglycaemia until proven otherwise, adjusting the infusion rate as needed to maintain glucose above 3.9 mmol/L."
+     "where": "IV antithyroid drug (propylthiouracil)",
+     "problem": "Propylthiouracil has no intravenous formulation and must be administered orally, via nasogastric tube, or rectally.",
+     "fix": "Specify oral, nasogastric, or rectal administration for propylthiouracil."
+    },
+    {
+     "severity": "high",
+     "where": "“Explain the rationale for giving glucocorticoids in myxedema coma.” – They treat possible adrenal insufficiency and reduce peripheral conve",
+     "problem": "Reducing peripheral conversion of T4 to T3 is an objective in thyrotoxic storm, not myxedema coma, where impairing T3 production would worsen severe hypothyroidism.",
+     "fix": "Explain that glucocorticoids are given solely to treat or prevent adrenal crisis from concomitant primary or secondary adrenal insufficiency, as levothyroxine accelerates cortisol clearance."
+    },
+    {
+     "severity": "high",
+     "where": "What is the target TSH range for this patient during pregnancy? Answer: Keep TSH in the trimester‑specific reference",
+     "problem": "Titrating antithyroid medication to achieve a normal trimester-specific TSH in pregnancy leads to maternal overtreatment and causes fetal hypothyroidism and goitre.",
+     "fix": "Target maternal free T4 at or slightly above the upper limit of normal using the lowest effective dose of PTU, rather than targeting a normal TSH."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-08"
-  },
-  "thyroid": {
-   "hash": "7066f972ba59",
-   "validated": true,
-   "high": 0,
-   "medium": 4,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Management - Definitive (long-term) treatment - Hyperthyroidism - Antithyroid drugs (ATDs)",
-     "problem": "The text states that propylthiouracil (PTU) is chosen based on liver status, but it does not specify the contraindication for PTU in severe hepatic disease.",
-     "fix": "Propylthiouracil should be avoided in severe hepatic disease due to the risk of hepatotoxicity."
-    },
-    {
-     "severity": "medium",
-     "where": "Management - Definitive (long-term) treatment - Hyperthyroidism - Surgery (total/near-total thyroidectomy)",
-     "problem": "The text mentions surgery is indicated for suspicion of malignancy, but it does not specify the need for pre-operative preparation.",
-     "fix": "Patients undergoing thyroidectomy for hyperthyroidism should be rendered euthyroid with antithyroid drugs before surgery."
-    },
-    {
-     "severity": "medium",
-     "where": "Management - Monitoring & follow-up - Hypothyroidism",
-     "problem": "The text states to adjust levothyroxine dose based on weight, age, and cardiac status, but it omits the primary biochemical parameter for dose adjustment.",
-     "fix": "Levothyroxine dose should be adjusted primarily based on TSH levels, with weight, age, and cardiac status considered as modifying factors."
-    },
-    {
-     "severity": "medium",
-     "where": "Management - Monitoring & follow-up - Pregnancy",
-     "problem": "The text states to adjust therapy to keep TSH in trimester-specific range, but it does not provide the actual target ranges.",
-     "fix": "In pregnancy, target TSH ranges are typically 0.1-2.5 mIU/L in the first trimester, 0.2-3.0 mIU/L in the second, and 0.3-3.0 mIU/L in the third."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-08"
+   "model": "gemini-3.8-flash",
+   "at": "2026-11-18",
+   "repairStatus": "held",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:16:28.071Z"
   },
   "thyroid-emergency": {
    "hash": "29a37431ebb6",
    "validated": false,
    "high": 1,
-   "medium": 1,
+   "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Management - Definitive treatment - Block hormone synthesis",
-     "problem": "The advice to give a thionamide and replace hormone with IV levothyroxine in thyroid storm is contradictory and potentially harmful.",
-     "fix": "In thyroid storm, block hormone synthesis with a thionamide and do not replace hormone with IV levothyroxine; hormone replacement is for myxoedema coma."
-    },
-    {
-     "severity": "medium",
-     "where": "Management - Monitoring & safety",
-     "problem": "The advice to give a CBC daily to monitor for agranulocytosis with thionamides is excessive and not standard practice.",
-     "fix": "Monitor for agranulocytosis with thionamides by checking CBC if symptoms of infection arise, not daily."
+     "where": "Explain the rationale for giving glucocorticoids in myxoedema coma",
+     "problem": "Glucocorticoids reduce peripheral conversion of T4 to T3, which is factually incorrect (iodothyronine deiodinase inhibitors like PTU and glucocorticoids actually inhibit peripheral T4 to T3 conversion in thyroid storm, but in myxoedema coma steroids are given purely for suspected coexistent primary",
+     "fix": "They provide stress-dose adrenal support to cover potential unrecognized concurrent adrenal insufficiency."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-08"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:18:09.973Z"
   },
   "adrenal": {
    "hash": "a93bc1fb322a",
-   "validated": false,
-   "high": 2,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Pituitary MRI",
-     "problem": "The size threshold for a pituitary microadenoma is incorrectly stated.",
-     "fix": "A pituitary microadenoma is typically defined as < 10 mm."
-    },
-    {
-     "severity": "high",
-     "where": "High-yield exam points - Key mnemonic",
-     "problem": "The mnemonic 'PAUSE' for adrenal crisis is not a real, widely taught mnemonic.",
-     "fix": "A widely taught mnemonic for adrenal crisis is '5 S's': Sugar, Salt, Steroids, Support, Search for cause."
-    },
-    {
-     "severity": "high",
-     "where": "Practice questions - Question 2",
-     "problem": "The explanation for Question 2 is incorrect; mineralocorticoid replacement is essential in primary adrenal insufficiency, and avoiding it in an acute crisis (where hyperkalemia is present) would be harmful.",
-     "fix": "Mineralocorticoid replacement (fludrocortisone) is crucial for primary adrenal insufficiency. While high-dose fludrocortisone is not used in acute crisis, the statement that 'Mineralocorticoid excess worsens hyperkalaemia' is misleading in the context of primary adrenal insufficiency where mineraloc"
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-09"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:19:01.762Z"
   },
   "calcium": {
    "hash": "180adc25ff05",
    "validated": false,
    "high": 1,
-   "medium": 3,
+   "medium": 0,
    "issues": [
     {
-     "severity": "medium",
-     "where": "Bisphosphonates are contraindicated in severe renal impairment (eGFR < 30 mL/min).",
-     "problem": "The text states bisphosphonates are contraindicated in severe renal impairment (eGFR < 30 mL/min), but this is a relative contraindication and dose adjustment is often possible, not an absolute contraindication.",
-     "fix": "Bisphosphonates should be used with caution and dose adjustment in severe renal impairment (eGFR < 30 mL/min)."
-    },
-    {
-     "severity": "medium",
-     "where": "Calcimimetics require caution in patients with hypocalcaemia; stop if calcium falls below the lower normal limit.",
-     "problem": "Calcimimetics are primarily used in hypercalcaemia, not hypocalcaemia, and their use in hypocalcaemia would be inappropriate and potentially harmful.",
-     "fix": "Calcimimetics require caution in patients with pre-existing hypocalcaemia; monitor calcium closely and stop if it falls below the lower normal limit."
-    },
-    {
-     "severity": "medium",
-     "where": "Key mnemonic: “CHOP” – Calcium, Hormone (PTH), Phosphate, Symptoms – always assess together.",
-     "problem": "The mnemonic 'CHOP' is not a widely recognized or standard mnemonic for assessing calcium, PTH, phosphate, and symptoms in medical education.",
-     "fix": "There is no widely taught mnemonic for assessing Calcium, Hormone (PTH), Phosphate, and Symptoms together."
-    },
-    {
      "severity": "high",
-     "where": "Question 2: A patient with severe hypocalcaemia (serum calcium 6.0 mg/dL) is seizing. Which intervention is contraindicated until the seizur",
-     "problem": "Intravenous magnesium sulfate is not contraindicated in seizures due to hypocalcaemia; it is often used to manage seizures in general, and hypomagnesemia can worsen hypocalcaemia.",
-     "fix": "Intravenous magnesium sulfate is not contraindicated in seizures due to hypocalcaemia; it is often used to manage seizures and hypomagnesemia can exacerbate hypocalcaemia."
+     "where": "Severe hypercalcaemia (> 1.75 mmol/L)",
+     "problem": "The given threshold of > 1.75 mmol/L applies to ionised calcium, not total calcium, which is dangerous since severe total calcium hypercalcaemia is typically > 3.0 mmol/L (> 12 mg/dL).",
+     "fix": "Severe hypercalcaemia for total serum calcium is typically defined as greater than 3.0 mmol/L (or ionised calcium > 1.75 mmol/L)."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-09"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:20:44.482Z"
   },
   "pituitary": {
    "hash": "d2d12864ab5e",
@@ -2300,423 +1761,138 @@
   },
   "stroke": {
    "hash": "0278c0f959e6",
-   "validated": false,
-   "high": 4,
-   "medium": 8,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Clinical features - History – what to ask - Onset",
-     "problem": "The text incorrectly states that a step-wise or delayed onset suggests hemorrhage or evolving infarct.",
-     "fix": "Sudden maximal deficit suggests arterial occlusion; a step-wise or fluctuating course may suggest evolving infarct or cardio-embolic events, while hemorrhage typically presents with sudden onset."
-    },
-    {
-     "severity": "medium",
-     "where": "Clinical features - History – what to ask - Time course",
-     "problem": "The text implies that symptoms reaching a peak within 1 hour determines eligibility for reperfusion therapy.",
-     "fix": "Eligibility for reperfusion therapy is determined by the time since symptom onset (typically within 4.5 hours for thrombolysis) and the presence of a large vessel occlusion, not solely by the peak time of symptoms."
-    },
-    {
-     "severity": "medium",
-     "where": "Differential diagnosis - Cerebral venous sinus thrombosis",
-     "problem": "The text states that cerebral venous sinus thrombosis often has a normal CT.",
-     "fix": "While CT can be normal in cerebral venous sinus thrombosis, it may show signs of venous infarction or hemorrhage."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Non-contrast CT head (within 24 h)",
-     "problem": "The text states that a normal CT does not exclude early ischemia.",
-     "fix": "A non-contrast CT head may not show signs of acute ischemic stroke in the first few hours, but diffusion-weighted MRI is sensitive to early ischemia."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - MRI brain with diffusion-weighted imaging",
-     "problem": "The text states that FLAIR helps age the lesion, which is not its primary function for acute infarcts.",
-     "fix": "Diffusion-weighted imaging (DWI) is the primary sequence for detecting acute ischemic infarcts within minutes to hours; FLAIR is more useful for detecting chronic infarcts or white matter lesions."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Full blood count, coagulation profile, electrolytes, renal & liver function",
-     "problem": "The text states that INR >1.7 contraindicates thrombolysis, which is too low a threshold.",
-     "fix": "An INR >1.7 generally contraindicates thrombolysis for ischemic stroke; however, specific guidelines may vary, and a higher threshold (e.g., >2.0) might be acceptable in some cases."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Lumbar puncture (if infection or SAH suspected)",
-     "problem": "The text states that xanthochromia indicates SAH, which is true but needs context regarding timing.",
-     "fix": "Xanthochromia in cerebrospinal fluid indicates the presence of bilirubin from red blood cell breakdown and is a sign of subarachnoid hemorrhage, typically appearing several hours after the bleed."
-    },
-    {
-     "severity": "medium",
-     "where": "Diagnosis and severity - Assess severity",
-     "problem": "The text states that GCS <= 8 signals need for airway protection and possible neurosurgical intervention.",
-     "fix": "A GCS of 8 or less generally indicates the need for airway protection and intubation, but neurosurgical intervention is based on specific findings like mass effect or herniation, not solely on GCS."
-    },
-    {
-     "severity": "high",
-     "where": "Immediate stabilisation",
-     "problem": "The blood glucose threshold for treating hypoglycaemia in stroke patients is too low.",
-     "fix": "Treat hypoglycaemia < 4.0 mmol/L."
-    },
-    {
-     "severity": "high",
-     "where": "Definitive treatment – Ischaemic stroke",
-     "problem": "The time window for endovascular thrombectomy is stated as 6-24 hours, which is incomplete and potentially misleading.",
-     "fix": "If large-vessel occlusion, arrange endovascular thrombectomy within 6-24 hours for selected patients, and also consider it within 6 hours for eligible patients."
-    },
-    {
-     "severity": "high",
-     "where": "Safety & contraindications",
-     "problem": "The platelet count contraindication for thrombolysis is too high.",
-     "fix": "Thrombolysis contraindicated if platelet < 50 × 10⁹/L."
-    },
-    {
-     "severity": "high",
-     "where": "Secondary prevention",
-     "problem": "The LDL target for secondary prevention is too high.",
-     "fix": "Lipid target LDL < 1.4 mmol/L."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-09"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:22:10.109Z"
   },
   "epilepsy": {
    "hash": "59ad66805540",
    "validated": true,
    "high": 0,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Management - Definitive treatment",
-     "problem": "The text lists levetiracetam and lamotrigine as AEDs with lower fetal risk for women of child-bearing age, but does not mention valproate's high teratogenicity.",
-     "fix": "For women of child-bearing age, avoid teratogenic AEDs like valproate, and prefer levetiracetam or lamotrigine due to lower fetal risk."
-    },
-    {
-     "severity": "medium",
-     "where": "Management - Definitive treatment",
-     "problem": "The text suggests levetiracetam or valproate as preferred AEDs in HIV/TB co-infection to minimize interactions with rifampicin and ART, but levetiracetam is not a significant inducer or inhibitor of CYP enzymes, and valproate can interact with ART.",
-     "fix": "In HIV/TB co-infection, consider drug interactions; levetiracetam is a preferred option due to minimal interactions with rifampicin and ART, while valproate may interact with ART."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-09"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:23:00.857Z"
   },
   "neuropathy": {
    "hash": "20d05da1c367",
    "validated": false,
-   "high": 5,
+   "high": 0,
    "medium": 1,
    "issues": [
     {
-     "severity": "high",
-     "where": "Muscle strength (MRC scale)",
-     "problem": "The description of GBS muscle weakness pattern is incorrect.",
-     "fix": "Demyelination in GBS impairs conduction to distal muscles first, leading to ascending weakness; axonal loss spares proximal muscles initially."
-    },
-    {
      "severity": "medium",
-     "where": "Deep tendon reflexes",
-     "problem": "The statement about brisk reflexes in demyelinating variants is misleading.",
-     "fix": "Deep tendon reflexes are typically absent or markedly reduced in both GBS and chronic polyneuropathy; brisk reflexes are not characteristic of demyelinating neuropathies."
-    },
-    {
-     "severity": "high",
-     "where": "Glycated hemoglobin",
-     "problem": "The diagnostic cut-off for glycated hemoglobin is incorrect for suggesting diabetic neuropathy.",
-     "fix": ">6.5% suggests diabetic neuropathy, while >7% indicates poorly controlled diabetes."
-    },
-    {
-     "severity": "high",
-     "where": "Definitive treatment - Classic Guillain-Barre (rapidly progressive ≤4 weeks)",
-     "problem": "The duration of the IVIG course is incorrect for standard GBS treatment.",
-     "fix": "Intravenous immunoglobulin (IVIG) – 5-day course (0.4 g/kg/day for 5 days) — Monitor renal function, avoid volume overload."
-    },
-    {
-     "severity": "high",
-     "where": "Practice questions - Question 2",
-     "problem": "The marked answer 'Autonomic dysreflexia' is incorrect for the described scenario in GBS.",
-     "fix": "The correct answer is 'Autonomic dysfunction'. Autonomic dysreflexia is a specific syndrome seen in spinal cord injury, not GBS."
-    },
-    {
-     "severity": "high",
-     "where": "Practice questions - Question 3",
-     "problem": "The question describes a chronic presentation (10 weeks), making the marked answer 'Oral prednisolone' incorrect as contraindicated first-line.",
-     "fix": "The question describes a progressive weakness over 10 weeks, which fits the criteria for CIDP, not acute GBS. For CIDP, oral prednisolone is a first-line therapy. Therefore, it is not contraindicated as first-line in this scenario. The question should either describe acute GBS or the answer should r"
+     "where": "Question 2 explanation: 'Labile hypertension with positional changes is classic autonomic dysfunction in GBS.'",
+     "problem": "Autonomic dysreflexia is a specific syndrome seen in spinal cord injuries above T6, whereas GBS causes generalized autonomic instability rather than true autonomic dysreflexia.",
+     "fix": "The explanation should attribute the swings to autonomic instability or dysfunction rather than autonomic dysreflexia."
     }
    ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-10"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:23:52.484Z"
   },
   "myasthenia": {
    "hash": "05a11ef6cb17",
-   "validated": false,
-   "high": 1,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Clinical case, Question 1",
-     "problem": "The duration for the ice-pack test is too short for a definitive result.",
-     "fix": "Apply ice to the eyelids for 5-10 minutes for the ice-pack test."
-    },
-    {
-     "severity": "high",
-     "where": "Practice questions, Question 5",
-     "problem": "Azathioprine is not absolutely contraindicated in pregnancy for MG and can be continued if the patient is stable on it, especially if the benefits outweigh the risks. It is not the medication that 'should be avoided' if she develops a severe flare, as other options like IVIG or plasma exchange would",
-     "fix": "Azathioprine is generally considered compatible with pregnancy in women with MG, especially if the disease is well-controlled on it. For a severe flare in pregnancy, IVIG or plasma exchange are preferred acute treatments, while azathioprine is not typically initiated during a flare."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-10"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:24:42.966Z"
   },
   "parkinson": {
    "hash": "20a4a18db575",
-   "validated": false,
-   "high": 1,
-   "medium": 5,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Severity staging (Hoehn & Yahr)",
-     "problem": "The Hoehn & Yahr staging description for stage 1 suggests considering early levodopa or MAO-B inhibitor if functional impact, which is not standard first-line advice.",
-     "fix": "For Hoehn & Yahr stage 1, initial management typically focuses on lifestyle measures, and pharmacotherapy (such as MAO-B inhibitors or dopamine agonists) is considered if symptoms become bothersome, with levodopa usually reserved for later stages or significant functional impairment."
-    },
-    {
-     "severity": "medium",
-     "where": "Causes and risk factors",
-     "problem": "The list of genetic causes is incomplete for a medical student note.",
-     "fix": "Common genetic causes include LRRK2, PARK2 (Parkin), SNCA (alpha-synuclein), and GBA mutations."
-    },
-    {
-     "severity": "medium",
-     "where": "Clinical features - Motor symptoms",
-     "problem": "The text states that postural instability appears later when compensatory pathways fail, but it is also listed as a core diagnostic feature in the 'Diagnosis and severity' section, creating an inconsistency.",
-     "fix": "Postural instability is a later feature of idiopathic Parkinson's disease and is not considered a core diagnostic criterion for initial diagnosis, unlike bradykinesia, rigidity, and resting tremor."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations",
-     "problem": "The interpretation for DaT-SPECT states 'normal scan suggests drug-induced or psychogenic parkinsonism', but it can also be normal in essential tremor.",
-     "fix": "A normal DaT-SPECT scan suggests drug-induced parkinsonism, psychogenic parkinsonism, or essential tremor, as these conditions do not involve presynaptic dopaminergic loss."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations",
-     "problem": "The interpretation for Neuropsychological screen (MoCA) states 'Scores <26 indicate cognitive impairment, may sway toward atypical parkinsonism', which is an oversimplification.",
-     "fix": "Scores <26 on the MoCA indicate mild cognitive impairment, which can be seen in idiopathic Parkinson's disease as well as atypical parkinsonism, and requires further detailed neuropsychological assessment for definitive characterization."
-    },
-    {
-     "severity": "medium",
-     "where": "Definitive pharmacologic therapy",
-     "problem": "The text states that MAO-B inhibitors have a 'neuroprotective rationale', which is not definitively proven.",
-     "fix": "MAO-B inhibitors provide modest symptomatic control, and while some studies suggested a neuroprotective effect, this has not been definitively proven in clinical trials."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-10"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:25:33.688Z"
   },
   "dementia": {
    "hash": "f0612a60bbfc",
    "validated": true,
    "high": 0,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Medication-induced",
-     "problem": "The text lists HIV antiretrovirals as a cause of delirium without further context, which could be misleading.",
-     "fix": "The text should specify that certain HIV antiretrovirals can cause delirium, particularly in the context of immune reconstitution inflammatory syndrome (IRIS) or drug interactions."
-    },
-    {
-     "severity": "medium",
-     "where": "Practice questions - Question 5",
-     "problem": "The explanation for Question 5 is misleading as MoCA is a cognitive screening tool, not a neuropsychological test for staging HIV-associated neurocognitive disorder.",
-     "fix": "In the absence of opportunistic infection, formal neuropsychological testing is used to stage HIV-associated neurocognitive disorder, and MoCA is a screening tool that can be part of this assessment."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-10"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:26:24.224Z"
   },
   "headache": {
    "hash": "22407a99b2c3",
-   "validated": false,
-   "high": 9,
-   "medium": 11,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Cerebral malaria → sequestration of parasitized erythrocytes → microvascular obstruction → cerebral edema → diffuse headache",
-     "problem": "Cerebral edema is not the primary mechanism for headache in cerebral malaria; it is microvascular obstruction and inflammation.",
-     "fix": "Cerebral malaria → sequestration of parasitized erythrocytes → microvascular obstruction and inflammation → diffuse headache."
-    },
-    {
-     "severity": "high",
-     "where": "Location: Unilateral piercing pain → trigeminal autonomic cephalgias; occipital pain → cervicogenic or posterior fossa lesion",
-     "problem": "Unilateral piercing pain is not exclusively indicative of trigeminal autonomic cephalgias; it can also be seen in primary stabbing headache or trigeminal neuralgia.",
-     "fix": "Unilateral piercing pain → trigeminal autonomic cephalgias, primary stabbing headache, or trigeminal neuralgia; occipital pain → cervicogenic or posterior fossa lesion."
-    },
-    {
-     "severity": "high",
-     "where": "Subarachnoid haemorrhage: Thunderclap onset, neck stiffness, loss of consciousness — CT within 6 h positive, xanthochromia in CSF",
-     "problem": "CT sensitivity for SAH decreases significantly after 6 hours, but it can still be positive beyond this window. The critical point is that a negative CT within 6 hours (with a modern scanner) can rule out SAH, but a positive CT is not limited to this timeframe.",
-     "fix": "For subarachnoid haemorrhage, a non-contrast CT head performed within 6 hours of symptom onset has high sensitivity to rule out the condition."
-    },
-    {
-     "severity": "high",
-     "where": "HIV‑related opportunistic infection (e.g., cryptococcal meningitis): HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive,",
-     "problem": "Cryptococcal meningitis typically presents with *elevated* CSF opening pressure, not low.",
-     "fix": "For cryptococcal meningitis, CSF analysis often shows elevated opening pressure."
-    },
-    {
-     "severity": "high",
-     "where": "Lumbar puncture (CSF analysis) ... Neutrophils + low glucose → bacterial meningitis; lymphocytes + low glucose → TB meningitis; xanthochromi",
-     "problem": "While low glucose is characteristic of bacterial and TB meningitis, it is not always present in TB meningitis, and high protein is a more consistent finding.",
-     "fix": "For TB meningitis, CSF analysis typically shows lymphocytes, high protein, and often low glucose."
-    },
-    {
-     "severity": "high",
-     "where": "HIV test + CD4 count ... CD4 <200 → high risk for opportunistic CNS infections",
-     "problem": "While CD4 <200 is a general threshold for opportunistic infections, for cryptococcal meningitis, the risk is significantly higher at CD4 <100.",
-     "fix": "CD4 <100 → high risk for cryptococcal meningitis; CD4 <200 → high risk for other opportunistic CNS infections."
-    },
-    {
-     "severity": "high",
-     "where": "Serum electrolytes & renal function ... Hyponatraemia → SIADH, renal failure → uremic encephalopathy",
-     "problem": "Hyponatremia can be a feature of SIADH, but SIADH itself is a common complication of TB meningitis, which is a significant cause of headache in this setting.",
-     "fix": "Hyponatraemia → SIADH (e.g., in TB meningitis), renal failure → uremic encephalopathy."
-    },
-    {
-     "severity": "high",
-     "where": "Temporal artery ultrasound (if arteritis suspected) ... Halo sign → temporal arteritis",
-     "problem": "The 'halo sign' on temporal artery ultrasound is a specific finding for giant cell arteritis (GCA), which is the correct term for temporal arteritis.",
-     "fix": "Temporal artery ultrasound (if giant cell arteritis suspected) → Halo sign → giant cell arteritis."
-    },
-    {
-     "severity": "high",
-     "where": "Safety monitoring ... Vital signs every 15 min initially for severe cases, then hourly.",
-     "problem": "Monitoring vital signs every 15 minutes then hourly for severe cases is insufficient for rapidly evolving neurological conditions. More frequent monitoring (e.g., every 5-15 minutes) may be needed initially, especially if unstable.",
-     "fix": "Vital signs every 5-15 minutes initially for severe or unstable cases, then hourly once stable."
-    },
-    {
-     "severity": "medium",
-     "where": "Cervical nerves (C1‑C3): Referred pain from neck → tension‑type headache",
-     "problem": "Referred pain from the neck is more characteristic of cervicogenic headache than tension-type headache.",
-     "fix": "Cervical nerves (C1-C3): Referred pain from neck → cervicogenic headache."
-    },
-    {
-     "severity": "medium",
-     "where": "Brain parenchyma: Intracranial mass or edema → raised ICP headache",
-     "problem": "Brain parenchyma itself is largely insensitive to pain. Headache from intracranial mass or edema is due to traction or displacement of pain-sensitive structures, or raised ICP.",
-     "fix": "Brain parenchyma: Intracranial mass or edema → traction/displacement of pain-sensitive structures or raised ICP → headache."
-    },
-    {
-     "severity": "medium",
-     "where": "Metabolic / systemic: Severe anaemia, electrolyte imbalance, sickle cell crisis, rheumatic fever (post‑streptococcal) — Sickle cell disease,",
-     "problem": "Rheumatic fever is not a direct cause of headache; post-streptococcal glomerulonephritis or carditis can lead to complications that cause headache, but rheumatic fever itself is not a direct cause.",
-     "fix": "Metabolic / systemic: Severe anaemia, electrolyte imbalance, sickle cell crisis, hypertensive encephalopathy (e.g., post-streptococcal glomerulonephritis)."
-    },
-    {
-     "severity": "medium",
-     "where": "Tuberculous meningitis → Mycobacterium TB infection of meninges → exudate → basal meningeal inflammation → headache, cranial nerve palsies",
-     "problem": "The exudate in TB meningitis is typically gelatinous and can cause hydrocephalus and vasculitis, which contribute significantly to headache and cranial nerve palsies.",
-     "fix": "Tuberculous meningitis → Mycobacterium TB infection of meninges → basal meningeal inflammation and gelatinous exudate → hydrocephalus, vasculitis, headache, cranial nerve palsies."
-    },
-    {
-     "severity": "medium",
-     "where": "Cerebral venous sinus thrombosis → thrombus → impaired venous outflow → raised ICP → headache often worse when supine",
-     "problem": "While headache can be worse when supine due to raised ICP, the headache in CVST is often progressive and can be severe, not just worse when supine.",
-     "fix": "Cerebral venous sinus thrombosis → thrombus → impaired venous outflow → raised ICP → progressive severe headache."
-    },
-    {
-     "severity": "medium",
-     "where": "Neck: Nuchal rigidity, Kernig/Brudzinski signs — Meningeal irritation from meningitis, TB meningitis, subarachnoid haemorrhage",
-     "problem": "Nuchal rigidity can also be a feature of severe tonsillitis or cervical spine pathology, which should be considered in the differential for neck stiffness.",
-     "fix": "Nuchal rigidity, Kernig/Brudzinski signs — Meningeal irritation from meningitis, TB meningitis, subarachnoid haemorrhage, or severe cervical spine pathology."
-    },
-    {
-     "severity": "medium",
-     "where": "Cranial nerves: Visual field cuts, papilledema, diplopia, facial weakness — Papilledema = raised ICP; cranial nerve palsies = cavernous sinu",
-     "problem": "Cranial nerve palsies can also be caused by TB meningitis due to basal meningeal inflammation.",
-     "fix": "Cranial nerve palsies = cavernous sinus thrombosis, HIV-related lesions, or TB meningitis."
-    },
-    {
-     "severity": "medium",
-     "where": "Fundoscopy: Papilledema, optic disc pallor, retinal hemorrhages — Raised ICP, optic neuritis (HIV), malaria retinopathy",
-     "problem": "Optic disc pallor is a sign of chronic optic neuropathy, not acute optic neuritis. Optic neuritis typically presents with optic disc swelling (papillitis) or a normal fundus if retrobulbar.",
-     "fix": "Fundoscopy: Papilledema, optic disc swelling (papillitis), optic disc pallor, retinal hemorrhages — Raised ICP, optic neuritis (HIV), chronic optic neuropathy, malaria retinopathy."
-    },
-    {
-     "severity": "medium",
-     "where": "Tuberculous meningitis: Subacute onset, weight loss, HIV+, basal meningeal enhancement — CSF lymphocytes, high protein, low glucose",
-     "problem": "The CSF findings for TB meningitis should also emphasize the often very high protein levels.",
-     "fix": "Tuberculous meningitis: CSF lymphocytes, very high protein, low glucose."
-    },
-    {
-     "severity": "medium",
-     "where": "Red-flag checklist",
-     "problem": "The age criteria for red flags in the SNOOP mnemonic are contradictory and not standard.",
-     "fix": "The SNOOP mnemonic should include 'New onset headache in patients > 50 years' and 'Significant change in headache pattern or severity'."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 3",
-     "problem": "The explanation for Question 3 is misleading as cerebral venous sinus thrombosis is not the only cause of stroke in sickle cell disease, and anticoagulation is not always the first-line treatment for all types of stroke in this population.",
-     "fix": "In sickle cell patients, stroke can be ischemic or hemorrhagic; while CVST is a possibility, other causes of ischemic stroke may require different management, and anticoagulation is not universally indicated for all strokes."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-10"
-  },
-  "cord-compression": {
-   "hash": "69f39fe3972d",
    "validated": false,
    "high": 2,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Definitive treatment - Metastatic tumour",
-     "problem": "Decompressive laminectomy is not always the first-line surgical approach for metastatic spinal cord compression; often, anterior or circumferential decompression is preferred depending on the tumour location and stability.",
-     "fix": "Urgent surgical decompression (approach depends on tumour location and stability, e.g., anterior, posterior, or circumferential) ± instrumented fusion + radiotherapy (post-op)."
+     "where": "HIV‑related opportunistic infection (e.g., cryptococcal meningitis): HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive,",
+     "problem": "Cryptococcal meningitis is characterized by high, not low, cerebrospinal fluid opening pressure.",
+     "fix": "CSF India‑ink positive, high opening pressure"
     },
     {
      "severity": "high",
-     "where": "Definitive treatment - Disc herniation with acute cord compromise",
-     "problem": "Post-op steroids for 24h is not a standard or universally recommended practice for disc herniation surgery, and could be harmful.",
-     "fix": "Post-op care focuses on pain management and early rehabilitation."
+     "where": "Onset < 50 y or > 70 y",
+     "problem": "The SNOOP acronym lists age < 50 or > 70 as a red flag, but the standard SNOOP mnemonic uses age > 50 (new onset at age > 50).",
+     "fix": "Onset age > 50 years"
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-10"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:26:29.466Z"
+  },
+  "cord-compression": {
+   "hash": "69f39fe3972d",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 3",
+     "problem": "Corticosteroids are indicated in spinal tuberculosis (Pott's disease) with neurological deficit, so stating they are contraindicated is incorrect.",
+     "fix": "Corticosteroids are part of the standard management for tuberculous spondylodiscitis with neurological deficits to reduce edema."
+    }
+   ],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:27:03.946Z"
   },
   "raised-icp": {
    "hash": "c9411ee01e92",
-   "validated": false,
-   "high": 1,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Management",
-     "problem": "The text lists ceftriaxone + vancomycin for bacterial meningitis without mentioning the need to adjust vancomycin dosing based on renal function or local resistance patterns.",
-     "fix": "Bacterial meningitis → high-dose IV ceftriaxone + vancomycin (adjust doses for renal function and local resistance patterns)."
-    },
-    {
-     "severity": "medium",
-     "where": "Management",
-     "problem": "The text states that hypertonic saline is contraindicated in hypernatremia > 155 mmol/L, but this threshold is too high and can lead to dangerous hypernatremia.",
-     "fix": "Hypertonic saline contraindicated in hypernatremia > 150 mmol/L, severe heart failure."
-    },
-    {
-     "severity": "high",
-     "where": "Clinical case, Question 1",
-     "problem": "The answer to the most urgent immediate intervention for a patient with GCS 13 and focal signs is incorrect.",
-     "fix": "The most urgent immediate intervention is to address the mass lesion causing the focal deficit and raised ICP, likely with neurosurgical consultation and potentially steroids, rather than immediate intubation for a GCS of 13."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-10"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-18T10:27:18.464Z"
   },
   "ra": {
    "hash": "5981578aac87",
@@ -2730,24 +1906,21 @@
   "sle": {
    "hash": "29393c718ffb",
    "validated": false,
-   "high": 2,
+   "high": 1,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Definitive treatment (step‑wise, organ‑based)",
-     "problem": "Suggesting rituximab as a substitute for cyclophosphamide in pregnancy is unsafe, as rituximab crosses the placenta and causes profound neonatal B-cell depletion and cytopenias, and is not an approved alternative for lupus induction in pregnancy.",
-     "fix": "Cyclophosphamide is contraindicated in pregnancy; active severe lupus nephritis in pregnancy is typically managed with glucocorticoids and azathioprine or calcineurin inhibitors (e.g., tacrolimus)."
-    },
-    {
-     "severity": "high",
-     "where": "Classification (clinical + laboratory)",
-     "problem": "The text states definite SLE requires '≥4 of the 2019 EULAR/ACR criteria', confusing the 2019 EULAR/ACR point threshold (score ≥10) with the older 1997 ACR criteria (≥4 of 11 criteria).",
-     "fix": "Definite SLE by the 2019 EULAR/ACR classification criteria requires an ANA titre of ≥1:80 as an entry criterion plus a total score of ≥10 points across the clinical and immunologic domains."
+     "where": "Question 2",
+     "problem": "Rituximab is not preferred over cyclophosphamide in the first trimester of pregnancy; both are contraindicated and teratogenic.",
+     "fix": "Change the question or answers since both cyclophosphamide and rituximab are contraindicated in the first trimester of pregnancy."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-11"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-18",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-18T10:27:20.333Z"
   },
   "gout": {
    "hash": "96060ec3411c",
