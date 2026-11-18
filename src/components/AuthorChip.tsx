@@ -22,18 +22,18 @@ export default function AuthorChip({ storyId, content, tags }: { storyId: string
   const verified = isVerifiedStory(tags);
   const uni = uniFromTags(tags);
   const initial = (author.name.replace(/^an?\s+/i, "").trim()[0] || "?").toUpperCase();
-  const first = author.name.split(" ")[0];
+  const displayName = author.name.replace(/\b[a-z]/g, (letter) => letter.toUpperCase());\n  const first = displayName.split(" ")[0];
   const go = () => document.getElementById("about-author")?.scrollIntoView({ behavior: "smooth", block: "start" });
   return (
     <div className="mt-4 flex items-center gap-3">
-      <button type="button" onClick={go} aria-label={`About ${author.name}`} className="relative shrink-0">
+      <button type="button" onClick={go} aria-label={`About ${displayName}`} className="relative shrink-0">
         {photo
           ? <img src={photo} alt="" className="h-10 w-10 rounded-full object-cover ring-2 ring-background" />
           : <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-500 font-serif text-lg font-bold text-primary-foreground ring-2 ring-background">{initial}</span>}
         {verified && <BadgeCheck className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-background text-sky-500" aria-label="Verified" />}
       </button>
       <div className="min-w-0 text-sm leading-tight">
-        <p className="flex flex-wrap items-center gap-x-1.5 font-bold text-foreground">{author.name}{verified && <BadgeCheck className="h-4 w-4 text-sky-500" aria-label="Verified" />}</p>
+        <p className="flex flex-wrap items-center gap-x-1.5 font-bold text-foreground">{displayName}{verified && <BadgeCheck className="h-4 w-4 text-sky-500" aria-label="Verified" />}</p>
         <p className="mt-0.5 flex flex-wrap items-center gap-x-2 text-xs text-muted-foreground">
           <span>{author.level}</span>
           {uni && <span className="inline-flex items-center gap-1"><GraduationCap className="h-3.5 w-3.5" /> {uni}</span>}
