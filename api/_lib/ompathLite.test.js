@@ -65,6 +65,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     const menu = await sendUssd("");
     expect(menu.body).toContain("CON OmpathStudy Lite\n1. Health support\n2. Help and information");
     const intro = await sendUssd("1");
+    expect(intro.body).toContain("Reply promptly; your network may close an idle session.");
     expect(intro.body).toContain("1. Continue\n2. Cancel\n0. Main menu");
     const language = await sendUssd("1*1");
     expect(language.body).toContain("1. English\n2. Kiswahili\n0. Back");
