@@ -136,7 +136,7 @@ export async function resumeHealthEncounter({ phoneNumber, newSessionId }) {
   if (!existing) return null;
   const rows = await db(
     "lite_health_encounters?session_id=eq." + encodeURIComponent(existing.session_id) + "&phone_number=eq." + encodeURIComponent(phone_number) + "&status=in.(intake_started,awaiting_clarification)&expires_at=gt." + encodeURIComponent(new Date().toISOString()),
-    { method: "PATCH", body: JSON.stringify({ session_id: new_session_id, resume_base_answers: existing.clarification_answers || [], updated_at: new Date().toISOString() }), timeoutMs: 3500 },
+    { method: "PATCH", body: JSON.stringify({ session_id: new_session_id, resume_base_answers: (existing.clarification_answers || []).filter((answer) => answer?.question_id !== "emergency_screen"), updated_at: new Date().toISOString() }), timeoutMs: 3500 },
   );
   return rows[0] || null;
 }
