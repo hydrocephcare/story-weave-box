@@ -54,6 +54,18 @@ function assessmentReply(assessment, language) {
  * AI output is stored only as an explicitly unverified annotation; it never
  * changes the deterministic emergency screen or clinical assessment.
  */
+async function liteRuntimeSetting(name, fallback) {
+ try {
+  const base=process.env.SUPABASE_URL,key=process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if(!base||!key)return fallback;
+  const response=await fetch(base.replace(/\/$/,"")+"/rest/v1/lite_operations_settings?select="+name+"&id=eq.1&limit=1",{
+   headers:{apikey:key,Authorization:"Bearer "+key},signal:AbortSignal.timeout(1200),
+  });
+  if(!response.ok)return fallback;
+  const rows=await response.json();
+  return rows[0]?.[name]??fallback;
+ } catch { return fallback; }
+}
 function scheduleLiteAiInterpretation({ req, encounter, session, phone, description, normalizedSummary }) {
  if (process.env.LITE_AI_INTERPRETATION_ENABLED !== "true" ||
      encounter?.status !== "intake_started" ||
@@ -61,6 +73,7 @@ function scheduleLiteAiInterpretation({ req, encounter, session, phone, descript
      !String(description || "").trim()) return;
  const task = (async () => {
   try {
+   if(await liteRuntimeSetting("ai_enabled",false)!==true)return;
    const result = await interpretLiteWithAi(description);
    if (!result?.ok) return;
    const annotation = {
@@ -109,6 +122,7 @@ function resumeOptions(question, language) {
 }
 
 async function ussd(req,res){
+ if(await liteRuntimeSetting("ussd_enabled",true)!==true)return reply(res,"OmpathStudy Lite USSD is temporarily unavailable. Please try again later.",true);
  let payload=req.body||{};
  if(typeof payload==="string")payload=Object.fromEntries(new URLSearchParams(payload));
  else if(!Object.keys(payload).length&&typeof req.rawBody==="string")payload=Object.fromEntries(new URLSearchParams(req.rawBody));
