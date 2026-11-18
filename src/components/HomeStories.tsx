@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { buildStoryPath } from "@/lib/seo";\nimport { authorFromContent, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
+import { buildStoryPath } from "@/lib/seo";
+import { authorFromContent, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 
 interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null; content?: string | null }
 
@@ -63,9 +64,7 @@ export default function HomeStories() {
         </Link>
       ) : (
         <div className="grid gap-4 sm:grid-cols-3">
-          {rows.map((s) => {
-            const y = Number(s.tags?.find((t) => /^year-[1-6]$/.test(t))?.slice(5)) || 0;
-            return (
+          {rows.map((s) => (
               <Link key={s.id} to={buildStoryPath(s)} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
                 {s.cover_image_url
                   ? <img src={s.cover_image_url} alt="" loading="lazy" className="aspect-[16/9] w-full object-cover object-center" />
@@ -79,8 +78,7 @@ export default function HomeStories() {
                   <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{s.meta_description}</p>
                 </div>
               </Link>
-            );
-          })}
+          ))}
         </div>
       )}
     </section>
