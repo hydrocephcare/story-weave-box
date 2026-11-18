@@ -63,7 +63,7 @@ export async function onRequest(context) {
   };
 
   try {
-    await handler({ ...req, query: { ...req.query, task } }, res);
+    await handler({ ...req, query: { ...req.query, task }, executionContext: context }, res);
     if (!committed) {
       return new Response(JSON.stringify({ error: "The Lite API returned no response." }), {
         status: 502,
