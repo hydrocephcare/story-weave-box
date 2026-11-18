@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AlertTriangle, ArrowRight, CheckCircle2, ExternalLink, HeartPulse, ShieldCheck, Stethoscope } from "lucide-react";
 import "./ompath-lite.css";
+import { detectEmergencyLanguage } from "../../shared/ompathLiteRedFlags.js";
 
 type Assessment = {
   provisional_diagnosis: string;
@@ -146,9 +147,13 @@ export default function OmpathLiteApp() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [result, setResult] = useState<{ assessment: Assessment; resources: Resource[]; reference: string } | null>(null);
-  const questions = useMemo(() => questionsFor(category, answers), [category, answers]);
+  const redFlagDetected = useMemo(() => detectEmergencyLanguage(description).length > 0, [description]);
+  const questions = useMemo(() => {
+    const pathway = questionsFor(category, answers);
+    return redFlagDetected ? pathway.slice(0, 1) : pathway;
+  }, [category, answers, redFlagDetected]);
   const answered = questions.filter((question) => Boolean(answers[question.id])).length;
-  const emergencyReported = answers.emergency_screen === "1";
+  const emergencyReported = answers.emergency_screen === "1" || redFlagDetected;
   const canSubmit = Boolean(category && consent && answers.emergency_screen && (emergencyReported || (questions.length > 1 && questions.every((question) => Boolean(answers[question.id])))));
 
   const setAnswer = (id: string, value: string) => {
@@ -240,6 +245,8 @@ export default function OmpathLiteApp() {
                 <textarea value={description} onChange={(event) => setDescription(event.target.value)} maxLength={1200} rows={4} placeholder="For example: I have lower abdominal pain that started yesterday, with fever..." />
                 <small>{description.length}/1,200 characters. Include when it started and what makes it better or worse, if known.</small>
               </label>
+
+              {redFlagDetected && <div className="health-error" role="alert"><AlertTriangle size={18} /> Your description includes a possible emergency warning sign. Seek emergency care now. Routine questions have been paused; do not wait for an online assessment.</div>}
 
               {category && (
                 <div className="health-questions">
