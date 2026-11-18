@@ -73,7 +73,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd(prefix + "*2*2*2*2");
     const consentPrompt = await sendUssd(prefix + "*2*2*2*2*2");
     expect(consentPrompt.body).toContain("CON ");
-    expect(consentPrompt.body).toContain("Receive a private health guide by SMS?");
+    expect(consentPrompt.body).toContain("Receive a health guide by SMS?");
     const final = await sendUssd(prefix + "*2*2*2*2*2*2");
 
     expect(final.statusCode).toBe(200);
@@ -118,7 +118,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd(prefix + "*2*1*3*2");
     const consentPrompt = await sendUssd(prefix + "*2*1*3*2*1");
     expect(consentPrompt.body).toContain("CON ");
-    expect(consentPrompt.body).toContain("Receive a private health guide by SMS?");
+    expect(consentPrompt.body).toContain("Receive a health guide by SMS?");
     const final = await sendUssd(prefix + "*2*1*3*2*1*2");
 
     expect(final.body).toContain("END Assessment saved. No SMS will be sent.");
