@@ -91,4 +91,13 @@ describe("OmpathStudy Lite emergency phrase screening", () => {
     expect(detectEmergencyLanguage("I do not have chest pain and I don't feel faint")).toEqual([]);
   });
 
+  it("flags shortness of breath and heavy bleeding described as one pad per hour", () => {
+    expect(detectEmergencyLanguage("I am short of breath")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "severe_breathing_difficulty", positive: true })]),
+    );
+    expect(detectEmergencyLanguage("I am bleeding one pad per hour")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "severe_bleeding", positive: true })]),
+    );
+  });
+
 });
