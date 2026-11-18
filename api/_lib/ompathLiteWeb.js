@@ -25,7 +25,7 @@ function expectedQuestionIds(category, answers){
   "Menstrual problem":["emergency_screen","duration","fever","pregnancy_possibility","severity"],
   "Lower abdominal pain":["emergency_screen","onset","pregnancy_possibility","fever_vomiting","severity"],
   "Vaginal discharge":["emergency_screen","duration","fever","pregnancy_possibility","severity"],
-  "Bleeding":["emergency_screen","bleeding_amount","pregnancy_possibility","duration","pain"],
+  "Bleeding":["emergency_screen","bleeding_amount","pregnancy_possibility","faintness","pain"],
   "Other health concern":["emergency_screen","duration","fever","worsening","care"],
  };
  return pathways[category]||null;
