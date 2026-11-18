@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { buildStoryPath } from "@/lib/seo";
-import { authorFromContent, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
+import { authorFromTags, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 
-interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null; content?: string | null }
+interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null }
 
 function HomeStoryAuthor({ story }: { story: Row }) {
-  const author = authorFromContent(story.content || "");
+  const author = authorFromTags(story.tags);
   const year = Number(story.tags?.find((tag) => /^year-[1-8]$/.test(tag))?.slice(5)) || 0;
   if (!author) return year > 0 ? <p className="mt-2 text-[11px] font-medium text-muted-foreground">{year === 7 ? "Finalist" : year === 8 ? "Another course" : `Year ${year}`}</p> : null;
   const photo = photoFromTags(story.tags);
@@ -36,7 +36,7 @@ export default function HomeStories() {
   const [rows, setRows] = useState<Row[] | null>(null);
   useEffect(() => {
     let on = true;
-    supabase.from("stories").select("id,title,slug,category,created_at,cover_image_url,meta_description,tags,content").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(3)
+    supabase.from("stories").select("id,title,slug,category,created_at,cover_image_url,meta_description,tags").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(3)
       .then(({ data }) => { if (on) setRows((data ?? []) as unknown as Row[]); }, () => { if (on) setRows([]); });
     return () => { on = false; };
   }, []);
