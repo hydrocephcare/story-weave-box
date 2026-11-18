@@ -31,7 +31,7 @@ OmpathStudy Lite is a focused, low-bandwidth health-support experience at `https
 
 ## Clinical and safety boundary
 
-The current engine is deterministic and rule-based. It is not a diagnostic device and does not produce confirmed diagnoses. It provides a preliminary intake impression and triage recommendation from the information supplied.
+The current engine is deterministic and rule-based. It does not send symptom text to external AI providers, is not a diagnostic device and does not produce confirmed diagnoses. It provides a preliminary intake impression and triage recommendation from the information supplied.
 
 It must not:
 - Claim that examination, vital signs, pregnancy testing or investigations have been performed.
