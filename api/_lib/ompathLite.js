@@ -175,6 +175,24 @@ async function ussd(req,res){
         :"How long has this been happening?\n1. Under 1 day  2. 1-7 days  3. Over 7 days";
     return reply(res,language==="sw"?"Tafadhali jibu swali lifuatalo kwa kuchagua nambari.\n"+firstQuestion:"Please answer the next question by choosing a number.\n"+firstQuestion+"\n0. Back");
    }
+   if(flow.length>=8){
+    const completed=await getHealthEncounter({sessionId:session,phoneNumber:phone});
+    const expectedConsentLength=6+(completed?.clarification_answers?.length||0);
+    if(completed?.assessment&&flow.length===expectedConsentLength){
+     const choice=flow[flow.length-1];
+     if(choice==="1"){
+      await updateHealthEncounter({id:completed.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:true,status:"guide_pending"}});
+      return reply(res,completed.preferred_language==="sw"
+       ?"Tathmini imehifadhiwa. Mwongozo wa afya utatumwa kwa SMS ikiwa mwongozo uliopitiwa upo. Fuata ushauri wa kwenda hospitali ikiwa umeelekezwa."
+       :"Assessment saved. A private patient guide will be sent by SMS if an approved guide is available. Follow the urgent care advice above.",true);
+     }
+     if(choice==="2"){
+      await updateHealthEncounter({id:completed.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:false,status:completed.urgency_level==="urgent"?"referred_urgent":"complete"}});
+      return reply(res,completed.preferred_language==="sw"?"Tathmini imehifadhiwa. Hakuna SMS itakayotumwa.":"Assessment saved. No SMS will be sent.",true);
+     }
+     return reply(res,completed.preferred_language==="sw"?"Pokea mwongozo kwa SMS?\\n1. Ndiyo  2. Hapana\\n0. Rudi":"Receive a private health guide by SMS?\\n1. Yes  2. No\\n0. Back");
+    }
+   }
    if(flow.length>=7&&flow.length<=11){
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
     if(!encounter)return reply(res,"Your health session expired. Please start again from the main menu.",true);
@@ -233,10 +251,13 @@ async function ussd(req,res){
       clarification_answers:nextAnswers,
       assessment,
       urgency_level:assessment.urgency_level,
-      status:["emergency","urgent"].includes(assessment.urgency_level)?"referred_urgent":encounter.sms_consent===true?"guide_pending":"complete"
+      status:assessment.urgency_level==="emergency"?"referred_urgent":assessment.urgency_level==="urgent"?"referred_urgent":"complete"
      }});
-     const emergency=assessment.urgency_level==="emergency";
-     return reply(res,assessmentReply(assessment,encounter.preferred_language,emergency),true);
+     if(assessment.urgency_level==="emergency")return reply(res,assessmentReply(assessment,encounter.preferred_language),true);
+     const prompt=encounter.preferred_language==="sw"
+      ?"Pokea mwongozo wa afya kwa SMS?\\n1. Ndiyo  2. Hapana"
+      :"Receive a private health guide by SMS?\\n1. Yes  2. No";
+     return reply(res,assessmentReply(assessment,encounter.preferred_language)+"\\n"+prompt);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
     const nextQuestions=adaptPregnancyQuestions(questions,category,nextAnswers);
