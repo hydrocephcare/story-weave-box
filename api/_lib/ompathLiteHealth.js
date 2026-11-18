@@ -110,6 +110,7 @@ export async function getHealthEncounter({ sessionId, phoneNumber }) {
   const phoneFilter = phone_number ? "&phone_number=eq." + encodeURIComponent(phone_number) : "";
   const rows = await db(
     `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
+    { timeoutMs: 3500 },
   );
   return rows[0] || null;
 }
@@ -160,7 +161,7 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   const phoneFilter = phone_number ? "&phone_number=eq." + encodeURIComponent(phone_number) : "";
   const rows = await db(
     `lite_health_encounters?id=eq.${encodeURIComponent(id)}&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}`,
-    { method: "PATCH", body: JSON.stringify(allowed) },
+    { method: "PATCH", body: JSON.stringify(allowed), timeoutMs: 3500 },
   );
   return rows[0] || null;
 }
