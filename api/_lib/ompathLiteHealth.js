@@ -142,6 +142,7 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
     };
   }
   if (typeof patch.sms_sent_at === "string" && !Number.isNaN(Date.parse(patch.sms_sent_at))) allowed.sms_sent_at = patch.sms_sent_at;
+  if (typeof patch.sms_consent === "boolean") allowed.sms_consent = patch.sms_consent;
   if (Array.isArray(patch.clarification_answers) && patch.clarification_answers.length <= 5 &&
       patch.clarification_answers.every((item) => item && typeof item === "object" && !Array.isArray(item) &&
         typeof item.question_id === "string" && item.question_id.length <= 60 &&
