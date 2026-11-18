@@ -206,7 +206,7 @@ async function ussd(req,res){
       clarification_answers:nextAnswers,
       assessment,
       urgency_level:assessment.urgency_level,
-      status:encounter.sms_consent===true?"guide_pending":"complete"
+      status:["emergency","urgent"].includes(assessment.urgency_level)?"referred_urgent":encounter.sms_consent===true?"guide_pending":"complete"
      }});
      const emergency=assessment.urgency_level==="emergency";
      return reply(res,assessmentReply(assessment,encounter.preferred_language,emergency),true);
