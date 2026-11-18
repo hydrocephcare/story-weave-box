@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { AlertTriangle, Bot, BarChart3, Bell, BookOpen, Building2, Check, Edit3, FileText, Globe, HardDrive, KeyRound, Layers, ListChecks, Search, Settings, Sparkles, Upload, Wallet, Wrench } from "lucide-react";
+import { AlertTriangle, Bot, BarChart3, Bell, BookOpen, Building2, Check, Edit3, FileText, Globe, HardDrive, KeyRound, Layers, ListChecks, MessageSquare, Search, Settings, Sparkles, Upload, Wallet, Wrench } from "lucide-react";
 import AdminWorkspace, { type AdminNavGroup } from "@/components/admin/AdminWorkspace";
 
 /**
@@ -22,6 +22,7 @@ const GROUPS: AdminNavGroup[] = [
     tab("route:/admin/monetise", "Monetise", Wallet),
     tab("route:/admin/study-system", "Study system", BookOpen),
     tab("route:/admin/contests", "Contests", ListChecks),
+    tab("route:/admin/ompath-lite", "OmpathStudy Lite", MessageSquare),
   ] },
   { label: "Content", items: [
     tab("create", "Create", FileText), tab("route:/admin/editor", "Editor", Edit3), tab("articles", "Articles", FileText), tab("route:/admin/categories", "Categories", Layers),

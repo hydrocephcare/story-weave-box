@@ -1,0 +1,207 @@
+import { afterEach, describe, expect, it, vi } from "vitest";
+import liteWeb from "./ompathLiteWeb.js";
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.unstubAllEnvs();
+});
+
+function responseSink() {
+  return {
+    statusCode: 200,
+    body: null,
+    status(code) { this.statusCode = code; return this; },
+    json(value) { this.body = value; return this; },
+  };
+}
+
+function stubHealthStorage() {
+  const id = "11111111-1111-4111-8111-111111111111";
+  const calls = [];
+  vi.stubEnv("SUPABASE_URL", "https://example.supabase.co");
+  vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "server-only-test-key");
+  vi.stubGlobal("fetch", vi.fn(async (url, options = {}) => {
+    const address = String(url);
+    calls.push({ address, options });
+    if (address.includes("/rest/v1/articles?")) return new Response("[]", { status: 200 });
+    if (address.includes("/rest/v1/lite_health_encounters?select=")) return new Response("[]", { status: 200 });
+    if (address.endsWith("/rest/v1/lite_health_encounters") && options.method === "POST") {
+      return new Response(JSON.stringify([{ id, status: "intake_started", assessment: null }]), { status: 201 });
+    }
+    if (address.includes("/rest/v1/lite_health_encounters?id=") && options.method === "PATCH") {
+      return new Response(JSON.stringify([{ id, status: "complete" }]), { status: 200 });
+    }
+    return new Response("[]", { status: 200 });
+  }));
+  return { calls, id };
+}
+
+describe("Lite Health Support web API", () => {
+  it("creates an anonymous, consented assessment without collecting a phone number", async () => {
+    const { calls, id } = stubHealthStorage();
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174000",
+        concern_category: "Lower abdominal pain",
+        original_message: "Mild lower abdominal pain since yesterday",
+        consent_given: true,
+        answers: [
+          { question_id: "emergency_screen", answer: "2" },
+          { question_id: "onset", answer: "2" },
+          { question_id: "pregnancy_possibility", answer: "2" },
+          { question_id: "fever_vomiting", answer: "2" },
+          { question_id: "severity", answer: "2" },
+        ],
+      },
+    }, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.body.assessment.status).toBe("not_a_diagnosis");
+    expect(res.body.assessment.differential_diagnoses.length).toBeGreaterThan(0);
+    expect(res.body.assessment.recommended_evaluation.length).toBeGreaterThan(0);
+    expect(res.body.reference).toBe(id);
+    const insert = calls.find((call) => call.options.method === "POST");
+    expect(JSON.parse(insert.options.body).phone_number).toBeNull();
+  });
+
+  it("returns emergency guidance immediately when the emergency screen is positive", async () => {
+    stubHealthStorage();
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174001",
+        concern_category: "Other health concern",
+        original_message: "",
+        consent_given: true,
+        answers: [{ question_id: "emergency_screen", answer: "1" }],
+      },
+    }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.assessment.urgency_level).toBe("emergency");
+    expect(res.body.assessment.next_steps[0]).toMatch(/emergency medical care now/i);
+  });
+
+  it("does not expose the old Lite learning or MCQ API", async () => {
+    const fetchStub = vi.fn();
+    vi.stubGlobal("fetch", fetchStub);
+    const res = responseSink();
+    await liteWeb({ method: "POST", body: { action: "library", phone: "+254700000000" } }, res);
+    expect(res.statusCode).toBe(410);
+    expect(fetchStub).not.toHaveBeenCalled();
+  });
+
+  it("requires consent and a valid emergency-screen answer before storing data", async () => {
+    const fetchStub = vi.fn();
+    vi.stubGlobal("fetch", fetchStub);
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174002",
+        concern_category: "Bleeding",
+        consent_given: false,
+        answers: [{ question_id: "emergency_screen", answer: "2" }],
+      },
+    }, res);
+    expect(res.statusCode).toBe(400);
+    expect(fetchStub).not.toHaveBeenCalled();
+  });
+  it("rejects follow-up answers that do not match the selected pathway", async () => {
+    const fetchStub = vi.fn();
+    vi.stubGlobal("fetch", fetchStub);
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174003",
+        concern_category: "Pregnancy-related concern",
+        consent_given: true,
+        answers: [
+          { question_id: "emergency_screen", answer: "2" },
+          { question_id: "pregnancy_status", answer: "2" },
+          { question_id: "gestation", answer: "2" },
+          { question_id: "pregnancy_bleeding_or_fluid", answer: "2" },
+        ],
+      },
+    }, res);
+    expect(res.statusCode).toBe(400);
+    expect(fetchStub).not.toHaveBeenCalled();
+  });
+
+  it("accepts the complete adaptive pregnancy pathway and escalates reduced fetal movement", async () => {
+    stubHealthStorage();
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174004",
+        concern_category: "Pregnancy-related concern",
+        original_message: "I am 30 weeks pregnant",
+        consent_given: true,
+        answers: [
+          { question_id: "emergency_screen", answer: "2" },
+          { question_id: "pregnancy_status", answer: "1" },
+          { question_id: "gestation", answer: "3" },
+          { question_id: "pregnancy_bleeding_or_fluid", answer: "2" },
+          { question_id: "pregnancy_movement", answer: "1" },
+        ],
+      },
+    }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.assessment.urgency_level).toBe("urgent");
+    expect(res.body.assessment.provisional_diagnosis).toMatch(/reduced fetal movements/i);
+  });
+
+  it("escalates faintness with bleeding as an emergency", async () => {
+    stubHealthStorage();
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174005",
+        concern_category: "Bleeding",
+        original_message: "I am bleeding and feel faint",
+        consent_given: true,
+        answers: [
+          { question_id: "emergency_screen", answer: "2" },
+          { question_id: "bleeding_amount", answer: "2" },
+          { question_id: "pregnancy_possibility", answer: "2" },
+          { question_id: "faintness", answer: "1" },
+          { question_id: "pain", answer: "2" },
+        ],
+      },
+    }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.assessment.urgency_level).toBe("emergency");
+    expect(res.body.assessment.next_steps[0]).toMatch(/emergency medical care now/i);
+  });
+
+  it("short-circuits routine questions when symptom text contains an emergency red flag", async () => {
+    stubHealthStorage();
+    const res = responseSink();
+    await liteWeb({
+      method: "POST",
+      body: {
+        action: "health-assess",
+        session_id: "123e4567-e89b-42d3-a456-426614174006",
+        concern_category: "Other health concern",
+        original_message: "I cannot breathe properly",
+        consent_given: true,
+        answers: [{ question_id: "emergency_screen", answer: "2" }],
+      },
+    }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.assessment.urgency_level).toBe("emergency");
+    expect(res.body.assessment.next_steps[0]).toMatch(/emergency medical care now/i);
+  });
+
+});

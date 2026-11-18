@@ -1,0 +1,66 @@
+/** Admin API for Lite operations and patient-guide clinical approval registry. */
+const json=(res,status,body)=>res.status(status).json(body);
+const clean=(v,max=300)=>String(v??"").trim().replace(/[<>]/g,"").slice(0,max);
+async function request(path,key,options={}) {
+ const base=process.env.SUPABASE_URL;
+ const response=await fetch(`${base.replace(/\/$/,"")}/rest/v1/${path}`,{
+  ...options, headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json",Prefer:options.prefer||"return=representation",...options.headers},
+  signal:AbortSignal.timeout(7000),
+ });
+ const body=await response.text();
+ if(!response.ok)throw new Error(`Database request failed (${response.status})`);
+ return body?JSON.parse(body):[];
+}
+async function authenticate(req) {
+ const url=process.env.SUPABASE_URL, serviceKey=process.env.SUPABASE_SERVICE_ROLE_KEY;
+ const anonKey=process.env.SUPABASE_ANON_KEY||process.env.VITE_SUPABASE_PUBLISHABLE_KEY||process.env.VITE_SUPABASE_ANON_KEY;
+ if(!url||!serviceKey||!anonKey)throw Object.assign(new Error("Lite admin is not configured."),{status:503});
+ const token=String(req.headers.authorization||"").replace(/^Bearer\s+/i,"");
+ if(!token)throw Object.assign(new Error("Sign in required."),{status:401});
+ const who=await fetch(`${url.replace(/\/$/,"")}/auth/v1/user`,{headers:{apikey:anonKey,Authorization:`Bearer ${token}`},signal:AbortSignal.timeout(5000)});
+ if(!who.ok)throw Object.assign(new Error("Session expired. Sign in again."),{status:401});
+ const user=await who.json();
+ const roles=await fetch(`${url.replace(/\/$/,"")}/rest/v1/rpc/has_role`,{
+  method:"POST",headers:{apikey:serviceKey,Authorization:`Bearer ${serviceKey}`,"Content-Type":"application/json"},
+  body:JSON.stringify({_user_id:user.id,_role:"admin"}),signal:AbortSignal.timeout(5000),
+ });
+ if(!roles.ok||await roles.json()!==true)throw Object.assign(new Error("Administrator access required."),{status:403});
+ return {url,serviceKey,user};
+}
+const PATIENT_TYPES=["patient_guide","patient_information","health_guide","Patient Guide","Patient Information","Health Guide"];
+export default async function liteAdmin(req,res) {
+ try {
+  const {serviceKey,user}=await authenticate(req);
+  if(req.method==="GET") {
+   const healthEncounters=await request("lite_health_encounters?select=id,concern_category,status,urgency_level,channel,created_at,updated_at&order=created_at.desc&limit=200",serviceKey);
+   const articleFilter="in.("+PATIENT_TYPES.map(x=>'"'+x+'"').join(",")+")";
+   const candidates=await request("articles?select=id,title,slug,content_type,verification_status,published,requires_review,deleted_at,updated_at&content_type="+encodeURIComponent(articleFilter)+"&deleted_at=is.null&order=updated_at.desc&limit=100",serviceKey);
+   const approvals=await request("lite_patient_guide_approvals?select=article_id,status,patient_language,audience,reviewer_name,reviewer_qualification,registration_body,registration_number,reviewed_at,review_due_at,review_notes,article_updated_at_snapshot",serviceKey);
+   const stats={encounters:healthEncounters.length,emergency:healthEncounters.filter(x=>x.urgency_level==="emergency").length,urgent:healthEncounters.filter(x=>x.urgency_level==="urgent").length,awaiting:healthEncounters.filter(x=>["intake_started","awaiting_clarification","guide_pending"].includes(x.status)).length,completed:healthEncounters.filter(x=>x.status==="complete").length};
+   return json(res,200,{healthEncounters,stats,guideCandidates:candidates,guideApprovals:approvals});
+  }
+  if(req.method!=="POST")return json(res,405,{error:"Method not allowed."});
+  const body=req.body&&typeof req.body==="object"?req.body:{};
+  const articleId=clean(body.article_id,36),action=clean(body.action,20);
+  if(!/^[0-9a-f-]{36}$/i.test(articleId)||!["approve","reject","suspend","pending"].includes(action))return json(res,400,{error:"Invalid article or review action."});
+  const articleRows=await request("articles?select=id,title,slug,content_type,verification_status,published,requires_review,deleted_at,updated_at&id=eq."+articleId+"&limit=1",serviceKey);
+  const article=articleRows[0];
+  if(!article||article.deleted_at||article.published!==true||article.requires_review!==false||!["reviewed","verified"].includes(article.verification_status)||!PATIENT_TYPES.includes(article.content_type))return json(res,409,{error:"This article is not currently eligible for patient-guide review. It must be published, patient-facing, and reviewed on the main site first."});
+  const status={approve:"approved",reject:"rejected",suspend:"suspended",pending:"pending"}[action];
+  const payload={article_id:articleId,status,updated_at:new Date().toISOString(),review_notes:clean(body.review_notes,1500)||null};
+  if(action==="approve"){
+   const reviewer_name=clean(body.reviewer_name,120),reviewer_qualification=clean(body.reviewer_qualification,120),registration_body=clean(body.registration_body,120),registration_number=clean(body.registration_number,80);
+   const dueDays=Math.max(30,Math.min(365,Number(body.review_due_days)||180));
+   if(reviewer_name.length<3||reviewer_qualification.length<3||registration_body.length<2||registration_number.length<2||body.reviewer_attested!==true)return json(res,400,{error:"Approval requires reviewer identity, professional qualification, registration body and number, and explicit attestation."});
+   Object.assign(payload,{patient_language:body.patient_language==="sw"?"sw":"en",audience:["general","adult_women","pregnancy","postpartum","adolescent","caregiver"].includes(body.audience)?body.audience:"general",reviewer_user_id:user.id,reviewer_name,reviewer_qualification,registration_body,registration_number,reviewer_attested:true,reviewed_at:new Date().toISOString(),review_due_at:new Date(Date.now()+dueDays*86400000).toISOString(),article_updated_at_snapshot:article.updated_at});
+  } else {
+   Object.assign(payload,{reviewer_user_id:user.id,reviewed_at:new Date().toISOString(),review_due_at:null,article_updated_at_snapshot:null,reviewer_attested:false});
+  }
+  const saved=await request("lite_patient_guide_approvals?on_conflict=article_id",serviceKey,{method:"POST",body:JSON.stringify(payload),headers:{"Prefer":"resolution=merge-duplicates,return=representation"}});
+  return json(res,200,{ok:true,approval:saved[0]||null});
+ } catch(error) {
+  const status=Number(error?.status)||500;
+  if(status>=500)console.error("Lite Health Support admin API:",error instanceof Error?error.message:"unknown error");
+  return json(res,status,{error:status===500?"Could not process the Health Support admin request.":error.message});
+ }
+}

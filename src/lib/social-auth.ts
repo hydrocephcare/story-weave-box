@@ -5,6 +5,8 @@ import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
 export function canonicalOrigin(): string {
   if (typeof window === "undefined") return "https://www.ompathstudy.com";
   const host = window.location.hostname;
+  // Keep Lite authentication on its own host; the main domain has a separate public app.
+  if (host === "lite.ompathstudy.com") return "https://lite.ompathstudy.com";
   if (host.endsWith("ompathstudy.com")) return "https://www.ompathstudy.com";
   return window.location.origin;
 }

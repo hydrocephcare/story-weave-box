@@ -1,0 +1,64 @@
+name: OmpathStudy Lite Health Support checks
+
+on:
+  push:
+    branches:
+      - feat/ompathstudy-lite-ussd-mvp
+    paths:
+      - "api/_lib/ompathLite*"
+      - "api/lite.js"
+      - "functions/api/**"
+      - "src/pages/OmpathLite*"
+      - "src/pages/ompath-lite.css"
+      - "supabase/migrations/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/lite-health.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "api/_lib/ompathLite*"
+      - "api/lite.js"
+      - "functions/api/**"
+      - "src/pages/OmpathLite*"
+      - "src/pages/ompath-lite.css"
+      - "supabase/migrations/**"
+      - "package.json"
+      - "package-lock.json"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lite-health-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  health-support:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Test Health Support intake, triage, safety and privacy
+        run: >
+          npx vitest run --config vitest.lite.config.ts --reporter=dot
+          api/_lib/ompathLiteClinical.test.js
+          api/_lib/ompathLiteClinical.assessment.test.js
+          api/_lib/ompathLiteFlow.test.js
+          api/_lib/ompathLiteHealth.guide.test.js
+          api/_lib/ompathLiteResources.test.js
+          api/_lib/ompathLiteUssdFormat.test.js
+          api/_lib/ompathLiteHealth.test.js
+          api/_lib/ompathLiteSms.test.js
+          api/_lib/ompathLiteWeb.test.js
+          api/_lib/ompathLite.test.js
+      - name: Build Lite frontend and Pages functions
+        env:
+          VERCEL: "1"
+        run: npm run build

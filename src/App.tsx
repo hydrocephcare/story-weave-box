@@ -98,6 +98,7 @@ const OsceBank2019 = lazy(() => import("./pages/OsceBank2019"));
 const AdminPaywall = lazy(() => import("./pages/AdminPaywall"));
 const AdminBilling = lazy(() => import("./pages/AdminBilling"));
 const AdminOneKitty = lazy(() => import("./pages/AdminOneKitty"));
+const OmpathLiteAdmin = lazy(() => import("./pages/OmpathLiteAdmin"));
 const AdminComments = lazy(() => import("./pages/AdminComments"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
 const AdminPaperFixes = lazy(() => import("./pages/AdminPaperFixes"));
@@ -339,6 +340,7 @@ const AnimatedRoutes = () => {
             <Route path="/contests/:slug/progress" element={<SignedInRoute><ContestProgress /></SignedInRoute>} />
             <Route path="/contests/:slug/certificate/:attemptId" element={<SignedInRoute><ContestCertificate /></SignedInRoute>} />
             <Route path="/review" element={<SignedInRoute><Review /></SignedInRoute>} />
+            <Route path="/admin/ompath-lite" element={<AdminPage><OmpathLiteAdmin /></AdminPage>} />
             <Route path="/admin/monetise" element={<AdminPage><AdminMonetise /></AdminPage>} />
             <Route path="/admin/analytics" element={<AdminPage><AdminAnalytics /></AdminPage>} />
             <Route path="/admin/tools" element={<AdminPage><AdminTools /></AdminPage>} />
