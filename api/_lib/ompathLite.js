@@ -1,5 +1,5 @@
 /** OmpathStudy Lite — Health Support only, delivered through Africa's Talking USSD. */
-import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
+import { createHealthEncounter, getHealthEncounter, getResumableHealthEncounter, resumeHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
 import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteRules.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 import { shortUssdText } from "./ompathLiteUssdFormat.js";
@@ -45,6 +45,24 @@ function assessmentReply(assessment, language) {
  const heading=level==="emergency"?"EMERGENCY: Go to hospital now. ":level==="urgent"?"URGENT: Attend a health facility today. ":"Preliminary impression: ";
  return heading+shortText(impression,105)+". Not a confirmed diagnosis; clinician assessment is required.";
 }
+
+function resumeQuestions(category, language, baseAnswers) {
+ const sets={
+  "Pregnancy-related concern":[{id:"pregnancy_status",en:"Are you pregnant?",sw:"Una ujauzito?"},{id:"gestation",en:"How many weeks pregnant?",sw:"Una ujauzito wa wiki ngapi?"},{id:"pregnancy_bleeding_or_fluid",en:"Any vaginal bleeding or fluid leak?",sw:"Unatoka damu au maji ukeni?"},{id:"pregnancy_movement",en:"At 20+ weeks, are baby movements reduced or absent?",sw:"Wiki 20 au zaidi: mtoto anasogea kidogo au hasogei?"}],
+  "Menstrual problem":[{id:"duration",en:"How long?",sw:"Kwa muda gani?"},{id:"fever",en:"Fever or chills?",sw:"Una homa au baridi?"},{id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Unaweza kuwa mjamzito?"},{id:"severity",en:"Is it getting worse?",sw:"Hali inazidi kuwa mbaya?"}],
+  "Vaginal discharge":[{id:"duration",en:"How long?",sw:"Kwa muda gani?"},{id:"fever",en:"Fever or chills?",sw:"Una homa au baridi?"},{id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Unaweza kuwa mjamzito?"},{id:"severity",en:"Is it getting worse?",sw:"Hali inazidi kuwa mbaya?"}],
+  "Lower abdominal pain":[{id:"onset",en:"When did the pain start?",sw:"Maumivu yalianza lini?"},{id:"pregnancy_possibility",en:"Could you be pregnant?",sw:"Unaweza kuwa mjamzito?"},{id:"fever_vomiting",en:"Fever or repeated vomiting?",sw:"Homa au kutapika mara kwa mara?"},{id:"severity",en:"Is the pain severe or worsening?",sw:"Maumivu ni makali au yanaongezeka?"}],
+  "Bleeding":[{id:"bleeding_amount",en:"Heavy bleeding (soaking a pad each hour)?",sw:"Damu nyingi (kulowanisha pedi moja kwa saa)?"},{id:"pregnancy_possibility",en:"Pregnant or recently gave birth?",sw:"Mjamzito au umejifungua hivi karibuni?"},{id:"faintness",en:"Have you felt faint or nearly passed out?",sw:"Umehisi kuzimia au karibu kupoteza fahamu?"},{id:"pain",en:"Severe abdominal or pelvic pain?",sw:"Maumivu makali ya tumbo au nyonga?"}]
+ };
+ const fallback=[{id:"duration",en:"How long has this been happening?",sw:"Tatizo limekuwepo kwa muda gani?"},{id:"fever",en:"Do you have fever?",sw:"Una homa?"},{id:"worsening",en:"Are symptoms getting worse?",sw:"Dalili zinazidi kuwa mbaya?"},{id:"care",en:"Have you received medical care?",sw:"Umepata huduma ya afya?"}];
+ return adaptPregnancyQuestions([{id:"emergency_screen",en:"Emergency signs now?",sw:"Dalili za dharura sasa?"},...(sets[category]||fallback)],category,baseAnswers.map(x=>x.answer));
+}
+function resumeOptions(question, language) {
+ if(question.id==="gestation")return language==="sw"?"1. Chini ya 20\n2. 20-27\n3. 28+\n4. Sina uhakika":"1. Under 20\n2. 20-27\n3. 28+\n4. Not sure";
+ if(["duration","onset"].includes(question.id))return language==="sw"?"1. Chini ya siku 1\n2. Siku 1-7\n3. Zaidi ya 7":"1. Under 1 day\n2. 1-7 days\n3. Over 7 days";
+ return language==="sw"?"1. Ndiyo\n2. Hapana\n3. Sina uhakika":"1. Yes\n2. No\n3. Not sure";
+}
+
 async function ussd(req,res){
  let payload=req.body||{};
  if(typeof payload==="string")payload=Object.fromEntries(new URLSearchParams(payload));
@@ -66,7 +84,50 @@ async function ussd(req,res){
     if(token==="0"){if(flow.length===1)returnedToIntro=true;flow.pop();continue;}
     flow.push(token);
    }
-   if(!flow.length){if(returnedToIntro)return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");return reply(res,parts.length>1?mainMenu:"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);}
+   if(!flow.length){
+    if(returnedToIntro)return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. New enquiry\n2. Resume previous\n0. Main menu");
+    if(parts.length===1){
+     const pending=await getResumableHealthEncounter(phone);
+     if(pending)return reply(res,"Health support\nYou have an unfinished enquiry.\n1. Start a new enquiry\n2. Resume previous enquiry\n0. Main menu");
+     return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");
+    }
+    return reply(res,parts.length>1?mainMenu:"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
+   }
+   if(flow.length===1 && flow[0]==="2"){
+    const resumed=await resumeHealthEncounter({phoneNumber:phone,newSessionId:session});
+    if(!resumed)return reply(res,"Health support cancelled. No new health information was saved.",true);
+    const base=resumed.resume_base_answers||[];
+    const questions=resumeQuestions(resumed.concern_category||"Other health concern",resumed.preferred_language,base);
+    const current=questions[1+base.length];
+    if(!current)return reply(res,"Your previous answers are saved. Please seek care if symptoms are worsening.",true);
+    return reply(resumed.preferred_language==="sw"?"Enquiry imerejeshwa. Jibu swali lililobaki:\n"+current.sw+"\n"+resumeOptions(current,"sw")+"\n0. Rudi":"Your previous enquiry has been restored. Continue with this question:\n"+current.en+"\n"+resumeOptions(current,"en")+"\n0. Back");
+   }
+   if(flow[0]==="2" && flow.length>=2){
+    const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
+    if(!encounter)return reply(res,"Your saved enquiry could not be restored. Please dial again.",true);
+    const base=Array.isArray(encounter.resume_base_answers)?encounter.resume_base_answers:[];
+    const questions=resumeQuestions(encounter.concern_category||"Other health concern",encounter.preferred_language,base);
+    const submitted=flow.slice(1);
+    const questionCount=questions.length-1;
+    if(submitted.length>questionCount){
+     const choice=submitted[questionCount];
+     if(choice==="1")await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:true,status:"guide_pending"}});
+     else await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:false,status:encounter.urgency_level==="urgent"?"referred_urgent":"complete"}});
+     return reply(res,choice==="1"?"Assessment saved. A health guide will be sent by SMS if an approved guide is available.":"Assessment saved. No SMS will be sent.",true);
+    }
+    const newAnswers=submitted.map((answer,index)=>({question_id:questions[1+base.length+index]?.id,answer})).filter(x=>x.question_id);
+    const allAnswers=[...base,...newAnswers];
+    if(allAnswers.length>=questionCount){
+     const assessment=buildPreliminaryAssessment({encounter,answers:allAnswers,emergencyFlags:encounter.red_flag_results||[]});
+     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:allAnswers,assessment,urgency_level:assessment.urgency_level,status:assessment.urgency_level==="emergency"||assessment.urgency_level==="urgent"?"referred_urgent":"complete"}});
+     const prompt=encounter.preferred_language==="sw"?"Pokea mwongozo wa afya kwa SMS?\n1. Ndiyo\n2. Hapana":"Receive a health guide by SMS?\n1. Yes\n2. No";
+     return reply(assessmentReply(assessment,encounter.preferred_language)+"\n"+prompt);
+    }
+    await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:allAnswers,status:"awaiting_clarification"}});
+    const current=questions[1+allAnswers.length];
+    if(!current)return reply(res,"Your answers have been saved. Please seek an in-person assessment.",true);
+    return reply(languagePrompt(encounter.preferred_language,current)+"\n"+resumeOptions(current,encounter.preferred_language)+"\n0. Back");
+   }
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
     if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
