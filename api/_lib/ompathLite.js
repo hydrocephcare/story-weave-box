@@ -169,6 +169,10 @@ async function ussd(req,res){
    if(flow.length>=8){
     const completed=await getHealthEncounter({sessionId:session,phoneNumber:phone});
     const expectedConsentLength=6+(completed?.clarification_answers?.length||0);
+    if(completed?.assessment&&flow.length===expectedConsentLength-1){
+     const prompt=completed.preferred_language==="sw"?"Pokea mwongozo kwa SMS?\\n1. Ndiyo  2. Hapana":"Receive a private health guide by SMS?\\n1. Yes  2. No";
+     return reply(res,assessmentReply(completed.assessment,completed.preferred_language)+"\\n"+prompt);
+    }
     if(completed?.assessment&&flow.length===expectedConsentLength){
      const choice=flow[flow.length-1];
      if(choice==="1"){
