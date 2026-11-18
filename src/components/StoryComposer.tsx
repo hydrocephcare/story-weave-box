@@ -27,7 +27,7 @@ import { tidyHtml } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
 import { assistBio, assistStory, assistTitles, paragraphsToHtml } from "@/lib/storyAssist";
 import { cleanExtra, extraFromTags, extraTag, withoutExtraTag, type AuthorExtra } from "@/lib/storyExtras";
-import { ABOUT_MAX, UNIVERSITIES, levelLabel, aboutFromTags, aboutTag, photoFromTags, photoTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
+import { ABOUT_MAX, UNIVERSITIES, levelLabel, aboutFromTags, aboutTag, photoFromTags, photoTag, uniFromTags, uniTag, withoutAuthorTags, authorTag } from "@/lib/storyAuthor";
 
 /** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
 export function yearGuide(year: number): { placeholder: string; categories: string[] } {
@@ -182,7 +182,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
         const extraT = extraTag(extra);
         const keepClean = withoutExtraTag(keep);
         const thumb = { cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) };
-        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keepClean, `year-${year}`, ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : []), ...(extraT ? [extraT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
+        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keepClean, `year-${year}`, ...(authorTag(display, levelLabel(year)) ? [authorTag(display, levelLabel(year))] : []), ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : []), ...(extraT ? [extraT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
         if (error) throw error;
         const path = buildStoryPath({ id: editing.id, title: fields.title, slug: (editing as { slug?: string | null }).slug });
         setDone({ url: `${SITE_URL}${path}`, path, title: fields.title, edited: true });
@@ -193,7 +193,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
       const base = storySlugBase(fields.title);
       const taken = ((await supabase.from("stories").select("slug").like("slug", `${base}%`)).data ?? []).map((r: { slug: string | null }) => r.slug);
       let slug = base; for (let n = 2; taken.includes(slug); n++) slug = `${base}-${n}`;
-      const { data, error } = await supabase.from("stories").insert({ ...fields, slug, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : []), ...(extraTag(extra) ? [extraTag(extra)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title,slug").single();
+      const { data, error } = await supabase.from("stories").insert({ ...fields, slug, published: true, tags: [`year-${year}`, "student", owner, ...(authorTag(display, levelLabel(year)) ? [authorTag(display, levelLabel(year))] : []), ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : []), ...(extraTag(extra) ? [extraTag(extra)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title,slug").single();
       if (error) throw error;
       try { localStorage.removeItem(DRAFT); localStorage.setItem(LAST, String(Date.now())); } catch { /* ignore */ }
       const path = buildStoryPath({ id: data.id, title: data.title, slug: (data as { slug?: string | null }).slug });
