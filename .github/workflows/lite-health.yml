@@ -21,6 +21,8 @@ on:
       - main
     paths:
       - "api/_lib/ompathLite*"
+      - "shared/ompathLiteLanguage*"
+      - "shared/ompathLiteRedFlags*"
       - "api/lite.js"
       - "functions/api/**"
       - "src/pages/OmpathLite*"
