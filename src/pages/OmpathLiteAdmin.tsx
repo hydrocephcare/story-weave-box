@@ -6,8 +6,8 @@ import { useAuth } from "@/hooks/useAuth";
 type Encounter = { id:string; concern_category:string|null; status:string; urgency_level:string; channel:string; created_at:string; updated_at:string };
 type Candidate = { id:string; title:string; slug:string|null; content_type:string|null; verification_status:string; updated_at:string };
 type Approval = { article_id:string; status:string; reviewer_name:string|null; review_due_at:string|null; article_updated_at_snapshot:string|null };
-type Operations = { ussd:{callbackSecret:boolean;callbackPath:string;networkProvider:string;mode:string}; sms:{databaseSettings:boolean;enabled:boolean;environment:string;providerUsername:boolean;providerApiKey:boolean;senderId:boolean;senderIdValue:string;inboundSecret:boolean;cronSecret:boolean}; ai:{enabled:boolean;groqConfigured:boolean;geminiConfigured:boolean;backgroundExecution:string}; storage:{supabaseUrl:boolean;serviceRoleKey:boolean;adminAuth:string}; safety:{liveSmsSentByDiagnostics:boolean;ussdTestUsesLiveNetwork:boolean;aiAffectsTriage:boolean} };
-type Data = { healthEncounters:Encounter[]; stats:{encounters:number;emergency:number;urgent:number;awaiting:number;completed:number}; guideCandidates:Candidate[]; guideApprovals:Approval[]; operations:Operations };
+type Operations = { ussd:{enabled:boolean;callbackSecret:boolean;callbackPath:string;networkProvider:string;mode:string}; sms:{databaseSettings:boolean;enabled:boolean;environment:string;providerUsername:boolean;providerApiKey:boolean;senderId:boolean;senderIdValue:string;inboundSecret:boolean;cronSecret:boolean}; ai:{enabled:boolean;adminEnabled:boolean;featureFlag:boolean;dailyLimit:number;groqConfigured:boolean;geminiConfigured:boolean;backgroundExecution:string}; storage:{supabaseUrl:boolean;serviceRoleKey:boolean;adminAuth:string}; safety:{liveSmsSentByDiagnostics:boolean;ussdTestUsesLiveNetwork:boolean;aiAffectsTriage:boolean} };
+type Data = { smsDeliveries:{id:string;status:string;sent_at:string;channel:string}[]; healthEncounters:Encounter[]; stats:{encounters:number;emergency:number;urgent:number;awaiting:number;completed:number}; guideCandidates:Candidate[]; guideApprovals:Approval[]; operations:Operations };
 type TestResult = { ok:boolean; mode:string; response?:string; liveSmsSent?:boolean; provider?:string; enabled?:boolean; modelRequestSent?:boolean; error?:string };
 
 export default function OmpathLiteAdmin() {
@@ -17,6 +17,7 @@ export default function OmpathLiteAdmin() {
  const [reviewDays,setReviewDays]=useState("180"),[language,setLanguage]=useState("en"),[audience,setAudience]=useState("general"),[attested,setAttested]=useState(false),[saving,setSaving]=useState("");
  const [testResult,setTestResult]=useState<TestResult|null>(null),[testing,setTesting]=useState("");
  const [smsEnabled,setSmsEnabled]=useState(false),[smsEnvironment,setSmsEnvironment]=useState("sandbox"),[smsSenderId,setSmsSenderId]=useState("");
+ const [ussdEnabled,setUssdEnabled]=useState(true),[aiEnabled,setAiEnabled]=useState(false),[aiDailyLimit,setAiDailyLimit]=useState("100");
  const refresh=useCallback(async()=>{
   setLoading(true);setError("");
   try{
@@ -26,7 +27,15 @@ export default function OmpathLiteAdmin() {
   }catch(reason){setError(reason instanceof Error?reason.message:"Could not load Health Support data.");}finally{setLoading(false);}
  },[session?.access_token]);
  useEffect(()=>{void refresh();},[refresh]);
- useEffect(()=>{if(data?.operations){setSmsEnabled(data.operations.sms.enabled);setSmsEnvironment(data.operations.sms.environment==="production"?"production":"sandbox");setSmsSenderId(data.operations.sms.senderIdValue||"");}},[data]);
+ useEffect(()=>{if(data?.operations){setUssdEnabled(data.operations.ussd.enabled);setAiEnabled(data.operations.ai.adminEnabled);setAiDailyLimit(String(data.operations.ai.dailyLimit));setSmsEnabled(data.operations.sms.enabled);setSmsEnvironment(data.operations.sms.environment==="production"?"production":"sandbox");setSmsSenderId(data.operations.sms.senderIdValue||"");}},[data]);
+ const saveOperationsSettings=async()=>{
+  setTesting("operations_settings_update");setError("");setNotice("");
+  try{
+   const response=await fetch("/api/ompath-lite-admin",{method:"POST",headers:{Authorization:"Bearer "+session?.access_token,"Content-Type":"application/json"},body:JSON.stringify({action:"operations_settings_update",ussd_enabled:ussdEnabled,ai_enabled:aiEnabled,ai_daily_limit:Number(aiDailyLimit)})});
+   const payload=await response.json();if(!response.ok)throw new Error(payload.error||"Could not save runtime settings.");
+   setNotice(payload.effective_ai_enabled?"Runtime settings saved; AI extraction is enabled behind the server feature flag.":"Runtime settings saved. AI remains inactive until its server feature flag is enabled.");await refresh();
+  }catch(reason){setError(reason instanceof Error?reason.message:"Could not save runtime settings.");}finally{setTesting("");}
+ };
  const saveSmsSettings=async()=>{
   setTesting("sms_settings_update");setError("");setNotice("");
   try{
@@ -67,6 +76,10 @@ export default function OmpathLiteAdmin() {
     {label:"Recent enquiries",value:data.stats.encounters,icon:Clock3},{label:"Emergency",value:data.stats.emergency,icon:AlertTriangle},{label:"Urgent",value:data.stats.urgent,icon:AlertTriangle},{label:"Awaiting action",value:data.stats.awaiting,icon:Clock3},{label:"Completed",value:data.stats.completed,icon:CheckCircle2}
    ].map(x=><div key={x.label} className="rounded-2xl border border-border bg-card p-4"><div className="flex items-center justify-between gap-2 text-muted-foreground"><span className="text-xs">{x.label}</span><x.icon className="h-4 w-4"/></div><p className="mt-3 text-3xl font-bold tabular-nums">{x.value}</p></div>)}</div>
    <section className="mb-7 overflow-hidden rounded-2xl border border-border bg-card">
+    <div className="border-b border-border p-4"><h2 className="font-semibold">Recent SMS delivery activity</h2><p className="mt-1 text-xs text-muted-foreground">De-identified delivery records. No recipient numbers or message content are shown.</p></div>
+    <div className="overflow-x-auto"><table className="w-full text-left text-xs"><thead className="bg-muted/40 text-muted-foreground"><tr><th className="p-3">Time</th><th className="p-3">Channel</th><th className="p-3">Encounter status</th><th className="p-3">Delivery</th></tr></thead><tbody>{data.smsDeliveries.length?data.smsDeliveries.map(x=><tr key={x.id} className="border-t border-border"><td className="p-3">{new Date(x.sent_at).toLocaleString()}</td><td className="p-3">{x.channel}</td><td className="p-3">{x.status}</td><td className="p-3">SMS accepted / sent timestamp recorded</td></tr>):<tr><td colSpan={4} className="p-4 text-center text-muted-foreground">No SMS delivery records yet.</td></tr>}</tbody></table></div>
+   </section>
+   <section className="mb-7 overflow-hidden rounded-2xl border border-border bg-card">
     <div className="border-b border-border p-4"><h2 className="font-semibold">Service configuration and integration health</h2><p className="mt-1 text-xs text-muted-foreground">Live configuration status from the Lite server. Secret values are never returned to the browser.</p></div>
     <div className="grid gap-3 p-4 md:grid-cols-2 xl:grid-cols-4">
      {[
@@ -77,6 +90,16 @@ export default function OmpathLiteAdmin() {
      ].map(group=><div key={group.title} className="rounded-xl border border-border p-4">
       <h3 className="text-sm font-semibold">{group.title}</h3><div className="mt-3 space-y-2">{group.items.map(([label,ok])=><div key={label} className="flex items-center justify-between gap-2 text-xs"><span className="text-muted-foreground">{label}</span><span className={ok?"font-semibold text-emerald-700":"font-semibold text-amber-700"}>{ok?"Configured":"Missing"}</span></div>)}</div><p className="mt-3 border-t border-border pt-3 text-[11px] text-muted-foreground">{group.detail}</p>
      </div>)}
+    </div>
+    <div className="border-t border-border p-4">
+     <h3 className="text-sm font-semibold">USSD and AI runtime controls</h3><p className="mt-1 text-xs text-muted-foreground">These switches are stored in the Lite-only settings table and affect the running service. AI also requires the server feature flag and a provider secret.</p>
+     <div className="mt-3 grid gap-3 md:grid-cols-3">
+      <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={ussdEnabled} onChange={e=>setUssdEnabled(e.target.checked)}/> Enable USSD intake</label>
+      <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={aiEnabled} onChange={e=>setAiEnabled(e.target.checked)}/> Allow background AI extraction</label>
+      <label className="text-sm">AI daily request limit<input type="number" min="0" max="10000" value={aiDailyLimit} onChange={e=>setAiDailyLimit(e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2"/></label>
+     </div>
+     <button disabled={!!testing} onClick={()=>void saveOperationsSettings()} className="mt-3 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-50">{testing==="operations_settings_update"?"Saving…":"Save runtime settings"}</button>
+     <p className="mt-2 text-[11px] text-muted-foreground">AI is currently governed by the clinical validation gate; setting this switch alone does not activate model calls. The daily limit is stored for the next quota-enforcement stage.</p>
     </div>
     <div className="border-t border-border p-4">
      <h3 className="text-sm font-semibold">SMS delivery settings</h3><p className="mt-1 text-xs text-muted-foreground">Manage the patient-guide SMS queue, sandbox/production mode and sender ID. Provider credentials remain protected server secrets.</p>
