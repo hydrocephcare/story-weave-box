@@ -80,7 +80,7 @@ export async function processPendingHealthGuideSms(limit=10){
    claimed=true;
    const guides=await searchReviewedPatientResources({
     query:[encounter.concern_category||"",encounter.original_message||""].join(" "),
-    language:"en",limit:1,
+    language:encounter.preferred_language||"en",limit:1,
    });
    if(!guides.length||!guides[0].slug){
     await db("lite_health_encounters?id=eq."+encodeURIComponent(encounter.id),{method:"PATCH",body:JSON.stringify({status:"guide_pending"})});
