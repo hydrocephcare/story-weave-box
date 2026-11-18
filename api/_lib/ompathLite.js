@@ -164,7 +164,7 @@ async function ussd(req,res){
        :flow[3]==="5"
         ?"Is the bleeding heavy (one pad/hour) or have you felt faint?\n1. Yes\n2. No\n3. Not sure"
         :"How long has this been happening?\n1. Under 1 day\n2. 1-7 days\n3. Over 7 days";
-    return reply(res,language==="sw"?"Tafadhali jibu swali lifuatalo kwa kuchagua nambari.\n"+firstQuestion:"Please answer the next question by choosing a number.\n"+firstQuestion+"\n0. Back");
+    return reply(res,language==="sw"?"Tafadhali jibu swali lifuatalo kwa kuchagua nambari.\n"+firstQuestion+"\n0. Rudi":"Please answer the next question by choosing a number.\n"+firstQuestion+"\n0. Back");
    }
    if(flow.length>=8){
     const completed=await getHealthEncounter({sessionId:session,phoneNumber:phone});
@@ -236,7 +236,7 @@ async function ussd(req,res){
     const allowedAnswers=currentQuestion.id==="gestation"?["1","2","3","4"]:
      ["duration","onset"].includes(currentQuestion.id)?["1","2","3"]:
      ["severity","worsening"].includes(currentQuestion.id)?["1","2","3"]:["1","2","3"];
-    if(!allowedAnswers.includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+"\nChoose one of the numbered options shown.\n0. Back");
+    if(!allowedAnswers.includes(answer))return reply(res,languagePrompt(encounter.preferred_language,currentQuestion)+(encounter.preferred_language==="sw"?"\nChagua nambari moja kati ya zilizoonyeshwa.\n0. Rudi":"\nChoose one of the numbered options shown.\n0. Back"));
     const nextAnswers=[...answers,{question_id:currentQuestion.id,answer}];
     const nextIndex=answerIndex+1;
     if(nextIndex>=questions.length){
