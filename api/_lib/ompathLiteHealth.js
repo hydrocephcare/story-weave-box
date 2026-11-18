@@ -89,7 +89,7 @@ export async function createHealthEncounter({
     preferred_language: preferredLanguage, updated_at: new Date().toISOString(),
   };
   try {
-    const rows = await db("lite_health_encounters", { method: "POST", body: JSON.stringify(payload) });
+    const rows = await db("lite_health_encounters", { method: "POST", body: JSON.stringify(payload), timeoutMs: 3500 });
     return rows[0] || null;
   } catch {
     // A concurrent callback may have inserted first; read it, never upsert.
