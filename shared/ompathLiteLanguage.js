@@ -45,7 +45,7 @@ const hasPhrase = (text, phrase) => {
 
 const isNegated = (text, index) => {
   const before = text.slice(Math.max(0, index - 48), index);
-  return /(?:^|\\s)(?:no|not|without|denies|don't have|do not have|doesn't have|does not have|sina|hakuna|sio)(?:\\s+[\\p{L}]+){0,2}\\s*$/iu.test(before);
+  return /(?:^|\s)(?:no|not|without|denies|don't have|do not have|doesn't have|does not have|sina|hakuna|sio)(?:\s+[\p{L}]+){0,2}\s*$/iu.test(before);
 };
 
 /**
