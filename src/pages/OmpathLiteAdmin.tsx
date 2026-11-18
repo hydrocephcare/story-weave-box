@@ -6,13 +6,16 @@ import { useAuth } from "@/hooks/useAuth";
 type Encounter = { id:string; concern_category:string|null; status:string; urgency_level:string; channel:string; created_at:string; updated_at:string };
 type Candidate = { id:string; title:string; slug:string|null; content_type:string|null; verification_status:string; updated_at:string };
 type Approval = { article_id:string; status:string; reviewer_name:string|null; review_due_at:string|null; article_updated_at_snapshot:string|null };
-type Data = { healthEncounters:Encounter[]; stats:{encounters:number;emergency:number;urgent:number;awaiting:number;completed:number}; guideCandidates:Candidate[]; guideApprovals:Approval[] };
+type Operations = { ussd:{callbackSecret:boolean;callbackPath:string;networkProvider:string;mode:string}; sms:{databaseSettings:boolean;enabled:boolean;environment:string;providerUsername:boolean;providerApiKey:boolean;senderId:boolean;inboundSecret:boolean;cronSecret:boolean}; ai:{enabled:boolean;groqConfigured:boolean;geminiConfigured:boolean;backgroundExecution:string}; storage:{supabaseUrl:boolean;serviceRoleKey:boolean;adminAuth:string}; safety:{liveSmsSentByDiagnostics:boolean;ussdTestUsesLiveNetwork:boolean;aiAffectsTriage:boolean} };
+type Data = { healthEncounters:Encounter[]; stats:{encounters:number;emergency:number;urgent:number;awaiting:number;completed:number}; guideCandidates:Candidate[]; guideApprovals:Approval[]; operations:Operations };
+type TestResult = { ok:boolean; mode:string; response?:string; liveSmsSent?:boolean; provider?:string; enabled?:boolean; modelRequestSent?:boolean; error?:string };
 
 export default function OmpathLiteAdmin() {
  const {session}=useAuth();
  const [data,setData]=useState<Data|null>(null),[loading,setLoading]=useState(true),[error,setError]=useState(""),[notice,setNotice]=useState("");
  const [reviewerName,setReviewerName]=useState(""),[qualification,setQualification]=useState(""),[registrationBody,setRegistrationBody]=useState(""),[registrationNumber,setRegistrationNumber]=useState("");
  const [reviewDays,setReviewDays]=useState("180"),[language,setLanguage]=useState("en"),[audience,setAudience]=useState("general"),[attested,setAttested]=useState(false),[saving,setSaving]=useState("");
+ const [testResult,setTestResult]=useState<TestResult|null>(null),[testing,setTesting]=useState("");
  const refresh=useCallback(async()=>{
   setLoading(true);setError("");
   try{
@@ -22,6 +25,13 @@ export default function OmpathLiteAdmin() {
   }catch(reason){setError(reason instanceof Error?reason.message:"Could not load Health Support data.");}finally{setLoading(false);}
  },[session?.access_token]);
  useEffect(()=>{void refresh();},[refresh]);
+ const runTest=async(action:"ussd_menu_test"|"sms_readiness_test"|"ai_readiness_test")=>{
+  setTesting(action);setTestResult(null);setError("");
+  try{
+   const response=await fetch("/api/ompath-lite-admin",{method:"POST",headers:{Authorization:"Bearer "+session?.access_token,"Content-Type":"application/json"},body:JSON.stringify({action})});
+   const payload=await response.json();if(!response.ok)throw new Error(payload.error||"Test failed.");setTestResult(payload);
+  }catch(reason){setTestResult({ok:false,mode:"error",error:reason instanceof Error?reason.message:"Test failed."});}finally{setTesting("");}
+ };
  const review=async(articleId:string,action:"approve"|"reject"|"suspend")=>{
   setSaving(articleId);setError("");setNotice("");
   try{
@@ -47,6 +57,28 @@ export default function OmpathLiteAdmin() {
    <div className="mb-7 grid grid-cols-2 gap-3 lg:grid-cols-5">{[
     {label:"Recent enquiries",value:data.stats.encounters,icon:Clock3},{label:"Emergency",value:data.stats.emergency,icon:AlertTriangle},{label:"Urgent",value:data.stats.urgent,icon:AlertTriangle},{label:"Awaiting action",value:data.stats.awaiting,icon:Clock3},{label:"Completed",value:data.stats.completed,icon:CheckCircle2}
    ].map(x=><div key={x.label} className="rounded-2xl border border-border bg-card p-4"><div className="flex items-center justify-between gap-2 text-muted-foreground"><span className="text-xs">{x.label}</span><x.icon className="h-4 w-4"/></div><p className="mt-3 text-3xl font-bold tabular-nums">{x.value}</p></div>)}</div>
+   <section className="mb-7 overflow-hidden rounded-2xl border border-border bg-card">
+    <div className="border-b border-border p-4"><h2 className="font-semibold">Service configuration and integration health</h2><p className="mt-1 text-xs text-muted-foreground">Live configuration status from the Lite server. Secret values are never returned to the browser.</p></div>
+    <div className="grid gap-3 p-4 md:grid-cols-2 xl:grid-cols-4">
+     {[
+      {title:"USSD · Africa's Talking",items:[["Callback secret",data.operations.ussd.callbackSecret],["Callback endpoint",true],["Network mode",true]],detail:data.operations.ussd.callbackPath+" · "+data.operations.ussd.mode},
+      {title:"SMS · Africa's Talking",items:[["SMS settings row",data.operations.sms.databaseSettings],["Provider username",data.operations.sms.providerUsername],["Provider API key",data.operations.sms.providerApiKey],["Sender ID",data.operations.sms.senderId],["Inbound STOP secret",data.operations.sms.inboundSecret],["Cron secret",data.operations.sms.cronSecret]],detail:"Mode: "+data.operations.sms.environment+" · "+(data.operations.sms.enabled?"Enabled":"Disabled")},
+      {title:"AI extraction",items:[["Groq credentials",data.operations.ai.groqConfigured],["Gemini credentials",data.operations.ai.geminiConfigured],["Feature flag",data.operations.ai.enabled]],detail:"Background: "+data.operations.ai.backgroundExecution+" · Does not control triage"},
+      {title:"Supabase",items:[["Project URL",data.operations.storage.supabaseUrl],["Server service key",data.operations.storage.serviceRoleKey],["Admin authorisation",true]],detail:data.operations.storage.adminAuth}
+     ].map(group=><div key={group.title} className="rounded-xl border border-border p-4">
+      <h3 className="text-sm font-semibold">{group.title}</h3><div className="mt-3 space-y-2">{group.items.map(([label,ok])=><div key={label} className="flex items-center justify-between gap-2 text-xs"><span className="text-muted-foreground">{label}</span><span className={ok?"font-semibold text-emerald-700":"font-semibold text-amber-700"}>{ok?"Configured":"Missing"}</span></div>)}</div><p className="mt-3 border-t border-border pt-3 text-[11px] text-muted-foreground">{group.detail}</p>
+     </div>)}
+    </div>
+    <div className="border-t border-border p-4"><h3 className="text-sm font-semibold">Safe test centre</h3><p className="mt-1 text-xs text-muted-foreground">These checks do not contact a mobile network, send an SMS, or make an AI model request.</p>
+     <div className="mt-3 flex flex-wrap gap-2">
+      <button disabled={!!testing} onClick={()=>void runTest("ussd_menu_test")} className="rounded-lg border border-border px-3 py-2 text-sm disabled:opacity-50">{testing==="ussd_menu_test"?"Testing…":"Test USSD menu"}</button>
+      <button disabled={!!testing} onClick={()=>void runTest("sms_readiness_test")} className="rounded-lg border border-border px-3 py-2 text-sm disabled:opacity-50">{testing==="sms_readiness_test"?"Checking…":"Check SMS readiness"}</button>
+      <button disabled={!!testing} onClick={()=>void runTest("ai_readiness_test")} className="rounded-lg border border-border px-3 py-2 text-sm disabled:opacity-50">{testing==="ai_readiness_test"?"Checking…":"Check AI readiness"}</button>
+     </div>
+     {testResult&&<pre className="mt-3 max-h-48 overflow-auto whitespace-pre-wrap rounded-lg bg-muted p-3 text-xs">{JSON.stringify(testResult,null,2)}</pre>}
+    </div>
+    <div className="border-t border-border bg-muted/30 p-4 text-xs text-muted-foreground">This first control panel provides secure configuration visibility and safe diagnostics. Provider credentials and Cloudflare secrets must still be changed in the Lite Cloudflare Pages environment; they are intentionally not editable or revealable through a browser. Runtime switches and full USSD session replay will be added as the next control-plane stage.</div>
+   </section>
    <section className="mb-7 overflow-hidden rounded-2xl border border-border bg-card">
     <div className="border-b border-border p-4"><h2 className="font-semibold">Patient-guide approval register</h2><p className="mt-1 text-xs text-muted-foreground">Only published main-site articles already marked patient-facing and reviewed appear here. Lite approval is a separate review gate.</p></div>
     <div className="grid gap-4 border-b border-border p-4 md:grid-cols-2">
