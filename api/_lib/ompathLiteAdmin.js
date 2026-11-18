@@ -38,19 +38,30 @@ export default async function liteAdmin(req,res) {
    const approvals=await request("lite_patient_guide_approvals?select=article_id,status,patient_language,audience,reviewer_name,reviewer_qualification,registration_body,registration_number,reviewed_at,review_due_at,review_notes,article_updated_at_snapshot",serviceKey);
    const stats={encounters:healthEncounters.length,emergency:healthEncounters.filter(x=>x.urgency_level==="emergency").length,urgent:healthEncounters.filter(x=>x.urgency_level==="urgent").length,awaiting:healthEncounters.filter(x=>["intake_started","awaiting_clarification","guide_pending"].includes(x.status)).length,completed:healthEncounters.filter(x=>x.status==="complete").length};
    const smsSettings=await request("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1",serviceKey).catch(()=>[]);
+   const runtimeRows=await request("lite_operations_settings?select=ussd_enabled,ai_enabled,ai_daily_limit,updated_at&id=eq.1&limit=1",serviceKey).catch(()=>[]);
+   const runtime=runtimeRows[0]||{ussd_enabled:true,ai_enabled:false,ai_daily_limit:100};
+   const smsDeliveries=healthEncounters.filter(x=>x.sms_sent_at).slice(0,50).map(x=>({id:x.id,status:x.status,sent_at:x.sms_sent_at,channel:x.channel}));
    const ready=(value)=>Boolean(value&&String(value).trim());
    const operations={
-    ussd:{callbackSecret:ready(process.env.USSD_CALLBACK_SECRET),callbackPath:"/api/ompath-lite",networkProvider:"Africa's Talking",mode:"callback-driven"},
+    ussd:{enabled:runtime.ussd_enabled===true,callbackSecret:ready(process.env.USSD_CALLBACK_SECRET),callbackPath:"/api/ompath-lite",networkProvider:"Africa's Talking",mode:"callback-driven"},
     sms:{databaseSettings:Boolean(smsSettings[0]),enabled:smsSettings[0]?.enabled===true,environment:smsSettings[0]?.environment||"not configured",providerUsername:ready(process.env.AT_LIVE_USERNAME),providerApiKey:ready(process.env.AT_LIVE_API_KEY),senderId:ready(smsSettings[0]?.sender_id||process.env.AT_SENDER_ID),senderIdValue:smsSettings[0]?.sender_id||process.env.AT_SENDER_ID||"",inboundSecret:ready(process.env.AT_INBOUND_SECRET),cronSecret:ready(process.env.CRON_SECRET)},
-    ai:{enabled:process.env.LITE_AI_INTERPRETATION_ENABLED==="true",groqConfigured:ready(process.env.GROQ_API_KEY||process.env.GROQ_API_KEYS),geminiConfigured:ready(process.env.GEMINI_API_KEY||process.env.GEMINI_API_KEYS),backgroundExecution:"waitUntil"},
+    ai:{enabled:runtime.ai_enabled===true&&process.env.LITE_AI_INTERPRETATION_ENABLED==="true",adminEnabled:runtime.ai_enabled===true,featureFlag:process.env.LITE_AI_INTERPRETATION_ENABLED==="true",dailyLimit:Number(runtime.ai_daily_limit)||0,groqConfigured:ready(process.env.GROQ_API_KEY||process.env.GROQ_API_KEYS),geminiConfigured:ready(process.env.GEMINI_API_KEY||process.env.GEMINI_API_KEYS),backgroundExecution:"waitUntil"},
     storage:{supabaseUrl:ready(process.env.SUPABASE_URL),serviceRoleKey:ready(process.env.SUPABASE_SERVICE_ROLE_KEY),adminAuth:"Supabase session + admin role"},
     safety:{liveSmsSentByDiagnostics:false,ussdTestUsesLiveNetwork:false,aiAffectsTriage:false}
    };
-   return json(res,200,{healthEncounters,stats,guideCandidates:candidates,guideApprovals:approvals,operations});
+   return json(res,200,{healthEncounters,stats,guideCandidates:candidates,guideApprovals:approvals,operations,smsDeliveries});
   }
   if(req.method!=="POST")return json(res,405,{error:"Method not allowed."});
   const body=req.body&&typeof req.body==="object"?req.body:{};
   const action=clean(body.action,40);
+  if(action==="operations_settings_update"){
+   const ussd_enabled=body.ussd_enabled===true;
+   const ai_enabled=body.ai_enabled===true;
+   const ai_daily_limit=Math.max(0,Math.min(10000,Math.floor(Number(body.ai_daily_limit)||0)));
+   if(ai_enabled&&!(process.env.GROQ_API_KEY||process.env.GROQ_API_KEYS||process.env.GEMINI_API_KEY||process.env.GEMINI_API_KEYS))return json(res,409,{error:"AI cannot be armed until a server-side Groq or Gemini credential is configured."});
+   await request("lite_operations_settings?on_conflict=id",serviceKey,{method:"POST",body:JSON.stringify({id:1,ussd_enabled,ai_enabled,ai_daily_limit,updated_by:user.id,updated_at:new Date().toISOString()}),headers:{"Prefer":"resolution=merge-duplicates,return=representation"}});
+   return json(res,200,{ok:true,settings:{ussd_enabled,ai_enabled,ai_daily_limit},effective_ai_enabled:ai_enabled&&process.env.LITE_AI_INTERPRETATION_ENABLED==="true",note:"Lite runtime settings saved."});
+  }
   if(action==="sms_settings_update"){
    const enabled=body.enabled===true;
    const environment=body.environment==="production"?"production":"sandbox";
