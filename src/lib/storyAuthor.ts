@@ -4,6 +4,7 @@ const PREFIX = "about:";
 const PHOTO = "photo:";
 const UNI = "uni:";
 const AUTHOR = "author:";
+export const UNIVERSITIES = ["Mount Kenya University (MKU)", "University of Nairobi (UoN)", "Moi University", "Kenyatta University", "JKUAT", "Egerton University", "Maseno University", "University of Eldoret", "Kenya Methodist University", "Other"];
 
 export const cleanAbout = (s: string) => s.replace(/\s+/g, " ").trim().slice(0, ABOUT_MAX);
 export const aboutTag = (s: string) => { const t = cleanAbout(s); return t ? PREFIX + encodeURIComponent(t) : ""; };
