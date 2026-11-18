@@ -51,13 +51,13 @@ async function sendSms(to,message,settings){
 export async function sendHealthGuideLink({to,link,language="en",smsConsent=false}){
  if(smsConsent!==true)throw new Error("Explicit SMS consent is required.");
  const phone=normalizePhone(to);
- if(!phone||typeof link!=="string"||!/^https:\/\/lite\.ompathstudy\.com\/api\/ompath-lite-guide\?token=[A-Za-z0-9_-]{40,60}&welcome=1$/.test(link))throw new Error("Invalid private guide delivery details.");
+ if(!phone||typeof link!=="string"||!/^https:\/\/lite\.ompathstudy\.com\/api\/ompath-lite-guide\?token=[A-Za-z0-9_-]{40,60}&welcome=1$/.test(link))throw new Error("Invalid health guide delivery details.");
  const rows=await db("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1");
  const settings=rows[0]||{enabled:false,environment:"sandbox",sender_id:null};
  if(!settings.enabled||settings.environment!=="production")return {sent:false,reason:"sms_not_live"};
  const message=language==="sw"
   ?"OmpathStudy: Uliomba taarifa za afya. Mwongozo unaweza kuwa kwa Kiingereza. Fungua kiungo hiki kwa usalama: "+link+" Kiungo kitaisha baada ya siku 7. Usishiriki kiungo hiki. Jibu STOP kujiondoa."
-  :"OmpathStudy: Your requested health information is ready. Open your private link: "+link+" This link expires in 7 days. Do not share it. Reply STOP to opt out.";
+  :"OmpathStudy: Your requested health guide is ready: "+link+" This link expires in 7 days. Do not share it. Reply STOP to opt out.";
  const recipient=await sendSms(phone,message,settings);
  return {sent:true,status:recipient.status||"Accepted",messageId:recipient.messageId||null};
 }
@@ -137,7 +137,7 @@ async function inbound(req,res){
    await db("lite_health_encounters?id="+filter,{method:"PATCH",body:JSON.stringify({sms_consent:false,updated_at:new Date().toISOString()})});
    await db("lite_health_guide_tokens?encounter_id="+filter+"&revoked_at=is.null",{method:"PATCH",body:JSON.stringify({revoked_at:new Date().toISOString()})});
   }
-  return res.status(200).send("You have opted out of OmpathStudy Lite health-information SMS. Active private guide links have been revoked.");
+  return res.status(200).send("You have opted out of OmpathStudy Lite health-information SMS. Active health guide links have been revoked.");
  }
  return res.status(200).send("OmpathStudy Lite no longer processes learning or MCQ replies. Reply STOP to opt out of health-information SMS.");
 }
