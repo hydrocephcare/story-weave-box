@@ -77,7 +77,8 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd("1*1*1*1");
     await sendUssd("1*1*1*1*3");
     await sendUssd(prefix);
-    await sendUssd(prefix + "*2");
+    const firstQuestion = await sendUssd(prefix + "*2");
+    expect(firstQuestion.body).toContain("When did the pain start?\\n1. Under 1 day\\n2. 1-7 days\\n3. Over 7 days\\n0. Back");
     await sendUssd(prefix + "*2*2");
     await sendUssd(prefix + "*2*2*2");
     await sendUssd(prefix + "*2*2*2*2");
