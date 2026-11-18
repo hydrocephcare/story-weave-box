@@ -162,22 +162,6 @@
   ],
   "rewrites": [
     {
-      "source": "/api/ompath-lite-sms",
-      "destination": "/api/ai?task=lite-sms"
-    },
-    {
-      "source": "/api/ompath-lite-admin",
-      "destination": "/api/ai?task=lite-admin"
-    },
-    {
-      "source": "/api/ompath-lite-web",
-      "destination": "/api/ai?task=lite-web"
-    },
-    {
-      "source": "/api/ompath-lite",
-      "destination": "/api/ai?task=lite"
-    },
-    {
       "source": "/api/ai-chat",
       "destination": "/api/ai?task=chat"
     },
@@ -688,11 +672,5 @@
     "api/note-card.js": {
       "includeFiles": "api/_assets/**"
     }
-  },
-  "crons": [
-    {
-      "path": "/api/ompath-lite-sms?mode=send",
-      "schedule": "0 6 * * *"
-    }
-  ]
+  }
 }
