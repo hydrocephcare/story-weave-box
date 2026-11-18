@@ -110,8 +110,8 @@ async function ussd(req,res){
      return reply(res,assessmentReply(assessment,language),true);
     }
     return reply(res,flow[1]==="2"
-     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\\n1. Ndiyo  2. Hapana  3. Sina uhakika\\n0. Rudi"
-     :"Emergency signs right now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\\n1. Yes  2. No  3. Not sure\\n0. Back");
+     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\n1. Ndiyo\n2. Hapana\n3. Sina uhakika\n0. Rudi"
+     :"Emergency signs right now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\n1. Yes\n2. No\n3. Not sure\n0. Back");
    }
    if(flow.length===6){
     if(!["1","2","3"].includes(flow[5]))return reply(res,flow[1]==="2"?"Chagua 1, 2 au 3.\n0. Rudi":"Choose 1, 2 or 3.\n0. Back");
@@ -156,22 +156,22 @@ async function ussd(req,res){
     });
     if(needsUrgentCare)return reply(res,assessmentReply(preliminary,language,true),true);
     const firstQuestion=flow[3]==="1"
-     ?"Are you pregnant?\n1. Yes  2. No  3. Not sure"
+     ?"Are you pregnant?\n1. Yes\n2. No\n3. Not sure"
      :flow[3]==="2"||flow[3]==="4"
-      ?"How long has this been happening?\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
+      ?"How long has this been happening?\n1. Under 1 day\n2. 1-7 days\n3. Over 7 days"
       :flow[3]==="3"
-       ?"When did the pain start?\n1. Under 1 day  2. 1-7 days  3. Over 7 days"
+       ?"When did the pain start?\n1. Under 1 day\n2. 1-7 days\n3. Over 7 days"
        :flow[3]==="5"
-        ?"Is the bleeding heavy (one pad/hour) or have you felt faint?\n1. Yes  2. No  3. Not sure"
-        :"How long has this been happening?\n1. Under 1 day  2. 1-7 days  3. Over 7 days";
+        ?"Is the bleeding heavy (one pad/hour) or have you felt faint?\n1. Yes\n2. No\n3. Not sure"
+        :"How long has this been happening?\n1. Under 1 day\n2. 1-7 days\n3. Over 7 days";
     return reply(res,language==="sw"?"Tafadhali jibu swali lifuatalo kwa kuchagua nambari.\n"+firstQuestion:"Please answer the next question by choosing a number.\n"+firstQuestion+"\n0. Back");
    }
    if(flow.length>=8){
     const completed=await getHealthEncounter({sessionId:session,phoneNumber:phone});
     const expectedConsentLength=6+(completed?.clarification_answers?.length||0);
     if(completed?.assessment&&flow.length===expectedConsentLength-1){
-     const prompt=completed.preferred_language==="sw"?"Pokea mwongozo kwa SMS?\\n1. Ndiyo  2. Hapana":"Receive a private health guide by SMS?\\n1. Yes  2. No";
-     return reply(res,assessmentReply(completed.assessment,completed.preferred_language)+"\\n"+prompt);
+     const prompt=completed.preferred_language==="sw"?"Pokea mwongozo kwa SMS?\n1. Ndiyo\n2. Hapana":"Receive a health guide by SMS?\n1. Yes\n2. No";
+     return reply(res,assessmentReply(completed.assessment,completed.preferred_language)+"\n"+prompt);
     }
     if(completed?.assessment&&flow.length===expectedConsentLength){
      const choice=flow[flow.length-1];
@@ -179,13 +179,13 @@ async function ussd(req,res){
       await updateHealthEncounter({id:completed.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:true,status:"guide_pending"}});
       return reply(res,completed.preferred_language==="sw"
        ?"Tathmini imehifadhiwa. Mwongozo wa afya utatumwa kwa SMS ikiwa mwongozo uliopitiwa upo. Fuata ushauri wa kwenda hospitali ikiwa umeelekezwa."
-       :"Assessment saved. A private patient guide will be sent by SMS if an approved guide is available. Follow the urgent care advice above.",true);
+       :"Assessment saved. A health guide will be sent by SMS if an approved guide is available. Follow the urgent care advice above.",true);
      }
      if(choice==="2"){
       await updateHealthEncounter({id:completed.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:false,status:completed.urgency_level==="urgent"?"referred_urgent":"complete"}});
       return reply(res,completed.preferred_language==="sw"?"Tathmini imehifadhiwa. Hakuna SMS itakayotumwa.":"Assessment saved. No SMS will be sent.",true);
      }
-     return reply(res,completed.preferred_language==="sw"?"Pokea mwongozo kwa SMS?\\n1. Ndiyo  2. Hapana\\n0. Rudi":"Receive a private health guide by SMS?\\n1. Yes  2. No\\n0. Back");
+     return reply(res,completed.preferred_language==="sw"?"Pokea mwongozo kwa SMS?\n1. Ndiyo\n2. Hapana\n0. Rudi":"Receive a health guide by SMS?\n1. Yes\n2. No\n0. Back");
     }
    }
    if(flow.length>=7&&flow.length<=11){
@@ -249,19 +249,19 @@ async function ussd(req,res){
      }});
      if(assessment.urgency_level==="emergency")return reply(res,assessmentReply(assessment,encounter.preferred_language),true);
      const prompt=encounter.preferred_language==="sw"
-      ?"Pokea mwongozo wa afya kwa SMS?\\n1. Ndiyo  2. Hapana"
-      :"Receive a private health guide by SMS?\\n1. Yes  2. No";
-     return reply(res,assessmentReply(assessment,encounter.preferred_language)+"\\n"+prompt);
+      ?"Pokea mwongozo wa afya kwa SMS?\n1. Ndiyo\n2. Hapana"
+      :"Receive a health guide by SMS?\n1. Yes\n2. No";
+     return reply(res,assessmentReply(assessment,encounter.preferred_language)+"\n"+prompt);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:nextAnswers,status:"awaiting_clarification"}});
     const nextQuestions=adaptPregnancyQuestions(questions,category,nextAnswers);
     const nextQuestion=nextQuestions[nextIndex];
     if(!nextQuestion)return reply(res,"Your answers have been recorded. Please arrange an in-person health assessment.",true);
     const optionText=nextQuestion.id==="gestation"
-     ?(encounter.preferred_language==="sw"?"1. Chini ya 20  2. 20-27  3. 28+  4. Sina uhakika":"1. Under 20  2. 20-27  3. 28+  4. Not sure")
+     ?(encounter.preferred_language==="sw"?"1. Chini ya 20\n2. 20-27\n3. 28+\n4. Sina uhakika":"1. Under 20\n2. 20-27\n3. 28+\n4. Not sure")
      :["duration","onset"].includes(nextQuestion.id)
-      ?(encounter.preferred_language==="sw"?"1. Chini ya siku 1  2. Siku 1-7  3. Zaidi ya 7":"1. Under 1 day  2. 1-7 days  3. Over 7 days")
-      :(encounter.preferred_language==="sw"?"1. Ndiyo  2. Hapana  3. Sina uhakika":"1. Yes  2. No  3. Not sure");
+      ?(encounter.preferred_language==="sw"?"1. Chini ya siku 1\n2. Siku 1-7\n3. Zaidi ya 7":"1. Under 1 day\n2. 1-7 days\n3. Over 7 days")
+      :(encounter.preferred_language==="sw"?"1. Ndiyo\n2. Hapana\n3. Sina uhakika":"1. Yes\n2. No\n3. Not sure");
     return reply(res,languagePrompt(encounter.preferred_language,nextQuestion)+"\n"+optionText+"\n0. Back");
    }
    return reply(res,"Health support session complete. Dial again for the main menu.",true);
