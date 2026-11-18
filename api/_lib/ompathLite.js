@@ -104,7 +104,8 @@ async function ussd(req,res){
    }
    if(flow.length===1 && flow[0]==="2"){
     if(!trustedResumeCallback(req))return reply(res,"Health support cancelled. No health information was saved.",true);
-    const resumed=await resumeHealthEncounter({phoneNumber:phone,newSessionId:session});
+    const alreadyBound=await getHealthEncounter({sessionId:session,phoneNumber:phone});
+    const resumed=alreadyBound||await resumeHealthEncounter({phoneNumber:phone,newSessionId:session});
     if(!resumed)return reply(res,"Health support cancelled. No new health information was saved.",true);
     const base=resumed.resume_base_answers||[];
     const questions=resumeQuestions(resumed.concern_category||"Other health concern",resumed.preferred_language,base);
