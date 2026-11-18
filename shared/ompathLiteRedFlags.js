@@ -19,7 +19,7 @@ const patterns = [
 
 function isNegated(text, index) {
   const before = text.slice(Math.max(0, index - 56), index);
-  return /(?:\b(?:do not have|don't have|does not have|doesn't have|do not feel|don't feel|not feeling|not experiencing|no sign of)\b(?:\s+\w+){0,3}\s*$|\b(?:no|not|without|denies|sina|hakuna|sio|si)\s*(?:any\s+)?(?:severe\s+)?$)/i.test(before);
+  return /(?:\b(?:do not have|don't have|does not have|doesn't have|do not feel|don't feel|not feeling|not experiencing|no sign of)\b(?:\s+\w+){0,3}\s*$|\b(?:do not|don't|does not|doesn't)\s*$|\b(?:no|not|without|denies|sina|hakuna|sio|si)\s*(?:any\s+)?(?:severe\s+)?$)/i.test(before);
 }
 
 export function detectEmergencyLanguage(input) {
