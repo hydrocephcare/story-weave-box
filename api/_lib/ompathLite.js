@@ -3,6 +3,7 @@ import { createHealthEncounter, getHealthEncounter, updateHealthEncounter } from
 import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteRules.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
 import { shortUssdText } from "./ompathLiteUssdFormat.js";
+import { interpretHealthConcern, prioritiseClinicalQuestions } from "./ompathLiteInterpret.js";
 const mainMenu = "OmpathStudy Lite\n1. Health support\n2. Help and information";
 const clean = (v,n=180)=>String(v??"").replace(/<br\s*\/?>/gi," ").replace(/<\/(?:p|div|li|h[1-6])\s*>/gi," ").replace(/<[^>]*>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;/gi,"'").replace(/\s+/g," ").trim().slice(0,n);
 const shortText=(value,max)=>shortUssdText(clean(value,2000),max);
@@ -124,6 +125,13 @@ async function ussd(req,res){
      emergencyFlags
     });
     const needsUrgentCare=emergencyAnswer!=="2"||emergencyFlags.length>0;
+    // Deterministic danger-sign checks always run before AI. AI only normalises
+    // language and prioritises clinician-authored follow-up questions.
+    const clinicalContext=needsUrgentCare?null:await interpretHealthConcern({
+     message:description,
+     category:categories[flow[3]],
+     language
+    }).catch(()=>null);
     await updateHealthEncounter({
      id:encounter.id,
      sessionId:session,
@@ -131,7 +139,8 @@ async function ussd(req,res){
      patch:{
       concern_category:categories[flow[3]],
       original_message:description,
-      normalized_summary:"",
+      normalized_summary:clinicalContext?.normalized_summary||"",
+      ...(clinicalContext?{clinical_context:clinicalContext}:{}),
       clarification_answers:emergencyAnswers,
       red_flag_results:emergencyFlags,
       ...(needsUrgentCare?{assessment:preliminary,urgency_level:preliminary.urgency_level,status:"referred_urgent"}:{urgency_level:"not_assessed",status:"awaiting_clarification"})
@@ -187,6 +196,7 @@ async function ussd(req,res){
       {id:"care",en:"Have you received medical care?",sw:"Umepata huduma ya afya?"}
      ])
     ];
+    questions=prioritiseClinicalQuestions(questions,encounter.clinical_context,category);
     const priorAnswers=flow.slice(5,-1);
     questions=adaptPregnancyQuestions(questions,category,priorAnswers);
     const answers=priorAnswers.map((value,index)=>({question_id:questions[index]?.id,answer:value})).filter(item=>item.question_id);
