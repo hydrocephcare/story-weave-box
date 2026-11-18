@@ -405,7 +405,7 @@ export default function StoryRead() {
               src={story.cover_image_url}
               alt={story.title}
               loading="lazy"
-              className="max-h-[420px] w-full object-cover"
+              className="aspect-[16/9] max-h-[420px] w-full object-cover object-center"
             />
           </figure>
         )}
