@@ -81,4 +81,14 @@ describe("OmpathStudy Lite emergency phrase screening", () => {
     );
   });
 
+  it("flags visual disturbance as a warning sign", () => {
+    expect(detectEmergencyLanguage("I am seeing flashing lights")).toEqual(
+      expect.arrayContaining([expect.objectContaining({ rule: "visual_disturbance", positive: true })]),
+    );
+  });
+
+  it("does not flag explicitly denied symptoms", () => {
+    expect(detectEmergencyLanguage("I do not have chest pain and I don't feel faint")).toEqual([]);
+  });
+
 });
