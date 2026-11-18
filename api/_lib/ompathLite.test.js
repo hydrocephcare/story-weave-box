@@ -60,11 +60,11 @@ async function sendUssd(text, res = responseSink()) {
 describe("OmpathStudy Lite USSD Health Support", () => {
   it("renders every numbered option on its own line", async () => {
     const menu = await sendUssd("");
-    expect(menu.body).toContain("CON OmpathStudy Lite\\n1. Health support\\n2. Help and information");
+    expect(menu.body).toContain("CON OmpathStudy Lite\n1. Health support\n2. Help and information");
     const intro = await sendUssd("1");
-    expect(intro.body).toContain("1. Continue\\n2. Cancel\\n0. Main menu");
+    expect(intro.body).toContain("1. Continue\n2. Cancel\n0. Main menu");
     const language = await sendUssd("1*1");
-    expect(language.body).toContain("1. English\\n2. Kiswahili\\n0. Back");
+    expect(language.body).toContain("1. English\n2. Kiswahili\n0. Back");
     expect(language.body).not.toMatch(/1\\. English +2\\./);
   });
 
@@ -78,7 +78,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd("1*1*1*1*3");
     await sendUssd(prefix);
     const firstQuestion = await sendUssd(prefix + "*2");
-    expect(firstQuestion.body).toContain("When did the pain start?\\n1. Under 1 day\\n2. 1-7 days\\n3. Over 7 days\\n0. Back");
+    expect(firstQuestion.body).toContain("When did the pain start?\n1. Under 1 day\n2. 1-7 days\n3. Over 7 days\n0. Back");
     await sendUssd(prefix + "*2*2");
     await sendUssd(prefix + "*2*2*2");
     await sendUssd(prefix + "*2*2*2*2");
