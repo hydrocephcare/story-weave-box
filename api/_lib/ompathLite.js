@@ -123,9 +123,18 @@ async function ussd(req,res){
     const questionCount=questions.length-1;
     if(submitted.length>questionCount){
      const choice=submitted[questionCount];
+     if(!["1","2"].includes(choice))return reply(res,encounter.preferred_language==="sw"?"Pokea mwongozo wa afya kwa SMS?\\n1. Ndiyo\\n2. Hapana\\n0. Rudi":"Receive a health guide by SMS?\\n1. Yes\\n2. No\\n0. Back");
      if(choice==="1")await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:true,status:"guide_pending"}});
      else await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:false,status:encounter.urgency_level==="urgent"?"referred_urgent":"complete"}});
      return reply(res,choice==="1"?"Assessment saved. A health guide will be sent by SMS if an approved guide is available.":"Assessment saved. No SMS will be sent.",true);
+    }
+    for(let index=0;index<submitted.length;index++){
+     const question=questions[1+base.length+index];
+     const allowed=question?.id==="gestation"?["1","2","3","4"]:["1","2","3"];
+     if(!allowed.includes(submitted[index])){
+      const prompt=languagePrompt(encounter.preferred_language,question);
+      return reply(res,prompt+"\\n"+resumeOptions(question,encounter.preferred_language)+"\\n0. Back");
+     }
     }
     const newAnswers=submitted.map((answer,index)=>({question_id:questions[1+base.length+index]?.id,answer})).filter(x=>x.question_id);
     const allAnswers=[...base,...newAnswers];
