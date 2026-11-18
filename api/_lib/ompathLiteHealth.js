@@ -84,7 +84,7 @@ export async function createHealthEncounter({
   const payload = {
     session_id, phone_number, channel, consent_given: true,
     consented_at: new Date().toISOString(), sms_consent: smsConsent === true,
-    preferred_language, updated_at: new Date().toISOString(),
+    preferred_language: preferredLanguage, updated_at: new Date().toISOString(),
   };
   try {
     const rows = await db("lite_health_encounters", { method: "POST", body: JSON.stringify(payload) });
