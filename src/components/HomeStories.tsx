@@ -3,16 +3,39 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { buildStoryPath } from "@/lib/seo";
+import { buildStoryPath } from "@/lib/seo";\nimport { authorFromContent, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 
-interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null }
+interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null; content?: string | null }
+
+function HomeStoryAuthor({ story }: { story: Row }) {
+  const author = authorFromContent(story.content || "");
+  const year = Number(story.tags?.find((tag) => /^year-[1-8]$/.test(tag))?.slice(5)) || 0;
+  if (!author) return year > 0 ? <p className="mt-2 text-[11px] font-medium text-muted-foreground">{year === 7 ? "Finalist" : year === 8 ? "Another course" : `Year ${year}`}</p> : null;
+  const photo = photoFromTags(story.tags);
+  const uni = uniFromTags(story.tags);
+  const initial = author.name.replace(/^an?\s+/i, "").trim().charAt(0).toUpperCase() || "?";
+  return (
+    <div className="mt-3 flex min-w-0 items-center gap-2.5">
+      <span className="relative h-8 w-8 shrink-0">
+        {photo
+          ? <img src={photo} alt="" loading="lazy" className="h-8 w-8 rounded-full object-cover ring-1 ring-border" />
+          : <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">{initial}</span>}
+        <span className="absolute -bottom-0.5 -right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-background text-rose-500"><span className="text-[9px] leading-none">♥</span></span>
+      </span>
+      <span className="min-w-0">
+        <span className="block truncate text-xs font-semibold text-foreground">{author.name}</span>
+        <span className="block truncate text-[10px] text-muted-foreground">{author.level}{uni ? ` · ${uni}` : ""}</span>
+      </span>
+    </div>
+  );
+}
 
 /** The newest student stories, on the homepage, with a one-tap way to write one. */
 export default function HomeStories() {
   const [rows, setRows] = useState<Row[] | null>(null);
   useEffect(() => {
     let on = true;
-    supabase.from("stories").select("id,title,slug,category,created_at,cover_image_url,meta_description,tags").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(3)
+    supabase.from("stories").select("id,title,slug,category,created_at,cover_image_url,meta_description,tags,content").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(3)
       .then(({ data }) => { if (on) setRows((data ?? []) as unknown as Row[]); }, () => { if (on) setRows([]); });
     return () => { on = false; };
   }, []);
@@ -45,15 +68,15 @@ export default function HomeStories() {
             return (
               <Link key={s.id} to={buildStoryPath(s)} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
                 {s.cover_image_url
-                  ? <img src={s.cover_image_url} alt="" loading="lazy" className="h-32 w-full object-cover" />
-                  : <StoryCoverArt title={s.title} className="h-32 w-full" />}
+                  ? <img src={s.cover_image_url} alt="" loading="lazy" className="aspect-[16/9] w-full object-cover object-center" />
+                  : <StoryCoverArt title={s.title} className="aspect-[16/9] w-full" />}
                 <div className="flex flex-1 flex-col p-4">
                   <div className="flex flex-wrap items-center gap-1.5">
                     {s.category && s.category !== "Uncategorized" && <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{s.category}</span>}
-                    {y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">Year {y}</span>}
                   </div>
                   <h3 className="mt-2 line-clamp-2 font-serif text-base font-bold leading-snug group-hover:text-primary">{s.title}</h3>
-                  <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{s.meta_description}</p>
+                  <HomeStoryAuthor story={s} />
+                  <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{s.meta_description}</p>
                 </div>
               </Link>
             );
