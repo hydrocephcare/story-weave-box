@@ -135,4 +135,17 @@ describe("OmpathStudy Lite preliminary assessment", () => {
     expect(result.recommended_evaluation.length).toBeGreaterThan(0);
   });
 
+  it("treats faintness with bleeding as a possible circulatory emergency", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Bleeding", original_message: "Bleeding and faintness" },
+      answers: [
+        { question_id: "emergency_screen", answer: "2" },
+        { question_id: "bleeding_amount", answer: "2" },
+        { question_id: "faintness", answer: "1" },
+      ],
+    });
+    expect(result.urgency_level).toBe("emergency");
+    expect(result.next_steps[0]).toMatch(/emergency medical care now/i);
+  });
+
 });
