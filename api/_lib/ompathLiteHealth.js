@@ -109,8 +109,34 @@ export async function getHealthEncounter({ sessionId, phoneNumber }) {
   if (phoneNumber && !phone_number) throw new Error("A valid mobile number is required.");
   const phoneFilter = phone_number ? "&phone_number=eq." + encodeURIComponent(phone_number) : "";
   const rows = await db(
-    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
+    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,resume_base_answers,expires_at&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
     { timeoutMs: 3500 },
+  );
+  return rows[0] || null;
+}
+
+
+/** Find the caller's latest consented, unfinished USSD encounter without exposing its details. */
+export async function getResumableHealthEncounter(phoneNumber) {
+  const phone_number = normalizePhone(phoneNumber);
+  if (!phone_number) return null;
+  const rows = await db(
+    "lite_health_encounters?select=id,session_id,phone_number,consent_given,preferred_language,concern_category,original_message,clarification_answers,red_flag_results,urgency_level,status,assessment,expires_at&phone_number=eq." + encodeURIComponent(phone_number) + "&consent_given=eq.true&status=in.(intake_started,awaiting_clarification)&expires_at=gt." + encodeURIComponent(new Date().toISOString()) + "&order=updated_at.desc&limit=1",
+    { timeoutMs: 3500 },
+  );
+  return rows[0] || null;
+}
+
+/** Rebind an unfinished encounter to a newly dialled carrier session. */
+export async function resumeHealthEncounter({ phoneNumber, newSessionId }) {
+  const phone_number = normalizePhone(phoneNumber);
+  const new_session_id = validateSession(newSessionId);
+  if (!phone_number) return null;
+  const existing = await getResumableHealthEncounter(phone_number);
+  if (!existing) return null;
+  const rows = await db(
+    "lite_health_encounters?session_id=eq." + encodeURIComponent(existing.session_id) + "&phone_number=eq." + encodeURIComponent(phone_number) + "&status=in.(intake_started,awaiting_clarification)&expires_at=gt." + encodeURIComponent(new Date().toISOString()),
+    { method: "PATCH", body: JSON.stringify({ session_id: new_session_id, resume_base_answers: existing.clarification_answers || [], updated_at: new Date().toISOString() }), timeoutMs: 3500 },
   );
   return rows[0] || null;
 }
@@ -148,6 +174,7 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
       ...(typeof item.evidence === "string" ? { evidence: clean(item.evidence, 180) } : {}),
     }));
   }
+  if (Array.isArray(patch.resume_base_answers) && patch.resume_base_answers.length <= 5) allowed.resume_base_answers = patch.resume_base_answers;
   if (patch.assessment && typeof patch.assessment === "object" && !Array.isArray(patch.assessment) &&
       JSON.stringify(patch.assessment).length <= 12000) {
     allowed.assessment = patch.assessment;
