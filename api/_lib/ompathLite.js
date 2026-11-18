@@ -103,7 +103,7 @@ async function ussd(req,res){
     return reply(res,parts.length>1?mainMenu:"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
    }
    if(flow.length===1 && flow[0]==="2"){
-    if(!trustedResumeCallback(req))return reply(res,"Session recovery is not enabled on this callback. Start a new enquiry or contact OmpathStudy support.",true);
+    if(!trustedResumeCallback(req))return reply(res,"Health support cancelled. No health information was saved.",true);
     const resumed=await resumeHealthEncounter({phoneNumber:phone,newSessionId:session});
     if(!resumed)return reply(res,"Health support cancelled. No new health information was saved.",true);
     const base=resumed.resume_base_answers||[];
