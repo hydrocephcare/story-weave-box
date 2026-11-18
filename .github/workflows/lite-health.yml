@@ -6,6 +6,8 @@ on:
       - feat/ompathstudy-lite-ussd-mvp
     paths:
       - "api/_lib/ompathLite*"
+      - "shared/ompathLiteLanguage*"
+      - "shared/ompathLiteRedFlags*"
       - "api/lite.js"
       - "functions/api/**"
       - "src/pages/OmpathLite*"
@@ -58,6 +60,8 @@ jobs:
           api/_lib/ompathLiteSms.test.js
           api/_lib/ompathLiteWeb.test.js
           api/_lib/ompathLite.test.js
+          shared/ompathLiteLanguage.test.js
+          shared/ompathLiteRedFlags.test.js
       - name: Build Lite frontend and Pages functions
         env:
           VERCEL: "1"
