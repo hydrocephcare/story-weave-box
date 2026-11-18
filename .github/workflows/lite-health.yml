@@ -8,6 +8,7 @@ on:
       - "api/_lib/ompathLite*"
       - "shared/ompathLiteLanguage*"
       - "shared/ompathLiteRedFlags*"
+      - "shared/ompathLiteAiSchema*"
       - "api/lite.js"
       - "functions/api/**"
       - "src/pages/OmpathLite*"
@@ -24,6 +25,7 @@ on:
       - "api/_lib/ompathLite*"
       - "shared/ompathLiteLanguage*"
       - "shared/ompathLiteRedFlags*"
+      - "shared/ompathLiteAiSchema*"
       - "api/lite.js"
       - "functions/api/**"
       - "src/pages/OmpathLite*"
@@ -66,6 +68,7 @@ jobs:
           api/_lib/ompathLite.test.js
           shared/ompathLiteLanguage.test.js
           shared/ompathLiteRedFlags.test.js
+          shared/ompathLiteAiSchema.test.js
       - name: Build Lite frontend and Pages functions
         env:
           VERCEL: "1"
