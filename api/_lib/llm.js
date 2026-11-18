@@ -22,14 +22,14 @@ async function viaGroq(msgs, opt, why) {
     for (const json of [true, false]) {
       try {
         const body = { model, messages: msgs, temperature: opt.temperature ?? 0.3, max_tokens: opt.maxTokens ?? 4000, ...(opt.fast && /^openai\/gpt-oss/.test(model) ? { reasoning_effort: "low" } : {}), ...(json ? { response_format: { type: "json_object" } } : {}) };
-        const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal: AbortSignal.timeout(opt.timeoutMs ?? (opt.fast ? 9000 : 30000)), headers: { "content-type": "application/json", Authorization: `Bearer ${keys[(start + i) % keys.length]}` }, body: JSON.stringify(body) });
-        if (r.ok) { const t = (await r.json())?.choices?.[0]?.message?.content; if (t) return t; why.push(`${model}: empty answer`); if (opt.singlePass) return null; break; }
+        const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal: AbortSignal.timeout(opt.fast ? 9000 : 30000), headers: { "content-type": "application/json", Authorization: `Bearer ${keys[(start + i) % keys.length]}` }, body: JSON.stringify(body) });
+        if (r.ok) { const t = (await r.json())?.choices?.[0]?.message?.content; if (t) return t; why.push(`${model}: empty answer`); break; }
         const detail = (await r.text().catch(() => "")).slice(0, 140);
         why.push(`${model}: ${r.status}${r.status === 429 ? " rate limit" : r.status === 413 ? " too large" : ""}`);
         if (r.status === 400 && json) continue;  // this model did not accept JSON mode: try it plain
         if (r.status === 413) tooBig.add(model); else noteFail(cid, r.status);
-        void detail; if (opt.singlePass) return null; break;
-      } catch (e) { why.push(`${model}: ${String(e?.message ?? e).slice(0, 60)}`); if (opt.singlePass) return null; break; }
+        void detail; break;
+      } catch (e) { why.push(`${model}: ${String(e?.message ?? e).slice(0, 60)}`); break; }
     }
   }
   return null;
@@ -44,10 +44,10 @@ async function viaGemini(msgs, opt, why) {
     const cid = `gemini:${model}:${(start + i) % keys.length}`;
     if (cooled(cid)) continue;
     try {
-      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal: AbortSignal.timeout(opt.timeoutMs ?? (opt.fast ? 12000 : 45000)), headers: { "content-type": "application/json", "x-goog-api-key": keys[(start + i) % keys.length] }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents, generationConfig: { responseMimeType: "application/json", temperature: opt.temperature ?? 0.3, maxOutputTokens: opt.maxTokens ?? 8000 } }) });
-      if (r.ok) { const t = (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join(""); if (t?.trim()) return t; why.push(`${model}: empty answer`); if (opt.singlePass) return null; continue; }
-      why.push(`${model}: ${r.status}${r.status === 429 ? " rate limit" : ""}`); noteFail(cid, r.status); if (opt.singlePass) return null;
-    } catch (e) { why.push(`${model}: ${String(e?.message ?? e).slice(0, 60)}`); if (opt.singlePass) return null; }
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal: AbortSignal.timeout(opt.fast ? 12000 : 45000), headers: { "content-type": "application/json", "x-goog-api-key": keys[(start + i) % keys.length] }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents, generationConfig: { responseMimeType: "application/json", temperature: opt.temperature ?? 0.3, maxOutputTokens: opt.maxTokens ?? 8000 } }) });
+      if (r.ok) { const t = (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join(""); if (t?.trim()) return t; why.push(`${model}: empty answer`); continue; }
+      why.push(`${model}: ${r.status}${r.status === 429 ? " rate limit" : ""}`); noteFail(cid, r.status);
+    } catch (e) { why.push(`${model}: ${String(e?.message ?? e).slice(0, 60)}`); }
   }
   return null;
 }
@@ -59,7 +59,7 @@ async function viaGemini(msgs, opt, why) {
 export async function askJson(msgs, opt = {}) {
   const order = opt.prefer === "gemini" ? [viaGemini, viaGroq] : [viaGroq, viaGemini];
   const why = [];
-  for (let round = 0; round < (opt.singlePass ? 1 : 2); round++) {
+  for (let round = 0; round < 2; round++) {
     for (const via of order) { const t = await via(msgs, opt, why); if (t) return { text: t }; }
     if (!why.some((w) => /rate limit|429/.test(w))) break;  // only a rate limit is worth waiting for
     await sleep(2500);
