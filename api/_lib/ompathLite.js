@@ -92,15 +92,15 @@ async function ussd(req,res){
     flow.push(token);
    }
    if(!flow.length){
-    if(returnedToIntro)return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. New enquiry\n2. Resume previous\n0. Main menu");
+    if(returnedToIntro)return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now. Reply promptly; your network may close an idle session.\n1. New enquiry\n2. Resume previous\n0. Main menu");
     if(parts.length===1){
      if(trustedResumeCallback(req)){
       const pending=await getResumableHealthEncounter(phone);
       if(pending)return reply(res,"Health support\nYou have an unfinished enquiry.\n1. Start a new enquiry\n2. Resume previous enquiry\n0. Main menu");
      }
-     return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");
+     return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now. Reply promptly; your network may close an idle session.\n1. Continue\n2. Cancel\n0. Main menu");
     }
-    return reply(res,parts.length>1?mainMenu:"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
+    return reply(res,parts.length>1?mainMenu:"Health support\nNot for emergencies. If symptoms are severe, go to hospital now. Reply promptly; your network may close an idle session.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
    }
    if(flow.length===1 && flow[0]==="2"){
     if(!trustedResumeCallback(req))return reply(res,"Health support cancelled. No health information was saved.",true);
