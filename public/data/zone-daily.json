@@ -1,142 +1,142 @@
 {
- "date": "2026-11-17",
+ "date": "2026-11-18",
  "games": [
   {
-   "id": "2026-11-17-1",
-   "title": "Molecular Biology Exam Review: quick quiz",
+   "id": "2026-11-18-1",
+   "title": "Medical Microbiology Q&A Guide: quick quiz",
    "game": "quiz",
-   "topic": "Molecular Biology Exam Review",
+   "topic": "Medical Microbiology Q&A Guide",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which of the following best describes the role of the 5' cap in eukaryotic mRNA?",
+      "q": "Which of the following Gram‑positive cocci is most commonly associated with endocarditis in intravenous drug users?",
       "options": [
-       "A. It signals for polyadenylation",
-       "B. It protects mRNA from exonucleases and aids ribosome binding",
-       "C. It marks the mRNA for nuclear export",
-       "D. It initiates transcription by RNA polymerase II"
-      ],
-      "correct": 1,
-      "explanation": "The 5' cap protects mRNA from degradation and facilitates ribosome recognition.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "What is the primary function of the ribosomal RNA (rRNA) within the ribosome?",
-      "options": [
-       "A. Catalyze peptide bond formation",
-       "B. Provide structural support only",
-       "C. Act as a transcription factor",
-       "D. Bind tRNA anticodons"
+       "Staphylococcus aureus",
+       "Streptococcus pyogenes",
+       "Streptococcus pneumoniae",
+       "Enterococcus faecalis"
       ],
       "correct": 0,
-      "explanation": "rRNA contains the peptidyl transferase active site that catalyses peptide bond formation.",
+      "explanation": "S. aureus is the leading cause of infective endocarditis in IV drug users.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which enzyme is responsible for removing the 5' cap during mRNA decay?",
+      "q": "What is the most sensitive rapid diagnostic test for detecting Mycobacterium tuberculosis in sputum?",
       "options": [
-       "A. Decapping enzyme Dcp2",
-       "B. Exonuclease Xrn1",
-       "C. Endonuclease RNase H",
-       "D. Poly(A) polymerase"
+       "Ziehl‑Neelsen staining",
+       "Culture on Löwenstein–Jensen medium",
+       "Nucleic acid amplification test (NAAT)",
+       "Acid‑fast bacilli smear microscopy"
+      ],
+      "correct": 2,
+      "explanation": "NAATs (e.g., Xpert MTB/RIF) detect TB DNA with high sensitivity and provide rapid results.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which virulence factor of Pseudomonas aeruginosa contributes to its resistance to many antibiotics?",
+      "options": [
+       "Exotoxin A",
+       "Pyocyanin",
+       "Alginate biofilm",
+       "Type III secretion system"
+      ],
+      "correct": 2,
+      "explanation": "Alginate biofilm formation protects P. aeruginosa from antibiotics and host defenses.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 45‑year‑old patient presents with a painless ulcer on the genitalia. Which organism is most likely responsible?",
+      "options": [
+       "Treponema pallidum",
+       "Haemophilus ducreyi",
+       "Chlamydia trachomatis",
+       "Neisseria gonorrhoeae"
       ],
       "correct": 0,
-      "explanation": "Dcp2 removes the 5' cap, initiating 5'‑to‑3' decay.",
+      "explanation": "Syphilis caused by T. pallidum presents with a painless chancre.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "During DNA replication, which enzyme synthesises the RNA primer?",
+      "q": "Which of the following is the preferred empirical therapy for community‑acquired pneumonia in a patient with no comorbidities?",
       "options": [
-       "A. DNA polymerase III",
-       "B. DNA polymerase I",
-       "C. Primase",
-       "D. DNA ligase"
+       "Amoxicillin",
+       "Azithromycin",
+       "Ceftriaxone",
+       "Vancomycin"
+      ],
+      "correct": 0,
+      "explanation": "Amoxicillin covers Streptococcus pneumoniae, the most common cause of CAP in healthy adults.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "What is the mechanism of action of vancomycin against Gram‑positive bacteria?",
+      "options": [
+       "Inhibits cell wall peptidoglycan cross‑linking",
+       "Inhibits protein synthesis at the 50S ribosomal subunit",
+       "Inhibits DNA gyrase",
+       "Disrupts cell membrane integrity"
+      ],
+      "correct": 0,
+      "explanation": "Vancomycin binds D‑alanine‑D‑alanine termini, preventing peptidoglycan cross‑linking.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following organisms is most likely to cause a urinary tract infection in a catheterised patient?",
+      "options": [
+       "Escherichia coli",
+       "Staphylococcus epidermidis",
+       "Pseudomonas aeruginosa",
+       "Enterococcus faecalis"
       ],
       "correct": 2,
-      "explanation": "Primase synthesises short RNA primers that DNA polymerases extend.",
+      "explanation": "P. aeruginosa is a common nosocomial pathogen in catheter‑associated UTIs.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is NOT a component of the spliceosome?",
+      "q": "Which laboratory test is most useful for diagnosing a fungal infection in a neutropenic patient?",
       "options": [
-       "A. U1 snRNA",
-       "B. U2 snRNA",
-       "C. U3 snoRNA",
-       "D. U5 snRNA"
+       "Serum β‑D‑glucan assay",
+       "KOH mount of skin scrapings",
+       "Blood culture on Sabouraud agar",
+       "PCR for Candida DNA"
       ],
-      "correct": 2,
-      "explanation": "U3 is a small nucleolar RNA, not part of the spliceosome.",
+      "correct": 0,
+      "explanation": "Serum β‑D‑glucan is a sensitive marker for invasive fungal infections in neutropenic patients.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "What is the main consequence of a mutation that introduces a premature stop codon in a protein-coding gene?",
+      "q": "Which of the following is a characteristic of Mycobacterium leprae?",
       "options": [
-       "A. Increased protein stability",
-       "B. Truncated protein with potential loss of function",
-       "C. Enhanced translation efficiency",
-       "D. No effect due to nonsense-mediated decay"
+       "Acid‑fast bacillus with a slow growth rate",
+       "Requires cholesterol for growth",
+       "Forms cords in culture",
+       "Produces a strong pigment"
       ],
       "correct": 1,
-      "explanation": "A premature stop codon yields a truncated, usually non‑functional protein.",
+      "explanation": "M. leprae is cholesterol‑dependent and cannot be cultured in vitro.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which DNA repair pathway repairs double‑strand breaks using a homologous template?",
+      "q": "What is the most common cause of bacterial meningitis in adults in the United States?",
       "options": [
-       "A. Base excision repair",
-       "B. Nucleotide excision repair",
-       "C. Homologous recombination",
-       "D. Mismatch repair"
+       "Streptococcus pneumoniae",
+       "Neisseria meningitidis",
+       "Haemophilus influenzae type b",
+       "Listeria monocytogenes"
       ],
-      "correct": 2,
-      "explanation": "Homologous recombination uses a sister chromatid as a template for accurate repair.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "In the lac operon, what is the role of the lac repressor protein?",
-      "options": [
-       "A. Activates transcription of lac genes",
-       "B. Binds to the operator to block RNA polymerase in absence of lactose",
-       "C. Degrades lactose",
-       "D. Phosphorylates lactose for transport"
-      ],
-      "correct": 1,
-      "explanation": "The lac repressor binds the operator, preventing transcription when lactose is absent.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following best describes the function of the 3' poly(A) tail?",
-      "options": [
-       "A. Enhances nuclear export of mRNA",
-       "B. Serves as a binding site for ribosomes",
-       "C. Protects mRNA from exonucleases and aids translation",
-       "D. Signals for DNA replication initiation"
-      ],
-      "correct": 2,
-      "explanation": "The poly(A) tail stabilises mRNA and promotes translation initiation.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which protein is directly involved in the proofreading of DNA during replication?",
-      "options": [
-       "A. DNA polymerase I",
-       "B. DNA polymerase III epsilon subunit",
-       "C. DNA ligase",
-       "D. Primase"
-      ],
-      "correct": 1,
-      "explanation": "The epsilon subunit of DNA polymerase III has 3'→5' exonuclease proofreading activity.",
+      "correct": 0,
+      "explanation": "S. pneumoniae remains the leading cause of bacterial meningitis in adults.",
       "ai": true,
       "kind": "mcq"
      }
@@ -145,7 +145,7 @@
    }
   },
   {
-   "id": "2026-11-17-2",
+   "id": "2026-11-18-2",
    "title": "Occupational and environmental lung diseases 2019-2: quick quiz",
    "game": "quiz",
    "topic": "Occupational and environmental lung diseases 2019-2",
@@ -154,249 +154,249 @@
    "questions": {
     "questions": [
      {
-      "q": "A 45‑year‑old man with a 20‑pack‑year smoking history presents with chronic productive cough and dyspnea. High‑resolution CT shows centrilobular nodules and a tree‑in‑bud pattern. Which occupational exposure is most likely responsible?",
+      "q": "Which occupational exposure is most strongly associated with silicosis?",
       "options": [
-       "Silica dust",
-       "Coal dust",
-       "Asbestos fibers",
-       "Beryllium"
+       "Coal mining",
+       "Glass manufacturing",
+       "Cement production",
+       "Welding"
       ],
       "correct": 1,
-      "explanation": "Coal workers’ pneumoconiosis typically presents with centrilobular nodules and a tree‑in‑bud pattern on HRCT, reflecting endobronchial spread of inflammation.",
+      "explanation": "Glass manufacturing involves high levels of crystalline silica dust, making it the classic occupational exposure for silicosis.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is the most specific serologic test for diagnosing hypersensitivity pneumonitis?",
+      "q": "A 45‑year‑old construction worker presents with progressive dyspnea and a fine inspiratory crackle. HRCT shows reticular opacities predominantly in the upper lobes. Which diagnosis is most likely?",
       "options": [
-       "Anti‑dsDNA antibodies",
-       "Serum precipitating IgG antibodies to the offending antigen",
-       "Anti‑myeloperoxidase antibodies",
-       "Anti‑nuclear antibodies"
+       "Asbestosis",
+       "Silicosis",
+       "Coal workers’ pneumoconiosis",
+       "Sarcoidosis"
       ],
       "correct": 1,
-      "explanation": "Serum precipitating IgG antibodies (precipitins) to the specific antigen are the most specific serologic test for hypersensitivity pneumonitis, although sensitivity is variable.",
+      "explanation": "Upper‑lobe reticular opacities with a history of silica exposure point to silicosis.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 60‑year‑old farmer presents with progressive dyspnea. Pulmonary function tests show a restrictive pattern with reduced DLCO. Chest X‑ray shows diffuse reticulonodular infiltrates. The most likely diagnosis is:",
+      "q": "Which of the following is the best initial screening test for early detection of occupational lung disease in a worker exposed to asbestos?",
       "options": [
-       "Bronchiolitis obliterans organizing pneumonia",
-       "Chronic beryllium disease",
-       "Idiopathic pulmonary fibrosis",
-       "Silicosis"
-      ],
-      "correct": 2,
-      "explanation": "Diffuse reticulonodular infiltrates with a restrictive defect and reduced DLCO are classic for idiopathic pulmonary fibrosis, especially in the absence of a clear occupational exposure.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is the most common cause of occupational asthma in the United States?",
-      "options": [
-       "Isocyanates",
-       "Polyvinyl chloride dust",
-       "Silica dust",
-       "Asbestos"
+       "Chest X‑ray",
+       "Pulmonary function tests",
+       "High‑resolution CT",
+       "Serum ferritin"
       ],
       "correct": 0,
-      "explanation": "Isocyanates are the leading cause of occupational asthma in the United States, followed by flour dust and other proteinaceous agents.",
+      "explanation": "Chest X‑ray is the first‑line screening tool for asbestos‑related lung disease.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 35‑year‑old textile worker presents with cough and wheeze. Spirometry shows reversible obstruction after bronchodilator. Which inhaled agent is most likely responsible?",
+      "q": "A patient with a history of long‑term exposure to diesel exhaust develops cough and sputum production. Which lung disease is most likely?",
       "options": [
-       "Silica",
-       "Asbestos",
-       "Cotton dust",
-       "Cobalt"
-      ],
-      "correct": 2,
-      "explanation": "Cotton dust (byssinosis) is the classic organic dust exposure in textile workers that can cause an asthma‑like reversible obstruction.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is the most characteristic radiographic finding in asbestosis?",
-      "options": [
-       "Upper lobe reticulonodular infiltrates",
-       "Lower lobe reticulonodular infiltrates",
-       "Diffuse ground‑glass opacity",
-       "Cavitary lesions"
+       "Bronchiolitis obliterans",
+       "Chronic bronchitis",
+       "Pulmonary fibrosis",
+       "Bronchiectasis"
       ],
       "correct": 1,
-      "explanation": "Asbestosis typically shows lower lobe reticulonodular infiltrates with pleural plaques, reflecting the predilection for the lower lung zones.",
+      "explanation": "Diesel exhaust is a known irritant that can cause chronic bronchitis.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 50‑year‑old construction worker presents with progressive dyspnea. HRCT shows upper‑lobe predominant reticular opacities with honeycombing. Which occupational exposure is most likely?",
+      "q": "Which occupational exposure is most commonly linked to the development of chronic beryllium disease?",
       "options": [
-       "Silica",
+       "Beryllium alloy manufacturing",
+       "Cement production",
+       "Coal mining",
+       "Welding"
+      ],
+      "correct": 0,
+      "explanation": "Beryllium alloy manufacturing exposes workers to beryllium dust, causing chronic beryllium disease.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 60‑year‑old farmer presents with progressive dyspnea, dry cough, and clubbing. HRCT shows diffuse ground‑glass opacities. Which environmental agent is most likely responsible?",
+      "options": [
+       "Pesticides",
+       "Silica dust",
+       "Organic dust from moldy hay",
+       "Asbestos"
+      ],
+      "correct": 2,
+      "explanation": "Organic dust exposure from moldy hay can cause farmer’s lung, an allergic alveolitis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is NOT a typical feature of asbestosis on high‑resolution CT?",
+      "options": [
+       "Subpleural fibrosis",
+       "Honeycombing",
+       "Upper‑lobe predominance",
+       "Lower‑lobe ground‑glass opacity"
+      ],
+      "correct": 2,
+      "explanation": "Asbestosis typically shows lower‑lobe subpleural fibrosis and honeycombing; upper‑lobe predominance is not characteristic.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 35‑year‑old electrician reports wheezing and dyspnea after prolonged exposure to welding fumes. Which lung condition is most likely?",
+      "options": [
+       "Bronchiolitis obliterans",
+       "Pulmonary fibrosis",
+       "Bronchiectasis",
+       "Chronic bronchitis"
+      ],
+      "correct": 0,
+      "explanation": "Welding fumes can cause bronchiolitis obliterans, a small‑airway disease.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which occupational exposure is most strongly associated with the development of idiopathic pulmonary fibrosis?",
+      "options": [
+       "Silica dust",
        "Coal dust",
        "Beryllium",
-       "Asbestos"
+       "No known occupational exposure"
       ],
-      "correct": 0,
-      "explanation": "Silica exposure leads to upper‑lobe predominant fibrosis with progressive massive fibrosis and honeycombing, whereas asbestosis usually involves lower lobes.",
+      "correct": 3,
+      "explanation": "Idiopathic pulmonary fibrosis has no known occupational cause; other exposures are linked to specific pneumoconioses.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is the best initial test to diagnose beryllium disease?",
+      "q": "A 50‑year‑old worker exposed to high levels of organic solvents presents with cough, dyspnea, and diffuse interstitial infiltrates on chest X‑ray. Which diagnosis is most likely?",
       "options": [
+       "Occupational asthma",
+       "Chronic obstructive pulmonary disease",
+       "Diffuse interstitial lung disease",
+       "Bronchiectasis"
+      ],
+      "correct": 2,
+      "explanation": "Organic solvent exposure can lead to diffuse interstitial lung disease.",
+      "ai": true,
+      "kind": "mcq"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
+  },
+  {
+   "id": "2026-11-18-3",
+   "title": "Cough: case showdown",
+   "game": "case",
+   "topic": "Cough",
+   "year": 4,
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "A 68‑year‑old man presents with a productive cough that has worsened over the past 3 weeks. He has a history of chronic bronchitis and is a heavy smoker. Chest auscultation reveals coarse crackles at the bases. What is the most likely diagnosis?",
+      "options": [
+       "Acute bronchitis",
+       "Community‑acquired pneumonia",
+       "COPD exacerbation",
+       "Pulmonary embolism"
+      ],
+      "correct": 2,
+      "explanation": "The combination of a chronic productive cough, coarse crackles, and a long‑standing smoking history is most characteristic of a COPD exacerbation.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 45‑year‑old woman reports a dry cough that started 2 days ago after a cold. She has no fever, no sputum, and her chest X‑ray is normal. What is the next best step in management?",
+      "options": [
+       "Prescribe a macrolide antibiotic",
+       "Order a sputum culture",
+       "Advise symptomatic treatment and observe",
+       "Refer for bronchoscopy"
+      ],
+      "correct": 2,
+      "explanation": "A viral upper‑respiratory infection is the most likely cause of a short‑duration dry cough; supportive care is adequate.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 22‑year‑old college student presents with a non‑productive cough that has persisted for 6 weeks. He reports nocturnal cough and a mild fever. Physical exam is unremarkable. Which investigation is most appropriate?",
+      "options": [
+       "Chest X‑ray",
+       "Sputum Gram stain",
        "Serum IgE level",
-       "Bronchoalveolar lavage eosinophil count",
-       "Beryllium lymphocyte proliferation test",
        "Pulmonary function test"
       ],
-      "correct": 2,
-      "explanation": "The beryllium lymphocyte proliferation test (BeLPT) is the diagnostic test of choice for chronic beryllium disease.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A 55‑year‑old shipyard worker presents with cough and dyspnea. Chest X‑ray shows pleural plaques. Which of the following is the most likely associated cancer?",
-      "options": [
-       "Lung adenocarcinoma",
-       "Mesothelioma",
-       "Liver carcinoma",
-       "Bladder cancer"
-      ],
-      "correct": 1,
-      "explanation": "Pleural plaques are strongly associated with asbestos exposure and are a marker for increased risk of malignant mesothelioma.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is the most common cause of occupational lung disease worldwide?",
-      "options": [
-       "Asbestos exposure",
-       "Coal dust exposure",
-       "Silica exposure",
-       "Beryllium exposure"
-      ],
-      "correct": 2,
-      "explanation": "Silica exposure is the most common cause of occupational lung disease worldwide, leading to silicosis and increased risk of tuberculosis.",
-      "ai": true,
-      "kind": "mcq"
-     }
-    ],
-    "reviewModel": "gemini-3.5-flash-lite"
-   }
-  },
-  {
-   "id": "2026-11-17-3",
-   "title": "Neonatal Jaundice: case showdown",
-   "game": "case",
-   "topic": "Neonatal Jaundice",
-   "year": 4,
-   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
-   "questions": {
-    "questions": [
-     {
-      "q": "A 2‑day‑old full‑term male infant presents with yellowing of the sclera and skin. His mother reports that the baby has been feeding well but has had only one bowel movement in the last 24 hours. Physical exam shows a mild hepatomegaly (2 cm below the costal margin). What is the most likely diagnosis?",
-      "options": [
-       "A. Breast‑milk jaundice",
-       "B. Physiologic jaundice",
-       "C. Hemolytic disease of the newborn",
-       "D. Crigler‑Najjar syndrome"
-      ],
-      "correct": 1,
-      "explanation": "Physiologic jaundice peaks at 3–5 days and resolves by 1 week; hepatomegaly and minimal stool are typical.",
+      "correct": 0,
+      "explanation": "A persistent cough lasting >4 weeks warrants a chest X‑ray to exclude pneumonia, tuberculosis, or other structural disease.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 3‑day‑old female infant born at 38 weeks has conjugated hyperbilirubinemia (total bilirubin 12 mg/dL, direct 6 mg/dL). She is lethargic and has a palpable gallbladder. Which of the following is the next best step in management?",
+      "q": "A 55‑year‑old man with a history of asthma presents with a dry cough that worsens at night. His peak expiratory flow is 40% of predicted. What is the most likely diagnosis?",
       "options": [
-       "A. Start phototherapy",
-       "B. Obtain abdominal ultrasound",
-       "C. Administer intravenous steroids",
-       "D. Perform a liver biopsy"
-      ],
-      "correct": 1,
-      "explanation": "Conjugated hyperbilirubinemia with gallbladder enlargement suggests biliary atresia; ultrasound is the diagnostic next step.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 1‑week‑old preterm infant (GA 30 weeks) has a total serum bilirubin of 15 mg/dL. He has a positive direct Coombs test and a hemoglobin of 18 g/dL. What is the most likely cause of his jaundice?",
-      "options": [
-       "A. Breast‑milk jaundice",
-       "B. Hemolytic disease due to Rh incompatibility",
-       "C. Physiologic jaundice",
-       "D. Neonatal hepatitis"
-      ],
-      "correct": 1,
-      "explanation": "Positive Coombs and high hemoglobin indicate hemolysis from Rh incompatibility.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 4‑day‑old full‑term male infant presents with jaundice that has worsened over the past 24 hours. He has a dark urine, pale stools, and a total bilirubin of 18 mg/dL with a direct fraction of 10 mg/dL. Which of the following is the most likely diagnosis?",
-      "options": [
-       "A. Neonatal sepsis",
-       "B. Crigler‑Najjar syndrome type I",
-       "C. Biliary atresia",
-       "D. Gilbert syndrome"
-      ],
-      "correct": 2,
-      "explanation": "Dark urine, pale stools, and conjugated hyperbilirubinemia point to biliary atresia.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 2‑day‑old infant has a total bilirubin of 8 mg/dL. He is feeding well, has normal stool frequency, and his skin appears mildly yellow. Which of the following is the most appropriate next step?",
-      "options": [
-       "A. Initiate phototherapy",
-       "B. Repeat bilirubin in 24 hours",
-       "C. Order a Coombs test",
-       "D. Start oral phenobarbital"
-      ],
-      "correct": 1,
-      "explanation": "Physiologic jaundice at 8 mg/dL in a well‑appearing infant requires no treatment; repeat measurement is appropriate.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 5‑day‑old male infant born to a mother with a history of hepatitis B presents with jaundice and a total bilirubin of 20 mg/dL. His hepatitis B surface antigen is positive. What is the most likely cause of his jaundice?",
-      "options": [
-       "A. Breast‑milk jaundice",
-       "B. Neonatal hepatitis due to hepatitis B infection",
-       "C. Physiologic jaundice",
-       "D. Hemolytic disease of the newborn"
-      ],
-      "correct": 1,
-      "explanation": "Positive hepatitis B surface antigen in the infant indicates neonatal hepatitis.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 3‑day‑old full‑term female infant has a total bilirubin of 12 mg/dL. She has a normal stool pattern, normal urine color, and a negative direct Coombs test. Which of the following is the most likely diagnosis?",
-      "options": [
-       "A. Breast‑milk jaundice",
-       "B. Physiologic jaundice",
-       "C. Hemolytic disease of the newborn",
-       "D. Crigler‑Najjar syndrome type II"
-      ],
-      "correct": 1,
-      "explanation": "Normal stool and urine with a moderate bilirubin level in a well‑appearing infant is typical of physiologic jaundice.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 6‑day‑old male infant presents with jaundice that has progressed rapidly over the past 12 hours. He has a total bilirubin of 25 mg/dL and a direct bilirubin of 12 mg/dL. He is lethargic and has a palpable gallbladder. Which of the following is the next best diagnostic test?",
-      "options": [
-       "A. Abdominal ultrasound",
-       "B. Liver function tests",
-       "C. Hemoglobin electrophoresis",
-       "D. Serum ceruloplasmin"
+       "Asthma exacerbation",
+       "Upper airway cough syndrome",
+       "Post‑nasal drip",
+       "Bronchiectasis"
       ],
       "correct": 0,
-      "explanation": "Rapid rise in conjugated bilirubin with gallbladder enlargement suggests biliary atresia; ultrasound is the first diagnostic step.",
+      "explanation": "Nighttime cough and markedly reduced peak expiratory flow are classic for an asthma exacerbation.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 30‑year‑old woman presents with a chronic dry cough that started after a recent upper respiratory infection. She has a history of gastro‑oesophageal reflux disease (GERD). What is the most likely cause of her cough?",
+      "options": [
+       "Post‑nasal drip",
+       "GERD‑induced cough",
+       "Bronchial asthma",
+       "Pulmonary embolism"
+      ],
+      "correct": 1,
+      "explanation": "GERD is a well‑known trigger of chronic dry cough, especially when it follows an upper respiratory infection.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 70‑year‑old man with a history of smoking presents with a productive cough and weight loss. Chest X‑ray shows a right upper lobe infiltrate. Which of the following is the most likely diagnosis?",
+      "options": [
+       "Tuberculosis",
+       "Lung cancer",
+       "COPD exacerbation",
+       "Community‑acquired pneumonia"
+      ],
+      "correct": 1,
+      "explanation": "In a heavy smoker with weight loss and an upper‑lobe infiltrate, lung cancer is a strong consideration and should be ruled out before attributing the findings to pneumonia.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 35‑year‑old woman presents with a dry cough that started 3 weeks ago. She has no fever, no sputum, and her chest X‑ray is normal. She reports a history of seasonal allergies. What is the most likely diagnosis?",
+      "options": [
+       "Asthma",
+       "Upper airway cough syndrome",
+       "Bronchiectasis",
+       "Pulmonary embolism"
+      ],
+      "correct": 1,
+      "explanation": "Seasonal allergies and a dry cough with a normal chest X‑ray point toward upper airway cough syndrome (post‑nasal drip).",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 60‑year‑old man presents with a productive cough and dyspnoea. He has a history of chronic bronchitis and is on long‑term oxygen therapy. Physical exam reveals digital clubbing. What is the most likely diagnosis?",
+      "options": [
+       "COPD exacerbation",
+       "Bronchiectasis",
+       "Pulmonary embolism",
+       "Lung cancer"
+      ],
+      "correct": 1,
+      "explanation": "Digital clubbing in a chronic smoker with a productive cough is most consistent with bronchiectasis.",
       "ai": true,
       "kind": "case"
      }
@@ -405,349 +405,232 @@
    }
   },
   {
-   "id": "2026-11-17-4",
-   "title": "Post-operative Care and Complications of Surgery: case showdown",
-   "game": "case",
-   "topic": "Post-operative Care and Complications of Surgery",
-   "year": 4,
-   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
-   "questions": {
-    "questions": [
-     {
-      "q": "A 68‑year‑old man underwent an elective laparoscopic cholecystectomy. On postoperative day 2 he develops a sudden, sharp, right upper quadrant pain radiating to the back, with a temperature of 38.5°C and a heart rate of 110/min. His white cell count is 18,000/µL. What is the most likely diagnosis?",
-      "options": [
-       "A. Surgical site infection",
-       "B. Acute pancreatitis",
-       "C. Bile duct injury",
-       "D. Pulmonary embolism"
-      ],
-      "correct": 1,
-      "explanation": "The combination of sudden RUQ pain radiating to the back, fever, tachycardia, and leukocytosis is classic for acute pancreatitis, which is a common postoperative complication after gallbladder surgery.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 45‑year‑old woman has a laparoscopic hysterectomy. On postoperative day 1 she reports sudden onset of shortness of breath and pleuritic chest pain. Her oxygen saturation is 88% on room air. Which is the next best step?",
-      "options": [
-       "A. Administer intravenous antibiotics",
-       "B. Order a chest X‑ray",
-       "C. Perform a CT pulmonary angiogram",
-       "D. Give subcutaneous heparin"
-      ],
-      "correct": 2,
-      "explanation": "Sudden dyspnea and pleuritic chest pain after major surgery are highly suggestive of pulmonary embolism; a CT pulmonary angiogram is the definitive diagnostic test.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 52‑year‑old man had an open appendectomy. On postoperative day 3 he has a fever of 39.0°C, a tender abdomen, and a leukocyte count of 20,000/µL. Which complication is most likely?",
-      "options": [
-       "A. Surgical site infection",
-       "B. Anastomotic leak",
-       "C. Ileus",
-       "D. Deep vein thrombosis"
-      ],
-      "correct": 1,
-      "explanation": "Fever, abdominal tenderness, and marked leukocytosis after abdominal surgery most commonly indicate an intra‑abdominal abscess or anastomotic leak rather than a superficial surgical site infection.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 30‑year‑old woman underwent a cesarean section. On postoperative day 4 she reports a sudden, severe headache, neck stiffness, and photophobia. Her blood pressure is 140/90 mmHg. What is the most likely diagnosis?",
-      "options": [
-       "A. Post‑operative hypertension",
-       "B. Subarachnoid hemorrhage",
-       "C. Post‑operative infection",
-       "D. Pulmonary embolism"
-      ],
-      "correct": 1,
-      "explanation": "The classic triad of headache, neck stiffness, and photophobia after surgery points to subarachnoid hemorrhage.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 70‑year‑old man had a total hip replacement. On postoperative day 2 he develops a sudden, painless swelling of the left calf and a positive Homan's sign. What is the next best step?",
-      "options": [
-       "A. Order an ultrasound Doppler of the leg",
-       "B. Start oral antibiotics",
-       "C. Perform a chest X‑ray",
-       "D. Give oral analgesics"
-      ],
-      "correct": 0,
-      "explanation": "Sudden calf swelling with a positive Homan's sign suggests deep vein thrombosis; Doppler ultrasound is the diagnostic test.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 55‑year‑old woman underwent a laparoscopic sleeve gastrectomy. On postoperative day 1 she has a sudden, severe epigastric pain and a drop in blood pressure to 90/60 mmHg. Her heart rate is 120/min. What is the most likely complication?",
-      "options": [
-       "A. Gastric leak",
-       "B. Pulmonary embolism",
-       "C. Hemorrhagic shock",
-       "D. Pulmonary embolism"
-      ],
-      "correct": 0,
-      "explanation": "Sudden severe epigastric pain with hypotension after bariatric surgery is most consistent with a gastric leak causing peritonitis.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 60‑year‑old man had an open right hemicolectomy. On postoperative day 5 he reports a sudden onset of chest pain that worsens with inspiration. His oxygen saturation is 92% on room air. Which is the most likely diagnosis?",
-      "options": [
-       "A. Pneumothorax",
-       "B. Pulmonary embolism",
-       "C. Myocardial infarction",
-       "D. Surgical site infection"
-      ],
-      "correct": 1,
-      "explanation": "Pleuritic chest pain after abdominal surgery is most commonly due to pulmonary embolism rather than a pneumothorax.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 40‑year‑old woman underwent a laparoscopic cholecystectomy. On postoperative day 2 she has a fever of 38.3°C, a mild leukocytosis, and a tender incision site. Her wound is erythematous but not purulent. What is the next best step?",
-      "options": [
-       "A. Start intravenous broad‑spectrum antibiotics",
-       "B. Perform a wound culture",
-       "C. Apply a sterile dressing and observe",
-       "D. Schedule a surgical debridement"
-      ],
-      "correct": 2,
-      "explanation": "A mild, non‑purulent, erythematous wound with fever suggests a superficial wound infection; observation with dressing changes is appropriate.",
-      "ai": true,
-      "kind": "case"
-     }
-    ],
-    "reviewModel": "gemini-3.5-flash-lite"
-   }
-  },
-  {
-   "id": "2026-11-17-5",
-   "title": "Medical Mycology Q&A: Fungal Pathogens, Drugs, & Diseases: drug duel",
+   "id": "2026-11-18-4",
+   "title": "Population and Demography: drug duel",
    "game": "drug",
-   "topic": "Medical Mycology Q&A: Fungal Pathogens, Drugs, & Diseases",
+   "topic": "Population and Demography",
+   "year": 2,
+   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "Which drug is most commonly used to reduce mortality in patients with atherosclerotic cardiovascular disease by inhibiting the synthesis of low‑density lipoprotein (LDL) cholesterol?",
+      "options": [
+       "A. Atorvastatin",
+       "B. Metformin",
+       "C. Amoxicillin",
+       "D. Prednisone"
+      ],
+      "correct": 0,
+      "explanation": "Atorvastatin is a statin that inhibits HMG‑CoA reductase, lowering LDL cholesterol and reducing cardiovascular mortality.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which medication is the first‑line treatment for type 2 diabetes in patients with a BMI >30 kg/m² and a history of heart failure?",
+      "options": [
+       "A. Metformin",
+       "B. Insulin glargine",
+       "C. SGLT2 inhibitor",
+       "D. Glucagon‑like peptide‑1 agonist"
+      ],
+      "correct": 2,
+      "explanation": "SGLT2 inhibitors improve glycaemic control and reduce heart failure risk in obese patients with type 2 diabetes.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "A 65‑year‑old man with chronic kidney disease stage 3 is started on a drug that reduces proteinuria by inhibiting the renin‑angiotensin system. Which drug is most likely prescribed?",
+      "options": [
+       "A. Losartan",
+       "B. Lisinopril",
+       "C. Amlodipine",
+       "D. Hydrochlorothiazide"
+      ],
+      "correct": 1,
+      "explanation": "Lisinopril, an ACE inhibitor, reduces proteinuria and slows CKD progression.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which of the following drugs is associated with a characteristic side effect of a red‑tinged urine due to inhibition of the renal tubular secretion of a fluorescent dye?",
+      "options": [
+       "A. Rifampicin",
+       "B. Ciprofloxacin",
+       "C. Isoniazid",
+       "D. Metronidazole"
+      ],
+      "correct": 0,
+      "explanation": "Rifampicin causes red‑orange urine by inducing hepatic enzymes that metabolise the dye.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is the preferred first‑line therapy for hypertension in a patient with a history of stroke and diabetes?",
+      "options": [
+       "A. Amlodipine",
+       "B. Hydrochlorothiazide",
+       "C. Losartan",
+       "D. Atenolol"
+      ],
+      "correct": 2,
+      "explanation": "Losartan, an ARB, is preferred in stroke and diabetes due to renal protection and lower risk of hypoglycaemia.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "A 55‑year‑old woman with newly diagnosed rheumatoid arthritis is started on a disease‑modifying antirheumatic drug that inhibits tumour necrosis factor‑α. Which drug is most likely?",
+      "options": [
+       "A. Methotrexate",
+       "B. Etanercept",
+       "C. Hydroxychloroquine",
+       "D. Sulfasalazine"
+      ],
+      "correct": 1,
+      "explanation": "Etanercept is a TNF‑α inhibitor used as a biologic DMARD in rheumatoid arthritis.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which medication is most commonly prescribed for the prevention of venous thromboembolism in patients undergoing major orthopedic surgery and is a reversible factor Xa inhibitor?",
+      "options": [
+       "A. Warfarin",
+       "B. Heparin",
+       "C. Rivaroxaban",
+       "D. Aspirin"
+      ],
+      "correct": 2,
+      "explanation": "Rivaroxaban is a direct oral factor Xa inhibitor used for VTE prophylaxis after orthopedic surgery.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "A 70‑year‑old man with chronic obstructive pulmonary disease (COPD) is started on a long‑acting bronchodilator that is a muscarinic antagonist. Which drug is most likely?",
+      "options": [
+       "A. Salmeterol",
+       "B. Tiotropium",
+       "C. Formoterol",
+       "D. Ipratropium"
+      ],
+      "correct": 1,
+      "explanation": "Tiotropium is a long‑acting antimuscarinic bronchodilator used in COPD management.",
+      "ai": true,
+      "kind": "drug"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
+  },
+  {
+   "id": "2026-11-18-5",
+   "title": "Pharmacology Wk 1 & 2: drug duel",
+   "game": "drug",
+   "topic": "Pharmacology Wk 1 & 2",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which antifungal drug is a triazole that inhibits cytochrome P450 14α‑sterol demethylase and is primarily used for invasive aspergillosis?",
+      "q": "Which drug is a selective COX‑2 inhibitor used primarily for osteoarthritis and rheumatoid arthritis, and is associated with an increased risk of myocardial infarction at high doses?",
       "options": [
-       "Amphotericin B",
-       "Voriconazole",
-       "Caspofungin",
-       "Fluconazole"
-      ],
-      "correct": 1,
-      "explanation": "Voriconazole is the first‑line triazole for invasive aspergillosis. It inhibits the 14α‑sterol demethylase enzyme, blocking ergosterol synthesis.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Voriconazole is associated with which characteristic adverse effect that can be monitored by serum drug levels?",
-      "options": [
-       "Hepatotoxicity",
-       "Nephrotoxicity",
-       "Pulmonary fibrosis",
-       "Ophthalmologic toxicity"
-      ],
-      "correct": 3,
-      "explanation": "Voriconazole can cause visual disturbances and retinal changes. Monitoring serum levels helps prevent toxicity and ensures therapeutic exposure.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which echinocandin is administered exclusively by the intravenous route?",
-      "options": [
-       "Anidulafungin",
-       "Caspofungin",
-       "Micafungin",
-       "None of the above"
-      ],
-      "correct": 3,
-      "explanation": "All echinocandins (anidulafungin, caspofungin, micafungin) are available only as intravenous formulations; none are given orally.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Posaconazole is a broad‑spectrum triazole that is particularly effective against which fungal pathogen causing chronic pulmonary disease in cystic fibrosis patients?",
-      "options": [
-       "Candida albicans",
-       "Aspergillus fumigatus",
-       "Cryptococcus neoformans",
-       "Histoplasma capsulatum"
-      ],
-      "correct": 1,
-      "explanation": "Posaconazole has strong activity against Aspergillus fumigatus, the predominant pathogen in chronic pulmonary infections in cystic fibrosis.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug is a polyene that binds to ergosterol, forming pores in the fungal cell membrane and is the treatment of choice for cryptococcal meningitis?",
-      "options": [
-       "Amphotericin B",
-       "Flucytosine",
-       "Voriconazole",
-       "Itraconazole"
+       "Celecoxib",
+       "Ibuprofen",
+       "Naproxen",
+       "Diclofenac"
       ],
       "correct": 0,
-      "explanation": "Amphotericin B binds ergosterol and creates pores in the fungal cell membrane; it is the gold standard for induction therapy of cryptococcal meningitis.",
+      "explanation": "Celecoxib selectively inhibits COX‑2 and has a higher cardiovascular risk profile at high doses.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Flucytosine is a pyrimidine analog that is primarily used in combination therapy for which fungal infection?",
+      "q": "What is the primary mechanism of action of the antiepileptic drug levetiracetam?",
       "options": [
-       "Candidiasis",
-       "Aspergillosis",
-       "Cryptococcosis",
-       "Histoplasmosis"
+       "Inhibition of voltage‑gated sodium channels",
+       "Enhancement of GABAergic transmission",
+       "Binding to synaptic vesicle protein 2A",
+       "Blockade of NMDA receptors"
       ],
       "correct": 2,
-      "explanation": "Flucytosine is combined with amphotericin B for the treatment of cryptococcal meningitis to improve efficacy and reduce relapse.",
+      "explanation": "Levetiracetam binds to SV2A, modulating neurotransmitter release.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which antifungal drug is a first‑generation triazole with excellent oral bioavailability and good CNS penetration, making it suitable for cryptococcal meningitis consolidation therapy?",
+      "q": "Which drug, a first‑generation antihistamine, is most likely to cause anticholinergic side effects such as dry mouth and blurred vision?",
       "options": [
+       "Cetirizine",
+       "Loratadine",
+       "Diphenhydramine",
+       "Fexofenadine"
+      ],
+      "correct": 2,
+      "explanation": "Diphenhydramine is a first‑generation H1 blocker with significant anticholinergic activity.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "A patient is prescribed a drug that blocks the H2 receptors on gastric parietal cells. Which of the following is the most common adverse effect?",
+      "options": [
+       "Hypertension",
+       "Hypokalemia",
+       "Diarrhoea",
+       "Constipation"
+      ],
+      "correct": 2,
+      "explanation": "H2 receptor antagonists are generally well tolerated; the most common adverse effect is mild gastrointestinal upset, including diarrhea.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which of the following drugs is a selective beta‑1 adrenergic antagonist used in hypertension and heart failure?",
+      "options": [
+       "Propranolol",
+       "Metoprolol",
+       "Timolol",
+       "Carvedilol"
+      ],
+      "correct": 1,
+      "explanation": "Metoprolol is a cardioselective β1 blocker.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is a proton pump inhibitor that irreversibly inhibits the H+/K+ ATPase in parietal cells?",
+      "options": [
+       "Omeprazole",
+       "Ranitidine",
+       "Famotidine",
+       "Cimetidine"
+      ],
+      "correct": 0,
+      "explanation": "Omeprazole irreversibly blocks the gastric proton pump.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "A patient on a drug that inhibits the CYP3A4 enzyme experiences increased plasma levels of a co‑administered statin. Which drug is most likely responsible?",
+      "options": [
+       "Cimetidine",
        "Fluconazole",
-       "Itraconazole",
-       "Voriconazole",
-       "Posaconazole"
+       "Ketoconazole",
+       "Amoxicillin"
       ],
-      "correct": 0,
-      "explanation": "Fluconazole has excellent bioavailability and penetrates the CNS well; it is used for consolidation therapy in cryptococcal meningitis.",
+      "correct": 2,
+      "explanation": "Ketoconazole is a potent CYP3A4 inhibitor, raising statin levels.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which drug is a 5‑fluorocytosine derivative that is a prodrug converted to 5‑fluorouracil in fungal cells, leading to inhibition of DNA synthesis?",
+      "q": "Which of the following is the main indication for the drug clopidogrel?",
       "options": [
-       "Amphotericin B",
-       "Flucytosine",
-       "Voriconazole",
-       "Micafungin"
+       "Deep vein thrombosis prophylaxis",
+       "Atrial fibrillation anticoagulation",
+       "Acute coronary syndrome antiplatelet therapy",
+       "Hypertension management"
       ],
-      "correct": 1,
-      "explanation": "Flucytosine is a prodrug that is converted to 5‑fluorouracil within fungal cells, inhibiting DNA synthesis.",
-      "ai": true,
-      "kind": "drug"
-     }
-    ],
-    "reviewModel": "gemini-3.5-flash-lite"
-   }
-  },
-  {
-   "id": "2026-11-17-6",
-   "title": "Department Of Pathology — Course Outline: drug duel",
-   "game": "drug",
-   "topic": "Department Of Pathology — Course Outline",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
-   "questions": {
-    "questions": [
-     {
-      "q": "Which drug is most commonly used in the treatment of acute bacterial meningitis in adults, and what is its mechanism of action?",
-      "options": [
-       "A) Ceftriaxone – inhibits bacterial cell wall synthesis",
-       "B) Amoxicillin – inhibits bacterial protein synthesis",
-       "C) Vancomycin – inhibits bacterial cell wall synthesis",
-       "D) Ciprofloxacin – inhibits bacterial DNA gyrase"
-      ],
-      "correct": 0,
-      "explanation": "Ceftriaxone is a third‑generation cephalosporin that inhibits bacterial cell wall synthesis and penetrates the CSF effectively.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "In the management of acute ischemic stroke, which drug is administered within 4.5 hours of symptom onset and what is its main indication?",
-      "options": [
-       "A) Alteplase – thrombolysis",
-       "B) Aspirin – antiplatelet",
-       "C) Clopidogrel – antiplatelet",
-       "D) Tenecteplase – thrombolysis"
-      ],
-      "correct": 0,
-      "explanation": "Alteplase is a tissue plasminogen activator used for thrombolysis in acute ischemic stroke within the therapeutic window.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which medication is the first-line treatment for severe sepsis with septic shock and what is its characteristic side effect?",
-      "options": [
-       "A) Hydrocortisone – hyperglycaemia",
-       "B) Dopamine – arrhythmias",
-       "C) Norepinephrine – peripheral vasoconstriction",
-       "D) Epinephrine – tachycardia"
-      ],
-      "correct": 0,
-      "explanation": "Hydrocortisone is used in septic shock and can cause hyperglycaemia as a notable side effect.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "In a patient with acute pancreatitis, which drug is used to reduce pancreatic exocrine secretion and what is its mechanism?",
-      "options": [
-       "A) Octreotide – inhibits hormone secretion",
-       "B) Pancrelipase – replaces enzymes",
-       "C) Gabexate – protease inhibition",
-       "D) Naltrexone – opioid antagonism"
-      ],
-      "correct": 0,
-      "explanation": "Octreotide is a somatostatin analogue that inhibits pancreatic exocrine secretion.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug is indicated for the treatment of severe hypertriglyceridemia and what is its main mechanism of action?",
-      "options": [
-       "A) Gemfibrozil – activates PPAR-α",
-       "B) Atorvastatin – inhibits HMG‑CoA reductase",
-       "C) Niacin – inhibits lipolysis",
-       "D) Omega‑3 fatty acids – reduces VLDL synthesis"
-      ],
-      "correct": 0,
-      "explanation": "Gemfibrozil activates PPAR‑α, increasing lipoprotein lipase activity and lowering triglycerides.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "For a patient with acute decompensated heart failure, which drug is used to reduce preload and what is its characteristic side effect?",
-      "options": [
-       "A) Furosemide – electrolyte loss",
-       "B) Digoxin – arrhythmias",
-       "C) Spironolactone – hyperkalaemia",
-       "D) Nitroglycerin – headache"
-      ],
-      "correct": 0,
-      "explanation": "Furosemide is a loop diuretic that reduces preload and can cause electrolyte loss, especially potassium.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which medication is the preferred first‑line treatment for acute gout flare and what is its main mechanism?",
-      "options": [
-       "A) Colchicine – inhibits microtubule polymerisation",
-       "B) Indomethacin – COX inhibition",
-       "C) Prednisone – anti‑inflammatory",
-       "D) Allopurinol – xanthine oxidase inhibition"
-      ],
-      "correct": 0,
-      "explanation": "Colchicine disrupts microtubule polymerisation, reducing neutrophil activity during a gout flare.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "In the management of severe asthma exacerbation, which drug is administered intravenously and what is its characteristic side effect?",
-      "options": [
-       "A) Salbutamol – tremor",
-       "B) Ipratropium – dry mouth",
-       "C) Hydrocortisone – hyperglycaemia",
-       "D) Magnesium sulfate – flushing"
-      ],
-      "correct": 0,
-      "explanation": "Intravenous salbutamol is a β2‑agonist used in severe asthma and can cause tremor as a side effect.",
+      "correct": 2,
+      "explanation": "Clopidogrel is an antiplatelet used in acute coronary syndrome.",
       "ai": true,
       "kind": "drug"
      }
