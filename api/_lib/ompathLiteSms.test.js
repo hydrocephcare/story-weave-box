@@ -6,7 +6,7 @@ afterEach(() => {
   vi.unstubAllEnvs();
 });
 
-describe("private patient-guide SMS consent and link validation", () => {
+describe("patient-guide SMS consent and link validation", () => {
   it("accepts only the deployed Lite guide route and never sends in sandbox", async () => {
     vi.stubEnv("SUPABASE_URL", "https://example.supabase.co");
     vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "server-only-test-key");
@@ -31,7 +31,7 @@ describe("private patient-guide SMS consent and link validation", () => {
       to: "+254712345678",
       link: "https://lite.ompathstudy.com/api/ompath-lite-guide?token=" + "A".repeat(43),
       smsConsent: true,
-    })).rejects.toThrow("Invalid private guide delivery details");
+    })).rejects.toThrow("Invalid health guide delivery details");
     await expect(sendHealthGuideLink({
       to: "+254712345678",
       link: "https://lite.ompathstudy.com/api/lite?task=health-guide&token=" + "A".repeat(43) + "&welcome=1",
