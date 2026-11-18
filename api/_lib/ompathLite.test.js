@@ -71,11 +71,13 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd(prefix + "*2*2");
     await sendUssd(prefix + "*2*2*2");
     await sendUssd(prefix + "*2*2*2*2");
-    const final = await sendUssd(prefix + "*2*2*2*2*2");
+    const consentPrompt = await sendUssd(prefix + "*2*2*2*2*2");
+    expect(consentPrompt.body).toContain("CON ");
+    expect(consentPrompt.body).toContain("Receive a private health guide by SMS?");
+    const final = await sendUssd(prefix + "*2*2*2*2*2*2");
 
     expect(final.statusCode).toBe(200);
-    expect(final.body).toContain("END Preliminary impression:");
-    expect(final.body).toContain("Not a confirmed diagnosis");
+    expect(final.body).toContain("END Assessment saved. No SMS will be sent.");
     expect(getRow().status).toBe("complete");
     expect(getRow().assessment.status).toBe("not_a_diagnosis");
     expect(getRow().clarification_answers).toHaveLength(5);
@@ -94,9 +96,12 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd(prefix + "*2*1");
     await sendUssd(prefix + "*2*1*3");
     await sendUssd(prefix + "*2*1*3*2");
-    const final = await sendUssd(prefix + "*2*1*3*2*1");
+    const consentPrompt = await sendUssd(prefix + "*2*1*3*2*1");
+    expect(consentPrompt.body).toContain("CON ");
+    expect(consentPrompt.body).toContain("Receive a private health guide by SMS?");
+    const final = await sendUssd(prefix + "*2*1*3*2*1*2");
 
-    expect(final.body).toContain("END URGENT:");
+    expect(final.body).toContain("END Assessment saved. No SMS will be sent.");
     expect(getRow().status).toBe("referred_urgent");
     expect(getRow().assessment.provisional_diagnosis).toMatch(/reduced fetal movements/i);
     expect(getRow().assessment.urgency_level).toBe("urgent");
@@ -110,8 +115,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd("1*1*1");
     await sendUssd("1*1*1*1");
     await sendUssd("1*1*1*1*6");
-    await sendUssd(prefix);
-    const final = await sendUssd(prefix + "*1");
+    const final = await sendUssd(prefix);
 
     expect(final.body).toContain("END EMERGENCY:");
     expect(getRow().status).toBe("referred_urgent");
