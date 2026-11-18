@@ -67,11 +67,19 @@ export async function interpretHealthConcern({ message, category, language }) {
   return validateClinicalInterpretation(result.text, category);
 }
 
-export function prioritiseClinicalQuestions(questions, context) {
+export function prioritiseClinicalQuestions(questions, context, category) {
+  // Pregnancy branching depends on a fixed sequence (status, gestation, then
+  // obstetric danger symptoms); never reorder that clinician-reviewed pathway.
+  if (category === "Pregnancy-related concern" || questions.length < 3) return questions;
   const priority = Array.isArray(context?.follow_up_priority_ids) ? context.follow_up_priority_ids : [];
   if (!priority.length) return questions;
+  // Keep the emergency screen and the first category-specific question fixed;
+  // AI may only reorder the remaining clinician-authored questions.
+  const prefix = questions.slice(0, 2);
+  const remainder = questions.slice(2);
   const rank = new Map(priority.map((id, index) => [id, index]));
-  return [...questions].sort((a, b) =>
+  remainder.sort((a, b) =>
     (rank.has(a.id) ? rank.get(a.id) : 100) - (rank.has(b.id) ? rank.get(b.id) : 100)
   );
+  return [...prefix, ...remainder];
 }
