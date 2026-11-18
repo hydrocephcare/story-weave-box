@@ -18,13 +18,19 @@ function responseSink() {
   };
 }
 
-function stubEncounterStorage() {
+function stubEncounterStorage({ aiResponse = null } = {}) {
   let row = null;
   const id = "11111111-1111-4111-8111-111111111111";
   vi.stubEnv("SUPABASE_URL", "https://example.supabase.co");
   vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "server-only-test-key");
   vi.stubGlobal("fetch", vi.fn(async (url, options = {}) => {
     const address = String(url);
+    if (address.includes("api.groq.com") && aiResponse) {
+      const body = JSON.parse(options.body);
+      expect(body.messages[1].content).not.toContain("+254712345678");
+      expect(body.messages[1].content).not.toContain("ATUid_");
+      return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(aiResponse) } }] }), { status: 200 });
+    }
     if (address.includes("/rest/v1/lite_health_encounters") && options.method === "POST") {
       const payload = JSON.parse(options.body);
       row = {
@@ -70,6 +76,57 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     const language = await sendUssd("1*1");
     expect(language.body).toContain("1. English\n2. Kiswahili\n0. Back");
     expect(language.body).not.toMatch(/1\\. English +2\\./);
+  });
+
+  it("runs optional AI extraction after the USSD response without delaying it or changing assessment", async () => {
+    const getRow = stubEncounterStorage({
+      aiResponse: {
+        symptom_ids: ["lower_abdominal_pain", "invented_diagnosis"],
+        negated_symptom_ids: [],
+        onset: "since yesterday",
+        duration: "one day",
+        severity: "moderate",
+        pregnancy_context: "unclear",
+        confidence: "high",
+        uncertain: false,
+      },
+    });
+    vi.stubEnv("LITE_AI_INTERPRETATION_ENABLED", "true");
+    vi.stubEnv("GROQ_API_KEY", "test-provider-key");
+    const backgroundTasks = [];
+    const res = responseSink();
+    await ompathLite({
+      method: "POST",
+      body: { phoneNumber: "+254712345678", sessionId: "ATUid_ai123", text: "1*1*1*1*3*Tumbo inaniuma chini tangu jana" },
+      query: {},
+      executionContext: { waitUntil(task) { backgroundTasks.push(task); } },
+    }, res);
+
+    expect(res.body).toContain("CON ");
+    expect(res.body).toContain("When did the pain start?");
+    expect(backgroundTasks).toHaveLength(1);
+    await Promise.all(backgroundTasks);
+
+    expect(getRow().original_message).toBe("Tumbo inaniuma chini tangu jana");
+    expect(getRow().normalized_summary).toContain("AI extraction (unverified)");
+    expect(getRow().normalized_summary).toContain('"lower_abdominal_pain"');
+    expect(getRow().normalized_summary).not.toContain("invented_diagnosis");
+    expect(getRow().urgency_level).toBe("not_assessed");
+    expect(getRow().assessment).toBeNull();
+  });
+
+  it("does not schedule AI extraction unless the feature flag is explicitly enabled", async () => {
+    stubEncounterStorage();
+    const backgroundTasks = [];
+    const res = responseSink();
+    await ompathLite({
+      method: "POST",
+      body: { phoneNumber: "+254712345678", sessionId: "ATUid_aioff1", text: "1*1*1*1*3*Tumbo inaniuma chini tangu jana" },
+      query: {},
+      executionContext: { waitUntil(task) { backgroundTasks.push(task); } },
+    }, res);
+    expect(res.body).toContain("CON ");
+    expect(backgroundTasks).toHaveLength(0);
   });
 
   it("completes the lower abdominal pain pathway and returns a preliminary impression", async () => {
