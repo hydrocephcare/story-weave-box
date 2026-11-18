@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { aboutFromTags, aboutTag, authorFromContent, isVerifiedStory, withoutAuthorTags } from "@/lib/storyAuthor";
+import { aboutFromTags, aboutTag, authorFromContent, authorFromTags, authorTag, isVerifiedStory, withoutAuthorTags } from "@/lib/storyAuthor";
 
 describe("story author", () => {
   it("round-trips the about note through a tag", () => {
@@ -16,3 +16,10 @@ describe("story author", () => {
     expect(isVerifiedStory(["student"])).toBe(false);
   });
 });
+  it("round-trips compact author metadata for story cards", () => {
+    const tag = authorTag("Amina W. Kamau", "Year 4");
+    expect(authorFromTags(["year-4", tag])).toEqual({ name: "Amina W. Kamau", level: "Year 4" });
+    expect(withoutAuthorTags(["year-4", tag])).toEqual(["year-4"]);
+    expect(authorTag("A medical student", "Year 2")).toBe("");
+  });
+
