@@ -28,8 +28,8 @@ export default function AuthorChip({ storyId, content, tags }: { storyId: string
     <div className="mt-4 flex items-center gap-3">
       <button type="button" onClick={go} aria-label={`About ${author.name}`} className="relative shrink-0">
         {photo
-          ? <img src={photo} alt="" className="h-11 w-11 rounded-full object-cover ring-2 ring-background" />
-          : <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-500 font-serif text-lg font-bold text-primary-foreground ring-2 ring-background">{initial}</span>}
+          ? <img src={photo} alt="" className="h-10 w-10 rounded-full object-cover ring-2 ring-background" />
+          : <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-500 font-serif text-lg font-bold text-primary-foreground ring-2 ring-background">{initial}</span>}
         {verified && <BadgeCheck className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full bg-background text-sky-500" aria-label="Verified" />}
       </button>
       <div className="min-w-0 text-sm leading-tight">
