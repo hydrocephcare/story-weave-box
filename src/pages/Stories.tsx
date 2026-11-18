@@ -11,7 +11,7 @@ import { INVITE_TEXT, INVITE_URL, shareOut, isGeneratedThumb } from "@/lib/story
 import { MessageCircle } from "lucide-react";
 import { Pencil } from "lucide-react";
 import FinalistBadge from "@/components/FinalistBadge";
-import { uniFromTags } from "@/lib/storyAuthor";
+import { authorFromContent, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 import { readSaved } from "@/lib/storyExtras";
 import { Bookmark } from "lucide-react";
 
@@ -25,6 +25,7 @@ interface Story {
   meta_description?: string | null;
   reading_time_minutes?: number | null;
   tags?: string[] | null;
+  content?: string | null;
 }
 
 const formatDate = (iso: string) => new Date(iso).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
@@ -39,7 +40,7 @@ function Meta({ story }: { story: Story }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {story.category && story.category !== "Uncategorized" && <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{story.category}</span>}
-      {y === 7 ? <FinalistBadge className="h-5 w-5" label /> : y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{y === 8 ? "Another course" : `Year ${y}`}</span>}
+      {y === 7 && <FinalistBadge className="h-5 w-5" label />}
       <span className="text-[11px] text-muted-foreground">{formatDate(story.created_at)}</span>
     </div>
   );
@@ -47,8 +48,33 @@ function Meta({ story }: { story: Story }) {
 
 function Cover({ story, className }: { story: Story; className: string }) {
   return story.cover_image_url && !isGeneratedThumb(story.cover_image_url)
-    ? <img src={story.cover_image_url} alt="" loading="lazy" className={`${className} object-cover`} />
+    ? <img src={story.cover_image_url} alt="" loading="lazy" className={`${className} object-cover object-center`} />
     : <StoryCoverArt title={story.title} className={className} />
+}
+
+function AuthorLine({ story }: { story: Story }) {
+  const author = authorFromContent(story.content || "");
+  if (!author) {
+    const y = yearOf(story);
+    return y > 0 ? <p className="mt-2 text-[11px] font-medium text-muted-foreground">{y === 7 ? "Finalist" : y === 8 ? "Another course" : `Year ${y}`}</p> : null;
+  }
+  const photo = photoFromTags(story.tags);
+  const uni = uniFromTags(story.tags);
+  const initial = author.name.replace(/^an?\s+/i, "").trim().charAt(0).toUpperCase() || "?";
+  return (
+    <div className="mt-3 flex min-w-0 items-center gap-2.5">
+      <span className="relative h-8 w-8 shrink-0">
+        {photo
+          ? <img src={photo} alt="" loading="lazy" className="h-8 w-8 rounded-full object-cover ring-1 ring-border" />
+          : <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-semibold text-primary">{initial}</span>}
+        <span className="absolute -bottom-0.5 -right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-background text-rose-500"><span className="text-[9px] leading-none">♥</span></span>
+      </span>
+      <span className="min-w-0">
+        <span className="block truncate text-xs font-semibold text-foreground">{author.name}</span>
+        <span className="block truncate text-[10px] text-muted-foreground">{author.level}{uni ? ` · ${uni}` : ""}</span>
+      </span>
+    </div>
+  );
 }
 
 function FeaturedCard({ story }: { story: Story }) {
@@ -62,7 +88,7 @@ function FeaturedCard({ story }: { story: Story }) {
         <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
           <div>
             <Meta story={story} />
-            <h2 className="mt-3 font-serif text-2xl font-bold leading-snug transition-colors group-hover:text-primary sm:text-3xl">{story.title}</h2>
+            <h2 className="mt-3 font-serif text-2xl font-bold leading-snug transition-colors group-hover:text-primary sm:text-3xl">{story.title}</h2>\n            <AuthorLine story={story} />
             <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{story.meta_description}</p>
           </div>
           <span className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-primary">Read story <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
@@ -79,7 +105,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
         <Cover story={story} className="h-40 w-full transition-transform duration-500 group-hover:scale-[1.03]" />
         <div className="flex flex-1 flex-col p-4">
           <Meta story={story} />
-          <h3 className="mb-2 mt-2.5 line-clamp-2 font-serif text-base font-bold leading-snug transition-colors group-hover:text-primary">{story.title}</h3>
+          <h3 className="mb-0 mt-2.5 line-clamp-2 font-serif text-base font-bold leading-snug transition-colors group-hover:text-primary">{story.title}</h3>\n          <AuthorLine story={story} />
           <p className="line-clamp-3 flex-1 text-xs leading-relaxed text-muted-foreground">{story.meta_description}</p>
           <p className="mt-3 flex items-center gap-1 text-[11px] text-muted-foreground"><Clock className="h-3 w-3" /> {story.reading_time_minutes ? `${story.reading_time_minutes} min read` : "Student story"}</p>
         </div>
@@ -112,7 +138,7 @@ export default function Stories() {
 
   const load = useCallback(() => {
     supabase.from("stories")
-      .select("id,title,slug,category,created_at,cover_image_url,meta_description,reading_time_minutes,tags")
+      .select("id,title,slug,category,created_at,cover_image_url,meta_description,reading_time_minutes,tags,content")
       .eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(300)
       .then(({ data }) => { setStories((data ?? []) as unknown as Story[]); setLoading(false); });
   }, []);
