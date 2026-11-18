@@ -3,6 +3,7 @@ import { timingSafeEqual } from "node:crypto";
 import { createHealthEncounter, getHealthEncounter, getResumableHealthEncounter, resumeHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
 import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteRules.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
+import { interpretSymptomText } from "../../shared/ompathLiteLanguage.js";
 import { shortUssdText } from "./ompathLiteUssdFormat.js";
 const mainMenu = "OmpathStudy Lite\n1. Health support\n2. Help and information";
 const clean = (v,n=180)=>String(v??"").replace(/<br\s*\/?>/gi," ").replace(/<\/(?:p|div|li|h[1-6])\s*>/gi," ").replace(/<[^>]*>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;/gi,"'").replace(/\s+/g," ").trim().slice(0,n);
@@ -181,6 +182,7 @@ async function ussd(req,res){
    if(flow.length===5){
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
+    const interpretation=interpretSymptomText(description);
     const immediateFlags=detectEmergencyLanguage(description);
     // Interrupt routine intake before another menu when a recognised danger
     // symptom is already present in the caller's own description.
@@ -190,7 +192,7 @@ async function ussd(req,res){
      const emergencyAnswers=[{question_id:"emergency_screen",answer:"1"}];
      const assessment=buildPreliminaryAssessment({encounter:{concern_category:categories[flow[3]],original_message:description},answers:emergencyAnswers,emergencyFlags:immediateFlags});
      await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{
-      concern_category:categories[flow[3]],original_message:description,normalized_summary:"",
+      concern_category:categories[flow[3]],original_message:description,normalized_summary:interpretation.normalized_summary,
       clarification_answers:emergencyAnswers,red_flag_results:immediateFlags,
       assessment,urgency_level:"emergency",status:"referred_urgent"
      }});
@@ -205,6 +207,7 @@ async function ussd(req,res){
     const language=flow[1]==="2"?"sw":"en";
     const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
     const description=flow[4]==="1"?"":clean(flow[4],1200);
+    const interpretation=interpretSymptomText(description);
     const emergencyAnswer=flow[5];
     const emergencyFlags=detectEmergencyLanguage(description);
     if(emergencyAnswer==="1")emergencyFlags.push({rule:"self_reported_emergency_symptom",positive:true});
@@ -235,7 +238,7 @@ async function ussd(req,res){
      patch:{
       concern_category:categories[flow[3]],
       original_message:description,
-      normalized_summary:"",
+      normalized_summary:interpretation.normalized_summary,
       clarification_answers:emergencyAnswers,
       red_flag_results:emergencyFlags,
       ...(needsUrgentCare?{assessment:preliminary,urgency_level:preliminary.urgency_level,status:"referred_urgent"}:{urgency_level:"not_assessed",status:"awaiting_clarification"})
