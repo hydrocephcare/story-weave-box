@@ -1,10 +1,14 @@
 # OmpathStudy Lite — model-backed extraction contract
 
-**Status: adapter scaffold only; not connected to the USSD flow and not enabled for patient traffic.**
+**Status: connected to a Cloudflare Pages background task behind an explicit feature flag; disabled by default and not enabled for patient traffic.**
 
 The optional model adapter in `api/_lib/ompathLiteAi.js` uses the existing server-side Groq/Gemini JSON provider helper. It is deliberately separate from the deterministic emergency detector and preliminary assessment rules.
 
 ## Structured extraction
+
+The USSD callback schedules this adapter through the Cloudflare Pages execution context (`waitUntil`) after the normal USSD response is ready. It does not block the carrier response. Only the patient's free-text symptom description is sent; phone number, session ID and other direct identifiers are not included. Successful extraction is appended to `normalized_summary` as `AI extraction (unverified)`. The original message is preserved. The annotation is not used by the assessment or urgency rules.
+
+To activate in a controlled test environment, set `LITE_AI_INTERPRETATION_ENABLED=true` and configure a supported server-side provider key (`GROQ_API_KEY`/`GROQ_API_KEYS` or `GEMINI_API_KEY`/`GEMINI_API_KEYS`) in the Lite Pages project. Keep the flag unset/false in production until clinician and language validation, monitoring and a cost limit are in place.
 
 The adapter requests only:
 - A bounded list of symptom concept IDs from the existing Lite vocabulary
@@ -28,4 +32,4 @@ Unknown symptom concepts are discarded. Negated symptoms are removed from the po
 
 ## Current status
 
-This commit adds a provider adapter and a strict output validator with unit tests. It does **not** wire the adapter into the USSD callback, does not activate model inference, and does not alter Supabase schema or main OmpathStudy production. The existing deterministic phrase matcher remains the only live interpretation path.
+The provider adapter is now wired to a Cloudflare Pages background task, with regression tests for the feature flag, prompt privacy, schema filtering and separation from clinical assessment. The feature remains disabled unless the explicit flag is enabled in the Lite environment. No Supabase schema change is required. The deterministic phrase matcher remains the only active interpretation path while the flag is off. Main OmpathStudy production is not modified.
