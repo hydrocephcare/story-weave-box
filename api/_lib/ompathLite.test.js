@@ -58,6 +58,16 @@ async function sendUssd(text, res = responseSink()) {
 }
 
 describe("OmpathStudy Lite USSD Health Support", () => {
+  it("renders every numbered option on its own line", async () => {
+    const menu = await sendUssd("");
+    expect(menu.body).toContain("CON OmpathStudy Lite\\n1. Health support\\n2. Help and information");
+    const intro = await sendUssd("1");
+    expect(intro.body).toContain("1. Continue\\n2. Cancel\\n0. Main menu");
+    const language = await sendUssd("1*1");
+    expect(language.body).toContain("1. English\\n2. Kiswahili\\n0. Back");
+    expect(language.body).not.toMatch(/1\\. English +2\\./);
+  });
+
   it("completes the lower abdominal pain pathway and returns a preliminary impression", async () => {
     const getRow = stubEncounterStorage();
     const prefix = "1*1*1*1*3*Lower abdominal pain since yesterday";
