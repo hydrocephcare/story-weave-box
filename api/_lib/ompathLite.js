@@ -1,4 +1,5 @@
 /** OmpathStudy Lite — Health Support only, delivered through Africa's Talking USSD. */
+import { timingSafeEqual } from "node:crypto";
 import { createHealthEncounter, getHealthEncounter, getResumableHealthEncounter, resumeHealthEncounter, updateHealthEncounter } from "./ompathLiteHealth.js";
 import { detectEmergencyLanguage, buildPreliminaryAssessment } from "./ompathLiteRules.js";
 import { adaptPregnancyQuestions } from "./ompathLiteFlow.js";
@@ -46,6 +47,12 @@ function assessmentReply(assessment, language) {
  return heading+shortText(impression,105)+". Not a confirmed diagnosis; clinician assessment is required.";
 }
 
+function trustedResumeCallback(req) {
+ const expected=process.env.USSD_CALLBACK_SECRET||"";
+ const provided=String(req.query?.key||"");
+ if(!expected||!provided||expected.length!==provided.length)return false;
+ try{return timingSafeEqual(Buffer.from(expected),Buffer.from(provided));}catch{return false;}
+}
 function resumeQuestions(category, language, baseAnswers) {
  const sets={
   "Pregnancy-related concern":[{id:"pregnancy_status",en:"Are you pregnant?",sw:"Una ujauzito?"},{id:"gestation",en:"How many weeks pregnant?",sw:"Una ujauzito wa wiki ngapi?"},{id:"pregnancy_bleeding_or_fluid",en:"Any vaginal bleeding or fluid leak?",sw:"Unatoka damu au maji ukeni?"},{id:"pregnancy_movement",en:"At 20+ weeks, are baby movements reduced or absent?",sw:"Wiki 20 au zaidi: mtoto anasogea kidogo au hasogei?"}],
@@ -87,13 +94,16 @@ async function ussd(req,res){
    if(!flow.length){
     if(returnedToIntro)return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. New enquiry\n2. Resume previous\n0. Main menu");
     if(parts.length===1){
-     const pending=await getResumableHealthEncounter(phone);
-     if(pending)return reply(res,"Health support\nYou have an unfinished enquiry.\n1. Start a new enquiry\n2. Resume previous enquiry\n0. Main menu");
+     if(trustedResumeCallback(req)){
+      const pending=await getResumableHealthEncounter(phone);
+      if(pending)return reply(res,"Health support\nYou have an unfinished enquiry.\n1. Start a new enquiry\n2. Resume previous enquiry\n0. Main menu");
+     }
      return reply(res,"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu");
     }
     return reply(res,parts.length>1?mainMenu:"Health support\nNot for emergencies. If symptoms are severe, go to hospital now.\n1. Continue\n2. Cancel\n0. Main menu",parts.length>1);
    }
    if(flow.length===1 && flow[0]==="2"){
+    if(!trustedResumeCallback(req))return reply(res,"Session recovery is not enabled on this callback. Start a new enquiry or contact OmpathStudy support.",true);
     const resumed=await resumeHealthEncounter({phoneNumber:phone,newSessionId:session});
     if(!resumed)return reply(res,"Health support cancelled. No new health information was saved.",true);
     const base=resumed.resume_base_answers||[];
@@ -103,6 +113,7 @@ async function ussd(req,res){
     return reply(resumed.preferred_language==="sw"?"Enquiry imerejeshwa. Jibu swali lililobaki:\n"+current.sw+"\n"+resumeOptions(current,"sw")+"\n0. Rudi":"Your previous enquiry has been restored. Continue with this question:\n"+current.en+"\n"+resumeOptions(current,"en")+"\n0. Back");
    }
    if(flow[0]==="2" && flow.length>=2){
+    if(!trustedResumeCallback(req))return reply(res,"Session recovery is not enabled on this callback. Please start a new enquiry.",true);
     const encounter=await getHealthEncounter({sessionId:session,phoneNumber:phone});
     if(!encounter)return reply(res,"Your saved enquiry could not be restored. Please dial again.",true);
     const base=Array.isArray(encounter.resume_base_answers)?encounter.resume_base_answers:[];
