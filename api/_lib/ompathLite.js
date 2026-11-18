@@ -49,7 +49,7 @@ async function ussd(req,res){
  let payload=req.body||{};
  if(typeof payload==="string")payload=Object.fromEntries(new URLSearchParams(payload));
  else if(!Object.keys(payload).length&&typeof req.rawBody==="string")payload=Object.fromEntries(new URLSearchParams(req.rawBody));
- const phone=clean(payload.phoneNumber,24),session=clean(payload.sessionId,100),text=clean(payload.text,300);
+ const phone=clean(payload.phoneNumber,24),session=clean(payload.sessionId,100),text=clean(payload.text,1800);
  if(!phone||!session)return reply(res,"Invalid session. Please dial again.",true);
  const parts=text?text.split("*"):[];
  try{
