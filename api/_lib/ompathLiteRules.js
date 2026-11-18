@@ -142,16 +142,21 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
     if (fever || positive("severity")) urgency = urgency === "emergency" ? urgency : "urgent";
   } else if (category === "Menstrual problem") {
     leadingImpression = "Menstrual disturbance (abnormal uterine bleeding or dysmenorrhoea, depending on the symptom)";
-    differentials = ["Pregnancy-related bleeding", "Ovulatory dysfunction", "Uterine fibroids", "Endometriosis"];
+    differentials = pregnancyPossible
+      ? ["Pregnancy-related bleeding", "Ovulatory dysfunction", "Uterine fibroids", "Endometriosis"]
+      : ["Ovulatory dysfunction", "Uterine fibroids", "Endometriosis", "Adenomyosis"];
     if (pregnancyPossible) {
       differentials.unshift("Ectopic pregnancy or miscarriage must be excluded");
       urgency = urgency === "emergency" ? urgency : "urgent";
     }
+    if (fever) differentials.unshift("Genital tract infection or endometritis");
     rationale = "Cycle pattern, bleeding volume, pain, pregnancy status and examination determine the likely cause.";
     if (positive("severity")) urgency = urgency === "emergency" ? urgency : "urgent";
   } else if (category === "Bleeding") {
     leadingImpression = "Abnormal bleeding of undetermined source; pregnancy-related bleeding must be excluded where relevant";
-    differentials = ["Pregnancy loss or ectopic pregnancy", "Abnormal uterine bleeding", "Cervical or vaginal cause"];
+    differentials = pregnancyPossible
+      ? ["Pregnancy loss or ectopic pregnancy", "Abnormal uterine bleeding", "Cervical or vaginal cause"]
+      : ["Abnormal uterine bleeding", "Cervical or vaginal cause", "Medication-related bleeding or coagulopathy"];
     if (pregnancyPossible || positive("bleeding_amount") || positive("pain")) urgency = urgency === "emergency" ? urgency : "urgent";
     rationale = "The source, amount, pregnancy status, recent delivery and associated pain determine the differential diagnosis.";
   } else {
