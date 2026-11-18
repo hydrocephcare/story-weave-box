@@ -47,7 +47,7 @@ jobs:
       - run: npm ci
       - name: Test Health Support intake, triage, safety and privacy
         run: >
-          npx vitest run --reporter=dot
+          npx vitest run --config vitest.lite.config.ts --reporter=dot
           api/_lib/ompathLiteClinical.test.js
           api/_lib/ompathLiteClinical.assessment.test.js
           api/_lib/ompathLiteFlow.test.js
