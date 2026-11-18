@@ -181,7 +181,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
 
   it("interrupts routine questions when the emergency screen is positive", async () => {
     const getRow = stubEncounterStorage();
-    const prefix = "1*1*1*1*6*I cannot breathe";
+    const prefix = "1*1*1*1*6*Nashindwa kupumua";
     await sendUssd("1");
     await sendUssd("1*1");
     await sendUssd("1*1*1");
@@ -191,6 +191,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
 
     expect(final.body).toContain("END EMERGENCY:");
     expect(getRow().status).toBe("referred_urgent");
+    expect(getRow().red_flag_results.map((item) => item.rule)).toContain("severe_breathing_difficulty");
     expect(getRow().assessment.urgency_level).toBe("emergency");
   });
 });
