@@ -13,7 +13,7 @@ export const aboutFromTags = (tags?: string[] | null): string => {
 export const isVerifiedStory = (tags?: string[] | null) => Boolean(tags?.includes("verified"));
 export const withoutAuthorTags = (tags: string[]) => tags.filter((t) => !t.startsWith(PREFIX) && !t.startsWith(UNI) && !t.startsWith(PHOTO));
 
-const PHOTO = "photo:";
+const PHOTO = "photo:";\nconst AUTHOR = "author:";\nexport const authorTag = (name: string, level: string) => {\n  const cleanName = name.replace(/\\s+/g, " ").trim().slice(0, 80);\n  const cleanLevel = level.replace(/\\s+/g, " ").trim().slice(0, 24);\n  if (!cleanName || /^a medical student$/i.test(cleanName)) return "";\n  return AUTHOR + cleanName + "|" + cleanLevel;\n};\nexport const authorFromTags = (tags?: string[] | null): { name: string; level: string } | null => {\n  const tag = (tags ?? []).find((value) => value.startsWith(AUTHOR));\n  if (!tag) return null;\n  const value = tag.slice(AUTHOR.length);\n  const separator = value.lastIndexOf("|");\n  const name = (separator < 0 ? value : value.slice(0, separator)).trim();\n  const level = separator < 0 ? "" : value.slice(separator + 1).trim();\n  return name ? { name, level } : null;\n};
 export const photoTag = (url: string) => (/^https:\/\//i.test(url) && url.length < 400 ? PHOTO + encodeURIComponent(url) : "");
 export const photoFromTags = (tags?: string[] | null): string => {
   const t = (tags ?? []).find((x) => x.startsWith(PHOTO));
