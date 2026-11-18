@@ -25,7 +25,7 @@ function HomeStoryAuthor({ story }: { story: Row }) {
         <span className="absolute -bottom-0.5 -right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-background text-rose-500"><span className="text-[9px] leading-none">♥</span></span>
       </span>
       <span className="min-w-0">
-        <span className="block truncate text-xs font-semibold text-foreground">{author.name}</span>
+        <span className="block truncate text-xs font-semibold text-foreground">{author.name.replace(/\b[a-z]/g, (letter) => letter.toUpperCase())}</span>
         <span className="block truncate text-[10px] text-muted-foreground">{author.level || "Contributor"}{uni ? ` · ${uni}` : ""}</span>
       </span>
     </div>
