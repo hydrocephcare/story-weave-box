@@ -82,7 +82,7 @@ function FeaturedCard({ story }: { story: Story }) {
     <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
       <Link to={buildStoryPath(story)} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-lg sm:flex-row">
         <div className="relative shrink-0 overflow-hidden sm:w-80">
-          <Cover story={story} className="h-48 w-full transition-transform duration-700 group-hover:scale-105 sm:h-full" />
+          <Cover story={story} className="aspect-[16/9] w-full transition-transform duration-700 group-hover:scale-105 sm:aspect-auto sm:h-full" />
           <span className="absolute left-3 top-3 rounded-full bg-primary px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground shadow">Latest</span>
         </div>
         <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
@@ -102,7 +102,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
   return (
     <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: Math.min(index, 8) * 0.04 }} whileHover={{ y: -3 }}>
       <Link to={buildStoryPath(story)} className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
-        <Cover story={story} className="h-40 w-full transition-transform duration-500 group-hover:scale-[1.03]" />
+        <Cover story={story} className="aspect-[16/9] w-full transition-transform duration-500 group-hover:scale-[1.03]" />
         <div className="flex flex-1 flex-col p-4">
           <Meta story={story} />
           <h3 className="mb-0 mt-2.5 line-clamp-2 font-serif text-base font-bold leading-snug transition-colors group-hover:text-primary">{story.title}</h3>\n          <AuthorLine story={story} />
