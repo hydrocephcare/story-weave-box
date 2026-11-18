@@ -83,6 +83,26 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     expect(getRow().clarification_answers).toHaveLength(5);
   });
 
+  it("records explicit consent when the caller chooses a patient-guide SMS", async () => {
+    const getRow = stubEncounterStorage();
+    const prefix = "1*1*1*1*3*Lower abdominal pain since yesterday";
+    await sendUssd("1");
+    await sendUssd("1*1");
+    await sendUssd("1*1*1");
+    await sendUssd("1*1*1*1");
+    await sendUssd("1*1*1*1*3");
+    await sendUssd(prefix);
+    await sendUssd(prefix + "*2");
+    await sendUssd(prefix + "*2*2");
+    await sendUssd(prefix + "*2*2*2");
+    await sendUssd(prefix + "*2*2*2*2");
+    await sendUssd(prefix + "*2*2*2*2*2");
+    const final = await sendUssd(prefix + "*2*2*2*2*2*1");
+    expect(final.body).toContain("END Assessment saved.");
+    expect(getRow().sms_consent).toBe(true);
+    expect(getRow().status).toBe("guide_pending");
+  });
+
   it("escalates reduced fetal movement after 20 weeks in the pregnancy pathway", async () => {
     const getRow = stubEncounterStorage();
     const prefix = "1*1*1*1*1*I am 30 weeks pregnant and the baby's movements are reduced";
