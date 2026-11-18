@@ -5,6 +5,7 @@ import { BookOpen, ChevronRight, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { buildStoryPath } from "@/lib/seo";
 import { authorFromTags, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
+import { isGeneratedThumb } from "@/lib/storyShare";
 
 interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null }
 
