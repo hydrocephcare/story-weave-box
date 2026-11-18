@@ -15,6 +15,7 @@ on:
       - "supabase/migrations/**"
       - "package.json"
       - "package-lock.json"
+      - "vitest.lite.config.ts"
       - ".github/workflows/lite-health.yml"
   pull_request:
     branches:
@@ -30,6 +31,7 @@ on:
       - "supabase/migrations/**"
       - "package.json"
       - "package-lock.json"
+      - "vitest.lite.config.ts"
 
 permissions:
   contents: read
