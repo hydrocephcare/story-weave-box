@@ -93,9 +93,26 @@ async function ussd(req,res){
      :"Briefly describe your symptoms. Enter 1 to skip.\n0. Back");
    }
    if(flow.length===5){
+    const categories={"1":"Pregnancy-related concern","2":"Menstrual problem","3":"Lower abdominal pain","4":"Vaginal discharge","5":"Bleeding","6":"Other health concern"};
+    const description=flow[4]==="1"?"":clean(flow[4],1200);
+    const immediateFlags=detectEmergencyLanguage(description);
+    // Interrupt routine intake before another menu when a recognised danger
+    // symptom is already present in the caller's own description.
+    if(immediateFlags.length){
+     const language=flow[1]==="2"?"sw":"en";
+     const encounter=await createHealthEncounter({sessionId:session,phoneNumber:phone,consentGiven:true,smsConsent:false,preferredLanguage:language,channel:"ussd"});
+     const emergencyAnswers=[{question_id:"emergency_screen",answer:"1"}];
+     const assessment=buildPreliminaryAssessment({encounter:{concern_category:categories[flow[3]],original_message:description},answers:emergencyAnswers,emergencyFlags:immediateFlags});
+     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{
+      concern_category:categories[flow[3]],original_message:description,normalized_summary:"",
+      clarification_answers:emergencyAnswers,red_flag_results:immediateFlags,
+      assessment,urgency_level:"emergency",status:"referred_urgent"
+     }});
+     return reply(res,assessmentReply(assessment,language),true);
+    }
     return reply(res,flow[1]==="2"
-     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\n1. Ndiyo  2. Hapana  3. Sina uhakika\n0. Rudi"
-     :"Emergency signs right now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\n1. Yes  2. No  3. Not sure\n0. Back");
+     ?"Dharura sasa: shida kali ya kupumua, maumivu ya kifua, kuzimia, degedege, damu nyingi au maumivu makali?\\n1. Ndiyo  2. Hapana  3. Sina uhakika\\n0. Rudi"
+     :"Emergency signs right now: severe breathing trouble, chest pain, fainting, seizure, heavy bleeding or severe pain?\\n1. Yes  2. No  3. Not sure\\n0. Back");
    }
    if(flow.length===6){
     if(!["1","2","3"].includes(flow[5]))return reply(res,flow[1]==="2"?"Chagua 1, 2 au 3.\n0. Rudi":"Choose 1, 2 or 3.\n0. Back");
