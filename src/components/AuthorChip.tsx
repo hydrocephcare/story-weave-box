@@ -22,7 +22,8 @@ export default function AuthorChip({ storyId, content, tags }: { storyId: string
   const verified = isVerifiedStory(tags);
   const uni = uniFromTags(tags);
   const initial = (author.name.replace(/^an?\s+/i, "").trim()[0] || "?").toUpperCase();
-  const displayName = author.name.replace(/\b[a-z]/g, (letter) => letter.toUpperCase());\n  const first = displayName.split(" ")[0];
+  const displayName = author.name.replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
+  const first = displayName.split(" ")[0];
   const go = () => document.getElementById("about-author")?.scrollIntoView({ behavior: "smooth", block: "start" });
   return (
     <div className="mt-4 flex items-center gap-3">
