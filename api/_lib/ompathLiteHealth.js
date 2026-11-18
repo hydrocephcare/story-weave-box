@@ -17,12 +17,13 @@ function normalizePhone(value) {
 }
 
 async function db(path, options = {}) {
+  const { timeoutMs = 6000, ...fetchOptions } = options;
   const base = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!base || !key) throw new Error("Health encounter storage is not configured.");
   const response = await fetch(`${base.replace(/\/$/, "")}/rest/v1/${path}`, {
-    ...options,
-    signal: options.signal || AbortSignal.timeout(6000),
+    ...fetchOptions,
+    signal: fetchOptions.signal || AbortSignal.timeout(timeoutMs),
     headers: {
       apikey: key,
       Authorization: `Bearer ${key}`,
@@ -71,6 +72,7 @@ export async function createHealthEncounter({
   // Repeated USSD callbacks must never reset an encounter or its consent.
   const existing = await db(
     `lite_health_encounters?select=id,session_id,phone_number,consent_given,status,assessment,expires_at&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
+    { timeoutMs: 3500 },
   );
   if (existing[0]) {
     if (existing[0].phone_number !== phone_number || existing[0].consent_given !== true) {
@@ -93,6 +95,7 @@ export async function createHealthEncounter({
     // A concurrent callback may have inserted first; read it, never upsert.
     const raced = await db(
       `lite_health_encounters?select=id,session_id,phone_number,consent_given,status,assessment,expires_at&session_id=eq.${encodeURIComponent(session_id)}&limit=1`,
+    { timeoutMs: 3500 },
     );
     if (raced[0]?.phone_number === phone_number && raced[0]?.consent_given === true && Date.parse(raced[0].expires_at) > Date.now()) return raced[0];
     throw new Error("We could not securely start this health enquiry.");
