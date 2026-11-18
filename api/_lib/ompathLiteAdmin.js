@@ -37,11 +37,36 @@ export default async function liteAdmin(req,res) {
    const candidates=await request("articles?select=id,title,slug,content_type,verification_status,published,requires_review,deleted_at,updated_at&content_type="+encodeURIComponent(articleFilter)+"&deleted_at=is.null&order=updated_at.desc&limit=100",serviceKey);
    const approvals=await request("lite_patient_guide_approvals?select=article_id,status,patient_language,audience,reviewer_name,reviewer_qualification,registration_body,registration_number,reviewed_at,review_due_at,review_notes,article_updated_at_snapshot",serviceKey);
    const stats={encounters:healthEncounters.length,emergency:healthEncounters.filter(x=>x.urgency_level==="emergency").length,urgent:healthEncounters.filter(x=>x.urgency_level==="urgent").length,awaiting:healthEncounters.filter(x=>["intake_started","awaiting_clarification","guide_pending"].includes(x.status)).length,completed:healthEncounters.filter(x=>x.status==="complete").length};
-   return json(res,200,{healthEncounters,stats,guideCandidates:candidates,guideApprovals:approvals});
+   const smsSettings=await request("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1",serviceKey).catch(()=>[]);
+   const ready=(value)=>Boolean(value&&String(value).trim());
+   const operations={
+    ussd:{callbackSecret:ready(process.env.USSD_CALLBACK_SECRET),callbackPath:"/api/ompath-lite",networkProvider:"Africa's Talking",mode:"callback-driven"},
+    sms:{databaseSettings:Boolean(smsSettings[0]),enabled:smsSettings[0]?.enabled===true,environment:smsSettings[0]?.environment||"not configured",providerUsername:ready(process.env.AT_LIVE_USERNAME),providerApiKey:ready(process.env.AT_LIVE_API_KEY),senderId:ready(smsSettings[0]?.sender_id||process.env.AT_SENDER_ID),inboundSecret:ready(process.env.AT_INBOUND_SECRET),cronSecret:ready(process.env.CRON_SECRET)},
+    ai:{enabled:process.env.LITE_AI_INTERPRETATION_ENABLED==="true",groqConfigured:ready(process.env.GROQ_API_KEY||process.env.GROQ_API_KEYS),geminiConfigured:ready(process.env.GEMINI_API_KEY||process.env.GEMINI_API_KEYS),backgroundExecution:"waitUntil"},
+    storage:{supabaseUrl:ready(process.env.SUPABASE_URL),serviceRoleKey:ready(process.env.SUPABASE_SERVICE_ROLE_KEY),adminAuth:"Supabase session + admin role"},
+    safety:{liveSmsSentByDiagnostics:false,ussdTestUsesLiveNetwork:false,aiAffectsTriage:false}
+   };
+   return json(res,200,{healthEncounters,stats,guideCandidates:candidates,guideApprovals:approvals,operations});
   }
   if(req.method!=="POST")return json(res,405,{error:"Method not allowed."});
   const body=req.body&&typeof req.body==="object"?req.body:{};
-  const articleId=clean(body.article_id,36),action=clean(body.action,20);
+  const action=clean(body.action,40);
+  if(action==="ussd_menu_test"){
+   const {default:ussdHandler}=await import("./ompathLite.js");
+   const testResponse={statusCode:200,body:"",headers:{},status(code){this.statusCode=code;return this;},setHeader(name,value){this.headers[name]=value;},send(value){this.body=value;return this;}};
+   await ussdHandler({method:"POST",body:{phoneNumber:"+254700000000",sessionId:"ADMIN-SIMULATION",text:""},query:{}},testResponse);
+   return json(res,200,{ok:testResponse.statusCode===200,mode:"local_simulation",response:testResponse.body,liveNetwork:false});
+  }
+  if(action==="sms_readiness_test"){
+   const rows=await request("lite_sms_settings?select=enabled,environment,sender_id&id=eq.1&limit=1",serviceKey).catch(()=>[]);
+   const settings=rows[0]||null;
+   return json(res,200,{ok:Boolean(settings&&settings.enabled===true&&settings.environment==="production"&&process.env.AT_LIVE_USERNAME&&process.env.AT_LIVE_API_KEY),mode:"readiness_only",liveSmsSent:false,settings:settings?{enabled:settings.enabled,environment:settings.environment,sender_id_configured:Boolean(settings.sender_id||process.env.AT_SENDER_ID)}:null,credentials:{usernameConfigured:Boolean(process.env.AT_LIVE_USERNAME),apiKeyConfigured:Boolean(process.env.AT_LIVE_API_KEY)}});
+  }
+  if(action==="ai_readiness_test"){
+   const provider=process.env.GROQ_API_KEY||process.env.GROQ_API_KEYS?"Groq":process.env.GEMINI_API_KEY||process.env.GEMINI_API_KEYS?"Gemini":"none";
+   return json(res,200,{ok:provider!=="none",enabled:process.env.LITE_AI_INTERPRETATION_ENABLED==="true",provider,mode:"configuration_check_only",modelRequestSent:false});
+  }
+  const articleId=clean(body.article_id,36);
   if(!/^[0-9a-f-]{36}$/i.test(articleId)||!["approve","reject","suspend","pending"].includes(action))return json(res,400,{error:"Invalid article or review action."});
   const articleRows=await request("articles?select=id,title,slug,content_type,verification_status,published,requires_review,deleted_at,updated_at&id=eq."+articleId+"&limit=1",serviceKey);
   const article=articleRows[0];
