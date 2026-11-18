@@ -41,7 +41,8 @@ function stubEncounterStorage() {
       return new Response(JSON.stringify([row]), { status: 200 });
     }
     if (address.includes("/rest/v1/lite_health_encounters?") && !options.method) {
-      if (address.includes("session_id=eq.")) return new Response(JSON.stringify(row ? [row] : []), { status: 200 });
+      if (address.includes("session_id=eq.")) return new Response(JSON.stringify(row && address.includes(encodeURIComponent(row.session_id)) ? [row] : []), { status: 200 });
+      if (address.includes("phone_number=eq.")) return new Response(JSON.stringify(row && row.phone_number === "+254712345678" && ["intake_started","awaiting_clarification"].includes(row.status) ? [row] : []), { status: 200 });
       return new Response("[]", { status: 200 });
     }
     throw new Error("Unexpected health storage request in test");
@@ -49,10 +50,10 @@ function stubEncounterStorage() {
   return () => row;
 }
 
-async function sendUssd(text, res = responseSink()) {
+async function sendUssd(text, res = responseSink(), sessionId = "ATUid_test123") {
   await ompathLite({
     method: "POST",
-    body: { phoneNumber: "+254712345678", sessionId: "ATUid_test123", text },
+    body: { phoneNumber: "+254712345678", sessionId, text },
   }, res);
   return res;
 }
@@ -92,6 +93,33 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     expect(getRow().status).toBe("complete");
     expect(getRow().assessment.status).toBe("not_a_diagnosis");
     expect(getRow().clarification_answers).toHaveLength(5);
+  });
+
+
+  it("resumes an unfinished enquiry under a new carrier session after disconnect", async () => {
+    const getRow = stubEncounterStorage();
+    const prefix = "1*1*1*1*3*Lower abdominal pain since yesterday";
+    const oldSession = "ATUid_old123";
+    const newSession = "ATUid_resume123";
+    await sendUssd("1", responseSink(), oldSession);
+    await sendUssd("1*1", responseSink(), oldSession);
+    await sendUssd("1*1*1", responseSink(), oldSession);
+    await sendUssd("1*1*1*1", responseSink(), oldSession);
+    await sendUssd("1*1*1*1*3", responseSink(), oldSession);
+    await sendUssd(prefix, responseSink(), oldSession);
+    await sendUssd(prefix + "*2", responseSink(), oldSession);
+    await sendUssd(prefix + "*2*2", responseSink(), oldSession);
+
+    expect(getRow().clarification_answers).toHaveLength(1);
+    const recoveryMenu = await sendUssd("1", responseSink(), newSession);
+    expect(recoveryMenu.body).toContain("Resume previous enquiry");
+    const restored = await sendUssd("1*2", responseSink(), newSession);
+    expect(restored.body).toContain("Your previous enquiry has been restored");
+    expect(restored.body).toContain("Could you be pregnant?");
+    const next = await sendUssd("1*2*3", responseSink(), newSession);
+    expect(next.body).toContain("Fever or repeated vomiting?");
+    expect(getRow().session_id).toBe(newSession);
+    expect(getRow().clarification_answers).toHaveLength(2);
   });
 
   it("records explicit consent when the caller chooses a patient-guide SMS", async () => {
