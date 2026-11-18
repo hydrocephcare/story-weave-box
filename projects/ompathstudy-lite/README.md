@@ -19,6 +19,7 @@ OmpathStudy Lite is a focused, low-bandwidth health-support experience at `https
 - Emergency and urgent cases receive immediate care-seeking guidance.
 - Only reviewed, published patient-facing information may be linked as supporting reading.
 - The admin dashboard exposes de-identified operational activity only.
+- The USSD assessment offers a separate, optional SMS consent step after a non-emergency preliminary assessment; declining it never blocks the result.
 
 ## USSD experience
 
@@ -28,6 +29,7 @@ OmpathStudy Lite is a focused, low-bandwidth health-support experience at `https
 - Emergency screening interrupts routine clarification.
 - Invalid choices are re-prompted; back navigation preserves the current flow.
 - The USSD channel uses the caller number for session matching. The web channel does not store a phone number.
+- Patient-guide SMS is queued only after an explicit USSD opt-in. Delivery requires the production SMS setting and separate live Africa's Talking credentials; sandbox mode does not send live messages.
 
 ## Clinical and safety boundary
 
@@ -58,4 +60,4 @@ The service-role key must never be exposed in browser code. The health encounter
 
 The Lite CI workflow runs the clinical rules, adaptive question flow, health persistence, USSD formatting, web API and end-to-end USSD tests, followed by the frontend/Pages build.
 
-Before enabling any live SMS delivery, separately verify provider credentials, explicit consent, delivery logs and opt-out handling. The Lite public UI currently states that it does not send SMS.
+Before enabling live SMS delivery, separately verify production provider credentials, explicit consent, delivery logs and opt-out handling. The database SMS setting remains disabled in sandbox until an administrator explicitly enables production.
