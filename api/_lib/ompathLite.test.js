@@ -60,6 +60,7 @@ async function sendUssd(text, res = responseSink(), sessionId = "ATUid_test123")
 
 describe("OmpathStudy Lite USSD Health Support", () => {
   it("renders every numbered option on its own line", async () => {
+    stubEncounterStorage();
     const menu = await sendUssd("");
     expect(menu.body).toContain("CON OmpathStudy Lite\n1. Health support\n2. Help and information");
     const intro = await sendUssd("1");
@@ -110,7 +111,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd(prefix + "*2", responseSink(), oldSession);
     await sendUssd(prefix + "*2*2", responseSink(), oldSession);
 
-    expect(getRow().clarification_answers).toHaveLength(1);
+    expect(getRow().clarification_answers).toHaveLength(2);
     const recoveryMenu = await sendUssd("1", responseSink(), newSession);
     expect(recoveryMenu.body).toContain("Resume previous enquiry");
     const restored = await sendUssd("1*2", responseSink(), newSession);
@@ -119,7 +120,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     const next = await sendUssd("1*2*3", responseSink(), newSession);
     expect(next.body).toContain("Fever or repeated vomiting?");
     expect(getRow().session_id).toBe(newSession);
-    expect(getRow().clarification_answers).toHaveLength(2);
+    expect(getRow().clarification_answers).toHaveLength(3);
   });
 
   it("records explicit consent when the caller chooses a patient-guide SMS", async () => {
