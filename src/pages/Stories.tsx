@@ -11,7 +11,7 @@ import { INVITE_TEXT, INVITE_URL, shareOut, isGeneratedThumb } from "@/lib/story
 import { MessageCircle } from "lucide-react";
 import { Pencil } from "lucide-react";
 import FinalistBadge from "@/components/FinalistBadge";
-import { authorFromContent, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
+import { authorFromTags, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 import { readSaved } from "@/lib/storyExtras";
 import { Bookmark } from "lucide-react";
 
@@ -25,7 +25,6 @@ interface Story {
   meta_description?: string | null;
   reading_time_minutes?: number | null;
   tags?: string[] | null;
-  content?: string | null;
 }
 
 const formatDate = (iso: string) => new Date(iso).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
@@ -53,7 +52,7 @@ function Cover({ story, className }: { story: Story; className: string }) {
 }
 
 function AuthorLine({ story }: { story: Story }) {
-  const author = authorFromContent(story.content || "");
+  const author = authorFromTags(story.tags);
   if (!author) {
     const y = yearOf(story);
     return y > 0 ? <p className="mt-2 text-[11px] font-medium text-muted-foreground">{y === 7 ? "Finalist" : y === 8 ? "Another course" : `Year ${y}`}</p> : null;
@@ -140,7 +139,7 @@ export default function Stories() {
 
   const load = useCallback(() => {
     supabase.from("stories")
-      .select("id,title,slug,category,created_at,cover_image_url,meta_description,reading_time_minutes,tags,content")
+      .select("id,title,slug,category,created_at,cover_image_url,meta_description,reading_time_minutes,tags")
       .eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(300)
       .then(({ data }) => { setStories((data ?? []) as unknown as Story[]); setLoading(false); });
   }, []);
