@@ -133,12 +133,12 @@ async function ussd(req,res){
      const assessment=buildPreliminaryAssessment({encounter,answers:allAnswers,emergencyFlags:encounter.red_flag_results||[]});
      await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:allAnswers,assessment,urgency_level:assessment.urgency_level,status:assessment.urgency_level==="emergency"||assessment.urgency_level==="urgent"?"referred_urgent":"complete"}});
      const prompt=encounter.preferred_language==="sw"?"Pokea mwongozo wa afya kwa SMS?\n1. Ndiyo\n2. Hapana":"Receive a health guide by SMS?\n1. Yes\n2. No";
-     return reply(assessmentReply(assessment,encounter.preferred_language)+"\n"+prompt);
+     return reply(res,assessmentReply(assessment,encounter.preferred_language)+"\n"+prompt);
     }
     await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{clarification_answers:allAnswers,status:"awaiting_clarification"}});
     const current=questions[1+allAnswers.length];
     if(!current)return reply(res,"Your answers have been saved. Please seek an in-person assessment.",true);
-    return reply(languagePrompt(encounter.preferred_language,current)+"\n"+resumeOptions(current,encounter.preferred_language)+"\n0. Back");
+    return reply(res,languagePrompt(encounter.preferred_language,current)+"\n"+resumeOptions(current,encounter.preferred_language)+"\n0. Back");
    }
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
