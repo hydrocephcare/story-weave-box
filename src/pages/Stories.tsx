@@ -70,7 +70,7 @@ function AuthorLine({ story }: { story: Story }) {
       </span>
       <span className="min-w-0">
         <span className="block truncate text-xs font-semibold text-foreground">{author.name}</span>
-        <span className="block truncate text-[10px] text-muted-foreground">{author.level}{uni ? ` · ${uni}` : ""}</span>
+        <span className="block truncate text-[10px] text-muted-foreground">{author.level || "Contributor"}{uni ? ` · ${uni}` : ""}</span>
       </span>
     </div>
   );
