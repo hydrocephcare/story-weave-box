@@ -25,6 +25,7 @@ function stubEncounterStorage({ aiResponse = null } = {}) {
   vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "server-only-test-key");
   vi.stubGlobal("fetch", vi.fn(async (url, options = {}) => {
     const address = String(url);
+    if (address.includes("/rest/v1/lite_operations_settings")) return new Response(JSON.stringify([{ ussd_enabled: true, ai_enabled: true, ai_daily_limit: 100 }]), { status: 200 });
     if (address.includes("api.groq.com") && aiResponse) {
       const body = JSON.parse(options.body);
       expect(body.messages[1].content).not.toContain("+254712345678");
