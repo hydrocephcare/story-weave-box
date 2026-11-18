@@ -50,10 +50,11 @@ function stubEncounterStorage() {
   return () => row;
 }
 
-async function sendUssd(text, res = responseSink(), sessionId = "ATUid_test123") {
+async function sendUssd(text, res = responseSink(), sessionId = "ATUid_test123", callbackKey = "") {
   await ompathLite({
     method: "POST",
     body: { phoneNumber: "+254712345678", sessionId, text },
+    query: callbackKey ? { key: callbackKey } : {},
   }, res);
   return res;
 }
@@ -99,9 +100,11 @@ describe("OmpathStudy Lite USSD Health Support", () => {
 
   it("resumes an unfinished enquiry under a new carrier session after disconnect", async () => {
     const getRow = stubEncounterStorage();
+    vi.stubEnv("USSD_CALLBACK_SECRET", "test-callback-secret");
     const prefix = "1*1*1*1*3*Lower abdominal pain since yesterday";
     const oldSession = "ATUid_old123";
     const newSession = "ATUid_resume123";
+    const callbackKey = "test-callback-secret";
     await sendUssd("1", responseSink(), oldSession);
     await sendUssd("1*1", responseSink(), oldSession);
     await sendUssd("1*1*1", responseSink(), oldSession);
@@ -112,12 +115,12 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     await sendUssd(prefix + "*2*2", responseSink(), oldSession);
 
     expect(getRow().clarification_answers).toHaveLength(2);
-    const recoveryMenu = await sendUssd("1", responseSink(), newSession);
+    const recoveryMenu = await sendUssd("1", responseSink(), newSession, callbackKey);
     expect(recoveryMenu.body).toContain("Resume previous enquiry");
-    const restored = await sendUssd("1*2", responseSink(), newSession);
+    const restored = await sendUssd("1*2", responseSink(), newSession, callbackKey);
     expect(restored.body).toContain("Your previous enquiry has been restored");
     expect(restored.body).toContain("Could you be pregnant?");
-    const next = await sendUssd("1*2*3", responseSink(), newSession);
+    const next = await sendUssd("1*2*3", responseSink(), newSession, callbackKey);
     expect(next.body).toContain("Fever or repeated vomiting?");
     expect(getRow().session_id).toBe(newSession);
     expect(getRow().clarification_answers).toHaveLength(3);
