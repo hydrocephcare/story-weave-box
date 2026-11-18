@@ -41,7 +41,7 @@ export default async function liteAdmin(req,res) {
    const ready=(value)=>Boolean(value&&String(value).trim());
    const operations={
     ussd:{callbackSecret:ready(process.env.USSD_CALLBACK_SECRET),callbackPath:"/api/ompath-lite",networkProvider:"Africa's Talking",mode:"callback-driven"},
-    sms:{databaseSettings:Boolean(smsSettings[0]),enabled:smsSettings[0]?.enabled===true,environment:smsSettings[0]?.environment||"not configured",providerUsername:ready(process.env.AT_LIVE_USERNAME),providerApiKey:ready(process.env.AT_LIVE_API_KEY),senderId:ready(smsSettings[0]?.sender_id||process.env.AT_SENDER_ID),inboundSecret:ready(process.env.AT_INBOUND_SECRET),cronSecret:ready(process.env.CRON_SECRET)},
+    sms:{databaseSettings:Boolean(smsSettings[0]),enabled:smsSettings[0]?.enabled===true,environment:smsSettings[0]?.environment||"not configured",providerUsername:ready(process.env.AT_LIVE_USERNAME),providerApiKey:ready(process.env.AT_LIVE_API_KEY),senderId:ready(smsSettings[0]?.sender_id||process.env.AT_SENDER_ID),senderIdValue:smsSettings[0]?.sender_id||process.env.AT_SENDER_ID||"",inboundSecret:ready(process.env.AT_INBOUND_SECRET),cronSecret:ready(process.env.CRON_SECRET)},
     ai:{enabled:process.env.LITE_AI_INTERPRETATION_ENABLED==="true",groqConfigured:ready(process.env.GROQ_API_KEY||process.env.GROQ_API_KEYS),geminiConfigured:ready(process.env.GEMINI_API_KEY||process.env.GEMINI_API_KEYS),backgroundExecution:"waitUntil"},
     storage:{supabaseUrl:ready(process.env.SUPABASE_URL),serviceRoleKey:ready(process.env.SUPABASE_SERVICE_ROLE_KEY),adminAuth:"Supabase session + admin role"},
     safety:{liveSmsSentByDiagnostics:false,ussdTestUsesLiveNetwork:false,aiAffectsTriage:false}
@@ -51,6 +51,14 @@ export default async function liteAdmin(req,res) {
   if(req.method!=="POST")return json(res,405,{error:"Method not allowed."});
   const body=req.body&&typeof req.body==="object"?req.body:{};
   const action=clean(body.action,40);
+  if(action==="sms_settings_update"){
+   const enabled=body.enabled===true;
+   const environment=body.environment==="production"?"production":"sandbox";
+   const sender_id=clean(body.sender_id,32)||null;
+   if(enabled&&environment==="production"&&(!process.env.AT_LIVE_USERNAME||!process.env.AT_LIVE_API_KEY))return json(res,409,{error:"Live SMS cannot be enabled until the Africa's Talking live username and API key are configured as server secrets."});
+   await request("lite_sms_settings?on_conflict=id",serviceKey,{method:"POST",body:JSON.stringify({id:1,enabled,environment,sender_id}),headers:{"Prefer":"resolution=merge-duplicates,return=representation"}});
+   return json(res,200,{ok:true,settings:{enabled,environment,sender_id},note:"SMS settings saved. No message was sent."});
+  }
   if(action==="ussd_menu_test"){
    const {default:ussdHandler}=await import("./ompathLite.js");
    const testResponse={statusCode:200,body:"",headers:{},status(code){this.statusCode=code;return this;},setHeader(name,value){this.headers[name]=value;},send(value){this.body=value;return this;}};
