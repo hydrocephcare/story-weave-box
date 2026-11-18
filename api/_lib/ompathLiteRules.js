@@ -69,6 +69,9 @@ export function buildPreliminaryAssessment({ encounter, answers = [], emergencyF
   } else if (answerFor("emergency_screen") === "3") {
     urgency = "urgent";
     reasons.push("The emergency screening answer was uncertain; urgent in-person assessment is the safer next step.");
+  } else if (category === "Bleeding" && positive("faintness")) {
+    urgency = "emergency";
+    reasons.push("Faintness or near-collapse with bleeding may indicate significant blood loss or circulatory compromise.");
   } else if (
     category === "Pregnancy-related concern" &&
     (positive("pregnancy_bleeding_or_fluid") || positive("pregnancy_movement")) &&
