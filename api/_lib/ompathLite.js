@@ -121,8 +121,9 @@ async function ussd(req,res){
     const questions=resumeQuestions(encounter.concern_category||"Other health concern",encounter.preferred_language,base);
     const submitted=flow.slice(1);
     const questionCount=questions.length-1;
-    if(submitted.length>questionCount){
-     const choice=submitted[questionCount];
+    const remainingQuestions=Math.max(0,questionCount-base.length);
+    if(submitted.length>remainingQuestions){
+     const choice=submitted[remainingQuestions];
      if(!["1","2"].includes(choice))return reply(res,encounter.preferred_language==="sw"?"Pokea mwongozo wa afya kwa SMS?\\n1. Ndiyo\\n2. Hapana\\n0. Rudi":"Receive a health guide by SMS?\\n1. Yes\\n2. No\\n0. Back");
      if(choice==="1")await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:true,status:"guide_pending"}});
      else await updateHealthEncounter({id:encounter.id,sessionId:session,phoneNumber:phone,patch:{sms_consent:false,status:encounter.urgency_level==="urgent"?"referred_urgent":"complete"}});
