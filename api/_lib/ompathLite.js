@@ -110,7 +110,7 @@ async function ussd(req,res){
     const questions=resumeQuestions(resumed.concern_category||"Other health concern",resumed.preferred_language,base);
     const current=questions[1+base.length];
     if(!current)return reply(res,"Your previous answers are saved. Please seek care if symptoms are worsening.",true);
-    return reply(resumed.preferred_language==="sw"?"Enquiry imerejeshwa. Jibu swali lililobaki:\n"+current.sw+"\n"+resumeOptions(current,"sw")+"\n0. Rudi":"Your previous enquiry has been restored. Continue with this question:\n"+current.en+"\n"+resumeOptions(current,"en")+"\n0. Back");
+    return reply(res,resumed.preferred_language==="sw"?"Enquiry imerejeshwa. Jibu swali lililobaki:\n"+current.sw+"\n"+resumeOptions(current,"sw")+"\n0. Rudi":"Your previous enquiry has been restored. Continue with this question:\n"+current.en+"\n"+resumeOptions(current,"en")+"\n0. Back");
    }
    if(flow[0]==="2" && flow.length>=2){
     if(!trustedResumeCallback(req))return reply(res,"Session recovery is not enabled on this callback. Please start a new enquiry.",true);
