@@ -176,9 +176,9 @@ async function ussd(req,res){
       {id:"fever_vomiting",en:"Fever or repeated vomiting?",sw:"Homa au kutapika mara kwa mara?"},
       {id:"severity",en:"Is the pain severe or worsening?",sw:"Maumivu ni makali au yanaongezeka?"}
      ]:category==="Bleeding"?[
-      {id:"bleeding_amount",en:"Heavy bleeding (pad/hour) or faint?",sw:"Damu nyingi (pedi kwa saa) au kuzimia?"},
+      {id:"bleeding_amount",en:"Heavy bleeding (soaking a pad each hour)?",sw:"Damu nyingi (kulowanisha pedi moja kwa saa)?"},
       {id:"pregnancy_possibility",en:"Pregnant or recently gave birth?",sw:"Mjamzito au umejifungua hivi karibuni?"},
-      {id:"duration",en:"When did bleeding start?",sw:"Damu ilianza lini?"},
+      {id:"faintness",en:"Have you felt faint or nearly passed out?",sw:"Umehisi kuzimia au karibu kupoteza fahamu?"},
       {id:"pain",en:"Severe abdominal or pelvic pain?",sw:"Maumivu makali ya tumbo au nyonga?"}
      ]:[
       {id:"duration",en:"How long has this been happening?",sw:"Tatizo limekuwepo kwa muda gani?"},
