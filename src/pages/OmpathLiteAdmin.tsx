@@ -6,7 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 type Encounter = { id:string; concern_category:string|null; status:string; urgency_level:string; channel:string; created_at:string; updated_at:string };
 type Candidate = { id:string; title:string; slug:string|null; content_type:string|null; verification_status:string; updated_at:string };
 type Approval = { article_id:string; status:string; reviewer_name:string|null; review_due_at:string|null; article_updated_at_snapshot:string|null };
-type Operations = { ussd:{callbackSecret:boolean;callbackPath:string;networkProvider:string;mode:string}; sms:{databaseSettings:boolean;enabled:boolean;environment:string;providerUsername:boolean;providerApiKey:boolean;senderId:boolean;inboundSecret:boolean;cronSecret:boolean}; ai:{enabled:boolean;groqConfigured:boolean;geminiConfigured:boolean;backgroundExecution:string}; storage:{supabaseUrl:boolean;serviceRoleKey:boolean;adminAuth:string}; safety:{liveSmsSentByDiagnostics:boolean;ussdTestUsesLiveNetwork:boolean;aiAffectsTriage:boolean} };
+type Operations = { ussd:{callbackSecret:boolean;callbackPath:string;networkProvider:string;mode:string}; sms:{databaseSettings:boolean;enabled:boolean;environment:string;providerUsername:boolean;providerApiKey:boolean;senderId:boolean;senderIdValue:string;inboundSecret:boolean;cronSecret:boolean}; ai:{enabled:boolean;groqConfigured:boolean;geminiConfigured:boolean;backgroundExecution:string}; storage:{supabaseUrl:boolean;serviceRoleKey:boolean;adminAuth:string}; safety:{liveSmsSentByDiagnostics:boolean;ussdTestUsesLiveNetwork:boolean;aiAffectsTriage:boolean} };
 type Data = { healthEncounters:Encounter[]; stats:{encounters:number;emergency:number;urgent:number;awaiting:number;completed:number}; guideCandidates:Candidate[]; guideApprovals:Approval[]; operations:Operations };
 type TestResult = { ok:boolean; mode:string; response?:string; liveSmsSent?:boolean; provider?:string; enabled?:boolean; modelRequestSent?:boolean; error?:string };
 
@@ -16,6 +16,7 @@ export default function OmpathLiteAdmin() {
  const [reviewerName,setReviewerName]=useState(""),[qualification,setQualification]=useState(""),[registrationBody,setRegistrationBody]=useState(""),[registrationNumber,setRegistrationNumber]=useState("");
  const [reviewDays,setReviewDays]=useState("180"),[language,setLanguage]=useState("en"),[audience,setAudience]=useState("general"),[attested,setAttested]=useState(false),[saving,setSaving]=useState("");
  const [testResult,setTestResult]=useState<TestResult|null>(null),[testing,setTesting]=useState("");
+ const [smsEnabled,setSmsEnabled]=useState(false),[smsEnvironment,setSmsEnvironment]=useState("sandbox"),[smsSenderId,setSmsSenderId]=useState("");
  const refresh=useCallback(async()=>{
   setLoading(true);setError("");
   try{
@@ -25,6 +26,14 @@ export default function OmpathLiteAdmin() {
   }catch(reason){setError(reason instanceof Error?reason.message:"Could not load Health Support data.");}finally{setLoading(false);}
  },[session?.access_token]);
  useEffect(()=>{void refresh();},[refresh]);
+ useEffect(()=>{if(data?.operations){setSmsEnabled(data.operations.sms.enabled);setSmsEnvironment(data.operations.sms.environment==="production"?"production":"sandbox");setSmsSenderId(data.operations.sms.senderIdValue||"");}},[data]);
+ const saveSmsSettings=async()=>{
+  setTesting("sms_settings_update");setError("");setNotice("");
+  try{
+   const response=await fetch("/api/ompath-lite-admin",{method:"POST",headers:{Authorization:"Bearer "+session?.access_token,"Content-Type":"application/json"},body:JSON.stringify({action:"sms_settings_update",enabled:smsEnabled,environment:smsEnvironment,sender_id:smsSenderId})});
+   const payload=await response.json();if(!response.ok)throw new Error(payload.error||"Could not save SMS settings.");setNotice("SMS settings saved. No SMS was sent.");await refresh();
+  }catch(reason){setError(reason instanceof Error?reason.message:"Could not save SMS settings.");}finally{setTesting("");}
+ };
  const runTest=async(action:"ussd_menu_test"|"sms_readiness_test"|"ai_readiness_test")=>{
   setTesting(action);setTestResult(null);setError("");
   try{
@@ -68,6 +77,16 @@ export default function OmpathLiteAdmin() {
      ].map(group=><div key={group.title} className="rounded-xl border border-border p-4">
       <h3 className="text-sm font-semibold">{group.title}</h3><div className="mt-3 space-y-2">{group.items.map(([label,ok])=><div key={label} className="flex items-center justify-between gap-2 text-xs"><span className="text-muted-foreground">{label}</span><span className={ok?"font-semibold text-emerald-700":"font-semibold text-amber-700"}>{ok?"Configured":"Missing"}</span></div>)}</div><p className="mt-3 border-t border-border pt-3 text-[11px] text-muted-foreground">{group.detail}</p>
      </div>)}
+    </div>
+    <div className="border-t border-border p-4">
+     <h3 className="text-sm font-semibold">SMS delivery settings</h3><p className="mt-1 text-xs text-muted-foreground">Manage the patient-guide SMS queue, sandbox/production mode and sender ID. Provider credentials remain protected server secrets.</p>
+     <div className="mt-3 grid gap-3 md:grid-cols-3">
+      <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={smsEnabled} onChange={e=>setSmsEnabled(e.target.checked)}/> Enable patient-guide SMS queue</label>
+      <label className="text-sm">Environment<select value={smsEnvironment} onChange={e=>setSmsEnvironment(e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2"><option value="sandbox">Sandbox / disabled delivery</option><option value="production">Production</option></select></label>
+      <label className="text-sm">Sender ID<input value={smsSenderId} onChange={e=>setSmsSenderId(e.target.value)} maxLength={32} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2" placeholder="Optional sender ID"/></label>
+     </div>
+     <button disabled={!!testing} onClick={()=>void saveSmsSettings()} className="mt-3 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-50">{testing==="sms_settings_update"?"Saving…":"Save SMS settings"}</button>
+     <p className="mt-2 text-[11px] text-muted-foreground">Production delivery requires explicit patient consent and valid live provider credentials. Saving settings does not send a test message.</p>
     </div>
     <div className="border-t border-border p-4"><h3 className="text-sm font-semibold">Safe test centre</h3><p className="mt-1 text-xs text-muted-foreground">These checks do not contact a mobile network, send an SMS, or make an AI model request.</p>
      <div className="mt-3 flex flex-wrap gap-2">
