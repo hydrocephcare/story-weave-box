@@ -74,7 +74,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
 
   it("completes the lower abdominal pain pathway and returns a preliminary impression", async () => {
     const getRow = stubEncounterStorage();
-    const prefix = "1*1*1*1*3*Lower abdominal pain since yesterday";
+    const prefix = "1*1*1*1*3*Tumbo inaniuma chini tangu jana";
     await sendUssd("1");
     await sendUssd("1*1");
     await sendUssd("1*1*1");
@@ -95,6 +95,7 @@ describe("OmpathStudy Lite USSD Health Support", () => {
     expect(final.body).toContain("END Assessment saved. No SMS will be sent.");
     expect(getRow().status).toBe("complete");
     expect(getRow().assessment.status).toBe("not_a_diagnosis");
+    expect(getRow().normalized_summary).toContain("lower abdominal or pelvic pain");
     expect(getRow().clarification_answers).toHaveLength(5);
   });
 
