@@ -7,7 +7,7 @@ import { shortUssdText } from "./ompathLiteUssdFormat.js";
 const mainMenu = "OmpathStudy Lite\n1. Health support\n2. Help and information";
 const clean = (v,n=180)=>String(v??"").replace(/<br\s*\/?>/gi," ").replace(/<\/(?:p|div|li|h[1-6])\s*>/gi," ").replace(/<[^>]*>/g," ").replace(/&nbsp;/gi," ").replace(/&amp;/gi,"&").replace(/&quot;/gi,'"').replace(/&#39;/gi,"'").replace(/\s+/g," ").trim().slice(0,n);
 const shortText=(value,max)=>shortUssdText(clean(value,2000),max);
-const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
+const reply = (res,message,end=false)=>{res.setHeader("Content-Type","text/plain; charset=utf-8");res.setHeader("Cache-Control","private, no-store");res.setHeader("Pragma","no-cache");return res.status(200).send(`${end?"END":"CON"} ${message}`);};
 function languagePrompt(language,q){return language==="sw"?q.sw:q.en;}
 function assessmentReply(assessment, language) {
  const impression=assessment?.provisional_diagnosis||"Cause not yet clear; clinical assessment is needed.";
