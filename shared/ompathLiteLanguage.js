@@ -39,7 +39,13 @@ const phraseGroups = [
 const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const hasPhrase = (text, phrase) => {
   const escaped = escapeRegex(phrase.toLocaleLowerCase("en"));
-  return new RegExp("(^|\\b)" + escaped + "($|\\b)", "i").test(text);
+  const match = new RegExp("(^|\\b)" + escaped + "($|\\b)", "i").exec(text);
+  return match ? match.index + match[1].length : -1;
+};
+
+const isNegated = (text, index) => {
+  const before = text.slice(Math.max(0, index - 48), index);
+  return /\\b(?:no|not|without|denies|don't have|do not have|doesn't have|does not have|sina|hakuna|sio)\\s+(?:[\\p{L}]+\\s+){0,2}$/iu.test(before);
 };
 
 /**
@@ -51,18 +57,20 @@ export function interpretSymptomText(input) {
   const text = normalise(original);
   if (!text) return { original, normalized_summary: "", symptoms: [], suggested_category: null, category_confidence: "none" };
 
-  const symptoms = phraseGroups
-    .filter((group) => group.phrases.some((phrase) => hasPhrase(text, phrase)))
-    .map(({ id, label, category }) => ({ id, label, category }));
-
-  const categories = [...new Set(symptoms.map((item) => item.category).filter(Boolean))];
+  const matches = phraseGroups.flatMap((group) => group.phrases
+    .map((phrase) => ({ group, index: hasPhrase(text, phrase) }))
+    .filter((match) => match.index >= 0)
+    .map(({ group, index }) => ({ id: group.id, label: group.label, category: group.category, negated: isNegated(text, index) })));
+  const symptoms = [...new Map(matches.map((item) => [item.id, item])).values()];
+  const positiveSymptoms = symptoms.filter((item) => !item.negated);
+  const categories = [...new Set(positiveSymptoms.map((item) => item.category).filter(Boolean))];
   const suggested_category = categories.length === 1 ? categories[0] : null;
   const category_confidence = !suggested_category ? "none"
-    : symptoms.filter((item) => item.category === suggested_category).length > 1 ? "high" : "medium";
+    : positiveSymptoms.filter((item) => item.category === suggested_category).length > 1 ? "high" : "medium";
 
   return {
     original,
-    normalized_summary: symptoms.map((item) => item.label).join("; "),
+    normalized_summary: positiveSymptoms.map((item) => item.label).join("; "),
     symptoms,
     suggested_category,
     category_confidence,
