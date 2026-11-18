@@ -78,9 +78,9 @@ function questionsFor(category: string, answers: Record<string, string>): Questi
   ];
   if (category === "Bleeding") return [
     emergency,
-    { id: "bleeding_amount", label: "Is the bleeding heavy (about one pad an hour), or have you felt faint?", options: yesNoUnsure },
+    { id: "bleeding_amount", label: "Is the bleeding heavy (soaking about one pad per hour)?", options: yesNoUnsure },
     possiblePregnancy,
-    { id: "duration", label: "When did the bleeding start?", options: duration },
+    { id: "faintness", label: "Have you felt faint or nearly passed out?", options: yesNoUnsure },
     { id: "pain", label: "Do you have severe abdominal or pelvic pain?", options: yesNoUnsure },
   ];
   if (category === "Vaginal discharge") return [
