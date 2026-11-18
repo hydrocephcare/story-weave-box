@@ -32,7 +32,7 @@ export default async function liteAdmin(req,res) {
  try {
   const {serviceKey,user}=await authenticate(req);
   if(req.method==="GET") {
-   const healthEncounters=await request("lite_health_encounters?select=id,concern_category,status,urgency_level,channel,created_at,updated_at&order=created_at.desc&limit=200",serviceKey);
+   const healthEncounters=await request("lite_health_encounters?select=id,concern_category,status,urgency_level,channel,sms_sent_at,created_at,updated_at&order=created_at.desc&limit=200",serviceKey);
    const articleFilter="in.("+PATIENT_TYPES.map(x=>'"'+x+'"').join(",")+")";
    const candidates=await request("articles?select=id,title,slug,content_type,verification_status,published,requires_review,deleted_at,updated_at&content_type="+encodeURIComponent(articleFilter)+"&deleted_at=is.null&order=updated_at.desc&limit=100",serviceKey);
    const approvals=await request("lite_patient_guide_approvals?select=article_id,status,patient_language,audience,reviewer_name,reviewer_qualification,registration_body,registration_number,reviewed_at,review_due_at,review_notes,article_updated_at_snapshot",serviceKey);
