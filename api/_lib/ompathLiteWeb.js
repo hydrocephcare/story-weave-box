@@ -45,7 +45,10 @@ export default async function liteWeb(req,res){
   if(!allowedCategories.includes(category))return send(res,400,{error:"Choose the main health concern."});
   if(payload.consent_given!==true)return send(res,400,{error:"Consent is required before health information can be stored."});
   const expected=expectedQuestionIds(category,answers);
-  if(!expected||answers.length!==expected.length||answers.some((answer,index)=>!answer||answer.question_id!==expected[index]||!["1","2","3",...(answer.question_id==="gestation"?["4"]:[])].includes(String(answer.answer))))return send(res,400,{error:"Complete the emergency screen and the correct follow-up questions for the concern selected."});
+  const validAnswer=(answer)=>Boolean(answer&&["1","2","3",...(answer.question_id==="gestation"?["4"]:[])].includes(String(answer.answer)));
+  const validSequence=Boolean(expected&&answers.length===expected.length&&answers.every((answer,index)=>answer&&answer.question_id===expected[index]&&validAnswer(answer)));
+  const emergencyShortPath=detectEmergencyLanguage(originalMessage).length>0&&answers.length===1&&answers[0]?.question_id==="emergency_screen"&&validAnswer(answers[0]);
+  if(!validSequence&&!emergencyShortPath)return send(res,400,{error:"Complete the emergency screen and the correct follow-up questions for the concern selected."});
   const emergencyFlags=detectEmergencyLanguage(originalMessage);
   if(String(answers[0].answer)==="1")emergencyFlags.push({rule:"self_reported_emergency_symptom",positive:true});
   const encounter=await createHealthEncounter({sessionId,phoneNumber:null,consentGiven:true,smsConsent:false,preferredLanguage:"en",channel:"web"});
