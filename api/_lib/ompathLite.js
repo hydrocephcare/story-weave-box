@@ -150,6 +150,10 @@ async function ussd(req,res){
     if(!current)return reply(res,"Your answers have been saved. Please seek an in-person assessment.",true);
     return reply(res,languagePrompt(encounter.preferred_language,current)+"\n"+resumeOptions(current,encounter.preferred_language)+"\n0. Back");
    }
+   if(flow.length===1 && flow[0]==="1" && trustedResumeCallback(req)){
+    const previous=await getResumableHealthEncounter(phone);
+    if(previous)await updateHealthEncounter({id:previous.id,sessionId:previous.session_id,phoneNumber:phone,patch:{status:"abandoned"}});
+   }
    if(flow.length===1){
     if(flow[0]==="2")return reply(res,"Health support cancelled. No health information was saved.",true);
     if(flow[0]!=="1")return reply(res,"Choose 1 to continue or 2 to cancel.\n0. Back");
