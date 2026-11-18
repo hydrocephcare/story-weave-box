@@ -106,7 +106,7 @@ export async function getHealthEncounter({ sessionId, phoneNumber }) {
   if (phoneNumber && !phone_number) throw new Error("A valid mobile number is required.");
   const phoneFilter = phone_number ? "&phone_number=eq." + encodeURIComponent(phone_number) : "";
   const rows = await db(
-    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
+    `lite_health_encounters?select=id,session_id,phone_number,channel,status,consent_given,preferred_language,concern_category,original_message,normalized_summary,clinical_context,clarification_answers,red_flag_results,urgency_level,assessment,guide_url,sms_consent,expires_at&session_id=eq.${encodeURIComponent(session_id)}${phoneFilter}&expires_at=gt.${encodeURIComponent(new Date().toISOString())}&limit=1`,
   );
   return rows[0] || null;
 }
@@ -126,6 +126,21 @@ export async function updateHealthEncounter({ id, sessionId, phoneNumber, patch 
   if (typeof patch.concern_category === "string") allowed.concern_category = clean(patch.concern_category, 80);
   if (typeof patch.original_message === "string") allowed.original_message = clean(patch.original_message, 1200);
   if (typeof patch.normalized_summary === "string") allowed.normalized_summary = clean(patch.normalized_summary, 1200);
+  if (patch.clinical_context && typeof patch.clinical_context === "object" && !Array.isArray(patch.clinical_context) &&
+      JSON.stringify(patch.clinical_context).length <= 5000) {
+    const context = patch.clinical_context;
+    const safeList = (items, max, size) => Array.isArray(items)
+      ? items.filter((item) => typeof item === "string").slice(0, max).map((item) => clean(item, size)).filter(Boolean)
+      : [];
+    allowed.clinical_context = {
+      detected_language: ["en", "sw", "mixed", "unknown"].includes(context.detected_language) ? context.detected_language : "unknown",
+      normalized_summary: clean(context.normalized_summary, 240),
+      explicit_facts: safeList(context.explicit_facts, 8, 120),
+      uncertainties: safeList(context.uncertainties, 6, 120),
+      follow_up_priority_ids: safeList(context.follow_up_priority_ids, 4, 60),
+      interpretation_source: "ai_assisted_unverified",
+    };
+  }
   if (typeof patch.sms_sent_at === "string" && !Number.isNaN(Date.parse(patch.sms_sent_at))) allowed.sms_sent_at = patch.sms_sent_at;
   if (Array.isArray(patch.clarification_answers) && patch.clarification_answers.length <= 5 &&
       patch.clarification_answers.every((item) => item && typeof item === "object" && !Array.isArray(item) &&
