@@ -148,4 +148,22 @@ describe("OmpathStudy Lite preliminary assessment", () => {
     expect(result.next_steps[0]).toMatch(/emergency medical care now/i);
   });
 
+  it("does not list pregnancy loss when bleeding is reported and pregnancy is denied", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Bleeding", original_message: "Unexpected bleeding" },
+      answers: [{ question_id: "pregnancy_possibility", answer: "2" }],
+    });
+    expect(result.differential_diagnoses).not.toContain("Pregnancy loss or ectopic pregnancy");
+    expect(result.differential_diagnoses).toContain("Medication-related bleeding or coagulopathy");
+  });
+
+  it("does not list pregnancy-related bleeding in menstrual differentials when pregnancy is denied", () => {
+    const result = buildPreliminaryAssessment({
+      encounter: { concern_category: "Menstrual problem", original_message: "Irregular periods" },
+      answers: [{ question_id: "pregnancy_possibility", answer: "2" }],
+    });
+    expect(result.differential_diagnoses).not.toContain("Pregnancy-related bleeding");
+    expect(result.differential_diagnoses).not.toContain("Ectopic pregnancy or miscarriage must be excluded");
+  });
+
 });
