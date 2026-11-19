@@ -276,26 +276,26 @@ export function Paywall({
   const duration = (d: number) => (d >= 365 ? "12 months" : d >= 85 ? "3 months" : d >= 28 ? `${Math.round(d / 30)} month${Math.round(d / 30) === 1 ? "" : "s"}` : d === 1 ? "1 day" : `${d} days`);
 
   return (
-    <div className={`not-prose relative overflow-hidden ${bare ? "" : "my-8 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8"}`}>
-      <div className="mx-auto max-w-lg">
+    <div className={`not-prose relative overflow-hidden ${bare ? "" : "my-6 rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6"}`}>
+      <div className="mx-auto max-w-xl space-y-4">
         <div className="text-center">
-          <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0f766e] to-[#0b2545] text-white shadow-md"><Lock className="h-5 w-5" /></span>
-          <h2 className="mt-3 font-serif text-2xl font-bold leading-snug text-foreground">
+          <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary"><Lock className="h-5 w-5" /></span>
+          <h2 className="mt-2 font-serif text-xl font-bold leading-snug text-foreground sm:text-2xl">
             {headline || `Unlock the ${label}`}
           </h2>
-          <p className="mx-auto mt-1.5 max-w-md text-sm leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-1 max-w-md text-sm leading-relaxed text-muted-foreground">
             {blurb || "Questions stay free to read. One subscription reveals every answer, with explanations and PDF handouts, across all of Ompath Study."}
           </p>
         </div>
 
-        <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-1.5 text-[13px] sm:grid-cols-2">
-          {[[Eye, "Every answer revealed"], [Check, "Explanations and study details"], [Sparkles, "Unlimited Ompath AI questions"], [ListChecks, "Quizzes of up to 50 MCQs"], [LineChart, "Review of your weak topics"], [BellRing, "Study plans and reminders"], [Download, "Watermarked PDF handouts"], [Mail, "Follows your email, any device"]].map(([Icon, text]) => {
+        <ul className="grid grid-cols-2 gap-2 text-xs sm:grid-cols-4">
+          {[[Check, "All questions"], [Eye, "Answers + explanations"], [Sparkles, "Ompath AI tools"], [Download, "PDF handouts"]].map(([Icon, text]) => {
             const I = Icon as typeof Eye;
-            return <li key={text as string} className="flex items-center gap-2 text-foreground/85"><I className="h-4 w-4 shrink-0 text-primary" />{text as string}</li>;
+            return <li key={text as string} className="flex items-center gap-2 rounded-lg bg-muted/60 px-2.5 py-2 font-medium text-foreground/85"><I className="h-4 w-4 shrink-0 text-primary" />{text as string}</li>;
           })}
         </ul>
 
-        <div className="mt-5 grid grid-cols-2 gap-1 rounded-xl bg-muted p-1" role="tablist" aria-label="How to unlock">
+        <div className="grid grid-cols-2 gap-1 rounded-xl bg-muted p-1" role="tablist" aria-label="How to unlock">
           {([["buy", "Pay securely"], ["code", "I have a code"]] as const).map(([id, text]) => (
             <button key={id} type="button" role="tab" aria-selected={mode === id} onClick={() => { setMode(id); setState("idle"); }}
               className={`rounded-lg px-3 py-2 text-sm font-bold transition-colors ${mode === id ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}>{text}</button>
@@ -304,7 +304,7 @@ export function Paywall({
 
         {mode === "buy" ? (
           <>
-            <div className="mt-4 grid grid-cols-2 gap-2.5" role="radiogroup" aria-label="Choose a plan">
+            <div className="grid grid-cols-2 gap-2.5" role="radiogroup" aria-label="Choose a plan">
               {sorted.map((p) => {
                 const rate = perMonth(p);
                 const best = sorted.length > 1 && rate !== null && rate === bestRate && baseRate !== null && rate < baseRate * 0.9;
@@ -398,7 +398,7 @@ export function Paywall({
             )}
           </>
         ) : (
-          <div className="mt-4 space-y-2">
+          <div className="space-y-2">
             <label htmlFor="pass-code" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Your pass code</label>
             <div className="relative">
               <KeyRound className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
