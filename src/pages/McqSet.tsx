@@ -83,7 +83,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const savedRecordForSession = useRef(false);
 
   const pick = useCallback((i: number, oi: number) => {
-    if (isLocked(i)) return;
+    if (isLocked(i) || timerStatus === "finished") return;
     if (solved.has(i) || shown.has(i) || (wrong.get(i) ?? []).includes(oi)) return;
     const q = qs[i];
     if (!sessionStartedAt) setSessionStartedAt(Date.now());
@@ -94,7 +94,7 @@ function Bank({ set }: { set: McqSetRow }) {
     }
     if (oi === q.correct_answer) setSolved((s) => new Set(s).add(i));
     else setWrong((m) => new Map(m).set(i, [...(m.get(i) ?? []), oi]));
-  }, [solved, shown, wrong, first, qs, set.id, mcqPaywallEnabled, freeLimit, access.hasPass, access.isAdmin, sessionStartedAt]);
+  }, [solved, shown, wrong, first, qs, set.id, mcqPaywallEnabled, freeLimit, access.hasPass, access.isAdmin, sessionStartedAt, timerStatus]);
 
   const done = new Set([...solved, ...shown]);
   const answered = done.size;
@@ -120,8 +120,8 @@ function Bank({ set }: { set: McqSetRow }) {
   }, [timerStatus, timerEndsAt]);
 
   useEffect(() => {
-    savePractice(set.id, { qs, first: [...first], wrong: [...wrong], solved: [...solved], shown: [...shown], timerMinutes, timerStatus, remainingSeconds, timerEndsAt, sessionStartedAt });
-  }, [set.id, qs, first, wrong, solved, shown, timerMinutes, timerStatus, remainingSeconds, timerEndsAt, sessionStartedAt]);
+    savePractice(set.id, { qs, first: [...first], wrong: [...wrong], solved: [...solved], shown: [...shown], timerMinutes, timerStatus, remainingSeconds: timerStatus === "running" ? null : remainingSeconds, timerEndsAt, sessionStartedAt });
+  }, [set.id, qs, first, wrong, solved, shown, timerMinutes, timerStatus, timerStatus === "running" ? null : remainingSeconds, timerEndsAt, sessionStartedAt]);
 
   useEffect(() => {
     if (!attemptFinished || savedRecordForSession.current) return;
@@ -250,7 +250,7 @@ function Bank({ set }: { set: McqSetRow }) {
               {(timerStatus === "paused" || timerStatus === "finished") && <button type="button" onClick={() => { setTimerStatus("idle"); setRemainingSeconds(null); setTimerEndsAt(null); setSessionStartedAt(null); savedRecordForSession.current = false; }} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-3 text-sm font-semibold"><RotateCcw className="h-4 w-4" /> Reset timer</button>}
             </div>
             {timerStatus !== "idle" && <p className="mt-3 text-xs text-muted-foreground">{tried} answered · {elapsedSeconds ? (elapsedSeconds / 60).toFixed(1) : "0.0"} min elapsed · {elapsedSeconds > 0 ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"} questions/min</p>}
-            {timerStatus === "finished" && <p className="mt-2 rounded-lg bg-destructive/10 px-3 py-2 text-sm font-semibold text-destructive">Time is up. Your current score and progress have been saved.</p>}
+            {timerStatus === "finished" && <div className="mt-3 rounded-xl border border-primary/20 bg-primary/5 p-3"><p className="text-sm font-bold">Time is up — your practice result</p><div className="mt-2 grid grid-cols-3 gap-2 text-center"><div><p className="text-xl font-bold tabular-nums">{correct}/{tried || 0}</p><p className="text-[10px] uppercase text-muted-foreground">Correct</p></div><div><p className="text-xl font-bold tabular-nums">{tried}/{qs.length}</p><p className="text-[10px] uppercase text-muted-foreground">Attempted</p></div><div><p className="text-xl font-bold tabular-nums">{tried && elapsedSeconds ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"}</p><p className="text-[10px] uppercase text-muted-foreground">Questions/min</p></div></div><p className="mt-2 text-xs text-muted-foreground">Your answers and result are saved on this device. Start over to begin another attempt.</p></div>}
             {history.length > 0 && <details className="mt-3 border-t border-border pt-3"><summary className="cursor-pointer text-xs font-bold text-muted-foreground">Previous attempts ({history.length})</summary><div className="mt-2 space-y-2">{history.slice(0,5).map((record) => <div key={record.id} className="flex items-center justify-between gap-3 rounded-lg bg-muted/50 px-3 py-2 text-xs"><span className="min-w-0 truncate">{new Date(record.completedAt).toLocaleString()}</span><span className="shrink-0 font-bold tabular-nums">{record.score}/{record.total} · {record.durationSeconds ? formatClock(record.durationSeconds) : "Untimed"}</span></div>)}</div></details>}
           </section>
           {missed.length > 0 && (
