@@ -32,10 +32,14 @@ const markFnDown = () => { try { localStorage.setItem(FN_DOWN, String(Date.now()
 /** One streamed answer from Ompath AI, as plain text. */
 export async function askOmpathAi(question: string, snippet: string, name: string, category: string, signal?: AbortSignal): Promise<string> {
   const payload = JSON.stringify({ question, history: [], sources: snippet ? [{ kind: "site", title: name, subtitle: category, snippet: snippet.slice(0, 2600) }] : [] });
+  const { data: sessionData } = await supabase.auth.getSession();
+  const token = sessionData.session?.access_token;
+  if (!token) throw new Error("login required");
+  const authHeaders = { "Content-Type": "application/json", Authorization: `Bearer ${token}` };
   // the site's own server first (what the Ompath AI chat uses), the older Supabase function only as a fallback
-  let res = await fetch("/api/ai-chat", { method: "POST", signal, headers: { "Content-Type": "application/json" }, body: payload }).catch((e) => { if ((e as Error).name === "AbortError") throw e; return null; });
+  let res = await fetch("/api/ai-chat", { method: "POST", signal, headers: authHeaders, body: payload }).catch((e) => { if ((e as Error).name === "AbortError") throw e; return null; });
   if (!res || !res.ok || !res.body) {
-    res = await fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, { method: "POST", signal, headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` }, body: payload });
+    res = await fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, { method: "POST", signal, headers: { ...authHeaders, apikey: SUPABASE_PUBLISHABLE_KEY }, body: payload });
   }
   if (res.status === 402 || res.status === 429) { pauseAi(); throw new Error("paused"); }
   if (!res.ok || !res.body) throw new Error(`ai ${res.status}`);
