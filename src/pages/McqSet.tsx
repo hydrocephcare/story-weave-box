@@ -83,7 +83,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const [timerEndsAt, setTimerEndsAt] = useState<number | null>(() => restored.current.timerEndsAt ?? null);
   const [sessionStartedAt, setSessionStartedAt] = useState<number | null>(() => restored.current.sessionStartedAt ?? null);
   const [history, setHistory] = useState<PracticeRecord[]>(() => loadPracticeHistory(set.id));
-  const [accountHistoryAvailable, setAccountHistoryAvailable] = useState(false);
+  const [accountHistorySynced, setAccountHistoryAvailable] = useState(false);
   const [timerExpanded, setTimerExpanded] = useState(false);
   useEffect(() => {
     let active = true;
@@ -98,6 +98,7 @@ function Bank({ set }: { set: McqSetRow }) {
         .order("completed_at", { ascending: false })
         .limit(20);
       if (!active || error || !data) return;
+      setAccountHistorySynced(true);
       const remote: PracticeRecord[] = data.map((row) => ({
         id: row.session_id,
         score: row.score,
@@ -196,6 +197,7 @@ function Bank({ set }: { set: McqSetRow }) {
         completed_at: new Date(record.completedAt).toISOString(),
       });
       // A duplicate session_id means this exact attempt was already synced.
+      if (!error || error.code === "23505") setAccountHistorySynced(true);
       if (error && error.code !== "23505") {
         console.warn("Could not sync MCQ practice history:", error.message);
       }
