@@ -74,6 +74,12 @@ serve(async (req) => {
       }
     }
     if (readerOnly) {
+      const userClient = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_ANON_KEY")!, {
+        global: { headers: { Authorization: `Bearer ${(req.headers.get("authorization") || "").replace(/^Bearer\\s+/i, "")}` } },
+      });
+      const { data: quota, error: quotaError } = await userClient.rpc("consume_feature", { p_feature: "ai_flashcard_generation", p_units: 1 });
+      if (quotaError) return json({ error: "Could not verify your free generation allowance. Please try again." }, 503);
+      if (!quota?.allowed) return json({ error: "Your free flashcard-generation allowance has been used. Unlock premium access to generate more decks.", upgrade_required: true, quota }, 402);
       const { data: have } = await supabase.from("flashcard_sets").select("id").eq("source_reference", body.article_id).is("deleted_at", null).limit(1);
       if (have && have.length) return json({ success: true, status: "exists" });
     }
