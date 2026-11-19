@@ -19,11 +19,12 @@ function savePosition(path: string, y: number) {
 }
 
 export default function ScrollToTop() {
-  const { pathname, search, hash, state } = useLocation();
+  const { pathname, search, hash, state, key } = useLocation();
   const navigationType = useNavigationType();
   const currentPath = pathname + search;
+  const entryKey = key || currentPath;
   // Back from a panel (it has its own history entry) lands on the same page: the reader must stay exactly where they are
-  const lastPath = useRef<string | null>(null);
+
 
   useEffect(() => {
     const old = window.history.scrollRestoration;
@@ -32,7 +33,7 @@ export default function ScrollToTop() {
   }, []);
 
   useEffect(() => {
-    const path = currentPath;
+    const path = entryKey;
     const save = () => savePosition(path, window.scrollY);
     window.addEventListener("pagehide", save);
     document.addEventListener("visibilitychange", save);
@@ -43,12 +44,9 @@ export default function ScrollToTop() {
       window.removeEventListener("beforeunload", save);
       save();
     };
-  }, [currentPath]);
+  }, [entryKey]);
 
   useLayoutEffect(() => {
-    const samePage = lastPath.current === currentPath;
-    lastPath.current = currentPath;
-    if (samePage && navigationType === "POP" && !hash) return;
     if (hash) {
       const frame = requestAnimationFrame(() => flashAnchor(hash.slice(1)));
       return () => cancelAnimationFrame(frame);
@@ -60,7 +58,8 @@ export default function ScrollToTop() {
     const ret = getNoteReturn();
     const fromLink = Boolean(ret && ret.path === currentPath && (navigationType === "POP" || (state as { restore?: boolean } | null)?.restore));
     const isReload = typeof performance !== "undefined" && performance.getEntriesByType("navigation").some((entry) => (entry as PerformanceNavigationTiming).type === "reload");
-    const savedY = readPositions()[currentPath] || 0;
+    const positions = readPositions();
+    const savedY = positions[entryKey] ?? positions[currentPath] ?? 0;
     const target = fromLink && ret ? ret.y : navigationType === "POP" || isReload ? savedY : 0;
     const startedAt = Date.now();
     let cancelled = false;
@@ -81,7 +80,7 @@ export default function ScrollToTop() {
       if (timer) clearTimeout(timer);
       events.forEach((e) => window.removeEventListener(e, stop));
     };
-  }, [currentPath, hash, navigationType]);
+  }, [currentPath, entryKey, hash, navigationType]);
 
   return null;
 }
