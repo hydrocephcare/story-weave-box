@@ -35,7 +35,7 @@ describe("subscription prompt over the AI panel", () => {
     const dialog = screen.getByRole("dialog");
     expect((dialog as HTMLElement).style.pointerEvents).toBe("auto");
     expect(document.body.style.pointerEvents).not.toBe("none");
-    const annual = screen.getByText("KES 400").closest("button")!;
+    const annual = screen.getAllByText("KES 400").map((node) => node.closest("button")).find((button) => button?.getAttribute("role") === "radio")!;
     expect(annual.getAttribute("aria-checked")).toBe("false");
     fireEvent.click(annual);
     expect(annual.getAttribute("aria-checked")).toBe("true");
