@@ -285,6 +285,10 @@ export function Paywall({
               <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">{headline || `Unlock the ${label}`}</h2>
               <p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">{blurb || "Get full access to questions, answers, explanations and study resources with one subscription."}</p>
             </div>
+            <div className="mt-5 grid grid-cols-2 rounded-lg border border-border p-1" role="tablist" aria-label="Checkout options">
+              <button type="button" role="tab" aria-selected={mode === "buy"} onClick={() => setMode("buy")} className={`min-h-10 rounded-md px-3 text-sm font-semibold ${mode === "buy" ? "bg-foreground text-background" : "text-muted-foreground"}`}>Pay securely</button>
+              <button type="button" role="tab" aria-selected={mode === "code"} onClick={() => setMode("code")} className={`min-h-10 rounded-md px-3 text-sm font-semibold ${mode === "code" ? "bg-foreground text-background" : "text-muted-foreground"}`}>I have a code</button>
+            </div>
             <div className="mt-6">
               <div className="flex items-center justify-between gap-3"><h3 className="text-sm font-semibold text-foreground">Choose your subscription</h3><span className="text-xs text-muted-foreground">Select one plan</span></div>
               <div className="mt-3 divide-y divide-border rounded-xl border border-border" role="radiogroup" aria-label="Choose a plan">
