@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ChevronRight, Eye, EyeOff, Loader2, RotateCcw, Lock } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import OmpathMark from "@/components/ai/OmpathMark";
 import { Helmet } from "react-helmet-async";
 import { trackAnswer } from "@/lib/answer-tracker";
@@ -46,6 +47,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const [shown, setShown] = useState<Set<number>>(new Set());                 // answer revealed without solving
   const [only, setOnly] = useState<"all" | "missed">("all");
   const [panelOpen, setPanelOpen] = useState(false);
+  const [unlockOpen, setUnlockOpen] = useState(false);
 
   const pick = useCallback((i: number, oi: number) => {
     if (isLocked(i)) return;
@@ -75,8 +77,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const reset = () => { setQs((cur) => shuffleOptions(mixOrder(cur), String(Math.random()))); setFirst(new Map()); setWrong(new Map()); setSolved(new Set()); setShown(new Set()); setOnly("all"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
   const paywallIndex = indices.find((i) => isLocked(i));
-  const lockedCount = indices.filter((i) => isLocked(i)).length;
-  const scrollToPaywall = () => document.getElementById("mcq-paywall")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  const lockedCount = qs.filter((_, i) => isLocked(i)).length;
   const [showUnlockBar, setShowUnlockBar] = useState(false);
   useEffect(() => {
     if (!lockedCount || access.loading) { setShowUnlockBar(false); return; }
@@ -123,10 +124,21 @@ function Bank({ set }: { set: McqSetRow }) {
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-8px_24px_rgba(0,0,0,0.12)] backdrop-blur supports-[backdrop-filter]:bg-background/85">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
             <div className="min-w-0"><p className="text-sm font-semibold text-foreground">{lockedCount} questions reserved for members</p><p className="text-xs text-muted-foreground">Unlock this bank to attempt every question</p></div>
-            <button type="button" onClick={scrollToPaywall} className="min-h-11 shrink-0 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">Unlock questions</button>
+            <button type="button" onClick={() => setUnlockOpen(true)} className="min-h-11 shrink-0 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">Unlock {lockedCount}</button>
           </div>
         </div>
       )}
+      <Dialog open={unlockOpen} onOpenChange={setUnlockOpen}>
+        <DialogContent className="max-h-[92dvh] w-[calc(100%-1rem)] max-w-4xl gap-0 overflow-y-auto rounded-2xl border-border bg-background p-0 sm:w-[calc(100%-2rem)]">
+          <DialogHeader className="border-b border-border px-5 py-4 text-left sm:px-7">
+            <DialogTitle className="font-serif text-xl font-bold sm:text-2xl">Unlock this question bank</DialogTitle>
+            <DialogDescription className="text-sm leading-relaxed">{lockedCount} locked questions in “{title}”. Choose a plan or redeem an access code. Your current page and progress will be preserved.</DialogDescription>
+          </DialogHeader>
+          <div className="p-3 sm:p-5">
+            <Paywall settings={access.settings} hiddenCount={lockedCount} label="MCQ bank" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline={`Unlock ${lockedCount} questions`} blurb={`Get access to all ${qs.length} questions in this bank, including answers and explanations.`} />
+          </div>
+        </DialogContent>
+      </Dialog>
       <Sheet open={panelOpen} onOpenChange={setPanelOpen}>
         <SheetContent side="left" className="w-[85vw] max-w-xs overflow-y-auto">
           <SheetHeader className="text-left"><SheetTitle className="font-serif">Your progress</SheetTitle><SheetDescription>{title}</SheetDescription></SheetHeader>
@@ -187,7 +199,10 @@ function Bank({ set }: { set: McqSetRow }) {
                     </div>
                     {!access.loading && i === paywallIndex && (
                       <div className="mt-4">
-                        <Paywall settings={access.settings} hiddenCount={Math.max(1, qs.length - freeLimit)} label="MCQ bank" onUnlocked={access.applyPass} headline="Unlock all questions" blurb={`You have completed the free preview of this ${qs.length}-question bank. Unlock the remaining ${qs.length - freeLimit} questions, answers and explanations.`} />
+                        <button type="button" onClick={() => setUnlockOpen(true)} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+                          <Lock className="h-4 w-4" /> Unlock {lockedCount} questions
+                        </button>
+                        <p className="mt-2 text-center text-xs text-muted-foreground">One secure checkout. Your progress stays on this page.</p>
                       </div>
                     )}
                   </section>
