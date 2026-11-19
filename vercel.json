@@ -101,7 +101,7 @@
   "redirects": [
     {
       "source": "/mcqs/abnormal-liver-enzymes-mcqs",
-      "destination": "/mcqs",
+      "destination": "/mcqs/abnormal-liver-enzymes-mcqs-5da81a83",
       "permanent": true
     },
     {
