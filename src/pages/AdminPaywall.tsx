@@ -4,7 +4,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Loader2, ShieldCheck, Save, LockKeyhole } from "lucide-react";
+import { Loader2, ShieldCheck, Save, LockKeyhole, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 type LegacyPaywall = { enabled?: boolean; price?: string; message?: string; payLink?: string; code?: string };
@@ -13,7 +14,7 @@ const Db = supabase as unknown as { from: (table: string) => any };
 /** One control panel for the site's MCQ paywall. */
 export default function AdminPaywall() {
   const [enabled, setEnabled] = useState(false);
-  const [freeLimit, setFreeLimit] = useState("15");
+  const [freePercent, setFreePercent] = useState("25");
   const [price, setPrice] = useState("15");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -23,13 +24,13 @@ export default function AdminPaywall() {
     let active = true;
     Promise.all([
       getSetting("mcq_paywall_enabled"),
-      getSetting("mcq_free_limit"),
+      getSetting("paywall_free_ratio"),
       getSetting("mcq_price"),
       Db.from("site_flags").select("value").eq("key", "answers_paywall").maybeSingle(),
     ]).then(([enabledRaw, freeRaw, priceRaw, legacy]) => {
       if (!active) return;
       setEnabled(enabledRaw === "true");
-      setFreeLimit(freeRaw || "15");
+      setFreePercent(String(Math.round(Math.min(0.9, Math.max(0.05, Number(freeRaw ?? "0.25"))) * 100)));
       setPrice(priceRaw || "15");
       // The old model-answer popup is intentionally kept off; this page is the single MCQ paywall control.
       const old = (legacy?.data?.value || {}) as LegacyPaywall;
@@ -42,10 +43,10 @@ export default function AdminPaywall() {
   }, []);
 
   const save = async () => {
-    const limit = Number(freeLimit);
+    const percent = Number(freePercent);
     const amount = Number(price);
-    if (!Number.isInteger(limit) || limit < 0 || limit > 500) {
-      toast({ title: "Invalid free-question limit", description: "Enter a whole number from 0 to 500.", variant: "destructive" });
+    if (!Number.isInteger(percent) || percent < 5 || percent > 90) {
+      toast({ title: "Invalid free preview percentage", description: "Enter a whole percentage from 5 to 90.", variant: "destructive" });
       return;
     }
     if (!Number.isInteger(amount) || amount < 1 || amount > 100000) {
@@ -56,7 +57,7 @@ export default function AdminPaywall() {
     try {
       await Promise.all([
         saveSetting("mcq_paywall_enabled", enabled ? "true" : "false"),
-        saveSetting("mcq_free_limit", String(limit)),
+        saveSetting("paywall_free_ratio", String(percent / 100)),
         saveSetting("mcq_price", String(amount)),
       ]);
       const { data: old } = await Db.from("site_flags").select("value").eq("key", "answers_paywall").maybeSingle();
@@ -81,11 +82,16 @@ export default function AdminPaywall() {
           <Switch checked={enabled} onCheckedChange={setEnabled} />
         </div>
         <div className="mt-5 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
-          <label className="text-sm font-medium">Free questions per set<Input className="mt-2" type="number" min="0" max="500" value={freeLimit} onChange={e => setFreeLimit(e.target.value)} /></label>
+          <label className="text-sm font-medium">Free question preview (%)<Input className="mt-2" type="number" min="5" max="90" step="1" value={freePercent} onChange={e => setFreePercent(e.target.value)} /><span className="mt-1 block text-xs font-normal text-muted-foreground">Default: 25%. Calculated separately for each question bank.</span></label>
           <label className="text-sm font-medium">Unlock price (KES)<Input className="mt-2" type="number" min="1" value={price} onChange={e => setPrice(e.target.value)} /></label>
         </div>
-        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">When enabled, the intended rule is that the first free questions remain answerable, while later questions remain visible but their answers and explanations are locked until the student's account has valid access. When disabled, all questions are open.</p>
+        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">When enabled, the intended rule is that the selected percentage of each question bank remains answerable. Questions after that point appear under a translucent locked preview until the student's account has valid access. When disabled, all questions are open.</p>
         <Button onClick={save} disabled={saving} className="mt-5 gap-2">{saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}Save Paywall 1</Button>
+      </section>
+      <section className="rounded-2xl border border-border bg-card p-5 sm:p-6">
+        <h2 className="font-semibold">Subscription prices and payment plans</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Set plan names, prices, duration and download access in Billing. The checkout uses those saved prices.</p>
+        <Link to="/admin/billing" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">Manage prices and plans <ExternalLink className="h-4 w-4" /></Link>
       </section>
       <div className="flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 text-sm">
         <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
