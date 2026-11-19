@@ -22,6 +22,10 @@ export async function loadPayments(limit = 60): Promise<PaymentRow[]> {
   fail(r.error); return (r.data ?? []) as PaymentRow[];
 }
 export async function grantPass(email: string, days: number, plan = "gift"): Promise<string> { const r = await db().rpc("admin_grant_pass", { p_email: email, p_days: days, p_plan: plan }); fail(r.error); return String(r.data); }
+export async function createCustomPass(code: string, days: number, email = "", plan = "gift"): Promise<string> {
+  const r = await db().rpc("admin_create_custom_pass", { p_code: code, p_days: days, p_plan: plan, p_email: email.trim() || null });
+  fail(r.error); return String(r.data);
+}
 export async function revokePass(args: { id?: string; email?: string }): Promise<number> { const r = await db().rpc("admin_revoke_pass", { p_id: args.id ?? null, p_email: args.email ?? null }); fail(r.error); return num(r.data); }
 
 export async function loadPrices(): Promise<Prices> {
