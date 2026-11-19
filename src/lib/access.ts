@@ -310,7 +310,8 @@ export interface FeatureAllowance { allowed: boolean; reason: string; remaining?
 
 /** Atomically consumes a server-side free allowance; browser storage is never authoritative. */
 export async function consumeFeature(feature: PaidFeature, units = 1): Promise<FeatureAllowance> {
-  const { data, error } = await (supabase as any).rpc("consume_feature", { p_feature: feature, p_units: units });
+  const rpc = (supabase as unknown as { rpc: (name: string, args: Record<string, unknown>) => Promise<{ data: unknown; error: unknown }> }).rpc;
+  const { data, error } = await rpc("consume_feature", { p_feature: feature, p_units: units });
   if (error || !data || typeof data.allowed !== "boolean") return { allowed: false, reason: "verification_unavailable", remaining: 0 };
   return data as FeatureAllowance;
 }
