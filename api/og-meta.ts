@@ -584,9 +584,10 @@ async function getMcqCrawlerAccess(setId: string, slug: string) {
       Number(settings.get("access_price_kes") || 0) > 0 &&
       !excluded.includes(setId) &&
       !excluded.includes(slug);
-    const ratioValue = Number(settings.get("paywall_free_ratio") || 0.25);
-    const ratio = Number.isFinite(ratioValue) ? Math.min(0.9, Math.max(0.05, ratioValue)) : 0.25;
-    return { locked, ratio, verified: true };
+    // Search crawlers receive the complete published bank. The paywall is
+    // explicitly declared in WebPage structured data below; this does not
+    // grant normal browser/API access to the premium questions.
+    return { locked, ratio: 1, verified: true };
   } catch (error) {
     console.error("Could not verify MCQ crawler access settings; hiding question content:", error);
     return { locked: true, ratio: 0, verified: false };
@@ -1317,12 +1318,32 @@ ${answerLine}
 ${explanationLine}
 </li>`;
         });
-        const previewHeading = crawlAccess.locked
-          ? `<p>Free preview: ${publicQuestions.length} of ${parsed.length} questions. Unlock the full question bank on OmpathStudy.</p>`
+        const premiumIntro = crawlAccess.locked
+          ? `<p>This is a premium OmpathStudy medical MCQ bank containing ${parsed.length} questions, with answer options, correct answers and explanations. Student access to the complete bank requires unlocking the package.</p>`
           : "";
-        bodyExtra = `${previewHeading}<h2>Questions, Answers &amp; Explanations</h2>\n<ol>\n${items.join("\n")}\n</ol>`;
+        const questionContent = `${premiumIntro}<h2>Questions, Answers &amp; Explanations</h2>\n<ol>\n${items.join("\n")}\n</ol>`;
+        bodyExtra = crawlAccess.locked
+          ? `<section class="paywall">${questionContent}</section>`
+          : questionContent;
       } else if (crawlAccess.locked) {
-        bodyExtra = "<p>This question bank includes a free preview. Sign in to OmpathStudy to view the available questions and unlock the complete bank.</p>";
+        bodyExtra = '<section class="paywall"><p>This premium question bank requires unlocking to access its questions, answers and explanations.</p></section>';
+      }
+
+      if (crawlAccess.locked && questionNumber === null) {
+        schemaJson = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: title,
+          description,
+          url: absoluteUrl,
+          isAccessibleForFree: false,
+          hasPart: {
+            "@type": "WebPageElement",
+            isAccessibleForFree: false,
+            cssSelector: ".paywall"
+          },
+          isPartOf: { "@type": "WebSite", name: "OmpathStudy", url: origin },
+        });
       }
 
       if (questionNumber !== null) {
@@ -1341,13 +1362,24 @@ ${explanationLine}
         const options = question.options.map((option, index) =>
           `<li><strong>${String.fromCharCode(65 + index)}.</strong> ${htmlEscape(option)}</li>`
         ).join("");
-        bodyExtra = `<article><h1>${htmlEscape(question.stem)}</h1><h2>Options</h2><ol>${options}</ol><p><strong>Correct answer:</strong> ${htmlEscape(question.correctText)}</p>${question.explanation ? `<p><strong>Explanation:</strong> ${htmlEscape(question.explanation)}</p>` : ""}<p>Part of <a href="${canonicalMcqPath}">${htmlEscape(mcq.title)} — full MCQ question bank</a>.</p></article>`;
+        const questionArticle = `<article><h1>${htmlEscape(question.stem)}</h1><h2>Options</h2><ol>${options}</ol><p><strong>Correct answer:</strong> ${htmlEscape(question.correctText)}</p>${question.explanation ? `<p><strong>Explanation:</strong> ${htmlEscape(question.explanation)}</p>` : ""}<p>Part of <a href="${canonicalMcqPath}">${htmlEscape(mcq.title)} — full MCQ question bank</a>.</p></article>`;
+        bodyExtra = crawlAccess.locked
+          ? `<section class="paywall">${questionArticle}</section>`
+          : questionArticle;
         schemaJson = JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: title,
           description,
           url: absoluteUrl,
+          ...(crawlAccess.locked ? {
+            isAccessibleForFree: false,
+            hasPart: {
+              "@type": "WebPageElement",
+              isAccessibleForFree: false,
+              cssSelector: ".paywall"
+            }
+          } : {}),
           about: { "@type": "Question", name: question.stem },
           isPartOf: { "@type": "WebPage", url: `${origin}${canonicalMcqPath}`, name: mcq.title },
         });
