@@ -111,7 +111,7 @@ export default function Index() {
     // Load categories
     getAllCategories().then(setCategories).finally(() => setLoading(false));
 
-  }, []);  }, []);
+  }, []);
 
   const yearGroups = Object.keys(YEAR_CATEGORIES).map(year => {
     const yearCats = categories.filter(c => getYearFromCategory(c.name) === year);
