@@ -39,7 +39,7 @@ function Bank({ set }: { set: McqSetRow }) {
     }).catch(() => { if (active) setMcqPaywallEnabled(false); });
     return () => { active = false; };
   }, []);
-  const isLocked = (index: number) => mcqPaywallEnabled && !excludedIds.includes(set.id) && !excludedIds.includes(set.slug || "") && index >= freeLimit && !access.hasPass && !access.isAdmin;   // Reset mixes the questions and their options again, so positions cannot be memorised
+  const isLocked = (index: number) => mcqPaywallEnabled && !access.isFree && !excludedIds.includes(set.id) && !excludedIds.includes(set.slug || "") && index >= freeLimit && !access.hasPass && !access.isAdmin;   // Reset mixes the questions and their options again, so positions cannot be memorised
   const [first, setFirst] = useState<Map<number, number>>(new Map());          // the first choice made on each question (this is what is scored)
   const [wrong, setWrong] = useState<Map<number, number[]>>(new Map());        // wrong choices already tried, per question
   const [solved, setSolved] = useState<Set<number>>(new Set());               // answered correctly (on any try)
