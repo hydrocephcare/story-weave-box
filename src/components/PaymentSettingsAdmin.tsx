@@ -24,6 +24,12 @@ export default function PaymentSettingsAdmin() {
   const [paystackEnabled, setPaystackEnabled] = useState(false);
   const subsOn = useSubscriptionMode();
   const [switching, setSwitching] = useState(false);
+  const [aiDaily, setAiDaily] = useState("8");
+  const [noteWeekly, setNoteWeekly] = useState("2");
+  const [flashWeekly, setFlashWeekly] = useState("2");
+  const [mcqWeekly, setMcqWeekly] = useState("2");
+  const [pictureDaily, setPictureDaily] = useState("15");
+  const [topicWeekly, setTopicWeekly] = useState("1");
   const flip = async (next: boolean) => {
     setSwitching(true);
     try {
@@ -45,7 +51,13 @@ export default function PaymentSettingsAdmin() {
       getSetting("redacted_names"),
       getSetting("show_content_counts"),
       getSetting("paystack_enabled"),
-    ]).then(([p, rp, r, d, pl, fv, gsv, rn, sc, pe]) => {
+      getSetting("free_ompath_ai_daily"),
+      getSetting("free_ai_note_generation_weekly"),
+      getSetting("free_ai_flashcard_generation_weekly"),
+      getSetting("free_ai_mcq_generation_weekly"),
+      getSetting("free_ai_picture_questions_daily"),
+      getSetting("free_topic_page_generation_weekly"),
+    ]).then(([p, rp, r, d, pl, fv, gsv, rn, sc, pe, ad, nw, fw, mw, pd, tw]) => {
       setPrice(p || "0");
       setRevealPrice(rp === "" ? "5" : (rp || "5"));
       setRatio(r || "0.25");
@@ -55,6 +67,8 @@ export default function PaymentSettingsAdmin() {
       setRedacted((rn ?? "").trim() || DEFAULT_SITE_SETTINGS.redactedNames.join(", "));
       setShowCounts(sc === "true");
       setPaystackEnabled(pe === "true");
+      setAiDaily(ad || "8"); setNoteWeekly(nw || "2"); setFlashWeekly(fw || "2");
+      setMcqWeekly(mw || "2"); setPictureDaily(pd || "15"); setTopicWeekly(tw || "1");
       try {
         const parsed = JSON.parse(pl || "[]");
         if (Array.isArray(parsed) && parsed.length) setPlans(parsed);
@@ -81,6 +95,15 @@ export default function PaymentSettingsAdmin() {
       await saveSetting("redacted_names", redacted);
       await saveSetting("show_content_counts", showCounts ? "true" : "false");
       await saveSetting("paystack_enabled", paystackEnabled ? "true" : "false");
+      const quota = (v: string, max: number) => String(Math.max(0, Math.min(max, Math.floor(Number(v) || 0))));
+      await Promise.all([
+        saveSetting("free_ompath_ai_daily", quota(aiDaily, 1000)),
+        saveSetting("free_ai_note_generation_weekly", quota(noteWeekly, 100)),
+        saveSetting("free_ai_flashcard_generation_weekly", quota(flashWeekly, 100)),
+        saveSetting("free_ai_mcq_generation_weekly", quota(mcqWeekly, 100)),
+        saveSetting("free_ai_picture_questions_daily", quota(pictureDaily, 1000)),
+        saveSetting("free_topic_page_generation_weekly", quota(topicWeekly, 100)),
+      ]);
       await loadPaymentSettings(true);
       await loadSiteSettings(true);
       toast({ title: "Payment settings saved" });
@@ -177,6 +200,21 @@ export default function PaymentSettingsAdmin() {
       </div>
 
       <div className="rounded-xl border border-border bg-card p-5">
+      <div className="rounded-xl border border-border bg-card p-5">
+        <div className="mb-1">
+          <h3 className="text-sm font-bold text-foreground">Free feature allowances</h3>
+          <p className="mt-1 text-xs text-muted-foreground">These limits apply per student. Active subscribers and administrators receive unlimited use. Set a limit to 0 to require premium access immediately.</p>
+        </div>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <label className="text-xs font-semibold text-foreground">Ompath AI questions / day<input type="number" min="0" max="1000" value={aiDaily} onChange={(e) => setAiDaily(e.target.value)} className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-2 text-sm" /></label>
+          <label className="text-xs font-semibold text-foreground">AI note generations / week<input type="number" min="0" max="100" value={noteWeekly} onChange={(e) => setNoteWeekly(e.target.value)} className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-2 text-sm" /></label>
+          <label className="text-xs font-semibold text-foreground">AI flashcard generations / week<input type="number" min="0" max="100" value={flashWeekly} onChange={(e) => setFlashWeekly(e.target.value)} className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-2 text-sm" /></label>
+          <label className="text-xs font-semibold text-foreground">AI MCQ generations / week<input type="number" min="0" max="100" value={mcqWeekly} onChange={(e) => setMcqWeekly(e.target.value)} className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-2 text-sm" /></label>
+          <label className="text-xs font-semibold text-foreground">AI picture questions / day<input type="number" min="0" max="1000" value={pictureDaily} onChange={(e) => setPictureDaily(e.target.value)} className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-2 text-sm" /></label>
+          <label className="text-xs font-semibold text-foreground">AI topic pages / week<input type="number" min="0" max="100" value={topicWeekly} onChange={(e) => setTopicWeekly(e.target.value)} className="mt-1 block w-full rounded-lg border border-border bg-background px-3 py-2 text-sm" /></label>
+        </div>
+      </div>
+
         <p className="mb-3 text-xs font-bold uppercase tracking-wide text-muted-foreground">Site visibility</p>
         <label className="mb-3 block">
           <span className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Guests on image-answer papers</span>
