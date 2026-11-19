@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { BadgeCheck, Download, Loader2, Plus, Trash2 } from "lucide-react";
-import { billingReport, grantPass, kes, loadOverview, loadPasses, loadPayments, loadPrices, revokePass, savePrices, type Overview, type Pass, type PaymentRow, type Prices } from "@/lib/billing";
+import { billingReport, createCustomPass, grantPass, kes, loadOverview, loadPasses, loadPayments, loadPrices, revokePass, savePrices, type Overview, type Pass, type PaymentRow, type Prices } from "@/lib/billing";
 
 const field = "h-10 w-full rounded-lg border border-border bg-background px-3 text-sm outline-none focus:border-primary";
 const card = "rounded-2xl border border-border bg-card p-4 sm:p-5";
@@ -16,7 +16,7 @@ export default function AdminBilling() {
   const [pays, setPays] = useState<PaymentRow[]>([]);
   const [msg, setMsg] = useState("");
   const [busy, setBusy] = useState(true);
-  const [email, setEmail] = useState(""); const [days, setDays] = useState("90"); const [given, setGiven] = useState("");
+  const [email, setEmail] = useState(""); const [days, setDays] = useState("90"); const [given, setGiven] = useState(""); const [customCode, setCustomCode] = useState("");
   const [report, setReport] = useState("");
 
   const load = useCallback(async () => {
@@ -100,10 +100,12 @@ export default function AdminBilling() {
 
       <section className={card} aria-label="Access passes">
         <h2 className="font-serif text-xl font-bold">Access passes <span className="text-sm font-semibold text-muted-foreground">{live.length} active</span></h2>
+        <p className="mt-1 text-xs text-muted-foreground">Enter an optional email to link a code to one student. Leave it blank to create a shareable code. Set your own code or leave it blank for an automatically generated one.</p>
         <div className="mt-3 flex flex-wrap gap-2">
           <input className={`${field} min-w-0 flex-1`} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Student e-mail, to give free access" aria-label="Student e-mail" />
           <input className={`${field} w-24`} type="number" min={1} value={days} onChange={(e) => setDays(e.target.value)} aria-label="Days" />
-          <button type="button" onClick={async () => { try { const c = await grantPass(email, Number(days)); setGiven(`Access given to ${email} for ${days} days. Their code: ${c}`); setEmail(""); void load(); } catch (e) { setGiven((e as Error).message); } }} className="h-10 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground">Give access</button>
+          <input className={`${field} min-w-0 flex-1`} value={customCode} onChange={(e) => setCustomCode(e.target.value.toUpperCase().replace(/[^A-Z0-9-]/g, ""))} placeholder="Custom code (optional)" aria-label="Custom access code" />
+          <button type="button" onClick={async () => { try { const c = customCode.trim() ? await createCustomPass(customCode, Number(days), email) : await grantPass(email, Number(days)); setGiven(`Access code created: ${c} · valid for ${days} days${email ? ` · linked to ${email}` : " · shareable code"}`); setEmail(""); setCustomCode(""); void load(); } catch (e) { setGiven((e as Error).message); } }} className="h-10 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground">Create access</button>
         </div>
         {given && <p className="mt-2 flex items-center gap-1.5 text-sm font-semibold text-emerald-700" role="status"><BadgeCheck className="h-4 w-4" aria-hidden /> {given}</p>}
         <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[560px] text-left text-sm">
