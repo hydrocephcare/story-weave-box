@@ -86,6 +86,7 @@ function Bank({ set }: { set: McqSetRow }) {
     if (isLocked(i)) return;
     if (solved.has(i) || shown.has(i) || (wrong.get(i) ?? []).includes(oi)) return;
     const q = qs[i];
+    if (!sessionStartedAt) setSessionStartedAt(Date.now());
     if (!first.has(i)) {
       setFirst((m) => new Map(m).set(i, oi));
       void trackAnswer({ mcq_set_id: set.id, question_index: i, question_text: q.question, selected_answer: oi, correct_answer: q.correct_answer, is_correct: oi === q.correct_answer }).catch(() => {});
@@ -93,7 +94,7 @@ function Bank({ set }: { set: McqSetRow }) {
     }
     if (oi === q.correct_answer) setSolved((s) => new Set(s).add(i));
     else setWrong((m) => new Map(m).set(i, [...(m.get(i) ?? []), oi]));
-  }, [solved, shown, wrong, first, qs, set.id, mcqPaywallEnabled, freeLimit, access.hasPass, access.isAdmin]);
+  }, [solved, shown, wrong, first, qs, set.id, mcqPaywallEnabled, freeLimit, access.hasPass, access.isAdmin, sessionStartedAt]);
 
   const done = new Set([...solved, ...shown]);
   const answered = done.size;
@@ -124,9 +125,11 @@ function Bank({ set }: { set: McqSetRow }) {
 
   useEffect(() => {
     if (!attemptFinished || savedRecordForSession.current) return;
+    const recordId = `${set.id}-${sessionStartedAt || "untimed"}`;
+    if (loadPracticeHistory(set.id).some((item) => item.id === recordId)) { savedRecordForSession.current = true; return; }
     savedRecordForSession.current = true;
     const record: PracticeRecord = {
-      id: `${set.id}-${sessionStartedAt || Date.now()}`,
+      id: recordId,
       score: correct,
       attempted: tried,
       total: qs.length,
@@ -169,7 +172,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
   const lockedCount = qs.filter((_, i) => isLocked(i)).length;
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
-  const reveal = (i: number) => setShown((s) => new Set(s).add(i));
+  const reveal = (i: number) => { if (!sessionStartedAt) setSessionStartedAt(Date.now()); setShown((s) => new Set(s).add(i)); };
   const allShown = shown.size === qs.length;
 
   const progress = (
@@ -221,7 +224,7 @@ function Bank({ set }: { set: McqSetRow }) {
         <ChevronRight className="h-3.5 w-3.5" aria-hidden /><Link to={`/mcqs?${year ? `year=Year ${year}&` : ""}unit=${encodeURIComponent(unit)}`} className="hover:text-foreground">{unit}</Link>
       </nav>
       <h1 className="mt-3 font-serif text-3xl font-bold leading-tight sm:text-4xl">{title}</h1>
-      <p className="mt-2 text-[15px] text-muted-foreground">{qs.length} questions · pick an answer; if it is wrong you can try again · nothing is timed</p>
+      <p className="mt-2 text-[15px] text-muted-foreground">{qs.length} questions · pick an answer; retry wrong choices · optional practice timer</p>
 
       <div className="mt-6 grid gap-8 lg:grid-cols-[200px_1fr]">
         <aside className="hidden lg:sticky lg:top-20 lg:block lg:self-start">
