@@ -1672,6 +1672,56 @@ export type Database = {
           },
         ]
       }
+      mcq_practice_attempts: {
+        Row: {
+          attempted: number
+          completed_at: string
+          created_at: string
+          duration_seconds: number
+          id: string
+          mcq_set_id: string
+          score: number
+          session_id: string
+          timer_minutes: number | null
+          total: number
+          user_id: string
+        }
+        Insert: {
+          attempted?: number
+          completed_at?: string
+          created_at?: string
+          duration_seconds?: number
+          id?: string
+          mcq_set_id: string
+          score?: number
+          session_id: string
+          timer_minutes?: number | null
+          total: number
+          user_id: string
+        }
+        Update: {
+          attempted?: number
+          completed_at?: string
+          created_at?: string
+          duration_seconds?: number
+          id?: string
+          mcq_set_id?: string
+          score?: number
+          session_id?: string
+          timer_minutes?: number | null
+          total?: number
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "mcq_practice_attempts_mcq_set_id_fkey"
+            columns: ["mcq_set_id"]
+            isOneToOne: false
+            referencedRelation: "mcq_sets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_answers: {
         Row: {
           correct_answer: number
