@@ -32,7 +32,7 @@ export function Paywall({
   bare?: boolean;
 }) {
   const plans = settings.plans.length ? settings.plans : [];
-  const [planId, setPlanId] = useState(plans[0]?.id || "semester");
+  const [planId, setPlanId] = useState(() => plans.find((p) => p.id.toLowerCase() === "annual" || /annual|yearly|12\s*months/i.test(p.label))?.id || plans[0]?.id || "annual");
   const [phone, setPhone] = useState("");
   const [countryCode, setCountryCode] = useState("KE");
   const countries: Record<string, { name: string; dial: string; flag: string }> = {
