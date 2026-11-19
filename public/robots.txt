@@ -24,7 +24,15 @@ Sitemap: https://www.ompathstudy.com/social-sitemap.xml
 Sitemap: https://www.ompathstudy.com/science-sitemap.xml
 Sitemap: https://www.ompathstudy.com/research-sitemap.xml
 
-# AI training and scraping crawlers are not allowed to take the papers or answers
+# Allow Google's Gemini systems to use public MCQ pages for grounding and model improvement.
+# Google-Extended is a control token; it does not affect Google Search indexing or ranking.
+# Restrict the allowance to published MCQ URLs rather than the whole site.
+User-agent: Google-Extended
+Allow: /mcqs/
+Allow: /mcqs
+Disallow: /
+
+# Other AI training and scraping crawlers remain disallowed.
 User-agent: GPTBot
 Disallow: /
 User-agent: ChatGPT-User
@@ -38,8 +46,6 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 User-agent: Claude-Web
-Disallow: /
-User-agent: Google-Extended
 Disallow: /
 User-agent: PerplexityBot
 Disallow: /
