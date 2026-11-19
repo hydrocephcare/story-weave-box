@@ -1,6 +1,7 @@
 // POST /api/topic-write { name, category, context }: Groq drafts a topic page and Gemini independently reviews it. The browser then saves it with the
 // publish_topic_page database function. Provider keys remain server-side; Gemini review is mandatory before a page is returned.
 import { generateReviewedTopicPage, validName } from "../../supabase/functions/_shared/topicAi.js";
+import { consumeEntitlement } from "./entitlements.js";
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 
@@ -28,6 +29,8 @@ export default async function handler(req, res) {
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   const name = String(body.name ?? "").trim();
   if (!validName(name)) return res.status(400).json({ status: "invalid" });
+  const quota = await consumeEntitlement(req, body.mode === "deep" ? "ai_note_generation" : "topic_page_generation");
+  if (!quota.allowed) return res.status(quota.status || 402).json({ status: "limit", upgrade_required: quota.status === 402, quota });
   if (body.mode === "deep") {
     // Preserve the existing deep-notes generator and its original provider fallback.
     if (!groq.trim() && !hasGemini) return res.status(503).json({ status: "unavailable" });
