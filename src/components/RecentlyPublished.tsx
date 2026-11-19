@@ -1,20 +1,23 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, FileText, Layers } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Layers, ListChecks } from "lucide-react";
+import { isPublicMcqSet } from "@/lib/content-policy";
 import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath, getCategoryDisplayName, getYearFromCategory } from "@/lib/store";
 import { STATIC_NOTES } from "@/data/staticNotes";
 import { topicPath } from "@/lib/topics";
 import { cn } from "@/lib/utils";
 
-interface Row { key: string; title: string; to: string; kind: "Note" | "Past paper" | "Topic" | "Blog"; year: number | null; unit: string; at: number }
+interface Row { key: string; title: string; to: string; kind: "Note" | "Past paper" | "Topic" | "Blog" | "MCQ bank"; year: number | null; unit: string; at: number }
 
-let dbMemo: Promise<Row[]> | null = null;
+let dbMemo: { promise: Promise<Row[]>; expiresAt: number } | null = null;
 function loadDb(): Promise<Row[]> {
-  dbMemo ??= (async () => {
-    const [a, t] = await Promise.all([
-      Promise.resolve(supabase.from("articles").select("id,title,slug,category,created_at").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(60)).catch(() => ({ data: null })),
-      Promise.resolve((supabase as unknown as { from: (x: string) => any }).from("topic_pages").select("slug,name,category,updated_at").eq("status", "published").order("updated_at", { ascending: false }).limit(30)).catch(() => ({ data: null })),
+  if (dbMemo && dbMemo.expiresAt > Date.now()) return dbMemo.promise;
+  const promise = (async () => {
+    const [a, t, m] = await Promise.all([
+      Promise.resolve(supabase.from("articles").select("id,title,slug,category,created_at").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(24)).catch(() => ({ data: null })),
+      Promise.resolve((supabase as unknown as { from: (x: string) => any }).from("topic_pages").select("slug,name,category,updated_at").eq("status", "published").order("updated_at", { ascending: false }).limit(18)).catch(() => ({ data: null })),
+      Promise.resolve((supabase as unknown as { from: (x: string) => any }).from("mcq_sets").select("id,title,slug,category,created_at,updated_at").eq("published", true).is("deleted_at", null).order("updated_at", { ascending: false }).limit(18)).catch(() => ({ data: null })),
     ]);
     const rows: Row[] = [];
     for (const r of (a.data ?? []) as { id: string; title: string; slug: string | null; category: string; created_at: string }[]) {
@@ -22,9 +25,15 @@ function loadDb(): Promise<Row[]> {
       rows.push({ key: `a:${r.id}`, title: r.title, to: buildBlogPath(r), kind: /past paper|cat\b|exam/i.test(r.title) ? "Past paper" : "Blog", year: y ? Number(y.slice(5)) : null, unit: getCategoryDisplayName(r.category), at: Date.parse(r.created_at) });
     }
     for (const r of (t.data ?? []) as { slug: string; name: string; category: string | null; updated_at: string }[]) rows.push({ key: `t:${r.slug}`, title: r.name, to: topicPath(r.slug), kind: "Topic", year: null, unit: r.category || "Medicine", at: Date.parse(r.updated_at) });
+    for (const r of (m.data ?? []) as { id: string; title: string; slug: string | null; category: string; created_at: string; updated_at: string | null }[]) {
+      if (!isPublicMcqSet(r)) continue;
+      const y = getYearFromCategory(r.category);
+      rows.push({ key: `m:${r.id}`, title: r.title, to: `/mcqs/${(r.slug || "").trim() || r.id}`, kind: "MCQ bank", year: y ? Number(y.slice(5)) : null, unit: getCategoryDisplayName(r.category), at: Date.parse(r.updated_at || r.created_at) });
+    }
     return rows.filter((r) => Number.isFinite(r.at));
   })();
-  return dbMemo;
+  dbMemo = { promise, expiresAt: Date.now() + 30_000 };
+  return promise;
 }
 
 const ago = (at: number) => {
@@ -36,7 +45,7 @@ const ago = (at: number) => {
   if (d < 7) return `${d} days ago`;
   return new Date(at).toLocaleDateString(undefined, { day: "numeric", month: "short" });
 };
-const ICON = { Note: BookOpen, "Past paper": FileText, Topic: Layers, Blog: BookOpen } as const;
+const ICON = { Note: BookOpen, "Past paper": FileText, Topic: Layers, Blog: BookOpen, "MCQ bank": ListChecks } as const;
 
 /**
  * The newest things published, newest first, across the whole site or for one year. Notes, past papers, blogs and topic pages all
@@ -44,7 +53,8 @@ const ICON = { Note: BookOpen, "Past paper": FileText, Topic: Layers, Blog: Book
  */
 export default function RecentlyPublished({ year, limit = 8, className, directNavigation = false }: { year?: number; limit?: number; className?: string; directNavigation?: boolean }) {
   const [db, setDb] = useState<Row[]>([]);
-  useEffect(() => { let on = true; void loadDb().then((r) => on && setDb(r)); return () => { on = false; }; }, []);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => { let on = true; void loadDb().then((r) => { if (on) setDb(r); }).catch(() => { if (on) setDb([]); }).finally(() => { if (on) setLoading(false); }); return () => { on = false; }; }, []);
 
   const rows = useMemo(() => {
     const own: Row[] = STATIC_NOTES.map((n, i) => ({ key: `s:${n.slug}`, title: n.title, to: `/notes/${n.slug}`, kind: n.paper ? "Past paper" as const : "Note" as const, year: n.year, unit: n.unit, at: Date.parse(n.updated) + i * 1000 })).filter((r) => Number.isFinite(r.at));
@@ -62,6 +72,7 @@ export default function RecentlyPublished({ year, limit = 8, className, directNa
       .slice(0, limit);
   }, [db, year, limit]);
 
+  if (loading) return <section aria-label="Recently published" className={cn("mx-auto max-w-6xl px-5", className)}><div className="h-7 w-56 animate-pulse rounded bg-muted" /><div className="mt-5 space-y-3">{Array.from({ length: 4 }, (_, i) => <div key={i} className="h-12 animate-pulse rounded-lg bg-muted/60" />)}</div></section>;
   if (!rows.length) return null;
   return (
     <section aria-label="Recently published" className={cn("mx-auto max-w-6xl px-5", className)}>
