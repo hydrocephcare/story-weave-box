@@ -276,151 +276,45 @@ export function Paywall({
   const duration = (d: number) => (d >= 365 ? "12 months" : d >= 85 ? "3 months" : d >= 28 ? `${Math.round(d / 30)} month${Math.round(d / 30) === 1 ? "" : "s"}` : d === 1 ? "1 day" : `${d} days`);
 
   return (
-    <div className={`not-prose relative ${bare ? "" : "my-8 rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7"}`}>
-      <div className="mx-auto max-w-2xl space-y-5">
-        <div className="border-b border-border pb-4 text-left">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary"><Lock className="h-5 w-5" /></span>
-          <h2 className="mt-3 font-serif text-xl font-bold leading-snug text-foreground sm:text-2xl">
-            {headline || `Unlock the ${label}`}
-          </h2>
-          <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            {blurb || "Questions stay free to read. One subscription reveals every answer, with explanations and PDF handouts, across all of Ompath Study."}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {[[Check, "Full question bank"], [Eye, "Answers and explanations"], [Sparkles, "Study tools"], [Download, "PDF handouts"]].map(([Icon, text]) => {
-            const I = Icon as typeof Eye;
-            return <div key={text as string} className="flex items-center gap-2 text-xs font-medium text-muted-foreground"><I className="h-4 w-4 shrink-0 text-primary" />{text as string}</div>;
-          })}
-        </div>
-
-        <div className="grid grid-cols-2 gap-1 rounded-xl bg-muted p-1" role="tablist" aria-label="How to unlock">
-          {([["buy", "Pay securely"], ["code", "I have a code"]] as const).map(([id, text]) => (
-            <button key={id} type="button" role="tab" aria-selected={mode === id} onClick={() => { setMode(id); setState("idle"); }}
-              className={`rounded-lg px-3 py-2 text-sm font-bold transition-colors ${mode === id ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}>{text}</button>
-          ))}
-        </div>
-
-        {mode === "buy" ? (
-          <>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2" role="radiogroup" aria-label="Choose a plan">
-              {sorted.map((p) => {
-                const rate = perMonth(p);
-                const best = sorted.length > 1 && rate !== null && rate === bestRate && baseRate !== null && rate < baseRate * 0.9;
-                const save = best && baseRate ? Math.round((1 - rate! / baseRate) * 100) : 0;
-                const on = planId === p.id;
-                return (
-                  <button key={p.id} type="button" role="radio" aria-checked={on} onClick={() => setPlanId(p.id)}
-                    className={`relative flex min-h-[104px] items-center justify-between gap-3 rounded-xl border p-4 text-left transition-colors ${on ? "border-primary bg-primary/5 ring-1 ring-primary/20" : "border-border bg-background hover:border-primary/40"}`}>
-                    {best && <span className="absolute -top-2.5 right-3 rounded-full bg-[#f2b632] px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-[#0b2545]">Best value{save ? ` · save ${save}%` : ""}</span>}
-                    <p className="text-xs font-semibold text-muted-foreground">{p.label || duration(p.days)}</p>
-                    <p className="mt-1 font-serif text-2xl font-bold leading-none text-foreground">KES {p.price.toLocaleString("en-KE")}</p>
-                    <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">{rate !== null && sorted.length > 1 ? `About KES ${Math.round(rate)} a month` : p.label.replace(/\s*\(.*\)\s*/, "")}</p>
-                    <span className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${on ? "border-primary bg-primary text-primary-foreground" : "border-border"}`}>{on && <Check className="h-3 w-3" />}</span>
-                  </button>
-                );
-              })}
+    <div className={`not-prose ${bare ? "" : "my-8"}`}>
+      <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_300px]">
+          <section className="min-w-0 p-5 sm:p-8">
+            <div className="border-b border-border pb-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">OmpathStudy / Secure checkout</p>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">{headline || `Unlock the ${label}`}</h2>
+              <p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">{blurb || "Get full access to questions, answers, explanations and study resources with one subscription."}</p>
             </div>
-
-            {!user && !authLoading && (
-              <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
-                <p className="text-xs font-bold uppercase tracking-wide text-primary">Step 1 · Sign in</p>
-                <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">
-                  Sign in with Google first. We bring you straight back here to complete your payment, and your subscription follows you on any device.
-                </p>
-                <button type="button" onClick={startGoogle} disabled={signingIn}
-                  className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground disabled:opacity-60">
-                  {signingIn ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
-                  Continue with Google
-                </button>
-                <p className="mt-2 text-center text-[11px] text-muted-foreground">
-                  Already paid on another device? <button type="button" onClick={() => { setMode("code"); setState("idle"); }} className="font-semibold text-primary underline underline-offset-4">Use your code</button>.
-                </p>
+            <div className="mt-6">
+              <div className="flex items-center justify-between gap-3"><h3 className="text-sm font-semibold text-foreground">Choose your subscription</h3><span className="text-xs text-muted-foreground">Select one plan</span></div>
+              <div className="mt-3 divide-y divide-border rounded-xl border border-border" role="radiogroup" aria-label="Choose a plan">
+                {sorted.map((p) => { const rate=perMonth(p); const best=sorted.length>1 && rate!==null && rate===bestRate && baseRate!==null && rate<baseRate*0.9; const save=best&&baseRate?Math.round((1-rate!/baseRate)*100):0; const on=planId===p.id;
+                  return <button key={p.id} type="button" role="radio" aria-checked={on} onClick={()=>setPlanId(p.id)} className={`flex min-h-[76px] w-full items-center justify-between gap-4 px-4 py-3 text-left first:rounded-t-xl last:rounded-b-xl ${on?"bg-primary/[0.06]":"bg-background hover:bg-muted/40"}`}>
+                    <span className="flex min-w-0 items-start gap-3"><span className={`mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border ${on?"border-primary":"border-muted-foreground/50"}`}>{on&&<span className="h-2 w-2 rounded-full bg-primary"/>}</span><span className="min-w-0"><span className="block text-sm font-semibold text-foreground">{p.label||duration(p.days)}</span><span className="mt-1 block text-xs text-muted-foreground">{duration(p.days)} access{rate!==null&&sorted.length>1?` · about KES ${Math.round(rate)} per month`:""}</span></span></span>
+                    <span className="shrink-0 text-right"><span className="block text-lg font-semibold tabular-nums text-foreground">KES {p.price.toLocaleString("en-KE")}</span>{best&&<span className="mt-0.5 block text-[11px] font-medium text-primary">Save {save}%</span>}</span>
+                  </button>; })}
               </div>
-            )}
-
-            <div className={`mt-4 space-y-3 ${!user && !authLoading ? "pointer-events-none opacity-40" : ""}`}>
-              <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Your mobile number</p>
-              <div className="space-y-2">
-                <label htmlFor="pay-phone" className="block text-xs font-semibold text-muted-foreground">Mobile number</label>
-                <div className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-background px-4 transition focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15">
-                  <span className="text-2xl leading-none" aria-hidden="true">{countries[countryCode]?.flag || "🌍"}</span>
-                  <input id="pay-phone" value={phone} onChange={(e) => {
-                    const next = e.target.value.replace(/[^0-9+ ]/g, "");
-                    setPhone(next);
-                    const detected = detectCountry(next);
-                    if (detected !== "OTHER") {
-                      setCountryCode(detected);
-                      if (detected !== "KE") setPaymentMethod("card");
-                      else if (paymentMethod === "card") setPaymentMethod("mpesa");
-                    } else if (next.trim().startsWith("+")) {
-                      setCountryCode("OTHER");
-                      setPaymentMethod("card");
-                    }
-                    setState("idle"); setMessage("");
-                  }} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX or +254..." className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/70" />
-                  <span className="shrink-0 text-xs font-semibold text-muted-foreground">{countries[countryCode]?.name || "International"}</span>
-                </div>
-                <p className="text-[11px] text-muted-foreground">Country is detected from the international prefix. Kenyan numbers support M-Pesa, Airtel Money and card.</p>
-              </div>
-              {countryCode === "KE" ? (
-                <div className="space-y-2">
-                  <p className="text-xs font-semibold text-muted-foreground">Choose payment method</p>
-                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-                    <button type="button" onClick={() => setPaymentMethod("mpesa")} aria-pressed={paymentMethod === "mpesa"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "mpesa" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><Smartphone className="h-5 w-5" />M-Pesa</button>
-                    <button type="button" onClick={() => setPaymentMethod("airtel")} aria-pressed={paymentMethod === "airtel"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "airtel" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><Wallet className="h-5 w-5" />Airtel Money</button>
-                    <button type="button" onClick={() => setPaymentMethod("card")} aria-pressed={paymentMethod === "card"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "card" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><CreditCard className="h-5 w-5" />Card</button>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex items-center gap-3 rounded-2xl border border-border bg-muted/40 p-4"><CreditCard className="h-5 w-5 shrink-0 text-primary" /><div><p className="text-sm font-semibold text-foreground">Paystack card checkout</p><p className="text-xs text-muted-foreground">Use secure Paystack card checkout for this country.</p></div></div>
-              )}
-              <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" || countryCode !== "KE" ? "Card payments redirect to secure Paystack checkout." : "Mobile-money prompts stay on OmpathStudy. Approve the prompt using your PIN."}</p>
-              {!paystackEnabled && <p role="status" className="rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs font-medium text-amber-700 dark:text-amber-300">Paystack payments are currently disabled. Please try again later or use an existing pass code.</p>}
-              <button type="button" onClick={startPaystackPayment} disabled={busy || !user || !paystackEnabled || phone.replace(/\D/g, "").length < 9} className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-4 text-base font-bold text-primary-foreground shadow-sm transition hover:brightness-95 disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" || countryCode !== "KE" ? `Continue to Paystack checkout · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
             </div>
-            {busy && (
-              <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
-                <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-primary">
-                  <Loader2 className="h-3.5 w-3.5 animate-spin" /> Payment in progress
-                </p>
-                <ol className="mt-2 space-y-1.5 text-[12px] leading-relaxed text-foreground/80">
-                  <li className={state === "waiting" ? "font-semibold text-primary" : ""}>1 · {paymentMethod === "airtel" ? "Airtel Money" : paymentMethod === "card" ? "Card checkout" : "M-Pesa"} request initiated</li>
-                  <li>2 · Complete the payment on your phone or hosted checkout</li>
-                  <li>3 · Your answers unlock here automatically</li>
-                </ol>
-                <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-primary/15">
-                  <div className="h-full w-1/3 animate-[pulse_1.4s_ease-in-out_infinite] rounded-full bg-primary" />
-                </div>
-                <p className="mt-2 text-[11px] text-muted-foreground">Keep this page open. Mobile-money confirmation can take up to 3 minutes.</p>
+            <div className="mt-7 border-t border-border pt-6">
+              <div className="flex items-center justify-between gap-3"><h3 className="text-sm font-semibold text-foreground">Payment details</h3><span className="text-xs text-muted-foreground">Final step</span></div>
+              {!user&&!authLoading&&<div className="mt-4 rounded-xl border border-border bg-background p-4"><p className="text-sm font-semibold text-foreground">Sign in to continue</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Your subscription will be linked to your account and available on your other devices.</p><button type="button" onClick={startGoogle} disabled={signingIn} className="mt-4 flex min-h-12 w-full items-center justify-center rounded-lg bg-foreground px-4 py-3 text-sm font-semibold text-background disabled:opacity-60">{signingIn?"Connecting…":"Continue with Google"}</button><button type="button" onClick={()=>{setMode("code");setState("idle");}} className="mt-3 w-full text-center text-xs font-medium text-primary underline underline-offset-4">Already have a pass code?</button></div>}
+              <div className={`mt-4 space-y-4 ${!user&&!authLoading?"pointer-events-none opacity-40":""}`}>
+                <div><label htmlFor="pay-phone" className="mb-2 block text-sm font-medium text-foreground">Mobile number</label><div className="flex min-h-12 items-center rounded-lg border border-border bg-background px-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15"><span className="mr-3 text-lg" aria-hidden="true">{countries[countryCode]?.flag||"🌍"}</span><input id="pay-phone" value={phone} onChange={(e)=>{const next=e.target.value.replace(/[^0-9+ ]/g,"");setPhone(next);const detected=detectCountry(next);if(detected!=="OTHER"){setCountryCode(detected);if(detected!=="KE")setPaymentMethod("card");else if(paymentMethod==="card")setPaymentMethod("mpesa");}else if(next.trim().startsWith("+")){setCountryCode("OTHER");setPaymentMethod("card");}setState("idle");setMessage("");}} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX or +254…" className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/60"/><span className="ml-2 shrink-0 text-xs text-muted-foreground">{countries[countryCode]?.name||"International"}</span></div><p className="mt-2 text-xs leading-5 text-muted-foreground">Enter the number that should receive your payment request.</p></div>
+                <div><p className="mb-2 text-sm font-medium text-foreground">Payment method</p>{countryCode==="KE"?<div className="grid grid-cols-3 overflow-hidden rounded-lg border border-border" role="group" aria-label="Payment method">{([["mpesa","M-Pesa"],["airtel","Airtel Money"],["card","Debit / credit card"]] as const).map(([method,title])=><button key={method} type="button" onClick={()=>setPaymentMethod(method)} aria-pressed={paymentMethod===method} className={`min-h-12 border-r border-border px-2 py-3 text-xs font-semibold last:border-r-0 sm:text-sm ${paymentMethod===method?"bg-foreground text-background":"bg-background text-muted-foreground hover:bg-muted/50"}`}>{title}</button>)}</div>:<div className="rounded-lg border border-border bg-muted/30 px-4 py-3"><p className="text-sm font-semibold text-foreground">Debit or credit card</p><p className="mt-1 text-xs text-muted-foreground">Secure card payment through Paystack.</p></div>}</div>
+                {!paystackEnabled&&<p role="status" className="rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs text-amber-700 dark:text-amber-300">Online payments are temporarily unavailable. Please use an existing pass code or try again later.</p>}
+                <button type="button" onClick={startPaystackPayment} disabled={busy||!user||!paystackEnabled||phone.replace(/\D/g,"").length<9} className="flex min-h-14 w-full items-center justify-center rounded-lg bg-primary px-5 py-4 text-base font-semibold text-primary-foreground transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50">{busy?(state==="waiting"?"Waiting for payment confirmation…":"Starting payment…"):`Pay KES ${(plan.price||settings.price).toLocaleString("en-KE")}`}</button>
+                <p className="text-center text-xs leading-5 text-muted-foreground">{paymentMethod==="card"||countryCode!=="KE"?"You will continue to Paystack’s secure card checkout.":"A payment prompt will be sent to your phone. Approve it using your mobile-money PIN."}</p>
               </div>
-            )}
-          </>
-        ) : (
-          <div className="space-y-2">
-            <label htmlFor="pass-code" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Your pass code</label>
-            <div className="relative">
-              <KeyRound className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <input id="pass-code" value={code} onChange={(e) => setCode(normalizePassCode(e.target.value))} placeholder="OM-XXXXXXXX"
-                className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-3 font-mono text-base text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
             </div>
-            <button type="button" onClick={redeem} disabled={state === "sending"}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground disabled:opacity-60">
-              {state === "sending" ? <Loader2 className="h-4 w-4 animate-spin" /> : <ShieldCheck className="h-4 w-4" />}
-              Unlock with code
-            </button>
-          </div>
-        )}
-
-        {message && (
-          <p role="status" className={`mt-3 rounded-xl px-3 py-2 text-center text-xs font-semibold ${state === "error" ? "bg-destructive/10 text-destructive" : "bg-primary/10 text-primary"}`}>{message}</p>
-        )}
-        <p className="mt-4 border-t border-border pt-4 text-center text-xs leading-relaxed text-muted-foreground">
-          One subscription covers the whole site wherever you sign in. Card payments redirect to secure checkout; mobile-money prompts stay on this page.{" "}
-          <Link to="/account" className="font-semibold text-primary underline underline-offset-4">Manage your subscription</Link>
-        </p>
+            {busy&&<div className="mt-4 rounded-lg border border-border bg-muted/30 p-4 text-sm text-muted-foreground"><span className="inline-flex items-center gap-2 font-semibold text-foreground"><Loader2 className="h-4 w-4 animate-spin"/>Payment in progress</span><p className="mt-2">Keep this page open while we confirm your payment. Your access will unlock automatically.</p></div>}
+            {message&&<p role="status" className={`mt-4 rounded-lg px-3 py-3 text-sm ${state==="error"?"bg-destructive/10 text-destructive":"bg-primary/10 text-foreground"}`}>{message}</p>}
+            <p className="mt-5 text-xs leading-5 text-muted-foreground">Card payments are handled by Paystack. Mobile-money requests are confirmed before access is activated. <Link to="/account" className="font-medium text-primary underline underline-offset-4">Manage your subscription</Link>.</p>
+          </section>
+          <aside className="border-t border-border bg-muted/25 p-5 sm:p-8 lg:border-l lg:border-t-0"><p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">Order summary</p><div className="mt-5 border-b border-border pb-5"><p className="text-sm font-semibold text-foreground">{plan.label||duration(plan.days)} subscription</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Access across OmpathStudy for {duration(plan.days).toLowerCase()}.</p></div><div className="flex items-center justify-between gap-3 py-5"><span className="text-sm text-muted-foreground">Total due</span><span className="text-xl font-semibold tabular-nums text-foreground">KES {(plan.price||settings.price).toLocaleString("en-KE")}</span></div><div className="rounded-lg border border-border bg-background p-4"><p className="text-sm font-semibold text-foreground">Included with your plan</p><ul className="mt-3 space-y-2 text-xs leading-5 text-muted-foreground"><li>Questions and full answer keys</li><li>Explanations and study resources</li><li>Access on your signed-in devices</li>{plan.download&&<li>PDF handouts and downloads</li>}</ul></div><p className="mt-5 text-xs leading-5 text-muted-foreground">Your selected plan and full amount are shown before you pay. No hidden checkout charges.</p></aside>
+        </div>
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border px-5 py-3 text-xs text-muted-foreground sm:px-8"><span>OMPATHSTUDY</span><span>Secure checkout · Support available through your account</span></div>
       </div>
+      {mode==="code"&&<div className="mx-auto mt-4 max-w-xl rounded-xl border border-border bg-card p-5"><div className="flex items-center justify-between gap-3"><h3 className="text-base font-semibold text-foreground">Redeem an access code</h3><button type="button" onClick={()=>setMode("buy")} className="text-xs font-medium text-primary underline underline-offset-4">Back to payment</button></div><label htmlFor="pass-code" className="mt-4 block text-sm font-medium text-foreground">Pass code</label><input id="pass-code" value={code} onChange={(e)=>setCode(normalizePassCode(e.target.value))} placeholder="OM-XXXXXXXX" className="mt-2 min-h-12 w-full rounded-lg border border-border bg-background px-3 font-mono text-base text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"/><button type="button" onClick={redeem} disabled={state==="sending"} className="mt-3 min-h-12 w-full rounded-lg bg-foreground px-4 py-3 text-sm font-semibold text-background disabled:opacity-60">{state==="sending"?"Checking code…":"Unlock with code"}</button></div>}
     </div>
   );
 }
