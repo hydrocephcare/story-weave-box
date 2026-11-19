@@ -1086,6 +1086,7 @@ export default async function handler(req: Request): Promise<Response> {
     const parts = originalPath.split("?")[0].split("/").filter(Boolean);
     const section = parts[0] || "";
     const param = parts[1] || "";
+    const questionNumber = parts[2] === "question" ? Number(parts[3]) : null;
 
     let title = "OmpathStudy | Medical Notes, MCQs & Exams";
     let description =
@@ -1274,7 +1275,7 @@ export default async function handler(req: Request): Promise<Response> {
       }
       const canonicalMcqPath = `/mcqs/${cleanPublicSlug(mcq.slug, mcq.title, "quiz")}`;
       if (canonicalMcqPath !== `/mcqs/${param}`) {
-        return permanentRedirect(canonicalMcqPath);
+        return permanentRedirect(questionNumber ? `${canonicalMcqPath}/question/${questionNumber}` : canonicalMcqPath);
       }
       const rawQuestions: unknown[] = Array.isArray(mcq.questions) ? mcq.questions : [];
       const parsed = rawQuestions.map(parseQuestion).filter((p): p is ParsedQuestion => p !== null);
@@ -1310,7 +1311,7 @@ export default async function handler(req: Request): Promise<Response> {
             ? `<p><strong>Explanation:</strong> ${htmlEscape(p.explanation)}</p>`
             : "";
           return `<li id="question-${i + 1}">
-<h2>Question ${i + 1}: ${htmlEscape(p.stem)}</h2>
+<h2><a href="${canonicalMcqPath}/question/${i + 1}">Question ${i + 1}: ${htmlEscape(p.stem)}</a></h2>
 ${optionsList}
 ${answerLine}
 ${explanationLine}
@@ -1322,6 +1323,34 @@ ${explanationLine}
         bodyExtra = `${previewHeading}<h2>Questions, Answers &amp; Explanations</h2>\n<ol>\n${items.join("\n")}\n</ol>`;
       } else if (crawlAccess.locked) {
         bodyExtra = "<p>This question bank includes a free preview. Sign in to OmpathStudy to view the available questions and unlock the complete bank.</p>";
+      }
+
+      if (questionNumber !== null) {
+        if (!Number.isInteger(questionNumber) || questionNumber < 1 || questionNumber > publicQuestions.length) {
+          return new Response(
+            "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex,nofollow\"><title>Question unavailable | OmpathStudy</title></head><body><h1>Question unavailable</h1><p>This question is not part of the public preview.</p></body></html>",
+            { status: 404, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } },
+          );
+        }
+        const question = publicQuestions[questionNumber - 1];
+        title = `${question.stem} | MCQ Answer &amp; Explanation | OmpathStudy`;
+        description = toMetaDescription(
+          `${question.stem} Correct answer: ${question.correctText}. ${question.explanation}`,
+          `Medical multiple-choice question with answer and explanation from ${mcqTitleBase} on OmpathStudy.`
+        );
+        const options = question.options.map((option, index) =>
+          `<li><strong>${String.fromCharCode(65 + index)}.</strong> ${htmlEscape(option)}</li>`
+        ).join("");
+        bodyExtra = `<article><h1>${htmlEscape(question.stem)}</h1><h2>Options</h2><ol>${options}</ol><p><strong>Correct answer:</strong> ${htmlEscape(question.correctText)}</p>${question.explanation ? `<p><strong>Explanation:</strong> ${htmlEscape(question.explanation)}</p>` : ""}<p>Part of <a href="${canonicalMcqPath}">${htmlEscape(mcq.title)} — full MCQ question bank</a>.</p></article>`;
+        schemaJson = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: title,
+          description,
+          url: absoluteUrl,
+          about: { "@type": "Question", name: question.stem },
+          isPartOf: { "@type": "WebPage", url: `${origin}${canonicalMcqPath}`, name: mcq.title },
+        });
       }
 
       // Ordinary MCQs are deliberately not labelled as flashcards or QAPage.
