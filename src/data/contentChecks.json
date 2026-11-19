@@ -1729,17 +1729,13 @@
    "hash": "a08b8cfa8b25",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Metabolic Syndrome (MetS) definition",
-     "problem": "The text states that the IDF definition of Metabolic Syndrome requires central obesity plus any two of the other criteria, but later in the Diagnosis and severity section, it states that Metabolic Syndrome is diagnosed when any three of the five criteria are present.",
-     "fix": "In Kenya, the most used criteria for Metabolic Syndrome are the IDF definition: central obesity (mandatory) plus any two of the following – elevated triglycerides, reduced HDL-cholesterol, raised blood pressure, or impaired fasting glucose, meaning a total of three criteria must be met."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-09"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:18:43.715Z"
   },
   "cns-foundations": {
    "hash": "588fefa4f195",
@@ -1926,17 +1922,13 @@
    "hash": "96060ec3411c",
    "validated": true,
    "high": 0,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "What long-term strategy should be started after the acute attack resolves?",
-     "problem": "The duration of colchicine prophylaxis when initiating urate-lowering therapy is often longer than stated.",
-     "fix": "Begin a xanthine oxidase inhibitor (allopurinol) at a low dose, titrating to achieve serum urate < 0.30 mmol/L, with prophylactic low-dose colchicine for the first 3-6 months."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-11"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:19:34.178Z"
   },
   "oa": {
    "hash": "f0aa24e522e5",
@@ -1949,133 +1941,58 @@
   },
   "sclerosis": {
    "hash": "c6293a22cf02",
-   "validated": false,
-   "high": 4,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Severity grading (practical for clinical rotations) - Renal",
-     "problem": "The threshold for creatinine in scleroderma renal crisis (SRC) is too low and could lead to overdiagnosis or unnecessary alarm.",
-     "fix": "Scleroderma renal crisis is typically defined by new-onset hypertension and acute kidney injury, often with a rapid and significant increase in serum creatinine (e.g., >30% increase from baseline or >1.5 mg/dL / 133 µmol/L if baseline is unknown), not merely >150 µmol/L."
-    },
-    {
-     "severity": "medium",
-     "where": "Causes and risk factors - Infections relevant to Kenya",
-     "problem": "The suggested link between malaria and systemic sclerosis is speculative and not supported by strong evidence in standard medical literature.",
-     "fix": "Remove malaria as a relevant infection that may act as a trigger, as its role is not established in systemic sclerosis pathogenesis."
-    },
-    {
-     "severity": "medium",
-     "where": "Causes and risk factors - Infections relevant to Kenya",
-     "problem": "The suggested link between sickle cell disease and systemic sclerosis is speculative and not supported by strong evidence in standard medical literature.",
-     "fix": "Remove sickle cell disease as a relevant condition that may exacerbate endothelial injury, as its role is not established in systemic sclerosis pathogenesis."
-    },
-    {
-     "severity": "high",
-     "where": "Immediate stabilisation - Renal crisis",
-     "problem": "The advice to initiate ACE-inhibitor therapy emergently for malignant hypertension in renal crisis is correct, but it is missing a crucial safety caveat regarding blood pressure reduction.",
-     "fix": "If malignant hypertension develops, initiate ACE-inhibitor therapy emergently, aiming for a gradual reduction in blood pressure (e.g., by 10-20% in the first hour) to avoid renal hypoperfusion, and arrange ICU transfer."
-    },
-    {
-     "severity": "high",
-     "where": "Definitive (long-term) treatment - Skin fibrosis & early disease",
-     "problem": "Mycophenolate mofetil and cyclophosphamide are not considered 'anti-fibrotics' for skin fibrosis in the same way nintedanib and pirfenidone are for ILD. They are immunosuppressants that can have an impact on skin disease.",
-     "fix": "Skin fibrosis & early disease: Immunosuppressants — Mycophenolate mofetil, cyclophosphamide (IV) — Reduce inflammation and collagen deposition, improve skin scores."
-    },
-    {
-     "severity": "high",
-     "where": "Contra-indications / safety",
-     "problem": "The statement that ACE-inhibitors are contraindicated in pregnancy is too absolute. While generally avoided, they may be used in specific, severe cases of scleroderma renal crisis where the maternal benefit outweighs the fetal risk, under strict monitoring.",
-     "fix": "ACE-inhibitors are generally avoided in pregnancy due to fetal risk, but may be used in severe scleroderma renal crisis if maternal benefit outweighs risk, with close monitoring."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-11"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:20:27.841Z"
   },
   "vasculitis": {
    "hash": "843f2cc3bc8b",
-   "validated": false,
-   "high": 3,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Pathophysiology",
-     "problem": "The pathophysiology steps incorrectly state that immune complexes or ANCA antibodies are formed before deposition in the vessel wall, which is not always the case for ANCA.",
-     "fix": "For ANCA-associated vasculitis, ANCA antibodies activate neutrophils, which then bind to the vessel wall and cause damage, rather than depositing as immune complexes."
-    },
-    {
-     "severity": "high",
-     "where": "Management > Immediate stabilisation > Severe renal impairment",
-     "problem": "The diagnostic cut-off for severe renal impairment requiring urgent plasma exchange is incorrect.",
-     "fix": "Severe renal impairment requiring urgent plasma exchange is typically defined as eGFR < 20 ml/min or creatinine > 5.7 mg/dL (500 µmol/L)."
-    },
-    {
-     "severity": "high",
-     "where": "High-yield exam points > Management nuance",
-     "problem": "The creatinine cut-off for plasma exchange indication is incorrect.",
-     "fix": "Plasma exchange is indicated for severe renal impairment (creatinine > 5.7 mg/dL or 500 µmol/L) or pulmonary haemorrhage."
-    },
-    {
-     "severity": "medium",
-     "where": "Management > Definitive treatment > Immune-complex small vessel",
-     "problem": "Hydroxychloroquine is not a standard treatment for skin/joint disease in immune-complex small vessel vasculitis.",
-     "fix": "For skin/joint disease in immune-complex small vessel vasculitis, symptomatic treatment and low-dose glucocorticoids may be used, but hydroxychloroquine is not a first-line agent."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-11"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:21:22.153Z"
   },
   "septic-arthritis": {
    "hash": "ac02e9ab0dd3",
-   "validated": false,
-   "high": 1,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Severity grading (used to guide urgency of intervention and level of monitoring)",
-     "problem": "The severity grading suggests outpatient management for mild septic arthritis, which is generally not recommended due to the risk of rapid joint destruction.",
-     "fix": "All cases of septic arthritis, regardless of severity, typically require hospital admission for intravenous antibiotics and close monitoring due to the risk of rapid joint destruction and systemic complications."
-    },
-    {
-     "severity": "high",
-     "where": "High-yield exam points - \"What fluid findings make septic arthritis most likely?\"",
-     "problem": "The diagnostic cut-off for synovial fluid WBC in septic arthritis is usually >50,000 cells/µL, not >50,000 µL.",
-     "fix": "WBC > 50,000 cells/µL, predominantly neutrophils, low glucose."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-11"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:22:16.428Z"
   },
   "spa": {
    "hash": "216b85f77d09",
    "validated": false,
-   "high": 3,
+   "high": 1,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Practice questions, Question 2 Answer",
-     "problem": "IGRA is a screening tool for latent TB, not for active TB, and it is not the 'first' investigation for a patient on a TNF-α inhibitor who develops a persistent cough and night sweats, which are symptoms of active TB.",
-     "fix": "For a patient on a TNF-α inhibitor with symptoms suggestive of active TB (cough, night sweats), the first investigation should be a chest X-ray and sputum microscopy/culture to rule out active disease."
-    },
-    {
-     "severity": "high",
-     "where": "Practice questions, Question 4 Answer",
-     "problem": "The marked answer suggests systemic steroids are 'often needed' for acute anterior uveitis, but topical steroids are the first-line treatment.",
-     "fix": "Acute anterior uveitis requires prompt ophthalmology input; topical steroid eye drops are the first-line treatment, with systemic steroids reserved for severe or refractory cases."
-    },
-    {
-     "severity": "high",
-     "where": "Practice questions, Question 5 Answer",
-     "problem": "Active hepatitis B infection is not an absolute contraindication to COX-2 selective NSAIDs, but rather a caution requiring careful monitoring and potentially antiviral therapy.",
-     "fix": "Active hepatitis B infection is a relative contraindication or requires careful monitoring for NSAID use, but severe renal impairment or uncontrolled hypertension are stronger contraindications for COX-2 selective NSAIDs."
+     "where": "Question 5 answer and explanation",
+     "problem": "Active hepatitis B infection is incorrectly stated as a contraindication to NSAID use.",
+     "fix": "Active hepatitis B is a contraindication to biologic or immunosuppressive therapy, not NSAIDs; contraindications to COX-2 selective NSAIDs include active peptic ulcer disease, severe heart failure, and advanced renal impairment."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-11"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-19T10:24:02.584Z"
   },
   "pharmacology": {
    "hash": "bfa4ca8839d4",
@@ -2085,13 +2002,16 @@
    "issues": [
     {
      "severity": "high",
-     "where": "How will you modify his ART during TB treatment?",
-     "problem": "Switching efavirenz to a protease inhibitor like lopinavir/ritonavir when giving rifampicin is dangerous and clinically incorrect because rifampicin drastically lowers protease inhibitor levels, whereas efavirenz is the preferred NNRTI compatible with rifampicin.",
-     "fix": "Continue the efavirenz-based regimen (efavirenz 600 mg once daily requires no dose adjustment with rifampicin) or, if using dolutegravir, double the dose to 50 mg twice daily, and avoid standard protease inhibitor regimens."
+     "where": "Clinical case - Question 2 answer",
+     "problem": "Switching efavirenz to a protease inhibitor during TB treatment is incorrect because rifampicin drastically reduces protease inhibitor levels; dolutegravir or doubled-dose efavirenz is preferred.",
+     "fix": "Switch or maintain ART with appropriate dosing (such as adding a dolutegravir dose or using efavirenz) rather than switching to a standard-dose protease inhibitor, since rifampicin induces protease inhibitors."
     }
    ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-11-11"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-19T10:25:12.658Z"
   },
   "geriatrics": {
    "hash": "6448b046795e",
@@ -2101,19 +2021,22 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Clinical case, Question 2",
-     "problem": "The recommended empiric antibiotic for UTI, nitrofurantoin, is often inappropriate for patients with a GFR below 30-60 mL/min, which is common in the elderly, and the case describes a patient with potential dehydration and likely impaired renal function.",
-     "fix": "Begin empiric broad-spectrum antibiotics (e.g., a third-generation cephalosporin or a fluoroquinolone if local resistance patterns allow and renal function is adequate) pending culture results, considering the patient's age, potential for urosepsis, and renal status."
+     "where": "* Renal – eGFR >60 mL/min/1.73 m² (stage 1), 30‑59 (stage 2), <30 (stage 3).",
+     "problem": "The KDIGO stages for chronic kidney disease are misclassified by eGFR thresholds and missing stages 4 and 5.",
+     "fix": "Renal staging follows KDIGO: stage 1 (≥90), stage 2 (60–89), stage 3a (45–59), stage 3b (30–44), stage 4 (15–29), and stage 5 (<15 mL/min/1.73m²)."
     },
     {
      "severity": "high",
-     "where": "Practice questions, Question 3",
-     "problem": "Hyperkalaemia (5.8 mmol/L) and eGFR 28 ml/min are contraindications to continuing an ACE-inhibitor, but stopping it and immediately starting a calcium channel blocker is not the safest action without addressing the hyperkalaemia first.",
-     "fix": "The safest action is to stop the ACE-inhibitor and manage the hyperkalaemia (e.g., with potassium-binding resins or IV calcium gluconate if ECG changes are present) before considering alternative antihypertensive agents like a calcium channel blocker."
+     "where": "Clinical case Question 2 answer: 'begin empiric oral nitrofurantoin'",
+     "problem": "Nitrofurantoin is contraindicated or ineffective for febrile UTIs and pyelonephritis/urosepsis because it does not achieve adequate renal tissue and systemic blood concentrations.",
+     "fix": "Begin empiric systemic broad-spectrum antibiotics (such as ceftriaxone or co-amoxiclav) according to local guidelines, rather than nitrofurantoin."
     }
    ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-12"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-19T10:27:50.395Z"
   },
   "poisoning": {
    "hash": "ebd3a8346b71",
@@ -2126,65 +2049,34 @@
   },
   "anaphylaxis": {
    "hash": "266f92298642",
-   "validated": false,
-   "high": 3,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Serum tryptase (draw 30-120 min after onset)",
-     "problem": "The diagnostic cut-off for serum tryptase elevation is incorrect.",
-     "fix": "Elevated >11.4 µg/L (or baseline + 2 + 1.2 x baseline) supports anaphylaxis; normal does not exclude it."
-    },
-    {
-     "severity": "high",
-     "where": "H2-antihistamine (e.g., ranitidine) – synergistic with H1 blocker for urticaria and angio-edema.",
-     "problem": "Ranitidine is no longer widely available or recommended due to safety concerns and product withdrawals.",
-     "fix": "H2-antihistamine (e.g., famotidine) – synergistic with H1 blocker for urticaria and angio-edema."
-    },
-    {
-     "severity": "high",
-     "where": "Corticosteroids are contraindicated in active, uncontrolled infection (e.g., disseminated TB) unless benefits clearly outweigh risks; monito",
-     "problem": "There are no absolute contraindications to corticosteroids in the acute management of anaphylaxis when indicated, as the benefit outweighs the risk.",
-     "fix": "Corticosteroids should be used with caution in active, uncontrolled infection (e.g., disseminated TB) but are not absolutely contraindicated in acute anaphylaxis where benefits clearly outweigh risks; monitor for worsening infection."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 4",
-     "problem": "The question states quinine as the drug, but the answer and explanation refer to quinidine, which is a different drug and a quinine analogue.",
-     "fix": "The question should refer to quinidine if quinidine-induced anaphylaxis is the intended diagnosis, or the explanation should clarify that quinine itself can cause anaphylaxis or that quinidine is a metabolite or analogue."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-12"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:29:07.761Z"
   },
   "nutrition": {
    "hash": "62860315fb62",
    "validated": false,
-   "high": 2,
-   "medium": 1,
+   "high": 1,
+   "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Causes and risk factors - Drug-induced",
-     "problem": "Antiretrovirals are listed as causing folate deficiency, which is not a common or direct side effect.",
-     "fix": "Antiretrovirals can cause other deficiencies (e.g., tenofovir can cause vitamin D and phosphate wasting), but folate deficiency is not a primary concern."
-    },
-    {
-     "severity": "medium",
-     "where": "Investigations - Bone mineral density (if available)",
-     "problem": "A T-score of <= -2.5 indicates osteoporosis, not osteopenia/osteoporosis.",
-     "fix": "T-score ≤-2.5 = osteoporosis"
-    },
-    {
-     "severity": "high",
-     "where": "Diagnosis and severity - Protein-energy malnutrition",
-     "problem": "The severity grading for PEM based on BMI is inconsistent with widely accepted classifications (e.g., WHO).",
-     "fix": "Protein-energy malnutrition: BMI <18.5 kg/m² or MUAC <23 cm plus at least two clinical signs (muscle wasting, edema, low albumin) — *Mild*: BMI 17-18.5, no edema; *Moderate*: BMI 16-17, mild edema; *Severe*: BMI <16 or presence of marked edema/ascites."
+     "where": "T-score ≤‑2.5 = osteopenia/osteoporosis",
+     "problem": "A T-score of ≤ -2.5 defines osteoporosis, whereas osteopenia is defined as a T-score between -1.0 and -2.5.",
+     "fix": "T-score ≤ -2.5 = osteoporosis (T-score -1.0 to -2.5 = osteopenia)."
     }
    ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-12"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 1,
+   "lastAttempt": "2026-11-19T10:31:47.055Z"
   },
   "lymphomas": {
    "hash": "cc7ddde80f04",
@@ -2217,29 +2109,13 @@
    "hash": "0221b2745e7b",
    "validated": true,
    "high": 0,
-   "medium": 3,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Ten things to remember, point 6",
-     "problem": "The statement implies APA and ICD-11 have the same definition of psychosis, focusing on 'impaired reality testing'. While related, their diagnostic criteria and emphasis can differ.",
-     "fix": "DSM-5-TR lists five features. ICD-11 defines psychosis as impaired reality testing, often with delusions or hallucinations."
-    },
-    {
-     "severity": "medium",
-     "where": "High-yield exam points, third bullet",
-     "problem": "The statement implies APA and ICD-11 have the same definition of psychosis, focusing on 'impaired reality testing'. While related, their diagnostic criteria and emphasis can differ.",
-     "fix": "DSM-5-TR lists five features. ICD-11 defines psychosis as impaired reality testing, often with delusions or hallucinations."
-    },
-    {
-     "severity": "medium",
-     "where": "Tricky questions examiners ask, Q3",
-     "problem": "Jaspers' definition of delusion includes 'subjective certainty' and 'incorrigibility', but not necessarily 'false or impossible content'. A delusion can be factually true but still delusional due to the manner in which it is held.",
-     "fix": "Jaspers' three features of a delusion are subjective certainty, incorrigibility (it cannot be argued away), and personal conviction (it is not shared by others)."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-12"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:32:44.613Z"
   },
   "psychiatry-group-assignments-2026": {
    "hash": "b24aa03e20c7",
@@ -2279,71 +2155,27 @@
   },
   "imed-bedside-abdominal-examination-ascites-liver-signs": {
    "hash": "e85250083864",
-   "validated": false,
-   "high": 2,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Murphy sign description",
-     "problem": "The maneuver is described incorrectly; the patient should inhale while the examiner palpates, not exhale.",
-     "fix": "Ask the patient to inhale while you palpate under the right costal margin; inspiratory arrest due to pain supports acute cholecystitis."
-    },
-    {
-     "severity": "high",
-     "where": "Spleen palpation technique",
-     "problem": "The spleen is incorrectly said to be palpated starting in the right iliac fossa.",
-     "fix": "Begin palpation in the left lower quadrant (left iliac fossa) and move upward toward the left costal margin during inspiration."
-    }
-   ],
-   "model": "openai/gpt-oss-120b",
-   "at": "2026-11-13"
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:34:51.020Z"
   },
   "stroke-seizures-epilepsy": {
    "hash": "1a6b19ac9114",
-   "validated": false,
-   "high": 6,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Immediate stabilisation",
-     "problem": "The threshold for treating hypoglycaemia is stated as < 3 mmol/L, but the standard threshold for intervention in acute stroke is < 3.3 mmol/L (or < 60 mg/dL).",
-     "fix": "Treat hypoglycaemia < 3.3 mmol/L."
-    },
-    {
-     "severity": "high",
-     "where": "Definitive treatment – Ischaemic stroke",
-     "problem": "The time window for endovascular thrombectomy is stated as 6–24 hours, but current guidelines extend this window for selected patients based on imaging criteria, not a strict 24-hour cut-off for all.",
-     "fix": "If large-vessel occlusion, arrange endovascular thrombectomy within 6-24 hours for most, or up to 24 hours or beyond for selected patients based on advanced imaging."
-    },
-    {
-     "severity": "high",
-     "where": "Definitive treatment – Haemorrhagic stroke",
-     "problem": "The target SBP for aggressive control in haemorrhagic stroke is stated as < 140 mmHg, but recent guidelines suggest a target of 130-140 mmHg, not simply < 140 mmHg, to avoid potential harm from over-aggressive lowering.",
-     "fix": "Control BP aggressively to SBP 130-140 mmHg (unless contraindicated)."
-    },
-    {
-     "severity": "high",
-     "where": "Monitoring",
-     "problem": "Neurological checks are recommended every 15 minutes for the first hour, then hourly for 24 hours. While frequent, post-thrombolysis protocols often require checks every 15 minutes for 2 hours, then every 30 minutes for 6 hours, then hourly for 16 hours.",
-     "fix": "Neurological checks (NIHSS or GCS) every 15 min for 2 hours, then every 30 min for 6 hours, then hourly for 16 hours."
-    },
-    {
-     "severity": "high",
-     "where": "Safety & contraindications",
-     "problem": "Thrombolysis contraindication lists platelet < 100 × 10⁹/L, but the standard threshold is < 100,000/µL (or < 100 × 10⁹/L), which is correctly stated, but it is also a contraindication if the platelet count is unknown.",
-     "fix": "Thrombolysis contraindicated: intracranial haemorrhage, recent major surgery, uncontrolled hypertension, active bleeding, platelet < 100 × 10⁹/L or unknown platelet count."
-    },
-    {
-     "severity": "high",
-     "where": "Secondary prevention",
-     "problem": "The blood pressure target for secondary prevention is stated as < 130/80 mmHg, but current guidelines often recommend < 140/90 mmHg for most, with < 130/80 mmHg for specific high-risk groups.",
-     "fix": "Blood pressure target < 140/90 mmHg for most, with < 130/80 mmHg for selected high-risk patients."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-14"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:33:39.125Z"
   },
   "clinical-clarifications-jvp-oedema-heart-murmurs": {
    "hash": "d7c21feba5be",
@@ -2365,31 +2197,15 @@
   },
   "imed-cns-examination-complete-notes": {
    "hash": "ace7bbe6960b",
-   "validated": false,
-   "high": 1,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "GCS table",
-     "problem": "The GCS motor response 'Normal flexion/withdrawal from pressure' is scored 4, but 'Abnormal flexion' is scored 3. This implies normal flexion is withdrawal, which is not correct in all GCS versions. Withdrawal is a distinct response.",
-     "fix": "The GCS motor response 'Normal flexion/withdrawal from pressure' should be split into 'Withdraws from pressure' (score 4) and 'Normal flexion' (not a standard GCS term, usually 'Abnormal flexion' is score 3, and 'Withdraws' is score 4)."
-    },
-    {
-     "severity": "high",
-     "where": "GCS table",
-     "problem": "The GCS motor response 'Normal flexion/withdrawal from pressure' is scored 4, but 'Abnormal flexion' is scored 3. The standard GCS uses 'Withdraws from pain' for score 4 and 'Abnormal flexion' for score 3.",
-     "fix": "The GCS motor response should be 'Withdraws from pain' for score 4 and 'Abnormal flexion' for score 3."
-    },
-    {
-     "severity": "medium",
-     "where": "Key dermatome landmarks",
-     "problem": "The dermatome for the inguinal region is typically T12-L1, not just L1.",
-     "fix": "The inguinal region is T12-L1."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-14"
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:36:33.657Z"
   },
   "psychotic-disorders-schizophrenia-related-conditions": {
    "hash": "c2da0d45bb66",
@@ -2404,48 +2220,37 @@
    "hash": "a73435858a4c",
    "validated": true,
    "high": 0,
-   "medium": 2,
-   "issues": [
-    {
-     "severity": "medium",
-     "where": "Scenario 1: Generalised anxiety disorder",
-     "problem": "The key clue for GAD is incomplete as it only mentions the duration of worry but omits the requirement for associated symptoms.",
-     "fix": "The key clue should state: 'excessive, difficult-to-control worry across several areas for at least six months and at least three associated symptoms in adults under DSM-5-TR'."
-    },
-    {
-     "severity": "medium",
-     "where": "High-yield examination points, point 4",
-     "problem": "Point 4 states 'at least three associated symptoms in adults' for GAD, but the scenario 1 key clue for GAD only mentions duration of worry, creating an inconsistency.",
-     "fix": "The key clue in Scenario 1 should be updated to include 'and at least three associated symptoms in adults' to match point 4."
-    }
-   ],
-   "model": "gemini-2.5-flash-lite",
-   "at": "2026-11-14"
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:38:17.343Z"
   },
   "mood-disorders-comprehensive": {
-   "hash": "d2b97dff3181",
+   "hash": "8a4603377e54",
    "validated": true,
    "high": 0,
    "medium": 0,
    "issues": [],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-14"
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:40:00.848Z"
   },
   "sadness-and-depression": {
    "hash": "b74639d465a7",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "14. Management - E. Social support and relapse prevention",
-     "problem": "The recommended duration for antidepressant treatment after a first episode of depression is too short.",
-     "fix": "For many patients after a first episode, antidepressant treatment continues for at least 9-12 months after remission; longer may be appropriate after recurrent, severe or high-risk episodes."
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-14"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:40:52.800Z"
   },
   "gynaecology-abnormal-uterine-bleeding": {
    "hash": "5ea80ab2d1eb",
@@ -2485,31 +2290,15 @@
   },
   "gynaecology-infertility": {
    "hash": "974902a01b23",
-   "validated": false,
-   "high": 3,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Definition and terminology",
-     "problem": "The WHO guideline for infertility was published in 2023, not 2025.",
-     "fix": "The WHO guideline for the prevention, diagnosis and treatment of infertility was published in 2023."
-    },
-    {
-     "severity": "high",
-     "where": "References and further reading",
-     "problem": "The WHO guideline for infertility was published in 2023, not 2025.",
-     "fix": "WHO. Guideline for the prevention, diagnosis and treatment of infertility (2023): https://www.who.int/publications/i/item/9789240115774"
-    },
-    {
-     "severity": "high",
-     "where": "References and further reading",
-     "problem": "The Kenya Ministry of Health National Family Planning Guidelines 7th Edition was published in 2023, not 2025.",
-     "fix": "Kenya Ministry of Health. National Family Planning Guidelines, 7th Edition (2023), infertility section: https://www.health.go.ke/sites/default/files/2023-02/Signed%20National%20Family%20Planning%20Guidelines%207th%20Edition%202023%20%281%29.pdf"
-    }
-   ],
-   "model": "gemini-2.5-flash",
-   "at": "2026-11-15"
+   "issues": [],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
+   "repairAttempts": 0,
+   "lastAttempt": "2026-11-19T10:41:44.081Z"
   },
   "gynaecology-endometriosis": {
    "hash": "5a883dd608cf",
