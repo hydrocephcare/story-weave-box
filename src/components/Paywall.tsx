@@ -87,6 +87,16 @@ export function Paywall({
   const [renaming, setRenaming] = useState(false);
   const [renameMsg, setRenameMsg] = useState("");
   const { user, loading: authLoading } = useAuth();
+  useEffect(() => {
+    const metadata = user?.user_metadata as Record<string, unknown> | undefined;
+    const savedPhone = typeof metadata?.payment_phone === "string" ? metadata.payment_phone : "";
+    const savedCountry = typeof metadata?.payment_country === "string" ? metadata.payment_country : "";
+    if (savedPhone && !phone) setPhone(savedPhone);
+    if (savedCountry && countryData[savedCountry]) {
+      setCountryCode(savedCountry);
+      setPaymentMethod(savedCountry === "KE" ? "mpesa" : "card");
+    }
+  }, [user]);
   const [signingIn, setSigningIn] = useState(false);
   const [paystackEnabled, setPaystackEnabled] = useState(false);
 
