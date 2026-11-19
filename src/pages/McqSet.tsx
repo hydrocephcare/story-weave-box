@@ -76,7 +76,6 @@ function Bank({ set }: { set: McqSetRow }) {
 
   const reset = () => { setQs((cur) => shuffleOptions(mixOrder(cur), String(Math.random()))); setFirst(new Map()); setWrong(new Map()); setSolved(new Set()); setShown(new Set()); setOnly("all"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
-  const paywallIndex = indices.find((i) => isLocked(i));
   const lockedCount = qs.filter((_, i) => isLocked(i)).length;
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
   const reveal = (i: number) => setShown((s) => new Set(s).add(i));
@@ -164,12 +163,12 @@ function Bank({ set }: { set: McqSetRow }) {
                         <Lock className="h-5 w-5" />
                       </span>
                       <p className="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-primary">Free preview complete</p>
-                      <h2 className="mt-1 font-serif text-2xl font-bold leading-tight text-foreground">Unlock ${lockedIndices.length} questions</h2>
+                      <h2 className="mt-1 font-serif text-2xl font-bold leading-tight text-foreground">Unlock ${lockedCount} questions</h2>
                       <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
                         Continue practising with all remaining questions, answer keys and explanations.
                       </p>
                       <button type="button" onClick={() => setUnlockOpen(true)} className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition duration-200 hover:-translate-y-0.5 hover:brightness-95 hover:shadow-md active:translate-y-0 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-auto sm:min-w-64">
-                        <Lock className="h-4 w-4" /> Unlock ${lockedIndices.length} questions
+                        <Lock className="h-4 w-4" /> Unlock ${lockedCount} questions
                       </button>
                       <p className="mt-2 text-xs text-muted-foreground">One secure checkout. Your place on this page is preserved.</p>
                     </div>
@@ -194,7 +193,7 @@ function Bank({ set }: { set: McqSetRow }) {
                       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/5 via-background/15 to-background/35" />
                       <div className="pointer-events-none absolute left-1/2 top-6 z-10 -translate-x-1/2">
                         <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border/80 bg-background/90 px-4 py-2 text-xs font-semibold text-foreground shadow-sm backdrop-blur-[2px]">
-                          <Lock className="h-3.5 w-3.5" /> ${lockedIndices.length} member questions
+                          <Lock className="h-3.5 w-3.5" /> ${lockedCount} member questions
                         </span>
                       </div>
                     </div>
