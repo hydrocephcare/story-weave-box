@@ -47,7 +47,7 @@ import { guideReply } from "@/lib/ompathAiGuide";
 import { suggestionsFor } from "@/lib/ompathAiSuggest";
 import { useAuth } from "@/hooks/useAuth";
 import { useSiteSearch } from "@/hooks/useSiteSearch";
-import { useAccess } from "@/lib/access";
+import { consumeFeature, useAccess } from "@/lib/access";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { aiStore, useAiStore, type AiTurn } from "@/lib/ompathAiStore";
 import { FREE_DAILY_QUESTIONS, countQuestion, extractiveAnswer, followUps, parseQuery, questionsUsedToday, retrieve, streamAnswer, type Retrieval } from "@/lib/ompathAi";
@@ -150,7 +150,7 @@ export default function OmpathAIHost() {
   const myYear = profileYear ?? toldYear;
   const myTimetable = useTimetable(myYear ?? 1);
   const used = questionsUsedToday();
-  const limitHit = !features.can("unlimitedAi") && used >= FREE_DAILY_QUESTIONS;
+
 
   // Live suggestions while typing, so a student can jump straight to a note without waiting for an answer.
   const live = useSiteSearch(q.trim().length >= 3 && !quickReply(q) ? parseQuery(q).topic : "", {}, open && !busy);
@@ -341,11 +341,6 @@ export default function OmpathAIHost() {
       }
       setBusy(false);
     }
-    if (limitHit) {
-      aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, error: "You have reached today's free AI limit.", upgrade: "questions", at: Date.now() });
-      aiStore.flush();
-      return;
-    }
     setBusy(true);
     const prior = (aiStore.get().sessions.find((s) => s.id === sessionId)?.turns ?? []).slice(-3).flatMap((t) => [{ role: "user" as const, content: t.q }, { role: "assistant" as const, content: t.answer }]).filter((m) => m.content);
     aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, at: Date.now() });
@@ -360,6 +355,12 @@ export default function OmpathAIHost() {
       if (lookupOnly) {
         const n = retrieval.hits.length;
         aiStore.patchTurn(sessionId, id, { answer: `I found ${n} match${n === 1 ? "" : "es"} for **${retrieval.parsed.topic || text}**${retrieval.parsed.year ? ` in Year ${retrieval.parsed.year}` : ""}. Tap one to read it here.` });
+        aiStore.flush();
+        return;
+      }
+      const allowance = await consumeFeature("ompath_ai_questions");
+      if (!allowance.allowed) {
+        aiStore.patchTurn(sessionId, id, { answer: "You have used your free Ompath AI allowance for this period. Your notes and saved work remain available. Unlock premium access for more AI questions.", error: "Free AI allowance reached.", upgrade: "questions" });
         aiStore.flush();
         return;
       }
@@ -595,11 +596,6 @@ export default function OmpathAIHost() {
 
           {view === "chat" && (
             <div className="border-t border-border bg-background px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
-              {limitHit && (
-                <div className="mb-2 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-xs text-amber-800 dark:text-amber-300">
-                  You have used today's {FREE_DAILY_QUESTIONS} free questions. Notes search still works. <button type="button" onClick={() => openSubscribePrompt("Subscribe for unlimited Ompath AI questions.")} className="font-bold underline">Subscribe for unlimited</button>
-                </div>
-              )}
               {liveHits.length > 0 && q.trim().length >= 3 && (
                 <div className="mb-2 overflow-hidden rounded-xl border border-border bg-card">
                   {liveHits.map((h) => (
