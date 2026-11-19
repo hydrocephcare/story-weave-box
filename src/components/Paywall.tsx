@@ -44,6 +44,21 @@ export function Paywall({
     ET:{name:"Ethiopia",dial:"251",flag:"🇪🇹"}, SS:{name:"South Sudan",dial:"211",flag:"🇸🇸"}, SO:{name:"Somalia",dial:"252",flag:"🇸🇴"},
     MW:{name:"Malawi",dial:"265",flag:"🇲🇼"}, ZM:{name:"Zambia",dial:"260",flag:"🇿🇲"}, ZW:{name:"Zimbabwe",dial:"263",flag:"🇿🇼"},
     MZ:{name:"Mozambique",dial:"258",flag:"🇲🇿"}, EG:{name:"Egypt",dial:"20",flag:"🇪🇬"}, SA:{name:"Saudi Arabia",dial:"966",flag:"🇸🇦"},
+    HK:{name:"Hong Kong",dial:"852",flag:"🇭🇰"}, MY:{name:"Malaysia",dial:"60",flag:"🇲🇾"}, ID:{name:"Indonesia",dial:"62",flag:"🇮🇩"},
+    PH:{name:"Philippines",dial:"63",flag:"🇵🇭"}, TH:{name:"Thailand",dial:"66",flag:"🇹🇭"}, VN:{name:"Vietnam",dial:"84",flag:"🇻🇳"},
+    KR:{name:"South Korea",dial:"82",flag:"🇰🇷"}, NZ:{name:"New Zealand",dial:"64",flag:"🇳🇿"}, IE:{name:"Ireland",dial:"353",flag:"🇮🇪"},
+    CH:{name:"Switzerland",dial:"41",flag:"🇨🇭"}, BE:{name:"Belgium",dial:"32",flag:"🇧🇪"}, SE:{name:"Sweden",dial:"46",flag:"🇸🇪"},
+    NO:{name:"Norway",dial:"47",flag:"🇳🇴"}, DK:{name:"Denmark",dial:"45",flag:"🇩🇰"}, PL:{name:"Poland",dial:"48",flag:"🇵🇱"},
+    PT:{name:"Portugal",dial:"351",flag:"🇵🇹"}, GR:{name:"Greece",dial:"30",flag:"🇬🇷"}, IL:{name:"Israel",dial:"972",flag:"🇮🇱"},
+    QA:{name:"Qatar",dial:"974",flag:"🇶🇦"}, KW:{name:"Kuwait",dial:"965",flag:"🇰🇼"}, BH:{name:"Bahrain",dial:"973",flag:"🇧🇭"},
+    JO:{name:"Jordan",dial:"962",flag:"🇯🇴"}, LB:{name:"Lebanon",dial:"961",flag:"🇱🇧"}, RU:{name:"Russia",dial:"7",flag:"🇷🇺"},
+    AR:{name:"Argentina",dial:"54",flag:"🇦🇷"}, CL:{name:"Chile",dial:"56",flag:"🇨🇱"}, CO:{name:"Colombia",dial:"57",flag:"🇨🇴"},
+    PE:{name:"Peru",dial:"51",flag:"🇵🇪"}, UY:{name:"Uruguay",dial:"598",flag:"🇺🇾"}, CU:{name:"Cuba",dial:"53",flag:"🇨🇺"},
+    SN:{name:"Senegal",dial:"221",flag:"🇸🇳"}, CI:{name:"Côte d’Ivoire",dial:"225",flag:"🇨🇮"}, CM:{name:"Cameroon",dial:"237",flag:"🇨🇲"},
+    MA:{name:"Morocco",dial:"212",flag:"🇲🇦"}, TN:{name:"Tunisia",dial:"216",flag:"🇹🇳"}, DZ:{name:"Algeria",dial:"213",flag:"🇩🇿"},
+    SD:{name:"Sudan",dial:"249",flag:"🇸🇩"}, ER:{name:"Eritrea",dial:"291",flag:"🇪🇷"}, GM:{name:"The Gambia",dial:"220",flag:"🇬🇲"},
+    BW:{name:"Botswana",dial:"267",flag:"🇧🇼"}, NA:{name:"Namibia",dial:"264",flag:"🇳🇦"}, LS:{name:"Lesotho",dial:"266",flag:"🇱🇸"},
+    SZ:{name:"Eswatini",dial:"268",flag:"🇸🇿"}, MG:{name:"Madagascar",dial:"261",flag:"🇲🇬"}, MU:{name:"Mauritius",dial:"230",flag:"🇲🇺"},
     JP:{name:"Japan",dial:"81",flag:"🇯🇵"}, CN:{name:"China",dial:"86",flag:"🇨🇳"}, BR:{name:"Brazil",dial:"55",flag:"🇧🇷"},
     MX:{name:"Mexico",dial:"52",flag:"🇲🇽"}, TR:{name:"Türkiye",dial:"90",flag:"🇹🇷"}, PK:{name:"Pakistan",dial:"92",flag:"🇵🇰"},
   };
@@ -53,8 +68,9 @@ export function Paywall({
   const [countryCode, setCountryCode] = useState(() => savedPaymentDetails.countryCode || "KE");
   const detectCountry = (value: string) => {
     const digits = value.replace(/\\D/g, "");
-    if (!value.trim().startsWith("+") && !/^(254|255|256|250|257|243|1|44|91|65|971|27|234|233|61|49|33|31|39|34|251|211|252|265|260|263|258|20|966|81|86|55|52|90|92)/.test(digits)) return null;
-    return callingCodes.find(([, info]) => digits.startsWith(info.dial))?.[0] || "OTHER";
+    const matches = callingCodes.filter(([, info]) => digits.startsWith(info.dial));
+    if (!value.trim().startsWith("+") && matches.length === 0) return null;
+    return matches.find(([code]) => code === countryCode)?.[0] || matches[0]?.[0] || "OTHER";
   };
   const countries = countryData;
   const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">(() => savedPaymentDetails.countryCode && savedPaymentDetails.countryCode !== "KE" ? "card" : "mpesa");
