@@ -74,6 +74,7 @@ function Bank({ set }: { set: McqSetRow }) {
 
   const reset = () => { setQs((cur) => shuffleOptions(mixOrder(cur), String(Math.random()))); setFirst(new Map()); setWrong(new Map()); setSolved(new Set()); setShown(new Set()); setOnly("all"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
+  const paywallIndex = indices.find((i) => isLocked(i));
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
   const reveal = (i: number) => setShown((s) => new Set(s).add(i));
   const allShown = shown.size === qs.length;
@@ -132,12 +133,13 @@ function Bank({ set }: { set: McqSetRow }) {
           {indices.map((i) => {
             const q = qs[i]; const tries = wrong.get(i) ?? []; const open = solved.has(i) || shown.has(i);
             const locked = isLocked(i);
+            if (locked && i !== paywallIndex) return null;
             return (
               <article key={i} id={`q${i + 1}`} className="scroll-mt-24 border-t border-border py-6 first:border-t-0 first:pt-0">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Question {i + 1}</p>
                 {locked ? (
                   <section className="mt-4 rounded-xl border border-border bg-muted/30 px-4 py-4">
-                    {!access.loading && i === freeLimit && (
+                    {!access.loading && i === paywallIndex && (
                       <div className="mb-4">
                         <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Free preview complete</p>
                         <h2 className="mt-1 font-serif text-xl font-bold text-foreground">Continue practising with full access</h2>
@@ -146,7 +148,7 @@ function Bank({ set }: { set: McqSetRow }) {
                     )}
                     <div className="flex items-center gap-3">
                       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border bg-card text-muted-foreground"><Lock className="h-4 w-4" /></span>
-                      <div><p className="text-sm font-semibold text-foreground">Question {i + 1} is locked</p><p className="mt-0.5 text-xs text-muted-foreground">Included with full MCQ access</p></div>
+                      <div><p className="text-sm font-semibold text-foreground">The remaining questions are locked</p><p className="mt-0.5 text-xs text-muted-foreground">Unlock the full question bank to continue</p></div>
                     </div>
                     {!access.loading && i === freeLimit && (
                       <div className="mt-4">
