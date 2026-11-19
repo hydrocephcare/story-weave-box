@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
 import { flashAnchor } from "@/lib/deep-link";
 import { clearNoteReturn, getNoteReturn } from "@/lib/noteReturn";
@@ -23,9 +23,6 @@ export default function ScrollToTop() {
   const navigationType = useNavigationType();
   const currentPath = pathname + search;
   const entryKey = key || currentPath;
-  // Back from a panel (it has its own history entry) lands on the same page: the reader must stay exactly where they are
-
-
   useEffect(() => {
     const old = window.history.scrollRestoration;
     window.history.scrollRestoration = "manual";
