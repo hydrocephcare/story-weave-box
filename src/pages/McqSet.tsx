@@ -82,6 +82,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const [timerEndsAt, setTimerEndsAt] = useState<number | null>(() => restored.current.timerEndsAt ?? null);
   const [sessionStartedAt, setSessionStartedAt] = useState<number | null>(() => restored.current.sessionStartedAt ?? null);
   const [history, setHistory] = useState<PracticeRecord[]>(() => loadPracticeHistory(set.id));
+  const [timerExpanded, setTimerExpanded] = useState(false);
   const savedRecordForSession = useRef(false);
 
   const pick = useCallback((i: number, oi: number) => {
@@ -256,26 +257,34 @@ function Bank({ set }: { set: McqSetRow }) {
         </aside>
 
         <div className="min-w-0">
-          <section className="mb-5 rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-5" aria-label="Practice timer">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary"><Clock className="h-5 w-5" /></span>
-                <div><p className="text-sm font-bold">Practice timer</p><p className="text-xs text-muted-foreground">Optional · track your answering speed</p></div>
+          <section className="mb-5 rounded-2xl border border-border bg-card shadow-sm" aria-label="Practice timer">
+            <button type="button" aria-expanded={timerExpanded} onClick={() => setTimerExpanded((v) => !v)} className="flex min-h-12 w-full items-center justify-between gap-3 px-4 py-3 text-left">
+              <span className="flex items-center gap-2 text-sm font-semibold"><Clock className="h-4 w-4 text-primary" /> Timer</span>
+              <span className="flex items-center gap-3"><span className="font-mono text-base font-bold tabular-nums">{timerStatus === "idle" ? "Not set" : formatClock(remainingSeconds ?? 0)}</span><ChevronRight className={`h-4 w-4 text-muted-foreground transition-transform ${timerExpanded ? "rotate-90" : ""}`} /></span>
+            </button>
+            {timerExpanded && <div className="border-t border-border px-4 pb-4 pt-3">
+  
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary"><Clock className="h-5 w-5" /></span>
+                  <div><p className="text-sm font-bold">Practice timer</p><p className="text-xs text-muted-foreground">Optional · track your answering speed</p></div>
+                </div>
+                <div className="text-right"><p className={`font-mono text-2xl font-bold tabular-nums ${timerStatus === "finished" ? "text-destructive" : "text-foreground"}`}>{timerStatus === "idle" ? formatClock(timerMinutes * 60) : formatClock(remainingSeconds ?? 0)}</p><p className="text-[11px] text-muted-foreground">{timerStatus === "running" ? "Time remaining" : timerStatus === "paused" ? "Paused" : timerStatus === "finished" ? "Time is up" : "Set your time limit"}</p></div>
               </div>
-              <div className="text-right"><p className={`font-mono text-2xl font-bold tabular-nums ${timerStatus === "finished" ? "text-destructive" : "text-foreground"}`}>{timerStatus === "idle" ? formatClock(timerMinutes * 60) : formatClock(remainingSeconds ?? 0)}</p><p className="text-[11px] text-muted-foreground">{timerStatus === "running" ? "Time remaining" : timerStatus === "paused" ? "Paused" : timerStatus === "finished" ? "Time is up" : "Set your time limit"}</p></div>
-            </div>
-            <div className="mt-4 flex flex-wrap items-end gap-2">
-              <label className="min-w-0 flex-1 text-xs font-semibold text-muted-foreground">Minutes
-                <input type="number" min={1} max={240} step={1} disabled={timerStatus !== "idle"} value={timerMinutes} onChange={(e) => setTimerMinutes(Math.max(1, Math.min(240, Number(e.target.value) || 1)))} className="mt-1 h-11 w-full rounded-xl border border-input bg-background px-3 text-sm font-semibold text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
-              </label>
-              {timerStatus === "idle" && <button type="button" onClick={startTimer} className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Start</button>}
-              {timerStatus === "running" && <button type="button" onClick={pauseTimer} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-4 text-sm font-bold"><Pause className="h-4 w-4" /> Pause</button>}
-              {timerStatus === "paused" && <button type="button" onClick={startTimer} className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Resume</button>}
-              {(timerStatus === "paused" || timerStatus === "finished") && <button type="button" onClick={() => { setTimerStatus("idle"); setRemainingSeconds(null); setTimerEndsAt(null); setSessionStartedAt(null); savedRecordForSession.current = false; }} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-3 text-sm font-semibold"><RotateCcw className="h-4 w-4" /> Reset timer</button>}
-            </div>
-            {timerStatus !== "idle" && <p className="mt-3 text-xs text-muted-foreground">{tried} answered · {elapsedSeconds ? (elapsedSeconds / 60).toFixed(1) : "0.0"} min elapsed · {elapsedSeconds > 0 ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"} questions/min</p>}
-            {timerStatus === "finished" && <div className="mt-3 rounded-xl border border-primary/20 bg-primary/5 p-3"><p className="text-sm font-bold">Time is up — your practice result</p><div className="mt-2 grid grid-cols-3 gap-2 text-center"><div><p className="text-xl font-bold tabular-nums">{correct}/{tried || 0}</p><p className="text-[10px] uppercase text-muted-foreground">Correct</p></div><div><p className="text-xl font-bold tabular-nums">{tried}/{qs.length}</p><p className="text-[10px] uppercase text-muted-foreground">Attempted</p></div><div><p className="text-xl font-bold tabular-nums">{tried && elapsedSeconds ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"}</p><p className="text-[10px] uppercase text-muted-foreground">Questions/min</p></div></div><p className="mt-2 text-xs text-muted-foreground">Your answers and result are saved on this device. Start over to begin another attempt.</p></div>}
-            {history.length > 0 && <details className="mt-3 border-t border-border pt-3"><summary className="cursor-pointer text-xs font-bold text-muted-foreground">Previous attempts ({history.length})</summary><div className="mt-2 space-y-2">{history.slice(0,5).map((record) => <div key={record.id} className="flex items-center justify-between gap-3 rounded-lg bg-muted/50 px-3 py-2 text-xs"><span className="min-w-0 truncate">{new Date(record.completedAt).toLocaleString()}</span><span className="shrink-0 font-bold tabular-nums">{record.score}/{record.total} · {record.durationSeconds ? formatClock(record.durationSeconds) : "Untimed"}</span></div>)}</div></details>}
+              <div className="mt-4 flex flex-wrap items-end gap-2">
+                <label className="min-w-0 flex-1 text-xs font-semibold text-muted-foreground">Minutes
+                  <input type="number" min={1} max={240} step={1} disabled={timerStatus !== "idle"} value={timerMinutes} onChange={(e) => setTimerMinutes(Math.max(1, Math.min(240, Number(e.target.value) || 1)))} className="mt-1 h-11 w-full rounded-xl border border-input bg-background px-3 text-sm font-semibold text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </label>
+                {timerStatus === "idle" && <button type="button" onClick={startTimer} className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Start</button>}
+                {timerStatus === "running" && <button type="button" onClick={pauseTimer} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-4 text-sm font-bold"><Pause className="h-4 w-4" /> Pause</button>}
+                {timerStatus === "paused" && <button type="button" onClick={startTimer} className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Resume</button>}
+                {(timerStatus === "paused" || timerStatus === "finished") && <button type="button" onClick={() => { setTimerStatus("idle"); setRemainingSeconds(null); setTimerEndsAt(null); setSessionStartedAt(null); savedRecordForSession.current = false; }} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-3 text-sm font-semibold"><RotateCcw className="h-4 w-4" /> Reset timer</button>}
+              </div>
+              {timerStatus !== "idle" && <p className="mt-3 text-xs text-muted-foreground">{tried} answered · {elapsedSeconds ? (elapsedSeconds / 60).toFixed(1) : "0.0"} min elapsed · {elapsedSeconds > 0 ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"} questions/min</p>}
+              {timerStatus === "finished" && <div className="mt-3 rounded-xl border border-primary/20 bg-primary/5 p-3"><p className="text-sm font-bold">Time is up — your practice result</p><div className="mt-2 grid grid-cols-3 gap-2 text-center"><div><p className="text-xl font-bold tabular-nums">{correct}/{tried || 0}</p><p className="text-[10px] uppercase text-muted-foreground">Correct</p></div><div><p className="text-xl font-bold tabular-nums">{tried}/{qs.length}</p><p className="text-[10px] uppercase text-muted-foreground">Attempted</p></div><div><p className="text-xl font-bold tabular-nums">{tried && elapsedSeconds ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"}</p><p className="text-[10px] uppercase text-muted-foreground">Questions/min</p></div></div><p className="mt-2 text-xs text-muted-foreground">Your answers and result are saved on this device. Start over to begin another attempt.</p></div>}
+              {history.length > 0 && <details className="mt-3 border-t border-border pt-3"><summary className="cursor-pointer text-xs font-bold text-muted-foreground">Previous attempts ({history.length})</summary><div className="mt-2 space-y-2">{history.slice(0,5).map((record) => <div key={record.id} className="flex items-center justify-between gap-3 rounded-lg bg-muted/50 px-3 py-2 text-xs"><span className="min-w-0 truncate">{new Date(record.completedAt).toLocaleString()}</span><span className="shrink-0 font-bold tabular-nums">{record.score}/{record.total} · {record.durationSeconds ? formatClock(record.durationSeconds) : "Untimed"}</span></div>)}</div></details>}
+  
+            </div>}
           </section>
           {missed.length > 0 && (
             <div className="mb-4 flex gap-4 text-sm font-bold" role="group" aria-label="Show">
