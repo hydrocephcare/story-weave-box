@@ -73,6 +73,8 @@ function Bank({ set }: { set: McqSetRow }) {
   const [only, setOnly] = useState<"all" | "missed">("all");
   const [panelOpen, setPanelOpen] = useState(false);
   const [unlockOpen, setUnlockOpen] = useState(false);
+  const [showUnlockBar, setShowUnlockBar] = useState(false);
+  const lockedPreviewRef = useRef<HTMLDivElement | null>(null);
   const restored = useRef(loadPractice(set.id));
   const [timerMinutes, setTimerMinutes] = useState(() => Math.max(1, Math.min(240, Number(restored.current.timerMinutes) || 10)));
   const [timerStatus, setTimerStatus] = useState<"idle" | "running" | "paused" | "finished">(() => restored.current.timerStatus || "idle");
@@ -118,6 +120,14 @@ function Bank({ set }: { set: McqSetRow }) {
     const interval = window.setInterval(tick, 500);
     return () => window.clearInterval(interval);
   }, [timerStatus, timerEndsAt]);
+
+  useEffect(() => {
+    const node = lockedPreviewRef.current;
+    if (!node || lockedCount <= 0) { setShowUnlockBar(false); return; }
+    const observer = new IntersectionObserver(([entry]) => setShowUnlockBar(entry.isIntersecting), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [lockedCount, qs.length, mcqPaywallEnabled, access.hasPass, access.isAdmin]);
 
   const remainingToSave = timerStatus === "running" ? null : remainingSeconds;
   useEffect(() => {
@@ -202,6 +212,19 @@ function Bank({ set }: { set: McqSetRow }) {
       <button type="button" onClick={() => setPanelOpen(true)} aria-label={`Progress: ${answered} of ${qs.length} answered. Tap for details.`} className={`fixed left-0 top-1/2 z-40 -translate-y-1/2 rounded-r-xl px-1.5 py-3 text-[11px] font-extrabold tabular-nums shadow-md lg:hidden ${tone}`} style={{ writingMode: "vertical-rl" }}>
         {answered}/{qs.length}{tried ? ` · ${pct}%` : ""}
       </button>
+      {showUnlockBar && lockedCount > 0 && !access.hasPass && !access.isAdmin && (
+        <div className="pointer-events-none fixed inset-x-0 bottom-[max(1rem,env(safe-area-inset-bottom))] z-40 px-3 sm:px-5">
+          <div className="pointer-events-auto mx-auto flex max-w-3xl items-center justify-between gap-3 rounded-2xl border border-primary/25 bg-background/95 px-4 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.22)] backdrop-blur-md sm:px-5">
+            <div className="min-w-0">
+              <p className="text-sm font-bold leading-tight text-foreground">{lockedCount} questions for members</p>
+              <p className="mt-0.5 hidden text-xs text-muted-foreground sm:block">Unlock the full bank with an OmpathStudy subscription</p>
+            </div>
+            <button type="button" onClick={() => setUnlockOpen(true)} className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-sm transition hover:brightness-95 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+              Unlock access
+            </button>
+          </div>
+        </div>
+      )}
       <Dialog open={unlockOpen} onOpenChange={setUnlockOpen}>
         <DialogContent className="max-h-[92dvh] w-[calc(100%-1rem)] max-w-4xl gap-0 overflow-y-auto rounded-2xl border-border bg-background p-0 sm:w-[calc(100%-2rem)]">
           <DialogHeader className="border-b border-border px-5 py-4 text-left sm:px-7">
@@ -209,7 +232,7 @@ function Bank({ set }: { set: McqSetRow }) {
             <DialogDescription className="text-sm leading-relaxed">{lockedCount} locked questions in “{title}”. Choose a plan or redeem an access code. Your current page and progress will be preserved.</DialogDescription>
           </DialogHeader>
           <div className="p-3 sm:p-5">
-            <Paywall settings={access.settings} hiddenCount={lockedCount} label="MCQ bank" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline={`Unlock ${lockedCount} questions`} blurb={`Get access to all ${qs.length} questions in this bank, including answers and explanations.`} />
+            <Paywall settings={access.settings} hiddenCount={lockedCount} label="MCQ bank" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline={`Unlock {lockedCount} questions`} blurb={`Get access to all ${qs.length} questions in this bank, including answers and explanations.`} />
           </div>
         </DialogContent>
       </Dialog>
@@ -284,12 +307,12 @@ function Bank({ set }: { set: McqSetRow }) {
                         Continue practising with all remaining questions, answer keys and explanations.
                       </p>
                       <button type="button" onClick={() => setUnlockOpen(true)} className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition duration-200 hover:-translate-y-0.5 hover:brightness-95 hover:shadow-md active:translate-y-0 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-auto sm:min-w-64">
-                        <Lock className="h-4 w-4" /> Unlock ${lockedCount} questions
+                        <Lock className="h-4 w-4" /> Unlock {lockedCount} questions
                       </button>
                       <p className="mt-2 text-xs text-muted-foreground">One secure checkout. Your place on this page is preserved.</p>
                     </div>
 
-                    <div className="relative isolate mt-5 overflow-hidden rounded-2xl border border-border/70 bg-muted/20">
+                    <div ref={lockedPreviewRef} className="relative isolate mt-5 overflow-hidden rounded-2xl border border-border/70 bg-muted/20">
                       <div aria-hidden="true" className="pointer-events-none select-none space-y-0 blur-[2px] opacity-85">
                         {visibleLockedQuestions.map(({ index, question }) => (
                           <article key={index} id={`q${index + 1}`} className="border-b border-border/50 px-4 py-6 last:border-b-0 sm:px-6">
