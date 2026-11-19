@@ -13,6 +13,10 @@ import { markFlashcardVisited } from "@/lib/progress-store";
 import { SITE_URL, stripRichText, updateMetaTags } from "@/lib/seo";
 import { useTopicThumbnail } from "@/lib/topicThumbnail";
 import { resourceSeoTitle } from "@/lib/resourceSeoTitle";
+import { useAccess } from "@/lib/access";
+import { useAuth } from "@/hooks/useAuth";
+import { Paywall } from "@/components/Paywall";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 
 export default function FlashcardStudy() {
@@ -76,19 +80,46 @@ export default function FlashcardStudy() {
 }
 
 function FlashcardStudyInner({ set }: { set: FlashcardSet }) {
+  const access = useAccess();
+  const { user } = useAuth();
+  const [unlockOpen, setUnlockOpen] = useState(false);
   const unitName = getCategoryDisplayName(set.category);
   const shareUrl = `${SITE_URL}${buildFlashcardPath(set)}`;
   const date = new Date(set.updated_at || set.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const shortTitle = set.title.replace(/\s*[:—–-]?\s*Flashcards?$/i, "");
   const cards = useMemo(() => set.cards.map((c, idx) => ({ question: c.question, answer: c.answer, setId: set.id, idx })), [set]);
+  const ownsSet = Boolean(user?.id && set.owner_id === user.id);
+  const isLocked = !access.loading && !access.isFree && !access.hasPass && !access.isAdmin && !ownsSet;
+  const freeCount = Math.min(cards.length, Math.max(1, Math.ceil(cards.length * access.settings.freeRatio)));
+  const visibleCards = isLocked ? cards.slice(0, freeCount) : cards;
+  const lockedCount = Math.max(0, cards.length - visibleCards.length);
 
   return (
     <div className="mx-auto max-w-xl px-3 pb-16 pt-1 sm:px-6">
       {/* the deck is the first thing on the page: nothing to scroll past */}
       <KeywordLinkProvider currentPath={buildFlashcardPath(set)} currentTitle={set.title}>
-        <FlashcardDeck cards={cards} title={set.title} category={set.category} mcqSource={(set as unknown as { source_reference?: string | null }).source_reference ?? null} />
+        <FlashcardDeck cards={visibleCards} title={set.title} category={set.category} mcqSource={(set as unknown as { source_reference?: string | null }).source_reference ?? null} />
       </KeywordLinkProvider>
 
+
+      {isLocked && lockedCount > 0 && (
+        <section className="mt-6 rounded-2xl border border-primary/20 bg-card p-5 text-center">
+          <p className="text-sm font-bold text-foreground">{lockedCount} more cards are in this deck</p>
+          <p className="mt-1 text-xs text-muted-foreground">You have studied the free preview. Unlock the deck to continue with all {cards.length} flashcards.</p>
+          <Button className="mt-4" onClick={() => setUnlockOpen(true)}>Unlock full deck</Button>
+        </section>
+      )}
+      <Dialog open={unlockOpen} onOpenChange={setUnlockOpen}>
+        <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="font-serif text-xl font-bold">Unlock this flashcard deck</DialogTitle>
+            <DialogDescription>{lockedCount} locked cards in “{set.title}”. Your progress will be preserved.</DialogDescription>
+          </DialogHeader>
+          <div className="p-1">
+            <Paywall settings={access.settings} hiddenCount={lockedCount} label="flashcards" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline={`Unlock ${lockedCount} cards`} blurb={`Get access to all ${cards.length} flashcards in this deck.`} />
+          </div>
+        </DialogContent>
+      </Dialog>
       <section className="mt-10 border-t border-border pt-6">
         <p className="text-sm text-muted-foreground">{set.cards.length} cards{unitName && unitName !== "Uncategorized" ? ` · ${unitName}` : ""} · updated {date}</p>
         <div className="mt-4"><StudyControls resourceType="flashcard" resourceId={set.id} title={shortTitle} /></div>
