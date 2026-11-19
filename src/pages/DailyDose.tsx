@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { CalendarCheck, Copy, Flame } from "lucide-react";
 import { BANK } from "@/clinical/bank";
+import { ALL_PDRUGS } from "@/pharm";
+import { DrugCard } from "@/components/pharm/PharmViews";
 import { BUILTIN_CASES } from "@/clinical";
 import { supabase } from "@/integrations/supabase/client";
 import { toItems, type QItem } from "@/components/QuizRunner";
@@ -64,8 +66,16 @@ function streakOf(log: Record<string, number>) {
   return s;
 }
 
+/** One stable, rotating drug for each local calendar date. */
+export function drugOfTheDay(date: string) {
+  if (!ALL_PDRUGS.length) return null;
+  const seed = [...date].reduce((n, ch) => (n * 31 + ch.charCodeAt(0)) >>> 0, 7);
+  return ALL_PDRUGS[seed % ALL_PDRUGS.length] ?? null;
+}
+
 export default function DailyDose() {
   const date = today();
+  const featuredDrug = drugOfTheDay(date);
   const [log, setLog] = useState(readLog);
   const { deck, year, clinical } = useDayDeck(date);
   const [res, setRes] = useState<SeriesResult | null>(null);
@@ -95,6 +105,16 @@ export default function DailyDose() {
         </div>
       </section>
       <div className="mx-auto max-w-2xl space-y-4 px-4 py-6 sm:px-5">
+        {featuredDrug && (
+          <section aria-label="Drug of the day" className="space-y-2 rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/5 via-background to-amber-500/5 p-3 sm:p-4">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-primary">Daily pharmacology</p>
+              <h2 className="mt-1 font-serif text-xl font-bold text-foreground">Drug of the day</h2>
+              <p className="text-xs text-muted-foreground">One drug to learn today. The featured drug changes with the local calendar date.</p>
+            </div>
+            <DrugCard d={featuredDrug} defaultOpen lookupNotes={false} />
+          </section>
+        )}
         {doneToday && !practice && !res ? (
           <div className="space-y-3">
             <ResultCard title="Today’s dose is done" pct={log[date]}><p className="mt-1 text-xs text-muted-foreground">Come back tomorrow to keep your streak.</p></ResultCard>
