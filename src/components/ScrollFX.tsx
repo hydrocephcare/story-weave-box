@@ -58,6 +58,8 @@ export function ScrollProgressBar() {
 /* Floating back-to-top button that appears after scrolling down */
 export function BackToTopButton() {
   const hidden = useHiddenPages();
+  const { pathname } = useLocation();
+  const isMcqBank = /^\\/mcqs\\/[^/]+/.test(pathname);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -79,7 +81,14 @@ export function BackToTopButton() {
 
   if (hidden) return null;
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = () => {
+    const gate = isMcqBank ? document.getElementById("mcq-paywall") : null;
+    if (gate && window.scrollY > gate.getBoundingClientRect().top + window.scrollY + 120) {
+      gate.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <button
@@ -87,7 +96,7 @@ export function BackToTopButton() {
       onClick={scrollToTop}
       aria-label="Back to top"
       title="Back to top"
-      className={`group fixed bottom-5 right-5 z-50 [.has-toc-bar_&]:bottom-16 flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-primary text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+      className={`group fixed ${isMcqBank ? "bottom-24" : "bottom-5"} right-5 z-50 [.has-toc-bar_&]:bottom-16 flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-primary text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
       }`}
     >
