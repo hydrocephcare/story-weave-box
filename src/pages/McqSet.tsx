@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { ChevronRight, Eye, EyeOff, Loader2, RotateCcw } from "lucide-react";
+import { ChevronRight, Eye, EyeOff, Loader2, RotateCcw, Lock } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import OmpathMark from "@/components/ai/OmpathMark";
 import { Helmet } from "react-helmet-async";
@@ -25,14 +25,15 @@ function Bank({ set }: { set: McqSetRow }) {
   const [qs, setQs] = useState(set.questions);
   const access = useAccess();
   const [mcqPaywallEnabled, setMcqPaywallEnabled] = useState(false);
-  const [freeLimit, setFreeLimit] = useState(15);
+  const [freeRatio, setFreeRatio] = useState(0.25);
+  const freeLimit = Math.min(qs.length, Math.max(1, Math.ceil(qs.length * freeRatio)));
   useEffect(() => {
     let active = true;
-    Promise.all([getSetting("mcq_paywall_enabled"), getSetting("mcq_free_limit")]).then(([enabled, limit]) => {
+    Promise.all([getSetting("mcq_paywall_enabled"), getSetting("paywall_free_ratio")]).then(([enabled, ratio]) => {
       if (!active) return;
       setMcqPaywallEnabled(enabled === "true");
-      const parsed = Number(limit);
-      setFreeLimit(Number.isFinite(parsed) ? Math.max(0, Math.min(500, Math.floor(parsed))) : 15);
+      const parsed = Number(ratio);
+      setFreeRatio(Number.isFinite(parsed) ? Math.min(0.9, Math.max(0.05, parsed)) : 0.25);
     }).catch(() => { if (active) setMcqPaywallEnabled(false); });
     return () => { active = false; };
   }, []);
@@ -134,12 +135,31 @@ function Bank({ set }: { set: McqSetRow }) {
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Question {i + 1}</p>
                 <h2 className="mt-1.5 font-serif text-lg font-bold leading-snug sm:text-xl">{q.question}</h2>
                 {locked ? (
-                  <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4">
-                    <p className="text-sm font-semibold text-foreground">This question and its answer are part of the locked section.</p>
-                    <p className="mt-1 text-xs text-muted-foreground">The first {freeLimit} questions in this bank are free. Unlock the full bank to attempt this question and view its explanation.</p>
-                    {!access.loading && i === freeLimit && <Paywall settings={access.settings} hiddenCount={Math.max(1, qs.length - freeLimit)} label="MCQ bank" onUnlocked={access.applyPass} headline="Unlock the full MCQ bank" blurb="Get access to every question, correct answer and explanation in this bank." />}
-                    {i !== freeLimit && <p className="mt-3 text-xs font-semibold text-primary">Use the unlock panel at the start of the locked section.</p>}
-                  </div>
+                  <>
+                    {!access.loading && i === freeLimit && (
+                      <div className="relative z-10 my-5">
+                        <Paywall settings={access.settings} hiddenCount={Math.max(1, qs.length - freeLimit)} label="MCQ bank" onUnlocked={access.applyPass} headline="Unlock all questions" blurb={`You are viewing the first ${freeLimit} of ${qs.length} questions free. Unlock the remaining ${qs.length - freeLimit} questions, answers and explanations.`} />
+                      </div>
+                    )}
+                    <div className="relative mt-4 overflow-hidden rounded-xl border border-border bg-card">
+                      <div aria-hidden="true" className="pointer-events-none select-none space-y-3 px-3 py-4 opacity-75 blur-[2px]">
+                        <div className="space-y-2">
+                          {q.options.map((opt, oi) => (
+                            <div key={oi} className="flex items-start gap-3 rounded-lg bg-muted/50 px-3 py-2.5 text-[15px] leading-snug">
+                              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted text-xs font-bold text-muted-foreground">{LETTERS[oi]}</span>
+                              <span>{opt}</span>
+                            </div>
+                          ))}
+                        </div>
+                        {q.explanation && <p className="text-sm text-muted-foreground">{q.explanation}</p>}
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center bg-background/55 backdrop-blur-[1px]">
+                        <div className="rounded-full border border-border bg-card/90 px-4 py-2 text-xs font-bold text-foreground shadow-sm">
+                          <span className="inline-flex items-center gap-2"><Lock className="h-3.5 w-3.5" /> Unlock to attempt this question</span>
+                        </div>
+                      </div>
+                    </div>
+                  </>
                 ) : <>
                 <div className="mt-3 space-y-1" role="group" aria-label={`Options for question ${i + 1}`}>
                   {q.options.map((opt, oi) => {
