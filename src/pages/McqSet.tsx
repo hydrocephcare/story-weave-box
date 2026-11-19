@@ -78,18 +78,6 @@ function Bank({ set }: { set: McqSetRow }) {
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
   const paywallIndex = indices.find((i) => isLocked(i));
   const lockedCount = qs.filter((_, i) => isLocked(i)).length;
-  const [showUnlockBar, setShowUnlockBar] = useState(false);
-  useEffect(() => {
-    if (!lockedCount || access.loading) { setShowUnlockBar(false); return; }
-    const update = () => {
-      const gate = document.getElementById("mcq-paywall");
-      setShowUnlockBar(!!gate && gate.getBoundingClientRect().bottom < 0);
-    };
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    return () => { window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
-  }, [lockedCount, access.loading]);
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
   const reveal = (i: number) => setShown((s) => new Set(s).add(i));
   const allShown = shown.size === qs.length;
@@ -120,14 +108,6 @@ function Bank({ set }: { set: McqSetRow }) {
       <button type="button" onClick={() => setPanelOpen(true)} aria-label={`Progress: ${answered} of ${qs.length} answered. Tap for details.`} className={`fixed left-0 top-1/2 z-40 -translate-y-1/2 rounded-r-xl px-1.5 py-3 text-[11px] font-extrabold tabular-nums shadow-md lg:hidden ${tone}`} style={{ writingMode: "vertical-rl" }}>
         {answered}/{qs.length}{tried ? ` · ${pct}%` : ""}
       </button>
-      {lockedCount > 0 && showUnlockBar && !access.loading && (
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-8px_24px_rgba(0,0,0,0.12)] backdrop-blur supports-[backdrop-filter]:bg-background/85">
-          <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
-            <div className="min-w-0"><p className="text-sm font-semibold text-foreground">{lockedCount} questions reserved for members</p><p className="text-xs text-muted-foreground">Unlock this bank to attempt every question</p></div>
-            <button type="button" onClick={() => setUnlockOpen(true)} className="min-h-11 shrink-0 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">Unlock {lockedCount}</button>
-          </div>
-        </div>
-      )}
       <Dialog open={unlockOpen} onOpenChange={setUnlockOpen}>
         <DialogContent className="max-h-[92dvh] w-[calc(100%-1rem)] max-w-4xl gap-0 overflow-y-auto rounded-2xl border-border bg-background p-0 sm:w-[calc(100%-2rem)]">
           <DialogHeader className="border-b border-border px-5 py-4 text-left sm:px-7">
@@ -164,78 +144,96 @@ function Bank({ set }: { set: McqSetRow }) {
               {(["all", "missed"] as const).map((k) => <button key={k} type="button" aria-pressed={only === k} onClick={() => setOnly(k)} className={only === k ? "text-primary underline underline-offset-4" : "text-muted-foreground hover:text-foreground"}>{k === "all" ? "All questions" : `Missed first time (${missed.length})`}</button>)}
             </div>
           )}
-          {indices.map((i) => {
-            const q = qs[i]; const tries = wrong.get(i) ?? []; const open = solved.has(i) || shown.has(i);
-            const locked = isLocked(i);
-            if (locked && i !== paywallIndex) return (
-              <article key={i} id={`q${i + 1}`} className="scroll-mt-24 border-t border-border py-5">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">Question {i + 1} · Member preview</p>
-                <div className="relative mt-3 overflow-hidden rounded-xl border border-border bg-card">
-                  <div aria-hidden="true" className="pointer-events-none select-none space-y-3 p-4 blur-[5px] opacity-70">
-                    <p className="font-serif text-lg font-bold leading-snug">{q.question}</p>
-                    {q.options.slice(0, 4).map((option, oi) => <div key={oi} className="flex items-center gap-3 rounded-lg bg-muted/70 px-3 py-3 text-sm"><span className="h-5 w-5 rounded-full bg-muted-foreground/30" />{option}</div>)}
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center bg-background/35">
-                    <span className="rounded-full border border-border bg-card/95 px-3 py-2 text-xs font-semibold text-foreground shadow-sm"><Lock className="mr-1.5 inline h-3.5 w-3.5" />Unlock to view this question</span>
-                  </div>
-                </div>
-              </article>
-            );
-            return (
-              <article key={i} id={`q${i + 1}`} className="scroll-mt-24 border-t border-border py-6 first:border-t-0 first:pt-0">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Question {i + 1}</p>
-                {locked ? (
-                  <section id="mcq-paywall" className="mt-4 scroll-mt-24 rounded-xl border border-border bg-muted/30 px-4 py-4">
-                    {!access.loading && i === paywallIndex && (
-                      <div className="mb-4">
-                        <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Free preview complete</p>
-                        <h2 className="mt-1 font-serif text-xl font-bold text-foreground">Continue practising with full access</h2>
-                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">The remaining {qs.length - freeLimit} questions, answer keys and explanations are protected. Choose a plan or redeem an access code to continue.</p>
-                      </div>
-                    )}
-                    <div className="flex items-center gap-3">
-                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border bg-card text-muted-foreground"><Lock className="h-4 w-4" /></span>
-                      <div><p className="text-sm font-semibold text-foreground">The remaining questions are locked</p><p className="mt-0.5 text-xs text-muted-foreground">Unlock the full question bank to continue</p></div>
-                    </div>
-                    {!access.loading && i === paywallIndex && (
-                      <div className="mt-4">
-                        <button type="button" onClick={() => setUnlockOpen(true)} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-                          <Lock className="h-4 w-4" /> Unlock {lockedCount} questions
-                        </button>
-                        <p className="mt-2 text-center text-xs text-muted-foreground">One secure checkout. Your progress stays on this page.</p>
-                      </div>
-                    )}
-                  </section>
-                ) : <>
-                <h2 className="mt-1.5 font-serif text-lg font-bold leading-snug sm:text-xl">{q.question}</h2>
-                <div className="mt-3 space-y-1" role="group" aria-label={`Options for question ${i + 1}`}>
-                  {q.options.map((opt, oi) => {
-                    const right = oi === q.correct_answer, was = tries.includes(oi);
-                    const style = open ? (right ? "bg-emerald-500/10" : was ? "bg-rose-500/10 text-muted-foreground" : "text-muted-foreground") : was ? "bg-rose-500/10 text-muted-foreground line-through decoration-rose-500/50" : "hover:bg-primary/5";
-                    return (
-                      <button key={oi} type="button" disabled={open || was} onClick={() => pick(i, oi)} aria-label={`Option ${LETTERS[oi]}: ${opt}${was ? " (not correct)" : ""}`} className={`flex w-full items-start gap-3 rounded-lg px-3 py-2.5 text-left text-[15px] leading-snug transition-colors ${style}`}>
-                        <span className={`mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${open && right ? "bg-emerald-500 text-white" : was ? "bg-rose-500 text-white" : "bg-muted text-muted-foreground"}`}>{LETTERS[oi]}</span>
-                        <span className="flex-1">{opt}</span>
+          {(() => {
+            const lockedIndices = indices.filter((index) => isLocked(index));
+            const firstLockedIndex = lockedIndices[0];
+            const visibleLockedQuestions = lockedIndices.map((index) => ({ index, question: qs[index] }));
+            return indices.map((i) => {
+              const q = qs[i];
+              const tries = wrong.get(i) ?? [];
+              const open = solved.has(i) || shown.has(i);
+              const locked = isLocked(i);
+
+              if (locked && i !== firstLockedIndex) return null;
+
+              if (locked && i === firstLockedIndex) {
+                return (
+                  <section key="mcq-paywall-section" id="mcq-paywall" className="scroll-mt-24 border-t border-border pt-6">
+                    <div className="relative z-10 mx-auto max-w-xl rounded-2xl border border-primary/30 bg-card px-5 py-5 text-center shadow-[0_12px_36px_rgba(0,0,0,0.10)] sm:px-7 sm:py-6 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+                      <span className="mx-auto grid h-10 w-10 place-items-center rounded-full bg-primary/10 text-primary">
+                        <Lock className="h-5 w-5" />
+                      </span>
+                      <p className="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-primary">Free preview complete</p>
+                      <h2 className="mt-1 font-serif text-2xl font-bold leading-tight text-foreground">Unlock ${lockedIndices.length} questions</h2>
+                      <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+                        Continue practising with all remaining questions, answer keys and explanations.
+                      </p>
+                      <button type="button" onClick={() => setUnlockOpen(true)} className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition duration-200 hover:-translate-y-0.5 hover:brightness-95 hover:shadow-md active:translate-y-0 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-auto sm:min-w-64">
+                        <Lock className="h-4 w-4" /> Unlock ${lockedIndices.length} questions
                       </button>
-                    );
-                  })}
-                </div>
-                {!open ? (
-                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 px-3 text-sm">
-                    {tries.length > 0 && <span className="font-semibold text-rose-600 dark:text-rose-300">Not quite. Try again.</span>}
-                    <button type="button" onClick={() => reveal(i)} className="font-bold text-muted-foreground hover:text-foreground">Show answer</button>
+                      <p className="mt-2 text-xs text-muted-foreground">One secure checkout. Your place on this page is preserved.</p>
+                    </div>
+
+                    <div className="relative isolate mt-5 overflow-hidden rounded-2xl border border-border/70 bg-muted/20">
+                      <div aria-hidden="true" className="pointer-events-none select-none space-y-0 blur-[2px] opacity-85">
+                        {visibleLockedQuestions.map(({ index, question }) => (
+                          <article key={index} id={`q${index + 1}`} className="border-b border-border/50 px-4 py-6 last:border-b-0 sm:px-6">
+                            <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">Question {index + 1} · Member preview</p>
+                            <p className="mt-2 font-serif text-lg font-bold leading-snug text-foreground">{question.question}</p>
+                            <div className="mt-3 space-y-1">
+                              {question.options.slice(0, 4).map((option, optionIndex) => (
+                                <div key={optionIndex} className="flex items-center gap-3 px-2 py-2.5 text-sm text-foreground">
+                                  <span className="h-5 w-5 shrink-0 rounded-full bg-muted-foreground/25" />
+                                  <span>{option}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/5 via-background/15 to-background/35" />
+                      <div className="pointer-events-none absolute left-1/2 top-6 z-10 -translate-x-1/2">
+                        <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border/80 bg-background/90 px-4 py-2 text-xs font-semibold text-foreground shadow-sm backdrop-blur-[2px]">
+                          <Lock className="h-3.5 w-3.5" /> ${lockedIndices.length} member questions
+                        </span>
+                      </div>
+                    </div>
+                  </section>
+                );
+              }
+
+              return (
+                <article key={i} id={`q${i + 1}`} className="scroll-mt-24 border-t border-border py-6 first:border-t-0 first:pt-0">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Question {i + 1}</p>
+                  <h2 className="mt-1.5 font-serif text-lg font-bold leading-snug sm:text-xl">{q.question}</h2>
+                  <div className="mt-3 space-y-1" role="group" aria-label={`Options for question ${i + 1}`}>
+                    {q.options.map((opt, oi) => {
+                      const right = oi === q.correct_answer, was = tries.includes(oi);
+                      const style = open ? (right ? "bg-emerald-500/10" : was ? "bg-rose-500/10 text-muted-foreground" : "text-muted-foreground") : was ? "bg-rose-500/10 text-muted-foreground line-through decoration-rose-500/50" : "hover:bg-primary/5";
+                      return (
+                        <button key={oi} type="button" disabled={open || was} onClick={() => pick(i, oi)} aria-label={`Option ${LETTERS[oi]}: ${opt}${was ? " (not correct)" : ""}`} className={`flex w-full items-start gap-3 rounded-lg px-3 py-2.5 text-left text-[15px] leading-snug transition-colors ${style}`}>
+                          <span className={`mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${open && right ? "bg-emerald-500 text-white" : was ? "bg-rose-500 text-white" : "bg-muted text-muted-foreground"}`}>{LETTERS[oi]}</span>
+                          <span className="flex-1">{opt}</span>
+                        </button>
+                      );
+                    })}
                   </div>
-                ) : (
-                  <div className="mt-3 border-l-[3px] border-primary/60 px-4 py-1">
-                    <p className={`text-sm font-bold ${first.get(i) === q.correct_answer ? "text-emerald-600 dark:text-emerald-300" : "text-foreground"}`}>{first.get(i) === q.correct_answer ? "Correct first time." : solved.has(i) ? `Correct${tries.length ? ` after ${tries.length} ${tries.length === 1 ? "try" : "tries"}` : ""}.` : "Answer revealed."} The answer is {LETTERS[q.correct_answer]}.</p>
-                    {q.explanation && <p className="mt-1 text-[15px] leading-relaxed text-muted-foreground">{q.explanation}</p>}
-                    <button type="button" onClick={() => openAI(`Explain this question like I am a medical student and tell me what the examiner wants:\n${q.question}\nOptions: ${q.options.map((o, k) => `${LETTERS[k]}. ${o}`).join(" | ")}\nAnswer: ${LETTERS[q.correct_answer]}`)} className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"><OmpathMark className="h-4 w-4" /> Explain this with Ompath AI</button>
-                  </div>
-                )}
-                </>}
-              </article>
-            );
-          })}
+                  {!open ? (
+                    <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 px-3 text-sm">
+                      {tries.length > 0 && <span className="font-semibold text-rose-600 dark:text-rose-300">Not quite. Try again.</span>}
+                      <button type="button" onClick={() => reveal(i)} className="font-bold text-muted-foreground hover:text-foreground">Show answer</button>
+                    </div>
+                  ) : (
+                    <div className="mt-3 border-l-[3px] border-primary/60 px-4 py-1">
+                      <p className={`text-sm font-bold ${first.get(i) === q.correct_answer ? "text-emerald-600 dark:text-emerald-300" : "text-foreground"}`}>{first.get(i) === q.correct_answer ? "Correct first time." : solved.has(i) ? `Correct${tries.length ? ` after ${tries.length} ${tries.length === 1 ? "try" : "tries"}` : ""}.` : "Answer revealed."} The answer is {LETTERS[q.correct_answer]}.</p>
+                      {q.explanation && <p className="mt-1 text-[15px] leading-relaxed text-muted-foreground">{q.explanation}</p>}
+                      <button type="button" onClick={() => openAI(`Explain this question like I am a medical student and tell me what the examiner wants:\n${q.question}\nOptions: ${q.options.map((o, k) => `${LETTERS[k]}. ${o}`).join(" | ")}\nAnswer: ${LETTERS[q.correct_answer]}`)} className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"><OmpathMark className="h-4 w-4" /> Explain this with Ompath AI</button>
+                    </div>
+                  )}
+                </article>
+              );
+            });
+          })()}
 
           {finished && (
             <section className="border-t border-border pt-8 text-center">
