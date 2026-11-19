@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Lock, Loader2, ShieldCheck, KeyRound, Smartphone, Wallet, CreditCard, Check, Pencil, Eye, Download, Mail, Sparkles, ListChecks, BellRing, LineChart } from "lucide-react";
+import { Loader2, ShieldCheck, Check, Pencil, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Link } from "react-router-dom";
 import { AccessPass, AccessPlan, PaymentSettings, issuePassForPayment, normalizePassCode, renamePassCode, verifyCode } from "@/lib/access";
