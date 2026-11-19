@@ -19,7 +19,11 @@ export function parseQuestions(md: string): Omit<DailyQ, "noteSlug" | "noteTitle
   return out;
 }
 
-const dayNumber = () => Math.floor(Date.now() / 86_400_000);
+// Match the student's local calendar date (Africa/Nairobi and other time zones), not UTC midnight.
+const dayNumber = () => {
+  const d = new Date();
+  return Math.floor(new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime() / 86_400_000);
+};
 
 export async function todaysQuestion(): Promise<DailyQ | null> {
   const notes = IMED.flatMap((s) => s.topics).filter(isPublished).map((t) => t.note as string);
