@@ -304,3 +304,13 @@ export function freeItemCount(total: number, freeRatio: number): number {
   if (total <= 2) return total;
   return Math.max(1, Math.floor(total * freeRatio));
 }
+
+export type PaidFeature = "ompath_ai_questions" | "ai_note_generation" | "ai_flashcard_generation" | "ai_mcq_generation" | "ai_picture_questions" | "topic_page_generation";
+export interface FeatureAllowance { allowed: boolean; reason: string; remaining?: number; limit?: number; unlimited?: boolean; period?: "day" | "week"; }
+
+/** Atomically consumes a server-side free allowance; browser storage is never authoritative. */
+export async function consumeFeature(feature: PaidFeature, units = 1): Promise<FeatureAllowance> {
+  const { data, error } = await supabase.rpc("consume_feature", { p_feature: feature, p_units: units });
+  if (error || !data || typeof data.allowed !== "boolean") return { allowed: false, reason: "verification_unavailable", remaining: 0 };
+  return data as FeatureAllowance;
+}
