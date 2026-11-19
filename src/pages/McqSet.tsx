@@ -232,7 +232,7 @@ function Bank({ set }: { set: McqSetRow }) {
             <DialogDescription className="text-sm leading-relaxed">{lockedCount} locked questions in “{title}”. Choose a plan or redeem an access code. Your current page and progress will be preserved.</DialogDescription>
           </DialogHeader>
           <div className="p-3 sm:p-5">
-            <Paywall settings={access.settings} hiddenCount={lockedCount} label="MCQ bank" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline={`Unlock {lockedCount} questions`} blurb={`Get access to all ${qs.length} questions in this bank, including answers and explanations.`} />
+            <Paywall settings={access.settings} hiddenCount={lockedCount} label="MCQ bank" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline={`Unlock ${lockedCount} questions`} blurb={`Get access to all ${qs.length} questions in this bank, including answers and explanations.`} />
           </div>
         </DialogContent>
       </Dialog>
