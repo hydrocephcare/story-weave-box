@@ -100,6 +100,11 @@
   ],
   "redirects": [
     {
+      "source": "/mcqs/abnormal-liver-enzymes-mcqs",
+      "destination": "/mcqs",
+      "permanent": true
+    },
+    {
       "source": "/supplementary-revision",
       "destination": "/my-revision",
       "statusCode": 301
