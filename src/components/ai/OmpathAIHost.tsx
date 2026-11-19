@@ -47,7 +47,7 @@ import { guideReply } from "@/lib/ompathAiGuide";
 import { suggestionsFor } from "@/lib/ompathAiSuggest";
 import { useAuth } from "@/hooks/useAuth";
 import { useSiteSearch } from "@/hooks/useSiteSearch";
-import { consumeFeature, useAccess } from "@/lib/access";
+import { useAccess } from "@/lib/access";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { aiStore, useAiStore, type AiTurn } from "@/lib/ompathAiStore";
 import { FREE_DAILY_QUESTIONS, countQuestion, extractiveAnswer, followUps, parseQuery, questionsUsedToday, retrieve, streamAnswer, type Retrieval } from "@/lib/ompathAi";
@@ -358,12 +358,6 @@ export default function OmpathAIHost() {
         aiStore.flush();
         return;
       }
-      const allowance = await consumeFeature("ompath_ai_questions");
-      if (!allowance.allowed) {
-        aiStore.patchTurn(sessionId, id, { answer: "You have used your free Ompath AI allowance for this period. Your notes and saved work remain available. Unlock premium access for more AI questions.", error: "Free AI allowance reached.", upgrade: "questions" });
-        aiStore.flush();
-        return;
-      }
       const answer = await streamAnswer({ question: opts.context ? `${text}\n\nThe official answer key for this question, from the Ompath bank:\n${opts.context}` : answerStyle(text, myYear, learnerNote(user?.id, text)), history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
       countQuestion();
       aiStore.patchTurn(sessionId, id, { answer });
@@ -374,6 +368,12 @@ export default function OmpathAIHost() {
       if (answer.trim().length > 40) { saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) }); void saveShared(text, answer, retrieval.grounded); }
     } catch (e) {
       if ((e as Error).name === "AbortError") { aiStore.flush(); return; }
+      if (/free Ompath AI allowance|sign in to use Ompath AI|verify your access/i.test(String((e as Error).message || ""))) {
+        const message = String((e as Error).message || "Premium access is required for more AI use.");
+        aiStore.patchTurn(sessionId, id, { answer: message, error: message, upgrade: "questions" });
+        aiStore.flush();
+        return;
+      }
       // never a dead end: the matching notes if we have them, otherwise links that still work, and the admin is told
       const local = retrieval ? null : await guideReply(text, myYear).catch(() => null);
       const fallback = retrieval ? extractiveAnswer(retrieval) : local?.answer ?? "Ompath AI could not reach the notes just now, so here is where to look. Try again in a minute.";
