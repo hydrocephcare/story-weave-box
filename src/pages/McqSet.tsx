@@ -458,9 +458,16 @@ function Bank({ set }: { set: McqSetRow }) {
 
 /** /mcqs/:id : a practice bank. Timed exams are handed to the exam page. */
 export default function McqSet() {
-  const { id } = useParams();
+  const { id, questionNumber } = useParams();
   const [set, setSet] = useState<McqSetRow | null | undefined>(undefined);
   useEffect(() => { let live = true; setSet(undefined); if (id) resolveMcqSet(id).then((s) => live && setSet(s)); return () => { live = false; }; }, [id]);
+  useEffect(() => {
+    if (!set || !questionNumber) return;
+    const index = Number(questionNumber);
+    if (!Number.isInteger(index) || index < 1) return;
+    const target = document.getElementById(`q${index}`);
+    if (target) window.setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+  }, [set, questionNumber]);
   const title = useMemo(() => (set ? shortTitle(set.title, set.category) : ""), [set]);
   if (set === undefined) return <div className="flex justify-center py-24"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Loading" /></div>;
   if (!set) return <Navigate to="/mcqs" replace />;
