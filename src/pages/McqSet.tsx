@@ -14,6 +14,7 @@ import { resourceSeoTitle } from "@/lib/resourceSeoTitle";
 import { getSetting } from "@/lib/store";
 import { useAccess } from "@/lib/access";
 import { Paywall } from "@/components/Paywall";
+import { supabase } from "@/integrations/supabase/client";
 
 const LETTERS = "ABCDEF";
 const mixOrder = <T,>(a: T[]): T[] => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -82,7 +83,42 @@ function Bank({ set }: { set: McqSetRow }) {
   const [timerEndsAt, setTimerEndsAt] = useState<number | null>(() => restored.current.timerEndsAt ?? null);
   const [sessionStartedAt, setSessionStartedAt] = useState<number | null>(() => restored.current.sessionStartedAt ?? null);
   const [history, setHistory] = useState<PracticeRecord[]>(() => loadPracticeHistory(set.id));
+  const [accountHistoryAvailable, setAccountHistoryAvailable] = useState(false);
   const [timerExpanded, setTimerExpanded] = useState(false);
+  useEffect(() => {
+    let active = true;
+    const loadAccountHistory = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!active || !user) return;
+      setAccountHistoryAvailable(true);
+      const { data, error } = await supabase
+        .from("mcq_practice_attempts")
+        .select("session_id, score, attempted, total, duration_seconds, timer_minutes, completed_at")
+        .eq("mcq_set_id", set.id)
+        .order("completed_at", { ascending: false })
+        .limit(20);
+      if (!active || error || !data) return;
+      const remote: PracticeRecord[] = data.map((row) => ({
+        id: row.session_id,
+        score: row.score,
+        attempted: row.attempted,
+        total: row.total,
+        durationSeconds: row.duration_seconds,
+        timerMinutes: row.timer_minutes,
+        completedAt: new Date(row.completed_at).getTime(),
+      }));
+      setHistory((current) => {
+        const merged = new Map<string, PracticeRecord>();
+        [...current, ...remote].forEach((item) => merged.set(item.id, item));
+        const next = [...merged.values()].sort((a, b) => b.completedAt - a.completedAt).slice(0, 20);
+        try { localStorage.setItem(`ompath_mcq_history_${set.id}`, JSON.stringify(next)); } catch { /* best effort */ }
+        return next;
+      });
+    };
+    void loadAccountHistory();
+    return () => { active = false; };
+  }, [set.id]);
+
   const savedRecordForSession = useRef(false);
 
   const pick = useCallback((i: number, oi: number) => {
@@ -144,6 +180,26 @@ function Bank({ set }: { set: McqSetRow }) {
     const next = [record, ...loadPracticeHistory(set.id)].slice(0, 20);
     try { localStorage.setItem(`ompath_mcq_history_${set.id}`, JSON.stringify(next)); } catch { /* best effort */ }
     setHistory(next);
+    void (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      setAccountHistoryAvailable(true);
+      const { error } = await supabase.from("mcq_practice_attempts").insert({
+        user_id: user.id,
+        mcq_set_id: set.id,
+        session_id: recordId,
+        score: record.score,
+        attempted: record.attempted,
+        total: record.total,
+        duration_seconds: record.durationSeconds,
+        timer_minutes: record.timerMinutes,
+        completed_at: new Date(record.completedAt).toISOString(),
+      });
+      // A duplicate session_id means this exact attempt was already synced.
+      if (error && error.code !== "23505") {
+        console.warn("Could not sync MCQ practice history:", error.message);
+      }
+    })();
   }, [attemptFinished, set.id, sessionStartedAt, correct, tried, qs.length, elapsedSeconds, timerStatus, timerMinutes]);
 
   const startTimer = () => {
@@ -281,7 +337,7 @@ function Bank({ set }: { set: McqSetRow }) {
                 {(timerStatus === "paused" || timerStatus === "finished") && <button type="button" onClick={() => { setTimerStatus("idle"); setRemainingSeconds(null); setTimerEndsAt(null); setSessionStartedAt(null); savedRecordForSession.current = false; }} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-3 text-sm font-semibold"><RotateCcw className="h-4 w-4" /> Reset timer</button>}
               </div>
               {timerStatus !== "idle" && <p className="mt-3 text-xs text-muted-foreground">{tried} answered · {elapsedSeconds ? (elapsedSeconds / 60).toFixed(1) : "0.0"} min elapsed · {elapsedSeconds > 0 ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"} questions/min</p>}
-              {timerStatus === "finished" && <div className="mt-3 rounded-xl border border-primary/20 bg-primary/5 p-3"><p className="text-sm font-bold">Time is up — your practice result</p><div className="mt-2 grid grid-cols-3 gap-2 text-center"><div><p className="text-xl font-bold tabular-nums">{correct}/{tried || 0}</p><p className="text-[10px] uppercase text-muted-foreground">Correct</p></div><div><p className="text-xl font-bold tabular-nums">{tried}/{qs.length}</p><p className="text-[10px] uppercase text-muted-foreground">Attempted</p></div><div><p className="text-xl font-bold tabular-nums">{tried && elapsedSeconds ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"}</p><p className="text-[10px] uppercase text-muted-foreground">Questions/min</p></div></div><p className="mt-2 text-xs text-muted-foreground">Your answers and result are saved on this device. Start over to begin another attempt.</p></div>}
+              {timerStatus === "finished" && <div className="mt-3 rounded-xl border border-primary/20 bg-primary/5 p-3"><p className="text-sm font-bold">Time is up — your practice result</p><div className="mt-2 grid grid-cols-3 gap-2 text-center"><div><p className="text-xl font-bold tabular-nums">{correct}/{tried || 0}</p><p className="text-[10px] uppercase text-muted-foreground">Correct</p></div><div><p className="text-xl font-bold tabular-nums">{tried}/{qs.length}</p><p className="text-[10px] uppercase text-muted-foreground">Attempted</p></div><div><p className="text-xl font-bold tabular-nums">{tried && elapsedSeconds ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"}</p><p className="text-[10px] uppercase text-muted-foreground">Questions/min</p></div></div><p className="mt-2 text-xs text-muted-foreground">Your answers are saved on this device. {accountHistoryAvailable ? "Completed results are also saved to your OmpathStudy account and will appear on your other devices." : "Sign in to sync completed results across your devices."} Start over to begin another attempt.</p></div>}
               {history.length > 0 && <details className="mt-3 border-t border-border pt-3"><summary className="cursor-pointer text-xs font-bold text-muted-foreground">Previous attempts ({history.length})</summary><div className="mt-2 space-y-2">{history.slice(0,5).map((record) => <div key={record.id} className="flex items-center justify-between gap-3 rounded-lg bg-muted/50 px-3 py-2 text-xs"><span className="min-w-0 truncate">{new Date(record.completedAt).toLocaleString()}</span><span className="shrink-0 font-bold tabular-nums">{record.score}/{record.total} · {record.durationSeconds ? formatClock(record.durationSeconds) : "Untimed"}</span></div>)}</div></details>}
   
             </div>}
