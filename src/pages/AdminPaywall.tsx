@@ -16,6 +16,8 @@ export default function AdminPaywall() {
   const [enabled, setEnabled] = useState(false);
   const [freePercent, setFreePercent] = useState("25");
   const [price, setPrice] = useState("15");
+  const [mcqSets, setMcqSets] = useState<{ id: string; title: string; category: string | null; slug: string | null }[]>([]);
+  const [excludedIds, setExcludedIds] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const { toast } = useToast();
@@ -26,12 +28,16 @@ export default function AdminPaywall() {
       getSetting("mcq_paywall_enabled"),
       getSetting("paywall_free_ratio"),
       getSetting("mcq_price"),
+      getSetting("mcq_paywall_excluded_ids"),
+      Db.from("mcq_sets").select("id,title,category,slug").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(500),
       Db.from("site_flags").select("value").eq("key", "answers_paywall").maybeSingle(),
-    ]).then(([enabledRaw, freeRaw, priceRaw, legacy]) => {
+    ]).then(([enabledRaw, freeRaw, priceRaw, excludedRaw, setsResult, legacy]) => {
       if (!active) return;
       setEnabled(enabledRaw === "true");
       setFreePercent(String(Math.round(Math.min(0.9, Math.max(0.05, Number(freeRaw ?? "0.25"))) * 100)));
       setPrice(priceRaw || "15");
+      try { const ids = JSON.parse(excludedRaw || "[]"); setExcludedIds(Array.isArray(ids) ? ids.map(String) : []); } catch { setExcludedIds([]); }
+      setMcqSets(setsResult?.data || []);
       // The old model-answer popup is intentionally kept off; this page is the single MCQ paywall control.
       const old = (legacy?.data?.value || {}) as LegacyPaywall;
       if (old.enabled) {
@@ -59,6 +65,7 @@ export default function AdminPaywall() {
         saveSetting("mcq_paywall_enabled", enabled ? "true" : "false"),
         saveSetting("paywall_free_ratio", String(percent / 100)),
         saveSetting("mcq_price", String(amount)),
+        saveSetting("mcq_paywall_excluded_ids", JSON.stringify(excludedIds)),
       ]);
       const { data: old } = await Db.from("site_flags").select("value").eq("key", "answers_paywall").maybeSingle();
       await Db.from("site_flags").upsert({ key: "answers_paywall", value: { ...(old?.value || {}), enabled: false }, updated_at: new Date().toISOString() });
@@ -87,6 +94,21 @@ export default function AdminPaywall() {
         </div>
         <p className="mt-3 text-xs leading-relaxed text-muted-foreground">When enabled, the intended rule is that the selected percentage of each question bank remains answerable. Questions after that point appear under a translucent locked preview until the student's account has valid access. When disabled, all questions are open.</p>
         <Button onClick={save} disabled={saving} className="mt-5 gap-2">{saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}Save Paywall 1</Button>
+      </section>
+      <section className="rounded-2xl border border-border bg-card p-5 sm:p-6">
+        <h2 className="font-semibold">Exempt individual MCQ banks</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Selected banks remain completely free even when the global MCQ paywall is enabled. This does not change subscription access elsewhere.</p>
+        <div className="mt-4 max-h-80 space-y-2 overflow-y-auto rounded-xl border border-border p-3">
+          {mcqSets.map((item) => {
+            const excluded = excludedIds.includes(item.id);
+            return <label key={item.id} className="flex cursor-pointer items-start gap-3 rounded-lg px-2 py-2 hover:bg-muted/40">
+              <input type="checkbox" checked={excluded} onChange={(e) => setExcludedIds((current) => e.target.checked ? [...current, item.id] : current.filter((id) => id !== item.id))} className="mt-1 h-4 w-4 accent-primary" />
+              <span className="min-w-0"><span className="block text-sm font-semibold">{item.title}</span><span className="block text-xs text-muted-foreground">{item.category || "Uncategorised"} · {excluded ? "Paywall exempt" : "Paywall applies"}</span></span>
+            </label>;
+          })}
+          {mcqSets.length === 0 && <p className="text-sm text-muted-foreground">No published MCQ banks found.</p>}
+        </div>
+        <Button onClick={save} disabled={saving} className="mt-4 gap-2">{saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}Save exemptions with Paywall settings</Button>
       </section>
       <section className="rounded-2xl border border-border bg-card p-5 sm:p-6">
         <h2 className="font-semibold">Subscription prices and payment plans</h2>
