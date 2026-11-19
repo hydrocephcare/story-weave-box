@@ -71,7 +71,8 @@ export default function AdminBilling() {
       )}
 
       <section className={card} aria-label="Plans and prices">
-        <h2 className="font-serif text-xl font-bold">Plans and prices (KES)</h2>
+        <h2 className="font-serif text-xl font-bold">Site-wide subscription plans and prices (KES)</h2>
+        <p className="mt-1 text-sm text-muted-foreground">These plans are shared by paywalls across OmpathStudy. The annual plan is selected by default at checkout when available; you can add, edit or remove other durations here.</p>
         <ul className="mt-3 space-y-2">
           {pr.plans.map((p, i) => (
             <li key={p.id} className="grid grid-cols-2 gap-2 rounded-xl border border-border p-3 sm:grid-cols-[1fr_110px_110px_auto_auto]">
