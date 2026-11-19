@@ -37,10 +37,18 @@ async function worker() {
       const t = JSON.parse(fs.readFileSync(path.join("public/topics", `${it.s}.json`), "utf8"));
       const existing = fs.existsSync(path.join(DIR, `${it.s}.json`)) ? JSON.parse(fs.readFileSync(path.join(DIR, `${it.s}.json`), "utf8")) : {};
       let page = null;
+      let lastError = "AI provider returned no page";
       for (let attempt = 0; attempt < 5 && !page; attempt++) {
-        try { page = (await generateReviewedTopicPage({ name: t.n, category: t.c, context: contextOf(t, existing) }, { env })).page; } catch (e) { await new Promise((r) => setTimeout(r, 8000 * (attempt + 1))); }
+        try {
+          page = (await generateReviewedTopicPage({ name: t.n, category: t.c, context: contextOf(t, existing) }, { env })).page;
+          if (!page) lastError = "AI provider returned no reviewed page";
+        } catch (e) {
+          lastError = e instanceof Error ? e.message : String(e);
+          console.warn(`[topic-generation] ${t.n}, attempt ${attempt + 1}/5: ${lastError.slice(0, 300)}`);
+          await new Promise((r) => setTimeout(r, 8000 * (attempt + 1)));
+        }
       }
-      if (!page) { failed++; console.log("failed", t.n); continue; }
+      if (!page) { failed++; console.log("failed", t.n, "-", lastError.slice(0, 300)); continue; }
       if (!page.medical) { skipped++; console.log("not medical", t.n); continue; }
       fs.writeFileSync(path.join(DIR, `${it.s}.json`), JSON.stringify({ ...page, reviewed: false }, null, 1) + "\n");
       done++;
