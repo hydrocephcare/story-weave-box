@@ -200,5 +200,410 @@
   "reviewedAt": "2026-11-18",
   "fixRounds": 0
  },
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "When a patient presents with a painful, swollen area, the clinician must separate simple cellulitis from more aggressive processes and identify systemic involvement.",
+    "b": [
+     "Onset: rapid (hours) suggests necrotizing infection; slower (days) favours cellulitis.",
+     "Pain: out‑of‑proportion to visible signs points to deep tissue necrosis.",
+     "Systemic features: fever, tachycardia, hypotension indicate SIRS or sepsis.",
+     "Risk factors: diabetes, HIV, trauma, recent herbal application, immunosuppression.",
+     "Progression: spreading erythema >2 cm/h, skin bullae, crepitus, anesthesia over the area.",
+     "Local warmth: compare with contralateral site; marked increase supports active inflammation.",
+     "Palpation: firm, tender induration suggests fascia involvement; fluctuation indicates abscess.",
+     "Bedside tests limitations: the “finger‑test” (pain on palpation) cannot differentiate bacterial species or depth of infection."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "In low‑resource settings, choose tests that answer the key clinical question while recognising what to do when a test is unavailable.",
+    "t": [
+     {
+      "a": "Full blood count (FBC)",
+      "b": "Is there a systemic inflammatory response? Neutrophil count >7 ×10⁹/L and left shift support bacterial infection; leukopenia may suggest overwhelming sepsis."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Is tissue hypoperfusion present? Lactate ≥2 mmol/L indicates early shock; ≥4 mmol/L signals severe sepsis requiring urgent resuscitation."
+     },
+     {
+      "a": "Blood culture (aerobic & anaerobic)",
+      "b": "What is the causative organism? Positive growth guides targeted antibiotics; if unavailable, start broad‑spectrum empiric therapy based on local flora."
+     },
+     {
+      "a": "Wound swab or aspirate Gram stain",
+      "b": "Is there a predominance of Gram‑positive cocci (Staph/Strep) or Gram‑negative rods? Guides empiric choice; a paucity of organisms may indicate necrotizing fasciitis."
+     },
+     {
+      "a": "Ultrasound of the affected area",
+      "b": "Is there a fluid collection or fascial thickening? Hypoechoic fluid with “dirty shadowing” suggests abscess; loss of fascial plane indicates necrotizing infection."
+     },
+     {
+      "a": "Plain radiograph",
+      "b": "Is there subcutaneous gas? Presence of radiolucent streaks strongly supports necrotizing fasciitis."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Rely on clinical scoring (e.g., LRINEC – use available labs) and early surgical consultation; do not delay source control awaiting results."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification combines clinical pattern, depth of tissue involvement and systemic impact.",
+    "b": [
+     "Cellulitis – superficial dermal and subcutaneous infection, no fascial involvement, usually <5 cm spread per hour.",
+     "Necrotizing fasciitis – rapid fascial necrosis, pain out of proportion, systemic toxicity; LRINEC score ≥6 suggests high risk.",
+     "Abscess – localized pus collection, fluctuant on palpation, may coexist with cellulitis.",
+     "Severe systemic inflammation – SIRS criteria (≥2: temperature >38 °C or <36 °C, HR >90, RR >20 or PaCO₂ <32 mmHg, WBC >12 ×10⁹/L or <4 ×10⁹/L).",
+     "Stage I (mild) – limited erythema, no systemic signs; treat with oral antibiotics.",
+     "Stage II (moderate) – extensive erythema, fever, elevated CRP; require IV antibiotics and possible incision‑drainage.",
+     "Stage III (severe) – necrosis, gas, organ dysfunction; urgent surgical debridement plus ICU support."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several other pathologies can mimic acute soft‑tissue inflammation, especially in tropical, low‑resource settings.",
+    "t": [
+     {
+      "a": "Deep vein thrombosis (DVT)",
+      "b": "Points to it: unilateral leg swelling, pain on calf compression, risk factors (immobility, pregnancy). Separate by Homan’s sign, duplex ultrasound; DVT lacks erythema and warmth."
+     },
+     {
+      "a": "Acute gouty arthritis",
+      "b": "Points to it: sudden mono‑articular pain, tophi, hyperuricemia. Joint aspiration shows negatively birefringent needle‑shaped crystals; inflammation is sterile."
+     },
+     {
+      "a": "Lymphangitis",
+      "b": "Points to it: linear red streaks following lymphatics, often after skin breach. No fascial thickening; ultrasound shows superficial vein inflammation, not deep fascial loss."
+     },
+     {
+      "a": "Myositis (viral or autoimmune)",
+      "b": "Points to it: muscle tenderness, elevated CK, systemic viral prodrome. MRI shows muscle edema without fascial gas; cultures are negative."
+     },
+     {
+      "a": "Erysipelas",
+      "b": "Points to it: sharply demarcated, raised erythema on face or legs, often Streptococcus pyogenes. No deep fascial involvement; responds rapidly to penicillin."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with rapid assessment, then definitive care, monitor, and know when to refer. This ladder keeps patients safe while using limited resources.",
+    "b": [
+     "1. Immediate ABCs: airway, breathing, circulation; give oxygen if SpO₂<94%. 2. Obtain vital signs, pain score, and local exam; note redness, warmth, swelling, and any crepitus. 3. Start empiric broad‑spectrum IV antibiotics covering common skin flora (e.g., ceftriaxone + clindamycin) unless contraindicated. 4. Initiate fluid resuscitation with crystalloids to maintain MAP >65 m"
+    ],
+    "t": [
+     {
+      "a": "Antibiotic rationale",
+      "b": "Ceftriaxone covers gram‑negative rods; clindamycin blocks toxin production and covers anaerobes."
+     },
+     {
+      "a": "Avoid",
+      "b": "Avoid monotherapy with narrow agents (e.g., penicillin alone) in severe infections."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Know the common side effects and interactions of the main drugs used in inflammation management.",
+    "b": [
+     "1. Ceftriaxone: biliary sludge, rash; monitor liver enzymes and watch for jaundice. 2. Clindamycin: C. difficile colitis; advise patient to report diarrhoea and consider stool test. 3. NSAIDs: GI ulcer, renal impairment; use proton‑pump inhibitor if risk factors present. 4. Systemic steroids: hyperglycaemia, infection flare; check blood glucose and counsel on infection signs. 5"
+    ],
+    "t": [
+     {
+      "a": "NSAID GI risk",
+      "b": "Use PPIs if history of ulcers or concurrent steroids."
+     },
+     {
+      "a": "Steroid hyperglycaemia",
+      "b": "Check fasting glucose; adjust diabetic meds."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early warning signs that require urgent escalation to prevent morbidity and mortality.",
+    "b": [
+     "1. Rapid spread of erythema beyond initial area. 2. New bullae or necrotic skin. 3. Systemic signs: tachycardia >120 bpm, hypotension, altered mental status. 4. Rising creatinine or oliguria indicating renal failure. 5. Persistent fever >48 h despite antibiotics. 6. Worsening pain out of proportion to exam. 7. Positive air‑crepitus on palpation. 8. If any of these occur, transf"
+    ],
+    "t": [
+     {
+      "a": "Escalation trigger",
+      "b": "Any sign of systemic toxicity or necrosis warrants transfer."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Patient comorbidities and local practices can alter presentation and treatment response.",
+    "b": [
+     "1. HIV: higher risk of opportunistic infections; use broader coverage and monitor CD4. 2. TB: granulomatous inflammation may mimic chronic abscess; consider sputum PCR. 3. Malnutrition: impaired wound healing; provide protein supplementation. 4. Pregnancy: avoid nephrotoxic drugs; use penicillin‑based regimens. 5. Diabetes: ↑ infection severity; control glucose tightly. 6. Herb"
+    ],
+    "t": [
+     {
+      "a": "Drug adjustment",
+      "b": "Reduce ceftriaxone dose in CKD; avoid NSAIDs in liver disease."
+     },
+     {
+      "a": "Herbal interaction",
+      "b": "Artemisinin can potentiate cytochrome P450; monitor drug levels."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management for vulnerable populations in low‑resource settings.",
+    "b": [
+     "1. Children: use weight‑based dosing; avoid NSAIDs if dehydrated. 2. Elderly: polypharmacy risk; review all meds for interactions. 3. HIV patients: consider drug‑drug interactions with antiretrovirals. 4. Low‑resource settings: prioritize empiric therapy, use available antibiotics, and ensure basic wound care. 5. Pregnant women: use penicillin or cephalosporins; avoid fluoroqui"
+    ],
+    "t": [
+     {
+      "a": "Antibiotic choice",
+      "b": "Penicillin or cephalosporin preferred in pregnancy; avoid fluoroquinolones."
+     },
+     {
+      "a": "Monitoring",
+      "b": "Use simple bedside tests (e.g., pulse oximetry, temperature) when labs unavailable."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Acute inflammation onset: minutes to hours; chronic: days to weeks.",
+   "Neutrophil predominance in exudate indicates acute phase; lymphocytes/macrophages indicate chronic.",
+   "Temperature >38 °C with tachycardia >90 bpm and respiratory rate >20/min meets SIRS criteria.",
+   "WBC count >12 ×10⁹/L with left shift supports bacterial acute inflammation.",
+   "Granuloma formation requires ≥2 weeks of persistent antigenic stimulus.",
+   "Fibrinous exudate appears as a thin, yellowish layer on serosal surfaces.",
+   "Resolution requires macrophage clearance and release of lipoxins, resolvins, protectins.",
+   "In low‑resource hospitals, delayed source control >24 h raises mortality >30 % in necrotizing fasciitis.",
+   "Corticosteroids are indicated in acute severe inflammation when benefits outweigh infection risk, e.g., meningitis adjunct."
+  ],
+  "mnemonics": [
+   {
+    "n": "CARD",
+    "t": "Calor, Rubor, Tumor, Dolor – the four classic vascular signs of acute inflammation."
+   },
+   {
+    "n": "VAN",
+    "t": "Vasodilation, Increased permeability, Neutrophil recruitment – key steps in the vascular phase."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define the five cardinal signs of inflammation and indicate which are primarily vascular.",
+    "a": "Rubor (redness) and calor (heat) are due to vasodilation; tumor (swelling) from increased permeability; dolor (pain) from nerve irritation; functio laesa (loss of function) is a consequence.",
+    "hot": true
+   },
+   {
+    "q": "What laboratory thresholds support a diagnosis of SIRS?",
+    "a": "Temperature >38 °C or <36 °C, heart rate >90 bpm, respiratory rate >20/min or PaCO₂ <32 mmHg, WBC >12 ×10⁹/L or <4 ×10⁹/L or >10 % bands.",
+    "hot": true
+   },
+   {
+    "q": "Explain how to differentiate cellulitis from early necrotizing fasciitis at the bedside.",
+    "a": "Cellulitis: diffuse erythema, tenderness, preserved skin integrity, no severe pain out of proportion. Necrotizing fasciitis: severe pain beyond erythema, rapid progression, tense edema, bullae, crepitus, systemic toxicity.",
+    "hot": true
+   },
+   {
+    "q": "Why is source control more important than antibiotics in severe soft‑tissue infection?",
+    "a": "Removing necrotic tissue eliminates the bacterial nidus and improves antibiotic penetration; delays increase mortality regardless of drug choice.",
+    "hot": true
+   },
+   {
+    "q": "When is corticosteroid therapy indicated in acute inflammation?",
+    "a": "When the inflammatory response threatens organ function (e.g., bacterial meningitis, severe asthma, autoimmune flare) and benefits outweigh infection risk; not in uncontrolled sepsis without source control.",
+    "hot": true
+   },
+   {
+    "q": "An immunocompromised patient develops progressive multifocal leukoencephalopathy without inflammation. Which virus is reactivated?",
+    "a": "John Cunningham (JC) polyomavirus.",
+    "past": true
+   },
+   {
+    "q": "A physician says, 'You are not in pain, it is just inflammation.' Which communication principle is breached?",
+    "a": "Empathy – dismissing the patient’s subjective experience undermines therapeutic relationship.",
+    "past": true
+   },
+   {
+    "q": "Rapid onset and severity of radiation‑induced mucositis are due to what cellular process?",
+    "a": "Direct DNA damage to basal epithelial cells leading to apoptosis and loss of mucosal barrier.",
+    "past": true
+   },
+   {
+    "q": "Chronic gingival inflammation with plasma cells and lymphocytes reflects which type of immune response?",
+    "a": "Chronic cell‑mediated (type IV) hypersensitivity with a dominant Th1/Th17 profile.",
+    "past": true
+   },
+   {
+    "q": "Mechanism behind migratory polyarthritis after streptococcal pharyngitis with high ASO titers?",
+    "a": "Molecular mimicry leading to immune complex deposition (type III hypersensitivity) in joints.",
+    "past": true
+   },
+   {
+    "q": "Primary pathological site causing airway obstruction in croup (steeple sign)?",
+    "a": "Subglottic mucosal edema and inflammation narrowing the airway lumen.",
+    "past": true
+   },
+   {
+    "q": "In ulcerative colitis, what histological feature defines the disease?",
+    "a": "Crypt abscesses – neutrophil‑filled colonic crypts.",
+    "past": true
+   },
+   {
+    "q": "Metabolic pathway that generates uric acid crystals in gout?",
+    "a": "Purine degradation via xanthine oxidase converting hypoxanthine to xanthine to uric acid.",
+    "past": true
+   },
+   {
+    "q": "List common causes of acute gastric inflammation.",
+    "a": "Helicobacter pylori infection, NSAID use, acute stress (e.g., burns), alcohol binge, severe infection."
+   },
+   {
+    "q": "Key steps of coagulation that aid immune defense after barrier breach.",
+    "a": "Fibrin mesh traps microbes, and thrombin-generated fibrinogen fragments act as chemotactic signals for neutrophils."
+   },
+   {
+    "q": "What are three local factors that impede resolution of inflammation in low‑resource settings?",
+    "a": "Persistent bacterial load due to inadequate debridement, ongoing tissue hypoxia, and lack of access to anti‑inflammatory agents."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 42‑year‑old farmer presents with a painful, rapidly expanding leg swelling, fever 38.9 °C, HR 110 bpm. Which finding most strongly suggests necrotizing fasciitis?",
+    "o": [
+     "Pain out of proportion to visual signs",
+     "Erythema limited to the area of swelling",
+     "Presence of a single pustule",
+     "Mild tenderness only"
+    ],
+    "a": 0,
+    "e": "Severe pain disproportionate to exam is classic for necrotizing fasciitis."
+   },
+   {
+    "q": "Which cytokine is primarily responsible for fever in acute inflammation?",
+    "o": [
+     "IL‑1",
+     "IL‑10",
+     "TGF‑β",
+     "PDGF"
+    ],
+    "a": 0,
+    "e": "IL‑1 acts on the hypothalamus to raise the set‑point."
+   },
+   {
+    "q": "In a patient with HIV and chronic non‑purulent knee swelling, the predominant inflammatory pattern is:",
+    "o": [
+     "Acute neutrophilic",
+     "Granulomatous",
+     "Chronic lymphoplasmacytic",
+     "Eosinophilic"
+    ],
+    "a": 2,
+    "e": "Chronic lymphoplasmacytic infiltrates are typical of indolent joint inflammation in immunocompromise."
+   },
+   {
+    "q": "Which of the following best describes the exudate in serous inflammation?",
+    "o": [
+     "Protein‑rich, fibrinous fluid",
+     "Clear, low‑protein fluid",
+     "Pus containing dead neutrophils",
+     "Blood‑filled fluid"
+    ],
+    "a": 1,
+    "e": "Serous exudate is thin, clear, and low in protein."
+   },
+   {
+    "q": "A child with malaria develops splenomegaly and left upper quadrant pain. The splenic inflammation is mainly due to:",
+    "o": [
+     "Direct parasite invasion of splenic parenchyma",
+     "Immune complex deposition",
+     "Ischemic necrosis from vaso‑occlusion",
+     "Hyperplasia of macrophages clearing parasitized RBCs"
+    ],
+    "a": 3,
+    "e": "Malaria triggers massive macrophage activity to remove infected red cells, causing congestion and inflammation."
+   },
+   {
+    "q": "Which drug class is first‑line for preventing further joint damage in chronic rheumatoid arthritis, a chronic inflammatory disease?",
+    "o": [
+     "NSAIDs",
+     "Glucocorticoids",
+     "Biologic TNF inhibitors",
+     "DMARDs"
+    ],
+    "a": 3,
+    "e": "Disease‑modifying antirheumatic drugs (DMARDs) are the cornerstone of long‑term control."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer presents with a 2‑day history of a painful, swollen right lower leg. The skin is erythematous, warm, and there are tense bullae. He is febrile (38.7 °C) and tachycardic (115 bpm). No obvious wound is seen.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Early necrotizing fasciitis."
+     },
+     {
+      "q": "What immediate management step should be taken?",
+      "a": "Urgent surgical exploration and debridement plus broad‑spectrum IV antibiotics."
+     },
+     {
+      "q": "Which bedside sign helps differentiate it from cellulitis?",
+      "a": "Pain out of proportion to the visible erythema and presence of tense bullae or crepitus."
+     }
+    ]
+   },
+   {
+    "v": "A 45‑year‑old woman with known HIV (CD4 150 cells/µL) reports a 3‑month history of painless swelling of the left knee. Examination shows a mildly effused joint without warmth or erythema. Synovial fluid analysis reveals a lymphocyte‑predominant, sterile exudate.",
+    "qs": [
+     {
+      "q": "What is the most likely inflammatory pattern?",
+      "a": "Chronic lymphoplasmacytic (type IV) inflammation."
+     },
+     {
+      "q": "Which investigation would best confirm the underlying cause?",
+      "a": "PCR for Mycobacterium tuberculosis in synovial fluid."
+     },
+     {
+      "q": "What is the first‑line treatment if TB arthritis is confirmed?",
+      "a": "Standard anti‑TB regimen (rifampicin, isoniazid, pyrazinamide, ethambutol) for 6‑9 months plus joint physiotherapy."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing cellulitis with necrotizing fasciitis and delaying surgical referral.",
+   "Relying solely on temperature to diagnose SIRS without considering heart rate, respiratory rate, and WBC.",
+   "Prescribing antibiotics without first achieving source control in deep soft‑tissue infections.",
+   "Using corticosteroids in uncontrolled sepsis without ruling out active infection.",
+   "Omitting fibrinous exudate description when describing serosal inflammation.",
+   "Failing to mention the role of DAMPs in initiating sterile inflammation.",
+   "Misidentifying chronic granulomatous inflammation as acute neutrophilic response.",
+   "Neglecting to assess for HIV or TB in chronic joint effusions in low‑resource settings."
+  ],
+  "exam": [
+   "Define the five cardinal signs of inflammation and indicate which are primarily vascular. — Rubor (redness) and calor (heat) are due to vasodilation; tumor (swelling) from increased permeability; dolor (pain) from nerve irritation; functio laesa (loss of function) is a consequence.",
+   "What laboratory thresholds support a diagnosis of SIRS? — Temperature >38 °C or <36 °C, heart rate >90 bpm, respiratory rate >20/min or PaCO₂ <32 mmHg, WBC >12 ×10⁹/L or <4 ×10⁹/L or >10 % bands.",
+   "Explain how to differentiate cellulitis from early necrotizing fasciitis at the bedside. — Cellulitis: diffuse erythema, tenderness, preserved skin integrity, no severe pain out of proportion. Necrotizing fasciitis: severe pain beyond erythema, rapid progression, tense edema, bullae, crepitus, systemic toxicity.",
+   "Why is source control more important than antibiotics in severe soft‑tissue infection? — Removing necrotic tissue eliminates the bacterial nidus and improves antibiotic penetration; delays increase mortality regardless of drug choice.",
+   "When is corticosteroid therapy indicated in acute inflammation? — When the inflammatory response threatens organ function (e.g., bacterial meningitis, severe asthma, autoimmune flare) and benefits outweigh infection risk; not in uncontrolled sepsis without source control.",
+   "An immunocompromised patient develops progressive multifocal leukoencephalopathy without inflammation. Which virus is reactivated? — John Cunningham (JC) polyomavirus.",
+   "A physician says, 'You are not in pain, it is just inflammation.' Which communication principle is breached? — Empathy – dismissing the patient’s subjective experience undermines therapeutic relationship.",
+   "Rapid onset and severity of radiation‑induced mucositis are due to what cellular process? — Direct DNA damage to basal epithelial cells leading to apoptosis and loss of mucosal barrier.",
+   "Chronic gingival inflammation with plasma cells and lymphocytes reflects which type of immune response? — Chronic cell‑mediated (type IV) hypersensitivity with a dominant Th1/Th17 profile.",
+   "Mechanism behind migratory polyarthritis after streptococcal pharyngitis with high ASO titers? — Molecular mimicry leading to immune complex deposition (type III hypersensitivity) in joints.",
+   "Primary pathological site causing airway obstruction in croup (steeple sign)? — Subglottic mucosal edema and inflammation narrowing the airway lumen.",
+   "In ulcerative colitis, what histological feature defines the disease? — Crypt abscesses – neutrophil‑filled colonic crypts.",
+   "Metabolic pathway that generates uric acid crystals in gout? — Purine degradation via xanthine oxidase converting hypoxanthine to xanthine to uric acid.",
+   "List common causes of acute gastric inflammation. — Helicobacter pylori infection, NSAID use, acute stress (e.g., burns), alcohol binge, severe infection."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-19",
+  "checked": "2026-11-19"
+ }
 }

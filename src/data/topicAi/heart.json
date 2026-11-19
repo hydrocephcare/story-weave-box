@@ -190,5 +190,352 @@
   "reviewedAt": "2026-11-16",
   "fixRounds": 0
  },
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect key symptoms, then perform a focused cardiac exam. A clear history guides which signs to look for and what a positive finding implies.",
+    "b": [
+     "History: • Chest pain (character, radiation, triggers) • Dyspnoea (on exertion, orthopnoea) • Palpitations (irregularity, frequency) • Swelling (legs, abdomen) • Syncope or near‑syncope episodes",
+     "History: • Past cardiac disease, rheumatic fever, hypertension, diabetes, smoking, family history",
+     "Examination: • Inspection – jugular venous distension, peripheral oedema, cyanosis",
+     "Examination: • Palpation – apex beat location, heave, thrill, displaced point of maximal impulse",
+     "Examination: • Percussion – cardiac dullness, displaced heart border",
+     "Examination: • Auscultation – S1/S2 quality, murmurs (location, timing, radiation), gallops (S3/S4), rubs",
+     "Examination: • Special tests – Korotkoff phases for blood pressure, hand‑grip test for LV hypertrophy",
+     "Bedside test limits – cannot quantify ejection fraction, cannot detect silent ischemia, cannot differentiate valve pathology without imaging"
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a structured table to match each test with its clinical question, interpretation, and action when unavailable.",
+    "t": [
+     {
+      "a": "12‑lead ECG",
+      "b": "Detects arrhythmias, ischemia, infarction, conduction blocks; look for ST‑segment changes, Q waves, T‑wave inversion, axis deviation. If unavailable, use handheld ECG or pulse oximetry for rhythm assessment."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Assesses cardiac size, pulmonary congestion, pleural effusion. Cardiomegaly > 50% of thoracic width suggests LV hypertrophy or failure. If not available, use bedside ultrasound for size."
+     },
+     {
+      "a": "Transthoracic echocardiography (TTE)",
+      "b": "Measures EF, valve morphology, wall thickness, pericardial effusion. EF < 40% = HFrEF. If TTE unavailable, use point‑of‑care ultrasound or Doppler."
+     },
+     {
+      "a": "BNP/NT‑proBNP",
+      "b": "Biomarker for heart failure; > 400 pg/mL (age‑adjusted) indicates decompensation. If assay unavailable, rely on clinical signs and imaging."
+     },
+     {
+      "a": "Coronary angiography",
+      "b": "Defines coronary anatomy, occlusion sites, dominance. If not available, use CT coronary angiography or fractional flow reserve."
+     },
+     {
+      "a": "Cardiac MRI",
+      "b": "Gold standard for fibrosis, viability, RV function. If unavailable, use TTE with contrast."
+     },
+     {
+      "a": "Holter monitor",
+      "b": "Detects paroxysmal arrhythmias; > 30 premature beats/min suggests atrial fibrillation risk. If not available, use event recorder or bedside ECG."
+     },
+     {
+      "a": "Laboratory panel (CBC, electrolytes, renal function)",
+      "b": "Identifies anemia, electrolyte imbalance, renal dysfunction affecting cardiac function. If unavailable, use clinical assessment of hydration and perfusion."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures timely treatment, safe monitoring and appropriate escalation for cardiac conditions in low‑resource settings.",
+    "b": [
+     "Initial assessment: ABCs, oxygen, rapid bedside ECG, and focused history to identify life‑threatening arrhythmia or ischemia.",
+     "First‑line pharmacology: beta‑blocker (e.g., propranolol) for tachyarrhythmia, ACE inhibitor for heart failure, and diuretic (furosemide) for volume overload; avoid NSAIDs in heart failure.",
+     "Definitive therapy: reperfusion (thrombolysis if PCI unavailable), valve surgery for severe regurgitation, or device implantation for refractory arrhythmia.",
+     "Monitoring: repeat ECG, vitals every 15 min initially, urine output, and daily weight; watch for signs of decompensation.",
+     "Escalation criteria: persistent hypotension, worsening chest pain, new pulmonary edema, or arrhythmia unresponsive to drugs – refer for higher‑level care.",
+     "Discharge planning: education on medication adherence, lifestyle, and follow‑up schedule; arrange community health worker visits if possible."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse reactions and interactions helps prevent iatrogenic harm, especially where laboratory monitoring is limited.",
+    "b": [
+     "Beta‑blockers may cause bradycardia and bronchospasm – stop if heart rate <50 bpm or wheeze develops; consider cardioselective agent.",
+     "ACE inhibitors can precipitate renal impairment – check creatinine if possible; hold drug if rise >30 % or potassium >5.5 mmol/L.",
+     "Loop diuretics cause electrolyte loss – supplement potassium orally if serum K⁺ falls below 3.5 mmol/L; monitor for dehydration.",
+     "Aspirin increases bleeding risk – avoid in active gastrointestinal ulcer or severe thrombocytopenia; use proton‑pump inhibitor if ulcer risk high.",
+     "Digoxin toxicity presents with nausea, visual halos, and arrhythmia – stop drug and give activated charcoal if recent ingestion; monitor serum level when feasible.",
+     "Thrombolytics may cause intracranial hemorrhage – contraindicated in recent head trauma or uncontrolled hypertension; observe for severe headache or neurological change."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of complications guides timely referral to tertiary centres.",
+    "b": [
+     "Cardiogenic shock: systolic BP <90 mmHg, cool extremities, oliguria – start inotropes, consider intra‑aortic balloon pump, refer urgently.",
+     "Acute pulmonary edema: severe dyspnea, crackles, pink frothy sputum – give high‑flow oxygen, IV furosemide, and consider non‑invasive ventilation; transfer if no improvement.",
+     "Ventricular arrhythmia (VT/VF): loss of pulse or unstable rhythm – immediate defibrillation, amiodarone infusion, and rapid transfer.",
+     "Pericardial tamponade: muffled heart sounds, JVD, hypotension (Beck's triad) – perform emergency pericardiocentesis; arrange surgical drainage.",
+     "Stroke secondary to atrial fibrillation: new focal deficit – start anticoagulation if no contraindication, arrange neuro‑imaging and specialist input."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, investigations and therapeutic choices.",
+    "b": [
+     "HIV infection: higher risk of myocarditis and pericardial effusion; avoid nephrotoxic drugs if on tenofovir; monitor for drug‑drug interactions with protease inhibitors.",
+     "Tuberculosis: pericardial TB can mimic effusion; obtain pericardial fluid for acid‑fast stain; treat with standard anti‑TB regimen before steroids.",
+     "Malnutrition: low albumin worsens drug binding and edema; use lower diuretic doses and monitor electrolytes closely.",
+     "Pregnancy: avoid ACE inhibitors and warfarin; use heparin for anticoagulation and beta‑blockers that are pregnancy‑safe.",
+     "Diabetes: beta‑blockers may mask hypoglycaemia symptoms; choose agents with less effect on glucose and monitor blood sugar.",
+     "Alcohol abuse: predisposes to dilated cardiomyopathy; counsel cessation and avoid binge‑drinking before surgery.",
+     "Renal failure: limit ACE inhibitor dose, avoid contrast‑enhanced imaging, and adjust diuretic regimen.",
+     "Liver disease: coagulopathy affects anticoagulation decisions; use low‑molecular‑weight heparin with careful monitoring."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring care to vulnerable populations improves outcomes where resources are scarce.",
+    "b": [
+     "Children: use weight‑based dosing, prefer echocardiography over CT, and consider congenital lesions first; avoid adult‑dose ACE inhibitors.",
+     "Pregnant women: prioritize non‑teratogenic drugs, use low‑dose aspirin for prophylaxis, and plan delivery in a centre with cardiac anaesthesia.",
+     "Elderly: start all drugs at half the usual dose, watch for orthostatic hypotension, and prefer once‑daily regimens for adherence.",
+     "People with HIV: screen for drug interactions with antiretrovirals, use echocardiography to detect early cardiomyopathy, and vaccinate against pneumococcus.",
+     "Low‑resource settings: rely on clinical scoring (e.g., Killip class), use streptokinase if PCI unavailable, and train community health workers for follow‑up."
+    ]
+   }
+  ],
+  "facts": [
+   "Apex beat normally located at the left 5th intercostal space, mid‑clavicular line.",
+   "Normal sinus rhythm: 60–100 bpm; bradycardia <60 bpm, tachycardia >100 bpm.",
+   "Coronary dominance: right dominant in ~85 % of people, left dominant ~8 %, balanced ~7 %.",
+   "Cardiac output = stroke volume × heart rate; normal 4.5–5.5 L/min.",
+   "S3 gallop indicates rapid ventricular filling; common in heart failure with EF < 40 %.",
+   "Mitral valve area <1.5 cm² defines severe mitral stenosis.",
+   "Aortic stenosis severity: peak velocity >4 m/s, mean gradient >40 mmHg, valve area <1.0 cm².",
+   "Jugular venous pressure >3 cm above sternal angle suggests elevated right atrial pressure.",
+   "Pericardial tamponade: pulsus paradoxus >10 mmHg drop in systolic BP on inspiration."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the most common congenital heart defect causing a harsh systolic murmur at the left sternal border in a newborn?",
+    "a": "Ventricular septal defect; a left‑to‑right shunt producing a harsh holosystolic murmur best heard at the left lower sternal border.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which valve is most frequently involved in rheumatic heart disease?",
+    "a": "The mitral valve, typically presenting with mitral regurgitation early and mitral stenosis later.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 70‑year‑old heart‑transplant recipient has fever, pulmonary infiltrates and a KOH prep showing budding yeast. Which antifungal mechanism is first‑line?",
+    "a": "Inhibition of fungal cell membrane ergosterol synthesis (e.g., azole class).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What does the presence of oval budding yeast with pseudohyphae on KOH indicate in a transplant patient?",
+    "a": "Candida species infection; suggests invasive candidiasis requiring systemic antifungal therapy.",
+    "past": true
+   },
+   {
+    "q": "A drug blocks muscarinic receptors in the heart. What is the expected effect on heart rate?",
+    "a": "Increase in heart rate (tachycardia) because vagal slowing is removed.",
+    "past": true
+   },
+   {
+    "q": "Which behavioural intervention is most appropriate for a patient with health anxiety repeatedly seeking reassurance for cardiac symptoms?",
+    "a": "Cognitive‑behavioural therapy focusing on health anxiety and reassurance avoidance.",
+    "past": true
+   },
+   {
+    "q": "During a public presentation, a student experiences rapid heart rate and dry mouth. Which autonomic division mediates these signs?",
+    "a": "Sympathetic division – releases norepinephrine causing tachycardia and reduces salivation.",
+    "past": true
+   },
+   {
+    "q": "What is the primary molecular mechanism of doxorubicin‑induced cardiotoxicity?",
+    "a": "Generation of free radicals causing oxidative damage to myocardial cell membranes and mitochondrial DNA.",
+    "past": true
+   },
+   {
+    "q": "In chronic heart failure with EF 30 %, what compensatory mechanism worsens pulmonary congestion?",
+    "a": "Activation of the renin‑angiotensin‑aldosterone system leading to sodium and water retention and increased preload.",
+    "past": true
+   },
+   {
+    "q": "How do you differentiate a pericardial friction rub from a pleural rub on auscultation?",
+    "a": "Pericardial rub is heard best with the patient leaning forward, has three components (two systolic, one diastolic), and does not vary with respiration; pleural rub varies with breathing."
+   },
+   {
+    "q": "Why is a high‑flow oxygen mask avoided in a patient with known COPD exacerbation and CO₂ retention?",
+    "a": "Excessive oxygen can suppress hypoxic drive, worsening hypercapnia."
+   },
+   {
+    "q": "What clinical sign indicates cardiac tamponade on blood pressure measurement?",
+    "a": "Pulsus paradoxus – >10 mmHg drop in systolic pressure during inspiration."
+   },
+   {
+    "q": "Explain how right coronary artery dominance influences the area of infarction in an LAD occlusion.",
+    "a": "In right‑dominant hearts, the posterior descending artery arises from the RCA; LAD occlusion spares the inferior wall, which is supplied by the RCA."
+   },
+   {
+    "q": "What is the bedside maneuver to assess for a left‑sided sternal fracture after trauma?",
+    "a": "Palpate the sternum for step deformity and crepitus; ask the patient to cough and note localized tenderness."
+   },
+   {
+    "q": "How would you assess for cardiac tamponade using only a stethoscope and sphygmomanometer?",
+    "a": "Listen for muffled heart sounds and measure for pulsus paradoxus; a >10 mmHg inspiratory drop suggests tamponade."
+   },
+   {
+    "q": "What is the significance of a laterally displaced apex beat with a systolic murmur at the apex?",
+    "a": "Suggests left ventricular enlargement (e.g., dilated cardiomyopathy) with mitral regurgitation."
+   },
+   {
+    "q": "Why is the left coronary artery less often dominant?",
+    "a": "Embryologically, the right coronary artery persists as the primary source for the posterior descending artery in most individuals."
+   },
+   {
+    "q": "What is the key difference between atrial septal defect and patent foramen ovale on echocardiography?",
+    "a": "ASD shows a true anatomical opening with left‑to‑right shunt; PFO is a flap‑like opening that may only open with transient right‑to‑left pressure reversal."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man presents with exertional dyspnoea, a harsh systolic murmur at the left lower sternal border, and a thrill. Which lesion is most likely?",
+    "o": [
+     "Aortic stenosis",
+     "Pulmonary stenosis",
+     "Mitral regurgitation",
+     "Ventricular septal defect"
+    ],
+    "a": 3,
+    "e": "VSD produces a harsh holosystolic murmur with a palpable thrill at the left lower sternal border."
+   },
+   {
+    "q": "Which ECG finding is most specific for acute pericarditis?",
+    "o": [
+     "Diffuse concave ST elevation with PR depression",
+     "ST elevation in leads V1‑V3",
+     "Tall peaked T waves",
+     "Q waves in leads II, III, aVF"
+    ],
+    "a": 0,
+    "e": "Diffuse concave ST elevation with PR depression is classic for pericarditis."
+   },
+   {
+    "q": "A patient with right‑dominant coronary anatomy suffers an inferior myocardial infarction. Which artery is occluded?",
+    "o": [
+     "Left anterior descending",
+     "Right coronary artery",
+     "Left circumflex",
+     "Posterior descending artery"
+    ],
+    "a": 1,
+    "e": "In right‑dominant hearts the RCA gives rise to the posterior descending artery supplying the inferior wall."
+   },
+   {
+    "q": "Which of the following is a contraindication to beta‑blocker use in acute decompensated heart failure?",
+    "o": [
+     "Atrial fibrillation with rapid ventricular response",
+     "Stable angina",
+     "Mild asthma",
+     "Severe bradycardia (<50 bpm)"
+    ],
+    "a": 3,
+    "e": "Severe bradycardia can be worsened by beta‑blockers and is a contraindication."
+   },
+   {
+    "q": "In a low‑resource setting, which bedside test best estimates left ventricular systolic function?",
+    "o": [
+     "Jugular venous pressure",
+     "Measurement of blood pressure",
+     "Palpation of apex beat",
+     "Peripheral edema assessment"
+    ],
+    "a": 2,
+    "e": "A sustained, displaced apex beat suggests left ventricular hypertrophy or dilatation, hinting at reduced function."
+   },
+   {
+    "q": "Which sign distinguishes cardiac from hepatic ascites on physical exam?",
+    "o": [
+     "Shifting dullness",
+     "Fluid wave",
+     "Positive hepato‑jugular reflux",
+     "Bulging flanks"
+    ],
+    "a": 2,
+    "e": "Positive hepato‑jugular reflux indicates elevated right‑sided pressures, favouring cardiac ascites."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman presents with sudden onset chest pain radiating to the back, hypotension (BP 90/60 mmHg), muffled heart sounds and jugular venous distension.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Cardiac tamponade, likely due to aortic dissection rupture into the pericardium."
+     },
+     {
+      "q": "Which bedside maneuver confirms the diagnosis with limited equipment?",
+      "a": "Measure pulsus paradoxus with a sphygmomanometer; a drop >10 mmHg on inspiration supports tamponade."
+     },
+     {
+      "q": "What is the immediate management step?",
+      "a": "Urgent pericardiocentesis under echocardiographic guidance, followed by surgical repair of the underlying cause."
+     }
+    ]
+   },
+   {
+    "v": "A 3‑month‑old infant is brought for a routine check‑up. On auscultation a grade 3/6 holosystolic murmur is heard at the left lower sternal border. The infant is thriving, with no cyanosis.",
+    "qs": [
+     {
+      "q": "What is the most probable cardiac lesion?",
+      "a": "Small ventricular septal defect (VSD) with left‑to‑right shunt."
+     },
+     {
+      "q": "What investigation would you order to confirm the diagnosis?",
+      "a": "Echocardiography with colour Doppler to visualise the defect and assess shunt size."
+     },
+     {
+      "q": "What is the typical management for a small VSD in this age group?",
+      "a": "Observation and regular follow‑up; most small VSDs close spontaneously without intervention."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing a VSD murmur (holosystolic) with a mitral regurgitation murmur (also holosystolic but best heard at the apex).",
+   "Assuming all patients with tamponade have pulsus paradoxus; it may be absent in early stages.",
+   "Using the term ‘right‑dominant’ to imply better prognosis; dominance only affects infarct distribution.",
+   "Prescribing beta‑blockers in acute decompensated heart failure without checking for severe bradycardia or hypotension.",
+   "Over‑relying on chest X‑ray for diagnosing pericardial effusion; bedside ultrasound is far more sensitive.",
+   "Mistaking a pericardial friction rub for a pleural rub by not noting its independence from respiration.",
+   "Failing to differentiate a patent foramen ovale from an atrial septal defect on echo, leading to inappropriate closure decisions.",
+   "Neglecting to assess for pulsus paradoxus when only a stethoscope and sphygmomanometer are available."
+  ],
+  "exam": [
+   "What is the most common congenital heart defect causing a harsh systolic murmur at the left sternal border in a newborn? — Ventricular septal defect; a left‑to‑right shunt producing a harsh holosystolic murmur best heard at the left lower sternal border.",
+   "Which valve is most frequently involved in rheumatic heart disease? — The mitral valve, typically presenting with mitral regurgitation early and mitral stenosis later.",
+   "A 70‑year‑old heart‑transplant recipient has fever, pulmonary infiltrates and a KOH prep showing budding yeast. Which antifungal mechanism is first‑line? — Inhibition of fungal cell membrane ergosterol synthesis (e.g., azole class).",
+   "What does the presence of oval budding yeast with pseudohyphae on KOH indicate in a transplant patient? — Candida species infection; suggests invasive candidiasis requiring systemic antifungal therapy.",
+   "A drug blocks muscarinic receptors in the heart. What is the expected effect on heart rate? — Increase in heart rate (tachycardia) because vagal slowing is removed.",
+   "Which behavioural intervention is most appropriate for a patient with health anxiety repeatedly seeking reassurance for cardiac symptoms? — Cognitive‑behavioural therapy focusing on health anxiety and reassurance avoidance.",
+   "During a public presentation, a student experiences rapid heart rate and dry mouth. Which autonomic division mediates these signs? — Sympathetic division – releases norepinephrine causing tachycardia and reduces salivation.",
+   "What is the primary molecular mechanism of doxorubicin‑induced cardiotoxicity? — Generation of free radicals causing oxidative damage to myocardial cell membranes and mitochondrial DNA.",
+   "In chronic heart failure with EF 30 %, what compensatory mechanism worsens pulmonary congestion? — Activation of the renin‑angiotensin‑aldosterone system leading to sodium and water retention and increased preload.",
+   "How do you differentiate a pericardial friction rub from a pleural rub on auscultation? — Pericardial rub is heard best with the patient leaning forward, has three components (two systolic, one diastolic), and does not vary with respiration; pleural rub varies with breathing.",
+   "Why is a high‑flow oxygen mask avoided in a patient with known COPD exacerbation and CO₂ retention? — Excessive oxygen can suppress hypoxic drive, worsening hypercapnia.",
+   "What clinical sign indicates cardiac tamponade on blood pressure measurement? — Pulsus paradoxus – >10 mmHg drop in systolic pressure during inspiration.",
+   "Explain how right coronary artery dominance influences the area of infarction in an LAD occlusion. — In right‑dominant hearts, the posterior descending artery arises from the RCA; LAD occlusion spares the inferior wall, which is supplied by the RCA.",
+   "What is the bedside maneuver to assess for a left‑sided sternal fracture after trauma? — Palpate the sternum for step deformity and crepitus; ask the patient to cough and note localized tenderness."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-19",
+  "checked": "2026-11-19"
+ }
 }

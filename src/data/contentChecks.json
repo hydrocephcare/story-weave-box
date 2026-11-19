@@ -464,16 +464,16 @@
    "lastAttempt": "2026-11-17T10:34:24.454Z"
   },
   "papers-internal-medicine-endocrinology-cat": {
-   "hash": "9ba3ea6c4e54",
+   "hash": "8e40b7a4d71a",
    "validated": true,
    "high": 0,
    "medium": 0,
    "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-17",
-   "repairStatus": "auto-repaired",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
    "repairAttempts": 1,
-   "lastAttempt": "2026-11-17T10:35:40.752Z"
+   "lastAttempt": "2026-11-19T16:22:08.061Z"
   },
   "papers-internal-medicine-main-exam-paper-one-31-january-2024": {
    "hash": "fcc9c487ffad",
@@ -565,22 +565,15 @@
   },
   "papers-paediatrics-end-of-first-trimester-exam-27-november-2018": {
    "hash": "4311f709191f",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 26, Answer: A.",
-     "problem": "Meconium aspiration syndrome is misidentified as respiratory distress syndrome.",
-     "fix": "The baby most likely has meconium aspiration syndrome."
-    }
-   ],
+   "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-17",
-   "repairStatus": "held-too-long",
+   "at": "2026-11-19",
+   "repairStatus": "clean",
    "repairAttempts": 1,
-   "lastAttempt": "2026-11-17T10:41:14.749Z"
+   "lastAttempt": "2026-11-19T16:23:30.498Z"
   },
   "papers-paediatrics-end-of-second-semester-exam-4-october-2022": {
    "hash": "0b53060c77ec",
