@@ -59,7 +59,7 @@ export function ScrollProgressBar() {
 export function BackToTopButton() {
   const hidden = useHiddenPages();
   const { pathname } = useLocation();
-  const isMcqBank = /^\\/mcqs\\/[^/]+/.test(pathname);
+  const isMcqBank = pathname.startsWith("/mcqs/");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
