@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { ChevronRight, Eye, EyeOff, Loader2, RotateCcw, Lock } from "lucide-react";
+import { ChevronRight, Eye, EyeOff, Loader2, RotateCcw, Lock, Clock, Pause, Play } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import OmpathMark from "@/components/ai/OmpathMark";
@@ -17,13 +17,38 @@ import { Paywall } from "@/components/Paywall";
 
 const LETTERS = "ABCDEF";
 const mixOrder = <T,>(a: T[]): T[] => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
+type PracticeSnapshot = {
+  qs?: McqSetRow["questions"];
+  first?: [number, number][];
+  wrong?: [number, number[]][];
+  solved?: number[];
+  shown?: number[];
+  timerMinutes?: number;
+  timerStatus?: "idle" | "running" | "paused" | "finished";
+  remainingSeconds?: number | null;
+  timerEndsAt?: number | null;
+  sessionStartedAt?: number | null;
+};
+const practiceKey = (id: string) => `ompath_mcq_session_${id}`;
+function loadPractice(id: string): PracticeSnapshot {
+  try { const value = JSON.parse(localStorage.getItem(practiceKey(id)) || "null"); return value && typeof value === "object" ? value : {}; }
+  catch { return {}; }
+}
+function savePractice(id: string, value: PracticeSnapshot) {
+  try { localStorage.setItem(practiceKey(id), JSON.stringify(value)); } catch { /* device storage may be unavailable */ }
+}
+type PracticeRecord = { id: string; score: number; attempted: number; total: number; durationSeconds: number; timerMinutes: number | null; completedAt: number; };
+function loadPracticeHistory(id: string): PracticeRecord[] {
+  try { const v = JSON.parse(localStorage.getItem(`ompath_mcq_history_${id}`) || "[]"); return Array.isArray(v) ? v : []; }
+  catch { return []; }
+}
 
 /**
  * A question bank as a reading page. A wrong choice is marked and you may try again; the answer opens when you get it right or tap "Show answer".
  * Your score counts the first try only, so retrying teaches without inflating it.
  */
 function Bank({ set }: { set: McqSetRow }) {
-  const [qs, setQs] = useState(set.questions);
+  const [qs, setQs] = useState(() => loadPractice(set.id).qs || set.questions);
   const access = useAccess();
   const [mcqPaywallEnabled, setMcqPaywallEnabled] = useState(false);
   const [freeRatio, setFreeRatio] = useState(0.25);
@@ -41,13 +66,21 @@ function Bank({ set }: { set: McqSetRow }) {
     return () => { active = false; };
   }, []);
   const isLocked = (index: number) => mcqPaywallEnabled && !access.isFree && !excludedIds.includes(set.id) && !excludedIds.includes(set.slug || "") && index >= freeLimit && !access.hasPass && !access.isAdmin;   // Reset mixes the questions and their options again, so positions cannot be memorised
-  const [first, setFirst] = useState<Map<number, number>>(new Map());          // the first choice made on each question (this is what is scored)
-  const [wrong, setWrong] = useState<Map<number, number[]>>(new Map());        // wrong choices already tried, per question
-  const [solved, setSolved] = useState<Set<number>>(new Set());               // answered correctly (on any try)
-  const [shown, setShown] = useState<Set<number>>(new Set());                 // answer revealed without solving
+  const [first, setFirst] = useState<Map<number, number>>(() => new Map(loadPractice(set.id).first || []));          // the first choice made on each question (this is what is scored)
+  const [wrong, setWrong] = useState<Map<number, number[]>>(() => new Map(loadPractice(set.id).wrong || []));        // wrong choices already tried, per question
+  const [solved, setSolved] = useState<Set<number>>(() => new Set(loadPractice(set.id).solved || []));               // answered correctly (on any try)
+  const [shown, setShown] = useState<Set<number>>(() => new Set(loadPractice(set.id).shown || []));                 // answer revealed without solving
   const [only, setOnly] = useState<"all" | "missed">("all");
   const [panelOpen, setPanelOpen] = useState(false);
   const [unlockOpen, setUnlockOpen] = useState(false);
+  const restored = useRef(loadPractice(set.id));
+  const [timerMinutes, setTimerMinutes] = useState(() => Math.max(1, Math.min(240, Number(restored.current.timerMinutes) || 10)));
+  const [timerStatus, setTimerStatus] = useState<"idle" | "running" | "paused" | "finished">(() => restored.current.timerStatus || "idle");
+  const [remainingSeconds, setRemainingSeconds] = useState<number | null>(() => restored.current.remainingSeconds ?? null);
+  const [timerEndsAt, setTimerEndsAt] = useState<number | null>(() => restored.current.timerEndsAt ?? null);
+  const [sessionStartedAt, setSessionStartedAt] = useState<number | null>(() => restored.current.sessionStartedAt ?? null);
+  const [history, setHistory] = useState<PracticeRecord[]>(() => loadPracticeHistory(set.id));
+  const savedRecordForSession = useRef(false);
 
   const pick = useCallback((i: number, oi: number) => {
     if (isLocked(i)) return;
@@ -69,12 +102,70 @@ function Bank({ set }: { set: McqSetRow }) {
   const tried = first.size;
   const pct = tried ? Math.round((correct / tried) * 100) : 0;
   const finished = answered === qs.length;
+  const timedOut = timerStatus === "finished";
+  const attemptFinished = finished || timedOut;
+  const elapsedSeconds = timerStatus === "running" && timerEndsAt ? Math.max(0, timerMinutes * 60 - Math.ceil((timerEndsAt - Date.now()) / 1000)) : timerStatus === "paused" || timerStatus === "finished" ? Math.max(0, timerMinutes * 60 - (remainingSeconds ?? 0)) : 0;
+
+  useEffect(() => {
+    if (timerStatus !== "running" || !timerEndsAt) return;
+    const tick = () => {
+      const left = Math.max(0, Math.ceil((timerEndsAt - Date.now()) / 1000));
+      setRemainingSeconds(left);
+      if (left <= 0) { setTimerStatus("finished"); setTimerEndsAt(null); }
+    };
+    tick();
+    const interval = window.setInterval(tick, 500);
+    return () => window.clearInterval(interval);
+  }, [timerStatus, timerEndsAt]);
+
+  useEffect(() => {
+    savePractice(set.id, { qs, first: [...first], wrong: [...wrong], solved: [...solved], shown: [...shown], timerMinutes, timerStatus, remainingSeconds, timerEndsAt, sessionStartedAt });
+  }, [set.id, qs, first, wrong, solved, shown, timerMinutes, timerStatus, remainingSeconds, timerEndsAt, sessionStartedAt]);
+
+  useEffect(() => {
+    if (!attemptFinished || savedRecordForSession.current) return;
+    savedRecordForSession.current = true;
+    const record: PracticeRecord = {
+      id: `${set.id}-${sessionStartedAt || Date.now()}`,
+      score: correct,
+      attempted: tried,
+      total: qs.length,
+      durationSeconds: elapsedSeconds,
+      timerMinutes: timerStatus === "idle" ? null : timerMinutes,
+      completedAt: Date.now(),
+    };
+    const next = [record, ...loadPracticeHistory(set.id)].slice(0, 20);
+    try { localStorage.setItem(`ompath_mcq_history_${set.id}`, JSON.stringify(next)); } catch { /* best effort */ }
+    setHistory(next);
+  }, [attemptFinished, set.id, sessionStartedAt, correct, tried, qs.length, elapsedSeconds, timerStatus, timerMinutes]);
+
+  const startTimer = () => {
+    const now = Date.now();
+    const left = timerStatus === "paused" && remainingSeconds !== null ? remainingSeconds : timerMinutes * 60;
+    setRemainingSeconds(left);
+    setTimerEndsAt(now + left * 1000);
+    setSessionStartedAt(sessionStartedAt || now);
+    setTimerStatus("running");
+    savedRecordForSession.current = false;
+  };
+  const pauseTimer = () => {
+    if (!timerEndsAt) return;
+    setRemainingSeconds(Math.max(0, Math.ceil((timerEndsAt - Date.now()) / 1000)));
+    setTimerEndsAt(null);
+    setTimerStatus("paused");
+  };
+  const resetAttempt = () => {
+    savedRecordForSession.current = false;
+    setQs((cur) => shuffleOptions(mixOrder(cur), String(Math.random())));
+    setFirst(new Map()); setWrong(new Map()); setSolved(new Set()); setShown(new Set()); setOnly("all");
+    setTimerStatus("idle"); setRemainingSeconds(null); setTimerEndsAt(null); setSessionStartedAt(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const formatClock = (seconds: number) => `${Math.floor(seconds / 60).toString().padStart(2, "0")}:${(seconds % 60).toString().padStart(2, "0")}`;
   useEffect(() => {
     if (!finished) return;
     try { localStorage.setItem(`mcq_practice_${set.id}`, JSON.stringify({ score: correct, total: qs.length, at: Date.now() })); } catch { /* storage blocked */ }
   }, [finished, correct, qs.length, set.id]);
-
-  const reset = () => { setQs((cur) => shuffleOptions(mixOrder(cur), String(Math.random()))); setFirst(new Map()); setWrong(new Map()); setSolved(new Set()); setShown(new Set()); setOnly("all"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
   const lockedCount = qs.filter((_, i) => isLocked(i)).length;
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
@@ -95,7 +186,7 @@ function Bank({ set }: { set: McqSetRow }) {
           </div>
           <div className="mt-4 flex gap-4 text-xs font-bold">
             <button type="button" onClick={() => setShown(allShown ? new Set() : new Set(qs.map((_, i) => i).filter((i) => !isLocked(i))))} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground">{allShown ? <EyeOff className="h-3.5 w-3.5" aria-hidden /> : <Eye className="h-3.5 w-3.5" aria-hidden />} {allShown ? "Hide all" : "Reveal all"}</button>
-            <button type="button" onClick={reset} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"><RotateCcw className="h-3.5 w-3.5" aria-hidden /> Start over</button>
+            <button type="button" onClick={resetAttempt} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"><RotateCcw className="h-3.5 w-3.5" aria-hidden /> Start over</button>
           </div>
     </div>
   );
@@ -138,6 +229,27 @@ function Bank({ set }: { set: McqSetRow }) {
         </aside>
 
         <div className="min-w-0">
+          <section className="mb-5 rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-5" aria-label="Practice timer">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary"><Clock className="h-5 w-5" /></span>
+                <div><p className="text-sm font-bold">Practice timer</p><p className="text-xs text-muted-foreground">Optional · track your answering speed</p></div>
+              </div>
+              <div className="text-right"><p className={`font-mono text-2xl font-bold tabular-nums ${timerStatus === "finished" ? "text-destructive" : "text-foreground"}`}>{timerStatus === "idle" ? formatClock(timerMinutes * 60) : formatClock(remainingSeconds ?? 0)}</p><p className="text-[11px] text-muted-foreground">{timerStatus === "running" ? "Time remaining" : timerStatus === "paused" ? "Paused" : timerStatus === "finished" ? "Time is up" : "Set your time limit"}</p></div>
+            </div>
+            <div className="mt-4 flex flex-wrap items-end gap-2">
+              <label className="min-w-0 flex-1 text-xs font-semibold text-muted-foreground">Minutes
+                <input type="number" min={1} max={240} step={1} disabled={timerStatus === "running" || timerStatus === "finished"} value={timerMinutes} onChange={(e) => setTimerMinutes(Math.max(1, Math.min(240, Number(e.target.value) || 1)))} className="mt-1 h-11 w-full rounded-xl border border-input bg-background px-3 text-sm font-semibold text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              </label>
+              {timerStatus === "idle" && <button type="button" onClick={startTimer} className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Start</button>}
+              {timerStatus === "running" && <button type="button" onClick={pauseTimer} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-4 text-sm font-bold"><Pause className="h-4 w-4" /> Pause</button>}
+              {timerStatus === "paused" && <button type="button" onClick={startTimer} className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Resume</button>}
+              {(timerStatus === "paused" || timerStatus === "finished") && <button type="button" onClick={() => { setTimerStatus("idle"); setRemainingSeconds(null); setTimerEndsAt(null); setSessionStartedAt(null); savedRecordForSession.current = false; }} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-3 text-sm font-semibold"><RotateCcw className="h-4 w-4" /> Reset timer</button>}
+            </div>
+            {timerStatus !== "idle" && <p className="mt-3 text-xs text-muted-foreground">{tried} answered · {elapsedSeconds ? (elapsedSeconds / 60).toFixed(1) : "0.0"} min elapsed · {elapsedSeconds > 0 ? (tried / (elapsedSeconds / 60)).toFixed(1) : "0.0"} questions/min</p>}
+            {timerStatus === "finished" && <p className="mt-2 rounded-lg bg-destructive/10 px-3 py-2 text-sm font-semibold text-destructive">Time is up. Your current score and progress have been saved.</p>}
+            {history.length > 0 && <details className="mt-3 border-t border-border pt-3"><summary className="cursor-pointer text-xs font-bold text-muted-foreground">Previous attempts ({history.length})</summary><div className="mt-2 space-y-2">{history.slice(0,5).map((record) => <div key={record.id} className="flex items-center justify-between gap-3 rounded-lg bg-muted/50 px-3 py-2 text-xs"><span className="min-w-0 truncate">{new Date(record.completedAt).toLocaleString()}</span><span className="shrink-0 font-bold tabular-nums">{record.score}/{record.total} · {record.durationSeconds ? formatClock(record.durationSeconds) : "Untimed"}</span></div>)}</div></details>}
+          </section>
           {missed.length > 0 && (
             <div className="mb-4 flex gap-4 text-sm font-bold" role="group" aria-label="Show">
               {(["all", "missed"] as const).map((k) => <button key={k} type="button" aria-pressed={only === k} onClick={() => setOnly(k)} className={only === k ? "text-primary underline underline-offset-4" : "text-muted-foreground hover:text-foreground"}>{k === "all" ? "All questions" : `Missed first time (${missed.length})`}</button>)}
@@ -234,7 +346,7 @@ function Bank({ set }: { set: McqSetRow }) {
             });
           })()}
 
-          {finished && (
+          {attemptFinished && (
             <section className="border-t border-border pt-8 text-center">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Bank complete</p>
               <p className="mt-1 font-serif text-3xl font-bold tabular-nums">{correct} / {qs.length} <span className="text-lg text-muted-foreground">({Math.round((correct / qs.length) * 100)}% first time)</span></p>
