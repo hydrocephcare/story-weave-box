@@ -90,8 +90,10 @@ function FlashcardStudyInner({ set }: { set: FlashcardSet }) {
   const cards = useMemo(() => set.cards.map((c, idx) => ({ question: c.question, answer: c.answer, setId: set.id, idx })), [set]);
   const ownsSet = Boolean(user?.id && set.owner_id === user.id);
   const isLocked = !access.loading && !access.isFree && !access.hasPass && !access.isAdmin && !ownsSet;
-  const freeCount = Math.min(cards.length, Math.max(1, Math.ceil(cards.length * access.settings.freeRatio)));
-  const visibleCards = isLocked ? cards.slice(0, freeCount) : cards;
+  const previewOnly = access.loading || isLocked;
+  const freeRatio = access.loading ? 0.25 : access.settings.freeRatio;
+  const freeCount = Math.min(cards.length, Math.max(1, Math.ceil(cards.length * freeRatio)));
+  const visibleCards = previewOnly ? cards.slice(0, freeCount) : cards;
   const lockedCount = Math.max(0, cards.length - visibleCards.length);
 
   return (
