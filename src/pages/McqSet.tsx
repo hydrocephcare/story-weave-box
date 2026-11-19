@@ -75,6 +75,8 @@ function Bank({ set }: { set: McqSetRow }) {
   const reset = () => { setQs((cur) => shuffleOptions(mixOrder(cur), String(Math.random()))); setFirst(new Map()); setWrong(new Map()); setSolved(new Set()); setShown(new Set()); setOnly("all"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
   const paywallIndex = indices.find((i) => isLocked(i));
+  const lockedCount = indices.filter((i) => isLocked(i)).length;
+  const scrollToPaywall = () => document.getElementById("mcq-paywall")?.scrollIntoView({ behavior: "smooth", block: "center" });
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
   const reveal = (i: number) => setShown((s) => new Set(s).add(i));
   const allShown = shown.size === qs.length;
@@ -105,6 +107,14 @@ function Bank({ set }: { set: McqSetRow }) {
       <button type="button" onClick={() => setPanelOpen(true)} aria-label={`Progress: ${answered} of ${qs.length} answered. Tap for details.`} className={`fixed left-0 top-1/2 z-40 -translate-y-1/2 rounded-r-xl px-1.5 py-3 text-[11px] font-extrabold tabular-nums shadow-md lg:hidden ${tone}`} style={{ writingMode: "vertical-rl" }}>
         {answered}/{qs.length}{tried ? ` · ${pct}%` : ""}
       </button>
+      {lockedCount > 0 && !access.loading && (
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-8px_24px_rgba(0,0,0,0.12)] backdrop-blur supports-[backdrop-filter]:bg-background/85">
+          <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
+            <div className="min-w-0"><p className="text-sm font-semibold text-foreground">{lockedCount} questions reserved for members</p><p className="text-xs text-muted-foreground">Unlock this bank to attempt every question</p></div>
+            <button type="button" onClick={scrollToPaywall} className="min-h-11 shrink-0 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">Unlock questions</button>
+          </div>
+        </div>
+      )}
       <Sheet open={panelOpen} onOpenChange={setPanelOpen}>
         <SheetContent side="left" className="w-[85vw] max-w-xs overflow-y-auto">
           <SheetHeader className="text-left"><SheetTitle className="font-serif">Your progress</SheetTitle><SheetDescription>{title}</SheetDescription></SheetHeader>
@@ -133,12 +143,25 @@ function Bank({ set }: { set: McqSetRow }) {
           {indices.map((i) => {
             const q = qs[i]; const tries = wrong.get(i) ?? []; const open = solved.has(i) || shown.has(i);
             const locked = isLocked(i);
-            if (locked && i !== paywallIndex) return null;
+            if (locked && i !== paywallIndex) return (
+              <article key={i} id={`q${i + 1}`} className="scroll-mt-24 border-t border-border py-5">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">Question {i + 1} · Member preview</p>
+                <div className="relative mt-3 overflow-hidden rounded-xl border border-border bg-card">
+                  <div aria-hidden="true" className="pointer-events-none select-none space-y-3 p-4 blur-[5px] opacity-70">
+                    <p className="font-serif text-lg font-bold leading-snug">{q.question}</p>
+                    {q.options.slice(0, 4).map((option, oi) => <div key={oi} className="flex items-center gap-3 rounded-lg bg-muted/70 px-3 py-3 text-sm"><span className="h-5 w-5 rounded-full bg-muted-foreground/30" />{option}</div>)}
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center bg-background/35">
+                    <span className="rounded-full border border-border bg-card/95 px-3 py-2 text-xs font-semibold text-foreground shadow-sm"><Lock className="mr-1.5 inline h-3.5 w-3.5" />Unlock to view this question</span>
+                  </div>
+                </div>
+              </article>
+            );
             return (
               <article key={i} id={`q${i + 1}`} className="scroll-mt-24 border-t border-border py-6 first:border-t-0 first:pt-0">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Question {i + 1}</p>
                 {locked ? (
-                  <section className="mt-4 rounded-xl border border-border bg-muted/30 px-4 py-4">
+                  <section id="mcq-paywall" className="mt-4 scroll-mt-24 rounded-xl border border-border bg-muted/30 px-4 py-4">
                     {!access.loading && i === paywallIndex && (
                       <div className="mb-4">
                         <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Free preview complete</p>
@@ -150,7 +173,7 @@ function Bank({ set }: { set: McqSetRow }) {
                       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border bg-card text-muted-foreground"><Lock className="h-4 w-4" /></span>
                       <div><p className="text-sm font-semibold text-foreground">The remaining questions are locked</p><p className="mt-0.5 text-xs text-muted-foreground">Unlock the full question bank to continue</p></div>
                     </div>
-                    {!access.loading && i === freeLimit && (
+                    {!access.loading && i === paywallIndex && (
                       <div className="mt-4">
                         <Paywall settings={access.settings} hiddenCount={Math.max(1, qs.length - freeLimit)} label="MCQ bank" onUnlocked={access.applyPass} headline="Unlock all questions" blurb={`You have completed the free preview of this ${qs.length}-question bank. Unlock the remaining ${qs.length - freeLimit} questions, answers and explanations.`} />
                       </div>
