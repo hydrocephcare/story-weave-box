@@ -77,6 +77,18 @@ function Bank({ set }: { set: McqSetRow }) {
   const paywallIndex = indices.find((i) => isLocked(i));
   const lockedCount = indices.filter((i) => isLocked(i)).length;
   const scrollToPaywall = () => document.getElementById("mcq-paywall")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  const [showUnlockBar, setShowUnlockBar] = useState(false);
+  useEffect(() => {
+    if (!lockedCount || access.loading) { setShowUnlockBar(false); return; }
+    const update = () => {
+      const gate = document.getElementById("mcq-paywall");
+      setShowUnlockBar(!!gate && gate.getBoundingClientRect().bottom < 0);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => { window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, [lockedCount, access.loading]);
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
   const reveal = (i: number) => setShown((s) => new Set(s).add(i));
   const allShown = shown.size === qs.length;
@@ -107,7 +119,7 @@ function Bank({ set }: { set: McqSetRow }) {
       <button type="button" onClick={() => setPanelOpen(true)} aria-label={`Progress: ${answered} of ${qs.length} answered. Tap for details.`} className={`fixed left-0 top-1/2 z-40 -translate-y-1/2 rounded-r-xl px-1.5 py-3 text-[11px] font-extrabold tabular-nums shadow-md lg:hidden ${tone}`} style={{ writingMode: "vertical-rl" }}>
         {answered}/{qs.length}{tried ? ` · ${pct}%` : ""}
       </button>
-      {lockedCount > 0 && !access.loading && (
+      {lockedCount > 0 && showUnlockBar && !access.loading && (
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-8px_24px_rgba(0,0,0,0.12)] backdrop-blur supports-[backdrop-filter]:bg-background/85">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
             <div className="min-w-0"><p className="text-sm font-semibold text-foreground">{lockedCount} questions reserved for members</p><p className="text-xs text-muted-foreground">Unlock this bank to attempt every question</p></div>
