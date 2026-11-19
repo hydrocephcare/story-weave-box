@@ -1,17 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import TaughtThisWeek from "@/components/TaughtThisWeek";
 import { useScopedYear as useHomeYear } from "@/hooks/useMyYear";
-import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   BookOpen, GraduationCap, Loader2, ListChecks,
   ArrowRight, Trophy, BookMarked, Phone, MessageCircle, Clock, Check, Search, FolderOpen,
 } from "lucide-react";
-import { getAllCategories, getCategoryDisplayName, getYearFromCategory, YEAR_CATEGORIES, buildBlogPath, buildFlashcardPath } from "@/lib/store";
-import { buildStoryPath, updateMetaTags } from "@/lib/seo";
+import { getAllCategories, getCategoryDisplayName, getYearFromCategory, YEAR_CATEGORIES } from "@/lib/store";
+import { updateMetaTags } from "@/lib/seo";
 import { supabase } from "@/integrations/supabase/client";
-import { getRecentArticles, type RecentArticle } from "@/lib/progress-store";
 import ContinueReading from "@/components/ContinueReading";
 import YourUnits from "@/components/YourUnits";
 import MyDecksCard from "@/components/MyDecksCard";
@@ -57,20 +55,6 @@ const PROOF = [
   "Built for medical students worldwide, with local course outlines where we have them",
 ];
 
-type RecentItem = { id: string; title: string; type: "article" | "flashcard" | "story"; category: string; created_at: string; slug?: string | null };
-
-function timeAgo(dateStr: string): string {
-  const diff = Date.now() - new Date(dateStr).getTime();
-  const mins = Math.floor(diff / 60_000);
-  if (mins < 1) return "just now";
-  if (mins < 60) return `${mins}m ago`;
-  const hours = Math.floor(mins / 60);
-  if (hours < 24) return `${hours}h ago`;
-  const days = Math.floor(hours / 24);
-  if (days < 7) return `${days}d ago`;
-  return `${Math.floor(days / 7)}w ago`;
-}
-
 // Shared reveal easing
 const REVEAL_EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -109,11 +93,7 @@ export default function Index() {
   const heroFade = useTransform(scrollYProgress, [0, 0.75], prefersReducedMotion ? [1, 1] : [1, 0.4]);
   const [categories, setCategories] = useState<{ name: string; articles: number; flashcards: number; mcqs: number }[]>([]);
   const [loading, setLoading] = useState(true);
-  const [recentlyUploaded, setRecentlyUploaded] = useState<RecentItem[]>([]);
-  const [lastRead, setLastRead] = useState<RecentArticle[]>([]);
-  const [activeTab, setActiveTab] = useState<"all" | "articles" | "flashcards" | "stories">("all");
   const [query, setQuery] = useState("");
-  const [recentShown, setRecentShown] = useState(10);
   const [studyYear, setStudyYear] = useState<number | null>(null);
 
   useEffect(() => {
@@ -131,31 +111,7 @@ export default function Index() {
     // Load categories
     getAllCategories().then(setCategories).finally(() => setLoading(false));
 
-    // Load last read
-    setLastRead(getRecentArticles());
-
-    // Recently added: one aggregated request that returns metadata only. The
-    // database already filters out empty shells (no body text / no questions),
-    // so the browser never downloads article bodies just to render this list.
-    supabase
-      .rpc("home_recent", { limit_n: 40 })
-      .then(({ data }) => {
-        // "mcq" rows are leftover quiz-bank sets (weekly exam content only, now that
-        // the rest have been migrated into articles) — they have no public page to
-        // link to since the /mcqs bank was retired, so they're dropped here.
-        const items: RecentItem[] = (data || [])
-          .filter((r) => r.kind !== "mcq")
-          .map((r) => ({
-            id: r.id,
-            title: r.title,
-            category: r.category,
-            created_at: r.created_at,
-            slug: r.slug,
-            type: r.kind as RecentItem["type"],
-          }));
-        setRecentlyUploaded(items);
-      });
-  }, []);
+  }, []);  }, []);
 
   const yearGroups = Object.keys(YEAR_CATEGORIES).map(year => {
     const yearCats = categories.filter(c => getYearFromCategory(c.name) === year);
@@ -171,22 +127,6 @@ export default function Index() {
     }),
     { notes: 0, mcqs: 0, units: 0 },
   );
-
-  const filteredRecent = recentlyUploaded.filter(item => activeTab === "all" || (activeTab === "articles" && item.type === "article") || (activeTab === "flashcards" && item.type === "flashcard") || (activeTab === "stories" && item.type === "story"));
-
-  function getItemLink(item: RecentItem) {
-    switch (item.type) {
-      case "article": return buildBlogPath(item);
-      case "flashcard": return buildFlashcardPath(item);
-      case "story": return buildStoryPath(item);
-    }
-  }
-
-  const typeMeta = {
-    article: { label: "Article", short: "ART", icon: BookOpen, badge: "bg-purple-500/10 text-purple-700 dark:text-purple-300" },
-    flashcard:{ label: "Flashcards", short: "FC", icon: GraduationCap, badge: "bg-blue-500/10 text-blue-700 dark:text-blue-300" },
-    story:   { label: "Story",   short: "STY", icon: BookMarked, badge: "bg-amber-500/10 text-amber-700 dark:text-amber-300" },
-  } as const;
 
   return (
     <div className="min-h-dvh bg-background">
