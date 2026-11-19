@@ -571,7 +571,7 @@ async function getMcqCrawlerAccess(setId: string, slug: string) {
       "app_settings",
       "select=key,value&key=in.(subscriptions_enabled,access_price_kes,mcq_paywall_enabled,paywall_free_ratio,mcq_paywall_excluded_ids)"
     );
-    const settings = new Map((rows || []).map((row: { key: string; value: string }) => [row.key, row.value]));
+    const settings = new Map<string, string>((rows || []).map((row: { key: string; value: string }) => [row.key, row.value] as [string, string]));
     const excludedRaw = settings.get("mcq_paywall_excluded_ids") || "[]";
     let excluded: string[] = [];
     try {
