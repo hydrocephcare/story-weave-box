@@ -36,6 +36,11 @@ describe("subscription prompt over the AI panel", () => {
     expect((dialog as HTMLElement).style.pointerEvents).toBe("auto");
     expect(document.body.style.pointerEvents).not.toBe("none");
     const annual = screen.getAllByText("KES 400").map((node) => node.closest("button")).find((button) => button?.getAttribute("role") === "radio")!;
+    // Annual is the default selected plan; verify that the user can switch away and back.
+    expect(annual.getAttribute("aria-checked")).toBe("true");
+    const semester = screen.getAllByText("KES 150").map((node) => node.closest("button")).find((button) => button?.getAttribute("role") === "radio")!;
+    fireEvent.click(semester);
+    expect(semester.getAttribute("aria-checked")).toBe("true");
     expect(annual.getAttribute("aria-checked")).toBe("false");
     fireEvent.click(annual);
     expect(annual.getAttribute("aria-checked")).toBe("true");
