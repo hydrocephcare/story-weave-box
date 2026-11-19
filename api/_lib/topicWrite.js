@@ -29,11 +29,11 @@ export default async function handler(req, res) {
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   const name = String(body.name ?? "").trim();
   if (!validName(name)) return res.status(400).json({ status: "invalid" });
-  const quota = await consumeEntitlement(req, body.mode === "deep" ? "ai_note_generation" : "topic_page_generation");
-  if (!quota.allowed) return res.status(quota.status || 402).json({ status: "limit", upgrade_required: quota.status === 402, quota });
   if (body.mode === "deep") {
     // Preserve the existing deep-notes generator and its original provider fallback.
     if (!groq.trim() && !hasGemini) return res.status(503).json({ status: "unavailable" });
+    const quota = await consumeEntitlement(req, "ai_note_generation");
+    if (!quota.allowed) return res.status(quota.status || 402).json({ status: "limit", upgrade_required: quota.status === 402, quota });
     try {
       const base = body.base && typeof body.base === "object" ? body.base : {};
       const past = (Array.isArray(body.past) ? body.past : []).map((x) => String(x).slice(0, 240)).slice(0, 12);
@@ -44,6 +44,8 @@ export default async function handler(req, res) {
     }
   }
   if (!groq.trim() || !hasGemini) return res.status(503).json({ status: "unavailable" });
+  const quota = await consumeEntitlement(req, "topic_page_generation");
+  if (!quota.allowed) return res.status(quota.status || 402).json({ status: "limit", upgrade_required: quota.status === 402, quota });
   try {
     const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), choices: body.choices && typeof body.choices === "object" ? body.choices : undefined };
     const { page } = await generateReviewedTopicPage(input, { env: { GROQ_API_KEYS: groq, ...geminiEnv }, fetchImpl: fetch });
