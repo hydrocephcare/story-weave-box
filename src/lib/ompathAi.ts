@@ -239,16 +239,19 @@ export async function streamAnswer(t: AiTurnInput, h: StreamHandlers): Promise<s
   const payload = JSON.stringify({ question, history: t.history.slice(-6), sources: buildSources(t.retrieval) });
   // our own server first (Groq, then Gemini, keys in turn); the older function is the fallback
   const send = async () => {
+    const { data: sessionData } = await supabase.auth.getSession();
+    const token = sessionData.session?.access_token;
+    const headers = { "Content-Type": "application/json", ...(token ? { Authorization: `Bearer ${token}` } : {}) };
     if (!chatApiDown()) {
       try {
-        const r = await fetch("/api/ai-chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: payload, signal: h.signal });
+        const r = await fetch("/api/ai-chat", { method: "POST", headers, body: payload, signal: h.signal });
         if (r.ok && r.body) return r;
         if (r.status === 404 || r.status === 503 || r.status === 405) markChatApiDown();
       } catch (e) { if ((e as Error).name === "AbortError") throw e; }
     }
     return fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` },
+      headers: { ...headers, apikey: SUPABASE_PUBLISHABLE_KEY },
       body: payload,
       signal: h.signal,
     });
