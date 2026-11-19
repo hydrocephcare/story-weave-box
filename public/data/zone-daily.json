@@ -1,142 +1,142 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-19",
  "games": [
   {
-   "id": "2026-11-18-1",
-   "title": "Medical Microbiology Q&A Guide: quick quiz",
+   "id": "2026-11-19-1",
+   "title": "Medical Physiology Ii: quick quiz",
    "game": "quiz",
-   "topic": "Medical Microbiology Q&A Guide",
+   "topic": "Medical Physiology Ii",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which of the following Gram‑positive cocci is most commonly associated with endocarditis in intravenous drug users?",
+      "q": "Which segment of the small intestine has the highest density of villi and is primarily responsible for nutrient absorption?",
       "options": [
-       "Staphylococcus aureus",
-       "Streptococcus pyogenes",
-       "Streptococcus pneumoniae",
-       "Enterococcus faecalis"
-      ],
-      "correct": 0,
-      "explanation": "S. aureus is the leading cause of infective endocarditis in IV drug users.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "What is the most sensitive rapid diagnostic test for detecting Mycobacterium tuberculosis in sputum?",
-      "options": [
-       "Ziehl‑Neelsen staining",
-       "Culture on Löwenstein–Jensen medium",
-       "Nucleic acid amplification test (NAAT)",
-       "Acid‑fast bacilli smear microscopy"
-      ],
-      "correct": 2,
-      "explanation": "NAATs (e.g., Xpert MTB/RIF) detect TB DNA with high sensitivity and provide rapid results.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which virulence factor of Pseudomonas aeruginosa contributes to its resistance to many antibiotics?",
-      "options": [
-       "Exotoxin A",
-       "Pyocyanin",
-       "Alginate biofilm",
-       "Type III secretion system"
-      ],
-      "correct": 2,
-      "explanation": "Alginate biofilm formation protects P. aeruginosa from antibiotics and host defenses.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A 45‑year‑old patient presents with a painless ulcer on the genitalia. Which organism is most likely responsible?",
-      "options": [
-       "Treponema pallidum",
-       "Haemophilus ducreyi",
-       "Chlamydia trachomatis",
-       "Neisseria gonorrhoeae"
-      ],
-      "correct": 0,
-      "explanation": "Syphilis caused by T. pallidum presents with a painless chancre.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is the preferred empirical therapy for community‑acquired pneumonia in a patient with no comorbidities?",
-      "options": [
-       "Amoxicillin",
-       "Azithromycin",
-       "Ceftriaxone",
-       "Vancomycin"
-      ],
-      "correct": 0,
-      "explanation": "Amoxicillin covers Streptococcus pneumoniae, the most common cause of CAP in healthy adults.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "What is the mechanism of action of vancomycin against Gram‑positive bacteria?",
-      "options": [
-       "Inhibits cell wall peptidoglycan cross‑linking",
-       "Inhibits protein synthesis at the 50S ribosomal subunit",
-       "Inhibits DNA gyrase",
-       "Disrupts cell membrane integrity"
-      ],
-      "correct": 0,
-      "explanation": "Vancomycin binds D‑alanine‑D‑alanine termini, preventing peptidoglycan cross‑linking.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following organisms is most likely to cause a urinary tract infection in a catheterised patient?",
-      "options": [
-       "Escherichia coli",
-       "Staphylococcus epidermidis",
-       "Pseudomonas aeruginosa",
-       "Enterococcus faecalis"
-      ],
-      "correct": 2,
-      "explanation": "P. aeruginosa is a common nosocomial pathogen in catheter‑associated UTIs.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which laboratory test is most useful for diagnosing a fungal infection in a neutropenic patient?",
-      "options": [
-       "Serum β‑D‑glucan assay",
-       "KOH mount of skin scrapings",
-       "Blood culture on Sabouraud agar",
-       "PCR for Candida DNA"
-      ],
-      "correct": 0,
-      "explanation": "Serum β‑D‑glucan is a sensitive marker for invasive fungal infections in neutropenic patients.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is a characteristic of Mycobacterium leprae?",
-      "options": [
-       "Acid‑fast bacillus with a slow growth rate",
-       "Requires cholesterol for growth",
-       "Forms cords in culture",
-       "Produces a strong pigment"
+       "Duodenum",
+       "Jejunum",
+       "Ileum",
+       "Large intestine"
       ],
       "correct": 1,
-      "explanation": "M. leprae is cholesterol‑dependent and cannot be cultured in vitro.",
+      "explanation": "The jejunum has the greatest villous surface area for absorption.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "What is the most common cause of bacterial meningitis in adults in the United States?",
+      "q": "What is the primary hormone that stimulates gastric acid secretion by parietal cells?",
       "options": [
-       "Streptococcus pneumoniae",
-       "Neisseria meningitidis",
-       "Haemophilus influenzae type b",
-       "Listeria monocytogenes"
+       "Gastrin",
+       "Secretin",
+       "Cholecystokinin",
+       "Motilin"
       ],
       "correct": 0,
-      "explanation": "S. pneumoniae remains the leading cause of bacterial meningitis in adults.",
+      "explanation": "Gastrin directly stimulates parietal cells to secrete H⁺.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which enzyme, secreted by the pancreas, is essential for the digestion of carbohydrates in the small intestine?",
+      "options": [
+       "Lipase",
+       "Trypsin",
+       "Amylase",
+       "Pepsin"
+      ],
+      "correct": 2,
+      "explanation": "Pancreatic amylase hydrolyzes starches into maltose and dextrins.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "The hormone secretin is released in response to which of the following?",
+      "options": [
+       "Low luminal pH in the duodenum",
+       "High luminal pH in the duodenum",
+       "High luminal calcium in the duodenum",
+       "High luminal bile salts in the duodenum"
+      ],
+      "correct": 0,
+      "explanation": "Secretin is secreted when duodenal pH falls below 4.5, stimulating bicarbonate secretion.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following best describes the mechanism of bile salt reabsorption in the ileum?",
+      "options": [
+       "Passive diffusion",
+       "Active transport via Na⁺/K⁺ ATPase",
+       "Active transport via ASBT",
+       "Endocytosis"
+      ],
+      "correct": 2,
+      "explanation": "Bile salts are actively transported by the apical sodium-dependent bile acid transporter (ASBT).",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is NOT a function of the gallbladder?",
+      "options": [
+       "Store bile",
+       "Concentrate bile",
+       "Release bile into the duodenum",
+       "Produce bile salts"
+      ],
+      "correct": 3,
+      "explanation": "Bile salts are synthesized in the liver, not the gallbladder.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "The hormone motilin is released during which phase of the interdigestive migrating motor complex?",
+      "options": [
+       "Phase I",
+       "Phase II",
+       "Phase III",
+       "Phase IV"
+      ],
+      "correct": 2,
+      "explanation": "Motilin peaks during phase III, triggering a strong contraction.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following best explains the mechanism of action of the drug sucralfate in peptic ulcer disease?",
+      "options": [
+       "Inhibits H⁺/K⁺ ATPase",
+       "Neutralises gastric acid",
+       "Binds to ulcer base forming a protective barrier",
+       "Stimulates mucous secretion"
+      ],
+      "correct": 2,
+      "explanation": "Sucralfate forms a viscous, adherent complex that shields the ulcer.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is the most common cause of chronic pancreatitis in the United States?",
+      "options": [
+       "Alcohol abuse",
+       "Gallstones",
+       "Autoimmune disease",
+       "Pancreatic cancer"
+      ],
+      "correct": 0,
+      "explanation": "Alcohol abuse is the leading cause of chronic pancreatitis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following hormones is released by the enteroendocrine cells of the duodenum in response to fatty acids?",
+      "options": [
+       "Secretin",
+       "Cholecystokinin",
+       "Motilin",
+       "Ghrelin"
+      ],
+      "correct": 1,
+      "explanation": "Cholecystokinin is secreted in response to fat and stimulates gallbladder contraction.",
       "ai": true,
       "kind": "mcq"
      }
@@ -145,141 +145,141 @@
    }
   },
   {
-   "id": "2026-11-18-2",
-   "title": "Occupational and environmental lung diseases 2019-2: quick quiz",
+   "id": "2026-11-19-2",
+   "title": "Acute and chronic pancreatitis: quick quiz",
    "game": "quiz",
-   "topic": "Occupational and environmental lung diseases 2019-2",
+   "topic": "Acute and chronic pancreatitis",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which occupational exposure is most strongly associated with silicosis?",
+      "q": "Which of the following is the most common cause of acute pancreatitis in the United Kingdom?",
       "options": [
-       "Coal mining",
-       "Glass manufacturing",
-       "Cement production",
-       "Welding"
+       "Alcohol abuse",
+       "Gallstones",
+       "Hypertriglyceridaemia",
+       "Trauma"
       ],
       "correct": 1,
-      "explanation": "Glass manufacturing involves high levels of crystalline silica dust, making it the classic occupational exposure for silicosis.",
+      "explanation": "Gallstones account for ~40–50% of acute pancreatitis cases in the UK.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 45‑year‑old construction worker presents with progressive dyspnea and a fine inspiratory crackle. HRCT shows reticular opacities predominantly in the upper lobes. Which diagnosis is most likely?",
+      "q": "A 52‑year‑old man presents with epigastric pain radiating to the back, elevated serum amylase and lipase, and a CT scan showing peripancreatic fat stranding. Which of the following is the most appropriate initial management?",
       "options": [
-       "Asbestosis",
-       "Silicosis",
-       "Coal workers’ pneumoconiosis",
-       "Sarcoidosis"
-      ],
-      "correct": 1,
-      "explanation": "Upper‑lobe reticular opacities with a history of silica exposure point to silicosis.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is the best initial screening test for early detection of occupational lung disease in a worker exposed to asbestos?",
-      "options": [
-       "Chest X‑ray",
-       "Pulmonary function tests",
-       "High‑resolution CT",
-       "Serum ferritin"
-      ],
-      "correct": 0,
-      "explanation": "Chest X‑ray is the first‑line screening tool for asbestos‑related lung disease.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A patient with a history of long‑term exposure to diesel exhaust develops cough and sputum production. Which lung disease is most likely?",
-      "options": [
-       "Bronchiolitis obliterans",
-       "Chronic bronchitis",
-       "Pulmonary fibrosis",
-       "Bronchiectasis"
-      ],
-      "correct": 1,
-      "explanation": "Diesel exhaust is a known irritant that can cause chronic bronchitis.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which occupational exposure is most commonly linked to the development of chronic beryllium disease?",
-      "options": [
-       "Beryllium alloy manufacturing",
-       "Cement production",
-       "Coal mining",
-       "Welding"
-      ],
-      "correct": 0,
-      "explanation": "Beryllium alloy manufacturing exposes workers to beryllium dust, causing chronic beryllium disease.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A 60‑year‑old farmer presents with progressive dyspnea, dry cough, and clubbing. HRCT shows diffuse ground‑glass opacities. Which environmental agent is most likely responsible?",
-      "options": [
-       "Pesticides",
-       "Silica dust",
-       "Organic dust from moldy hay",
-       "Asbestos"
+       "Immediate ERCP",
+       "Urgent laparotomy",
+       "Aggressive IV fluid resuscitation",
+       "Oral feeding"
       ],
       "correct": 2,
-      "explanation": "Organic dust exposure from moldy hay can cause farmer’s lung, an allergic alveolitis.",
+      "explanation": "Early aggressive IV fluids are critical in acute pancreatitis to prevent hypovolemia and organ failure.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is NOT a typical feature of asbestosis on high‑resolution CT?",
+      "q": "Which imaging modality is most sensitive for detecting chronic pancreatitis in a patient with recurrent abdominal pain?",
       "options": [
-       "Subpleural fibrosis",
-       "Honeycombing",
-       "Upper‑lobe predominance",
-       "Lower‑lobe ground‑glass opacity"
+       "Abdominal ultrasound",
+       "CT scan",
+       "Endoscopic ultrasound (EUS)",
+       "MRI with MRCP"
       ],
       "correct": 2,
-      "explanation": "Asbestosis typically shows lower‑lobe subpleural fibrosis and honeycombing; upper‑lobe predominance is not characteristic.",
+      "explanation": "EUS is the most sensitive for early chronic pancreatitis, detecting parenchymal changes and ductal abnormalities.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 35‑year‑old electrician reports wheezing and dyspnea after prolonged exposure to welding fumes. Which lung condition is most likely?",
+      "q": "A patient with chronic pancreatitis develops painless jaundice. The most likely explanation is:",
       "options": [
-       "Bronchiolitis obliterans",
-       "Pulmonary fibrosis",
-       "Bronchiectasis",
-       "Chronic bronchitis"
-      ],
-      "correct": 0,
-      "explanation": "Welding fumes can cause bronchiolitis obliterans, a small‑airway disease.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which occupational exposure is most strongly associated with the development of idiopathic pulmonary fibrosis?",
-      "options": [
-       "Silica dust",
-       "Coal dust",
-       "Beryllium",
-       "No known occupational exposure"
+       "Alcoholic liver disease",
+       "Pancreatic head carcinoma",
+       "Choledocholithiasis",
+       "Biliary stricture from chronic inflammation"
       ],
       "correct": 3,
-      "explanation": "Idiopathic pulmonary fibrosis has no known occupational cause; other exposures are linked to specific pneumoconioses.",
+      "explanation": "Chronic pancreatitis can cause a pancreatic duct stricture that compresses the common bile duct, leading to painless jaundice.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 50‑year‑old worker exposed to high levels of organic solvents presents with cough, dyspnea, and diffuse interstitial infiltrates on chest X‑ray. Which diagnosis is most likely?",
+      "q": "Which laboratory finding is most characteristic of acute pancreatitis?",
       "options": [
-       "Occupational asthma",
-       "Chronic obstructive pulmonary disease",
-       "Diffuse interstitial lung disease",
-       "Bronchiectasis"
+       "Hyperglycaemia",
+       "Hypercalcaemia",
+       "Hypertriglyceridaemia",
+       "Hyperamylasaemia"
       ],
-      "correct": 2,
-      "explanation": "Organic solvent exposure can lead to diffuse interstitial lung disease.",
+      "correct": 3,
+      "explanation": "Serum amylase (and lipase) are markedly elevated in acute pancreatitis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 45‑year‑old woman with chronic pancreatitis has a serum amylase of 120 U/L (normal 30–110 U/L). Which of the following is most likely?",
+      "options": [
+       "Active acute pancreatitis",
+       "Chronic pancreatitis with mild inflammation",
+       "Pancreatic pseudocyst",
+       "Pancreatic carcinoma"
+      ],
+      "correct": 1,
+      "explanation": "A mildly raised amylase in chronic pancreatitis reflects low‑grade inflammation, not an acute flare.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is a major risk factor for the development of pancreatic cancer in patients with chronic pancreatitis?",
+      "options": [
+       "Smoking",
+       "Alcohol consumption",
+       "Long‑standing hypertriglyceridaemia",
+       "Obesity"
+      ],
+      "correct": 0,
+      "explanation": "Smoking is the strongest independent risk factor for pancreatic cancer in chronic pancreatitis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is the most appropriate long‑term management for a patient with chronic pancreatitis who is malnourished and has exocrine insufficiency?",
+      "options": [
+       "Pancreatic enzyme replacement therapy",
+       "High‑fat diet",
+       "Somatostatin analogue",
+       "Cholecystectomy"
+      ],
+      "correct": 0,
+      "explanation": "Pancreatic enzyme replacement therapy corrects exocrine insufficiency and improves nutrition.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "In acute pancreatitis, the Ranson criteria are most useful for:",
+      "options": [
+       "Diagnosing pancreatitis",
+       "Predicting mortality",
+       "Guiding fluid therapy",
+       "Deciding on surgical intervention"
+      ],
+      "correct": 1,
+      "explanation": "Ranson criteria are used to predict the severity and mortality risk of acute pancreatitis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following best describes the pathophysiology of chronic pancreatitis?",
+      "options": [
+       "Autoimmune destruction of acinar cells",
+       "Alcohol‑induced ductal obstruction and fibrosis",
+       "Genetic mutations causing ductal blockage",
+       "Pancreatic ductal adenocarcinoma"
+      ],
+      "correct": 1,
+      "explanation": "Alcohol causes ductal obstruction, leading to inflammation, fibrosis, and chronic pancreatitis.",
       "ai": true,
       "kind": "mcq"
      }
@@ -288,115 +288,232 @@
    }
   },
   {
-   "id": "2026-11-18-3",
-   "title": "Cough: case showdown",
+   "id": "2026-11-19-3",
+   "title": "TUMOR SUPPRESSOR GENES & CELL CYCLE CONTROL: case showdown",
    "game": "case",
-   "topic": "Cough",
+   "topic": "TUMOR SUPPRESSOR GENES & CELL CYCLE CONTROL",
+   "year": 3,
+   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "A 45‑year‑old woman presents with a painless, firm mass in the left breast. Mammography shows a spiculated lesion and core needle biopsy reveals invasive ductal carcinoma with loss of heterozygosity at the TP53 locus. What is the most likely tumor suppressor gene involved?",
+      "options": [
+       "A) BRCA1",
+       "B) PTEN",
+       "C) TP53",
+       "D) CDKN2A"
+      ],
+      "correct": 2,
+      "explanation": "Loss of TP53 is common in invasive ductal carcinoma and is a key tumor suppressor in breast cancer.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 28‑year‑old man is diagnosed with acute myeloid leukemia (AML) with a t(8;21)(q22;q22) translocation. Which tumor suppressor pathway is most likely disrupted?",
+      "options": [
+       "A) p53/MDM2",
+       "B) Rb/E2F",
+       "C) PTEN/PI3K",
+       "D) APC/Wnt"
+      ],
+      "correct": 0,
+      "explanation": "t(8;21) involves RUNX1‑RUNX1T1 fusion, which interferes with p53-mediated apoptosis.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 60‑year‑old man has a 2‑cm ulcerated lesion on the scalp. Histology shows squamous cell carcinoma with loss of CDKN2A (p16) expression. Which cell cycle regulator is directly affected?",
+      "options": [
+       "A) Cyclin D1",
+       "B) CDK4/6",
+       "C) Rb",
+       "D) p53"
+      ],
+      "correct": 1,
+      "explanation": "CDKN2A encodes p16, an inhibitor of CDK4/6; its loss leads to unchecked CDK4/6 activity.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 35‑year‑old woman presents with a rapidly enlarging cervical lymph node. Fine‑needle aspiration shows metastatic melanoma with BRAF V600E mutation. Which tumor suppressor gene is most likely inactivated in this tumor?",
+      "options": [
+       "A) PTEN",
+       "B) TP53",
+       "C) CDKN2A",
+       "D) RB1"
+      ],
+      "correct": 2,
+      "explanation": "Melanoma frequently inactivates CDKN2A (p16), leading to CDK4/6 activation.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 50‑year‑old man has a 3‑cm mass in the left kidney. Imaging and biopsy reveal clear cell renal cell carcinoma with loss of VHL gene function. Which pathway is dysregulated as a result?",
+      "options": [
+       "A) PI3K/AKT",
+       "B) HIF‑1α/VEGF",
+       "C) Wnt/β‑catenin",
+       "D) Notch"
+      ],
+      "correct": 1,
+      "explanation": "VHL loss leads to stabilization of HIF‑1α and upregulation of VEGF, driving angiogenesis.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 22‑year‑old woman presents with a painless, firm mass in the left ovary. Histology shows granulosa cell tumor with FOXL2 C134W mutation. Which tumor suppressor pathway is most likely compromised?",
+      "options": [
+       "A) p53/MDM2",
+       "B) PTEN/PI3K",
+       "C) Rb/E2F",
+       "D) APC/Wnt"
+      ],
+      "correct": 0,
+      "explanation": "FOXL2 mutation is associated with loss of p53 pathway activity in granulosa cell tumors.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 65‑year‑old man has a 4‑cm ulcerated lesion on the lower lip. Histology shows squamous cell carcinoma with loss of p53 immunoreactivity. Which of the following is the most appropriate next step in management?",
+      "options": [
+       "A) Excisional biopsy with 1‑cm margin",
+       "B) Wide local excision with 2‑cm margin",
+       "C) Mohs micrographic surgery",
+       "D) Radiation therapy alone"
+      ],
+      "correct": 2,
+      "explanation": "Mohs surgery provides tissue-sparing, margin-controlled excision ideal for lip SCC.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 30‑year‑old woman presents with a 2‑cm breast mass. Core needle biopsy shows ductal carcinoma in situ (DCIS) with loss of BRCA1 expression. Which of the following best describes the role of BRCA1 in cell cycle control?",
+      "options": [
+       "A) Inhibits CDK4/6",
+       "B) Promotes DNA repair via homologous recombination",
+       "C) Activates p53 transcription",
+       "D) Suppresses Rb phosphorylation"
+      ],
+      "correct": 1,
+      "explanation": "BRCA1 is essential for homologous recombination DNA repair, a key tumor suppressor function.",
+      "ai": true,
+      "kind": "case"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
+  },
+  {
+   "id": "2026-11-19-4",
+   "title": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and: case showdown",
+   "game": "case",
+   "topic": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "A 68‑year‑old man presents with a productive cough that has worsened over the past 3 weeks. He has a history of chronic bronchitis and is a heavy smoker. Chest auscultation reveals coarse crackles at the bases. What is the most likely diagnosis?",
+      "q": "A 68‑year‑old man presents with a 2‑day history of abdominal pain and distension after a recent laparotomy for sigmoid volvulus. On examination the abdomen is tense and the surgical wound shows a well‑healed colostomy site. What is the most likely diagnosis?",
       "options": [
-       "Acute bronchitis",
-       "Community‑acquired pneumonia",
-       "COPD exacerbation",
-       "Pulmonary embolism"
+       "A. Parastomal hernia",
+       "B. Stomal obstruction",
+       "C. Stomal infection",
+       "D. Stomal prolapse"
+      ],
+      "correct": 1,
+      "explanation": "Stomal obstruction is common after colostomy and presents with abdominal distension and pain.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 45‑year‑old woman with ulcerative colitis develops a 3‑day history of fever, abdominal pain, and a new opening of the ileostomy with purulent drainage. What is the next best step?",
+      "options": [
+       "A. Start oral antibiotics",
+       "B. Perform a CT scan of the abdomen",
+       "C. Obtain a stool culture and start IV antibiotics",
+       "D. Schedule a stoma revision"
       ],
       "correct": 2,
-      "explanation": "The combination of a chronic productive cough, coarse crackles, and a long‑standing smoking history is most characteristic of a COPD exacerbation.",
+      "explanation": "Purulent drainage suggests infection; obtain culture and start IV antibiotics.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 45‑year‑old woman reports a dry cough that started 2 days ago after a cold. She has no fever, no sputum, and her chest X‑ray is normal. What is the next best step in management?",
+      "q": "A 30‑year‑old man with a loop ileostomy for Crohn’s disease presents with a 1‑day history of abdominal pain and a 2‑cm protrusion of the stoma. Which type of stoma complication is most likely?",
       "options": [
-       "Prescribe a macrolide antibiotic",
-       "Order a sputum culture",
-       "Advise symptomatic treatment and observe",
-       "Refer for bronchoscopy"
+       "A. Stomal prolapse",
+       "B. Stomal retraction",
+       "C. Stomal necrosis",
+       "D. Stomal infection"
+      ],
+      "correct": 0,
+      "explanation": "A protrusion of the stoma indicates prolapse.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 55‑year‑old woman with a permanent colostomy for diverticular disease reports a sudden change in stool output to watery, foul‑smelling stools. What is the most likely explanation?",
+      "options": [
+       "A. Stomal stenosis",
+       "B. Stomal ulceration",
+       "C. Stomal infection",
+       "D. Stomal overflow"
+      ],
+      "correct": 3,
+      "explanation": "Watery, foul stools indicate overflow from the proximal colon.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 70‑year‑old man with a permanent ileostomy for colorectal cancer has a 2‑day history of abdominal pain, fever, and a tender, erythematous stoma. What is the most likely diagnosis?",
+      "options": [
+       "A. Stomal infection",
+       "B. Stomal necrosis",
+       "C. Stomal prolapse",
+       "D. Parastomal hernia"
+      ],
+      "correct": 0,
+      "explanation": "Tender, erythematous stoma with fever suggests infection.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 60‑year‑old woman with a loop colostomy for Hirschsprung disease has a 1‑day history of abdominal distension and a firm, non‑tender abdomen. The stoma is functioning normally. What is the next best step?",
+      "options": [
+       "A. Perform a barium enema",
+       "B. Order a CT scan of the abdomen",
+       "C. Obtain a plain abdominal X‑ray",
+       "D. Schedule a stoma revision"
       ],
       "correct": 2,
-      "explanation": "A viral upper‑respiratory infection is the most likely cause of a short‑duration dry cough; supportive care is adequate.",
+      "explanation": "Plain X‑ray can identify obstruction proximal to the stoma.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 22‑year‑old college student presents with a non‑productive cough that has persisted for 6 weeks. He reports nocturnal cough and a mild fever. Physical exam is unremarkable. Which investigation is most appropriate?",
+      "q": "A 50‑year‑old man with a permanent ileostomy for ulcerative colitis presents with a 2‑day history of abdominal pain and a 1‑cm ulcerated area on the stoma. What is the most appropriate management?",
       "options": [
-       "Chest X‑ray",
-       "Sputum Gram stain",
-       "Serum IgE level",
-       "Pulmonary function test"
+       "A. Apply a stoma patch and observe",
+       "B. Start oral antibiotics",
+       "C. Perform a stoma revision",
+       "D. Apply a stoma dressing and start topical steroids"
       ],
-      "correct": 0,
-      "explanation": "A persistent cough lasting >4 weeks warrants a chest X‑ray to exclude pneumonia, tuberculosis, or other structural disease.",
+      "correct": 3,
+      "explanation": "An ulcerated stoma requires topical steroids and dressing to promote healing.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 55‑year‑old man with a history of asthma presents with a dry cough that worsens at night. His peak expiratory flow is 40% of predicted. What is the most likely diagnosis?",
+      "q": "A 65‑year‑old woman with a loop colostomy for colorectal cancer has a 3‑day history of abdominal pain, nausea, and a 1‑cm defect in the stoma. What is the most likely complication?",
       "options": [
-       "Asthma exacerbation",
-       "Upper airway cough syndrome",
-       "Post‑nasal drip",
-       "Bronchiectasis"
+       "A. Stomal retraction",
+       "B. Stomal prolapse",
+       "C. Stomal necrosis",
+       "D. Stomal infection"
       ],
-      "correct": 0,
-      "explanation": "Nighttime cough and markedly reduced peak expiratory flow are classic for an asthma exacerbation.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 30‑year‑old woman presents with a chronic dry cough that started after a recent upper respiratory infection. She has a history of gastro‑oesophageal reflux disease (GERD). What is the most likely cause of her cough?",
-      "options": [
-       "Post‑nasal drip",
-       "GERD‑induced cough",
-       "Bronchial asthma",
-       "Pulmonary embolism"
-      ],
-      "correct": 1,
-      "explanation": "GERD is a well‑known trigger of chronic dry cough, especially when it follows an upper respiratory infection.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 70‑year‑old man with a history of smoking presents with a productive cough and weight loss. Chest X‑ray shows a right upper lobe infiltrate. Which of the following is the most likely diagnosis?",
-      "options": [
-       "Tuberculosis",
-       "Lung cancer",
-       "COPD exacerbation",
-       "Community‑acquired pneumonia"
-      ],
-      "correct": 1,
-      "explanation": "In a heavy smoker with weight loss and an upper‑lobe infiltrate, lung cancer is a strong consideration and should be ruled out before attributing the findings to pneumonia.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 35‑year‑old woman presents with a dry cough that started 3 weeks ago. She has no fever, no sputum, and her chest X‑ray is normal. She reports a history of seasonal allergies. What is the most likely diagnosis?",
-      "options": [
-       "Asthma",
-       "Upper airway cough syndrome",
-       "Bronchiectasis",
-       "Pulmonary embolism"
-      ],
-      "correct": 1,
-      "explanation": "Seasonal allergies and a dry cough with a normal chest X‑ray point toward upper airway cough syndrome (post‑nasal drip).",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 60‑year‑old man presents with a productive cough and dyspnoea. He has a history of chronic bronchitis and is on long‑term oxygen therapy. Physical exam reveals digital clubbing. What is the most likely diagnosis?",
-      "options": [
-       "COPD exacerbation",
-       "Bronchiectasis",
-       "Pulmonary embolism",
-       "Lung cancer"
-      ],
-      "correct": 1,
-      "explanation": "Digital clubbing in a chronic smoker with a productive cough is most consistent with bronchiectasis.",
+      "correct": 2,
+      "explanation": "A defect in the stoma indicates necrosis of the stoma tissue.",
       "ai": true,
       "kind": "case"
      }
@@ -405,232 +522,115 @@
    }
   },
   {
-   "id": "2026-11-18-4",
-   "title": "Population and Demography: drug duel",
+   "id": "2026-11-19-5",
+   "title": "Weeks 6 & 7 Must-Know: drug duel",
    "game": "drug",
-   "topic": "Population and Demography",
-   "year": 2,
-   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
-   "questions": {
-    "questions": [
-     {
-      "q": "Which drug is most commonly used to reduce mortality in patients with atherosclerotic cardiovascular disease by inhibiting the synthesis of low‑density lipoprotein (LDL) cholesterol?",
-      "options": [
-       "A. Atorvastatin",
-       "B. Metformin",
-       "C. Amoxicillin",
-       "D. Prednisone"
-      ],
-      "correct": 0,
-      "explanation": "Atorvastatin is a statin that inhibits HMG‑CoA reductase, lowering LDL cholesterol and reducing cardiovascular mortality.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which medication is the first‑line treatment for type 2 diabetes in patients with a BMI >30 kg/m² and a history of heart failure?",
-      "options": [
-       "A. Metformin",
-       "B. Insulin glargine",
-       "C. SGLT2 inhibitor",
-       "D. Glucagon‑like peptide‑1 agonist"
-      ],
-      "correct": 2,
-      "explanation": "SGLT2 inhibitors improve glycaemic control and reduce heart failure risk in obese patients with type 2 diabetes.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "A 65‑year‑old man with chronic kidney disease stage 3 is started on a drug that reduces proteinuria by inhibiting the renin‑angiotensin system. Which drug is most likely prescribed?",
-      "options": [
-       "A. Losartan",
-       "B. Lisinopril",
-       "C. Amlodipine",
-       "D. Hydrochlorothiazide"
-      ],
-      "correct": 1,
-      "explanation": "Lisinopril, an ACE inhibitor, reduces proteinuria and slows CKD progression.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which of the following drugs is associated with a characteristic side effect of a red‑tinged urine due to inhibition of the renal tubular secretion of a fluorescent dye?",
-      "options": [
-       "A. Rifampicin",
-       "B. Ciprofloxacin",
-       "C. Isoniazid",
-       "D. Metronidazole"
-      ],
-      "correct": 0,
-      "explanation": "Rifampicin causes red‑orange urine by inducing hepatic enzymes that metabolise the dye.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug is the preferred first‑line therapy for hypertension in a patient with a history of stroke and diabetes?",
-      "options": [
-       "A. Amlodipine",
-       "B. Hydrochlorothiazide",
-       "C. Losartan",
-       "D. Atenolol"
-      ],
-      "correct": 2,
-      "explanation": "Losartan, an ARB, is preferred in stroke and diabetes due to renal protection and lower risk of hypoglycaemia.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "A 55‑year‑old woman with newly diagnosed rheumatoid arthritis is started on a disease‑modifying antirheumatic drug that inhibits tumour necrosis factor‑α. Which drug is most likely?",
-      "options": [
-       "A. Methotrexate",
-       "B. Etanercept",
-       "C. Hydroxychloroquine",
-       "D. Sulfasalazine"
-      ],
-      "correct": 1,
-      "explanation": "Etanercept is a TNF‑α inhibitor used as a biologic DMARD in rheumatoid arthritis.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which medication is most commonly prescribed for the prevention of venous thromboembolism in patients undergoing major orthopedic surgery and is a reversible factor Xa inhibitor?",
-      "options": [
-       "A. Warfarin",
-       "B. Heparin",
-       "C. Rivaroxaban",
-       "D. Aspirin"
-      ],
-      "correct": 2,
-      "explanation": "Rivaroxaban is a direct oral factor Xa inhibitor used for VTE prophylaxis after orthopedic surgery.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "A 70‑year‑old man with chronic obstructive pulmonary disease (COPD) is started on a long‑acting bronchodilator that is a muscarinic antagonist. Which drug is most likely?",
-      "options": [
-       "A. Salmeterol",
-       "B. Tiotropium",
-       "C. Formoterol",
-       "D. Ipratropium"
-      ],
-      "correct": 1,
-      "explanation": "Tiotropium is a long‑acting antimuscarinic bronchodilator used in COPD management.",
-      "ai": true,
-      "kind": "drug"
-     }
-    ],
-    "reviewModel": "gemini-3.5-flash-lite"
-   }
-  },
-  {
-   "id": "2026-11-18-5",
-   "title": "Pharmacology Wk 1 & 2: drug duel",
-   "game": "drug",
-   "topic": "Pharmacology Wk 1 & 2",
+   "topic": "Weeks 6 & 7 Must-Know",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which drug is a selective COX‑2 inhibitor used primarily for osteoarthritis and rheumatoid arthritis, and is associated with an increased risk of myocardial infarction at high doses?",
+      "q": "Which class of drug is used as the first-line treatment for acute asthma exacerbations in the emergency department?",
       "options": [
-       "Celecoxib",
-       "Ibuprofen",
-       "Naproxen",
-       "Diclofenac"
+       "A. Beta‑agonists",
+       "B. Corticosteroids",
+       "C. Anticholinergics",
+       "D. Theophylline"
       ],
       "correct": 0,
-      "explanation": "Celecoxib selectively inhibits COX‑2 and has a higher cardiovascular risk profile at high doses.",
+      "explanation": "Short‑acting β₂‑agonists (e.g., salbutamol) are the first‑line bronchodilator for acute asthma.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "What is the primary mechanism of action of the antiepileptic drug levetiracetam?",
+      "q": "What is the primary mechanism of action of amiodarone?",
       "options": [
-       "Inhibition of voltage‑gated sodium channels",
-       "Enhancement of GABAergic transmission",
-       "Binding to synaptic vesicle protein 2A",
-       "Blockade of NMDA receptors"
-      ],
-      "correct": 2,
-      "explanation": "Levetiracetam binds to SV2A, modulating neurotransmitter release.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug, a first‑generation antihistamine, is most likely to cause anticholinergic side effects such as dry mouth and blurred vision?",
-      "options": [
-       "Cetirizine",
-       "Loratadine",
-       "Diphenhydramine",
-       "Fexofenadine"
-      ],
-      "correct": 2,
-      "explanation": "Diphenhydramine is a first‑generation H1 blocker with significant anticholinergic activity.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "A patient is prescribed a drug that blocks the H2 receptors on gastric parietal cells. Which of the following is the most common adverse effect?",
-      "options": [
-       "Hypertension",
-       "Hypokalemia",
-       "Diarrhoea",
-       "Constipation"
-      ],
-      "correct": 2,
-      "explanation": "H2 receptor antagonists are generally well tolerated; the most common adverse effect is mild gastrointestinal upset, including diarrhea.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which of the following drugs is a selective beta‑1 adrenergic antagonist used in hypertension and heart failure?",
-      "options": [
-       "Propranolol",
-       "Metoprolol",
-       "Timolol",
-       "Carvedilol"
+       "A. Sodium channel blockade",
+       "B. Potassium channel blockade",
+       "C. Calcium channel blockade",
+       "D. β‑adrenergic blockade"
       ],
       "correct": 1,
-      "explanation": "Metoprolol is a cardioselective β1 blocker.",
+      "explanation": "Amiodarone primarily blocks potassium channels (Class III antiarrhythmic), prolonging the action potential duration and refractory period.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which drug is a proton pump inhibitor that irreversibly inhibits the H+/K+ ATPase in parietal cells?",
+      "q": "Which drug is most commonly associated with the characteristic side effect of blue‑tinged urine?",
       "options": [
-       "Omeprazole",
-       "Ranitidine",
-       "Famotidine",
-       "Cimetidine"
+       "A. Ciprofloxacin",
+       "B. Rifampicin",
+       "C. Metronidazole",
+       "D. Doxycycline"
+      ],
+      "correct": 1,
+      "explanation": "Rifampicin produces a characteristic red‑orange discoloration of urine and other body fluids.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "A 45‑year‑old patient is started on a drug that inhibits the CYP3A4 enzyme, leading to increased plasma levels of a concurrent oral contraceptive. Which drug is most likely responsible?",
+      "options": [
+       "A. Ketoconazole",
+       "B. Fluconazole",
+       "C. Itraconazole",
+       "D. Voriconazole"
       ],
       "correct": 0,
-      "explanation": "Omeprazole irreversibly blocks the gastric proton pump.",
+      "explanation": "Ketoconazole is a potent CYP3A4 inhibitor, raising levels of drugs metabolised by this enzyme.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "A patient on a drug that inhibits the CYP3A4 enzyme experiences increased plasma levels of a co‑administered statin. Which drug is most likely responsible?",
+      "q": "Which of the following is the main indication for the use of enoxaparin?",
       "options": [
-       "Cimetidine",
-       "Fluconazole",
-       "Ketoconazole",
-       "Amoxicillin"
+       "A. Primary prevention of deep vein thrombosis in orthopedic surgery",
+       "B. Treatment of acute pulmonary embolism",
+       "C. Management of chronic heart failure",
+       "D. Antiplatelet therapy in acute coronary syndrome"
       ],
-      "correct": 2,
-      "explanation": "Ketoconazole is a potent CYP3A4 inhibitor, raising statin levels.",
+      "correct": 1,
+      "explanation": "Enoxaparin, a low‑molecular‑weight heparin, is indicated for treatment of acute pulmonary embolism.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which of the following is the main indication for the drug clopidogrel?",
+      "q": "Which drug is known to cause a characteristic ‘blue‑ish’ discoloration of the skin and mucous membranes?",
       "options": [
-       "Deep vein thrombosis prophylaxis",
-       "Atrial fibrillation anticoagulation",
-       "Acute coronary syndrome antiplatelet therapy",
-       "Hypertension management"
+       "A. Hydroxychloroquine",
+       "B. Amiodarone",
+       "C. Dapsone",
+       "D. Chloramphenicol"
       ],
-      "correct": 2,
-      "explanation": "Clopidogrel is an antiplatelet used in acute coronary syndrome.",
+      "correct": 1,
+      "explanation": "Amiodarone can produce a slate‑blue discoloration of the skin and mucous membranes, a classic adverse effect.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the primary therapeutic target of the drug lisinopril?",
+      "options": [
+       "A. Angiotensin‑converting enzyme (ACE)",
+       "B. Angiotensin II receptor",
+       "C. Aldosterone synthase",
+       "D. Renin"
+      ],
+      "correct": 0,
+      "explanation": "Lisinopril is an ACE inhibitor, blocking conversion of angiotensin I to angiotensin II.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which of the following is a common side effect of high‑dose corticosteroids used in asthma?",
+      "options": [
+       "A. Hyperglycaemia",
+       "B. Hypokalemia",
+       "C. Bradycardia",
+       "D. Hypotension"
+      ],
+      "correct": 0,
+      "explanation": "High‑dose corticosteroids can cause hyperglycaemia due to increased gluconeogenesis.",
       "ai": true,
       "kind": "drug"
      }
