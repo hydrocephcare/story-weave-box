@@ -2010,6 +2010,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/hyperplasia</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s7-1-703797e8.jpg</image:loc>
+      <image:caption>Immunological mechanism on allergen exposure</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/liver</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q48-b7d911ea.jpg</image:loc>
@@ -2033,6 +2040,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/lymphoma</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
+      <image:caption>Causes of exudates</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-14-fba1288f.jpg</image:loc>
+      <image:caption>Visual clues in pleural fluid</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/necrosis</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q17-bc569e02.jpg</image:loc>
@@ -2052,6 +2070,13 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-04-fc329fee.jpg</image:loc>
       <image:caption>Clinical presentation</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/pneumonia</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-18-8540eb89.jpg</image:loc>
+      <image:caption>Escalating interventions</image:caption>
     </image:image>
   </url>
 </urlset>
