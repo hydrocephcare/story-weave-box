@@ -276,24 +276,24 @@ export function Paywall({
   const duration = (d: number) => (d >= 365 ? "12 months" : d >= 85 ? "3 months" : d >= 28 ? `${Math.round(d / 30)} month${Math.round(d / 30) === 1 ? "" : "s"}` : d === 1 ? "1 day" : `${d} days`);
 
   return (
-    <div className={`not-prose relative overflow-hidden ${bare ? "" : "my-6 rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-6"}`}>
-      <div className="mx-auto max-w-xl space-y-4">
-        <div className="text-center">
-          <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary"><Lock className="h-5 w-5" /></span>
-          <h2 className="mt-2 font-serif text-xl font-bold leading-snug text-foreground sm:text-2xl">
+    <div className={`not-prose relative ${bare ? "" : "my-8 rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7"}`}>
+      <div className="mx-auto max-w-2xl space-y-5">
+        <div className="border-b border-border pb-4 text-left">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary"><Lock className="h-5 w-5" /></span>
+          <h2 className="mt-3 font-serif text-xl font-bold leading-snug text-foreground sm:text-2xl">
             {headline || `Unlock the ${label}`}
           </h2>
-          <p className="mx-auto mt-1 max-w-md text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted-foreground">
             {blurb || "Questions stay free to read. One subscription reveals every answer, with explanations and PDF handouts, across all of Ompath Study."}
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 gap-2 text-xs sm:grid-cols-4">
-          {[[Check, "All questions"], [Eye, "Answers + explanations"], [Sparkles, "Ompath AI tools"], [Download, "PDF handouts"]].map(([Icon, text]) => {
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {[[Check, "Full question bank"], [Eye, "Answers and explanations"], [Sparkles, "Study tools"], [Download, "PDF handouts"]].map(([Icon, text]) => {
             const I = Icon as typeof Eye;
-            return <li key={text as string} className="flex items-center gap-2 rounded-lg bg-muted/60 px-2.5 py-2 font-medium text-foreground/85"><I className="h-4 w-4 shrink-0 text-primary" />{text as string}</li>;
+            return <div key={text as string} className="flex items-center gap-2 text-xs font-medium text-muted-foreground"><I className="h-4 w-4 shrink-0 text-primary" />{text as string}</div>;
           })}
-        </ul>
+        </div>
 
         <div className="grid grid-cols-2 gap-1 rounded-xl bg-muted p-1" role="tablist" aria-label="How to unlock">
           {([["buy", "Pay securely"], ["code", "I have a code"]] as const).map(([id, text]) => (
@@ -304,7 +304,7 @@ export function Paywall({
 
         {mode === "buy" ? (
           <>
-            <div className="grid grid-cols-2 gap-2.5" role="radiogroup" aria-label="Choose a plan">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2" role="radiogroup" aria-label="Choose a plan">
               {sorted.map((p) => {
                 const rate = perMonth(p);
                 const best = sorted.length > 1 && rate !== null && rate === bestRate && baseRate !== null && rate < baseRate * 0.9;
@@ -312,12 +312,12 @@ export function Paywall({
                 const on = planId === p.id;
                 return (
                   <button key={p.id} type="button" role="radio" aria-checked={on} onClick={() => setPlanId(p.id)}
-                    className={`relative rounded-2xl border-2 p-3.5 text-left transition-all ${on ? "border-primary bg-primary/5 shadow-sm" : "border-border hover:border-primary/40"}`}>
+                    className={`relative flex min-h-[104px] items-center justify-between gap-3 rounded-xl border p-4 text-left transition-colors ${on ? "border-primary bg-primary/5 ring-1 ring-primary/20" : "border-border bg-background hover:border-primary/40"}`}>
                     {best && <span className="absolute -top-2.5 right-3 rounded-full bg-[#f2b632] px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-[#0b2545]">Best value{save ? ` · save ${save}%` : ""}</span>}
-                    <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{duration(p.days)}</p>
-                    <p className="mt-1 font-serif text-2xl font-bold leading-none text-foreground">KES {p.price}</p>
+                    <p className="text-xs font-semibold text-muted-foreground">{p.label || duration(p.days)}</p>
+                    <p className="mt-1 font-serif text-2xl font-bold leading-none text-foreground">KES {p.price.toLocaleString("en-KE")}</p>
                     <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">{rate !== null && sorted.length > 1 ? `About KES ${Math.round(rate)} a month` : p.label.replace(/\s*\(.*\)\s*/, "")}</p>
-                    <span className={`mt-2 inline-flex h-5 w-5 items-center justify-center rounded-full border-2 ${on ? "border-primary bg-primary text-primary-foreground" : "border-border"}`}>{on && <Check className="h-3 w-3" />}</span>
+                    <span className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${on ? "border-primary bg-primary text-primary-foreground" : "border-border"}`}>{on && <Check className="h-3 w-3" />}</span>
                   </button>
                 );
               })}
@@ -367,7 +367,7 @@ export function Paywall({
               {countryCode === "KE" ? (
                 <div className="space-y-2">
                   <p className="text-xs font-semibold text-muted-foreground">Choose payment method</p>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
                     <button type="button" onClick={() => setPaymentMethod("mpesa")} aria-pressed={paymentMethod === "mpesa"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "mpesa" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><Smartphone className="h-5 w-5" />M-Pesa</button>
                     <button type="button" onClick={() => setPaymentMethod("airtel")} aria-pressed={paymentMethod === "airtel"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "airtel" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><Wallet className="h-5 w-5" />Airtel Money</button>
                     <button type="button" onClick={() => setPaymentMethod("card")} aria-pressed={paymentMethod === "card"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "card" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><CreditCard className="h-5 w-5" />Card</button>
@@ -378,7 +378,7 @@ export function Paywall({
               )}
               <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" || countryCode !== "KE" ? "Card payments redirect to secure Paystack checkout." : "Mobile-money prompts stay on OmpathStudy. Approve the prompt using your PIN."}</p>
               {!paystackEnabled && <p role="status" className="rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs font-medium text-amber-700 dark:text-amber-300">Paystack payments are currently disabled. Please try again later or use an existing pass code.</p>}
-              <button type="button" onClick={startPaystackPayment} disabled={busy || !user || !paystackEnabled || phone.replace(/\D/g, "").length < 9} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" || countryCode !== "KE" ? `Continue to Paystack checkout · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
+              <button type="button" onClick={startPaystackPayment} disabled={busy || !user || !paystackEnabled || phone.replace(/\D/g, "").length < 9} className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-4 text-base font-bold text-primary-foreground shadow-sm transition hover:brightness-95 disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" || countryCode !== "KE" ? `Continue to Paystack checkout · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
             </div>
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
@@ -416,7 +416,7 @@ export function Paywall({
         {message && (
           <p role="status" className={`mt-3 rounded-xl px-3 py-2 text-center text-xs font-semibold ${state === "error" ? "bg-destructive/10 text-destructive" : "bg-primary/10 text-primary"}`}>{message}</p>
         )}
-        <p className="mt-4 text-center text-[11px] leading-relaxed text-muted-foreground">
+        <p className="mt-4 border-t border-border pt-4 text-center text-xs leading-relaxed text-muted-foreground">
           One subscription covers the whole site wherever you sign in. Card payments redirect to secure checkout; mobile-money prompts stay on this page.{" "}
           <Link to="/account" className="font-semibold text-primary underline underline-offset-4">Manage your subscription</Link>
         </p>
