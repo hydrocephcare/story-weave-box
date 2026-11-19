@@ -73,7 +73,10 @@ const apiKnownDown = () => { try { return Date.now() - Number(localStorage.getIt
 async function viaServer(name: string, category: string, context: string, choices?: TopicChoices, signal?: AbortSignal): Promise<{ status: "published"; page: AiPage & { subject?: string } } | { status: "rejected" | "busy" } | null> {
   if (apiKnownDown()) return null;
   try {
-    const r = await fetch("/api/topic-write", { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ name, category, context: context.slice(0, 3000), choices }) });
+    const { data: sessionData } = await supabase.auth.getSession();
+    const token = sessionData.session?.access_token;
+    if (!token) return { status: "rejected" };
+    const r = await fetch("/api/topic-write", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: `Bearer ${token}` }, body: JSON.stringify({ name, category, context: context.slice(0, 3000), choices }) });
     if (r.status === 503 || r.status === 404 || r.status === 405) { try { localStorage.setItem(API_DOWN, String(Date.now())); } catch { /* ignore */ } return null; }
     const j = (await r.json().catch(() => null)) as { status?: string; page?: AiPage & { subject?: string } } | null;
     if (j?.status === "published" && j.page) return { status: "published", page: j.page };
