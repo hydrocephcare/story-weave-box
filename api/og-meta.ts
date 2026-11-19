@@ -896,7 +896,7 @@ function buildHtml(opts: {
   let robotsPath = opts.url;
   try { robotsPath = new URL(opts.url, "https://www.ompathstudy.com").pathname; } catch { /* retain the supplied path */ }
 
-  const bodyExtra = opts.bodyExtra ? opts.bodyExtra.slice(0, 120000) : "";
+  const bodyExtra = opts.bodyExtra ? opts.bodyExtra.slice(0, 900000) : "";
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -1271,8 +1271,8 @@ export default async function handler(req: Request): Promise<Response> {
           const explanationLine = p.explanation
             ? `<p><strong>Explanation:</strong> ${htmlEscape(p.explanation)}</p>`
             : "";
-          return `<li>
-<p><strong>Q${i + 1}.</strong> ${htmlEscape(p.stem)}</p>
+          return `<li id="question-${i + 1}">
+<h2>Question ${i + 1}: ${htmlEscape(p.stem)}</h2>
 ${optionsList}
 ${answerLine}
 ${explanationLine}
@@ -1281,30 +1281,9 @@ ${explanationLine}
         bodyExtra = `<h2>Questions, Answers &amp; Explanations</h2>\n<ol>\n${items.join("\n")}\n</ol>`;
       }
 
-      const schemaQuestions = parsed.slice(0, 50).map((p) => {
-        const item: Record<string, unknown> = {
-          "@type": "Question",
-          name: p.stem,
-        };
-        if (p.correctText) {
-          item.acceptedAnswer = {
-            "@type": "Answer",
-            text: p.correctText + (p.explanation ? " — " + p.explanation : ""),
-          };
-        }
-        return item;
-      });
-
-      schemaJson = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Quiz",
-        name: title,
-        description,
-        url: absoluteUrl,
-        datePublished: mcq.created_at,
-        provider: { "@type": "Organization", name: "OmpathStudy" },
-        ...(schemaQuestions.length > 0 ? { hasPart: schemaQuestions } : {}),
-      });
+      // Do not label a multiple-choice question bank as Google's Education Q&A
+      // flashcard carousel. Google requires genuine flashcard pages for that feature.
+      // The complete, visible question content above remains available to crawlers.
 
     } else if (section === "flashcards" && param) {
       const set = await fetchFlashcardSetBySlugOrId(param);
