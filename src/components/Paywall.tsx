@@ -32,20 +32,52 @@ export function Paywall({
   bare?: boolean;
 }) {
   const plans = settings.plans.length ? settings.plans : [];
-  const [planId, setPlanId] = useState(() => plans.find((p) => p.id.toLowerCase() === "annual" || /annual|yearly|12\s*months/i.test(p.label))?.id || plans[0]?.id || "annual");
-  const [phone, setPhone] = useState("");
-  const [countryCode, setCountryCode] = useState("KE");
-  const countries: Record<string, { name: string; dial: string; flag: string }> = {
-    KE: { name: "Kenya", dial: "254", flag: "🇰🇪" }, TZ: { name: "Tanzania", dial: "255", flag: "🇹🇿" },
-    UG: { name: "Uganda", dial: "256", flag: "🇺🇬" }, RW: { name: "Rwanda", dial: "250", flag: "🇷🇼" },
-    BI: { name: "Burundi", dial: "257", flag: "🇧🇮" }, CD: { name: "DR Congo", dial: "243", flag: "🇨🇩" },
+  const [planId, setPlanId] = useState(() => plans.find((p) => p.id.toLowerCase() === "annual" || /annual|yearly|12\\s*months/i.test(p.label))?.id || plans[0]?.id || "annual");
+  const countryData: Record<string, { name: string; dial: string; flag: string }> = {
+    KE:{name:"Kenya",dial:"254",flag:"🇰🇪"}, TZ:{name:"Tanzania",dial:"255",flag:"🇹🇿"}, UG:{name:"Uganda",dial:"256",flag:"🇺🇬"},
+    RW:{name:"Rwanda",dial:"250",flag:"🇷🇼"}, BI:{name:"Burundi",dial:"257",flag:"🇧🇮"}, CD:{name:"DR Congo",dial:"243",flag:"🇨🇩"},
+    US:{name:"United States",dial:"1",flag:"🇺🇸"}, CA:{name:"Canada",dial:"1",flag:"🇨🇦"}, GB:{name:"United Kingdom",dial:"44",flag:"🇬🇧"},
+    IN:{name:"India",dial:"91",flag:"🇮🇳"}, SG:{name:"Singapore",dial:"65",flag:"🇸🇬"}, AE:{name:"United Arab Emirates",dial:"971",flag:"🇦🇪"},
+    ZA:{name:"South Africa",dial:"27",flag:"🇿🇦"}, NG:{name:"Nigeria",dial:"234",flag:"🇳🇬"}, GH:{name:"Ghana",dial:"233",flag:"🇬🇭"},
+    AU:{name:"Australia",dial:"61",flag:"🇦🇺"}, DE:{name:"Germany",dial:"49",flag:"🇩🇪"}, FR:{name:"France",dial:"33",flag:"🇫🇷"},
+    NL:{name:"Netherlands",dial:"31",flag:"🇳🇱"}, IT:{name:"Italy",dial:"39",flag:"🇮🇹"}, ES:{name:"Spain",dial:"34",flag:"🇪🇸"},
+    ET:{name:"Ethiopia",dial:"251",flag:"🇪🇹"}, SS:{name:"South Sudan",dial:"211",flag:"🇸🇸"}, SO:{name:"Somalia",dial:"252",flag:"🇸🇴"},
+    MW:{name:"Malawi",dial:"265",flag:"🇲🇼"}, ZM:{name:"Zambia",dial:"260",flag:"🇿🇲"}, ZW:{name:"Zimbabwe",dial:"263",flag:"🇿🇼"},
+    MZ:{name:"Mozambique",dial:"258",flag:"🇲🇿"}, EG:{name:"Egypt",dial:"20",flag:"🇪🇬"}, SA:{name:"Saudi Arabia",dial:"966",flag:"🇸🇦"},
+    JP:{name:"Japan",dial:"81",flag:"🇯🇵"}, CN:{name:"China",dial:"86",flag:"🇨🇳"}, BR:{name:"Brazil",dial:"55",flag:"🇧🇷"},
+    MX:{name:"Mexico",dial:"52",flag:"🇲🇽"}, TR:{name:"Türkiye",dial:"90",flag:"🇹🇷"}, PK:{name:"Pakistan",dial:"92",flag:"🇵🇰"},
   };
+  const callingCodes = Object.entries(countryData).sort((a,b)=>b[1].dial.length-a[1].dial.length);
+  const savedPaymentDetails = (() => { try { return JSON.parse(localStorage.getItem("ompath_payment_details") || "{}"); } catch { return {}; } })();
+  const [phone, setPhone] = useState(() => savedPaymentDetails.phone || "");
+  const [countryCode, setCountryCode] = useState(() => savedPaymentDetails.countryCode || "KE");
   const detectCountry = (value: string) => {
-    const digits = value.replace(/\D/g, "");
-    if (!value.trim().startsWith("+") && !/^(254|255|256|250|257|243)/.test(digits)) return "KE";
-    return ([["254","KE"],["255","TZ"],["256","UG"],["250","RW"],["257","BI"],["243","CD"]] as const).find(([prefix]) => digits.startsWith(prefix))?.[1] || "OTHER";
+    const digits = value.replace(/\\D/g, "");
+    if (!value.trim().startsWith("+") && !/^(254|255|256|250|257|243|1|44|91|65|971|27|234|233|61|49|33|31|39|34|251|211|252|265|260|263|258|20|966|81|86|55|52|90|92)/.test(digits)) return null;
+    return callingCodes.find(([, info]) => digits.startsWith(info.dial))?.[0] || "OTHER";
   };
-  const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">("mpesa");
+  const countries = countryData;
+  const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">(() => savedPaymentDetails.countryCode && savedPaymentDetails.countryCode !== "KE" ? "card" : "mpesa");
+  useEffect(() => {
+    let active = true;
+    const loadLocationDefault = async () => {
+      if (savedPaymentDetails.countryCode) return;
+      try {
+        const response = await fetch("https://ipapi.co/json/", { signal: AbortSignal.timeout(3500) });
+        if (!response.ok) return;
+        const location = await response.json();
+        const code = String(location?.country_code || "").toUpperCase();
+        if (!active || !countryData[code]) return;
+        setCountryCode(code);
+        setPaymentMethod(code === "KE" ? "mpesa" : "card");
+      } catch { /* Location lookup is optional; phone prefix and Kenya default remain available. */ }
+    };
+    void loadLocationDefault();
+    return () => { active = false; };
+  }, []);
+  useEffect(() => {
+    try { localStorage.setItem("ompath_payment_details", JSON.stringify({ phone, countryCode })); } catch { /* best effort */ }
+  }, [phone, countryCode]);
   const [state, setState] = useState<"idle" | "sending" | "waiting" | "error">("idle");
   const [message, setMessage] = useState("");
   const [mode, setMode] = useState<"buy" | "code">("buy");
@@ -122,11 +154,14 @@ export function Paywall({
   const startPaystackPayment = async () => {
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
     const digits = phone.replace(/\D/g, "");
-    const detected = detectCountry(phone);
+    const detected = detectCountry(phone) || countryCode;
     if (digits.length < 9) { setState("error"); setMessage("Enter a complete mobile number."); return; }
     const resolvedCountry = detected === "OTHER" ? "OTHER" : detected;
-    const internationalPhone = phone.trim().startsWith("+") || /^(254|255|256|250|257|243)/.test(digits)
+    const internationalPhone = phone.trim().startsWith("+") || (countries[resolvedCountry] && digits.startsWith(countries[resolvedCountry].dial))
       ? digits : (countries[resolvedCountry]?.dial || "") + digits.replace(/^0/, "");
+    if (user) {
+      await supabase.auth.updateUser({ data: { payment_phone: internationalPhone, payment_country: resolvedCountry } });
+    }
     const selectedMethod = resolvedCountry === "KE" ? paymentMethod : "card";
     setState("sending"); setMessage("");
     const { data, error } = await supabase.functions.invoke("initiate-paystack", {
@@ -304,10 +339,10 @@ export function Paywall({
               <div className="flex items-center justify-between gap-3"><h3 className="text-sm font-semibold text-foreground">Payment details</h3><span className="text-xs text-muted-foreground">Final step</span></div>
               {!user&&!authLoading&&<div className="mt-4 rounded-xl border border-border bg-background p-4"><p className="text-sm font-semibold text-foreground">Sign in to continue</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Your subscription will be linked to your account and available on your other devices.</p><button type="button" onClick={startGoogle} disabled={signingIn} className="mt-4 flex min-h-12 w-full items-center justify-center rounded-lg bg-foreground px-4 py-3 text-sm font-semibold text-background disabled:opacity-60">{signingIn?"Connecting…":"Continue with Google"}</button><button type="button" onClick={()=>{setMode("code");setState("idle");}} className="mt-3 w-full text-center text-xs font-medium text-primary underline underline-offset-4">Already have a pass code?</button></div>}
               <div className={`mt-4 space-y-4 ${!user&&!authLoading?"pointer-events-none opacity-40":""}`}>
-                <div><label htmlFor="pay-phone" className="mb-2 block text-sm font-medium text-foreground">Mobile number</label><div className="flex min-h-12 items-center rounded-lg border border-border bg-background px-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15"><span className="mr-3 text-lg" aria-hidden="true">{countries[countryCode]?.flag||"🌍"}</span><input id="pay-phone" value={phone} onChange={(e)=>{const next=e.target.value.replace(/[^0-9+ ]/g,"");setPhone(next);const detected=detectCountry(next);if(detected!=="OTHER"){setCountryCode(detected);if(detected!=="KE")setPaymentMethod("card");else if(paymentMethod==="card")setPaymentMethod("mpesa");}else if(next.trim().startsWith("+")){setCountryCode("OTHER");setPaymentMethod("card");}setState("idle");setMessage("");}} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX or +254…" className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/60"/><span className="ml-2 shrink-0 text-xs text-muted-foreground">{countries[countryCode]?.name||"International"}</span></div><p className="mt-2 text-xs leading-5 text-muted-foreground">Enter the number that should receive your payment request.</p></div>
+                <div><label htmlFor="pay-phone" className="mb-2 block text-sm font-medium text-foreground">Mobile number</label><div className="flex min-h-12 items-center rounded-lg border border-border bg-background px-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15"><span className="mr-3 text-lg" aria-hidden="true">{countries[countryCode]?.flag||"🌍"}</span><input id="pay-phone" value={phone} onChange={(e)=>{const next=e.target.value.replace(/[^0-9+ ]/g,"");setPhone(next);const detected=detectCountry(next);if(detected){setCountryCode(detected);if(detected!=="KE")setPaymentMethod("card");else if(paymentMethod==="card")setPaymentMethod("mpesa");}setState("idle");setMessage("");}} inputMode="tel" autoComplete="tel" placeholder={countryCode==="KE"?"07XX XXX XXX or +254…":`+${countries[countryCode]?.dial || ""} mobile number` } className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/60"/><span className="ml-2 shrink-0 text-xs text-muted-foreground">{countries[countryCode]?.name||"International"}</span></div><p className="mt-2 text-xs leading-5 text-muted-foreground">Enter the number that should receive your payment request.</p></div>
                 <div><p className="mb-2 text-sm font-medium text-foreground">Payment method</p>{countryCode==="KE"?<div className="grid grid-cols-3 overflow-hidden rounded-lg border border-border" role="group" aria-label="Payment method">{([["mpesa","M-Pesa"],["airtel","Airtel Money"],["card","Debit / credit card"]] as const).map(([method,title])=><button key={method} type="button" onClick={()=>setPaymentMethod(method)} aria-pressed={paymentMethod===method} className={`min-h-12 border-r border-border px-2 py-3 text-xs font-semibold last:border-r-0 sm:text-sm ${paymentMethod===method?"bg-foreground text-background":"bg-background text-muted-foreground hover:bg-muted/50"}`}>{title}</button>)}</div>:<div className="rounded-lg border border-border bg-muted/30 px-4 py-3"><p className="text-sm font-semibold text-foreground">Debit or credit card</p><p className="mt-1 text-xs text-muted-foreground">Secure card payment through Paystack.</p></div>}</div>
                 {!paystackEnabled&&<p role="status" className="rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs text-amber-700 dark:text-amber-300">Online payments are temporarily unavailable. Please use an existing pass code or try again later.</p>}
-                <button type="button" onClick={startPaystackPayment} disabled={busy||!user||!paystackEnabled||phone.replace(/\D/g,"").length<9} className="flex min-h-14 w-full items-center justify-center rounded-lg bg-primary px-5 py-4 text-base font-semibold text-primary-foreground transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50">{busy?(state==="waiting"?"Waiting for payment confirmation…":"Starting payment…"):`Pay KES ${(plan.price||settings.price).toLocaleString("en-KE")}`}</button>
+                <button type="button" onClick={startPaystackPayment} disabled={busy||!user||!paystackEnabled||phone.replace(/\D/g,"").length<9} className="flex min-h-14 w-full items-center justify-center rounded-lg bg-primary px-5 py-4 text-base font-semibold text-primary-foreground transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50">{busy?(state==="waiting"?"Waiting for payment confirmation…":"Starting payment…"):"Continue to secure payment"}</button>
                 <p className="text-center text-xs leading-5 text-muted-foreground">{paymentMethod==="card"||countryCode!=="KE"?"You will continue to Paystack’s secure card checkout.":"A payment prompt will be sent to your phone. Approve it using your mobile-money PIN."}</p>
               </div>
             </div>
