@@ -121,14 +121,6 @@ function Bank({ set }: { set: McqSetRow }) {
     return () => window.clearInterval(interval);
   }, [timerStatus, timerEndsAt]);
 
-  useEffect(() => {
-    const node = lockedPreviewRef.current;
-    if (!node || lockedCount <= 0) { setShowUnlockBar(false); return; }
-    const observer = new IntersectionObserver(([entry]) => setShowUnlockBar(entry.isIntersecting), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [lockedCount, qs.length, mcqPaywallEnabled, access.hasPass, access.isAdmin]);
-
   const remainingToSave = timerStatus === "running" ? null : remainingSeconds;
   useEffect(() => {
     savePractice(set.id, { qs, first: [...first], wrong: [...wrong], solved: [...solved], shown: [...shown], timerMinutes, timerStatus, remainingSeconds: remainingToSave, timerEndsAt, sessionStartedAt });
@@ -182,6 +174,14 @@ function Bank({ set }: { set: McqSetRow }) {
   }, [finished, correct, qs.length, set.id]);
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
   const lockedCount = qs.filter((_, i) => isLocked(i)).length;
+  useEffect(() => {
+    const node = lockedPreviewRef.current;
+    if (!node || lockedCount <= 0) { setShowUnlockBar(false); return; }
+    const observer = new IntersectionObserver(([entry]) => setShowUnlockBar(entry.isIntersecting), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [lockedCount, qs.length, mcqPaywallEnabled, access.hasPass, access.isAdmin]);
+
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
   const reveal = (i: number) => { if (!sessionStartedAt) setSessionStartedAt(Date.now()); setShown((s) => new Set(s).add(i)); };
   const allShown = shown.size === qs.length;
