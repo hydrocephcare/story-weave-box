@@ -1333,7 +1333,7 @@ ${explanationLine}
           );
         }
         const question = publicQuestions[questionNumber - 1];
-        title = `${question.stem} | MCQ Answer &amp; Explanation | OmpathStudy`;
+        title = `${question.stem} | MCQ Answer & Explanation | OmpathStudy`;
         description = toMetaDescription(
           `${question.stem} Correct answer: ${question.correctText}. ${question.explanation}`,
           `Medical multiple-choice question with answer and explanation from ${mcqTitleBase} on OmpathStudy.`
