@@ -560,6 +560,39 @@ async function fetchMcqSetBySlugOrId(param: string) {
   return byClean && byClean.length > 0 ? byClean[0] : null;
 }
 
+/**
+ * Decide what a public crawler may see on a paid MCQ page.
+ * The browser's paywall is not an access-control boundary; never serialize
+ * locked questions into crawler HTML or structured data.
+ */
+async function getMcqCrawlerAccess(setId: string, slug: string) {
+  try {
+    const rows = await sbFetch(
+      "app_settings",
+      "select=key,value&key=in.(subscriptions_enabled,access_price_kes,mcq_paywall_enabled,paywall_free_ratio,mcq_paywall_excluded_ids)"
+    );
+    const settings = new Map((rows || []).map((row: { key: string; value: string }) => [row.key, row.value]));
+    const excludedRaw = settings.get("mcq_paywall_excluded_ids") || "[]";
+    let excluded: string[] = [];
+    try {
+      const parsed = JSON.parse(excludedRaw);
+      if (Array.isArray(parsed)) excluded = parsed.map(String);
+    } catch { /* malformed exclusion list must not grant access */ }
+    const locked =
+      settings.get("subscriptions_enabled") === "true" &&
+      settings.get("mcq_paywall_enabled") === "true" &&
+      Number(settings.get("access_price_kes") || 0) > 0 &&
+      !excluded.includes(setId) &&
+      !excluded.includes(slug);
+    const ratioValue = Number(settings.get("paywall_free_ratio") || 0.25);
+    const ratio = Number.isFinite(ratioValue) ? Math.min(0.9, Math.max(0.05, ratioValue)) : 0.25;
+    return { locked, ratio, verified: true };
+  } catch (error) {
+    console.error("Could not verify MCQ crawler access settings; hiding question content:", error);
+    return { locked: true, ratio: 0, verified: false };
+  }
+}
+
 async function fetchFlashcardSetBySlugOrId(param: string) {
   const cols = "id,title,category,cards,slug,created_at";
   const decoded = decodeURIComponent(param).trim();
@@ -1260,8 +1293,13 @@ export default async function handler(req: Request): Promise<Response> {
       keywords = `OmpathStudy, MCQs Kenya, ${mcqTitleBase || ""}, ${mcq.category || ""}, oncology MCQs, pathology MCQs, medical quizzes, exam practice, ${GEO_KEYWORDS}`;
       type = "article";
 
-      if (parsed.length > 0) {
-        const items = parsed.map((p, i) => {
+      const crawlAccess = await getMcqCrawlerAccess(String(mcq.id), String(mcq.slug || ""));
+      const publicQuestions = crawlAccess.locked
+        ? parsed.slice(0, Math.ceil(parsed.length * crawlAccess.ratio))
+        : parsed;
+
+      if (publicQuestions.length > 0) {
+        const items = publicQuestions.map((p, i) => {
           const optionsList = p.options.length > 0
             ? `<ul>${p.options.map(o => `<li>${htmlEscape(o)}</li>`).join("")}</ul>`
             : "";
@@ -1278,12 +1316,16 @@ ${answerLine}
 ${explanationLine}
 </li>`;
         });
-        bodyExtra = `<h2>Questions, Answers &amp; Explanations</h2>\n<ol>\n${items.join("\n")}\n</ol>`;
+        const previewHeading = crawlAccess.locked
+          ? `<p>Free preview: ${publicQuestions.length} of ${parsed.length} questions. Unlock the full question bank on OmpathStudy.</p>`
+          : "";
+        bodyExtra = `${previewHeading}<h2>Questions, Answers &amp; Explanations</h2>\n<ol>\n${items.join("\n")}\n</ol>`;
+      } else if (crawlAccess.locked) {
+        bodyExtra = "<p>This question bank includes a free preview. Sign in to OmpathStudy to view the available questions and unlock the complete bank.</p>";
       }
 
-      // Do not label a multiple-choice question bank as Google's Education Q&A
-      // flashcard carousel. Google requires genuine flashcard pages for that feature.
-      // The complete, visible question content above remains available to crawlers.
+      // Ordinary MCQs are deliberately not labelled as flashcards or QAPage.
+      // Google only supports the Education Q&A carousel for genuine flashcards.
 
     } else if (section === "flashcards" && param) {
       const set = await fetchFlashcardSetBySlugOrId(param);
@@ -1318,7 +1360,7 @@ ${explanationLine}
         bodyExtra = `<h2>Flashcards</h2>\n<ol>\n${cardItems.join("\n")}\n</ol>`;
         // Google's "Education Q&A" markup: a quiz whose questions are the card fronts and whose answers are the card backs
         const qa = cards.slice(0, 30).map((c) => ({ front: getCardFront(c), back: getCardBack(c) })).filter((x) => x.front && x.back);
-        if (qa.length) schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "Quiz", name: title, description, url: absoluteUrl, about: { "@type": "Thing", name: title.replace(/\s*[|–-].*$/, "") }, educationalLevel: "University", provider: { "@type": "Organization", name: "OmpathStudy" }, hasPart: qa.map((x) => ({ "@type": "Question", eduQuestionType: "Flashcard", name: x.front, acceptedAnswer: { "@type": "Answer", text: x.back } })) });
+        if (qa.length) schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "Quiz", name: title, description, url: absoluteUrl, about: { "@type": "Thing", name: title.replace(/\s*[|–-].*$/, "") }, educationalLevel: "University", provider: { "@type": "Organization", name: "OmpathStudy" }, hasPart: qa.map((x) => ({ "@type": "Question", eduQuestionType: "Flashcard", text: x.front, acceptedAnswer: { "@type": "Answer", text: x.back } })) });
       }
 
     } else if (section === "exams" && param) {
