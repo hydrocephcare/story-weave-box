@@ -324,7 +324,7 @@ const AnimatedRoutes = () => {
             <Route path="/flashcards/today" element={<SignedInRoute><FlashcardsToday /></SignedInRoute>} />
             <Route path="/generated-flashcards/:id" element={<SignedInRoute><GeneratedFlashcardStudy /></SignedInRoute>} />
             <Route path="/flashcards/:id" element={<SignedInRoute><FlashcardStudy /></SignedInRoute>} />
-            <Route path="/mcqs" element={<SignedInRoute><RailLayout><McqHub /></RailLayout></SignedInRoute>} />
+            <Route path="/mcqs" element={<RailLayout><McqHub /></RailLayout>} />
             <Route path="/mcqs/:id" element={<SignedInRoute><McqSet /></SignedInRoute>} />
             <Route path="/exams" element={<SignedInRoute><RailLayout><Exams /></RailLayout></SignedInRoute>} />
             <Route path="/exams/:id" element={<SignedInRoute><ExamLinkRedirect /></SignedInRoute>} />
