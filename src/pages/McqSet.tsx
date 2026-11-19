@@ -90,7 +90,6 @@ function Bank({ set }: { set: McqSetRow }) {
     const loadAccountHistory = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!active || !user) return;
-      setAccountHistorySynced(true);
       const { data, error } = await supabase
         .from("mcq_practice_attempts")
         .select("session_id, score, attempted, total, duration_seconds, timer_minutes, completed_at")
@@ -184,7 +183,7 @@ function Bank({ set }: { set: McqSetRow }) {
     void (async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
-      setAccountHistoryAvailable(true);
+      setAccountHistorySynced(true);
       const { error } = await supabase.from("mcq_practice_attempts").insert({
         user_id: user.id,
         mcq_set_id: set.id,
