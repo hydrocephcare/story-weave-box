@@ -1,5 +1,7 @@
 // POST /api/ai-chat { question, history, sources }: Ompath AI answers, streamed as OpenAI-style server-sent events (what the site already reads).
 // Groq first (fast, keys take turns), Gemini (keys take turns) when Groq is busy or out of quota. Keys: GROQ_API_KEYS, GEMINI_API_KEYS.
+import { consumeEntitlement } from "./entitlements.js";
+
 const hits = new Map();
 const LIMIT = 80; // questions per visitor per hour (best effort)
 let turn = 0;
@@ -108,6 +110,8 @@ export default async function handler(req, res) {
 
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   if (!String(body.question ?? "").trim()) return res.status(400).json({ error: "Ask a question." });
+  const quota = await consumeEntitlement(req, "ompath_ai_questions");
+  if (!quota.allowed) return res.status(quota.status || 402).json({ error: quota.reason === "quota_exhausted" ? "You have reached your free Ompath AI allowance. Unlock premium access for more questions." : quota.reason === "login_required" || quota.reason === "invalid_session" ? "Please sign in to use Ompath AI." : "We could not verify your access. Please try again.", upgrade_required: quota.status === 402, quota });
   const msgs = buildMessages(body);
   const ok = (groq.length && (await viaGroq(msgs, res, groq))) || (gemini.length && (await viaGemini(msgs, res, gemini)));
   if (!ok) return res.status(502).json({ error: "Ompath AI is busy. Please try again in a moment." });
