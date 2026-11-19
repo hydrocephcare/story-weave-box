@@ -35,8 +35,12 @@ export default function ScrollToTop() {
     const path = currentPath;
     const save = () => savePosition(path, window.scrollY);
     window.addEventListener("pagehide", save);
+    document.addEventListener("visibilitychange", save);
+    window.addEventListener("beforeunload", save);
     return () => {
       window.removeEventListener("pagehide", save);
+      document.removeEventListener("visibilitychange", save);
+      window.removeEventListener("beforeunload", save);
       save();
     };
   }, [currentPath]);
@@ -55,7 +59,9 @@ export default function ScrollToTop() {
     // as the reader scrolls. The position recorded when the link was clicked is exact, so it wins over the saved one.
     const ret = getNoteReturn();
     const fromLink = Boolean(ret && ret.path === currentPath && (navigationType === "POP" || (state as { restore?: boolean } | null)?.restore));
-    const target = fromLink && ret ? ret.y : navigationType === "POP" ? readPositions()[currentPath] || 0 : 0;
+    const isReload = typeof performance !== "undefined" && performance.getEntriesByType("navigation").some((entry) => (entry as PerformanceNavigationTiming).type === "reload");
+    const savedY = readPositions()[currentPath] || 0;
+    const target = fromLink && ret ? ret.y : navigationType === "POP" || isReload ? savedY : 0;
     const startedAt = Date.now();
     let cancelled = false;
     let timer: ReturnType<typeof setTimeout> | undefined;
