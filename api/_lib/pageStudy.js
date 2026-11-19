@@ -1,6 +1,7 @@
 // POST /api/page-study { mode: "cards" | "quiz", title, text }: flashcards or a short quiz made from the page the reader is on.
 // Groq first, Gemini as the backup (keys take turns), the same as the rest of the site's AI.
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { consumeEntitlement } from "./entitlements.js";
 
 const hits = new Map();
 const LIMIT = 40; // per visitor per hour (best effort)
@@ -71,6 +72,23 @@ export default async function handler(req, res) {
   const title = String(body.title ?? "").slice(0, 140);
   const text = String(body.text ?? "").replace(/\s+/g, " ").trim().slice(0, 5500);
   if (text.length < 200) return res.status(400).json({ error: "There is not enough text on this page yet." });
+
+  // Generated study aids consume the same account-based weekly allowances as the other AI tools.
+  const feature = mode === "cards" ? "ai_flashcard_generation"
+    : mode === "quiz" ? "ai_mcq_generation"
+    : "ai_note_generation";
+  const quota = await consumeEntitlement(req, feature);
+  if (!quota.allowed) {
+    return res.status(quota.status || 402).json({
+      error: quota.reason === "quota_exhausted"
+        ? "Your free allowance for this AI study tool has been used. Unlock premium access to continue."
+        : quota.reason === "login_required" || quota.reason === "invalid_session"
+          ? "Please sign in to generate study aids."
+          : "We could not verify your access. Please try again.",
+      upgrade_required: quota.status === 402,
+      quota,
+    });
+  }
   try {
     const { text: out } = await ask(PROMPTS[mode](title, text), env, mode === "essays" ? 3400 : mode === "cards" ? 3600 : 1800);
     const j = JSON.parse(out.match(/\{[\s\S]*\}/)[0]);
