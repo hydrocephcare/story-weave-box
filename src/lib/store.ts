@@ -63,6 +63,7 @@ export interface FlashcardSet {
   meta_description?: string;
   og_image_url?: string;
   slug?: string;
+  owner_id?: string | null;
 }
 
 export interface McqSet {
@@ -916,7 +917,7 @@ export async function getFlashcardSets(): Promise<FlashcardSet[]> {
   return (data || []) as unknown as FlashcardSet[];
 }
 
-const FLASHCARD_DETAIL_COLUMNS = "id,title,cards,created_at,updated_at,published,original_notes,category,is_raw,slug,source_reference";
+const FLASHCARD_DETAIL_COLUMNS = "id,title,cards,created_at,updated_at,published,original_notes,category,is_raw,slug,source_reference,owner_id";
 
 export async function getPublishedFlashcardSets(): Promise<FlashcardSet[]> {
   const { data, error } = await supabase
