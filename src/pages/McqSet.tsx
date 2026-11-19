@@ -243,7 +243,7 @@ function Bank({ set }: { set: McqSetRow }) {
             </div>
             <div className="mt-4 flex flex-wrap items-end gap-2">
               <label className="min-w-0 flex-1 text-xs font-semibold text-muted-foreground">Minutes
-                <input type="number" min={1} max={240} step={1} disabled={timerStatus === "running" || timerStatus === "finished"} value={timerMinutes} onChange={(e) => setTimerMinutes(Math.max(1, Math.min(240, Number(e.target.value) || 1)))} className="mt-1 h-11 w-full rounded-xl border border-input bg-background px-3 text-sm font-semibold text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                <input type="number" min={1} max={240} step={1} disabled={timerStatus !== "idle"} value={timerMinutes} onChange={(e) => setTimerMinutes(Math.max(1, Math.min(240, Number(e.target.value) || 1)))} className="mt-1 h-11 w-full rounded-xl border border-input bg-background px-3 text-sm font-semibold text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
               </label>
               {timerStatus === "idle" && <button type="button" onClick={startTimer} className="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground"><Play className="h-4 w-4" /> Start</button>}
               {timerStatus === "running" && <button type="button" onClick={pauseTimer} className="inline-flex h-11 items-center gap-2 rounded-xl border border-border px-4 text-sm font-bold"><Pause className="h-4 w-4" /> Pause</button>}
