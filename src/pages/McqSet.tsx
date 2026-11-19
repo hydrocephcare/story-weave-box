@@ -119,9 +119,10 @@ function Bank({ set }: { set: McqSetRow }) {
     return () => window.clearInterval(interval);
   }, [timerStatus, timerEndsAt]);
 
+  const remainingToSave = timerStatus === "running" ? null : remainingSeconds;
   useEffect(() => {
-    savePractice(set.id, { qs, first: [...first], wrong: [...wrong], solved: [...solved], shown: [...shown], timerMinutes, timerStatus, remainingSeconds: timerStatus === "running" ? null : remainingSeconds, timerEndsAt, sessionStartedAt });
-  }, [set.id, qs, first, wrong, solved, shown, timerMinutes, timerStatus, timerStatus === "running" ? null : remainingSeconds, timerEndsAt, sessionStartedAt]);
+    savePractice(set.id, { qs, first: [...first], wrong: [...wrong], solved: [...solved], shown: [...shown], timerMinutes, timerStatus, remainingSeconds: remainingToSave, timerEndsAt, sessionStartedAt });
+  }, [set.id, qs, first, wrong, solved, shown, timerMinutes, timerStatus, remainingToSave, timerEndsAt, sessionStartedAt]);
 
   useEffect(() => {
     if (!attemptFinished || savedRecordForSession.current) return;
@@ -325,7 +326,7 @@ function Bank({ set }: { set: McqSetRow }) {
                       const right = oi === q.correct_answer, was = tries.includes(oi);
                       const style = open ? (right ? "bg-emerald-500/10" : was ? "bg-rose-500/10 text-muted-foreground" : "text-muted-foreground") : was ? "bg-rose-500/10 text-muted-foreground line-through decoration-rose-500/50" : "hover:bg-primary/5";
                       return (
-                        <button key={oi} type="button" disabled={open || was} onClick={() => pick(i, oi)} aria-label={`Option ${LETTERS[oi]}: ${opt}${was ? " (not correct)" : ""}`} className={`flex w-full items-start gap-3 rounded-lg px-3 py-2.5 text-left text-[15px] leading-snug transition-colors ${style}`}>
+                        <button key={oi} type="button" disabled={open || was || timerStatus === "finished"} onClick={() => pick(i, oi)} aria-label={`Option ${LETTERS[oi]}: ${opt}${was ? " (not correct)" : ""}`} className={`flex w-full items-start gap-3 rounded-lg px-3 py-2.5 text-left text-[15px] leading-snug transition-colors ${style}`}>
                           <span className={`mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${open && right ? "bg-emerald-500 text-white" : was ? "bg-rose-500 text-white" : "bg-muted text-muted-foreground"}`}>{LETTERS[oi]}</span>
                           <span className="flex-1">{opt}</span>
                         </button>
@@ -335,7 +336,7 @@ function Bank({ set }: { set: McqSetRow }) {
                   {!open ? (
                     <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 px-3 text-sm">
                       {tries.length > 0 && <span className="font-semibold text-rose-600 dark:text-rose-300">Not quite. Try again.</span>}
-                      <button type="button" onClick={() => reveal(i)} className="font-bold text-muted-foreground hover:text-foreground">Show answer</button>
+                      <button type="button" disabled={timerStatus === "finished"} onClick={() => reveal(i)} className="font-bold text-muted-foreground hover:text-foreground">Show answer</button>
                     </div>
                   ) : (
                     <div className="mt-3 border-l-[3px] border-primary/60 px-4 py-1">
