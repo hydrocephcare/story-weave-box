@@ -5,6 +5,15 @@ on:
     # The batch script still applies its per-run time and count limits.
     - cron: "0 3,9,15,21 * * *"
   workflow_dispatch:
+    inputs:
+      count:
+        description: "How many published articles to process"
+        required: false
+        default: "40"
+      year:
+        description: "Only this year (1 to 6); leave empty for all"
+        required: false
+        default: ""
   # Run the article pipeline immediately when its safeguards or prompts change.
   push:
     branches: [main]
@@ -15,15 +24,6 @@ on:
       - "api/_lib/blogPolishRun.js"
       - "api/_lib/blogPolishVerify.js"
       - "api/_lib/blogPolishPrompts.js"
-    inputs:
-      count:
-        description: "How many published articles to process"
-        required: false
-        default: "40"
-      year:
-        description: "Only this year (1 to 6); leave empty for all"
-        required: false
-        default: ""
 permissions:
   contents: read
 concurrency:
