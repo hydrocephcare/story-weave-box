@@ -1,594 +1,185 @@
 {
  "medical": true,
- "summary": "The breast is a modified sweat gland on the anterior chest wall, composed of glandular, fibrous, and adipose tissues. Its primary function is lactation, but it is also a site for common pathologies like cancer. Understanding its anatomy is crucial for clinical assessment and diagnosis.",
+ "clinicalScope": "Normal breast anatomy and clinical examination in adult women and adolescent females presenting to low‑resource East African hospitals",
+ "title": "Breast Anatomy and Clinical Examination",
+ "subject": "Anatomy",
+ "summary": "The breast is a modified sweat gland on the anterior chest wall that produces milk and has important supportive and cosmetic roles. Understanding its development, structure, blood and nerve supply, and how to examine it is essential for clinicians in resource‑limited settings.",
  "aka": [
-  "Mammary gland"
+  "Mammary gland",
+  "Mammary tissue"
  ],
  "sections": [
   {
-   "h": "Overview",
-   "p": "The breast, or mammary gland, is a superficial organ located on the anterior thoracic wall. While its primary physiological role is milk production (lactation) in females, it is also a common site for various clinical conditions in both sexes. A thorough understanding of its anatomical components and relations is fundamental for accurate clinical examination and interpretation of findings."
-  },
-  {
-   "h": "Location and structure",
-   "p": "The breast typically extends vertically from the 2nd to the 6th ribs and horizontally from the sternum to the midaxillary line. A small extension, the axillary tail of Spence, projects superolaterally towards the axilla. It is composed of glandular tissue, fibrous connective tissue, and adipose tissue, all encased within the superficial fascia.",
+   "h": "Definition and anatomical overview",
+   "p": "The breast is a paired, superficial organ composed of glandular, fibrous, and adipose tissue that sits over the pectoralis major muscle. It functions primarily in lactation but also serves as a marker of hormonal status and a site for common pathology.",
    "b": [
-    "Glandular tissue: Consists of 15-20 lobes, each containing lobules with milk-producing alveoli, which drain into lactiferous ducts and sinuses.",
-    "Fibrous tissue: Includes Cooper's ligaments (suspensory ligaments) that connect the deep fascia to the skin, providing structural support.",
-    "Adipose tissue: Surrounds the glandular elements, contributing significantly to breast size and contour.",
-    "Nipple and Areola: The nipple is a conical projection containing lactiferous duct openings, surrounded by the pigmented areola. Montgomery tubercles, sebaceous glands, are visible on the areola."
+    "Modified sweat gland (apocrine) with milk‑producing alveoli",
+    "15–20 lobes per breast, each with lobules and ducts",
+    "Cooper’s ligaments provide structural support",
+    "Surrounded by variable adipose tissue influencing size"
    ]
   },
   {
-   "h": "Relations",
-   "p": "The breast lies superficial to the deep fascia covering the pectoralis major muscle. A loose connective tissue layer, the retromammary space, separates the breast from the deep fascia, allowing for some mobility over the chest wall.",
+   "h": "Embryological development",
+   "p": "Breast tissue originates from the ectodermal mammary ridge (milk line) that appears around the 4th week of gestation and regresses except at the thoracic level, where it forms the future breast bud.",
    "b": [
-    "Deep relations: Primarily the pectoralis major muscle, but also parts of the serratus anterior and external oblique muscles laterally.",
-    "Retromammary space: A potential space that facilitates breast movement and can be a site for implants or abscesses."
+    "Mammary ridge forms bilaterally from axilla to groin",
+    "Primary breast bud appears at the 6th week",
+    "Lobular differentiation begins at puberty under estrogen",
+    "Hormonal surge in pregnancy expands alveolar epithelium"
+   ]
+  },
+  {
+   "h": "Gross anatomy and relations",
+   "p": "Each breast extends from the second to the sixth rib vertically and from the sternum to the mid‑axillary line horizontally. It lies superficial to the pectoralis major and deep to the skin and subcutaneous fat.",
+   "b": [
+    "Superior border: clavicle; inferior border: 6th rib",
+    "Medial border: sternum; lateral border: mid‑axillary line",
+    "Retromammary (subglandular) space separates gland from pectoralis major",
+    "Nipple‑areolar complex centered over the fourth intercostal space"
    ]
   },
   {
    "h": "Blood supply",
-   "p": "The breast receives a rich arterial supply from several sources, reflecting its metabolic demands, especially during lactation. Venous drainage largely follows the arterial supply, with clinical implications for the spread of malignancy.",
+   "p": "Arterial blood reaches the breast from three main sources, while venous drainage follows parallel pathways to the axillary and internal thoracic veins.",
    "b": [
-    "Arterial supply: Medial mammary branches from the internal thoracic artery; lateral thoracic and thoracoacromial arteries (pectoral branch) from the axillary artery; and posterior intercostal arteries.",
-    "Venous drainage: Corresponding veins drain primarily into the axillary vein and internal thoracic vein, with some drainage to intercostal veins."
+    "Medial mammary branches of internal thoracic artery (primary supply)",
+    "Lateral thoracic artery from axillary artery (supplementary supply)",
+    "Thoraco‑acromial (pectoral) branch and posterior intercostal arteries",
+    "Veins mirror arteries, draining mainly into axillary vein"
    ]
   },
   {
-   "h": "Nerve supply",
-   "p": "The breast receives sensory innervation from intercostal nerves, which also carry sympathetic fibers to the smooth muscle and blood vessels within the breast.",
+   "h": "Nerve supply and lymphatic drainage",
+   "p": "Sensory innervation derives from the intercostal nerves (T2‑T6) and the supraclavicular nerves; lymphatics follow predictable pathways to axillary and internal mammary nodes.",
    "b": [
-    "Sensory innervation: Anterior and lateral cutaneous branches of the 4th-6th intercostal nerves supply sensation to the breast skin and nipple/areola.",
-    "Autonomic innervation: Sympathetic fibers accompany the intercostal nerves to supply blood vessels and smooth muscle in the nipple and areola, involved in nipple erection."
+    "Anterior and lateral cutaneous branches of intercostal nerves T2‑T6",
+    "Supraclavicular nerves supply the upper pole",
+    "Lymph drains to level I‑III axillary nodes (most clinically relevant)",
+    "Medial drainage to internal mammary nodes via perforating branches"
    ]
   },
   {
-   "h": "Function",
-   "p": "The primary function of the female breast is lactation, the production and secretion of milk to nourish an infant. This process is under complex hormonal control, leading to significant anatomical and physiological changes throughout life.",
+   "h": "Histology and microanatomy",
+   "p": "The breast consists of a ductal‑lobular system embedded in a fibrous‑adipose stroma. The epithelium is lined by two layers of cells that respond to hormonal cues.",
    "b": [
-    "Lactation: Milk production is stimulated by prolactin, and milk ejection (let-down) by oxytocin, in response to suckling.",
-    "Hormonal changes: During puberty, estrogen stimulates breast development (thelarche). During pregnancy, high levels of estrogen and progesterone cause breast enlargement, tenderness, darkening of the areola, and prominent Montgomery tubercles.",
-    "Milk synthesis: The rate of milk synthesis is not related to how full the breast is, allowing for continuous production based on demand."
+    "Lobules contain alveoli lined by secretory cuboidal cells and myoepithelial cells",
+    "Lactiferous ducts lined by columnar luminal cells and basal myoepithelial cells",
+    "Cooper’s ligaments are dense collagen bundles",
+    "Montgomery tubercles are sebaceous glands on the areola"
    ]
   },
   {
-   "h": "Clinical relevance and injuries",
-   "p": "Understanding breast anatomy is critical for diagnosing and managing a range of conditions, from benign changes to life-threatening malignancies. The lymphatic drainage pathways are particularly important for cancer staging.",
+   "h": "Functions and biomechanics",
+   "p": "Beyond milk production, the breast provides tactile feedback, contributes to body image, and its connective framework resists gravitational ptosis.",
    "b": [
-    "Breast cancer: The most common cancer in women, often spreading via lymphatic vessels to axillary lymph nodes, necessitating careful examination of these areas.",
-    "Mastitis: Inflammation of breast tissue, commonly occurring during lactation due to bacterial infection, often presenting with pain, redness, and swelling.",
-    "Fibrocystic changes: Benign, common changes in breast tissue, often presenting as lumps, pain, or tenderness, especially premenstrually.",
-    "Gynecomastia: Benign enlargement of male breast tissue, often due to hormonal imbalances.",
-    "Trauma: Direct injury can lead to hematoma, fat necrosis (a firm, irregular mass), or rupture of implants."
-   ],
-   "t": [
-    {
-     "a": "Clinical breast examination",
-     "b": "To detect palpable masses, skin changes, nipple discharge, or lymphadenopathy. Abnormal findings may indicate benign conditions or malignancy, requiring further imaging."
-    },
-    {
-     "a": "Mammography",
-     "b": "To screen for breast cancer and evaluate suspicious lumps, especially in older women. Detects calcifications, masses, and architectural distortion, guiding biopsy if needed. If unavailable, thorough clinical exam and ultrasound are crucial."
-    },
-    {
-     "a": "Ultrasound",
-     "b": "To differentiate solid from cystic masses, especially in younger women or dense breasts. Cystic lesions appear anechoic; solid lesions require further characterization. Also useful for guiding biopsies."
-    }
+    "Alveolar cells synthesize milk under prolactin stimulation",
+    "Oxytocin‑mediated myoepithelial contraction expels milk",
+    "Cooper’s ligaments maintain shape; loss leads to sagging",
+    "Adipose layer determines size and protects underlying tissue"
    ]
   },
   {
-   "h": "Exam pearls",
-   "p": "A systematic and sensitive approach to breast examination is essential for detecting abnormalities. Clinicians must be aware of normal variations and key signs of pathology.",
+   "h": "Applied anatomy and clinical correlations",
+   "p": "Knowledge of breast anatomy guides procedures such as clinical examination, fine‑needle aspiration, and mastectomy, and helps predict spread of infection or tumour.",
    "b": [
-    "Conduct with a chaperone, patient disrobed to the waist, arms relaxed by the sides, ensuring tact and sensitivity.",
-    "Inspect with the patient seated (arms on sides, then raised) and then supine, checking for asymmetry, contour changes (e.g., dimpling), and skin color.",
-    "Check for nipple inversion, which can be a normal variant or a sign of underlying pathology if new onset.",
-    "Palpate for masses using the pads of your middle three fingers with rotatory movements, gently compressing tissue against the chest wall.",
-    "Proceed systematically to examine all quadrants, the axillary tail, and areola, noting size, consistency, mobility, and tenderness of any masses.",
-    "Breast changes like enlargement, tenderness, darkening of the areola, and prominent Montgomery tubercles are common during puberty and pregnancy.",
-    "In Tanner stage 3 of female puberty, the breast and areola enlarge with no separation of contours, indicating normal development."
+    "Location of axillary nodes predicts metastatic pathways",
+    "Retromammary space is a potential site for abscesses or implants",
+    "Understanding ductal layout aids in nipple discharge localisation",
+    "Cooper’s ligaments tether the skin; retraction suggests underlying fibrosis or tumour"
+   ]
+  },
+  {
+   "h": "Common injuries and pathology",
+   "p": "In low‑resource settings, the most frequent breast problems are mastitis, abscess formation, and benign fibro‑adenoma; traumatic rupture of Cooper’s ligaments can cause dimpling.",
+   "b": [
+    "Acute puerperal mastitis: bacterial infection of lactating breast",
+    "Sub‑areolar abscess: often Staphylococcus aureus, may require drainage",
+    "Fibro‑adenoma: firm, mobile mass common in adolescents",
+    "Traumatic ligament rupture → skin dimpling, mimics malignancy"
+   ]
+  },
+  {
+   "h": "Imaging and examination",
+   "p": "Physical examination remains primary; when available, ultrasound is the first imaging modality, while mammography is limited by cost and equipment.",
+   "b": [
+    "Inspection: symmetry, skin changes, nipple retraction",
+    "Palpation: circular motion, assess for masses, tenderness, lymph nodes",
+    "Ultrasound: distinguishes cystic from solid lesions, guides FNAC",
+    "If ultrasound unavailable, rely on clinical pattern and refer if suspicious"
+   ]
+  },
+  {
+   "h": "Variations and congenital anomalies",
+   "p": "Normal variation includes size, shape, and degree of ptosis. Congenital anomalies such as polythelia (extra nipples) or accessory breast tissue can be mistaken for pathology.",
+   "b": [
+    "Polymastia: accessory breast tissue along milk line",
+    "Polythelia: supernumerary nipples, usually benign",
+    "Tubular breasts: congenital hypoplasia, may affect lactation",
+    "Asymmetry >1 cm warrants further evaluation"
+   ]
+  },
+  {
+   "h": "Exam approach",
+   "p": "A systematic bedside exam ensures no finding is missed and respects patient modesty, crucial in culturally sensitive settings.",
+   "b": [
+    "Introduce self, obtain consent, ensure chaperone, patient seated with arms relaxed",
+    "Inspect with arms at sides, raised, then supine; note contour, skin, nipple",
+    "Palpate using pads of fingers in concentric circles, assess all quadrants and axilla",
+    "Document any mass size, consistency, mobility, skin changes, and discharge"
    ]
   }
  ],
  "whenToSeekHelp": [
-  "New or persistent breast lump",
-  "Nipple discharge (especially bloody or spontaneous)",
-  "Skin changes (redness, dimpling, thickening, 'peau d'orange')",
-  "New onset nipple inversion or retraction",
-  "Persistent breast pain not related to menstrual cycle"
+  "Rapidly enlarging breast mass",
+  "Severe pain with fever suggesting abscess",
+  "Nipple retraction with skin ulceration",
+  "Unexplained bloody nipple discharge"
  ],
  "faq": [
   {
-   "q": "What are Cooper's ligaments?",
-   "a": "These are fibrous bands that extend from the deep fascia overlying the pectoralis major muscle through the breast tissue to the skin, providing structural support and maintaining breast shape."
+   "q": "Why is the axillary lymph node group most important in breast disease?",
+   "a": "It is the first drainage basin for most breast tissue and the site where metastatic cancer cells first lodge."
   },
   {
-   "q": "Why is lymphatic drainage important in breast cancer?",
-   "a": "Breast cancer commonly metastasizes via lymphatic vessels to regional lymph nodes, primarily the axillary nodes. Understanding these pathways is crucial for staging the cancer and guiding surgical and medical treatment."
+   "q": "Can a breast abscess be managed without imaging?",
+   "a": "Yes, if clinical signs of fluctuation and systemic infection are clear; drainage can be performed empirically, but ultrasound helps confirm."
   },
   {
-   "q": "What are Montgomery tubercles?",
-   "a": "These are sebaceous glands located on the areola that become more prominent during pregnancy and lactation. They secrete an oily substance that lubricates and protects the nipple and areola."
+   "q": "What is the purpose of the retromammary space?",
+   "a": "It allows breast movement over the chest wall and can accommodate fluid collections or implants."
   }
  ],
  "exam": [
-  "Describe the anatomical boundaries and deep relations of the breast, explaining how this knowledge informs surgical approaches and the interpretation of imaging.",
-  "Trace the lymphatic drainage pathways of the breast, detailing their clinical significance in the staging and prognosis of breast malignancy.",
-  "Outline the systematic steps of a clinical breast examination, identifying key findings on inspection and palpation that would warrant further investigation."
+  "A 19‑year‑old woman presents with a firm, mobile 2 cm mass in the upper outer quadrant; what is your next step and why? — Perform focused breast ultrasound to differentiate cystic from solid lesion before deciding on FNAC.",
+  "During a routine exam you note skin dimpling over a 3 cm mass; which structure is likely involved and what does this suggest? — Involvement of Cooper’s ligaments; raises suspicion for malignancy.",
+  "A lactating mother has a tender, erythematous breast with a fluctuant area; what investigations are essential in a low‑resource setting? — Clinical assessment; if possible, bedside ultrasound to locate abscess; otherwise proceed to incision and drainage.",
+  "Explain how the internal thoracic artery contributes to breast blood supply and why this matters in mastectomy. — It supplies the medial breast; ligation is required to control intra‑operative bleeding.",
+  "A patient reports unilateral nipple discharge that is clear and milky; what anatomical pathway should you examine and why? — Follow the lactiferous ducts centrally to the subareolar region; discharge often originates from ductal ectasia or papilloma.",
+  "What are the key differences between fibro‑adenoma and a malignant tumour on physical exam? — Fibro‑adenoma is usually well‑circumscribed, mobile, and painless; malignancy may be fixed, irregular, and associated with skin changes.",
+  "In a setting without mammography, how would you screen a high‑risk woman for early breast cancer? — Perform thorough clinical breast exam every 6‑12 months and use ultrasound if a suspicious lesion is felt.",
+  "Why is it important to assess the contralateral breast during examination? — Bilateral comparison helps identify subtle asymmetry and reduces missed pathology.",
+  "A newborn female has palpable breast tissue; is this normal and what is the usual management? — Physiologic neonatal breast enlargement due to maternal hormones; reassurance and observation only.",
+  "During a mastectomy you encounter a thickened retromammary fascia; what is its clinical relevance? — It may contain residual breast tissue; careful removal reduces local recurrence risk."
  ],
  "related": [
-  "Lactation",
-  "Lymphatic system",
-  "Pectoralis major muscle",
-  "Thoracic wall",
-  "Hormonal regulation",
-  "Breast cancer",
-  "Puberty",
-  "Pregnancy"
+  "Mastitis",
+  "Breast abscess",
+  "Fibro‑adenoma",
+  "Breast carcinoma",
+  "Axillary lymph node anatomy",
+  "Lactation physiology",
+  "Fine‑needle aspiration cytology",
+  "Breast imaging modalities"
  ],
  "kind": "anatomy",
- "model": "gemini-2.5-flash",
- "generatedAt": "2026-10-13",
- "reviewed": false,
- "deep": {
-  "sections": [
-   {
-    "h": "Bedside: history and how to examine",
-    "p": "A focused history and systematic exam allow differentiation of benign from malignant breast disease and guide further testing in low‑resource settings.",
-    "b": [
-     "Onset, duration and pattern of any breast mass or pain",
-     "Changes in size, shape or skin over the breast",
-     "Nipple discharge: colour, consistency, unilateral or bilateral",
-     "Recent lactation, weaning or hormonal therapy",
-     "Family history of breast/ovarian cancer and age at diagnosis",
-     "Personal history of radiation to chest, prior breast surgery or biopsy",
-     "Systemic symptoms: weight loss, fever, night sweats",
-     "Medication use (hormone replacement, tamoxifen, antiretrovirals)"
-    ],
-    "t": [
-     {
-      "a": "Inspection",
-      "b": "Look for asymmetry, skin dimpling, peau d'orange, nipple retraction or ulceration; a positive finding suggests underlying pathology but cannot determine histology"
-     },
-     {
-      "a": "Palpation of breast tissue",
-      "b": "Systematically palpate each quadrant and the axilla with pads of fingers; a firm, irregular, non‑mobile nodule raises suspicion for carcinoma; cannot differentiate fibroadenoma from carcinoma"
-     },
-     {
-      "a": "Nipple‑areola complex assessment",
-      "b": "Evert nipple to examine for discharge or lesions; unilateral bloody discharge is worrisome; cannot identify intraductal papilloma without imaging"
-     },
-     {
-      "a": "Axillary lymph node examination",
-      "b": "Palpate level I nodes (lateral to pectoralis minor) for size >1 cm, hard consistency or fixation; positive nodes suggest regional spread; cannot stage beyond clinical N without imaging"
-     },
-     {
-      "a": "Skin‑tethering test (pinch test)",
-      "b": "Pinch skin over a mass; if skin adheres, suggests infiltration of Cooper’s ligaments; negative test does not exclude malignancy"
-     }
-    ]
-   },
-   {
-    "h": "Investigations and how to read them",
-    "p": "Select investigations based on availability; each test answers a specific clinical question and has defined interpretation thresholds.",
-    "b": [
-     "Ultrasound (first line for palpable mass in women <30 y or dense breast) – solid hypoechoic irregular lesion = suspicious; simple cyst = benign; if unavailable, proceed to clinical management based on exam"
-    ],
-    "t": [
-     {
-      "a": "Mammography",
-      "b": "Detect microcalcifications and architectural distortion; BI‑RADS 4–5 warrants biopsy; BI‑RADS 1–2 is negative; if not available, rely on ultrasound and clinical findings"
-     },
-     {
-      "a": "Fine‑needle aspiration cytology (FNAC)",
-      "b": "Answers whether a mass is malignant; presence of atypical cells = positive; insufficient material = repeat or core biopsy"
-     },
-     {
-      "a": "Core needle (tru‑cut) biopsy",
-      "b": "Provides histology and receptor status; invasive carcinoma confirmed by malignant glands; if unavailable, refer for surgical excision biopsy"
-     },
-     {
-      "a": "Hormone receptor testing (ER/PR)",
-      "b": "Answers eligibility for endocrine therapy; >1 % nuclear staining = positive; negative = no endocrine benefit"
-     },
-     {
-      "a": "HER2 testing – IHC and FISH",
-      "b": "IHC 3+ or FISH ratio ≥ 2.0 confirms HER2 amplification; qualifies for trastuzumab; if FISH unavailable, treat as HER2‑negative unless strong IHC 3+"
-     },
-     {
-      "a": "Ki‑67 index",
-      "b": "Assesses proliferation; <10 % low, 10‑20 % intermediate, >20 % high; influences chemotherapy intensity; if lab cannot quantify, report as low vs high based on visual estimate"
-     },
-     {
-      "a": "Axillary ultrasound with fine‑needle sampling",
-      "b": "Answers clinical N status; cortical thickening >3 mm or loss of fatty hilum = suspicious; positive cytology upgrades N stage; if unavailable, clinical palpation guides N classification"
-     },
-     {
-      "a": "Serum CA‑15‑3",
-      "b": "Used for monitoring, not diagnosis; rising level suggests recurrence; not reliable for initial work‑up"
-     }
-    ]
-   },
-   {
-    "h": "Diagnosis, staging and severity",
-    "p": "Use the TNM system and histopathologic criteria to stage disease and guide treatment decisions, adapting to resource constraints.",
-    "b": [
-     "T1 ≤2 cm, T2 >2 cm ≤5 cm, T3 >5 cm, T4 extension to chest wall or skin"
-    ],
-    "t": [
-     {
-      "a": "M staging",
-      "b": "M0 no distant metastasis; M1 distant organ involvement confirmed by imaging or biopsy"
-     },
-     {
-      "a": "Histologic grade (Nottingham)",
-      "b": "Score tubule formation, nuclear pleomorphism, mitoses; grade 1‑3; higher grade predicts poorer prognosis"
-     },
-     {
-      "a": "Receptor status classification",
-      "b": "Luminal A (ER+/PR+, HER2‑, Ki‑67 < 20%); Luminal B (ER+/PR+, HER2‑ or +, Ki‑67 ≥ 20%); HER2‑enriched (HER2+, ER‑); Triple‑negative (ER‑, PR‑, HER2‑)"
-     }
-    ]
-   },
-   {
-    "h": "Look‑alike conditions",
-    "p": "Several benign or inflammatory processes can mimic breast cancer clinically and on imaging; key discriminators are listed.",
-    "b": [
-     "Fibroadenoma, mastitis, galactocele, fat necrosis, phyllodes tumor"
-    ],
-    "t": [
-     {
-      "a": "Fibroadenoma",
-      "b": "Well‑circumscribed, mobile mass in young women; ultrasound shows homogeneous hypoechoic lesion with smooth borders; core biopsy shows benign stromal proliferation; no skin changes"
-     },
-     {
-      "a": "Mastitis/abscess",
-      "b": "Pain, erythema, warmth, systemic fever; ultrasound shows hypoechoic fluid collection with peripheral hyperemia; responds to antibiotics; absence of irregular margins distinguishes from carcinoma"
-     },
-     {
-      "a": "Galactocele",
-      "b": "Lactational cyst with milky fluid; ultrasound shows anechoic or low‑level internal echoes; aspirate yields milky fluid; resolves after lactation cessation"
-     },
-     {
-      "a": "Fat necrosis",
-      "b": "History of trauma; firm irregular mass with calcifications on mammogram; may mimic carcinoma but biopsy shows necrotic fat and giant cells; often stable on follow‑up"
-     }
-    ]
-   },
-   {
-    "h": "Management step by step",
-    "p": "A systematic approach ensures timely diagnosis, appropriate therapy and safe monitoring of breast pathology, especially cancer, in low‑resource settings.",
-    "b": [
-     "1. Confirm diagnosis: clinical exam, imaging (ultrasound, mammography if available), core needle biopsy.",
-     "2. Stage disease: TNM clinical staging using physical exam, imaging, and pathology (size, nodal status, metastasis).",
-     "3. Multidisciplinary plan: surgery (wide local excision or mastectomy) plus sentinel node biopsy when feasible.",
-     "4. Adjuvant therapy: radiotherapy for breast‑conserving surgery; systemic therapy based on hormone‑receptor and HER2 status.",
-     "5. Ongoing monitoring: clinical review every 3‑6 months, annual imaging, assess treatment toxicity.",
-     "6. Escalate or refer: persistent nodal disease, recurrence, or inability to deliver radiotherapy → refer to regional cancer centre."
-    ],
-    "t": [
-     {
-      "a": "Hormone‑receptor‑positive disease",
-      "b": "Give endocrine therapy (tamoxifen pre‑menopausal, aromatase inhibitor post‑menopausal). Avoid aromatase inhibitors in severe osteoporosis."
-     },
-     {
-      "a": "HER2‑positive disease",
-      "b": "Add trastuzumab after confirming FISH ratio ≥ 2.0. Hold if EF falls below 50 % and drops >10 % from baseline; monitor EF every 3 months."
-     },
-     {
-      "a": "Triple‑negative disease",
-      "b": "Offer chemotherapy (anthracycline‑based or taxane‑based). Avoid anthracyclines if left ventricular ejection fraction <50 %."
-     },
-     {
-      "a": "Pregnancy‑associated cancer",
-      "b": "Prioritise surgery; postpone radiotherapy until postpartum; use chemotherapy agents safe in second/third trimester (e.g., anthracyclines)."
-     }
-    ]
-   },
-   {
-    "h": "Drug effects and what to do",
-    "p": "Recognising adverse effects early prevents treatment interruption and improves outcomes.",
-    "b": [
-     "Tamoxifen – hot flashes, deep‑vein thrombosis, endometrial changes; counsel on signs of DVT, perform pelvic exam if abnormal bleeding.",
-     "Aromatase inhibitors – arthralgia, bone loss; give calcium/vitamin D, consider bisphosphonate if osteoporosis risk high.",
-     "Trastuzumab – cardiotoxicity; repeat echocardiogram every 3 months, hold drug if EF < 50 % and falls >10 % from baseline.",
-     "Anthracyclines – cumulative dose‑related cardiomyopathy; monitor EF, avoid if baseline EF < 50 %; limit total dose.",
-     "Taxanes – neuropathy, hypersensitivity; pre‑medicate with steroids, monitor for peripheral sensory loss."
-    ],
-    "t": [
-     {
-      "a": "Drug‑drug interaction",
-      "b": "Avoid concurrent strong CYP3A4 inhibitors with aromatase inhibitors as they may increase serum levels."
-     },
-     {
-      "a": "Herbal remedies",
-      "b": "St. John’s wort induces CYP enzymes and can reduce tamoxifen efficacy; advise patients to discontinue."
-     }
-    ]
-   },
-   {
-    "h": "Complications and when to escalate",
-    "p": "Complications may arise from disease progression or treatment toxicity; timely escalation improves prognosis.",
-    "b": [
-     "Local recurrence – new palpable mass or skin change at scar; obtain imaging and biopsy, consider re‑excision or mastectomy.",
-     "Axillary nodal progression – increasing node size or new supraclavicular nodes; upgrade N stage, discuss systemic therapy intensification.",
-     "Radiation dermatitis – grade ≥ 2 skin ulceration; pause radiotherapy, treat with topical steroids, refer to wound‑care specialist.",
-     "Cardiac dysfunction from trastuzumab or anthracyclines – EF drop >10 % to <50 %; hold offending drug, start cardiology referral.",
-     "Severe neutropenia from chemotherapy – ANC < 500 µL; delay next cycle, give G‑CSF if febrile, monitor cultures."
-    ],
-    "t": [
-     {
-      "a": "Lymphedema",
-      "b": "Progressive arm swelling after node dissection; initiate compression therapy, physiotherapy, and refer to lymphedema clinic."
-     },
-     {
-      "a": "Bone metastasis pain",
-      "b": "Start bisphosphonate or denosumab; add opioid analgesia; consider palliative radiotherapy."
-     }
-    ]
-   },
-   {
-    "h": "Complicating and confounding factors",
-    "p": "Co‑morbid conditions modify presentation, investigations and therapeutic choices.",
-    "b": [
-     "HIV – higher risk of opportunistic infections; CD4 < 200 cells/µL may limit chemotherapy tolerance; coordinate with antiretroviral therapy.",
-     "TB endemic area – granulomatous mastitis can mimic carcinoma; obtain microbiology, treat TB before surgery if present.",
-     "Malnutrition – low albumin may impair wound healing; optimise nutrition pre‑operatively, consider protein supplementation.",
-     "Pregnancy – breast tissue is denser; ultrasound preferred, avoid mammography unless essential with shielding.",
-     "Diabetes – delayed wound healing; control glucose tightly peri‑operatively, monitor for infection.",
-     "Renal failure – adjust dosing of renally cleared chemotherapeutics (e.g., carboplatin); avoid nephrotoxic agents.",
-     "Liver failure – limit hepatically metabolised drugs (e.g., tamoxifen) and monitor liver enzymes.",
-     "Alcohol abuse – increases risk of liver toxicity with tamoxifen; counsel on reduction."
-    ],
-    "t": [
-     {
-      "a": "Age extremes",
-      "b": "Very young patients may have aggressive subtypes; elderly may have comorbidities limiting surgery or chemo – tailor approach."
-     },
-     {
-      "a": "Herbal supplements",
-      "b": "Some contain phytoestrogens that can interfere with endocrine therapy; obtain a thorough medication history."
-     }
-    ]
-   },
-   {
-    "h": "Special groups",
-    "p": "Tailored strategies address the unique needs of vulnerable populations while respecting resource constraints.",
-    "b": [
-     "Children/adolescents – breast masses are usually benign; biopsy only if suspicious; avoid radiation unless essential.",
-     "Pregnant women – prioritize surgery; use ultrasound; postpone radiotherapy; select chemotherapy agents safe after first trimester.",
-     "Elderly – assess functional status; consider less extensive surgery, hormone therapy alone if hormone‑receptor positive.",
-     "People with HIV – ensure CD4 > 200 cells/µL before chemotherapy; monitor for drug interactions with antiretrovirals.",
-     "Low‑resource settings – use clinical exam and ultrasound as primary tools; send core biopsy to central lab; refer for radiotherapy if not locally available."
-    ],
-    "t": [
-     {
-      "a": "Resource‑adapted staging",
-      "b": "When CT or PET unavailable, rely on chest X‑ray, ultrasound of axilla and liver, and clinical assessment for metastasis."
-     },
-     {
-      "a": "Alternative endocrine options",
-      "b": "If aromatase inhibitors unavailable, use tamoxifen regardless of menopausal status, with close monitoring for thrombotic risk."
-     }
-    ]
-   }
-  ],
-  "facts": [
-   "Breast lobes: 15‑20 per breast, each with lobules draining into a single lactiferous duct.",
-   "Cooper's ligaments: dense connective tissue suspending the breast to the underlying fascia.",
-   "Primary lymphatic drainage: Level I axillary nodes (lateral to pectoralis minor).",
-   "Secondary drainage: Level II axillary nodes (behind pectoralis minor) and internal mammary nodes.",
-   "HER2 amplification threshold by FISH: ratio ≥2.0 confirms positivity.",
-   "Ki‑67 proliferation index: <10% low, 10‑20% intermediate, >20% high.",
-   "Nodal staging (AJCC): N1 = 1‑3 axillary nodes; N2 = 4‑9 axillary or internal mammary nodes; N3 = ≥10 axillary or infraclavicular or supraclavicular nodes.",
-   "Trastuzumab cardiac monitoring: hold if EF <50% AND drop >10% from baseline."
-  ],
-  "mnemonics": [],
-  "vivas": [
-   {
-    "q": "Define the retromammary space and its clinical significance.",
-    "a": "A potential loose areolar tissue plane between breast parenchyma and pectoralis major fascia; allows breast movement and is the site for implants or abscess formation.",
-    "hot": true
-   },
-   {
-    "q": "What are the key history questions when evaluating a breast lump?",
-    "a": "Onset, duration, pain, changes in size, nipple discharge, skin changes, menstrual cycle relation, family history of breast/ovarian cancer, prior radiation, contraceptive/hormone use.",
-    "hot": true
-   },
-   {
-    "q": "Describe the step‑by‑step clinical breast examination and the significance of each finding.",
-    "a": "Inspection (asymmetry, skin dimpling, nipple retraction); palpation (patient supine, fingers on breast tissue, move from periphery to centre, assess consistency, mobility, fixation); axillary palpation (level I nodes); nipple examination (discharge, inversion). Positive signs suggest malignancy or infection.",
-    "hot": true
-   },
-   {
-    "q": "How do you differentiate a fibroadenoma from a malignant mass on physical exam?",
-    "a": "Fibroadenoma: well‑circumscribed, mobile, rubbery, painless, often in younger women; malignant mass: hard, irregular, fixed, may have skin/nipple changes, usually painless but progressive."
-   },
-   {
-    "q": "What is the first imaging modality for a palpable breast lump in a woman under 30?",
-    "a": "Ultrasound, because it avoids radiation and distinguishes cystic from solid lesions."
-   },
-   {
-    "q": "Explain the significance of a HER2/neu amplification in breast cancer.",
-    "a": "It leads to overexpression of a tyrosine‑kinase receptor driving cell proliferation; predicts response to trastuzumab therapy.",
-    "past": true
-   },
-   {
-    "q": "Which cytogenetic technique uses fluorescent DNA probes to detect HER2 amplification?",
-    "a": "Fluorescence in situ hybridisation (FISH).",
-    "past": true
-   },
-   {
-    "q": "What is the basic functional unit of the breast parenchyma?",
-    "a": "The lobule‑ductal unit (lobule with its terminal ductal lobular unit draining into a lactiferous duct).",
-    "past": true
-   },
-   {
-    "q": "During which physiological stage does estrogen stimulate ductal elongation into the fat pad?",
-    "a": "Puberty (thelarche).",
-    "past": true
-   },
-   {
-    "q": "Which component of breast milk inhibits Escherichia coli growth?",
-    "a": "Lactoferrin, which binds iron and limits bacterial proliferation.",
-    "past": true
-   },
-   {
-    "q": "Where do the majority of breast cancers originate?",
-    "a": "Within the terminal duct‑lobular units (TDLUs) of the lobules.",
-    "past": true
-   },
-   {
-    "q": "Which breast cancer subtype has the best prognosis and is treated with tamoxifen?",
-    "a": "Hormone‑receptor‑positive, HER2‑negative invasive ductal carcinoma (luminal A), accounting for ~50‑65% of cases.",
-    "past": true
-   },
-   {
-    "q": "What is the primary cause of elevated gonadotropins in a 16‑year‑old phenotypic female with 45,X karyotype?",
-    "a": "Gonadal dysgenesis (Turner syndrome) leading to lack of estrogen feedback and consequent high FSH/LH.",
-    "past": true
-   },
-   {
-    "q": "Why is the nipple‑areola complex’s first lymphatic drainage to Level I axillary nodes, not internal mammary nodes?",
-    "a": "Because superficial lymphatics from the NAC follow the lateral cutaneous branches of the intercostal nerves to the ipsilateral axilla.",
-    "past": true
-   },
-   {
-    "q": "When should trastuzumab be held due to cardiac dysfunction?",
-    "a": "If ejection fraction falls below 50% AND drops >10% from baseline, or if symptomatic heart failure develops."
-   },
-   {
-    "q": "Interpret a Ki‑67 index of 22% in a breast tumour.",
-    "a": "High proliferative activity; suggests aggressive biology and may influence chemotherapy decisions."
-   },
-   {
-    "q": "What investigations are essential for staging a newly diagnosed breast cancer?",
-    "a": "Clinical exam (including nodal assessment), mammography, ultrasound of the breast and axilla, core needle biopsy, and imaging for distant metastasis (chest X‑ray, ultrasound/CT abdomen, bone scan if indicated)."
-   }
-  ],
-  "mcqs": [
-   {
-    "q": "A 45‑year‑old woman presents with a 2‑cm firm, irregular mass in the upper outer quadrant. Ultrasound shows a solid hypoechoic lesion. Which next step is most appropriate?",
-    "o": [
-     "Immediate mastectomy",
-     "Core needle biopsy",
-     "Fine‑needle aspiration cytology",
-     "Observation for 3 months"
-    ],
-    "a": 1,
-    "e": "Core needle biopsy provides histology and receptor status, essential before definitive treatment."
-   },
-   {
-    "q": "A patient on trastuzumab has an echocardiogram EF of 48% (baseline 60%). What is the correct management?",
-    "o": [
-     "Continue trastuzumab, repeat EF in 6 months",
-     "Hold trastuzumab, repeat EF in 3 months",
-     "Switch to lapatinib",
-     "Add ACE inhibitor and continue trastuzumab"
-    ],
-    "a": 1,
-    "e": "EF <50% with >10% drop mandates holding trastuzumab and re‑evaluating cardiac function."
-   },
-   {
-    "q": "Which of the following best describes the Ki‑67 index interpretation?",
-    "o": [
-     "<10% low, 10‑20% intermediate, >20% high",
-     "<5% low, 5‑15% intermediate, >15% high",
-     "<20% low, 20‑30% intermediate, >30% high",
-     "No cut‑offs are clinically used"
-    ],
-    "a": 0,
-    "e": "Current practice uses <10% low, 10‑20% intermediate, >20% high proliferation."
-   },
-   {
-    "q": "A 30‑year‑old lactating woman complains of painful breast swelling. Which sign differentiates mastitis from a blocked duct?",
-    "o": [
-     "Localized erythema with warmth",
-     "Diffuse tenderness without redness",
-     "Nipple retraction",
-     "Palpable mass that moves with compression"
-    ],
-    "a": 0,
-    "e": "Mastitis presents with localized erythema, warmth, and systemic signs; a blocked duct lacks skin changes."
-   },
-   {
-    "q": "In a low‑resource setting without access to FISH, which HER2 testing method is acceptable for treatment decisions?",
-    "o": [
-     "Serum HER2 ELISA",
-     "Immunohistochemistry (IHC) 3+",
-     "PCR for HER2 mRNA",
-     "Ultrasound elastography"
-    ],
-    "a": 1,
-    "e": "IHC 3+ is considered positive when FISH is unavailable."
-   }
-  ],
-  "cases": [
-   {
-    "v": "A 52‑year‑old woman presents with a 3‑cm hard, irregular mass in the left breast, skin dimpling, and palpable level I axillary nodes. Mammography shows spiculated mass; core biopsy reveals invasive ductal carcinoma, ER‑positive, HER2‑negative, Ki‑67 18%.",
-    "qs": [
-     {
-      "q": "What is the appropriate staging work‑up?",
-      "a": "Clinical exam, bilateral mammography, breast‑ and axillary ultrasound, chest X‑ray, abdominal ultrasound (or CT), and bone scan if symptoms suggest metastasis."
-     },
-     {
-      "q": "Outline the initial management plan.",
-      "a": "Neoadjuvant endocrine therapy (e.g., aromatase inhibitor) because tumour is ER‑positive, followed by surgery (breast‑conserving or mastectomy) with axillary node assessment, then radiotherapy and adjuvant hormonal therapy."
-     },
-     {
-      "q": "How does the Ki‑67 result influence treatment?",
-      "a": "Intermediate Ki‑67 (10‑20%) supports endocrine therapy; high Ki‑67 would push toward chemotherapy, but 18% suggests endocrine approach is reasonable."
-     }
-    ]
-   },
-   {
-    "v": "A 19‑year‑old female presents with a 1‑cm mobile, painless, well‑circumscribed breast lump in the upper outer quadrant. Ultrasound shows a solid, homogeneous, oval lesion. Core biopsy reports fibroadenoma.",
-    "qs": [
-     {
-      "q": "What are the key history points to ask?",
-      "a": "Duration, pain, changes with menstrual cycle, family history of breast disease, prior trauma, contraceptive use."
-     },
-     {
-      "q": "What management options are appropriate?",
-      "a": "Observation with periodic ultrasound if asymptomatic; surgical excision if enlarging, painful, or patient anxiety."
-     },
-     {
-      "q": "Which feature would prompt reconsideration of the diagnosis?",
-      "a": "Rapid growth, irregular margins, calcifications, or fixation to skin/muscle suggesting possible phyllodes tumour or malignancy."
-     }
-    ]
-   }
-  ],
-  "mistakes": [
-   "Confusing Level I axillary nodes with internal mammary nodes as the primary drainage for the nipple‑areola complex.",
-   "Using an EF <55% alone to stop trastuzumab without considering the >10% drop from baseline.",
-   "Applying a simplified N‑stage (e.g., N1 = any node) instead of the correct AJCC definitions.",
-   "Stating Ki‑67 cut‑offs as <20% low and >20% high, ignoring the intermediate category.",
-   "Assuming HER2 positivity without specifying the FISH ratio ≥2.0 or IHC 3+ criteria.",
-   "Relying on fine‑needle aspiration alone for definitive diagnosis of a solid breast mass.",
-   "Neglecting to assess the contralateral breast during clinical examination.",
-   "Overlooking the need for cardiac monitoring intervals (every 3 months) during trastuzumab therapy."
-  ],
-  "exam": [
-   "Define the retromammary space and its clinical significance. — A potential loose areolar tissue plane between breast parenchyma and pectoralis major fascia; allows breast movement and is the site for implants or abscess formation.",
-   "What are the key history questions when evaluating a breast lump? — Onset, duration, pain, changes in size, nipple discharge, skin changes, menstrual cycle relation, family history of breast/ovarian cancer, prior radiation, contraceptive/hormone use.",
-   "Describe the step‑by‑step clinical breast examination and the significance of each finding. — Inspection (asymmetry, skin dimpling, nipple retraction); palpation (patient supine, fingers on breast tissue, move from periphery to centre, assess consistency, mobility, fixation); axillary palpation (level I nodes); nipple examination (discharge, inversion). Positive signs suggest malignancy or infection.",
-   "How do you differentiate a fibroadenoma from a malignant mass on physical exam? — Fibroadenoma: well‑circumscribed, mobile, rubbery, painless, often in younger women; malignant mass: hard, irregular, fixed, may have skin/nipple changes, usually painless but progressive.",
-   "What is the first imaging modality for a palpable breast lump in a woman under 30? — Ultrasound, because it avoids radiation and distinguishes cystic from solid lesions.",
-   "Explain the significance of a HER2/neu amplification in breast cancer. — It leads to overexpression of a tyrosine‑kinase receptor driving cell proliferation; predicts response to trastuzumab therapy.",
-   "Which cytogenetic technique uses fluorescent DNA probes to detect HER2 amplification? — Fluorescence in situ hybridisation (FISH).",
-   "What is the basic functional unit of the breast parenchyma? — The lobule‑ductal unit (lobule with its terminal ductal lobular unit draining into a lactiferous duct).",
-   "During which physiological stage does estrogen stimulate ductal elongation into the fat pad? — Puberty (thelarche).",
-   "Which component of breast milk inhibits Escherichia coli growth? — Lactoferrin, which binds iron and limits bacterial proliferation.",
-   "Where do the majority of breast cancers originate? — Within the terminal duct‑lobular units (TDLUs) of the lobules.",
-   "Which breast cancer subtype has the best prognosis and is treated with tamoxifen? — Hormone‑receptor‑positive, HER2‑negative invasive ductal carcinoma (luminal A), accounting for ~50‑65% of cases.",
-   "What is the primary cause of elevated gonadotropins in a 16‑year‑old phenotypic female with 45,X karyotype? — Gonadal dysgenesis (Turner syndrome) leading to lack of estrogen feedback and consequent high FSH/LH.",
-   "Why is the nipple‑areola complex’s first lymphatic drainage to Level I axillary nodes, not internal mammary nodes? — Because superficial lymphatics from the NAC follow the lateral cutaneous branches of the intercostal nerves to the ipsilateral axilla."
-  ],
-  "model": "openai/gpt-oss-120b",
-  "generatedAt": "2026-10-19",
-  "checked": "2026-10-19",
-  "trimmed": 2
- }
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-20",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-3.5-flash-lite",
+  "reviewedAt": "2026-11-20",
+  "fixRounds": 0
+ },
+ "reviewed": false
 }
