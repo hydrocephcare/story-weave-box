@@ -2371,7 +2371,7 @@ export default function BlogPost() {
 
 function RelatedMarquee({ articles }: { articles: any[] }) {
   const [paused, setPaused] = useState(false);
-  const unique = Array.from(new Map(articles.filter((a) => a?.id).map((a) => [a.id, a])).values());
+  const unique = Array.from(new Map(articles.filter((a) => a?.id).map((a) => [String(a.title || a.slug || a.id).trim().toLowerCase(), a])).values());
   const firstPage = unique.slice(0, 12);
   const list = firstPage.length > 1 ? [...firstPage, ...firstPage] : firstPage;
   return (
