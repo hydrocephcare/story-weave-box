@@ -926,7 +926,7 @@ export function extractToc(content: string): TocItem[] {
   // HTML-authored articles (for example examination papers) need the same TOC
   // treatment as Markdown notes. Exclude numbered question headings so the TOC
   // reports actual sections rather than counting every question as a section.
-  const htmlHeadings = Array.from(content.matchAll(/<h([1-3])\\b[^>]*>([\\s\\S]*?)<\\/h\\1>/gi));
+  const htmlHeadings = Array.from(content.matchAll(/<h([1-3])\b[^>]*>([\s\S]*?)<\/h\1>/gi));
   if (htmlHeadings.length) {
     for (const match of htmlHeadings) {
       const level = Number(match[1]);
@@ -935,13 +935,13 @@ export function extractToc(content: string): TocItem[] {
     return items;
   }
 
-  const lines = preprocessContent(content).split("\\n");
+  const lines = preprocessContent(content).split("\n");
   for (let i = 0; i < lines.length; i++) {
     const t = lines[i].trim();
-    if (/^#{1,2}\\s/.test(t)) {
-      add(t.replace(/^#+\\s+/, ""), 2);
+    if (/^#{1,2}\s/.test(t)) {
+      add(t.replace(/^#+\s+/, ""), 2);
     } else if (isLikelyStandaloneSectionHeading(t, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "")
-      && !/^(?:question|q)\\s*\\d+\\b/i.test(t) && !/^\\d+[.)]\\s/.test(t) && !isQuestionLike(t)) {
+      && !/^(?:question|q)\s*\d+\b/i.test(t) && !/^\d+[.)]\s/.test(t) && !isQuestionLike(t)) {
       add(trimSurroundingAsterisks(t), 3);
     }
   }
