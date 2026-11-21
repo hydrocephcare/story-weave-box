@@ -756,13 +756,14 @@ type ArticleContentProps = { content: string; articleId: string; category: strin
 /** Short-answer papers in the standard layout get question cards; everything else goes through the line-by-line renderer below. */
 const ArticleContent = memo(function ArticleContent(props: ArticleContentProps) {
   const hasStructuredHtml = /<\/(?:h[1-6]|p|ul|ol|table|figure|section|div)>/i.test(props.content);
-  const [safeHtml, setSafeHtml] = useState("");
+  const [safeHtml, setSafeHtml] = useState<{ source: string; html: string } | null>(null);
   useEffect(() => {
-    if (!hasStructuredHtml) { setSafeHtml(""); return; }
-    setSafeHtml(DOMPurify.sanitize(props.content, { USE_PROFILES: { html: true } }));
+    if (!hasStructuredHtml) { setSafeHtml(null); return; }
+    setSafeHtml({ source: props.content, html: DOMPurify.sanitize(props.content, { USE_PROFILES: { html: true } }) });
   }, [hasStructuredHtml, props.content]);
   const saq = useMemo(() => parseSaq(props.content), [props.content]);
-  if (hasStructuredHtml) return safeHtml ? <div className="note-body html-article-content" dangerouslySetInnerHTML={{ __html: safeHtml }} /> : null;
+  const renderedHtml = safeHtml?.source === props.content ? safeHtml.html : "";
+  if (hasStructuredHtml) return renderedHtml ? <div className="note-body html-article-content" dangerouslySetInnerHTML={{ __html: renderedHtml }} /> : null;
   if (!saq) return <ArticleLines {...props} />;
   return (
     <>
