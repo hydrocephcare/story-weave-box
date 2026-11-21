@@ -1,142 +1,129 @@
 {
- "date": "2026-11-19",
+ "date": "2026-11-21",
  "games": [
   {
-   "id": "2026-11-19-1",
-   "title": "Medical Physiology Ii: quick quiz",
+   "id": "2026-11-21-1",
+   "title": "Steroid and Sex Hormones: quick quiz",
    "game": "quiz",
-   "topic": "Medical Physiology Ii",
+   "topic": "Steroid and Sex Hormones",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which segment of the small intestine has the highest density of villi and is primarily responsible for nutrient absorption?",
+      "q": "Which of the following is the primary androgen produced by the fetal adrenal gland during the first trimester?",
       "options": [
-       "Duodenum",
-       "Jejunum",
-       "Ileum",
-       "Large intestine"
-      ],
-      "correct": 1,
-      "explanation": "The jejunum has the greatest villous surface area for absorption.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "What is the primary hormone that stimulates gastric acid secretion by parietal cells?",
-      "options": [
-       "Gastrin",
-       "Secretin",
-       "Cholecystokinin",
-       "Motilin"
-      ],
-      "correct": 0,
-      "explanation": "Gastrin directly stimulates parietal cells to secrete H⁺.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which enzyme, secreted by the pancreas, is essential for the digestion of carbohydrates in the small intestine?",
-      "options": [
-       "Lipase",
-       "Trypsin",
-       "Amylase",
-       "Pepsin"
+       "Testosterone",
+       "Dihydrotestosterone",
+       "Dehydroepiandrosterone sulfate (DHEAS)",
+       "Androstenedione"
       ],
       "correct": 2,
-      "explanation": "Pancreatic amylase hydrolyzes starches into maltose and dextrins.",
+      "explanation": "DHEAS is the main adrenal androgen secreted in early pregnancy.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "The hormone secretin is released in response to which of the following?",
+      "q": "A 28‑year‑old woman presents with hirsutism and irregular menses. Serum LH:FSH ratio is 4:1. Which hormone is most likely elevated?",
       "options": [
-       "Low luminal pH in the duodenum",
-       "High luminal pH in the duodenum",
-       "High luminal calcium in the duodenum",
-       "High luminal bile salts in the duodenum"
-      ],
-      "correct": 0,
-      "explanation": "Secretin is secreted when duodenal pH falls below 4.5, stimulating bicarbonate secretion.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following best describes the mechanism of bile salt reabsorption in the ileum?",
-      "options": [
-       "Passive diffusion",
-       "Active transport via Na⁺/K⁺ ATPase",
-       "Active transport via ASBT",
-       "Endocytosis"
+       "Estradiol",
+       "Progesterone",
+       "Luteinizing hormone",
+       "Follicle‑stimulating hormone"
       ],
       "correct": 2,
-      "explanation": "Bile salts are actively transported by the apical sodium-dependent bile acid transporter (ASBT).",
+      "explanation": "An LH:FSH ratio >2:1 suggests excess LH, typical of PCOS.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is NOT a function of the gallbladder?",
+      "q": "Which of the following is NOT a direct metabolite of testosterone in the liver?",
       "options": [
-       "Store bile",
-       "Concentrate bile",
-       "Release bile into the duodenum",
-       "Produce bile salts"
+       "Estradiol",
+       "Dihydrotestosterone",
+       "Androsterone",
+       "Cortisol"
       ],
       "correct": 3,
-      "explanation": "Bile salts are synthesized in the liver, not the gallbladder.",
+      "explanation": "Cortisol is not a testosterone metabolite; it is a glucocorticoid.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "The hormone motilin is released during which phase of the interdigestive migrating motor complex?",
+      "q": "A patient with congenital adrenal hyperplasia due to 21‑hydroxylase deficiency has markedly elevated levels of which precursor?",
       "options": [
-       "Phase I",
-       "Phase II",
-       "Phase III",
-       "Phase IV"
-      ],
-      "correct": 2,
-      "explanation": "Motilin peaks during phase III, triggering a strong contraction.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following best explains the mechanism of action of the drug sucralfate in peptic ulcer disease?",
-      "options": [
-       "Inhibits H⁺/K⁺ ATPase",
-       "Neutralises gastric acid",
-       "Binds to ulcer base forming a protective barrier",
-       "Stimulates mucous secretion"
-      ],
-      "correct": 2,
-      "explanation": "Sucralfate forms a viscous, adherent complex that shields the ulcer.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is the most common cause of chronic pancreatitis in the United States?",
-      "options": [
-       "Alcohol abuse",
-       "Gallstones",
-       "Autoimmune disease",
-       "Pancreatic cancer"
+       "17‑Hydroxyprogesterone",
+       "11‑Deoxycortisol",
+       "Cortisol",
+       "Aldosterone"
       ],
       "correct": 0,
-      "explanation": "Alcohol abuse is the leading cause of chronic pancreatitis.",
+      "explanation": "17‑Hydroxyprogesterone accumulates when 21‑hydroxylase is deficient.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following hormones is released by the enteroendocrine cells of the duodenum in response to fatty acids?",
+      "q": "Which hormone is primarily responsible for the development of female secondary sexual characteristics during puberty?",
       "options": [
-       "Secretin",
-       "Cholecystokinin",
-       "Motilin",
-       "Ghrelin"
+       "Testosterone",
+       "Estradiol",
+       "Progesterone",
+       "DHEA"
       ],
       "correct": 1,
-      "explanation": "Cholecystokinin is secreted in response to fat and stimulates gallbladder contraction.",
+      "explanation": "Estradiol drives breast development, body hair, and menstrual cycle onset.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is a potent inhibitor of 5α‑reductase, thereby reducing dihydrotestosterone formation?",
+      "options": [
+       "Finasteride",
+       "Spironolactone",
+       "Corticosteroids",
+       "Estradiol"
+      ],
+      "correct": 0,
+      "explanation": "Finasteride blocks 5α‑reductase, lowering DHT levels.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "In a male patient, a serum testosterone level of 0.3 nmol/L is considered below the normal range. Which of the following is the most likely clinical consequence?",
+      "options": [
+       "Gynecomastia",
+       "Hypogonadism",
+       "Hyperprolactinemia",
+       "Polycystic ovary syndrome"
+      ],
+      "correct": 1,
+      "explanation": "Low testosterone leads to hypogonadism with fatigue, decreased libido, etc.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is the most sensitive assay for measuring adrenal androgen excess?",
+      "options": [
+       "Immunoassay for DHEAS",
+       "Mass spectrometry for DHEA",
+       "Radioimmunoassay for testosterone",
+       "ELISA for estradiol"
+      ],
+      "correct": 1,
+      "explanation": "LC‑MS/MS provides the most accurate measurement of adrenal androgens.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which hormone is synthesized from cholesterol in the zona glomerulosa of the adrenal cortex?",
+      "options": [
+       "Cortisol",
+       "Aldosterone",
+       "DHEA",
+       "Progesterone"
+      ],
+      "correct": 1,
+      "explanation": "Aldosterone is produced in the zona glomerulosa; cortisol is from the fasciculata.",
       "ai": true,
       "kind": "mcq"
      }
@@ -145,141 +132,141 @@
    }
   },
   {
-   "id": "2026-11-19-2",
-   "title": "Acute and chronic pancreatitis: quick quiz",
+   "id": "2026-11-21-2",
+   "title": "Vasculitides: quick quiz",
    "game": "quiz",
-   "topic": "Acute and chronic pancreatitis",
+   "topic": "Vasculitides",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which of the following is the most common cause of acute pancreatitis in the United Kingdom?",
+      "q": "Which of the following is the most common systemic vasculitis in adults?",
       "options": [
-       "Alcohol abuse",
-       "Gallstones",
-       "Hypertriglyceridaemia",
-       "Trauma"
-      ],
-      "correct": 1,
-      "explanation": "Gallstones account for ~40–50% of acute pancreatitis cases in the UK.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A 52‑year‑old man presents with epigastric pain radiating to the back, elevated serum amylase and lipase, and a CT scan showing peripancreatic fat stranding. Which of the following is the most appropriate initial management?",
-      "options": [
-       "Immediate ERCP",
-       "Urgent laparotomy",
-       "Aggressive IV fluid resuscitation",
-       "Oral feeding"
-      ],
-      "correct": 2,
-      "explanation": "Early aggressive IV fluids are critical in acute pancreatitis to prevent hypovolemia and organ failure.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which imaging modality is most sensitive for detecting chronic pancreatitis in a patient with recurrent abdominal pain?",
-      "options": [
-       "Abdominal ultrasound",
-       "CT scan",
-       "Endoscopic ultrasound (EUS)",
-       "MRI with MRCP"
-      ],
-      "correct": 2,
-      "explanation": "EUS is the most sensitive for early chronic pancreatitis, detecting parenchymal changes and ductal abnormalities.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A patient with chronic pancreatitis develops painless jaundice. The most likely explanation is:",
-      "options": [
-       "Alcoholic liver disease",
-       "Pancreatic head carcinoma",
-       "Choledocholithiasis",
-       "Biliary stricture from chronic inflammation"
-      ],
-      "correct": 3,
-      "explanation": "Chronic pancreatitis can cause a pancreatic duct stricture that compresses the common bile duct, leading to painless jaundice.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which laboratory finding is most characteristic of acute pancreatitis?",
-      "options": [
-       "Hyperglycaemia",
-       "Hypercalcaemia",
-       "Hypertriglyceridaemia",
-       "Hyperamylasaemia"
-      ],
-      "correct": 3,
-      "explanation": "Serum amylase (and lipase) are markedly elevated in acute pancreatitis.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A 45‑year‑old woman with chronic pancreatitis has a serum amylase of 120 U/L (normal 30–110 U/L). Which of the following is most likely?",
-      "options": [
-       "Active acute pancreatitis",
-       "Chronic pancreatitis with mild inflammation",
-       "Pancreatic pseudocyst",
-       "Pancreatic carcinoma"
-      ],
-      "correct": 1,
-      "explanation": "A mildly raised amylase in chronic pancreatitis reflects low‑grade inflammation, not an acute flare.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is a major risk factor for the development of pancreatic cancer in patients with chronic pancreatitis?",
-      "options": [
-       "Smoking",
-       "Alcohol consumption",
-       "Long‑standing hypertriglyceridaemia",
-       "Obesity"
+       "Giant cell arteritis",
+       "Polyarteritis nodosa",
+       "Microscopic polyangiitis",
+       "Granulomatosis with polyangiitis"
       ],
       "correct": 0,
-      "explanation": "Smoking is the strongest independent risk factor for pancreatic cancer in chronic pancreatitis.",
+      "explanation": "Giant cell arteritis (GCA) is the most frequently encountered systemic vasculitis in adults, particularly those over 50 years of age.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is the most appropriate long‑term management for a patient with chronic pancreatitis who is malnourished and has exocrine insufficiency?",
+      "q": "A 45‑year‑old man presents with fever, weight loss, and palpable purpura on the lower limbs. His skin biopsy shows leukocytoclastic vasculitis with IgA deposition. What is the most likely diagnosis?",
       "options": [
-       "Pancreatic enzyme replacement therapy",
-       "High‑fat diet",
-       "Somatostatin analogue",
-       "Cholecystectomy"
+       "Microscopic polyangiitis",
+       "Henoch–Schönlein purpura",
+       "Polyarteritis nodosa",
+       "Giant cell arteritis"
+      ],
+      "correct": 1,
+      "explanation": "IgA deposition in leukocytoclastic vasculitis is characteristic of Henoch–Schönlein purpura.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which antibody is most strongly associated with microscopic polyangiitis?",
+      "options": [
+       "Anti‑dsDNA",
+       "Anti‑PR3",
+       "Anti‑MPO",
+       "Anti‑SSA"
+      ],
+      "correct": 2,
+      "explanation": "Anti‑myeloperoxidase (MPO) antibodies are most commonly seen in microscopic polyangiitis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A patient with polyarteritis nodosa has livedo reticularis and mononeuritis multiplex. Which organ is least likely to be involved?",
+      "options": [
+       "Kidney",
+       "Heart",
+       "Skin",
+       "Brain"
+      ],
+      "correct": 3,
+      "explanation": "Polyarteritis nodosa rarely involves the brain; it mainly affects medium‑sized arteries of kidney, heart, skin, and nerves.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which imaging modality is best for detecting aneurysms in polyarteritis nodosa?",
+      "options": [
+       "CT angiography",
+       "MRI brain",
+       "Ultrasound Doppler",
+       "Plain X‑ray"
       ],
       "correct": 0,
-      "explanation": "Pancreatic enzyme replacement therapy corrects exocrine insufficiency and improves nutrition.",
+      "explanation": "CT angiography is the gold standard for visualising medium‑sized arterial aneurysms in PAN.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "In acute pancreatitis, the Ranson criteria are most useful for:",
+      "q": "A 30‑year‑old woman with relapsing polychondritis develops sudden visual loss. Which vasculitis is most likely responsible for her ocular involvement?",
       "options": [
-       "Diagnosing pancreatitis",
-       "Predicting mortality",
-       "Guiding fluid therapy",
-       "Deciding on surgical intervention"
+       "Giant cell arteritis",
+       "Kawasaki disease",
+       "Behçet disease",
+       "Takayasu arteritis"
       ],
-      "correct": 1,
-      "explanation": "Ranson criteria are used to predict the severity and mortality risk of acute pancreatitis.",
+      "correct": 0,
+      "explanation": "Giant cell arteritis commonly causes anterior ischemic optic neuropathy leading to sudden visual loss.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following best describes the pathophysiology of chronic pancreatitis?",
+      "q": "Which of the following is NOT a typical feature of granulomatosis with polyangiitis?",
       "options": [
-       "Autoimmune destruction of acinar cells",
-       "Alcohol‑induced ductal obstruction and fibrosis",
-       "Genetic mutations causing ductal blockage",
-       "Pancreatic ductal adenocarcinoma"
+       "Nasal ulceration",
+       "Pulmonary nodules",
+       "Renal crescentic glomerulonephritis",
+       "Chronic hepatitis B infection"
+      ],
+      "correct": 3,
+      "explanation": "Chronic hepatitis B infection is not characteristic of GPA; it is more associated with polyarteritis nodosa.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A 55‑year‑old man with fever, abdominal pain, and hypertension is found to have microaneurysms on mesenteric angiography. Which vasculitis is most likely?",
+      "options": [
+       "Microscopic polyangiitis",
+       "Polyarteritis nodosa",
+       "Giant cell arteritis",
+       "Churg–Strauss syndrome"
       ],
       "correct": 1,
-      "explanation": "Alcohol causes ductal obstruction, leading to inflammation, fibrosis, and chronic pancreatitis.",
+      "explanation": "Mesenteric microaneurysms are classic for polyarteritis nodosa.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following laboratory findings is most characteristic of eosinophilic granulomatosis with polyangiitis (Churg–Strauss)?",
+      "options": [
+       "Elevated serum IgE",
+       "Low complement C3",
+       "Positive anti‑dsDNA",
+       "Anemia of chronic disease"
+      ],
+      "correct": 0,
+      "explanation": "Eosinophilic granulomatosis with polyangiitis typically shows markedly elevated serum IgE.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "A patient with systemic lupus erythematosus develops livedo reticularis and peripheral neuropathy. Which vasculitis is most likely secondary to SLE?",
+      "options": [
+       "Microscopic polyangiitis",
+       "Polyarteritis nodosa",
+       "Giant cell arteritis",
+       "Cutaneous small‑vessel vasculitis"
+      ],
+      "correct": 3,
+      "explanation": "Cutaneous small‑vessel vasculitis is the most common vasculitic manifestation in SLE.",
       "ai": true,
       "kind": "mcq"
      }
@@ -288,232 +275,115 @@
    }
   },
   {
-   "id": "2026-11-19-3",
-   "title": "TUMOR SUPPRESSOR GENES & CELL CYCLE CONTROL: case showdown",
+   "id": "2026-11-21-3",
+   "title": "Wk 7 liver cirrosis: case showdown",
    "game": "case",
-   "topic": "TUMOR SUPPRESSOR GENES & CELL CYCLE CONTROL",
-   "year": 3,
-   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
-   "questions": {
-    "questions": [
-     {
-      "q": "A 45‑year‑old woman presents with a painless, firm mass in the left breast. Mammography shows a spiculated lesion and core needle biopsy reveals invasive ductal carcinoma with loss of heterozygosity at the TP53 locus. What is the most likely tumor suppressor gene involved?",
-      "options": [
-       "A) BRCA1",
-       "B) PTEN",
-       "C) TP53",
-       "D) CDKN2A"
-      ],
-      "correct": 2,
-      "explanation": "Loss of TP53 is common in invasive ductal carcinoma and is a key tumor suppressor in breast cancer.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 28‑year‑old man is diagnosed with acute myeloid leukemia (AML) with a t(8;21)(q22;q22) translocation. Which tumor suppressor pathway is most likely disrupted?",
-      "options": [
-       "A) p53/MDM2",
-       "B) Rb/E2F",
-       "C) PTEN/PI3K",
-       "D) APC/Wnt"
-      ],
-      "correct": 0,
-      "explanation": "t(8;21) involves RUNX1‑RUNX1T1 fusion, which interferes with p53-mediated apoptosis.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 60‑year‑old man has a 2‑cm ulcerated lesion on the scalp. Histology shows squamous cell carcinoma with loss of CDKN2A (p16) expression. Which cell cycle regulator is directly affected?",
-      "options": [
-       "A) Cyclin D1",
-       "B) CDK4/6",
-       "C) Rb",
-       "D) p53"
-      ],
-      "correct": 1,
-      "explanation": "CDKN2A encodes p16, an inhibitor of CDK4/6; its loss leads to unchecked CDK4/6 activity.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 35‑year‑old woman presents with a rapidly enlarging cervical lymph node. Fine‑needle aspiration shows metastatic melanoma with BRAF V600E mutation. Which tumor suppressor gene is most likely inactivated in this tumor?",
-      "options": [
-       "A) PTEN",
-       "B) TP53",
-       "C) CDKN2A",
-       "D) RB1"
-      ],
-      "correct": 2,
-      "explanation": "Melanoma frequently inactivates CDKN2A (p16), leading to CDK4/6 activation.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 50‑year‑old man has a 3‑cm mass in the left kidney. Imaging and biopsy reveal clear cell renal cell carcinoma with loss of VHL gene function. Which pathway is dysregulated as a result?",
-      "options": [
-       "A) PI3K/AKT",
-       "B) HIF‑1α/VEGF",
-       "C) Wnt/β‑catenin",
-       "D) Notch"
-      ],
-      "correct": 1,
-      "explanation": "VHL loss leads to stabilization of HIF‑1α and upregulation of VEGF, driving angiogenesis.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 22‑year‑old woman presents with a painless, firm mass in the left ovary. Histology shows granulosa cell tumor with FOXL2 C134W mutation. Which tumor suppressor pathway is most likely compromised?",
-      "options": [
-       "A) p53/MDM2",
-       "B) PTEN/PI3K",
-       "C) Rb/E2F",
-       "D) APC/Wnt"
-      ],
-      "correct": 0,
-      "explanation": "FOXL2 mutation is associated with loss of p53 pathway activity in granulosa cell tumors.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 65‑year‑old man has a 4‑cm ulcerated lesion on the lower lip. Histology shows squamous cell carcinoma with loss of p53 immunoreactivity. Which of the following is the most appropriate next step in management?",
-      "options": [
-       "A) Excisional biopsy with 1‑cm margin",
-       "B) Wide local excision with 2‑cm margin",
-       "C) Mohs micrographic surgery",
-       "D) Radiation therapy alone"
-      ],
-      "correct": 2,
-      "explanation": "Mohs surgery provides tissue-sparing, margin-controlled excision ideal for lip SCC.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 30‑year‑old woman presents with a 2‑cm breast mass. Core needle biopsy shows ductal carcinoma in situ (DCIS) with loss of BRCA1 expression. Which of the following best describes the role of BRCA1 in cell cycle control?",
-      "options": [
-       "A) Inhibits CDK4/6",
-       "B) Promotes DNA repair via homologous recombination",
-       "C) Activates p53 transcription",
-       "D) Suppresses Rb phosphorylation"
-      ],
-      "correct": 1,
-      "explanation": "BRCA1 is essential for homologous recombination DNA repair, a key tumor suppressor function.",
-      "ai": true,
-      "kind": "case"
-     }
-    ],
-    "reviewModel": "gemini-3.5-flash-lite"
-   }
-  },
-  {
-   "id": "2026-11-19-4",
-   "title": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and: case showdown",
-   "game": "case",
-   "topic": "Intestinal Stomas: Colostomy and Ileostomy, Types, Care and",
+   "topic": "Wk 7 liver cirrosis",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "A 68‑year‑old man presents with a 2‑day history of abdominal pain and distension after a recent laparotomy for sigmoid volvulus. On examination the abdomen is tense and the surgical wound shows a well‑healed colostomy site. What is the most likely diagnosis?",
+      "q": "A 58‑year‑old man with a 30‑year history of alcohol abuse presents with jaundice, ascites and asterixis. His serum bilirubin is 12 mg/dL, albumin 2.8 g/dL, INR 1.8 and platelets 90 × 10^9/L. What is the most likely diagnosis?",
       "options": [
-       "A. Parastomal hernia",
-       "B. Stomal obstruction",
-       "C. Stomal infection",
-       "D. Stomal prolapse"
+       "Acute viral hepatitis",
+       "Alcoholic hepatitis",
+       "Compensated cirrhosis",
+       "Decompensated cirrhosis"
+      ],
+      "correct": 3,
+      "explanation": "The presence of ascites, jaundice, coagulopathy and thrombocytopenia indicates decompensated cirrhosis.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 62‑year‑old woman with known hepatitis C cirrhosis develops sudden onset confusion and asterixis. Her ammonia level is 120 µmol/L. What is the next best step?",
+      "options": [
+       "Start lactulose",
+       "Order MRI brain",
+       "Give intravenous glucose",
+       "Administer rifaximin"
+      ],
+      "correct": 0,
+      "explanation": "Elevated ammonia and clinical hepatic encephalopathy are first managed with lactulose to reduce ammonia production and absorption.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 55‑year‑old man with cirrhosis presents with a sudden drop in hemoglobin and a large, painless, palpable spleen. Which complication is most likely?",
+      "options": [
+       "Acute variceal bleed",
+       "Spontaneous bacterial peritonitis",
+       "Hepatorenal syndrome",
+       "Portal hypertensive gastropathy"
+      ],
+      "correct": 0,
+      "explanation": "In cirrhosis, a sudden fall in hemoglobin together with splenomegaly most often reflects an acute variceal hemorrhage, which can cause rapid blood loss and anemia.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 48‑year‑old woman with cirrhosis has a platelet count of 70 × 10^9/L and a normal coagulation profile. What is the most appropriate management?",
+      "options": [
+       "Platelet transfusion",
+       "Desmopressin",
+       "No intervention",
+       "Anticoagulation"
+      ],
+      "correct": 2,
+      "explanation": "Mild thrombocytopenia in cirrhosis is usually well tolerated; transfusion is reserved for active bleeding or invasive procedures.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 60‑year‑old man with cirrhosis presents with a sudden onset of right upper quadrant pain and a tender, enlarged liver. His AST is 400 U/L and ALT 350 U/L. What is the most likely diagnosis?",
+      "options": [
+       "Acute viral hepatitis",
+       "Acute alcoholic hepatitis",
+       "Acute fatty liver of pregnancy",
+       "Acute cholangitis"
       ],
       "correct": 1,
-      "explanation": "Stomal obstruction is common after colostomy and presents with abdominal distension and pain.",
+      "explanation": "Marked elevation of AST and ALT in a cirrhotic patient with recent heavy alcohol intake points to acute alcoholic hepatitis.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 45‑year‑old woman with ulcerative colitis develops a 3‑day history of fever, abdominal pain, and a new opening of the ileostomy with purulent drainage. What is the next best step?",
+      "q": "A 65‑year‑old man with cirrhosis and a history of variceal bleeding is being considered for endoscopic therapy. Which endoscopic procedure is most appropriate?",
       "options": [
-       "A. Start oral antibiotics",
-       "B. Perform a CT scan of the abdomen",
-       "C. Obtain a stool culture and start IV antibiotics",
-       "D. Schedule a stoma revision"
-      ],
-      "correct": 2,
-      "explanation": "Purulent drainage suggests infection; obtain culture and start IV antibiotics.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 30‑year‑old man with a loop ileostomy for Crohn’s disease presents with a 1‑day history of abdominal pain and a 2‑cm protrusion of the stoma. Which type of stoma complication is most likely?",
-      "options": [
-       "A. Stomal prolapse",
-       "B. Stomal retraction",
-       "C. Stomal necrosis",
-       "D. Stomal infection"
+       "Endoscopic variceal ligation",
+       "Endoscopic sclerotherapy",
+       "Transjugular intrahepatic portosystemic shunt",
+       "Percutaneous transhepatic obliteration"
       ],
       "correct": 0,
-      "explanation": "A protrusion of the stoma indicates prolapse.",
+      "explanation": "Endoscopic variceal ligation (EVL) is the first‑line endoscopic treatment for esophageal varices to prevent re‑bleeding.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 55‑year‑old woman with a permanent colostomy for diverticular disease reports a sudden change in stool output to watery, foul‑smelling stools. What is the most likely explanation?",
+      "q": "A 52‑year‑old woman with cirrhosis develops a sudden, severe headache and vomiting. CT brain shows a subarachnoid hemorrhage. Which underlying condition is most likely responsible?",
       "options": [
-       "A. Stomal stenosis",
-       "B. Stomal ulceration",
-       "C. Stomal infection",
-       "D. Stomal overflow"
+       "Portal hypertension",
+       "Hepatic encephalopathy",
+       "Spontaneous bacterial peritonitis",
+       "Cirrhosis‑related coagulopathy"
       ],
       "correct": 3,
-      "explanation": "Watery, foul stools indicate overflow from the proximal colon.",
+      "explanation": "Cirrhosis can cause a complex coagulopathy that predisposes to spontaneous intracranial bleeding such as subarachnoid hemorrhage.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 70‑year‑old man with a permanent ileostomy for colorectal cancer has a 2‑day history of abdominal pain, fever, and a tender, erythematous stoma. What is the most likely diagnosis?",
+      "q": "A 70‑year‑old man with cirrhosis presents with worsening renal function, oliguria and a serum creatinine of 3.0 mg/dL. His urine sodium is 10 mmol/L. What is the most likely diagnosis?",
       "options": [
-       "A. Stomal infection",
-       "B. Stomal necrosis",
-       "C. Stomal prolapse",
-       "D. Parastomal hernia"
-      ],
-      "correct": 0,
-      "explanation": "Tender, erythematous stoma with fever suggests infection.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 60‑year‑old woman with a loop colostomy for Hirschsprung disease has a 1‑day history of abdominal distension and a firm, non‑tender abdomen. The stoma is functioning normally. What is the next best step?",
-      "options": [
-       "A. Perform a barium enema",
-       "B. Order a CT scan of the abdomen",
-       "C. Obtain a plain abdominal X‑ray",
-       "D. Schedule a stoma revision"
+       "Acute tubular necrosis",
+       "Acute interstitial nephritis",
+       "Hepatorenal syndrome",
+       "Post‑renal obstruction"
       ],
       "correct": 2,
-      "explanation": "Plain X‑ray can identify obstruction proximal to the stoma.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 50‑year‑old man with a permanent ileostomy for ulcerative colitis presents with a 2‑day history of abdominal pain and a 1‑cm ulcerated area on the stoma. What is the most appropriate management?",
-      "options": [
-       "A. Apply a stoma patch and observe",
-       "B. Start oral antibiotics",
-       "C. Perform a stoma revision",
-       "D. Apply a stoma dressing and start topical steroids"
-      ],
-      "correct": 3,
-      "explanation": "An ulcerated stoma requires topical steroids and dressing to promote healing.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 65‑year‑old woman with a loop colostomy for colorectal cancer has a 3‑day history of abdominal pain, nausea, and a 1‑cm defect in the stoma. What is the most likely complication?",
-      "options": [
-       "A. Stomal retraction",
-       "B. Stomal prolapse",
-       "C. Stomal necrosis",
-       "D. Stomal infection"
-      ],
-      "correct": 2,
-      "explanation": "A defect in the stoma indicates necrosis of the stoma tissue.",
+      "explanation": "Low urine sodium and oliguria in the setting of advanced cirrhosis are characteristic of hepatorenal syndrome, a functional renal failure.",
       "ai": true,
       "kind": "case"
      }
@@ -522,115 +392,219 @@
    }
   },
   {
-   "id": "2026-11-19-5",
-   "title": "Weeks 6 & 7 Must-Know: drug duel",
+   "id": "2026-11-21-4",
+   "title": "Obesity Types, Causes and Treatments: drug duel",
    "game": "drug",
-   "topic": "Weeks 6 & 7 Must-Know",
+   "topic": "Obesity Types, Causes and Treatments",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which class of drug is used as the first-line treatment for acute asthma exacerbations in the emergency department?",
+      "q": "Which drug is a GLP‑1 receptor agonist that promotes weight loss by delaying gastric emptying and reducing appetite?",
       "options": [
-       "A. Beta‑agonists",
-       "B. Corticosteroids",
-       "C. Anticholinergics",
-       "D. Theophylline"
-      ],
-      "correct": 0,
-      "explanation": "Short‑acting β₂‑agonists (e.g., salbutamol) are the first‑line bronchodilator for acute asthma.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the primary mechanism of action of amiodarone?",
-      "options": [
-       "A. Sodium channel blockade",
-       "B. Potassium channel blockade",
-       "C. Calcium channel blockade",
-       "D. β‑adrenergic blockade"
+       "Metformin",
+       "Liraglutide",
+       "Orlistat",
+       "Phentermine"
       ],
       "correct": 1,
-      "explanation": "Amiodarone primarily blocks potassium channels (Class III antiarrhythmic), prolonging the action potential duration and refractory period.",
+      "explanation": "Liraglutide activates GLP‑1 receptors, slows gastric emptying and suppresses appetite, leading to weight loss.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which drug is most commonly associated with the characteristic side effect of blue‑tinged urine?",
+      "q": "Which mechanism is most characteristic of Orlistat in the treatment of obesity?",
       "options": [
-       "A. Ciprofloxacin",
-       "B. Rifampicin",
-       "C. Metronidazole",
-       "D. Doxycycline"
-      ],
-      "correct": 1,
-      "explanation": "Rifampicin produces a characteristic red‑orange discoloration of urine and other body fluids.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "A 45‑year‑old patient is started on a drug that inhibits the CYP3A4 enzyme, leading to increased plasma levels of a concurrent oral contraceptive. Which drug is most likely responsible?",
-      "options": [
-       "A. Ketoconazole",
-       "B. Fluconazole",
-       "C. Itraconazole",
-       "D. Voriconazole"
+       "Inhibition of gastric lipase",
+       "Blockade of leptin receptors",
+       "Activation of PPAR‑γ",
+       "Stimulation of β‑adrenergic receptors"
       ],
       "correct": 0,
-      "explanation": "Ketoconazole is a potent CYP3A4 inhibitor, raising levels of drugs metabolised by this enzyme.",
+      "explanation": "Orlistat inhibits gastric and pancreatic lipases, preventing fat absorption.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which of the following is the main indication for the use of enoxaparin?",
+      "q": "A patient with obesity and type 2 diabetes is started on a drug that reduces hepatic glucose production and improves insulin sensitivity. Which drug is this?",
       "options": [
-       "A. Primary prevention of deep vein thrombosis in orthopedic surgery",
-       "B. Treatment of acute pulmonary embolism",
-       "C. Management of chronic heart failure",
-       "D. Antiplatelet therapy in acute coronary syndrome"
+       "Sitagliptin",
+       "Pioglitazone",
+       "Acarbose",
+       "Glipizide"
       ],
       "correct": 1,
-      "explanation": "Enoxaparin, a low‑molecular‑weight heparin, is indicated for treatment of acute pulmonary embolism.",
+      "explanation": "Pioglitazone is a thiazolidinedione that activates PPAR‑γ, reducing hepatic gluconeogenesis and enhancing insulin sensitivity.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which drug is known to cause a characteristic ‘blue‑ish’ discoloration of the skin and mucous membranes?",
+      "q": "Which side effect is most commonly associated with long‑term use of Orlistat?",
       "options": [
-       "A. Hydroxychloroquine",
-       "B. Amiodarone",
-       "C. Dapsone",
-       "D. Chloramphenicol"
+       "Gastrointestinal steatorrhea",
+       "Hypoglycemia",
+       "Hypertension",
+       "Weight gain"
+      ],
+      "correct": 0,
+      "explanation": "Orlistat causes steatorrhea, oily stools, and flatulence due to fat malabsorption.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is a sympathomimetic amine that increases norepinephrine release and is used for short‑term obesity management?",
+      "options": [
+       "Orlistat",
+       "Phentermine",
+       "Liraglutide",
+       "Metformin"
       ],
       "correct": 1,
-      "explanation": "Amiodarone can produce a slate‑blue discoloration of the skin and mucous membranes, a classic adverse effect.",
+      "explanation": "Phentermine is a sympathomimetic that releases norepinephrine, suppressing appetite for short‑term use.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "What is the primary therapeutic target of the drug lisinopril?",
+      "q": "Which drug class is primarily indicated for patients with obesity and non‑alcoholic fatty liver disease (NAFLD) due to its effect on weight and liver enzymes?",
       "options": [
-       "A. Angiotensin‑converting enzyme (ACE)",
-       "B. Angiotensin II receptor",
-       "C. Aldosterone synthase",
-       "D. Renin"
+       "GLP‑1 receptor agonists",
+       "SGLT2 inhibitors",
+       "Beta‑blockers",
+       "ACE inhibitors"
       ],
       "correct": 0,
-      "explanation": "Lisinopril is an ACE inhibitor, blocking conversion of angiotensin I to angiotensin II.",
+      "explanation": "GLP‑1 agonists like semaglutide reduce weight and improve liver enzymes in NAFLD.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "Which of the following is a common side effect of high‑dose corticosteroids used in asthma?",
+      "q": "Which of the following is a contraindication for the use of Orlistat?",
       "options": [
-       "A. Hyperglycaemia",
-       "B. Hypokalemia",
-       "C. Bradycardia",
-       "D. Hypotension"
+       "Chronic pancreatitis",
+       "Celiac disease",
+       "Hyperlipidemia",
+       "Obstructive sleep apnea"
       ],
       "correct": 0,
-      "explanation": "High‑dose corticosteroids can cause hyperglycaemia due to increased gluconeogenesis.",
+      "explanation": "Orlistat is contraindicated in chronic pancreatitis because it inhibits pancreatic lipase, worsening fat digestion.",
+      "ai": true,
+      "kind": "drug"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
+  },
+  {
+   "id": "2026-11-21-5",
+   "title": "MBPL3822 Chemotherapy CAT 1: drug duel",
+   "game": "drug",
+   "topic": "MBPL3822 Chemotherapy CAT 1",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "Which class of drugs does MBPL3822 Chemotherapy CAT 1 belong to?",
+      "options": [
+       "Alkylating agents",
+       "Antimetabolites",
+       "Antitumor antibiotics",
+       "Targeted therapy"
+      ],
+      "correct": 0,
+      "explanation": "MBPL3822 is an alkylating agent that cross‑links DNA.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the primary mechanism of action of MBPL3822?",
+      "options": [
+       "Inhibition of microtubule polymerisation",
+       "DNA cross‑linking leading to strand breaks",
+       "Inhibition of thymidylate synthase",
+       "Inhibition of topoisomerase II"
+      ],
+      "correct": 1,
+      "explanation": "It cross‑links DNA, preventing replication and transcription.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "For which malignancy is MBPL3822 most commonly indicated?",
+      "options": [
+       "Acute myeloid leukemia",
+       "Non‑small cell lung cancer",
+       "Metastatic colorectal cancer",
+       "Breast cancer"
+      ],
+      "correct": 0,
+      "explanation": "It is primarily used in AML protocols.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which of the following is a characteristic side effect of MBPL3822?",
+      "options": [
+       "Peripheral neuropathy",
+       "Severe mucositis",
+       "Hematologic suppression",
+       "Cardiotoxicity"
+      ],
+      "correct": 2,
+      "explanation": "Hematologic suppression (neutropenia) is the hallmark toxicity.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "MBPL3822 is metabolised predominantly by which pathway?",
+      "options": [
+       "Cytochrome P450 3A4 oxidation",
+       "Glucuronidation in the liver",
+       "Renal tubular secretion",
+       "Mitochondrial beta‑oxidation"
+      ],
+      "correct": 1,
+      "explanation": "It undergoes hepatic glucuronidation.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which laboratory value is most likely to be abnormal during MBPL3822 therapy?",
+      "options": [
+       "Elevated serum creatinine",
+       "Low platelet count",
+       "High serum alkaline phosphatase",
+       "Elevated serum bilirubin"
+      ],
+      "correct": 1,
+      "explanation": "Thrombocytopenia is a common cytopenia.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the recommended dose‑adjustment strategy for a patient with renal impairment receiving MBPL3822?",
+      "options": [
+       "Increase dose by 25%",
+       "No adjustment needed",
+       "Reduce dose by 50%",
+       "Hold therapy until creatinine normalises"
+      ],
+      "correct": 2,
+      "explanation": "Dose is reduced by 50% in moderate renal impairment.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which supportive medication is routinely co‑administered with MBPL3822 to mitigate its side effects?",
+      "options": [
+       "Granulocyte colony‑stimulating factor",
+       "Proton pump inhibitor",
+       "Antifungal prophylaxis",
+       "Antiviral prophylaxis"
+      ],
+      "correct": 0,
+      "explanation": "G‑CSF is used to prevent severe neutropenia.",
       "ai": true,
       "kind": "drug"
      }
