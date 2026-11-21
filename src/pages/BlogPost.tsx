@@ -2053,7 +2053,7 @@ export default function BlogPost() {
   const heroEl = (
     <ClassicHero
       band={bandHero}
-      minutes={Math.max(1, Math.round((article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").split(/\s+/).length / 210))}
+      minutes={Math.max(1, Math.round(stripRichText(article.content || "").replace(/!\[[^\]]*\]\([^)]+\)/g, " ").split(/\s+/).filter(Boolean).length / 210))}
       summaryId={article.slug ? `a:${article.slug}` : undefined}
       articleId={article.id}
       studyPath={buildBlogPath(article)}
