@@ -760,8 +760,8 @@ const ArticleContent = memo(function ArticleContent(props: ArticleContentProps) 
     () => hasStructuredHtml ? DOMPurify.sanitize(props.content, { USE_PROFILES: { html: true } }) : "",
     [hasStructuredHtml, props.content],
   );
-  if (hasStructuredHtml) return <div className="note-body html-article-content" dangerouslySetInnerHTML={{ __html: safeHtml }} />;
   const saq = useMemo(() => parseSaq(props.content), [props.content]);
+  if (hasStructuredHtml) return <div className="note-body html-article-content" dangerouslySetInnerHTML={{ __html: safeHtml }} />;
   if (!saq) return <ArticleLines {...props} />;
   return (
     <>
