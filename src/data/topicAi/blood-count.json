@@ -1,512 +1,224 @@
 {
  "medical": true,
+ "clinicalScope": "Complete blood count (CBC) interpretation in adult patients presenting to low‑resource East African hospitals, focusing on common infectious, hematologic and chronic diseases.",
  "title": "Complete Blood Count Interpretation",
  "subject": "Medicine",
- "summary": "A complete blood count (CBC) gives a rapid snapshot of the cellular components of blood. Interpreting the numbers helps clinicians locate infection, inflammation, bleeding, marrow failure or chronic disease, especially where advanced imaging is scarce.",
+ "summary": "A CBC gives a quick snapshot of red cells, white cells and platelets, helping clinicians spot infection, anemia, bleeding or marrow problems. In low‑resource settings it guides urgent decisions when imaging is unavailable.",
  "aka": [
-  "Full Blood Count"
+  "full blood count"
  ],
  "sections": [
   {
-   "h": "Definition and diagnosis",
-   "p": "The CBC measures red cells, white cells (with differential), and platelets using an automated analyser. It is the first laboratory test for any undifferentiated sick patient.",
+   "h": "Definition and epidemiology",
+   "p": "The complete blood count (CBC) measures haemoglobin, haematocrit, red cell indices, total white blood cell (WBC) count with differential, and platelet count. It is the most frequently ordered test worldwide, essential for triage in East African hospitals where advanced diagnostics are limited.",
    "b": [
-    "Haemoglobin, haematocrit, MCV assess anaemia type.",
-    "Total WBC and differential identify infection, inflammation or marrow stress.",
-    "Platelet count screens for bleeding risk and marrow suppression."
+    "Provides quantitative data on all three cellular blood components.",
+    "Cost‑effective and rapid (often <1 h).",
+    "Used in >80 % of inpatient admissions in low‑resource settings.",
+    "Key for diagnosing malaria‑related anemia, HIV‑associated cytopenias, and bacterial sepsis."
    ]
   },
   {
-   "h": "Severity and staging",
-   "p": "Severity is judged by how far values deviate from normal ranges and by clinical impact (e.g., haemoglobin <7 g/dL = severe anaemia needing transfusion).",
+   "h": "Causes and risk factors, most likely first",
+   "p": "In the East African context the most common drivers of abnormal CBC components are infectious diseases, nutritional deficiencies, and chronic organ disease.",
    "b": [
-    "Mild anaemia: Hb 10‑12 g/dL (women) or 11‑13 g/dL (men).",
-    "Moderate anaemia: Hb 7‑9 g/dL.",
-    "Severe anaemia: Hb <7 g/dL.",
-    "Leukocytosis: WBC >11 ×10⁹/L; leukopenia: <4 ×10⁹/L.",
-    "Thrombocytopenia: platelets <100 ×10⁹/L; severe <50 ×10⁹/L."
+    "Anaemia: malaria, hookworm, iron‑deficiency diet, sickle‑cell disease, chronic kidney disease.",
+    "Leukocytosis: bacterial sepsis, malaria, tuberculosis, HIV opportunistic infection.",
+    "Leukopenia: advanced HIV, severe malaria, aplastic crisis in sickle‑cell.",
+    "Thrombocytopenia: malaria, dengue, HIV, drug‑induced marrow suppression (e.g., zidovudine)."
    ]
   },
   {
-   "h": "Causes, most likely first",
-   "p": "In low‑resource East African hospitals the most common drivers of abnormal CBCs are infections (malaria, HIV, TB, bacterial sepsis), nutritional deficiencies, sickle‑cell disease and chronic haemolysis.",
+   "h": "How it develops (pathophysiology)",
+   "p": "Abnormal CBC values reflect altered production, destruction, or sequestration of blood cells.",
    "b": [
-    "Anaemia – malaria, hookworm, iron deficiency, sickle‑cell, chronic kidney disease.",
-    "Leukocytosis – bacterial sepsis, malaria, TB, HIV opportunistic infection.",
-    "Leukopenia – advanced HIV, severe malaria, aplastic crisis in sickle‑cell.",
-    "Thrombocytopenia – malaria, dengue, HIV, drug‑induced marrow suppression."
+    "Anaemia from hemolysis (malaria) or marrow suppression (HIV).",
+    "Leukocytosis via cytokine‑driven marrow release (IL‑6, G‑CSF).",
+    "Leukopenia from direct viral marrow infection or peripheral consumption.",
+    "Thrombocytopenia from splenic sequestration (malaria) or immune destruction (HIV)."
    ]
   },
   {
    "h": "How it presents",
-   "p": "Patients may present with fatigue, pallor, dyspnoea (anaemia), fever, chills, rigors (leukocytosis), bruising or bleeding (thrombocytopenia). In malaria the CBC often shows anaemia with thrombocytopenia and a left‑shifted neutrophil count.",
+   "p": "CBC abnormalities manifest through systemic signs that guide bedside suspicion.",
    "b": [
-    "Anaemia → tachycardia, orthostatic dizziness, conjunctival pallor.",
-    "Leukocytosis → fever, rigors, focal pain.",
-    "Thrombocytopenia → petechiae, mucosal bleeding, prolonged bleeding after minor cuts."
+    "Anaemia – fatigue, tachycardia, orthostatic dizziness, conjunctival pallor.",
+    "Leukocytosis – fever, rigors, localized pain, possible hypotension.",
+    "Leukopenia – recurrent infections, oral thrush, atypical skin lesions.",
+    "Thrombocytopenia – petechiae, mucosal bleeding, prolonged bleeding after minor cuts."
    ]
   },
   {
-   "h": "Investigations",
-   "p": "The CBC is the backbone; additional tests are guided by the pattern of abnormality.",
+   "h": "Bedside: history and how to examine",
+   "p": "Targeted history and focused exam narrow the differential before CBC results return.",
+   "b": [
+    "Ask about recent fever, travel, malaria prophylaxis, HIV status, drug exposures.",
+    "Inspect for pallor, jaundice, petechiae, splenomegaly.",
+    "Palpate abdomen for hepatosplenomegaly; note lymphadenopathy.",
+    "Measure vitals: tachycardia may suggest anaemia; hypotension may indicate sepsis."
+   ]
+  },
+  {
+   "h": "Differential diagnosis",
+   "p": "Interpret CBC patterns in the context of clinical clues.",
+   "b": [
+    "Isolated low Hb with normal WBC/platelets → nutritional or chronic disease anemia.",
+    "High WBC with left shift → bacterial sepsis or severe malaria.",
+    "Low platelets with normal Hb/WBC → dengue, malaria, HIV‑related immune thrombocytopenia.",
+    "Pancytopenia → advanced HIV, aplastic anemia, severe malaria."
+   ]
+  },
+  {
+   "h": "Investigations and how to read them",
+   "p": "If a specific test (e.g., reticulocyte count) is unavailable, infer marrow response from clinical context and peripheral smear.",
    "t": [
     {
-     "a": "Peripheral blood smear",
-     "b": "What cell morphology is present? → Detect malaria parasites, sickle cells, schistocytes, blasts."
+     "a": "Haemoglobin (Hb)",
+     "b": "Is there anemia? – Hb <13 g/dL (men) or <12 g/dL (women) indicates anemia; severity: mild 10‑12 g/dL, moderate 7‑9 g/dL, severe <7 g/dL."
     },
     {
-     "a": "Reticulocyte count",
-     "b": "Is the marrow responding? → High in haemolysis or blood loss; low in iron deficiency or marrow failure."
+     "a": "Mean corpuscular volume (MCV)",
+     "b": "What type of anemia? – MCV <80 fL microcytic (iron deficiency, thalassaemia), 80‑100 fL normocytic (chronic disease, acute blood loss), >100 fL macrocytic (folate/B12 deficiency, drug effect)."
     },
     {
-     "a": "Serum ferritin / iron studies",
-     "b": "Is iron deficiency the cause of microcytic anaemia? → Low ferritin confirms deficiency."
+     "a": "Total WBC count",
+     "b": "Is there leukocytosis or leukopenia? – WBC >11 ×10⁹/L = leukocytosis; WBC <4 ×10⁹/L = leukopenia."
     },
     {
-     "a": "HIV test",
-     "b": "Is HIV contributing to cytopenias? → Positive test prompts ART and opportunistic infection work‑up."
+     "a": "Differential (neutrophils, lymphocytes, eosinophils)",
+     "b": "What is driving the WBC change? – Neutrophil predominance suggests bacterial infection; lymphocytosis suggests viral or TB; eosinophilia suggests parasitic infection or drug reaction."
     },
     {
-     "a": "Bone marrow aspirate (if available)",
-     "b": "Is there marrow infiltration or aplasia? → Needed when pancytopenia persists without clear peripheral cause."
+     "a": "Platelet count",
+     "b": "Is bleeding risk increased? – Platelets <100 ×10⁹/L = thrombocytopenia; <50 ×10⁹/L = high bleeding risk."
     },
     {
-     "a": "If smear unavailable",
-     "b": "What to do? → Use rapid malaria antigen test; consider empirical antimalarial if clinical picture fits."
+     "a": "Reticulocyte count (if available)",
+     "b": "Is marrow responding? – Elevated retics (>2 %) indicate peripheral loss (hemolysis); low retics suggest production failure."
     }
    ]
   },
   {
-   "h": "Red flags and complications",
-   "p": "Certain CBC patterns herald life‑threatening states that need urgent action.",
+   "h": "Severity and staging",
+   "p": "CBC thresholds guide urgency and level of care.",
    "b": [
-    "Hb <7 g/dL with cardiac failure → risk of sudden decompensation.",
-    "WBC >25 ×10⁹/L with left shift → possible sepsis or leukemoid reaction.",
-    "Platelets <20 ×10⁹/L → spontaneous intracranial bleed risk."
+    "Severe anemia (Hb <7 g/dL) → consider transfusion, cardiac monitoring.",
+    "Leukocytosis >25 ×10⁹/L with left shift → possible sepsis; start broad‑spectrum antibiotics.",
+    "Platelets <20 ×10⁹/L → high risk of spontaneous intracranial bleed; urgent platelet transfusion if bleeding.",
+    "Pancytopenia with Hb <8 g/dL, WBC <2 ×10⁹/L, platelets <30 ×10⁹/L → admit to high‑dependency unit."
    ]
   },
   {
-   "h": "Management",
-   "p": "Treat the underlying cause first; then correct the specific cytopenia if it threatens organ function.",
+   "h": "Complicating and confounding factors",
+   "p": "Local factors can skew CBC interpretation.",
    "b": [
-    "Anaemia – treat malaria, give iron/folate, transfuse if Hb <7 g/dL or symptomatic.",
-    "Leukocytosis – start empiric antibiotics for sepsis; add antimalarial if smear positive.",
-    "Leukopenia in HIV – start ART, consider prophylactic cotrimoxazole.",
-    "Thrombocytopenia – stop offending drugs, treat malaria, give platelet transfusion if <20 ×10⁹/L with bleeding."
+    "Dehydration concentrates cells → falsely high Hb/Hct; correct with clinical assessment.",
+    "Recent malaria treatment can cause transient leukopenia.",
+    "Pregnancy physiologically lowers Hb (dilutional anemia) and raises platelet count.",
+    "Hookworm infection causes iron‑deficiency anemia but may also cause mild leukocytosis."
    ]
   },
   {
-   "h": "Follow‑up and prevention",
-   "p": "Repeat CBC after 48‑72 h of therapy to gauge response. Prevent recurrence with vector control, deworming, iron supplementation programs and HIV screening.",
+   "h": "Management, step by step",
+   "p": "Treat the underlying cause first, then address the cytopenia.",
    "b": [
-    "Re‑check Hb after malaria treatment; expect rise of 1‑2 g/dL per week.",
-    "Monitor WBC trend; falling count suggests effective infection control.",
-    "Educate patients on avoiding herbal remedies that cause marrow suppression."
+    "Anaemia: give iron (oral if able, IV if severe and malabsorption suspected), treat malaria or chronic kidney disease, consider transfusion if Hb <7 g/dL with symptoms.",
+    "Leukocytosis: start empiric antibiotics for suspected bacterial sepsis; add antimalarial if malaria endemic and fever present.",
+    "Leukopenia: evaluate HIV status, start antiretroviral therapy, consider prophylactic antibiotics if neutrophils <0.5 ×10⁹/L.",
+    "Thrombocytopenia: stop offending drugs, treat underlying infection (e.g., dengue supportive care), give platelet transfusion if <20 ×10⁹/L with active bleeding."
    ]
   },
   {
-   "h": "Often confused with",
-   "p": "Similar presentations can mislead clinicians.",
+   "h": "Complications and red flags",
+   "p": "Recognize when a CBC abnormality signals imminent danger.",
    "b": [
-    "Anaemia of chronic disease vs iron‑deficiency – differentiate with ferritin and CRP.",
-    "Leukocytosis from stress vs bacterial infection – look for left shift and clinical sepsis signs.",
-    "Thrombocytopenia from malaria vs dengue – dengue often has marked leukopenia and high transaminases."
+    "Hb <5 g/dL with chest pain → high‑output cardiac failure.",
+    "WBC >30 ×10⁹/L with left shift and hypotension → septic shock.",
+    "Platelets <10 ×10⁹/L → spontaneous intracranial hemorrhage risk.",
+    "Rapid drop in Hb (>2 g/dL in 24 h) → occult GI bleed or hemolysis."
+   ]
+  },
+  {
+   "h": "Special groups",
+   "p": "Adjust interpretation for children, pregnant women and patients with sickle‑cell disease.",
+   "b": [
+    "Pregnancy: lower Hb cut‑offs (11 g/dL) accepted; watch for gestational thrombocytopenia.",
+    "Sickle‑cell: chronic hemolytic anemia (Hb 6‑9 g/dL) may be baseline; look for acute drop indicating crisis.",
+    "HIV‑positive: expect chronic mild leukopenia; monitor CD4‑related trends.",
+    "Elderly with chronic kidney disease: normocytic anemia common; consider erythropoietin deficiency."
+   ]
+  },
+  {
+   "h": "Prognosis, follow‑up and prevention",
+   "p": "Serial CBCs track response and guide long‑term care.",
+   "b": [
+    "Re‑check CBC 48–72 h after initiating therapy for sepsis or malaria.",
+    "For iron‑deficiency anemia, repeat Hb after 4 weeks of supplementation.",
+    "HIV patients: CBC every 3 months while on ART.",
+    "Prevent malaria‑related anemia with insecticide‑treated nets and intermittent preventive therapy."
    ]
   },
   {
    "h": "Where results can mislead",
-   "p": "Certain conditions mask true values.",
+   "p": "Be aware of false‑normal or spurious values.",
    "b": [
-    "Hemolysis in sample can falsely raise potassium and lower haemoglobin.",
-    "Cold agglutinins can cause spuriously low platelet counts on automated analysers.",
-    "Severe dehydration concentrates cells, giving a pseudo‑leukocytosis."
+    "Cold agglutinins can cause spuriously low Hb on automated counters; confirm with manual method.",
+    "Leukocyte clumping may falsely lower WBC count; repeat with anticoagulant change.",
+    "Platelet clumping on EDTA samples can give falsely low platelet count; use citrate tube.",
+    "Severe dehydration may mask anemia; assess clinical volume status."
    ]
   }
  ],
  "whenToSeekHelp": [
-  "Severe anaemia (Hb <7 g/dL) with chest pain or syncope",
-  "WBC >25 ×10⁹/L with fever",
-  "Platelets <20 ×10⁹/L with active bleeding"
+  "Hb <5 g/dL with chest pain or syncope",
+  "WBC >30 ×10⁹/L with hypotension or altered mental status",
+  "Platelets <10 ×10⁹/L with any bleeding",
+  "Rapid fall in Hb >2 g/dL within 24 h"
  ],
  "faq": [
   {
-   "q": "Why does malaria cause low platelets?",
-   "a": "Parasite‑induced splenic sequestration and immune‑mediated destruction lower platelet counts."
+   "q": "Why can malaria cause both anemia and thrombocytopenia?",
+   "a": "Parasite invasion destroys red cells and platelets, and splenic sequestration removes both from circulation."
   },
   {
-   "q": "Can a normal CBC rule out serious infection?",
-   "a": "No; early sepsis may have normal WBC, so rely on clinical picture and other labs like CRP."
+   "q": "Can a normal Hb rule out severe disease in a febrile patient?",
+   "a": "No; early sepsis may have normal Hb while WBC and clinical signs guide urgency."
   },
   {
-   "q": "When is a blood transfusion indicated for anaemia?",
-   "a": "When Hb <7 g/dL or <9 g/dL with cardiac disease, severe symptoms, or active bleeding."
+   "q": "What is the best bedside clue for chronic anemia in a malaria‑endemic area?",
+   "a": "Conjunctival pallor with a history of recurrent fevers and low dietary iron."
   }
  ],
  "exam": [
-  "A 6‑year‑old with sickle‑cell disease presents with fever and a CBC showing Hb 6 g/dL, WBC 15 ×10⁹/L, platelets 120 ×10⁹/L — discuss immediate priorities and why transfusion may be needed.",
-  "A 35‑year‑old HIV‑positive man has Hb 9 g/dL, MCV 72 fL, ferritin 10 µg/L — explain the diagnostic steps to confirm iron‑deficiency anaemia and rule out anaemia of chronic disease.",
-  "A patient with confirmed malaria has Hb 8 g/dL, platelets 45 ×10⁹/L, WBC 5 ×10⁹/L — what supportive measures are essential and how does malaria explain the platelet count?",
-  "You receive a CBC with WBC 30 ×10⁹/L, neutrophils 85 % and left‑shifted bands, but the patient is afebrile and looks well — what differential diagnoses should you consider and what next test would you order?",
-  "A pregnant woman in a rural clinic has Hb 10 g/dL, MCV 85 fL, platelets 150 ×10⁹/L — what are the main causes of her mild anaemia and how would you manage it without iron studies?",
-  "A patient on long‑term methotrexate for rheumatoid arthritis shows platelets 80 ×10⁹/L and WBC 3 ×10⁹/L — why must the drug be stopped and what alternative therapy is safer in low‑resource settings?",
-  "A child with severe malnutrition presents with Hb 5 g/dL, reticulocyte count 0.5 % — interpret the marrow response and outline the next steps in management."
+  "A 35‑year‑old man with fever, chills, and a CBC showing Hb 9 g/dL, WBC 18 ×10⁹/L (neutrophil 85 %) and platelets 120 ×10⁹/L – what is the most likely diagnosis and immediate management? — Likely bacterial sepsis or severe malaria; start empiric antibiotics plus antimalarial, obtain blood cultures, monitor vitals.",
+  "A pregnant woman at 28 weeks has Hb 10 g/dL, MCV 78 fL, normal WBC, platelets 250 ×10⁹/L – what type of anemia and next step? — Microcytic iron‑deficiency anemia; give oral iron and dietary counseling.",
+  "A patient on zidovudine presents with Hb 8 g/dL, reticulocyte count 1 % – how do you interpret and manage? — Drug‑induced marrow suppression; consider switching ART, give supportive transfusion if symptomatic.",
+  "WBC 4 ×10⁹/L with lymphocyte predominance in an HIV‑positive adult – what does this suggest? — Possible viral infection or advanced HIV; check CD4 count, consider opportunistic infection work‑up.",
+  "Platelet count 45 ×10⁹/L in a child with recent dengue fever – what is the appropriate observation period? — Monitor for bleeding; repeat CBC in 24 h; platelet transfusion only if <20 ×10⁹/L or active bleeding.",
+  "Hb 6 g/dL with normal WBC and platelets in a sickle‑cell patient presenting with chest pain – what complication must be excluded? — Acute chest syndrome; obtain chest X‑ray, start antibiotics, analgesia, and consider exchange transfusion.",
+  "A dehydrated patient has Hb 15 g/dL, Hct 45 % – how might this affect interpretation? — Hemoconcentration; correct volume status before relying on Hb for anemia assessment.",
+  "Leukocytosis >25 ×10⁹/L with left shift but no fever – what differential is high on the list in East Africa? — Leukemoid reaction from severe malaria or TB; obtain malaria smear and sputum for TB.",
+  "Persistent pancytopenia after malaria treatment – what long‑term causes should be investigated? — HIV infection, bone‑marrow infiltration, drug‑induced aplasia; order HIV test, bone‑marrow aspirate if available.",
+  "When is platelet transfusion indicated in thrombocytopenia without bleeding? — Platelets <20 ×10⁹/L in a patient undergoing invasive procedure or with high risk of spontaneous bleed."
  ],
  "related": [
-  "Malaria diagnostics",
-  "Sickle‑cell disease",
-  "HIV‑related cytopenias",
-  "Iron‑deficiency anaemia",
-  "Sepsis work‑up",
-  "Blood transfusion safety"
+  "Malaria diagnosis and treatment",
+  "HIV‑related hematologic abnormalities",
+  "Iron‑deficiency anemia",
+  "Sickle‑cell disease crises",
+  "Sepsis work‑up in low‑resource settings",
+  "Dengue fever and thrombocytopenia",
+  "Acute chest syndrome",
+  "Blood transfusion guidelines"
  ],
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
- "generatedAt": "2026-10-16",
- "reviewed": false,
- "deep": {
-  "sections": [
-   {
-    "h": "Bedside: history and how to examine",
-    "p": "A focused history and systematic physical exam reveal the pattern of cytopenia and point to underlying aetiology, while recognising the limits of bedside assessment.",
-    "b": [
-     "Onset and duration of symptoms (fatigue, dyspnoea, bruising, fever, night sweats).",
-     "Recent infections (malaria, TB, HIV exposure, recent antibiotics).",
-     "Medication and herbal use (zidovudine, methotrexate, antimalarials, traditional remedies).",
-     "Nutritional intake (iron‑rich foods, folate, B12 sources, chronic alcohol).",
-     "Pregnancy status, menstrual history, obstetric complications.",
-     "Past haematological disease (sickle‑cell, thalassaemia, known marrow failure).",
-     "Renal or liver disease, diabetes, chronic inflammation."
-    ],
-    "t": [
-     {
-      "a": "General inspection",
-      "b": "Look for pallor, jaundice, cyanosis, petechiae, bruises; indicates anaemia, haemolysis, thrombocytopenia or hypoxia. Cannot quantify severity."
-     },
-     {
-      "a": "Cardiac auscultation",
-      "b": "Murmurs or gallop may indicate high‑output state from chronic anaemia. Does not differentiate cause of anaemia."
-     },
-     {
-      "a": "Peripheral lymph node examination",
-      "b": "Enlarged nodes suggest infection (TB, HIV) or lymphoma; does not identify specific pathogen."
-     },
-     {
-      "a": "Abdominal palpation for splenomegaly",
-      "b": "Measure finger‑breadths below costal margin; >2 cm suggests sequestration or infiltrative disease. Cannot determine exact size or cause."
-     },
-     {
-      "a": "Liver span",
-      "b": "Palpable edge >2 cm below costal margin may indicate hepatic congestion or infiltration; does not quantify liver function."
-     },
-     {
-      "a": "Capillary refill and peripheral pulses",
-      "b": "Delayed refill (>2 s) or weak pulses support severe anaemia or shock; bedside test cannot differentiate between hypovolaemia and anaemia."
-     },
-     {
-      "a": "Neurological exam",
-      "b": "Assess for peripheral neuropathy (B12 deficiency) or focal deficits (stroke from severe thrombocytopenia). Cannot replace imaging."
-     }
-    ]
-   },
-   {
-    "h": "Investigations and how to read them",
-    "p": "Interpret the CBC pattern together with targeted adjunct tests; use calculated indices when full panels are unavailable.",
-    "b": [
-     "Full CBC with differential – first line to classify anaemia, leukocytosis/leukopenia, thrombocytopenia.",
-     "Peripheral smear – morphology (microcytosis, macrocytosis, schistocytes, sickle cells) guides specific diagnoses.",
-     "Serum B12 – <150 pmol/L confirms deficiency; borderline values need clinical correlation.",
-     "Serum folate – low levels support folate‑deficiency macrocytosis.",
-     "Renal function (eGFR) – <60 mL/min/1.73 m² suggests CKD‑related anaemia.",
-     "HIV viral load/CD4 – <200 cells/µL raises risk of marrow suppression.",
-     "Malaria rapid test or thick smear – confirms malaria‑associated cytopenias.",
-     "Blood culture – indicated when WBC >25 ×10⁹/L with left shift or fever of unknown origin."
-    ],
-    "t": [
-     {
-      "a": "Mean corpuscular volume (MCV)",
-      "b": "Classifies anaemia: <80 fL microcytic, 80‑100 fL normocytic, >100 fL macrocytic. Guides iron, B12, folate work‑up."
-     },
-     {
-      "a": "Absolute neutrophil count (ANC)",
-      "b": "ANC <0.5 ×10⁹/L = severe neutropenia, high infection risk; ANC 0.5‑1.5 ×10⁹/L = moderate risk."
-     },
-     {
-      "a": "Peripheral smear – schistocytes",
-      "b": "Presence >1 % suggests microangiopathic haemolysis (e.g., severe malaria, DIC)."
-     },
-     {
-      "a": "Serum lactate dehydrogenase (LDH)",
-      "b": "Elevated in haemolysis or high cell turnover; supports diagnosis when reticulocyte count is high."
-     },
-     {
-      "a": "C‑reactive protein (CRP)",
-      "b": "Elevated with bacterial infection; helps interpret ferritin in inflammatory states."
-     },
-     {
-      "a": "When a test is unavailable",
-      "b": "Use clinical surrogates: e.g., if ferritin unavailable, rely on transferrin saturation (<15 %) and clinical picture; if B12 assay unavailable, use methylmalonic acid if accessible, otherwise treat empirically if macrocytosis with neurological signs."
-     }
-    ]
-   },
-   {
-    "h": "Diagnosis, staging and severity",
-    "p": "Combine clinical pattern with laboratory thresholds to assign a diagnostic category and severity grade that drives management.",
-    "b": [
-     "Normocytic anaemia with eGFR <60 mL/min/1.73 m² → CKD‑related anaemia; treat when Hb <10 g/dL.",
-     "Macrocytic anaemia with B12 <150 pmol/L → vitamin B12 deficiency; severe when Hb <8 g/dL or neurological signs present.",
-     "Leukocytosis WBC >11 ×10⁹/L with neutrophils >75 % and bands >10 % → bacterial sepsis or leukemoid reaction; urgent evaluation if WBC >25 ×10⁹/L.",
-     "Leukopenia WBC <4 ×10⁹/L; ANC <0.5 ×10⁹/L with fever → neutropenic sepsis; start broad‑spectrum antibiotics immediately.",
-     "Combined anaemia + thrombocytopenia + leukopenia → pancytopenia; consider marrow infiltration, aplastic crisis, advanced HIV."
-    ],
-    "t": []
-   },
-   {
-    "h": "Look‑alike conditions",
-    "p": "Certain disorders mimic common CBC patterns; key discriminators are clinical clues and selective tests.",
-    "b": [
-     "Iron‑deficiency vs thalassaemia trait – both microcytic; differentiate by RDW (high in iron deficiency, normal in thalassaemia) and family history; Hb electrophoresis confirms thalassaemia.",
-     "Acute bacterial sepsis vs malaria‑induced leukocytosis – malaria often shows normal or low WBC with parasitaemia on smear; sepsis shows high WBC with left shift.",
-     "Drug‑induced neutropenia vs HIV‑related neutropenia – drug history (e.g., methotrexate) and temporal relation; HIV CD4 count helps identify HIV‑related suppression.",
-     "Vitamin B12 deficiency vs folate deficiency – both macrocytic; elevated methylmalonic acid points to B12 deficiency; folate deficiency has normal methylmalonic acid."
-    ],
-    "t": [
-     {
-      "a": "Thalassaemia trait",
-      "b": "Family history of mild anaemia, normal iron studies, HbA2 >3.5 %; differentiate with electrophoresis."
-     },
-     {
-      "a": "Acute malaria",
-      "b": "Positive rapid test or thick smear; may cause thrombocytopenia and anaemia but usually not marked leukocytosis."
-     },
-     {
-      "a": "Aplastic crisis in sickle‑cell disease",
-      "b": "Sudden drop in reticulocyte count (<1 %) with severe anaemia; no splenomegaly; parvovirus B19 PCR if available."
-     },
-     {
-      "a": "Dengue‑associated thrombocytopenia",
-      "b": "Recent febrile illness, rash, positive NS1 antigen; platelet count falls rapidly, usually recovers in 7‑10 days."
-     }
-    ]
-   },
-   {
-    "h": "Management step by step",
-    "p": "A structured approach ensures rapid correction of life‑threatening cytopenias, treats the underlying cause and prevents recurrence.",
-    "b": [
-     "2. Identify pattern: isolated anaemia, leukocytosis, leukopenia, thrombocytopenia or mixed picture.",
-     "3. Targeted therapy: iron, folate or B12 for specific deficiencies; antimalarials, antibiotics or anti‑TB drugs for infections; erythropoietin for CKD‑related anaemia when eGFR < 60 mL/min/1.73 m².",
-     "4. Stop or modify marrow‑suppressive drugs (e.g., zidovudine, methotrexate, carbamazepine) if cytopenias develop.",
-     "5. Monitor trends: repeat CBC every 24‑48 h for acute changes, weekly for chronic therapy adjustments.",
-     "6. Escalate: refer to higher‑level care if Hb < 6 g/dL with cardiac compromise, WBC > 25 ×10⁹/L with left shift and hemodynamic instability, or platelets < 10 ×10⁹/L with bleeding."
-    ],
-    "t": []
-   },
-   {
-    "h": "Drug effects and what to do",
-    "p": "Recognising adverse effects and drug interactions prevents iatrogenic worsening of the CBC.",
-    "b": [
-     "Iron supplements may cause gastrointestinal upset and constipation – give with food or switch to liquid formulation.",
-     "Folic acid can mask B12 deficiency – check B12 before long‑term high‑dose folate.",
-     "Erythropoietin increases risk of hypertension and thromboembolism – monitor blood pressure and avoid in uncontrolled hypertension.",
-     "Broad‑spectrum antibiotics can cause neutropenia – if neutrophils fall <1 ×10⁹/L, review necessity and consider de‑escalation.",
-     "Zidovudine causes macrocytic anaemia – switch to alternative NRTI if Hb falls >2 g/dL or below 7 g/dL."
-    ],
-    "t": []
-   },
-   {
-    "h": "Complications and when to escalate",
-    "p": "Cytopenias can progress to organ‑threatening states; early recognition of warning signs triggers timely referral.",
-    "b": [
-     "Leukocytosis > 25 ×10⁹/L with left‑shifted bands and fever > 38 °C → consider sepsis or leukemoid reaction; start broad‑spectrum antibiotics and obtain cultures.",
-     "Neutropenia < 0.5 ×10⁹/L with fever → neutropenic sepsis; give empiric anti‑pseudomonal antibiotics within 1 hour.",
-     "Persistent mixed cytopenia despite treatment → evaluate bone‑marrow failure, consider referral for marrow biopsy."
-    ],
-    "t": []
-   },
-   {
-    "h": "Complicating and confounding factors",
-    "p": "Co‑morbidities and local practices modify both laboratory interpretation and therapeutic choices.",
-    "b": [
-     "HIV: may cause anemia of chronic disease, opportunistic infections, and zidovudine‑related macrocytosis; CD4 count guides infection risk.",
-     "TB: chronic inflammation raises ferritin > 100 µg/L, masking iron deficiency; treat TB before iron repletion.",
-     "Malnutrition: low folate and B12 produce macrocytosis; re‑evaluate after nutritional rehabilitation.",
-     "Pregnancy: physiological haemodilution lowers Hb; use trimester‑specific thresholds and avoid iron overload.",
-     "Diabetes: chronic kidney disease lowers eGFR; start erythropoietin when eGFR < 60 mL/min/1.73 m².",
-     "Herbal remedies (e.g., neem, traditional tonics) may contain phytochemicals causing marrow suppression – obtain a detailed medication history.",
-     "Alcohol: causes macrocytosis and folate deficiency; counsel on abstinence and replace folate.",
-     "Renal failure: reduces erythropoietin; avoid iron overload by checking ferritin before supplementation.",
-     "Liver disease: can cause thrombocytopenia via splenic sequestration; platelet count < 50 ×10⁹/L warrants imaging for portal hypertension."
-    ],
-    "t": []
-   },
-   {
-    "h": "Special groups",
-    "p": "Tailoring assessment and treatment to vulnerable populations improves outcomes in low‑resource settings.",
-    "b": [
-     "Elderly: higher prevalence of anemia of chronic disease; screen for occult malignancy and renal insufficiency; be cautious with rapid transfusion.",
-     "People with HIV: monitor for zidovudine‑related anaemia; switch ART if Hb falls < 7 g/dL; prophylactic cotrimoxazole can cause neutropenia – adjust if neutrophils < 1 ×10⁹/L.",
-     "Low‑resource settings: when CBC analyser unavailable, use manual haemoglobin (copper sulphate) and peripheral smear; if iron studies not possible, treat presumptive iron deficiency when ferritin unavailable and MCV < 80 fL."
-    ],
-    "t": []
-   }
-  ],
-  "facts": [
-   "Hb <7 g/dL with symptoms or <6 g/dL in pregnancy warrants transfusion",
-   "Platelet <50 ×10⁹/L is bleeding risk; <20 ×10⁹/L high intracranial bleed risk",
-   "WBC <4 ×10⁹/L = leukopenia; neutropenia <1.5 ×10⁹/L; severe neutropenia <0.5 ×10⁹/L",
-   "MCV <80 fL = microcytic; >100 fL = macrocytic",
-   "Ferritin <15 µg/L confirms iron deficiency; >100 µg/L with CRP ↑ suggests anemia of chronic disease",
-   "eGFR <60 mL/min/1.73 m² indicates CKD‑related anemia",
-   "Hb 10‑12 g/dL (women) or 10‑13 g/dL (men) = mild anemia per WHO",
-   "Platelet transfusion indicated <10–20 ×10⁹/L with bleeding or before invasive procedure"
-  ],
-  "mnemonics": [],
-  "vivas": [
-   {
-    "q": "Why is a platelet count <20 ×10⁹/L considered high risk for spontaneous intracranial bleed?",
-    "a": "Platelets <20 ×10⁹/L impair primary hemostasis; risk of life‑threatening bleed rises sharply.",
-    "hot": true
-   },
-   {
-    "q": "What bedside sign indicates splenomegaly and how is it quantified?",
-    "a": "Palpate left costal margin; count finger‑breadths below margin; 1–2 finger‑breadths is mild, >2 is moderate."
-   },
-   {
-    "q": "A patient with malaria has Hb 8 g/dL, platelets 45 ×10⁹/L, WBC 5 ×10⁹/L. What complication should you monitor?",
-    "a": "Risk of bleeding; monitor for petechiae, mucosal bleeding, and consider platelet transfusion if <10 ×10⁹/L with bleeding."
-   },
-   {
-    "q": "Why is a neutrophil count <0.5 ×10⁹/L with fever defined as neutropenic fever?",
-    "a": "It indicates severe neutropenia; infection risk is high; requires broad‑spectrum antibiotics immediately."
-   },
-   {
-    "q": "How do you differentiate viral from bacterial pneumonia on CBC?",
-    "a": "Lymphocytosis or relative lymphocytosis suggests viral; neutrophilia suggests bacterial."
-   },
-   {
-    "q": "Explain the significance of a spuriously low platelet count due to rosettes around neutrophils.",
-    "a": "It is an artifact; repeat sample with EDTA or citrate; avoid misdiagnosing thrombocytopenia."
-   },
-   {
-    "q": "Why should folic acid not be given to all macrocytic patients?",
-    "a": "Macrocytosis may be due to B12 deficiency; giving folate can mask B12 deficiency and worsen neurotoxicity."
-   },
-   {
-    "q": "When is it appropriate to stop broad‑spectrum antibiotics due to marrow suppression?",
-    "a": "If neutrophils fall <1 ×10⁹/L and infection is controlled; consider switching to a less myelosuppressive agent."
-   },
-   {
-    "q": "What is the threshold for switching antiretroviral therapy due to zidovudine‑induced anemia?",
-    "a": "If Hb falls >2 g/dL or below 7–8 g/dL, consider switching."
-   },
-   {
-    "q": "How do you interpret a platelet count of 250,000/µL in a healthy volunteer?",
-    "a": "Normal platelet count; no clinical significance."
-   },
-   {
-    "q": "What is the significance of a left shift in neutrophils?",
-    "a": "Indicates marrow response to infection or inflammation; associated with sepsis risk."
-   }
-  ],
-  "mcqs": [
-   {
-    "q": "Which CBC finding suggests a viral etiology for pneumonia?",
-    "o": [
-     "Neutrophilia",
-     "Lymphocytosis",
-     "Eosinophilia",
-     "Basophilia"
-    ],
-    "a": 1,
-    "e": "Lymphocytosis is typical of viral infections.",
-    "past": true
-   },
-   {
-    "q": "A patient has a spuriously low platelet count due to rosettes around neutrophils. What should you do?",
-    "o": [
-     "Treat with platelet transfusion",
-     "Repeat sample in citrate",
-     "Start anticoagulation",
-     "Order bone marrow biopsy"
-    ],
-    "a": 1,
-    "e": "Repeat sample in citrate removes rosettes.",
-    "past": true
-   },
-   {
-    "q": "Which platelet count threshold warrants urgent evaluation for bleeding risk?",
-    "o": [
-     "<20 ×10⁹/L",
-     "<50 ×10⁹/L",
-     "<100 ×10⁹/L",
-     "<150 ×10⁹/L"
-    ],
-    "a": 0,
-    "e": "<20 ×10⁹/L is high intracranial bleed risk."
-   },
-   {
-    "q": "A 54‑year‑old man with fatigue has normal WBC 6,500/µL and Hb 11.2 g/dL. Which additional test justifies a CBC?",
-    "o": [
-     "Serum ferritin",
-     "Serum B12",
-     "Serum creatinine",
-     "Serum albumin"
-    ],
-    "a": 0,
-    "e": "Ferritin assesses iron stores; low ferritin indicates iron deficiency."
-   },
-   {
-    "q": "Which peripheral smear finding is most common in macrocytic anemia due to B12 deficiency?",
-    "o": [
-     "Target cells",
-     "Poikilocytes",
-     "Hypersegmented neutrophils",
-     "Stomatocytes"
-    ],
-    "a": 2,
-    "e": "Hypersegmented neutrophils are classic for B12 deficiency."
-   }
-  ],
-  "cases": [
-   {
-    "v": "A 30‑year‑old woman presents with fatigue, pallor, and a CBC showing Hb 10 g/dL, MCV 85 fL, platelets 150 ×10⁹/L. She is on oral iron therapy for 2 weeks with no improvement.",
-    "qs": [
-     {
-      "q": "Which additional test would confirm iron deficiency?",
-      "a": "Transferrin saturation <20 % or serum iron low with high TIBC."
-     },
-     {
-      "q": "Why might the patient not respond to iron therapy?",
-      "a": "Possible malabsorption, ongoing blood loss, or concurrent chronic disease."
-     }
-    ]
-   }
-  ],
-  "mistakes": [
-   "Assuming Hb <7 g/dL always requires transfusion without considering symptoms",
-   "Treating all macrocytosis with folic acid without checking B12",
-   "Using platelet count <50 ×10⁹/L as sole indicator of intracranial bleed risk",
-   "Interpreting a left shift as definitive sepsis without clinical correlation",
-   "Overlooking the need for repeat CBC when sample shows platelet rosettes",
-   "Mislabeling splenomegaly quantification as precise measurement",
-   "Confusing ferritin <30 µg/L with iron deficiency in inflammatory states",
-   "Ignoring pregnancy‑specific Hb thresholds for transfusion"
-  ],
-  "exam": [
-   "Why is a platelet count <20 ×10⁹/L considered high risk for spontaneous intracranial bleed? — Platelets <20 ×10⁹/L impair primary hemostasis; risk of life‑threatening bleed rises sharply.",
-   "What bedside sign indicates splenomegaly and how is it quantified? — Palpate left costal margin; count finger‑breadths below margin; 1–2 finger‑breadths is mild, >2 is moderate.",
-   "A patient with malaria has Hb 8 g/dL, platelets 45 ×10⁹/L, WBC 5 ×10⁹/L. What complication should you monitor? — Risk of bleeding; monitor for petechiae, mucosal bleeding, and consider platelet transfusion if <10 ×10⁹/L with bleeding.",
-   "Why is a neutrophil count <0.5 ×10⁹/L with fever defined as neutropenic fever? — It indicates severe neutropenia; infection risk is high; requires broad‑spectrum antibiotics immediately.",
-   "How do you differentiate viral from bacterial pneumonia on CBC? — Lymphocytosis or relative lymphocytosis suggests viral; neutrophilia suggests bacterial.",
-   "Explain the significance of a spuriously low platelet count due to rosettes around neutrophils. — It is an artifact; repeat sample with EDTA or citrate; avoid misdiagnosing thrombocytopenia.",
-   "Why should folic acid not be given to all macrocytic patients? — Macrocytosis may be due to B12 deficiency; giving folate can mask B12 deficiency and worsen neurotoxicity.",
-   "When is it appropriate to stop broad‑spectrum antibiotics due to marrow suppression? — If neutrophils fall <1 ×10⁹/L and infection is controlled; consider switching to a less myelosuppressive agent.",
-   "What is the threshold for switching antiretroviral therapy due to zidovudine‑induced anemia? — If Hb falls >2 g/dL or below 7–8 g/dL, consider switching.",
-   "How do you interpret a platelet count of 250,000/µL in a healthy volunteer? — Normal platelet count; no clinical significance.",
-   "What is the significance of a left shift in neutrophils? — Indicates marrow response to infection or inflammation; associated with sepsis risk."
-  ],
-  "model": "openai/gpt-oss-120b",
-  "generatedAt": "2026-10-27",
-  "checked": "2026-10-27",
-  "trimmed": 21
- }
+ "generatedAt": "2026-11-21",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-3.5-flash-lite",
+  "reviewedAt": "2026-11-21",
+  "fixRounds": 0
+ },
+ "reviewed": false
 }
