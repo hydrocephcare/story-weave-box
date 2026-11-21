@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useLayoutEffect, useRef, forwardRef, memo } from "react";
+import DOMPurify from "dompurify";
 import { useReadLog } from "@/lib/readLog";
 import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
@@ -548,7 +549,7 @@ function ClassicHeroInner({
           <span className="inline-flex items-center gap-1.5"><Check className="h-4 w-4 text-emerald-500" aria-hidden /> Updated {date}</span>
           {minutes ? <span>· {minutes} min read</span> : null}
           {year ? <span>· Year {year}</span> : null}
-          {aiReviewStatus === "passed" ? <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300"><Check className="h-3.5 w-3.5" aria-hidden /> AI cross-checked by Gemini · not clinician-reviewed</span> : null}
+          {aiReviewStatus === "pending_review" ? <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/5 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300">Pending academic review · not clinician-reviewed</span> : aiReviewStatus === "passed" ? <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300"><Check className="h-3.5 w-3.5" aria-hidden /> AI checks passed · not clinician-reviewed</span> : null}
         </p>
         <ShareButtons url={shareUrl} title={title} description={description} variant="full" className="mt-5" />
       </div>
@@ -754,6 +755,12 @@ function LockedSection({ lines }: { lines: string[] }) {
 type ArticleContentProps = { content: string; articleId: string; category: string; title?: string; contentKind?: string };
 /** Short-answer papers in the standard layout get question cards; everything else goes through the line-by-line renderer below. */
 const ArticleContent = memo(function ArticleContent(props: ArticleContentProps) {
+  const hasStructuredHtml = /<\/(?:h[1-6]|p|ul|ol|table|figure|section|div)>/i.test(props.content);
+  const safeHtml = useMemo(
+    () => hasStructuredHtml ? DOMPurify.sanitize(props.content, { USE_PROFILES: { html: true } }) : "",
+    [hasStructuredHtml, props.content],
+  );
+  if (hasStructuredHtml) return <div className="note-body html-article-content" dangerouslySetInnerHTML={{ __html: safeHtml }} />;
   const saq = useMemo(() => parseSaq(props.content), [props.content]);
   if (!saq) return <ArticleLines {...props} />;
   return (
@@ -2019,18 +2026,17 @@ export default function BlogPost() {
     const asTitle = String(article.title ?? "");
     if ((article as { content_type?: string | null }).content_type === "Notes" || /(notes?|revision|summary|guide)/i.test(asTitle) || !isPaperTitle(asTitle)) return ""; // revision notes about a CAT are notes, not a paper
     const c = String(article.content || "");
-    const q = (c.match(/^\s*(?:#{1,4}\s*)?\**\s*(?:Question\s*)?\d{1,3}\s*[.)]/gim) || []).length;
-    const a = (c.match(/^\s*[*_✅✔\s]*(?:model\s+)?answers?\b\s*[:*-]/gim) || []).length;
+    const parsed = extractExamQuestions(c);
+    const q = parsed.mcqs.length + parsed.essays.length;
+    const plain = stripRichText(c);
+    const hasModelAnswers = /\b(?:answer key|model answers?|answers and explanations|suggested answers?)\b/i.test(plain)
+      || /<li>\s*<strong>(?:Answer|Explanation)/i.test(c);
     if (q < 3) return ""; // timetables, notices and outlines keep the normal header
-    // numbered section headings and numbered steps in a lesson are not questions: a real paper has answer options, answers, marks, or lines that ask something
-    const options = (c.match(/^\s*\(?[A-E][.)]\s+\S/gm) || []).length;
-    const marks = (c.match(/\(\s*\d+\s*marks?\s*\)/gi) || []).length;
-    const asking = (c.match(/^\s*(?:#{1,4}\s*)?\**\s*(?:Question\s*)?\d{1,3}\s*[.)].*\?\**\s*$/gim) || []).length;
-    if (!(options >= 6 || a >= 1 || marks >= 2 || asking >= 3)) return "";
+    if (!hasModelAnswers && !/\b(?:marks?|answer:)\b/i.test(plain)) return "";
     if ((article as { source_type?: string | null }).source_type === "ai_gateway" && (article as { content_kind?: string | null }).content_kind === "note") return "";
     const parts = [unitName && unitName !== "Uncategorized" ? `${unitName} past paper` : "Past paper"];
     parts.push(`${q} questions`);
-    parts.push(a >= Math.max(3, q * 0.5) ? "answers and explanations included" : a >= 3 ? "some answers included" : "questions only");
+    parts.push(hasModelAnswers ? "answers and explanations included" : "questions only");
     return parts.join(" · ");
   })();
   const hasRelated = related.flashcards.length > 0 || related.mcqs.length > 0;
@@ -2061,7 +2067,7 @@ export default function BlogPost() {
       description={cleanMetaDescription(article)}
       category={article.category}
       paperLine={paperLine}
-      aiReviewStatus={(article as any).ai_review_status}
+      aiReviewStatus={(article as any).verification_status}
     />
   );
   return (
@@ -2360,7 +2366,9 @@ export default function BlogPost() {
 
 function RelatedMarquee({ articles }: { articles: any[] }) {
   const [paused, setPaused] = useState(false);
-  const list = [...articles.slice(0, 12), ...articles.slice(0, 12)];
+  const unique = Array.from(new Map(articles.filter((a) => a?.id).map((a) => [a.id, a])).values());
+  const firstPage = unique.slice(0, 12);
+  const list = firstPage.length > 1 ? [...firstPage, ...firstPage] : firstPage;
   return (
     <div
       className="group relative -mx-5 overflow-x-auto overflow-y-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
