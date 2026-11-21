@@ -915,29 +915,36 @@ export interface TocItem { id: string; text: string; level: number }
 
 export function extractToc(content: string): TocItem[] {
   const items: TocItem[] = [];
-  const lines = preprocessContent(content).split("\n");
-  let secNum = 0;
+  const add = (text: string, level: number) => {
+    const heading = cleanDisplayText(text).replace(/^\d+\.\s*/, "").replace(/\*+/g, "").replace(/⭐+/g, "").trim();
+    if (!heading || META_HEADING.test(heading) || /^(?:question|q)\s*\d+\b/i.test(heading) || /^\d+[.)]\s/.test(heading)) return;
+    const id = slugify(heading);
+    if (!id || items.some((item) => item.id === id)) return;
+    items.push({ id, text: heading, level });
+  };
 
-  for (let i = 0; i < lines.length; i++) {
-    const t = lines[i].trim();
-    if (/^#{1,2}\s/.test(t)) {
-      const heading = t.replace(/^#+\s+/, "").replace(/\*+/g, "").replace(/⭐+/g, "").replace(/^\d+\.\s*/, "").trim();
-      if (META_HEADING.test(heading)) continue;
-      secNum++;
-      items.push({ id: slugify(heading) || `section-${secNum}`, text: heading, level: 2 });
-    } else if (isLikelyStandaloneSectionHeading(t, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "")) {
-      const heading = trimSurroundingAsterisks(cleanDisplayText(t)).trim();
-      if (heading && !META_HEADING.test(heading)) {
-        items.push({ id: slugify(heading) || `section-${++secNum}`, text: heading, level: 3 });
-      }
+  // HTML-authored articles (for example examination papers) need the same TOC
+  // treatment as Markdown notes. Exclude numbered question headings so the TOC
+  // reports actual sections rather than counting every question as a section.
+  const htmlHeadings = Array.from(content.matchAll(/<h([1-3])\\b[^>]*>([\\s\\S]*?)<\\/h\\1>/gi));
+  if (htmlHeadings.length) {
+    for (const match of htmlHeadings) {
+      const level = Number(match[1]);
+      if (level <= 3) add(match[2].replace(/<[^>]+>/g, " "), level === 1 ? 2 : level);
     }
-    const qMatch = t.match(/^(QUESTION|Question|Q)\s*(\d+)/i);
-    if (qMatch) {
-      secNum++;
-      items.push({ id: `section-${secNum}`, text: `Question ${qMatch[2]}`, level: 2 });
-    }
+    return items;
   }
 
+  const lines = preprocessContent(content).split("\\n");
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^#{1,2}\\s/.test(t)) {
+      add(t.replace(/^#+\\s+/, ""), 2);
+    } else if (isLikelyStandaloneSectionHeading(t, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "")
+      && !/^(?:question|q)\\s*\\d+\\b/i.test(t) && !/^\\d+[.)]\\s/.test(t) && !isQuestionLike(t)) {
+      add(trimSurroundingAsterisks(t), 3);
+    }
+  }
   return items;
 }
 
