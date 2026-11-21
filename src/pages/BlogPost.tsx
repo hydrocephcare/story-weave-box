@@ -2027,7 +2027,8 @@ export default function BlogPost() {
     if ((article as { content_type?: string | null }).content_type === "Notes" || /(notes?|revision|summary|guide)/i.test(asTitle) || !isPaperTitle(asTitle)) return ""; // revision notes about a CAT are notes, not a paper
     const c = String(article.content || "");
     const parsed = extractExamQuestions(c);
-    const q = parsed.mcqs.length + parsed.essays.length;
+    const htmlQuestionCount = (c.match(/<h[3-6][^>]*>\\s*(?:Question\\s*)?\\d+[.)]\\s+[^<]+/gi) || []).length;
+    const q = htmlQuestionCount || parsed.mcqs.length + parsed.essays.length;
     const plain = stripRichText(c);
     const hasModelAnswers = /\b(?:answer key|model answers?|answers and explanations|suggested answers?)\b/i.test(plain)
       || /<li>\s*<strong>(?:Answer|Explanation)/i.test(c);
