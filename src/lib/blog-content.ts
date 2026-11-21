@@ -941,7 +941,7 @@ export function extractToc(content: string): TocItem[] {
     if (/^#{1,2}\s/.test(t)) {
       add(t.replace(/^#+\s+/, ""), 2);
     } else if (isLikelyStandaloneSectionHeading(t, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "")
-      && !/^(?:question|q)\s*\d+\b/i.test(t) && !/^\d+[.)]\s/.test(t) && !isQuestionLike(t)) {
+      && !/^(?:question|q)\s*\d+\b/i.test(t) && !/^\d+[.)]\s/.test(t) && !isQuestionLike(t) && !/\(\s*\d+\s*marks?\s*\)$/i.test(t)) {
       add(trimSurroundingAsterisks(t), 3);
     }
   }
