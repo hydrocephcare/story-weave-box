@@ -756,12 +756,13 @@ type ArticleContentProps = { content: string; articleId: string; category: strin
 /** Short-answer papers in the standard layout get question cards; everything else goes through the line-by-line renderer below. */
 const ArticleContent = memo(function ArticleContent(props: ArticleContentProps) {
   const hasStructuredHtml = /<\/(?:h[1-6]|p|ul|ol|table|figure|section|div)>/i.test(props.content);
-  const safeHtml = useMemo(
-    () => hasStructuredHtml ? DOMPurify.sanitize(props.content, { USE_PROFILES: { html: true } }) : "",
-    [hasStructuredHtml, props.content],
-  );
+  const [safeHtml, setSafeHtml] = useState("");
+  useEffect(() => {
+    if (!hasStructuredHtml) { setSafeHtml(""); return; }
+    setSafeHtml(DOMPurify.sanitize(props.content, { USE_PROFILES: { html: true } }));
+  }, [hasStructuredHtml, props.content]);
   const saq = useMemo(() => parseSaq(props.content), [props.content]);
-  if (hasStructuredHtml) return <div className="note-body html-article-content" dangerouslySetInnerHTML={{ __html: safeHtml }} />;
+  if (hasStructuredHtml) return safeHtml ? <div className="note-body html-article-content" dangerouslySetInnerHTML={{ __html: safeHtml }} /> : null;
   if (!saq) return <ArticleLines {...props} />;
   return (
     <>
