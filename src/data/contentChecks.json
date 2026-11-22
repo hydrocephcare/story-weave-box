@@ -122,22 +122,15 @@
   },
   "pneumonia": {
    "hash": "137fad200293",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "PCP (HIV) | High‑dose co‑trimoxazole (TMP 15 mg/kg + SMX 75 mg/kg) + steroids if SpO₂ < 70 %",
-     "problem": "The oxygen saturation threshold for adding adjunctive corticosteroids in Pneumocystis jirovecii pneumonia is PaO₂ < 70 mmHg (or SpO₂ < 92% on room air), not SpO₂ < 70%.",
-     "fix": "High‑dose co‑trimoxazole (TMP 15 mg/kg + SMX 75 mg/kg) + steroids if SpO₂ < 92 % (or PaO₂ < 70 mmHg)."
-    }
-   ],
+   "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-16",
-   "repairStatus": "held",
+   "at": "2026-11-22",
+   "repairStatus": "clean",
    "repairAttempts": 1,
-   "lastAttempt": "2026-11-16T12:33:57.688Z"
+   "lastAttempt": "2026-11-22T09:40:51.155Z"
   },
   "pleural-effusion": {
    "hash": "da6d35e11d1e",
@@ -534,22 +527,15 @@
   },
   "papers-paediatrics-year-4-mbchb-end-of-semester-cat-newborn-triage-growth": {
    "hash": "168359a0ec5f",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 21: Breast milk at room temperature can be stored for",
-     "problem": "Current WHO and CDC guidelines state that expressed human breast milk can be safely stored at room temperature (up to 25°C) for up to 4 hours, not 8 hours.",
-     "fix": "Change the correct answer option to 4 hours."
-    }
-   ],
+   "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
-   "repairStatus": "held-too-long",
+   "at": "2026-11-22",
+   "repairStatus": "clean",
    "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:01:45.020Z"
+   "lastAttempt": "2026-11-22T09:43:48.784Z"
   },
   "papers-paediatrics-special-supplementary-exam-august-2019-paper-one": {
    "hash": "44347d07ae47",
@@ -822,16 +808,16 @@
    "lastAttempt": "2026-11-17T10:45:55.522Z"
   },
   "heart-murmurs": {
-   "hash": "173a88a47a17",
+   "hash": "c56ec6e5ad96",
    "validated": true,
    "high": 0,
    "medium": 0,
    "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-17",
+   "at": "2026-11-22",
    "repairStatus": "auto-repaired",
-   "repairAttempts": 1,
-   "lastAttempt": "2026-11-17T10:47:29.855Z"
+   "repairAttempts": 2,
+   "lastAttempt": "2026-11-22T09:41:11.533Z"
   },
   "heart-failure-which-tests": {
    "hash": "2e04c59e34cf",
@@ -1174,22 +1160,15 @@
   },
   "hiv": {
    "hash": "cd57e002f710",
-   "validated": false,
-   "high": 1,
+   "validated": true,
+   "high": 0,
    "medium": 0,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Question 3",
-     "problem": "The clinical scenario describes starting trimethoprim-sulfamethoxazole for PCP and worsening 2 days later with a rash, but attributes this to IRIS, which is incorrect for sulfamethoxazole hypersensitivity/toxicity.",
-     "fix": "The most likely explanation for worsening symptoms and a rash two days after starting trimethoprim-sulfamethoxazole is a drug hypersensitivity reaction or adverse drug reaction."
-    }
-   ],
+   "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
-   "repairStatus": "held-too-long",
+   "at": "2026-11-22",
+   "repairStatus": "clean",
    "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:03:56.269Z"
+   "lastAttempt": "2026-11-22T09:44:00.406Z"
   },
   "malaria": {
    "hash": "750296e7ccfd",
@@ -1343,16 +1322,16 @@
    "issues": [
     {
      "severity": "high",
-     "where": "- **3**: Somnolence, confusion, inability to perform simple tasks — IV lactulose, aggressive infection control",
-     "problem": "Intravenous lactulose does not exist and cannot be given intravenously; lactulose is administered orally or via nasogastric tube or enema.",
-     "fix": "- **3**: Somnolence, confusion, inability to perform simple tasks — Oral or nasogastric lactulose, aggressive infection control"
+     "where": "IV lactulose, aggressive infection control",
+     "problem": "Lactulose is never administered intravenously as it can cause severe, life-threatening complications and is strictly for oral or enteral use.",
+     "fix": "Oral or nasogastric lactulose, aggressive infection control"
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:05:52.510Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:44:16.896Z"
   },
   "ibd": {
    "hash": "e988b70c4e2b",
@@ -1364,16 +1343,16 @@
    "at": "2026-11-06"
   },
   "hrs": {
-   "hash": "8543bff56c44",
+   "hash": "3821db0d311a",
    "validated": true,
    "high": 0,
    "medium": 0,
    "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-18",
+   "at": "2026-11-22",
    "repairStatus": "auto-repaired",
-   "repairAttempts": 1,
-   "lastAttempt": "2026-11-18T10:05:40.478Z"
+   "repairAttempts": 2,
+   "lastAttempt": "2026-11-22T09:41:44.471Z"
   },
   "iron-deficiency": {
    "hash": "21b8895dfefa",
@@ -1395,16 +1374,16 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Question 1",
-     "problem": "Isoniazid causes sideroblastic anaemia (due to interference with pyridoxine/B6), not folate deficiency, and B6 (pyridoxine) is the correct supplement.",
-     "fix": "Change the question context or correct the answer to pyridoxine (vitamin B6) for isoniazid-induced sideroblastic anaemia."
+     "where": "Question 1 answer: B. Start oral folic acid immediately",
+     "problem": "Isoniazid causes sideroblastic anaemia (microcytic), not megaloblastic anaemia, and vitamin B6 (pyridoxine) is the correct prevention/treatment.",
+     "fix": "Change the answer to C. Add pyridoxine (vit B6) to his regimen and update the explanation to note isoniazid-induced sideroblastic anaemia."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:08:54.022Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:44:26.645Z"
   },
   "ckd": {
    "hash": "c0a17b6c9c65",
@@ -1456,16 +1435,16 @@
    "issues": [
     {
      "severity": "medium",
-     "where": "Practice questions, Question 1",
-     "problem": "Refractory celiac disease is typically defined as persistent symptoms and villous atrophy after 6-12 months on a strict gluten-free diet, not 4 weeks.",
-     "fix": "Change the timeframe in the vignette from 4 weeks to 12 months to properly align with the diagnosis of refractory celiac disease."
+     "where": "Practice Questions, Question 1",
+     "problem": "Four weeks on a gluten-free diet is too short to diagnose refractory celiac disease, as mucosal healing takes much longer.",
+     "fix": "Change the timeframe or management step, as mucosal recovery and symptom resolution in celiac disease can take several months."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:09:57.234Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:44:51.704Z"
   },
   "haemolytic": {
    "hash": "562dc3dd6c2a",
@@ -1498,16 +1477,16 @@
    "at": "2026-11-07"
   },
   "leukaemia": {
-   "hash": "2116f3e9e96d",
+   "hash": "151ea05c1a80",
    "validated": true,
    "high": 0,
    "medium": 0,
    "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-18",
+   "at": "2026-11-22",
    "repairStatus": "auto-repaired",
-   "repairAttempts": 1,
-   "lastAttempt": "2026-11-18T10:10:42.256Z"
+   "repairAttempts": 2,
+   "lastAttempt": "2026-11-22T09:42:31.249Z"
   },
   "lymphoma": {
    "hash": "202d315a38a8",
@@ -1565,16 +1544,16 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Question 1 explanation: 'presentation is classic for TRALI (non‑cardiogenic pulmonary oedema)... Diuretics are reserved for TACO.'",
-     "problem": "The patient in Question 1 has chronic heart failure and a normal BP (130/80 mmHg), which is classic for Transfusion-Associated Circulatory Overload (TACO), not TRALI, and IV furosemide is the correct next step/treatment.",
-     "fix": "Change the diagnosis in the explanation to TACO (cardiogenic pulmonary oedema) and make the correct answer A (Give IV furosemide)."
+     "where": "Question 1 explanation: \"The presentation is classic for TRALI (non‑cardiogenic pulmonary oedema)... Diuretics are reserved for TACO.\"",
+     "problem": "In Question 1, a patient with heart failure develops tachypnoea, hypoxia, bibasal crackles, and normal blood pressure (130/80 mmHg), which is classic for Transfusion-Associated Circulatory Overload (TACO), not TRALI, making the explanation and clinical distinction flawed.",
+     "fix": "The presentation and normal-to-high blood pressure in a patient with heart failure are classic for TACO (cardiogenic pulmonary overload), where diuretics are indicated."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:10:56.172Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:45:04.363Z"
   },
   "diabetes": {
    "hash": "be59d63c843a",
@@ -1600,58 +1579,40 @@
   "thyroid": {
    "hash": "7066f972ba59",
    "validated": false,
-   "high": 3,
-   "medium": 1,
-   "issues": [
-    {
-     "severity": "high",
-     "where": "Methimazole preferred; propylthiouracil in first trimester or severe hepatic disease",
-     "problem": "Propylthiouracil is hepatotoxic and contraindicated in severe hepatic disease, and this directly contradicts Section 10.4.",
-     "fix": "Change to state that propylthiouracil is preferred in the first trimester of pregnancy or thyroid storm, and is contraindicated in liver disease."
-    },
-    {
-     "severity": "medium",
-     "where": "IV antithyroid drug (propylthiouracil)",
-     "problem": "Propylthiouracil has no intravenous formulation and must be administered orally, via nasogastric tube, or rectally.",
-     "fix": "Specify oral, nasogastric, or rectal administration for propylthiouracil."
-    },
-    {
-     "severity": "high",
-     "where": "“Explain the rationale for giving glucocorticoids in myxedema coma.” – They treat possible adrenal insufficiency and reduce peripheral conve",
-     "problem": "Reducing peripheral conversion of T4 to T3 is an objective in thyrotoxic storm, not myxedema coma, where impairing T3 production would worsen severe hypothyroidism.",
-     "fix": "Explain that glucocorticoids are given solely to treat or prevent adrenal crisis from concomitant primary or secondary adrenal insufficiency, as levothyroxine accelerates cortisol clearance."
-    },
-    {
-     "severity": "high",
-     "where": "What is the target TSH range for this patient during pregnancy? Answer: Keep TSH in the trimester‑specific reference",
-     "problem": "Titrating antithyroid medication to achieve a normal trimester-specific TSH in pregnancy leads to maternal overtreatment and causes fetal hypothyroidism and goitre.",
-     "fix": "Target maternal free T4 at or slightly above the upper limit of normal using the lowest effective dose of PTU, rather than targeting a normal TSH."
-    }
-   ],
-   "model": "gemini-3.8-flash",
-   "at": "2026-11-18",
-   "repairStatus": "held",
-   "repairAttempts": 1,
-   "lastAttempt": "2026-11-18T10:16:28.071Z"
-  },
-  "thyroid-emergency": {
-   "hash": "29a37431ebb6",
-   "validated": false,
    "high": 1,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "“Explain the rationale for giving glucocorticoids in myxoedema coma.” – they provide stress‑dose adrenal support and reduce peripheral conve",
-     "problem": "Glucocorticoids reduce peripheral conversion of T4 to T3 in thyroid storm, not myxoedema coma (and in myxoedema coma they treat relative adrenal insufficiency).",
-     "fix": "They provide stress-dose adrenal support to cover potential coexistent secondary adrenal insufficiency."
+     "where": "glucocorticoids treat possible adrenal insufficiency and, in high doses, inhibit peripheral conversion of T4 to T3.",
+     "problem": "High-dose glucocorticoids actually inhibit the peripheral conversion of T4 to T3 (which is useful in storm), but for myxedema coma, stress-dose steroids are given for potential coexistent adrenal insufficiency (Schmidt syndrome) rather than to inhibit T4 to T3 conversion.",
+     "fix": "Glucocorticoids treat possible central adrenal insufficiency and must be administered prior to starting levothyroxine to prevent precipitating an addisonian crisis."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
-   "repairStatus": "held-too-long",
+   "at": "2026-11-22",
+   "repairStatus": "held",
    "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:14:24.430Z"
+   "lastAttempt": "2026-11-22T09:43:42.240Z"
+  },
+  "thyroid-emergency": {
+   "hash": "29a37431ebb6",
+   "validated": false,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Explain the rationale for giving glucocorticoids in myxoedema coma.",
+     "problem": "Glucocorticoids reduce peripheral conversion of T4 to T3, which is factually incorrect as they inhibit T4 to T3 conversion in thyroid storm (PTU/dexamethasone), but in myxoedema coma they are given for empiric coverage of potential coexistent primary adrenal insufficiency (Schmidt syndrome).",
+     "fix": "They provide stress-dose adrenal support in case of concurrent primary adrenal insufficiency."
+    }
+   ],
+   "model": "gemini-3.5-flash-lite",
+   "at": "2026-11-22",
+   "repairStatus": "held-too-long",
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:45:17.045Z"
   },
   "adrenal": {
    "hash": "a93bc1fb322a",
@@ -1674,15 +1635,15 @@
     {
      "severity": "high",
      "where": "Severe hypercalcaemia (> 1.75 mmol/L)",
-     "problem": "The given threshold of 1.75 mmol/L for severe hypercalcaemia applies to ionised calcium, not total calcium, which is misleading in a section without units explicitly stating ionised vs total.",
-     "fix": "Severe hypercalcaemia (total calcium > 3.0 mmol/L or ionised > 1.75 mmol/L) requires immediate management."
+     "problem": "The numerical values given for calcium severity grading are in mmol/L but correspond to ionised calcium values typical of total calcium or are completely mismatched (e.g. severe hypercalcaemia total calcium is typically > 3.0 mmol/L, or ionised > 1.4 mmol/L).",
+     "fix": "Severe hypercalcaemia is defined as total calcium > 3.0 mmol/L (or ionised calcium > 1.4 mmol/L)."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:15:14.950Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:46:07.477Z"
   },
   "pituitary": {
    "hash": "d2d12864ab5e",
@@ -1750,21 +1711,21 @@
   "neuropathy": {
    "hash": "20d05da1c367",
    "validated": false,
-   "high": 1,
-   "medium": 0,
+   "high": 0,
+   "medium": 1,
    "issues": [
     {
-     "severity": "high",
-     "where": "Question 2",
-     "problem": "The text calls labile blood pressure in GBS \"autonomic dysreflexia\", which is incorrect; autonomic dysreflexia occurs in spinal cord injuries above T6, whereas GBS causes generalized autonomic instability.",
-     "fix": "Change the answer and explanation to autonomic instability rather than autonomic dysreflexia."
+     "severity": "medium",
+     "where": "Question 2 answer explanation: autonomic dysreflexia",
+     "problem": "Autonomic dysreflexia is a specific syndrome seen in spinal cord injuries above T6, not Guillain-Barre syndrome where the BP lability is due to general autonomic instability.",
+     "fix": "The explanation should refer to generalized autonomic instability or autonomic dysfunction rather than autonomic dysreflexia."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:16:05.712Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:47:57.604Z"
   },
   "myasthenia": {
    "hash": "05a11ef6cb17",
@@ -1811,21 +1772,21 @@
     {
      "severity": "high",
      "where": "HIV‑related opportunistic infection (e.g., cryptococcal meningitis): HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive,",
-     "problem": "Cryptococcal meningitis characteristically presents with high, not low, cerebrospinal fluid opening pressure.",
-     "fix": "CSF India‑ink positive, high opening pressure."
+     "problem": "Cryptococcal meningitis is characterized by high, not low, cerebrospinal fluid (CSF) opening pressure.",
+     "fix": "CSF India-ink positive, high opening pressure."
     },
     {
      "severity": "high",
-     "where": "SNOOP: Onset < 50 y or > 70 y",
-     "problem": "The SNOOP mnemonic traditionally lists age > 50 years as a red flag, not < 50 or > 70.",
-     "fix": "Onset after age 50 (or age > 50 y)"
+     "where": "Onset < 50 y or > 70 y",
+     "problem": "The SNOOP acronym states onset < 40 or > 50 years, not < 50 or > 70.",
+     "fix": "Onset < 40 y or > 50 y"
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:17:07.914Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:49:39.696Z"
   },
   "cord-compression": {
    "hash": "69f39fe3972d",
@@ -1864,26 +1825,20 @@
    "hash": "29393c718ffb",
    "validated": false,
    "high": 1,
-   "medium": 1,
+   "medium": 0,
    "issues": [
     {
      "severity": "high",
      "where": "Question 2 answer",
-     "problem": "Rituximab is not preferred over cyclophosphamide in first-trimester pregnancy; both are contraindicated/teratogenic, and mycophenolate is also teratogenic.",
-     "fix": "Rituximab is also teratogenic and contraindicated in pregnancy; neither is preferred, and safer alternatives like azathioprine are used."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 4 explanation",
-     "problem": "New-onset headaches and visual disturbances in SLE with a normal MRI suggest pseudotumor cerebri (idiopathic intracranial hypertension), lupus headache, or thrombosis rather than immediate high-dose IV methylprednisolone pulse without further workup.",
-     "fix": "Headaches and visual disturbances with a normal MRI require ruling out intracranial hypertension or thrombosis before assuming severe neuro-lupus."
+     "problem": "Rituximab is not preferred over cyclophosphamide in first trimester pregnancy; both are contraindicated and mycophenolate/cyclophosphamide are teratogenic.",
+     "fix": "Rituximab is also contraindicated in pregnancy; neither is preferred and safer alternatives or termination counseling should be discussed according to guidelines."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:17:40.031Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:50:37.169Z"
   },
   "gout": {
    "hash": "96060ec3411c",
@@ -1945,27 +1900,21 @@
   "spa": {
    "hash": "216b85f77d09",
    "validated": false,
-   "high": 2,
+   "high": 1,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Question 2 explanation: IGRA (interferon-gamma release assay) is the preferred screening tool before continuing biologic therapy",
-     "problem": "For evaluating a patient on a biologic presenting with new symptoms like persistent cough and night sweats, a chest X-ray is the immediate first-line investigation to assess for active tuberculosis or other pulmonary pathology.",
-     "fix": "Chest X-ray is the initial imaging study required to evaluate new pulmonary symptoms in a patient on immunosuppressive therapy."
-    },
-    {
-     "severity": "high",
-     "where": "Question 5 explanation: Active viral hepatitis is a contraindication to NSAID use due to risk of hepatic injury",
-     "problem": "Active viral hepatitis is not a standard contraindication to NSAID use (NSAIDs are metabolized by the liver, but active hepatitis per se is not the primary contraindication listed among standard options like severe renal disease, active peptic ulcer bleeding, or cardiovascular disease).",
-     "fix": "Active hepatitis B is not a direct contraindication to NSAID use; cardiovascular disease and active gastrointestinal bleeding are primary contraindications."
+     "where": "Question 5 answer and explanation",
+     "problem": "Active hepatitis B infection is stated as a contraindication to NSAIDs, which is clinically incorrect and confuses NSAIDs with DMARDs or biologics.",
+     "fix": "The correct contraindication to COX-2 selective NSAIDs among the options is a history of cardiovascular disease or severe renal impairment, whereas active hepatitis B is a contraindication for methotrexate or biologics."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:18:14.808Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:52:21.324Z"
   },
   "pharmacology": {
    "hash": "bfa4ca8839d4",
@@ -1975,41 +1924,47 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Clinical case - Question 2",
-     "problem": "Rifampicin induces hepatic enzymes, which lowers efavirenz levels, so efavirenz should be increased or an integrase inhibitor like dolutegravir used, not switched to a protease inhibitor.",
-     "fix": "Switch efavirenz to a dolutegravir-based ART regimen (or double the dose of efavirenz) to overcome rifampicin-induced reduction of antiretroviral levels."
+     "where": "Clinical case - Question 2 Answer",
+     "problem": "Rifampicin induces efavirenz metabolism, requiring an increased dose of efavirenz or switching to dolutegravir, not a protease inhibitor.",
+     "fix": "Switch efavirenz-based regimen to a dolutegravir-based regimen with a doubled dose of dolutegravir or maintain efavirenz 600 mg daily during TB treatment according to national guidelines."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:19:56.282Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:53:12.323Z"
   },
   "geriatrics": {
    "hash": "6448b046795e",
    "validated": false,
-   "high": 2,
+   "high": 3,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
-     "where": "Renal – eGFR >60 mL/min/1.73 m² (stage 1), 30–59 (stage 2), <30 (stage 3).",
-     "problem": "The CKD staging and eGFR thresholds are incorrect according to KDIGO guidelines.",
-     "fix": "Stage 1 is ≥90, stage 2 is 60–89, stage 3a is 45–59, stage 3b is 30–44, and stage 4 is 15–29 mL/min/1.73 m²."
+     "where": "Renal – eGFR >60 mL/min/1.73 m² (stage 1), 30‑59 (stage 2), <30 (stage 3).",
+     "problem": "The KDIGO chronic kidney disease staging thresholds and definitions are incorrectly attributed and incomplete.",
+     "fix": "Stage 1 eGFR is ≥90, Stage 2 is 60–89, Stage 3a is 45–59, Stage 3b is 30–44, and Stage 4 is 15–29 mL/min/1.73 m²."
     },
     {
      "severity": "high",
-     "where": "Clinical case, Questions, Question 2",
-     "problem": "Nitrofurantoin is contraindicated or inadequate for upper urinary tract infection or complicated UTI/urosepsis with fever and systemic symptoms due to poor tissue penetration.",
-     "fix": "Start empiric broad-spectrum IV antibiotics appropriate for complicated UTI or urosepsis pending culture results."
+     "where": "Clinical case Question 2 answer",
+     "problem": "Nitrofurantoin is inadequate for treating acute pyelonephritis or complicated UTIs presenting with fever and systemic symptoms because it does not achieve therapeutic tissue levels.",
+     "fix": "Use an appropriate systemic antibiotic such as amoxicillin-clavulanate, a cephalosporin, or a fluoroquinolone based on local guidelines."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions Question 1 option D and answer",
+     "problem": "An intertrochanteric hip fracture requires surgical fixation (e.g., sliding hip screw or intramedullary nail), not total hip arthroplasty, and LMWH is for DVT prophylaxis, not the primary next surgical step.",
+     "fix": "Arrange prompt surgical fixation (sliding hip screw or intramedullary nail) within 48 hours alongside standard medical optimization and DVT prophylaxis."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:21:22.264Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:55:12.849Z"
   },
   "poisoning": {
    "hash": "ebd3a8346b71",
@@ -2041,15 +1996,15 @@
     {
      "severity": "high",
      "where": "T-score ≤‑2.5 = osteopenia/osteoporosis",
-     "problem": "A T-score of -2.5 or lower defines osteoporosis, not osteopenia.",
-     "fix": "T-score ≤‑2.5 = osteoporosis (-1.0 to -2.5 is osteopenia)."
+     "problem": "A T-score of ≤ -2.5 defines osteoporosis, whereas osteopenia is defined as a T-score between -1.0 and -2.5.",
+     "fix": "T-score ≤-2.5 = osteoporosis (T-score -1.0 to -2.5 = osteopenia)."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-20",
+   "at": "2026-11-22",
    "repairStatus": "held-too-long",
-   "repairAttempts": 2,
-   "lastAttempt": "2026-11-20T10:22:08.717Z"
+   "repairAttempts": 3,
+   "lastAttempt": "2026-11-22T09:55:48.683Z"
   },
   "lymphomas": {
    "hash": "cc7ddde80f04",
