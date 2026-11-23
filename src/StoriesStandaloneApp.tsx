@@ -1,4 +1,4 @@
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -60,8 +60,10 @@ export default function StoriesStandaloneApp() {
   return <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
     <AuthProvider>
       <TooltipProvider>
-        <Toaster/><SonnerToaster/>
-        <StoriesRoutes/>
+        <BrowserRouter>
+          <Toaster/><SonnerToaster/>
+          <StoriesRoutes/>
+        </BrowserRouter>
       </TooltipProvider>
     </AuthProvider>
   </ThemeProvider>;
