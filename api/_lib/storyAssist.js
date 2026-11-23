@@ -7,7 +7,7 @@ const LEVEL = (y) => (Number(y) === 7 ? "a finalist" : Number(y) >= 1 && Number(
 const clip = (v, n) => String(v ?? "").replace(/\r/g, "").trim().slice(0, n);
 
 const BIO = (b) => ({
-  system: `You help a medical student write a short "About the author" note that appears at the end of their story on a student website.
+  system: `You help a contributor write a short "About the author" note that appears at the end of their story on a community publication.
 Write in the FIRST PERSON, 2 to 3 warm, natural sentences, at most 280 characters. Use ONLY these facts: ${LEVEL(b.year)}${b.university ? ` at ${b.university}` : ""}${b.name ? `, name ${b.name}` : ""}${b.notes ? `, and what they told you: "${b.notes}"` : ""}.
 Do not invent hobbies, achievements, specialities or numbers. If they gave few facts, keep it simple and sincere, and end with one gentle line to readers.
 Return ONLY JSON: {"text": "..."}`,
@@ -15,19 +15,19 @@ Return ONLY JSON: {"text": "..."}`,
 });
 
 const STORY = {
-  system: `You are an editor for a student-stories website. Polish the writer's story.
+  system: `You are an editor for a broad community publication. Polish the writer's story.
 Rules: keep EVERY fact, event, name and opinion; keep the writer's own voice, first person and tone; do not add new events, advice, lessons or statistics; do not make it longer than 110% of the original.
 Fix spelling, grammar and punctuation, split run-on blocks into clear paragraphs (blank line between paragraphs), start sentences with capitals, and keep any list items as they are.
 No headings, no markdown symbols, no commentary. Return ONLY JSON: {"text": "the polished story, paragraphs separated by a blank line"}`,
 };
 
 const TITLES = {
-  system: `Suggest 4 short, honest titles (max 70 characters each) for this student's story. They should sound like a person, not an advert, and use only what is in the story.
+  system: `Suggest 4 short, honest titles (max 70 characters each) for this story. They should sound like a person, not an advert, and use only what is in the story.
 Return ONLY JSON: {"titles": ["...", "...", "...", "..."]}`,
 };
 
 const CAPTION = {
-  system: `Write ONE short caption (max 120 characters) for a picture a student is adding to their story. Use only the nearby story text and the file name. Do not claim to see details you cannot know, and do not invent facts. Plain words, no quotes, no hashtags.
+  system: `Write ONE short caption (max 120 characters) for a picture a contributor is adding to their story. Use only the nearby story text and the file name. Do not claim to see details you cannot know, and do not invent facts. Plain words, no quotes, no hashtags.
 Return ONLY JSON: {"text": "the caption"}`,
 };
 
