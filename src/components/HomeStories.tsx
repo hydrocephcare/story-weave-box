@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { buildStoryPath } from "@/lib/seo";
+const STORIES_ORIGIN = "https://stories.ompathstudy.com";
+const storyUrl = (slug?: string | null, id?: string, title?: string) => `${STORIES_ORIGIN}/stories/${slug || (id ? `${id}-${(title || "story").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}` : "")}`;
 import { authorFromTags, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 import { isGeneratedThumb } from "@/lib/storyShare";
 
@@ -50,23 +51,23 @@ export default function HomeStories() {
           <p className="mt-0.5 text-xs text-muted-foreground sm:text-sm">Real experiences and advice from medical school, first year to final year</p>
         </div>
         <div className="flex items-center gap-2">
-          <Link to="/stories?write=1" className="inline-flex items-center gap-1.5 rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground hover:bg-primary/90"><PenLine className="h-4 w-4" /> Share yours</Link>
-          <Link to="/stories" className="inline-flex items-center gap-1 rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary hover:text-primary">All stories <ChevronRight className="h-4 w-4" /></Link>
+          <a href={`${STORIES_ORIGIN}/stories?write=1`} className="inline-flex items-center gap-1.5 rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground hover:bg-primary/90"><PenLine className="h-4 w-4" /> Share yours</a>
+          <a href={`${STORIES_ORIGIN}/stories`} className="inline-flex items-center gap-1 rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary hover:text-primary">All stories <ChevronRight className="h-4 w-4" /></a>
         </div>
       </div>
 
       {rows === null ? (
         <div className="grid gap-4 sm:grid-cols-3">{[0, 1, 2].map((i) => <div key={i} className="h-44 animate-pulse rounded-xl bg-muted" />)}</div>
       ) : rows.length === 0 ? (
-        <Link to="/stories?write=1" className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border bg-card px-6 py-10 text-center hover:border-primary/50">
+        <a href={`${STORIES_ORIGIN}/stories?write=1`} className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border bg-card px-6 py-10 text-center hover:border-primary/50">
           <BookOpen className="h-8 w-8 text-muted-foreground/40" />
           <strong className="font-serif text-lg">Be the first to share a story</strong>
           <span className="text-sm text-muted-foreground">What has medical school been like for you?</span>
-        </Link>
+        </a>
       ) : (
         <div className="grid gap-4 sm:grid-cols-3">
           {rows.map((s) => (
-              <Link key={s.id} to={buildStoryPath(s)} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
+              <a key={s.id} href={storyUrl(s.slug, s.id, s.title)} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
                 {s.cover_image_url
                   ? <img src={s.cover_image_url} alt="" loading="lazy" className="aspect-[16/9] w-full object-cover object-center" />
                   : <StoryCoverArt title={s.title} className="aspect-[16/9] w-full" />}
@@ -78,7 +79,7 @@ export default function HomeStories() {
                   <HomeStoryAuthor story={s} />
                   <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{s.meta_description}</p>
                 </div>
-              </Link>
+              </a>
           ))}
         </div>
       )}
