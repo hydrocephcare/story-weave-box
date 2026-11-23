@@ -27,7 +27,7 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
   const ua = request.headers.get("user-agent") || "";
   const bot = /(bot|crawl|spider|google|bing|yandex|baidu|facebookexternalhit|whatsapp|telegram|discord|slack|linkedin|twitter|openseo-audit|ompathstudymonitor|inspectiontool)/i.test(ua);
   if (!bot || (url.searchParams.has("write")) || !["/","/stories","/share-your-story","/finalists"].includes(path) && !path.startsWith("/stories/")) return context.next();
-  const baseQuery = {select:"id,title,slug,content,category,created_at,cover_image_url,meta_title,meta_description,tags,reading_time_minutes",published:"eq.true","deleted_at":"is.null",limit:"1"};
+  const baseQuery = {select:"id,title,slug,content,category,created_at,cover_image_url,meta_title,meta_description,tags,reading_time_minutes",published:"eq.true","deleted_at":"is.null","password_protected":"eq.false",or:"(scheduled_at.is.null,scheduled_at.lte."+new Date().toISOString()+")",limit:"1"};
   if (path.startsWith("/stories/")) {
     const param = decodeURIComponent(path.slice("/stories/".length));
     let found = await rows(context.env,{...baseQuery,slug:"eq."+param});
@@ -51,7 +51,7 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
     const body = "<h1>Your story deserves to be heard</h1><p>"+escapeHtml(description)+"</p><p><a href='/stories?write=1'>Start writing</a></p>";
     return new Response(documentHtml(title,description,ORIGIN+path,body),{headers:{"content-type":"text/html; charset=utf-8","cache-control":"public, max-age=60"}});
   }
-  const recent = await rows(context.env,{select:"id,title,slug,category,created_at,meta_description,cover_image_url",published:"eq.true","deleted_at":"is.null",order:"created_at.desc",limit:"20"});
+  const recent = await rows(context.env,{select:"id,title,slug,category,created_at,meta_description,cover_image_url",published:"eq.true","deleted_at":"is.null","password_protected":"eq.false",or:"(scheduled_at.is.null,scheduled_at.lte."+new Date().toISOString()+")",order:"created_at.desc",limit:"20"});
   const links = recent.map(s => {
     const slug = s.slug || s.id;
     return "<article><h2><a href='/stories/"+escapeHtml(slug)+"'>"+escapeHtml(s.title)+"</a></h2><small>"+escapeHtml(s.category || "Community story")+"</small><p>"+escapeHtml(s.meta_description || plainText(s.content || "").slice(0,180))+"</p></article>";
