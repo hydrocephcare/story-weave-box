@@ -53,4 +53,4 @@ export function authorFromContent(content: string): { name: string; level: strin
 }
 
 /** 1 to 6 are the years of study, 7 a finalist, 8 anyone outside MBChB. */
-export const levelLabel = (y: number) => (y === 7 ? "Finalist" : y === 8 ? "Another course" : `Year ${y}`);
+export const levelLabel = (y: number) => (y === 7 ? "Finalist" : y === 8 ? "Another course" : y >= 1 && y <= 6 ? `Year ${y}` : "Community writer");
