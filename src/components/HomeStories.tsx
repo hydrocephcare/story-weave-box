@@ -2,11 +2,11 @@ import StoryCoverArt from "@/components/StoryCoverArt";
 import { useEffect, useState } from "react";
 import { BookOpen, ChevronRight, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-const storyUrl = (slug?: string | null, id?: string, title?: string) => `${STORIES_ORIGIN}/stories/${slug || (id ? `${id}-${(title || "story").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}` : "")}`;
 import { authorFromTags, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 import { isGeneratedThumb } from "@/lib/storyShare";
 
 const STORIES_ORIGIN = "https://stories.ompathstudy.com";
+const storyUrl = (slug?: string | null, id?: string, title?: string) => `${STORIES_ORIGIN}/stories/${slug || (id ? `${id}-${(title || "story").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}` : "")}`;
 interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null }
 
 function HomeStoryAuthor({ story }: { story: Row }) {
