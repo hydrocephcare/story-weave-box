@@ -1,14 +1,9 @@
 type Env = { SUPABASE_URL?:string; SUPABASE_ANON_KEY?:string };
-export const onRequestGet = async ({env}:{env:Env}):Promise<Response> => {
-  const base=env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
-  const key=env.SUPABASE_ANON_KEY || "";
+export const onRequestGet = async ():Promise<Response> => {
   const rows:any[]=[];
   for(let offset=0;offset<10000;offset+=1000){
-    const u=new URL(base+"/rest/v1/stories");
-    u.searchParams.set("select","id,title,slug,created_at,updated_at,cover_image_url");
-    u.searchParams.set("published","eq.true");u.searchParams.set("deleted_at","is.null");
-    u.searchParams.set("order","created_at.desc");u.searchParams.set("limit","1000");u.searchParams.set("offset",String(offset));
-    const r=await fetch(u.toString(),{headers:{apikey:key,Authorization:"Bearer "+key}});
+    const query="stories?select=id,title,slug,created_at,updated_at,cover_image_url&published=eq.true&deleted_at=is.null&order=created_at.desc&limit=1000&offset="+offset;
+    const r=await fetch("https://ompath-sb-cache.hydrocephcare.workers.dev/?u="+encodeURIComponent(query));
     if(!r.ok)break;const batch=await r.json();if(!Array.isArray(batch)||!batch.length)break;
     rows.push(...batch);if(batch.length<1000)break;
   }
