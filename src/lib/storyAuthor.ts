@@ -17,7 +17,7 @@ export const isVerifiedStory = (tags?: string[] | null) => Boolean(tags?.include
 export const authorTag = (name: string, level: string) => {
   const cleanName = name.replace(/\s+/g, " ").trim().slice(0, 80);
   const cleanLevel = level.replace(/\s+/g, " ").trim().slice(0, 24);
-  if (!cleanName || /^a medical student$/i.test(cleanName)) return "";
+  if (!cleanName || /^a (?:medical student|community writer)$/i.test(cleanName)) return "";
   return AUTHOR + cleanName + "|" + cleanLevel;
 };
 export const authorFromTags = (tags?: string[] | null): { name: string; level: string } | null => {
@@ -27,7 +27,7 @@ export const authorFromTags = (tags?: string[] | null): { name: string; level: s
   const separator = value.lastIndexOf("|");
   const name = (separator < 0 ? value : value.slice(0, separator)).trim();
   const level = separator < 0 ? "" : value.slice(separator + 1).trim();
-  return name && !/^a medical student$/i.test(name) ? { name, level } : null;
+  return name && !/^a (?:medical student|community writer)$/i.test(name) ? { name, level } : null;
 };
 export const photoTag = (url: string) => (/^https:\/\//i.test(url) && url.length < 400 ? PHOTO + encodeURIComponent(url) : "");
 export const photoFromTags = (tags?: string[] | null): string => {
