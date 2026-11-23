@@ -13,7 +13,8 @@ async function rows(_env:StoriesEnv, params:Record<string,string>):Promise<Story
 }
 function documentHtml(title:string,description:string,canonical:string,body:string,image?:string,schema?:unknown) {
   const imageTag = image ? '<meta property="og:image" content="'+escapeHtml(image)+'"><meta name="twitter:image" content="'+escapeHtml(image)+'">' : "";
-  const schemaTag = schema ? '<script type="application/ld+json">'+JSON.stringify(schema).replace(/</g,"\\u003c")+'</script>' : "";
+  const schemaJson = schema ? (JSON.stringify(schema) || "{}").replace(/</g,"\\u003c") : "";
+  const schemaTag = schema ? '<script type="application/ld+json">'+schemaJson+'</script>' : "";
   return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escapeHtml(title)+'</title><meta name="description" content="'+escapeHtml(description)+'"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="'+escapeHtml(canonical)+'"><meta property="og:type" content="article"><meta property="og:site_name" content="Stories"><meta property="og:title" content="'+escapeHtml(title)+'"><meta property="og:description" content="'+escapeHtml(description)+'"><meta property="og:url" content="'+escapeHtml(canonical)+'"><meta name="twitter:card" content="summary_large_image">'+imageTag+schemaTag+'<style>body{max-width:850px;margin:40px auto;padding:0 20px;font:18px/1.75 Georgia,serif;color:#263b30}a{color:#315e47}h1{font-size:2.5rem;line-height:1.1}small{color:#64746a;font:13px Arial}</style></head><body><header><a href="/" style="font-weight:bold;font-size:24px;text-decoration:none">Stories.</a></header>'+body+'<footer><p><a href="/stories">Explore more stories</a> · <a href="/share-your-story">Share your story</a></p></footer></body></html>';
 }
 export const onRequest = async (context:PagesContext):Promise<Response> => {
