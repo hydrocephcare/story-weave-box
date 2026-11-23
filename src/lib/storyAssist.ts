@@ -3,8 +3,9 @@ type Reply = { text?: string; titles?: string[]; error?: string };
 
 async function call(body: Record<string, unknown>): Promise<Reply> {
   try {
-    const apiOrigin = typeof window !== "undefined" && window.location.hostname === "stories.ompathstudy.com" ? "https://www.ompathstudy.com" : "";
-    const r = await fetch(`${apiOrigin}/api/ai?task=assist`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+    const isStoriesSite = typeof window !== "undefined" && window.location.hostname === "stories.ompathstudy.com";
+    const endpoint = isStoriesSite ? "/api/story-assist" : "/api/ai?task=assist";
+    const r = await fetch(endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
     const j = (await r.json().catch(() => ({}))) as Reply;
     if (!r.ok) throw new Error(j.error || "The helper is busy. Please try again in a minute.");
     return j;
