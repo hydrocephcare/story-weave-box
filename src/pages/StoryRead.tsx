@@ -123,7 +123,7 @@ export default function StoryRead() {
   }
 
   // a placeholder title such as "1.1" is shown as the writer's story instead
-  const shownTitle = /[A-Za-z]{3,}/.test(String(story.title)) ? story.title : `${authorFromContent(story.content || "")?.name.split(" ")[0] ?? "A student"}'s story`;
+  const shownTitle = /[A-Za-z]{3,}/.test(String(story.title)) ? story.title : `${authorFromContent(story.content || "")?.name.split(" ")[0] ?? "A writer"}'s story`;
   // the byline is shown by the author chip, so it is not repeated in the text
   const storyContent = tidyStory((story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, ""));
   const descText = String((story as any).meta_description ?? "").replace(/…$/, "").replace(/\s+/g, " ").trim();
