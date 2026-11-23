@@ -15,6 +15,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import StoriesStandaloneApp from "./StoriesStandaloneApp";
+import StoriesRedirect from "@/components/StoriesRedirect";
 import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AuthProvider } from "@/hooks/useAuth";
@@ -369,11 +370,11 @@ const AnimatedRoutes = () => {
             <Route path="/admin/contests/operations" element={<AdminPage><ContestOperations /></AdminPage>} />
             <Route path="/admin/contests/rehearsal" element={<AdminPage><ContestRehearsal /></AdminPage>} />
             <Route path="/admin/contests/appeals" element={<AdminPage><ContestAppealsAdmin /></AdminPage>} />
-            <Route path="/stories" element={<RailLayout><Stories /></RailLayout>} />
-            <Route path="/stories/:id" element={<StoryRead />} />
-            <Route path="/share-your-story" element={<ShareYourStory />} />
-            <Route path="/finalists" element={<ShareYourStory audience="finalist" />} />
-            <Route path="/share-your-story/:who" element={<ShareYourStory />} />
+            <Route path="/stories" element={<StoriesRedirect />} />
+            <Route path="/stories/:id" element={<StoriesRedirect />} />
+            <Route path="/share-your-story" element={<StoriesRedirect />} />
+            <Route path="/finalists" element={<StoriesRedirect />} />
+            <Route path="/share-your-story/:who" element={<StoriesRedirect />} />
             <Route path="/submit-story" element={<Navigate to="/stories?write=1" replace />} />
             <Route path="/essays" element={<RailLayout><Essays /></RailLayout>} />
             <Route path="/essays/:slug" element={<EssayStudy />} />
