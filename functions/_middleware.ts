@@ -4,9 +4,12 @@ type StoryRow = { id:string; title:string; slug:string|null; content:string; cat
 const ORIGIN = "https://stories.ompathstudy.com";
 const escapeHtml = (value:unknown) => String(value ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 const plainText = (value:string) => String(value || "").replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ").replace(/&nbsp;|&#160;/gi," ").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/\s+/g," ").trim();
-async function rows(_env:StoriesEnv, params:Record<string,string>):Promise<StoryRow[]> {
-  const query = "stories?" + new URLSearchParams(params).toString();
-  const response = await fetch("https://ompath-sb-cache.hydrocephcare.workers.dev/?u=" + encodeURIComponent(query));
+async function rows(env:StoriesEnv, params:Record<string,string>):Promise<StoryRow[]> {
+  const base = env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
+  const key = env.SUPABASE_ANON_KEY || "";
+  const url = new URL(base + "/rest/v1/stories");
+  for (const [k,v] of Object.entries(params)) url.searchParams.set(k,v);
+  const response = await fetch(url.toString(), {headers:{apikey:key,Authorization:"Bearer "+key}});
   if (!response.ok) return [];
   const data = await response.json();
   return Array.isArray(data) ? data as StoryRow[] : [];
