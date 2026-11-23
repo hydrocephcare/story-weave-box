@@ -14,7 +14,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import StoriesStandaloneApp from "./StoriesStandaloneApp";
+const StoriesStandaloneApp = lazy(() => import("./StoriesStandaloneApp"));
 import StoriesRedirect from "@/components/StoriesRedirect";
 import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
@@ -410,7 +410,7 @@ const AIPage = lazy(() => import("@/pages/OmpathAIPage"));
 const AdminPage = ({ children }: { children: React.ReactNode }) => <AdminRoute><AdminShell>{children}</AdminShell></AdminRoute>;
 
 const App = () => {
-  if (typeof window !== "undefined" && window.location.hostname === "stories.ompathstudy.com") return <StoriesStandaloneApp />;
+  if (typeof window !== "undefined" && window.location.hostname === "stories.ompathstudy.com") return <Suspense fallback={<RouteLoader />}><StoriesStandaloneApp /></Suspense>;
   return (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
     <QueryClientProvider client={queryClient}>
