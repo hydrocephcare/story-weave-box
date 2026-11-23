@@ -167,6 +167,14 @@
   ],
   "rewrites": [
     {
+      "source": "/robots.txt",
+      "destination": "/api/robots"
+    },
+    {
+      "source": "/stories-sitemap.xml",
+      "destination": "/api/stories-sitemap"
+    },
+    {
       "source": "/api/ai-chat",
       "destination": "/api/ai?task=chat"
     },
