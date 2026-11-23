@@ -49,7 +49,7 @@ export const withoutAuthorTags = (tags: string[]) => tags.filter((t) =>
 /** The byline the writer adds at the top of a story: "By Name · Year 4" or "By Name · Finalist". */
 export function authorFromContent(content: string): { name: string; level: string } | null {
   const m = content.match(/^\s*<p><em>By\s+([^<]{1,80}?)\s*(?:·|&middot;|&#183;)\s*([^<]{1,20})<\/em><\/p>/i);
-  return m ? { name: m[1].trim(), level: m[2].trim() } : null;
+  return m && !/^a (?:medical student|community writer)$/i.test(m[1].trim()) ? { name: m[1].trim(), level: m[2].trim() } : null;
 }
 
 /** 1 to 6 are the years of study, 7 a finalist, 8 anyone outside MBChB. */
