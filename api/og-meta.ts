@@ -1082,7 +1082,9 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   try {
-    const origin = "https://www.ompathstudy.com";
+    const requestHost = String(req.headers.get ? req.headers.get("host") || "" : req.headers.host || "").split(":")[0].toLowerCase();
+    const isStoriesHost = requestHost === "stories.ompathstudy.com";
+    const origin = isStoriesHost ? "https://stories.ompathstudy.com" : "https://www.ompathstudy.com";
     const absoluteUrl = `${origin}${originalPath.split("?")[0]}`;
     const parts = originalPath.split("?")[0].split("/").filter(Boolean);
     const section = parts[0] || "";
@@ -1102,14 +1104,20 @@ export default async function handler(req: Request): Promise<Response> {
     let schemaJson = "";
     let bodyExtra = "";
 
-    if (STATIC_PAGE_META[originalPath.split("?")[0]]) {
-      const page = STATIC_PAGE_META[originalPath.split("?")[0]];
+    if (STATIC_PAGE_META[originalPath.split("?")[0]] || (isStoriesHost && ["/", "/stories"].includes(originalPath.split("?")[0]))) {
+      const pathKey = originalPath.split("?")[0];
+      const page = isStoriesHost && ["/", "/stories"].includes(pathKey) ? {
+        title: "Stories | Read and Publish Original Stories",
+        description: "Personal experiences, ideas, knowledge and reflections from writers around the world. Read, discover and publish stories on every subject.",
+        image: "",
+        links: ["/stories", "/share-your-story"],
+      } : STATIC_PAGE_META[pathKey];
       title = page.title;
       description = page.description;
       if (page.image) ogImage = page.image;
       keywords = `OmpathStudy, medical notes Kenya, MCQs, flashcards, exams, MBChB revision`;
       type = "website";
-      schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: absoluteUrl, isPartOf: { "@type": "WebSite", name: "OmpathStudy", url: origin }, publisher: { "@type": "Organization", name: "OmpathStudy", url: origin } });
+      schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: absoluteUrl, isPartOf: { "@type": "WebSite", name: isStoriesHost ? "Stories" : "OmpathStudy", url: origin }, publisher: { "@type": "Organization", name: isStoriesHost ? "Stories" : "OmpathStudy", url: origin } });
       bodyExtra = `<section><h2>Study resources</h2><p>OmpathStudy provides structured medical learning resources for MBChB and health students worldwide. The public study library includes concise clinical notes, pathology guides, pharmacology revision, anatomy summaries, physiology explanations, microbiology material, active-recall flashcards, practice MCQs and timed exam-style revision. Content is organised by academic year and unit so students can move directly from a year hub to the relevant articles, question banks, flashcards and exam practice.</p><p>Use these links to navigate to live indexable pages without redirects.</p><nav aria-label="Core pages">${page.links.map((path) => `<a href="${path}">${path === "/" ? "Home" : path.replace(/^\//, "")}</a>`).join(" ")}</nav></section>`;
     } else if (!param && ["blog", "mcqs", "flashcards", "stories", "exams"].includes(section)) {
       const pages: Record<string, { title: string; description: string; keywords: string }> = {
@@ -1129,9 +1137,9 @@ export default async function handler(req: Request): Promise<Response> {
           keywords: "OmpathStudy, flashcards Kenya, medical flashcards, active recall, exam revision",
         },
         stories: {
-          title: "Medical School Stories | Ompath Study",
-          description: "Read reflective medical school stories and student experiences from around the world.",
-          keywords: "OmpathStudy, medical stories, medical students Kenya, reflective practice",
+          title: "Stories | Read and Publish Original Stories",
+          description: "Read personal experiences, ideas, knowledge and reflections from writers around the world. Publish your own story.",
+          keywords: "Stories, personal stories, articles, experiences, ideas, community writing",
         },
         exams: {
           title: "Timed Medical Exams | Ompath Study",
@@ -1477,14 +1485,14 @@ ${explanationLine}
       }
       const rawStory = String(story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "");
       const plainStory = storyPlainText(rawStory);
-      title = toMetaTitle(String(story.meta_title || ""), story.title + " | Story | Ompath Study");
+      title = toMetaTitle(String(story.meta_title || ""), story.title + (isStoriesHost ? " | Stories" : " | Story | Ompath Study"));
       description = toMetaDescription(
         String(story.meta_description || plainStory),
-        "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow."
+        isStoriesHost ? "Read an original story on Stories, a publication for personal experiences, ideas and knowledge." : "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow."
       );
       bodyExtra = "<article>" + storyBodyHtml(rawStory) + "</article>";
       const by = String(story.content || "").match(/^\s*<p><em>By\s+([^<]{1,80}?)\s*(?:·|&middot;|&#183;)\s*([^<]{1,20})<\/em><\/p>/i);
-      const who = by && !/^a medical student$/i.test(by[1]) ? by[1].trim() : "";
+      const who = by && !/^a (?:medical student|community writer)$/i.test(by[1]) ? by[1].trim() : "";
       const lvl = /^Year\s*(\d)$/i.exec(by ? by[2].trim() : "");
       const photoTag = ((story as { tags?: string[] }).tags || []).find((t) => t.startsWith("photo:"));
       let photo = ""; try { photo = photoTag ? decodeURIComponent(photoTag.slice(6)) : ""; } catch { photo = ""; }
@@ -1502,7 +1510,7 @@ ${explanationLine}
       } else {
         ogImage = cardUrl(story.title, lvl ? "Year " + lvl[1] + ": " + (who || "Student story") : who || (by ? by[2].trim() : ""), "Student story", "", photo);
       }
-      keywords = "OmpathStudy, medical stories, reflective practice, " + (story.category || "") + ", medical students Kenya";
+      keywords = (isStoriesHost ? "Stories, articles, personal stories, " : "OmpathStudy, medical stories, reflective practice, ") + (story.category || "") + (isStoriesHost ? ", community writing" : ", medical students Kenya");
       type = "article";
       schemaJson = JSON.stringify({
         "@context": "https://schema.org",
@@ -1512,8 +1520,8 @@ ${explanationLine}
         articleBody: plainStory.slice(0, 12000),
         image: ogImage,
         datePublished: story.created_at,
-        author: { "@type": "Person", name: who || "Medical student" },
-        publisher: { "@type": "Organization", name: "Ompath Study" },
+        author: { "@type": "Person", name: who || (isStoriesHost ? "Community writer" : "Medical student") },
+        publisher: { "@type": "Organization", name: isStoriesHost ? "Stories" : "Ompath Study" },
         mainEntityOfPage: absoluteUrl,
       });
     } else if (section === "year" && param) {
