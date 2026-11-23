@@ -387,7 +387,7 @@ export default function StoryRead() {
                 </svg>
               </span>
               <div className="leading-tight">
-                <p className="text-xs font-semibold text-foreground">{story.tags?.includes("student") ? "Written by a student" : "Editorially Reviewed"}</p>
+                <p className="text-xs font-semibold text-foreground">{story.tags?.includes("student") ? "Written by a student" : "Community writer"}</p>
                 <p className="text-[11px] text-muted-foreground">{story.tags?.includes("student") ? "Shared in their own words" : "Shared with Stories readers"}</p>
               </div>
             </div>
