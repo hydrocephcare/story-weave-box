@@ -1086,7 +1086,7 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   try {
-    const requestHost = String(req.headers.get ? req.headers.get("host") || "" : req.headers.host || "").split(":")[0].toLowerCase();
+    const requestHost = String(req.headers.get("host") || "").split(":")[0].toLowerCase();
     const isStoriesHost = requestHost === "stories.ompathstudy.com";
     const origin = isStoriesHost ? "https://stories.ompathstudy.com" : "https://www.ompathstudy.com";
     const absoluteUrl = `${origin}${originalPath.split("?")[0]}`;
