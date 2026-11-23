@@ -5,6 +5,7 @@ import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
 export function canonicalOrigin(): string {
   if (typeof window === "undefined") return "https://www.ompathstudy.com";
   const host = window.location.hostname;
+  if (host === "stories.ompathstudy.com") return "https://stories.ompathstudy.com";
   if (host.endsWith("ompathstudy.com")) return "https://www.ompathstudy.com";
   return window.location.origin;
 }
