@@ -36,11 +36,10 @@ export default function Login() {
     typeof window !== "undefined"
       ? `${window.location.origin}${location.pathname}${location.search}`
       : location.pathname;
-  const title = "Sign In | OmpathStudy";
-  const description =
-    "Sign in to OmpathStudy to access your medical education content, subscriptions, and study materials.";
-  const keywords =
-    "OmpathStudy, login, medical education, student portal, study notes";
+  const isStoriesSite = typeof window !== "undefined" && window.location.hostname === "stories.ompathstudy.com";
+  const title = isStoriesSite ? "Sign In | Stories" : "Sign In | OmpathStudy";
+  const description = isStoriesSite ? "Sign in to publish stories, manage your writing and join conversations." : "Sign in to OmpathStudy to access your medical education content, subscriptions, and study materials.";
+  const keywords = isStoriesSite ? "Stories, sign in, publish stories, writer account" : "OmpathStudy, login, medical education, student portal, study notes";
 
   const google = async () => {
     setBusy(true);
@@ -113,10 +112,10 @@ export default function Login() {
       <div className="grid w-full min-w-0 max-w-6xl grid-cols-1 items-center gap-8 py-8 sm:gap-12 sm:py-10 lg:grid-cols-2">
         <div className="hidden space-y-6 lg:block">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-            <Sparkles className="h-3.5 w-3.5" /> Your medical study workspace
+            <Sparkles className="h-3.5 w-3.5" /> {isStoriesSite ? "Your Stories account" : "Your medical study workspace"}
           </span>
-          <h2 className="font-serif text-4xl font-bold leading-tight text-foreground">Read, practise and revise — all in one place.</h2>
-          <p className="text-sm leading-relaxed text-muted-foreground">One account keeps your subscription, saved files and study progress with you on every device.</p>
+          <h2 className="font-serif text-4xl font-bold leading-tight text-foreground">{isStoriesSite ? "Read, write and share stories with the world." : "Read, practise and revise — all in one place."}</h2>
+          <p className="text-sm leading-relaxed text-muted-foreground">{isStoriesSite ? "One account keeps your writing, saved stories and conversations with you on every device." : "One account keeps your subscription, saved files and study progress with you on every device."}</p>
           <div className="grid gap-3">
             {[
               { icon: BookOpen, t: "Notes for Year 1–6", d: "Unit-by-unit study notes, slides and past papers." },
@@ -138,18 +137,18 @@ export default function Login() {
               <ShieldCheck className="h-8 w-8" />
             </div>
             <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-semibold tracking-wide text-primary">
-              <Sparkles className="h-3 w-3" /> OMPATHSTUDY ACCOUNT
+              <Sparkles className="h-3 w-3" /> {isStoriesSite ? "STORIES ACCOUNT" : "OMPATHSTUDY ACCOUNT"}
             </span>
           </div>
           <h1 className="mb-2 text-center font-serif text-2xl font-bold text-foreground">
-            {sent ? "Check your email" : mode === "signup" ? "Create your student account" : "Welcome back"}
+            {sent ? "Check your email" : mode === "signup" ? isStoriesSite ? "Create your writer account" : "Create your student account" : "Welcome back"}
           </h1>
           <p className="mb-6 break-words text-center text-sm leading-relaxed text-muted-foreground [overflow-wrap:anywhere]">
             {sent
               ? "We sent a link to confirm your email. Open it, then sign in here. If your admission number could not be matched, the admin will review your request."
               : new URLSearchParams(location.search).get("mku")
                 ? "Books, timetables, course outlines and past papers are for Mount Kenya University students. Sign in with your student account."
-                : "Continue with Google to create or access your OmpathStudy account. Search, MCQs, flashcards, exams and personal study tools require sign-in; public notes remain open. Visitor analytics counts usage in aggregate and does not store your search terms or reading history."}
+                : isStoriesSite ? "Continue with Google to create or access your Stories account." : "Continue with Google to create or access your OmpathStudy account. Search, MCQs, flashcards, exams and personal study tools require sign-in; public notes remain open. Visitor analytics counts usage in aggregate and does not store your search terms or reading history."}
           </p>
           {sent && (
             <Button type="button" className="w-full" onClick={() => { setSent(false); setMode("signin"); setReaderPassword(""); setConfirmPassword(""); }}>Go to sign in</Button>
