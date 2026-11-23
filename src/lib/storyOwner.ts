@@ -37,5 +37,6 @@ export function storyToEditable(html: string): { body: string; html: string; nam
   const body = unescapeHtml(
     rest.replace(/<h[1-6][^>]*>(.*?)<\/h[1-6]>/gi, "## $1\n\n").replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n\n").replace(/<[^>]+>/g, "").replace(/\n{3,}/g, "\n\n"),
   ).trim();
-  return { body, html: rest.trim(), name: name === "A medical student" ? "" : name, anonymous: name === "A medical student" };
+  const anonymous = /^a (?:medical student|community writer)$/i.test(name);
+  return { body, html: rest.trim(), name: anonymous ? "" : name, anonymous };
 }
