@@ -1,625 +1,299 @@
 {
  "medical": true,
- "title": "Management of Paediatric Congestive Cardiac Failure",
+ "clinicalScope": "Management of congestive cardiac failure in children in low‑resource East African hospitals",
+ "title": "Congestive Cardiac Failure in Children",
  "subject": "Paediatrics",
- "summary": "A systematic approach to diagnosing and treating heart failure in children, emphasizing limited-resource settings, common tropical causes, and practical bedside management.",
+ "summary": "Congestive cardiac failure (CCF) in children is a life‑threatening condition that often follows rheumatic heart disease, congenital defects, or severe anemia. Prompt recognition, supportive care, and targeted drugs can reverse decompensation even when investigations are limited.",
  "aka": [
-  "Paediatric Heart Failure",
-  "CHF in children"
+  "Pediatric heart failure",
+  "Childhood CHF"
  ],
  "sections": [
   {
-   "h": "Definition and diagnosis",
-   "p": "Congestive cardiac failure (CCF) is the inability of the heart to pump sufficient blood to meet metabolic demands, leading to fluid overload.",
+   "h": "Definition and epidemiology",
+   "p": "Congestive cardiac failure (CCF) is the inability of the heart to pump blood adequately to meet the body’s needs, leading to fluid accumulation and organ hypoperfusion. In sub‑Saharan Africa, rheumatic heart disease (RHD) and severe malaria‑related anemia are the leading causes in children.",
    "b": [
-    "Clinical diagnosis based on history, exam and response to therapy.",
-    "Echocardiography confirms ventricular dysfunction when available."
+    "Incidence 1–5 per 1000 children in endemic areas",
+    "RHD accounts for ~70% of pediatric CCF",
+    "Malaria and sickle cell anemia contribute 20–30%",
+    "Congenital heart disease (CHD) ~10%",
+    "Hospital mortality 15–30% without treatment"
    ]
   },
   {
-   "h": "Severity and staging",
-   "p": "Use the Ross classification (I‑IV) to grade functional limitation and guide therapy intensity.",
+   "h": "Causes and risk factors, most likely first",
+   "p": "Risk factors cluster around infections, nutritional deficits, and genetic heart disease.",
    "b": [
-    "Stage I: No limitation, normal activity.",
-    "Stage II: Slight limitation, fatigue with exertion.",
-    "Stage III: Marked limitation, symptoms at rest.",
-    "Stage IV: Severe symptoms, refractory to treatment."
-   ]
-  },
-  {
-   "h": "Causes, most likely first",
-   "p": "Identify the underlying cardiac lesion; in low‑resource East African settings the commonest are:",
-   "b": [
-    "Rheumatic heart disease (mitral regurgitation/stenosis).",
-    "Congenital heart disease (VSD, PDA, Tetralogy).",
-    "Anemia‑related high‑output failure (severe malaria, sickle cell).",
-    "Infective endocarditis (HIV, poor hygiene).",
-    "Myocarditis (viral, post‑malaria)."
-   ]
-  },
-  {
-   "h": "How it presents",
-   "p": "Children present with tachypnoea, tachycardia, hepatomegaly, peripheral edema, poor feeding and growth failure.",
-   "b": [
-    "Rapid, shallow breathing with intercostal retractions.",
-    "Cold extremities, delayed capillary refill.",
-    "Chest X‑ray: cardiomegaly, pulmonary congestion if available."
-   ]
-  },
-  {
-   "h": "Investigations",
-   "p": "When echocardiography is unavailable, rely on clinical signs and response to a trial of diuretics.",
+    "Rheumatic fever (strep throat) – untreated or recurrent",
+    "Severe malaria or sickle cell anemia – high-output failure",
+    "Congenital heart defects (VSD, PDA, Tetralogy) – structural",
+    "Infective endocarditis – HIV, poor hygiene",
+    "Myocarditis – viral, post‑malaria",
+    "Hypertensive heart disease – rare"
+   ],
    "t": [
     {
-     "a": "Chest X‑ray",
-     "b": "Is there cardiomegaly or pulmonary congestion? → Enlarged cardiac silhouette suggests chronic overload; pulmonary infiltrates indicate fluid."
-    },
-    {
-     "a": "Echocardiography",
-     "b": "What is ventricular function and valve status? → Low ejection fraction confirms systolic failure; valve lesions guide surgical referral."
-    },
-    {
-     "a": "Full blood count",
-     "b": "Is anemia present? → Severe anemia worsens high‑output failure; treat with transfusion if indicated."
-    },
-    {
-     "a": "Serum electrolytes & renal function",
-     "b": "Are kidneys tolerating diuretics? → Rising creatinine signals renal hypoperfusion; adjust fluids."
-    },
-    {
-     "a": "HIV test (rapid)",
-     "b": "Is HIV infection contributing? → Positive test prompts antiretroviral therapy and prophylaxis."
+     "a": "Streptococcal throat culture",
+     "b": "Positive culture supports diagnosis and guides penicillin prophylaxis"
     }
    ]
   },
   {
-   "h": "Red flags and complications",
-   "p": "Identify features that demand urgent referral or intensive care.",
+   "h": "How it develops (pathophysiology)",
+   "p": "CCF results from a mismatch between cardiac output and systemic demand, leading to neurohormonal activation and fluid retention.",
    "b": [
-    "Persistent hypotension or shock.",
-    "Severe respiratory distress (SpO2 < 90% on room air).",
-    "Rapidly rising creatinine or oliguria.",
-    "New arrhythmia or syncope."
+    "Increased preload from volume overload (e.g., VSD) or anemia",
+    "Afterload elevation from hypertension or pulmonary hypertension",
+    "Myocardial depression from myocarditis or ischemia",
+    "Neurohormonal cascade: RAAS, sympathetic, ADH cause sodium and water retention"
+   ],
+   "t": [
+    {
+     "a": "BNP/NT‑proBNP",
+     "b": "Elevated in CCF; useful when available"
+    }
    ]
   },
   {
-   "h": "Management",
-   "p": "Treat the underlying cause, relieve congestion, and support circulation.",
+   "h": "How it presents",
+   "p": "Symptoms and signs vary with age and severity but commonly reflect pulmonary congestion and systemic hypoperfusion.",
    "b": [
-    "Diuretics (e.g., furosemide) to reduce preload; avoid if severe dehydration.",
-    "ACE inhibitors (e.g., enalapril) for afterload reduction; contraindicated in bilateral renal artery stenosis.",
-    "Beta‑blockers (e.g., carvedilol) in stable patients to improve remodeling; avoid in acute decompensation.",
-    "Treat anemia with transfusion or iron when Hb < 7 g/dL.",
-    "Antibiotics for rheumatic fever or infective endocarditis per local guidelines.",
-    "Antiretroviral therapy for HIV‑related cardiomyopathy.",
-    "Nutritional support and iron supplementation.",
-    "Avoid corticosteroids unless specific indication (e.g., myocarditis with proven benefit)."
+    "Rapid, shallow breathing; intercostal retractions",
+    "Cyanosis, cool extremities, delayed capillary refill",
+    "Jugular venous distension (older children)",
+    "Edema of lower limbs, hepatomegaly",
+    "Poor feeding, irritability in infants"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "If available, confirms heart enlargement and fluid"
+    }
    ]
   },
   {
-   "h": "Follow-up and prevention",
-   "p": "Long‑term monitoring prevents relapse and progression.",
+   "h": "Bedside: history and how to examine",
+   "p": "A focused history and physical exam can identify the underlying cause and severity.",
    "b": [
-    "Clinic review every 4‑6 weeks for Ross stage I‑II, more often if stage III‑IV.",
-    "Repeat echo annually or sooner if clinical deterioration.",
-    "Primary prophylaxis for rheumatic fever (penicillin) in endemic areas.",
-    "Vaccination against pneumococcus and influenza.",
-    "Education on early signs of decompensation for caregivers."
+    "History of sore throat, fever, rash, recent malaria",
+    "Family history of heart disease",
+    "Growth and feeding patterns",
+    "Examination: respiratory effort, heart sounds (murmur), peripheral pulses, capillary refill, edema, abdominal girth"
+   ],
+   "t": [
+    {
+     "a": "Peripheral pulse oximetry",
+     "b": "SpO2 <90% indicates severe hypoxia"
+    }
    ]
   },
   {
-   "h": "Often confused with",
-   "p": "Conditions that mimic CCF in children.",
+   "h": "Differential diagnosis",
+   "p": "Conditions mimicking CCF must be ruled out to avoid inappropriate therapy.",
    "b": [
-    "Severe pneumonia – distinguished by fever, focal crackles, and lack of hepatomegaly.",
-    "Nephrotic syndrome – prominent edema but usually no tachypnoea or cardiomegaly.",
-    "Sepsis with capillary leak – rapid shock, high fever, and normal heart size."
+    "Severe pneumonia – fever, focal crackles, no hepatomegaly",
+    "Nephrotic syndrome – massive edema, normal respiratory effort",
+    "Acute gastroenteritis with dehydration – dry mucosa, no pulmonary crackles",
+    "Anaphylaxis – wheeze, hypotension, no cardiac murmurs"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Low BP indicates shock"
+    }
+   ]
+  },
+  {
+   "h": "Investigations and how to read them",
+   "p": "Investigation priorities depend on availability; clinical judgment guides management when tests are missing.",
+   "b": [
+    "Full blood count – anemia, infection markers",
+    "Electrolytes – sodium, potassium, renal function",
+    "Chest X‑ray – cardiomegaly, pulmonary edema",
+    "Echocardiography – ventricular function, valve disease"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Leukocytosis suggests infection"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyperkalemia contraindicates ACE inhibitors"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The WHO/ISHLT staging guides therapy intensity.",
+   "b": [
+    "Stage I – no limitation, normal activity",
+    "Stage II – mild limitation, fatigue on exertion",
+    "Stage III – marked limitation, symptoms at rest",
+    "Stage IV – severe, refractory to treatment"
+   ],
+   "t": [
+    {
+     "a": "Functional class",
+     "b": "Stage III/IV require urgent intervention"
+    }
+   ]
+  },
+  {
+   "h": "Complicating and confounding factors",
+   "p": "Co‑morbidities can worsen prognosis and alter treatment choices.",
+   "b": [
+    "HIV – increases risk of endocarditis, drug interactions",
+    "Malaria – causes anemia and myocarditis",
+    "Sickle cell disease – vaso‑occlusive crises",
+    "Malnutrition – impairs drug metabolism",
+    "Coagulopathy – contraindicates anticoagulation"
+   ],
+   "t": [
+    {
+     "a": "HIV test",
+     "b": "Positive status requires adjusted drug choices"
+    }
+   ]
+  },
+  {
+   "h": "Management, step by step",
+   "p": "Early supportive care, drug therapy, and definitive treatment of the underlying cause are essential.",
+   "b": [
+    "Initial assessment: ABCs, oxygen if SpO2 <90%",
+    "Diuretics (furosemide) to reduce preload – avoid if dehydrated",
+    "ACE inhibitors (enalapril) after stabilization – afterload reduction",
+    "Beta‑blockers (carvedilol) in stable patients – improve remodeling",
+    "Treat anemia – transfusion if Hb <7 g/dL",
+    "Treat infection – penicillin for RHD, appropriate antibiotics for endocarditis",
+    "Antiretroviral therapy for HIV",
+    "Nutritional support and iron supplementation",
+    "Consider referral for surgical correction of CHD or valve replacement"
+   ],
+   "t": [
+    {
+     "a": "Furosemide",
+     "b": "Monitor urine output and electrolytes"
+    }
+   ]
+  },
+  {
+   "h": "Complications and red flags",
+   "p": "Early recognition of deterioration prevents irreversible organ damage.",
+   "b": [
+    "Hypotension or shock – immediate fluid resuscitation",
+    "Oliguria or rising creatinine – renal failure",
+    "Severe arrhythmias – ECG monitoring",
+    "Pulmonary edema with cyanosis – intubation",
+    "Heart block – pacemaker if available"
+   ],
+   "t": [
+    {
+     "a": "Urine output",
+     "b": "Prompt fluid or inotropes needed"
+    }
+   ]
+  },
+  {
+   "h": "Special groups",
+   "p": "Certain populations require tailored approaches.",
+   "b": [
+    "Infants – lower thresholds for diuretics, careful fluid balance",
+    "Elderly children – higher risk of drug toxicity",
+    "Children with HIV – avoid nephrotoxic drugs",
+    "Malaria endemic areas – monitor for cerebral malaria",
+    "Sickle cell disease – avoid high‑dose steroids"
+   ],
+   "t": [
+    {
+     "a": "Renal function",
+     "b": "Avoid ACE inhibitors if creatinine >1.5 mg/dL"
+    }
+   ]
+  },
+  {
+   "h": "Prognosis, follow‑up and prevention",
+   "p": "With timely treatment, many children recover; long‑term follow‑up is crucial to prevent recurrence.",
+   "b": [
+    "Mortality 15–30% without treatment, <5% with early care",
+    "Regular clinic review every 4–6 weeks",
+    "Annual echocardiography if structural disease",
+    "Penicillin prophylaxis for RHD",
+    "Vaccination against pneumococcus and influenza",
+    "Education on early signs of decompensation"
+   ],
+   "t": [
+    {
+     "a": "Follow‑up clinic",
+     "b": "Adjust medications as needed"
+    }
    ]
   },
   {
    "h": "Where results can mislead",
-   "p": "Pitfalls in interpretation.",
+   "p": "Certain investigations may give false negatives or positives in low‑resource settings.",
    "b": [
-    "Normal chest X‑ray early in decompensation; rely on clinical exam.",
-    "Elevated BNP may be absent in malnourished children; use functional assessment."
+    "Chest X‑ray may be normal in early CCF",
+    "BNP can be elevated in sepsis",
+    "Echocardiography limited by operator skill",
+    "Blood cultures may be negative in low‑volume samples"
+   ],
+   "t": [
+    {
+     "a": "BNP",
+     "b": "Interpret with clinical context"
+    }
    ]
   }
  ],
  "whenToSeekHelp": [
-  "Sudden collapse, loss of consciousness, or severe cyanosis.",
-  "Persistent low blood pressure despite fluids.",
-  "New arrhythmia or worsening edema despite therapy."
+  "Persistent hypotension despite fluids",
+  "SpO2 <90% on room air",
+  "Oliguria or rising creatinine",
+  "New arrhythmia or syncope",
+  "Severe respiratory distress with cyanosis"
  ],
  "faq": [
   {
-   "q": "Why are ACE inhibitors preferred over calcium channel blockers?",
-   "a": "ACE inhibitors reduce afterload and improve remodeling without causing reflex tachycardia, which can worsen heart failure."
+   "q": "Why are diuretics avoided in severe dehydration?",
+   "a": "They can worsen intravascular volume and precipitate shock."
   },
   {
-   "q": "Can diuretics be used in a child with severe dehydration?",
-   "a": "No; first correct volume depletion before giving diuretics, otherwise renal perfusion worsens."
+   "q": "When is an ACE inhibitor contraindicated?",
+   "a": "In bilateral renal artery stenosis, pregnancy, or hyperkalemia."
   },
   {
-   "q": "When is surgical referral indicated?",
-   "a": "For structural lesions (e.g., large VSD, severe rheumatic valve disease) that cause refractory failure despite optimal medical therapy."
+   "q": "What is the first drug to give in acute CCF?",
+   "a": "Oxygen and diuretics if no dehydration; otherwise stabilize ABCs first."
   }
  ],
  "exam": [
-  "A 4‑year‑old with rheumatic mitral regurgitation presents with tachypnoea and hepatomegaly – what is your immediate management and why? — Start furosemide to relieve pulmonary congestion, give ACE inhibitor for afterload reduction, and arrange urgent echo.",
-  "How does the Ross classification guide drug choice in paediatric heart failure? — Higher stages (III‑IV) require aggressive diuresis and afterload reduction; stage I may be managed with observation and nutrition.",
-  "A child with sickle cell disease develops acute chest syndrome and signs of heart failure – which investigations are essential and what if echo is unavailable? — Obtain chest X‑ray, full blood count, electrolytes; use clinical response to diuretics to infer cardiac involvement.",
-  "Why is corticosteroid therapy not part of routine CCF management in children? — Steroids have no proven benefit and increase infection risk, especially in TB‑endemic settings.",
-  "What red‑flag symptom would prompt immediate transfer to a tertiary centre? — Persistent hypotension or SpO2 < 90% despite oxygen, indicating shock or severe respiratory failure.",
-  "Differentiate between congestive heart failure and severe pneumonia in a malnourished child with fast breathing. — Pneumonia shows fever, focal crackles, and normal liver; CCF shows hepatomegaly, peripheral edema, and a displaced apex.",
-  "Explain why beta‑blockers are avoided in acute decompensated paediatric heart failure. — They can worsen bradycardia and reduce cardiac output when the heart is already failing.",
-  "What preventive measure reduces rheumatic heart disease‑related heart failure in East Africa? — Long‑term secondary prophylaxis with monthly benzathine penicillin."
+  "What is the most likely underlying cause of CCF in a 7‑year‑old with a history of sore throat and a holosystolic murmur? — RHD causing MR or VSD; look for fever, throat pain, and a murmur.",
+  "Which drug should be avoided in a child with severe anemia and CCF? — Diuretics if dehydrated; avoid if Hb <7 g/dL.",
+  "A child with CCF has SpO2 88% on room air. What is the next step? — Give oxygen to maintain SpO2 >90% and reassess.",
+  "Why is furosemide preferred over mannitol in low‑resource settings? — Furosemide is oral/IV, cheaper, and effective for preload reduction.",
+  "When is an echocardiogram essential in CCF management? — When structural heart disease is suspected or to guide definitive therapy.",
+  "What is the key red flag indicating impending cardiogenic shock? — Persistent hypotension despite fluids and oliguria.",
+  "How does malaria‑related anemia lead to CCF? — High-output failure due to tachycardia and increased cardiac work.",
+  "What is the rationale for starting ACE inhibitors after initial stabilization? — Reduce afterload and improve remodeling.",
+  "Which infection requires penicillin prophylaxis in a child with RHD? — Group A streptococcal pharyngitis.",
+  "Why should beta‑blockers be avoided in acute decompensation? — They can worsen heart rate and contractility."
  ],
  "related": [
   "Rheumatic Heart Disease",
-  "Congenital Heart Defects",
-  "Paediatric Hypertension",
-  "Anemia in Children",
-  "Infective Endocarditis",
-  "Malnutrition and Cardiac Function"
+  "Congenital Heart Disease",
+  "Severe Malaria",
+  "Sickle Cell Anemia",
+  "Pediatric Hypertension"
  ],
  "kind": "disease",
- "model": "openai/gpt-oss-120b",
- "generatedAt": "2026-10-31",
- "reviewed": false,
- "deep": {
-  "sections": [
-   {
-    "h": "Bedside: history and how to examine",
-    "p": "A focused paediatric heart‑failure history and systematic exam allow you to recognise decompensation, identify the underlying lesion and decide on urgent referral when resources are limited.",
-    "b": [
-     "Onset and duration of tachypnoea or dyspnoea; rapid progression suggests decompensation.",
-     "Feeding difficulty, poor weight gain or failure to thrive; indicates chronic volume overload.",
-     "Recent infections (malaria, pneumonia, viral illness) or sickle‑cell crisis; high‑output failure triggers.",
-     "History of rheumatic fever, known congenital defect, or prior cardiac surgery; points to structural cause.",
-     "Medication adherence, recent diuretic or ACE‑inhibitor changes; helps explain sudden worsening.",
-     "Family history of cardiomyopathy or sudden cardiac death; may uncover genetic disease."
-    ],
-    "t": [
-     {
-      "a": "General inspection",
-      "b": "Look for respiratory distress, intercostal retractions, cyanosis, peripheral cyanosis and clubbing; a positive sign confirms severe respiratory compromise but cannot quantify cardiac output."
-     },
-     {
-      "a": "Pulse and heart rate",
-      "b": "Measure rate, rhythm and volume; tachycardia with a rapid, weak pulse suggests low‑output failure; however, heart rate alone cannot differentiate cause."
-     },
-     {
-      "a": "Pre‑cordial palpation",
-      "b": "Assess for displaced apex, heave or thrill; a displaced apex suggests cardiomegaly, but cannot differentiate between dilated cardiomyopathy and volume overload."
-     },
-     {
-      "a": "Lung auscultation",
-      "b": "Crackles or wheeze indicate pulmonary congestion; absence does not rule out heart failure in early stages."
-     },
-     {
-      "a": "Hepatomegaly",
-      "b": "Palpate liver edge >2 cm below costal margin; a positive finding reflects systemic venous congestion, but cannot specify severity."
-     },
-     {
-      "a": "Peripheral edema",
-      "b": "Inspect ankles, shins and sacrum for pitting; presence supports chronic volume overload, yet mild edema may be missed in malnourished children."
-     },
-     {
-      "a": "Jugular venous assessment (if feasible)",
-      "b": "Observe neck veins for distension; often unreliable in infants, so a negative exam does not exclude elevated right‑sided pressures."
-     }
-    ]
-   },
-   {
-    "h": "Investigations and how to read them",
-    "p": "Use available investigations to answer key clinical questions; when a test is unavailable, rely on validated clinical algorithms and bedside response to therapy.",
-    "b": [
-     "Chest X‑ray – Does the child have cardiomegaly or pulmonary congestion?",
-     "ECG – Is there evidence of ventricular hypertrophy, arrhythmia or conduction delay?",
-     "Point‑of‑care ultrasound (POCUS) – Can we estimate ventricular function and detect pleural effusion?",
-     "Full blood count – Is anaemia severe enough to cause high‑output failure?",
-     "Serum electrolytes, urea, creatinine – Are kidneys tolerating diuretics and is there metabolic acidosis?",
-     "BNP/NT‑proBNP – Does the level support cardiac overload, acknowledging age‑specific cut‑offs?",
-     "Malaria rapid test or thick smear – Is malaria contributing to high‑output failure?",
-     "HIV rapid test – Does HIV infection modify presentation or treatment?"
-    ],
-    "t": [
-     {
-      "a": "Chest X‑ray",
-      "b": "Answers: presence of cardiomegaly (cardiothoracic ratio >0.55) and pulmonary oedema (perihilar haze, interstitial lines). If unavailable, use clinical cardiomegaly (displaced apex) and crackles as surrogate."
-     },
-     {
-      "a": "ECG",
-      "b": "Answers: left ventricular hypertrophy (tall R in V5‑V6), right‑axis deviation, atrial enlargement, arrhythmias. Normal ECG does not exclude heart failure."
-     },
-     {
-      "a": "POCUS (focused cardiac)",
-      "b": "Answers: qualitative ejection fraction (good, reduced, severely reduced), pericardial effusion, pleural fluid. If no machine, trial of diuretic and observe rapid respiratory improvement."
-     },
-     {
-      "a": "Serum electrolytes, urea, creatinine",
-      "b": "Answers: hyponatraemia or hyperkalaemia may signal diuretic excess; creatinine rise >30 % from baseline or oliguria >12 h signals renal injury, prompting dose adjustment."
-     },
-     {
-      "a": "Malaria test",
-      "b": "Answers: positive test with fever, severe anaemia or acidosis indicates malaria‑related high‑output failure; treat promptly."
-     },
-     {
-      "a": "HIV test",
-      "b": "Answers: positive result alerts to possible myocarditis, TB pericarditis and drug interactions; modify antimicrobial and antiretroviral choices accordingly."
-     }
-    ]
-   },
-   {
-    "h": "Diagnosis, staging and severity",
-    "p": "Combine clinical picture with investigations to confirm congestive cardiac failure, grade functional limitation using the Ross classification and recognise when the child meets criteria for urgent escalation.",
-    "b": [
-     "Diagnosis of paediatric CCF: tachypnoea, hepatomegaly, peripheral edema, chest X‑ray or POCUS evidence of ventricular dysfunction, and response to a diuretic trial.",
-     "Ross classification I – No limitation, normal activity; II – Slight limitation, fatigue on exertion, occasional dyspnoea with feeding.",
-     "Ross classification III – Marked limitation, symptoms with minimal exertion, hepatomegaly, growth faltering.",
-     "Ross classification IV – Severe symptoms at rest, refractory oedema, hypotension or need for inotropes."
-    ],
-    "t": []
-   },
-   {
-    "h": "Look‑alike conditions",
-    "p": "Several common paediatric illnesses mimic heart failure; systematic comparison of key features helps avoid misdiagnosis, especially where diagnostic tools are scarce.",
-    "b": [
-     "Severe pneumonia – Presents with tachypnoea, retractions, crackles; chest X‑ray shows infiltrates without cardiomegaly; fever and leukocytosis are prominent."
-    ],
-    "t": [
-     {
-      "a": "Severe pneumonia",
-      "b": "Points: fever, productive cough, focal crackles, chest X‑ray lobar consolidation. Separate by lack of hepatomegaly, normal liver size, and absence of chronic edema."
-     },
-     {
-      "a": "Severe malnutrition with kwashiorkor",
-      "b": "Points: oedema, thin hair, skin lesions, low weight‑for‑height. Separate by low muscle mass, hypoalbuminaemia, and absence of cardiomegaly on X‑ray."
-     },
-     {
-      "a": "Acute severe malaria",
-      "b": "Points: fever, parasitaemia, severe anaemia, acidosis. Separate by rapid improvement after antimalarial therapy and lack of persistent cardiomegaly."
-     },
-     {
-      "a": "Bronchiolitis",
-      "b": "Points: wheeze, viral prodrome, hyperinflated lungs on X‑ray. Separate by predominant expiratory wheeze and lack of hepatomegaly."
-     }
-    ]
-   },
-   {
-    "h": "Management step by step",
-    "p": "A pragmatic ladder for paediatric congestive cardiac failure in low‑resource settings, beginning with stabilisation, moving to disease‑specific therapy, then monitoring and criteria for escalation or referral.",
-    "b": [
-     "1. Immediate stabilisation: airway, oxygen (target SpO2 ≥94 %), position upright, treat severe distress with gentle CPAP or high‑flow nasal oxygen if available.",
-     "2. Rapid diuresis: intravenous loop diuretic (e.g., furosemide) to relieve pulmonary congestion; monitor urine output and electrolytes.",
-     "3. After initial diuresis, add oral ACE‑inhibitor (e.g., enalapril) to reduce afterload and remodel myocardium; check renal function within 48 h.",
-     "4. If persistent volume overload despite loop diuretic, add low‑dose thiazide diuretic for synergistic natriuresis.",
-     "5. In Ross III–IV with systolic dysfunction, consider digoxin only when tachyarrhythmia or poor contractility persists after ACE‑inhibitor and diuretic optimisation.",
-     "6. Treat underlying lesion: give penicillin prophylaxis for rheumatic disease, anti‑malaria therapy for severe malaria, antibiotics for infective endocarditis, or refer for surgical repair of congenital defects.",
-     "7. Monitor: daily weight, urine output, respiratory rate, heart rate, SpO2, hepatomegaly size, and signs of hypotension; repeat bedside assessment every 6‑8 h.",
-     "8. Escalate or refer when any of: persistent hypotension (SBP <70 mmHg), SpO2 <90 % despite oxygen, oliguria <0.5 mL/kg/h for >12 h, rising creatinine >30 % from baseline, new arrhythmia, or Ross IV features."
-    ],
-    "t": []
-   },
-   {
-    "h": "Drug effects and what to do",
-    "p": "Key adverse effects, drug‑drug interactions and corrective actions for the main agents used in paediatric heart failure.",
-    "b": [
-     "Loop diuretics – may cause hypokalaemia, hyponatraemia, and ototoxicity at high doses; replace electrolytes orally or intravenously and avoid concurrent nephrotoxic drugs.",
-     "ACE‑inhibitors – can precipitate acute kidney injury and hyperkalaemia; check creatinine and potassium at 48 h, hold if creatinine rises >30 % from baseline or K⁺ >5.5 mmol/L.",
-     "Thiazides – increase risk of hyponatraemia and hypokalaemia; monitor electrolytes and avoid with concomitant NSAIDs that reduce renal perfusion.",
-     "Digoxin – narrow therapeutic index; watch for nausea, visual disturbances, arrhythmias; check serum digoxin level if toxicity suspected and correct electrolyte abnormalities first.",
-     "Beta‑blockers – generally avoided in acute decompensation; if introduced later, start low and titrate slowly, monitoring for bradycardia and worsening heart failure.",
-     "Antibiotics for infective endocarditis – watch for drug‑induced nephrotoxicity (e.g., aminoglycosides) and interactions with ACE‑inhibitors; adjust doses for renal function."
-    ],
-    "t": []
-   },
-   {
-    "h": "Complications and when to escalate",
-    "p": "Complications that signal failure of current therapy and mandate urgent escalation or transfer to a higher‑level centre.",
-    "b": [
-     "Refractory pulmonary oedema – worsening crackles, increasing work of breathing, SpO2 falling despite oxygen; move to intravenous diuretics, consider non‑invasive ventilation, and refer.",
-     "Cardiogenic shock – cold extremities, capillary refill >3 s, SBP <70 mmHg, oliguria; start cautious fluid bolus only if preload is low, then inotropes (e.g., dopamine) and urgent transfer.",
-     "Renal impairment – creatinine rise >30 % from baseline, oliguria <0.5 mL/kg/h for >12 h; stop nephrotoxic drugs, adjust diuretic dose, consider renal replacement if available.",
-     "Arrhythmias – new atrial or ventricular ectopy, heart block; obtain ECG, correct electrolytes, consider digoxin toxicity, and refer for cardiology input.",
-     "Progressive hepatomegaly with ascites – indicates chronic congestion; add thiazide, evaluate for underlying lesion, and arrange echocardiography if possible."
-    ],
-    "t": []
-   },
-   {
-    "h": "Complicating and confounding factors",
-    "p": "Conditions that modify presentation, laboratory interpretation, or therapeutic choices in paediatric heart failure.",
-    "b": [
-     "HIV infection – may cause myocarditis and opportunistic infections; monitor CD4, avoid nephrotoxic antiretrovirals with ACE‑inhibitors, and treat co‑infection aggressively.",
-     "Tuberculosis – pericardial TB can mimic heart failure; look for night sweats, chest X‑ray mediastinal widening; start anti‑TB therapy before initiating ACE‑inhibitor if pericardial effusion present.",
-     "Severe malnutrition – blunted tachycardia, low muscle mass hides oedema; use weight‑adjusted diuretic dosing, give micronutrient supplementation, and avoid rapid fluid boluses.",
-     "Diabetes mellitus – risk of hypoglycaemia with beta‑blockers; monitor glucose closely, prefer ACE‑inhibitor and diuretic regimen.",
-     "Herbal remedies (e.g., traditional plant extracts) – may contain sodium or nephrotoxic compounds; obtain a thorough medication history and counsel against unregulated use.",
-     "Renal or hepatic failure – limits diuretic clearance and ACE‑inhibitor metabolism; start with lower diuretic doses, monitor drug levels, and adjust according to renal/hepatic labs.",
-     "Age extremes – infants have higher normal heart rates; use age‑appropriate tachycardia thresholds, and be cautious with fluid shifts in neonates."
-    ],
-    "t": []
-   },
-   {
-    "h": "Special groups",
-    "p": "Tailored considerations for children, pregnant adolescents, the elderly, people living with HIV, and settings with limited diagnostics.",
-    "b": [
-     "Children – rely on clinical signs (hepatomegaly, feeding difficulty, growth faltering) rather than BNP; use Ross classification to guide therapy intensity; avoid beta‑blockers in acute phase.",
-     "Elderly – higher prevalence of renal impairment; start diuretics at low dose, monitor electrolytes closely, and consider comorbidities such as atrial fibrillation.",
-     "People with HIV – drug interactions with protease inhibitors; prefer ACE‑inhibitor over ARB if renal function stable, and treat opportunistic cardiac infections promptly.",
-     "Low‑resource settings – when echo unavailable, use bedside signs (hepatomegaly, gallop, tachypnoea) and response to diuretic trial; obtain chest X‑ray if possible, otherwise rely on clinical judgment."
-    ],
-    "t": []
-   },
-   {
-    "h": "Exam‑style questions",
-    "p": "Sample questions to test knowledge of assessment, investigations, management, complications and special circumstances in paediatric congestive cardiac failure.",
-    "b": [
-     "1. Which bedside sign best distinguishes fluid overload from severe pneumonia in a malnourished child?",
-     "2. How does the Ross classification influence the choice of first‑line medication?",
-     "3. A child with sickle cell disease presents with acute chest syndrome and SpO2 88 %; what is the priority intervention?",
-     "4. When is it appropriate to add a thiazide diuretic to a loop diuretic regimen?",
-     "5. List three laboratory results that would prompt you to hold an ACE‑inhibitor.",
-     "6. What are the red‑flag features that mandate immediate transfer to a tertiary centre?",
-     "7. Explain why rapid blood transfusion can worsen heart failure in severe anaemia.",
-     "8. How would you assess for hepatomegaly at the bedside and what does a palpable liver edge >2 cm below the costal margin indicate?",
-     "9. In a child with rheumatic mitral regurgitation, which secondary prophylaxis reduces future heart‑failure risk?",
-     "10. Describe the management steps for a child with Ross IV heart failure who develops hypotension.",
-     "11. How does HIV infection alter the interpretation of serum creatinine in a child with heart failure?",
-     "12. What modifications are required for heart‑failure therapy in a pregnant adolescent with Ross III disease?"
-    ],
-    "t": []
-   }
-  ],
-  "facts": [
-   "Ross classification I: No limitation, normal activity.",
-   "Ross classification II: Slight limitation, fatigue on exertion, occasional dyspnoea with feeding.",
-   "Ross classification III: Marked limitation, symptoms with minimal exertion, hepatomegaly, growth faltering.",
-   "Ross classification IV: Severe symptoms at rest, refractory oedema, hypotension, need for inotropes.",
-   "Furosemide IV is first‑line for acute decompensated paediatric heart failure.",
-   "ACE inhibitor (e.g., enalapril) added once euvolemia achieved, monitor creatinine rise >30% from baseline.",
-   "Digoxin reserved for symptomatic systolic dysfunction in Ross III‑IV or atrial fibrillation.",
-   "Low‑resource bedside signs: tachypnoea >60/min (infants) or age‑appropriate, hepatomegaly >2 cm below costal margin, peripheral edema, cool extremities.",
-   "SpO2 <94% on room air in a child with CCF warrants urgent review.",
-   "Rapid, shallow breathing with intercostal retractions indicates pulmonary congestion."
-  ],
-  "mnemonics": [],
-  "vivas": [
-   {
-    "q": "Define the Ross classification and its clinical utility in paediatric heart failure.",
-    "a": "A symptom‑based severity scale (I‑IV) guiding intensity of therapy and need for referral; higher grades require inotropes and possible ICU care.",
-    "hot": true
-   },
-   {
-    "q": "What bedside signs differentiate congestive cardiac failure from severe pneumonia in a malnourished child?",
-    "a": "CCF shows hepatomegaly, cool extremities, raised JVP (if assessable), and clear lung fields; pneumonia shows crackles, bronchial breath sounds, and fever without hepatomegaly.",
-    "hot": true
-   },
-   {
-    "q": "Why are beta‑blockers avoided in acute decompensated paediatric heart failure?",
-    "a": "They reduce contractility and can worsen low cardiac output; they are introduced only after stabilization in chronic systolic failure.",
-    "hot": true
-   },
-   {
-    "q": "When is intravenous furosemide preferred over oral in a child with Ross III heart failure?",
-    "a": "In acute decompensation with pulmonary oedema, rapid diuresis is needed; IV route provides faster effect and better control.",
-    "hot": true
-   },
-   {
-    "q": "What red‑flag symptom mandates immediate transfer to a tertiary centre?",
-    "a": "Persistent hypotension (systolic <70 mmHg) or shock despite initial measures.",
-    "hot": true
-   },
-   {
-    "q": "Explain why corticosteroids are not routine in paediatric CCF management.",
-    "a": "They have no proven benefit, may cause fluid retention and immunosuppression; reserved for specific conditions like myocarditis with inflammation."
-   },
-   {
-    "q": "How does the Ross classification guide drug choice?",
-    "a": "I‑II start with diuretics; III adds ACE inhibitor and consider digoxin; IV requires inotropes and possible ICU support."
-   },
-   {
-    "q": "What investigation confirms ventricular dysfunction when echo is unavailable?",
-    "a": "Clinical response to a trial of diuretics plus signs of volume overload; chest X‑ray showing cardiomegaly supports diagnosis."
-   },
-   {
-    "q": "Which sign is unreliable in infants for assessing volume overload?",
-    "a": "Jugular venous distension and hepato‑jugular reflux are difficult to assess reliably in young children."
-   },
-   {
-    "q": "When should a thiazide diuretic be added in paediatric heart failure?",
-    "a": "In refractory fluid overload after adequate loop diuretic dosing, to achieve synergistic natriuresis."
-   },
-   {
-    "q": "What is the correct approach to blood transfusion in sickle‑cell high‑output failure?",
-    "a": "Transfuse packed RBCs slowly (2–3 mL/kg over several hours) while monitoring for fluid overload; often concurrent with diuretics."
-   },
-   {
-    "q": "How to assess for hepatomegaly at the bedside?",
-    "a": "Palpate the right costal margin during quiet respiration; >2 cm below the margin indicates enlargement, suggesting congestion."
-   },
-   {
-    "q": "Interpret a chest X‑ray showing cardiothoracic ratio 0.6 with pulmonary venous congestion.",
-    "a": "Suggests left‑sided failure; supports diagnosis of CCF when clinical signs are present."
-   },
-   {
-    "q": "Why is rapid improvement after blood transfusion not a reliable discriminator for high‑output failure?",
-    "a": "Fast transfusion can precipitate pulmonary oedema; improvement depends on rate and underlying cardiac reserve, not solely on diagnosis."
-   },
-   {
-    "q": "What is the first‑line inotrope for refractory hypotension in Ross IV children?",
-    "a": "Dobutamine infusion, titrated to improve perfusion while monitoring for tachyarrhythmia."
-   },
-   {
-    "q": "During the management of a severely injured trauma patient, the surgical team prioritises checking airway patency, respiratory rate, and blood pressure before taking a detailed history. What clinical principle does this illustrate?",
-    "a": "The primary survey (ABCs) of Advanced Trauma Life Support, ensuring life‑threatening issues are addressed first.",
-    "past": true
-   },
-   {
-    "q": "A 28‑year‑old man is admitted with severe pneumonia and a parapneumonic effusion. Pleural fluid pH is 7.10 with high LDH and low glucose. What is the mandatory next step?",
-    "a": "Insert a chest tube for drainage; low pH indicates empyema requiring prompt drainage.",
-    "past": true
-   },
-   {
-    "q": "In the surgical management of pneumothorax, what is the specific term for the removal of blebs and bullae?",
-    "a": "Bullectomy.",
-    "past": true
-   },
-   {
-    "q": "A neonate with Type C oesophageal atresia has a confirmed minor anastomotic leak on post‑operative day 4, manifesting with mild tachypnoea and localized sepsis. What is the initial management of choice?",
-    "a": "Conservative management: nil per os, broad‑spectrum antibiotics, and drainage if collection forms; most minor leaks heal spontaneously.",
-    "past": true
-   },
-   {
-    "q": "During the post‑operative management of a neonate who had a primary repair of oesophageal atresia, a transanastomotic tube is in place. When is this tube typically removed?",
-    "a": "Usually between day 5 and 7 post‑operatively, after confirming no leak on contrast study.",
-    "past": true
-   }
-  ],
-  "mcqs": [
-   {
-    "q": "A 5‑year‑old presents with tachypnoea 70/min, hepatomegaly 4 cm below costal margin, and SpO2 92% on room air. Which is the most appropriate initial therapy?",
-    "o": [
-     "Oral furosemide",
-     "Oral ACE inhibitor",
-     "Intravenous furosemide",
-     "Inhaled bronchodilator"
-    ],
-    "a": 2,
-    "e": "IV furosemide provides rapid diuresis needed for acute decompensation."
-   },
-   {
-    "q": "Which of the following is a red‑flag sign requiring immediate referral in paediatric CCF?",
-    "o": [
-     "Mild peripheral edema",
-     "Persistent hypotension (systolic <70 mmHg)",
-     "Growth faltering",
-     "Elevated BNP 150 pg/mL"
-    ],
-    "a": 1,
-    "e": "Severe hypotension indicates shock and needs tertiary care."
-   },
-   {
-    "q": "In a child with rheumatic mitral regurgitation and Ross II heart failure, the next step after diuretics is:",
-    "o": [
-     "Add digoxin",
-     "Observe only",
-     "Begin beta‑blocker",
-     "Start ACE inhibitor"
-    ],
-    "a": 3,
-    "e": "ACE inhibitor is introduced once euvolemia is achieved to reduce afterload."
-   },
-   {
-    "q": "A child with sickle‑cell disease develops acute chest syndrome and signs of high‑output failure. Which intervention is priority?",
-    "o": [
-     "Exchange transfusion",
-     "High‑dose steroids",
-     "IV digoxin",
-     "Nebulised salbutamol"
-    ],
-    "a": 0,
-    "e": "Exchange or simple transfusion improves oxygen carrying capacity and reduces sickling."
-   },
-   {
-    "q": "Which bedside sign is unreliable for assessing volume overload in infants?",
-    "o": [
-     "Hepatomegaly",
-     "Jugular venous distension",
-     "Cool extremities",
-     "Peripheral edema"
-    ],
-    "a": 1,
-    "e": "JVD is difficult to assess in young children."
-   },
-   {
-    "q": "A child with Ross IV heart failure and refractory hypotension is started on inotropes. Which drug is preferred?",
-    "o": [
-     "Milrinone",
-     "Epinephrine",
-     "Dobutamine",
-     "Norepinephrine"
-    ],
-    "a": 2,
-    "e": "Dobutamine improves contractility with less increase in afterload."
-   },
-   {
-    "q": "Which laboratory marker has age‑specific cut‑offs and cannot be used as a single threshold for paediatric heart failure?",
-    "o": [
-     "BNP",
-     "Troponin I",
-     "Serum creatinine",
-     "Hemoglobin"
-    ],
-    "a": 0,
-    "e": "BNP values vary with age; a single cut‑off is misleading."
-   }
-  ],
-  "cases": [
-   {
-    "v": "A 6‑year‑old boy from a rural clinic presents with progressive breathlessness, feeding difficulty, and a weight loss of 2 kg over 2 weeks. Examination: RR 68/min, HR 150/min, hepatomegaly 3 cm below costal margin, bilateral basal crepitations, SpO2 91% on room air. No fever.",
-    "qs": [
-     {
-      "q": "What is the most likely Ross classification?",
-      "a": "Ross III – marked limitation with symptoms on minimal exertion, hepatomegaly, and growth faltering."
-     },
-     {
-      "q": "Outline the immediate management steps.",
-      "a": "Start IV furosemide, monitor urine output, give supplemental oxygen to maintain SpO2 ≥ 94%, assess response, then add ACE inhibitor once euvolemic."
-     },
-     {
-      "q": "Which red‑flag would prompt urgent transfer?",
-      "a": "Development of systolic blood pressure <70 mmHg or worsening respiratory distress despite therapy."
-     }
-    ]
-   },
-   {
-    "v": "A 3‑year‑old girl with known rheumatic mitral stenosis presents with fever, cough, and increasing dyspnoea. Exam: RR 80/min, HR 160/min, cool extremities, hepatomegaly 4 cm, mild bilateral crackles, SpO2 88% on room air. Chest X‑ray shows cardiomegaly and pulmonary congestion.",
-    "qs": [
-     {
-      "q": "What Ross stage does she belong to?",
-      "a": "Ross IV – severe symptoms at rest with refractory hypoxia."
-     },
-     {
-      "q": "What is the priority pharmacologic therapy?",
-      "a": "IV furosemide for rapid diuresis, followed immediately by inotrope (dobutamine) and supplemental oxygen; ACE inhibitor added after stabilization."
-     },
-     {
-      "q": "Why is digoxin not the first drug in this scenario?",
-      "a": "In acute decompensation, diuretics and inotropes address preload and contractility faster; digoxin is reserved for chronic systolic dysfunction."
-     }
-    ]
-   }
-  ],
-  "mistakes": [
-   "Using a single BNP >100 pg/mL as diagnostic without age‑adjusted reference ranges.",
-   "Assuming >5 % parasitaemia is needed to label malaria‑related high‑output failure.",
-   "Starting oral furosemide alone in a child with Ross III decompensation.",
-   "Adding thiazide diuretic before achieving adequate loop diuretic response.",
-   "Rapid blood transfusion in severe anaemia without slow infusion and monitoring.",
-   "Prescribing beta‑blockers in acute decompensated heart failure.",
-   "Relying on jugular venous distension in infants to assess volume status.",
-   "Delaying inotrope initiation when hypotension persists despite diuresis."
-  ],
-  "exam": [
-   "Define the Ross classification and its clinical utility in paediatric heart failure. — A symptom‑based severity scale (I‑IV) guiding intensity of therapy and need for referral; higher grades require inotropes and possible ICU care.",
-   "What bedside signs differentiate congestive cardiac failure from severe pneumonia in a malnourished child? — CCF shows hepatomegaly, cool extremities, raised JVP (if assessable), and clear lung fields; pneumonia shows crackles, bronchial breath sounds, and fever without hepatomegaly.",
-   "Why are beta‑blockers avoided in acute decompensated paediatric heart failure? — They reduce contractility and can worsen low cardiac output; they are introduced only after stabilization in chronic systolic failure.",
-   "When is intravenous furosemide preferred over oral in a child with Ross III heart failure? — In acute decompensation with pulmonary oedema, rapid diuresis is needed; IV route provides faster effect and better control.",
-   "What red‑flag symptom mandates immediate transfer to a tertiary centre? — Persistent hypotension (systolic <70 mmHg) or shock despite initial measures.",
-   "Explain why corticosteroids are not routine in paediatric CCF management. — They have no proven benefit, may cause fluid retention and immunosuppression; reserved for specific conditions like myocarditis with inflammation.",
-   "How does the Ross classification guide drug choice? — I‑II start with diuretics; III adds ACE inhibitor and consider digoxin; IV requires inotropes and possible ICU support.",
-   "What investigation confirms ventricular dysfunction when echo is unavailable? — Clinical response to a trial of diuretics plus signs of volume overload; chest X‑ray showing cardiomegaly supports diagnosis.",
-   "Which sign is unreliable in infants for assessing volume overload? — Jugular venous distension and hepato‑jugular reflux are difficult to assess reliably in young children.",
-   "When should a thiazide diuretic be added in paediatric heart failure? — In refractory fluid overload after adequate loop diuretic dosing, to achieve synergistic natriuresis.",
-   "What is the correct approach to blood transfusion in sickle‑cell high‑output failure? — Transfuse packed RBCs slowly (2–3 mL/kg over several hours) while monitoring for fluid overload; often concurrent with diuretics.",
-   "How to assess for hepatomegaly at the bedside? — Palpate the right costal margin during quiet respiration; >2 cm below the margin indicates enlargement, suggesting congestion.",
-   "Interpret a chest X‑ray showing cardiothoracic ratio 0.6 with pulmonary venous congestion. — Suggests left‑sided failure; supports diagnosis of CCF when clinical signs are present.",
-   "Why is rapid improvement after blood transfusion not a reliable discriminator for high‑output failure? — Fast transfusion can precipitate pulmonary oedema; improvement depends on rate and underlying cardiac reserve, not solely on diagnosis."
-  ],
-  "model": "openai/gpt-oss-120b",
-  "generatedAt": "2026-10-31",
-  "checked": "2026-10-31",
-  "trimmed": 6
- }
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-23",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-3.5-flash-lite",
+  "reviewedAt": "2026-11-23",
+  "fixRounds": 0
+ },
+ "reviewed": false
 }

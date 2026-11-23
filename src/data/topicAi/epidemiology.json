@@ -1,181 +1,193 @@
 {
  "medical": true,
- "clinicalScope": "Epidemiology in low‑resource, East African hospital settings",
+ "clinicalScope": "Epidemiology as a public‑health discipline applied to common diseases and health problems in East African and other low‑resource hospital settings",
  "subject": "Public health",
- "summary": "Epidemiology is the science of who gets sick, why, and how many. In East Africa it guides ward rounds, test choices, and prevention plans when labs are scarce.",
+ "summary": "Epidemiology studies how diseases spread, who gets them, and why. In East African hospitals it guides clinicians to recognise patterns, target limited resources and prevent illness.",
  "aka": [
-  "Epidemiology",
-  "Public Health Epidemiology"
+  "Population health",
+  "Disease surveillance"
  ],
  "sections": [
   {
    "h": "Definition and scope",
-   "p": "Epidemiology studies the distribution and determinants of disease in populations, informing prevention and control. In low‑resource hospitals it shapes clinical priorities and resource allocation.",
+   "p": "Epidemiology is the systematic study of the distribution and determinants of health‑related states in populations, and the application of this knowledge to control health problems.",
    "b": [
-    "Population‑level focus",
-    "Disease frequency",
-    "Risk factor analysis",
-    "Surveillance methods"
+    "Descriptive: person, place, time",
+    "Analytical: risk‑factor identification",
+    "Applied: planning interventions",
+    "Focus on communicable, non‑communicable and injury‑related conditions"
    ]
   },
   {
    "h": "Epidemiology and burden",
-   "p": "Common endemic diseases drive admissions: malaria, HIV, TB, diarrhoeal disease, and sickle cell crises. Burden is measured by incidence, prevalence, and mortality rates.",
+   "p": "In East Africa the leading causes of morbidity and mortality are infectious diseases (malaria, HIV, TB), perinatal conditions, and emerging non‑communicable diseases (hypertension, diabetes).",
    "b": [
-    "Malaria: 10–20% of febrile admissions",
-    "HIV/TB co‑infection: 30% of TB cases",
-    "Diarrhoea: 25% of under‑5 admissions",
-    "Sickle cell crisis: 15% of paediatric admissions"
+    "Malaria accounts for ~20% of outpatient visits in rural hospitals",
+    "HIV prevalence in adults 15‑49 y ranges 4‑7 % in most countries",
+    "TB incidence ≈ 200 per 100 000 population",
+    "Hypertension prevalence ≈ 25 % in urban adults"
    ]
   },
   {
    "h": "Determinants and risk factors",
-   "p": "Determinants include socioeconomic status, environmental exposure, genetics, and behaviour. Risk factors are often modifiable.",
+   "p": "Determinants are the social, economic, environmental and biological factors that shape disease patterns.",
    "b": [
-    "Malaria: stagnant water, lack of nets",
-    "HIV: unprotected sex, unsafe injections",
-    "TB: overcrowding, malnutrition",
-    "Diarrhoea: unsafe water, poor sanitation",
-    "Sickle cell: consanguinity, malaria exposure"
+    "Poverty → limited access to clean water, nutrition, health care",
+    "Agricultural work → exposure to vector habitats (mosquitoes, tsetse)",
+    "Urbanisation → crowding, air pollution, sedentary lifestyle",
+    "Genetic predisposition (e.g., sickle‑cell trait) interacts with infections"
    ]
   },
   {
    "h": "Surveillance and data interpretation",
-   "p": "Routine data come from hospital records, community health workers, and national health information systems. Interpretation must account for under‑reporting and diagnostic gaps.",
-   "b": [
-    "Passive surveillance: hospital admissions",
-    "Active surveillance: community case detection",
-    "Data quality: completeness, timeliness",
-    "Interpretation: trend analysis, outbreak detection"
+   "p": "Surveillance collects routine data to detect trends, outbreaks and evaluate interventions. In low‑resource settings, simple tools (paper registers, mobile SMS) are often used.",
+   "t": [
+    {
+     "a": "Weekly malaria case count",
+     "b": "Is transmission increasing? – Rising counts suggest outbreak; compare to seasonal baseline"
+    },
+    {
+     "a": "Maternal mortality audit",
+     "b": "What are preventable causes? – Identify delays in referral, hemorrhage, infection"
+    },
+    {
+     "a": "TB treatment success rate",
+     "b": "Is the program effective? – <85 % indicates need for adherence support"
+    },
+    {
+     "a": "Blood pressure screening data",
+     "b": "What proportion is uncontrolled? – Guides community‑based hypertension program"
+    }
    ]
   },
   {
    "h": "Screening and prevention",
-   "p": "Screening targets high‑risk groups; prevention focuses on vaccination, vector control, and health education.",
+   "p": "Screening aims to detect disease early when treatment is more effective; prevention reduces incidence.",
    "b": [
-    "Malaria prophylaxis: IPTp, ITNs",
-    "HIV testing: opt‑out counselling",
-    "TB screening: symptom questionnaire, sputum microscopy",
-    "Vaccination: BCG, measles, polio"
+    "Malaria: intermittent preventive treatment in pregnancy (IPTp) and insecticide‑treated nets",
+    "HIV: provider‑initiated testing and counseling (PITC) in all admissions",
+    "Hypertension: opportunistic BP measurement at every clinic visit",
+    "Cervical cancer: visual inspection with acetic acid (VIA) where cytology unavailable"
    ]
   },
   {
    "h": "Interventions and implementation",
-   "p": "Interventions must be affordable, culturally acceptable, and sustainable. Implementation science guides adaptation.",
+   "p": "Implementation science evaluates how best to deliver evidence‑based interventions within existing health‑system constraints.",
    "b": [
-    "Task shifting: nurses for malaria diagnosis",
-    "Community health workers for IPTp",
-    "Mobile phone reminders for medication adherence",
-    "Supply chain management for drugs and diagnostics"
+    "Task‑shifting: train community health workers to dispense antimalarials",
+    "Bundle care for obstetric hemorrhage (uterotonics, tranexamic acid, rapid transport)",
+    "Integrated NCD clinics: combine hypertension, diabetes and HIV follow‑up",
+    "Use of mHealth reminders for medication adherence"
    ]
   },
   {
    "h": "Health systems and policy",
-   "p": "Policy decisions rely on epidemiological evidence to allocate limited resources and set priorities.",
+   "p": "Strong health systems provide the platform for epidemiologic actions; policies translate data into action.",
    "b": [
-    "National malaria control programme",
-    "HIV treatment guidelines",
-    "TB national strategy",
-    "Health financing models"
+    "Essential medicines list ensures availability of first‑line drugs",
+    "District health information system (DHIS2) aggregates routine data",
+    "National malaria strategic plan sets targets for net coverage and case management",
+    "Financing: community health insurance schemes improve access"
    ]
   },
   {
    "h": "Equity and community engagement",
-   "p": "Equity ensures vulnerable groups receive care; community engagement improves uptake.",
+   "p": "Equity means reducing health gaps between groups; community engagement ensures interventions are culturally acceptable.",
    "b": [
-    "Gender disparities in care-seeking",
-    "Child health outreach",
-    "Engaging traditional healers",
-    "Participatory monitoring"
+    "Engage tribal leaders to promote bed‑net use",
+    "Gender‑sensitive outreach for antenatal care in pastoralist communities",
+    "Subsidised transport vouchers for remote patients",
+    "Participatory mapping of disease hotspots"
    ]
   },
   {
    "h": "Monitoring and evaluation",
-   "p": "Continuous monitoring of intervention coverage and outcomes is essential for quality improvement.",
+   "p": "M&E tracks whether interventions achieve intended outcomes and informs course correction.",
    "b": [
-    "Coverage indicators: % of pregnant women with ITNs",
-    "Outcome indicators: malaria incidence per 1,000",
-    "Process indicators: stock‑out rates",
-    "Feedback loops: community scorecards"
+    "Process indicators: % of health facilities reporting weekly malaria data",
+    "Outcome indicators: reduction in under‑5 malaria admissions by 30 % in 2 years",
+    "Impact indicators: decline in age‑standardised mortality rate",
+    "Use of rapid assessment surveys when routine data are incomplete"
    ]
   },
   {
    "h": "Clinical relevance",
-   "p": "Clinicians use epidemiology to decide which tests to order, which empiric therapies to start, and when to refer.",
+   "p": "Clinicians use epidemiologic information at the bedside to shape differential diagnoses, ordering of investigations and empiric therapy.",
    "b": [
-    "Empiric malaria treatment when microscopy unavailable",
-    "Empiric TB therapy in high‑prevalence settings",
-    "Prioritising HIV testing in febrile patients",
-    "Using syndromic management for diarrhoea"
+    "High local malaria incidence → treat febrile patient with ACT pending test",
+    "TB hotspot → consider TB in chronic cough even with negative sputum if resources limited",
+    "Seasonal cholera surge → early rehydration and oral cholera vaccine campaigns",
+    "Rising hypertension prevalence → screen all adult admissions"
    ]
   },
   {
    "h": "Common limitations",
-   "p": "Data gaps, diagnostic delays, and cultural barriers limit accuracy.",
+   "p": "Low‑resource settings face data quality, diagnostic capacity and workforce challenges.",
    "b": [
-    "Limited laboratory capacity",
-    "Under‑reporting of deaths",
-    "Recall bias in surveys",
-    "Stigma affecting testing"
+    "Incomplete registers → under‑reporting of deaths",
+    "Delayed laboratory confirmation (e.g., culture) → reliance on clinical algorithms",
+    "Staff turnover → loss of surveillance expertise",
+    "Limited internet connectivity → delayed data upload"
    ]
   },
   {
    "h": "Exam approach",
-   "p": "Examiners test understanding of disease patterns, risk assessment, and application to clinical scenarios.",
+   "p": "Examiners test ability to translate epidemiologic data into clinical decisions, public‑health planning and critical appraisal of surveillance systems.",
    "b": [
-    "Interpret incidence vs prevalence",
-    "Identify high‑risk groups",
-    "Choose appropriate screening",
-    "Explain impact of interventions"
+    "Interpret a trend graph of malaria cases and suggest next step",
+    "Identify key risk factors for an outbreak of typhoid in a refugee camp",
+    "Design a simple surveillance tool for postpartum hemorrhage",
+    "Critique the use of a single‑site study to estimate national HIV prevalence"
    ]
   }
  ],
  "whenToSeekHelp": [
-  "Severe malaria with altered consciousness",
-  "TB meningitis signs",
-  "HIV‑related opportunistic infection with high fever",
-  "Severe diarrhoea with dehydration"
+  "Sudden surge in deaths or severe illness clusters",
+  "Unexplained high fever (>38 °C) in >3 days with no response to standard therapy",
+  "Rapidly increasing respiratory distress in a ward during rainy season"
  ],
  "faq": [
   {
-   "q": "What is the difference between incidence and prevalence?",
-   "a": "Incidence is new cases over a period; prevalence is all existing cases at a point."
+   "q": "Why is epidemiology important for a bedside doctor?",
+   "a": "It tells you which diseases are most likely in your setting, guiding empiric treatment and appropriate investigations."
   },
   {
-   "q": "Why is malaria still common in East Africa?",
-   "a": "Persistent breeding sites, insecticide resistance, and gaps in net coverage."
+   "q": "What if laboratory tests are unavailable?",
+   "a": "Use syndromic algorithms based on local disease prevalence and clinical patterns, and document uncertainty for later confirmation."
   },
   {
-   "q": "How can I use epidemiology in a ward round?",
-   "a": "Assess local disease patterns to guide empiric therapy and investigations."
+   "q": "How often should surveillance data be reviewed?",
+   "a": "At minimum weekly for acute infections; monthly for chronic conditions; and quarterly for program evaluation."
   }
  ],
  "exam": [
-  "What is the most likely diagnosis for a 5‑year‑old with fever, vomiting, and dehydration in a rural clinic? — Malaria (high endemicity) vs. bacterial sepsis; choose malaria empirically if microscopy unavailable.",
-  "In a patient with chronic cough and weight loss, which test is most useful in a low‑resource setting? — Sputum microscopy for TB; explain limitations of GeneXpert.",
-  "Why is IPTp recommended for pregnant women in malaria‑endemic areas? — Prevents maternal anaemia and low birth weight; explain mechanism.",
-  "When should you refer a patient with suspected typhoid fever? — If persistent fever >7 days, or signs of perforation; explain referral criteria.",
-  "Explain the role of community health workers in malaria surveillance. — They collect data, distribute nets, and educate; discuss impact on case detection.",
-  "How does under‑reporting affect malaria control programmes? — Leads to under‑estimation of burden; discuss mitigation strategies.",
-  "What is the WHO target for ITN coverage in sub‑Saharan Africa? — 80% of households; explain how to achieve it.",
-  "Why is HIV testing mandatory in all febrile adults in high‑prevalence settings? — Early detection improves outcomes; discuss ethical considerations.",
-  "Describe the steps to implement a syndromic management protocol for STIs in a primary clinic. — Screening, empiric therapy, partner notification; explain rationale.",
-  "What are the key indicators for evaluating a TB programme? — Treatment success rate, default rate, sputum conversion; explain each."
+  "A 4‑year‑old presents with fever, cough and night sweats in a high‑TB district – which epidemiologic factor most strongly supports starting empiric TB therapy? — High local TB incidence and prolonged cough >2 weeks.",
+  "You notice a 30 % rise in malaria admissions over two weeks; what is the first public‑health action? — Verify data, then trigger an outbreak response (vector control, community net distribution).",
+  "A district hospital lacks culture facilities; a patient with sepsis is not improving on antimalarials – how do you decide on empiric antibiotics? — Apply local bacterial prevalence data (e.g., gram‑negative bacilli common in urinary sepsis) and use broad‑spectrum agents recommended by national guidelines.",
+  "During a cholera outbreak, what surveillance indicator best measures control success? — Decrease in proportion of acute watery diarrhoea cases testing positive for Vibrio cholerae.",
+  "Explain why task‑shifting to community health workers can improve malaria case management. — Increases access to rapid diagnostic tests and ACTs, reduces delays, and aligns with WHO recommendations for low‑resource settings.",
+  "A health‑facility audit shows 40 % of maternal deaths occur after referral; what determinant does this highlight? — Delays in transport and referral systems (health‑system factor).",
+  "How would you evaluate the impact of a new hypertension screening program after 12 months? — Compare baseline and follow‑up prevalence of uncontrolled BP, assess treatment initiation rates, and calculate reduction in stroke admissions.",
+  "What is the main limitation of using hospital‑based mortality data to estimate community disease burden? — Selection bias: only the most severe cases reach the hospital, under‑representing milder community cases.",
+  "In a refugee camp, you observe a spike in diarrhoea; which risk factor is most likely driving it? — Overcrowding and inadequate water‑sanitation facilities.",
+  "Describe one way to ensure equity when distributing insecticide‑treated nets. — Prioritise households without previous net ownership and vulnerable groups (pregnant women, children <5 y)."
  ],
  "related": [
-  "Malaria control",
-  "HIV treatment guidelines",
-  "TB national strategy",
-  "Diarrhoea management in children",
-  "Health equity in sub‑Saharan Africa"
+  "Disease surveillance",
+  "Outbreak investigation",
+  "Health‑system strengthening",
+  "Maternal and child health",
+  "Non‑communicable disease control",
+  "Vector‑borne disease control",
+  "Health equity"
  ],
  "kind": "publicHealth",
- "model": "openai/gpt-oss-20b",
- "generatedAt": "2026-11-19",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-23",
  "aiReview": {
   "status": "passed",
   "model": "gemini-3.5-flash-lite",
-  "reviewedAt": "2026-11-19",
+  "reviewedAt": "2026-11-23",
   "fixRounds": 0
  },
  "reviewed": false
