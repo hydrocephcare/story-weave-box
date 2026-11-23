@@ -7,7 +7,7 @@ export const onRequestGet = async ({env}:{env:Env}):Promise<Response> => {
   for(let offset=0;offset<10000;offset+=1000){
     const u=new URL(base+"/rest/v1/stories");
     u.searchParams.set("select","id,title,slug,created_at,cover_image_url");
-    u.searchParams.set("published","eq.true");u.searchParams.set("deleted_at","is.null");
+    u.searchParams.set("published","eq.true");u.searchParams.set("deleted_at","is.null");u.searchParams.set("password_protected","eq.false");u.searchParams.set("or","(scheduled_at.is.null,scheduled_at.lte."+new Date().toISOString()+")");
     u.searchParams.set("order","created_at.desc");u.searchParams.set("limit","1000");u.searchParams.set("offset",String(offset));
     const r=await fetch(u.toString(),{headers:{apikey:key,Authorization:"Bearer "+key}});
     if(!r.ok)break;const batch=await r.json();if(!Array.isArray(batch)||!batch.length)break;
