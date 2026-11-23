@@ -136,7 +136,7 @@ export default function ShareYourStory({ audience }: { audience?: Who | "finalis
           {CHOICES.map((o) => <Link key={o.who} to={`/${o.who === "finalist" ? "finalists" : `share-your-story/${o.who}`}`} className={`rounded-full border px-3 py-1 text-xs font-bold transition-colors ${o.who === who ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{o.label}</Link>)}
         </div>
       </div>
-      <p className="mt-6 text-center text-sm"><Link to="/stories" className="text-primary hover:underline">Read what other students wrote</Link></p>
+      <p className="mt-6 text-center text-sm"><Link to="/stories" className="text-primary hover:underline">Read other stories</Link></p>
     </main>
   );
 }
