@@ -14,6 +14,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import StoriesStandaloneApp from "./StoriesStandaloneApp";
 import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AuthProvider } from "@/hooks/useAuth";
@@ -407,7 +408,9 @@ const AIPage = lazy(() => import("@/pages/OmpathAIPage"));
 
 const AdminPage = ({ children }: { children: React.ReactNode }) => <AdminRoute><AdminShell>{children}</AdminShell></AdminRoute>;
 
-const App = () => (
+const App = () => {
+  if (typeof window !== "undefined" && window.location.hostname === "stories.ompathstudy.com") return <StoriesStandaloneApp />;
+  return (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
@@ -448,6 +451,7 @@ const App = () => (
       </AuthProvider>
     </QueryClientProvider>
   </ThemeProvider>
-);
+  );
+};
 
 export default App;
