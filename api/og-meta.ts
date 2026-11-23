@@ -83,14 +83,14 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     links: ["/", "/blog", "/papers", "/stories"],
   },
   "/finalists": {
-    title: "Finalists: tell the students coming behind you | Ompath Study",
-    description: "Finalists and graduates of any medical school: tell the students coming behind you what the wards, exams and years were really like.",
+    title: "Share your experience | Stories",
+    description: "Contributors from every background can share experiences, lessons, knowledge and ideas with readers around the world.",
     image: "https://www.ompathstudy.com/og/share-story.png?v=2",
     links: ["/share-your-story", "/stories", "/blog", "/papers", "/mcqs"],
   },
   "/share-your-story": {
-    title: "Share your medical school story: every student has one | Ompath Study",
-    description: "First year to final year, any medical school: write what it has really been like and help the students beside you and behind you. Your name can stay private.",
+    title: "Share your story | Stories",
+    description: "Everyone has a story worth sharing. Publish personal experiences, ideas, knowledge and creative writing. Your name can stay private.",
     image: "https://www.ompathstudy.com/og/share-story-all.png?v=3",
     links: ["/stories", "/blog", "/papers", "/mcqs", "/exams"],
   },
@@ -105,15 +105,15 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
 // share-your-story pages made for one year or one group, so the link preview in WhatsApp says who it is for
 for (const y of [1, 2, 3, 4, 5, 6]) {
   STATIC_PAGE_META[`/share-your-story/year-${y}`] = {
-    title: `Year ${y} students: share your story | Ompath Study`,
-    description: `Year ${y} at medical school: write what it is really like and help the students beside you and behind you. Your name can stay private.`,
+    title: `Share your story | Stories`,
+    description: `Publish a personal experience, idea or lesson with the Stories community. Your name can stay private.`,
     image: "https://www.ompathstudy.com/og/share-story-all.png?v=3",
     links: ["/share-your-story", "/finalists", "/stories", "/blog"],
   };
 }
 STATIC_PAGE_META["/share-your-story/other"] = {
-  title: "Share your story: nursing, clinical medicine, pharmacy, dentistry and beyond | Ompath Study",
-  description: "You do not have to be an MBChB student. Nurses, clinical officers, pharmacists, dental and lab students, lecturers and parents: write your story and let it help someone.",
+  title: "Share your story | Stories",
+  description: "People from every profession, background and country are welcome to publish personal experiences, ideas and knowledge.",
   image: "https://www.ompathstudy.com/og/share-story-all.png?v=3",
   links: ["/share-your-story", "/finalists", "/stories"],
 };
