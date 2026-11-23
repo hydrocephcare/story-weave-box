@@ -45,15 +45,15 @@ export default function StoryRead() {
       ? `${window.location.origin}${location.pathname}${location.search}`
       : location.pathname;
   const title = story?.title
-    ? `${story.title} | Story | OmpathStudy Kenya`
-    : "Story | OmpathStudy Kenya";
+    ? `${story.title} | Stories`
+    : "Stories";
   const description =
     story?.content
       ? stripRichText(story.content || "", 160) ||
         "Read a medical story on OmpathStudy—built for Kenyan medical and health students to learn, reflect, and grow."
       : "Read a medical story on OmpathStudy—built for Kenyan medical and health students to learn, reflect, and grow.";
   const keywords =
-    "OmpathStudy, story, medical narrative, reflective practice, medical students Kenya, nursing students Kenya, health education Kenya";
+    "Stories, personal stories, articles, experiences, ideas, community writing, health, education, culture, technology";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -388,7 +388,7 @@ export default function StoryRead() {
               </span>
               <div className="leading-tight">
                 <p className="text-xs font-semibold text-foreground">{story.tags?.includes("student") ? "Written by a student" : "Editorially Reviewed"}</p>
-                <p className="text-[11px] text-muted-foreground">{story.tags?.includes("student") ? "Shared in their own words" : "Curated for OmpathStudy readers"}</p>
+                <p className="text-[11px] text-muted-foreground">{story.tags?.includes("student") ? "Shared in their own words" : "Shared with Stories readers"}</p>
               </div>
             </div>
             <div className="shrink-0">
