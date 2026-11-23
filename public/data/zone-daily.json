@@ -1,129 +1,142 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-23",
  "games": [
   {
-   "id": "2026-11-21-1",
-   "title": "Steroid and Sex Hormones: quick quiz",
+   "id": "2026-11-23-1",
+   "title": "Comprehensive Guide to Nutrient Digestion and Absorption: quick quiz",
    "game": "quiz",
-   "topic": "Steroid and Sex Hormones",
+   "topic": "Comprehensive Guide to Nutrient Digestion and Absorption",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which of the following is the primary androgen produced by the fetal adrenal gland during the first trimester?",
+      "q": "Which enzyme is primarily responsible for the hydrolysis of disaccharides into monosaccharides in the small intestine lumen?",
       "options": [
-       "Testosterone",
-       "Dihydrotestosterone",
-       "Dehydroepiandrosterone sulfate (DHEAS)",
-       "Androstenedione"
+       "Sucrase",
+       "Pepsin",
+       "Trypsin",
+       "Lipase"
       ],
-      "correct": 2,
-      "explanation": "DHEAS is the main adrenal androgen secreted in early pregnancy.",
+      "correct": 0,
+      "explanation": "Sucrase, along with other brush‑border enzymes such as lactase and maltase, cleaves disaccharides into monosaccharides for absorption.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A 28‑year‑old woman presents with hirsutism and irregular menses. Serum LH:FSH ratio is 4:1. Which hormone is most likely elevated?",
+      "q": "The majority of amino acid absorption occurs in which segment of the small intestine?",
       "options": [
-       "Estradiol",
-       "Progesterone",
-       "Luteinizing hormone",
-       "Follicle‑stimulating hormone"
+       "Duodenum",
+       "Jejunum",
+       "Ileum",
+       "Stomach"
       ],
-      "correct": 2,
-      "explanation": "An LH:FSH ratio >2:1 suggests excess LH, typical of PCOS.",
+      "correct": 1,
+      "explanation": "The jejunum contains the highest density of transporters for amino acids, accounting for most absorption.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is NOT a direct metabolite of testosterone in the liver?",
+      "q": "Which transporter mediates sodium‑dependent glucose uptake in enterocytes?",
       "options": [
-       "Estradiol",
-       "Dihydrotestosterone",
-       "Androsterone",
-       "Cortisol"
+       "SGLT1",
+       "GLUT4",
+       "GLUT2",
+       "SGLT2"
+      ],
+      "correct": 0,
+      "explanation": "SGLT1 couples glucose transport with Na⁺ influx across the apical membrane of enterocytes.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Chylomicron formation occurs in which cellular compartment?",
+      "options": [
+       "Endoplasmic reticulum",
+       "Golgi apparatus",
+       "Mitochondria",
+       "Lysosome"
+      ],
+      "correct": 0,
+      "explanation": "Chylomicrons are assembled in the smooth endoplasmic reticulum and then packaged into secretory vesicles that travel to the Golgi for further processing.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which hormone stimulates gastric acid secretion by parietal cells?",
+      "options": [
+       "Gastrin",
+       "Secretin",
+       "Cholecystokinin",
+       "Motilin"
+      ],
+      "correct": 0,
+      "explanation": "Gastrin binds to G‑protein coupled receptors on parietal cells, promoting H⁺ secretion.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is NOT a function of the ileocecal valve?",
+      "options": [
+       "Prevent reflux of colonic contents",
+       "Regulate flow of chyme into colon",
+       "Facilitate bile acid reabsorption",
+       "Increase intestinal motility"
       ],
       "correct": 3,
-      "explanation": "Cortisol is not a testosterone metabolite; it is a glucocorticoid.",
+      "explanation": "The valve controls flow and prevents reflux; it does not directly increase motility.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "A patient with congenital adrenal hyperplasia due to 21‑hydroxylase deficiency has markedly elevated levels of which precursor?",
+      "q": "Which transporter is responsible for the uptake of bile acids in the ileum?",
       "options": [
-       "17‑Hydroxyprogesterone",
-       "11‑Deoxycortisol",
-       "Cortisol",
-       "Aldosterone"
+       "ASBT",
+       "SGLT1",
+       "PEPT1",
+       "CFTR"
       ],
       "correct": 0,
-      "explanation": "17‑Hydroxyprogesterone accumulates when 21‑hydroxylase is deficient.",
+      "explanation": "The apical sodium‑dependent bile acid transporter (ASBT) mediates ileal bile acid absorption.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which hormone is primarily responsible for the development of female secondary sexual characteristics during puberty?",
+      "q": "Which enzyme is secreted by pancreatic acinar cells and is essential for the digestion of proteins?",
       "options": [
-       "Testosterone",
-       "Estradiol",
-       "Progesterone",
-       "DHEA"
-      ],
-      "correct": 1,
-      "explanation": "Estradiol drives breast development, body hair, and menstrual cycle onset.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is a potent inhibitor of 5α‑reductase, thereby reducing dihydrotestosterone formation?",
-      "options": [
-       "Finasteride",
-       "Spironolactone",
-       "Corticosteroids",
-       "Estradiol"
+       "Trypsinogen",
+       "Chymotrypsinogen",
+       "Pepsinogen",
+       "Lipase"
       ],
       "correct": 0,
-      "explanation": "Finasteride blocks 5α‑reductase, lowering DHT levels.",
+      "explanation": "Trypsinogen is activated to trypsin in the duodenum, initiating proteolysis.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "In a male patient, a serum testosterone level of 0.3 nmol/L is considered below the normal range. Which of the following is the most likely clinical consequence?",
+      "q": "What is the primary site for the absorption of water and electrolytes in the gastrointestinal tract?",
       "options": [
-       "Gynecomastia",
-       "Hypogonadism",
-       "Hyperprolactinemia",
-       "Polycystic ovary syndrome"
+       "Duodenum",
+       "Jejunum",
+       "Ileum",
+       "Colon"
       ],
-      "correct": 1,
-      "explanation": "Low testosterone leads to hypogonadism with fatigue, decreased libido, etc.",
+      "correct": 3,
+      "explanation": "The colon absorbs the majority of water and electrolytes from the remaining chyme.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "Which of the following is the most sensitive assay for measuring adrenal androgen excess?",
+      "q": "Which of the following best describes the mechanism of vitamin B12 absorption?",
       "options": [
-       "Immunoassay for DHEAS",
-       "Mass spectrometry for DHEA",
-       "Radioimmunoassay for testosterone",
-       "ELISA for estradiol"
+       "Passive diffusion across enterocytes",
+       "Active transport via intrinsic factor",
+       "Endocytosis by M cells",
+       "Facilitated diffusion through GLUT transporters"
       ],
       "correct": 1,
-      "explanation": "LC‑MS/MS provides the most accurate measurement of adrenal androgens.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which hormone is synthesized from cholesterol in the zona glomerulosa of the adrenal cortex?",
-      "options": [
-       "Cortisol",
-       "Aldosterone",
-       "DHEA",
-       "Progesterone"
-      ],
-      "correct": 1,
-      "explanation": "Aldosterone is produced in the zona glomerulosa; cortisol is from the fasciculata.",
+      "explanation": "Vitamin B12 binds intrinsic factor and is absorbed in the terminal ileum via receptor‑mediated endocytosis.",
       "ai": true,
       "kind": "mcq"
      }
@@ -132,258 +145,232 @@
    }
   },
   {
-   "id": "2026-11-21-2",
-   "title": "Vasculitides: quick quiz",
-   "game": "quiz",
-   "topic": "Vasculitides",
-   "year": 4,
-   "blurb": "Quiz for Year 4 and above, written fresh today.",
+   "id": "2026-11-23-2",
+   "title": "Hematopathology: case showdown",
+   "game": "case",
+   "topic": "Hematopathology",
+   "year": 3,
+   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which of the following is the most common systemic vasculitis in adults?",
+      "q": "A 45‑year‑old woman presents with fatigue, pallor, and easy bruising. CBC shows hemoglobin 8.2 g/dL, platelets 45 × 10⁹/L, and a peripheral smear with anisocytosis and occasional schistocytes. Bone marrow aspirate reveals a hypercellular marrow with a 30% population of large blasts that are CD34+, CD117+, and TdT+. What is the most likely diagnosis?",
       "options": [
-       "Giant cell arteritis",
-       "Polyarteritis nodosa",
-       "Microscopic polyangiitis",
-       "Granulomatosis with polyangiitis"
+       "Acute lymphoblastic leukemia",
+       "Acute myeloid leukemia",
+       "Myelodysplastic syndrome",
+       "Chronic myeloid leukemia"
       ],
       "correct": 0,
-      "explanation": "Giant cell arteritis (GCA) is the most frequently encountered systemic vasculitis in adults, particularly those over 50 years of age.",
+      "explanation": "CD34+, CD117+, TdT+ blasts in a 45‑year‑old with pancytopenia point to B‑cell ALL.",
       "ai": true,
-      "kind": "mcq"
+      "kind": "case"
      },
      {
-      "q": "A 45‑year‑old man presents with fever, weight loss, and palpable purpura on the lower limbs. His skin biopsy shows leukocytoclastic vasculitis with IgA deposition. What is the most likely diagnosis?",
+      "q": "A 60‑year‑old man has a history of chronic lymphocytic leukemia (CLL) and now presents with a sudden drop in hemoglobin from 12.5 to 8.0 g/dL and a platelet count of 30 × 10⁹/L. Peripheral smear shows numerous schistocytes and a few spherocytes. What is the next best step in management?",
       "options": [
-       "Microscopic polyangiitis",
-       "Henoch–Schönlein purpura",
-       "Polyarteritis nodosa",
-       "Giant cell arteritis"
+       "Start high‑dose steroids",
+       "Order a coagulation panel for DIC",
+       "Obtain a CT scan of the abdomen",
+       "Perform a splenic ultrasound"
       ],
       "correct": 1,
-      "explanation": "IgA deposition in leukocytoclastic vasculitis is characteristic of Henoch–Schönlein purpura.",
+      "explanation": "The picture suggests microangiopathic hemolytic anemia; a coagulation panel for DIC is indicated.",
       "ai": true,
-      "kind": "mcq"
+      "kind": "case"
      },
      {
-      "q": "Which antibody is most strongly associated with microscopic polyangiitis?",
+      "q": "A 28‑year‑old woman presents with fever, night sweats, and a palpable left axillary lymph node. Excisional biopsy shows sheets of large atypical lymphoid cells that are CD20+, CD10+, BCL6+, and MUM1−. Ki‑67 is 90%. What is the most likely diagnosis?",
       "options": [
-       "Anti‑dsDNA",
-       "Anti‑PR3",
-       "Anti‑MPO",
-       "Anti‑SSA"
+       "Diffuse large B‑cell lymphoma, germinal center type",
+       "Follicular lymphoma",
+       "Burkitt lymphoma",
+       "Hodgkin lymphoma"
+      ],
+      "correct": 0,
+      "explanation": "CD10+, BCL6+, high Ki‑67, and CD20+ indicate DLBCL, germinal center type.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 70‑year‑old man with a history of hypertension presents with sudden onset of severe headache and vomiting. CT head shows a subarachnoid hemorrhage. Lumbar puncture reveals xanthochromia and a platelet count of 80 × 10⁹/L. Which of the following is the most likely underlying hematologic disorder?",
+      "options": [
+       "Immune thrombocytopenic purpura",
+       "Essential thrombocythemia",
+       "Acquired von Willebrand disease",
+       "Platelet‑derived microangiopathy"
       ],
       "correct": 2,
-      "explanation": "Anti‑myeloperoxidase (MPO) antibodies are most commonly seen in microscopic polyangiitis.",
+      "explanation": "Acquired von Willebrand disease can cause spontaneous bleeding and thrombocytopenia.",
       "ai": true,
-      "kind": "mcq"
+      "kind": "case"
      },
      {
-      "q": "A patient with polyarteritis nodosa has livedo reticularis and mononeuritis multiplex. Which organ is least likely to be involved?",
+      "q": "A 35‑year‑old man presents with painless splenomegaly and a peripheral smear showing numerous circulating nucleated red blood cells and a mild leukocytosis. Flow cytometry of the peripheral blood shows a population of CD34+, CD117+, and CD33+ cells. What is the most likely diagnosis?",
       "options": [
-       "Kidney",
-       "Heart",
-       "Skin",
-       "Brain"
-      ],
-      "correct": 3,
-      "explanation": "Polyarteritis nodosa rarely involves the brain; it mainly affects medium‑sized arteries of kidney, heart, skin, and nerves.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which imaging modality is best for detecting aneurysms in polyarteritis nodosa?",
-      "options": [
-       "CT angiography",
-       "MRI brain",
-       "Ultrasound Doppler",
-       "Plain X‑ray"
+       "Acute myeloid leukemia",
+       "Chronic myelogenous leukemia in blast phase",
+       "Polycythemia vera",
+       "Essential thrombocythemia"
       ],
       "correct": 0,
-      "explanation": "CT angiography is the gold standard for visualising medium‑sized arterial aneurysms in PAN.",
+      "explanation": "CD34+, CD117+, CD33+ blasts in a 35‑year‑old with splenomegaly point to AML.",
       "ai": true,
-      "kind": "mcq"
+      "kind": "case"
      },
      {
-      "q": "A 30‑year‑old woman with relapsing polychondritis develops sudden visual loss. Which vasculitis is most likely responsible for her ocular involvement?",
+      "q": "A 55‑year‑old woman with a history of rheumatoid arthritis presents with anemia (Hb 9.5 g/dL) and thrombocytopenia (platelets 90 × 10⁹/L). Peripheral smear shows schistocytes and a few spherocytes. Which laboratory test would most help confirm the diagnosis?",
       "options": [
-       "Giant cell arteritis",
-       "Kawasaki disease",
-       "Behçet disease",
-       "Takayasu arteritis"
-      ],
-      "correct": 0,
-      "explanation": "Giant cell arteritis commonly causes anterior ischemic optic neuropathy leading to sudden visual loss.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is NOT a typical feature of granulomatosis with polyangiitis?",
-      "options": [
-       "Nasal ulceration",
-       "Pulmonary nodules",
-       "Renal crescentic glomerulonephritis",
-       "Chronic hepatitis B infection"
-      ],
-      "correct": 3,
-      "explanation": "Chronic hepatitis B infection is not characteristic of GPA; it is more associated with polyarteritis nodosa.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "A 55‑year‑old man with fever, abdominal pain, and hypertension is found to have microaneurysms on mesenteric angiography. Which vasculitis is most likely?",
-      "options": [
-       "Microscopic polyangiitis",
-       "Polyarteritis nodosa",
-       "Giant cell arteritis",
-       "Churg–Strauss syndrome"
+       "Serum haptoglobin",
+       "Coombs test",
+       "Reticulocyte count",
+       "Peripheral smear for schistocytes"
       ],
       "correct": 1,
-      "explanation": "Mesenteric microaneurysms are classic for polyarteritis nodosa.",
+      "explanation": "A positive Coombs test would confirm autoimmune hemolytic anemia.",
       "ai": true,
-      "kind": "mcq"
+      "kind": "case"
      },
      {
-      "q": "Which of the following laboratory findings is most characteristic of eosinophilic granulomatosis with polyangiitis (Churg–Strauss)?",
+      "q": "A 42‑year‑old man presents with fever, night sweats, and weight loss. A lymph node biopsy shows a proliferation of small lymphocytes with a starry‑sky appearance and a high Ki‑67 index. Immunohistochemistry is positive for CD20, CD10, and BCL6. What is the most likely diagnosis?",
       "options": [
-       "Elevated serum IgE",
-       "Low complement C3",
-       "Positive anti‑dsDNA",
-       "Anemia of chronic disease"
+       "Follicular lymphoma",
+       "Burkitt lymphoma",
+       "Mantle cell lymphoma",
+       "Diffuse large B‑cell lymphoma"
       ],
-      "correct": 0,
-      "explanation": "Eosinophilic granulomatosis with polyangiitis typically shows markedly elevated serum IgE.",
+      "correct": 1,
+      "explanation": "Starry‑sky, high Ki‑67, CD10+, BCL6+ = Burkitt lymphoma.",
       "ai": true,
-      "kind": "mcq"
+      "kind": "case"
      },
      {
-      "q": "A patient with systemic lupus erythematosus develops livedo reticularis and peripheral neuropathy. Which vasculitis is most likely secondary to SLE?",
+      "q": "A 50‑year‑old woman with a history of systemic lupus erythematosus presents with a sudden drop in hemoglobin and a platelet count of 25 × 10⁹/L. Peripheral smear shows schistocytes and a few spherocytes. Which of the following is the most appropriate next step?",
       "options": [
-       "Microscopic polyangiitis",
-       "Polyarteritis nodosa",
-       "Giant cell arteritis",
-       "Cutaneous small‑vessel vasculitis"
+       "Start high‑dose methylprednisolone",
+       "Order a coagulation panel for DIC",
+       "Administer intravenous immunoglobulin",
+       "Give platelet transfusion"
       ],
-      "correct": 3,
-      "explanation": "Cutaneous small‑vessel vasculitis is the most common vasculitic manifestation in SLE.",
+      "correct": 1,
+      "explanation": "The presentation suggests TTP/DIC; a coagulation panel is the next step.",
       "ai": true,
-      "kind": "mcq"
+      "kind": "case"
      }
     ],
     "reviewModel": "gemini-3.5-flash-lite"
    }
   },
   {
-   "id": "2026-11-21-3",
-   "title": "Wk 7 liver cirrosis: case showdown",
+   "id": "2026-11-23-3",
+   "title": "Cerebral Palsy: case showdown",
    "game": "case",
-   "topic": "Wk 7 liver cirrosis",
+   "topic": "Cerebral Palsy",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "A 58‑year‑old man with a 30‑year history of alcohol abuse presents with jaundice, ascites and asterixis. His serum bilirubin is 12 mg/dL, albumin 2.8 g/dL, INR 1.8 and platelets 90 × 10^9/L. What is the most likely diagnosis?",
+      "q": "A 3‑year‑old boy presents with a stiff, spastic gait and a tendency to fall to the left when walking. He has a normal head circumference and no visual or hearing impairment. What is the most likely type of cerebral palsy?",
       "options": [
-       "Acute viral hepatitis",
-       "Alcoholic hepatitis",
-       "Compensated cirrhosis",
-       "Decompensated cirrhosis"
-      ],
-      "correct": 3,
-      "explanation": "The presence of ascites, jaundice, coagulopathy and thrombocytopenia indicates decompensated cirrhosis.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 62‑year‑old woman with known hepatitis C cirrhosis develops sudden onset confusion and asterixis. Her ammonia level is 120 µmol/L. What is the next best step?",
-      "options": [
-       "Start lactulose",
-       "Order MRI brain",
-       "Give intravenous glucose",
-       "Administer rifaximin"
-      ],
-      "correct": 0,
-      "explanation": "Elevated ammonia and clinical hepatic encephalopathy are first managed with lactulose to reduce ammonia production and absorption.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 55‑year‑old man with cirrhosis presents with a sudden drop in hemoglobin and a large, painless, palpable spleen. Which complication is most likely?",
-      "options": [
-       "Acute variceal bleed",
-       "Spontaneous bacterial peritonitis",
-       "Hepatorenal syndrome",
-       "Portal hypertensive gastropathy"
-      ],
-      "correct": 0,
-      "explanation": "In cirrhosis, a sudden fall in hemoglobin together with splenomegaly most often reflects an acute variceal hemorrhage, which can cause rapid blood loss and anemia.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 48‑year‑old woman with cirrhosis has a platelet count of 70 × 10^9/L and a normal coagulation profile. What is the most appropriate management?",
-      "options": [
-       "Platelet transfusion",
-       "Desmopressin",
-       "No intervention",
-       "Anticoagulation"
-      ],
-      "correct": 2,
-      "explanation": "Mild thrombocytopenia in cirrhosis is usually well tolerated; transfusion is reserved for active bleeding or invasive procedures.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 60‑year‑old man with cirrhosis presents with a sudden onset of right upper quadrant pain and a tender, enlarged liver. His AST is 400 U/L and ALT 350 U/L. What is the most likely diagnosis?",
-      "options": [
-       "Acute viral hepatitis",
-       "Acute alcoholic hepatitis",
-       "Acute fatty liver of pregnancy",
-       "Acute cholangitis"
+       "Spastic diplegia",
+       "Spastic hemiplegia",
+       "Spastic quadriplegia",
+       "Ataxic"
       ],
       "correct": 1,
-      "explanation": "Marked elevation of AST and ALT in a cirrhotic patient with recent heavy alcohol intake points to acute alcoholic hepatitis.",
+      "explanation": "Spastic hemiplegia presents with unilateral spasticity and gait deviation.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 65‑year‑old man with cirrhosis and a history of variceal bleeding is being considered for endoscopic therapy. Which endoscopic procedure is most appropriate?",
+      "q": "A 6‑month‑old girl has a high arched palate, microcephaly, and a floppiness that improves with age. She also has a mild intellectual disability. Which underlying cause is most likely?",
       "options": [
-       "Endoscopic variceal ligation",
-       "Endoscopic sclerotherapy",
-       "Transjugular intrahepatic portosystemic shunt",
-       "Percutaneous transhepatic obliteration"
-      ],
-      "correct": 0,
-      "explanation": "Endoscopic variceal ligation (EVL) is the first‑line endoscopic treatment for esophageal varices to prevent re‑bleeding.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 52‑year‑old woman with cirrhosis develops a sudden, severe headache and vomiting. CT brain shows a subarachnoid hemorrhage. Which underlying condition is most likely responsible?",
-      "options": [
-       "Portal hypertension",
-       "Hepatic encephalopathy",
-       "Spontaneous bacterial peritonitis",
-       "Cirrhosis‑related coagulopathy"
+       "Periventricular leukomalacia",
+       "Intrauterine infection",
+       "Hypoxic‑ischemic encephalopathy",
+       "Congenital Zika virus infection"
       ],
       "correct": 3,
-      "explanation": "Cirrhosis can cause a complex coagulopathy that predisposes to spontaneous intracranial bleeding such as subarachnoid hemorrhage.",
+      "explanation": "Zika infection is associated with microcephaly and spastic CP.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 70‑year‑old man with cirrhosis presents with worsening renal function, oliguria and a serum creatinine of 3.0 mg/dL. His urine sodium is 10 mmol/L. What is the most likely diagnosis?",
+      "q": "A 4‑year‑old boy with spastic quadriplegia has a normal MRI but shows increased muscle tone in all four limbs and a positive Babinski sign. What is the next best step in management?",
       "options": [
-       "Acute tubular necrosis",
-       "Acute interstitial nephritis",
-       "Hepatorenal syndrome",
-       "Post‑renal obstruction"
+       "Start physiotherapy",
+       "Order a CT scan",
+       "Prescribe antispasticity medication",
+       "Refer for orthopedic surgery"
+      ],
+      "correct": 0,
+      "explanation": "Early physiotherapy is essential for all CP patients.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 2‑year‑old girl with spastic hemiplegia has a normal head circumference but shows a right‑sided spasticity and a left‑sided weakness. Which brain region is most likely damaged?",
+      "options": [
+       "Left basal ganglia",
+       "Right basal ganglia",
+       "Left cerebellum",
+       "Right cerebellum"
+      ],
+      "correct": 0,
+      "explanation": "Left hemisphere lesions cause right‑sided spasticity.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 5‑year‑old boy with spastic diplegia has a normal developmental milestone progression but shows a pronounced gait abnormality. Which imaging modality would best confirm the diagnosis?",
+      "options": [
+       "CT scan",
+       "MRI",
+       "Ultrasound of the brain",
+       "X‑ray of the spine"
+      ],
+      "correct": 1,
+      "explanation": "MRI is the gold standard for detecting periventricular leukomalacia.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 7‑year‑old girl with spastic quadriplegia has a normal intelligence quotient but exhibits severe speech delay. Which therapy is most likely to improve her speech?",
+      "options": [
+       "Speech‑language therapy",
+       "Occupational therapy",
+       "Physical therapy",
+       "Botulinum toxin injections"
+      ],
+      "correct": 0,
+      "explanation": "Speech‑language therapy targets speech delays in CP.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 3‑year‑old boy with spastic hemiplegia has a normal head circumference but shows a prominent left‑sided spasticity. Which of the following is the most common cause of his condition?",
+      "options": [
+       "Perinatal hypoxia",
+       "Congenital infection",
+       "Traumatic brain injury",
+       "Genetic mutation"
+      ],
+      "correct": 0,
+      "explanation": "Perinatal hypoxia is the most common cause of hemiplegic CP.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 4‑year‑old girl with spastic diplegia has a normal MRI but shows increased muscle tone in the lower limbs. Which medication is most appropriate to reduce spasticity?",
+      "options": [
+       "Diazepam",
+       "Clonazepam",
+       "Tizanidine",
+       "Phenobarbital"
       ],
       "correct": 2,
-      "explanation": "Low urine sodium and oliguria in the setting of advanced cirrhosis are characteristic of hepatorenal syndrome, a functional renal failure.",
+      "explanation": "Tizanidine is a selective alpha‑2 agonist used for spasticity in CP.",
       "ai": true,
       "kind": "case"
      }
@@ -392,219 +379,115 @@
    }
   },
   {
-   "id": "2026-11-21-4",
-   "title": "Obesity Types, Causes and Treatments: drug duel",
+   "id": "2026-11-23-4",
+   "title": "Master pharmacology: drug duel",
    "game": "drug",
-   "topic": "Obesity Types, Causes and Treatments",
+   "topic": "Master pharmacology",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which drug is a GLP‑1 receptor agonist that promotes weight loss by delaying gastric emptying and reducing appetite?",
+      "q": "Which class of drug is theophylline classified as?",
       "options": [
-       "Metformin",
-       "Liraglutide",
-       "Orlistat",
-       "Phentermine"
-      ],
-      "correct": 1,
-      "explanation": "Liraglutide activates GLP‑1 receptors, slows gastric emptying and suppresses appetite, leading to weight loss.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which mechanism is most characteristic of Orlistat in the treatment of obesity?",
-      "options": [
-       "Inhibition of gastric lipase",
-       "Blockade of leptin receptors",
-       "Activation of PPAR‑γ",
-       "Stimulation of β‑adrenergic receptors"
-      ],
-      "correct": 0,
-      "explanation": "Orlistat inhibits gastric and pancreatic lipases, preventing fat absorption.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "A patient with obesity and type 2 diabetes is started on a drug that reduces hepatic glucose production and improves insulin sensitivity. Which drug is this?",
-      "options": [
-       "Sitagliptin",
-       "Pioglitazone",
-       "Acarbose",
-       "Glipizide"
-      ],
-      "correct": 1,
-      "explanation": "Pioglitazone is a thiazolidinedione that activates PPAR‑γ, reducing hepatic gluconeogenesis and enhancing insulin sensitivity.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which side effect is most commonly associated with long‑term use of Orlistat?",
-      "options": [
-       "Gastrointestinal steatorrhea",
-       "Hypoglycemia",
-       "Hypertension",
-       "Weight gain"
-      ],
-      "correct": 0,
-      "explanation": "Orlistat causes steatorrhea, oily stools, and flatulence due to fat malabsorption.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug is a sympathomimetic amine that increases norepinephrine release and is used for short‑term obesity management?",
-      "options": [
-       "Orlistat",
-       "Phentermine",
-       "Liraglutide",
-       "Metformin"
-      ],
-      "correct": 1,
-      "explanation": "Phentermine is a sympathomimetic that releases norepinephrine, suppressing appetite for short‑term use.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug class is primarily indicated for patients with obesity and non‑alcoholic fatty liver disease (NAFLD) due to its effect on weight and liver enzymes?",
-      "options": [
-       "GLP‑1 receptor agonists",
-       "SGLT2 inhibitors",
-       "Beta‑blockers",
-       "ACE inhibitors"
-      ],
-      "correct": 0,
-      "explanation": "GLP‑1 agonists like semaglutide reduce weight and improve liver enzymes in NAFLD.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which of the following is a contraindication for the use of Orlistat?",
-      "options": [
-       "Chronic pancreatitis",
-       "Celiac disease",
-       "Hyperlipidemia",
-       "Obstructive sleep apnea"
-      ],
-      "correct": 0,
-      "explanation": "Orlistat is contraindicated in chronic pancreatitis because it inhibits pancreatic lipase, worsening fat digestion.",
-      "ai": true,
-      "kind": "drug"
-     }
-    ],
-    "reviewModel": "gemini-3.5-flash-lite"
-   }
-  },
-  {
-   "id": "2026-11-21-5",
-   "title": "MBPL3822 Chemotherapy CAT 1: drug duel",
-   "game": "drug",
-   "topic": "MBPL3822 Chemotherapy CAT 1",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
-   "questions": {
-    "questions": [
-     {
-      "q": "Which class of drugs does MBPL3822 Chemotherapy CAT 1 belong to?",
-      "options": [
-       "Alkylating agents",
-       "Antimetabolites",
-       "Antitumor antibiotics",
-       "Targeted therapy"
-      ],
-      "correct": 0,
-      "explanation": "MBPL3822 is an alkylating agent that cross‑links DNA.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the primary mechanism of action of MBPL3822?",
-      "options": [
-       "Inhibition of microtubule polymerisation",
-       "DNA cross‑linking leading to strand breaks",
-       "Inhibition of thymidylate synthase",
-       "Inhibition of topoisomerase II"
-      ],
-      "correct": 1,
-      "explanation": "It cross‑links DNA, preventing replication and transcription.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "For which malignancy is MBPL3822 most commonly indicated?",
-      "options": [
-       "Acute myeloid leukemia",
-       "Non‑small cell lung cancer",
-       "Metastatic colorectal cancer",
-       "Breast cancer"
-      ],
-      "correct": 0,
-      "explanation": "It is primarily used in AML protocols.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which of the following is a characteristic side effect of MBPL3822?",
-      "options": [
-       "Peripheral neuropathy",
-       "Severe mucositis",
-       "Hematologic suppression",
-       "Cardiotoxicity"
+       "A. Beta‑blocker",
+       "B. Anticholinergic",
+       "C. Methylxanthine",
+       "D. Calcium channel blocker"
       ],
       "correct": 2,
-      "explanation": "Hematologic suppression (neutropenia) is the hallmark toxicity.",
+      "explanation": "Theophylline is a methylxanthine bronchodilator.",
       "ai": true,
       "kind": "drug"
      },
      {
-      "q": "MBPL3822 is metabolised predominantly by which pathway?",
+      "q": "What is the primary mechanism of action of amiodarone?",
       "options": [
-       "Cytochrome P450 3A4 oxidation",
-       "Glucuronidation in the liver",
-       "Renal tubular secretion",
-       "Mitochondrial beta‑oxidation"
-      ],
-      "correct": 1,
-      "explanation": "It undergoes hepatic glucuronidation.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which laboratory value is most likely to be abnormal during MBPL3822 therapy?",
-      "options": [
-       "Elevated serum creatinine",
-       "Low platelet count",
-       "High serum alkaline phosphatase",
-       "Elevated serum bilirubin"
-      ],
-      "correct": 1,
-      "explanation": "Thrombocytopenia is a common cytopenia.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the recommended dose‑adjustment strategy for a patient with renal impairment receiving MBPL3822?",
-      "options": [
-       "Increase dose by 25%",
-       "No adjustment needed",
-       "Reduce dose by 50%",
-       "Hold therapy until creatinine normalises"
-      ],
-      "correct": 2,
-      "explanation": "Dose is reduced by 50% in moderate renal impairment.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which supportive medication is routinely co‑administered with MBPL3822 to mitigate its side effects?",
-      "options": [
-       "Granulocyte colony‑stimulating factor",
-       "Proton pump inhibitor",
-       "Antifungal prophylaxis",
-       "Antiviral prophylaxis"
+       "A. Sodium channel blockade",
+       "B. Potassium channel blockade",
+       "C. Calcium channel blockade",
+       "D. Beta‑adrenergic blockade"
       ],
       "correct": 0,
-      "explanation": "G‑CSF is used to prevent severe neutropenia.",
+      "explanation": "Amiodarone blocks cardiac sodium channels, prolonging the action potential.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is most commonly used as a first‑line treatment for acute asthma exacerbation?",
+      "options": [
+       "A. Salmeterol",
+       "B. Ipratropium bromide",
+       "C. Albuterol",
+       "D. Montelukast"
+      ],
+      "correct": 2,
+      "explanation": "Albuterol, a short‑acting β2‑agonist, is first‑line for acute asthma.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the characteristic side effect of clopidogrel that can lead to bleeding?",
+      "options": [
+       "A. Hypertension",
+       "B. Rash",
+       "C. Bleeding",
+       "D. Hyperglycemia"
+      ],
+      "correct": 2,
+      "explanation": "Clopidogrel increases bleeding risk due to platelet inhibition.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug class is used to treat hypertension by blocking the renin‑angiotensin system?",
+      "options": [
+       "A. ACE inhibitors",
+       "B. Beta‑blockers",
+       "C. Loop diuretics",
+       "D. Calcium channel blockers"
+      ],
+      "correct": 0,
+      "explanation": "ACE inhibitors block the renin‑angiotensin system to lower BP.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the main indication for the drug rivaroxaban?",
+      "options": [
+       "A. Deep vein thrombosis prophylaxis",
+       "B. Hypertension",
+       "C. Diabetes mellitus",
+       "D. Asthma"
+      ],
+      "correct": 0,
+      "explanation": "Rivaroxaban is an oral factor Xa inhibitor used for DVT prophylaxis.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is known for causing a blue‑black discoloration of the skin?",
+      "options": [
+       "A. Hydroxychloroquine",
+       "B. Isoniazid",
+       "C. Chlorpromazine",
+       "D. Metronidazole"
+      ],
+      "correct": 2,
+      "explanation": "Chlorpromazine can cause a blue‑black skin discoloration.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the mechanism of action of levothyroxine?",
+      "options": [
+       "A. Inhibition of thyroid hormone synthesis",
+       "B. Replacement of deficient thyroid hormone",
+       "C. Stimulation of TSH release",
+       "D. Blockade of peripheral conversion of T4 to T3"
+      ],
+      "correct": 1,
+      "explanation": "Levothyroxine replaces missing thyroid hormone in hypothyroidism.",
       "ai": true,
       "kind": "drug"
      }
