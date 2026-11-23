@@ -7,7 +7,7 @@ import { ownerOf } from "@/lib/storyExtras";
 /** The author at the top of a story: photo, name, verified tick, level and university, and a link down to their card and other stories. */
 export default function AuthorChip({ storyId, content, tags }: { storyId: string; content: string; tags?: string[] | null }) {
   const author = authorFromContent(content);
-  const anonymous = !author || /^a medical student$/i.test(author.name);
+  const anonymous = !author || /^a (?:medical student|community writer)$/i.test(author.name);
   const owner = !anonymous ? ownerOf(tags) : "";
   const [more, setMore] = useState(0);
   useEffect(() => {
