@@ -50,8 +50,8 @@ export default function StoryRead() {
   const description =
     story?.content
       ? stripRichText(story.content || "", 160) ||
-        "Read a medical story on OmpathStudy—built for Kenyan medical and health students to learn, reflect, and grow."
-      : "Read a medical story on OmpathStudy—built for Kenyan medical and health students to learn, reflect, and grow.";
+        "Read original stories, experiences and ideas from writers around the world."
+      : "Read original stories, experiences and ideas from writers around the world.";
   const keywords =
     "Stories, personal stories, articles, experiences, ideas, community writing, health, education, culture, technology";
 
