@@ -134,7 +134,7 @@ export default function Stories() {
   const ownerTag = useOwnerTag();
 
   useEffect(() => {
-    updateMetaTags({ title: "Student Stories | Ompath Study", description: "Experiences, advice and reflections from medical students around the world, first year to final year.", url: `${SITE_URL}/stories`, type: "website" });
+    updateMetaTags({ title: "Stories | Read and Publish Original Stories", description: "Personal experiences, ideas, knowledge and reflections from writers around the world. Read and publish stories on every subject.", url: `${SITE_URL}/stories`, type: "website" });
   }, []);
 
   const load = useCallback(() => {
@@ -193,8 +193,8 @@ export default function Stories() {
       {/* Heading: short, so the stories are close to the top */}
       <section className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="font-serif text-3xl font-bold sm:text-4xl">Student Stories</h1>
-          <p className="mt-1 max-w-xl text-sm text-muted-foreground">Real experiences from medical school and beyond. Read, then share yours. Your name can stay private.</p>
+          <h1 className="font-serif text-3xl font-bold sm:text-4xl">Stories</h1>
+          <p className="mt-1 max-w-xl text-sm text-muted-foreground">Real experiences, ideas and perspectives from people everywhere. Read, then share yours. Your name can stay private.</p>
         </div>
         <button type="button" onClick={openWriter} className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition-transform active:scale-95"><PenLine className="h-4 w-4" /> Share your story</button>
       </section>
@@ -259,7 +259,7 @@ export default function Stories() {
           <div className="rounded-2xl border border-dashed border-border bg-card px-6 py-14 text-center">
             <BookOpen className="mx-auto mb-3 h-10 w-10 text-muted-foreground/30" />
             <p className="font-serif text-lg font-bold">{stories.length === 0 ? "No stories yet" : "Nothing matches that"}</p>
-            <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">{stories.length === 0 ? "Be the first to share what medical school has been like for you." : "Try another topic or year, or write the story you wish you could find."}</p>
+            <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">{stories.length === 0 ? "Be the first to share a story with the world." : "Try another topic or year, or write the story you wish you could find."}</p>
             <button type="button" onClick={openWriter} className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground"><PenLine className="h-4 w-4" /> Share your story</button>
           </div>
         ) : (
@@ -276,8 +276,8 @@ export default function Stories() {
 
       {/* Who are you? Each choice opens a page and a link made for that group, so anyone can share it. */}
       <section className="mt-10 rounded-2xl border border-border bg-card/60 p-4" aria-label="Share your story">
-        <p className="font-serif text-lg font-bold">Are you a finalist? Year 1? Studying something else?</p>
-        <p className="mt-0.5 text-sm text-muted-foreground">Anyone can share a story. Tap yours: it opens the page and the link to share with your group.</p>
+        <p className="font-serif text-lg font-bold">Everyone has a story worth sharing.</p>
+        <p className="mt-0.5 text-sm text-muted-foreground">Share an experience, an idea, a lesson, a perspective or a piece of creative writing. Everyone is welcome.</p>
         <div className="mt-3 flex flex-wrap gap-1.5">
           <Link to="/finalists" className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/50 bg-amber-500/10 px-3.5 py-1.5 text-sm font-bold text-amber-700 hover:bg-amber-500/20 dark:text-amber-300"><FinalistBadge className="h-5 w-5" /> Finalist</Link>
           {[1, 2, 3, 4, 5, 6].map((y) => <Link key={y} to={`/share-your-story/year-${y}`} className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-bold hover:border-primary hover:text-primary">Year {y}</Link>)}
