@@ -126,7 +126,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
   const chars = plain.trim().length;
   const words = useMemo(() => plain.trim().split(/\s+/).filter(Boolean).length, [plain]);
   const links = Math.max((html.match(/href=/g) ?? []).length, (plain.match(/https?:\/\/|www\./gi) ?? []).length);
-  const problem = title.trim() && (!/[A-Za-z]{3,}/.test(title) || title.trim().length < 8) ? "Add a longer title, or clear it and one is written for you." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
+  const problem = title.trim() && (!/[A-Za-z]{3,}/.test(title) || title.trim().length < 8) ? "Add a longer title, or clear it and one is written for you." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : "";
   const aiFail = (e: unknown) => toast({ title: "The helper could not help", description: (e as Error).message, variant: "destructive" });
   const polishStory = async () => {
     setAiBusy("story");
@@ -168,21 +168,21 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
       const text = plain.replace(/\s+/g, " ").trim();
       const fields = {
         title: finalTitle.slice(0, 150),
-        content: `<p><em>By ${escapeHtml(display)} · ${levelLabel(year)}</em></p>${tidyHtml(cleanStoryHtml(bodyHtml))}`,
+        content: `<p><em>By ${escapeHtml(display)}${year ? " · " + escapeHtml(levelLabel(year)) : ""}</em></p>${tidyHtml(cleanStoryHtml(bodyHtml))}`,
         category,
         meta_description: text.slice(0, 160),
         reading_time_minutes: Math.max(1, Math.ceil(words / 200)),
       };
       if (editing) {
         if (!editing.tags?.includes(owner)) throw new Error("You can only edit your own stories.");
-        const keep = withoutAuthorTags((editing.tags ?? []).filter((t) => !/^year-\d$/.test(t)));
+        const keep = withoutAuthorTags((editing.tags ?? []).filter((t) => !/^year-\d$/.test(t) && t !== "student"));
         const aboutT = aboutTag(about);
         const uniT = uniTag(uni);
         const photoT = photoTag(photo);
         const extraT = extraTag(extra);
         const keepClean = withoutExtraTag(keep);
         const thumb = { cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) };
-        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keepClean, `year-${year}`, ...(authorTag(display, levelLabel(year)) ? [authorTag(display, levelLabel(year))] : []), ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : []), ...(extraT ? [extraT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
+        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keepClean, ...(year ? [`year-${year}`, "student"] : []), ...(authorTag(display, levelLabel(year)) ? [authorTag(display, levelLabel(year))] : []), ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : []), ...(extraT ? [extraT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
         if (error) throw error;
         const path = buildStoryPath({ id: editing.id, title: fields.title, slug: (editing as { slug?: string | null }).slug });
         setDone({ url: `${SITE_URL}${path}`, path, title: fields.title, edited: true });
@@ -193,7 +193,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
       const base = storySlugBase(fields.title);
       const taken = ((await supabase.from("stories").select("slug").like("slug", `${base}%`)).data ?? []).map((r: { slug: string | null }) => r.slug);
       let slug = base; for (let n = 2; taken.includes(slug); n++) slug = `${base}-${n}`;
-      const { data, error } = await supabase.from("stories").insert({ ...fields, slug, published: true, tags: [`year-${year}`, "student", owner, ...(authorTag(display, levelLabel(year)) ? [authorTag(display, levelLabel(year))] : []), ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : []), ...(extraTag(extra) ? [extraTag(extra)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title,slug").single();
+      const { data, error } = await supabase.from("stories").insert({ ...fields, slug, published: true, tags: [...(year ? [`year-${year}`, "student"] : []), owner, ...(authorTag(display, levelLabel(year)) ? [authorTag(display, levelLabel(year))] : []), ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : []), ...(extraTag(extra) ? [extraTag(extra)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title,slug").single();
       if (error) throw error;
       try { localStorage.removeItem(DRAFT); localStorage.setItem(LAST, String(Date.now())); } catch { /* ignore */ }
       const path = buildStoryPath({ id: data.id, title: data.title, slug: (data as { slug?: string | null }).slug });
@@ -242,7 +242,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
         {!user ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-3 px-6 text-center">
             <p className="font-serif text-lg font-bold">Log in to publish</p>
-            <p className="max-w-sm text-sm text-muted-foreground">Stories are written by signed-in students, so you can come back and edit yours. Your draft will be waiting.</p>
+            <p className="max-w-sm text-sm text-muted-foreground">Stories are written by signed-in contributors, so you can come back and edit yours. Your draft will be waiting.</p>
             <Link to={`/login?redirect=${encodeURIComponent("/stories?write=1")}`} className="rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Log in or sign up</Link>
           </div>
         ) : done ? (
@@ -271,7 +271,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                   {words > 0 && <span className="text-[11px] text-muted-foreground">{Math.max(1, Math.ceil(words / 200))} min read</span>}
                 </div>
                 <h2 className="mt-3 font-serif text-3xl font-bold leading-tight">{title.trim() || "Your title"}</h2>
-                <p className="mt-2 text-sm italic text-muted-foreground">By {display} · {year ? levelLabel(year) : "Year ?"}</p>
+                <p className="mt-2 text-sm italic text-muted-foreground">By {display}{year ? " · " + levelLabel(year) : ""}</p>
                 {previewHtml && chars > 0
                   ? <div className="story-prose mt-5 text-[17px] leading-8" dangerouslySetInnerHTML={{ __html: previewHtml }} />
                   : <p className="mt-5 text-sm text-muted-foreground">Nothing written yet. Switch to Write and tell your story.</p>}
@@ -281,7 +281,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
             <div className={tab === "write" ? "min-h-0 min-w-0 flex-1 overflow-y-auto lg:order-1 lg:basis-1/2" : "hidden min-h-0 min-w-0 overflow-y-auto lg:order-1 lg:block lg:flex-1 lg:basis-1/2"}>
               <div className="mx-auto w-full max-w-3xl">
               <div className="flex items-center gap-1.5 overflow-x-auto px-4 pt-3 [scrollbar-width:none] sm:px-6">
-                <span className="shrink-0 text-xs font-bold text-muted-foreground">I am in</span>
+                <span className="shrink-0 text-xs font-bold text-muted-foreground">My background</span><button type="button" onClick={() => setYear(0)} aria-pressed={year === 0} className={`inline-flex h-8 shrink-0 items-center whitespace-nowrap rounded-full border px-3 text-sm font-bold transition-colors ${year === 0 ? "border-primary bg-primary text-primary-foreground" : "border-border text-foreground/80"}`}>Not a student</button>
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`inline-flex h-8 shrink-0 items-center whitespace-nowrap rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border text-foreground/80"}`}>{y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}
               </div>
               <div className="px-4 pt-4 sm:px-6">
@@ -334,14 +334,14 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                   <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary to-emerald-500 ring-2 ring-border">{photo ? <img src={photo} alt="Your photo" className="h-full w-full object-cover" /> : <span className="flex h-full w-full items-center justify-center font-serif text-xl font-bold text-primary-foreground">{(name.trim()[0] || "?").toUpperCase()}</span>}</div>
                   <div className="text-sm"><label className="cursor-pointer font-bold text-primary hover:underline">{photoBusy ? "Uploading…" : photo ? "Change photo" : "Add your photo"}<input type="file" accept="image/*" className="hidden" disabled={photoBusy} onChange={(e) => { const f = e.target.files?.[0]; if (f) { setPhotoBusy(true); void uploadStoryImage(f).then(setPhoto).catch((er) => toast({ title: "Photo not added", description: (er as Error).message, variant: "destructive" })).finally(() => setPhotoBusy(false)); } e.target.value = ""; }} /></label>{photo && <button type="button" onClick={() => setPhoto("")} className="ml-3 text-muted-foreground hover:text-destructive">Remove</button>}<p className="text-xs text-muted-foreground">Optional. Shown with your note at the end of the story. Save it once in your account to reuse it.</p></div>
                 </div>
-                <label htmlFor="story-uni" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">University <span className="font-medium normal-case tracking-normal">(optional)</span></label>
-                <input id="story-uni" list="story-unis" value={uni} onChange={(e) => setUni(e.target.value.slice(0, 60))} placeholder="e.g. Mount Kenya University (MKU)" className="mb-4 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm outline-none focus:border-primary" />
+                <label htmlFor="story-uni" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">School or organisation <span className="font-medium normal-case tracking-normal">(optional)</span></label>
+                <input id="story-uni" list="story-unis" value={uni} onChange={(e) => setUni(e.target.value.slice(0, 60))} placeholder="e.g. Mount Kenya University, Thika Level 5 Hospital, or your organisation" className="mb-4 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm outline-none focus:border-primary" />
                 <datalist id="story-unis">{UNIVERSITIES.map((u) => <option key={u} value={u} />)}</datalist>
                 <div className="mb-1 flex items-center justify-between gap-2">
                   <label htmlFor="story-about" className="block text-xs font-bold uppercase tracking-wide text-muted-foreground">About you <span className="font-medium normal-case tracking-normal">(optional, shown at the end of your story)</span></label>
                   <button type="button" onClick={() => void writeAbout()} disabled={aiBusy !== ""} className="inline-flex items-center gap-1 text-xs font-bold text-primary disabled:opacity-50">{aiBusy === "about" ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />} Help me write it</button>
                 </div>
-                <textarea id="story-about" value={about} onChange={(e) => setAbout(e.target.value.slice(0, ABOUT_MAX))} rows={3} placeholder="Tell readers a little about yourself: your year, your school, what you love about medicine, what you would tell a junior." className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm leading-relaxed outline-none focus:border-primary" />
+                <textarea id="story-about" value={about} onChange={(e) => setAbout(e.target.value.slice(0, ABOUT_MAX))} rows={3} placeholder="Tell readers a little about yourself: your background, interests, what you do, or what you would tell someone in a similar situation." className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm leading-relaxed outline-none focus:border-primary" />
                 <p className="mt-1 text-xs text-muted-foreground">{about.length}/{ABOUT_MAX}{user?.email_confirmed_at ? " · your story will carry a Verified tick" : ""}</p>
               </div>
               <div className="rounded-xl border border-border bg-muted/40">
