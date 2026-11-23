@@ -14,7 +14,7 @@ import { isGeneratedThumb, storyThumb, whatsappLink } from "@/lib/storyShare";
 import { uploadStoryImage } from "@/lib/storyImage";
 import { reportError } from "@/lib/errorReport";
 
-export const STORY_CATEGORIES = ["Experience", "Advice", "First-year life", "Clinical rotations", "Exams & study", "Reflection", "Campus & fun", "Other"];
+export const STORY_CATEGORIES = ["Personal experiences", "Experience", "Advice", "Health & medicine", "Education", "Technology", "Business", "Lifestyle", "Relationships", "Culture", "Travel", "Opinion", "Science", "Creative writing", "Personal growth", "Community", "First-year life", "Clinical rotations", "Exams & study", "Reflection", "Campus & fun", "Other"];
 const DRAFT = "ompath_story_draft_v2";
 const LAST = "ompath_story_last";
 const MAX_CHARS = 20000;
