@@ -13,7 +13,7 @@ type Other = { id: string; title: string; slug?: string | null };
  *  a tip for juniors, links, the writer's own words and their other stories. */
 export default function AuthorCard({ storyId, content, tags }: { storyId?: string; content: string; tags?: string[] | null }) {
   const author = authorFromContent(content);
-  const owner = author && !/^a medical student$/i.test(author.name) ? ownerOf(tags) : ""; // an anonymous writer is never linked to their other stories
+  const owner = author && !/^a (?:medical student|community writer)$/i.test(author.name) ? ownerOf(tags) : ""; // an anonymous writer is never linked to their other stories
   const [others, setOthers] = useState<Other[]>([]);
   useEffect(() => {
     if (!owner || !storyId) return;
