@@ -31,11 +31,11 @@ import { ABOUT_MAX, UNIVERSITIES, levelLabel, aboutFromTags, aboutTag, photoFrom
 
 /** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
 export function yearGuide(year: number): { placeholder: string; categories: string[] } {
-  if (year === 8) return { placeholder: "e.g. What my course has taught me about caring for people", categories: ["Experience", "Advice", "Reflection", "Exams & study", "Campus & fun", "Other"] };
+  if (year === 8) return { placeholder: "e.g. What my work, studies or life have taught me", categories: STORY_CATEGORIES };
   if (year === 7) return { placeholder: "e.g. What I wish I knew before I started med school", categories: ["Advice", "Reflection", "Exams & study", "Clinical rotations", "Experience", "Campus & fun", "Other"] };
   if (year >= 1 && year <= 3) return { placeholder: year === 1 ? "e.g. My first month on campus" : "e.g. Surviving the pre-clinical years", categories: STORY_CATEGORIES.filter((c) => c !== "Clinical rotations" && (year === 1 || c !== "First-year life")) };
   if (year >= 4) return { placeholder: "e.g. My first day on the wards", categories: STORY_CATEGORIES.filter((c) => c !== "First-year life") };
-  return { placeholder: "e.g. My first day on the wards", categories: STORY_CATEGORIES };
+  return { placeholder: "e.g. An experience that changed how I see the world", categories: STORY_CATEGORIES };
 }
 
 export function textToHtml(text: string): string {
