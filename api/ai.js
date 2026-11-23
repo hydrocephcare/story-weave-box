@@ -16,6 +16,14 @@ import assist from "./_lib/storyAssist.js";
 const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo, write, sb, transcribe, assist };
 
 export default async function handler(req, res) {
+  const origin = String(req.headers.origin || "");
+  if (origin === "https://stories.ompathstudy.com") {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Vary", "Origin");
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  }
+  if (req.method === "OPTIONS") return res.status(204).end();
   const task = String(Array.isArray(req.query?.task) ? req.query.task[0] : req.query?.task ?? "");
   const fn = TASKS[task];
   if (!fn) return res.status(404).json({ error: "unknown task" });
