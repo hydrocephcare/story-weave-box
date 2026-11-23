@@ -950,7 +950,7 @@ function buildHtml(opts: {
     ${opts.ogImageType ? `<meta property="og:image:type" content="${htmlEscape(opts.ogImageType)}" />` : ""}
     ${(opts.ogImageWidth && opts.ogImageHeight) ? `<meta property="og:image:width" content="${opts.ogImageWidth}" /><meta property="og:image:height" content="${opts.ogImageHeight}" />` : (opts.ogImage.includes("/api/note-card?") ? '<meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />' : "")}
     <meta property="og:image:alt" content="${title}" />
-    <meta property="og:site_name" content="OmpathStudy" />
+    <meta property="og:site_name" content="${opts.url.startsWith("https://stories.ompathstudy.com") ? "Stories" : "OmpathStudy"}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${desc}" />
@@ -1028,6 +1028,10 @@ export default async function handler(req: Request): Promise<Response> {
   // Query parameters are deliberately preserved for app behaviour and excluded from canonical URLs.
   const requestedPath = originalPath.split("?")[0];
   const normalizedPath = requestedPath.length > 1 ? requestedPath.replace(/\/+$/, "") : "/";
+  const requestHost = String(req.headers.get("host") || "").split(":")[0].toLowerCase();
+  if (requestHost !== "stories.ompathstudy.com" && (normalizedPath === "/stories" || normalizedPath.startsWith("/stories/") || normalizedPath === "/share-your-story" || normalizedPath.startsWith("/share-your-story/") || normalizedPath === "/finalists")) {
+    return Response.redirect(new URL(originalPath, "https://stories.ompathstudy.com").toString(), 301);
+  }
   if (isCrawler(ua) && requestedPath !== normalizedPath) {
     return permanentRedirect(normalizedPath);
   }
