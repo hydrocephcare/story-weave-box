@@ -54,6 +54,21 @@ const REDIRECTED = ["/blog/amebiasis-pathogenic-free-living-amebae-guide","/blog
 
 async function extraSitemap(req, res, mode) {
   const SITE = "https://www.ompathstudy.com";
+  if (mode === "stories") {
+    const STORY_SITE = "https://stories.ompathstudy.com";
+    const rows = await fetchPublicRows("stories?select=id,title,slug,created_at,updated_at,cover_image_url&published=eq.true&deleted_at=is.null&order=created_at.desc", 250);
+    const esc = (v) => String(v ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+    const slug = (v) => String(v || "").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/&/g," and ").replace(/[^a-z0-9\\s-]/g,"").trim().replace(/\\s+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"");
+    const urls = [{loc:STORY_SITE+"/"},{loc:STORY_SITE+"/stories"},{loc:STORY_SITE+"/share-your-story"}];
+    for (const row of rows) {
+      const path = "/stories/" + (row.slug || (row.id + "-" + (slug(row.title) || "story")));
+      urls.push({loc:STORY_SITE+path,lastmod:row.updated_at||row.created_at,image:row.cover_image_url||"",alt:row.title||""});
+    }
+    const body = urls.map(x => "<url><loc>"+esc(x.loc)+"</loc>"+(x.lastmod?"<lastmod>"+esc(new Date(x.lastmod).toISOString())+"</lastmod>":"")+(x.image?"<image:image><image:loc>"+esc(x.image)+"</image:loc><image:title>"+esc(x.alt)+"</image:title></image:image>":"")+"<changefreq>"+(x.lastmod?"monthly":"weekly")+"</changefreq><priority>"+(x.loc===STORY_SITE+"/"?"1.0":x.loc===STORY_SITE+"/stories"?"0.9":"0.7")+"</priority></url>").join("");
+    res.setHeader("Content-Type","application/xml; charset=utf-8");
+    res.setHeader("Cache-Control","public, s-maxage=900, stale-while-revalidate=86400");
+    return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'+body+"</urlset>");
+  }
   if (mode === "research") {
     const paths = ["/research","/research/services","/research/topics","/research/resources","/research/pricing","/research/process","/research/faq","/research/request-support","/research/academic-integrity","/research/universities","/research/universities/mku","/research/universities/university-of-nairobi","/research/universities/jkuat","/research/universities/kenyatta-university","/research/universities/moi-university","/research/universities/maseno-university","/research/universities/aga-khan-university","/research/universities/other-universities","/research/services/research-topic-consultation","/research/services/proposal-review","/research/services/methodology-support","/research/services/questionnaire-development","/research/services/data-analysis-support","/research/services/spss-support","/research/services/academic-editing","/research/services/research-defence-preparation","/research/guides/research-problem-statement","/research/guides/research-objectives-questions-hypotheses","/research/guides/quantitative-qualitative-mixed-methods","/research/guides/cross-sectional-cohort-case-control-studies","/research/guides/sampling-methods-and-sample-size","/research/guides/research-ethics-informed-consent","/research/guides/questionnaire-design-validity-reliability","/research/guides/descriptive-statistics-and-data-analysis","/research/guides/writing-results-and-discussion","/research/guides/sample-size-calculation-prevalence-studies","/research/guides/pico-framework-clinical-research-questions","/research/guides/literature-review-search-strategy","/research/guides/confounding-and-bias-clinical-research","/research/guides/odds-ratios-risk-ratios-confidence-intervals","/research/guides/chi-square-t-tests-logistic-regression","/research/guides/data-cleaning-spss","/research/guides/vancouver-referencing-medical-research","/research/guides/writing-research-abstract","/research/guides/research-defence-presentation-preparation"];
     const urls=paths.map(p=>`<url><loc>${SITE}${p}</loc><changefreq>${p==="/research"?"weekly":"monthly"}</changefreq><priority>${p==="/research"?"0.9":p.includes("/guides/")?"0.7":"0.6"}</priority></url>`).join("");
@@ -70,7 +85,7 @@ async function extraSitemap(req, res, mode) {
 }
 export default async function handler(req, res) {
   const mode = typeof req.query?.mode === "string" ? req.query.mode : "";
-  if (mode === "research" || mode === "topics") return extraSitemap(req, res, mode);
+  if (mode === "research" || mode === "topics" || mode === "stories") return extraSitemap(req, res, mode);
   try {
     const file = typeof req.query?.file === "string" ? req.query.file : "all.xml";
     const upstream = await fetch(`https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/generate-sitemap?file=${encodeURIComponent(file)}`, {
