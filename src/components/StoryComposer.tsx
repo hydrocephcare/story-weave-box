@@ -141,7 +141,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
   const undoPolish = () => { if (undoHtml === null) return; setInitialHtml(undoHtml); setHtml(undoHtml); setDocKey(String(Date.now())); setUndoHtml(null); };
   const ideasForTitle = async () => { setAiBusy("titles"); try { setTitleIdeas(await assistTitles(plain)); } catch (e) { aiFail(e); } finally { setAiBusy(""); } };
   const writeAbout = async () => { setAiBusy("about"); try { const t = await assistBio({ name: anonymous ? "" : name, university: uni, year, notes: about }); if (t) setAbout(t.slice(0, ABOUT_MAX)); } catch (e) { aiFail(e); } finally { setAiBusy(""); } };
-  const display = anonymous ? "A medical student" : name.trim() || "A medical student";
+  const display = anonymous ? "A community writer" : name.trim() || "A community writer";
   const previewHtml = useMemo(() => cleanStoryHtml(html), [html]);
 
   async function publish() {
@@ -235,7 +235,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
         ) : (
           <div className="border-b border-border bg-gradient-to-r from-primary/15 via-primary/5 to-transparent px-5 py-4 pr-12">
             <DialogTitle className="font-serif text-xl font-bold lg:text-2xl">{done ? (done.edited ? "Saved" : "Your story is live") : "Share your story"}</DialogTitle>
-            <DialogDescription className="mt-0.5 text-xs lg:text-sm">{done ? "Share it, or go and see it." : "First years to final years, anything about medical school."}</DialogDescription>
+            <DialogDescription className="mt-0.5 text-xs lg:text-sm">{done ? "Share it, or go and see it." : "Share an experience, idea, lesson or perspective. All subjects and backgrounds are welcome."}</DialogDescription>
           </div>
         )}
 
@@ -254,7 +254,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
             </div>
             <div className="flex w-full max-w-sm flex-col gap-2">
               <Link to={done.path} onClick={onClose} className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> View my story</Link>
-              <a href={whatsappLink(`I just shared my story on Ompath Study: “${done.title}”. Read it, and add yours 👇\n${done.url}`)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-bold text-[#073b1d]"><MessageCircle className="h-4 w-4" /> Share on WhatsApp</a>
+              <a href={whatsappLink(`I just shared my story on Stories: “${done.title}”. Read it, and add yours 👇\n${done.url}`)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-bold text-[#073b1d]"><MessageCircle className="h-4 w-4" /> Share on WhatsApp</a>
               <button type="button" onClick={() => void copy(done.url)} className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-bold hover:border-primary">{copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />} {copied ? "Link copied" : "Copy link"}</button>
             </div>
           </div>
