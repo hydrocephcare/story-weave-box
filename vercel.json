@@ -168,11 +168,11 @@
   "rewrites": [
     {
       "source": "/robots.txt",
-      "destination": "/api/robots"
+      "destination": "/api/sitemap-index?mode=robots"
     },
     {
       "source": "/stories-sitemap.xml",
-      "destination": "/api/stories-sitemap"
+      "destination": "/api/sitemap?mode=stories"
     },
     {
       "source": "/api/ai-chat",
