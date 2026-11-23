@@ -108,7 +108,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
           <h3 className="mb-0 mt-2.5 line-clamp-2 font-serif text-base font-bold leading-snug transition-colors group-hover:text-primary">{story.title}</h3>
           <AuthorLine story={story} />
           <p className="line-clamp-3 flex-1 text-xs leading-relaxed text-muted-foreground">{story.meta_description}</p>
-          <p className="mt-3 flex items-center gap-1 text-[11px] text-muted-foreground"><Clock className="h-3 w-3" /> {story.reading_time_minutes ? `${story.reading_time_minutes} min read` : "Student story"}</p>
+          <p className="mt-3 flex items-center gap-1 text-[11px] text-muted-foreground"><Clock className="h-3 w-3" /> {story.reading_time_minutes ? `${story.reading_time_minutes} min read` : "Community story"}</p>
         </div>
       </Link>
     </motion.div>
