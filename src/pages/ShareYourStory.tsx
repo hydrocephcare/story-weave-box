@@ -52,13 +52,13 @@ function pageFor(who: Who): Page {
   }
   return {
     path: "/share-your-story", image: "/og/share-story-all.png?v=3",
-    title: "Medical students: share your story | OmpathStudy",
-    description: "From first year to finalists: write what medical school has really been like and help the students beside you and behind you. Your name can stay private.",
-    eyebrow: "For medical students", heading: "Your story could be someone's best day",
-    lead: "Year 1 and lost in anatomy? On the wards for the first time? Resitting a paper and keeping quiet about it? A finalist looking back? Write it the way you would tell a friend in the hostel. Someone out there is going through the same thing and needs to read it. (Studying something else in health? You are welcome too.)",
-    prompts: ["My first week on campus", "The exam that scared me most, and what helped", "My first day on the wards", "How I study when I do not feel like it", "What I wish someone told me at the start"],
-    link: "/stories?write=1", note: "Takes a few minutes. Your name can stay private. Pick your year or level when you write.",
-    share: "Pass it on to your classmates", wa: "Med students, tell the juniors what it is really like. Write your story here:",
+    title: "Share your story | Stories",
+    description: "Everyone has a story worth sharing. Publish personal experiences, ideas, knowledge and creative writing. Your name can stay private.",
+    eyebrow: "Open to everyone", heading: "Your story deserves to be heard",
+    lead: "A personal experience, a lesson you learned, a perspective worth sharing, a useful idea or a piece of creative writing: there is room for your voice here. Stories welcomes people from every profession, background and country.",
+    prompts: ["An experience that changed how I see the world", "Something I wish I had known earlier", "A lesson I learned the hard way", "A person who made a difference in my life", "An idea I cannot stop thinking about"],
+    link: "/stories?write=1", note: "Takes a few minutes. Your name can stay private. Choose the category that best fits your story.",
+    share: "Pass it on", wa: "Everyone has a story worth sharing. Write yours here:",
   };
 }
 
