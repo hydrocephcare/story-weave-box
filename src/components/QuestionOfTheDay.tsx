@@ -26,10 +26,10 @@ function loadDailyPick(year: number | null, day: number): Promise<Pick | null> {
         const { data } = await (supabase as any).from("mcq_sets").select("id,title,slug,questions").eq("id", id).maybeSingle();
         const set = data;
         if (!set || !Array.isArray(set.questions)) continue;
-        const ok: Q[] = (set.questions as Q[]).filter((x) => x?.question && Array.isArray(x.options) && x.options.length === 4 && Number.isInteger(x.correct_answer) && !/!\\[|figure|image|shown/i.test(x.question) && !weakness(x).filter((w: string) => w !== "recall").length);
+        const ok: Q[] = (set.questions as Q[]).filter((x) => x?.question && Array.isArray(x.options) && x.options.length === 4 && Number.isInteger(x.correct_answer) && !/!\[|figure|image|shown/i.test(x.question) && !weakness(x).filter((w: string) => w !== "recall").length);
         if (ok.length) {
           const item = ok[(day * 13) % ok.length];
-          return { q: item, path: buildMcqPath(set), title: String(set.title).replace(/:?\\s*MCQs?$/i, "") };
+          return { q: item, path: buildMcqPath(set), title: String(set.title).replace(/:?\s*MCQs?$/i, "") };
         }
       }
       return null;
