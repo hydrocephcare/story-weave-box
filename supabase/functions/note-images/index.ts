@@ -175,8 +175,8 @@ serve(async (req) => {
     for (const row of otherImageRows ?? []) {
       const content = String((row as { content?: string }).content || "");
       const urls = [
-        ...content.matchAll(/!\\[[^\\]]*\\]\\((https?:\\/\\/[^)\\s]+)[^)]*\\)/gi),
-        ...content.matchAll(/<img\\b[^>]*?src=["'](https?:\\/\\/[^"']+)["']/gi),
+        ...content.matchAll(/!\[[^\]]*\]\((https?:\/\/[^)\s]+)[^)]*\)/gi),
+        ...content.matchAll(/<img\b[^>]*?src=["'](https?:\/\/[^"']+)["']/gi),
       ];
       for (const match of urls) {
         const key = imageKey(match[1]);
