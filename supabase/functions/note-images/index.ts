@@ -150,8 +150,8 @@ serve(async (req) => {
         u.search = ""; u.hash = "";
         let path = decodeURIComponent(u.pathname);
         const thumb = path.match(/^(.*\/commons)\/thumb\/(.+?)\/([^/]+)\/[^/]+$/);
-        if (thumb) path = \${thumb[1]}/\${thumb[2]}/\${thumb[3]};
-        return \${u.hostname.toLowerCase()}\${path}.toLowerCase();
+        if (thumb) path = `${thumb[1]}/${thumb[2]}/${thumb[3]}`;
+        return `${u.hostname.toLowerCase()}${path}`.toLowerCase();
       } catch { return ""; }
     };
     // Never add a picture already present in this article. This includes images
