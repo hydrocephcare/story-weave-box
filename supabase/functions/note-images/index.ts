@@ -191,8 +191,8 @@ serve(async (req) => {
       const found = await wikiExact(cand.map((c) => c.term).slice(0, 120));
       const takenSec = new Set<number>();
       for (const c of cand) {
-        const f = found.get(c.term); if (!f || used.has(f.url) || takenSec.has(c.sec) || picked.length >= 6) continue;
-        used.add(f.url); takenSec.add(c.sec);
+        const f = found.get(c.term); if (!f || used.has(imageKey(f.url)) || takenSec.has(c.sec) || picked.length >= 6) continue;
+        used.add(imageKey(f.url)); takenSec.add(c.sec);
         const cap = `${f.title} · Image from the Wikipedia article, Wikimedia Commons`.replace(/[\[\]()\n]/g, " ").replace(/\s+/g, " ");
         picked.push({ i: c.sec, line: `![${cap}](${f.url})`, why: `Wikipedia: ${f.title}` });
         trace.push(`exact: ${c.term}`);
@@ -204,7 +204,7 @@ serve(async (req) => {
       if (picked.length >= 5) break;
       const secKeys = sec.keys.length > 2 ? [...sec.keys].sort((x, y) => y.length - x.length).slice(0, 2) : sec.keys; // a long heading is searched by its two most specific words
       const q = secKeys.join(" ");
-      const cands = (await commons(q)).filter((c, k, arr) => arr.findIndex((x) => x.url === c.url) === k && !used.has(c.url));
+      const cands = (await commons(q)).filter((c, k, arr) => arr.findIndex((x) => imageKey(x.url) === imageKey(c.url)) === k && !used.has(imageKey(c.url)));
       // the picture's own title/description must name what the heading is about (all of its key words when there are one or two)
       const need = secKeys.length;
       const ok = cands.filter((c) => { const hay = `${c.title} ${c.about}`.toLowerCase(); return secKeys.filter((w) => hay.includes(w)).length >= need; }).slice(0, 6);
@@ -216,7 +216,7 @@ serve(async (req) => {
         const m = raw.match(/-?\d+/); pickIdx = m ? Number(m[0]) : -1; trace.push(`  AI said ${raw.slice(0, 20)}`);
       } catch (e) { aiDown = true; pickIdx = -1; trace.push(`  AI failed ${String(e).slice(0, 80)}`); }
       const c = ok[pickIdx]; if (!c) continue;
-      used.add(c.url);
+      used.add(imageKey(c.url));
       const cap = `${c.title}  · ${c.credit}, ${c.licence}, Wikimedia Commons`.replace(/[\[\]()\n]/g, " ").replace(/\s+/g, " ").slice(0, 200);
       picked.push({ i: sec.i, line: `![${cap}](${c.url.split("?")[0]})`, why: c.title });
     }
@@ -225,7 +225,7 @@ serve(async (req) => {
       try {
         const subject = head.replace(/^\s*\d+\s*[a-z]?\s*[.):-]?\s+/i, "").replace(/\.(pptx?|pdf|docx?).*$/i, "").replace(/[-_ ]wk\s*\d+.*$/i, "").trim() || head;
         const lead = await wikiLead(subject, words(subject));
-        if (lead) {
+        if (lead && !used.has(imageKey(lead.url))) {
           const first = lines.findIndex((l, i) => i >= 1 && /^#{2,4}\s/.test(l));
           if (first > 0) { picked.push({ i: first, line: `![${lead.caption}](${lead.url})`, why: `Wikipedia: ${lead.title}` }); trace.push(`lead picture: ${lead.title}`); }
         }
