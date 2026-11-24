@@ -39,7 +39,7 @@ export function makeCachedFetch(baseUrl: string, anonKey: string, real: typeof f
       // Cache only public catalogue tables for signed-in users. The Worker re-queries
       // with the anon key, so public RLS remains the security boundary. Private tables
       // and user-specific records continue directly to Supabase.
-      const sharedPublicPath = /^\\/rest\\/v1\\/(articles|mcq_sets|flashcard_sets|stories|essays|article_categories|topic_pages|resource_topics|study_resources|academic_years|semesters|units|syllabus_topics|paper_answers|paper_seo|paper_similar|medical_concepts|medical_concept_aliases|concept_relationships)(\\?|$)/.test(path);
+      const sharedPublicPath = /^\/rest\/v1\/(articles|mcq_sets|flashcard_sets|stories|essays|article_categories|topic_pages|resource_topics|study_resources|academic_years|semesters|units|syllabus_topics|paper_answers|paper_seo|paper_similar|medical_concepts|medical_concept_aliases|concept_relationships)(\?|$)/.test(path);
       if (auth && auth !== `Bearer ${anonKey}` && !sharedPublicPath) return direct();
       const range = h.get("range") || "", prefer = h.get("prefer") || "";
       if (!/^(\d+-\d*)?$/.test(range) || !/^(count=(exact|planned|estimated))?$/.test(prefer)) return direct(); // only pages and counts are cached; anything else goes to Supabase
