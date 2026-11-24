@@ -149,16 +149,16 @@ serve(async (req) => {
         if (u.protocol !== "https:" && u.protocol !== "http:") return "";
         u.search = ""; u.hash = "";
         let path = decodeURIComponent(u.pathname);
-        const thumb = path.match(/^(.*\\/commons)\\/thumb\\/(.+?)\\/([^/]+)\\/[^/]+$/);
-        if (thumb) path = `${thumb[1]}/${thumb[2]}/${thumb[3]}`;
-        return `${u.hostname.toLowerCase()}${path}`.toLowerCase();
+        const thumb = path.match(/^(.*\/commons)\/thumb\/(.+?)\/([^/]+)\/[^/]+$/);
+        if (thumb) path = \${thumb[1]}/\${thumb[2]}/\${thumb[3]};
+        return \${u.hostname.toLowerCase()}\${path}.toLowerCase();
       } catch { return ""; }
     };
     // Never add a picture already present in this article. This includes images
     // inserted manually, by an earlier run, or through HTML rather than Markdown.
     const existingImageUrls = [
-      ...String(a.content || "").matchAll(/!\\[[^\\]]*\\]\\((https?:\\/\\/[^)\\s]+)[^)]*\\)/gi),
-      ...String(a.content || "").matchAll(/<img\\b[^>]*?src=[\\"'](https?:\\/\\/[^\\"']+)[\\"']/gi),
+      ...String(a.content || "").matchAll(/!\[[^\]]*\]\((https?:\/\/[^)\s]+)[^)]*\)/gi),
+      ...String(a.content || "").matchAll(/<img\b[^>]*?src=["'](https?:\/\/[^"']+)["']/gi),
     ].map((m) => m[1]);
     const used = new Set(existingImageUrls.map(imageKey).filter(Boolean));
     let aiDown = false;
