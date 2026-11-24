@@ -66,6 +66,7 @@ export function Paywall({
   const savedPaymentDetails = (() => { try { return JSON.parse(localStorage.getItem("ompath_payment_details") || "{}"); } catch { return {}; } })();
   const [phone, setPhone] = useState(() => savedPaymentDetails.phone || "");
   const [countryCode, setCountryCode] = useState(() => savedPaymentDetails.countryCode || "KE");
+  const [pricingCountry, setPricingCountry] = useState(() => savedPaymentDetails.countryCode || "KE");
   const detectCountry = (value: string) => {
     const digits = value.replace(/\\D/g, "");
     const matches = callingCodes.filter(([, info]) => digits.startsWith(info.dial));
@@ -77,16 +78,15 @@ export function Paywall({
   useEffect(() => {
     let active = true;
     const loadLocationDefault = async () => {
-      if (savedPaymentDetails.countryCode) return;
       try {
         const response = await fetch("https://ipapi.co/json/", { signal: AbortSignal.timeout(3500) });
         if (!response.ok) return;
         const location = await response.json();
         const code = String(location?.country_code || "").toUpperCase();
-        if (!active || !countryData[code]) return;
-        setCountryCode(code);
-        setPaymentMethod(code === "KE" ? "mpesa" : "card");
-      } catch { /* Location lookup is optional; phone prefix and Kenya default remain available. */ }
+        if (!active || !/^[A-Z]{2}$/.test(code)) return;
+        setPricingCountry(code);
+        setPaymentMethod(code === "KE" && countryCode === "KE" ? "mpesa" : "card");
+      } catch { /* Fall back to the saved phone country, or Kenya for a new visitor. */ }
     };
     void loadLocationDefault();
     return () => { active = false; };
@@ -132,8 +132,13 @@ export function Paywall({
   };
 
   const plan: AccessPlan = plans.find((p) => p.id === planId) || {
-    id: "semester", label: "Semester pass (3 months)", price: settings.price, days: 90, download: true,
+    id: "semester", label: "Semester pass (3 months)", price: settings.price, internationalPrice: 21, days: 90, download: true,
   };
+  const currency = pricingCountry === "KE" ? "KES" : "USD";
+  const amountForPlan = (p: AccessPlan) => pricingCountry === "KE" ? Number(p.price || settings.price || 150) : Number(p.internationalPrice ?? 21);
+  const formatPlanAmount = (p: AccessPlan) => currency === "KES"
+    ? `KES ${amountForPlan(p).toLocaleString("en-KE")}`
+    : `${amountForPlan(p).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
   const pollPayment = async (transactionId: string, selectedPlanId = plan.id) => {
     for (let i = 0; i < 40; i++) {
@@ -188,12 +193,14 @@ export function Paywall({
     if (user) {
       await supabase.auth.updateUser({ data: { payment_phone: internationalPhone, payment_country: resolvedCountry } });
     }
-    const selectedMethod = resolvedCountry === "KE" ? paymentMethod : "card";
+    const selectedMethod = pricingCountry === "KE" && resolvedCountry === "KE" ? paymentMethod : "card";
     setState("sending"); setMessage("");
     const { data, error } = await supabase.functions.invoke("initiate-paystack", {
       body: {
+        amount: amountForPlan(plan),
+        currency,
+        pricing_country: pricingCountry,
         method: selectedMethod,
-        amount: plan.price || settings.price,
         package_type: plan.id,
         phone: internationalPhone,
         country_code: resolvedCountry,
@@ -331,7 +338,7 @@ export function Paywall({
 
   // Shortest plan first; show what each costs per month so the better deal is obvious.
   const sorted = [...plans].sort((a, b) => a.days - b.days);
-  const perMonth = (p: AccessPlan) => (p.days >= 28 ? p.price / (p.days / 30) : null);
+  const perMonth = (p: AccessPlan) => (p.days >= 28 ? amountForPlan(p) / (p.days / 30) : null);
   const baseRate = sorted.map(perMonth).find((v) => v !== null) ?? null;
   const bestRate = Math.min(...sorted.map((p) => perMonth(p) ?? Infinity));
   const duration = (d: number) => (d >= 365 ? "12 months" : d >= 85 ? "3 months" : d >= 28 ? `${Math.round(d / 30)} month${Math.round(d / 30) === 1 ? "" : "s"}` : d === 1 ? "1 day" : `${d} days`);
@@ -356,8 +363,8 @@ export function Paywall({
               <div className="mt-3 divide-y divide-border rounded-xl border border-border" role="radiogroup" aria-label="Choose a plan">
                 {sorted.map((p) => { const rate=perMonth(p); const best=sorted.length>1 && rate!==null && rate===bestRate && baseRate!==null && rate<baseRate*0.9; const save=best&&baseRate?Math.round((1-rate!/baseRate)*100):0; const on=planId===p.id;
                   return <button key={p.id} type="button" role="radio" aria-checked={on} onClick={()=>setPlanId(p.id)} className={`flex min-h-[76px] w-full items-center justify-between gap-4 px-4 py-3 text-left first:rounded-t-xl last:rounded-b-xl ${on?"bg-primary/[0.06]":"bg-background hover:bg-muted/40"}`}>
-                    <span className="flex min-w-0 items-start gap-3"><span className={`mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border ${on?"border-primary":"border-muted-foreground/50"}`}>{on&&<span className="h-2 w-2 rounded-full bg-primary"/>}</span><span className="min-w-0"><span className="block text-sm font-semibold text-foreground">{p.label||duration(p.days)}</span><span className="mt-1 block text-xs text-muted-foreground">{duration(p.days)} access{rate!==null&&sorted.length>1?` · about KES ${Math.round(rate)} per month`:""}</span></span></span>
-                    <span className="shrink-0 text-right"><span className="block text-lg font-semibold tabular-nums text-foreground">KES {p.price.toLocaleString("en-KE")}</span>{best&&<span className="mt-0.5 block text-[11px] font-medium text-primary">Save {save}%</span>}</span>
+                    <span className="flex min-w-0 items-start gap-3"><span className={`mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border ${on?"border-primary":"border-muted-foreground/50"}`}>{on&&<span className="h-2 w-2 rounded-full bg-primary"/>}</span><span className="min-w-0"><span className="block text-sm font-semibold text-foreground">{p.label||duration(p.days)}</span><span className="mt-1 block text-xs text-muted-foreground">{duration(p.days)} access{rate!==null&&sorted.length>1?` · about ${currency} ${Math.round(rate)} per month`:""}</span></span></span>
+                    <span className="shrink-0 text-right"><span className="block text-lg font-semibold tabular-nums text-foreground">{formatPlanAmount(p)}</span>{best&&<span className="mt-0.5 block text-[11px] font-medium text-primary">Save {save}%</span>}</span>
                   </button>; })}
               </div>
             </div>
@@ -366,10 +373,10 @@ export function Paywall({
               {!user&&!authLoading&&<div className="mt-4 rounded-xl border border-border bg-background p-4"><p className="text-sm font-semibold text-foreground">Sign in to continue</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Your subscription will be linked to your account and available on your other devices.</p><button type="button" onClick={startGoogle} disabled={signingIn} className="mt-4 flex min-h-12 w-full items-center justify-center rounded-lg bg-foreground px-4 py-3 text-sm font-semibold text-background disabled:opacity-60">{signingIn?"Connecting…":"Continue with Google"}</button><button type="button" onClick={()=>{setMode("code");setState("idle");}} className="mt-3 w-full text-center text-xs font-medium text-primary underline underline-offset-4">Already have a pass code?</button></div>}
               <div className={`mt-4 space-y-4 ${!user&&!authLoading?"pointer-events-none opacity-40":""}`}>
                 <div><label htmlFor="pay-phone" className="mb-2 block text-sm font-medium text-foreground">Mobile number</label><div className="flex min-h-12 items-center rounded-lg border border-border bg-background px-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15"><span className="mr-3 text-lg" aria-hidden="true">{countries[countryCode]?.flag||"🌍"}</span><input id="pay-phone" value={phone} onChange={(e)=>{const next=e.target.value.replace(/[^0-9+ ]/g,"");setPhone(next);const detected=detectCountry(next);if(detected){setCountryCode(detected);if(detected!=="KE")setPaymentMethod("card");else if(paymentMethod==="card")setPaymentMethod("mpesa");}setState("idle");setMessage("");}} inputMode="tel" autoComplete="tel" placeholder={countryCode==="KE"?"07XX XXX XXX or +254…":`+${countries[countryCode]?.dial || ""} mobile number` } className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/60"/><span className="ml-2 shrink-0 text-xs text-muted-foreground">{countries[countryCode]?.name||"International"}</span></div><p className="mt-2 text-xs leading-5 text-muted-foreground">Enter the number that should receive your payment request.</p></div>
-                <div><p className="mb-2 text-sm font-medium text-foreground">Payment method</p>{countryCode==="KE"?<div className="grid grid-cols-3 overflow-hidden rounded-lg border border-border" role="group" aria-label="Payment method">{([["mpesa","M-Pesa"],["airtel","Airtel Money"],["card","Debit / credit card"]] as const).map(([method,title])=><button key={method} type="button" onClick={()=>setPaymentMethod(method)} aria-pressed={paymentMethod===method} className={`min-h-12 border-r border-border px-2 py-3 text-xs font-semibold last:border-r-0 sm:text-sm ${paymentMethod===method?"bg-foreground text-background":"bg-background text-muted-foreground hover:bg-muted/50"}`}>{title}</button>)}</div>:<div className="rounded-lg border border-border bg-muted/30 px-4 py-3"><p className="text-sm font-semibold text-foreground">Debit or credit card</p><p className="mt-1 text-xs text-muted-foreground">Secure card payment through Paystack.</p></div>}</div>
+                <div><p className="mb-2 text-sm font-medium text-foreground">Payment method</p>{pricingCountry==="KE" && countryCode==="KE"?<div className="grid grid-cols-3 overflow-hidden rounded-lg border border-border" role="group" aria-label="Payment method">{([["mpesa","M-Pesa"],["airtel","Airtel Money"],["card","Debit / credit card"]] as const).map(([method,title])=><button key={method} type="button" onClick={()=>setPaymentMethod(method)} aria-pressed={paymentMethod===method} className={`min-h-12 border-r border-border px-2 py-3 text-xs font-semibold last:border-r-0 sm:text-sm ${paymentMethod===method?"bg-foreground text-background":"bg-background text-muted-foreground hover:bg-muted/50"}`}>{title}</button>)}</div>:<div className="rounded-lg border border-border bg-muted/30 px-4 py-3"><p className="text-sm font-semibold text-foreground">Debit or credit card</p><p className="mt-1 text-xs text-muted-foreground">Secure card payment through Paystack.</p></div>}</div>
                 {!paystackEnabled&&<p role="status" className="rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs text-amber-700 dark:text-amber-300">Online payments are temporarily unavailable. Please use an existing pass code or try again later.</p>}
                 <button type="button" onClick={startPaystackPayment} disabled={busy||!user||!paystackEnabled||phone.replace(/\D/g,"").length<9} className="flex min-h-14 w-full items-center justify-center rounded-lg bg-primary px-5 py-4 text-base font-semibold text-primary-foreground transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50">{busy?(state==="waiting"?"Waiting for payment confirmation…":"Starting payment…"):"Continue to secure payment"}</button>
-                <p className="text-center text-xs leading-5 text-muted-foreground">{paymentMethod==="card"||countryCode!=="KE"?"You will continue to Paystack’s secure card checkout.":"A payment prompt will be sent to your phone. Approve it using your mobile-money PIN."}</p>
+                <p className="text-center text-xs leading-5 text-muted-foreground">{paymentMethod==="card"||pricingCountry!=="KE"||countryCode!=="KE"?"You will continue to Paystack’s secure card checkout.":"A payment prompt will be sent to your phone. Approve it using your mobile-money PIN."}</p>
               </div>
             </div>
             {busy&&<div className="mt-4 rounded-lg border border-border bg-muted/30 p-4 text-sm text-muted-foreground"><span className="inline-flex items-center gap-2 font-semibold text-foreground"><Loader2 className="h-4 w-4 animate-spin"/>Payment in progress</span><p className="mt-2">Keep this page open while we confirm your payment. Your access will unlock automatically.</p></div>}
@@ -377,7 +384,7 @@ export function Paywall({
             <p className="mt-5 text-xs leading-5 text-muted-foreground">Card payments are handled by Paystack. Mobile-money requests are confirmed before access is activated. <Link to="/account" className="font-medium text-primary underline underline-offset-4">Manage your subscription</Link>.</p>
             </>}
           </section>
-          {mode === "buy" && <aside className="border-t border-border bg-muted/25 p-5 sm:p-8 lg:border-l lg:border-t-0"><p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">Order summary</p><div className="mt-5 border-b border-border pb-5"><p className="text-sm font-semibold text-foreground">{plan.label||duration(plan.days)} subscription</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Access across OmpathStudy for {duration(plan.days).toLowerCase()}.</p></div><div className="flex items-center justify-between gap-3 py-5"><span className="text-sm text-muted-foreground">Total due</span><span className="text-xl font-semibold tabular-nums text-foreground">KES {(plan.price||settings.price).toLocaleString("en-KE")}</span></div><div className="rounded-lg border border-border bg-background p-4"><p className="text-sm font-semibold text-foreground">Included with your plan</p><ul className="mt-3 space-y-2 text-xs leading-5 text-muted-foreground"><li>Questions and full answer keys</li><li>Explanations and study resources</li><li>Access on your signed-in devices</li>{plan.download&&<li>PDF handouts and downloads</li>}</ul></div><p className="mt-5 text-xs leading-5 text-muted-foreground">Your selected plan and full amount are shown before you pay. No hidden checkout charges.</p></aside>}
+          {mode === "buy" && <aside className="border-t border-border bg-muted/25 p-5 sm:p-8 lg:border-l lg:border-t-0"><p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">Order summary</p><div className="mt-5 border-b border-border pb-5"><p className="text-sm font-semibold text-foreground">{plan.label||duration(plan.days)} subscription</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Access across OmpathStudy for {duration(plan.days).toLowerCase()}.</p></div><div className="flex items-center justify-between gap-3 py-5"><span className="text-sm text-muted-foreground">Total due</span><span className="text-xl font-semibold tabular-nums text-foreground">{formatPlanAmount(plan)}</span></div><div className="rounded-lg border border-border bg-background p-4"><p className="text-sm font-semibold text-foreground">Included with your plan</p><ul className="mt-3 space-y-2 text-xs leading-5 text-muted-foreground"><li>Questions and full answer keys</li><li>Explanations and study resources</li><li>Access on your signed-in devices</li>{plan.download&&<li>PDF handouts and downloads</li>}</ul></div><p className="mt-5 text-xs leading-5 text-muted-foreground">Your selected plan and full amount are shown before you pay. No hidden checkout charges.</p></aside>}
         </div>
         <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border px-5 py-3 text-xs text-muted-foreground sm:px-8"><span>OMPATHSTUDY</span><span>Secure checkout · Support available through your account</span></div>
       </div>
