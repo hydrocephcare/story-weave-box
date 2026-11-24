@@ -140,7 +140,27 @@ serve(async (req) => {
       .filter((x) => x.h && x.i > 3 && !/^(references?|common exam|key points?|exam|questions?|mcqs?)/i.test(x.h))
       .map((x) => ({ ...x, keys: words(x.h).filter((w) => !GENERIC.has(w)) })).filter((x) => x.keys.length > 0);
     const picked: { i: number; line: string; why: string }[] = [];
-    const used = new Set<string>();
+    // Canonicalise Wikimedia thumbnail URLs to the original file URL. The same
+    // Commons file can otherwise appear different when one result is a 900px
+    // thumbnail and another is the original or a differently sized thumbnail.
+    const imageKey = (raw: string) => {
+      try {
+        const u = new URL(raw.trim().replace(/^<|>$/g, ""));
+        if (u.protocol !== "https:" && u.protocol !== "http:") return "";
+        u.search = ""; u.hash = "";
+        let path = decodeURIComponent(u.pathname);
+        const thumb = path.match(/^(.*\\/commons)\\/thumb\\/(.+?)\\/([^/]+)\\/[^/]+$/);
+        if (thumb) path = `${thumb[1]}/${thumb[2]}/${thumb[3]}`;
+        return `${u.hostname.toLowerCase()}${path}`.toLowerCase();
+      } catch { return ""; }
+    };
+    // Never add a picture already present in this article. This includes images
+    // inserted manually, by an earlier run, or through HTML rather than Markdown.
+    const existingImageUrls = [
+      ...String(a.content || "").matchAll(/!\\[[^\\]]*\\]\\((https?:\\/\\/[^)\\s]+)[^)]*\\)/gi),
+      ...String(a.content || "").matchAll(/<img\\b[^>]*?src=[\\"'](https?:\\/\\/[^\\"']+)[\\"']/gi),
+    ].map((m) => m[1]);
+    const used = new Set(existingImageUrls.map(imageKey).filter(Boolean));
     let aiDown = false;
     const trace: string[] = [];
     // pass 1, no guessing: a heading or a bold term that is exactly the name of a Wikipedia article gets that article's own lead picture (placed in the section it came from)
