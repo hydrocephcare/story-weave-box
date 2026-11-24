@@ -16,7 +16,7 @@ export default function PaymentSettingsAdmin() {
   const [plans, setPlans] = useState<AccessPlan[]>(DEFAULT_PLANS);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [passes, setPasses] = useState<{ code: string; plan: string; expires_at: string; amount: number }[]>([]);
+  const [passes, setPasses] = useState<{ code: string; plan: string; expires_at: string; amount: number; currency?: string }[]>([]);
   const [founderVisible, setFounderVisible] = useState(false);
   const [guestSlideView, setGuestSlideView] = useState<"all" | "half">("all");
   const [redacted, setRedacted] = useState(DEFAULT_SITE_SETTINGS.redactedNames.join(", "));
@@ -119,7 +119,7 @@ export default function PaymentSettingsAdmin() {
 
   const addPlan = () => setPlans((prev) => [
     ...prev,
-    { id: `plan-${Date.now().toString(36)}`, label: "New pass", price: 700, days: 90, download: true },
+    { id: `plan-${Date.now().toString(36)}`, label: "New pass", price: 700, internationalPrice: 21, days: 90, download: true },
   ]);
 
   const removePlan = (i: number) => setPlans((prev) => prev.filter((_, idx) => idx !== i));
@@ -236,9 +236,10 @@ export default function PaymentSettingsAdmin() {
         <div className="mb-3 flex items-center justify-between"><p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Subscription passes</p><button type="button" onClick={addPlan} className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-xs font-semibold text-foreground hover:border-primary/50 hover:text-primary"><Plus className="h-3 w-3" /> Add pass</button></div>
         <div className="space-y-3">
           {plans.map((p, i) => (
-            <div key={p.id} className="grid gap-2 sm:grid-cols-[1.4fr_0.7fr_0.7fr_auto] sm:items-center">
+            <div key={p.id} className="grid gap-2 sm:grid-cols-[1.4fr_0.7fr_0.7fr_0.7fr_auto] sm:items-center">
               <input value={p.label} onChange={(e) => updatePlan(i, { label: e.target.value })} placeholder="Label" className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-primary" />
-              <input value={String(p.price)} onChange={(e) => updatePlan(i, { price: Number(e.target.value) || 0 })} inputMode="numeric" placeholder="KES" className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-primary" />
+              <input value={String(p.price)} onChange={(e) => updatePlan(i, { price: Number(e.target.value) || 0 })} inputMode="numeric" placeholder="KES" aria-label={`${p.label} Kenyan price in KES`} className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-primary" />
+              <input value={String(p.internationalPrice ?? 21)} onChange={(e) => updatePlan(i, { internationalPrice: Number(e.target.value) || 0 })} inputMode="decimal" placeholder="USD" aria-label={`${p.label} international price in USD`} className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-primary" />
               <input value={String(p.days)} onChange={(e) => updatePlan(i, { days: Number(e.target.value) || 1 })} inputMode="numeric" placeholder="Days" className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-primary" />
               <div className="flex items-center gap-3"><label className="flex items-center gap-1.5 text-xs font-semibold text-foreground"><input type="checkbox" checked={p.download !== false} onChange={(e) => updatePlan(i, { download: e.target.checked })} className="accent-primary" /> PDF</label><button type="button" onClick={() => removePlan(i)} aria-label={`Remove ${p.label}`} className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border text-muted-foreground hover:border-destructive/50 hover:text-destructive"><X className="h-3.5 w-3.5" /></button></div>
             </div>
@@ -251,7 +252,7 @@ export default function PaymentSettingsAdmin() {
 
       <div className="rounded-xl border border-border bg-card p-5">
         <div className="mb-3 flex items-center justify-between"><p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-muted-foreground"><ShieldCheck className="h-3.5 w-3.5 text-primary" /> Issued passes</p><button type="button" onClick={loadPasses} className="rounded-full border border-border px-3 py-1 text-xs font-semibold text-foreground">Load recent</button></div>
-        {passes.length === 0 ? <p className="text-xs text-muted-foreground">No passes loaded.</p> : <ul className="divide-y divide-border text-sm">{passes.map((p) => <li key={p.code} className="flex items-center justify-between py-2"><span className="font-mono font-bold text-foreground">{p.code}</span><span className="text-xs text-muted-foreground">{p.plan} · KES {p.amount} · until {new Date(p.expires_at).toLocaleDateString()}</span></li>)}</ul>}
+        {passes.length === 0 ? <p className="text-xs text-muted-foreground">No passes loaded.</p> : <ul className="divide-y divide-border text-sm">{passes.map((p) => <li key={p.code} className="flex items-center justify-between py-2"><span className="font-mono font-bold text-foreground">{p.code}</span><span className="text-xs text-muted-foreground">{p.plan} · {p.currency || "KES"} {p.amount} · until {new Date(p.expires_at).toLocaleDateString()}</span></li>)}</ul>}
         <p className="mt-2 inline-flex items-center gap-1.5 text-[11px] text-muted-foreground"><Trash2 className="h-3 w-3" /> Passes expire automatically — no manual cleanup needed.</p>
       </div>
     </div>
