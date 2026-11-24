@@ -358,7 +358,7 @@ export function Paywall({
   return (
     <div className={`not-prose ${bare ? "" : "my-8"}`}>
       <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-        <div className="grid lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_340px]">
           <section className="min-w-0 p-5 sm:p-8">
             <div className="border-b border-border pb-5">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">OmpathStudy / Secure checkout</p>
