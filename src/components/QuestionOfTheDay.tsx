@@ -9,6 +9,37 @@ import { weakness } from "../../supabase/functions/_shared/mcqHarden.js";
 interface Q { question: string; options: string[]; correct_answer: number; explanation?: string; h?: number }
 interface Pick { q: Q; path: string; title: string }
 
+const dailyPickPromises = new Map<string, Promise<Pick | null>>();
+function loadDailyPick(year: number | null, day: number): Promise<Pick | null> {
+  const key = `${day}:${year ?? "all"}`;
+  const cached = dailyPickPromises.get(key);
+  if (cached) return cached;
+  const request = (async (): Promise<Pick | null> => {
+    try {
+      let idq = (supabase as any).from("mcq_sets").select("id").eq("published", true).is("deleted_at", null).eq("source_type", "note_generated").order("id", { ascending: true }).limit(700);
+      if (year) idq = idq.like("category", `Year ${year}:%`);
+      const { data: ids } = await idq;
+      const list: { id: string }[] = ids ?? [];
+      if (!list.length) return null;
+      for (let t = 0; t < 5; t++) {
+        const id = list[(day * 31 + t * 7) % list.length].id;
+        const { data } = await (supabase as any).from("mcq_sets").select("id,title,slug,questions").eq("id", id).maybeSingle();
+        const set = data;
+        if (!set || !Array.isArray(set.questions)) continue;
+        const ok: Q[] = (set.questions as Q[]).filter((x) => x?.question && Array.isArray(x.options) && x.options.length === 4 && Number.isInteger(x.correct_answer) && !/!\\[|figure|image|shown/i.test(x.question) && !weakness(x).filter((w: string) => w !== "recall").length);
+        if (ok.length) {
+          const item = ok[(day * 13) % ok.length];
+          return { q: item, path: buildMcqPath(set), title: String(set.title).replace(/:?\\s*MCQs?$/i, "") };
+        }
+      }
+      return null;
+    } catch { return null; }
+  })();
+  dailyPickPromises.set(key, request);
+  if (dailyPickPromises.size > 12) dailyPickPromises.delete(dailyPickPromises.keys().next().value!);
+  return request;
+}
+
 /** One hard question a day on the home page, the same for everyone in the same year: answer it right there, see why, and go on to the whole bank. */
 export default function QuestionOfTheDay({ className = "" }: { className?: string }) {
   const { year } = useScopedYear();
@@ -17,23 +48,8 @@ export default function QuestionOfTheDay({ className = "" }: { className?: strin
 
   useEffect(() => {
     let on = true;
-    void (async () => {
-      try {
-        const day = Math.floor((Date.now() + 3 * 3_600_000) / 86_400_000);
-        let idq = (supabase as any).from("mcq_sets").select("id").eq("published", true).is("deleted_at", null).eq("source_type", "note_generated").order("id", { ascending: true }).limit(700);
-        if (year) idq = idq.like("category", `Year ${year}:%`);
-        const { data: ids } = await idq;
-        const list: { id: string }[] = ids ?? []; if (!list.length) return;
-        // a few tries, so a bank with nothing suitable does not leave the home page without a question
-        for (let t = 0; t < 5; t++) {
-          const id = list[(day * 31 + t * 7) % list.length].id;
-          const { data } = await (supabase as any).from("mcq_sets").select("id,title,slug,questions").eq("id", id).maybeSingle();
-          const set = data; if (!set || !Array.isArray(set.questions)) continue;
-          const ok: Q[] = (set.questions as Q[]).filter((x) => x?.question && Array.isArray(x.options) && x.options.length === 4 && Number.isInteger(x.correct_answer) && !/!\[|figure|image|shown/i.test(x.question) && !weakness(x).filter((w: string) => w !== "recall").length);
-          if (ok.length) { const q = ok[(day * 13) % ok.length]; if (on) setPick({ q, path: buildMcqPath(set), title: String(set.title).replace(/:?\s*MCQs?$/i, "") }); return; }
-        }
-      } catch { /* the home page does without it */ }
-    })();
+    const day = Math.floor((Date.now() + 3 * 3_600_000) / 86_400_000);
+    void loadDailyPick(year, day).then((result) => { if (on && result) setPick(result); });
     return () => { on = false; };
   }, [year]);
 
