@@ -66,7 +66,8 @@ export function Paywall({
   const savedPaymentDetails = (() => { try { return JSON.parse(localStorage.getItem("ompath_payment_details") || "{}"); } catch { return {}; } })();
   const [phone, setPhone] = useState(() => savedPaymentDetails.phone || "");
   const [countryCode, setCountryCode] = useState(() => savedPaymentDetails.countryCode || "KE");
-  const [pricingCountry, setPricingCountry] = useState(() => savedPaymentDetails.countryCode || "KE");
+  const [pricingCountry, setPricingCountry] = useState<string | null>(null);
+  const [pricingCountryReady, setPricingCountryReady] = useState(false);
   const detectCountry = (value: string) => {
     const digits = value.replace(/\\D/g, "");
     const matches = callingCodes.filter(([, info]) => digits.startsWith(info.dial));
@@ -78,15 +79,25 @@ export function Paywall({
   useEffect(() => {
     let active = true;
     const loadLocationDefault = async () => {
+      const fallback = String(savedPaymentDetails.countryCode || "KE").toUpperCase();
       try {
         const response = await fetch("https://ipapi.co/json/", { signal: AbortSignal.timeout(3500) });
-        if (!response.ok) return;
+        if (!response.ok) throw new Error("Location lookup unavailable");
         const location = await response.json();
         const code = String(location?.country_code || "").toUpperCase();
-        if (!active || !/^[A-Z]{2}$/.test(code)) return;
+        if (!/^[A-Z]{2}$/.test(code)) throw new Error("Location country unavailable");
+        if (!active) return;
         setPricingCountry(code);
-        setPaymentMethod(code === "KE" && countryCode === "KE" ? "mpesa" : "card");
-      } catch { /* Fall back to the saved phone country, or Kenya for a new visitor. */ }
+        if (!savedPaymentDetails.countryCode) setCountryCode(code);
+        setPaymentMethod(code === "KE" && (savedPaymentDetails.countryCode || code) === "KE" ? "mpesa" : "card");
+      } catch {
+        if (!active) return;
+        setPricingCountry(fallback);
+        if (!savedPaymentDetails.countryCode) setCountryCode(fallback);
+        setPaymentMethod(fallback === "KE" ? "mpesa" : "card");
+      } finally {
+        if (active) setPricingCountryReady(true);
+      }
     };
     void loadLocationDefault();
     return () => { active = false; };
@@ -135,8 +146,8 @@ export function Paywall({
     id: "semester", label: "Semester pass (3 months)", price: settings.price, internationalPrice: 21, days: 90, download: true,
   };
   const currency = pricingCountry === "KE" ? "KES" : "USD";
-  const amountForPlan = (p: AccessPlan) => pricingCountry === "KE" ? Number(p.price || settings.price || 150) : Number(p.internationalPrice ?? 21);
-  const formatPlanAmount = (p: AccessPlan) => currency === "KES"
+  const amountForPlan = (p: AccessPlan) => !pricingCountryReady ? 0 : pricingCountry === "KE" ? Number(p.price || settings.price || 150) : Number(p.internationalPrice ?? 21);
+  const formatPlanAmount = (p: AccessPlan) => !pricingCountryReady ? "Checking your location…" : currency === "KES"
     ? `KES ${amountForPlan(p).toLocaleString("en-KE")}`
     : `${amountForPlan(p).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
@@ -184,6 +195,7 @@ export function Paywall({
 
   const startPaystackPayment = async () => {
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
+    if (!pricingCountryReady || !pricingCountry) { setState("error"); setMessage("We are still confirming your country. Please try again in a moment."); return; }
     const digits = phone.replace(/\D/g, "");
     const detected = detectCountry(phone) || countryCode;
     if (digits.length < 9) { setState("error"); setMessage("Enter a complete mobile number."); return; }
@@ -338,7 +350,7 @@ export function Paywall({
 
   // Shortest plan first; show what each costs per month so the better deal is obvious.
   const sorted = [...plans].sort((a, b) => a.days - b.days);
-  const perMonth = (p: AccessPlan) => (p.days >= 28 ? amountForPlan(p) / (p.days / 30) : null);
+  const perMonth = (p: AccessPlan) => (pricingCountryReady && p.days >= 28 ? amountForPlan(p) / (p.days / 30) : null);
   const baseRate = sorted.map(perMonth).find((v) => v !== null) ?? null;
   const bestRate = Math.min(...sorted.map((p) => perMonth(p) ?? Infinity));
   const duration = (d: number) => (d >= 365 ? "12 months" : d >= 85 ? "3 months" : d >= 28 ? `${Math.round(d / 30)} month${Math.round(d / 30) === 1 ? "" : "s"}` : d === 1 ? "1 day" : `${d} days`);
@@ -375,7 +387,7 @@ export function Paywall({
                 <div><label htmlFor="pay-phone" className="mb-2 block text-sm font-medium text-foreground">Mobile number</label><div className="flex min-h-12 items-center rounded-lg border border-border bg-background px-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15"><span className="mr-3 text-lg" aria-hidden="true">{countries[countryCode]?.flag||"🌍"}</span><input id="pay-phone" value={phone} onChange={(e)=>{const next=e.target.value.replace(/[^0-9+ ]/g,"");setPhone(next);const detected=detectCountry(next);if(detected){setCountryCode(detected);if(detected!=="KE")setPaymentMethod("card");else if(paymentMethod==="card")setPaymentMethod("mpesa");}setState("idle");setMessage("");}} inputMode="tel" autoComplete="tel" placeholder={countryCode==="KE"?"07XX XXX XXX or +254…":`+${countries[countryCode]?.dial || ""} mobile number` } className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/60"/><span className="ml-2 shrink-0 text-xs text-muted-foreground">{countries[countryCode]?.name||"International"}</span></div><p className="mt-2 text-xs leading-5 text-muted-foreground">Enter the number that should receive your payment request.</p></div>
                 <div><p className="mb-2 text-sm font-medium text-foreground">Payment method</p>{pricingCountry==="KE" && countryCode==="KE"?<div className="grid grid-cols-3 overflow-hidden rounded-lg border border-border" role="group" aria-label="Payment method">{([["mpesa","M-Pesa"],["airtel","Airtel Money"],["card","Debit / credit card"]] as const).map(([method,title])=><button key={method} type="button" onClick={()=>setPaymentMethod(method)} aria-pressed={paymentMethod===method} className={`min-h-12 border-r border-border px-2 py-3 text-xs font-semibold last:border-r-0 sm:text-sm ${paymentMethod===method?"bg-foreground text-background":"bg-background text-muted-foreground hover:bg-muted/50"}`}>{title}</button>)}</div>:<div className="rounded-lg border border-border bg-muted/30 px-4 py-3"><p className="text-sm font-semibold text-foreground">Debit or credit card</p><p className="mt-1 text-xs text-muted-foreground">Secure card payment through Paystack.</p></div>}</div>
                 {!paystackEnabled&&<p role="status" className="rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs text-amber-700 dark:text-amber-300">Online payments are temporarily unavailable. Please use an existing pass code or try again later.</p>}
-                <button type="button" onClick={startPaystackPayment} disabled={busy||!user||!paystackEnabled||phone.replace(/\D/g,"").length<9} className="flex min-h-14 w-full items-center justify-center rounded-lg bg-primary px-5 py-4 text-base font-semibold text-primary-foreground transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50">{busy?(state==="waiting"?"Waiting for payment confirmation…":"Starting payment…"):"Continue to secure payment"}</button>
+                <button type="button" onClick={startPaystackPayment} disabled={busy||!user||!pricingCountryReady||!paystackEnabled||phone.replace(/\D/g,"").length<9} className="flex min-h-14 w-full items-center justify-center rounded-lg bg-primary px-5 py-4 text-base font-semibold text-primary-foreground transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50">{busy?(state==="waiting"?"Waiting for payment confirmation…":"Starting payment…"):"Continue to secure payment"}</button>
                 <p className="text-center text-xs leading-5 text-muted-foreground">{paymentMethod==="card"||pricingCountry!=="KE"||countryCode!=="KE"?"You will continue to Paystack’s secure card checkout.":"A payment prompt will be sent to your phone. Approve it using your mobile-money PIN."}</p>
               </div>
             </div>
