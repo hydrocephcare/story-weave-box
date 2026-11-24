@@ -113,7 +113,7 @@ serve(async (req) => {
           });
           const body = await response.json().catch(() => ({})), txn = body?.data;
           if (response.ok && body?.status === true && txn && String(txn.reference || "") === reference &&
-              Number(txn.amount) === Math.round(Number(payment.amount) * 100) && String(txn.currency || "").toUpperCase() === "KES") {
+              Number(txn.amount) === Math.round(Number(payment.amount) * 100) && String(txn.currency || "").toUpperCase() === String(payment.currency || "KES").toUpperCase()) {
             const remoteStatus = String(txn.status || "").toLowerCase();
             if (remoteStatus === "success" || remoteStatus === "failed") {
               const { data: updated } = await supabase.from("payments").update({
