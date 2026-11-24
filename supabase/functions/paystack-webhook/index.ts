@@ -41,7 +41,7 @@ Deno.serve(async (req) => {
     const supabaseUrl = Deno.env.get("SUPABASE_URL") || "", serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
     if (!supabaseUrl || !serviceKey) return json({ success: false, error: "Backend credentials not configured." }, 503);
     const admin = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
-    const { data: payment, error: lookupError } = await admin.from("payments").select("id,amount,payment_status,transaction_id,provider_txn_id").eq("transaction_id", reference).maybeSingle();
+    const { data: payment, error: lookupError } = await admin.from("payments").select("id,amount,currency,payment_status,transaction_id,provider_txn_id").eq("transaction_id", reference).maybeSingle();
     if (lookupError) throw lookupError;
     if (!payment || !String(payment.provider_txn_id || "").startsWith("paystack:")) return json({ success: true, ignored: true, reason: "No matching local Paystack payment." });
     if (payment.payment_status === "completed") return json({ success: true, duplicate: true });
@@ -49,7 +49,7 @@ Deno.serve(async (req) => {
     const body = await response.json().catch(() => ({}));
     if (!response.ok || body?.status !== true || !body?.data) return json({ success: false, error: "Could not verify transaction with Paystack." }, 502);
     const txn = body.data;
-    if (String(txn.reference || "") !== reference || Number(txn.amount) !== Math.round(Number(payment.amount) * 100) || String(txn.currency || "").toUpperCase() !== "KES") {
+    if (String(txn.reference || "") !== reference || Number(txn.amount) !== Math.round(Number(payment.amount) * 100) || String(txn.currency || "").toUpperCase() !== String(payment.currency || "KES").toUpperCase()) {
       console.error("Paystack verified transaction did not match local payment."); return json({ success: true, ignored: true, reason: "Verified transaction did not match local payment." });
     }
     const status = String(txn.status || "").toLowerCase();
