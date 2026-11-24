@@ -274,7 +274,7 @@ function Bank({ set }: { set: McqSetRow }) {
         <div className="pointer-events-none fixed inset-x-0 bottom-[max(1rem,env(safe-area-inset-bottom))] z-40 px-3 sm:px-5">
           <div className="pointer-events-auto mx-auto flex max-w-3xl items-center justify-between gap-3 rounded-2xl border border-primary/25 bg-background/95 px-4 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.22)] backdrop-blur-md sm:px-5">
             <div className="min-w-0">
-              <p className="text-sm font-bold leading-tight text-foreground">{lockedCount} questions for members</p>
+              <p className="text-sm font-bold leading-tight text-foreground">Unlock all questions</p>
               <p className="mt-0.5 hidden text-xs text-muted-foreground sm:block">Unlock the full bank with an OmpathStudy subscription</p>
             </div>
             <button type="button" onClick={() => setUnlockOpen(true)} className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-sm transition hover:brightness-95 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
@@ -286,11 +286,11 @@ function Bank({ set }: { set: McqSetRow }) {
       <Dialog open={unlockOpen} onOpenChange={setUnlockOpen}>
         <DialogContent className="max-h-[92dvh] w-[calc(100%-1rem)] max-w-4xl gap-0 overflow-y-auto rounded-2xl border-border bg-background p-0 sm:w-[calc(100%-2rem)]">
           <DialogHeader className="border-b border-border px-5 py-4 text-left sm:px-7">
-            <DialogTitle className="font-serif text-xl font-bold sm:text-2xl">Unlock this question bank</DialogTitle>
-            <DialogDescription className="text-sm leading-relaxed">{lockedCount} locked questions in “{title}”. Choose a plan or redeem an access code. Your current page and progress will be preserved.</DialogDescription>
+            <DialogTitle className="font-serif text-xl font-bold sm:text-2xl">Unlock all questions</DialogTitle>
+            <DialogDescription className="text-sm leading-relaxed">Get full access to all {qs.length} questions in “{title}”, including answer keys and explanations. Choose a plan or redeem an access code. Your current page and progress will be preserved.</DialogDescription>
           </DialogHeader>
           <div className="p-3 sm:p-5">
-            <Paywall settings={access.settings} hiddenCount={lockedCount} label="MCQ bank" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline={`Unlock ${lockedCount} questions`} blurb={`Get access to all ${qs.length} questions in this bank, including answers and explanations.`} />
+            <Paywall settings={access.settings} hiddenCount={lockedCount} label="MCQ bank" onUnlocked={(pass) => { access.applyPass(pass); setUnlockOpen(false); }} headline="Unlock all questions" blurb={`Get access to all ${qs.length} questions in this bank, including answers and explanations.`} />
           </div>
         </DialogContent>
       </Dialog>
@@ -368,12 +368,12 @@ function Bank({ set }: { set: McqSetRow }) {
                         <Lock className="h-5 w-5" />
                       </span>
                       <p className="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-primary">Free preview complete</p>
-                      <h2 className="mt-1 font-serif text-2xl font-bold leading-tight text-foreground">Unlock ${lockedCount} questions</h2>
+                      <h2 className="mt-1 font-serif text-2xl font-bold leading-tight text-foreground">Unlock all questions</h2>
                       <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
                         Continue practising with all remaining questions, answer keys and explanations.
                       </p>
                       <button type="button" onClick={() => setUnlockOpen(true)} className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition duration-200 hover:-translate-y-0.5 hover:brightness-95 hover:shadow-md active:translate-y-0 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-auto sm:min-w-64">
-                        <Lock className="h-4 w-4" /> Unlock {lockedCount} questions
+                        <Lock className="h-4 w-4" /> Unlock all questions
                       </button>
                       <p className="mt-2 text-xs text-muted-foreground">One secure checkout. Your place on this page is preserved.</p>
                     </div>
@@ -398,7 +398,7 @@ function Bank({ set }: { set: McqSetRow }) {
                       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/5 via-background/15 to-background/35" />
                       <div className="pointer-events-none absolute left-1/2 top-6 z-10 -translate-x-1/2">
                         <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border/80 bg-background/90 px-4 py-2 text-xs font-semibold text-foreground shadow-sm backdrop-blur-[2px]">
-                          <Lock className="h-3.5 w-3.5" /> ${lockedCount} member questions
+                          <Lock className="h-3.5 w-3.5" /> Locked questions
                         </span>
                       </div>
                     </div>
