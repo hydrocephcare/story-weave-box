@@ -1,485 +1,203 @@
 {
  "medical": true,
- "title": "Clinical Virology: Understanding Viral Infections",
+ "clinicalScope": "General viral infections affecting humans, with emphasis on common diseases seen in East African and other low‑resource hospital settings",
+ "title": "Human Viral Infections",
  "subject": "Microbiology & immunology",
- "summary": "Viruses are obligate intracellular parasites causing a wide range of human diseases, from common colds to life-threatening conditions like HIV and viral hepatitis. Understanding their unique features and life cycles is crucial for diagnosis, treatment, and prevention, especially in resource-limited settings where diagnostic tools may be scarce.",
+ "summary": "Viruses are tiny obligate intracellular parasites that cause a wide range of illnesses, from colds to life‑threatening hepatitis or HIV. In low‑resource hospitals the most frequent problems are respiratory, gastrointestinal and blood‑borne viral diseases, often overlapping with malaria, TB or HIV.",
  "aka": [
   "viral infections",
-  "virology"
+  "viral diseases"
  ],
  "sections": [
   {
-   "h": "Overview",
-   "p": "Viruses are microscopic infectious agents that replicate only inside the living cells of an organism. They are distinct from bacteria, fungi, and parasites due to their acellular nature and obligate intracellular parasitism. Clinically, viral infections present with diverse symptoms, often mimicking other conditions, making accurate diagnosis challenging but essential for appropriate management and public health control.",
+   "h": "Classification and overview",
+   "p": "Viruses are classified by genome type, capsid symmetry and presence of an envelope. This determines transmission routes, stability in the environment and therapeutic options.",
    "b": [
-    "Viruses are non-living entities outside of a host cell.",
-    "They consist of genetic material (DNA or RNA) enclosed in a protein coat (capsid).",
-    "Viral infections are a major cause of morbidity and mortality globally, including in East Africa.",
-    "Many viral diseases are self-limiting, but some lead to chronic conditions or severe acute illness."
+    "DNA viruses: e.g., hepatitis B (enveloped, partially double‑stranded DNA).",
+    "RNA viruses: e.g., influenza (segmented negative‑sense RNA), HIV (positive‑sense RNA, retrovirus).",
+    "Enveloped viruses survive poorly on dry surfaces but are vulnerable to detergents; non‑enveloped viruses resist disinfectants but are inactivated by heat.",
+    "Key clinical groups in East Africa: respiratory RNA viruses, enteric non‑enveloped viruses, blood‑borne DNA/RNA viruses."
    ]
   },
   {
-   "h": "Features of the organism",
-   "p": "Viruses are characterized by their small size, simple structure, and dependence on host cellular machinery for replication. Their genetic material can be DNA or RNA, single-stranded or double-stranded, which influences their replication strategies and susceptibility to antiviral drugs. Some viruses, like HIV and influenza, have an outer lipid envelope derived from the host cell membrane.",
+   "h": "Morphology and structure",
+   "p": "A virus consists of nucleic acid, a protein capsid, and sometimes a lipid envelope with glycoproteins that mediate cell entry.",
    "b": [
-    "Obligate intracellular parasites: cannot replicate independently.",
-    "Genetic material: either DNA or RNA, never both.",
-    "Capsid: protein coat protecting the genetic material.",
-    "Envelope: lipid bilayer surrounding the capsid in some viruses, aiding entry into host cells.",
-    "High mutation rates, especially in RNA viruses, contribute to immune evasion and drug resistance.",
-    "Hepatitis B virus (HBV) is notably stable, contributing to its persistence in the environment."
+    "Capsid symmetry: icosahedral (e.g., adenovirus) or helical (e.g., rabies).",
+    "Envelope glycoproteins determine tissue tropism – e.g., HA and NA of influenza bind respiratory epithelium.",
+    "Size ranges from 20 nm (parvovirus) to >300 nm (poxviruses).",
+    "Morphology guides laboratory detection: electron microscopy useful when rapid tests are unavailable."
    ]
   },
   {
-   "h": "Transmission and life cycle",
-   "p": "Viral transmission occurs through various routes, including respiratory droplets, direct contact, sexual contact, blood-borne routes, vector-borne transmission, and vertical transmission from mother to child. Once inside a host, viruses attach to specific cell receptors, enter the cell, uncoat to release their genetic material, replicate using host machinery, assemble new virions, and then exit the cell to infect others.",
+   "h": "Virulence factors",
+   "p": "Virulence derives from proteins that facilitate entry, evade immunity or cause direct cell damage.",
    "b": [
-    "Respiratory: Influenza, RSV, SARS-CoV-2, Rhinovirus, Adenovirus.",
-    "Fecal-oral: Rotavirus, Hepatitis A, Poliovirus.",
-    "Blood-borne/Sexual: HIV-1 (predominant globally and in East Africa), HIV-2 (West Africa), Hepatitis B, Hepatitis C.",
-    "Vector-borne: Dengue, Chikungunya, Yellow Fever (mosquitoes).",
-    "Vertical: HIV, Hepatitis B, Rubella, CMV.",
-    "Life cycle stages: attachment, penetration, uncoating, replication, assembly, release."
+    "Attachment proteins (e.g., HIV gp120) bind specific receptors, dictating host range.",
+    "Enzymes that inhibit interferon responses – e.g., NS1 of influenza.",
+    "Cytopathic effect: viral replication causing cell lysis (e.g., poliovirus).",
+    "Immune‑complex formation leading to vasculitis (e.g., hepatitis B)."
    ]
   },
   {
-   "h": "Disease it causes",
-   "p": "Viruses cause a spectrum of diseases, from mild, self-limiting illnesses to severe, life-threatening conditions. The clinical presentation depends on the virus, the target organ, and the host's immune response. In East African settings, common viral diseases include HIV/AIDS, viral hepatitis (especially B), influenza, and childhood viral exanthems. Opportunistic infections are common in immunocompromised individuals, such as those with HIV.",
+   "h": "Transmission and epidemiology",
+   "p": "Understanding how viruses spread guides infection control and public‑health measures, especially where resources are limited.",
    "b": [
-    "Respiratory infections: Common cold (Rhinovirus), Influenza, Bronchiolitis (RSV), Pneumonia (Influenza, RSV, SARS-CoV-2).",
-    "Gastrointestinal infections: Viral gastroenteritis (Rotavirus, Adenovirus).",
-    "Hepatitis: Hepatitis A, B, C, D, E (HBV is unique due to its stability and chronic potential).",
-    "Immunodeficiency: HIV-1 (global, highly pathogenic), HIV-2 (West Africa, slower progression).",
-    "Neurological: Viral meningitis/encephalitis (Enteroviruses, HSV, Rabies).",
-    "Exanthematous diseases: Measles, Rubella, Chickenpox (Varicella-Zoster).",
-    "Pancreatitis: Mumps, Coxsackie, Hepatitis, CMV.",
-    "Opportunistic infections: CMV, HSV, VZV reactivation in HIV patients."
+    "Respiratory droplets: influenza, RSV, SARS‑CoV‑2 – high attack rates in crowded wards.",
+    "Fecal‑oral: rotavirus, hepatitis A – linked to unsafe water and poor sanitation.",
+    "Blood‑borne/sexual: HIV‑1, hepatitis B – prevalent in East Africa; perinatal transmission common for HBV.",
+    "Vector‑borne: dengue, chikungunya – seasonal peaks after rains."
    ]
   },
   {
-   "h": "Diagnosis",
-   "p": "Diagnosis of viral infections relies on clinical suspicion, epidemiological context, and laboratory confirmation. In low-resource settings, clinical diagnosis based on characteristic signs and symptoms is often the primary approach due to limited access to advanced diagnostics. When available, laboratory tests aim to detect viral components or host immune responses.",
+   "h": "Pathogenesis and host response",
+   "p": "Viruses hijack host cell machinery; the clinical picture reflects direct cytopathic damage and the immune response.",
+   "b": [
+    "Entry → uncoating → replication using host enzymes (RNA‑dependent RNA polymerase for RNA viruses).",
+    "Innate immunity: interferon release limits early spread; some viruses block this pathway.",
+    "Adaptive immunity: neutralising antibodies clear extracellular virus; cytotoxic T cells eliminate infected cells.",
+    "Immunopathology: cytokine storm in severe influenza or dengue shock syndrome."
+   ]
+  },
+  {
+   "h": "Clinical manifestations",
+   "p": "Symptoms vary by organ tropism, patient age and immune status.",
+   "b": [
+    "Upper respiratory: sore throat, cough, fever – common cold (rhinovirus) or influenza.",
+    "Lower respiratory: dyspnoea, crackles, hypoxia – viral pneumonia (influenza, RSV, SARS‑CoV‑2).",
+    "Gastrointestinal: watery diarrhoea, vomiting – rotavirus, adenovirus.",
+    "Hepatic: jaundice, right‑upper‑quadrant pain – hepatitis B or C.",
+    "Systemic: fever, lymphadenopathy – acute HIV seroconversion.",
+    "Neurologic: meningismus, seizures – enterovirus meningitis, HSV encephalitis."
+   ]
+  },
+  {
+   "h": "Laboratory diagnosis and interpretation",
+   "p": "In low‑resource settings, point‑of‑care tests and clinical algorithms are essential; when unavailable, rely on syndromic management.",
    "t": [
     {
-     "a": "Clinical assessment (history and physical exam)",
-     "b": "To identify characteristic symptoms and signs (e.g., rash, jaundice, respiratory distress) and epidemiological links. Suggests the most likely viral pathogen and guides initial management."
+     "a": "Rapid antigen test (influenza, RSV)",
+     "b": "Is the patient infected with a specific respiratory virus? Positive = presence of viral protein; negative does not rule out infection if sensitivity <90%."
     },
     {
-     "a": "Rapid diagnostic tests (RDTs) for specific viruses (e.g., HIV, Malaria)",
-     "b": "To quickly detect viral antigens or antibodies at the point of care. A positive result indicates current or past infection, guiding immediate patient management and public health interventions. If unavailable, clinical suspicion and syndromic management are crucial."
+     "a": "PCR (if available) for HIV, HBV, SARS‑CoV‑2",
+     "b": "Detects viral nucleic acid; quantitative PCR gives viral load for monitoring therapy."
     },
     {
-     "a": "ELISA (Enzyme-Linked Immunosorbent Assay) for antibodies (IgM, IgG) or antigens",
-     "b": "To detect specific viral antigens or host antibodies against a virus. IgM indicates acute infection, IgG indicates past infection or immunity. Helps confirm diagnosis, especially for chronic infections like HBV or HIV, and for seroprevalence studies."
+     "a": "Serology (IgM/IgG) for hepatitis A, EBV",
+     "b": "IgM indicates acute infection; IgG indicates past exposure or immunity."
     },
     {
-     "a": "PCR (Polymerase Chain Reaction) or RT-PCR (Reverse Transcriptase PCR)",
-     "b": "To detect viral genetic material (DNA or RNA). Highly sensitive and specific for confirming active infection, quantifying viral load (e.g., HIV, HBV), and identifying specific viral strains. Essential for early diagnosis and monitoring treatment response, but often unavailable in low-resource settings. If unavailable, "
-    },
-    {
-     "a": "Viral culture",
-     "b": "To isolate and grow the virus in a laboratory. Gold standard for some viruses but slow, technically demanding, and not routinely used for most clinical diagnoses. Primarily for research or specific outbreak investigations."
-    },
-    {
-     "a": "Full Blood Count (FBC)",
-     "b": "To assess general immune response (e.g., lymphocytosis or lymphopenia) and rule out bacterial co-infection. Non-specific but can support a viral etiology."
+     "a": "Complete blood count (CBC)",
+     "b": "Does the patient have lymphopenia suggestive of viral infection? Lymphocyte count <1 × 10⁹/L supports viral aetiology, especially in HIV or severe influenza."
     }
    ]
   },
   {
-   "h": "Treatment and control",
-   "p": "Treatment for viral infections is often supportive, focusing on symptom relief and preventing complications. Specific antiviral drugs are available for a limited number of viruses, targeting different stages of the viral life cycle. Prevention through vaccination, hygiene, and public health measures is paramount, especially in settings where treatment options are limited.",
+   "h": "Treatment and antimicrobial pharmacology",
+   "p": "Therapy combines virus‑specific agents (when available) and supportive care; stewardship is critical where drugs are scarce.",
    "b": [
-    "Supportive care: hydration, antipyretics (paracetamol), pain relief, rest.",
-    "Antivirals: specific drugs for HIV (ARVs), Hepatitis B (tenofovir, entecavir), Influenza (oseltamivir), HSV/VZV (acyclovir).",
-    "Vaccination: highly effective for preventing diseases like Measles, Polio, Hepatitis B, Influenza, Yellow Fever.",
-    "Infection control: hand hygiene, safe injection practices, barrier nursing, safe sexual practices.",
-    "Public health measures: surveillance, contact tracing, isolation, health education.",
-    "Avoid unnecessary antibiotics, as they are ineffective against viruses and contribute to antimicrobial resistance."
+    "Neuraminidase inhibitors (oseltamivir) for influenza – reduce duration if started ≤48 h.",
+    "Nucleoside analogues (tenofovir, lamivudine) for HIV and HBV – suppress replication, prevent resistance.",
+    "Ribavirin for severe RSV in infants only where intensive care is possible.",
+    "Supportive measures: fluid balance, antipyretics, oxygen; avoid routine antibiotics unless bacterial superinfection suspected."
    ]
   },
   {
-   "h": "Exam pearls",
-   "p": "When approaching viral infections in exams, think systematically about the pathogen, host, and environment. Consider the most common presentations in your local context, the limitations of diagnostics, and the importance of public health interventions. Always prioritize life-threatening conditions and their immediate management."
+   "h": "Resistance",
+   "p": "High mutation rates, especially in RNA viruses, drive drug resistance; monitoring is essential.",
+   "b": [
+    "HIV: M184V, K103N mutations confer resistance to lamivudine and NNRTIs; requires regimen change.",
+    "Influenza: H275Y mutation reduces oseltamivir efficacy – consider alternative neuraminidase inhibitor if available.",
+    "HBV: YMDD motif mutation leads to lamivudine resistance – switch to tenofovir.",
+    "In low‑resource settings, resistance testing often unavailable; use clinical failure (viral load rise) as trigger."
+   ]
+  },
+  {
+   "h": "Prevention and public health",
+   "p": "Vaccination, hygiene, and vector control are the cornerstones of viral disease prevention in resource‑limited hospitals.",
+   "b": [
+    "Vaccines: BCG (TB but cross‑protects), hepatitis B birth‑dose, measles‑rubella, influenza (seasonal).",
+    "Safe injection practices and blood screening to prevent HIV/HBV transmission.",
+    "Hand hygiene and respiratory etiquette to limit droplet spread.",
+    "Mosquito control (larvicides, bed nets) to curb dengue and chikungunya."
+   ]
+  },
+  {
+   "h": "Complications",
+   "p": "Complications arise from direct viral damage, immune‑mediated injury or secondary bacterial infection.",
+   "b": [
+    "Secondary bacterial pneumonia after influenza – high mortality if untreated.",
+    "Chronic hepatitis B → cirrhosis, hepatocellular carcinoma.",
+    "HIV → opportunistic infections (TB, cryptococcal meningitis).",
+    "Dengue shock syndrome – plasma leakage, hemorrhage.",
+    "Post‑infectious encephalitis (e.g., after measles)."
+   ]
+  },
+  {
+   "h": "Exam approach",
+   "p": "Examiners test integration of epidemiology, bedside assessment, interpretation of limited tests and rational therapy.",
+   "b": [
+    "Always start with a focused history (travel, exposure, vaccination) and targeted exam (respiratory, abdominal, neuro).",
+    "Prioritise rapid tests that change immediate management; if unavailable, treat syndromically.",
+    "Know first‑line antivirals and contraindications (e.g., avoid oseltamivir in severe renal impairment).",
+    "Identify red‑flag complications that require escalation (e.g., hypoxia, altered mental status, jaundice)."
+   ]
   }
  ],
  "whenToSeekHelp": [
-  "Severe difficulty breathing or shortness of breath",
-  "Persistent chest pain or pressure",
-  "New confusion or inability to arouse",
-  "Bluish lips or face",
-  "Severe dehydration (e.g., sunken eyes, no tears, reduced urine output)",
-  "Seizures",
-  "High fever unresponsive to antipyretics"
+  "Sudden onset of high‑grade fever with neck stiffness",
+  "Severe dyspnoea, SpO₂ < 90 % on room air",
+  "Altered mental status or seizures in a febrile patient",
+  "Jaundice with coagulopathy (INR > 1.5)",
+  "Rapidly expanding rash with hypotension (possible dengue shock)"
  ],
  "faq": [
   {
-   "q": "Are all viral infections treatable with antiviral drugs?",
-   "a": "No, specific antiviral drugs are only available for a limited number of viruses like HIV, Hepatitis B, and Influenza. Most viral infections are managed with supportive care."
+   "q": "Why are antibiotics not useful for most viral infections?",
+   "a": "Viruses lack the bacterial targets (cell wall, ribosomes) that antibiotics act on; misuse promotes resistance and harms microbiota."
   },
   {
-   "q": "Why are antibiotics not effective against viruses?",
-   "a": "Antibiotics target bacterial structures and processes that are absent in viruses. Using antibiotics for viral infections is ineffective and contributes to antibiotic resistance."
+   "q": "Can a viral infection become chronic?",
+   "a": "Yes; hepatitis B, hepatitis C, HIV and some herpesviruses establish persistent infection by integrating or evading immunity."
   },
   {
-   "q": "Can a person be infected with more than one virus at a time?",
-   "a": "Yes, co-infections with multiple viruses are possible, and some viruses can also co-infect with bacteria or other pathogens, complicating diagnosis and treatment."
+   "q": "What is the best way to prevent influenza in a low‑resource hospital?",
+   "a": "Annual vaccination of health workers, hand hygiene, and early use of neuraminidase inhibitors for suspected cases."
   }
  ],
- "exam": [],
+ "exam": [
+  "A 6‑year‑old presents with watery diarrhoea, vomiting and no blood in stool during the rainy season – which viral test is most appropriate and why? — Rapid rotavirus antigen test; it is quick, inexpensive, and guides rehydration focus.",
+  "A pregnant woman in her third trimester has fever, myalgia and a maculopapular rash after returning from a rural area – what viral infection is most likely and what is the key management step? — Likely rubella; obtain IgM serology and counsel on fetal risk, consider termination if confirmed early.",
+  "A 35‑year‑old HIV‑positive man on ART develops fever, cough and hypoxia; chest X‑ray shows bilateral infiltrates. Which viral pathogen should be high on the differential and what immediate therapy is indicated? — Influenza; start oseltamivir within 48 h and give supplemental oxygen.",
+  "A child with sickle cell disease presents with fever and a new petechial rash; labs show thrombocytopenia. Which viral infection must be excluded and what test is required? — Dengue; perform NS1 antigen test or PCR if available.",
+  "A nurse is exposed to a needle stick from a patient known to be HBsAg‑positive. What post‑exposure prophylaxis is recommended? — Administer hepatitis B vaccine series and hepatitis B immune globulin within 24 h.",
+  "In a district hospital without PCR, a patient with suspected acute hepatitis B presents. Which serological marker confirms acute infection? — Positive hepatitis B surface antigen (HBsAg) with IgM anti‑HBc.",
+  "A 70‑year‑old with chronic obstructive pulmonary disease develops sudden fever and confusion; lumbar puncture shows lymphocytic pleocytosis. Which virus is most likely and what is the treatment of choice? — HSV encephalitis; give intravenous acyclovir.",
+  "During a dengue outbreak, a patient presents with severe abdominal pain, persistent vomiting and a haematocrit rise of 20 % from baseline. What complication is developing and how should it be managed? — Dengue shock syndrome; aggressive IV fluid resuscitation guided by clinical signs.",
+  "A refugee child presents with a vesicular rash on the trunk and fever; what virus is most probable and what infection control measures are needed in the ward? — Varicella‑zoster virus; isolate the child, use airborne and contact precautions.",
+  "A patient on tenofovir for HIV develops rising serum creatinine; what viral treatment consideration must be made? — Tenofovir nephrotoxicity; switch to an alternative NRTI (e.g., abacavir) if renal function declines.",
+  "A laboratory cannot perform viral PCR for influenza. Which clinical scoring system can help decide on antiviral therapy? — Use the WHO influenza-like illness criteria (fever ≥ 38 °C plus cough or sore throat) to start oseltamivir empirically.",
+  "A teenager with a history of multiple sexual partners tests negative for HIV antibodies but reports recent unprotected sex. What test should be ordered next and why? — HIV RNA PCR (viral load) to detect acute infection before seroconversion."
+ ],
  "related": [
-  "HIV/AIDS",
-  "Viral Hepatitis",
   "Influenza",
-  "Measles",
+  "HIV infection",
+  "Hepatitis B",
+  "Dengue fever",
+  "Respiratory syncytial virus",
   "Rotavirus",
-  "Antiviral Drugs",
-  "Vaccinology",
-  "Infection Control"
+  "Vaccination strategies",
+  "Infection control in low‑resource settings"
  ],
  "kind": "microbe",
- "model": "gemini-2.5-flash",
- "generatedAt": "2026-10-25",
- "reviewed": false,
- "deep": {
-  "sections": [
-   {
-    "h": "Bedside: history and how to examine",
-    "p": "A systematic history and focused physical exam allow you to narrow the viral differential, assess severity and identify complications that require urgent care.",
-    "b": [
-     "Onset and duration of symptoms – abrupt (influenza) vs. gradual (HIV seroconversion).",
-     "Fever pattern – high, sustained spikes suggest systemic viral infection; low‑grade fever may indicate chronic hepatitis.",
-     "Respiratory symptoms – cough, sore throat, nasal congestion, dyspnoea; ask about exposure to crowds or sick contacts.",
-     "Gastro‑intestinal symptoms – diarrhoea, vomiting, haematemesis; inquire about recent travel, contaminated water or food.",
-     "Skin/mucosal lesions – vesicles, maculopapular rash, jaundice; note distribution, pain and evolution.",
-     "Neurological signs – headache, photophobia, seizures, altered consciousness; ask about recent febrile illness or vector exposure.",
-     "Risk factors – HIV status, pregnancy, immunosuppressive drugs, malnutrition, chronic liver disease, recent transfusion or surgery.",
-     "Vaccination history – hepatitis A/B, influenza, yellow fever, HPV; missing vaccines raise suspicion for preventable viral diseases."
-    ],
-    "t": [
-     {
-      "a": "Inspection for rash or lesions",
-      "b": "Confirms presence and pattern of cutaneous involvement; vesicular lesions suggest HSV/Varicella, maculopapular rash suggests measles or rubella. Cannot determine viral genotype."
-     },
-     {
-      "a": "Palpation of lymph nodes",
-      "b": "Detects lymphadenopathy typical of EBV, CMV, HIV. Does not differentiate between viral and bacterial causes."
-     },
-     {
-      "a": "Auscultation of lungs",
-      "b": "Identifies crackles, wheeze or decreased breath sounds indicating viral pneumonia or bronchiolitis. Cannot specify the virus."
-     },
-     {
-      "a": "Neurological exam (neck stiffness, focal deficits)",
-      "b": "Positive meningeal signs point to viral meningitis/encephalitis; focal deficits suggest encephalitis. Cannot identify the causative virus."
-     }
-    ]
-   },
-   {
-    "h": "Investigations and how to read them",
-    "p": "Laboratory and imaging studies answer specific diagnostic questions, stage disease severity and guide therapy. When a test is unavailable, use clinical algorithms and surrogate markers.",
-    "b": [
-     "Complete blood count – lymphocytosis favors viral aetiology; neutrophilia suggests bacterial co‑infection.",
-     "Serum ALT/AST – elevations >10 × ULN indicate acute hepatocellular injury; ALT >500 U/L common in hepatitis A/E.",
-     "Serum bilirubin – total >5 mg/dL with rising trend signals severe hepatitis; conjugated >2 mg/dL suggests cholestasis.",
-     "INR – >1.5 denotes impaired synthetic function and acute liver failure.",
-     "Serum creatinine – rise >0.3 mg/dL or 50 % from baseline signals renal toxicity from antivirals.",
-     "PCR for viral nucleic acid – Ct <40 cycles is positive; Ct >35 indicates low‑level shedding.",
-     "Serology (IgM/IgG) – IgM positivity confirms recent infection (e.g., HAV IgM); IgG indicates past exposure or immunity.",
-     "CSF analysis – lymphocyte predominance, protein 50‑100 mg/dL, glucose >60 % of serum supports viral meningitis."
-    ],
-    "t": [
-     {
-      "a": "RT‑PCR for respiratory viruses (nasopharyngeal swab)",
-      "b": "Answers which virus is present; a Ct <40 is positive. If unavailable, use rapid antigen test or clinical syndrome."
-     },
-     {
-      "a": "Hepatitis serology panel (HBsAg, anti‑HBc IgM, anti‑HBs, anti‑HAV IgM)",
-      "b": "Distinguishes acute HBV (HBsAg + IgM anti‑HBc) from HAV (IgM anti‑HAV). If serology unavailable, rely on ALT pattern and epidemiology."
-     },
-     {
-      "a": "Serum‑ascites albumin gradient (SAAG)",
-      "b": "Differentiates portal hypertension (SAAG ≥1.1 g/dL) from exudative causes. Not routinely needed for viral hepatitis but useful if ascites present."
-     },
-     {
-      "a": "Chest radiograph",
-      "b": "Detects infiltrates consistent with viral pneumonia; bilateral interstitial pattern suggests influenza or COVID‑19. Cannot identify specific virus."
-     },
-     {
-      "a": "MRI brain (if encephalitis suspected)",
-      "b": "Shows hyperintensities in temporal lobes for HSV; normal imaging does not exclude other viruses."
-     }
-    ]
-   },
-   {
-    "h": "Diagnosis, staging and severity",
-    "p": "Combine clinical picture with targeted investigations to assign a definitive viral diagnosis, stage organ involvement and gauge severity for management decisions.",
-    "b": [
-     "Acute viral hepatitis – confirmed by compatible symptoms, ALT/AST >10 × ULN, and virus‑specific IgM or PCR.",
-     "Severe hepatitis – any of: ALT/AST >10 × ULN, INR >1.5, bilirubin >5 mg/dL, or any grade of encephalopathy.",
-     "Acute viral meningitis – CSF lymphocytes >50 %, protein 50‑100 mg/dL, glucose >60 % of serum, and negative bacterial culture.",
-     "HSV encephalitis – positive HSV PCR in CSF, temporal lobe hyperintensity on MRI, altered mental status.",
-     "Chronic hepatitis B – HBsAg + >6 months, HBV DNA >2,000 IU/mL, ALT >2 × ULN, with or without fibrosis on elastography."
-    ],
-    "t": []
-   },
-   {
-    "h": "Look‑alike conditions",
-    "p": "Several non‑viral diseases mimic viral presentations; a focused comparison helps avoid misdiagnosis.",
-    "t": [
-     {
-      "a": "Drug‑induced hepatitis",
-      "b": "History of hepatotoxic drug exposure, ALT/AST rise often <10 × ULN, absence of viral markers. Viral hepatitis has specific serology/PCR."
-     },
-     {
-      "a": "Autoimmune hepatitis",
-      "b": "Elevated IgG, positive ANA or SMA, interface hepatitis on biopsy; viral serology negative. Viral hepatitis shows IgM antibodies to specific virus."
-     },
-     {
-      "a": "Malaria‑associated fever",
-      "b": "Periodic chills, haemoglobinuria, positive rapid diagnostic test; respiratory symptoms uncommon. Viral respiratory infections have cough and nasal symptoms."
-     }
-    ],
-    "b": []
-   },
-   {
-    "h": "Management step by step",
-    "p": "A structured approach ensures timely antiviral therapy, supportive care and safe escalation while avoiding harmful interventions.",
-    "b": [
-     "1. Initial assessment: confirm viral aetiology with rapid test or PCR; assess severity (vital signs, organ dysfunction).",
-     "2. Stabilisation: oxygen, IV fluids, treat fever, correct electrolyte disturbances.",
-     "3. Specific antiviral therapy: start virus‑specific agents (e.g., nucleoside analogues for HSV, neuraminidase inhibitors for influenza, remdesivir for severe SARS‑CoV‑2) as soon as possible.",
-     "4. Adjunctive measures: consider corticosteroids for severe COVID‑19 or viral encephalitis with raised intracranial pressure; give vitamin A for measles in children.",
-     "5. Monitoring: daily vitals, urine output, liver enzymes, renal function, viral load where applicable.",
-     "6. Escalation criteria: worsening hypoxia, rising lactate, new organ failure, or viral load increase despite therapy – refer to higher‑level centre.",
-     "7. Discharge planning: ensure completion of antiviral course, arrange follow‑up for sequelae, counsel on infection control."
-    ],
-    "t": []
-   },
-   {
-    "h": "Drug effects and what to do",
-    "p": "Recognising adverse reactions and drug interactions prevents treatment failure and iatrogenic harm.",
-    "b": [
-     "Nephrotoxicity with acyclovir or tenofovir – monitor serum creatinine; if rise >0.3 mg/dL or 50 % from baseline, reduce dose or switch drug.",
-     "Bone‑marrow suppression with ribavirin – check hemoglobin weekly; stop if haemoglobin falls >2 g/dL or symptomatic anaemia develops.",
-     "Hepatotoxicity with protease inhibitors – track ALT/AST; discontinue if >5 × ULN with clinical jaundice.",
-     "Drug‑drug interaction: ritonavir‑boosted regimens inhibit CYP3A4 – avoid co‑administration of warfarin or certain antiepileptics without dose adjustment."
-    ],
-    "t": []
-   },
-   {
-    "h": "Complications and when to escalate",
-    "p": "Complications signal the need for higher‑level care or specialist input.",
-    "b": [
-     "Progressive respiratory failure (PaO2/FiO2 <200) – transfer to ICU for mechanical ventilation.",
-     "Acute liver failure (INR >1.5, bilirubin >5 mg/dL, any encephalopathy) – refer for transplant assessment.",
-     "Severe encephalitis (GCS <13, focal deficits) – start high‑dose IV antiviral, obtain neuro‑imaging, consider neurology consult.",
-     "Renal failure (creatinine rise >0.3 mg/dL or 50 % from baseline) – initiate renal replacement therapy if oliguria persists."
-    ],
-    "t": []
-   },
-   {
-    "h": "Complicating and confounding factors",
-    "p": "Co‑morbidities and external factors modify presentation, test interpretation and therapeutic choices.",
-    "b": [
-     "HIV infection – lower CD4 may mask typical rash; viral loads often higher; prefer agents with minimal CYP interaction.",
-     "TB co‑infection – rifampicin induces CYP enzymes, reducing levels of many antivirals; adjust doses or select non‑inducing regimens.",
-     "Malnutrition – impaired immunity leads to atypical presentations; monitor electrolytes closely when re‑feeding.",
-     "Pregnancy – avoid teratogenic antivirals (e.g., ribavirin); use interferon‑free regimens for hepatitis C when necessary.",
-     "Diabetes – hyperglycaemia worsens viral replication; monitor glucose and adjust insulin; avoid steroids unless clearly indicated.",
-     "Herbal remedies (e.g., St. John’s wort) – induce CYP3A4, lowering antiviral concentrations; counsel patients to discontinue.",
-     "Alcohol use – potentiates hepatotoxicity of many antivirals; advise abstinence during treatment.",
-     "Renal or hepatic failure – dose‑adjust or avoid nephro‑toxic or hepatotoxic drugs; use renal‑adjusted acyclovir if needed."
-    ],
-    "t": []
-   },
-   {
-    "h": "Special groups",
-    "p": "Tailoring care to vulnerable populations improves outcomes in low‑resource settings.",
-    "b": [
-     "Children – use weight‑based dosing formulas; prefer oral ribavirin‑free regimens for RSV; monitor growth parameters after severe infection.",
-     "Pregnancy – prioritize drugs with established safety (e.g., acyclovir for HSV, lamivudine for HBV); defer teratogenic agents until postpartum.",
-     "Elderly – start with lower‑intensity antivirals; watch for polypharmacy interactions; assess frailty before ICU transfer.",
-     "Low‑resource settings – rely on rapid antigen tests, syndromic management when PCR unavailable; use generic oral antivirals; ensure cold‑chain‑free storage."
-    ],
-    "t": [
-     {
-      "a": "Exam question 1",
-      "b": "List three key history points that differentiate viral from bacterial meningitis."
-     },
-     {
-      "a": "Exam question 2",
-      "b": "Interpret a CSF result: lymphocytes 120/µL, protein 80 mg/dL, glucose 70 % of serum – what is the diagnosis?"
-     },
-     {
-      "a": "Exam question 3",
-      "b": "A patient on tenofovir develops a creatinine rise of 0.4 mg/dL – what is the next step?"
-     },
-     {
-      "a": "Exam question 4",
-      "b": "Describe the bedside test for shifting dullness and its limitation."
-     },
-     {
-      "a": "Exam question 5",
-      "b": "When should remdesivir be stopped in a COVID‑19 patient with rising ALT?"
-     },
-     {
-      "a": "Exam question 6",
-      "b": "Identify two drug‑drug interactions between ritonavir‑boosted antivirals and common TB medicines."
-     },
-     {
-      "a": "Exam question 7",
-      "b": "Explain why a Ct value of 38 on SARS‑CoV‑2 PCR is still considered positive."
-     },
-     {
-      "a": "Exam question 8",
-      "b": "Outline management of HSV encephalitis in a pregnant woman."
-     },
-     {
-      "a": "Exam question 9",
-      "b": "What are the escalation criteria for severe influenza requiring ICU admission?"
-     },
-     {
-      "a": "Exam question 10",
-      "b": "How does malnutrition alter the clinical picture of viral gastroenteritis?"
-     }
-    ]
-   }
-  ],
-  "facts": [
-   "PCR Ct <40 cycles is positive; Ct >35 indicates low‑level shedding",
-   "CSF glucose >60% of serum supports viral meningitis; protein 50‑100 mg/dL, lymphocytes >50%",
-   "Acute viral hepatitis: ALT/AST >10×ULN, INR >1.5, bilirubin >5 mg/dL or any encephalopathy = severe",
-   "Renal impairment on tenofovir/acyclovir: creatinine rise >0.3 mg/dL or 50% from baseline",
-   "HIV‑1 integrates into host genome, causing chronic infection; HIV‑2 slower progression",
-   "Herpes simplex virus productive infection site: oral or genital mucosa, keratinised epithelium"
-  ],
-  "mnemonics": [],
-  "vivas": [
-   {
-    "q": "What is the primary site of productive infection for herpes simplex viruses?",
-    "a": "Oral or genital mucosa, keratinised epithelium.",
-    "hot": true
-   },
-   {
-    "q": "During a cough event, which expiratory phase characteristic contributes most to wide dispersion of respiratory viruses?",
-    "a": "The turbulent jet of exhaled air carrying droplets and aerosols.",
-    "hot": true
-   },
-   {
-    "q": "Which family includes the most common causes of viral meningoencephalitis such as coxsackievirus and echovirus?",
-    "a": "Picornaviridae.",
-    "hot": true
-   },
-   {
-    "q": "An infant with microencephaly and simplified gyral folding was infected in utero. Which virus is the established cause?",
-    "a": "Zika virus.",
-    "hot": true
-   },
-   {
-    "q": "Which antiviral has shown efficacy against Ebola, MERS‑CoV, SARS‑CoV and was trialled for COVID‑19?",
-    "a": "Remdesivir.",
-    "hot": true
-   },
-   {
-    "q": "Which virus integrates its DNA into host chromosome, leading to B‑cell proliferation and potential malignancy?",
-    "a": "Epstein‑Barr virus (EBV).",
-    "hot": true
-   },
-   {
-    "q": "A Tzanck smear shows multinucleated giant cells. Which virus group is indicated?",
-    "a": "Herpesviridae (HSV, VZV).",
-    "hot": true
-   },
-   {
-    "q": "List the most common viral families and specific viruses associated with viral meningoencephalitis in children.",
-    "a": "Picornaviridae (enteroviruses), Herpesviridae (HSV‑1, VZV), Flaviviridae (West Nile), Paramyxoviridae (mumps)."
-   },
-   {
-    "q": "Discuss the five pathogenic hepatotropic viruses, common issues, biochemical profiles, and diagnostic features of Hepatitis A.",
-    "a": "Hepatitis A: IgM anti‑HAV, ALT/AST mild‑moderate, no chronicity, supportive care. Hepatitis B: HBsAg, HBeAg, ALT/AST high, chronic risk. Hepatitis C: anti‑HCV, HCV RNA, ALT/AST high, chronic. Hepatitis D: requires HBV, anti‑HDV. Hepatitis E: IgM anti‑HEV, ALT/AST high, usually self‑limited."
-   }
-  ],
-  "mcqs": [
-   {
-    "q": "A 28‑year‑old woman presents with fever, sore throat, and a vesicular rash on the lips. Which virus is most likely?",
-    "o": [
-     "Varicella zoster",
-     "Herpes simplex",
-     "Epstein‑Barr",
-     "Coxsackie"
-    ],
-    "a": 1,
-    "e": "HSV‑1 causes oral vesicles."
-   },
-   {
-    "q": "Which drug is contraindicated in a patient with tenofovir‑induced nephrotoxicity?",
-    "o": [
-     "Acyclovir",
-     "Lamivudine",
-     "Tenofovir",
-     "Emtricitabine"
-    ],
-    "a": 0,
-    "e": "Acyclovir can worsen renal function."
-   },
-   {
-    "q": "A patient with chronic hepatitis C genotype 1 is started on sofosbuvir/ledipasvir. What is the expected SVR?",
-    "o": [
-     "<50%",
-     "50‑70%",
-     ">90%",
-     "100%"
-    ],
-    "a": 2,
-    "e": "DAAs achieve >90% sustained virologic response."
-   },
-   {
-    "q": "Which of the following is NOT a typical feature of acute viral hepatitis?",
-    "o": [
-     "ALT >10×ULN",
-     "INR >1.5",
-     "Bilirubin >5 mg/dL",
-     "Severe hypertension"
-    ],
-    "a": 3,
-    "e": "Hypertension is not a feature of acute viral hepatitis."
-   }
-  ],
-  "cases": [
-   {
-    "v": "A 5‑year‑old boy presents with fever, sore throat, and a vesicular rash on the lips. He is otherwise well.",
-    "qs": [
-     {
-      "q": "What is the most likely diagnosis?",
-      "a": "Herpes simplex virus type 1 infection (cold sore)."
-     },
-     {
-      "q": "What is the first step in management?",
-      "a": "Supportive care, analgesia, and reassurance; antiviral therapy if severe or immunocompromised."
-     },
-     {
-      "q": "Which laboratory test would confirm the diagnosis?",
-      "a": "PCR of vesicle fluid for HSV DNA or Tzanck smear showing multinucleated giant cells."
-     }
-    ]
-   }
-  ],
-  "mistakes": [],
-  "exam": [
-   "What is the primary site of productive infection for herpes simplex viruses? — Oral or genital mucosa, keratinised epithelium.",
-   "During a cough event, which expiratory phase characteristic contributes most to wide dispersion of respiratory viruses? — The turbulent jet of exhaled air carrying droplets and aerosols.",
-   "Which family includes the most common causes of viral meningoencephalitis such as coxsackievirus and echovirus? — Picornaviridae.",
-   "An infant with microencephaly and simplified gyral folding was infected in utero. Which virus is the established cause? — Zika virus.",
-   "Which antiviral has shown efficacy against Ebola, MERS‑CoV, SARS‑CoV and was trialled for COVID‑19? — Remdesivir.",
-   "Which virus integrates its DNA into host chromosome, leading to B‑cell proliferation and potential malignancy? — Epstein‑Barr virus (EBV).",
-   "A Tzanck smear shows multinucleated giant cells. Which virus group is indicated? — Herpesviridae (HSV, VZV).",
-   "List the most common viral families and specific viruses associated with viral meningoencephalitis in children. — Picornaviridae (enteroviruses), Herpesviridae (HSV‑1, VZV), Flaviviridae (West Nile), Paramyxoviridae (mumps).",
-   "Discuss the five pathogenic hepatotropic viruses, common issues, biochemical profiles, and diagnostic features of Hepatitis A. — Hepatitis A: IgM anti‑HAV, ALT/AST mild‑moderate, no chronicity, supportive care. Hepatitis B: HBsAg, HBeAg, ALT/AST high, chronic risk. Hepatitis C: anti‑HCV, HCV RNA, ALT/AST high, chronic. Hepatitis D: requires HBV, anti‑HDV. Hepatitis E: IgM anti‑HEV, ALT/AST high, usually self‑limited."
-  ],
-  "model": "openai/gpt-oss-120b",
-  "generatedAt": "2026-10-28",
-  "checked": "2026-10-28",
-  "trimmed": 12
- }
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-24",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-3.5-flash-lite",
+  "reviewedAt": "2026-11-24",
+  "fixRounds": 0
+ },
+ "reviewed": false
 }

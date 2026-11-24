@@ -1973,6 +1973,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/albumin</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-11-054f4257.jpg</image:loc>
+      <image:caption>Exam trap: diuretics in heart failure</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-19-8675edee.jpg</image:loc>
+      <image:caption>Key numbers</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/asthma</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s3-1-bdc17d5b.jpg</image:loc>
@@ -2137,6 +2148,13 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-04-fc329fee.jpg</image:loc>
       <image:caption>Clinical presentation</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/physical-examination</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-05-46d22127.jpg</image:loc>
+      <image:caption>Physical examination and percussion differential</image:caption>
     </image:image>
   </url>
   <url>

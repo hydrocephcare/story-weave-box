@@ -1,62 +1,30 @@
 {
  "medical": true,
+ "clinicalScope": "Delusional disorders – classification of delusion types in adults presenting to general medical or psychiatric services in low‑resource East African hospitals",
  "title": "Types of Delusion",
  "subject": "Psychiatry",
- "summary": "Delusions are fixed false beliefs that persist despite contrary evidence. They are classified by content and can guide diagnosis and management, especially in low‑resource settings where formal scales may be unavailable.",
+ "summary": "Delusions are fixed false beliefs that persist despite evidence to the contrary. They are grouped by content, which helps clinicians decide on investigations, safety measures and treatment, especially where formal scales are unavailable.",
  "aka": [
-  "Delusional disorders",
-  "Psychotic beliefs"
+  "Delusional disorder subtypes",
+  "Delusional content categories"
  ],
  "sections": [
   {
-   "h": "Overview",
-   "p": "Delusions are pathological beliefs that are not shared by cultural or subcultural groups and are held with conviction. Recognising the type helps differentiate primary psychotic disorders from mood‑related psychosis and organic causes.",
+   "h": "Overview and biological role",
+   "p": "Delusions arise from abnormal dopaminergic activity in frontostriatal circuits, leading to mis‑attribution of salience to irrelevant thoughts. They are a core feature of psychotic illnesses and can occur in medical conditions affecting the brain.",
    "b": [
-    "Fixed, false, held despite evidence",
-    "Not culturally sanctioned",
-    "Often accompanied by other psychotic features"
+    "Fixed, false, held despite contradictory evidence",
+    "Not culturally sanctioned or shared by a community",
+    "Often accompanied by other psychotic features (hallucinations, disorganized thinking)",
+    "Content guides differential diagnosis and risk assessment"
    ]
   },
   {
-   "h": "How it works",
-   "p": "Normal belief formation involves integration of perception, memory, and reasoning. Disruption of dopaminergic pathways, especially in the mesolimbic system, leads to aberrant salience and the formation of delusional ideas.",
-   "b": [
-    "Excess dopamine → over‑attribution of importance",
-    "Impaired reality testing"
-   ]
-  },
-  {
-   "h": "Regulation",
-   "p": "Neurotransmitter balance (dopamine, serotonin, glutamate) and cortical‑subcortical circuits regulate belief appraisal. Stress, infection, or substance use can tip this balance.",
-   "b": [
-    "Prefrontal‑striatal loops",
-    "HPA‑axis activation in stress"
-   ]
-  },
-  {
-   "h": "What goes wrong",
-   "p": "Pathological over‑activity of mesolimbic dopamine, structural lesions, or metabolic disturbances produce delusional content. In low‑resource settings, infections (HIV, TB meningitis, malaria) and substance use are common precipitants.",
-   "b": [
-    "Schizophrenia – primary psychosis",
-    "Mood disorder with psychotic features",
-    "Organic: HIV encephalopathy, TB meningitis, severe malaria"
-   ]
-  },
-  {
-   "h": "Clinical relevance",
-   "p": "Identifying the delusion type directs further work‑up, informs prognosis, and shapes therapeutic choices. Certain types (e.g., persecutory) raise safety concerns, while somatic delusions may mask underlying medical illness.",
-   "b": [
-    "Persecutory – risk of aggression",
-    "Somatic – consider occult disease",
-    "Grandiose – may mask poor insight"
-   ]
-  },
-  {
-   "h": "What goes wrong",
-   "p": "Delusional content is grouped by theme. The most frequently taught categories are:",
+   "h": "Structure and key components",
+   "p": "Each delusion has a theme (content) and a conviction level. The main themes are listed below; they are mutually exclusive but a patient may hold more than one.",
    "b": [
     "Persecutory – belief of being harmed or conspired against",
-    "Grandiose – inflated sense of worth, power, or knowledge",
+    "Grandiose – inflated sense of worth, power or knowledge",
     "Somatic – false belief about bodily functions or disease",
     "Jealous (Othello) – unfounded belief partner is unfaithful",
     "Erotomanic – belief that another person, often of higher status, is in love",
@@ -66,518 +34,165 @@
    ]
   },
   {
-   "h": "Investigations",
-   "p": "Use targeted history, exam and basic labs to rule out organic causes before labeling primary psychosis.",
+   "h": "Pathway or mechanism step by step",
+   "p": "Excess dopamine in the mesolimbic pathway enhances salience tagging, while prefrontal hypo‑activity impairs reality testing. Stress‑related HPA‑axis activation can amplify these changes.",
+   "b": [
+    "Stress → cortisol surge → dopaminergic dysregulation",
+    "Dopamine excess → over‑attribution of importance to neutral thoughts",
+    "Prefrontal deficits → failure to reject implausible beliefs",
+    "Feedback loop sustains conviction"
+   ]
+  },
+  {
+   "h": "Enzymes and cofactors",
+   "p": "Key enzymes influencing dopamine synthesis and breakdown are tyrosine hydroxylase, aromatic L‑amino‑acid decarboxylase, monoamine oxidase (MAO) and catechol‑O‑methyltransferase (COMT). Genetic variants affecting these enzymes modulate risk.",
+   "b": [
+    "Tyrosine hydroxylase – rate‑limiting step in dopamine production",
+    "MAO‑A – degrades dopamine; inhibition raises synaptic levels",
+    "COMT polymorphisms linked to psychosis severity",
+    "Vitamin B6 (pyridoxal‑5‑phosphate) is a cofactor for aromatic L‑amino‑acid decarboxylase"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Dopamine tone is regulated by presynaptic autoreceptors (D2) and feedback from cortical glutamatergic inputs. Inflammation (e.g., HIV, TB meningitis) can disrupt this balance.",
+   "b": [
+    "D2 autoreceptor activation reduces dopamine release",
+    "Glutamate from prefrontal cortex modulates dopaminergic firing",
+    "Cytokines (IL‑6, TNF‑α) can increase dopamine synthesis",
+    "Antipsychotics act by blocking D2 receptors, restoring regulation"
+   ]
+  },
+  {
+   "h": "Integration and energy balance",
+   "p": "Delusional thinking consumes cognitive resources, leading to fatigue and poor self‑care, which may worsen metabolic status in low‑resource settings.",
+   "b": [
+    "Increased mental effort → higher cerebral glucose demand",
+    "Neglect of nutrition or medication adherence",
+    "Potential weight loss or malnutrition in severe cases",
+    "Interaction with comorbid HIV or TB affecting energy reserves"
+   ]
+  },
+  {
+   "h": "Clinical and disease correlations",
+   "p": "Delusion type narrows the differential diagnosis and predicts risk behaviours.",
+   "b": [
+    "Persecutory – high risk of aggression, common in schizophrenia and substance‑induced psychosis",
+    "Somatic – may mask underlying medical disease (e.g., HIV, TB)",
+    "Nihilistic – seen in severe depression, psychotic depression, or advanced neurological disease",
+    "Erotomanic – can lead to stalking, relevant for legal safety planning"
+   ]
+  },
+  {
+   "h": "Laboratory assessment and interpretation",
    "t": [
     {
-     "a": "Full mental state examination",
-     "b": "Confirms presence, type and conviction of delusion; assesses insight and safety"
+     "a": "Basic metabolic panel",
+     "b": "Rule out metabolic causes (e.g., electrolyte imbalance) that can precipitate delusions"
     },
     {
-     "a": "Basic bloods (CBC, electrolytes, renal & liver function, glucose)",
-     "b": "Detect metabolic derangements (e.g., hyponatraemia) that can cause psychosis"
+     "a": "HIV rapid test",
+     "b": "Identify HIV‑associated neurocognitive disorder as a cause of delusional content"
     },
     {
-     "a": "HIV test, VDRL/RPR, malaria rapid test",
-     "b": "Identify infections common in East Africa that may present with delusions"
+     "a": "Full blood count",
+     "b": "Detect anemia or infection that may contribute to delirium‑like presentations"
     },
     {
-     "a": "CT/MRI brain (if available)",
-     "b": "Rule out structural lesions; if unavailable, rely on clinical clues (focal neuro signs, fever)"
+     "a": "If unavailable: bedside mental status exam",
+     "b": "Assess orientation, attention, and thought content when labs cannot be done"
     }
    ]
   },
   {
-   "h": "Management",
-   "p": "Treat underlying cause first, then address the delusion with antipsychotics and psychosocial support.",
+   "h": "Disorders and consequences",
+   "p": "Delusional disorders can be primary (schizophrenia, delusional disorder) or secondary (infection, substance, metabolic). Untreated delusions lead to functional decline, self‑harm, or violence.",
    "b": [
-    "If infection confirmed → appropriate antimicrobial (e.g., antiretroviral for HIV, ACT for malaria)",
-    "Acute agitation → short‑acting benzodiazepine (e.g., lorazepam) for safety",
-    "Low‑resource antipsychotic of choice: haloperidol – effective, inexpensive, monitor extrapyramidal signs",
-    "Avoid high‑potency typicals in patients with Parkinsonism or severe cardiac disease",
-    "Psychosocial: reassurance, reality testing, involve family, address safety"
+    "Primary psychotic illness – persistent delusions >1 month",
+    "Secondary to infection – TB meningitis, cryptococcal meningitis",
+    "Substance‑induced – cannabis, amphetamines, alcohol withdrawal",
+    "Medication side‑effects – steroids, dopaminergic agents"
    ]
   },
   {
-   "h": "Often confused with",
-   "p": "Delusions can be mistaken for strongly held cultural or religious beliefs, overvalued ideas, or normal anxiety‑driven thoughts.",
+   "h": "Therapeutic implications",
+   "p": "Management follows a three‑step approach: treat underlying cause, use antipsychotic medication, and provide psychosocial support.",
    "b": [
-    "Cultural belief – shared by community, not pathological",
-    "Overvalued idea – less fixed, may be amenable to reasoning",
-    "Obsessive thought – recognized as intrusive and unwanted"
+    "Identify and treat organic triggers (e.g., start anti‑TB therapy)",
+    "Low‑cost typical antipsychotic (haloperidol) preferred in low‑resource settings",
+    "Avoid high‑potency typicals in Parkinsonism or cardiac disease",
+    "Safety planning for persecutory or erotomanic beliefs"
    ]
   },
   {
-   "h": "Where results can mislead",
-   "p": "Normal basic labs do not exclude organic brain disease; a negative HIV test does not rule out early seroconversion.",
+   "h": "Common errors",
    "b": [
-    "Normal CBC may coexist with cerebral malaria",
-    "Negative malaria rapid test in low‑parasitaemia – consider repeat or microscopy"
+    "Mistaking culturally accepted beliefs for delusions – always explore cultural context first",
+    "Assuming all delusions need antipsychotics – treat reversible organic causes first",
+    "Over‑reliance on a single laboratory test; normal results do not exclude psychosis",
+    "Neglecting risk assessment for violence in persecutory or grandiose types"
    ]
   },
   {
-   "h": "Exam pearls",
-   "p": "Focus on pattern recognition, safety, and resource‑appropriate investigations.",
+   "h": "Exam approach",
    "b": [
-    "Ask about personal safety when persecutory delusion present",
-    "Link somatic delusion to possible hidden infection (e.g., TB)",
-    "Differentiate grandiose delusion from mood elevation"
+    "Start with a focused mental state exam (content, conviction, insight)",
+    "Ask about recent infections, substance use, medication changes",
+    "Prioritise investigations that are locally available (CBC, HIV rapid test)",
+    "Formulate a management plan that balances drug availability, side‑effects and safety"
    ]
   }
  ],
  "whenToSeekHelp": [
-  "Acute aggression or threat to self/others",
-  "Rapid deterioration of mental status",
-  "New onset delusion with fever, headache, or focal neuro signs"
+  "Sudden onset of bizarre delusions with fever or headache – possible meningitis",
+  "Persecutory delusion with threats or weapons – risk of violence",
+  "Severe somatic delusion leading to self‑harm (e.g., self‑inflicted burns)",
+  "Nihilistic delusion with neglect of food or medication – risk of death"
  ],
  "faq": [
   {
-   "q": "Can a patient with a persecutory delusion be safely discharged?",
-   "a": "Only if risk assessment shows no imminent danger and a reliable support system is in place."
+   "q": "How do I differentiate a delusion from a culturally shared belief?",
+   "a": "A delusion is idiosyncratic, fixed, and not accepted by the patient's cultural group; shared beliefs are endorsed by many in the community."
   },
   {
-   "q": "What is the first drug to use when antipsychotics are unavailable?",
-   "a": "Low‑dose benzodiazepine for agitation while arranging transfer for definitive treatment."
+   "q": "Can a somatic delusion be a sign of an undiagnosed medical illness?",
+   "a": "Yes – always rule out HIV, TB, or other infections before labeling it primary psychosis."
   },
   {
-   "q": "How do I distinguish a somatic delusion from a real medical problem?",
-   "a": "Correlate belief with objective findings; if examinations and basic labs are normal, consider delusional disorder."
+   "q": "What is the first‑line antipsychotic in a low‑resource East African hospital?",
+   "a": "Haloperidol, because it is inexpensive, widely available, and effective for most delusional types."
   }
  ],
  "exam": [
-  "A 28‑year‑old man with HIV presents with a firm belief that his neighbours are poisoning his food – what is the most urgent next step? — Assess safety, involve security, and arrange urgent psychiatric evaluation.",
-  "A patient with malaria treatment failure now reports that his blood is turning into glass – which delusion type is this and what does it suggest? — Somatic delusion; consider cerebral malaria or drug toxicity and repeat malaria testing.",
-  "In a resource‑limited ward, a woman with a new grandiose belief that she is a queen refuses medication – how would you manage? — Use low‑dose haloperidol for psychosis, explain benefits calmly, involve family, and monitor for side effects.",
-  "A refugee child reports that the hospital staff are trying to kill him – which safety measures are required? — Immediate risk assessment, constant observation, and involve senior staff before any invasive procedures.",
-  "When faced with a patient who claims he is dead (Cotard syndrome), what investigations are essential? — Basic labs, HIV test, malaria rapid test, and if possible neuroimaging to exclude encephalitis.",
-  "How does a persecutory delusion differ from an overvalued idea in terms of insight? — Persecutory delusion: no insight, fixed belief; overvalued idea: some insight, belief can be challenged.",
-  "Why is haloperidol preferred over clozapine in most low‑resource settings for acute delusions? — Haloperidol is inexpensive, widely available, and requires no regular blood monitoring, unlike clozapine.",
-  "A patient on high‑dose haloperidol develops rigidity – what is the likely cause and next step? — Extrapyramidal side effect; give a benzo and consider switching to a lower‑potency antipsychotic."
+  "A 28‑year‑old man with a new persecutory delusion after starting isoniazid for TB – what is the most likely cause and next step? — Consider isoniazid‑induced psychosis; stop drug, start pyridoxine, assess need for antipsychotic.",
+  "A patient presents with a grandiose belief that they are a tribal chief and refuses medication – which safety measure is essential? — Assess risk of self‑neglect and arrange supervised medication administration.",
+  "In a resource‑limited setting, which single test helps differentiate primary psychosis from HIV‑associated delusion? — Perform a rapid HIV test; a positive result directs ART and neuro‑psychiatric care.",
+  "A woman with a somatic delusion about parasites in her blood refuses antimalarial therapy – what should you do? — Explore possible underlying infection, order a malaria rapid test, and provide education while arranging safe observation.",
+  "Which delusion type carries the highest risk of violent behaviour and why? — Persecutory delusion; belief of being harmed can trigger defensive aggression.",
+  "How does dopamine dysregulation lead to fixed false beliefs? — Excess dopamine tags neutral thoughts with salience, while prefrontal deficits prevent reality testing, cementing conviction.",
+  "When laboratory facilities are unavailable, what bedside assessment helps identify delirium versus primary delusion? — Evaluate orientation, attention, and fluctuating consciousness; delirium shows fluctuating course.",
+  "Why is haloperidol preferred over olanzapine in patients with severe cardiac disease? — Haloperidol has less QT‑prolongation risk and is cheaper; olanzapine can cause metabolic syndrome.",
+  "A patient with a nihilistic delusion refuses food – what immediate intervention is required? — Initiate nutritional support (NG tube if needed) and treat underlying depression or neurological disease.",
+  "What feature distinguishes erotomanic delusion from an overvalued idea? — Erotomania is fixed, false, and persists despite evidence; overvalued ideas are less rigid and may be reasoned with."
  ],
  "related": [
   "Schizophrenia",
-  "Mood disorders with psychotic features",
+  "Delusional disorder",
   "Substance‑induced psychosis",
-  "Organic brain syndromes",
-  "Psychotic depression",
-  "Cognitive assessment tools"
+  "HIV‑associated neurocognitive disorder",
+  "TB meningitis",
+  "Risk assessment for violence",
+  "Low‑resource antipsychotic strategies",
+  "Cultural concepts of distress"
  ],
- "kind": "physiology",
+ "kind": "biochemistry",
  "model": "openai/gpt-oss-120b",
- "generatedAt": "2026-10-22",
- "reviewed": false,
- "deep": {
-  "sections": [
-   {
-    "h": "Bedside: history and how to examine",
-    "p": "Ask patients about unusual beliefs, their impact on daily life, and any associated hallucinations or mood changes. Examine for insight, thought content, and affect.",
-    "b": [
-     "- Ask: ‘What do you think is happening to you?’ and ‘Do you feel safe?’",
-     "- Probe for persecutory, grandiose, somatic, jealous or erotomanic themes",
-     "- Assess insight: does the patient recognise the belief as false?",
-     "- Look for disorganized speech, flat affect or agitation",
-     "- Check for visual/aural hallucinations that may accompany delusions",
-     "- Observe for suspicious behaviour or defensive posture",
-     "- Note any recent stressors or medication changes",
-     "- Record any physical signs of illness (fever, rash, neurological deficits)"
-    ]
-   },
-   {
-    "h": "Investigations and how to read them",
-    "p": "Use a pragmatic, resource‑aware approach. Prioritise tests that rule out organic causes and guide treatment.",
-    "t": [
-     {
-      "a": "Full blood count (FBC)",
-      "b": "Detects anaemia, infection or malaria – abnormal WCC or Hb <10 g/dL suggests organic cause"
-     },
-     {
-      "a": "Serum electrolytes & glucose",
-      "b": "Hyponatraemia or hypoglycaemia can mimic psychosis – Na <130 mmol/L or glucose <3.5 mmol/L is abnormal"
-     },
-     {
-      "a": "Liver & renal function tests",
-      "b": "Elevated transaminases or creatinine >1.5× ULN may indicate metabolic encephalopathy"
-     },
-     {
-      "a": "HIV viral load & CD4 count",
-      "b": "High viral load or CD4 <200 cells/µL increases risk of neuro‑HIV disease"
-     },
-     {
-      "a": "Chest X‑ray",
-      "b": "Cavities or infiltrates suggest TB meningitis or septic emboli – any abnormality warrants further imaging"
-     },
-     {
-      "a": "Lumbar puncture (if safe)",
-      "b": "CSF opening pressure >250 mmH2O or pleocytosis >10 cells/µL indicates meningitis or encephalitis"
-     },
-     {
-      "a": "MRI brain (if available)",
-      "b": "Detects structural lesions, demyelination or tumours – any focal abnormality changes diagnosis"
-     },
-     {
-      "a": "Cognitive screening (MMSE or MoCA)",
-      "b": "Score <24 suggests cognitive impairment that may coexist with psychosis"
-     }
-    ]
-   },
-   {
-    "h": "Diagnosis, staging and severity",
-    "p": "Apply standard criteria to classify the delusion type and gauge severity for management decisions.",
-    "b": [
-     "- DSM‑5 delusion: fixed, false belief not shared culturally, with impaired reality testing",
-     "- Delusion subtypes: persecutory, grandiose, somatic, jealous, erotomanic",
-     "- Severity scales: Brief Psychiatric Rating Scale (BPRS) >30 indicates severe psychosis",
-     "- Functional impact: loss of work, social withdrawal, or risk of harm to self/others",
-     "- Staging: acute (≤2 weeks), sub‑acute (2–6 weeks), chronic (>6 weeks)",
-     "- Prognosis: early treatment improves outcome; chronicity linked to poorer insight"
-    ]
-   },
-   {
-    "h": "Look‑alike conditions",
-    "p": "Differentiate delusions from other psychiatric or medical entities that mimic them.",
-    "t": [
-     {
-      "a": "Schizophrenia",
-      "b": "Multiple psychotic features, disorganized speech, negative symptoms – delusions are one component"
-     },
-     {
-      "a": "Mood disorder with psychotic features",
-      "b": "Delusions occur with major depression or bipolar episode; mood symptoms are prominent"
-     },
-     {
-      "a": "Organic brain syndrome (e.g., HIV encephalopathy, malaria encephalopathy)",
-      "b": "Acute onset, fluctuating cognition, focal neurological signs"
-     },
-     {
-      "a": "Substance‑induced psychosis",
-      "b": "Temporal relation to drug use, withdrawal symptoms, or toxicology screen positive"
-     },
-     {
-      "a": "Delusional disorder",
-      "b": "Single delusion type, preserved cognition, no other psychotic features"
-     }
-    ]
-   },
-   {
-    "h": "Management step by step",
-    "p": "When a patient presents with a new delusion, act quickly to ensure safety, confirm diagnosis, start antipsychotic therapy, monitor response, and decide when specialist input is needed.",
-    "b": [
-     "1. Assess for violence or self‑harm risk; if present, secure environment and involve security or police.",
-     "2. Rule out organic causes with basic labs (CBC, electrolytes, LFTs, RFTs, HIV, TB screen) and neuroimaging if available.",
-     "3. Initiate first‑line antipsychotic – low‑dose haloperidol or olanzapine; choose based on side‑effect profile and drug availability.",
-     "4. Re‑evaluate after 48–72 h for symptom reduction and side‑effects; adjust dose or switch if no improvement.",
-     "5. If no response or worsening, refer to psychiatric liaison or tertiary centre; consider clozapine only if treatment‑resistant and monitoring facilities exist.",
-     "6. Provide psychoeducation to patient and family about illness, medication adherence, and safety plans.",
-     "7. Schedule follow‑up within 1–2 weeks, then monthly until stable; longer if comorbid conditions or social instability."
-    ],
-    "t": [
-     {
-      "a": "Drug choice",
-      "b": "Haloperidol – rapid onset, inexpensive, but watch for extrapyramidal symptoms; Olanzapine – better metabolic profile, but monitor weight and glucose."
-     },
-     {
-      "a": "Avoid",
-      "b": "High‑dose antipsychotics without monitoring; benzodiazepines for long‑term use; anticholinergics unless severe EPS."
-     }
-    ]
-   },
-   {
-    "h": "Drug effects and what to do",
-    "p": "Antipsychotics can cause a range of adverse effects; recognise them early and manage appropriately.",
-    "b": [
-     "1. Extrapyramidal symptoms (tremor, rigidity, bradykinesia) – start low‑dose anticholinergic (e.g., benztropine) if EPS appear.",
-     "2. Neuroleptic malignant syndrome – sudden fever, rigidity, autonomic instability; stop drug, give dantrolene or bromocriptine, and ICU care.",
-     "3. Tardive dyskinesia – chronic involuntary movements; consider switching to atypical antipsychotic and monitor with Abnormal Involuntary Movement Scale.",
-     "4. Metabolic syndrome – weight gain, hyperglycaemia, dyslipidaemia; counsel diet, exercise, and monitor fasting glucose and lipids.",
-     "5. QT prolongation – avoid other QT‑prolonging drugs, check baseline ECG if possible, and monitor electrolytes.",
-     "6. Sedation – reduce dose or switch to less sedating agent if patient cannot perform daily tasks.",
-     "7. Anticholinergic burden – monitor cognition, especially in elderly; avoid additional anticholinergic drugs."
-    ],
-    "t": [
-     {
-      "a": "Interaction warning",
-      "b": "Haloperidol + macrolides or fluoroquinolones → ↑QT risk; avoid or monitor ECG."
-     },
-     {
-      "a": "Monitoring",
-      "b": "Regular weight, glucose, lipids, and ECG if high risk."
-     }
-    ]
-   },
-   {
-    "h": "Complications and when to escalat",
-    "p": "Delusional disorders can lead to serious complications; recognise red flags that demand urgent escalation.",
-    "b": [
-     "1. Aggression or violence toward self or others – immediate safety measures and possible involuntary admission.",
-     "2. Severe self‑harm ideation or attempts – urgent psychiatric assessment and possible inpatient care.",
-     "3. Non‑adherence leading to relapse – involve social worker, arrange community support, consider depot medication.",
-     "4. Development of catatonia or neuroleptic malignant syndrome – stop antipsychotic, initiate supportive care.",
-     "5. Unexplained weight loss or cachexia in somatic delusions – investigate for occult malignancy or infection.",
-     "6. Persistent EPS despite dose adjustment – switch to atypical antipsychotic or add anticholinergic.",
-     "7. Worsening metabolic parameters – refer to endocrinology or dietitian."
-    ],
-    "t": [
-     {
-      "a": "Escalation trigger",
-      "b": "Any sign of imminent harm or deterioration; act within 24 h."
-     }
-    ]
-   },
-   {
-    "h": "Complicating and confounding factors",
-    "p": "Certain conditions and substances alter presentation, investigations, or treatment of delusional disorders.",
-    "b": [
-     "1. HIV – increases risk of neuropsychiatric complications; screen for CNS opportunistic infections; antiretrovirals may interact with antipsychotics.",
-     "2. TB – CNS involvement can mimic or trigger psychosis; consider TB meningitis work‑up.",
-     "3. Malnutrition – can worsen metabolic side‑effects; monitor electrolytes and liver function closely.",
-     "4. Pregnancy – avoid teratogenic antipsychotics; use lowest effective dose and monitor fetal growth.",
-     "5. Diabetes – antipsychotics can worsen glycaemic control; monitor HbA1c and adjust diabetes meds.",
-     "6. Herbal remedies or alcohol – may potentiate sedation or hepatotoxicity; obtain thorough medication history.",
-     "7. Renal or hepatic failure – dose‑adjust antipsychotics with renal/hepatic metabolism; avoid drugs cleared renally if kidney function <30%.",
-     "8. Age extremes – elderly more prone to EPS and metabolic syndrome; children require lower doses and careful monitoring."
-    ],
-    "t": [
-     {
-      "a": "Dose adjustment",
-      "b": "Haloperidol 1–2 mg/day in renal failure; olanzapine 2.5–5 mg/day in hepatic impairment."
-     },
-     {
-      "a": "Interaction note",
-      "b": "St. John’s wort ↑ antipsychotic metabolism; avoid concurrent use."
-     }
-    ]
-   },
-   {
-    "h": "Special groups",
-    "p": "Tailor management of delusional disorders to the unique needs of vulnerable populations.",
-    "b": [
-     "1. Children – use low‑dose atypical antipsychotics; involve child‑psychiatry; monitor growth and endocrine effects.",
-     "2. Pregnancy – prefer haloperidol or low‑dose olanzapine; avoid clozapine; monitor fetal heart rate and maternal weight.",
-     "3. Elderly – start very low dose, titrate slowly; monitor for orthostatic hypotension and cognitive decline.",
-     "4. People with HIV – coordinate with ART team; avoid drug–drug interactions; monitor neurocognitive status.",
-     "5. Low‑resource settings – use haloperidol due to cost and availability; rely on clinical monitoring rather than routine labs; involve community health workers for adherence support."
-    ],
-    "t": [
-     {
-      "a": "Monitoring strategy",
-      "b": "Clinical observation every 48–72 h in first week; weight and glucose monthly; ECG only if high risk."
-     },
-     {
-      "a": "Referral threshold",
-      "b": "Any patient requiring inpatient care, complex comorbidities, or treatment‑resistant psychosis."
-     }
-    ]
-   }
-  ],
-  "facts": [
-   "Delusions are fixed false beliefs not shared by the person's cultural or subcultural group.",
-   "Persecutory delusions are the most common type, seen in up to 70% of psychotic patients.",
-   "Grandiose delusions often coexist with mood elevation in bipolar disorder.",
-   "Somatic delusions may indicate underlying medical illness in 15% of cases.",
-   "Erotomanic delusions are rare (<5%) and frequently linked to personality disorders.",
-   "Overvalued ideas retain some insight, unlike delusions which have none.",
-   "Acute psychosis with delusions requires antipsychotic treatment within 24 h in low‑resource settings.",
-   "Haloperidol is preferred for rapid tranquilisation because it is inexpensive and requires no blood monitoring."
-  ],
-  "mnemonics": [
-   {
-    "n": "P‑G‑S‑J‑E",
-    "t": "Persecutory, Grandiose, Somatic, Jealous, Erotomanic – the five classic delusional themes."
-   }
-  ],
-  "vivas": [
-   {
-    "q": "Define a delusion and list the three core criteria.",
-    "a": "A delusion is a fixed false belief, not culturally sanctioned, held despite contradictory evidence, and with impaired reality testing.",
-    "hot": true
-   },
-   {
-    "q": "How does a persecutory delusion differ from an overvalued idea?",
-    "a": "Persecutory delusion lacks insight and is immutable; an overvalued idea retains some insight and can be challenged.",
-    "hot": true
-   },
-   {
-    "q": "A 28‑year‑old HIV patient believes neighbours are poisoning his food. What investigations are essential?",
-    "a": "Baseline CBC, CD4 count, viral load, and screen for CNS infections (TB, cryptococcal antigen) to exclude organic causes.",
-    "hot": true
-   },
-   {
-    "q": "Why is haloperidol preferred over clozapine for acute delusions in low‑resource hospitals?",
-    "a": "Haloperidol is cheap, oral or IM, has rapid onset, and does not require weekly blood counts for agranulocytosis monitoring.",
-    "hot": true
-   },
-   {
-    "q": "A patient on high‑dose haloperidol develops rigidity. What is the likely cause and next step?",
-    "a": "Acute dystonic reaction; give intramuscular benztropine or diphenhydramine and lower haloperidol dose.",
-    "hot": true
-   },
-   {
-    "q": "What is the key feature that distinguishes a somatic delusion from a hypochondriacal disorder?",
-    "a": "Somatic delusion is a fixed false belief with no basis, whereas hypochondriasis involves excessive health anxiety with some reality‑based concerns."
-   },
-   {
-    "q": "Explain why a grandiose delusion may mask poor insight.",
-    "a": "Patients view themselves as superior, so they deny illness and refuse treatment, leading to delayed care."
-   },
-   {
-    "q": "A refugee child says staff are trying to kill him. What safety measures should be taken?",
-    "a": "Ensure constant observation, involve mental health team, and assess for trauma‑related psychosis; keep environment calm and safe."
-   },
-   {
-    "q": "What molecular lesion causes sickle cell disease?",
-    "a": "A single‑base substitution (GAG → GTG) in the β‑globin gene causing a glutamic acid to valine change (missense mutation).",
-    "past": true
-   },
-   {
-    "q": "What type of bias arises when online forms with validation checks are used to reduce missing data?",
-    "a": "Selection bias, because only clinicians with internet access and time may respond.",
-    "past": true
-   },
-   {
-    "q": "What research impact is described by presenting findings to hospital management to influence scheduling policies?",
-    "a": "Policy impact – the research informs organisational decision‑making.",
-    "past": true
-   },
-   {
-    "q": "Which fusion protein results from the Philadelphia chromosome in CML and what activity does it have?",
-    "a": "BCR‑ABL fusion with constitutive tyrosine‑kinase activity.",
-    "past": true
-   },
-   {
-    "q": "List the five classic delusional themes using the standard mnemonic.",
-    "a": "Persecutory, Grandiose, Somatic, Jealous, Erotomanic (P‑G‑S‑J‑E)."
-   },
-   {
-    "q": "How do you differentiate Cotard syndrome from severe depression?",
-    "a": "Cotard includes nihilistic delusions of non‑existence, whereas depression may have guilt but retains reality testing."
-   }
-  ],
-  "mcqs": [
-   {
-    "q": "A 35‑year‑old man with untreated schizophrenia presents with a firm belief that his neighbours are spying on him. Which feature best confirms a delusion?",
-    "o": [
-     "He can provide a plausible explanation for the belief.",
-     "The belief is shared by his cultural group.",
-     "The belief persists despite clear contradictory evidence.",
-     "He expresses mild anxiety about the belief."
-    ],
-    "a": 2,
-    "e": "Delusions are fixed false beliefs that remain despite contradictory evidence."
-   },
-   {
-    "q": "Which delusional type is most likely to be associated with a manic episode?",
-    "o": [
-     "Persecutory",
-     "Somatic",
-     "Grandiose",
-     "Jealous"
-    ],
-    "a": 2,
-    "e": "Grandiose delusions commonly accompany mania."
-   },
-   {
-    "q": "A patient on haloperidol develops severe muscle rigidity, fever, autonomic instability, and altered consciousness. What is the most likely diagnosis?",
-    "o": [
-     "Acute dystonia",
-     "Neuroleptic malignant syndrome",
-     "Serotonin syndrome",
-     "Malignant hyperthermia"
-    ],
-    "a": 1,
-    "e": "The triad of rigidity, fever, and autonomic change defines neuroleptic malignant syndrome."
-   },
-   {
-    "q": "In a low‑resource setting, which investigation is essential before labeling a delusion as primary psychosis?",
-    "o": [
-     "MRI brain",
-     "Serum electrolytes",
-     "CSF PCR for TB",
-     "Full blood count"
-    ],
-    "a": 3,
-    "e": "A full blood count can reveal anemia, infection or hematologic causes that may mimic psychosis."
-   },
-   {
-    "q": "Which of the following best describes an overvalued idea?",
-    "o": [
-     "A belief held with absolute conviction and no insight.",
-     "A culturally accepted belief.",
-     "A transient hallucination.",
-     "A belief that is exaggerated but still open to challenge."
-    ],
-    "a": 3,
-    "e": "Overvalued ideas are exaggerated beliefs that retain some insight and can be challenged."
-   },
-   {
-    "q": "A 22‑year‑old woman reports that she is a queen and refuses medication, claiming she does not need doctors. Which delusional theme is this?",
-    "o": [
-     "Grandiose",
-     "Persecutory",
-     "Somatic",
-     "Erotomanic"
-    ],
-    "a": 0,
-    "e": "Grandiose delusions involve inflated self‑importance or identity."
-   }
-  ],
-  "cases": [
-   {
-    "v": "A 30‑year‑old male with newly diagnosed HIV presents with a firm belief that his neighbours are poisoning his meals. He is agitated, denies medication, and has a CD4 count of 180 cells/µL.",
-    "qs": [
-     {
-      "q": "Which investigations will help rule out an organic cause?",
-      "a": "CBC, serum electrolytes, malaria smear, cryptococcal antigen, and brain imaging if focal signs appear."
-     },
-     {
-      "q": "How would you explain the delusion to the patient in a culturally sensitive way?",
-      "a": "Acknowledge his fear, reassure that his belief is a symptom of stress/infection, and use simple language to describe how illness can affect thoughts."
-     }
-    ]
-   },
-   {
-    "v": "A 45‑year‑old woman on malaria treatment for 7 days develops the belief that her blood is turning into glass and refuses further medication. Vital signs are stable, but she is anxious.",
-    "qs": [
-     {
-      "q": "What is the most likely psychiatric diagnosis?",
-      "a": "Acute psychotic episode secondary to severe malaria or drug toxicity."
-     },
-     {
-      "q": "Which drug would you choose for rapid control and why?",
-      "a": "Intramuscular haloperidol because it is inexpensive, fast‑acting, and does not need serum monitoring."
-     },
-     {
-      "q": "What follow‑up investigations are required after stabilisation?",
-      "a": "Repeat malaria smear, liver function tests, and screen for quinine‑related neurotoxicity."
-     }
-    ]
-   }
-  ],
-  "mistakes": [
-   "Confusing overvalued ideas with delusions – overvalued ideas retain some insight.",
-   "Prescribing clozapine without baseline and weekly blood counts in low‑resource settings.",
-   "Failing to rule out organic causes (e.g., CNS infections) before labeling primary psychosis.",
-   "Using cultural beliefs as evidence against delusion without confirming they are not shared by the community.",
-   "Neglecting safety measures for patients with persecutory delusions who may act aggressively.",
-   "Missing the need for rapid IM antipsychotic in acute agitation, leading to escalation of violence."
-  ],
-  "exam": [
-   "Define a delusion and list the three core criteria. — A delusion is a fixed false belief, not culturally sanctioned, held despite contradictory evidence, and with impaired reality testing.",
-   "How does a persecutory delusion differ from an overvalued idea? — Persecutory delusion lacks insight and is immutable; an overvalued idea retains some insight and can be challenged.",
-   "A 28‑year‑old HIV patient believes neighbours are poisoning his food. What investigations are essential? — Baseline CBC, CD4 count, viral load, and screen for CNS infections (TB, cryptococcal antigen) to exclude organic causes.",
-   "Why is haloperidol preferred over clozapine for acute delusions in low‑resource hospitals? — Haloperidol is cheap, oral or IM, has rapid onset, and does not require weekly blood counts for agranulocytosis monitoring.",
-   "A patient on high‑dose haloperidol develops rigidity. What is the likely cause and next step? — Acute dystonic reaction; give intramuscular benztropine or diphenhydramine and lower haloperidol dose.",
-   "What is the key feature that distinguishes a somatic delusion from a hypochondriacal disorder? — Somatic delusion is a fixed false belief with no basis, whereas hypochondriasis involves excessive health anxiety with some reality‑based concerns.",
-   "Explain why a grandiose delusion may mask poor insight. — Patients view themselves as superior, so they deny illness and refuse treatment, leading to delayed care.",
-   "A refugee child says staff are trying to kill him. What safety measures should be taken? — Ensure constant observation, involve mental health team, and assess for trauma‑related psychosis; keep environment calm and safe.",
-   "What molecular lesion causes sickle cell disease? — A single‑base substitution (GAG → GTG) in the β‑globin gene causing a glutamic acid to valine change (missense mutation).",
-   "What type of bias arises when online forms with validation checks are used to reduce missing data? — Selection bias, because only clinicians with internet access and time may respond.",
-   "What research impact is described by presenting findings to hospital management to influence scheduling policies? — Policy impact – the research informs organisational decision‑making.",
-   "Which fusion protein results from the Philadelphia chromosome in CML and what activity does it have? — BCR‑ABL fusion with constitutive tyrosine‑kinase activity.",
-   "List the five classic delusional themes using the standard mnemonic. — Persecutory, Grandiose, Somatic, Jealous, Erotomanic (P‑G‑S‑J‑E).",
-   "How do you differentiate Cotard syndrome from severe depression? — Cotard includes nihilistic delusions of non‑existence, whereas depression may have guilt but retains reality testing."
-  ],
-  "model": "openai/gpt-oss-20b",
-  "generatedAt": "2026-11-16",
-  "checked": "2026-11-16"
- }
+ "generatedAt": "2026-11-24",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-3.5-flash-lite",
+  "reviewedAt": "2026-11-24",
+  "fixRounds": 0
+ },
+ "reviewed": false
 }
