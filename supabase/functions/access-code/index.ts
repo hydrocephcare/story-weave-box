@@ -58,7 +58,7 @@ serve(async (req) => {
       // Masked summary for the admin dashboard — never returns full codes.
       const { data } = await supabase
         .from("access_grants")
-        .select("code, plan, amount, expires_at, redeem_count, created_at")
+        .select("code, plan, amount, currency, expires_at, redeem_count, created_at")
         .order("created_at", { ascending: false })
         .limit(25);
       return json({
@@ -66,6 +66,7 @@ serve(async (req) => {
           code: String(g.code).slice(0, 3) + "•••" + String(g.code).slice(-3),
           plan: g.plan,
           amount: g.amount,
+          currency: g.currency || "KES",
           expires_at: g.expires_at,
           redeem_count: g.redeem_count,
         })),
@@ -139,6 +140,7 @@ serve(async (req) => {
         code: grant.code,
         plan: grant.plan,
         amount: grant.amount,
+        currency: grant.currency || "KES",
         expires_at: grant.expires_at,
         expired: new Date(String(grant.expires_at)).getTime() < Date.now(),
         allow_download: grant.allow_download !== false,
@@ -251,6 +253,7 @@ serve(async (req) => {
             payment_id: payment.id,
             phone_number: payment.phone_number,
             amount: Number(payment.amount || 0),
+            currency: String(payment.currency || "KES").toUpperCase(),
             allow_download: plan.download !== false,
             email: emailIn,
             user_id: userIdIn,
