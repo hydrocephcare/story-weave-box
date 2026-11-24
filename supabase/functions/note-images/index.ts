@@ -161,6 +161,28 @@ serve(async (req) => {
       ...String(a.content || "").matchAll(/<img\b[^>]*?src=["'](https?:\/\/[^"']+)["']/gi),
     ].map((m) => m[1]);
     const used = new Set(existingImageUrls.map(imageKey).filter(Boolean));
+    // Keep automatically sourced Commons images unique across published notes,
+    // not just within the current article. Query only notes that already contain
+    // a Commons URL so this remains a small, targeted lookup.
+    const { data: otherImageRows } = await supabase
+      .from("articles")
+      .select("content")
+      .eq("published", true)
+      .is("deleted_at", null)
+      .neq("id", a.id)
+      .like("content", "%upload.wikimedia.org%")
+      .limit(1000);
+    for (const row of otherImageRows ?? []) {
+      const content = String((row as { content?: string }).content || "");
+      const urls = [
+        ...content.matchAll(/!\\[[^\\]]*\\]\\((https?:\\/\\/[^)\\s]+)[^)]*\\)/gi),
+        ...content.matchAll(/<img\\b[^>]*?src=["'](https?:\\/\\/[^"']+)["']/gi),
+      ];
+      for (const match of urls) {
+        const key = imageKey(match[1]);
+        if (key) used.add(key);
+      }
+    }
     let aiDown = false;
     const trace: string[] = [];
     // pass 1, no guessing: a heading or a bold term that is exactly the name of a Wikipedia article gets that article's own lead picture (placed in the section it came from)
