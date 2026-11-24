@@ -50,7 +50,7 @@ export async function savePrices(p: Partial<Prices>): Promise<void> {
 }
 
 export const kes = (n: number) => `KES ${Math.round(n).toLocaleString("en-KE")}`;
-export const money = (n: number, currency = "KES") => currency.toUpperCase() === "USD" ? `${Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : kes(n);
+export const money = (n: number, currency = "KES") => currency.toUpperCase() === "USD" ? "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : kes(n);
 
 /** One short text of the money position, for the admin assistant. */
 export async function billingReport(): Promise<string> {

@@ -149,7 +149,7 @@ export function Paywall({
   const amountForPlan = (p: AccessPlan) => !pricingCountryReady ? 0 : pricingCountry === "KE" ? Number(p.price || settings.price || 150) : Number(p.internationalPrice ?? 21);
   const formatPlanAmount = (p: AccessPlan) => !pricingCountryReady ? "Checking your location…" : currency === "KES"
     ? `KES ${amountForPlan(p).toLocaleString("en-KE")}`
-    : `${amountForPlan(p).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    : "$" + amountForPlan(p).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   const pollPayment = async (transactionId: string, selectedPlanId = plan.id) => {
     for (let i = 0; i < 40; i++) {
