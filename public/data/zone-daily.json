@@ -1,376 +1,259 @@
 {
- "date": "2026-11-23",
+ "date": "2026-11-24",
  "games": [
   {
-   "id": "2026-11-23-1",
-   "title": "Comprehensive Guide to Nutrient Digestion and Absorption: quick quiz",
+   "id": "2026-11-24-1",
+   "title": "The Heme and Liver: quick quiz",
    "game": "quiz",
-   "topic": "Comprehensive Guide to Nutrient Digestion and Absorption",
+   "topic": "The Heme and Liver",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which enzyme is primarily responsible for the hydrolysis of disaccharides into monosaccharides in the small intestine lumen?",
+      "q": "Which of the following is the primary site of heme synthesis in adults?",
       "options": [
-       "Sucrase",
-       "Pepsin",
-       "Trypsin",
-       "Lipase"
+       "Bone marrow",
+       "Liver",
+       "Spleen",
+       "Kidney"
       ],
       "correct": 0,
-      "explanation": "Sucrase, along with other brush‑border enzymes such as lactase and maltase, cleaves disaccharides into monosaccharides for absorption.",
+      "explanation": "In adults, about 85 % of heme synthesis occurs in the bone marrow, with the liver accounting for the remainder.",
       "ai": true,
       "kind": "mcq"
      },
      {
-      "q": "The majority of amino acid absorption occurs in which segment of the small intestine?",
+      "q": "What is the most common cause of acute hepatic failure in patients with chronic alcoholism?",
       "options": [
-       "Duodenum",
-       "Jejunum",
-       "Ileum",
-       "Stomach"
-      ],
-      "correct": 1,
-      "explanation": "The jejunum contains the highest density of transporters for amino acids, accounting for most absorption.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which transporter mediates sodium‑dependent glucose uptake in enterocytes?",
-      "options": [
-       "SGLT1",
-       "GLUT4",
-       "GLUT2",
-       "SGLT2"
-      ],
-      "correct": 0,
-      "explanation": "SGLT1 couples glucose transport with Na⁺ influx across the apical membrane of enterocytes.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Chylomicron formation occurs in which cellular compartment?",
-      "options": [
-       "Endoplasmic reticulum",
-       "Golgi apparatus",
-       "Mitochondria",
-       "Lysosome"
-      ],
-      "correct": 0,
-      "explanation": "Chylomicrons are assembled in the smooth endoplasmic reticulum and then packaged into secretory vesicles that travel to the Golgi for further processing.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which hormone stimulates gastric acid secretion by parietal cells?",
-      "options": [
-       "Gastrin",
-       "Secretin",
-       "Cholecystokinin",
-       "Motilin"
-      ],
-      "correct": 0,
-      "explanation": "Gastrin binds to G‑protein coupled receptors on parietal cells, promoting H⁺ secretion.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following is NOT a function of the ileocecal valve?",
-      "options": [
-       "Prevent reflux of colonic contents",
-       "Regulate flow of chyme into colon",
-       "Facilitate bile acid reabsorption",
-       "Increase intestinal motility"
-      ],
-      "correct": 3,
-      "explanation": "The valve controls flow and prevents reflux; it does not directly increase motility.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which transporter is responsible for the uptake of bile acids in the ileum?",
-      "options": [
-       "ASBT",
-       "SGLT1",
-       "PEPT1",
-       "CFTR"
-      ],
-      "correct": 0,
-      "explanation": "The apical sodium‑dependent bile acid transporter (ASBT) mediates ileal bile acid absorption.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which enzyme is secreted by pancreatic acinar cells and is essential for the digestion of proteins?",
-      "options": [
-       "Trypsinogen",
-       "Chymotrypsinogen",
-       "Pepsinogen",
-       "Lipase"
-      ],
-      "correct": 0,
-      "explanation": "Trypsinogen is activated to trypsin in the duodenum, initiating proteolysis.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "What is the primary site for the absorption of water and electrolytes in the gastrointestinal tract?",
-      "options": [
-       "Duodenum",
-       "Jejunum",
-       "Ileum",
-       "Colon"
-      ],
-      "correct": 3,
-      "explanation": "The colon absorbs the majority of water and electrolytes from the remaining chyme.",
-      "ai": true,
-      "kind": "mcq"
-     },
-     {
-      "q": "Which of the following best describes the mechanism of vitamin B12 absorption?",
-      "options": [
-       "Passive diffusion across enterocytes",
-       "Active transport via intrinsic factor",
-       "Endocytosis by M cells",
-       "Facilitated diffusion through GLUT transporters"
-      ],
-      "correct": 1,
-      "explanation": "Vitamin B12 binds intrinsic factor and is absorbed in the terminal ileum via receptor‑mediated endocytosis.",
-      "ai": true,
-      "kind": "mcq"
-     }
-    ],
-    "reviewModel": "gemini-3.5-flash-lite"
-   }
-  },
-  {
-   "id": "2026-11-23-2",
-   "title": "Hematopathology: case showdown",
-   "game": "case",
-   "topic": "Hematopathology",
-   "year": 3,
-   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
-   "questions": {
-    "questions": [
-     {
-      "q": "A 45‑year‑old woman presents with fatigue, pallor, and easy bruising. CBC shows hemoglobin 8.2 g/dL, platelets 45 × 10⁹/L, and a peripheral smear with anisocytosis and occasional schistocytes. Bone marrow aspirate reveals a hypercellular marrow with a 30% population of large blasts that are CD34+, CD117+, and TdT+. What is the most likely diagnosis?",
-      "options": [
-       "Acute lymphoblastic leukemia",
-       "Acute myeloid leukemia",
-       "Myelodysplastic syndrome",
-       "Chronic myeloid leukemia"
-      ],
-      "correct": 0,
-      "explanation": "CD34+, CD117+, TdT+ blasts in a 45‑year‑old with pancytopenia point to B‑cell ALL.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 60‑year‑old man has a history of chronic lymphocytic leukemia (CLL) and now presents with a sudden drop in hemoglobin from 12.5 to 8.0 g/dL and a platelet count of 30 × 10⁹/L. Peripheral smear shows numerous schistocytes and a few spherocytes. What is the next best step in management?",
-      "options": [
-       "Start high‑dose steroids",
-       "Order a coagulation panel for DIC",
-       "Obtain a CT scan of the abdomen",
-       "Perform a splenic ultrasound"
-      ],
-      "correct": 1,
-      "explanation": "The picture suggests microangiopathic hemolytic anemia; a coagulation panel for DIC is indicated.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 28‑year‑old woman presents with fever, night sweats, and a palpable left axillary lymph node. Excisional biopsy shows sheets of large atypical lymphoid cells that are CD20+, CD10+, BCL6+, and MUM1−. Ki‑67 is 90%. What is the most likely diagnosis?",
-      "options": [
-       "Diffuse large B‑cell lymphoma, germinal center type",
-       "Follicular lymphoma",
-       "Burkitt lymphoma",
-       "Hodgkin lymphoma"
-      ],
-      "correct": 0,
-      "explanation": "CD10+, BCL6+, high Ki‑67, and CD20+ indicate DLBCL, germinal center type.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 70‑year‑old man with a history of hypertension presents with sudden onset of severe headache and vomiting. CT head shows a subarachnoid hemorrhage. Lumbar puncture reveals xanthochromia and a platelet count of 80 × 10⁹/L. Which of the following is the most likely underlying hematologic disorder?",
-      "options": [
-       "Immune thrombocytopenic purpura",
-       "Essential thrombocythemia",
-       "Acquired von Willebrand disease",
-       "Platelet‑derived microangiopathy"
+       "Acetaminophen toxicity",
+       "Viral hepatitis B",
+       "Alcoholic hepatitis",
+       "Ischemic hepatitis"
       ],
       "correct": 2,
-      "explanation": "Acquired von Willebrand disease can cause spontaneous bleeding and thrombocytopenia.",
+      "explanation": "Alcoholic hepatitis is the leading cause of acute hepatic failure among chronic alcohol users.",
       "ai": true,
-      "kind": "case"
+      "kind": "mcq"
      },
      {
-      "q": "A 35‑year‑old man presents with painless splenomegaly and a peripheral smear showing numerous circulating nucleated red blood cells and a mild leukocytosis. Flow cytometry of the peripheral blood shows a population of CD34+, CD117+, and CD33+ cells. What is the most likely diagnosis?",
+      "q": "Which enzyme deficiency leads to porphyria cutanea tarda, characterized by photosensitivity and blistering?",
       "options": [
-       "Acute myeloid leukemia",
-       "Chronic myelogenous leukemia in blast phase",
-       "Polycythemia vera",
-       "Essential thrombocythemia"
+       "ALA synthase",
+       "Porphobilinogen deaminase",
+       "Uroporphyrinogen decarboxylase",
+       "Coproporphyrinogen oxidase"
+      ],
+      "correct": 2,
+      "explanation": "Uroporphyrinogen decarboxylase deficiency causes porphyria cutanea tarda.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "In the context of liver function tests, a markedly elevated alanine aminotransferase (ALT) with a normal alkaline phosphatase (ALP) most likely indicates:",
+      "options": [
+       "Cholestasis",
+       "Acute hepatocellular injury",
+       "Portal hypertension",
+       "Hepatic steatosis"
+      ],
+      "correct": 1,
+      "explanation": "ALT elevation with normal ALP suggests hepatocellular injury rather than cholestasis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following is NOT a typical feature of Wilson disease?",
+      "options": [
+       "Kayser-Fleischer rings",
+       "Coombs-negative hemolytic anemia",
+       "Low ceruloplasmin",
+       "Elevated serum alkaline phosphatase"
+      ],
+      "correct": 3,
+      "explanation": "Elevated serum alkaline phosphatase is not a classic feature of Wilson disease; the disease is characterized by Kayser‑Fleischer rings, hemolytic anemia, and low ceruloplasmin.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "The most sensitive laboratory test for detecting acute hepatic necrosis is:",
+      "options": [
+       "Serum AST",
+       "Serum ALT",
+       "Serum bilirubin",
+       "Serum alkaline phosphatase"
+      ],
+      "correct": 1,
+      "explanation": "Serum ALT rises earlier and is more specific for hepatocellular necrosis.",
+      "ai": true,
+      "kind": "mcq"
+     },
+     {
+      "q": "Which of the following best explains the mechanism of bilirubin conjugation in the liver?",
+      "options": [
+       "Oxidative addition of glucuronic acid",
+       "Reduction of bilirubin to biliverdin",
+       "Methylation of bilirubin",
+       "Phosphorylation of bilirubin"
       ],
       "correct": 0,
-      "explanation": "CD34+, CD117+, CD33+ blasts in a 35‑year‑old with splenomegaly point to AML.",
+      "explanation": "Hepatocytes conjugate bilirubin with glucuronic acid via UDP‑glucuronosyltransferase.",
       "ai": true,
-      "kind": "case"
+      "kind": "mcq"
      },
      {
-      "q": "A 55‑year‑old woman with a history of rheumatoid arthritis presents with anemia (Hb 9.5 g/dL) and thrombocytopenia (platelets 90 × 10⁹/L). Peripheral smear shows schistocytes and a few spherocytes. Which laboratory test would most help confirm the diagnosis?",
+      "q": "In a patient with chronic hepatitis C, which of the following is the most appropriate first‑line antiviral therapy?",
       "options": [
-       "Serum haptoglobin",
-       "Coombs test",
-       "Reticulocyte count",
-       "Peripheral smear for schistocytes"
+       "Pegylated interferon plus ribavirin",
+       "Sofosbuvir plus ledipasvir",
+       "Daclatasvir plus asunaprevir",
+       "Interferon monotherapy"
       ],
       "correct": 1,
-      "explanation": "A positive Coombs test would confirm autoimmune hemolytic anemia.",
+      "explanation": "Sofosbuvir plus ledipasvir is a highly effective direct‑acting antiviral regimen for HCV.",
       "ai": true,
-      "kind": "case"
+      "kind": "mcq"
      },
      {
-      "q": "A 42‑year‑old man presents with fever, night sweats, and weight loss. A lymph node biopsy shows a proliferation of small lymphocytes with a starry‑sky appearance and a high Ki‑67 index. Immunohistochemistry is positive for CD20, CD10, and BCL6. What is the most likely diagnosis?",
+      "q": "Which of the following is a major risk factor for developing hepatocellular carcinoma in a patient with cirrhosis?",
       "options": [
-       "Follicular lymphoma",
-       "Burkitt lymphoma",
-       "Mantle cell lymphoma",
-       "Diffuse large B‑cell lymphoma"
+       "Chronic hepatitis B infection",
+       "Alcoholic liver disease",
+       "Non‑alcoholic fatty liver disease",
+       "All of the above"
       ],
-      "correct": 1,
-      "explanation": "Starry‑sky, high Ki‑67, CD10+, BCL6+ = Burkitt lymphoma.",
+      "correct": 3,
+      "explanation": "All listed conditions are independent risk factors for HCC in cirrhosis.",
       "ai": true,
-      "kind": "case"
+      "kind": "mcq"
      },
      {
-      "q": "A 50‑year‑old woman with a history of systemic lupus erythematosus presents with a sudden drop in hemoglobin and a platelet count of 25 × 10⁹/L. Peripheral smear shows schistocytes and a few spherocytes. Which of the following is the most appropriate next step?",
+      "q": "The ratio of prothrombin time (PT) to international normalized ratio (INR) is used to monitor which of the following treatments?",
       "options": [
-       "Start high‑dose methylprednisolone",
-       "Order a coagulation panel for DIC",
-       "Administer intravenous immunoglobulin",
-       "Give platelet transfusion"
+       "Vitamin K deficiency",
+       "Warfarin therapy",
+       "Heparin therapy",
+       "Antiplatelet therapy"
       ],
       "correct": 1,
-      "explanation": "The presentation suggests TTP/DIC; a coagulation panel is the next step.",
+      "explanation": "PT/INR monitoring is essential for patients on warfarin to maintain therapeutic anticoagulation.",
       "ai": true,
-      "kind": "case"
+      "kind": "mcq"
      }
     ],
     "reviewModel": "gemini-3.5-flash-lite"
    }
   },
   {
-   "id": "2026-11-23-3",
-   "title": "Cerebral Palsy: case showdown",
+   "id": "2026-11-24-2",
+   "title": "Chemicals and pesticides: case showdown",
    "game": "case",
-   "topic": "Cerebral Palsy",
+   "topic": "Chemicals and pesticides",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "A 3‑year‑old boy presents with a stiff, spastic gait and a tendency to fall to the left when walking. He has a normal head circumference and no visual or hearing impairment. What is the most likely type of cerebral palsy?",
+      "q": "A 42‑year‑old woman presents with a 3‑day history of nausea, vomiting, and a metallic taste. She reports that she was gardening yesterday and used a commercial herbicide containing glyphosate. Examination shows mild tachycardia and a dry mucous membrane. What is the most likely diagnosis?",
       "options": [
-       "Spastic diplegia",
-       "Spastic hemiplegia",
-       "Spastic quadriplegia",
-       "Ataxic"
+       "A. Acute glyphosate poisoning",
+       "B. Acute organophosphate poisoning",
+       "C. Acute carbamate poisoning",
+       "D. Acute paraquat poisoning"
+      ],
+      "correct": 0,
+      "explanation": "Glyphosate causes GI upset and metallic taste; organophosphates give cholinergic signs.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 27‑year‑old farmer develops sudden onset of muscle weakness, difficulty swallowing, and a dry cough after handling a spray containing chlorpyrifos. His pupils are pinpoint. Which antidote should be administered first?",
+      "options": [
+       "A. Atropine",
+       "B. Pralidoxime",
+       "C. Naloxone",
+       "D. Activated charcoal"
+      ],
+      "correct": 0,
+      "explanation": "Organophosphate toxicity is treated first with atropine to counter muscarinic effects.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 55‑year‑old man presents with a 2‑week history of fatigue, weight loss, and a diffuse rash. He works in a pesticide factory and reports frequent exposure to organochlorine pesticides. Which laboratory finding would most support the diagnosis of chronic organochlorine poisoning?",
+      "options": [
+       "A. Elevated serum cholinesterase",
+       "B. Low serum cholinesterase",
+       "C. Elevated serum acetylcholinesterase",
+       "D. Low serum acetylcholinesterase"
       ],
       "correct": 1,
-      "explanation": "Spastic hemiplegia presents with unilateral spasticity and gait deviation.",
+      "explanation": "Chronic organochlorine exposure leads to low serum cholinesterase levels.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 6‑month‑old girl has a high arched palate, microcephaly, and a floppiness that improves with age. She also has a mild intellectual disability. Which underlying cause is most likely?",
+      "q": "A 35‑year‑old woman presents with sudden onset of severe headache, vomiting, and a left-sided hemiparesis. She reports that she was applying a pesticide containing paraquat to her garden 12 hours ago. What is the next best step in management?",
       "options": [
-       "Periventricular leukomalacia",
-       "Intrauterine infection",
-       "Hypoxic‑ischemic encephalopathy",
-       "Congenital Zika virus infection"
-      ],
-      "correct": 3,
-      "explanation": "Zika infection is associated with microcephaly and spastic CP.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 4‑year‑old boy with spastic quadriplegia has a normal MRI but shows increased muscle tone in all four limbs and a positive Babinski sign. What is the next best step in management?",
-      "options": [
-       "Start physiotherapy",
-       "Order a CT scan",
-       "Prescribe antispasticity medication",
-       "Refer for orthopedic surgery"
+       "A. Immediate whole‑body decontamination and supportive care",
+       "B. Administer pralidoxime",
+       "C. Give intravenous methylprednisolone",
+       "D. Initiate hemodialysis"
       ],
       "correct": 0,
-      "explanation": "Early physiotherapy is essential for all CP patients.",
+      "explanation": "Paraquat causes pulmonary toxicity; early decontamination and supportive care are essential.",
       "ai": true,
       "kind": "case"
      },
      {
-      "q": "A 2‑year‑old girl with spastic hemiplegia has a normal head circumference but shows a right‑sided spasticity and a left‑sided weakness. Which brain region is most likely damaged?",
+      "q": "A 60‑year‑old man presents with a 1‑month history of progressive memory loss and gait instability. He works as a pesticide applicator and has been exposed to organophosphates for 30 years. Which imaging finding is most characteristic of chronic organophosphate neurotoxicity?",
       "options": [
-       "Left basal ganglia",
-       "Right basal ganglia",
-       "Left cerebellum",
-       "Right cerebellum"
-      ],
-      "correct": 0,
-      "explanation": "Left hemisphere lesions cause right‑sided spasticity.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 5‑year‑old boy with spastic diplegia has a normal developmental milestone progression but shows a pronounced gait abnormality. Which imaging modality would best confirm the diagnosis?",
-      "options": [
-       "CT scan",
-       "MRI",
-       "Ultrasound of the brain",
-       "X‑ray of the spine"
-      ],
-      "correct": 1,
-      "explanation": "MRI is the gold standard for detecting periventricular leukomalacia.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 7‑year‑old girl with spastic quadriplegia has a normal intelligence quotient but exhibits severe speech delay. Which therapy is most likely to improve her speech?",
-      "options": [
-       "Speech‑language therapy",
-       "Occupational therapy",
-       "Physical therapy",
-       "Botulinum toxin injections"
-      ],
-      "correct": 0,
-      "explanation": "Speech‑language therapy targets speech delays in CP.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 3‑year‑old boy with spastic hemiplegia has a normal head circumference but shows a prominent left‑sided spasticity. Which of the following is the most common cause of his condition?",
-      "options": [
-       "Perinatal hypoxia",
-       "Congenital infection",
-       "Traumatic brain injury",
-       "Genetic mutation"
-      ],
-      "correct": 0,
-      "explanation": "Perinatal hypoxia is the most common cause of hemiplegic CP.",
-      "ai": true,
-      "kind": "case"
-     },
-     {
-      "q": "A 4‑year‑old girl with spastic diplegia has a normal MRI but shows increased muscle tone in the lower limbs. Which medication is most appropriate to reduce spasticity?",
-      "options": [
-       "Diazepam",
-       "Clonazepam",
-       "Tizanidine",
-       "Phenobarbital"
+       "A. Bilateral basal ganglia hyperintensity on T2 MRI",
+       "B. Diffuse cortical atrophy on CT",
+       "C. White matter hyperintensities on MRI",
+       "D. Normal imaging"
       ],
       "correct": 2,
-      "explanation": "Tizanidine is a selective alpha‑2 agonist used for spasticity in CP.",
+      "explanation": "Chronic organophosphate exposure is associated with white matter changes.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 22‑year‑old woman presents with burning pain in her eyes, throat, and skin after handling a new pesticide product. Her pupils are dilated and she has a dry cough. Which of the following is the most appropriate initial treatment?",
+      "options": [
+       "A. Atropine",
+       "B. Pralidoxime",
+       "C. Activated charcoal",
+       "D. Antihistamine"
+      ],
+      "correct": 0,
+      "explanation": "Organophosphate poisoning presents with muscarinic symptoms; atropine is first line.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 48‑year‑old man presents with a 2‑day history of abdominal pain, diarrhea, and a metallic taste. He reports that he cleaned a pesticide container with a solvent. Which laboratory test would most likely be abnormal?",
+      "options": [
+       "A. Serum potassium elevated",
+       "B. Serum calcium low",
+       "C. Serum magnesium low",
+       "D. Serum sodium low"
+      ],
+      "correct": 0,
+      "explanation": "Organophosphate poisoning can cause hyperkalemia due to cellular leakage.",
+      "ai": true,
+      "kind": "case"
+     },
+     {
+      "q": "A 30‑year‑old woman presents with sudden onset of blurred vision, headache, and a metallic taste after using a new herbicide. Her pupils are normal. Which of the following is the most likely diagnosis?",
+      "options": [
+       "A. Acute glyphosate poisoning",
+       "B. Acute organophosphate poisoning",
+       "C. Acute carbamate poisoning",
+       "D. Acute paraquat poisoning"
+      ],
+      "correct": 0,
+      "explanation": "Glyphosate exposure causes metallic taste and GI symptoms without cholinergic signs.",
       "ai": true,
       "kind": "case"
      }
@@ -379,115 +262,232 @@
    }
   },
   {
-   "id": "2026-11-23-4",
-   "title": "Master pharmacology: drug duel",
+   "id": "2026-11-24-3",
+   "title": "Post-operative Care and Complications of Surgery: drug duel",
    "game": "drug",
-   "topic": "Master pharmacology",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "topic": "Post-operative Care and Complications of Surgery",
+   "year": 4,
+   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
    "questions": {
     "questions": [
      {
-      "q": "Which class of drug is theophylline classified as?",
+      "q": "Which drug is most commonly used to prevent postoperative nausea and vomiting in patients undergoing laparoscopic cholecystectomy?",
       "options": [
-       "A. Beta‑blocker",
-       "B. Anticholinergic",
-       "C. Methylxanthine",
-       "D. Calcium channel blocker"
-      ],
-      "correct": 2,
-      "explanation": "Theophylline is a methylxanthine bronchodilator.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the primary mechanism of action of amiodarone?",
-      "options": [
-       "A. Sodium channel blockade",
-       "B. Potassium channel blockade",
-       "C. Calcium channel blockade",
-       "D. Beta‑adrenergic blockade"
-      ],
-      "correct": 0,
-      "explanation": "Amiodarone blocks cardiac sodium channels, prolonging the action potential.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug is most commonly used as a first‑line treatment for acute asthma exacerbation?",
-      "options": [
-       "A. Salmeterol",
-       "B. Ipratropium bromide",
-       "C. Albuterol",
-       "D. Montelukast"
-      ],
-      "correct": 2,
-      "explanation": "Albuterol, a short‑acting β2‑agonist, is first‑line for acute asthma.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the characteristic side effect of clopidogrel that can lead to bleeding?",
-      "options": [
-       "A. Hypertension",
-       "B. Rash",
-       "C. Bleeding",
-       "D. Hyperglycemia"
-      ],
-      "correct": 2,
-      "explanation": "Clopidogrel increases bleeding risk due to platelet inhibition.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug class is used to treat hypertension by blocking the renin‑angiotensin system?",
-      "options": [
-       "A. ACE inhibitors",
-       "B. Beta‑blockers",
-       "C. Loop diuretics",
-       "D. Calcium channel blockers"
-      ],
-      "correct": 0,
-      "explanation": "ACE inhibitors block the renin‑angiotensin system to lower BP.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the main indication for the drug rivaroxaban?",
-      "options": [
-       "A. Deep vein thrombosis prophylaxis",
-       "B. Hypertension",
-       "C. Diabetes mellitus",
-       "D. Asthma"
-      ],
-      "correct": 0,
-      "explanation": "Rivaroxaban is an oral factor Xa inhibitor used for DVT prophylaxis.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "Which drug is known for causing a blue‑black discoloration of the skin?",
-      "options": [
-       "A. Hydroxychloroquine",
-       "B. Isoniazid",
-       "C. Chlorpromazine",
-       "D. Metronidazole"
-      ],
-      "correct": 2,
-      "explanation": "Chlorpromazine can cause a blue‑black skin discoloration.",
-      "ai": true,
-      "kind": "drug"
-     },
-     {
-      "q": "What is the mechanism of action of levothyroxine?",
-      "options": [
-       "A. Inhibition of thyroid hormone synthesis",
-       "B. Replacement of deficient thyroid hormone",
-       "C. Stimulation of TSH release",
-       "D. Blockade of peripheral conversion of T4 to T3"
+       "A) Metoclopramide",
+       "B) Ondansetron",
+       "C) Promethazine",
+       "D) Dexamethasone"
       ],
       "correct": 1,
-      "explanation": "Levothyroxine replaces missing thyroid hormone in hypothyroidism.",
+      "explanation": "Ondansetron, a 5‑HT3 antagonist, is the first‑line antiemetic for postoperative nausea and vomiting.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the mechanism of action of tranexamic acid in reducing postoperative bleeding after cardiac surgery?",
+      "options": [
+       "A) Inhibition of platelet aggregation",
+       "B) Inhibition of fibrinolysis by lysine‑binding to plasminogen",
+       "C) Activation of the coagulation cascade",
+       "D) Direct inhibition of thrombin"
+      ],
+      "correct": 1,
+      "explanation": "Tranexamic acid blocks lysine sites on plasminogen, preventing fibrin clot breakdown.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is indicated for prophylaxis against deep vein thrombosis in patients after hip replacement surgery?",
+      "options": [
+       "A) Aspirin",
+       "B) Enoxaparin",
+       "C) Warfarin",
+       "D) Clopidogrel"
+      ],
+      "correct": 1,
+      "explanation": "Low‑molecular‑weight heparin (enoxaparin) is the standard prophylaxis for DVT after hip arthroplasty.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the characteristic side effect of cefazolin when used for prophylaxis in abdominal surgery?",
+      "options": [
+       "A) Hypersensitivity rash",
+       "B) Nephrotoxicity",
+       "C) Ototoxicity",
+       "D) Hemolytic anemia"
+      ],
+      "correct": 0,
+      "explanation": "Cefazolin can cause a type I hypersensitivity rash, especially in patients with a β‑lactam allergy.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is most appropriate to treat postoperative pain after thoracotomy when the patient has a history of asthma?",
+      "options": [
+       "A) Morphine",
+       "B) Hydromorphone",
+       "C) Fentanyl",
+       "D) Ketorolac"
+      ],
+      "correct": 2,
+      "explanation": "Fentanyl is a short‑acting opioid with minimal respiratory depression, suitable for asthmatic patients.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the main indication for administering dexamethasone intraoperatively in patients undergoing major abdominal surgery?",
+      "options": [
+       "A) Reduce postoperative nausea and vomiting",
+       "B) Prevent anaphylaxis",
+       "C) Treat postoperative pain",
+       "D) Reduce postoperative edema and inflammation"
+      ],
+      "correct": 3,
+      "explanation": "Dexamethasone decreases postoperative inflammation and edema, improving recovery.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is contraindicated in patients with a history of pancreatitis undergoing postoperative care after pancreaticoduodenectomy?",
+      "options": [
+       "A) Acetaminophen",
+       "B) Ibuprofen",
+       "C) Ketorolac",
+       "D) Naproxen"
+      ],
+      "correct": 2,
+      "explanation": "Ketorolac, a potent NSAID, can precipitate pancreatitis and is contraindicated.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the mechanism of action of droperidol in preventing postoperative nausea and vomiting?",
+      "options": [
+       "A) Dopamine D2 receptor antagonist",
+       "B) 5‑HT3 receptor antagonist",
+       "C) Opioid receptor antagonist",
+       "D) Histamine H1 receptor antagonist"
+      ],
+      "correct": 0,
+      "explanation": "Droperidol blocks dopamine D2 receptors in the chemoreceptor trigger zone, reducing nausea.",
+      "ai": true,
+      "kind": "drug"
+     }
+    ],
+    "reviewModel": "gemini-3.5-flash-lite"
+   }
+  },
+  {
+   "id": "2026-11-24-4",
+   "title": "Anemia of Inadequate production: drug duel",
+   "game": "drug",
+   "topic": "Anemia of Inadequate production",
+   "year": 4,
+   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
+   "questions": {
+    "questions": [
+     {
+      "q": "Which drug is most commonly used to treat iron‑deficiency anemia in children with inadequate erythropoiesis?",
+      "options": [
+       "A. Ferrous sulfate",
+       "B. Hydroxyurea",
+       "C. Erythropoietin",
+       "D. Vitamin B12"
+      ],
+      "correct": 0,
+      "explanation": "Ferrous sulfate is the first‑line oral iron supplement for iron‑deficiency anemia.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the primary mechanism of action of recombinant human erythropoietin in treating anemia of inadequate production?",
+      "options": [
+       "A. Stimulates iron absorption in the gut",
+       "B. Increases red cell survival by inhibiting apoptosis",
+       "C. Stimulates erythroid progenitor proliferation in the bone marrow",
+       "D. Enhances hemoglobin oxygen affinity"
+      ],
+      "correct": 2,
+      "explanation": "Erythropoietin binds to erythroid progenitors, promoting their proliferation and differentiation.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which side effect is most characteristic of high‑dose iron therapy in children?",
+      "options": [
+       "A. Hyperpigmentation of skin",
+       "B. Hypothyroidism",
+       "C. Iron overload leading to hepatotoxicity",
+       "D. Nephrocalcinosis"
+      ],
+      "correct": 2,
+      "explanation": "Excess iron can accumulate in the liver, causing hepatotoxicity and cirrhosis.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is indicated for anemia of chronic disease in children when iron therapy is ineffective?",
+      "options": [
+       "A. Ferrous gluconate",
+       "B. Erythropoietin",
+       "C. Vitamin C",
+       "D. Folic acid"
+      ],
+      "correct": 1,
+      "explanation": "Erythropoietin is used when iron deficiency is not the cause of anemia.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the most common adverse effect of hydroxyurea used in sickle cell disease?",
+      "options": [
+       "A. Myelosuppression",
+       "B. Hyperglycemia",
+       "C. Alopecia",
+       "D. Hypertension"
+      ],
+      "correct": 0,
+      "explanation": "Hydroxyurea can cause dose‑dependent myelosuppression.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which vitamin deficiency can lead to megaloblastic anemia in children?",
+      "options": [
+       "A. Vitamin B6",
+       "B. Vitamin B12",
+       "C. Vitamin A",
+       "D. Vitamin D"
+      ],
+      "correct": 1,
+      "explanation": "Vitamin B12 deficiency causes megaloblastic anemia due to impaired DNA synthesis.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "Which drug is used to treat anemia of chronic kidney disease in children when erythropoietin therapy fails?",
+      "options": [
+       "A. L-thyroxine",
+       "B. Erythropoietin",
+       "C. Recombinant human erythropoietin analog",
+       "D. Iron dextran"
+      ],
+      "correct": 2,
+      "explanation": "Recombinant human erythropoietin analogs (e.g., darbepoetin) are used when standard erythropoietin is ineffective.",
+      "ai": true,
+      "kind": "drug"
+     },
+     {
+      "q": "What is the main indication for folic acid supplementation in paediatric anemia?",
+      "options": [
+       "A. Treating iron‑deficiency anemia",
+       "B. Correcting folate‑deficiency anemia",
+       "C. Reducing hemolysis in sickle cell disease",
+       "D. Enhancing iron absorption"
+      ],
+      "correct": 1,
+      "explanation": "Folic acid is indicated for folate‑deficiency anemia, which can cause macrocytosis.",
       "ai": true,
       "kind": "drug"
      }
