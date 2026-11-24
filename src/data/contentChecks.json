@@ -808,16 +808,16 @@
    "lastAttempt": "2026-11-17T10:45:55.522Z"
   },
   "heart-murmurs": {
-   "hash": "cc8c381be64e",
+   "hash": "70baef5f2970",
    "validated": true,
    "high": 0,
    "medium": 0,
    "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "auto-repaired",
-   "repairAttempts": 3,
-   "lastAttempt": "2026-11-23T10:33:56.523Z"
+   "repairAttempts": 4,
+   "lastAttempt": "2026-11-24T12:22:14.161Z"
   },
   "heart-failure-which-tests": {
    "hash": "2e04c59e34cf",
@@ -1323,15 +1323,15 @@
     {
      "severity": "high",
      "where": "IV lactulose, aggressive infection control",
-     "problem": "Lactulose is never administered intravenously; it is a non-absorbable disaccharide meant solely for oral or rectal use.",
-     "fix": "Oral or rectal (enema) lactulose, aggressive infection control."
+     "problem": "Lactulose is never administered intravenously as it can cause severe, life-threatening complications and is strictly for oral or enteral use.",
+     "fix": "Oral or nasogastric lactulose, aggressive infection control"
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:39:26.857Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:23:38.004Z"
   },
   "ibd": {
    "hash": "e988b70c4e2b",
@@ -1343,16 +1343,23 @@
    "at": "2026-11-06"
   },
   "hrs": {
-   "hash": "6f6cc37eb9f9",
-   "validated": true,
-   "high": 0,
+   "hash": "358b21cc6e9b",
+   "validated": false,
+   "high": 1,
    "medium": 0,
-   "issues": [],
+   "issues": [
+    {
+     "severity": "high",
+     "where": "midodrine 62.5 mg PO q8 h",
+     "problem": "Midodrine 62.5 mg per dose is a massive, potentially fatal overdose (standard dose is usually 7.5 mg to 15 mg PO TID).",
+     "fix": "Midodrine 7.5 mg to 15 mg PO q8 h + octreotide 50 µg SC q8 h."
+    }
+   ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
-   "repairStatus": "auto-repaired",
-   "repairAttempts": 3,
-   "lastAttempt": "2026-11-23T10:36:28.950Z"
+   "at": "2026-11-24",
+   "repairStatus": "held",
+   "repairAttempts": 4,
+   "lastAttempt": "2026-11-24T12:23:18.546Z"
   },
   "iron-deficiency": {
    "hash": "21b8895dfefa",
@@ -1375,15 +1382,15 @@
     {
      "severity": "high",
      "where": "Question 1",
-     "problem": "Isoniazid causes sideroblastic anaemia (microcytic) due to B6 antagonism, not megaloblastic anaemia requiring folic acid.",
-     "fix": "Change the question scenario or correct the answer to pyridoxine (vitamin B6) for sideroblastic anaemia due to isoniazid."
+     "problem": "Isoniazid causes sideroblastic anaemia (microcytic), not megaloblastic anaemia due to folate interference.",
+     "fix": "Change question scenario or answers to reflect isoniazid-induced sideroblastic anaemia requiring pyridoxine (B6)."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:40:29.564Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:23:52.564Z"
   },
   "ckd": {
    "hash": "c0a17b6c9c65",
@@ -1431,20 +1438,26 @@
    "hash": "1c81e762646f",
    "validated": false,
    "high": 1,
-   "medium": 0,
+   "medium": 1,
    "issues": [
     {
+     "severity": "medium",
+     "where": "Endoscopic reassessment (duodenal biopsy) 6–12 months after gluten‑free diet if celiac disease suspected.",
+     "problem": "Endoscopic reassessment with biopsy is recommended at 12-24 months, not 6-12 months, to assess mucosal healing in celiac disease.",
+     "fix": "Endoscopic reassessment (duodenal biopsy) 12–24 months after gluten‑free diet if celiac disease suspected."
+    },
+    {
      "severity": "high",
-     "where": "A. Check for refractory celiac disease with repeat duodenal biopsy",
-     "problem": "Refractory celiac disease is generally defined by the persistence of symptoms and villous atrophy after 12 months or more of strict gluten-free diet, not 4 weeks.",
-     "fix": "A 45-year-old woman with newly diagnosed celiac disease presents with persistent diarrhoea despite strict gluten-free diet for 12 months. What is the next best step?"
+     "where": "Question 1 Explanation: Persistent symptoms after adequate diet raise suspicion for refractory celiac...",
+     "problem": "Refractory celiac disease is typically diagnosed only after 12 months of strict gluten-free diet, not 4 weeks.",
+     "fix": "Persistent symptoms after 12 months of a strict gluten-free diet raise suspicion for refractory celiac disease."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:41:46.189Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:02.619Z"
   },
   "haemolytic": {
    "hash": "562dc3dd6c2a",
@@ -1477,16 +1490,16 @@
    "at": "2026-11-07"
   },
   "leukaemia": {
-   "hash": "5418d4d5da6c",
+   "hash": "e25d4c44a034",
    "validated": true,
    "high": 0,
    "medium": 0,
    "issues": [],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "auto-repaired",
-   "repairAttempts": 3,
-   "lastAttempt": "2026-11-23T10:37:57.711Z"
+   "repairAttempts": 4,
+   "lastAttempt": "2026-11-24T12:23:28.348Z"
   },
   "lymphoma": {
    "hash": "202d315a38a8",
@@ -1540,26 +1553,20 @@
    "hash": "02b18ad9efb5",
    "validated": false,
    "high": 1,
-   "medium": 1,
+   "medium": 0,
    "issues": [
     {
      "severity": "high",
      "where": "Practice Questions, Question 1",
-     "problem": "The explanation diagnoses TRALI in a patient with normal blood pressure and bibasal crackles who responds to diuretics, but TRALI is non-cardiogenic pulmonary edema whereas this is TACO (cardiogenic overload).",
-     "fix": "The presentation is classic for TACO (transfusion-associated circulatory overload); stop the transfusion and administer IV diuretics."
-    },
-    {
-     "severity": "medium",
-     "where": "Practice Questions, Question 3 Explanation",
-     "problem": "Fever with a maculopapular rash points toward a mild allergic/febrile reaction rather than bacterial contamination, and culturing the unit is not the primary immediate investigation for a simple rash and fever.",
-     "fix": "Fever and a rash point toward a mild allergic or febrile reaction; symptomatic management with antihistamines or antipyretics is appropriate."
+     "problem": "The explanation misdiagnoses TACO as TRALI while correctly identifying that the patient has pulmonary oedema and hypertension.",
+     "fix": "The presentation is classic for TACO (transfusion-associated circulatory overload); the first action is to halt the transfusion and provide oxygen and diuretics."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:42:40.550Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:07.490Z"
   },
   "diabetes": {
    "hash": "be59d63c843a",
@@ -1602,16 +1609,16 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Explain the rationale for giving glucocorticoids in myxoedema coma",
-     "problem": "It states glucocorticoids reduce peripheral conversion of T4 to T3, which is incorrect as they inhibit T4 to T3 conversion.",
-     "fix": "Glucocorticoids provide stress-dose adrenal support and treat potential coexistent primary adrenal insufficiency."
+     "where": "Explain the rationale for giving glucocorticoids in myxoedema coma.",
+     "problem": "Glucocorticoids reduce peripheral conversion of T4 to T3, but this applies to PTU/beta-blockers/iodine/amiodarone; for glucocorticoids, they are given to cover potential concurrent adrenal insufficiency.",
+     "fix": "Glucocorticoids are given to cover potential concurrent primary or secondary adrenal insufficiency (stress-dose coverage)."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:44:13.485Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:13.235Z"
   },
   "adrenal": {
    "hash": "a93bc1fb322a",
@@ -1629,26 +1636,20 @@
    "hash": "180adc25ff05",
    "validated": false,
    "high": 1,
-   "medium": 1,
+   "medium": 0,
    "issues": [
     {
      "severity": "high",
      "where": "Severe hypercalcaemia (> 1.75 mmol/L)",
-     "problem": "The thresholds listed for hypercalcaemia severity (e.g., > 1.75 mmol/L) refer to ionised calcium, but the values are stated as mmol/L without specifying ionised calcium, and severe total calcium hypercalcaemia is typically > 3.0 mmol/L.",
-     "fix": "Severe hypercalcaemia is defined as a total serum calcium > 3.0 mmol/L (or ionised calcium > 1.4 mmol/L)."
-    },
-    {
-     "severity": "medium",
-     "where": "Question 2 answer explanation: Intravenous magnesium sulfate – magnesium can worsen neuromuscular irritability in acute seizures; calcium is",
-     "problem": "The rationale states that magnesium worsens neuromuscular irritability, which is incorrect (magnesium is actually used to treat seizures and tetany, and hypomagnesemia causes tetany/seizures).",
-     "fix": "Magnesium sulfate is not the immediate treatment for hypocalcemic seizures; calcium gluconate is required."
+     "problem": "The given threshold (1.75 mmol/L) is for ionised calcium, but the values are stated as mmol/L in a way that confuses total and ionised calcium thresholds (severe total calcium is typically > 3.0 mmol/L or 14 mg/dL).",
+     "fix": "Severe hypercalcaemia is defined by a total serum calcium > 3.0 mmol/L (> 12 mg/dL) or ionised calcium > 1.75 mmol/L."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:46:04.096Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:22.106Z"
   },
   "pituitary": {
    "hash": "d2d12864ab5e",
@@ -1716,21 +1717,21 @@
   "neuropathy": {
    "hash": "20d05da1c367",
    "validated": false,
-   "high": 0,
-   "medium": 1,
+   "high": 1,
+   "medium": 0,
    "issues": [
     {
-     "severity": "medium",
+     "severity": "high",
      "where": "Question 2",
-     "problem": "Positional blood pressure swings in Guillain-Barre are referred to as autonomic instability or autonomic dysfunction, whereas 'autonomic dysreflexia' specifically refers to a syndrome of unopposed sympathetic discharge in spinal cord injury above T6.",
-     "fix": "Change the answer option and explanation to Autonomic dysfunction."
+     "problem": "Autonomic lability in GBS is termed autonomic instability, not autonomic dysreflexia which is classically seen in spinal cord injury above T6.",
+     "fix": "Change the answer to Autonomic instability or autonomic dysfunction."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:46:10.585Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:23.886Z"
   },
   "myasthenia": {
    "hash": "05a11ef6cb17",
@@ -1776,22 +1777,22 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Cryptococcal meningitis: HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive, low opening pressure",
-     "problem": "Cryptococcal meningitis is characterized by a high, not low, cerebrospinal fluid opening pressure.",
-     "fix": "Cryptococcal meningitis: HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive, high opening pressure"
+     "where": "HIV‑related opportunistic infection (e.g., cryptococcal meningitis): HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive,",
+     "problem": "Cryptococcal meningitis characteristically presents with high, not low, cerebrospinal fluid opening pressure.",
+     "fix": "CSF India‑ink positive, high opening pressure"
     },
     {
      "severity": "high",
-     "where": "- Red‑flag checklist (“SNOOP” plus local additions): Sudden onset, Neurological deficit, Onset < 50 y or > 70 y",
-     "problem": "The SNOOP mnemonic stands for Age of onset > 50 years (not < 50 y), misstating the classic red flag.",
-     "fix": "SNOOP: Age of onset > 50 years, New progressive headache, etc."
+     "where": "Red‑flag checklist (“SNOOP” plus local additions): Sudden onset, Neurological deficit, Onset < 50 y or > 70 y",
+     "problem": "The SNOOP mnemonic stands for Age of onset > 50 years, not < 50 y.",
+     "fix": "Age of onset > 50 years"
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:47:08.680Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:26.517Z"
   },
   "cord-compression": {
    "hash": "69f39fe3972d",
@@ -1835,15 +1836,15 @@
     {
      "severity": "high",
      "where": "Question 2",
-     "problem": "Rituximab is not preferred over cyclophosphamide in the first trimester of pregnancy; both are contraindicated/teratogenic, and rituximab is category C/avoided.",
-     "fix": "Change the question or correct the answer since neither drug is safe in the first trimester."
+     "problem": "Rituximab is not preferred over cyclophosphamide in the first trimester of pregnancy; both are contraindicated and teratogenic.",
+     "fix": "Change the question or answers so that the correct reason for choosing rituximab involves refractory lupus nephritis."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:48:01.137Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:28.826Z"
   },
   "gout": {
    "hash": "96060ec3411c",
@@ -1911,15 +1912,15 @@
     {
      "severity": "high",
      "where": "Question 5 explanation: 'Active viral hepatitis is a contraindication to NSAID use due to risk of hepatic injury'",
-     "problem": "NSAIDs are not specifically contraindicated in active viral hepatitis due to hepatic injury risk, and the explanation incorrectly links NSAIDs to hepatitis B contraindications.",
-     "fix": "COX-2 selective NSAIDs and traditional NSAIDs carry cardiovascular and gastrointestinal risks, and should be used with caution in renal impairment, but active viral hepatitis is not a standard contraindication."
+     "problem": "Active viral hepatitis is not a standard contraindication to NSAIDs; the explanation provides a factually incorrect reason for the answer.",
+     "fix": "Explain that cardiovascular disease is a contraindication to COX-2 selective NSAIDs, making active hepatitis B an incorrect choice among the options."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:48:55.603Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:32.681Z"
   },
   "pharmacology": {
    "hash": "bfa4ca8839d4",
@@ -1929,35 +1930,47 @@
    "issues": [
     {
      "severity": "high",
-     "where": "Clinical case, Question 2 answer",
-     "problem": "Rifampicin induces CYP enzymes and decreases levels of efavirenz and other NNRTIs; standard management is to increase efavirenz dose or switch to dolutegravir, not switch to a protease inhibitor.",
-     "fix": "Switch or adjust the antiretroviral regimen to include dolutegravir (with a twice-daily dose) or maintain/adjust efavirenz as per national guidelines."
+     "where": "How will you modify his ART during TB treatment?",
+     "problem": "Switching efavirenz to a protease inhibitor during rifampicin-based TB treatment is incorrect because rifampicin induces protease inhibitors, lowering their levels.",
+     "fix": "Keep the patient on efavirenz or switch to an integrase inhibitor (like dolutegravir) with a dose adjustment, avoiding protease inhibitors with rifampicin."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:49:47.540Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:40.038Z"
   },
   "geriatrics": {
    "hash": "6448b046795e",
    "validated": false,
-   "high": 1,
-   "medium": 0,
+   "high": 2,
+   "medium": 1,
    "issues": [
     {
      "severity": "high",
-     "where": "begin empiric oral nitrofurantoin",
-     "problem": "Nitrofurantoin is contraindicated in significant renal impairment and does not achieve adequate tissue levels for pyelonephritis or upper urinary tract involvement.",
-     "fix": "Use an appropriate empiric antibiotic such as co-amoxiclav or a cephalosporin according to local guidelines, avoiding nitrofurantoin."
+     "where": "Renal – eGFR >60 mL/min/1.73 m² (stage 1), 30–59 (stage 2), <30 (stage 3).",
+     "problem": "The staging of chronic kidney disease (CKD) stages 2 and 3 based on eGFR values is incorrectly defined.",
+     "fix": "Stage 1 is ≥90, stage 2 is 60–89, stage 3a is 45–59, stage 3b is 30–44, and stage <30 mL/min/1.73 m² represents stage 4 (15–29) or stage 5 (<15)."
+    },
+    {
+     "severity": "high",
+     "where": "Clinical case Question 2 answer",
+     "problem": "Nitrofurantoin is inadequate for treating upper or systemic urinary tract infections (such as pyelonephritis or urosepsis presenting with fever and confusion) because it does not achieve therapeutic tissue levels.",
+     "fix": "Use a systemic empiric antibiotic appropriate for UTI with systemic symptoms, such as an intravenous cephalosporin or fluoroquinolone according to local guidelines."
+    },
+    {
+     "severity": "medium",
+     "where": "Practice Question 1 explanation",
+     "problem": "Low-molecular-weight heparin is used for VTE prophylaxis, but the primary acute management step for a displaced intertrochanteric hip fracture is urgent surgical fixation rather than delaying for anticoagulation.",
+     "fix": "Early surgical intervention within 48 hours is the priority alongside routine pharmacological VTE prophylaxis."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:51:29.329Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:24:45.145Z"
   },
   "poisoning": {
    "hash": "ebd3a8346b71",
@@ -1983,21 +1996,27 @@
   "nutrition": {
    "hash": "62860315fb62",
    "validated": false,
-   "high": 1,
+   "high": 2,
    "medium": 0,
    "issues": [
     {
      "severity": "high",
      "where": "T-score ≤‑2.5 = osteopenia/osteoporosis",
      "problem": "A T-score of ≤ -2.5 defines osteoporosis, whereas osteopenia is defined as a T-score between -1.0 and -2.5.",
-     "fix": "T-score ≤‑2.5 = osteoporosis (T-score between -1.0 and -2.5 = osteopenia)."
+     "fix": "T-score ≤‑2.5 = osteoporosis (T-score -1.0 to -2.5 = osteopenia)"
+    },
+    {
+     "severity": "high",
+     "where": "Clinical case: What is the most likely vitamin deficiency? Answer",
+     "problem": "The clinical case describes confusion, ataxia (stiff-leg gait), and macrocytic anaemia (MCV 112 fL) in an HIV patient, but attributes it solely to thiamine deficiency while ignoring vitamin B12 deficiency which explains both the macrocytosis and subacute combined degeneration (stiff-leg gait).",
+     "fix": "Vitamin B12 (cobalamin) and thiamine (vitamin B1) deficiency, as macrocytosis and spinal cord signs point to B12 deficiency alongside Wernicke-Korsakoff risk."
     }
    ],
    "model": "gemini-3.5-flash-lite",
-   "at": "2026-11-23",
+   "at": "2026-11-24",
    "repairStatus": "held-too-long",
-   "repairAttempts": 4,
-   "lastAttempt": "2026-11-23T10:51:57.631Z"
+   "repairAttempts": 5,
+   "lastAttempt": "2026-11-24T12:25:37.186Z"
   },
   "lymphomas": {
    "hash": "cc7ddde80f04",
