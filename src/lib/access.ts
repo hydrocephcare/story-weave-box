@@ -8,6 +8,8 @@ export interface AccessPlan {
   id: string;
   label: string;
   price: number;
+  /** USD price charged to visitors outside Kenya. */
+  internationalPrice?: number;
   days: number;
   download?: boolean;
 }
@@ -24,7 +26,7 @@ export interface PaymentSettings {
 }
 
 export const DEFAULT_PLANS: AccessPlan[] = [
-  { id: "annual", label: "Annual subscription (12 months)", price: 150, days: 365, download: true },
+  { id: "annual", label: "Annual subscription (12 months)", price: 150, internationalPrice: 21, days: 365, download: true },
 ];
 
 export const DEFAULT_SETTINGS: PaymentSettings = {
