@@ -582,6 +582,8 @@ function setCachedSummaries(data: Article[]) {
  */
 export function clearArticleSummaryCache() {
   memorySummaryCache = null;
+  yearSummaryCache.clear();
+  articleSummaryInflight.clear();
   try {
     sessionStorage.removeItem(SUMMARY_CACHE_KEY);
   } catch {}
@@ -593,7 +595,7 @@ export function isPublicStudyArticle(article: Pick<Article, "title">): boolean {
   return isPublicStudyTitle(article?.title);
 }
 
-async function readInPages<T>(query: any, pageSize = 20): Promise<T[]> {
+async function readInPages<T>(query: any, pageSize = 500): Promise<T[]> {
   const rows: T[] = [];
   for (let offset = 0; offset < 100_000; offset += pageSize) {
     const { data, error } = await query.range(offset, offset + pageSize - 1);
@@ -625,31 +627,46 @@ export async function getPublishedArticles(): Promise<Article[]> {
   return (await readInPages<Article>(query)).filter(isPublicStudyArticle);
 }
 
+const articleSummaryInflight = new Map<string, Promise<Article[]>>();
+const yearSummaryCache = new Map<string, { data: Article[]; expiresAt: number }>();
+
 export async function getPublishedArticleSummaries(year?: string): Promise<Article[]> {
+  const cacheKey = year || "__all__";
   if (!year) {
     const cached = getCachedSummaries();
     if (cached) return cached;
+  } else {
+    const cached = yearSummaryCache.get(cacheKey);
+    if (cached && cached.expiresAt > Date.now()) return cached.data;
   }
+  const pending = articleSummaryInflight.get(cacheKey);
+  if (pending) return pending;
 
-  let query = supabase
-    .from("articles")
-    .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind, content_type, source_type, semester_number")
-    .eq("published", true)
-    .or("is_raw.is.null,is_raw.eq.false")
-    .is("deleted_at", null)
-    .order("updated_at", { ascending: false });
+  const request = (async () => {
+    let query = supabase
+      .from("articles")
+      .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind, content_type, source_type, semester_number")
+      .eq("published", true)
+      .or("is_raw.is.null,is_raw.eq.false")
+      .is("deleted_at", null)
+      .order("updated_at", { ascending: false });
 
-  if (year && /^Year [1-6]$/.test(year)) {
-    query = year === "Year 2"
-      ? query.or("category.like.Year 2:%,category.like.Year 1: Aponeurosis%")
-      : query.like("category", `${year}:%`);
-  }
+    if (year && /^Year [1-6]$/.test(year)) {
+      query = year === "Year 2"
+        ? query.or("category.like.Year 2:%,category.like.Year 1: Aponeurosis%")
+        : query.like("category", `${year}:%`);
+    }
 
-  const data = await readInPages<any>(query);
-  const result = data.map((row) => toArticlePreview(row)).filter(isPublicStudyArticle);
+    const data = await readInPages<any>(query);
+    const result = data.map((row) => toArticlePreview(row)).filter(isPublicStudyArticle);
+    if (!year) setCachedSummaries(result);
+    else if (result.length) yearSummaryCache.set(cacheKey, { data: result, expiresAt: Date.now() + SUMMARY_CACHE_TTL });
+    return result;
+  })();
 
-  if (!year) setCachedSummaries(result);
-  return result;
+  articleSummaryInflight.set(cacheKey, request);
+  try { return await request; }
+  finally { if (articleSummaryInflight.get(cacheKey) === request) articleSummaryInflight.delete(cacheKey); }
 }
 
 export async function searchPublishedArticles(queryText: string, year?: string, unit?: string): Promise<Article[]> {
@@ -1188,29 +1205,37 @@ export async function deleteArticleCategory(id: string) {
 
 const SETTINGS_CACHE_TTL_MS = 5 * 60_000;
 const settingsCache = new Map<string, { value: string; expiresAt: number }>();
+const settingsInflight = new Map<string, Promise<string>>();
 
 export async function getSetting(key: string): Promise<string> {
   const cached = settingsCache.get(key);
   if (cached && cached.expiresAt > Date.now()) return cached.value;
+  const pending = settingsInflight.get(key);
+  if (pending) return pending;
 
-  const { data, error } = await supabase
-    .from("app_settings")
-    .select("value")
-    .eq("key", key)
-    .maybeSingle();
-  if (error) {
-    console.error(`Failed to load setting "${key}":`, error.message);
-    return "";
-  }
-
-  const value = data?.value || "";
-  settingsCache.set(key, { value, expiresAt: Date.now() + SETTINGS_CACHE_TTL_MS });
-  return value;
+  const request = (async () => {
+    const { data, error } = await supabase
+      .from("app_settings")
+      .select("value")
+      .eq("key", key)
+      .maybeSingle();
+    if (error) {
+      console.error(`Failed to load setting "${key}":`, error.message);
+      return "";
+    }
+    const value = data?.value || "";
+    settingsCache.set(key, { value, expiresAt: Date.now() + SETTINGS_CACHE_TTL_MS });
+    return value;
+  })();
+  settingsInflight.set(key, request);
+  try { return await request; }
+  finally { if (settingsInflight.get(key) === request) settingsInflight.delete(key); }
 }
 
 export async function saveSetting(key: string, value: string): Promise<void> {
   const normalized = value.trim();
   settingsCache.delete(key);
+  settingsInflight.delete(key);
   const { data: existing, error: existingError } = await supabase
     .from("app_settings")
     .select("id")
