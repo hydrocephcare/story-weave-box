@@ -44,7 +44,7 @@ export function SubscribeModal({
   return createPortal(
     <div className="fixed inset-0 z-[130] flex items-end justify-center bg-background/80 p-3 backdrop-blur-sm sm:items-center" role="dialog" aria-modal="true" style={{ pointerEvents: "auto" }}>
       <div className="absolute inset-0" onClick={later} aria-hidden />
-      <div className="relative z-10 max-h-[92dvh] w-full max-w-xl overflow-y-auto overscroll-contain rounded-2xl border border-border bg-card p-5 shadow-2xl sm:p-7" onClick={(event) => event.stopPropagation()}>
+      <div className="relative z-10 max-h-[min(92dvh,900px)] w-full max-w-5xl overflow-y-auto overscroll-contain rounded-2xl border border-border bg-card p-5 shadow-2xl sm:p-7" onClick={(event) => event.stopPropagation()}>
         <button
           type="button"
           onPointerDown={(event) => { event.preventDefault(); event.stopPropagation(); close(); }}
