@@ -14,12 +14,21 @@ Deno.serve(async (req) => {
     const { data: auth, error: authError } = await admin.auth.getUser(bearer);
     if (authError || !auth.user?.id || !auth.user.email) return json({ success: false, error: "Your session has expired. Sign in again." }, 401);
     const body = await req.json().catch(() => ({}));
-    const amount = Number(body.amount), method = String(body.method || "card").toLowerCase(), countryCode = String(body.country_code || "KE").toUpperCase();
+    const method = String(body.method || "card").toLowerCase(), countryCode = String(body.country_code || "KE").toUpperCase();
+    const pricingCountry = String(body.pricing_country || countryCode || "KE").toUpperCase();
     const phone = normalizePhone(body.phone), packageType = String(body.package_type || "annual").slice(0, 80);
     if (!["card", "mpesa", "airtel"].includes(method)) return json({ success: false, error: "Choose Card, M-Pesa or Airtel Money." }, 400);
     if (!phone) return json({ success: false, error: "Enter a valid mobile number with country code." }, 400);
-    if (!Number.isInteger(amount) || amount < 1 || amount > 1000000) return json({ success: false, error: "Invalid payment amount." }, 400);
-    if (countryCode !== "KE" && method !== "card") return json({ success: false, error: "Mobile-money payments are currently available for Kenyan numbers only." }, 400);
+    const { data: planSetting, error: planError } = await admin.from("app_settings").select("value").eq("key", "access_plans").maybeSingle();
+    if (planError) return json({ success: false, error: "Could not load the current subscription price. Please try again." }, 503);
+    let plans: Array<{ id: string; price?: number; internationalPrice?: number }> = [];
+    try { plans = JSON.parse(String(planSetting?.value || "[]")); } catch { plans = []; }
+    const selectedPlan = plans.find((p) => p.id === packageType);
+    if (!selectedPlan) return json({ success: false, error: "That subscription plan is no longer available. Refresh the page and try again." }, 400);
+    const currency = pricingCountry === "KE" ? "KES" : "USD";
+    const amount = currency === "KES" ? Number(selectedPlan.price) : Number(selectedPlan.internationalPrice ?? 21);
+    if (!Number.isInteger(amount) || amount < (currency === "USD" ? 2 : 3) || amount > 1000000) return json({ success: false, error: "The configured subscription price is invalid." }, 400);
+    if ((pricingCountry !== "KE" || countryCode !== "KE") && method !== "card") return json({ success: false, error: "International visitors and non-Kenyan numbers must use card checkout." }, 400);
     const reference = "OMP-" + crypto.randomUUID();
     const callbackUrl = new URL("https://www.ompathstudy.com/");
     try {
@@ -30,14 +39,14 @@ Deno.serve(async (req) => {
     } catch { /* use canonical homepage */ }
     callbackUrl.searchParams.set("paystack_ref", reference); callbackUrl.searchParams.set("paystack_plan", packageType);
     const { error: insertError } = await admin.from("payments").insert({
-      phone_number: phone, amount, payment_status: "pending", transaction_id: reference, provider_txn_id: "paystack:" + reference,
+      phone_number: phone, amount, currency, pricing_country: pricingCountry, payment_status: "pending", transaction_id: reference, provider_txn_id: "paystack:" + reference,
       package_type: packageType, buyer_email: auth.user.email.toLowerCase(),
       buyer_name: String(auth.user.user_metadata?.full_name || auth.user.user_metadata?.name || "").slice(0, 120) || null, user_id: auth.user.id
     });
     if (insertError) { console.error("Paystack pending payment insert failed:", insertError.message); return json({ success: false, error: "Could not create your payment record. Please try again." }, 500); }
     const isCard = method === "card";
     const payload: Record<string, unknown> = {
-      email: auth.user.email, amount: String(Math.round(amount * 100)), currency: "KES", reference,
+      email: auth.user.email, amount: String(Math.round(amount * 100)), currency, reference,
       metadata: { user_id: auth.user.id, package_type: packageType, source: "ompathstudy" }
     };
     if (isCard) { payload.channels = ["card"]; payload.callback_url = callbackUrl.toString(); }
