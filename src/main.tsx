@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
 import { installErrorReporting } from "@/lib/errorReport";
 
-const isLiteHost = window.location.hostname === "lite.ompathstudy.com";
+const isLiteHost = window.location.hostname === "lite.ompathstudy.com" || window.location.hostname === "ompathstudy-lite.pages.dev" || window.location.hostname.endsWith(".ompathstudy-lite.pages.dev");
 if (!isLiteHost) installErrorReporting();
 
 // Auto-recover from stale chunk loads after a deploy. When the cached
