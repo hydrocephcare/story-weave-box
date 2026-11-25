@@ -1,0 +1,27 @@
+name: OmpathStudy Lite daily learning SMS
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  send-daily-quiz:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send daily quiz to opted-in learners
+        env:
+          LITE_CRON_SECRET: ${{ secrets.LITE_CRON_SECRET }}
+        run: |
+          if [ -z "$LITE_CRON_SECRET" ]; then
+            echo "LITE_CRON_SECRET is not configured; refusing to call the SMS endpoint."
+            exit 1
+          fi
+          curl --fail-with-body --silent --show-error \
+            -X POST "https://lite.ompathstudy.com/api/ompath-lite-send-daily-sms" \
+            -H "x-cron-secret: $LITE_CRON_SECRET" \
+            -H "content-type: application/json" \
+            --data '{}'

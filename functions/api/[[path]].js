@@ -5,6 +5,10 @@ const routes = {
   "ompath-lite": "lite",
   "ompath-lite-sms": "lite-sms",
   "ompath-lite-admin": "lite-admin",
+  "ompath-lite-learning": "lite-learning",
+  "ompath-lite-ussd": "lite-learning-ussd",
+  "ompath-lite-sms-inbound": "lite-learning-sms-inbound",
+  "ompath-lite-send-daily-sms": "lite-learning-sms-send",
   "ompath-lite-guide": "health-guide",
   "ompath-lite-cleanup": "health-cleanup",
 };
