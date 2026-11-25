@@ -16,7 +16,7 @@ const routes = {
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
-  const route = url.pathname.replace(/^\\/api\\//, "");
+  const route = url.pathname.replace(/^\/api\//, "");
   const task = routes[route];
   if (!task) return new Response(JSON.stringify({ error: "Unknown Lite API route." }), {
     status: 404,
