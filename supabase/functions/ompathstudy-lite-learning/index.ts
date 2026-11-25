@@ -189,6 +189,22 @@ async function sendAtSms(to: string, message: string) {
   if (!recipient || Number(recipient.statusCode) >= 400) throw new Error(recipient?.status || "Africa's Talking did not accept the SMS.");
   return recipient;
 }
+async function sendAtAirtime(phone: string, amount: number) {
+  if (Deno.env.get("AT_AIRTIME_ENABLED") !== "true") throw new Error("Airtime sending is disabled until an administrator enables the Africa's Talking airtime product.");
+  const apiKey = Deno.env.get("AT_API_KEY") || "";
+  const username = Deno.env.get("AT_USERNAME") || "sandbox";
+  const environment = Deno.env.get("AT_ENV") === "production" ? "production" : "sandbox";
+  if (!apiKey) throw new Error("Africa's Talking API key is not configured.");
+  const form = new URLSearchParams({ username, recipients: JSON.stringify([{ phoneNumber: phone, amount: "KES " + amount.toFixed(2) }]) });
+  const endpoint = environment === "production" ? "https://api.africastalking.com/version1/airtime/send" : "https://api.sandbox.africastalking.com/version1/airtime/send";
+  const response = await fetch(endpoint, { method: "POST", headers: { apiKey, Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" }, body: form, signal: AbortSignal.timeout(12000) });
+  const body = await response.text();
+  if (!response.ok) throw new Error("Africa's Talking airtime returned HTTP " + response.status + ".");
+  const result = JSON.parse(body);
+  const recipient = result?.responses?.[0];
+  if (!recipient || !["Sent", "Success"].includes(String(recipient.status))) throw new Error(recipient?.errorMessage || result?.errorMessage || "Airtime request was not accepted.");
+  return recipient;
+}
 async function ussd(req: Request, payload: any) {
   const supplied = new URL(req.url).searchParams.get("key") || req.headers.get("x-ussd-secret") || "";
   if (!supplied) return text("END Service configuration is incomplete. Please try again later.");
@@ -349,6 +365,24 @@ async function adminAction(req: Request, payload: any) {
     const { data, error } = await db.from("lite_airtime_rewards").insert({ student_id: studentId, amount, reason }).select("*").single();
     if (error) throw error;
     return json({ ok: true, reward: data, note: "Reward recorded as pending approval. Airtime is not sent until live Africa's Talking credentials are configured and an authorised send action is implemented." });
+  }
+  if (action === "send_airtime_reward") {
+    const rewardId = clean(payload.reward_id, 36);
+    const { data: reward, error: rewardError } = await db.from("lite_airtime_rewards").select("id,student_id,amount,currency,status").eq("id", rewardId).maybeSingle();
+    if (rewardError) throw rewardError;
+    if (!reward || reward.status !== "pending" || reward.currency !== "KES") return json({ error: "Only pending KES rewards can be sent." }, 409);
+    const { data: learner, error: learnerError } = await db.from("lite_students").select("phone_number").eq("id", reward.student_id).maybeSingle();
+    if (learnerError) throw learnerError;
+    if (!learner?.phone_number) return json({ error: "The learner has no valid phone number." }, 409);
+    try {
+      const sent = await sendAtAirtime(learner.phone_number, Number(reward.amount));
+      const { data: saved, error: saveError } = await db.from("lite_airtime_rewards").update({ status: "sent", provider_reference: sent.requestId || null, approved_by: user.id, sent_at: new Date().toISOString() }).eq("id", reward.id).eq("status", "pending").select("*").single();
+      if (saveError) throw saveError;
+      return json({ ok: true, reward: saved, provider_status: sent.status, provider_reference: sent.requestId || null });
+    } catch (error) {
+      await db.from("lite_airtime_rewards").update({ status: "failed", approved_by: user.id }).eq("id", reward.id).eq("status", "pending");
+      return json({ error: String((error as Error)?.message || "Airtime send failed.") }, 502);
+    }
   }
   return json({ error: "Unknown administrator action." }, 400);
 }
