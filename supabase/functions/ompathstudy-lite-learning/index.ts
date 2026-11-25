@@ -289,8 +289,11 @@ async function sendDailySms(req: Request) {
   if (error) throw error;
   const sent: any[] = [];
   const failed: any[] = [];
+  const today = new Date().toISOString().slice(0, 10);
   for (const student of students || []) {
     try {
+      const { data: alreadySent } = await db.from("lite_sms_deliveries").select("id").eq("student_id", student.id).eq("delivery_date", today).limit(1);
+      if (alreadySent?.length) continue;
       const set = await dailySet(student.study_level);
       if (!set?.questions?.length) continue;
       const q = publicQuestion(set, 0);
@@ -298,7 +301,7 @@ async function sendDailySms(req: Request) {
       const shortCode = String(crypto.getRandomValues(new Uint32Array(1))[0] % 900000 + 100000);
       const message = "OmpathStudy daily quiz: " + q.question.slice(0, 110) + "\n1. " + q.options[0] + "\n2. " + q.options[1] + "\n3. " + (q.options[2] || "-") + "\n4. " + (q.options[3] || "-") + "\nReply " + shortCode + " A/B/C/D. " + "lite.ompathstudy.com";
       const recipient = await sendAtSms(student.phone_number, message);
-      const { error: saveError } = await db.from("lite_sms_deliveries").insert({ student_id: student.id, mcq_set_id: set.id, question_index: 0, delivery_date: new Date().toISOString().slice(0, 10), short_code: shortCode, provider_status: recipient.status || "Accepted", provider_message_id: recipient.messageId || null });
+      const { error: saveError } = await db.from("lite_sms_deliveries").insert({ student_id: student.id, mcq_set_id: set.id, question_index: 0, delivery_date: today, short_code: shortCode, provider_status: recipient.status || "Accepted", provider_message_id: recipient.messageId || null });
       if (saveError) throw saveError;
       sent.push({ student_id: student.id, status: recipient.status || "Accepted" });
     } catch (error) {
