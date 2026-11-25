@@ -70,7 +70,7 @@ function publicQuestion(set: any, index: number) {
   };
 }
 async function catalogue(studyLevel?: string) {
-  let query = db.from("mcq_sets").select("id,title,category,slug,created_at").eq("published", true).is("deleted_at", null).eq("password_protected", false).order("created_at", { ascending: false }).limit(120);
+  let query = db.from("mcq_sets").select("id,title,category,slug,created_at").eq("published", true).is("deleted_at", null).eq("password_protected", false).order("created_at", { ascending: false }).range(0, 1199);
   if (studyLevel) query = query.ilike("category", "%" + studyLevel + "%");
   const { data, error } = await query;
   if (error) throw error;
@@ -405,6 +405,11 @@ Deno.serve(async (req: Request) => {
     if (action === "login") {
       const result = await loginStudent(payload);
       return result.error ? json({ error: result.error }, 401) : json(result);
+    }
+    if (action === "logout") {
+      const student = await studentFromToken(req);
+      if (student) await db.from("lite_students").update({ session_token_hash: null, session_expires_at: null }).eq("id", student.id);
+      return json({ ok: true });
     }
     if (action === "catalogue") {
       const student = await studentFromToken(req);
