@@ -57,16 +57,21 @@ async function getSet(setId: string) {
   if (!data || data.password_protected) return null;
   return data;
 }
+function isValidMcq(q: any) {
+  return Boolean(q?.question && Array.isArray(q.options) && q.options.length >= 2 &&
+    typeof q.correct_answer === "number" && Number.isInteger(q.correct_answer) &&
+    q.correct_answer >= 0 && q.correct_answer < q.options.length && (!q.type || q.type === "mcq"));
+}
 function publicQuestion(set: any, index: number) {
   const q = Array.isArray(set?.questions) ? set.questions[index] : null;
-  if (!q) return null;
+  if (!isValidMcq(q)) return null;
   return {
     set_id: set.id,
     set_title: set.title,
     category: set.category,
     question_index: index,
     question: stripMarkup(q.question, 900),
-    options: Array.isArray(q.options) ? q.options.map((x: unknown) => stripMarkup(x, 240)) : [],
+    options: q.options.map((x: unknown) => stripMarkup(x, 240)),
   };
 }
 async function catalogue(studyLevel?: string) {
@@ -84,10 +89,10 @@ async function dailySet(studyLevel: string) {
   const seed = Array.from(day + "|" + studyLevel).reduce((n, ch) => (n * 31 + ch.charCodeAt(0)) >>> 0, 7);
   for (let offset = 0; offset < sets.length; offset++) {
     const candidate = await getSet(sets[(seed + offset) % sets.length].id);
-    if (candidate && Array.isArray(candidate.questions) && candidate.questions.length >= 5) return candidate;
+    if (candidate && Array.isArray(candidate.questions) && candidate.questions.slice(0, 5).length === 5 && candidate.questions.slice(0, 5).every(isValidMcq)) return candidate;
   }
   const first = await getSet(sets[0].id);
-  return first && Array.isArray(first.questions) && first.questions.length ? first : null;
+  return first && Array.isArray(first.questions) && first.questions.length && isValidMcq(first.questions[0]) ? first : null;
 }
 async function registerStudent(payload: any, channel = "web") {
   const phone = normalizePhone(payload.phone_number);
