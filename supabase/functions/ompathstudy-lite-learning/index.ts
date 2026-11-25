@@ -58,9 +58,9 @@ async function getSet(setId: string) {
   return data;
 }
 function isValidMcq(q: any) {
+  const correct = Number(q?.correct_answer);
   return Boolean(q?.question && Array.isArray(q.options) && q.options.length >= 2 &&
-    typeof q.correct_answer === "number" && Number.isInteger(q.correct_answer) &&
-    q.correct_answer >= 0 && q.correct_answer < q.options.length && (!q.type || q.type === "mcq"));
+    Number.isInteger(correct) && correct >= 0 && correct < q.options.length && (!q.type || q.type === "mcq"));
 }
 function publicQuestion(set: any, index: number) {
   const q = Array.isArray(set?.questions) ? set.questions[index] : null;
