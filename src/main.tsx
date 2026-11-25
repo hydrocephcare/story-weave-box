@@ -83,9 +83,12 @@ const useFullAppOnLiteHost = isLiteHost && (
 );
 
 if (isLiteHost && !useFullAppOnLiteHost) {
-  // The public Lite experience stays lightweight. Authentication and admin
-  // URLs use the shared OmpathStudy router so those real routes are available.
-  import("./pages/OmpathLiteApp").then(({ default: LiteApp }) => root.render(<LiteApp />)).catch((error) => {
+  // The Lite learning experience is the default public site. The original
+  // symptom-intake tool remains available at /health-support.
+  const app = litePath === "/health-support"
+    ? import("./pages/OmpathLiteApp")
+    : import("./pages/OmpathLiteLearningApp");
+  app.then(({ default: LiteApp }) => root.render(<LiteApp />)).catch((error) => {
     console.error("OmpathStudy Lite failed to start", error);
     root.render(<div style={{ padding: 32, fontFamily: "sans-serif" }}>OmpathStudy Lite could not load. Please refresh the page.</div>);
   });
