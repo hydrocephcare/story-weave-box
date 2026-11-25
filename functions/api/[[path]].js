@@ -5,6 +5,10 @@ const routes = {
   "ompath-lite": "lite",
   "ompath-lite-sms": "lite-sms",
   "ompath-lite-admin": "lite-admin",
+  "ompath-lite-learning": "lite-learning",
+  "ompath-lite-ussd": "lite-learning-ussd",
+  "ompath-lite-sms-inbound": "lite-learning-sms-inbound",
+  "ompath-lite-send-daily-sms": "lite-learning-sms-send",
   "ompath-lite-guide": "health-guide",
   "ompath-lite-cleanup": "health-cleanup",
 };
@@ -12,7 +16,7 @@ const routes = {
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
-  const route = url.pathname.replace(/^\/api\//, "");
+  const route = url.pathname.replace(/^\\/api\\//, "");
   const task = routes[route];
   if (!task) return new Response(JSON.stringify({ error: "Unknown Lite API route." }), {
     status: 404,
