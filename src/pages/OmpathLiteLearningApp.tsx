@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, BookOpen, CheckCircle2, ChevronRight, CircleHelp, GraduationCap, LogIn, LogOut, MessageSquare, Phone, ShieldCheck, Sparkles, Trophy, UserPlus, WifiOff } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, ChevronRight, GraduationCap, LogIn, LogOut, MessageSquare, Phone, ShieldCheck, Sparkles, Trophy, UserPlus, WifiOff } from "lucide-react";
 import "./ompath-lite-learning.css";
 
 type Student = { id: string; phone_number: string; full_name: string; study_level: string; sms_opt_in: boolean; parent_phone?: string | null; parent_sms_opt_in?: boolean; preferred_subject?: string | null; preferred_language?: string; school_name?: string | null };
@@ -27,7 +27,7 @@ export default function OmpathLiteLearningApp() {
   const [progress, setProgress] = useState<Progress | null>(null);
   const [mode, setMode] = useState<"catalogue" | "quiz" | "progress">("catalogue");
   const [authMode, setAuthMode] = useState<"login" | "register">("register");
-  const [form, setForm] = useState({ full_name: "", phone_number: "", study_level: "Year 1", pin: "", school_name: "", parent_phone: "", sms_opt_in: true, parent_sms_opt_in: false, preferred_language: "en" });
+  const [form, setForm] = useState({ full_name: "", phone_number: "", study_level: "Year 1", pin: "", school_name: "", parent_phone: "", sms_opt_in: false, parent_sms_opt_in: false, preferred_language: "en" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
@@ -37,7 +37,6 @@ export default function OmpathLiteLearningApp() {
   const [questionCount, setQuestionCount] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<{ is_correct: boolean; correct_answer: number; explanation: string } | null>(null);
-  const [answered, setAnswered] = useState(0);
   const [daily, setDaily] = useState(false);
 
   const filteredSets = useMemo(() => {
@@ -88,7 +87,7 @@ export default function OmpathLiteLearningApp() {
     setLoading(true); setError(""); setNotice(""); setFeedback(null); setSelected(null);
     try {
       const result = await callApi("question", { set_id: set.id, question_index: index }, token);
-      setActiveSet(set); setQuestion(result.question); setQuestionCount(result.total); setAnswered(index); setDaily(isDaily); setMode("quiz");
+      setActiveSet(set); setQuestion(result.question); setQuestionCount(result.total); setDaily(isDaily); setMode("quiz");
     } catch (e) { setError(e instanceof Error ? e.message : "Could not load this question set."); }
     finally { setLoading(false); }
   };
