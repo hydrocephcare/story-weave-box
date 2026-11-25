@@ -38,10 +38,10 @@ The administrator dashboard is available at `/admin/ompath-lite-learning` after 
 - Learner roster and study-year overview.
 - MCQ attempt and accuracy summaries.
 - Attendance recording.
-- Announcement drafts and audience targeting.
-- Airtime reward requests recorded for approval.
+- Announcement drafts, study-year targeting and consent-aware SMS delivery to opted-in learners and separately opted-in parents.
+- Airtime reward requests with an explicit administrator approval/send action.
 
-Announcements are saved as drafts; airtime requests remain pending. Neither is represented as sent until the provider integration is configured and an authorised send action is enabled.
+Announcements are saved as drafts first. An administrator must deliberately send them. Airtime requests remain pending until an administrator approves the send action.
 
 ## Africa's Talking configuration
 
@@ -50,9 +50,10 @@ The Edge Function reads these server-side secrets:
 - `AT_USERNAME` (use `sandbox` for sandbox testing)
 - `AT_ENV` (`sandbox` or `production`)
 - `AT_SENDER_ID` (optional, if approved)
+- `AT_AIRTIME_ENABLED=true` (required before airtime reward sends)
 - `CRON_SECRET` (required for scheduled daily SMS)
 
-The project currently has no live Africa's Talking API key. Live SMS, voice calls, airtime rewards and payment collection must remain disabled until the appropriate credentials, sender IDs/shortcodes and provider approvals are supplied. The public web quiz and the USSD callback can be tested independently of outbound SMS.
+The project currently has no Africa's Talking API key configured in the Edge Function. Outbound SMS, scheduled SMS and airtime sends therefore remain disabled until the provider credentials are supplied. Voice broadcasting and payment collection are not yet wired into this Lite release; they must not be presented as operational.
 
 ## Health Support
 
