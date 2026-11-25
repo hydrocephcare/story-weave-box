@@ -53,7 +53,7 @@ The Edge Function reads these server-side secrets:
 - `AT_AIRTIME_ENABLED=true` (required before airtime reward sends)
 - `CRON_SECRET` (required for scheduled daily SMS)
 
-The project currently has no Africa's Talking API key configured in the Edge Function. Outbound SMS, scheduled SMS and airtime sends therefore remain disabled until the provider credentials are supplied. Voice broadcasting and payment collection are not yet wired into this Lite release; they must not be presented as operational.
+The Cloudflare Pages configuration has no Africa's Talking API key. The Edge Function reads `AT_API_KEY` from Supabase Edge Function secrets; verify that it is configured there before expecting outbound SMS or airtime to work. Voice broadcasting and payment collection are not yet wired into this Lite release; they must not be presented as operational.
 
 ## Health Support
 
