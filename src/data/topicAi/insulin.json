@@ -1,469 +1,210 @@
 {
  "medical": true,
- "summary": "Insulin is a vital anabolic peptide hormone synthesized by the beta cells of the pancreatic islets of Langerhans. It is the primary regulator of glucose homeostasis, acting to lower blood glucose levels by facilitating cellular uptake and inhibiting endogenous production.",
- "aka": [],
+ "clinicalScope": "Insulin hormone physiology and its clinical implications in adult and paediatric patients in low‑resource East African hospitals",
+ "title": "Insulin Physiology and Clinical Reasoning",
+ "subject": "Physiology",
+ "summary": "Insulin is a peptide hormone that lowers blood glucose by moving sugar into cells. It also controls fat and protein metabolism, and its deficiency or excess drives diabetes and related emergencies.",
+ "aka": [
+  "Insulin hormone",
+  "β‑cell hormone"
+ ],
  "sections": [
   {
-   "h": "Synthesis and Secretion",
-   "p": "Insulin is synthesized as preproinsulin, cleaved to proinsulin, and finally processed into equimolar amounts of insulin and C-peptide within secretory granules. Its release is primarily stimulated by rising blood glucose levels via GLUT2 transporters and the subsequent increase in intracellular ATP, which closes K+ channels and triggers calcium influx."
-  },
-  {
-   "h": "Mechanism of Action",
-   "p": "Insulin binds to a transmembrane receptor with tyrosine kinase activity. This initiates a signaling cascade (IRS-1 pathway) that leads to the translocation of GLUT4 glucose transporters to the plasma membrane in skeletal muscle and adipose tissue."
-  },
-  {
-   "h": "Metabolic Effects",
+   "h": "Overview and homeostasis",
+   "p": "Insulin, secreted by pancreatic β‑cells, is the chief anabolic hormone that maintains glucose homeostasis by promoting cellular uptake and storage of glucose, while inhibiting hepatic glucose production.",
    "b": [
-    "Carbohydrates: Increases glucose uptake, promotes glycogenesis in the liver and muscle, and inhibits gluconeogenesis and glycogenolysis.",
-    "Lipids: Promotes lipogenesis and inhibits lipolysis (hormone-sensitive lipase inhibition).",
-    "Proteins: Stimulates amino acid uptake and protein synthesis while inhibiting proteolysis.",
-    "Electrolytes: Promotes the intracellular shift of potassium by activating the Na+/K+ ATPase pump."
+    "Produced as pro‑insulin → cleaved to A (21 aa) and B (30 aa) chains linked by disulfide bonds.",
+    "Normal fasting plasma insulin: 5–20 µU/mL; post‑prandial peaks up to 80 µU/mL.",
+    "Works with glucagon (α‑cell hormone) in a yin‑yang balance.",
+    "Key target organs: liver, skeletal muscle, adipose tissue.",
+    "Deficiency → hyperglycaemia (type 1, advanced type 2, pancreatic loss).",
+    "Excess (iatrogenic) → hypoglycaemia, especially after re‑feeding."
    ]
   },
   {
-   "h": "Clinical Relevance",
+   "h": "Normal physiology step by step",
+   "p": "After a carbohydrate meal, glucose rises → β‑cell depolarisation → calcium influx → insulin granule exocytosis.",
    "b": [
-    "Diabetes Mellitus: Type 1 involves an absolute insulin deficiency due to autoimmune beta-cell destruction. Type 2 involves peripheral insulin resistance.",
-    "Hyperkalemia: Insulin (with glucose) is used acutely to shift potassium intracellularly.",
-    "Insulinoma: A rare pancreatic tumor causing profound hypoglycemia due to excessive insulin secretion."
+    "Glucose enters β‑cell via GLUT2 (high Km).",
+    "ATP generated closes K‑ATP channels, depolarising membrane.",
+    "Voltage‑gated Ca²⁺ channels open, triggering insulin release.",
+    "Insulin enters portal circulation, first‑pass liver uptake (~50%).",
+    "Peak insulin within 30–60 min, return to baseline in 2–3 h."
    ]
   },
   {
-   "h": "Often confused with",
+   "h": "Cellular and molecular mechanisms",
+   "p": "Insulin binds the insulin receptor (a tyrosine kinase) initiating cascades that translocate GLUT4 transporters and modulate metabolic enzymes.",
    "b": [
-    "C-peptide: Unlike insulin, it has no metabolic activity but indicates endogenous production levels.",
-    "IGF-1: Shares structural similarity but primarily mediates growth hormone effects rather than acute glucose homeostasis."
+    "Receptor autophosphorylation → IRS‑1/2 recruitment.",
+    "PI3K‑Akt pathway → GLUT4 vesicle fusion in muscle/fat.",
+    "Akt phosphorylates glycogen synthase kinase‑3 → activates glycogen synthase.",
+    "Inhibits hormone‑sensitive lipase → reduces lipolysis.",
+    "Stimulates protein synthesis via mTOR."
    ]
   },
   {
-   "h": "Where results can mislead",
+   "h": "Regulation and feedback",
+   "p": "Insulin secretion is tightly coupled to nutrient signals and modulated by autonomic and hormonal inputs.",
    "b": [
-    "Insulin antibodies: Can interfere with immunoassays, causing falsely high or low measured insulin levels.",
-    "Hemolysis: Can lead to falsely low insulin readings in lab samples due to the release of insulin-degrading enzymes from red cells."
+    "Stimulators: ↑ glucose, ↑ amino acids (especially leucine), incretins (GLP‑1, GIP), parasympathetic acetylcholine.",
+    "Inhibitors: ↑ catecholamines, somatostatin, cortisol, growth hormone.",
+    "Negative feedback: hyperglycaemia → insulin rise → glucose fall → insulin decline.",
+    "In fasting, low insulin permits glucagon‑driven gluconeogenesis."
+   ]
+  },
+  {
+   "h": "Integration across organ systems",
+   "p": "Insulin coordinates liver, muscle and adipose metabolism to store excess energy and spare glucose for the brain.",
+   "b": [
+    "Liver: ↑ glycogen synthesis, ↓ gluconeogenesis, ↓ VLDL secretion.",
+    "Muscle: ↑ GLUT4 translocation, ↑ glycogen storage, ↑ protein synthesis.",
+    "Adipose: ↑ lipogenesis, ↓ lipolysis, ↑ fatty acid uptake.",
+    "Kidney: contributes to peripheral glucose uptake; insulin resistance may affect renal sodium handling."
+   ]
+  },
+  {
+   "h": "Factors affecting normal function",
+   "p": "Various physiological and pathological conditions modify insulin action, especially in low‑resource settings.",
+   "b": [
+    "Pregnancy → insulin resistance (↑ placental hormones).",
+    "Infection (malaria, HIV, TB) → cytokine‑mediated resistance.",
+    "Malnutrition → β‑cell exhaustion, blunted secretion.",
+    "Herbal remedies (e.g., bitter leaf) may contain insulin‑like peptides.",
+    "Physical activity → insulin‑independent GLUT4 uptake, improving sensitivity."
+   ]
+  },
+  {
+   "h": "Pathophysiology: what goes wrong",
+   "p": "Failure of insulin secretion or action underlies diabetes mellitus and acute metabolic crises.",
+   "b": [
+    "Type 1 diabetes: autoimmune β‑cell destruction → absolute insulin deficiency.",
+    "Type 2 diabetes: insulin resistance + relative β‑cell failure; common with obesity, HIV‑ART, chronic infections.",
+    "Re‑feeding syndrome: sudden insulin surge drives potassium, phosphate, magnesium into cells → severe hypokalaemia.",
+    "Insulinoma (rare): autonomous secretion → fasting hypoglycaemia.",
+    "Iatrogenic overdose: excess exogenous insulin → neuroglycopenic symptoms."
+   ]
+  },
+  {
+   "h": "Clinical manifestations",
+   "p": "Symptoms reflect the direction of glucose imbalance and the metabolic shift caused by insulin.",
+   "b": [
+    "Deficiency: polyuria, polydipsia, weight loss, ketoacidosis (acetone breath, abdominal pain).",
+    "Resistance: gradual hyperglycaemia, fatigue, blurred vision.",
+    "Excess: sweating, tremor, confusion, seizures, coma (blood glucose < 3 mmol/L).",
+    "Re‑feeding: muscle weakness, arrhythmia from hypokalaemia."
+   ]
+  },
+  {
+   "h": "Investigations and interpretation",
+   "p": "Laboratory tests confirm insulin status and guide acute management.",
+   "t": [
+    {
+     "a": "Random plasma glucose",
+     "b": "Is the patient hyper‑ or hypoglycaemic? ≥ 11.1 mmol/L suggests diabetes; ≤ 3.0 mmol/L indicates hypoglycaemia."
+    },
+    {
+     "a": "Serum insulin (if available)",
+     "b": "High with low glucose → insulinoma or exogenous overdose; low with high glucose → β‑cell failure."
+    },
+    {
+     "a": "C‑peptide",
+     "b": "Distinguishes endogenous vs exogenous insulin; low in type 1, high in insulinoma."
+    },
+    {
+     "a": "Electrolytes (K⁺, PO₄³⁻, Mg²⁺)",
+     "b": "Detect re‑feeding shifts; K⁺ < 3.3 mmol/L warrants correction before insulin infusion."
+    },
+    {
+     "a": "Urine ketones",
+     "b": "Positive in insulin deficiency ketoacidosis."
+    },
+    {
+     "a": "Point‑of‑care glucometer",
+     "b": "Rapid bedside glucose; essential where labs are delayed."
+    }
+   ]
+  },
+  {
+   "h": "Clinical applications",
+   "p": "Understanding insulin physiology directs acute and chronic management in low‑resource settings.",
+   "b": [
+    "DKA: give IV fluids, correct K⁺, start regular insulin infusion 0.1 U/kg/h after first fluid bolus.",
+    "Re‑feeding: start low‑dose insulin (0.05 U/kg) when electrolytes are ≥ 3.3 mmol/L K⁺, monitor electrolytes q4‑6 h.",
+    "Type 2 diabetes: lifestyle first; metformin preferred, insulin added when HbA1c > 9 % or symptomatic.",
+    "Insulin storage: keep vials away from heat; in tropical climates use cool boxes."
+   ]
+  },
+  {
+   "h": "Common misconceptions",
+   "p": "Clarify frequent errors that can mislead clinicians.",
+   "b": [
+    "“Insulin always lowers potassium” – true only when glucose falls; rapid shifts can cause severe hypokalaemia.",
+    "“All diabetics need insulin” – many type 2 patients achieve control with oral agents.",
+    "“Glucose‑only monitoring is enough” – ignoring electrolytes in re‑feeding leads to arrhythmia.",
+    "“Insulin works only after meals” – muscle contraction can uptake glucose independently."
+   ]
+  },
+  {
+   "h": "Exam approach",
+   "p": "Strategic thinking for ward‑round and viva questions.",
+   "b": [
+    "Always assess glucose, electrolytes, and mental status before starting insulin.",
+    "When faced with hypoglycaemia, ask: is it endogenous (insulinoma) or exogenous?",
+    "In DKA, prioritize fluid resuscitation, then potassium, then insulin.",
+    "If a test (C‑peptide) is unavailable, infer endogenous insulin by clinical context and glucose trends."
    ]
   }
  ],
- "whenToSeekHelp": [],
+ "whenToSeekHelp": [
+  "Unconscious patient with blood glucose < 2.5 mmol/L",
+  "Severe electrolyte derangement (K⁺ < 2.5 mmol/L) before insulin",
+  "Persistent metabolic acidosis (pH < 7.1) despite fluids"
+ ],
  "faq": [
   {
-   "q": "Why is C-peptide measured alongside insulin?",
-   "a": "C-peptide is co-secreted with insulin in equimolar amounts. It serves as a marker of endogenous insulin production, helping distinguish it from exogenous insulin administration."
+   "q": "Why does exercise improve insulin sensitivity?",
+   "a": "Muscle contraction translocates GLUT4 to the membrane without insulin, reducing the amount needed for glucose uptake."
   },
   {
-   "q": "How does insulin affect potassium levels?",
-   "a": "Insulin stimulates the Na+/K+ ATPase pump, shifting potassium from the extracellular fluid into the intracellular compartment, potentially leading to hypokalemia."
+   "q": "Can insulin be given subcutaneously in DKA?",
+   "a": "In low‑resource settings IV may be unavailable; sub‑Q regular insulin every 1–2 h can be used, but monitor glucose closely."
   },
   {
-   "q": "What is the primary stimulus for insulin release?",
-   "a": "Increased blood glucose levels are the primary stimulus. Glucose enters beta cells via GLUT2, increasing ATP, which closes K+ channels and triggers calcium-mediated exocytosis."
+   "q": "What is the role of the C‑peptide test?",
+   "a": "C‑peptide is co‑secreted with insulin; it remains detectable after exogenous insulin, helping differentiate endogenous from exogenous sources."
   }
  ],
  "exam": [
-  "Describe the molecular structure of insulin and the processing of proinsulin.",
-  "Explain the intracellular signaling pathway activated by the insulin receptor (tyrosine kinase).",
-  "Compare the metabolic effects of insulin on the liver, adipose tissue, and skeletal muscle."
+  "A 7‑year‑old with new‑onset type 1 diabetes presents with vomiting and glucose 28 mmol/L – what is the immediate management priority? — Correct potassium first, then start insulin infusion.",
+  "A malnourished adult is started on high‑carb feeds; after 12 h glucose is 6 mmol/L but potassium falls to 2.8 mmol/L – what explains this? — Re‑feeding syndrome: insulin‑driven intracellular shift of K⁺.",
+  "How does insulin resistance in pregnancy differ from that in obesity? — Pregnancy resistance is driven by placental hormones (hPL, estrogen) and is transient; obesity resistance is chronic, linked to adipokines and inflammation.",
+  "A patient on sulfonylurea develops hypoglycaemia; why might measuring C‑peptide be useful? — To determine if endogenous insulin is still being secreted; low C‑peptide suggests overdose rather than insulinoma.",
+  "Explain why a patient with DKA may have a normal serum potassium despite total body depletion. — Insulin deficiency and acidosis shift K⁺ out of cells, masking depletion.",
+  "In a rural clinic without insulin assays, how would you differentiate type 1 from type 2 diabetes? — Look for rapid onset, weight loss, ketoacidosis, age < 30, and absence of obesity.",
+  "Why is it unsafe to give insulin before confirming serum potassium ≥ 3.3 mmol/L? — Insulin drives K⁺ into cells, precipitating severe hypokalaemia and arrhythmia.",
+  "What is the physiological basis for the ‘glucose‑insulin clamp’ technique? — It maintains a constant insulin infusion while adjusting glucose infusion to keep plasma glucose steady, measuring insulin sensitivity.",
+  "A patient on high‑dose steroids develops hyperglycaemia; which insulin regimen is most appropriate initially? — Start basal‑bolus with short‑acting insulin before meals, adjusting for steroid timing.",
+  "Describe the sequence of events leading from β‑cell depolarisation to insulin granule exocytosis. — Glucose ↑ → ATP ↑ → K‑ATP channels close → membrane depolarises → Ca²⁺ influx → insulin granules fuse with membrane."
  ],
  "related": [
-  "Glucagon",
-  "Somatostatin",
-  "Diabetes Mellitus",
-  "Glycogenesis",
-  "GLUT Transporters",
-  "Ketogenesis"
+  "Glucagon physiology",
+  "Diabetic ketoacidosis",
+  "Re‑feeding syndrome",
+  "Type 1 diabetes mellitus",
+  "Type 2 diabetes mellitus",
+  "Insulin resistance",
+  "Hypoglycaemia management",
+  "Electrolyte disturbances in critical care"
  ],
- "subject": "Physiology",
  "kind": "physiology",
- "model": "gemini",
- "generatedAt": "2026-10-13",
- "reviewed": false,
- "deep": {
-  "sections": [
-   {
-    "h": "Bedside: history and how to examine",
-    "p": "A focused history and systematic physical exam reveal the clinical picture of insulin excess or deficiency and guide further testing.",
-    "b": [
-     "Onset, duration and pattern of polyuria, polydipsia, polyphagia, weight change; recent infection or stress; medication list including insulin, sulfonylureas, steroids; family history of diabetes or endocrine tumours; pregnancy status; HIV or TB co‑infection; alcohol use; dietary habits.",
-     "Inspect for acanthosis nigricans (insulin resistance), lipodystrophy at injection sites, cachexia or obesity; note any facial coarsening (acromegaly) or signs of hypoglycaemia (sweating, tremor).",
-     "Palpate abdomen for hepatomegaly (insulin‑driven glycogen storage) and assess for ascites (fluid shift tests).",
-     "Measure blood pressure and heart rate; tachycardia may indicate hypovolaemia from osmotic diuresis.",
-     "Perform bedside capillary glucose; a single high value suggests hyperglycaemia but does not confirm diabetes without repeat measurement."
-    ],
-    "t": [
-     {
-      "a": "Inspection for acanthosis nigricans",
-      "b": "Does the patient have cutaneous signs of chronic hyperinsulinaemia? Positive thickened hyperpigmented plaques on neck/axillae indicate insulin resistance."
-     },
-     {
-      "a": "Shifting dullness test",
-      "b": "Is there free fluid in the abdomen? Dullness shifts to dependent flank when patient rolls; positive suggests ascites but cannot quantify volume."
-     },
-     {
-      "a": "Peripheral pulses and edema assessment",
-      "b": "Are there signs of volume depletion or overload? Weak pulses and dry mucosa support dehydration; pitting edema may point to heart failure rather than pure insulin effect."
-     }
-    ]
-   },
-   {
-    "h": "Investigations and how to read them",
-    "p": "Laboratory and point‑of‑care tests answer specific pathophysiological questions and help stage insulin‑related disorders.",
-    "b": [
-     "Serum fasting glucose – answers presence of hyperglycaemia; ≥126 mg/dL confirms diabetes on repeat testing.",
-     "C‑peptide – distinguishes endogenous from exogenous insulin; low in type 1, normal/high in type 2 or insulinoma.",
-     "Serum insulin – high with low glucose suggests insulinoma; low with high glucose suggests deficiency.",
-     "HbA1c – reflects average glucose over 2‑3 months; ≥6.5 % confirms chronic hyperglycaemia.",
-     "Serum potassium – assesses insulin‑mediated shift; low may indicate insulin excess or redistribution.",
-     "Liver function tests – evaluate hepatic glycogen storage; elevated ALT/AST may accompany fatty liver in insulin resistance.",
-     "Urine ketones – detect ketoacidosis; positive with hyperglycaemia indicates insulin deficiency.",
-     "Serum lipids – triglycerides rise when insulin is deficient; >150 mg/dL supports metabolic dysregulation."
-    ],
-    "t": [
-     {
-      "a": "Fasting plasma glucose",
-      "b": "Is the patient hyperglycaemic? ≥126 mg/dL confirms diabetes on a second sample; a single value guides further testing."
-     },
-     {
-      "a": "C‑peptide assay",
-      "b": "Is insulin endogenous? <0.2 ng/mL indicates absent endogenous secretion (type 1 or pancreatic failure); >0.8 ng/mL suggests preserved beta‑cell function."
-     },
-     {
-      "a": "Serum insulin level",
-      "b": "Is insulin excess present? >20 µU/mL with hypoglycaemia points to insulinoma; low with hyperglycaemia points to deficiency."
-     },
-     {
-      "a": "HbA1c",
-      "b": "What is chronic glycaemic control? ≥6.5 % meets diagnostic criteria; 5.7‑6.4 % indicates pre‑diabetes."
-     },
-     {
-      "a": "Serum potassium",
-      "b": "Has insulin shifted potassium intracellularly? <3.5 mmol/L after insulin therapy signals redistribution; monitor to avoid arrhythmia."
-     },
-     {
-      "a": "Urine ketones (or β‑hydroxybutyrate)",
-      "b": "Is ketoacidosis present? Moderate‑to‑strong ketones with glucose >250 mg/dL trigger DKA protocol."
-     }
-    ]
-   },
-   {
-    "h": "Diagnosis, staging and severity",
-    "p": "Classification integrates clinical, biochemical and, when available, imaging data to guide management intensity.",
-    "b": [
-     "Type 1 diabetes – absolute insulin deficiency; fasting glucose ≥126 mg/dL on two occasions or HbA1c ≥6.5 % with low C‑peptide.",
-     "Type 2 diabetes – insulin resistance with relative deficiency; same glucose/HbA1c thresholds, C‑peptide normal or high.",
-     "Hyperosmolar hyperglycaemic state – glucose ≥600 mg/dL, serum osmolality >320 mOsm/kg, pH >7.3, minimal ketones; severity graded by neurologic status and dehydration."
-    ],
-    "t": []
-   },
-   {
-    "h": "Look‑alike conditions",
-    "p": "Several disorders mimic insulin excess or deficiency; targeted history, exam and selective testing separate them.",
-    "b": [
-     "Factitious hypoglycaemia – surreptitious insulin or sulfonylurea use; differentiate by insulin/C‑peptide ratio (high insulin, low C‑peptide for exogenous insulin).",
-     "Addison’s disease – cortisol deficiency causes hypoglycaemia and hyperkalaemia; check morning cortisol <5 µg/dL.",
-     "Sepsis‑induced insulin resistance – hyperglycaemia with high insulin levels; inflammatory markers (CRP, procalcitonin) elevated.",
-     "Pregnancy‑induced hyperglycaemia – gestational diabetes; oral glucose tolerance test at 24‑28 weeks confirms."
-    ],
-    "t": [
-     {
-      "a": "Insulin/C‑peptide ratio",
-      "b": "Is hypoglycaemia due to exogenous insulin? Ratio >10 suggests exogenous insulin; ratio <1 suggests endogenous hyperinsulinaemia."
-     },
-     {
-      "a": "Morning cortisol",
-      "b": "Does adrenal insufficiency explain low glucose? <5 µg/dL supports Addison’s disease."
-     }
-    ]
-   },
-   {
-    "h": "Management step by step",
-    "p": "A systematic approach ensures safe insulin therapy, whether for hyperglycaemia, ketoacidosis, hyperkalemia or peri‑operative glucose control.",
-    "b": [
-     "1. Verify indication and baseline status: capillary glucose, ketones, electrolytes, renal function, acid‑base, and mental state.",
-     "2. Initiate rapid‑acting insulin infusion when glucose >250 mg/dL with ketonaemia or acidosis, or when urgent potassium shift is needed.",
-     "5. Escalate to intensive care if pH ≤7.3, bicarbonate ≤15 mmol/L, persistent hypotension, or worsening mental status; involve endocrinology for refractory cases.",
-     "6. Transition to subcutaneous basal‑bolus regimen once acidosis resolved, patient eating, and glucose stable for >24 h.",
-     "7. Avoid concomitant sulfonylureas or meglitinides that may precipitate hypoglycaemia during insulin infusion.",
-     "8. Document insulin type, infusion rate, and any interruptions; ensure clear hand‑over to ward staff."
-    ],
-    "t": []
-   },
-   {
-    "h": "Drug effects and what to do",
-    "p": "Insulin’s actions can produce predictable adverse events; early recognition and mitigation are essential.",
-    "b": [
-     "Hypokalaemia: monitor serum K⁺; give potassium chloride IV when K⁺ <3.5 mmol/L and renal function permits.",
-     "Fluid overload: watch for pulmonary crackles and rising weight; reduce fluid rate or add diuretic if signs develop.",
-     "Allergic reaction at infusion site: stop infusion, use antihistamine, consider alternative insulin analogue.",
-     "Insulin resistance (e.g., infection, steroids): increase infusion rate cautiously; treat underlying cause."
-    ],
-    "t": [
-     {
-      "a": "Concurrent beta‑blockers",
-      "b": "Mask hypoglycaemia symptoms; increase glucose monitoring frequency."
-     },
-     {
-      "a": "ACE inhibitors or ARBs",
-      "b": "May potentiate potassium rise; check K⁺ closely when insulin is used for hyperkalaemia."
-     },
-     {
-      "a": "Oral contraceptives",
-      "b": "Can increase insulin‑binding globulins, modestly raising insulin requirements."
-     }
-    ]
-   },
-   {
-    "h": "Complications and when to escalate",
-    "p": "Recognising complications early prevents deterioration and guides referral.",
-    "b": [
-     "Persistent metabolic acidosis (pH ≤7.3) despite adequate insulin: consider missed infection, inadequate fluid resuscitation, or bicarbonate therapy.",
-     "Refractory hyperkalaemia (K⁺ >6.5 mmol/L) after insulin/dextrose: add calcium gluconate, consider sodium bicarbonate or dialysis.",
-     "Signs of cerebral oedema in DKA (headache, decreasing GCS, papilledema): raise head of bed, reduce fluid rate, give mannitol if needed, urgent ICU transfer.",
-     "Rapidly falling blood pressure or rising lactate: suspect sepsis or adrenal insufficiency; start broad‑spectrum antibiotics and consider stress steroids."
-    ],
-    "t": []
-   },
-   {
-    "h": "Complicating and confounding factors",
-    "p": "Co‑morbidities and local conditions modify insulin pharmacodynamics and laboratory interpretation.",
-    "b": [
-     "HIV infection: protease inhibitors cause insulin resistance; monitor glucose closely and consider higher insulin doses.",
-     "Tuberculosis treatment (rifampicin): induces hepatic enzymes, increasing insulin clearance; may need dose escalation.",
-     "Severe malnutrition: reduced hepatic glycogen stores blunt glucose rise; start insulin at lower infusion rates to avoid hypoglycaemia.",
-     "Pregnancy: increased peripheral insulin resistance, especially in the third trimester; target glucose 80‑110 mg/dL fasting, 140‑150 mg/dL post‑prandial.",
-     "Renal failure: reduced insulin degradation; avoid high infusion rates and monitor for hypoglycaemia.",
-     "Liver failure: impaired gluconeogenesis, risk of hypoglycaemia; use lower insulin doses and frequent glucose checks.",
-     "Alcohol intoxication: inhibits gluconeogenesis, precipitating hypoglycaemia; give dextrose before insulin if recent binge.",
-     "Herbal remedies (e.g., bitter melon): may have additive glucose‑lowering effect; adjust insulin accordingly."
-    ],
-    "t": []
-   },
-   {
-    "h": "Special groups",
-    "p": "Tailoring insulin therapy to vulnerable populations improves safety and outcomes.",
-    "b": [
-     "Children: use rapid‑acting analogues for bolus dosing; basal insulin at night; avoid overtight glucose targets to reduce hypoglycaemia risk.",
-     "Pregnant women: prefer short‑acting insulin analogues (lispro, aspart) for post‑prandial control; avoid oral hypoglycaemics.",
-     "Elderly: start with low‑dose basal insulin; monitor for hypoglycaemia due to reduced counter‑regulatory response and polypharmacy.",
-     "People with HIV: screen for lipodystrophy; consider metformin adjunct to lower insulin requirements.",
-     "Low‑resource settings: use regular human insulin with split‑dose regimen; rely on capillary glucose strips and urine ketone testing when labs unavailable."
-    ],
-    "t": [
-     {
-      "a": "Bedside glucose monitoring",
-      "b": "If glucometer unavailable, use urine dipstick for glucose and ketones; treat as DKA if both positive."
-     },
-     {
-      "a": "Limited laboratory access",
-      "b": "Estimate serum osmolality using 2 × Na⁺ + glucose/18 + BUN/2.8; if >320 mOsm/kg with glucose >600 mg/dL, manage as HHS."
-     }
-    ]
-   }
-  ],
-  "facts": [
-   "Fasting plasma glucose ≥126 mg/dL confirms diabetes on two separate occasions.",
-   "HbA1c ≥6.5% is diagnostic for diabetes.",
-   "Insulin receptor activation phosphorylates IRS‑1/2 leading to PI3K‑Akt pathway.",
-   "Insulin stimulates hepatic glucokinase and glycogen synthase; inhibits glycogen phosphorylase.",
-   "Insulin promotes GLUT4 translocation in skeletal muscle and adipose tissue.",
-   "Insulin drives potassium into cells via Na+/K+‑ATPase activation.",
-   "C‑peptide level reflects endogenous insulin secretion; useful in distinguishing exogenous insulin use.",
-   "Hyperosmolar hyperglycaemic state: glucose ≥600 mg/dL, osmolality >320 mOsm/kg, pH >7.3, minimal ketones."
-  ],
-  "mnemonics": [],
-  "vivas": [
-   {
-    "q": "What enzyme is up‑regulated during exercise that improves insulin sensitivity by increasing fatty‑acid oxidation and glucose transport?",
-    "a": "AMP‑activated protein kinase (AMPK) activates GLUT4 translocation and fatty‑acid oxidation.",
-    "hot": true
-   },
-   {
-    "q": "What specific hepatic enzyme does insulin activate to promote glycogen synthesis?",
-    "a": "Insulin activates glycogen synthase and inhibits glycogen phosphorylase.",
-    "hot": true
-   },
-   {
-    "q": "What metabolic disturbance results from unchecked triglyceride breakdown in insulin deficiency?",
-    "a": "Elevated free fatty acids leading to hepatic ketogenesis and hypertriglyceridaemia.",
-    "hot": true
-   },
-   {
-    "q": "What direct effect does insulin have on hepatic glucose production?",
-    "a": "It suppresses gluconeogenesis by inhibiting phosphoenolpyruvate carboxykinase and glucose‑6‑phosphatase.",
-    "hot": true
-   },
-   {
-    "q": "How does insulin affect protein metabolism in peripheral tissues?",
-    "a": "It stimulates amino‑acid uptake and protein synthesis while inhibiting proteolysis via mTOR activation.",
-    "hot": true
-   },
-   {
-    "q": "Which tissue’s glucose uptake is largely insulin‑independent?",
-    "a": "The brain (neurons) uses GLUT1/GLUT3 transporters, not insulin‑dependent."
-   },
-   {
-    "q": "What ionic shift triggers insulin granule exocytosis in beta cells?",
-    "a": "An influx of calcium through voltage‑gated Ca²⁺ channels after membrane depolarisation."
-   },
-   {
-    "q": "Which of the following processes is increased by insulin?",
-    "a": "Lipogenesis in adipose tissue via activation of acetyl‑CoA carboxylase."
-   },
-   {
-    "q": "A child with polyuria, polydipsia, weight loss after viral illness – likely diabetes type and autoimmune marker?",
-    "a": "Type 1 diabetes; presence of anti‑GAD65 or IA‑2 antibodies indicates autoimmunity.",
-    "past": true
-   },
-   {
-    "q": "Adult with acromegaly features, high insulin resistance, GH not suppressed on glucose load – likely diagnosis?",
-    "a": "Acromegaly; failure of GH suppression after oral glucose tolerance test confirms diagnosis.",
-    "past": true
-   },
-   {
-    "q": "Why does HHS lack significant ketosis compared with DKA?",
-    "a": "Residual insulin is enough to inhibit lipolysis and ketogenesis but insufficient to control hyperglycaemia."
-   },
-   {
-    "q": "What is the first‑line emergency treatment for severe hyperkalaemia with ECG changes?",
-    "a": "IV calcium gluconate to stabilise cardiac membranes, then insulin‑glucose to shift potassium intracellularly."
-   },
-   {
-    "q": "How does hemolysis affect measured insulin levels?",
-    "a": "It releases insulin‑degrading enzymes causing falsely low insulin concentrations."
-   },
-   {
-    "q": "What bedside test distinguishes insulinoma from factitious insulin use?",
-    "a": "Measure C‑peptide; high in insulinoma, low in exogenous insulin administration."
-   },
-   {
-    "q": "Why are insulin antibodies problematic in immunoassays?",
-    "a": "They can bind assay antibodies causing falsely high or low measured insulin levels."
-   },
-   {
-    "q": "What is the effect of pregnancy on insulin requirements?",
-    "a": "Insulin resistance rises due to placental hormones, increasing dose needs especially in the second half of pregnancy."
-   }
-  ],
-  "mcqs": [
-   {
-    "q": "Which of the following best describes insulin’s effect on hepatic glucose output?",
-    "o": [
-     "Stimulates gluconeogenesis",
-     "Inhibits glycogenolysis",
-     "Activates glucose‑6‑phosphatase",
-     "Increases glucagon secretion"
-    ],
-    "a": 1,
-    "e": "Insulin inhibits glycogenolysis, reducing hepatic glucose release."
-   },
-   {
-    "q": "A patient with severe hyperkalaemia (K⁺ 7.2 mmol/L) and peaked T waves. First step?",
-    "o": [
-     "IV insulin‑glucose",
-     "IV calcium gluconate",
-     "IV sodium bicarbonate",
-     "IV loop diuretic"
-    ],
-    "a": 1,
-    "e": "Calcium gluconate stabilises cardiac membranes before potassium‑shifting measures."
-   },
-   {
-    "q": "Which laboratory finding distinguishes exogenous insulin administration from endogenous hyperinsulinaemia?",
-    "o": [
-     "Elevated insulin, low C‑peptide",
-     "Low insulin, high C‑peptide",
-     "Elevated insulin, elevated C‑peptide",
-     "Low insulin, low C‑peptide"
-    ],
-    "a": 0,
-    "e": "Exogenous insulin raises insulin but suppresses C‑peptide."
-   },
-   {
-    "q": "In HHS, which of the following is NOT a diagnostic criterion?",
-    "o": [
-     "Glucose ≥600 mg/dL",
-     "pH <7.3",
-     "Serum osmolality >320 mOsm/kg",
-     "Minimal ketones"
-    ],
-    "a": 1,
-    "e": "HHS requires pH >7.3, not <7.3."
-   },
-   {
-    "q": "During an oral glucose tolerance test, failure of GH to suppress indicates which condition?",
-    "o": [
-     "Type 2 diabetes",
-     "Acromegaly",
-     "Cushing’s syndrome",
-     "Hypopituitarism"
-    ],
-    "a": 1,
-    "e": "",
-    "past": true
-   }
-  ],
-  "cases": [
-   {
-    "v": "A 12‑year‑old boy presents with 3 weeks of polyuria, polydipsia, weight loss, and fasting glucose 210 mg/dL. He had a recent measles infection.",
-    "qs": [
-     {
-      "q": "What is the most likely type of diabetes?",
-      "a": "Type 1 diabetes mellitus."
-     },
-     {
-      "q": "Which auto‑antibody test would support the diagnosis?",
-      "a": "Anti‑GAD65 or IA‑2 antibodies."
-     },
-     {
-      "q": "Initial management in a low‑resource setting?",
-      "a": "Start basal‑bolus insulin regimen, educate on glucose monitoring, and ensure adequate hydration and electrolyte correction."
-     }
-    ]
-   },
-   {
-    "v": "A 68‑year‑old woman with known type 2 diabetes presents with confusion, serum glucose 680 mg/dL, serum osmolality 340 mOsm/kg, pH 7.35, and minimal ketones.",
-    "qs": [
-     {
-      "q": "What is the diagnosis?",
-      "a": "Hyperosmolar hyperglycaemic state (HHS)."
-     },
-     {
-      "q": "Why is ketosis minimal?",
-      "a": "Residual insulin suppresses lipolysis and ketogenesis despite severe hyperglycaemia."
-     },
-     {
-      "q": "Key steps in immediate management?",
-      "a": "IV fluids with isotonic saline, careful potassium monitoring, then insulin infusion once K⁺ >3.3 mmol/L; avoid rapid glucose fall."
-     }
-    ]
-   }
-  ],
-  "mistakes": [
-   "Confusing a single fasting glucose ≥126 mg/dL as diagnostic without repeat confirmation.",
-   "Omitting the pH >7.3 criterion when defining HHS.",
-   "Using beta‑blockers to treat severe hypoglycaemia instead of glucagon or glucose.",
-   "Assuming insulin is first‑line for gestational diabetes without trial of diet and exercise.",
-   "Failing to give calcium gluconate before insulin in severe hyperkalaemia with ECG changes.",
-   "Interpreting low insulin levels as normal without checking for hemolysis‑induced degradation.",
-   "Neglecting to measure C‑peptide when differentiating endogenous from exogenous insulin excess."
-  ],
-  "exam": [
-   "What enzyme is up‑regulated during exercise that improves insulin sensitivity by increasing fatty‑acid oxidation and glucose transport? — AMP‑activated protein kinase (AMPK) activates GLUT4 translocation and fatty‑acid oxidation.",
-   "What specific hepatic enzyme does insulin activate to promote glycogen synthesis? — Insulin activates glycogen synthase and inhibits glycogen phosphorylase.",
-   "What metabolic disturbance results from unchecked triglyceride breakdown in insulin deficiency? — Elevated free fatty acids leading to hepatic ketogenesis and hypertriglyceridaemia.",
-   "What direct effect does insulin have on hepatic glucose production? — It suppresses gluconeogenesis by inhibiting phosphoenolpyruvate carboxykinase and glucose‑6‑phosphatase.",
-   "How does insulin affect protein metabolism in peripheral tissues? — It stimulates amino‑acid uptake and protein synthesis while inhibiting proteolysis via mTOR activation.",
-   "Which tissue’s glucose uptake is largely insulin‑independent? — The brain (neurons) uses GLUT1/GLUT3 transporters, not insulin‑dependent.",
-   "What ionic shift triggers insulin granule exocytosis in beta cells? — An influx of calcium through voltage‑gated Ca²⁺ channels after membrane depolarisation.",
-   "Which of the following processes is increased by insulin? — Lipogenesis in adipose tissue via activation of acetyl‑CoA carboxylase.",
-   "A child with polyuria, polydipsia, weight loss after viral illness – likely diabetes type and autoimmune marker? — Type 1 diabetes; presence of anti‑GAD65 or IA‑2 antibodies indicates autoimmunity.",
-   "Adult with acromegaly features, high insulin resistance, GH not suppressed on glucose load – likely diagnosis? — Acromegaly; failure of GH suppression after oral glucose tolerance test confirms diagnosis.",
-   "Why does HHS lack significant ketosis compared with DKA? — Residual insulin is enough to inhibit lipolysis and ketogenesis but insufficient to control hyperglycaemia.",
-   "What is the first‑line emergency treatment for severe hyperkalaemia with ECG changes? — IV calcium gluconate to stabilise cardiac membranes, then insulin‑glucose to shift potassium intracellularly.",
-   "How does hemolysis affect measured insulin levels? — It releases insulin‑degrading enzymes causing falsely low insulin concentrations.",
-   "What bedside test distinguishes insulinoma from factitious insulin use? — Measure C‑peptide; high in insulinoma, low in exogenous insulin administration."
-  ],
-  "model": "openai/gpt-oss-120b",
-  "generatedAt": "2026-10-26",
-  "checked": "2026-10-26",
-  "trimmed": 7
- }
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-25",
+ "aiReview": {
+  "status": "passed",
+  "model": "gemini-3.5-flash-lite",
+  "reviewedAt": "2026-11-25",
+  "fixRounds": 0
+ },
+ "reviewed": false
 }
