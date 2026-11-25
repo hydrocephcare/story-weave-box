@@ -78,7 +78,8 @@ export default function OmpathLiteLearningApp() {
     finally { setLoading(false); }
   };
 
-  const signOut = () => {
+  const signOut = async () => {
+    try { await callApi("logout", {}, token); } catch {}
     try { localStorage.removeItem(TOKEN_KEY); } catch {}
     setToken(""); setStudent(null); setSets([]); setProgress(null); setActiveSet(null); setQuestion(null); setMode("catalogue");
   };
