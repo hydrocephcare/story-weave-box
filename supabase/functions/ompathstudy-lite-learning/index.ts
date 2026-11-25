@@ -359,6 +359,30 @@ async function adminAction(req: Request, payload: any) {
     if (error) throw error;
     return json({ ok: true, attendance: data });
   }
+  if (action === "send_announcement") {
+    const announcementId = clean(payload.announcement_id, 36);
+    const { data: announcement, error: announcementError } = await db.from("lite_announcements").select("*").eq("id", announcementId).maybeSingle();
+    if (announcementError) throw announcementError;
+    if (!announcement || announcement.status !== "draft") return json({ error: "Only saved announcement drafts can be sent." }, 409);
+    const { data: learners, error: learnerError } = await db.from("lite_students").select("id,phone_number,study_level,sms_opt_in,parent_phone,parent_sms_opt_in").eq("sms_opt_in", true).limit(500);
+    if (learnerError) throw learnerError;
+    const recipients = new Map<string, string>();
+    for (const learner of learners || []) {
+      if (announcement.audience_study_level && learner.study_level !== announcement.audience_study_level) continue;
+      if (learner.phone_number) recipients.set(learner.phone_number, "learner");
+      if (announcement.include_parents && learner.parent_sms_opt_in && learner.parent_phone) recipients.set(learner.parent_phone, "parent");
+    }
+    if (!recipients.size) return json({ error: "There are no opted-in recipients in this audience." }, 409);
+    const sent: string[] = [], failed: { phone: string; error: string }[] = [];
+    for (const phone of recipients.keys()) {
+      try { await sendAtSms(phone, announcement.title + ": " + announcement.body); sent.push(phone); }
+      catch (error) { failed.push({ phone, error: String((error as Error)?.message || "SMS failed").slice(0, 100) }); }
+    }
+    const status = failed.length ? (sent.length ? "failed" : "failed") : "sent";
+    const { error: updateError } = await db.from("lite_announcements").update({ status, sent_at: sent.length ? new Date().toISOString() : null, delivery_summary: { attempted: recipients.size, sent: sent.length, failed: failed.length, sent_at: new Date().toISOString() } }).eq("id", announcementId);
+    if (updateError) throw updateError;
+    return json({ ok: failed.length === 0, sent: sent.length, failed: failed.length, details: failed.slice(0, 10) });
+  }
   if (action === "create_airtime_reward") {
     const studentId = clean(payload.student_id, 36);
     const amount = Number(payload.amount);
