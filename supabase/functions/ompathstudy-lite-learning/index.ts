@@ -138,20 +138,22 @@ async function submitAnswer(student: any, setId: string, index: number, selected
   const set = await getSet(setId);
   const q = set?.questions?.[index];
   if (!q || !Array.isArray(q.options) || selected < 1 || selected > q.options.length || selected > 5) return { error: "That question or answer is no longer available." };
+  const correctIndex = Number(q.correct_answer);
+  const isCorrect = correctIndex === selected - 1;
   if (daily) {
     const start = new Date(); start.setHours(0, 0, 0, 0);
     const { data: existing } = await db.from("lite_attempts").select("id").eq("student_id", student.id).eq("mcq_set_id", setId).eq("question_index", index).gte("attempted_at", start.toISOString()).limit(1);
     if (!existing?.length) {
-      const { error } = await db.from("lite_attempts").insert({ student_id: student.id, mcq_set_id: setId, question_index: index, selected_option: selected, is_correct: Number(q.correct_answer) === selected });
+      const { error } = await db.from("lite_attempts").insert({ student_id: student.id, mcq_set_id: setId, question_index: index, selected_option: selected, is_correct: isCorrect });
       if (error) throw error;
     }
   } else {
-    const { error } = await db.from("lite_attempts").insert({ student_id: student.id, mcq_set_id: setId, question_index: index, selected_option: selected, is_correct: Number(q.correct_answer) === selected });
+    const { error } = await db.from("lite_attempts").insert({ student_id: student.id, mcq_set_id: setId, question_index: index, selected_option: selected, is_correct: isCorrect });
     if (error) throw error;
   }
   return {
-    is_correct: Number(q.correct_answer) === selected,
-    correct_answer: Number(q.correct_answer),
+    is_correct: isCorrect,
+    correct_answer: correctIndex + 1,
     explanation: stripMarkup(q.explanation || "Review the explanation and key learning point.", 1200),
     question: stripMarkup(q.question, 900),
   };
