@@ -59,6 +59,12 @@ export default function OmpathLiteLearningAdmin() {
     catch(e){setError(e instanceof Error?e.message:"Could not record reward.");}
     finally{setSaving(false);}
   };
+  const sendReward=async(rewardId:string)=>{
+    setSaving(true);setError("");setNotice("");
+    try{await request("admin_action",{action:"send_airtime_reward",reward_id:rewardId});setNotice("Airtime request accepted by Africa's Talking.");await refresh();}
+    catch(e){setError(e instanceof Error?e.message:"Airtime could not be sent.");}
+    finally{setSaving(false);}
+  };
 
   const total=data?.attempts.length||0;
   const correct=data?.attempts.filter(x=>x.is_correct).length||0;
@@ -100,7 +106,7 @@ export default function OmpathLiteLearningAdmin() {
       </section>
       <section className="mt-6 grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl border bg-card p-5"><h2 className="font-semibold">Recent announcements</h2>{data.announcements.slice(0,8).map(a=><div key={a.id} className="border-b py-3 last:border-0"><div className="flex items-center justify-between gap-2"><strong className="text-sm">{a.title}</strong><span className="text-xs text-muted-foreground">{a.status}</span></div><p className="mt-1 text-xs text-muted-foreground">{a.body}</p></div>)}{!data.announcements.length&&<p className="mt-3 text-sm text-muted-foreground">No announcements yet.</p>}</div>
-        <div className="rounded-2xl border bg-card p-5"><h2 className="font-semibold">Airtime reward requests</h2>{data.rewards.slice(0,8).map(r=><div key={r.id} className="flex items-start justify-between gap-3 border-b py-3 last:border-0"><span><strong className="text-sm">{r.amount} {r.currency}</strong><small className="block text-xs text-muted-foreground">{r.reason}</small></span><span className="text-xs text-muted-foreground">{r.status}</span></div>)}{!data.rewards.length&&<p className="mt-3 text-sm text-muted-foreground">No reward requests yet.</p>}</div>
+        <div className="rounded-2xl border bg-card p-5"><h2 className="font-semibold">Airtime reward requests</h2>{data.rewards.slice(0,8).map(r=><div key={r.id} className="flex items-start justify-between gap-3 border-b py-3 last:border-0"><span><strong className="text-sm">{r.amount} {r.currency}</strong><small className="block text-xs text-muted-foreground">{r.reason}</small></span><span className="flex flex-col items-end gap-2"><small className="text-xs text-muted-foreground">{r.status}</small>{r.status==="pending"&&<button disabled={saving} onClick={()=>void sendReward(r.id)} className="rounded-md border px-2 py-1 text-xs font-semibold disabled:opacity-50">Approve &amp; send</button>}</span></div>)}{!data.rewards.length&&<p className="mt-3 text-sm text-muted-foreground">No reward requests yet.</p>}<p className="mt-3 text-xs text-muted-foreground">Sending requires AT_AIRTIME_ENABLED=true and an active Africa's Talking API key. Each send is an explicit administrator action.</p></div>
       </section>
     </>}
   </div>;
