@@ -361,6 +361,7 @@ async function adminAction(req: Request, payload: any) {
   }
   if (action === "send_announcement") {
     const announcementId = clean(payload.announcement_id, 36);
+    if (!Deno.env.get("AT_API_KEY")) return json({ error: "Africa's Talking API key is not configured. The draft has not been sent." }, 503);
     const { data: announcement, error: announcementError } = await db.from("lite_announcements").select("*").eq("id", announcementId).maybeSingle();
     if (announcementError) throw announcementError;
     if (!announcement || announcement.status !== "draft") return json({ error: "Only saved announcement drafts can be sent." }, 409);
