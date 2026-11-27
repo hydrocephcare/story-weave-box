@@ -119,7 +119,7 @@ export default async function handler(req, res) {
     const settings = Object.fromEntries(rows.map((row) => [row.key, row.value]));
     let plans = [];
     try { plans = JSON.parse(String(settings.access_plans || "[]")); } catch {}
-    return { enabled: String(settings.paystack_enabled || "").toLowerCase() === "true", plans: plans.map((p) => ({ id: p.id, price: p.price, currency: "KES", days: p.days })) };
+    return { enabled: String(settings.paystack_enabled || "").toLowerCase() === "true", plans: (Array.isArray(plans) ? plans : []).map((p) => ({ id: p.id, price: p.price, days: p.days })) };
   });
 
   result.topics = await check("topics", async () => {
