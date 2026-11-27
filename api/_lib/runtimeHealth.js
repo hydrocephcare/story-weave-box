@@ -137,7 +137,7 @@ export default async function handler(req, res) {
   });
 
   result.entitlements = await check("entitlements", async () => {
-    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\\/+$/, "");
+    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\/+$/, "");
     const response = await fetch(base + "/rpc/consume_feature", {
       method: "POST",
       headers: { Authorization: "Bearer " + bearer(req), "Content-Type": "application/json", Accept: "application/json" },
