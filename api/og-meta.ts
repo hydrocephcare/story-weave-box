@@ -1,7 +1,4 @@
 import { topicTitle } from "../src/lib/topicMeta.js";
-import { createClient, SupabaseAuthAdapter } from "@neondatabase/neon-js";
-// Use the default Node.js runtime: Neon Auth SDK imports Node-compatible modules
-// that Vercel Edge Runtime does not support.
 
 /** Which subject picture (public/unit-img) goes on a share card, by the words of the unit or the page. */
 const SUBJECT_PICS: [RegExp, string][] = [
@@ -429,53 +426,30 @@ function extractUuidFromParam(value?: string | null): string | null {
   return match?.[1] || null;
 }
 
-const NEON_AUTH_URL =
-  process.env.NEON_AUTH_URL ||
-  process.env.VITE_NEON_AUTH_URL ||
-  "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth";
 const NEON_DATA_API_URL =
   process.env.NEON_DATA_API_URL ||
   process.env.VITE_NEON_DATA_API_URL ||
   "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
 
-const neon = createClient({
-  auth: { adapter: SupabaseAuthAdapter(), url: NEON_AUTH_URL, allowAnonymous: true },
-  dataApi: { url: NEON_DATA_API_URL },
-});
-
-/** Read-only public metadata queries through Neon; preserves the existing PostgREST filters. */
+/** Read-only public metadata queries through Neon. Use the Data API directly:
+ * importing the Neon Auth SDK here initialises async crypto/network state at
+ * Worker module scope, which Cloudflare Pages correctly rejects.
+ */
 async function sbFetch(table: string, params: string) {
+  if (!/^[a-z_][a-z0-9_]*$/i.test(table)) throw new Error("Invalid metadata table.");
   const search = new URLSearchParams(params);
-  const select = search.get("select") || "*";
-  let query: any = neon.from(table).select(select);
-
-  for (const [key, raw] of search.entries()) {
-    if (key === "select" || key === "limit" || key === "order") continue;
-    if (raw.startsWith("eq.")) {
-      query = query.eq(key, raw.slice(3));
-    } else if (raw === "is.null") {
-      query = query.is(key, null);
-    } else if (raw.startsWith("in.(") && raw.endsWith(")")) {
-      const values = raw.slice(4, -1).split(",").filter(Boolean);
-      query = query.in(key, values);
-    } else {
-      throw new Error(`Unsupported metadata filter: ${key}=${raw}`);
-    }
+  const url = `${NEON_DATA_API_URL.replace(/\/+$/, "")}/${table}?${search.toString()}`;
+  const response = await fetch(url, {
+    method: "GET",
+    headers: { Accept: "application/json" },
+    signal: AbortSignal.timeout(12000),
+  });
+  if (!response.ok) {
+    const detail = (await response.text()).slice(0, 240);
+    throw new Error(`Neon metadata query failed on ${table} (${response.status}): ${detail}`);
   }
-
-  const order = search.get("order");
-  if (order) {
-    const [column, direction] = order.split(".");
-    query = query.order(column, { ascending: direction !== "desc", nullsFirst: false });
-  }
-  const limit = Number(search.get("limit"));
-  if (Number.isFinite(limit) && limit > 0) query = query.limit(limit);
-
-  const { data, error } = await query;
-  if (error) {
-    throw new Error(`Neon metadata query failed on ${table}: ${error.message || String(error)}`);
-  }
-  return data || [];
+  const data = await response.json();
+  return Array.isArray(data) ? data : [];
 }
 
 function isPublicScheduled(row: Record<string, any> | null | undefined): boolean {

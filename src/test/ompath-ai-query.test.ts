@@ -29,6 +29,12 @@ describe("Ompath AI query parsing", () => {
     expect(parseQuery("anemia in pediatrics").topic).toContain("anaemia");
     expect(parseQuery("anemia in pediatrics").topic).toContain("paediatrics");
   });
+  it("corrects common medical spelling errors such as autophagy", () => {
+    const p = parseQuery("whats auphagy");
+    expect(p.topic).toBe("autophagy");
+    expect(p.isQuestion).toBe(true);
+    expect(p.wants).toBe("answer");
+  });
   it("gives search words and follow-ups", () => {
     const p = parseQuery("nephrotic syndrome in children");
     expect(scoringTerms(p)).toContain("nephrotic");

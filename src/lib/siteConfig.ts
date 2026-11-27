@@ -41,7 +41,7 @@ export function formatUnitEntry(entry: string, names: Record<string, string>): {
 }
 
 export const DEFAULT_CONFIG: SiteConfig = {
-  maintenanceEnabled: true,
+  maintenanceEnabled: false,
   announcement: { enabled: false, text: "", link: "", tone: "info" },
   keyDates: [
     { id: "teaching-end", label: "End of teaching", date: "2026-12-04" },
@@ -63,7 +63,7 @@ const emit = () => listeners.forEach((l) => l());
 function merge(raw: unknown): SiteConfig {
   const r = (raw && typeof raw === "object" ? raw : {}) as Partial<SiteConfig>;
   return {
-    maintenanceEnabled: r.maintenanceEnabled !== false,
+    maintenanceEnabled: r.maintenanceEnabled === true,
     announcement: { ...DEFAULT_CONFIG.announcement, ...(r.announcement ?? {}) },
     keyDates: Array.isArray(r.keyDates) ? r.keyDates.filter((d) => d && d.date) : DEFAULT_CONFIG.keyDates,
     timetable: r.timetable && typeof r.timetable === "object" ? r.timetable : {},

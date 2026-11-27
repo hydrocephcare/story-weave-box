@@ -293,9 +293,20 @@ export function extractiveAnswer(r: Retrieval): string {
       : "I could not find anything about that on Ompath Study. Try different words, or ask me again in a minute.";
   }
   const byTitle = new Map<string, string[]>();
-  for (const p of r.passages) (byTitle.get(p.title) ?? byTitle.set(p.title, []).get(p.title)!).push(p.text);
-  const parts = [...byTitle.entries()].slice(0, 3).map(([title, texts]) => `### ${title}\n${texts.slice(0, 2).map((x) => `- ${x}`).join("\n")}`);
-  return `The AI writer is busy, so here are the most relevant parts of your notes:\n\n${parts.join("\n\n")}`;
+  const seen = new Set<string>();
+  for (const passage of r.passages) {
+    const text = passage.text.replace(/\\s+/g, " ").trim();
+    const key = text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    if (!text || key.length < 40 || seen.has(key)) continue;
+    seen.add(key);
+    const list = byTitle.get(passage.title) ?? [];
+    if (list.length < 2) list.push(text);
+    byTitle.set(passage.title, list);
+  }
+  const parts = [...byTitle.entries()].slice(0, 3).map(([title, texts]) =>
+    `### ${title}\n${texts.map((text) => `- ${text}`).join("\n")}`
+  );
+  return `I could not generate a fresh AI explanation just now. These are the most relevant excerpts I found in your Ompath Study notes:\n\n${parts.join("\n\n")}\n\nYou can open any source below to read the complete note.`;
 }
 
 // ---------- daily allowance (the model costs money, so guests get a fair daily number of questions) ----------
