@@ -1,16 +1,26 @@
 import { describe, expect, it } from "vitest";
 import fs from "node:fs";
 
-describe("Vercel Hobby plan", () => {
-  it("keeps the serverless functions within the limit of twelve", () => {
-    const files = fs.readdirSync("api").filter((f) => /\.(js|ts|mjs)$/.test(f) && !f.startsWith("_"));
-    // an edge function does not count towards the limit
-    const edge = files.filter((f) => /runtime:\s*"edge"/.test(fs.readFileSync(`api/${f}`, "utf8")));
-    const counted = files.filter((f) => !edge.includes(f));
-    expect(counted.length, `functions: ${counted.join(", ")}`).toBeLessThanOrEqual(12);
+describe("Cloudflare Pages runtime", () => {
+  it("has Pages Function entrypoints for the production API routes", () => {
+    const required = [
+      "functions/api/ai.js",
+      "functions/api/neon-functions.js",
+      "functions/api/paystack-webhook.js",
+      "functions/api/note-card.js",
+      "functions/api/source-pdf.js",
+      "functions/api/sitemap-index.js",
+      "functions/api/sitemap.js",
+      "functions/_middleware.ts",
+      "functions/stories-sitemap.xml.ts",
+    ];
+    for (const path of required) expect(fs.existsSync(path), path).toBe(true);
   });
-  it("only names functions that exist in vercel.json", () => {
-    const v = JSON.parse(fs.readFileSync("vercel.json", "utf8"));
-    for (const p of Object.keys(v.functions ?? {})) expect(fs.existsSync(p), p).toBe(true);
+
+  it("keeps the Pages runtime adapter available for migrated API handlers", () => {
+    expect(fs.existsSync("functions/_lib/vercel-adapter.js")).toBe(true);
+    const source = fs.readFileSync("functions/_lib/vercel-adapter.js", "utf8");
+    expect(source).toContain("runVercelHandler");
+    expect(source).toContain("request.arrayBuffer()");
   });
 });
