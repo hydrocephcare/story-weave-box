@@ -1,9 +1,5 @@
 import { neon } from "@neondatabase/serverless";
-import { createRemoteJWKSet, jwtVerify } from "jose";
-import { isNeonAdmin } from "./neonAdmin.js";
-
-const DEFAULT_JWKS = "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth/.well-known/jwks.json";
-const jwks = createRemoteJWKSet(new URL(process.env.NEON_AUTH_JWKS_URL || DEFAULT_JWKS));
+import { isNeonAdmin, verifyNeonToken } from "./neonAdmin.js";
 const json = (res, status, body) => res.status(status).json(body);
 const db = () => {
   const url = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
@@ -22,20 +18,16 @@ export default async function handler(req, res) {
   if (!(await isNeonAdmin(token))) return json(res, 403, { error: "Administrator access required." });
 
   try {
-    const { payload } = await jwtVerify(token, jwks);
-    const userId = String(payload.sub || "");
-    if (!/^[0-9a-f-]{36}$/i.test(userId)) return json(res, 401, { error: "Invalid administrator session." });
+    const identity = await verifyNeonToken(token);
+    if (!identity) return json(res, 401, { error: "Invalid administrator session." });
+    const userId = identity.id;
+    const adminEmail = identity.email;
     const sql = db();
-    const adminRows = await sql.query('SELECT email FROM neon_auth."user" WHERE id=$1 LIMIT 1', [userId]);
-    const adminEmail = String(adminRows[0]?.email || payload.email || "").trim().toLowerCase();
-    if (!adminEmail) return json(res, 401, { error: "Administrator email is unavailable." });
-    const ensureLegacyUser = async (neonId, email) => {
-      const existing = await sql.query("SELECT id FROM auth.users WHERE lower(email)=lower($1) LIMIT 1", [email]);
-      if (existing[0]?.id) return String(existing[0].id);
-      await sql.query("INSERT INTO auth.users (id,email) VALUES ($1,$2) ON CONFLICT (id) DO UPDATE SET email=EXCLUDED.email", [neonId, email]);
+    const ensureNeonUser = async (neonId) => {
+      await sql.query("INSERT INTO auth.users(id,email) VALUES($1,NULL) ON CONFLICT(id) DO NOTHING", [neonId]);
       return neonId;
     };
-    const adminLegacyId = await ensureLegacyUser(userId, adminEmail);
+    const adminNeonId = await ensureNeonUser(userId);
 
     const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
     const title = String(body.title || "").trim().slice(0, 120);
@@ -53,34 +45,32 @@ export default async function handler(req, res) {
     if (audience === "study_year") {
       recipients = await sql.query(`SELECT DISTINCT n.id AS neon_id,n.email
         FROM neon_auth."user" n
-        LEFT JOIN auth.users a ON lower(a.email)=lower(n.email)
-        JOIN public.profiles p ON p.user_id=n.id OR p.user_id=a.id
-        WHERE p.study_year=$1 AND n.email IS NOT NULL`, [studyYear]);
+        JOIN public.profiles p ON p.user_id=n.id
+        WHERE p.study_year=$1 AND n.email IS NOT NULL AND n."emailVerified"=true`, [studyYear]);
     } else if (audience === "subscribers") {
       recipients = await sql.query(`SELECT DISTINCT n.id AS neon_id,n.email
         FROM neon_auth."user" n
-        LEFT JOIN auth.users a ON lower(a.email)=lower(n.email)
-        JOIN public.access_grants g
-          ON (g.user_id=n.id OR g.user_id=a.id OR lower(coalesce(g.email,''))=lower(n.email))
-        WHERE n.email IS NOT NULL AND g.expires_at > now()
+        JOIN public.access_grants g ON g.user_id=n.id
+        WHERE n.email IS NOT NULL AND n."emailVerified"=true
+          AND (g.expires_at IS NULL OR g.expires_at > now())
           AND coalesce(g.scope,'all') IN ('all','premium','content')`);
     } else {
-      recipients = await sql.query('SELECT id AS neon_id,email FROM neon_auth."user" WHERE email IS NOT NULL');
+      recipients = await sql.query('SELECT id AS neon_id,email FROM neon_auth."user" WHERE email IS NOT NULL AND "emailVerified"=true');
     }
 
     const unique = new Map();
     for (const r of recipients) {
       const email = String(r.email || "").trim().toLowerCase();
       if (!r.neon_id || !email) continue;
-      const legacyId = await ensureLegacyUser(String(r.neon_id), email);
-      if (!unique.has(legacyId)) unique.set(legacyId, { id: legacyId, email });
+      const neonId = await ensureNeonUser(String(r.neon_id));
+      if (!unique.has(neonId)) unique.set(neonId, { id: neonId, email });
     }
     const users = [...unique.values()];
 
     const campaigns = await sql.query(`INSERT INTO public.notification_campaigns
       (title,message,action_url,audience,study_year,status,recipient_count,created_by)
       VALUES ($1,$2,$3,$4,$5,'sending',$6,$7) RETURNING id`,
-      [title, message, actionUrl, audience, studyYear, users.length, adminLegacyId]);
+      [title, message, actionUrl, audience, studyYear, users.length, adminNeonId]);
     const campaignId = campaigns[0]?.id;
     if (!campaignId) throw new Error("Could not create notification campaign.");
 
