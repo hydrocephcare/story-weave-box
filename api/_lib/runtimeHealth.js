@@ -89,6 +89,12 @@ export default async function handler(req, res) {
     return { configured: true, reachable: response.ok, status: response.status, models: Array.isArray(data.models) ? data.models.length : 0 };
   });
 
+  result.paystackWebhook = await check("paystack-webhook", async () => {
+    const response = await fetch("https://www.ompathstudy.com/api/paystack-webhook", { signal: AbortSignal.timeout(10000) });
+    const data = await response.json().catch(() => ({}));
+    return { ready: response.ok && data.ready === true, status: response.status };
+  });
+
   result.paystack = await check("paystack", async () => {
     const key = String(process.env.PAYSTACK_SECRET_KEY || "");
     if (!key) return { configured: false, reachable: false };
