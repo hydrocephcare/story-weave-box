@@ -109,7 +109,7 @@ export function fixTypo(w: string): string {
   return bestD <= limit && !tie ? best : w;
 }
 
-const QUESTION_RE = /^(what|why|how|when|where|which|who|explain|define|describe|differentiate|compare|list|outline|discuss|is|are|does|do|can|should|tell me|give me the)\b|\?\s*$/i;
+const QUESTION_RE = /^(what(?:'s|s)?|why|how|when|where|which|who|explain|define|describe|differentiate|compare|list|outline|discuss|is|are|does|do|can|should|tell me|give me the)\b|\?\s*$/i;
 
 export function parseQuery(input: string): ParsedQuery {
   const raw = input.trim().replace(/\s+/g, " ");
