@@ -1,21 +1,8 @@
 // POST /api/outline-parse { text, year, semester, unit } (admin only): reads a course outline's text with AI and returns its rows as
 // { items: [{ week, topic, lecturer, detail }] }. Groq first, Gemini as the backup (keys in turn), the same as the rest of the site's AI.
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { isNeonAdmin } from "./neonAdmin.js";
 
-const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
-const ANON = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
-
-async function isAdmin(token) {
-  if (!token) return false;
-  try {
-    const u = await fetch(`${SUPABASE_URL}/auth/v1/user`, { headers: { apikey: ANON, Authorization: `Bearer ${token}` } });
-    if (!u.ok) return false;
-    const id = (await u.json())?.id;
-    if (!id) return false;
-    const r = await fetch(`${SUPABASE_URL}/rest/v1/rpc/has_role`, { method: "POST", headers: { apikey: ANON, Authorization: `Bearer ${token}`, "content-type": "application/json" }, body: JSON.stringify({ _user_id: id, _role: "admin" }) });
-    return r.ok && (await r.json()) === true;
-  } catch { return false; }
-}
 
 // Groq first (fast), then every key we have
 async function askJson(prompt, env) {
@@ -36,7 +23,7 @@ ${chunk}
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
   const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
-  if (!(await isAdmin(token))) return res.status(403).json({ error: "Admin only." });
+  if (!(await isNeonAdmin(token))) return res.status(403).json({ error: "Admin only." });
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   const text = String(body.text ?? "").replace(/\r/g, "").trim();
   if (text.length < 40) return res.status(400).json({ error: "Paste the outline text first." });
