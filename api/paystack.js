@@ -164,7 +164,7 @@ async function accessCode(req, res) {
     for(let i=0;i<5;i++){
       const code=newCode();
       try {
-        const inserted=await sql.query("INSERT INTO public.access_grants(code,plan,expires_at,payment_id,phone_number,amount,currency,allow_download,email,user_id) VALUES($1,$2,now()+($3::int * interval '1 day'),$4,$5,$6,$7,$8,$9,$10) ON CONFLICT (payment_id) DO NOTHING RETURNING code,plan,expires_at,allow_download",[code,plan.id,Math.max(1,Number(plan.days)||365),payment.id,payment.phone_number,Number(payment.amount||0),String(payment.currency||"KES").toUpperCase(),plan.download!==false,user.email,user.id]);
+        const inserted=await sql.query("INSERT INTO public.access_grants(code,plan,expires_at,payment_id,phone_number,amount,currency,allow_download,email,user_id) VALUES($1,$2,now()+($3::int * interval '1 day'),$4,$5,$6,$7,$8,$9,$10) ON CONFLICT (payment_id) WHERE payment_id IS NOT NULL DO NOTHING RETURNING code,plan,expires_at,allow_download",[code,plan.id,Math.max(1,Number(plan.days)||365),payment.id,payment.phone_number,Number(payment.amount||0),String(payment.currency||"KES").toUpperCase(),plan.download!==false,user.email,user.id]);
         if(inserted[0]) {const g=inserted[0];return out(res,200,{success:true,code:g.code,plan:g.plan,expires_at:g.expires_at,allow_download:g.allow_download!==false});}
         const raced=await sql.query("SELECT code,plan,expires_at,allow_download FROM public.access_grants WHERE payment_id=$1 LIMIT 1",[payment.id]);
         if(raced[0]) {const g=raced[0];return out(res,200,{success:true,code:g.code,plan:g.plan,expires_at:g.expires_at,allow_download:g.allow_download!==false});}
