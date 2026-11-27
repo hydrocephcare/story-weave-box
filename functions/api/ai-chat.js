@@ -7,7 +7,15 @@ const hits = new Map();
 const dead = new Map();
 let turn = 0;
 
-const splitKeys = (value) => [...new Set(String(value ?? "").split(/[\s,]+/).map((x) => x.trim()).filter(Boolean))].reverse();
+const splitKeys = (...values) => [...new Set(values.flatMap((value) => {
+  const raw = String(value ?? "").trim();
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
+  } catch {}
+  return raw.split(/[\s,;]+/).map((item) => item.trim()).filter(Boolean);
+}))].reverse();
 const isDead = (id) => (dead.get(id) ?? 0) > Date.now();
 const markDead = (id, ms = 45000) => dead.set(id, Date.now() + ms);
 
@@ -70,7 +78,7 @@ function sse(value) {
 }
 
 async function viaGroq(messages, env, send) {
-  const keys = splitKeys(env.GROQ_API_KEYS || env.GROQ_API_KEY);
+  const keys = splitKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
   const models = splitKeys(env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,openai/gpt-oss-20b");
   const start = keys.length ? turn++ % keys.length : 0;
   for (let i = 0; i < keys.length; i++) {
@@ -115,8 +123,8 @@ async function viaGroq(messages, env, send) {
 }
 
 async function viaGemini(messages, env, send) {
-  const keys = splitKeys(env.GEMINI_API_KEYS || env.GEMINI_API_KEY);
-  const models = splitKeys(env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite,gemini-2.5-flash,gemini-2.5-flash-lite");
+  const keys = splitKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
+  const models = splitKeys(env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite");
   const system = messages[0].content;
   const contents = messages.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = keys.length ? turn++ % keys.length : 0;
@@ -148,8 +156,8 @@ export async function onRequestOptions() {
 }
 
 export async function onRequestPost({ request, env }) {
-  const groqKeys = splitKeys(env.GROQ_API_KEYS || env.GROQ_API_KEY);
-  const geminiKeys = splitKeys(env.GEMINI_API_KEYS || env.GEMINI_API_KEY);
+  const groqKeys = splitKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
+  const geminiKeys = splitKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
   if (!groqKeys.length && !geminiKeys.length) return json({ error: "Ompath AI is not configured yet." }, 503);
 
   let body;

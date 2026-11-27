@@ -1,7 +1,7 @@
 // POST /api/topic-write { name, category, context }: Groq drafts a topic page and Gemini independently reviews it. The browser then saves it with the
 // publish_topic_page database function. Provider keys remain server-side; Gemini review is mandatory before a page is returned.
 import { neon } from "@neondatabase/serverless";
-import { generateReviewedTopicPage, validName, slugOf } from "../../supabase/functions/_shared/topicAi.js";
+import { generateReviewedTopicPage, validName, slugOf, providerKeys } from "../../supabase/functions/_shared/topicAi.js";
 import { consumeEntitlement } from "./entitlements.js";
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
@@ -31,14 +31,9 @@ async function saveDeepNotes({ slug, name, category, base, deep }) {
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
-  const geminiEnv = {
-    GEMINI_API_KEYS: process.env.GEMINI_API_KEYS || "",
-    GEMINI_API_KEY: process.env.GEMINI_API_KEY || "",
-    GEMINI_API_KEY_2: process.env.GEMINI_API_KEY_2 || "",
-    GEMINI_API_KEY_3: process.env.GEMINI_API_KEY_3 || "",
-  };
-  const hasGemini = Object.values(geminiEnv).some((value) => value.trim());
-  const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
+  const geminiEnv = { GEMINI_API_KEYS: providerKeys(process.env, "GEMINI").join(",") };
+  const hasGemini = Boolean(geminiEnv.GEMINI_API_KEYS);
+  const groq = providerKeys(process.env, "GROQ").join(",");
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
   const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
