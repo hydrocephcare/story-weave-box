@@ -127,7 +127,7 @@ $function$;
 CREATE OR REPLACE FUNCTION public.is_mku_student(_uid uuid DEFAULT auth.uid())
 RETURNS boolean
 LANGUAGE plpgsql
-STABLE
+VOLATILE
 SECURITY DEFINER
 SET search_path TO 'public', 'auth'
 AS $function$
