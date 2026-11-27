@@ -11,4 +11,4 @@ bucket_name = "ompathstudy"
 [vars]
 PUBLIC_BASE = "https://cdn.ompathstudy.com"
 NEON_DATA_API_URL = "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1"
-ALLOWED_ORIGINS = "https://www.ompathstudy.com,https://ompathstudy.com"
+ALLOWED_ORIGINS = "https://www.ompathstudy.com,https://ompathstudy.com,https://stories.ompathstudy.com"
