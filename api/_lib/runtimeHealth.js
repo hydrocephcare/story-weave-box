@@ -209,6 +209,20 @@ export default async function handler(req, res) {
     return { configured, ready: false, reason: "Google Drive OAuth and import tables still need migration to Neon." };
   });
 
+  result.rlsRoleCompatibility = await check("rls-role-compatibility", async () => {
+    const rows = await getPolishSql().query(`SELECT
+      count(*) FILTER (WHERE roles @> ARRAY['supabase_authenticated_legacy']::name[]
+        AND NOT roles @> ARRAY['authenticated']::name[])::int AS authenticated_policies_missing,
+      count(*) FILTER (WHERE roles @> ARRAY['supabase_anon_legacy']::name[]
+        AND NOT roles @> ARRAY['anonymous']::name[])::int AS anonymous_policies_missing
+      FROM pg_policies WHERE schemaname='public'`);
+    const row = rows[0] || {};
+    const authenticatedMissing = Number(row.authenticated_policies_missing || 0);
+    const anonymousMissing = Number(row.anonymous_policies_missing || 0);
+    return { ready: authenticatedMissing === 0 && anonymousMissing === 0,
+      authenticatedPoliciesMissing: authenticatedMissing, anonymousPoliciesMissing: anonymousMissing };
+  });
+
   result.contestManagement = await check("contest-management", async () => {
     const rows = await getPolishSql().query(`SELECT
       to_regclass('public.contests') IS NOT NULL AS contests,
@@ -220,7 +234,7 @@ export default async function handler(req, res) {
       to_regprocedure('public.admin_replace_contest_questions(uuid,jsonb)') IS NOT NULL AS question_import_rpc,
       to_regprocedure('public.score_contest_attempt(uuid)') IS NOT NULL AS scoring_rpc`);
     const schema = rows[0] || {};
-    const ready = Object.values(schema).every((value) => value === true);
+    const ready = Object.values(schema).every((value) => value === true) && result.rlsRoleCompatibility?.ready === true;
     return { ready, schema, handler: "cloudflare-pages-neon" };
   });
 
