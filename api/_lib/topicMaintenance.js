@@ -85,10 +85,10 @@ export default async function handler(req, res) {
         ORDER BY updated_at DESC LIMIT 1000`;
       const seen = new Set();
       const topics = rows.map((row) => {
-        const year = /^Year\\s*(\\d)/i.exec(String(row.category || ""))?.[1];
-        const name = String(row.title || "").replace(/\\b(MCQs?|questions?|quiz|set|part)\\b.*$/i, "")
-          .replace(/[–—:|-]\\s*$/, "").replace(/\\s+/g, " ").trim();
-        return { year: year ? Number(year) : 0, name, unit: String(row.category || "").replace(/^Year\\s*\\d\\s*:\\s*/i, "") };
+        const year = /^Year\s*(\d)/i.exec(String(row.category || ""))?.[1];
+        const name = String(row.title || "").replace(/\b(MCQs?|questions?|quiz|set|part)\b.*$/i, "")
+          .replace(/[–—:|-]\s*$/, "").replace(/\s+/g, " ").trim();
+        return { year: year ? Number(year) : 0, name, unit: String(row.category || "").replace(/^Year\s*\d\s*:\s*/i, "") };
       }).filter((item) => item.year >= 1 && item.year <= 6 && item.name.length > 3 && item.name.length < 60
         && !seen.has(item.name.toLowerCase()) && seen.add(item.name.toLowerCase()));
       return res.status(200).json({ topics });
@@ -133,9 +133,9 @@ export default async function handler(req, res) {
       if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
       let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
       if (!review.validated) {
-        const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\\nISSUES:\\n"
-          + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\\n")
-          + "\\nQUESTIONS:\\n" + JSON.stringify(questions);
+        const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
+          + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
+          + "\nQUESTIONS:\n" + JSON.stringify(questions);
         const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
         questions = parse(fixed.text);
         if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
