@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import { maintenanceRequest } from "./maintenance-client.mjs";
 
-const PAGE_SIZE = 50;
+const PAGE_SIZE = 20;
 const COLS = ["articles", "mcq_sets", "essays"];
 
 async function all(table) {
