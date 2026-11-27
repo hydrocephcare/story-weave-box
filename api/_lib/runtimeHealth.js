@@ -1,6 +1,7 @@
 import { isAdmin } from "./adminAgent.js";
 import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
 import { verifyNeonToken } from "./neonAdmin.js";
+import { askGeminiModel, askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 
 const DEFAULT_JWKS = "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth/.well-known/jwks.json";
 const DEFAULT_DATA_API = "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
@@ -21,6 +22,7 @@ export default async function handler(req, res) {
   if (!(await isAdmin(bearer(req)))) return res.status(403).json({ error: "Administrator access required." });
 
   const result = {};
+  const deepAI = new URL(req.url, "https://www.ompathstudy.com").searchParams.get("deep") === "1";
   result.neonDatabase = await check("neon-database", async () => {
     const rows = await getPolishSql().query("SELECT 1 AS ok");
     return { connected: rows[0]?.ok === 1 };
@@ -169,6 +171,17 @@ export default async function handler(req, res) {
     const data = await response.json().catch(() => ({}));
     return { configured: true, reachable: response.ok, status: response.status, models: Array.isArray(data.models) ? data.models.length : 0 };
   });
+
+  if (deepAI) {
+    result.groqGeneration = await check("groq-generation", async () => {
+      const out = await askGroqModel("Reply with the single word OK.", { env: process.env, timeoutMs: 15000, maxTokens: 8 });
+      return { ready: Boolean(out?.text?.trim()), model: out?.model || null };
+    });
+    result.geminiGeneration = await check("gemini-generation", async () => {
+      const out = await askGeminiModel("Reply with the single word OK.", { env: process.env, timeoutMs: 15000, maxTokens: 8 });
+      return { ready: Boolean(out?.text?.trim()), model: out?.model || null };
+    });
+  }
 
   result.paystackWebhook = await check("paystack-webhook", async () => {
     const response = await fetch("https://www.ompathstudy.com/api/paystack-webhook", { signal: AbortSignal.timeout(10000) });
