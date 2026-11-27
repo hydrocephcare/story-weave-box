@@ -1,7 +1,10 @@
 import { createRemoteJWKSet, jwtVerify } from "jose";
 
 const AUDIENCE="ompathstudy-blog-polish";
-const WORKFLOW_REF="hydrocephcare/story-weave-box/.github/workflows/blogs-polish.yml@refs/heads/main";
+const WORKFLOW_REFS=new Set([
+  "hydrocephcare/story-weave-box/.github/workflows/blogs-polish.yml@refs/heads/main",
+  "hydrocephcare/story-weave-box/.github/workflows/blogs-restructure.yml@refs/heads/main",
+]);
 const jwks=createRemoteJWKSet(new URL("https://token.actions.githubusercontent.com/.well-known/jwks"));
 
 export async function isTrustedBlogWorkflow(value) {
@@ -10,7 +13,7 @@ export async function isTrustedBlogWorkflow(value) {
   try {
     const {payload}=await jwtVerify(token,jwks,{issuer:"https://token.actions.githubusercontent.com",audience:AUDIENCE});
     return payload.repository==="hydrocephcare/story-weave-box"
-      && payload.workflow_ref===WORKFLOW_REF
+      && WORKFLOW_REFS.has(String(payload.workflow_ref||""))
       && payload.ref==="refs/heads/main"
       && ["schedule","workflow_dispatch"].includes(String(payload.event_name||""));
   } catch { return false; }
