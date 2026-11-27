@@ -274,21 +274,19 @@ export function useTopicPage(slug: string) {
 export async function writeDeepNotes(slug: string, name: string, category: string, base: AiPage, past: string[] = []): Promise<{ deep: DeepNotes } | { error: "busy" | "failed" | "bot" }> {
   if (looksLikeBot()) return { error: "bot" };
   try {
-    const digest = { sections: base.sections.map((x) => ({ h: x.h, p: x.p, b: (x.b ?? []).slice(0, 4) })), exam: base.exam ?? [] };
+    const digest = { summary: base.summary, subject: base.subject, sections: base.sections.map((x) => ({ h: x.h, p: x.p, b: (x.b ?? []).slice(0, 4) })), exam: base.exam ?? [] };
     const { data: sessionData } = await supabase.auth.getSession();
     const token = sessionData.session?.access_token;
     if (!token) return { error: "failed" };
     const r = await fetch("/api/topic-write", {
       method: "POST",
       headers: { "content-type": "application/json", Authorization: `Bearer ${token}` },
-      body: JSON.stringify({ mode: "deep", name, category, base: digest, past: past.slice(0, 12) }),
+      body: JSON.stringify({ mode: "deep", slug, name, category, base: digest, past: past.slice(0, 12) }),
     });
     const j = (await r.json().catch(() => null)) as { status?: string; deep?: DeepNotes } | null;
-    if (j?.status === "published" && j.deep) {
-      const clean = { ...base, deep: undefined } as AiPage;
-      try { await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<unknown> }).rpc("save_topic_deep", { p_slug: slug, p_name: name, p_category: category || base.subject || "", p_base: JSON.parse(JSON.stringify(clean)), p_deep: j.deep }); } catch { /* shown anyway; saved next time */ }
+    if (j?.status === "published" && j.deep && j.saved === true) {
       return { deep: j.deep };
     }
-    return { error: r.status === 429 || r.status === 402 || j?.status === "busy" || j?.status === "limit" ? "busy" : "failed" };
+    return { error: r.status === 429 || r.status === 402 || r.status === 503 || j?.status === "busy" || j?.status === "limit" ? "busy" : "failed" };
   } catch { return { error: "failed" }; }
 }
