@@ -1,4 +1,5 @@
 import mainOgMeta from "../api/og-meta.ts";
+import { runVercelHandler } from "./_lib/vercel-adapter.js";
 import { neon } from "@neondatabase/serverless";
 
 type StoriesEnv = { DATABASE_URL?: string };
@@ -36,7 +37,7 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
     if (!bot || url.searchParams.has("write") || path.startsWith("/api/") || path.startsWith("/assets/") || /\.(xml|txt|json|js|css|png|jpe?g|webp|svg|ico|woff2?)$/i.test(path)) return context.next();
     const target = new URL("/api/og-meta", request.url);
     target.searchParams.set("path", path + url.search);
-    return mainOgMeta(new Request(target, request));
+    return runVercelHandler(mainOgMeta, new Request(target, request));
   }
 
   if (!bot || (url.searchParams.has("write")) || !["/","/stories","/share-your-story","/finalists"].includes(path) && !path.startsWith("/stories/")) return context.next();
