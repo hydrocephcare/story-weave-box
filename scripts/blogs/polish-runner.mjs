@@ -49,7 +49,11 @@ for(const article of articles) {
         break;
       }
       if(data.status==="partial"&&data.more===true) { await pause(1200); continue; }
-      if(data.status==="partial"||data.status==="working"||data.status==="busy") { await pause(data.hiccup?15000:8000); continue; }
+      if(data.status==="partial"&&data.more===false) {
+        if(data.hiccup) { await pause(15000); continue; }
+        finished=true;failed++;console.log("partial; deferred to a later run: "+article.title.slice(0,70));break;
+      }
+      if(data.status==="working"||data.status==="busy") { await pause(8000); continue; }
       if(data.status==="invalid") { finished=true;held++;break; }
       await pause(5000);
     } catch(error) {
