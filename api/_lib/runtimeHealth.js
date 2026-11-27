@@ -35,7 +35,8 @@ export default async function handler(req, res) {
       to_regclass('public.stories') IS NOT NULL AS stories,
       to_regprocedure('public.publish_topic_page(text,text,text,jsonb,text)') IS NOT NULL AS topic_publish_rpc,
       to_regprocedure('public.save_topic_deep(text,text,text,jsonb,jsonb)') IS NOT NULL AS topic_deep_rpc,
-      to_regprocedure('public.consume_feature(text,integer)') IS NOT NULL AS entitlement_rpc`);
+      to_regprocedure('public.consume_feature(text,integer)') IS NOT NULL AS entitlement_rpc,
+      to_regprocedure('public.is_mku_student(uuid)') IS NOT NULL AS mku_student_rpc`);
     return rows[0] || {};
   });
 
@@ -52,6 +53,18 @@ export default async function handler(req, res) {
     const response = await fetch(process.env.NEON_AUTH_JWKS_URL || DEFAULT_JWKS, { signal: AbortSignal.timeout(8000) });
     const data = await response.json().catch(() => ({}));
     return { reachable: response.ok && Array.isArray(data.keys) && data.keys.length > 0, status: response.status };
+  });
+
+  result.mkuStudentAccess = await check("mku-student-access", async () => {
+    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\/+$/, "");
+    const response = await fetch(base + "/rpc/is_mku_student", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + bearer(req), "Content-Type": "application/json", Accept: "application/json" },
+      body: "{}",
+      signal: AbortSignal.timeout(10000),
+    });
+    const allowed = response.ok ? await response.json().catch(() => false) : false;
+    return { endpointReachable: response.ok, currentAdminAllowed: allowed === true, status: response.status };
   });
 
   result.groq = await check("groq", async () => {
@@ -80,6 +93,16 @@ export default async function handler(req, res) {
     const key = String(process.env.PAYSTACK_SECRET_KEY || "");
     if (!key) return { configured: false, reachable: false };
     const response = await fetch("https://api.paystack.co/balance", {
+      headers: { Authorization: "Bearer " + key, Accept: "application/json" },
+      signal: AbortSignal.timeout(10000),
+    });
+    return { configured: true, reachable: response.ok, status: response.status };
+  });
+
+  result.resend = await check("resend", async () => {
+    const key = String(process.env.RESEND_API_KEY || "");
+    if (!key) return { configured: false, reachable: false };
+    const response = await fetch("https://api.resend.com/domains", {
       headers: { Authorization: "Bearer " + key, Accept: "application/json" },
       signal: AbortSignal.timeout(10000),
     });
