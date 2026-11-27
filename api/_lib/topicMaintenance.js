@@ -1,6 +1,5 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
-import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
