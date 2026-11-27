@@ -1,8 +1,7 @@
 // POST /api/ai?task=draft: saves strong, unanswered Ompath AI study notes as drafts for admin approval.
 // GET /api/ai?task=health: checks provider keys for the admin Activity page.
-import { getPolishSql, verifyPolishWriteKey } from "./neonPolishStore.js";
+import { getPolishSql, hasPolishWriteKey, verifyPolishWriteKey } from "./neonPolishStore.js";
 
-const WRITE_KEY = () => process.env.POLISH_WRITE_KEY || "";
 const MAX_PENDING = 200;
 const hits = new Map();
 
@@ -11,10 +10,8 @@ const keyOf = (q) => String(q).toLowerCase().replace(/\b(notes?|on|about|explain
 export async function draft(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ ok: false });
-  const writeKey = WRITE_KEY();
-  if (!writeKey) return res.status(503).json({ ok: false });
+  if (!(await hasPolishWriteKey())) return res.status(503).json({ ok: false });
   const sql = getPolishSql();
-  if (!(await verifyPolishWriteKey(writeKey))) return res.status(503).json({ ok: false });
 
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
@@ -49,8 +46,7 @@ export async function draft(req, res) {
 export async function health(req, res) {
   res.setHeader("Cache-Control", "no-store");
   const sent = String(req.headers["x-polish-key"] || "");
-  const writeKey = WRITE_KEY();
-  if (!writeKey || sent !== writeKey || !(await verifyPolishWriteKey(writeKey))) return res.status(403).json({ error: "no" });
+  if (!(await verifyPolishWriteKey(sent))) return res.status(403).json({ error: "no" });
   const test = async (name, url, key, header) => {
     try { const r = await fetch(url, { headers: header(key), signal: AbortSignal.timeout(8000) }); return { provider: name, ok: r.ok, status: r.status }; }
     catch { return { provider: name, ok: false, status: 0 }; }
