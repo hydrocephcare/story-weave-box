@@ -59,7 +59,7 @@ async function extraSitemap(req, res, mode, env = {}) {
       return res.status(503).send('<?xml version="1.0" encoding="UTF-8"?><error>Stories sitemap temporarily unavailable</error>');
     }
     const esc = (v) => String(v ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-    const slug = (v) => String(v || "").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/&/g," and ").replace(/[^a-z0-9\\s-]/g,"").trim().replace(/\\s+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"");
+    const slug = (v) => String(v || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g," and ").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"");
     const urls = [{loc:STORY_SITE+"/"},{loc:STORY_SITE+"/stories"},{loc:STORY_SITE+"/share-your-story"}];
     for (const row of rows) {
       const path = "/stories/" + (row.slug || (row.id + "-" + (slug(row.title) || "story")));
