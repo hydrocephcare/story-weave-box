@@ -65,6 +65,7 @@ jobs:
           node --check api/_lib/polishConfig.js
           node --check api/_lib/runtimeHealth.js
           node --check api/_lib/sendNotification.js
+          node --check api/_lib/generateExam.js
           node --check api/_lib/student-data.js
           node --check api/paystack.js
           node --check api/paystack-webhook.js
