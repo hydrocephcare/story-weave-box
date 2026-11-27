@@ -148,8 +148,8 @@ export async function onRequestOptions() {
 }
 
 export async function onRequestPost({ request, env }) {
-  const groqKeys = splitKeys(env.GROQ_API_KEYS || env.GROQ_API_KEY);
-  const geminiKeys = splitKeys(env.GEMINI_API_KEYS || env.GEMINI_API_KEY);
+  const groqKeys = splitKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
+  const geminiKeys = splitKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
   if (!groqKeys.length && !geminiKeys.length) return json({ error: "Ompath AI is not configured yet." }, 503);
 
   let body;
