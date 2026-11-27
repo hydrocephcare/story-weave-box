@@ -1,4 +1,5 @@
 import { topicTitle } from "../src/lib/topicMeta.js";
+import { createClient, SupabaseAuthAdapter } from "@neondatabase/neon-js";
 export const config = {
   runtime: "edge",
 };
@@ -429,32 +430,53 @@ function extractUuidFromParam(value?: string | null): string | null {
   return match?.[1] || null;
 }
 
-function getSupabaseConfig() {
-  const url =
-    process.env.VITE_SUPABASE_URL ||
-    process.env.SUPABASE_URL ||
-    "https://strfwaqvxvkhjbqrwmla.supabase.co";
-  const key =
-    process.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-    process.env.SUPABASE_PUBLISHABLE_KEY ||
-    process.env.SUPABASE_ANON_KEY ||
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
-  return { url, key };
-}
+const NEON_AUTH_URL =
+  process.env.NEON_AUTH_URL ||
+  process.env.VITE_NEON_AUTH_URL ||
+  "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth";
+const NEON_DATA_API_URL =
+  process.env.NEON_DATA_API_URL ||
+  process.env.VITE_NEON_DATA_API_URL ||
+  "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
 
+const neon = createClient({
+  auth: { adapter: SupabaseAuthAdapter(), url: NEON_AUTH_URL, allowAnonymous: true },
+  dataApi: { url: NEON_DATA_API_URL },
+});
+
+/** Read-only public metadata queries through Neon; preserves the existing PostgREST filters. */
 async function sbFetch(table: string, params: string) {
-  const { url, key } = getSupabaseConfig();
-  const res = await fetch(`${url}/rest/v1/${table}?${params}`, {
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-      Accept: "application/json",
-    },
-  });
-  if (!res.ok) {
-    throw new Error(`Supabase error on ${table}: ${res.status} ${await res.text()}`);
+  const search = new URLSearchParams(params);
+  const select = search.get("select") || "*";
+  let query: any = neon.from(table).select(select);
+
+  for (const [key, raw] of search.entries()) {
+    if (key === "select" || key === "limit" || key === "order") continue;
+    if (raw.startsWith("eq.")) {
+      query = query.eq(key, raw.slice(3));
+    } else if (raw === "is.null") {
+      query = query.is(key, null);
+    } else if (raw.startsWith("in.(") && raw.endsWith(")")) {
+      const values = raw.slice(4, -1).split(",").filter(Boolean);
+      query = query.in(key, values);
+    } else {
+      throw new Error(`Unsupported metadata filter: ${key}=${raw}`);
+    }
   }
-  return res.json();
+
+  const order = search.get("order");
+  if (order) {
+    const [column, direction] = order.split(".");
+    query = query.order(column, { ascending: direction !== "desc", nullsFirst: false });
+  }
+  const limit = Number(search.get("limit"));
+  if (Number.isFinite(limit) && limit > 0) query = query.limit(limit);
+
+  const { data, error } = await query;
+  if (error) {
+    throw new Error(`Neon metadata query failed on ${table}: ${error.message || String(error)}`);
+  }
+  return data || [];
 }
 
 async function fetchArticleBySlug(slug: string) {
