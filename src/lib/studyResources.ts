@@ -46,7 +46,7 @@ const table = () => (supabase as any).from(TABLE);
 export async function listYearResources(year: number): Promise<StudyResource[]> {
   const { data, error } = await table()
     .select(
-      "id, year, unit, title, description, category, file_name, file_path, file_type, file_size, download_enabled, keywords, created_at, updated_at",
+      "id, year, unit, title, description, category, file_name, file_path, file_type, file_size, storage_url, google_drive_file_id, download_enabled, keywords, created_at, updated_at",
     )
     .eq("year", year)
     .eq("download_enabled", true)
