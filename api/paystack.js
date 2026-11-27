@@ -15,24 +15,19 @@ const phoneNumber = (v) => {
   return d.length >= 9 && d.length <= 15 ? "+" + d : "";
 };
 async function userFromRequest(req) {
-  const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
+  const token = String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
   if (!token) return null;
   try {
     const result = await jwtVerify(token, jwks);
-    const p = result.payload;
-    const id = String(p.sub || "");
+    const payload = result.payload;
+    const id = String(payload.sub || "");
     if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
     const sql = db();
-    const account = await sql.query('SELECT email,name FROM neon_auth."user" WHERE id=$1 LIMIT 1', [id]);
-    const tokenEmail = String(p.email || p.user?.email || account[0]?.email || "").trim().toLowerCase();
-    if (!tokenEmail) return null;
-    const legacy = await sql.query("SELECT id,email FROM auth.users WHERE lower(email)=lower($1) OR id=$2 ORDER BY (lower(email)=lower($1)) DESC LIMIT 1", [tokenEmail, id]);
-    // Reuse the migrated legacy ID for existing foreign keys; do not insert a duplicate email under a new Neon UUID.
-    const legacyId = legacy[0]?.id ? String(legacy[0].id) : id;
-    if (!legacy[0]?.id) {
-      await sql.query("INSERT INTO auth.users (id,email) VALUES ($1,$2) ON CONFLICT (id) DO UPDATE SET email=EXCLUDED.email", [id,tokenEmail]);
-    }
-    return { id: legacyId, neonId: id, email: tokenEmail, name: String(p.name || p.user?.name || account[0]?.name || "").slice(0, 120) };
+    const account = await sql.query('SELECT email,name FROM neon_auth."user" WHERE id=$1 AND "emailVerified"=true LIMIT 1', [id]);
+    const email = String(payload.email || payload.user?.email || account[0]?.email || "").trim().toLowerCase();
+    if (!email || !account[0]) return null;
+    await sql.query("INSERT INTO auth.users(id,email) VALUES($1,NULL) ON CONFLICT(id) DO NOTHING", [id]);
+    return { id, neonId: id, email, name: String(payload.name || payload.user?.name || account[0]?.name || "").slice(0, 120) };
   } catch { return null; }
 }
 async function verifyWithPaystack(reference, secret) {
