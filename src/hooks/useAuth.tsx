@@ -62,16 +62,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           ready = fetch("/api/ensure-user", {
             method: "POST",
             headers: { Authorization: "Bearer " + nextSession.access_token },
+            signal: AbortSignal.timeout(12000),
           }).then(async (response) => {
             if (!response.ok) throw new Error("Account data migration could not be completed.");
           });
           ensurePromises.set(userId, ready);
           void ready.catch(() => ensurePromises.delete(userId));
         }
-        void ready.then(() => Promise.all([
-          syncLocalProgress(userId).catch(() => undefined),
-          syncTrailToAccount(userId).catch(() => undefined),
-        ])).catch((error) => console.warn("[auth] Neon account preparation failed:", error));
+        try {
+          await ready;
+          void syncLocalProgress(userId).catch(() => undefined);
+          void syncTrailToAccount(userId).catch(() => undefined);
+        } catch (error) {
+          console.warn("[auth] Neon account preparation failed:", error);
+        }
       }
       else {
         setIsAdmin(false);
