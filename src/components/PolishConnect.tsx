@@ -70,7 +70,7 @@ export default function PolishConnect() {
         <div className="mt-3 space-y-2 text-sm">
           <p className="flex items-center gap-2">{config?.configured ? <Check className="h-4 w-4 text-emerald-500" /> : <span className="h-2 w-2 rounded-full bg-amber-500" />} Database secret: {config?.configured ? "saved in Neon" : "not configured"}</p>
           <p className="flex items-center gap-2">{config?.aiReady ? <Check className="h-4 w-4 text-emerald-500" /> : <span className="h-2 w-2 rounded-full bg-amber-500" />} Groq and Gemini keys: {config?.aiReady ? "present in runtime" : "one or both missing"}</p>
-          <p className="flex items-center gap-2">{config?.runtimeReady ? <Check className="h-4 w-4 text-emerald-500" /> : <span className="h-2 w-2 rounded-full bg-amber-500" />} Cloudflare runtime secret: {config?.runtimeReady ? "matches the Neon secret" : config?.runtimeKeyConfigured ? "configured; sync it to Neon" : "missing"}</p>
+          <p className="flex items-center gap-2">{config?.runtimeReady ? <Check className="h-4 w-4 text-emerald-500" /> : <span className="h-2 w-2 rounded-full bg-amber-500" />} Cloudflare runtime secret: {config?.runtimeReady ? "matches the Neon secret" : config?.syncAvailable ? "configured; sync it to Neon" : config?.runtimeKeyConfigured ? "does not match; update Cloudflare after rotating" : "missing"}</p>
           {config?.updatedAt && <p className="text-xs text-muted-foreground">Last changed: {new Date(config.updatedAt).toLocaleString()}</p>}
         </div>
       )}
