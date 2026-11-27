@@ -53,7 +53,7 @@ const checks = [
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
   ["runtime robots.txt uses real line breaks rather than literal backslash-n text", sitemapIndex.includes('lines.join("\\n")') && !sitemapIndex.includes('lines.join("\\\\n")')],
-  ["dynamic sitemap reads published content through Neon rather than the retired Supabase Edge Function", neonSitemap.includes("@neondatabase/neon-js") && neonSitemap.includes("SupabaseAuthAdapter()") && !neonSitemap.includes("Deno.env") && !neonSitemap.includes("new Response") && sitemapRoute.includes("/api/generate-sitemap") && !sitemapRoute.includes("strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/generate-sitemap")],
+  ["dynamic sitemap reads published content through Neon rather than the retired Supabase Edge Function", neonSitemap.includes('from "@neondatabase/serverless"') && neonSitemap.includes("neon(databaseUrl)") && neonSitemap.includes("sql.query(") && !neonSitemap.includes("@neondatabase/neon-js") && !neonSitemap.includes("SupabaseAuthAdapter") && !neonSitemap.includes("Deno.env") && !neonSitemap.includes("new Response") && sitemapRoute.includes("/api/generate-sitemap") && !sitemapRoute.includes("strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/generate-sitemap")],
   ["legacy generate-sitemap invocations use the Neon sitemap handler", functionDispatcher.includes('name === "generate-sitemap"') && functionDispatcher.includes("return generateSitemap(req, res)")],
 ];
 
