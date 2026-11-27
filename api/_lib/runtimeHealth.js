@@ -150,15 +150,19 @@ export default async function handler(req, res) {
   });
 
   result.entitlements = await check("entitlements", async () => {
-    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\/+$/, "");
-    const response = await fetch(base + "/rpc/consume_feature", {
+    // Health checks must never consume a student's feature quota. Verify the
+    // read-only role RPC instead of calling consume_feature().
+    const identity = await verifyNeonToken(bearer(req));
+    if (!identity) return { ready: false, reason: "Verified Neon Auth identity unavailable." };
+    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\\/+$/, "");
+    const response = await fetch(base + "/rpc/has_role", {
       method: "POST",
       headers: { Authorization: "Bearer " + bearer(req), "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({ p_feature: "ompath_ai_questions", p_units: 1 }),
+      body: JSON.stringify({ _user_id: identity.id, _role: "admin" }),
       signal: AbortSignal.timeout(10000),
     });
-    const data = response.ok ? await response.json().catch(() => ({})) : {};
-    return { ready: response.ok && data.allowed === true && data.reason === "admin", status: response.status, reason: data.reason };
+    const allowed = response.ok ? await response.json().catch(() => false) : false;
+    return { ready: response.ok && allowed === true, status: response.status };
   });
 
   result.groq = await check("groq", async () => {
