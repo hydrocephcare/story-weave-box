@@ -112,27 +112,50 @@ export async function initiate(req,res) {
 export async function callback(req,res) {
   if(req.method!=="POST") return send(res,405,{success:false,error:"Method not allowed."});
   try {
+    const developerKey=String(process.env.ONEKITTY_DEVELOPER_API_KEY||"");
+    if(!developerKey) return send(res,503,{success:false,error:"ONEKITTY_DEVELOPER_API_KEY is required to verify payment callbacks."});
     const body=req.body||{};
     const externalRef=String(body.third_party_reference||"").trim();
     const resultCode=String(body.result_code??"").trim();
     const kittyId=Number(body.kitty_id),amount=Number(body.amount),currency=String(body.currency||"KES").toUpperCase();
-    if(!externalRef||!resultCode||!Number.isFinite(amount)||!Number.isInteger(kittyId)) return send(res,400,{success:false,error:"Incomplete callback payload."});
+    if(!externalRef||!Number.isInteger(kittyId)||!Number.isFinite(amount)||!["0","00"].includes(resultCode)) {
+      return send(res,400,{success:false,error:"Invalid or unsuccessful OneKitty callback."});
+    }
     const sql=db();
-    const rows=await sql.query("SELECT id,amount,kitty_id,currency,callback_received_at FROM public.onekitty_test_payments WHERE external_ref=$1 LIMIT 1",[externalRef]);
+    const rows=await sql.query("SELECT id,amount,kitty_id,currency,callback_verified FROM public.onekitty_test_payments WHERE external_ref=$1 LIMIT 1",[externalRef]);
     const row=rows[0];
-    if(!row||Number(row.amount)!==amount||Number(row.kitty_id)!==kittyId||String(row.currency).toUpperCase()!==currency) return send(res,409,{success:false,error:"Payment reference or amount mismatch."});
-    if(row.callback_received_at) return send(res,200,{success:true,duplicate:true,verified:false});
-    const successReported=resultCode==="0"||resultCode==="00";
+    if(!row||Number(row.amount)!==amount||Number(row.kitty_id)!==kittyId||String(row.currency).toUpperCase()!==currency) {
+      return send(res,409,{success:false,error:"Callback amount, kitty or currency mismatch."});
+    }
+    if(row.callback_verified===true) return send(res,200,{success:true,duplicate:true,verified:true});
+    const query=new URLSearchParams({kitty_id:String(kittyId),reference:externalRef,page:"0",page_size:"20",sort:"-id"});
+    const {response,data}=await providerJson(`https://apisalticon.onekitty.co.ke/developer/v1/transactions/?${query.toString()}`,{
+      headers:{Authorization:"Bearer "+developerKey,Accept:"application/json"},
+    });
+    const items=Array.isArray(data?.data?.items)?data.data.items:[];
+    const verified=items.find(item=>
+      String(item.external_ref||"")===externalRef &&
+      Number(item.kitty_id)===kittyId &&
+      Number(item.amount)===amount &&
+      String(item.currency||"").toUpperCase()===currency &&
+      String(item.status||"").toUpperCase()==="SUCCESS" &&
+      String(item.type_in_out||"").toUpperCase()==="IN"
+    );
+    if(!response.ok||data?.status!==true||!verified) {
+      console.error("[onekitty-callback] independent verification failed",response.status);
+      return send(res,502,{success:false,error:"OneKitty transaction could not be independently verified."});
+    }
     const updated=await sql.query(`UPDATE public.onekitty_test_payments SET
-      callback_status=$1,callback_result_code=$2,callback_result_desc=$3,callback_channel_code=$4,
-      callback_transaction_code=$5,provider_payment_ref=COALESCE($6,provider_payment_ref),
-      request_reference=COALESCE($7,request_reference),callback_received_at=now(),callback_verified=false,updated_at=now()
-      WHERE id=$8 AND callback_received_at IS NULL RETURNING id`,
-      [successReported?"callback_reported_success":"callback_reported_failure",resultCode.slice(0,30),
-        safeText(body.result_desc,500),safeText(body.channel_code,30),safeText(body.transaction_code,100),
-        safeText(body.payment_ref,120)||null,safeText(body.request_reference,160)||null,row.id]);
-    if(!updated.length) return send(res,200,{success:true,duplicate:true,verified:false});
-    return send(res,200,{success:true,recorded:true,verified:false});
+      callback_status='callback_reported_success',callback_result_code=$1,callback_result_desc=$2,
+      callback_channel_code=$3,callback_transaction_code=$4,provider_payment_ref=$5,
+      request_reference=$6,callback_received_at=now(),callback_verified=true,updated_at=now()
+      WHERE id=$7 AND callback_verified=false RETURNING id`,
+      [resultCode,safeText(body.result_desc,500),safeText(verified.channel_code||body.channel_code,30),
+        safeText(verified.transaction_code||body.transaction_code,100),
+        safeText(verified.reference||body.payment_ref,120)||null,
+        safeText(body.request_reference,160)||null,row.id]);
+    if(!updated.length) return send(res,200,{success:true,duplicate:true,verified:true});
+    return send(res,200,{success:true,verified:true,external_ref:externalRef});
   } catch(error) {
     console.error("[onekitty-callback]",error instanceof Error?error.message:String(error));
     return send(res,500,{success:false,error:"Callback processing failed."});
