@@ -6,7 +6,7 @@ const WRITE_KEY = () => process.env.POLISH_WRITE_KEY || "";
 const MAX_PENDING = 200;
 const hits = new Map();
 
-const keyOf = (q) => String(q).toLowerCase().replace(/\\b(notes?|on|about|explain|please|give|me|the|of|for|a|an)\\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().slice(0, 80);
+const keyOf = (q) => String(q).toLowerCase().replace(/\b(notes?|on|about|explain|please|give|me|the|of|for|a|an)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim().slice(0, 80);
 
 export async function draft(req, res) {
   res.setHeader("Cache-Control", "no-store");
@@ -27,15 +27,15 @@ export async function draft(req, res) {
   const answer = String(body.answer ?? "").trim().slice(0, 20000);
   const year = [1, 2, 3, 4, 5, 6].includes(Number(body.year)) ? Number(body.year) : null;
   const key = keyOf(query);
-  const headings = (answer.match(/^#{1,4}\\s+\\S/gm) || []).length + (answer.match(/^\\*\\*[^*]{3,60}\\*\\*\\s*$/gm) || []).length;
-  const bullets = (answer.match(/^\\s*[-*•]\\s+\\S/gm) || []).length;
+  const headings = (answer.match(/^#{1,4}\s+\S/gm) || []).length + (answer.match(/^\*\*[^*]{3,60}\*\*\s*$/gm) || []).length;
+  const bullets = (answer.match(/^\s*[-*•]\s+\S/gm) || []).length;
   if (key.length < 4 || answer.length < 1200 || headings < 2 || bullets < 4 || /(could not reach|i can't help|i cannot help|as an ai)/i.test(answer)) return res.status(200).json({ ok: false, why: "not a full note" });
 
   const pending = await sql.query("SELECT count(*)::int AS count FROM public.ai_drafts WHERE status = 'pending'");
   if (Number(pending[0]?.count || 0) >= MAX_PENDING) return res.status(200).json({ ok: false, why: "queue full" });
 
-  const first = answer.match(/^#{1,2}\\s+(.+)$/m)?.[1]?.replace(/[*_`]/g, "").trim();
-  const title = (first && first.length >= 6 && first.length <= 110 ? first : query.replace(/\\b\\w/g, (c) => c.toUpperCase())).slice(0, 110);
+  const first = answer.match(/^#{1,2}\s+(.+)$/m)?.[1]?.replace(/[*_`]/g, "").trim();
+  const title = (first && first.length >= 6 && first.length <= 110 ? first : query.replace(/\b\w/g, (c) => c.toUpperCase())).slice(0, 110);
   const made = await sql.query(
     "INSERT INTO public.ai_drafts (query,query_key,title,content,year) VALUES ($1,$2,$3,$4,$5) ON CONFLICT (query_key) DO NOTHING RETURNING id",
     [query, key, title, answer, year],
@@ -55,7 +55,7 @@ export async function health(req, res) {
     try { const r = await fetch(url, { headers: header(key), signal: AbortSignal.timeout(8000) }); return { provider: name, ok: r.ok, status: r.status }; }
     catch { return { provider: name, ok: false, status: 0 }; }
   };
-  const list = (v) => String(v || "").split(/[ ,\\s]+/).filter(Boolean);
+  const list = (v) => String(v || "").split(/[ ,\s]+/).filter(Boolean);
   const out = [];
   for (const k of list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY)) out.push({ ...(await test("Groq", "https://api.groq.com/openai/v1/models", k, (x) => ({ Authorization: `Bearer ${x}` }))), tail: k.slice(-4) });
   for (const k of list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY)) out.push({ ...(await test("Gemini", `https://generativelanguage.googleapis.com/v1beta/models?key=${k}`, k, () => ({}))), tail: k.slice(-4) });
