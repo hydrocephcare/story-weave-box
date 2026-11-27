@@ -1,6 +1,5 @@
 import { neon } from "@neondatabase/serverless";
 // the simulator cases that ship with the site (the AI-written ones are read from the database below)
-const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const BUILTIN_CASES = ["med-acs","med-aki","med-dka","med-gibleed","med-hf","med-malaria","med-mening","med-pe","med-stroke","med-tb","ob-aph","ob-ectopic","ob-labour","ob-pe","ob-pid","ob-pph","pd-asthma","pd-dehyd","pd-malaria","pd-neo","pd-pneu","pd-sam","pd-scd","ps-adhd","ps-delirium","ps-depr","ps-dts","ps-mania","ps-panic","ps-schiz","sg-appy","sg-breast","sg-burn","sg-foot","sg-obstruct","sg-trauma"];
 
 const REMOVED_404 = [
@@ -34,32 +33,33 @@ const REMOVED_404 = [
   "/essays/weekly-year-2-git-physiology-exam-april-17-2026-sections-b-and-c",
 ];
 
-const PUBLIC_CACHE = "https://ompath-sb-cache.hydrocephcare.workers.dev";
-
-async function fetchPublicRows(path, maxPages = 250) {
-  const rows = [];
-  for (let page = 0; page < maxPages; page++) {
-    const offset = page * 20;
-    const query = /[?]/.test(path) ? `${path}&limit=20&offset=${offset}` : `${path}?limit=20&offset=${offset}`;
-    const response = await fetch(`${PUBLIC_CACHE}/?u=${encodeURIComponent(query)}`);
-    if (!response.ok) break;
-    const batch = await response.json();
-    if (!Array.isArray(batch)) break;
-    rows.push(...batch);
-    if (batch.length < 20) break;
-  }
-  return rows;
-}
-
 const REDIRECTED = ["/blog/amebiasis-pathogenic-free-living-amebae-guide","/blog/entamoeba-histolytica-amoebiasis","/blog/liver-tumors-benign-and-malignant-overview","/blog/lymphoma-overview-classification","/blog/liver-tumors-summary-notes","/blog/non-hodgkin-lymphoma","/blog/pleural-effusion-lights-criteria-y4","/blog/pneumothorax-clinical-management-y4","/blog/bronchial-asthma-internal-medicine-y4","/mcqs/medical-bacteriology-mcqs","/mcqs/fundamentals-of-tb-mcqs","/mcqs/chemical-pathology-mcqs","/mcqs/cardiovascular-pathology-mcqs","/mcqs/respiratory-pathology-mcqs","/mcqs/glomerular-diseases-mcqs","/mcqs/sickle-cell-anaemia-mcqs","/mcqs/infective-endocarditis-mcqs","/mcqs/biliary-tract-disease-mcqs","/mcqs/rheumatic-heart-disease-mcqs","/mcqs/paed-2021-mcqs","/mcqs/congenital-heart-disease-mcqs","/mcqs/gout-mcqs","/mcqs/pneumonia-mcqs","/mcqs/osteoarthritis-presentation-mcqs","/mcqs/fibromyalgia-presentation-mcqs","/mcqs/crystal-arthropathies-mcqs","/mcqs/sepsis-mcqs","/mcqs/hepatic-amoebiasis-mcqs","/mcqs/blood-transfusion-mcqs","/essays/congenital-heart-disease-essay-questions"];
 
-async function extraSitemap(req, res, mode) {
+async function extraSitemap(req, res, mode, env = {}) {
   const SITE = "https://www.ompathstudy.com";
   if (mode === "stories") {
     const STORY_SITE = "https://stories.ompathstudy.com";
-    const rows = await fetchPublicRows("stories?select=id,title,slug,created_at,updated_at,cover_image_url&published=eq.true&deleted_at=is.null&order=created_at.desc", 250);
+    const databaseUrl = env.DATABASE_URL || process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
+    if (!databaseUrl) {
+      res.setHeader("Content-Type", "application/xml; charset=utf-8");
+      res.setHeader("Cache-Control", "no-store");
+      return res.status(503).send('<?xml version="1.0" encoding="UTF-8"?><error>Stories sitemap database is not configured</error>');
+    }
+    let rows;
+    try {
+      rows = await neon(databaseUrl)`SELECT id,title,slug,created_at,cover_image_url
+        FROM public.stories
+        WHERE published = true AND deleted_at IS NULL AND password_protected = false
+          AND (scheduled_at IS NULL OR scheduled_at <= now())
+        ORDER BY created_at DESC LIMIT 10000`;
+    } catch (error) {
+      console.error("[stories-sitemap] Neon lookup failed:", error instanceof Error ? error.message : String(error));
+      res.setHeader("Content-Type", "application/xml; charset=utf-8");
+      res.setHeader("Cache-Control", "no-store");
+      return res.status(503).send('<?xml version="1.0" encoding="UTF-8"?><error>Stories sitemap temporarily unavailable</error>');
+    }
     const esc = (v) => String(v ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-    const slug = (v) => String(v || "").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/&/g," and ").replace(/[^a-z0-9\\s-]/g,"").trim().replace(/\\s+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"");
+    const slug = (v) => String(v || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g," and ").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-").replace(/-+/g,"-").replace(/^-|-$/g,"");
     const urls = [{loc:STORY_SITE+"/"},{loc:STORY_SITE+"/stories"},{loc:STORY_SITE+"/share-your-story"}];
     for (const row of rows) {
       const path = "/stories/" + (row.slug || (row.id + "-" + (slug(row.title) || "story")));
@@ -79,6 +79,7 @@ async function extraSitemap(req, res, mode) {
   }
   if (mode === "topics") {
     const entries = [{ slug: null, updated_at: null }];
+    let databaseReady = false;
     try {
       const connectionString = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
       if (connectionString) {
@@ -86,6 +87,7 @@ async function extraSitemap(req, res, mode) {
         const rows = await db`SELECT slug, updated_at FROM public.topic_pages
           WHERE status = 'published' AND ai_review_status = 'passed'
           ORDER BY updated_at DESC LIMIT 5000`;
+        databaseReady = true;
         for (const row of rows) {
           if (typeof row.slug === "string" && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(row.slug)) entries.push(row);
         }
@@ -102,6 +104,7 @@ async function extraSitemap(req, res, mode) {
     }).join("");
     res.setHeader("Content-Type", "application/xml; charset=utf-8");
     res.setHeader("Cache-Control", "public, s-maxage=900, stale-while-revalidate=86400");
+    if (databaseReady) res.setHeader("X-Ompath-Topics-Sitemap", "neon-v1");
     return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
   }
   // The topics branch above lists Neon pages only after independent Gemini review; static pages remain in library-sitemap.xml.
@@ -109,9 +112,9 @@ async function extraSitemap(req, res, mode) {
   res.setHeader("Cache-Control","public, s-maxage=900, stale-while-revalidate=86400");
   return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE + '/topics</loc><changefreq>daily</changefreq><priority>0.7</priority></url></urlset>');
 }
-export default async function handler(req, res) {
+export default async function handler(req, res, env = {}) {
   const mode = typeof req.query?.mode === "string" ? req.query.mode : "";
-  if (mode === "research" || mode === "topics" || mode === "stories") return extraSitemap(req, res, mode);
+  if (mode === "research" || mode === "topics" || mode === "stories") return extraSitemap(req, res, mode, env);
   try {
     const file = typeof req.query?.file === "string" ? req.query.file : "all.xml";
     const sitemapUrl = new URL(`/api/generate-sitemap?file=${encodeURIComponent(file)}`, `https://${req.headers.host || "www.ompathstudy.com"}`);

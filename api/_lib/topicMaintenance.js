@@ -1,9 +1,15 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
+import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
+import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
-const WORKFLOW_REF = "hydrocephcare/story-weave-box/.github/workflows/topics-daily.yml@refs/heads/main";
+const WORKFLOW_REFS = new Set([
+  "hydrocephcare/story-weave-box/.github/workflows/topics-daily.yml@refs/heads/main",
+  "hydrocephcare/story-weave-box/.github/workflows/zone-daily.yml@refs/heads/main",
+]);
 const jwks = createRemoteJWKSet(new URL("https://token.actions.githubusercontent.com/.well-known/jwks"));
 const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
 let database;
@@ -46,7 +52,7 @@ async function verifyWorkflow(req) {
     });
     return payload.repository === REPOSITORY
       && payload.ref === "refs/heads/main"
-      && payload.workflow_ref === WORKFLOW_REF
+      && WORKFLOW_REFS.has(String(payload.workflow_ref || ""))
       && ["push", "schedule", "workflow_dispatch"].includes(String(payload.event_name));
   } catch {
     return false;
@@ -73,6 +79,156 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, publishedTopics: Number(rows[0]?.count || 0) });
     }
 
+    if (task === "zone-topics") {
+      const rows = await getDb()`SELECT title,category FROM public.mcq_sets
+        WHERE published=true AND deleted_at IS NULL AND title IS NOT NULL
+        ORDER BY updated_at DESC LIMIT 1000`;
+      const seen = new Set();
+      const topics = rows.map((row) => {
+        const year = /^Year\s*(\d)/i.exec(String(row.category || ""))?.[1];
+        const name = String(row.title || "").replace(/\b(MCQs?|questions?|quiz|set|part)\b.*$/i, "")
+          .replace(/[–—:|-]\s*$/, "").replace(/\s+/g, " ").trim();
+        return { year: year ? Number(year) : 0, name, unit: String(row.category || "").replace(/^Year\s*\d\s*:\s*/i, "") };
+      }).filter((item) => item.year >= 1 && item.year <= 6 && item.name.length > 3 && item.name.length < 60
+        && !seen.has(item.name.toLowerCase()) && seen.add(item.name.toLowerCase()));
+      return res.status(200).json({ topics });
+    }
+
+    if (task === "zone-write") {
+      const kind = String(body.kind || "");
+      const topic = body.topic && typeof body.topic === "object" ? body.topic : {};
+      const name = String(topic.name || "").trim().slice(0, 100);
+      const year = Number(topic.year);
+      const unit = String(topic.unit || "").trim().slice(0, 100);
+      if (!["quiz", "case", "drug"].includes(kind) || name.length < 4 || !Number.isInteger(year) || year < 1 || year > 6) {
+        return res.status(400).json({ error: "Invalid daily game request." });
+      }
+      const groqEnv = { GROQ_API_KEYS: String(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "") };
+      const geminiEnv = { GEMINI_API_KEYS: String(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "") };
+      if (!groqEnv.GROQ_API_KEYS.trim() || !geminiEnv.GEMINI_API_KEYS.trim()) {
+        return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
+      }
+      const prompts = {
+        quiz: `Write 10 multiple-choice questions on "${name}" (${unit}) for a Year ${year} MBChB student.`,
+        case: `Write 8 short clinical case questions on "${name}" (${unit}) for a Year ${year} MBChB student. Each needs a 2–3 sentence vignette and asks for the most likely diagnosis or next best step.`,
+        drug: `Write 8 pharmacology questions related to "${name}" (${unit}) for a Year ${year} MBChB student: drug class, mechanism, indication or characteristic adverse effect.`,
+      };
+      const label = kind === "case" ? "Case Showdown" : kind === "drug" ? "Drug Duel" : "Quiz";
+      const parse = (raw) => {
+        try {
+          const text = String(raw || "");
+          const parsed = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+          return (parsed.questions || []).filter((item) => item && item.q && Array.isArray(item.options)
+            && item.options.length >= 3 && item.options.length <= 6
+            && Number.isInteger(item.correct) && item.correct >= 0 && item.correct < item.options.length
+            && new Set(item.options.map(String)).size === item.options.length)
+            .map((item) => ({ q: String(item.q).slice(0, 700), options: item.options.map((option) => String(option).slice(0, 200)),
+              correct: item.correct, explanation: String(item.explanation || "").slice(0, 400), ai: true,
+              kind: kind === "case" ? "case" : kind === "drug" ? "drug" : "mcq" }));
+        } catch { return []; }
+      };
+      const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
+      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+      let questions = parse(draft.text);
+      if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
+      let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+      if (!review.validated) {
+        const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
+          + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
+          + "\nQUESTIONS:\n" + JSON.stringify(questions);
+        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+        questions = parse(fixed.text);
+        if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
+        review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+      }
+      if (!review.validated) return res.status(422).json({ validated: false, issues: review.issues || [] });
+      return res.status(200).json({ validated: true, questions, reviewModel: review.model || null });
+    }
+
+    if (task === "generate-publish") {
+      const name = String(body.name || "").trim();
+      const category = String(body.category || "").slice(0, 60);
+      const context = String(body.context || "").slice(0, 5000);
+      if (name.length < 4 || name.length > 80 || name.includes("<") || name.includes(">")) {
+        return res.status(400).json({ error: "Invalid topic name." });
+      }
+      const dailyRows = await getDb()`SELECT count(*)::int AS count FROM public.topic_pages WHERE created_at > now() - interval '1 day'`;
+      if (Number(dailyRows[0]?.count || 0) >= 150) {
+        return res.status(429).json({ ok: false, reason: "daily_cap", error: "The Neon topic publishing limit of 150 pages per rolling day has been reached." });
+      }
+      const env = {
+        GROQ_API_KEYS: String(process.env.GROQ_API_KEYS || ""),
+        GEMINI_API_KEYS: String(process.env.GEMINI_API_KEYS || ""),
+      };
+      if (!env.GROQ_API_KEYS.trim() || !env.GEMINI_API_KEYS.trim()) {
+        return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
+      }
+      const generated = await generateReviewedTopicPage({ name, category, context }, { env });
+      const generatedPage = generated?.page;
+      if (!generatedPage) return res.status(422).json({ ok: false, reason: "no_page" });
+      if (generatedPage.medical !== true) return res.status(200).json({ ok: true, medical: false, slug: body.slug || null, page: generatedPage });
+      const page = { ...generatedPage, subject: pickSubject(generatedPage.subject, `${name} ${category}`) };
+      if (page.aiReview?.status !== "passed" || !String(page.aiReview?.model || "").trim()
+          || !Array.isArray(page.sections) || page.sections.length < 3
+          || !Array.isArray(page.exam) || page.exam.length < 8
+          || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
+        return res.status(422).json({ ok: false, reason: "review_or_structure" });
+      }
+      const requestedSlug = String(body.slug || "");
+      const slug = requestedSlug || name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80).replace(/-+$/g, "");
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || slug.length > 80) return res.status(400).json({ error: "Invalid topic slug." });
+      const rows = await getDb()`SELECT public.publish_topic_page(
+        ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
+      ) AS result`;
+      const result = rows[0]?.result || { ok: false, reason: "empty_result" };
+      if (!result.ok) return res.status(result.reason === "busy" ? 429 : 422).json(result);
+      return res.status(200).json({ ...result, slug, name, page });
+    }
+
+    if (task === "publish") {
+      const slug = String(body.slug || "");
+      const name = String(body.name || "").trim();
+      const category = String(body.category || "").slice(0, 60);
+      const page = body.page;
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || !name || name.length > 80) {
+        return res.status(400).json({ error: "Invalid topic identity." });
+      }
+      if (!page || typeof page !== "object" || page.medical !== true || page.aiReview?.status !== "passed"
+          || !String(page.aiReview?.model || "").trim() || !Array.isArray(page.sections) || page.sections.length < 3
+          || !Array.isArray(page.exam) || page.exam.length < 8 || String(page.summary || "").length < 100
+          || JSON.stringify(page).length > 60000
+          || (/https?:|javascript:|data:text/i.test(JSON.stringify(page)) || JSON.stringify(page).toLowerCase().includes("www.") || /<[a-z/!]/i.test(JSON.stringify(page)) || /(?:onerror|onload) *=/i.test(JSON.stringify(page)))) {
+        return res.status(400).json({ error: "Topic did not pass the publication safeguards." });
+      }
+      const rows = await getDb()`SELECT public.publish_topic_page(
+        ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
+      ) AS result`;
+      const result = rows[0]?.result || { ok: false, reason: "empty_result" };
+      return res.status(result.ok ? 200 : result.reason === "busy" ? 429 : 422).json(result);
+    }
+
+    if (task === "summarize") {
+      const title = String(body.title || "").slice(0, 240);
+      const where = String(body.where || "").slice(0, 160);
+      const sourceText = String(body.text || "").slice(0, 5000);
+      if (title.length < 2 || sourceText.trim().length < 250) return res.status(400).json({ error: "A page title and at least 250 characters of source text are required." });
+      const prompt = `You write the short "in a nutshell" for a medical study page.
+Page: "${title}" (${where}).
+Return ONLY JSON: {"summary":"2 or 3 plain sentences, 55 words at most, no hype, no drug doses","terms":["5 to 7 key terms from the page"]}.
+Use only information supported by the source text. Do not invent content.
+PAGE TEXT:
+"""${sourceText}"""`;
+      const result = await askModel(prompt, { env: process.env, timeoutMs: 40000, maxTokens: 900 });
+      const match = String(result?.text || "").match(/\{[\s\S]*\}/);
+      if (!match) return res.status(502).json({ error: "The AI summary was not valid JSON." });
+      let parsed;
+      try { parsed = JSON.parse(match[0]); } catch { return res.status(502).json({ error: "The AI summary could not be parsed." }); }
+      const summary = String(parsed.summary || "").replace(/\s+/g, " ").trim();
+      const terms = (Array.isArray(parsed.terms) ? parsed.terms : []).map((term) => String(term).trim()).filter((term) => term.length >= 3 && term.length <= 40).slice(0, 7);
+      if (summary.length < 40 || summary.length > 420 || terms.length < 4 || /\d+\s?(mg|mcg|g)\b/i.test(summary)) return res.status(422).json({ error: "The generated summary did not meet the content checks." });
+      return res.status(200).json({ summary, terms });
+    }
+
     if (task === "corpus") {
       const table = String(body.table || "");
       const config = TABLES[table];
@@ -84,6 +240,106 @@ export default async function handler(req, res) {
         [limit, offset],
       );
       return res.status(200).json({ rows });
+    }
+
+
+    if (task === "deep-static") {
+      const name = String(body.name || "").slice(0, 180);
+      const category = String(body.category || "").slice(0, 100);
+      const base = body.base && typeof body.base === "object" ? body.base : null;
+      if (name.length < 2 || !base || !Array.isArray(base.sections) || base.sections.length < 3) return res.status(400).json({ error: "A valid topic name and revision page are required." });
+      const past = Array.isArray(body.past) ? body.past.slice(0, 12).map(x => String(x).slice(0, 220)) : [];
+      const deep = await generateCheckedDeep({ name, category, base, past }, process.env, fetch, 240000);
+      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
+      return res.status(200).json({ deep });
+    }
+
+    if (task === "check-note") {
+      const title = String(body.title || "").slice(0, 240);
+      const original = String(body.text || "").slice(0, 18000);
+      if (title.length < 2 || original.trim().length < 200) return res.status(400).json({ error: "A note title and at least 200 characters are required." });
+      const isThin = value => value.trim().split(/\s+/).filter(Boolean).length < 750 || (value.match(/^#{1,3}\s+/gm) || []).length < 8;
+      const applyThin = (result, value) => {
+        if (isThin(value)) {
+          result.validated = false; result.medium = Number(result.medium || 0) + 1;
+          result.issues = [...(result.issues || []), { severity: "medium", where: "overall structure", problem: "This study note is too thin for the comprehensive library standard.", fix: "Expand to at least 8 substantive sections with topic-specific physiology, mechanisms, clinical relevance, investigations, management and pharmacology where relevant." }];
+        }
+        return result;
+      };
+      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: process.env, timeoutMs: 45000 }), original);
+      let final = first, correctedBody = null, repairStatus = "clean";
+      if (!first.validated) {
+        const prompt = [
+          "You are the medical editor correcting a medical-school learning note for OmpathStudy.",
+          "Correct every factual or clinical issue listed below. Preserve every correct original fact, number, unit, drug name, warning, table, diagram, image markdown and link. Do not shorten the note or remove valid teaching content.",
+          "Add missing explanations where needed to make the note accurate and understandable. For a thin note, expand it into at least 8 substantive topic-specific sections. Explain relevant physiology, mechanisms, types/classification, clinical features, investigations and interpretation, management, pharmacology, complications and prevention when appropriate.",
+          "Use standard accepted medical knowledge only. Never invent statistics, references, local guideline claims or drug doses. If uncertain, qualify or omit. Use British spelling and define specialist terms at first use.",
+          "Do not claim a clinician has reviewed the note. Output only the complete corrected Markdown body, without YAML frontmatter or code fences.",
+          "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
+          "ORIGINAL NOTE:", original
+        ].join("\n\n");
+        const draft = await askModel(prompt, { env: process.env, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
+        fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
+        if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
+          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: process.env, timeoutMs: 45000 }), fixed);
+          if (final.validated) { correctedBody = fixed; repairStatus = "auto-repaired"; } else repairStatus = "held";
+        } else repairStatus = "held";
+      }
+      return res.status(200).json({ validated: final.validated, high: final.high, medium: final.medium, issues: final.issues, model: final.model, at: final.at, repairStatus, correctedBody });
+    }
+
+    if (task === "review-topic") {
+      const slug = String(body.slug || "");
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
+      const rows = await getDb()`SELECT slug,name,category,content,updated_at,ai_review_status FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
+      const row = rows[0];
+      if (!row) return res.status(404).json({ error: "Published topic not found." });
+      if (row.ai_review_status === "passed" && row.content?.aiReview?.status === "passed"
+          && (row.content?.sections?.length || 0) >= 9 && (row.content?.exam?.length || 0) >= 8
+          && (row.content?.faq?.length || 0) >= 3 && JSON.stringify(row.content).split(/\s+/).length >= 700) {
+        return res.status(200).json({ status: "existing", slug });
+      }
+      const prior = row.content || {};
+      const context = JSON.stringify({ priorSummary: prior.summary, priorSections: prior.sections, priorExam: prior.exam }).slice(0, 5000);
+      const result = await generateReviewedTopicPage({
+        name: row.name, category: row.category || "Medicine", context,
+        choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
+      }, { env: process.env, maxFixRounds: 1, timeoutMs: 55000 });
+      if (!result.page?.medical || result.review?.status !== "passed") return res.status(422).json({ status: "held", slug, reason: "independent_review_failed" });
+      const page = { ...result.page, aiReview: { ...(result.page.aiReview || {}), status: "passed", model: result.review.model, rounds: result.review.rounds || 0 } };
+      if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3
+          || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
+        return res.status(422).json({ status: "held", slug, reason: "structure_check_failed" });
+      }
+      const saved = await getDb()`UPDATE public.topic_pages
+        SET content = ${JSON.stringify(page)}::jsonb, model = ${page.model || "groq"},
+            reviewed = false, updated_at = now(), generator_model = ${page.model || "groq"},
+            ai_review_status = 'passed', ai_review_model = ${String(result.review.model || "gemini")},
+            ai_reviewed_at = now(), ai_review_fix_rounds = ${Number(result.review.rounds) || 0}
+        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
+        RETURNING slug`;
+      return res.status(200).json({ status: saved.length ? "reviewed" : "conflict", slug });
+    }
+
+    if (task === "deep-topic") {
+      const slug = String(body.slug || "");
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
+      const rows = await getDb()`SELECT slug,name,category,content,updated_at FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
+      const row = rows[0];
+      if (!row) return res.status(404).json({ error: "Published topic not found." });
+      if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
+      const deep = await generateCheckedDeep(
+        { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
+        process.env, fetch, 240000,
+      );
+      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
+      const content = { ...(row.content || {}), deep };
+      const saved = await getDb()`UPDATE public.topic_pages
+        SET content = ${JSON.stringify(content)}::jsonb, updated_at = now()
+        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
+        RETURNING slug`;
+      return res.status(200).json({ status: saved.length ? "deep_saved" : "conflict", slug });
     }
 
     if (task === "review-save") {

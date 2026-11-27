@@ -45,6 +45,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let active = true;
     let hadUser = false;
+    const ensurePromises = new Map<string, Promise<boolean>>();
     const applySession = async (nextSession: Session | null) => {
       if (!active) return;
       const hadBefore = hadUser;
@@ -55,8 +56,32 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // The session is sufficient to render the app. Progress syncing is
         // background work and must not delay every page navigation/login.
         await checkAdmin(nextSession.user.id, nextSession.user.email);
-        void syncLocalProgress(nextSession.user.id).catch(() => undefined);
-        void syncTrailToAccount(nextSession.user.id).catch(() => undefined);
+        const userId = nextSession.user.id;
+        let ready = ensurePromises.get(userId);
+        if (!ready) {
+          ready = fetch("/api/ensure-user", {
+            method: "POST",
+            headers: { Authorization: "Bearer " + nextSession.access_token },
+            signal: AbortSignal.timeout(12000),
+          }).then(async (response) => {
+            if (!response.ok) throw new Error("Account data migration could not be completed.");
+            const result = await response.json().catch(() => ({}));
+            const canSync = !result.migration_pending;
+            if (!canSync) ensurePromises.delete(userId);
+            return canSync;
+          });
+          ensurePromises.set(userId, ready);
+          void ready.catch(() => ensurePromises.delete(userId));
+        }
+        try {
+          const canSync = await ready;
+          if (canSync) {
+            void syncLocalProgress(userId).catch(() => undefined);
+            void syncTrailToAccount(userId).catch(() => undefined);
+          }
+        } catch (error) {
+          console.warn("[auth] Neon account preparation failed:", error);
+        }
       }
       else {
         setIsAdmin(false);

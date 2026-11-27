@@ -9,7 +9,7 @@ const cooled = (id) => (cool.get(id) || 0) > Date.now();
 const noteFail = (id, status) => { if (status === 429) cool.set(id, Date.now() + 60_000); else if (status === 404) cool.set(id, Date.now() + 3_600_000); };
 
 const GROQ_MODELS = () => list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,qwen/qwen3.8-27b,openai/gpt-oss-20b");
-const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-3.5-flash,gemini-flash-lite-latest,gemini-2.5-flash,gemini-2.5-flash-lite");
+const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite,gemini-2.5-flash,gemini-2.5-flash-lite");
 
 async function viaGroq(msgs, opt, why) {
   const keys = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY); if (!keys.length) { why.push("no Groq key"); return null; }

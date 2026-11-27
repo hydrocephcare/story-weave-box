@@ -1,87 +1,90 @@
 import { useCallback, useEffect, useState } from "react";
-import { Check, Copy, KeyRound, Loader2 } from "lucide-react";
+import { Check, Copy, KeyRound, Loader2, RefreshCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-type Db = { from: (t: string) => any };
-const ZERO = "00000000-0000-0000-0000-000000000000";
-
-/** The one-time link between the site's server and the database for blog polishing: a private key the admin makes here (no Supabase access needed). */
+type Config = { configured: boolean; runtimeReady: boolean; aiReady: boolean; updatedAt: string | null; key?: string };
 export default function PolishConnect() {
-  const db = supabase as unknown as Db;
-  const [key, setKey] = useState<string | null | undefined>(undefined); // undefined: loading, null: none yet
-  const [server, setServer] = useState<"checking" | "yes" | "no">("checking");
+  const [config, setConfig] = useState<Config | null>(null);
+  const [key, setKey] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
   const [copied, setCopied] = useState(false);
-  const [show, setShow] = useState(false);
 
-  const checkServer = useCallback(async () => {
-    setServer("checking");
-    try {
-      // a made-up page id: the server answers "unavailable" when it has no key or no AI keys, and "invalid" when it is ready
-      const r = await fetch("/api/ai-polish", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id: ZERO }) });
-      const j = (await r.json().catch(() => ({}))) as { status?: string };
-      setServer(j.status === "unavailable" ? "no" : "yes");
-    } catch { setServer("no"); }
+  const request = useCallback(async (method: "GET" | "POST", body?: unknown) => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.access_token) throw new Error("Sign in with the administrator account first.");
+    const response = await fetch("/api/ai?task=polishConfig", {
+      method,
+      headers: { "content-type": "application/json", Authorization: `Bearer ${session.access_token}` },
+      ...(body ? { body: JSON.stringify(body) } : {}),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(data.error || `Polish configuration failed (${response.status}).`);
+    return data as Config;
   }, []);
 
-  useEffect(() => {
-    void (async () => {
-      const { data, error } = await db.from("polish_secret").select("secret").maybeSingle();
-      setKey(error ? null : (data?.secret ?? null));
-      if (error) setMsg("The database is not ready for this yet. It is set up automatically when the latest update is applied; try again in a few minutes.");
-    })();
-    void checkServer();
-  }, [db, checkServer]);
+  const load = useCallback(async () => {
+    setLoading(true); setMsg("");
+    try { setConfig(await request("GET")); }
+    catch (error) { setMsg(error instanceof Error ? error.message : "Could not check the polishing connection."); }
+    finally { setLoading(false); }
+  }, [request]);
 
-  const make = async () => {
-    const bytes = new Uint8Array(24);
-    crypto.getRandomValues(bytes);
-    const k = Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("");
-    const { error } = await db.from("polish_secret").upsert({ id: 1, secret: k, updated_at: new Date().toISOString() });
-    if (error) { setMsg(error.message); return; }
-    setMsg(""); setKey(k); setServer("no");
+  useEffect(() => { void load(); }, [load]);
+
+  const rotate = async () => {
+    setBusy(true); setMsg(""); setKey(null);
+    try {
+      const result = await request("POST", { action: "rotate" });
+      setConfig(result); setKey(result.key || null);
+      setMsg("New secret saved in Neon and activated immediately. Scheduled polishing uses GitHub Actions identity; no duplicate Cloudflare or GitHub secret is required.");
+    } catch (error) {
+      setMsg(error instanceof Error ? error.message : "Could not update the polishing secret.");
+    } finally { setBusy(false); }
   };
-  const copy = async () => { try { await navigator.clipboard.writeText(key ?? ""); setCopied(true); setTimeout(() => setCopied(false), 1800); } catch { /* copy by hand */ } };
+
+  const copy = async () => {
+    if (!key) return;
+    try { await navigator.clipboard.writeText(key); setCopied(true); window.setTimeout(() => setCopied(false), 1800); }
+    catch { setMsg("Clipboard access was blocked. Select and copy the key manually."); }
+  };
 
   return (
-    <section className="mt-8 max-w-2xl" aria-label="Connect the polish">
-      <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-primary"><KeyRound className="h-4 w-4" aria-hidden /> Connect</p>
-      <p className="mt-2 flex items-center gap-2 text-[16px] text-foreground/85">
-        {server === "checking" ? <><Loader2 className="h-4 w-4 animate-spin" /> Checking the server…</> : server === "yes" ? <><Check className="h-4 w-4 text-emerald-500" /> The server is connected: blogs are polished when someone opens them.</> : "The server is not connected yet, so nothing is being polished."}
-      </p>
-      {server === "yes" && key && (
-        <div className="mt-3 text-[16px] text-foreground/85">
-          {!show ? (
-            <button type="button" onClick={() => setShow(true)} className="text-sm font-bold text-primary hover:underline">Show the key (for the computer or GitHub batch)</button>
-          ) : (
-            <>
-              <p className="break-all rounded-xl bg-muted/60 px-4 py-3 font-mono text-[14px]">{key}</p>
-              <button type="button" onClick={copy} className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline"><Copy className="h-4 w-4" aria-hidden /> {copied ? "Copied" : "Copy the key"}</button>
-              <button type="button" onClick={() => setShow(false)} className="ml-4 text-sm font-semibold text-muted-foreground hover:text-foreground">Hide</button>
-            </>
-          )}
+    <section className="mt-8 max-w-2xl rounded-2xl border border-border p-5" aria-label="Blog polishing connection">
+      <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-primary"><KeyRound className="h-4 w-4" aria-hidden /> Blog polishing connection</div>
+      {loading ? (
+        <p className="mt-3 flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Checking Neon and AI providers…</p>
+      ) : (
+        <div className="mt-3 space-y-2 text-sm">
+          <p className="flex items-center gap-2">{config?.configured ? <Check className="h-4 w-4 text-emerald-500" /> : <span className="h-2 w-2 rounded-full bg-amber-500" />} Site-managed secret: {config?.configured ? "active in Neon" : "not configured"}</p>
+          <p className="flex items-center gap-2">{config?.aiReady ? <Check className="h-4 w-4 text-emerald-500" /> : <span className="h-2 w-2 rounded-full bg-amber-500" />} Groq and Gemini keys: {config?.aiReady ? "present in Cloudflare runtime" : "one or both missing"}</p>
+          {config?.updatedAt && <p className="text-xs text-muted-foreground">Last changed: {new Date(config.updatedAt).toLocaleString()}</p>}
         </div>
       )}
-      {server === "no" && (
-        <div className="mt-4 text-[16px] leading-relaxed text-foreground/85">
-          {key === undefined ? null : key === null ? (
-            <button type="button" onClick={make} className="h-11 rounded-full bg-primary px-6 font-bold text-primary-foreground">Make the key</button>
-          ) : (
-            <>
-              <p>The key is saved in the database. Now paste it in two places (it stays private):</p>
-              <p className="mt-3 break-all rounded-xl bg-muted/60 px-4 py-3 font-mono text-[14px]">{key}</p>
-              <button type="button" onClick={copy} className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline"><Copy className="h-4 w-4" aria-hidden /> {copied ? "Copied" : "Copy the key"}</button>
-              <ol className="mt-4 list-decimal space-y-2 pl-5">
-                <li><strong>Vercel:</strong> your project, Settings, Environment Variables. Name <strong>POLISH_WRITE_KEY</strong>, value the key, type Secret. Then redeploy.</li>
-                <li><strong>GitHub</strong> (for the daily batch): in a terminal, <code className="rounded bg-muted px-1.5 py-0.5 text-[13px]">gh secret set POLISH_WRITE_KEY</code>, then paste the key.</li>
-              </ol>
-              <button type="button" onClick={checkServer} className="mt-4 h-10 rounded-full border border-border px-5 text-sm font-bold hover:border-primary/60">Check again</button>
-              <button type="button" onClick={make} className="ml-3 h-10 text-sm font-semibold text-muted-foreground hover:text-destructive">Make a new key</button>
-            </>
-          )}
+      {key && (
+        <div className="mt-4 space-y-2">
+          <p className="text-sm font-semibold">Optional: copy this key for local batch tools. It is shown only once.</p>
+          <p className="break-all rounded-xl bg-muted/60 px-3 py-3 font-mono text-xs">{key}</p>
+          <button type="button" onClick={copy} className="inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-semibold"><Copy className="h-4 w-4" />{copied ? "Copied" : "Copy key"}</button>
         </div>
       )}
-      {msg && <p className="mt-3 text-sm font-semibold text-primary" role="status">{msg}</p>}
+      <div className="mt-4 rounded-xl bg-muted/50 p-3 text-sm leading-relaxed">
+        <p className="font-semibold">How this works</p>
+        <ul className="mt-2 list-disc space-y-1 pl-5">
+          <li>The secret is stored in Neon and takes effect immediately when created or rotated here.</li>
+          <li>Cloudflare Production must have <strong>DATABASE_URL</strong>, <strong>GROQ_API_KEYS</strong> and <strong>GEMINI_API_KEYS</strong>.</li>
+          <li>Scheduled polishing authenticates with GitHub Actions OIDC; it does not need a duplicated polish key or database password in GitHub secrets.</li>
+          <li>The optional copied key is only for the local manual batch utility and protected provider-health checks.</li>
+        </ul>
+      </div>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <button type="button" disabled={busy || loading} onClick={() => void rotate()} className="inline-flex h-10 items-center gap-2 rounded-full border px-4 text-sm font-semibold disabled:opacity-50">
+          {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />} {config?.configured ? "Rotate secret" : "Create secret"}
+        </button>
+        <button type="button" disabled={busy || loading} onClick={() => void load()} className="inline-flex h-10 items-center gap-2 rounded-full border px-4 text-sm font-semibold disabled:opacity-50">Check again</button>
+      </div>
+      {msg && <p className="mt-3 text-sm font-medium text-foreground" role="status">{msg}</p>}
     </section>
   );
 }

@@ -1,22 +1,100 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, CheckCircle2, Loader2, RefreshCw, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 import { clearAiFailures, loadAiFailures, markAiFailuresSeen, type AiFailure } from "@/lib/aiHealth";
 
+type RuntimeHealth = { checkedAt: string; checks: Record<string, any> };
 const KIND: Record<string, string> = { answer: "AI answer", search: "Search", quiz: "Quiz", essay: "Essays", paper: "Paper", drill: "Anatomy drill", other: "Other" };
 const when = (iso: string) => new Date(iso).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 
 /** Admin: the times Ompath AI failed for a student, and what the student saw instead. */
 export default function AiHealthAdmin() {
   const [rows, setRows] = useState<AiFailure[] | null>(null);
+  const [runtime, setRuntime] = useState<RuntimeHealth | null>(null);
+  const [runtimeBusy, setRuntimeBusy] = useState(false);
+  const [runtimeError, setRuntimeError] = useState("");
   const load = useCallback(async () => { setRows(null); setRows(await loadAiFailures(150)); markAiFailuresSeen(); window.dispatchEvent(new Event("ompath:ai-health")); }, []);
-  useEffect(() => { void load(); }, [load]);
+  const loadRuntime = useCallback(async () => {
+    setRuntimeBusy(true); setRuntimeError("");
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session?.access_token) throw new Error("Sign in with the administrator account first.");
+      const response = await fetch("/api/ai?task=runtimeHealth&deep=1", {
+        headers: { Authorization: `Bearer ${session.access_token}` },
+        cache: "no-store",
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || `Backend check failed (${response.status}).`);
+      setRuntime(data as RuntimeHealth);
+    } catch (error) {
+      setRuntimeError(error instanceof Error ? error.message : "Could not run backend checks.");
+    } finally { setRuntimeBusy(false); }
+  }, []);
+  useEffect(() => { void load(); void loadRuntime(); }, [load, loadRuntime]);
 
   const day = useMemo(() => (rows ?? []).filter((r) => Date.now() - Date.parse(r.created_at) < 86_400_000).length, [rows]);
   const byKind = useMemo(() => { const m = new Map<string, number>(); (rows ?? []).forEach((r) => m.set(r.kind, (m.get(r.kind) ?? 0) + 1)); return [...m.entries()].sort((a, b) => b[1] - a[1]); }, [rows]);
 
   return (
     <div className="space-y-4">
+      <section className="rounded-xl border border-border bg-card p-4 space-y-3">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 className="font-serif text-lg font-bold">Backend readiness</h3>
+            <p className="text-xs text-muted-foreground">Live checks for Neon, search access, AI providers, Paystack and automatic publishing dependencies.</p>
+          </div>
+          <Button variant="outline" size="sm" disabled={runtimeBusy} onClick={() => void loadRuntime()}><RefreshCw className={`mr-1.5 h-4 w-4 ${runtimeBusy ? "animate-spin" : ""}`} /> Check backend</Button>
+        </div>
+        {runtimeError && <p className="text-sm text-destructive">{runtimeError}</p>}
+        {!runtime && !runtimeError && <p className="text-sm text-muted-foreground">Run the checks to inspect production readiness.</p>}
+        {runtime && (() => {
+          const c = runtime.checks || {};
+          const checks = [
+            ["Neon database", c.neonDatabase?.ok && c.neonDatabase?.connected],
+            ["Neon user identity", c.userIdentity?.ok && c.userIdentity?.ready && (c.userIdentity?.skipped || 0) === 0],
+            ["Legacy workflows remaining", c.unportedFunctions?.ready === true],
+            ["Search Data API", c.searchDataApi?.ok && c.searchDataApi?.connected],
+            ["Neon Auth keys", c.authJwks?.ok && c.authJwks?.reachable],
+            ["AI entitlements", c.entitlements?.ok && c.entitlements?.ready],
+            ["Main XML sitemap", c.mainSitemap?.ok && c.mainSitemap?.ready],
+            ["Stories XML sitemap", c.storiesSitemap?.ok && c.storiesSitemap?.ready],
+            ["Main crawler metadata", c.crawlerMetadata?.ok && c.crawlerMetadata?.ready],
+            ["Stories crawler metadata", c.storiesCrawlerMetadata?.ok && c.storiesCrawlerMetadata?.ready],
+            ["SEO share-card renderer", c.noteCard?.ok && c.noteCard?.ready],
+            ["Groq", c.groq?.ok && c.groq?.reachable],
+            ["Groq generation", c.groqGeneration?.ok && c.groqGeneration?.ready],
+            ["Gemini", c.gemini?.ok && c.gemini?.reachable],
+            ["Gemini generation", c.geminiGeneration?.ok && c.geminiGeneration?.ready],
+            ["Paystack API", c.paystack?.ok && c.paystack?.reachable],
+            ["Topics sitemap / SEO", c.topicsSitemap?.ok && c.topicsSitemap?.ready],
+            ["Stories sitemap / SEO", c.storiesSitemap?.ok && c.storiesSitemap?.ready],
+            ["Paystack webhook route", c.paystackWebhook?.ok && c.paystackWebhook?.ready],
+            ["OneKitty configuration", c.onekitty?.ok && c.onekitty?.ready],
+            ["Google Drive import", c.googleDrive?.ok && c.googleDrive?.ready],
+            ["Contest management", c.contestManagement?.ok && c.contestManagement?.ready],
+            ["Student library access", c.mkuStudentAccess?.ok && c.mkuStudentAccess?.endpointReachable && c.mkuStudentAccess?.currentAdminAllowed],
+            ["Email delivery", c.resend?.ok && c.resend?.reachable],
+            ["Blog polish secret", c.polish?.ok && c.polish?.databaseSecretMatchesRuntime && c.polish?.aiKeysConfigured],
+            ["Paystack enabled", c.payments?.ok && c.payments?.enabled],
+            ["Topic publishing RPC", c.schema?.ok && c.schema?.topic_publish_rpc],
+            ["Deep-note RPC", c.schema?.ok && c.schema?.topic_deep_rpc],
+          ] as [string, boolean][];
+          return <>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {checks.map(([label, ok]) => <div key={label} className="flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm">
+                {ok ? <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" /> : <AlertTriangle className="h-4 w-4 shrink-0 text-amber-600" />}
+                <span>{label}</span><span className="ml-auto text-xs font-semibold text-muted-foreground">{ok ? "Ready" : "Needs attention"}</span>
+              </div>)}
+            </div>
+            <p className="text-[11px] text-muted-foreground">Checked {when(runtime.checkedAt)}. These checks verify connectivity and credentials; they do not charge a payment or publish a test article.</p>
+            {c.unportedFunctions?.functions?.length > 0 && <p className="text-sm text-amber-700 dark:text-amber-300">Not yet migrated: <strong>{c.unportedFunctions.functions.join(", ")}</strong>. These legacy endpoints still return HTTP 501 and must be ported before those specific workflows can be used.</p>}
+            {(!c.storiesSitemap?.ready || !c.storiesCrawlerMetadata?.ready) && <p className="text-sm text-amber-700 dark:text-amber-300">Stories runs in a separate Cloudflare Pages project named <strong>stories-platform</strong>. Add the same Neon <strong>DATABASE_URL</strong> as an encrypted Production secret in that project; the main site's secret is not shared automatically.</p>}
+            {c.resend?.configured === false && <p className="text-sm text-amber-700 dark:text-amber-300">In-app notifications can work, but email delivery needs a <strong>RESEND_API_KEY</strong> in the main Cloudflare Production environment.</p>}
+            {c.polish?.databaseSecretMatchesRuntime === false && c.polish?.aiKeysConfigured && <p className="text-sm text-amber-700 dark:text-amber-300">Open Admin → Polish and select <strong>Sync existing Cloudflare secret</strong> to save the configured POLISH_WRITE_KEY in Neon.</p>}
+          </>;
+        })()}
+      </section>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
           <h2 className="font-serif text-xl font-bold text-foreground">AI health</h2>
@@ -32,7 +110,7 @@ export default function AiHealthAdmin() {
         : rows.length === 0 ? (
           <div className="rounded-xl border border-border bg-card p-5 text-sm">
             <p className="flex items-center gap-2 font-semibold text-emerald-700 dark:text-emerald-400"><CheckCircle2 className="h-4 w-4" /> No AI failures recorded.</p>
-            <p className="mt-2 text-muted-foreground">If you expected some, make sure the <code>ai_failures</code> table exists: run <code>supabase/migrations/20261009120000_ompath_ai_failures.sql</code> once in the Supabase SQL editor.</p>
+            <p className="mt-2 text-muted-foreground">If you expected some, confirm that the <code>ai_failures</code> table and its Neon migration are present in the production database.</p>
           </div>
         ) : (
           <>

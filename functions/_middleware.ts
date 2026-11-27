@@ -1,18 +1,20 @@
-type StoriesEnv = { SUPABASE_URL?: string; SUPABASE_ANON_KEY?: string };
+import mainOgMeta from "../api/og-meta.ts";
+import { neon } from "@neondatabase/serverless";
+
+type StoriesEnv = { DATABASE_URL?: string };
 type PagesContext = { request: Request; env: StoriesEnv; next: () => Promise<Response> };
 type StoryRow = { id:string; title:string; slug:string|null; content:string; category:string; created_at:string; cover_image_url?:string|null; meta_title?:string|null; meta_description?:string|null; tags?:string[]|null; reading_time_minutes?:number|null };
 const ORIGIN = "https://stories.ompathstudy.com";
 const escapeHtml = (value:unknown) => String(value ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 const plainText = (value:string) => String(value || "").replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ").replace(/&nbsp;|&#160;/gi," ").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/\s+/g," ").trim();
-async function rows(env:StoriesEnv, params:Record<string,string>):Promise<StoryRow[]> {
-  const base = env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
-  const key = env.SUPABASE_ANON_KEY || "";
-  const url = new URL(base + "/rest/v1/stories");
-  for (const [k,v] of Object.entries(params)) url.searchParams.set(k,v);
-  const response = await fetch(url.toString(), {headers:{apikey:key,Authorization:"Bearer "+key}});
-  if (!response.ok) return [];
-  const data = await response.json();
-  return Array.isArray(data) ? data as StoryRow[] : [];
+async function rows(env: StoriesEnv, sqlText: string, params: unknown[] = []): Promise<StoryRow[] | null> {
+  if (!env.DATABASE_URL) return null;
+  try {
+    return await neon(env.DATABASE_URL).query(sqlText, params) as StoryRow[];
+  } catch (error) {
+    console.error("[stories-seo] Neon lookup failed:", error instanceof Error ? error.message : String(error));
+    return null;
+  }
 }
 function documentHtml(title:string,description:string,canonical:string,body:string,image?:string,schema?:unknown) {
   const imageTag = image ? '<meta property="og:image" content="'+escapeHtml(image)+'"><meta name="twitter:image" content="'+escapeHtml(image)+'">' : "";
@@ -26,14 +28,29 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
   const path = url.pathname.replace(/\/+$/,"") || "/";
   const ua = request.headers.get("user-agent") || "";
   const bot = /(bot|crawl|spider|google|bing|yandex|baidu|facebookexternalhit|whatsapp|telegram|discord|slack|linkedin|twitter|openseo-audit|ompathstudymonitor|inspectiontool)/i.test(ua);
+  const host = url.hostname.toLowerCase();
+
+  // Main-site crawler rendering: keep article, MCQ, flashcard, exam and hub metadata
+  // on Cloudflare instead of relying on Vercel rewrites.
+  if (host !== "stories.ompathstudy.com") {
+    if (!bot || url.searchParams.has("write") || path.startsWith("/api/") || path.startsWith("/assets/") || /\.(xml|txt|json|js|css|png|jpe?g|webp|svg|ico|woff2?)$/i.test(path)) return context.next();
+    const target = new URL("/api/og-meta", request.url);
+    target.searchParams.set("path", path + url.search);
+    return mainOgMeta(new Request(target, request));
+  }
+
   if (!bot || (url.searchParams.has("write")) || !["/","/stories","/share-your-story","/finalists"].includes(path) && !path.startsWith("/stories/")) return context.next();
-  const baseQuery = {select:"id,title,slug,content,category,created_at,cover_image_url,meta_title,meta_description,tags,reading_time_minutes",published:"eq.true","deleted_at":"is.null","password_protected":"eq.false",or:"(scheduled_at.is.null,scheduled_at.lte."+new Date().toISOString()+")",limit:"1"};
   if (path.startsWith("/stories/")) {
     const param = decodeURIComponent(path.slice("/stories/".length));
-    let found = await rows(context.env,{...baseQuery,slug:"eq."+param});
+    const eligible = "published = true AND deleted_at IS NULL AND password_protected = false AND (scheduled_at IS NULL OR scheduled_at <= now())";
+    let found = await rows(context.env, `SELECT id,title,slug,content,category,created_at,cover_image_url,meta_title,meta_description,tags,reading_time_minutes FROM public.stories WHERE ${eligible} AND slug = $1 LIMIT 1`, [param]);
+    if (found === null) return context.next();
     if (!found.length) {
       const match = param.match(/[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/i);
-      if (match) found = await rows(context.env,{...baseQuery,id:"eq."+match[0]});
+      if (match) {
+        found = await rows(context.env, `SELECT id,title,slug,content,category,created_at,cover_image_url,meta_title,meta_description,tags,reading_time_minutes FROM public.stories WHERE ${eligible} AND id = $1 LIMIT 1`, [match[0]]);
+        if (found === null) return context.next();
+      }
     }
     const story = found[0];
     if (!story) return new Response(documentHtml("Story not found | Stories","This story could not be found.",ORIGIN+path,"<h1>Story not found</h1><p>The story may have been removed or is no longer published.</p>"),{status:404,headers:{"content-type":"text/html; charset=utf-8","x-robots-tag":"noindex"}});
@@ -51,7 +68,11 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
     const body = "<h1>Your story deserves to be heard</h1><p>"+escapeHtml(description)+"</p><p><a href='/stories?write=1'>Start writing</a></p>";
     return new Response(documentHtml(title,description,ORIGIN+path,body),{headers:{"content-type":"text/html; charset=utf-8","cache-control":"public, max-age=60"}});
   }
-  const recent = await rows(context.env,{select:"id,title,slug,category,created_at,meta_description,cover_image_url",published:"eq.true","deleted_at":"is.null","password_protected":"eq.false",or:"(scheduled_at.is.null,scheduled_at.lte."+new Date().toISOString()+")",order:"created_at.desc",limit:"20"});
+  const recent = await rows(context.env, `SELECT id,title,slug,category,created_at,meta_description,cover_image_url,content FROM public.stories
+    WHERE published = true AND deleted_at IS NULL AND password_protected = false
+      AND (scheduled_at IS NULL OR scheduled_at <= now())
+    ORDER BY created_at DESC LIMIT 20`);
+  if (recent === null) return context.next();
   const links = recent.map(s => {
     const slug = s.slug || s.id;
     return "<article><h2><a href='/stories/"+escapeHtml(slug)+"'>"+escapeHtml(s.title)+"</a></h2><small>"+escapeHtml(s.category || "Community story")+"</small><p>"+escapeHtml(s.meta_description || plainText(s.content || "").slice(0,180))+"</p></article>";

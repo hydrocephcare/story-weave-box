@@ -19,17 +19,15 @@ async function userFromRequest(req) {
   if (!token) return null;
   try {
     const result = await jwtVerify(token, jwks);
-    const p = result.payload;
-    const id = String(p.sub || "");
+    const payload = result.payload;
+    const id = String(payload.sub || "");
     if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
     const sql = db();
-    const account = await sql.query("SELECT email,name FROM neon_auth.\"user\" WHERE id=$1 LIMIT 1", [id]);
-    const legacy = account[0] ? [] : await sql.query("SELECT email FROM auth.users WHERE id=$1 LIMIT 1", [id]);
-    const email = String(p.email || p.user?.email || account[0]?.email || legacy[0]?.email || "").trim().toLowerCase();
-    if (!email) return null;
-    // Keep the migrated auth.users compatibility table in sync for existing foreign keys.
-    await sql.query("INSERT INTO auth.users (id,email) VALUES ($1,$2) ON CONFLICT (id) DO UPDATE SET email=EXCLUDED.email", [id,email]);
-    return { id, email, name: String(p.name || p.user?.name || account[0]?.name || "").slice(0, 120) };
+    const account = await sql.query('SELECT email,name,"emailVerified" FROM neon_auth."user" WHERE id=$1 LIMIT 1', [id]);
+    const email = String(payload.email || payload.user?.email || account[0]?.email || "").trim().toLowerCase();
+    if (!email || !account[0] || account[0].emailVerified !== true) return null;
+    await sql.query("SELECT public.ensure_neon_user($1,$2)", [id,email]);
+    return { id, neonId: id, email, name: String(payload.name || payload.user?.name || account[0]?.name || "").slice(0, 120) };
   } catch { return null; }
 }
 async function verifyWithPaystack(reference, secret) {
@@ -135,8 +133,8 @@ async function accessCode(req, res) {
   const sql = db();
   if (action === "list") {
     if (!user?.id) return out(res, 401, { error: "Sign in required." });
-    const roles = await sql.query("SELECT 1 FROM public.user_roles r JOIN auth.users u ON u.id=r.user_id WHERE lower(u.email)=$1 AND r.role='admin' LIMIT 1", [user.email]);
-    if (!roles[0]) return out(res, 403, { error: "Administrator access required." });
+    const roles = await sql.query("SELECT public.has_role($1::uuid,'admin'::app_role) AS is_admin", [user.id]);
+    if (roles[0]?.is_admin !== true) return out(res, 403, { error: "Administrator access required." });
     const rows = await sql.query("SELECT code,plan,amount,currency,expires_at,redeem_count,created_at FROM public.access_grants ORDER BY created_at DESC LIMIT 25");
     return out(res, 200, { passes: rows.map((g) => ({ code: String(g.code).slice(0,3) + "•••" + String(g.code).slice(-3), plan: g.plan, amount: Number(g.amount || 0), currency: g.currency || "KES", expires_at: g.expires_at, redeem_count: g.redeem_count })) });
   }
@@ -169,7 +167,7 @@ async function accessCode(req, res) {
     const existing = await sql.query("SELECT * FROM public.access_grants WHERE payment_id=$1 LIMIT 1", [payment.id]);
     if (existing[0]) { const g = existing[0]; if (!g.user_id || !g.email) await sql.query("UPDATE public.access_grants SET user_id=$1,email=$2 WHERE id=$3",[user.id,user.email,g.id]); return out(res,200,{success:true,code:g.code,plan:g.plan,expires_at:g.expires_at,allow_download:g.allow_download!==false}); }
     const s = await sql.query("SELECT value FROM public.app_settings WHERE key='access_plans' LIMIT 1");
-    let plans=[]; try { plans=JSON.parse(String(s[0]?.value || "[]")); } catch {}
+    let plans=[]; try { const parsed=JSON.parse(String(s[0]?.value || "[]")); plans=Array.isArray(parsed)?parsed:[]; } catch {}
     const planId = String(b.plan || payment.package_type || "annual");
     const plan = plans.find((x)=>x.id===planId) || plans.find((x)=>Number(x.price)===Number(payment.amount)) || {id:"annual",days:365,download:true};
     for(let i=0;i<5;i++){

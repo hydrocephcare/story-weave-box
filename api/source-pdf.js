@@ -1,7 +1,7 @@
 import { jsPDF } from "jspdf";
+import { neon } from "@neondatabase/serverless";
 
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
-const SUPABASE_KEY = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
+const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL || "";
 
 const scanUrls = (article) => [...new Set(`${article.original_notes || ""}\n${article.content || ""}`.replace(/\\\//g, "/").match(/https?:\/\/[^\s)"'<>]+/gi) || [])]
   .map(url => url.replace(/[\],.;:!?]+$/, "").replace(/^https:\/\/(?:www\.)?ompathstudy\.com\/uploads\//i, "https://cdn.ompathstudy.com/uploads/"))
@@ -20,12 +20,13 @@ export default async function handler(req, res) {
     } else {
       const slug = String(Array.isArray(req.query.slug) ? req.query.slug[0] : req.query.slug || "").trim();
       if (!slug) return res.status(400).json({ error: "slug required" });
-      if (!SUPABASE_KEY) return res.status(500).json({ error: "Server configuration missing" });
-      const filter = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug) ? `id=eq.${encodeURIComponent(slug)}` : `slug=eq.${encodeURIComponent(slug)}`;
-      const query = `${SUPABASE_URL}/rest/v1/articles?${filter}&select=title,content,original_notes&limit=1`;
-      const articleResponse = await fetch(query, { headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` } });
-      if (!articleResponse.ok) throw new Error(`Article lookup failed (${articleResponse.status})`);
-      article = (await articleResponse.json())[0];
+      if (!databaseUrl) return res.status(503).json({ error: "Database connection is not configured" });
+      const sql = neon(databaseUrl);
+      const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(slug);
+      const rows = isUuid
+        ? await sql.query("SELECT title,content,original_notes FROM public.articles WHERE id=$1 LIMIT 1", [slug])
+        : await sql.query("SELECT title,content,original_notes FROM public.articles WHERE slug=$1 LIMIT 1", [slug]);
+      article = rows[0];
       if (!article) return res.status(404).json({ error: "Source not found" });
       urls = scanUrls(article);
     }

@@ -51,9 +51,13 @@ jobs:
           node --check scripts/seo/audit-production.mjs
           node --check scripts/library/prerender.mjs
           node --check scripts/git/commit-generated.mjs
+          find functions -name "*.js" -print0 | xargs -0 -n1 node --check
           node --check api/_lib/topicWrite.js
           node --check api/_lib/aiChat.js
           node --check api/_lib/topicMaintenance.js
+          node --check api/_lib/blogPolishAuth.js
+          node --check api/_lib/blogPolishQueue.js
+          node --check scripts/blogs/polish-runner.mjs
           node --check api/neon-functions.js
           node --check scripts/topics/maintenance-client.mjs
           node --check scripts/topics/corpus.mjs
@@ -61,6 +65,21 @@ jobs:
           node --check scripts/topics/deep-fill-database.mjs
           node --check scripts/topics/verify-maintenance.mjs
           node --check api/_lib/entitlements.js
+          node --check api/_lib/polishConfig.js
+          node --check api/_lib/runtimeHealth.js
+          node --check api/_lib/sendNotification.js
+          node --check api/_lib/neonAdmin.js
+          node --check api/_lib/ensureUser.js
+          node --check api/drive-notes.js
+          node --check api/_lib/drive-notes.js
+          node --check api/_lib/generateExam.js
+          node --check api/_lib/student-data.js
+          node --check api/paystack.js
+          node --check api/paystack-webhook.js
+          node --check api/_lib/onekitty.js
+          node --check api/_lib/topicMaintenance.js
+          node --check scripts/topics/bulk-fill.mjs
+          node --check api/neon-functions.js
           node --check api/sitemap.js
           node --check api/_lib/blogPolish.js
           node --check api/_lib/blogPolishVerify.js
@@ -70,7 +89,6 @@ jobs:
           node --check supabase/functions/_shared/contentCheck.js
 
       - name: Test combined Lovable and repository code
-        continue-on-error: true
         run: npm test
         env:
           NODE_OPTIONS: --max-old-space-size=6144
@@ -81,3 +99,6 @@ jobs:
           VITE_NEON_AUTH_URL: https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth
           VITE_NEON_DATA_API_URL: https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1
           VERCEL: "1"
+
+      - name: Compile Cloudflare Pages Functions
+        run: npx wrangler pages functions build ./functions --outdir ./.wrangler/pages-functions --compatibility-date 2026-11-27 --compatibility-flags nodejs_compat,nodejs_compat_populate_process_env

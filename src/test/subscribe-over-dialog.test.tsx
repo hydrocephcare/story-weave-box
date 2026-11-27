@@ -24,7 +24,13 @@ function Page() {
 }
 
 describe("subscription prompt over the AI panel", () => {
-  beforeAll(async () => { await loadSubscriptionMode(true); });
+  beforeAll(async () => {
+    await loadSubscriptionMode(true);
+    vi.stubGlobal("fetch", vi.fn(async (input: RequestInfo | URL) => {
+      if (String(input).includes("ipapi.co/json")) return new Response(JSON.stringify({ country_code: "KE" }), { status: 200, headers: { "content-type": "application/json" } });
+      return new Response("{}", { status: 200, headers: { "content-type": "application/json" } });
+    }));
+  });
   it("closes the panel, releases the screen lock and shows the plans, clickable", async () => {
     render(<MemoryRouter><Page /></MemoryRouter>);
     expect(screen.getByText("panel")).toBeTruthy();
@@ -35,15 +41,16 @@ describe("subscription prompt over the AI panel", () => {
     const dialog = screen.getByRole("dialog");
     expect((dialog as HTMLElement).style.pointerEvents).toBe("auto");
     expect(document.body.style.pointerEvents).not.toBe("none");
-    const annual = screen.getAllByText("KES 400").map((node) => node.closest("button")).find((button) => button?.getAttribute("role") === "radio")!;
+    const annual = screen.getAllByText("Annual pass (12 months)").map((node) => node.closest("button")).find((button) => button?.getAttribute("role") === "radio")!;
     // Annual is the default selected plan; verify that the user can switch away and back.
     expect(annual.getAttribute("aria-checked")).toBe("true");
-    const semester = screen.getAllByText("KES 150").map((node) => node.closest("button")).find((button) => button?.getAttribute("role") === "radio")!;
+    const semester = screen.getAllByText("Semester pass (3 months)").map((node) => node.closest("button")).find((button) => button?.getAttribute("role") === "radio")!;
     fireEvent.click(semester);
     expect(semester.getAttribute("aria-checked")).toBe("true");
     expect(annual.getAttribute("aria-checked")).toBe("false");
     fireEvent.click(annual);
     expect(annual.getAttribute("aria-checked")).toBe("true");
-    expect(screen.getByText("Unlimited Ompath AI questions")).toBeTruthy();
+    expect(screen.getByText("Questions and full answer keys")).toBeTruthy();
+    expect(screen.getByText("Explanations and study resources")).toBeTruthy();
   });
 });

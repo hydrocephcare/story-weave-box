@@ -65,7 +65,7 @@ export default function AdminOneKitty() {
     event.preventDefault();
     setBusy(true); setError(""); setNotice(""); setLast(null);
     const { data, error: invokeError } = await supabase.functions.invoke("onekitty-initiate", {
-      body: { amount: Number(amount), phone_number: `${dialCode}${phone.replace(/\D/g, "")}`, country_code: countryCode, method: "card" },
+      body: { amount: Number(amount), phone_number: `${dialCode}${phone.replace(/\D/g, "")}`, country_code: countryCode, mode: "checkout", method: "card" },
     });
     setBusy(false);
     if (invokeError) { setError(await getFunctionErrorMessage(invokeError)); return; }
@@ -102,11 +102,6 @@ export default function AdminOneKitty() {
               <Label htmlFor="ok-country">Country</Label>
               <select id="ok-country" value={countryCode} onChange={(e) => { setCountryCode(e.target.value); setPhone(""); setError(""); setNotice(""); }} className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                 <option value="KE">🇰🇪 Kenya (+254)</option>
-                <option value="TZ">🇹🇿 Tanzania (+255)</option>
-                <option value="UG">🇺🇬 Uganda (+256)</option>
-                <option value="RW">🇷🇼 Rwanda (+250)</option>
-                <option value="BI">🇧🇮 Burundi (+257)</option>
-                <option value="CD">🇨🇩 DR Congo (+243)</option>
               </select>
             </div>
             <div className="space-y-2">
@@ -117,7 +112,7 @@ export default function AdminOneKitty() {
               </div>
             </div>
           </div>
-          <p className="text-xs leading-relaxed text-muted-foreground">OneKitty hosted checkout will display the payment methods available for the selected country. No card or mobile-money details are collected on OmpathStudy.</p>
+          <p className="text-xs leading-relaxed text-muted-foreground">This test flow is currently configured for Kenya and KES. OneKitty hosted checkout displays the available payment methods. No card or mobile-money details are collected on OmpathStudy.</p>
           <div className="flex flex-wrap items-center gap-3 pt-1">
             <Button type="submit" disabled={busy || !amount || phone.replace(/\D/g, "").length < 6} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <CreditCard className="h-4 w-4" />}{busy ? "Starting…" : "Continue to OneKitty checkout"}</Button>
             <span className="text-xs text-muted-foreground">API credentials remain on the server.</span>
@@ -129,9 +124,9 @@ export default function AdminOneKitty() {
       </section>
 
       <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
-        <h2 className="font-semibold">Callback URL to register in OneKitty</h2>
-        <p className="mt-1 text-xs text-muted-foreground">Use the callback URL you already shared with OneKitty support. It now routes OneKitty confirmations and preserves the existing PalPlus handler.</p>
-        <code className="mt-3 block break-all rounded-lg bg-muted p-3 text-xs">https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/payment-callback</code>
+        <h2 className="font-semibold">Cloudflare callback URL</h2>
+        <p className="mt-1 text-xs text-muted-foreground">Register this URL with OneKitty support. Successful callbacks are independently checked against the OneKitty Developer API before they are marked verified.</p>
+        <code className="mt-3 block break-all rounded-lg bg-muted p-3 text-xs">https://www.ompathstudy.com/api/neon-functions?name=onekitty-callback</code>
       </section>
 
       <section className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5">

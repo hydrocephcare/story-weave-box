@@ -2,22 +2,7 @@ name: Daily topic pages and AI overviews
 on:
   schedule:
     - cron: "0 2 * * *"
-  # Re-run the complete pipeline when generation, verification or deep-note safeguards change.
-  # Generated outputs are deliberately excluded, preventing an automation loop.
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/topics-daily.yml"
-      - "scripts/topics/bulk-fill.mjs"
-      - "scripts/topics/deep-fill.mjs"
-      - "scripts/topics/deep-fill-database.mjs"
-      - "scripts/topics/review-database-pages.mjs"
-      - "scripts/topics/build-topics.mjs"
-      - "scripts/topics/corpus.mjs"
-      - "scripts/topics/maintenance-client.mjs"
-      - "scripts/topics/verify-maintenance.mjs"
-      - "supabase/functions/_shared/topicAi.js"
-      - "supabase/functions/_shared/contentCheck.js"
+  # Use workflow_dispatch after a controlled Cloudflare release; scheduled runs keep publishing daily.
   workflow_dispatch:
     inputs:
       count:
@@ -73,12 +58,9 @@ jobs:
         id: image_sitemap
         continue-on-error: true
         run: node scripts/seo/image-sitemap.mjs
-      - name: Write new comprehensive topic pages (Groq)
+      - name: Generate, independently review and publish new topic pages through Cloudflare
         id: topic_pages
         continue-on-error: true
-        env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
         run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || (github.event_name == 'push' && '4') || '40' }} --parallel=3
       - name: Rebuild static topic pages with the new comprehensive AI content
         id: merge_new_topics
@@ -96,8 +78,6 @@ jobs:
         continue-on-error: true
         timeout-minutes: 30
         env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           TOPIC_REVIEW_COUNT: ${{ inputs.review || (github.event_name == 'push' && '4') || '40' }}
         run: node scripts/topics/review-database-pages.mjs
       - name: Generate comprehensive deep exam notes for live topic pages
@@ -105,8 +85,6 @@ jobs:
         continue-on-error: true
         timeout-minutes: 60
         env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || (github.event_name == 'push' && '4') || '40' }}
           TOPIC_DEEP_DB_PARALLEL: "2"
         run: node scripts/topics/deep-fill-database.mjs
@@ -114,9 +92,6 @@ jobs:
         id: static_deep
         continue-on-error: true
         timeout-minutes: 45
-        env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
         run: node scripts/topics/deep-fill.mjs ${{ inputs.deep || (github.event_name == 'push' && '4') || '40' }}
       - name: Merge generated deep exam notes into the static topic pages
         id: merge_deep
@@ -130,17 +105,11 @@ jobs:
         id: note_check
         continue-on-error: true
         timeout-minutes: 30
-        env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/imed/validate-notes.mjs ${{ inputs.check || (github.event_name == 'push' && '4') || '40' }}
       - name: Write page summaries
         id: summaries
         continue-on-error: true
         timeout-minutes: 15
-        env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/summaries/fill.mjs 25 --parallel=2
       - name: Save generated topic and review data
         if: always()

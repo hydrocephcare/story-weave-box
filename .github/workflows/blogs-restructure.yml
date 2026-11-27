@@ -1,35 +1,25 @@
 name: Tidy the blogs
-
-# From 1 November 2026, every morning, a few blogs are given a clear structure (headings, short paragraphs, lists) without changing any fact:
-# Year 3 first, then Year 2, then Year 1. The stored blog is never touched: the tidied text is saved in public/blog-fixes and shown in its place,
-# so deleting one file puts that blog back as it was. Pictures, question banks and past papers are left alone.
-# Uses only the morning-job keys (the GROQ_API_KEYS and GEMINI_API_KEYS secrets), never the keys visitors use.
-# Run it yourself any time: Actions > Tidy the blogs > Run workflow (tick "force" to run before 1 November).
 on:
-  # The daily schedule is off: the site now polishes each blog by itself the first time someone opens it (see api/_lib/blogPolish.js), so this job
-  # would only spend AI for nothing. It can still be run by hand.
   workflow_dispatch:
     inputs:
       count:
-        description: "How many blogs to tidy this run"
+        description: "How many published articles to process"
         required: false
         default: "12"
-      force:
-        description: "Run even before the start date"
+      year:
+        description: "Only this year (1 to 6); leave empty for all"
         required: false
-        default: "false"
-
+        default: ""
 permissions:
-  contents: write
-
+  contents: read
+  id-token: write
 concurrency:
   group: blogs-restructure
   cancel-in-progress: false
-
 jobs:
   tidy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,21 +27,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Tidy today's blogs
+      - name: Polish and independently verify articles through the Cloudflare backend
         env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          BLOG_FIX_START: "2026-11-01"
-        run: node scripts/blogs/restructure.mjs ${{ inputs.count || '12' }} ${{ inputs.force == 'true' && '--force' || '' }}
-      - name: Save the tidied blogs
-        run: |
-          if [ -z "$(git status --porcelain public/blog-fixes)" ]; then
-            echo "Nothing new today."
-          else
-            git config user.name "ompath-bot"
-            git config user.email "ompath-bot@users.noreply.github.com"
-            git add public/blog-fixes
-            git commit -m "Tidied blogs"
-            git pull --rebase origin main
-            git push origin main
-          fi
+          COUNT: ${{ inputs.count || '12' }}
+          YEAR: ${{ inputs.year }}
+          MINUTES: "50"
+        run: node scripts/blogs/polish-runner.mjs

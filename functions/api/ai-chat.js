@@ -116,7 +116,7 @@ async function viaGroq(messages, env, send) {
 
 async function viaGemini(messages, env, send) {
   const keys = splitKeys(env.GEMINI_API_KEYS || env.GEMINI_API_KEY);
-  const models = splitKeys(env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite,gemini-3.8-flash");
+  const models = splitKeys(env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite,gemini-2.5-flash,gemini-2.5-flash-lite");
   const system = messages[0].content;
   const contents = messages.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = keys.length ? turn++ % keys.length : 0;
@@ -129,7 +129,7 @@ async function viaGemini(messages, env, send) {
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
           method: "POST",
           headers: { "content-type": "application/json", "x-goog-api-key": key },
-          body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents, generationConfig: { temperature: 0.4, maxOutputTokens: 1800, ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : {}) } }),
+          body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents, generationConfig: { temperature: 0.4, maxOutputTokens: 1800, ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : model.startsWith("gemini-3") ? { thinkingConfig: { thinkingLevel: "low" } } : {}) } }),
           signal: AbortSignal.timeout(60000),
         });
         if ([429, 503, 404].includes(response.status)) { markDead(id); continue; }

@@ -13,7 +13,7 @@ describe("public read cache", () => {
     expect(real).toHaveBeenCalledTimes(1);
     expect(String(real.mock.calls[0][0])).toContain("workers.dev/?u=");
   });
-  it("sends signed-in users, writes, unusual headers and other tables straight to Supabase", async () => {
+  it("caches signed-in public catalogue reads but keeps writes, private tables and auth calls direct", async () => {
     const real = vi.fn(async (_input?: RequestInfo | URL, _init?: RequestInit) => ok());
     const f = makeCachedFetch(BASE, KEY, real as unknown as typeof fetch);
     await f(`${BASE}/rest/v1/articles?select=id`, { headers: { authorization: "Bearer a.user.jwt" } });
@@ -21,7 +21,8 @@ describe("public read cache", () => {
     await f(`${BASE}/rest/v1/articles?select=id`, { headers: { prefer: "return=representation" } });
     await f(`${BASE}/rest/v1/user_roles?select=*`, { headers: {} });
     await f(`${BASE}/auth/v1/user`, { headers: {} });
-    expect(real.mock.calls.map((c) => String(c[0])).every((x) => x.startsWith(BASE))).toBe(true);
+    expect(String(real.mock.calls[0][0])).toContain("workers.dev/?u=");
+    expect(real.mock.calls.slice(1).map((c) => String(c[0])).every((x) => x.startsWith(BASE))).toBe(true);
     expect(real).toHaveBeenCalledTimes(5);
   });
   it("caches paged and counted reads too, and the new public tables", async () => {

@@ -41,6 +41,9 @@ jobs:
           node --check api/_lib/aiChat.js
           node --check api/sitemap.js
           node --check api/_lib/topicMaintenance.js
+          node --check api/_lib/blogPolishAuth.js
+          node --check api/_lib/blogPolishQueue.js
+          node --check scripts/blogs/polish-runner.mjs
           node --check api/neon-functions.js
           node --check scripts/topics/maintenance-client.mjs
           node --check scripts/topics/corpus.mjs
@@ -48,6 +51,10 @@ jobs:
           node --check scripts/topics/deep-fill-database.mjs
           node --check scripts/topics/verify-maintenance.mjs
           node --check api/_lib/entitlements.js
+          node --check api/_lib/onekitty.js
+          node --check api/_lib/topicMaintenance.js
+          node --check scripts/topics/bulk-fill.mjs
+          node --check api/neon-functions.js
           node --check api/_lib/blogPolish.js
           node --check api/_lib/blogPolishVerify.js
           node --check api/_lib/blogPolishRun.js
@@ -56,7 +63,6 @@ jobs:
           node --check supabase/functions/_shared/contentCheck.js
 
       - name: Unit tests
-        continue-on-error: true
         run: npm test -- --reporter=dot
       - name: Production build (reuse committed topic corpus; do not reread Supabase)
         env:

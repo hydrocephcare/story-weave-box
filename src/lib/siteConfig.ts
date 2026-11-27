@@ -8,6 +8,8 @@ export interface KeyDate { id: string; label: string; date: string } // date = Y
 export interface Announcement { enabled: boolean; text: string; link: string; tone: "info" | "success" | "warning" }
 
 export interface SiteConfig {
+  /** Site-wide maintenance gate; administrators can always access the admin panel. */
+  maintenanceEnabled: boolean;
   announcement: Announcement;
   keyDates: KeyDate[];
   /** Admin-edited weekly timetable per year; a year not listed here uses the official one. */
@@ -39,6 +41,7 @@ export function formatUnitEntry(entry: string, names: Record<string, string>): {
 }
 
 export const DEFAULT_CONFIG: SiteConfig = {
+  maintenanceEnabled: true,
   announcement: { enabled: false, text: "", link: "", tone: "info" },
   keyDates: [
     { id: "teaching-end", label: "End of teaching", date: "2026-12-04" },
@@ -60,6 +63,7 @@ const emit = () => listeners.forEach((l) => l());
 function merge(raw: unknown): SiteConfig {
   const r = (raw && typeof raw === "object" ? raw : {}) as Partial<SiteConfig>;
   return {
+    maintenanceEnabled: r.maintenanceEnabled !== false,
     announcement: { ...DEFAULT_CONFIG.announcement, ...(r.announcement ?? {}) },
     keyDates: Array.isArray(r.keyDates) ? r.keyDates.filter((d) => d && d.date) : DEFAULT_CONFIG.keyDates,
     timetable: r.timetable && typeof r.timetable === "object" ? r.timetable : {},

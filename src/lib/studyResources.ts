@@ -1,5 +1,4 @@
 import { supabase } from "@/integrations/supabase/client";
-import { SUPABASE_URL } from "@/lib/supabase-config";
 
 /** Downloadable study resource catalogued in Supabase (`public.study_resources`). */
 export interface StudyResource {
@@ -14,6 +13,9 @@ export interface StudyResource {
   file_path: string;
   file_type: string | null;
   file_size: number | null;
+  storage_url?: string | null;
+  google_drive_file_id?: string | null;
+  published?: boolean;
   download_enabled: boolean;
   keywords: string[] | null;
   created_at: string;
@@ -44,7 +46,7 @@ const table = () => (supabase as any).from(TABLE);
 export async function listYearResources(year: number): Promise<StudyResource[]> {
   const { data, error } = await table()
     .select(
-      "id, year, unit, title, description, category, file_name, file_path, file_type, file_size, download_enabled, keywords, created_at, updated_at",
+      "id, year, unit, title, description, category, file_name, file_path, file_type, file_size, storage_url, google_drive_file_id, download_enabled, keywords, created_at, updated_at",
     )
     .eq("year", year)
     .eq("download_enabled", true)
@@ -82,11 +84,14 @@ export async function deleteResource(id: string): Promise<void> {
 }
 
 /** Resolve the real download URL for a catalogue row. */
-export function resourceUrl(resource: Pick<StudyResource, "file_path">): string {
-  const path = (resource.file_path || "").trim();
+export function resourceUrl(resource: Pick<StudyResource, "file_path"> & Partial<Pick<StudyResource, "storage_url">>): string {
+  const direct = String(resource.storage_url || "").trim();
+  if (/^https?:\/\//i.test(direct)) return direct;
+  const path = String(resource.file_path || "").trim();
   if (/^https?:\/\//i.test(path)) return path;
+  if (path.startsWith("drive://")) return `https://drive.google.com/file/d/${encodeURIComponent(path.slice(8))}/view`;
   const clean = path.replace(/^\/+/, "");
-  return `${SUPABASE_URL}/storage/v1/object/public/${RESOURCE_BUCKET}/${clean}`;
+  return `https://cdn.ompathstudy.com/${RESOURCE_BUCKET}/${clean}`;
 }
 
 export function formatFileSize(bytes: number | null | undefined): string {

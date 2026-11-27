@@ -50,6 +50,14 @@ export default function SiteManagerAdmin() {
         <Button onClick={save} disabled={saving}>{saving ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Save className="mr-2 h-4 w-4" />} Save all changes</Button>
       </div>
 
+      <Section title="Site availability" hint="Turn maintenance mode on while carrying out updates. Administrators retain access to the admin panel so they can switch it off again.">
+        <label className="flex items-center gap-3 rounded-xl border border-border p-3 text-sm font-semibold">
+          <input type="checkbox" checked={cfg.maintenanceEnabled} onChange={(e) => patch((c) => { c.maintenanceEnabled = e.target.checked; })} />
+          <span>Enable maintenance mode</span>
+        </label>
+        <p className="text-xs text-muted-foreground">{cfg.maintenanceEnabled ? "Visitors see the maintenance screen. Admins can still use the site and turn this off." : "The public website is open to visitors."}</p>
+      </Section>
+
       <Section title="Free or Pro features" hint="Switch any feature between everyone (Free) and subscribers only (Pro). Press Save all changes and it applies to every visitor straight away.">
         {FEATURES.map((feat) => {
           const tier = tierOf(feat.key, cfg);

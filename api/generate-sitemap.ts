@@ -129,12 +129,16 @@ function preferredYearMap(rows: any[], pathOf: (row: any) => string): Map<string
   return result;
 }
 
-async function fetchAllPublished(sb: any, table: string, select: string, orderColumn = "updated_at", soft = true) {
+async function fetchAllPublished(sb: any, table: string, select: string, orderColumn = "updated_at", soft = true, publicOnly = false) {
   const rows: any[] = [];
   const batchSize = 1000;
   for (let from = 0; ; from += batchSize) {
     let query = sb.from(table).select(select).eq("published", true);
     if (soft) query = query.is("deleted_at", null);   // contests have no deleted_at column; asking for it failed the whole sitemap
+    if (publicOnly) {
+      query = query.eq("password_protected", false)
+        .or("scheduled_at.is.null,scheduled_at.lte." + new Date().toISOString());
+    }
     const { data, error } = await query
       .order(orderColumn, { ascending: false, nullsFirst: false })
       .range(from, from + batchSize - 1);
@@ -162,10 +166,10 @@ export default async function handler(req, res) {
     const baseUrl = normalizeBaseUrl((siteUrlSetting as any)?.value);
 
     const [articles, mcqs, flashcards, stories, essays, contests] = await Promise.all([
-      fetchAllPublished(supabase, "articles", "id, title, slug, created_at, updated_at, category, og_image_url, featured_image"),
-      fetchAllPublished(supabase, "mcq_sets", "id, title, slug, og_image_url, created_at, updated_at, category, source_type, exam_year"),
-      fetchAllPublished(supabase, "flashcard_sets", "id, title, slug, created_at, updated_at, category"),
-      fetchAllPublished(supabase, "stories", "id, title, slug, created_at, category, cover_image_url", "created_at"),
+      fetchAllPublished(supabase, "articles", "id, title, slug, created_at, updated_at, category, og_image_url, featured_image", "updated_at", true, true),
+      fetchAllPublished(supabase, "mcq_sets", "id, title, slug, og_image_url, created_at, updated_at, category, source_type, exam_year", "updated_at", true, true),
+      fetchAllPublished(supabase, "flashcard_sets", "id, title, slug, created_at, updated_at, category", "updated_at", true, true),
+      fetchAllPublished(supabase, "stories", "id, title, slug, created_at, category, cover_image_url", "created_at", true, true),
       fetchAllPublished(supabase, "essays", "id, title, slug, created_at, updated_at, category"),
       fetchAllPublished(supabase, "contests", "id, slug, title, subtitle, starts_at, published, updated_at, created_at", "updated_at", false),
     ]);
