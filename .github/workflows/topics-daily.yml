@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
-      TOPIC_MAINTENANCE_URL: https://www.ompathstudy.com/api/topic-maintenance
+      TOPIC_MAINTENANCE_URL: https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance
     steps:
       - uses: actions/checkout@v4
         with:
