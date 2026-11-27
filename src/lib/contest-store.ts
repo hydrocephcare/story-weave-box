@@ -1,3 +1,4 @@
+import { uploadFileToR2 } from "@/lib/r2";
 import { supabase } from "@/integrations/supabase/client";
 import type { ContestPreview, ContestStage } from "@/lib/contest";
 
@@ -224,9 +225,8 @@ export async function uploadContestPoster(contestId: string, file: File): Promis
   if (file.size > 5 * 1024 * 1024) throw new Error("The poster must be smaller than 5 MB.");
   const extension = file.name.split(".").pop()?.toLowerCase() || "jpg";
   const path = `${contestId}/poster-${Date.now()}.${extension}`;
-  const { error } = await supabase.storage.from("contest-posters").upload(path, file, { cacheControl: "3600", upsert: false });
-  if (error) throw error;
-  return supabase.storage.from("contest-posters").getPublicUrl(path).data.publicUrl;
+  const uploaded = await uploadFileToR2(file, "contest-posters", path);
+  return uploaded.url;
 }
 
 export async function loadMyContestAnswers(attemptId: string): Promise<{ question_id: string; selected_index: number }[]> {

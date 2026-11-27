@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Loader2, Trash2, Upload } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { uploadFileToR2, deleteFilesFromR2 } from "@/lib/r2";
 import {
   RESOURCE_BUCKET,
   RESOURCE_CATEGORIES,
@@ -65,10 +65,7 @@ export default function ResourceAdmin() {
     try {
       const ext = (file.name.split(".").pop() || "bin").toLowerCase();
       const path = `year-${year}/${slugify(unit)}/${slugify(title)}-${Date.now().toString(36)}.${ext}`;
-      const { error: upErr } = await supabase.storage
-        .from(RESOURCE_BUCKET)
-        .upload(path, file, { contentType: file.type || undefined, upsert: false });
-      if (upErr) throw upErr;
+      const uploaded = await uploadFileToR2(file, RESOURCE_BUCKET, path);
       await saveResource({
         year,
         unit: unit.trim(),
@@ -76,7 +73,7 @@ export default function ResourceAdmin() {
         description: description.trim() || null,
         category,
         file_name: file.name,
-        file_path: path,
+        file_path: uploaded.key,
         file_type: ext,
         file_size: file.size,
         download_enabled: true,
@@ -113,7 +110,7 @@ export default function ResourceAdmin() {
     if (!window.confirm(`Remove “${row.title}” from the library?`)) return;
     try {
       if (!/^https?:\/\//i.test(row.file_path)) {
-        await supabase.storage.from(RESOURCE_BUCKET).remove([row.file_path]);
+        await deleteFilesFromR2(RESOURCE_BUCKET, [row.file_path]);
       }
       await deleteResource(row.id);
       await reload(year);

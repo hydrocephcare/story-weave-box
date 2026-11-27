@@ -314,6 +314,7 @@ export interface FeatureAllowance { allowed: boolean; reason: string; remaining?
 export async function consumeFeature(feature: PaidFeature, units = 1): Promise<FeatureAllowance> {
   const rpc = (supabase as unknown as { rpc: (name: string, args: Record<string, unknown>) => Promise<{ data: unknown; error: unknown }> }).rpc;
   const { data, error } = await rpc("consume_feature", { p_feature: feature, p_units: units });
-  if (error || !data || typeof data.allowed !== "boolean") return { allowed: false, reason: "verification_unavailable", remaining: 0 };
-  return data as FeatureAllowance;
+  const allowance = data as FeatureAllowance | null;
+  if (error || !allowance || typeof allowance.allowed !== "boolean") return { allowed: false, reason: "verification_unavailable", remaining: 0 };
+  return allowance;
 }
