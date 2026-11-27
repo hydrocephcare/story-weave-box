@@ -2,7 +2,8 @@ name: Daily topic pages and AI overviews
 on:
   schedule:
     - cron: "0 2 * * *"
-  # Use workflow_dispatch after a controlled Cloudflare release; scheduled runs keep publishing daily.\n  workflow_dispatch:
+  # Use workflow_dispatch after a controlled Cloudflare release; scheduled runs keep publishing daily.
+  workflow_dispatch:
     inputs:
       count:
         description: "How many new comprehensive topic pages to write"
