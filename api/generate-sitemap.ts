@@ -153,9 +153,9 @@ export default async function handler(req, res) {
   try {
     const requestUrl = new URL(req.url, `https://${req.headers.host || "www.ompathstudy.com"}`);
     const filter = sitemapFilterFromFile(requestUrl.searchParams.get("file"));
-    const NEON_AUTH_URL = process.env.NEON_AUTH_URL || process.env.VITE_NEON_AUTH_URL;
-    const NEON_DATA_API_URL = process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL;
-    if (!NEON_AUTH_URL || !NEON_DATA_API_URL) throw new Error("Missing Neon Auth/Data API configuration");
+    const NEON_AUTH_URL = process.env.NEON_AUTH_URL || process.env.VITE_NEON_AUTH_URL || "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth";
+    const NEON_DATA_API_URL = process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
+    
 
     const supabase = createClient({ auth: { adapter: SupabaseAuthAdapter(), url: NEON_AUTH_URL, allowAnonymous: true }, dataApi: { url: NEON_DATA_API_URL } });
     const { data: siteUrlSetting } = await supabase.from("app_settings").select("value").eq("key", "site_url").maybeSingle();
@@ -352,7 +352,10 @@ ${lm ? `    <lastmod>${lm}</lastmod>
     return res.status(200).send(xml);
   } catch (error: unknown) {
     console.error("Sitemap error:", error);
-    return new Response(`<?xml version="1.0" encoding="UTF-8"?>
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, s-maxage=600, stale-while-revalidate=3600");
+    res.setHeader("x-sitemap-error", String((error as any)?.message || error).replace(/[^ -~]/g, " ").slice(0, 200));
+    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${DEFAULT_BASE_URL}/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
   <url><loc>${DEFAULT_BASE_URL}/blog</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
