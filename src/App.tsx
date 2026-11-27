@@ -39,6 +39,7 @@ import TopicPeekHost from "@/components/TopicPeek";
 import PageHelpers from "@/components/PageHelpers";
 import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRoute";
 import AdminShell from "@/components/admin/AdminShell";
+import MaintenanceGate from "@/components/MaintenanceGate";
 
 const ShareYourStory = lazy(() => import("./pages/ShareYourStory"));
 /** A short exam link, /exams/<slug>, opens the exam. */
@@ -419,6 +420,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <MaintenanceGate>
             <ScrollToTop />
             <ReturnToNote />
             <ScrollProgressBar />
@@ -447,6 +449,7 @@ const App = () => {
             <AnimatedRoutes />
             <AdminCopilotGate />
             <SiteFooter />
+            </MaintenanceGate>
           </BrowserRouter>
         </TooltipProvider>
       </AuthProvider>
