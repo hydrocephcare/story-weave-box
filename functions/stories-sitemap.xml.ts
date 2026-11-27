@@ -1,6 +1,13 @@
+import mainSitemap from "../api/sitemap.js";
+import { runVercelHandler } from "./_lib/vercel-adapter.js";
+
 type Env = { SUPABASE_URL?:string; SUPABASE_ANON_KEY?:string };
-type Env = { SUPABASE_URL?:string; SUPABASE_ANON_KEY?:string };
-export const onRequestGet = async ({env}:{env:Env}):Promise<Response> => {
+type Context = { request:Request; env:Env };
+export const onRequestGet = async ({request,env}:Context):Promise<Response> => {
+  if (new URL(request.url).hostname.toLowerCase() !== "stories.ompathstudy.com") {
+    const url = new URL("/api/sitemap?mode=stories", request.url);
+    return runVercelHandler(mainSitemap, new Request(url, request));
+  }
   const base=env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
   const key=env.SUPABASE_ANON_KEY || "";
   const rows:any[]=[];
@@ -21,4 +28,5 @@ export const onRequestGet = async ({env}:{env:Env}):Promise<Response> => {
   }
   const body=urls.map((x:any)=>"<url><loc>"+esc(x.loc)+"</loc>"+(x.lastmod?"<lastmod>"+esc(new Date(x.lastmod).toISOString())+"</lastmod>":"")+(x.image?"<image:image><image:loc>"+esc(x.image)+"</image:loc><image:title>"+esc(x.title)+"</image:title></image:image>":"")+"</url>").join("");
   return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'+body+"</urlset>",{headers:{"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age=900, s-maxage=3600"}});
+};
 };
