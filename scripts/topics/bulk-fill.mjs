@@ -51,6 +51,8 @@ async function worker() {
       }
       if (!page) { failed++; console.log("failed", t.n, "-", lastError.slice(0, 300)); continue; }
       if (!page.medical) { skipped++; console.log("not medical", t.n); continue; }
+      const published = await maintenanceRequest("publish", { slug: it.s, name: t.n, category: t.c, page });
+      if (!published?.ok) throw new Error("Neon publication refused: " + String(published?.reason || "unknown"));
       fs.writeFileSync(path.join(DIR, `${it.s}.json`), JSON.stringify({ ...page, reviewed: false }, null, 1) + "\n");
       done++;
       if (done % 10 === 0) console.log(`done ${done}/${todo.length} (skipped ${skipped}, failed ${failed})`);
