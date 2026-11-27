@@ -14,6 +14,9 @@ const libraryPrerender = read("scripts/library/prerender.mjs");
 const htmlTemplate = read("index.html");
 const seoLib = read("src/lib/seo.ts");
 const staticNotePage = read("src/pages/StaticNote.tsx");
+const neonSitemap = read("api/generate-sitemap.ts");
+const sitemapRoute = read("api/sitemap.js");
+const functionDispatcher = read("api/neon-functions.js");
 
 const checks = [
   ["temporary crawler failures use retryable 503 responses", /status:\s*503/.test(meta) && /"retry-after":\s*"300"/.test(meta)],
@@ -50,6 +53,8 @@ const checks = [
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
   ["runtime robots.txt uses real line breaks rather than literal backslash-n text", sitemapIndex.includes('lines.join("\\n")') && !sitemapIndex.includes('lines.join("\\\\n")')],
+  ["dynamic sitemap reads published content through Neon rather than the retired Supabase Edge Function", neonSitemap.includes("@neondatabase/neon-js") && neonSitemap.includes("SupabaseAuthAdapter()") && !neonSitemap.includes("Deno.env") && !neonSitemap.includes("new Response") && sitemapRoute.includes("/api/generate-sitemap") && !sitemapRoute.includes("strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/generate-sitemap")],
+  ["legacy generate-sitemap invocations use the Neon sitemap handler", functionDispatcher.includes('name === "generate-sitemap"') && functionDispatcher.includes("return generateSitemap(req, res)")],
 ];
 
 let failed = false;
