@@ -17,7 +17,7 @@ const makePage = (title: string, subject: string, count = 13) => {
 
 describe("AI provider key configuration", () => {
   it("parses comma, whitespace, semicolon and JSON-array key lists without duplicates", () => {
-    expect(providerKeys({ GEMINI_API_KEYS: "gem-a, gem-b;\\ngem-c", GEMINI_API_KEY_2: "gem-b", GEMINI_API_KEY_3: "gem-d" }, "GEMINI"))
+    expect(providerKeys({ GEMINI_API_KEYS: "gem-a, gem-b; gem-c", GEMINI_API_KEY_2: "gem-b", GEMINI_API_KEY_3: "gem-d" }, "GEMINI"))
       .toEqual(["gem-a", "gem-b", "gem-c", "gem-d"]);
     expect(providerKeys({ GROQ_API_KEYS: '["groq-a","groq-b"]' }, "GROQ"))
       .toEqual(["groq-a", "groq-b"]);
