@@ -15,7 +15,7 @@ const phoneNumber = (v) => {
   return d.length >= 9 && d.length <= 15 ? "+" + d : "";
 };
 async function userFromRequest(req) {
-  const token = String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
+  const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
   if (!token) return null;
   try {
     const result = await jwtVerify(token, jwks);
