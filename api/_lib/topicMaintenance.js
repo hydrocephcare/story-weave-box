@@ -2,7 +2,7 @@ import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
-import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
+import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -171,6 +171,53 @@ PAGE TEXT:
         [limit, offset],
       );
       return res.status(200).json({ rows });
+    }
+
+
+    if (task === "deep-static") {
+      const name = String(body.name || "").slice(0, 180);
+      const category = String(body.category || "").slice(0, 100);
+      const base = body.base && typeof body.base === "object" ? body.base : null;
+      if (name.length < 2 || !base || !Array.isArray(base.sections) || base.sections.length < 3) return res.status(400).json({ error: "A valid topic name and revision page are required." });
+      const past = Array.isArray(body.past) ? body.past.slice(0, 12).map(x => String(x).slice(0, 220)) : [];
+      const deep = await generateCheckedDeep({ name, category, base, past }, process.env, fetch, 240000);
+      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
+      return res.status(200).json({ deep });
+    }
+
+    if (task === "check-note") {
+      const title = String(body.title || "").slice(0, 240);
+      const original = String(body.text || "").slice(0, 18000);
+      if (title.length < 2 || original.trim().length < 200) return res.status(400).json({ error: "A note title and at least 200 characters are required." });
+      const isThin = value => value.trim().split(/\\s+/).filter(Boolean).length < 750 || (value.match(/^#{1,3}\\s+/gm) || []).length < 8;
+      const applyThin = (result, value) => {
+        if (isThin(value)) {
+          result.validated = false; result.medium = Number(result.medium || 0) + 1;
+          result.issues = [...(result.issues || []), { severity: "medium", where: "overall structure", problem: "This study note is too thin for the comprehensive library standard.", fix: "Expand to at least 8 substantive sections with topic-specific physiology, mechanisms, clinical relevance, investigations, management and pharmacology where relevant." }];
+        }
+        return result;
+      };
+      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: process.env, timeoutMs: 45000 }), original);
+      let final = first, correctedBody = null, repairStatus = "clean";
+      if (!first.validated) {
+        const prompt = [
+          "You are the medical editor correcting a medical-school learning note for OmpathStudy.",
+          "Correct every factual or clinical issue listed below. Preserve every correct original fact, number, unit, drug name, warning, table, diagram, image markdown and link. Do not shorten the note or remove valid teaching content.",
+          "Add missing explanations where needed to make the note accurate and understandable. For a thin note, expand it into at least 8 substantive topic-specific sections. Explain relevant physiology, mechanisms, types/classification, clinical features, investigations and interpretation, management, pharmacology, complications and prevention when appropriate.",
+          "Use standard accepted medical knowledge only. Never invent statistics, references, local guideline claims or drug doses. If uncertain, qualify or omit. Use British spelling and define specialist terms at first use.",
+          "Do not claim a clinician has reviewed the note. Output only the complete corrected Markdown body, without YAML frontmatter or code fences.",
+          "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\\n"),
+          "ORIGINAL NOTE:", original
+        ].join("\\n\\n");
+        const draft = await askModel(prompt, { env: process.env, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\\s*/i, "").replace(/\x60{3}\\s*$/, "").trim();
+        fixed = fixed.replace(/^---[\\s\\S]*?---\\r?\\n?/, "");
+        if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
+          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: process.env, timeoutMs: 45000 }), fixed);
+          if (final.validated) { correctedBody = fixed; repairStatus = "auto-repaired"; } else repairStatus = "held";
+        } else repairStatus = "held";
+      }
+      return res.status(200).json({ validated: final.validated, high: final.high, medium: final.medium, issues: final.issues, model: final.model, at: final.at, repairStatus, correctedBody });
     }
 
     if (task === "review-topic") {
