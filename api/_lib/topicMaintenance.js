@@ -97,7 +97,9 @@ export default async function handler(req, res) {
           || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
         return res.status(422).json({ ok: false, reason: "review_or_structure" });
       }
-      const slug = name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80).replace(/-+$/g, "");
+      const requestedSlug = String(body.slug || "");
+      const slug = requestedSlug || name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80).replace(/-+$/g, "");
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || slug.length > 80) return res.status(400).json({ error: "Invalid topic slug." });
       const rows = await getDb()`SELECT public.publish_topic_page(
         ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
       ) AS result`;
