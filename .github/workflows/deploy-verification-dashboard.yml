@@ -1,0 +1,35 @@
+name: Deploy OmpathStudy verification dashboard
+
+on:
+  push:
+    branches:
+      - verification-staging
+    paths:
+      - "ops/verification-worker.js"
+      - ".github/workflows/deploy-verification-dashboard.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ompathstudy-verification-dashboard
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out verification branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Deploy read-only verification Worker
+        run: npx --yes wrangler@4 deploy ops/verification-worker.js --name ompathstudy-verification --compatibility-date 2026-11-27
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
