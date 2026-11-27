@@ -64,9 +64,10 @@ To correct or approve a page, edit its row in topic_pages (set reviewed to true 
 
 ## How the AI writes and publishes now (Neon)
 
-The dedicated Neon-backed writer is the primary route; Ompath AI chat is the secondary route. Both use the same Neon Auth
-session and the same `publish_topic_page` RPC. The RPC refuses unsafe or unreviewed content and caps new topic pages at 150 per day.
-Deep exam notes use `/api/topic-write` with `mode: "deep"`, require a Neon Auth session, and persist through `save_topic_deep`.
+The dedicated Neon-backed writer is the only route that publishes topic pages. It validates the Neon Auth session, consumes the topic-generation entitlement,
+uses Groq for drafting and Gemini for independent review, then persists through the server-only `publish_topic_page` RPC. The RPC refuses unsafe
+or unreviewed content and caps new topic pages at 150 per day. Ompath AI chat remains a separate question-and-answer feature; it does not publish pages.
+Deep exam notes use `/api/topic-write` with `mode: "deep"`, require a Neon Auth session, and persist through the server-only `save_topic_deep` RPC.
 
 The daily GitHub workflow reads and updates `articles`, `mcq_sets`, `essays` and `topic_pages` directly in Neon using the
 `NEON_DATABASE_URL` repository secret. It rebuilds static topic pages, updates the image sitemap, reviews legacy pages with Gemini,
