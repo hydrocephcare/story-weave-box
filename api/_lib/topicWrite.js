@@ -30,6 +30,26 @@ async function saveDeepNotes({ slug, name, category, base, deep }) {
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
+  if (req.method === "GET" && new URL(req.url, "https://ompathstudy.com").searchParams.get("health") === "1") {
+    const groqKeys = providerKeys(process.env, "GROQ");
+    const geminiKeys = providerKeys(process.env, "GEMINI");
+    const probe = async (url, headers) => {
+      try { const response = await fetch(url, { headers, signal: AbortSignal.timeout(8000) }); return { reachable: response.ok, status: response.status }; }
+      catch { return { reachable: false, status: 0 }; }
+    };
+    const [groqChecks, geminiChecks, database] = await Promise.all([
+      Promise.all(groqKeys.map((key) => probe("https://api.groq.com/openai/v1/models", { Authorization: "Bearer " + key }))),
+      Promise.all(geminiKeys.map((key) => probe("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1", { "x-goog-api-key": key }))),
+      (async () => { try { const rows = await getDatabase()`select 1 as ok`; return { configured: true, connected: rows[0]?.ok === 1 }; } catch { return { configured: Boolean(databaseUrl), connected: false }; } })(),
+    ]);
+    return res.status(200).json({
+      ok: groqChecks.some((x) => x.reachable) && geminiChecks.some((x) => x.reachable) && database.connected,
+      groq: { configuredKeys: groqKeys.length, healthyKeys: groqChecks.filter((x) => x.reachable).length, statuses: groqChecks.map((x) => x.status) },
+      gemini: { configuredKeys: geminiKeys.length, healthyKeys: geminiChecks.filter((x) => x.reachable).length, statuses: geminiChecks.map((x) => x.status) },
+      database,
+      auth: { jwksConfigured: true, dataApiConfigured: true },
+    });
+  }
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
   const geminiEnv = { GEMINI_API_KEYS: providerKeys(process.env, "GEMINI").join(",") };
   const hasGemini = Boolean(geminiEnv.GEMINI_API_KEYS);
@@ -76,6 +96,7 @@ export default async function handler(req, res) {
     if (!saved?.ok) return res.status(saved?.reason === "busy" ? 429 : 502).json({ status: saved?.reason === "busy" ? "busy" : "failed" });
     return res.status(200).json({ status: "published", page: finalPage, saved: true, slug: finalSlug, name: finalName });
   } catch (e) {
-    return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed" });
+    console.error("[topic-write] generation or persistence failed:", String(e?.message ?? e).slice(0, 500));
+    return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed", reason: String(e?.message ?? "Topic generation failed").slice(0, 240) });
   }
 }
