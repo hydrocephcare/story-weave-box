@@ -3,8 +3,10 @@ import generateSitemap from "./generate-sitemap";
 import paystackHandler from "./paystack.js";
 import sendNotification from "./_lib/sendNotification.js";
 import generateExam from "./_lib/generateExam.js";
+import transcribe from "./_lib/transcribe.js";
+import aiCases from "./_lib/ai-cases.js";
 
-/** Neon/Vercel function dispatcher. Keep sitemap GET requests working for crawlers. */
+/** Neon-backed function dispatcher for Cloudflare Pages and crawler requests. */
 export const config = { maxDuration: 60 };
 export default async function handler(req, res) {
   const name = String(req.query?.name || "").trim();
@@ -15,6 +17,8 @@ export default async function handler(req, res) {
   if (name === "topic-maintenance") return topicMaintenance(req, res);
   if (name === "send-notification") return sendNotification(req, res);
   if (name === "generate-exam") return generateExam(req, res);
+  if (name === "transcribe") return transcribe(req, res);
+  if (name === "ai-cases") return aiCases(req, res);
 
   // api/sitemap.js fetches this endpoint with GET; browser-side function calls use POST.
   if (["initiate-paystack", "check-payment", "access-code"].includes(name)) {
@@ -43,6 +47,6 @@ export default async function handler(req, res) {
   }
 
   return res.status(501).json({
-    error: `The ${name} function has not yet been ported to Neon/Vercel.`,
+    error: `The ${name} function has not yet been ported to Neon.`,
   });
 }
