@@ -43,10 +43,22 @@ END;
 $function$;
 
 REVOKE ALL ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text)
-  FROM PUBLIC, anonymous, authenticated;
+  FROM PUBLIC, authenticated;
 REVOKE ALL ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb)
   FROM PUBLIC, anonymous, authenticated;
-GRANT EXECUTE ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text)
-  TO service_role, neondb_owner;
-GRANT EXECUTE ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb)
-  TO service_role, neondb_owner;
+GRANT EXECUTE ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text) TO service_role;
+DO $
+BEGIN
+  IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'neondb_owner') THEN
+    EXECUTE 'GRANT EXECUTE ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text) TO neondb_owner';
+  END IF;
+END
+$;
+GRANT EXECUTE ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb) TO service_role;
+DO $
+BEGIN
+  IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'neondb_owner') THEN
+    EXECUTE 'GRANT EXECUTE ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb) TO neondb_owner';
+  END IF;
+END
+$;
