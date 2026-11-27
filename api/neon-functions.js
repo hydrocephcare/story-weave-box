@@ -1,12 +1,16 @@
+import topicMaintenance from "./_lib/topicMaintenance.js";
 import generateSitemap from "./generate-sitemap";
 import paystackHandler from "./paystack.js";
 
 /** Neon/Vercel function dispatcher. Keep sitemap GET requests working for crawlers. */
+export const config = { maxDuration: 60 };
 export default async function handler(req, res) {
   const name = String(req.query?.name || "").trim();
   if (!/^[a-z0-9-]+$/i.test(name)) {
     return res.status(400).json({ error: "Invalid function name" });
   }
+
+  if (name === "topic-maintenance") return topicMaintenance(req, res);
 
   // api/sitemap.js fetches this endpoint with GET; browser-side function calls use POST.
   if (["initiate-paystack", "check-payment", "access-code"].includes(name)) {
