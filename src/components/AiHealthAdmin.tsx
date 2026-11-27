@@ -20,7 +20,7 @@ export default function AiHealthAdmin() {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session?.access_token) throw new Error("Sign in with the administrator account first.");
-      const response = await fetch("/api/ai?task=runtimeHealth", {
+      const response = await fetch("/api/ai?task=runtimeHealth&deep=1", {
         headers: { Authorization: `Bearer ${session.access_token}` },
         cache: "no-store",
       });
