@@ -155,7 +155,7 @@ const parseProviderKeys = (...values) => [...new Set(values.flatMap((value) => {
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
   } catch {}
-  return raw.split(/[\\s,;]+/).map((key) => key.trim()).filter(Boolean);
+  return raw.split(/[\s,;]+/).map((key) => key.trim()).filter(Boolean);
 }))];
 export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false } = {}) {
   const gateways = [];
