@@ -49,6 +49,17 @@ export default async function handler(req, res) {
     return { connected: response.ok, status: response.status };
   });
 
+  result.noteCard = await check("note-card", async () => {
+    const response = await fetch("https://www.ompathstudy.com/api/note-card?title=Ompath%20Study%20Health%20Check&kind=System", {
+      redirect: "manual",
+      signal: AbortSignal.timeout(15000),
+    });
+    const type = response.headers.get("content-type") || "";
+    const bytes = response.ok && type.includes("image/png") ? new Uint8Array(await response.arrayBuffer()) : new Uint8Array();
+    const png = bytes.length > 8 && bytes[0] === 137 && bytes[1] === 80 && bytes[2] === 78 && bytes[3] === 71;
+    return { ready: response.status === 200 && png, status: response.status, png };
+  });
+
   result.authJwks = await check("auth-jwks", async () => {
     const response = await fetch(process.env.NEON_AUTH_JWKS_URL || DEFAULT_JWKS, { signal: AbortSignal.timeout(8000) });
     const data = await response.json().catch(() => ({}));
