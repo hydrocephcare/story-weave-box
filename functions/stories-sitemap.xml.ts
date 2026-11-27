@@ -44,7 +44,7 @@ export const onRequestGet = async ({ env }: Context): Promise<Response> => {
     ).join("");
 
     return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' + body + "</urlset>", {
-      headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=900, s-maxage=3600" },
+      headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=900, s-maxage=3600", "x-ompath-stories-sitemap": "neon-v1" },
     });
   } catch (error) {
     console.error("[stories-sitemap] Neon lookup failed:", error instanceof Error ? error.message : String(error));
