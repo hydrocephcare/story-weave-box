@@ -1,4 +1,4 @@
-import { createClient, SupabaseAuthAdapter } from "@neondatabase/neon-js";
+import { neon } from "@neondatabase/serverless";
 
 const DEFAULT_BASE_URL = "https://www.ompathstudy.com";
 
@@ -129,20 +129,24 @@ function preferredYearMap(rows: any[], pathOf: (row: any) => string): Map<string
   return result;
 }
 
-async function fetchAllPublished(sb: any, table: string, select: string, orderColumn = "updated_at", soft = true, publicOnly = false) {
+async function fetchAllPublished(sql: any, table: string, select: string, orderColumn = "updated_at", soft = true, publicOnly = false) {
+  // Table and column names are fixed by the calls below; validate identifiers before
+  // interpolating them because SQL parameters cannot represent identifiers.
+  const identifier = /^[a-z_][a-z0-9_]*$/i;
+  if (!identifier.test(table) || !identifier.test(orderColumn)) throw new Error("Invalid sitemap query identifier");
+  const columns = select.split(",").map((column) => column.trim());
+  if (!columns.length || columns.some((column) => !identifier.test(column))) throw new Error("Invalid sitemap select list");
   const rows: any[] = [];
   const batchSize = 1000;
-  for (let from = 0; ; from += batchSize) {
-    let query = sb.from(table).select(select).eq("published", true);
-    if (soft) query = query.is("deleted_at", null);   // contests have no deleted_at column; asking for it failed the whole sitemap
-    if (publicOnly) {
-      query = query.eq("password_protected", false)
-        .or("scheduled_at.is.null,scheduled_at.lte." + new Date().toISOString());
-    }
-    const { data, error } = await query
-      .order(orderColumn, { ascending: false, nullsFirst: false })
-      .range(from, from + batchSize - 1);
-    if (error) throw error;
+  for (let offset = 0; ; offset += batchSize) {
+    const where = ["published = true"];
+    if (soft) where.push("deleted_at IS NULL");
+    if (publicOnly) where.push("password_protected = false AND (scheduled_at IS NULL OR scheduled_at <= now())");
+    const query = `SELECT ${columns.join(", ")} FROM public.${table}
+      WHERE ${where.join(" AND ")}
+      ORDER BY ${orderColumn} DESC NULLS LAST
+      LIMIT $1 OFFSET $2`;
+    const data = await sql.query(query, [batchSize, offset]);
     rows.push(...(data || []));
     if (!data || data.length < batchSize) break;
   }
@@ -157,21 +161,19 @@ export default async function handler(req, res) {
   try {
     const requestUrl = new URL(req.url, `https://${req.headers.host || "www.ompathstudy.com"}`);
     const filter = sitemapFilterFromFile(requestUrl.searchParams.get("file"));
-    const NEON_AUTH_URL = process.env.NEON_AUTH_URL || process.env.VITE_NEON_AUTH_URL || "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth";
-    const NEON_DATA_API_URL = process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
-    
-
-    const supabase = createClient({ auth: { adapter: SupabaseAuthAdapter(), url: NEON_AUTH_URL, allowAnonymous: true }, dataApi: { url: NEON_DATA_API_URL } });
-    const { data: siteUrlSetting } = await supabase.from("app_settings").select("value").eq("key", "site_url").maybeSingle();
-    const baseUrl = normalizeBaseUrl((siteUrlSetting as any)?.value);
+    const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
+    if (!databaseUrl) throw new Error("DATABASE_URL is not configured.");
+    const sql = neon(databaseUrl);
+    const siteUrlRows = await sql.query("SELECT value FROM public.app_settings WHERE key = $1 LIMIT 1", ["site_url"]);
+    const baseUrl = normalizeBaseUrl(siteUrlRows?.[0]?.value);
 
     const [articles, mcqs, flashcards, stories, essays, contests] = await Promise.all([
-      fetchAllPublished(supabase, "articles", "id, title, slug, created_at, updated_at, category, og_image_url, featured_image", "updated_at", true, true),
-      fetchAllPublished(supabase, "mcq_sets", "id, title, slug, og_image_url, created_at, updated_at, category, source_type, exam_year", "updated_at", true, true),
-      fetchAllPublished(supabase, "flashcard_sets", "id, title, slug, created_at, updated_at, category", "updated_at", true, true),
-      fetchAllPublished(supabase, "stories", "id, title, slug, created_at, category, cover_image_url", "created_at", true, true),
-      fetchAllPublished(supabase, "essays", "id, title, slug, created_at, updated_at, category"),
-      fetchAllPublished(supabase, "contests", "id, slug, title, subtitle, starts_at, published, updated_at, created_at", "updated_at", false),
+      fetchAllPublished(sql, "articles", "id, title, slug, created_at, updated_at, category, og_image_url, featured_image", "updated_at", true, true),
+      fetchAllPublished(sql, "mcq_sets", "id, title, slug, og_image_url, created_at, updated_at, category, source_type, exam_year", "updated_at", true, true),
+      fetchAllPublished(sql, "flashcard_sets", "id, title, slug, created_at, updated_at, category", "updated_at", true, true),
+      fetchAllPublished(sql, "stories", "id, title, slug, created_at, category, cover_image_url", "created_at", true, true),
+      fetchAllPublished(sql, "essays", "id, title, slug, created_at, updated_at, category"),
+      fetchAllPublished(sql, "contests", "id, slug, title, subtitle, starts_at, published, updated_at, created_at", "updated_at", false),
     ]);
 
     const years = new Set<number>([1, 2, 3, 4, 5, 6]);
