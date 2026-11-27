@@ -192,7 +192,7 @@ export default async function handler(req, res) {
   result.onekitty = await check("onekitty", async () => {
     const authConfigured = Boolean(process.env.ONEKITTY_AUTH_CODE && Number(process.env.ONEKITTY_KITTY_ID) > 0);
     const developerConfigured = Boolean(process.env.ONEKITTY_DEVELOPER_API_KEY);
-    return { configured: authConfigured, developerApiConfigured: developerConfigured, ready: authConfigured };
+    return { configured: authConfigured, developerApiConfigured: developerConfigured, ready: authConfigured && developerConfigured };
   });
 
   result.googleDrive = await check("google-drive", async () => {
