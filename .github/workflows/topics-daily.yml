@@ -14,8 +14,8 @@ on:
       - "scripts/topics/review-database-pages.mjs"
       - "scripts/topics/build-topics.mjs"
       - "scripts/topics/corpus.mjs"
-      - "scripts/topics/neon-client.mjs"
-      - "scripts/topics/verify-neon.mjs"
+      - "scripts/topics/maintenance-client.mjs"
+      - "scripts/topics/verify-maintenance.mjs"
       - "supabase/functions/_shared/topicAi.js"
       - "supabase/functions/_shared/contentCheck.js"
   workflow_dispatch:
@@ -38,6 +38,7 @@ on:
         default: "40"
 permissions:
   contents: write
+  id-token: write
 concurrency:
   group: topics-daily
   cancel-in-progress: true
@@ -46,9 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
-      NEON_AUTH_URL: https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth
-      NEON_DATA_API_URL: https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1
-      POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
+      TOPIC_MAINTENANCE_URL: https://www.ompathstudy.com/api/topic-maintenance
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,8 +57,8 @@ jobs:
           node-version: 22
       - name: Install
         run: npm install --legacy-peer-deps --no-audit --no-fund
-      - name: Verify Neon Data API and topic automation access
-        run: node scripts/topics/verify-neon.mjs
+      - name: Verify Ompath topic maintenance API
+        run: node scripts/topics/verify-maintenance.mjs
       - name: Restore yesterday's reading of the library
         uses: actions/cache@v4
         with:
