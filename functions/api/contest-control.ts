@@ -1,5 +1,5 @@
 import { balanceBank } from "../../supabase/functions/_shared/mcqPositions.js";
-import { createClient } from "@supabase/supabase-js";
+import { createClient as createNeonClient } from "@neondatabase/neon-js";
 import { neon } from "@neondatabase/serverless";
 import { verifyNeonToken, isNeonAdmin } from "../../api/_lib/neonAdmin.js";
 
@@ -25,12 +25,8 @@ export async function onRequest({ request: req }: { request: Request }) {
     const identity = await verifyNeonToken(bearer);
     if (!identity) return json({ error: "Authentication required" }, 401);
     const user = { id: identity.id, email: identity.email };
-    const dataApi = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API)
-      .replace(/\/rest\/v1\/?$/, "");
-    const admin = createClient(dataApi, bearer, {
-      auth: { persistSession: false, autoRefreshToken: false },
-      global: { headers: { Authorization: `Bearer ${bearer}` } },
-    });
+    const dataApi = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API);
+    const admin = createNeonClient({ dataApi: { url: dataApi, getToken: async () => bearer } });
     const body = await req.json();
     const action = String(body?.action || "");
     const isAdmin = async () => isNeonAdmin(bearer);
