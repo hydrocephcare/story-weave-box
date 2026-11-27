@@ -189,7 +189,7 @@ PAGE TEXT:
       const title = String(body.title || "").slice(0, 240);
       const original = String(body.text || "").slice(0, 18000);
       if (title.length < 2 || original.trim().length < 200) return res.status(400).json({ error: "A note title and at least 200 characters are required." });
-      const isThin = value => value.trim().split(/\\s+/).filter(Boolean).length < 750 || (value.match(/^#{1,3}\\s+/gm) || []).length < 8;
+      const isThin = value => value.trim().split(/\s+/).filter(Boolean).length < 750 || (value.match(/^#{1,3}\s+/gm) || []).length < 8;
       const applyThin = (result, value) => {
         if (isThin(value)) {
           result.validated = false; result.medium = Number(result.medium || 0) + 1;
@@ -206,12 +206,12 @@ PAGE TEXT:
           "Add missing explanations where needed to make the note accurate and understandable. For a thin note, expand it into at least 8 substantive topic-specific sections. Explain relevant physiology, mechanisms, types/classification, clinical features, investigations and interpretation, management, pharmacology, complications and prevention when appropriate.",
           "Use standard accepted medical knowledge only. Never invent statistics, references, local guideline claims or drug doses. If uncertain, qualify or omit. Use British spelling and define specialist terms at first use.",
           "Do not claim a clinician has reviewed the note. Output only the complete corrected Markdown body, without YAML frontmatter or code fences.",
-          "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\\n"),
+          "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
           "ORIGINAL NOTE:", original
-        ].join("\\n\\n");
+        ].join("\n\n");
         const draft = await askModel(prompt, { env: process.env, timeoutMs: 55000, maxTokens: 10000, plain: true });
-        let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\\s*/i, "").replace(/\x60{3}\\s*$/, "").trim();
-        fixed = fixed.replace(/^---[\\s\\S]*?---\\r?\\n?/, "");
+        let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
+        fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
         if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
           final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: process.env, timeoutMs: 45000 }), fixed);
           if (final.validated) { correctedBody = fixed; repairStatus = "auto-repaired"; } else repairStatus = "held";
