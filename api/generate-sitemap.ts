@@ -1,0 +1,373 @@
+import { createClient, SupabaseAuthAdapter } from "@neondatabase/neon-js";
+
+const DEFAULT_BASE_URL = "https://www.ompathstudy.com";
+
+function slugify(value: string): string {
+  return (value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function cleanPublicSlug(rawSlug: string | null | undefined, fallbackTitle: string, fallback = "study"): string {
+  const base = String(rawSlug || slugify(fallbackTitle) || fallback).trim().toLowerCase();
+  return base
+    .replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-/i, "")
+    .replace(/-[0-9a-f]{6,12}$/i, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "") || fallback;
+}
+
+function normalizeBaseUrl(url: string | null | undefined): string {
+  const trimmed = String(url || "").trim();
+  if (!trimmed) return DEFAULT_BASE_URL;
+  const withProtocol = /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+  // Force canonical www host so sitemap entries match robots.txt + canonical tags.
+  // Google rejects sitemap URLs that don't share the sitemap's hostname.
+  const cleaned = withProtocol.replace(/\/+$/, "");
+  try {
+    const u = new URL(cleaned);
+    if (/(^|\.)ompathstudy\.com$/i.test(u.hostname) && u.hostname.toLowerCase() !== "www.ompathstudy.com") {
+      u.hostname = "www.ompathstudy.com";
+    }
+    u.protocol = "https:";
+    return `${u.protocol}//${u.hostname}`;
+  } catch {
+    return cleaned;
+  }
+}
+
+function escapeXml(str: string): string {
+  return String(str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function extractFirstImage(content: string | null): string | null {
+  if (!content) return null;
+  const md = content.match(/!\[[^\]]*\]\((https?:\/\/[^\s)]+)\)/i);
+  if (md) return md[1];
+  const html = content.match(/<img[^>]+src=["'](https?:\/\/[^\s"']+)["'][^>]*>/i);
+  return html ? html[1] : null;
+}
+
+/**
+ * Every remote image inside an article body, with its caption/alt text.
+ * Spot/slide-review notes are almost entirely images, so indexing each plate
+ * is what makes them discoverable in Google Images.
+ */
+function extractContentImages(...sources: (string | null | undefined)[]): { loc: string; caption: string }[] {
+  const out: { loc: string; caption: string }[] = [];
+  const seen = new Set<string>();
+  const add = (loc: string, caption: string) => {
+    const url = (loc || "").trim();
+    if (!url || !/^https?:\/\//i.test(url) || seen.has(url)) return;
+    seen.add(url);
+    out.push({ loc: url, caption: (caption || "").replace(/\s+/g, " ").trim() });
+  };
+  for (const content of sources) {
+    if (!content) continue;
+    for (const m of content.matchAll(/!\[([^\]]*)\]\(\s*<?(https?:\/\/[^\s)>]+)>?(?:\s+["'][^"']*["'])?\s*\)/gi)) add(m[2], m[1]);
+    for (const m of content.matchAll(/<img\b[^>]*>/gi)) {
+      const tag = m[0];
+      const src = tag.match(/(?:src|data-src|data-lazy-src)=["'](https?:\/\/[^"']+)["']/i)?.[1] || "";
+      const alt = tag.match(/alt=["']([^"']*)["']/i)?.[1] || "";
+      add(src, alt);
+      const srcset = tag.match(/(?:srcset|data-srcset)=["']([^"']+)["']/i)?.[1] || "";
+      for (const candidate of srcset.split(",")) add(candidate.trim().split(/\s+/)[0], alt);
+    }
+  }
+  return out.slice(0, 900); // Google caps at 1000 images per <url>
+}
+
+const EXCLUDED_PATHS = new Set<string>([
+  "/sitemap.xml",
+  "/sitemap-dynamic.xml",
+  "/blog/victory-school-club-membership-system-project-guide",
+  "/mcqs/fundamentals-of-tb-mcqs",
+]);
+
+function sitemapFilterFromFile(file: string | null) {
+  const f = String(file || "all.xml").toLowerCase();
+  // "other" collects what has no "Year N:" in its category (it used to be in no sitemap at all)
+  const year = f.match(/year-([1-6])/)?.[1] || (f.includes("other") ? "other" : null);
+  const section = f.includes("exams") ? "exams"
+    : f.includes("blog") ? "blog"
+    : f.includes("mcqs") ? "mcqs"
+    : f.includes("flashcards") ? "flashcards"
+    : f.includes("stories") ? "stories"
+    : f.includes("essays") ? "essays"
+    : f.includes("contests") ? "contests"
+    : f.includes("pages") ? "pages"
+    : "all";
+  return { section, year };
+}
+
+function matchesYear(category: string | null | undefined, year: string | null) {
+  if (!year) return true;
+  if (year === "other") return !/^Year\s+[1-6]\s*:/i.test(String(category || ""));
+  return new RegExp(`^Year\\s+${year}\\s*:`, "i").test(String(category || ""));
+}
+
+// Each resource URL belongs in one year/other sitemap only. Rows are already
+// ordered newest-first, so the newest published record owns a duplicated slug.
+function preferredYearMap(rows: any[], pathOf: (row: any) => string): Map<string, string> {
+  const result = new Map<string, string>();
+  for (const row of rows || []) {
+    const path = pathOf(row);
+    if (!path || EXCLUDED_PATHS.has(path) || result.has(path)) continue;
+    const match = String(row.category || "").match(/^Year\s+([1-6])\s*:/i);
+    result.set(path, match?.[1] || "other");
+  }
+  return result;
+}
+
+async function fetchAllPublished(sb: any, table: string, select: string, orderColumn = "updated_at", soft = true) {
+  const rows: any[] = [];
+  const batchSize = 1000;
+  for (let from = 0; ; from += batchSize) {
+    let query = sb.from(table).select(select).eq("published", true);
+    if (soft) query = query.is("deleted_at", null);   // contests have no deleted_at column; asking for it failed the whole sitemap
+    const { data, error } = await query
+      .order(orderColumn, { ascending: false, nullsFirst: false })
+      .range(from, from + batchSize - 1);
+    if (error) throw error;
+    rows.push(...(data || []));
+    if (!data || data.length < batchSize) break;
+  }
+  return rows;
+}
+
+export default async function handler(req, res) {
+  if (req.method === "OPTIONS") {
+    return res.status(204).end();
+  }
+
+  try {
+    const requestUrl = new URL(req.url, `https://${req.headers.host || "www.ompathstudy.com"}`);
+    const filter = sitemapFilterFromFile(requestUrl.searchParams.get("file"));
+    const NEON_AUTH_URL = process.env.NEON_AUTH_URL || process.env.VITE_NEON_AUTH_URL;
+    const NEON_DATA_API_URL = process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL;
+    if (!NEON_AUTH_URL || !NEON_DATA_API_URL) throw new Error("Missing Neon Auth/Data API configuration");
+
+    const supabase = createClient({ auth: { adapter: SupabaseAuthAdapter(), url: NEON_AUTH_URL, allowAnonymous: true }, dataApi: { url: NEON_DATA_API_URL } });
+    const { data: siteUrlSetting } = await supabase.from("app_settings").select("value").eq("key", "site_url").maybeSingle();
+    const baseUrl = normalizeBaseUrl((siteUrlSetting as any)?.value);
+
+    const [articles, mcqs, flashcards, stories, essays, contests] = await Promise.all([
+      fetchAllPublished(supabase, "articles", "id, title, slug, created_at, updated_at, category, og_image_url, featured_image"),
+      fetchAllPublished(supabase, "mcq_sets", "id, title, slug, og_image_url, created_at, updated_at, category, source_type, exam_year"),
+      fetchAllPublished(supabase, "flashcard_sets", "id, title, slug, created_at, updated_at, category"),
+      fetchAllPublished(supabase, "stories", "id, title, slug, created_at, category, cover_image_url", "created_at"),
+      fetchAllPublished(supabase, "essays", "id, title, slug, created_at, updated_at, category"),
+      fetchAllPublished(supabase, "contests", "id, slug, title, subtitle, starts_at, published, updated_at, created_at", "updated_at", false),
+    ]);
+
+    const years = new Set<number>([1, 2, 3, 4, 5, 6]);
+    [...(articles || []), ...(mcqs || []), ...(flashcards || [])].forEach((item: any) => {
+      const m = (item.category || "").match(/^Year (\d)/);
+      if (m) years.add(parseInt(m[1]));
+    });
+    const preferredBlogYear = preferredYearMap(articles || [], (a) => `/blog/${cleanPublicSlug(a.slug, a.title, "article")}`);
+    const isTimedMcq = (m: any) => /exam/i.test(m.title || "") || /^weekly exam/i.test(m.category || "") || m.source_type === "past_paper" || Boolean(m.exam_year);
+    const preferredMcqYear = preferredYearMap((mcqs || []).filter((m: any) => !isTimedMcq(m)), (m) => `/mcqs/${cleanPublicSlug(m.slug, m.title, "quiz")}`);
+    const preferredFlashcardYear = preferredYearMap(flashcards || [], (f) => `/flashcards/${cleanPublicSlug(f.slug, f.title, "flashcards")}`);
+
+    const includePages = filter.section === "all" || filter.section === "pages";
+    const includeBlog = filter.section === "all" || filter.section === "blog";
+    const includeStories = filter.section === "all" || filter.section === "stories";
+    const includeMcqs = filter.section === "all" || filter.section === "mcqs";
+    const includeFlashcards = filter.section === "all" || filter.section === "flashcards";
+    const includeEssays = filter.section === "all" || filter.section === "essays";
+    const includeExams = filter.section === "all" || filter.section === "exams";
+    const includeContests = filter.section === "all" || filter.section === "contests";
+    const emittedPaths = new Set<string>();
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+`;
+
+    if (includePages) {
+      [
+        ["/", "1.0", "daily"],
+        ["/blog", "0.9", "daily"],
+        ["/stories", "0.8", "daily"],
+        ["/share-your-story", "0.7", "monthly"],
+        ["/flashcards", "0.8", "daily"],
+        ["/mcqs", "0.8", "daily"],
+        ["/essays", "0.8", "weekly"],
+        ["/exams", "0.8", "weekly"],
+        ["/contests", "0.8", "weekly"],
+      ].forEach(([path, priority, changefreq]) => {
+        emittedPaths.add(path);
+        xml += `  <url><loc>${baseUrl}${path}</loc><priority>${priority}</priority><changefreq>${changefreq}</changefreq></url>\n`;
+      });
+    }
+
+    for (const y of Array.from(years).sort()) {
+      if (!includePages && filter.section !== "all") continue;
+      const path = `/year/${y}`;
+      emittedPaths.add(path);
+      xml += `  <url><loc>${baseUrl}${path}</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>\n`;
+    }
+
+    // Articles
+    for (const a of (articles || []) as any[]) {
+      if (!includeBlog || !matchesYear(a.category, filter.year)) continue;
+      const articleSlug = cleanPublicSlug(a.slug, a.title, "article");
+      const path = `/blog/${articleSlug}`;
+      if (filter.year && preferredBlogYear.get(path) !== filter.year) continue;
+      if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
+      emittedPaths.add(path);
+      const lastmod = (a.updated_at || a.created_at) ? new Date(a.updated_at || a.created_at).toISOString().split("T")[0] : "";
+      const imageUrl = a.og_image_url || a.featured_image || null;
+      const contentImages: { loc: string; caption: string }[] = [];
+      xml += `  <url>\n    <loc>${baseUrl}${path}</loc>\n`;
+      if (lastmod) xml += `    <lastmod>${lastmod}</lastmod>\n`;
+      xml += `    <priority>0.7</priority>\n    <changefreq>weekly</changefreq>\n`;
+      const emittedImages = new Set<string>();
+      if (imageUrl) {
+        emittedImages.add(imageUrl);
+        xml += `    <image:image>\n      <image:loc>${escapeXml(imageUrl)}</image:loc>\n      <image:title>${escapeXml(a.title)}</image:title>\n    </image:image>\n`;
+      }
+      for (const img of contentImages) {
+        if (emittedImages.has(img.loc)) continue;
+        emittedImages.add(img.loc);
+        xml += `    <image:image>\n      <image:loc>${escapeXml(img.loc)}</image:loc>\n      <image:title>${escapeXml(a.title)}</image:title>\n`;
+        if (img.caption) xml += `      <image:caption>${escapeXml(img.caption)}</image:caption>\n`;
+        xml += `    </image:image>\n`;
+      }
+      xml += `  </url>\n`;
+    }
+
+    // Stories
+    for (const s of (stories || []) as any[]) {
+      if (!includeStories) continue;
+      const storySlug = cleanPublicSlug(s.slug, s.title, "story");
+      const path = `/stories/${s.id}-${storySlug}`;
+      if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
+      emittedPaths.add(path);
+      const lastmod = s.created_at ? new Date(s.created_at).toISOString().split("T")[0] : "";
+      const imageUrl = s.cover_image_url || null;
+      xml += `  <url>\n    <loc>${baseUrl}${path}</loc>\n`;
+      if (lastmod) xml += `    <lastmod>${lastmod}</lastmod>\n`;
+      xml += `    <priority>0.7</priority>\n    <changefreq>weekly</changefreq>\n`;
+      if (imageUrl) {
+        xml += `    <image:image>\n      <image:loc>${escapeXml(imageUrl)}</image:loc>\n      <image:title>${escapeXml(s.title)}</image:title>\n    </image:image>\n`;
+      }
+      xml += `  </url>\n`;
+    }
+
+    // MCQs
+    for (const m of (mcqs || []) as any[]) {
+      // timed exams (weekly, unit exams, past papers) are taken on the exam page and are not listed as practice banks
+      if (/exam/i.test(m.title || "") || /^weekly exam/i.test(m.category || "") || m.source_type === "past_paper" || m.exam_year) {
+        // timed exams have their own pages under /exams (listed in exams.xml, not as practice banks)
+        if (includeExams && m.slug) {
+          const examPath = `/exams/${m.slug}`;
+          if (!emittedPaths.has(examPath) && !EXCLUDED_PATHS.has(examPath)) {
+            emittedPaths.add(examPath);
+            const lm = (m.updated_at || m.created_at) ? new Date(m.updated_at || m.created_at).toISOString().split("T")[0] : "";
+            xml += `  <url>
+    <loc>${baseUrl}${examPath}</loc>
+${lm ? `    <lastmod>${lm}</lastmod>
+` : ""}    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+`;
+          }
+        }
+        continue;
+      }
+      if (!includeMcqs || !matchesYear(m.category, filter.year)) continue;
+      const mcqSlug = cleanPublicSlug(m.slug, m.title, "quiz");
+      const path = `/mcqs/${mcqSlug}`;
+      if (filter.year && preferredMcqYear.get(path) !== filter.year) continue;
+      if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
+      emittedPaths.add(path);
+      const lastmod = (m.updated_at || m.created_at) ? new Date(m.updated_at || m.created_at).toISOString().split("T")[0] : "";
+      xml += `  <url>\n    <loc>${baseUrl}${path}</loc>\n`;
+      if (lastmod) xml += `    <lastmod>${lastmod}</lastmod>\n`;
+      xml += `    <priority>0.7</priority>\n    <changefreq>weekly</changefreq>\n`;
+      if (m.og_image_url) {
+        xml += `    <image:image>\n      <image:loc>${escapeXml(m.og_image_url)}</image:loc>\n      <image:title>${escapeXml(m.title)}</image:title>\n    </image:image>\n`;
+      }
+      xml += `  </url>\n`;
+    }
+
+    // Flashcards
+    for (const f of (flashcards || []) as any[]) {
+      if (!includeFlashcards || !matchesYear(f.category, filter.year)) continue;
+      const flashcardSlug = cleanPublicSlug(f.slug, f.title, "flashcards");
+      const path = `/flashcards/${flashcardSlug}`;
+      if (filter.year && preferredFlashcardYear.get(path) !== filter.year) continue;
+      if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
+      emittedPaths.add(path);
+      const lastmod = (f.updated_at || f.created_at) ? new Date(f.updated_at || f.created_at).toISOString().split("T")[0] : "";
+      xml += `  <url>\n    <loc>${baseUrl}${path}</loc>\n`;
+      if (lastmod) xml += `    <lastmod>${lastmod}</lastmod>\n`;
+      xml += `    <priority>0.7</priority>\n    <changefreq>weekly</changefreq>\n`;
+      xml += `  </url>\n`;
+    }
+
+
+    // Public contest briefings (only in the all/contests sitemap, never duplicated into every section)
+    for (const contest of (contests || []) as any[]) {
+      if (!includeContests || !contest.slug) continue;
+      const path = `/contests/${contest.slug}/briefing`;
+      if (emittedPaths.has(path) || EXCLUDED_PATHS.has(path)) continue;
+      emittedPaths.add(path);
+      const lastmod = (contest.updated_at || contest.created_at) ? new Date(contest.updated_at || contest.created_at).toISOString().split("T")[0] : "";
+      xml += `  <url>\n    <loc>${baseUrl}${path}</loc>\n`;
+      if (lastmod) xml += `    <lastmod>${lastmod}</lastmod>\n`;
+      xml += `    <priority>0.6</priority>\n    <changefreq>weekly</changefreq>\n  </url>\n`;
+    }
+
+    // Essays
+    const emittedEssaySlugs = new Set<string>();
+    for (const e of (essays || []) as any[]) {
+      if (!includeEssays) continue;
+      const essaySlug = cleanPublicSlug(e.slug, e.title, "essay");
+      const path = `/essays/${essaySlug}`;
+      if (emittedPaths.has(path) || emittedEssaySlugs.has(essaySlug) || EXCLUDED_PATHS.has(path)) continue;
+      emittedEssaySlugs.add(essaySlug);
+      emittedPaths.add(path);
+      const lastmod = (e.updated_at || e.created_at) ? new Date(e.updated_at || e.created_at).toISOString().split("T")[0] : "";
+      xml += `  <url>\n    <loc>${baseUrl}${path}</loc>\n`;
+      if (lastmod) xml += `    <lastmod>${lastmod}</lastmod>\n`;
+      xml += `    <priority>0.7</priority>\n    <changefreq>weekly</changefreq>\n  </url>\n`;
+    }
+
+    xml += `</urlset>`;
+
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, s-maxage=3600, stale-while-revalidate=86400");
+    return res.status(200).send(xml);
+  } catch (error: unknown) {
+    console.error("Sitemap error:", error);
+    return new Response(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>${DEFAULT_BASE_URL}/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/blog</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/mcqs</loc><priority>0.8</priority><changefreq>daily</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/flashcards</loc><priority>0.8</priority><changefreq>daily</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/exams</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/stories</loc><priority>0.8</priority><changefreq>daily</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/essays</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/contests</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/year/1</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/year/2</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/year/3</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/year/4</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/year/5</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>${DEFAULT_BASE_URL}/year/6</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+</urlset>`);
+  }
+}
