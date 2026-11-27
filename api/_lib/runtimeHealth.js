@@ -77,6 +77,11 @@ export default async function handler(req, res) {
     return { ready: response.ok && response.headers.get("content-type")?.includes("xml") === true && /sitemapindex|urlset/.test(xml), status: response.status };
   });
 
+  result.topicsSitemap = await check("topics-sitemap", async () => {
+    const response = await fetch("https://www.ompathstudy.com/topics-sitemap.xml", { signal: AbortSignal.timeout(10000) });
+    return { ready: response.ok && response.headers.get("x-ompath-topics-sitemap") === "neon-v1", status: response.status, migrated: response.headers.get("x-ompath-topics-sitemap") === "neon-v1" };
+  });
+
   result.storiesSitemap = await check("stories-sitemap", async () => {
     const response = await fetch("https://stories.ompathstudy.com/stories-sitemap.xml", { signal: AbortSignal.timeout(10000) });
     const xml = await response.text();
