@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   if (!(await isAdmin(bearer(req)))) return res.status(403).json({ error: "Administrator access required." });
 
   const result = {
-    unportedFunctions: { ok: true, ready: false, functions: ["contest-control", "google-drive-import", "onekitty-initiate"] },
+    unportedFunctions: { ok: false, ready: false, functions: ["contest-control", "google-drive-import"] },
   };
   const deepAI = new URL(req.url, "https://www.ompathstudy.com").searchParams.get("deep") === "1";
   result.neonDatabase = await check("neon-database", async () => {
@@ -188,6 +188,19 @@ export default async function handler(req, res) {
       return { ready: Boolean(out?.text?.trim()), model: out?.model || null };
     });
   }
+
+  result.onekitty = await check("onekitty", async () => {
+    const authConfigured = Boolean(process.env.ONEKITTY_AUTH_CODE && Number(process.env.ONEKITTY_KITTY_ID) > 0);
+    const developerConfigured = Boolean(process.env.ONEKITTY_DEVELOPER_API_KEY);
+    return { configured: authConfigured, developerApiConfigured: developerConfigured, ready: authConfigured };
+  });
+
+  result.googleDrive = await check("google-drive", async () => {
+    const configured = Boolean(process.env.GOOGLE_DRIVE_CLIENT_ID && process.env.GOOGLE_DRIVE_CLIENT_SECRET);
+    return { configured, ready: false, reason: "Google Drive OAuth and import tables still need migration to Neon." };
+  });
+
+  result.contestManagement = { ok: false, ready: false, reason: "Contest management is not yet ported to Neon." };
 
   result.paystackWebhook = await check("paystack-webhook", async () => {
     const response = await fetch("https://www.ompathstudy.com/api/paystack-webhook", { signal: AbortSignal.timeout(10000) });
