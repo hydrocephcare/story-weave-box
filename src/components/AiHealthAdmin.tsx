@@ -108,7 +108,7 @@ export default function AiHealthAdmin() {
         : rows.length === 0 ? (
           <div className="rounded-xl border border-border bg-card p-5 text-sm">
             <p className="flex items-center gap-2 font-semibold text-emerald-700 dark:text-emerald-400"><CheckCircle2 className="h-4 w-4" /> No AI failures recorded.</p>
-            <p className="mt-2 text-muted-foreground">If you expected some, make sure the <code>ai_failures</code> table exists: run <code>supabase/migrations/20261009120000_ompath_ai_failures.sql</code> once in the Supabase SQL editor.</p>
+            <p className="mt-2 text-muted-foreground">If you expected some, confirm that the <code>ai_failures</code> table and its Neon migration are present in the production database.</p>
           </div>
         ) : (
           <>
