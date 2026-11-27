@@ -148,7 +148,7 @@ export function sanitizePage(raw, options = {}) {
 let turn = 0;
 const deadKeys = new Set();
 const deadModels = new Set();
-const parseProviderKeys = (...values) => [...new Set(values.flatMap((value) => {
+export const parseProviderKeys = (...values) => [...new Set(values.flatMap((value) => {
   const raw = String(value ?? "").trim();
   if (!raw) return [];
   try {
@@ -157,6 +157,10 @@ const parseProviderKeys = (...values) => [...new Set(values.flatMap((value) => {
   } catch {}
   return raw.split(/[\s,;]+/).map((key) => key.trim()).filter(Boolean);
 }))];
+export const providerKeys = (env = {}, provider = "GEMINI") => parseProviderKeys(
+  env[provider + "_API_KEYS"], env[provider + "_API_KEY"],
+  ...Array.from({ length: 20 }, (_, i) => env[provider + "_API_KEY_" + (i + 2)])
+);
 export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false } = {}) {
   const gateways = [];
   if (env.LOVABLE_API_KEY) gateways.push(["https://ai.gateway.lovable.dev/v1/chat/completions", env.LOVABLE_API_KEY, env.TOPIC_AI_MODEL || "google/gemini-3-flash-preview"]);
