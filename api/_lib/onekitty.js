@@ -59,12 +59,15 @@ export async function initiate(req,res) {
         if(k.response.ok&&k.data?.status===true) kitty=k.data.data;
         if(t.response.ok&&t.data?.status===true) providerTransactions=t.data.data?.items||[];
       }
-      return send(res,200,{success:true,payments,kitty,provider_transactions:providerTransactions,configured:Boolean(process.env.ONEKITTY_AUTH_CODE&&kittyId>0)});
+      return send(res,200,{success:true,payments,kitty,provider_transactions:providerTransactions,
+        configured:Boolean(process.env.ONEKITTY_AUTH_CODE&&kittyId>0&&developerKey),
+        initiation_configured:Boolean(process.env.ONEKITTY_AUTH_CODE&&kittyId>0),verification_configured:Boolean(developerKey)});
     }
 
     const authCode=String(process.env.ONEKITTY_AUTH_CODE||"");
     const kittyId=Number(process.env.ONEKITTY_KITTY_ID||0);
-    if(!authCode||!Number.isInteger(kittyId)||kittyId<=0) return send(res,503,{success:false,error:"OneKitty credentials are missing in Cloudflare Production. Configure ONEKITTY_AUTH_CODE and ONEKITTY_KITTY_ID."});
+    const developerKey=String(process.env.ONEKITTY_DEVELOPER_API_KEY||"");
+    if(!authCode||!developerKey||!Number.isInteger(kittyId)||kittyId<=0) return send(res,503,{success:false,error:"OneKitty is not ready. Configure ONEKITTY_AUTH_CODE, ONEKITTY_KITTY_ID and ONEKITTY_DEVELOPER_API_KEY in Cloudflare Production."});
     const amount=Number(body.amount),phone=normalizePhone(body.phone_number);
     const mode=body.mode==="checkout"?"CHECKOUT":body.mode==="stk"?"STK_REQUEST":"";
     const channel=String(body.channel_code||"63902");
