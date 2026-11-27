@@ -58,7 +58,7 @@ jobs:
         id: image_sitemap
         continue-on-error: true
         run: node scripts/seo/image-sitemap.mjs
-      - name: Write new comprehensive topic pages (Groq)
+      - name: Generate, independently review and publish new topic pages through Cloudflare
         id: topic_pages
         continue-on-error: true
         run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || (github.event_name == 'push' && '4') || '40' }} --parallel=3
