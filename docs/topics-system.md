@@ -69,7 +69,8 @@ uses Groq for drafting and Gemini for independent review, then persists through 
 or unreviewed content and caps new topic pages at 150 per day. Ompath AI chat remains a separate question-and-answer feature; it does not publish pages.
 Deep exam notes use `/api/topic-write` with `mode: "deep"`, require a Neon Auth session, and persist through the server-only `save_topic_deep` RPC.
 
-The daily GitHub workflow reads and updates `articles`, `mcq_sets`, `essays` and `topic_pages` directly in Neon using the
-`NEON_DATABASE_URL` repository secret. It rebuilds static topic pages, updates the image sitemap, reviews legacy pages with Gemini,
+The daily GitHub workflow reads `articles`, `mcq_sets`, `essays` and `topic_pages` through the Neon Data API using a short-lived
+anonymous Neon Auth JWT. Its server-only `POLISH_WRITE_KEY` header is checked by the database before topic-page updates; no raw PostgreSQL
+connection string is stored in GitHub Actions. It rebuilds static topic pages, updates the image sitemap, reviews legacy pages with Gemini,
 and fills the deep-note queue. The Vercel build merges committed, Gemini-passed content without rereading the entire database.
 Newly generated static pages are included in the topic index, prerendered HTML and sitemap on the next deployment.
