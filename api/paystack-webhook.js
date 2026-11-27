@@ -1,5 +1,5 @@
 import { neon } from "@neondatabase/serverless";
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 
 export const config = { api: { bodyParser: false } };
 const send = (res,status,body) => res.status(status).json(body);
