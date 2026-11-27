@@ -14,18 +14,9 @@ on:
         description: "Only this year (1 to 6); leave empty for all"
         required: false
         default: ""
-  # Run the article pipeline immediately when its safeguards or prompts change.
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/blogs-polish.yml"
-      - "scripts/blogs/polish-batch.mjs"
-      - "api/_lib/blogPolish.js"
-      - "api/_lib/blogPolishRun.js"
-      - "api/_lib/blogPolishVerify.js"
-      - "api/_lib/blogPolishPrompts.js"
 permissions:
   contents: read
+  id-token: write
 concurrency:
   group: blogs-polish
   cancel-in-progress: false
@@ -40,13 +31,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Generate comprehensive note copy with Groq and independently verify with Gemini
+      - name: Polish and verify published articles through the Cloudflare backend
         env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           COUNT: ${{ github.event.inputs.count || '40' }}
           YEAR: ${{ github.event.inputs.year }}
-        run: |
-          if [ -n "$YEAR" ]; then node scripts/blogs/polish-batch.mjs "$COUNT" --year "$YEAR" --minutes 50; else node scripts/blogs/polish-batch.mjs "$COUNT" --minutes 50; fi
+          MINUTES: "50"
+        run: node scripts/blogs/polish-runner.mjs
