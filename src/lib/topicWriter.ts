@@ -1,140 +1,127 @@
-// Writes a topic page when a reader opens one the site has little on, then publishes it for everyone.
-// Route 1: the Neon-backed topic writer (Groq generation + independent Gemini review). Route 2: Neon-backed Ompath AI chat
-// generates the page in short parts. Both routes save through the Neon publish_topic_page RPC.
-// Nothing here may break a page: every failure returns a status, and the reader keeps what the site already has.
+// Topic pages are generated, clinically reviewed and persisted by the Neon-backed server route.
 import { supabase } from "@/integrations/supabase/client";
-import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/functions/_shared/topicParts.js";
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
 
-/** What the reader chose before the page was written. */
-export type TopicChoices = { level: "year3" | "year4" | "year5"; angles: string[]; setting: "tropical" | "general"; depth: "quick" | "full" };
+export type TopicChoices = {
+  level: "year3" | "year4" | "year5";
+  angles: string[];
+  setting: "tropical" | "general";
+  depth: "quick" | "full";
+};
 
-export type WriteResult = { status: "published"; page: AiPage & { subject?: string }; saved: boolean; slug?: string; name?: string } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" | "paused" };
+export type WriteResult =
+  | { status: "published"; page: AiPage & { subject?: string }; saved: boolean; slug?: string; name?: string }
+  | { status: "rejected" | "failed" | "busy" | "limit" | "bot" | "paused" };
 
 const DAY_KEY = "ompath_topic_writes";
 const PER_VISITOR_PER_DAY = 40;
-const FN_DOWN = "ompath_topic_fn_down";
 const AI_PAUSED = "ompath_ai_paused";
-/** When the assistant has said it is out of credits, nothing is asked of it again for an hour: no wasted calls, no spinner. */
-export const aiPaused = () => { try { return Date.now() - Number(localStorage.getItem(AI_PAUSED) ?? 0) < 3600_000; } catch { return false; } };
-const pauseAi = () => { try { localStorage.setItem(AI_PAUSED, String(Date.now())); } catch { /* ignore */ } };
+
+export const aiPaused = () => {
+  try { return Date.now() - Number(localStorage.getItem(AI_PAUSED) ?? 0) < 3_600_000; }
+  catch { return false; }
+};
+
+export const looksLikeBot = () =>
+  typeof navigator === "undefined"
+  || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|whatsapp/i.test(navigator.userAgent)
+  || (navigator as Navigator & { webdriver?: boolean }).webdriver === true;
+
 const today = () => new Date().toISOString().slice(0, 10);
-
-export const looksLikeBot = () => typeof navigator === "undefined" || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|whatsapp/i.test(navigator.userAgent) || (navigator as Navigator & { webdriver?: boolean }).webdriver === true;
-
-function writesToday(): number { try { const v = JSON.parse(localStorage.getItem(DAY_KEY) ?? "null"); return v?.day === today() ? Number(v.n) || 0 : 0; } catch { return 0; } }
-function countWrite() { try { localStorage.setItem(DAY_KEY, JSON.stringify({ day: today(), n: writesToday() + 1 })); } catch { /* storage blocked */ } }
-const fnKnownDown = () => { try { return Date.now() - Number(localStorage.getItem(FN_DOWN) ?? 0) < 6 * 3600_000; } catch { return false; } };
-const markFnDown = () => { try { localStorage.setItem(FN_DOWN, String(Date.now())); } catch { /* ignore */ } };
-
-/** One streamed answer from Ompath AI, as plain text. */
-export async function askOmpathAi(question: string, snippet: string, name: string, category: string, signal?: AbortSignal): Promise<string> {
-  const payload = JSON.stringify({ question, history: [], sources: snippet ? [{ kind: "site", title: name, subtitle: category, snippet: snippet.slice(0, 2600) }] : [] });
-  const { data: sessionData } = await supabase.auth.getSession();
-  const token = sessionData.session?.access_token;
-  if (!token) throw new Error("login required");
-  const authHeaders = { "Content-Type": "application/json", Authorization: `Bearer ${token}` };
-  // Use the Neon-backed site API only; the retired Supabase function cannot validate Neon Auth sessions.
-  const res = await fetch("/api/ai-chat", { method: "POST", signal, headers: authHeaders, body: payload });
-  if (res.status === 402 || res.status === 429) { pauseAi(); throw new Error("paused"); }
-  if (!res.ok || !res.body) throw new Error(`ai ${res.status}`);
-  const reader = res.body.getReader(); const dec = new TextDecoder();
-  let buf = "", text = "";
-  for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    buf += dec.decode(value, { stream: true });
-    const lines = buf.split("\n"); buf = lines.pop() ?? "";
-    for (const l of lines) {
-      const d = l.trim();
-      if (!d.startsWith("data:")) continue;
-      const p = d.slice(5).trim();
-      if (p === "[DONE]") continue;
-      try { const piece = JSON.parse(p)?.choices?.[0]?.delta?.content; if (piece) text += piece; } catch { /* partial line */ }
-    }
-  }
-  return text;
-}
-
-
-async function publish(page: AiPage & { subject?: string }, slug: string, name: string, category: string): Promise<{ saved: boolean }> {
+function writesToday(): number {
   try {
-    const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean; reason?: string } | null }> })
-      .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category || page.subject || "", p_content: page, p_model: "gemini" });
-    return { saved: Boolean(data?.ok) };
-  } catch { return { saved: false }; }
+    const value = JSON.parse(localStorage.getItem(DAY_KEY) ?? "null");
+    return value?.day === today() ? Number(value.n) || 0 : 0;
+  } catch { return 0; }
+}
+function countWrite() {
+  try { localStorage.setItem(DAY_KEY, JSON.stringify({ day: today(), n: writesToday() + 1 })); }
+  catch { /* storage blocked */ }
 }
 
-const API_DOWN = "ompath_topic_api_down";
-const apiKnownDown = () => { try { return Date.now() - Number(localStorage.getItem(API_DOWN) ?? 0) < 3 * 3600_000; } catch { return false; } };
-
-/** Route 0: the site's own server, which holds the Gemini keys and takes turns between them. */
-async function viaServer(name: string, category: string, context: string, choices?: TopicChoices, signal?: AbortSignal): Promise<{ status: "published"; page: AiPage & { subject?: string } } | { status: "rejected" | "busy" | "limit" } | null> {
-  if (apiKnownDown()) return null;
+async function viaServer(
+  name: string,
+  category: string,
+  context: string,
+  choices?: TopicChoices,
+  keepSlug?: boolean,
+  signal?: AbortSignal,
+): Promise<
+  | { status: "published"; page: AiPage & { subject?: string }; saved: boolean; slug?: string; name?: string }
+  | { status: "rejected" | "busy" | "limit" }
+  | null
+> {
   try {
     const { data: sessionData } = await supabase.auth.getSession();
     const token = sessionData.session?.access_token;
     if (!token) return { status: "rejected" };
-    const r = await fetch("/api/topic-write", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: `Bearer ${token}` }, body: JSON.stringify({ name, category, context: context.slice(0, 3000), choices }) });
-    if (r.status === 503 || r.status === 404 || r.status === 405) { try { localStorage.setItem(API_DOWN, String(Date.now())); } catch { /* ignore */ } return null; }
-    const j = (await r.json().catch(() => null)) as { status?: string; page?: AiPage & { subject?: string } } | null;
-    if (j?.status === "published" && j.page) return { status: "published", page: j.page };
-    if (j?.status === "rejected") return { status: "rejected" };
-    if (j?.status === "limit") return { status: "limit" };
-    if (j?.status === "busy") return null; // another route may still have room
+
+    const response = await fetch("/api/topic-write", {
+      method: "POST",
+      signal,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ name, category, context: context.slice(0, 3000), choices, keepSlug }),
+    });
+
+    if (response.status === 401) return { status: "rejected" };
+    if (response.status === 402) return { status: "limit" };
+    if (response.status === 429 || response.status === 503) return { status: "busy" };
+
+    const result = await response.json().catch(() => null) as {
+      status?: string;
+      page?: AiPage & { subject?: string };
+      saved?: boolean;
+      slug?: string;
+      name?: string;
+    } | null;
+
+    if (result?.status === "published" && result.page) {
+      return {
+        status: "published",
+        page: result.page,
+        saved: result.saved === true,
+        slug: result.slug,
+        name: result.name,
+      };
+    }
+    if (result?.status === "rejected") return { status: "rejected" };
+    if (result?.status === "limit") return { status: "limit" };
+    if (result?.status === "busy") return { status: "busy" };
     return null;
-  } catch { return null; }
+  } catch {
+    return null;
+  }
 }
 
-export async function writeTopicPage({ name, category, context, choices, keepSlug, signal }: { name: string; category: string; context: string; choices?: TopicChoices; keepSlug?: boolean; signal?: AbortSignal }): Promise<WriteResult> {
+export async function writeTopicPage({
+  name, category, context, choices, keepSlug, signal,
+}: {
+  name: string;
+  category: string;
+  context: string;
+  choices?: TopicChoices;
+  keepSlug?: boolean;
+  signal?: AbortSignal;
+}): Promise<WriteResult> {
   if (!validName(name)) return { status: "failed" };
   if (looksLikeBot()) return { status: "bot" };
   if (writesToday() >= PER_VISITOR_PER_DAY) return { status: "limit" };
-  const slug = slugOf(name);
 
-  // Route 0: our own server with the Gemini keys
-  const viaApi = await viaServer(name, category, context, choices, signal);
-  if (viaApi?.status === "rejected") return { status: "rejected" };
-  if (viaApi?.status === "limit") return { status: "limit" };
-  if (viaApi?.status === "published") {
-    countWrite();
-    // the page is saved under the clean title the writer chose, not under what was typed
-    const title = String((viaApi.page as { title?: string }).title ?? "").trim();
-    const cleanName = validName(title) && !keepSlug ? title : name;
-    const cleanSlug = keepSlug ? slug : slugOf(cleanName) || slug;
-    const { saved } = await publish(viaApi.page, cleanSlug, cleanName, category);
-    return { status: "published", page: viaApi.page, saved, slug: cleanSlug, name: cleanName };
-  }
+  const result = await viaServer(name, category, context, choices, keepSlug, signal);
+  if (!result) return { status: "failed" };
+  if (result.status !== "published") return result;
+  if (!result.saved) return { status: "failed" };
 
-  // If the dedicated writer is busy or unavailable, continue with the Neon-backed Ompath AI chat fallback below.
-
-  if (aiPaused()) return { status: "paused" };
-  // Route 2: Ompath AI in short parts, then publish with the database function
-  try {
-    const prompts = buildPartPrompts({ name, category });
-    let first = await askOmpathAi(prompts[0], context, name, category, signal).then(parseJsonReply, () => null);
-    if (!first) first = await askOmpathAi(prompts[0], "", name, category, signal).then(parseJsonReply, () => null);
-    if (!first) return { status: aiPaused() ? "paused" : "failed" };
-    if (first.medical === false) return { status: "rejected" };
-    const later = await Promise.all(prompts.slice(1).map((p) => askOmpathAi(p, "", name, category, signal).then(parseJsonReply, () => null)));
-    const parts = [first, ...later] as (Record<string, unknown> | null)[];
-    let page: AiPage & { medical?: boolean };
-    try { page = mergeParts(parts, { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch {
-      // the answer came in an unusable shape: ask once more without the site's notes
-      const again = await askOmpathAi(prompts[0], "", name, category, signal).then(parseJsonReply, () => null);
-      if (!again) return { status: "failed" };
-      try { page = mergeParts([again, ...later], { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch { return { status: "failed" }; }
-    }
-    if (page.medical === false) return { status: "rejected" };
-    countWrite();
-    let saved = false;
-    try {
-      const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean; existing?: boolean; reason?: string } | null }> })
-        .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category || (page as { subject?: string }).subject || "", p_content: page, p_model: "gemini" });
-      saved = Boolean(data?.ok);
-      if (data?.reason === "busy") return { status: "published", page, saved: false };
-    } catch { saved = false; }
-    return { status: "published", page, saved };
-  } catch { return { status: "failed" }; }
+  countWrite();
+  return {
+    status: "published",
+    page: result.page,
+    saved: true,
+    slug: result.slug || slugOf(name),
+    name: result.name || name,
+  };
 }
