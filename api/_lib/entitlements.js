@@ -8,11 +8,11 @@ const jwks = createRemoteJWKSet(new URL(AUTH_JWKS_URL));
 
 /**
  * Validate Neon Auth access tokens and consume the central entitlement RPC
-  const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
+ * through the Neon Data API. Do not fall back to the retired Supabase project:
  * that accepts neither the migrated Neon JWTs nor the current database.
  */
 export async function consumeEntitlement(req, feature) {
-  const token = String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
+  const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
   if (!token) return { allowed: false, status: 401, reason: "login_required" };
 
   let claims;
