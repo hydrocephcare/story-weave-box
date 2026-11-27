@@ -224,64 +224,63 @@ function buildSources(r: Retrieval) {
   return list;
 }
 
-const CHAT_DOWN = "ompath_chat_api_down";
-const chatApiDown = () => { try { return Date.now() - Number(sessionStorage.getItem(CHAT_DOWN) ?? 0) < 30 * 60_000; } catch { return false; } };
-const markChatApiDown = () => { try { sessionStorage.setItem(CHAT_DOWN, String(Date.now())); } catch { /* ignore */ } };
+const SUPABASE_AI_URL = "https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai";
+// A Supabase publishable key is designed to be included in browser requests.
+const SUPABASE_AI_PUBLISHABLE_KEY = "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP";
 
 export interface StreamHandlers { onText: (full: string) => void; signal?: AbortSignal }
 
-/** Streams the model's answer. Resolves with the final text; throws a friendly Error when the model cannot answer. */
+/** Sends grounded Ompath AI prompts through the dedicated Supabase Edge Function. */
 export async function streamAnswer(t: AiTurnInput, h: StreamHandlers): Promise<string> {
   const question = t.retrieval.grounded
     ? t.question
     : `${t.question}\n\n(Nothing on Ompath Study matched this. Answer from sound general medical knowledge and begin by saying it is general guidance, not from the site's notes.)`;
-  const payload = JSON.stringify({ question, history: t.history.slice(-6), sources: buildSources(t.retrieval) });
-  // Use the Neon-backed site API only. The retired Supabase Edge Function rejects Neon Auth tokens.
-  const send = async () => {
-    const { data: sessionData } = await supabase.auth.getSession();
-    const token = sessionData.session?.access_token;
-    const headers = { "Content-Type": "application/json", ...(token ? { Authorization: `Bearer ${token}` } : {}) };
-    if (chatApiDown()) throw new Error("Ompath AI service is temporarily unavailable.");
-    try {
-      const r = await fetch("/api/ai-chat", { method: "POST", headers, body: payload, signal: h.signal });
-      if (r.status === 404 || r.status === 503 || r.status === 405) markChatApiDown();
-      return r;
-    } catch (e) {
-      if ((e as Error).name === "AbortError") throw e;
-      markChatApiDown();
-      throw e;
-    }
-  };
-  // a dropped connection or a busy server (5xx, 429) is tried once more before we fall back to the notes
-  let res = await send().catch((e) => { if ((e as Error).name === "AbortError") throw e; return null; });
-  if (!res || res.status >= 500 || res.status === 429) { await new Promise((r) => setTimeout(r, 900)); res = await send().catch((e) => { if ((e as Error).name === "AbortError") throw e; return res; }); }
-  if (!res) throw new Error("Could not reach Ompath AI. Check your connection.");
-  if (!res.ok || !res.body) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err?.error || "Ompath AI could not answer right now.");
+  const sources = buildSources(t.retrieval);
+  const sourceContext = sources.length
+    ? "\n\nSite sources (use these first; identify the relevant note and do not invent details):\n" +
+      sources.map((s, i) => `[${i + 1}] ${s.title}${s.subtitle ? ` — ${s.subtitle}` : ""}\n${s.snippet}`).join("\n\n")
+    : "";
+  const system = `You are Ompath AI, the study assistant of Ompath Study, a medical study site used by medical and clinical students in many countries, including low-resource hospitals.
+Teach clinical reasoning: explain what a condition is, why it happens, how to recognise it, investigate it, manage it, and what to monitor.
+Use short paragraphs and clear headings; avoid walls of text. Put the most important point first.
+Use supplied Site sources first, identify the note they come from, and add standard medical knowledge only to fill gaps.
+Never provide drug doses. Explain medicine classes and why they are chosen. For emergencies, advise urgent medical care.
+Interpret likely medical typos and abbreviations generously; clarify only when genuinely ambiguous.
+Be warm, accurate, plain-language and exam-aware.${sourceContext}`;
+  const messages = [
+    { role: "system", content: system },
+    ...t.history.slice(-6).filter((m) => m && (m.role === "user" || m.role === "assistant"))
+      .map((m) => ({ role: m.role, content: String(m.content).slice(0, 3000) })),
+    { role: "user", content: question.slice(0, 2500) },
+  ];
+  const response = await fetch(SUPABASE_AI_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": SUPABASE_AI_PUBLISHABLE_KEY,
+      "Authorization": `Bearer ${(await supabase.auth.getSession()).data.session?.access_token ?? ""}`,
+    },
+    body: JSON.stringify({
+      feature: "ompath_ai_questions",
+      messages,
+      temperature: 0.4,
+      max_tokens: 1800,
+      timeout_ms: 60000,
+    }),
+    signal: h.signal,
+  });
+  const result = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const reason = result?.error === "login_required"
+      ? "Please sign in to use Ompath AI."
+      : result?.error === "limit"
+        ? "You have reached your current Ompath AI allowance."
+        : result?.message || result?.detail || result?.error || `Ompath AI request failed (${response.status}).`;
+    throw new Error(reason);
   }
-  const reader = res.body.getReader();
-  const dec = new TextDecoder();
-  let buf = "";
-  let answer = "";
-  for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    buf += dec.decode(value, { stream: true });
-    const lines = buf.split("\n");
-    buf = lines.pop() ?? "";
-    for (const line of lines) {
-      const d = line.trim();
-      if (!d.startsWith("data:")) continue;
-      const payload = d.slice(5).trim();
-      if (payload === "[DONE]") continue;
-      try {
-        const piece = JSON.parse(payload)?.choices?.[0]?.delta?.content;
-        if (piece) { answer += piece; h.onText(answer); }
-      } catch { /* a partial line: wait for the rest */ }
-    }
-  }
-  if (!answer.trim()) throw new Error("Ompath AI gave no answer.");
+  const answer = result?.choices?.[0]?.message?.content;
+  if (typeof answer !== "string" || !answer.trim()) throw new Error("Ompath AI returned an empty answer.");
+  h.onText(answer);
   return answer;
 }
 
