@@ -82,6 +82,10 @@ export default async function handler(req, res) {
       if (name.length < 4 || name.length > 80 || name.includes("<") || name.includes(">")) {
         return res.status(400).json({ error: "Invalid topic name." });
       }
+      const dailyRows = await getDb()`SELECT count(*)::int AS count FROM public.topic_pages WHERE created_at > now() - interval '1 day'`;
+      if (Number(dailyRows[0]?.count || 0) >= 150) {
+        return res.status(429).json({ ok: false, reason: "daily_cap", error: "The Neon topic publishing limit of 150 pages per rolling day has been reached." });
+      }
       const env = {
         GROQ_API_KEYS: String(process.env.GROQ_API_KEYS || ""),
         GEMINI_API_KEYS: String(process.env.GEMINI_API_KEYS || ""),
