@@ -56,7 +56,6 @@ jobs:
           node --check supabase/functions/_shared/contentCheck.js
 
       - name: Unit tests
-        continue-on-error: true
         run: npm test -- --reporter=dot
       - name: Production build (reuse committed topic corpus; do not reread Supabase)
         env:
