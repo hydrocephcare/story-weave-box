@@ -1,5 +1,10 @@
 import mainOgMeta from "../api/og-meta.ts";
 import { neon } from "@neondatabase/serverless";
+import ensureUser from "../api/_lib/ensureUser.js";
+import neonFunctions from "../api/neon-functions.js";
+import { runVercelHandler } from "./_lib/vercel-adapter.js";
+import { onRequest as aiChat } from "./api/ai-chat.js";
+import { onRequest as aiHistory } from "./api/ai-history.js";
 
 type StoriesEnv = { DATABASE_URL?: string };
 type PagesContext = { request: Request; env: StoriesEnv; next: () => Promise<Response> };
@@ -29,6 +34,14 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
   const ua = request.headers.get("user-agent") || "";
   const bot = /(bot|crawl|spider|google|bing|yandex|baidu|facebookexternalhit|whatsapp|telegram|discord|slack|linkedin|twitter|openseo-audit|ompathstudymonitor|inspectiontool)/i.test(ua);
   const host = url.hostname.toLowerCase();
+
+  // Explicitly dispatch critical application APIs from the root Pages middleware.
+  // This keeps POST endpoints reachable even if a Pages route manifest or nested
+  // function matcher accidentally omits /api/* routes.
+  if (path === "/api/ensure-user") return runVercelHandler(ensureUser, request);
+  if (path === "/api/neon-functions") return runVercelHandler(neonFunctions, request);
+  if (path === "/api/ai-chat") return aiChat(context as any);
+  if (path === "/api/ai-history") return aiHistory(context as any);
 
   // Main-site crawler rendering: keep article, MCQ, flashcard, exam and hub metadata
   // on Cloudflare instead of relying on Vercel rewrites.
