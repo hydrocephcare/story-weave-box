@@ -2,6 +2,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
+import { parseQuery, streamAnswer, type Retrieval } from "@/lib/ompathAi";
 
 export type TopicChoices = {
   level: "year3" | "year4" | "year5";
@@ -124,4 +125,12 @@ export async function writeTopicPage({
     slug: result.slug || slugOf(name),
     name: result.name || name,
   };
+}
+
+/** Shared Ompath AI text helper used by Friend Zone to generate its clearly labelled AI questions. */
+export async function askOmpathAi(prompt: string, history = "", topic = "", unit = ""): Promise<string> {
+  const question = [prompt, topic ? `Topic: ${topic}` : "", unit ? `Unit: ${unit}` : ""].filter(Boolean).join("\n\n");
+  const retrieval: Retrieval = { parsed: parseQuery(question), hits: [], passages: [], grounded: false };
+  const prior = history.trim() ? [{ role: "user" as const, content: history.trim().slice(0, 1800) }] : [];
+  return streamAnswer({ question, history: prior, retrieval }, { onText: () => undefined });
 }
