@@ -14,7 +14,7 @@ const splitKeys = (...values) => [...new Set(values.flatMap((value) => {
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
   } catch {}
-  return raw.split(/[\\s,;]+/).map((item) => item.trim()).filter(Boolean);
+  return raw.split(/[\s,;]+/).map((item) => item.trim()).filter(Boolean);
 }))].reverse();
 const isDead = (id) => (dead.get(id) ?? 0) > Date.now();
 const markDead = (id, ms = 45000) => dead.set(id, Date.now() + ms);
