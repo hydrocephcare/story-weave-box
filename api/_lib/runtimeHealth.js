@@ -6,7 +6,15 @@ import { askGeminiModel, askGroqModel } from "../../supabase/functions/_shared/t
 const DEFAULT_JWKS = "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth/.well-known/jwks.json";
 const DEFAULT_DATA_API = "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
 const bearer = (req) => String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
-const keys = (value) => [...new Set(String(value || "").split(/[\s,]+/).map((x) => x.trim()).filter(Boolean))];
+const keys = (...values) => [...new Set(values.flatMap((value) => {
+  const raw = String(value ?? "").trim();
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
+  } catch {}
+  return raw.split(/[\s,;]+/).map((item) => item.trim()).filter(Boolean);
+}))];
 
 async function check(name, fn) {
   try { return { ok: true, ...(await fn()) }; }
@@ -191,7 +199,7 @@ export default async function handler(req, res) {
         signal: AbortSignal.timeout(10000),
       });
       const data = await response.json().catch(() => ({}));
-      const modelNames = Array.isArray(data.models) ? data.models.map((model) => String(model.name || "").replace(/^models\\//, "")) : [];
+      const modelNames = Array.isArray(data.models) ? data.models.map((model) => String(model.name || "").replace(/^models\//, "")) : [];
       return { ok: response.ok, status: response.status, models: modelNames.length,
         hasCurrentFlash: modelNames.includes("gemini-3.8-flash"),
         hasCurrentFlashLite: modelNames.includes("gemini-3.5-flash-lite") };
