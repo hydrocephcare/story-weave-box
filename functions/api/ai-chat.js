@@ -7,7 +7,15 @@ const hits = new Map();
 const dead = new Map();
 let turn = 0;
 
-const splitKeys = (value) => [...new Set(String(value ?? "").split(/[\s,]+/).map((x) => x.trim()).filter(Boolean))].reverse();
+const splitKeys = (...values) => [...new Set(values.flatMap((value) => {
+  const raw = String(value ?? "").trim();
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
+  } catch {}
+  return raw.split(/[\\s,;]+/).map((item) => item.trim()).filter(Boolean);
+}))].reverse();
 const isDead = (id) => (dead.get(id) ?? 0) > Date.now();
 const markDead = (id, ms = 45000) => dead.set(id, Date.now() + ms);
 
