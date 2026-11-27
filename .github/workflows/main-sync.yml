@@ -55,6 +55,8 @@ jobs:
           node --check api/_lib/topicWrite.js
           node --check api/_lib/aiChat.js
           node --check api/_lib/topicMaintenance.js
+          node --check api/_lib/blogPolishBatch.js
+          node --check scripts/blogs/polish-runner.mjs
           node --check api/neon-functions.js
           node --check scripts/topics/maintenance-client.mjs
           node --check scripts/topics/corpus.mjs
