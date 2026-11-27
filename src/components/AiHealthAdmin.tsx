@@ -57,6 +57,7 @@ export default function AiHealthAdmin() {
             ["Groq", c.groq?.ok && c.groq?.reachable],
             ["Gemini", c.gemini?.ok && c.gemini?.reachable],
             ["Paystack API", c.paystack?.ok && c.paystack?.reachable],
+            ["Paystack webhook route", c.paystackWebhook?.ok && c.paystackWebhook?.ready],
             ["Student library access", c.mkuStudentAccess?.ok && c.mkuStudentAccess?.endpointReachable && c.mkuStudentAccess?.currentAdminAllowed],
             ["Email delivery", c.resend?.ok && c.resend?.reachable],
             ["Blog polish secret", c.polish?.ok && c.polish?.databaseSecretMatchesRuntime && c.polish?.aiKeysConfigured],
