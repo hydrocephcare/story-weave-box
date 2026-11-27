@@ -28,7 +28,7 @@ function parseMcqs(raw) {
   try {
     const value = JSON.parse(raw.slice(start, end + 1));
     if (!Array.isArray(value)) return [];
-    return value.filter((q) => q?.question && Array.isArray(q.options) && q.options.length >= 4).map((q) => ({
+    return value.filter((q) => q?.question && Array.isArray(q.options) && q.options.length === 5).map((q) => ({
       question: String(q.question).trim(),
       options: q.options.slice(0, 5).map((x) => String(x).trim()),
       correct_answer: Number.isInteger(q.correct_answer) ? Math.max(0, Math.min(4, q.correct_answer)) : 0,
@@ -119,7 +119,8 @@ export default async function handler(req, res) {
       const weekly = /^Weekly Exam/i.test(target.category || "");
       const review = await reviewQuestions(before, weekly);
       const balanced = balanceBank(review.kept, { seed: String(target.id) }).questions;
-      const changed = review.dropped > 0 || review.fixed > 0 || balanced.length !== before.length;
+      const changed = review.dropped > 0 || review.fixed > 0 || balanced.length !== before.length
+        || balanced.some((q, i) => JSON.stringify(q.options) !== JSON.stringify(before[i]?.options));
       if (balanced.length >= Math.max(8, Math.floor(before.length * 0.6)) && changed) {
         await sql.query("UPDATE public.mcq_sets SET questions=$2::jsonb,updated_at=now() WHERE id=$1", [target.id, JSON.stringify(balanced)]);
       }
@@ -131,8 +132,8 @@ export default async function handler(req, res) {
     }
 
     const [articles, banks, examPasswordRows] = await Promise.all([
-      sql.query("SELECT id,title,category,content,updated_at FROM public.articles WHERE published=true AND deleted_at IS NULL ORDER BY updated_at DESC LIMIT 3000"),
-      sql.query("SELECT id,title,category,questions,created_at FROM public.mcq_sets WHERE published=true AND deleted_at IS NULL ORDER BY created_at DESC LIMIT 3000"),
+      sql.query("SELECT id,title,category,updated_at FROM public.articles WHERE published=true AND deleted_at IS NULL ORDER BY updated_at DESC LIMIT 3000"),
+      sql.query("SELECT id,title,category,created_at FROM public.mcq_sets WHERE published=true AND deleted_at IS NULL ORDER BY created_at DESC LIMIT 3000"),
       sql.query("SELECT value FROM public.app_settings WHERE key='exam_password' LIMIT 1"),
     ]);
     const groups = new Map();
@@ -167,8 +168,12 @@ export default async function handler(req, res) {
     const password = String(examPasswordRows[0]?.value || "");
     const created = [], skipped = [];
     for (const [unit, group] of chosen) {
-      const articleContext = group.articles.slice(0, 20).map((x) => "[Article] " + x.title + ": " + String(x.content || "").slice(0, 700));
-      const mcqContext = group.banks.slice(0, 10).flatMap((x) => (Array.isArray(x.questions) ? x.questions.slice(0, 8) : []).map((q) => "[MCQ] " + String(q?.question || "")));
+      const [unitArticles, unitBanks] = await Promise.all([
+        sql.query("SELECT title,content FROM public.articles WHERE published=true AND deleted_at IS NULL AND category=$1 ORDER BY updated_at DESC LIMIT 20", [unit]),
+        sql.query("SELECT title,questions FROM public.mcq_sets WHERE published=true AND deleted_at IS NULL AND category=$1 ORDER BY created_at DESC LIMIT 10", [unit]),
+      ]);
+      const articleContext = unitArticles.map((x) => "[Article] " + x.title + ": " + String(x.content || "").slice(0, 700));
+      const mcqContext = unitBanks.flatMap((x) => (Array.isArray(x.questions) ? x.questions.slice(0, 8) : []).map((q) => "[MCQ] " + String(q?.question || "")));
       const context = articleContext.concat(mcqContext).join("\n");
       if (context.length < 300) { skipped.push(unit + ": insufficient source content."); continue; }
 
