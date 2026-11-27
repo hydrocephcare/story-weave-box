@@ -1,3 +1,4 @@
+// Production AI transport: Supabase Edge Function (Neon remains the auth/data source).
 // Ompath AI: finds what is on the site that matches a question, pulls the most relevant passages out of those notes,
 // and asks the model to answer from them. If the model is down, the passages themselves are shown, so the student
 // always gets something useful. If nothing on the site matches, the model answers from general knowledge and says so.
