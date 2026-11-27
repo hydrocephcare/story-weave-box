@@ -1,3 +1,5 @@
+import mainOgMeta from "../api/og-meta.ts";
+
 type StoriesEnv = { SUPABASE_URL?: string; SUPABASE_ANON_KEY?: string };
 type PagesContext = { request: Request; env: StoriesEnv; next: () => Promise<Response> };
 type StoryRow = { id:string; title:string; slug:string|null; content:string; category:string; created_at:string; cover_image_url?:string|null; meta_title?:string|null; meta_description?:string|null; tags?:string[]|null; reading_time_minutes?:number|null };
@@ -26,6 +28,17 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
   const path = url.pathname.replace(/\/+$/,"") || "/";
   const ua = request.headers.get("user-agent") || "";
   const bot = /(bot|crawl|spider|google|bing|yandex|baidu|facebookexternalhit|whatsapp|telegram|discord|slack|linkedin|twitter|openseo-audit|ompathstudymonitor|inspectiontool)/i.test(ua);
+  const host = url.hostname.toLowerCase();
+
+  // Main-site crawler rendering: keep article, MCQ, flashcard, exam and hub metadata
+  // on Cloudflare instead of relying on Vercel rewrites.
+  if (host !== "stories.ompathstudy.com") {
+    if (!bot || url.searchParams.has("write") || path.startsWith("/api/") || path.startsWith("/assets/") || /\\.(xml|txt|json|js|css|png|jpe?g|webp|svg|ico|woff2?)$/i.test(path)) return context.next();
+    const target = new URL("/api/og-meta", request.url);
+    target.searchParams.set("path", path + url.search);
+    return mainOgMeta(new Request(target, request));
+  }
+
   if (!bot || (url.searchParams.has("write")) || !["/","/stories","/share-your-story","/finalists"].includes(path) && !path.startsWith("/stories/")) return context.next();
   const baseQuery = {select:"id,title,slug,content,category,created_at,cover_image_url,meta_title,meta_description,tags,reading_time_minutes",published:"eq.true","deleted_at":"is.null","password_protected":"eq.false",or:"(scheduled_at.is.null,scheduled_at.lte."+new Date().toISOString()+")",limit:"1"};
   if (path.startsWith("/stories/")) {
