@@ -70,7 +70,7 @@ const API_DOWN = "ompath_topic_api_down";
 const apiKnownDown = () => { try { return Date.now() - Number(localStorage.getItem(API_DOWN) ?? 0) < 3 * 3600_000; } catch { return false; } };
 
 /** Route 0: the site's own server, which holds the Gemini keys and takes turns between them. */
-async function viaServer(name: string, category: string, context: string, choices?: TopicChoices, signal?: AbortSignal): Promise<{ status: "published"; page: AiPage & { subject?: string } } | { status: "rejected" | "busy" } | null> {
+async function viaServer(name: string, category: string, context: string, choices?: TopicChoices, signal?: AbortSignal): Promise<{ status: "published"; page: AiPage & { subject?: string } } | { status: "rejected" | "busy" | "limit" } | null> {
   if (apiKnownDown()) return null;
   try {
     const { data: sessionData } = await supabase.auth.getSession();
@@ -81,6 +81,7 @@ async function viaServer(name: string, category: string, context: string, choice
     const j = (await r.json().catch(() => null)) as { status?: string; page?: AiPage & { subject?: string } } | null;
     if (j?.status === "published" && j.page) return { status: "published", page: j.page };
     if (j?.status === "rejected") return { status: "rejected" };
+    if (j?.status === "limit") return { status: "limit" };
     if (j?.status === "busy") return null; // another route may still have room
     return null;
   } catch { return null; }
@@ -95,6 +96,7 @@ export async function writeTopicPage({ name, category, context, choices, keepSlu
   // Route 0: our own server with the Gemini keys
   const viaApi = await viaServer(name, category, context, choices, signal);
   if (viaApi?.status === "rejected") return { status: "rejected" };
+  if (viaApi?.status === "limit") return { status: "limit" };
   if (viaApi?.status === "published") {
     countWrite();
     // the page is saved under the clean title the writer chose, not under what was typed
