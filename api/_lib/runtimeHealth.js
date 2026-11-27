@@ -154,7 +154,7 @@ export default async function handler(req, res) {
     // read-only role RPC instead of calling consume_feature().
     const identity = await verifyNeonToken(bearer(req));
     if (!identity) return { ready: false, reason: "Verified Neon Auth identity unavailable." };
-    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\\/+$/, "");
+    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\/+$/, "");
     const response = await fetch(base + "/rpc/has_role", {
       method: "POST",
       headers: { Authorization: "Bearer " + bearer(req), "Content-Type": "application/json", Accept: "application/json" },
