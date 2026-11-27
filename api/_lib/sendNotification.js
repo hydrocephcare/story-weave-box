@@ -45,19 +45,19 @@ export default async function handler(req, res) {
 
     let recipients;
     if (audience === "study_year") {
-      recipients = await sql.query(`SELECT DISTINCT n.id AS neon_id,n.email
+      recipients = await sql.query(`SELECT DISTINCT n.id AS neon_id,n.email,n."emailVerified" AS email_verified
         FROM neon_auth."user" n
         JOIN public.profiles p ON p.user_id=n.id
-        WHERE p.study_year=$1 AND n.email IS NOT NULL AND n."emailVerified"=true`, [studyYear]);
+        WHERE p.study_year=$1 AND n.email IS NOT NULL`, [studyYear]);
     } else if (audience === "subscribers") {
-      recipients = await sql.query(`SELECT DISTINCT n.id AS neon_id,n.email
+      recipients = await sql.query(`SELECT DISTINCT n.id AS neon_id,n.email,n."emailVerified" AS email_verified
         FROM neon_auth."user" n
         JOIN public.access_grants g ON g.user_id=n.id
-        WHERE n.email IS NOT NULL AND n."emailVerified"=true
+        WHERE n.email IS NOT NULL
           AND (g.expires_at IS NULL OR g.expires_at > now())
           AND coalesce(g.scope,'all') IN ('all','premium','content')`);
     } else {
-      recipients = await sql.query('SELECT id AS neon_id,email FROM neon_auth."user" WHERE email IS NOT NULL AND "emailVerified"=true');
+      recipients = await sql.query('SELECT id AS neon_id,email,"emailVerified" AS email_verified FROM neon_auth."user" WHERE email IS NOT NULL');
     }
 
     const unique = new Map();
@@ -65,7 +65,7 @@ export default async function handler(req, res) {
       const email = String(r.email || "").trim().toLowerCase();
       if (!r.neon_id || !email) continue;
       const neonId = await ensureNeonUser(String(r.neon_id));
-      if (!unique.has(neonId)) unique.set(neonId, { id: neonId, email });
+      if (!unique.has(neonId)) unique.set(neonId, { id: neonId, email, emailVerified: r.email_verified === true });
     }
     const users = [...unique.values()];
 
