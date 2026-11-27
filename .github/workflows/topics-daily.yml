@@ -42,16 +42,19 @@ jobs:
   topics:
     runs-on: ubuntu-latest
     timeout-minutes: 180
+    env:
+      NEON_DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
       - name: Install
-        run: npm ci
+        run: npm install --legacy-peer-deps --no-audit --no-fund
+      - name: Verify Neon topic database connection
+        run: node --input-type=module -e 'import { neon } from "@neondatabase/serverless"; if (!process.env.NEON_DATABASE_URL) throw new Error("Missing NEON_DATABASE_URL GitHub Actions secret"); const rows = await neon(process.env.NEON_DATABASE_URL)\`select current_database() as database\`; console.log("Connected to topic database:", rows[0].database);'
       - name: Restore yesterday's reading of the library
         uses: actions/cache@v4
         with:
@@ -89,8 +92,6 @@ jobs:
         continue-on-error: true
         timeout-minutes: 30
         env:
-          SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
-          POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           TOPIC_REVIEW_COUNT: ${{ inputs.review || (github.event_name == 'push' && '4') || '40' }}
@@ -100,8 +101,6 @@ jobs:
         continue-on-error: true
         timeout-minutes: 60
         env:
-          SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
-          POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || (github.event_name == 'push' && '4') || '40' }}
