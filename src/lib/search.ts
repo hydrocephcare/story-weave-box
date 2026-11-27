@@ -104,6 +104,8 @@ export async function globalSearch(query: string, filters: SearchFilters = {}): 
     )
     .eq("published", true)
     .is("deleted_at", null)
+    .eq("password_protected", false)
+    .or("scheduled_at.is.null,scheduled_at.lte." + new Date().toISOString())
     .or(orIlike(["title", "meta_description", "category", "unit", "university"], terms))
     .limit(40);
   if (yearLabel) articleQ = articleQ.ilike("category", `${yearLabel}:%`);
@@ -165,6 +167,8 @@ export async function globalSearch(query: string, filters: SearchFilters = {}): 
         .select("id, title, slug, category, updated_at, content")
         .eq("published", true)
         .is("deleted_at", null)
+        .eq("password_protected", false)
+        .or("scheduled_at.is.null,scheduled_at.lte." + new Date().toISOString())
         .or(orIlike(["title", "category"], terms))
         .limit(10)
     : Promise.resolve({ data: [] as { id: string; title: string; slug: string | null; category: string | null; updated_at: string | null }[] });
