@@ -1,4 +1,5 @@
 import generateSitemap from "./generate-sitemap";
+import paystackHandler from "./paystack.js";
 
 /** Neon/Vercel function dispatcher. Keep sitemap GET requests working for crawlers. */
 export default async function handler(req, res) {
@@ -8,6 +9,10 @@ export default async function handler(req, res) {
   }
 
   // api/sitemap.js fetches this endpoint with GET; browser-side function calls use POST.
+  if (["initiate-paystack", "check-payment", "access-code"].includes(name)) {
+    return paystackHandler(req, res, name);
+  }
+
   if (name === "generate-sitemap") {
     if (req.method !== "GET" && req.method !== "POST") {
       res.setHeader("Allow", "GET, POST, OPTIONS");
