@@ -1,3 +1,7 @@
 import handler from "../../api/neon-functions.js";
 import { runVercelHandler } from "../_lib/vercel-adapter.js";
-export const onRequest = ({ request }) => runVercelHandler(handler, request);
+
+const run = ({ request }) => runVercelHandler(handler, request);
+export const onRequest = run;
+export const onRequestPost = run;
+export const onRequestOptions = run;
