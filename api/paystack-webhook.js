@@ -9,7 +9,15 @@ async function rawBody(req) {
   return Buffer.concat(chunks);
 }
 export default async function handler(req,res) {
-  if(req.method==="GET") return send(res,200,{success:true,endpoint:"paystack-webhook",ready:true});
+  if(req.method==="GET") {
+    if(!process.env.PAYSTACK_SECRET_KEY || !process.env.DATABASE_URL) return send(res,503,{success:false,endpoint:"paystack-webhook",ready:false});
+    try {
+      await neon(process.env.DATABASE_URL).query("SELECT 1 AS ok");
+      return send(res,200,{success:true,endpoint:"paystack-webhook",ready:true});
+    } catch {
+      return send(res,503,{success:false,endpoint:"paystack-webhook",ready:false});
+    }
+  }
   if(req.method!=="POST") return send(res,405,{success:false,error:"Method not allowed."});
   const secret=process.env.PAYSTACK_SECRET_KEY||"";
   if(!secret || !process.env.DATABASE_URL) return send(res,503,{success:false,error:"Payment webhook is not configured."});
