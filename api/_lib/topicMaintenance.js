@@ -2,6 +2,7 @@ import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
+import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -135,6 +136,28 @@ export default async function handler(req, res) {
       ) AS result`;
       const result = rows[0]?.result || { ok: false, reason: "empty_result" };
       return res.status(result.ok ? 200 : result.reason === "busy" ? 429 : 422).json(result);
+    }
+
+    if (task === "summarize") {
+      const title = String(body.title || "").slice(0, 240);
+      const where = String(body.where || "").slice(0, 160);
+      const sourceText = String(body.text || "").slice(0, 5000);
+      if (title.length < 2 || sourceText.trim().length < 250) return res.status(400).json({ error: "A page title and at least 250 characters of source text are required." });
+      const prompt = `You write the short "in a nutshell" for a medical study page.
+Page: "${title}" (${where}).
+Return ONLY JSON: {"summary":"2 or 3 plain sentences, 55 words at most, no hype, no drug doses","terms":["5 to 7 key terms from the page"]}.
+Use only information supported by the source text. Do not invent content.
+PAGE TEXT:
+"""${sourceText}"""`;
+      const result = await askModel(prompt, { env: process.env, timeoutMs: 40000, maxTokens: 900 });
+      const match = String(result?.text || "").match(/\{[\s\S]*\}/);
+      if (!match) return res.status(502).json({ error: "The AI summary was not valid JSON." });
+      let parsed;
+      try { parsed = JSON.parse(match[0]); } catch { return res.status(502).json({ error: "The AI summary could not be parsed." }); }
+      const summary = String(parsed.summary || "").replace(/\s+/g, " ").trim();
+      const terms = (Array.isArray(parsed.terms) ? parsed.terms : []).map((term) => String(term).trim()).filter((term) => term.length >= 3 && term.length <= 40).slice(0, 7);
+      if (summary.length < 40 || summary.length > 420 || terms.length < 4 || /\d+\s?(mg|mcg|g)\b/i.test(summary)) return res.status(422).json({ error: "The generated summary did not meet the content checks." });
+      return res.status(200).json({ summary, terms });
     }
 
     if (task === "corpus") {
