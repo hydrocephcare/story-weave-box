@@ -254,12 +254,22 @@ Be warm, accurate, plain-language and exam-aware.${sourceContext}`;
       .map((m) => ({ role: m.role, content: String(m.content).slice(0, 3000) })),
     { role: "user", content: question.slice(0, 2500) },
   ];
+  // Neon Auth's Supabase compatibility getSession() can expose the opaque
+  // Better Auth session token. The adapter's getJWTToken() returns the signed
+  // JWT required by Supabase Edge Functions and Neon Data API.
+  const authAdapter = supabase.auth as typeof supabase.auth & {
+    getJWTToken?: () => Promise<string | null>;
+  };
+  const accessToken = await authAdapter.getJWTToken?.();
+  if (!accessToken || accessToken.split(".").length !== 3) {
+    throw new Error("Your secure Neon session token is unavailable. Please sign out and sign in again.");
+  }
   const response = await fetch(SUPABASE_AI_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "apikey": SUPABASE_AI_PUBLISHABLE_KEY,
-      "Authorization": `Bearer ${(await supabase.auth.getSession()).data.session?.access_token ?? ""}`,
+      "Authorization": `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
       feature: "ompath_ai_questions",
