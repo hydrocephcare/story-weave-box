@@ -51,6 +51,7 @@ jobs:
           node --check scripts/seo/audit-production.mjs
           node --check scripts/library/prerender.mjs
           node --check scripts/git/commit-generated.mjs
+          find functions -name "*.js" -print0 | xargs -0 -n1 node --check
           node --check api/_lib/topicWrite.js
           node --check api/_lib/aiChat.js
           node --check api/_lib/topicMaintenance.js
