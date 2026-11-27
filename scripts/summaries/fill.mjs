@@ -1,4 +1,4 @@
-// Writes a three-line summary and key terms for every note and blog that has none yet, a few at a time (Groq first, Gemini as the backup).
+// Writes summaries and key terms for study notes and published articles through the authenticated Neon/Cloudflare AI endpoint.
 // Result: src/data/pageSummaries.json  { "n:<note slug>" | "a:<article slug>": { s: "summary", t: ["term", ...] } }
 //   node scripts/summaries/fill.mjs [count] [--parallel=3]
 import fs from "node:fs";
@@ -25,7 +25,7 @@ try {
       if (!a.slug || have[`a:${a.slug}`] || /^stories/i.test(a.category || "")) continue;
       const text = plain(a.content);
       if (text.length < 600) continue;
-      todo.push({ key: `a:${a.slug}`, title: a.title, where: a.category || "", text, paper: /past paper|questions & answers|exam|cat\\b/i.test(a.title) });
+      todo.push({ key: `a:${a.slug}`, title: a.title, where: a.category || "", text, paper: /past paper|questions & answers|exam|cat\b/i.test(a.title) });
     }
     if (rows.length < 100) break;
   }
@@ -33,16 +33,6 @@ try {
 todo.sort((a, b) => Number(Boolean(a.paper)) - Number(Boolean(b.paper)));
 const batch = todo.slice(0, COUNT);
 console.log(`${todo.length} pages still need a summary; writing ${batch.length}.`);
-
-const PROMPT = (p) => `You write the short "in a nutshell" for a medical study page.
-Page: "${p.title}" (${p.where}).
-${p.paper ? "This is a past paper or question set: say what it tests and which topics it covers." : "Say what the page teaches and why it matters to a medical student."}
-Return ONLY JSON: {"summary":"2 or 3 plain sentences, 55 words at most, no hype, no drug doses","terms":["5 to 7 key terms from the page"]}
-
-PAGE TEXT:
-"""
-${p.text.slice(0, 3200)}
-"""`;
 
 async function ask(page) {
   return maintenanceRequest("summarize", { title: page.title, where: page.where, text: page.text.slice(0, 5000) });
