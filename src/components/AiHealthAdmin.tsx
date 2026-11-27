@@ -54,6 +54,7 @@ export default function AiHealthAdmin() {
             ["Neon database", c.neonDatabase?.ok && c.neonDatabase?.connected],
             ["Search Data API", c.searchDataApi?.ok && c.searchDataApi?.connected],
             ["Neon Auth keys", c.authJwks?.ok && c.authJwks?.reachable],
+            ["SEO share-card renderer", c.noteCard?.ok && c.noteCard?.ready],
             ["Groq", c.groq?.ok && c.groq?.reachable],
             ["Gemini", c.gemini?.ok && c.gemini?.reachable],
             ["Paystack API", c.paystack?.ok && c.paystack?.reachable],
