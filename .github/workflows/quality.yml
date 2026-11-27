@@ -37,6 +37,9 @@ jobs:
           node --check scripts/seo/audit-production.mjs
           node --check scripts/library/prerender.mjs
           node --check scripts/git/commit-generated.mjs
+          node --check api/_lib/topicWrite.js
+          node --check api/_lib/aiChat.js
+          node --check api/_lib/entitlements.js
           node --check api/_lib/blogPolish.js
           node --check api/_lib/blogPolishVerify.js
           node --check api/_lib/blogPolishRun.js
