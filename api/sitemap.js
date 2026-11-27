@@ -1,6 +1,5 @@
 import { neon } from "@neondatabase/serverless";
 // the simulator cases that ship with the site (the AI-written ones are read from the database below)
-const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const BUILTIN_CASES = ["med-acs","med-aki","med-dka","med-gibleed","med-hf","med-malaria","med-mening","med-pe","med-stroke","med-tb","ob-aph","ob-ectopic","ob-labour","ob-pe","ob-pid","ob-pph","pd-asthma","pd-dehyd","pd-malaria","pd-neo","pd-pneu","pd-sam","pd-scd","ps-adhd","ps-delirium","ps-depr","ps-dts","ps-mania","ps-panic","ps-schiz","sg-appy","sg-breast","sg-burn","sg-foot","sg-obstruct","sg-trauma"];
 
 const REMOVED_404 = [
