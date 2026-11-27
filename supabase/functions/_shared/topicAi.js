@@ -180,7 +180,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
   }
   // Google keys: any number, comma separated in GEMINI_API_KEYS (or GEMINI_API_KEY, _2, _3). They take turns, so no single key is worn out,
   // and a key that is over its limit or refused is skipped for the rest of this run.
-  const keys = [...new Set([...String(env.GEMINI_API_KEYS ?? "").split(/[\s,]+/), env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3].map((k) => String(k ?? "").trim()).filter(Boolean))];
+  const keys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
   const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
   const start = keys.length ? turn++ % keys.length : 0;
   for (let i = 0; i < keys.length; i++) {
@@ -204,7 +204,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
     }
   }
   // Groq: a free backup that takes over when every Gemini key is out of quota. Keys in GROQ_API_KEYS (comma separated), used in turn.
-  const groqKeys = [...new Set(String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
+  const groqKeys = parseProviderKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
   const groqModels = String(env.GROQ_MODELS ?? "openai/gpt-oss-20b,openai/gpt-oss-120b").split(",").map((m) => m.trim()).filter(Boolean);
   const gStart = groqKeys.length ? turn++ % groqKeys.length : 0;
   for (let i = 0; i < groqKeys.length; i++) {
@@ -231,10 +231,10 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
  * no Lovable/OmniRoute gateway and no Groq fallback are permitted here.
  */
 export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 3500 } = {}) {
-  const keys = [...new Set([
-    ...String(env.GEMINI_API_KEYS ?? "").split(/[\s,]+/),
-    env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3,
-  ].map((key) => String(key ?? "").trim()).filter(Boolean))];
+  const keys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
+
+
+
   const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
   if (!keys.length) throw new Error("Gemini review is not configured (GEMINI_API_KEYS).");
   if (!models.length) throw new Error("No Gemini review model is configured.");
@@ -283,7 +283,7 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
  * independent Gemini review must never silently become the same model family.
  */
 export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000 } = {}) {
-  const keys = [...new Set(String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
+  const keys = parseProviderKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
   const models = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
   if (!keys.length) throw new Error("Groq generation is not configured (GROQ_API_KEYS).");
   if (!models.length) throw new Error("No Groq generation model is configured.");
