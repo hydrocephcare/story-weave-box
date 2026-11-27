@@ -1,6 +1,6 @@
 // POST /api/page-study { mode: "cards" | "quiz", title, text }: flashcards or a short quiz made from the page the reader is on.
 // Groq first, Gemini as the backup (keys take turns), the same as the rest of the site's AI.
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, providerKeys } from "../../supabase/functions/_shared/topicAi.js";
 import { consumeEntitlement } from "./entitlements.js";
 
 const hits = new Map();
@@ -48,7 +48,7 @@ async function ask(prompt, env, maxTokens = 1800) {
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
-  const env = { GROQ_API_KEYS: process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "", GEMINI_API_KEYS: process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "" };
+  const env = { GROQ_API_KEYS: providerKeys(process.env, "GROQ").join(","), GEMINI_API_KEYS: providerKeys(process.env, "GEMINI").join(",") };
   if (!env.GROQ_API_KEYS.trim() && !env.GEMINI_API_KEYS.trim()) return res.status(503).json({ error: "not configured" });
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
