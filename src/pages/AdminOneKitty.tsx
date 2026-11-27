@@ -124,9 +124,9 @@ export default function AdminOneKitty() {
       </section>
 
       <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
-        <h2 className="font-semibold">Callback URL to register in OneKitty</h2>
-        <p className="mt-1 text-xs text-muted-foreground">Use the callback URL you already shared with OneKitty support. It now routes OneKitty confirmations and preserves the existing PalPlus handler.</p>
-        <code className="mt-3 block break-all rounded-lg bg-muted p-3 text-xs">https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/payment-callback</code>
+        <h2 className="font-semibold">Cloudflare callback URL</h2>
+        <p className="mt-1 text-xs text-muted-foreground">Register this URL with OneKitty support. Successful callbacks are independently checked against the OneKitty Developer API before they are marked verified.</p>
+        <code className="mt-3 block break-all rounded-lg bg-muted p-3 text-xs">https://www.ompathstudy.com/api/neon-functions?name=onekitty-callback</code>
       </section>
 
       <section className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5">
