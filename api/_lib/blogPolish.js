@@ -7,30 +7,24 @@
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
+import { getPolishSql, verifyPolishWriteKey } from "./neonPolishStore.js";
 
-const SB = process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
-const ANON = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE"; // the public key every visitor's browser already has
 const WRITE_KEY = () => process.env.POLISH_WRITE_KEY || "";
 const DAILY_CAP = Number(process.env.POLISH_DAILY_CAP || 40);
-const hits = new Map(); // per visitor, per hour (best effort)
+const hits = new Map();
 const LIMIT = 20;
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-async function sb(path, { method = "GET", body, headers = {} } = {}) {
-  const service = process.env.SUPABASE_SERVICE_ROLE_KEY; // used only if it is set; otherwise the write key does the job
-  const key = service || ANON;
-  const r = await fetch(`${SB}/rest/v1/${path}`, { method, headers: { apikey: key, Authorization: `Bearer ${key}`, ...(service ? {} : { "x-polish-key": WRITE_KEY() }), "content-type": "application/json", ...headers }, body: body ? JSON.stringify(body) : undefined });
-  const text = await r.text();
-  let json = null; try { json = text ? JSON.parse(text) : null; } catch { /* not json */ }
-  return { ok: r.ok, status: r.status, json, headers: r.headers };
-}
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
   const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
   const gem = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-  if (!(process.env.SUPABASE_SERVICE_ROLE_KEY || WRITE_KEY()) || !groq.trim() || !gem.trim()) return res.status(503).json({ status: "unavailable" });
+  const writeKey = WRITE_KEY();
+  if (!writeKey || !groq.trim() || !gem.trim()) return res.status(503).json({ status: "unavailable" });
+  const sql = getPolishSql();
+  if (!(await verifyPolishWriteKey(writeKey))) return res.status(503).json({ status: "unavailable" });
 
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
@@ -44,13 +38,13 @@ export default async function handler(req, res) {
   if (!UUID.test(id)) return res.status(400).json({ status: "invalid" });
 
   // only public, published blogs
-  const got = await sb(`articles?select=id,title,category,content,original_notes,published,deleted_at,password_protected&id=eq.${id}`);
-  const a = got.json?.[0];
+  const got = await sql.query("SELECT id,title,category,content,original_notes,published,deleted_at,password_protected FROM public.articles WHERE id=$1 LIMIT 1", [id]);
+  const a = got[0];
   if (!a || !a.published || a.deleted_at || a.password_protected) return res.status(404).json({ status: "invalid" });
 
   // already finished, or being worked on: nothing to do. A finished page is never polished again.
   // (progress on a long page is kept at the top of its saved text as <!--parts:N-->, so no extra database column is needed)
-  const existing = (await sb(`blog_polish?select=status,updated_at,content,title,reason,ai_review_status,verdict&article_id=eq.${id}`)).json?.[0];
+  const existing = (await sql.query("SELECT status,updated_at,content,title,reason,ai_review_status,verdict FROM public.blog_polish WHERE article_id=$1 LIMIT 1", [id]))[0];
   const ageS = existing ? (now - new Date(existing.updated_at).getTime()) / 1000 : 0;
   const long = a.content.length > 14000;
   const marker = /^<!--parts:(\d+)(?::(\d+))?-->\n?/;
@@ -69,24 +63,30 @@ export default async function handler(req, res) {
 
   // only when the AI has room: if several pages failed in the last half hour the keys have run out, so nobody is made to wait for nothing
   const recent = new Date(now - 30 * 60_000).toISOString();
-  const failures = await sb(`blog_polish?select=article_id&status=eq.${"failed"}&updated_at=gte.${recent}&limit=1`, { headers: { Prefer: "count=exact", Range: "0-0" } });
-  if (Number(String(failures.headers.get("content-range") || "").split("/")[1] || 0) >= 3) return res.status(200).json({ status: existing?.status ?? "busy", more: false });
+  const failures = await sql.query("SELECT count(*)::int AS count FROM public.blog_polish WHERE status=$1 AND updated_at >= $2", ["failed", recent]);
+  if (Number(failures[0]?.count || 0) >= 3) return res.status(200).json({ status: existing?.status ?? "busy", more: false });
 
   // a daily limit on new pages, so visitors cannot use up the AI quota
   const since = new Date(); since.setUTCHours(0, 0, 0, 0);
-  const count = await sb(`blog_polish?select=article_id&created_at=gte.${since.toISOString()}&limit=1`, { headers: { Prefer: "count=exact", Range: "0-0" } });
-  const used = Number(String(count.headers.get("content-range") || "").split("/")[1] || 0);
+  const count = await sql.query("SELECT count(*)::int AS count FROM public.blog_polish WHERE created_at >= $1", [since.toISOString()]);
+  const used = Number(count[0]?.count || 0);
   if (used >= DAILY_CAP && !existing) return res.status(429).json({ status: "busy", more: false });
 
   // claim it, so two visitors do not do the same page
   let claimed;
-  if (existing) claimed = await sb(`blog_polish?article_id=eq.${id}&status=eq.${existing.status}`, { method: "PATCH", body: { status: "working", updated_at: new Date().toISOString() }, headers: { Prefer: "return=representation" } });
-  else claimed = await sb("blog_polish?on_conflict=article_id", { method: "POST", body: { article_id: id, status: "working" }, headers: { Prefer: "resolution=ignore-duplicates,return=representation" } });
-  if (!claimed.json?.length) return res.status(200).json({ status: "working", more: false });
+  if (existing) claimed = await sql.query("UPDATE public.blog_polish SET status=$1, updated_at=now() WHERE article_id=$2 AND status=$3 RETURNING article_id", ["working", id, existing.status]);
+  else claimed = await sql.query("INSERT INTO public.blog_polish (article_id,status) VALUES ($1,$2) ON CONFLICT (article_id) DO NOTHING RETURNING article_id", [id, "working"]);
+  if (!claimed.length) return res.status(200).json({ status: "working", more: false });
 
   const env = { GROQ_API_KEYS: groq };
   const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
-  const save = (row) => sb(`blog_polish?article_id=eq.${id}`, { method: "PATCH", body: { ...row, updated_at: new Date().toISOString() } });
+  const save = async (row) => {
+    const allowed = new Set(["title","description","image_query","verdict","reason","model","content","status","ai_review_status","ai_review_model","ai_reviewed_at","ai_review_issues","parts_done"]);
+    const entries = Object.entries(row || {}).filter(([key, value]) => allowed.has(key) && value !== undefined);
+    if (!entries.length) return [];
+    const assignments = entries.map(([key], index) => `${key}=${index + 2}`);
+    return sql.query(`UPDATE public.blog_polish SET ${assignments.join(",")}, updated_at=now() WHERE article_id=$1 RETURNING article_id`, [id, ...entries.map(([, value]) => value)]);
+  };
 
   try {
     if (!long) {
