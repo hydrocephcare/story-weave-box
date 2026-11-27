@@ -48,7 +48,7 @@ export default async function handler(req, res) {
   // (progress on a long page is kept at the top of its saved text as <!--parts:N-->, so no extra database column is needed)
   const existing = (await sql.query("SELECT status,updated_at,content,title,reason,ai_review_status,verdict FROM public.blog_polish WHERE article_id=$1 LIMIT 1", [id]))[0];
   const ageS = existing ? (now - new Date(existing.updated_at).getTime()) / 1000 : 0;
-  const long = a.content.length > 14000;
+  const long = String(a.content || "").length > 14000;
   const marker = /^<!--parts:(\d+)(?::(\d+))?-->\n?/;
   const doneParts = Number(existing?.content?.match(marker)?.[1] ?? 0);
   const rawParts = Number(existing?.content?.match(marker)?.[2] ?? 0);
