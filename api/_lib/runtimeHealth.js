@@ -49,6 +49,34 @@ export default async function handler(req, res) {
     return { connected: response.ok, status: response.status };
   });
 
+  result.mainSitemap = await check("main-sitemap", async () => {
+    const response = await fetch("https://www.ompathstudy.com/sitemap.xml", { signal: AbortSignal.timeout(10000) });
+    const xml = await response.text();
+    return { ready: response.ok && response.headers.get("content-type")?.includes("xml") === true && /sitemapindex|urlset/.test(xml), status: response.status };
+  });
+
+  result.storiesSitemap = await check("stories-sitemap", async () => {
+    const response = await fetch("https://stories.ompathstudy.com/stories-sitemap.xml", { signal: AbortSignal.timeout(10000) });
+    const xml = await response.text();
+    return { ready: response.ok && response.headers.get("content-type")?.includes("xml") === true && xml.includes("<urlset"), status: response.status };
+  });
+
+  result.crawlerMetadata = await check("crawler-metadata", async () => {
+    const rows = await getPolishSql().query(`SELECT slug FROM public.articles
+      WHERE published=true AND deleted_at IS NULL AND password_protected=false
+        AND (scheduled_at IS NULL OR scheduled_at <= now()) AND slug IS NOT NULL
+      ORDER BY updated_at DESC LIMIT 1`);
+    const slug = String(rows[0]?.slug || "");
+    if (!slug) return { ready: false, reason: "No public article slug found." };
+    const response = await fetch("https://www.ompathstudy.com/blog/" + encodeURIComponent(slug), {
+      headers: { "user-agent": "Googlebot" },
+      redirect: "follow",
+      signal: AbortSignal.timeout(12000),
+    });
+    const html = await response.text();
+    return { ready: response.ok && html.includes('property="og:title"') && html.includes('rel="canonical"') && !html.includes('name="robots" content="noindex'), status: response.status };
+  });
+
   result.noteCard = await check("note-card", async () => {
     const response = await fetch("https://www.ompathstudy.com/api/note-card?title=Ompath%20Study%20Health%20Check&kind=System", {
       redirect: "manual",
