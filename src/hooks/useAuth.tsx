@@ -65,6 +65,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             signal: AbortSignal.timeout(12000),
           }).then(async (response) => {
             if (!response.ok) throw new Error("Account data migration could not be completed.");
+            const result = await response.json().catch(() => ({}));
+            if (result.migration_pending) ensurePromises.delete(userId);
           });
           ensurePromises.set(userId, ready);
           void ready.catch(() => ensurePromises.delete(userId));
