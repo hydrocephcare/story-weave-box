@@ -8,11 +8,17 @@ export function getPolishSql() {
   return neon(url);
 }
 
+export async function hasPolishWriteKey() {
+  const rows = await getPolishSql().query(
+    "SELECT EXISTS (SELECT 1 FROM public.polish_secret WHERE id = 1 AND length(secret) >= 24) AS configured",
+  );
+  return rows[0]?.configured === true;
+}
+
 export async function verifyPolishWriteKey(value) {
   const key = String(value || "");
   if (key.length < 24) return false;
-  const sql = getPolishSql();
-  const rows = await sql.query(
+  const rows = await getPolishSql().query(
     "SELECT EXISTS (SELECT 1 FROM public.polish_secret WHERE id = 1 AND secret = $1) AS allowed",
     [key],
   );
