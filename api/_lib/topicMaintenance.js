@@ -6,7 +6,10 @@ import { generateCheckedDeep, checkContent } from "../../supabase/functions/_sha
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
-const WORKFLOW_REF = "hydrocephcare/story-weave-box/.github/workflows/topics-daily.yml@refs/heads/main";
+const WORKFLOW_REFS = new Set([
+  "hydrocephcare/story-weave-box/.github/workflows/topics-daily.yml@refs/heads/main",
+  "hydrocephcare/story-weave-box/.github/workflows/zone-daily.yml@refs/heads/main",
+]);
 const jwks = createRemoteJWKSet(new URL("https://token.actions.githubusercontent.com/.well-known/jwks"));
 const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
 let database;
@@ -49,7 +52,7 @@ async function verifyWorkflow(req) {
     });
     return payload.repository === REPOSITORY
       && payload.ref === "refs/heads/main"
-      && payload.workflow_ref === WORKFLOW_REF
+      && WORKFLOW_REFS.has(String(payload.workflow_ref || ""))
       && ["push", "schedule", "workflow_dispatch"].includes(String(payload.event_name));
   } catch {
     return false;
@@ -74,6 +77,72 @@ export default async function handler(req, res) {
     if (task === "health") {
       const rows = await getDb()`SELECT count(*)::int AS count FROM public.topic_pages WHERE status = 'published'`;
       return res.status(200).json({ ok: true, publishedTopics: Number(rows[0]?.count || 0) });
+    }
+
+    if (task === "zone-topics") {
+      const rows = await getDb()`SELECT title,category FROM public.mcq_sets
+        WHERE published=true AND deleted_at IS NULL AND title IS NOT NULL
+        ORDER BY updated_at DESC LIMIT 1000`;
+      const seen = new Set();
+      const topics = rows.map((row) => {
+        const year = /^Year\\s*(\\d)/i.exec(String(row.category || ""))?.[1];
+        const name = String(row.title || "").replace(/\\b(MCQs?|questions?|quiz|set|part)\\b.*$/i, "")
+          .replace(/[–—:|-]\\s*$/, "").replace(/\\s+/g, " ").trim();
+        return { year: year ? Number(year) : 0, name, unit: String(row.category || "").replace(/^Year\\s*\\d\\s*:\\s*/i, "") };
+      }).filter((item) => item.year >= 1 && item.year <= 6 && item.name.length > 3 && item.name.length < 60
+        && !seen.has(item.name.toLowerCase()) && seen.add(item.name.toLowerCase()));
+      return res.status(200).json({ topics });
+    }
+
+    if (task === "zone-write") {
+      const kind = String(body.kind || "");
+      const topic = body.topic && typeof body.topic === "object" ? body.topic : {};
+      const name = String(topic.name || "").trim().slice(0, 100);
+      const year = Number(topic.year);
+      const unit = String(topic.unit || "").trim().slice(0, 100);
+      if (!["quiz", "case", "drug"].includes(kind) || name.length < 4 || !Number.isInteger(year) || year < 1 || year > 6) {
+        return res.status(400).json({ error: "Invalid daily game request." });
+      }
+      const groqEnv = { GROQ_API_KEYS: String(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "") };
+      const geminiEnv = { GEMINI_API_KEYS: String(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "") };
+      if (!groqEnv.GROQ_API_KEYS.trim() || !geminiEnv.GEMINI_API_KEYS.trim()) {
+        return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
+      }
+      const prompts = {
+        quiz: `Write 10 multiple-choice questions on "${name}" (${unit}) for a Year ${year} MBChB student.`,
+        case: `Write 8 short clinical case questions on "${name}" (${unit}) for a Year ${year} MBChB student. Each needs a 2–3 sentence vignette and asks for the most likely diagnosis or next best step.`,
+        drug: `Write 8 pharmacology questions related to "${name}" (${unit}) for a Year ${year} MBChB student: drug class, mechanism, indication or characteristic adverse effect.`,
+      };
+      const label = kind === "case" ? "Case Showdown" : kind === "drug" ? "Drug Duel" : "Quiz";
+      const parse = (raw) => {
+        try {
+          const text = String(raw || "");
+          const parsed = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+          return (parsed.questions || []).filter((item) => item && item.q && Array.isArray(item.options)
+            && item.options.length >= 3 && item.options.length <= 6
+            && Number.isInteger(item.correct) && item.correct >= 0 && item.correct < item.options.length
+            && new Set(item.options.map(String)).size === item.options.length)
+            .map((item) => ({ q: String(item.q).slice(0, 700), options: item.options.map((option) => String(option).slice(0, 200)),
+              correct: item.correct, explanation: String(item.explanation || "").slice(0, 400), ai: true,
+              kind: kind === "case" ? "case" : kind === "drug" ? "drug" : "mcq" }));
+        } catch { return []; }
+      };
+      const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
+      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+      let questions = parse(draft.text);
+      if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
+      let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+      if (!review.validated) {
+        const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\\nISSUES:\\n"
+          + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\\n")
+          + "\\nQUESTIONS:\\n" + JSON.stringify(questions);
+        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+        questions = parse(fixed.text);
+        if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
+        review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+      }
+      if (!review.validated) return res.status(422).json({ validated: false, issues: review.issues || [] });
+      return res.status(200).json({ validated: true, questions, reviewModel: review.model || null });
     }
 
     if (task === "generate-publish") {
