@@ -37,7 +37,6 @@ BEGIN
     WHERE lower(a.email)=lower(_email) AND a.id<>_user_id
   ) INTO v_legacy_present;
 
-  -- Only move legacy records after Neon Auth has verified ownership of the email.
   IF v_verified THEN
     FOR v_legacy IN
       SELECT a.id
@@ -45,16 +44,30 @@ BEGIN
       WHERE lower(a.email) = lower(_email) AND a.id <> _user_id
     LOOP
       FOR v_ref IN
-        SELECT c.oid::regclass AS table_name, a.attname AS column_name
-        FROM pg_constraint fk
-        JOIN pg_class c ON c.oid = fk.conrelid
-        JOIN pg_namespace n ON n.oid = c.relnamespace
-        JOIN unnest(fk.conkey) k(attnum) ON true
-        JOIN pg_attribute a ON a.attrelid = c.oid AND a.attnum = k.attnum
-        WHERE fk.contype = 'f'
-          AND fk.confrelid = 'auth.users'::regclass
-          AND n.nspname = 'public'
-        ORDER BY c.relname, a.attname
+        SELECT DISTINCT refs.table_name, refs.column_name
+        FROM (
+          SELECT c.oid::regclass AS table_name, a.attname AS column_name
+          FROM pg_constraint fk
+          JOIN pg_class c ON c.oid = fk.conrelid
+          JOIN pg_namespace n ON n.oid = c.relnamespace
+          JOIN unnest(fk.conkey) k(attnum) ON true
+          JOIN pg_attribute a ON a.attrelid = c.oid AND a.attnum = k.attnum
+          WHERE fk.contype = 'f'
+            AND fk.confrelid = 'auth.users'::regclass
+            AND n.nspname = 'public'
+          UNION
+          SELECT c.oid::regclass AS table_name, a.attname AS column_name
+          FROM pg_class c
+          JOIN pg_namespace n ON n.oid = c.relnamespace
+          JOIN pg_attribute a ON a.attrelid = c.oid
+          WHERE n.nspname = 'public'
+            AND c.relkind IN ('r','p')
+            AND a.attnum > 0
+            AND NOT a.attisdropped
+            AND a.atttypid = 'uuid'::regtype
+            AND a.attname IN ('user_id','owner_id','created_by','updated_by','reviewed_by','actor_id','decided_by')
+        ) refs
+        ORDER BY refs.table_name, refs.column_name
       LOOP
         BEGIN
           EXECUTE format(
