@@ -136,6 +136,18 @@ export default async function handler(req, res) {
     return { endpointReachable: response.ok, currentAdminAllowed: allowed === true, status: response.status };
   });
 
+  result.entitlements = await check("entitlements", async () => {
+    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\\/+$/, "");
+    const response = await fetch(base + "/rpc/consume_feature", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + bearer(req), "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ p_feature: "ompath_ai_questions", p_units: 1 }),
+      signal: AbortSignal.timeout(10000),
+    });
+    const data = response.ok ? await response.json().catch(() => ({})) : {};
+    return { ready: response.ok && data.allowed === true && data.reason === "admin", status: response.status, reason: data.reason };
+  });
+
   result.groq = await check("groq", async () => {
     const key = keys(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY)[0];
     if (!key) return { configured: false, reachable: false };
