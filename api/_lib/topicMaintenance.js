@@ -1,7 +1,5 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
-import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
-import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 
 export const config = { maxDuration: 60 };
 
@@ -90,25 +88,15 @@ export default async function handler(req, res) {
       return res.status(200).json({ rows });
     }
 
-    if (task === "review-one") {
+    if (task === "review-save") {
       const slug = String(body.slug || "");
+      const page = body.page;
       if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
-      const rows = await getDb()`SELECT slug,name,category,content,updated_at FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
-      const row = rows[0];
-      if (!row) return res.status(200).json({ status: "missing", slug });
-      const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
-      const gemini = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-      if (!groq || !gemini) return res.status(503).json({ error: "Topic writer and independent reviewer are not configured." });
-      const prior = row.content || {};
-      const context = JSON.stringify({ priorSummary: prior.summary, priorSections: prior.sections, priorExam: prior.exam }).slice(0, 5000);
-      const result = await generateReviewedTopicPage({
-        name: row.name, category: row.category || "Medicine", context,
-        choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
-      }, { env: { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gemini }, maxFixRounds: 1, timeoutMs: 45000, fetchImpl: fetch });
-      if (!result.page?.medical || result.review?.status !== "passed") {
-        return res.status(200).json({ status: "held", slug, reason: "independent_review_not_passed" });
+      if (!page || typeof page !== "object" || page.medical !== true || page.aiReview?.status !== "passed"
+          || !Array.isArray(page.sections) || page.sections.length < 9 || !Array.isArray(page.exam) || page.exam.length < 8
+          || JSON.stringify(page).length > 60000) {
+        return res.status(400).json({ error: "Topic review payload did not pass the required structure checks." });
       }
-      const page = result.page;
       const saved = await getDb()`UPDATE public.topic_pages
         SET content = ${JSON.stringify(page)}::jsonb,
             model = ${page.model || "groq"},
@@ -116,34 +104,31 @@ export default async function handler(req, res) {
             updated_at = now(),
             generator_model = ${page.model || "groq"},
             ai_review_status = 'passed',
-            ai_review_model = ${result.review.model},
+            ai_review_model = ${String(body.reviewModel || page.aiReview.model || "gemini")},
             ai_reviewed_at = now(),
-            ai_review_fix_rounds = ${result.review.rounds || 0}
-        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
+            ai_review_fix_rounds = ${Number(body.reviewRounds) || 0}
+        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${body.updatedAt}
         RETURNING slug`;
       return res.status(200).json({ status: saved.length ? "reviewed" : "conflict", slug });
     }
 
-    if (task === "deep-one") {
+    if (task === "deep-save") {
       const slug = String(body.slug || "");
+      const deep = body.deep;
       if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
-      const rows = await getDb()`SELECT slug,name,category,content,updated_at FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
+      if (!deepReady(deep) || JSON.stringify(deep).length > 90000
+          || /https?:|www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text/i.test(JSON.stringify(deep))) {
+        return res.status(400).json({ error: "Deep-note payload did not pass the required structure checks." });
+      }
+      const rows = await getDb()`SELECT content FROM public.topic_pages
+        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${body.updatedAt} LIMIT 1`;
       const row = rows[0];
-      if (!row) return res.status(200).json({ status: "missing", slug });
+      if (!row) return res.status(200).json({ status: "conflict", slug });
       if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
-      const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
-      const gemini = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-      if (!groq || !gemini) return res.status(503).json({ error: "Topic writer and independent reviewer are not configured." });
-      const deep = await generateCheckedDeep(
-        { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
-        { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gemini },
-        fetch,
-        45000,
-      );
       const content = { ...(row.content || {}), deep };
       const saved = await getDb()`UPDATE public.topic_pages
         SET content = ${JSON.stringify(content)}::jsonb, updated_at = now()
-        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
+        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${body.updatedAt}
         RETURNING slug`;
       return res.status(200).json({ status: saved.length ? "deep_saved" : "conflict", slug });
     }
