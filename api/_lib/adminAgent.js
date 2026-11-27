@@ -1,20 +1,10 @@
 // POST /api/ai?task=agent { message, history, context }: the admin assistant. It only PLANS: it returns { reply, actions } and the browser, with the admin's own
 // login, runs the actions after the admin presses Yes. Requires a signed-in administrator (checked against Supabase with the caller's own token).
 import { askJson } from "./llm.js";
-const SUPABASE = "https://strfwaqvxvkhjbqrwmla.supabase.co";
-const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
+import { isNeonAdmin } from "./neonAdmin.js";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 
-export async function isAdmin(token) {
-  try {
-    const u = await fetch(`${SUPABASE}/auth/v1/user`, { headers: { apikey: ANON, Authorization: `Bearer ${token}` } });
-    if (!u.ok) return false;
-    const id = (await u.json())?.id;
-    if (!id) return false;
-    const r = await fetch(`${SUPABASE}/rest/v1/rpc/has_role`, { method: "POST", headers: { apikey: ANON, Authorization: `Bearer ${token}`, "content-type": "application/json" }, body: JSON.stringify({ _user_id: id, _role: "admin" }) });
-    return r.ok && (await r.json()) === true;
-  } catch { return false; }
-}
+export async function isAdmin(token) { return isNeonAdmin(token); }
 
 const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "...", "args": {...}}):
 1. create_contest  args: { "title": string, "universities": "all" | [university slugs from the list, at least 2], "years": [1-6], "exam": string (words from a REAL exam title in the list; or "__none__" ONLY if the admin said to create it without questions for now), "start": "YYYY-MM-DDTHH:mm" (Nairobi time), "minutes": number (5-240), "autoAdmit": true|false }
