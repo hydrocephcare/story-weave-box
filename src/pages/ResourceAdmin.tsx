@@ -74,6 +74,7 @@ export default function ResourceAdmin() {
         category,
         file_name: file.name,
         file_path: uploaded.key,
+        storage_url: uploaded.url,
         file_type: ext,
         file_size: file.size,
         download_enabled: true,
