@@ -55,7 +55,7 @@ jobs:
         run: npm install --legacy-peer-deps --no-audit --no-fund
       - name: Verify Neon topic database connection
         run: node --input-type=module -e 'import { neon } from "@neondatabase/serverless"; if (!process.env.NEON_DATABASE_URL) throw new Error("Missing NEON_DATABASE_URL GitHub Actions secret"); const rows = await neon(process.env.NEON_DATABASE_URL)\`select current_database() as database\`; console.log("Connected to topic database:", rows[0].database);'
-      - name: Restore yesterday's reading of the library
+        run: node --input-type=module -e 'import { neon } from "@neondatabase/serverless"; if (!process.env.NEON_DATABASE_URL) throw new Error("Missing NEON_DATABASE_URL GitHub Actions secret"); const db = neon(process.env.NEON_DATABASE_URL); const rows = await db.query("select current_database() as database"); console.log("Connected to topic database:", rows[0].database);'
         uses: actions/cache@v4
         with:
           path: .cache/topics-corpus.json
