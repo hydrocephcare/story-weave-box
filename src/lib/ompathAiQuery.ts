@@ -79,7 +79,7 @@ const VOCAB = ("psychiatry paediatrics obstetrics gynaecology pharmacology patho
   "ophthalmology orthopaedics radiology surgery medicine tuberculosis hypertension diabetes pneumonia asthma anaemia schizophrenia depression epilepsy stroke malaria hepatitis cirrhosis leukaemia lymphoma " +
   "appendicitis pancreatitis meningitis tonsillitis bronchitis arthritis osteoporosis thyroid cholera typhoid pregnancy eclampsia contraception embryology parasitology bacteriology virology mycology entomology " +
   "epidemiology biostatistics genetics pharmacokinetics antibiotics inflammation neoplasia atherosclerosis myocardial infarction angina arrhythmia embolism thrombosis oedema shock sepsis dehydration " +
-  "cardiovascular respiratory gastrointestinal endocrinology rheumatology urology neurosurgery anaesthesia emergency toxicology forensic ethics communication histopathology cytopathology " +
+  "cardiovascular respiratory gastrointestinal endocrinology rheumatology urology neurosurgery anaesthesia emergency toxicology forensic ethics communication histopathology cytopathology autophagy autophagosome autophagic " +
   "dementia delirium anxiety bipolar psychosis addiction nephrotic nephritic glomerulonephritis hydrocephalus pleural effusion pneumothorax emphysema cirrhosis jaundice").split(" ");
 const VOCAB_SET = new Set(VOCAB);
 
