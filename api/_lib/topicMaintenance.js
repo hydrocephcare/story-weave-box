@@ -1,6 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
-import { generateReviewedTopicPage, validName } from "../../supabase/functions/_shared/topicAi.js";
+import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 
 export const config = { maxDuration: 60 };
