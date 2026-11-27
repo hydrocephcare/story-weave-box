@@ -69,9 +69,11 @@ export async function initiate(req,res) {
     const developerKey=String(process.env.ONEKITTY_DEVELOPER_API_KEY||"");
     if(!authCode||!developerKey||!Number.isInteger(kittyId)||kittyId<=0) return send(res,503,{success:false,error:"OneKitty is not ready. Configure ONEKITTY_AUTH_CODE, ONEKITTY_KITTY_ID and ONEKITTY_DEVELOPER_API_KEY in Cloudflare Production."});
     const amount=Number(body.amount),phone=normalizePhone(body.phone_number);
-    const mode=body.mode==="checkout"?"CHECKOUT":body.mode==="stk"?"STK_REQUEST":"";
+    const countryCode=String(body.country_code||"KE").toUpperCase();
+    const mode=body.mode==="stk"?"STK_REQUEST":(body.mode==="checkout"||body.method==="card"||!body.mode)?"CHECKOUT":"";
     const channel=String(body.channel_code||"63902");
     if(!Number.isInteger(amount)||amount<1||amount>1000000) return send(res,400,{success:false,error:"Enter a whole-number amount between KES 1 and KES 1,000,000."});
+    if(countryCode!=="KE") return send(res,400,{success:false,error:"OneKitty is currently configured for Kenya and KES test payments only."});
     if(!phone) return send(res,400,{success:false,error:"Enter a valid Kenyan mobile number."});
     if(!mode) return send(res,400,{success:false,error:"Choose hosted checkout or STK push."});
     if(mode==="STK_REQUEST"&&!["63902","63903","63907"].includes(channel)) return send(res,400,{success:false,error:"Choose M-Pesa, Airtel Money or T-Kash for STK push."});
@@ -80,7 +82,7 @@ export async function initiate(req,res) {
     const paymentRef="OMPATH-TEST-"+externalRef.slice(0,8).toUpperCase();
     const redirectUrl="https://www.ompathstudy.com/admin/onekitty?onekitty_return=1&ref="+encodeURIComponent(externalRef);
     const payload={
-      auth_code:authCode,kitty_id:kittyId,amount,phone_number:phone,country_code:"KE",currency_code:"KES",
+      auth_code:authCode,kitty_id:kittyId,amount,phone_number:phone,country_code:countryCode,currency_code:"KES",
       channel_code:mode==="CHECKOUT"?0:Number(channel),
       first_name:safeText(auth.user.name.split(" ")[0]||"Ompath",80),
       second_name:safeText(auth.user.name.split(" ").slice(1).join(" ")||"Admin",80),
