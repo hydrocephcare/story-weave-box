@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Check, Copy, KeyRound, Loader2, RefreshCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-type Config = { configured: boolean; runtimeReady: boolean; runtimeKeyConfigured?: boolean; aiReady: boolean; updatedAt: string | null; key?: string };
+type Config = { configured: boolean; runtimeReady: boolean; runtimeKeyConfigured?: boolean; syncAvailable?: boolean; aiReady: boolean; updatedAt: string | null; key?: string };
 export default function PolishConnect() {
   const [config, setConfig] = useState<Config | null>(null);
   const [key, setKey] = useState<string | null>(null);
@@ -91,7 +91,7 @@ export default function PolishConnect() {
         <p className="mt-2 text-xs text-muted-foreground">The site-open polish uses Cloudflare secrets. The scheduled backlog processor uses GitHub Actions secrets and writes directly to Neon; it no longer calls the retired Supabase REST API.</p>
       </div>
       <div className="mt-4 flex flex-wrap gap-2">
-        <button type="button" disabled={busy || loading || !config?.runtimeKeyConfigured || config?.runtimeReady} onClick={() => void syncRuntime()} className="inline-flex h-10 items-center gap-2 rounded-full bg-primary px-4 text-sm font-bold text-primary-foreground disabled:opacity-50">
+        <button type="button" disabled={busy || loading || !config?.syncAvailable} onClick={() => void syncRuntime()} className="inline-flex h-10 items-center gap-2 rounded-full bg-primary px-4 text-sm font-bold text-primary-foreground disabled:opacity-50">
           {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />} Sync existing Cloudflare secret
         </button>
         <button type="button" disabled={busy || loading} onClick={() => void rotate()} className="inline-flex h-10 items-center gap-2 rounded-full border px-4 text-sm font-semibold disabled:opacity-50">
