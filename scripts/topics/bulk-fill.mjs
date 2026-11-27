@@ -13,7 +13,8 @@ const PAR = Number((process.argv.find((a) => a.startsWith("--parallel=")) || "--
 const local = fs.existsSync(".gemini-keys.local") ? fs.readFileSync(".gemini-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const groq = fs.existsSync(".groq-keys.local") ? fs.readFileSync(".groq-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const env = { GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local].filter(Boolean).join(","), GROQ_API_KEYS: [process.env.GROQ_API_KEYS, groq].filter(Boolean).join(",") };
-if (!env.GEMINI_API_KEYS || !env.GROQ_API_KEYS) throw new Error("Both GROQ_API_KEYS and GEMINI_API_KEYS are required; no pages were written.");
+const inGitHubActions = process.env.GITHUB_ACTIONS === "true";
+if (!inGitHubActions && (!env.GEMINI_API_KEYS || !env.GROQ_API_KEYS)) throw new Error("Both GROQ_API_KEYS and GEMINI_API_KEYS are required for local generation; no pages were written.");
 fs.mkdirSync(DIR, { recursive: true });
 
 const index = JSON.parse(fs.readFileSync("public/topics/index.json", "utf8"));
@@ -41,7 +42,13 @@ async function worker() {
       let lastError = "AI provider returned no page";
       for (let attempt = 0; attempt < 5 && !page; attempt++) {
         try {
-          page = (await generateReviewedTopicPage({ name: t.n, category: t.c, context: contextOf(t, existing) }, { env })).page;
+          if (inGitHubActions) {
+            const generated = await maintenanceRequest("generate-publish", { name: t.n, category: t.c, context: contextOf(t, existing) });
+            if (!generated?.ok || !generated.page) throw new Error("Cloudflare generation/publication refused: " + String(generated?.reason || "no reviewed page"));
+            page = generated.page;
+          } else {
+            page = (await generateReviewedTopicPage({ name: t.n, category: t.c, context: contextOf(t, existing) }, { env })).page;
+          }
           if (!page) lastError = "AI provider returned no reviewed page";
         } catch (e) {
           lastError = e instanceof Error ? e.message : String(e);
@@ -51,12 +58,7 @@ async function worker() {
       }
       if (!page) { failed++; console.log("failed", t.n, "-", lastError.slice(0, 300)); continue; }
       if (!page.medical) { skipped++; console.log("not medical", t.n); continue; }
-      if (process.env.GITHUB_ACTIONS === "true") {
-        const published = await maintenanceRequest("publish", { slug: it.s, name: t.n, category: t.c, page });
-        if (!published?.ok) throw new Error("Neon publication refused: " + String(published?.reason || "unknown"));
-      } else {
-        console.log("local generation only; Neon publication is reserved for the authenticated GitHub workflow");
-      }
+      if (!inGitHubActions) console.log("local generation only; Neon publication is reserved for the authenticated GitHub workflow");
       fs.writeFileSync(path.join(DIR, `${it.s}.json`), JSON.stringify({ ...page, reviewed: false }, null, 1) + "\n");
       done++;
       if (done % 10 === 0) console.log(`done ${done}/${todo.length} (skipped ${skipped}, failed ${failed})`);
