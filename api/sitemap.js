@@ -140,7 +140,7 @@ export default async function handler(req, res) {
     // Do not repeat them in all.xml, which robots.txt also discovers independently.
 
     // All story landing and article URLs are listed in the Stories subdomain sitemap, not here.
-    xml = xml.replace(/\\s*<url>\\s*<loc>https:\\/\\/www\\.ompathstudy\\.com\\/(?:stories(?:\\/[^<]*)?|share-your-story(?:\\/[^<]*)?|finalists)<\\/loc>[\\s\\S]*?<\\/url>/g, "");
+    xml = xml.replace(/\s*<url>\s*<loc>https:\/\/www\.ompathstudy\.com\/(?:stories(?:\/[^<]*)?|share-your-story(?:\/[^<]*)?|finalists)<\/loc>[\s\S]*?<\/url>/g, "");
     // exams are taken at /exams/<slug>/start, a noindex page: the exam list (/exams) is the page for search, so single exams are not listed
     xml = xml.replace(/\s*<url>\s*<loc>https:\/\/www\.ompathstudy\.com\/exams\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "");
     // Individual clinical simulator cases are interactive/noindex; keep only the public /clinical hub.
