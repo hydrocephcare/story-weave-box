@@ -3,12 +3,12 @@ import { createRemoteJWKSet, jwtVerify } from "jose";
 const AUTH_JWKS_URL = process.env.NEON_AUTH_JWKS_URL
   || "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth/.well-known/jwks.json";
 const DATA_API_URL = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL
-  || "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1").replace(/\\/+$/, "");
+  || "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1").replace(/\/+$/, "");
 const jwks = createRemoteJWKSet(new URL(AUTH_JWKS_URL));
 
 /**
  * Validate Neon Auth access tokens and consume the central entitlement RPC
- * through the Neon Data API. Do not fall back to the retired Supabase project:
+  const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
  * that accepts neither the migrated Neon JWTs nor the current database.
  */
 export async function consumeEntitlement(req, feature) {
