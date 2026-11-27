@@ -8,6 +8,7 @@ import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
 import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
+import { isTrustedBlogWorkflow } from "./blogPolishAuth.js";
 
 const DAILY_CAP = Number(process.env.POLISH_DAILY_CAP || 40);
 const hits = new Map();
@@ -23,13 +24,16 @@ export default async function handler(req, res) {
   if (!groq.trim() || !gem.trim()) return res.status(503).json({ status: "unavailable" });
   const sql = getPolishSql();
   if (!(await hasPolishWriteKey())) return res.status(503).json({ status: "unavailable" });
+  const workflow = await isTrustedBlogWorkflow(req.headers.authorization);
 
-  const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
-  const now = Date.now();
-  const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
-  if (mine.length >= LIMIT) return res.status(429).json({ status: "busy" });
-  hits.set(ip, [...mine, now]);
-  if (hits.size > 5000) hits.clear();
+  if (!workflow) {
+    const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
+    const now = Date.now();
+    const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
+    if (mine.length >= LIMIT) return res.status(429).json({ status: "busy" });
+    hits.set(ip, [...mine, now]);
+    if (hits.size > 5000) hits.clear();
+  }
 
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   const id = String(body.id ?? "");
@@ -68,7 +72,7 @@ export default async function handler(req, res) {
   const since = new Date(); since.setUTCHours(0, 0, 0, 0);
   const count = await sql.query("SELECT count(*)::int AS count FROM public.blog_polish WHERE created_at >= $1", [since.toISOString()]);
   const used = Number(count[0]?.count || 0);
-  if (used >= DAILY_CAP && !existing) return res.status(429).json({ status: "busy", more: false });
+  if (used >= DAILY_CAP && !existing && !workflow) return res.status(429).json({ status: "busy", more: false });
 
   // claim it, so two visitors do not do the same page
   let claimed;
