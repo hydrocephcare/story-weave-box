@@ -1,4 +1,4 @@
-const endpoint = process.env.TOPIC_MAINTENANCE_URL || "https://www.ompathstudy.com/api/topic-maintenance";
+const endpoint = process.env.TOPIC_MAINTENANCE_URL || "https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance";
 const audience = "ompathstudy-topic-maintenance";
 
 async function getWorkflowToken() {
