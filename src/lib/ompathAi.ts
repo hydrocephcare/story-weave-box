@@ -269,7 +269,7 @@ Be warm, accurate, plain-language and exam-aware.${sourceContext}`;
     headers: {
       "Content-Type": "application/json",
       "apikey": SUPABASE_AI_PUBLISHABLE_KEY,
-      "Authorization": `Bearer ${accessToken}`,
+      "x-neon-authorization": `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
       feature: "ompath_ai_questions",
