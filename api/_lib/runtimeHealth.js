@@ -204,11 +204,6 @@ export default async function handler(req, res) {
     return { configured: authConfigured, developerApiConfigured: developerConfigured, ready: authConfigured && developerConfigured };
   });
 
-  result.googleDrive = await check("google-drive", async () => {
-    const configured = Boolean(process.env.GOOGLE_DRIVE_CLIENT_ID && process.env.GOOGLE_DRIVE_CLIENT_SECRET);
-    return { configured, ready: false, reason: "Google Drive OAuth and import tables still need migration to Neon." };
-  });
-
   result.rlsRoleCompatibility = await check("rls-role-compatibility", async () => {
     const rows = await getPolishSql().query(`SELECT
       count(*) FILTER (WHERE roles @> ARRAY['supabase_authenticated_legacy']::name[]
