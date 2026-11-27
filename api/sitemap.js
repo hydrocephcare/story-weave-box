@@ -79,6 +79,7 @@ async function extraSitemap(req, res, mode, env = {}) {
   }
   if (mode === "topics") {
     const entries = [{ slug: null, updated_at: null }];
+    let databaseReady = false;
     try {
       const connectionString = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
       if (connectionString) {
@@ -86,6 +87,7 @@ async function extraSitemap(req, res, mode, env = {}) {
         const rows = await db`SELECT slug, updated_at FROM public.topic_pages
           WHERE status = 'published' AND ai_review_status = 'passed'
           ORDER BY updated_at DESC LIMIT 5000`;
+        databaseReady = true;
         for (const row of rows) {
           if (typeof row.slug === "string" && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(row.slug)) entries.push(row);
         }
@@ -102,6 +104,7 @@ async function extraSitemap(req, res, mode, env = {}) {
     }).join("");
     res.setHeader("Content-Type", "application/xml; charset=utf-8");
     res.setHeader("Cache-Control", "public, s-maxage=900, stale-while-revalidate=86400");
+    if (databaseReady) res.setHeader("X-Ompath-Topics-Sitemap", "neon-v1");
     return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
   }
   // The topics branch above lists Neon pages only after independent Gemini review; static pages remain in library-sitemap.xml.
