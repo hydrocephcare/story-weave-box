@@ -58,11 +58,15 @@ export default async function handler(req, res) {
 
   result.searchDataApi = await check("search-data-api", async () => {
     const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\/+$/, "");
-    const response = await fetch(base + "/articles?select=id&limit=1", {
-      headers: { Authorization: "Bearer " + bearer(req), Accept: "application/json" },
-      signal: AbortSignal.timeout(10000),
-    });
-    return { connected: response.ok, status: response.status };
+    const tables = ["articles", "mcq_sets", "flashcard_sets", "units", "syllabus_topics", "search_aliases", "stories"];
+    const checks = await Promise.all(tables.map(async (table) => {
+      const response = await fetch(base + "/" + table + "?select=id&limit=1", {
+        headers: { Authorization: "Bearer " + bearer(req), Accept: "application/json" },
+        signal: AbortSignal.timeout(10000),
+      });
+      return { table, ok: response.ok, status: response.status };
+    }));
+    return { connected: checks.every((item) => item.ok), tables: checks };
   });
 
   result.mainSitemap = await check("main-sitemap", async () => {
