@@ -61,6 +61,22 @@ export default async function handler(req, res) {
     return { ready: response.ok && response.headers.get("content-type")?.includes("xml") === true && xml.includes("<urlset"), status: response.status };
   });
 
+  result.storiesCrawlerMetadata = await check("stories-crawler-metadata", async () => {
+    const rows = await getPolishSql().query(`SELECT slug FROM public.stories
+      WHERE published=true AND deleted_at IS NULL AND password_protected=false
+        AND (scheduled_at IS NULL OR scheduled_at <= now()) AND slug IS NOT NULL
+      ORDER BY created_at DESC LIMIT 1`);
+    const slug = String(rows[0]?.slug || "");
+    if (!slug) return { ready: false, reason: "No public story slug found." };
+    const response = await fetch("https://stories.ompathstudy.com/stories/" + encodeURIComponent(slug), {
+      headers: { "user-agent": "Googlebot" },
+      redirect: "follow",
+      signal: AbortSignal.timeout(12000),
+    });
+    const html = await response.text();
+    return { ready: response.ok && html.includes('property="og:title"') && html.includes('rel="canonical"') && !html.includes('name="robots" content="noindex'), status: response.status };
+  });
+
   result.crawlerMetadata = await check("crawler-metadata", async () => {
     const rows = await getPolishSql().query(`SELECT slug FROM public.articles
       WHERE published=true AND deleted_at IS NULL AND password_protected=false
