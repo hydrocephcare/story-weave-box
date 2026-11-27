@@ -15,6 +15,7 @@ on:
       - "scripts/topics/build-topics.mjs"
       - "scripts/topics/corpus.mjs"
       - "scripts/topics/neon-client.mjs"
+      - "scripts/topics/verify-neon.mjs"
       - "supabase/functions/_shared/topicAi.js"
       - "supabase/functions/_shared/contentCheck.js"
   workflow_dispatch:
@@ -58,7 +59,7 @@ jobs:
       - name: Install
         run: npm install --legacy-peer-deps --no-audit --no-fund
       - name: Verify Neon Data API and topic automation access
-        run: node --input-type=module -e 'import { createClient, SupabaseAuthAdapter } from "@neondatabase/neon-js"; if (!process.env.POLISH_WRITE_KEY) throw new Error("Missing POLISH_WRITE_KEY GitHub Actions secret"); const client = createClient({ auth: { adapter: SupabaseAuthAdapter(), url: process.env.NEON_AUTH_URL, allowAnonymous: true }, dataApi: { url: process.env.NEON_DATA_API_URL, options: { global: { headers: { "x-polish-key": process.env.POLISH_WRITE_KEY } } } } }); const { data, error } = await client.from("topic_pages").select("slug").eq("status", "published").limit(1); if (error) throw error; console.log("Neon Data API ready; sample published topic rows:", data?.length);'
+        run: node scripts/topics/verify-neon.mjs
       - name: Restore yesterday's reading of the library
         uses: actions/cache@v4
         with:
