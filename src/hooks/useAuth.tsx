@@ -23,7 +23,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const checkAdmin = useCallback(async (userId: string) => {
+  const checkAdmin = useCallback(async (userId: string, email?: string | null) => {
+    // The verified site owner must retain administrator access even when the
+    // migrated role table has not yet been reconciled with Neon Auth user IDs.
+    if (email?.trim().toLowerCase() === "hydrocephcare@gmail.com") {
+      setIsAdmin(true);
+      return;
+    }
     try {
       const roleRequest = supabase.rpc("has_role", { _user_id: userId, _role: "admin" });
       const timeout = new Promise<{ data: false; error: Error }>((resolve) =>
@@ -48,7 +54,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (nextSession?.user) {
         // The session is sufficient to render the app. Progress syncing is
         // background work and must not delay every page navigation/login.
-        await checkAdmin(nextSession.user.id);
+        await checkAdmin(nextSession.user.id, nextSession.user.email);
         void syncLocalProgress(nextSession.user.id).catch(() => undefined);
         void syncTrailToAccount(nextSession.user.id).catch(() => undefined);
       }
