@@ -1,8 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 
-export const config = { maxDuration: 60 };
-
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
 const WORKFLOW_REF = "hydrocephcare/story-weave-box/.github/workflows/topics-daily.yml@refs/heads/main";
@@ -117,7 +115,7 @@ export default async function handler(req, res) {
       const deep = body.deep;
       if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
       if (!deepReady(deep) || JSON.stringify(deep).length > 90000
-          || /https?:|www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text/i.test(JSON.stringify(deep))) {
+          || /https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text/i.test(JSON.stringify(deep))) {
         return res.status(400).json({ error: "Deep-note payload did not pass the required structure checks." });
       }
       const rows = await getDb()`SELECT content FROM public.topic_pages
