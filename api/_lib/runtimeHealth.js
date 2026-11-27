@@ -166,25 +166,41 @@ export default async function handler(req, res) {
   });
 
   result.groq = await check("groq", async () => {
-    const key = keys(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY)[0];
-    if (!key) return { configured: false, reachable: false };
-    const response = await fetch("https://api.groq.com/openai/v1/models", {
-      headers: { Authorization: "Bearer " + key, Accept: "application/json" },
-      signal: AbortSignal.timeout(10000),
-    });
-    const data = await response.json().catch(() => ({}));
-    return { configured: true, reachable: response.ok, status: response.status, models: Array.isArray(data.data) ? data.data.length : 0 };
+    const providerKeys = keys(process.env.GROQ_API_KEYS, process.env.GROQ_API_KEY,
+      ...Array.from({ length: 20 }, (_, i) => process.env["GROQ_API_KEY_" + (i + 2)]));
+    if (!providerKeys.length) return { configured: false, reachable: false, configuredKeyCount: 0 };
+    const checks = await Promise.all(providerKeys.map(async (key) => {
+      const response = await fetch("https://api.groq.com/openai/v1/models", {
+        headers: { Authorization: "Bearer " + key, Accept: "application/json" },
+        signal: AbortSignal.timeout(10000),
+      });
+      return { ok: response.ok, status: response.status };
+    }));
+    return { configured: true, reachable: checks.some((item) => item.ok),
+      configuredKeyCount: checks.length, healthyKeyCount: checks.filter((item) => item.ok).length,
+      statuses: checks.map((item) => item.status) };
   });
 
   result.gemini = await check("gemini", async () => {
-    const key = keys(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY)[0];
-    if (!key) return { configured: false, reachable: false };
-    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=100", {
-      headers: { "x-goog-api-key": key, Accept: "application/json" },
-      signal: AbortSignal.timeout(10000),
-    });
-    const data = await response.json().catch(() => ({}));
-    return { configured: true, reachable: response.ok, status: response.status, models: Array.isArray(data.models) ? data.models.length : 0 };
+    const providerKeys = keys(process.env.GEMINI_API_KEYS, process.env.GEMINI_API_KEY,
+      ...Array.from({ length: 20 }, (_, i) => process.env["GEMINI_API_KEY_" + (i + 2)]));
+    if (!providerKeys.length) return { configured: false, reachable: false, configuredKeyCount: 0 };
+    const checks = await Promise.all(providerKeys.map(async (key) => {
+      const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=100", {
+        headers: { "x-goog-api-key": key, Accept: "application/json" },
+        signal: AbortSignal.timeout(10000),
+      });
+      const data = await response.json().catch(() => ({}));
+      const modelNames = Array.isArray(data.models) ? data.models.map((model) => String(model.name || "").replace(/^models\\//, "")) : [];
+      return { ok: response.ok, status: response.status, models: modelNames.length,
+        hasCurrentFlash: modelNames.includes("gemini-3.8-flash"),
+        hasCurrentFlashLite: modelNames.includes("gemini-3.5-flash-lite") };
+    }));
+    return { configured: true, reachable: checks.some((item) => item.ok),
+      configuredKeyCount: checks.length, healthyKeyCount: checks.filter((item) => item.ok).length,
+      statuses: checks.map((item) => item.status),
+      currentFlashAvailable: checks.some((item) => item.ok && item.hasCurrentFlash),
+      currentFlashLiteAvailable: checks.some((item) => item.ok && item.hasCurrentFlashLite) };
   });
 
   if (deepAI) {
