@@ -83,7 +83,7 @@ async function viaGroq(msgs, res, keys) {
 }
 
 async function viaGemini(msgs, res, keys) {
-  const models = list(process.env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite");
+  const models = list(process.env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite");
   const system = msgs[0].content;
   const contents = msgs.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = keys.length ? turn++ % keys.length : 0;
