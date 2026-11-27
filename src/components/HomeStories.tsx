@@ -7,7 +7,7 @@ import { isGeneratedThumb } from "@/lib/storyShare";
 
 const STORIES_ORIGIN = "https://stories.ompathstudy.com";
 const storyUrl = (slug?: string | null, id?: string, title?: string) => `${STORIES_ORIGIN}/stories/${slug || (id ? `${id}-${(title || "story").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}` : "")}`;
-interface Row { id: string; title: string; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null }
+interface Row { id: string; title: string; slug?: string | null; category: string; created_at: string; cover_image_url: string | null; meta_description: string | null; tags: string[] | null }
 
 function HomeStoryAuthor({ story }: { story: Row }) {
   const author = authorFromTags(story.tags);
@@ -18,6 +18,4 @@ function HomeStoryAuthor({ story }: { story: Row }) {
   const initial = author.name.replace(/^an?\s+/i, "").trim().charAt(0).toUpperCase() || "?";
   return (
     <div className="mt-3 flex min-w-0 items-center gap-2.5">
-      <span className="relative h-8 w-8 shrink-0">
-        {photo
-      ¶»§q«^
+      <span className="relative h-8 w-8 shrink-0">¶»§q«^
