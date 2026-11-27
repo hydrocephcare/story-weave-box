@@ -45,7 +45,7 @@ export default async function handler(req,res) {
         return false;
       }
       const setting = await sql.query("SELECT value FROM public.app_settings WHERE key='access_plans' LIMIT 1");
-      let plans=[]; try { plans=JSON.parse(String(setting[0]?.value || "[]")); } catch {}
+      let plans=[]; try { const parsed=JSON.parse(String(setting[0]?.value || "[]")); plans=Array.isArray(parsed)?parsed:[]; } catch {}
       const planId=String(payment.package_type || "annual");
       const plan=plans.find((p)=>p && p.id===planId) || plans.find((p)=>Number(p.price)===Number(payment.amount)) || {id:"annual",days:365,download:true};
       const code="OM-"+randomBytes(8).toString("hex").toUpperCase().slice(0,8);
