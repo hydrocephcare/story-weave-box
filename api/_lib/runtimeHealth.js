@@ -202,6 +202,11 @@ export default async function handler(req, res) {
 
   result.contestManagement = { ok: false, ready: false, reason: "Contest management is not yet ported to Neon." };
 
+  result.storiesSitemap = await check("stories-sitemap", async () => {
+    const response = await fetch("https://stories.ompathstudy.com/stories-sitemap.xml", { signal: AbortSignal.timeout(10000) });
+    return { ready: response.ok && response.headers.get("x-ompath-stories-sitemap") === "neon-v1", status: response.status, migrated: response.headers.get("x-ompath-stories-sitemap") === "neon-v1" };
+  });
+
   result.paystackWebhook = await check("paystack-webhook", async () => {
     const response = await fetch("https://www.ompathstudy.com/api/paystack-webhook", { signal: AbortSignal.timeout(10000) });
     const data = await response.json().catch(() => ({}));
