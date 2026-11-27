@@ -3,24 +3,16 @@ on:
   schedule:
     - cron: "30 2 * * *"
   workflow_dispatch:
-  # Run immediately when this generator or its workflow is repaired.
-  # Generated data commits do not match these paths, so this cannot loop.
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/zone-daily.yml"
-      - "scripts/zone/daily.mjs"
-      - "supabase/functions/_shared/topicAi.js"
-      - "supabase/functions/_shared/contentCheck.js"
 permissions:
   contents: write
+  id-token: write
 concurrency:
   group: zone-daily
   cancel-in-progress: false
 jobs:
   games:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,10 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Write today's games
-        env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+      - name: Generate and independently review today's games through Cloudflare
         run: node scripts/zone/daily.mjs
       - name: Save generated games without rebase conflicts
         run: node scripts/git/commit-generated.mjs "New Friend Zone games (daily)" public/data/zone-daily.json
