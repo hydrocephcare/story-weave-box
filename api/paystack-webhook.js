@@ -31,8 +31,11 @@ export default async function handler(req,res) {
     const payment=rows[0];
     if(!payment || !String(payment.provider_txn_id||"").startsWith("paystack:")) return send(res,200,{success:true,ignored:true,reason:"No matching Paystack payment."});
     const issueGrant = async () => {
-      const existing = await sql.query("SELECT code,plan,expires_at FROM public.access_grants WHERE payment_id=$1 LIMIT 1",[payment.id]);
-      if(existing[0]) return false;
+      const existing = await sql.query("SELECT id,code,plan,expires_at FROM public.access_grants WHERE payment_id=$1 LIMIT 1",[payment.id]);
+      if(existing[0]) {
+        await sql.query("UPDATE public.access_grants SET user_id=COALESCE(user_id,$1),email=COALESCE(email,$2) WHERE id=$3",[payment.user_id||null,payment.buyer_email||null,existing[0].id]);
+        return false;
+      }
       const setting = await sql.query("SELECT value FROM public.app_settings WHERE key='access_plans' LIMIT 1");
       let plans=[]; try { plans=JSON.parse(String(setting[0]?.value || "[]")); } catch {}
       const planId=String(payment.package_type || "annual");
