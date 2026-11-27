@@ -45,7 +45,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let active = true;
     let hadUser = false;
-    const ensurePromises = new Map<string, Promise<void>>();
+    const ensurePromises = new Map<string, Promise<boolean>>();
     const applySession = async (nextSession: Session | null) => {
       if (!active) return;
       const hadBefore = hadUser;
@@ -66,15 +66,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           }).then(async (response) => {
             if (!response.ok) throw new Error("Account data migration could not be completed.");
             const result = await response.json().catch(() => ({}));
-            if (result.migration_pending) ensurePromises.delete(userId);
+            const canSync = !result.migration_pending;
+            if (!canSync) ensurePromises.delete(userId);
+            return canSync;
           });
           ensurePromises.set(userId, ready);
           void ready.catch(() => ensurePromises.delete(userId));
         }
         try {
-          await ready;
-          void syncLocalProgress(userId).catch(() => undefined);
-          void syncTrailToAccount(userId).catch(() => undefined);
+          const canSync = await ready;
+          if (canSync) {
+            void syncLocalProgress(userId).catch(() => undefined);
+            void syncTrailToAccount(userId).catch(() => undefined);
+          }
         } catch (error) {
           console.warn("[auth] Neon account preparation failed:", error);
         }
