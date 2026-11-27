@@ -41,17 +41,19 @@ contrast, underlined links, stop motion, read aloud (this page or the selected t
 
 ## Pages written on demand (the "AI fills the gaps" part)
 
-When someone opens a topic the library has little on (or one with no page at all, for example /topic/lupus-nephritis), the page shows what the
-site has straight away and asks the **topic-ai** Supabase edge function (supabase/functions/topic-ai) to write the rest with **Gemini**, through the
-same Lovable gateway Ompath AI uses (secret LOVABLE_API_KEY, already set). The answer is saved in the topic_pages table, so the model is asked **once per
-topic**: the next reader gets the saved copy free. Credit savers: short prompt, one call per topic ever, a daily cap (default 60 new pages, TOPIC_AI_DAILY_CAP),
-nothing is generated for topics the site already covers well, and non-medical names are remembered as rejected.
+When someone opens a topic the library has little on (or no page at all, for example /topic/lupus-nephritis), the page first shows the
+site's existing material. It then calls the same-origin **/api/topic-write** route, which validates the Neon Auth session, checks the
+topic_page_generation entitlement in Neon, drafts with Groq and independently reviews with Gemini. If the dedicated writer is busy, the
+browser can fall back to the Neon-backed **/api/ai-chat** route and assemble the page in short parts. The completed page is saved through
+the Neon Data API's **publish_topic_page** RPC. It is written once per topic; subsequent readers load the saved row from Neon.
 
-If anything fails (no key, model down, cap reached) the reader still sees the site's own material plus a "try again" button.
+The server requires GROQ_API_KEYS (or GROQ_API_KEY) and GEMINI_API_KEYS (or GEMINI_API_KEY) in the Vercel environment.
+If generation, review, authentication or persistence fails, the page keeps its existing library material and offers a retry; an unreviewed
+or malformed page must not be published.
 
-Switch it on (once): run supabase/migrations/20261012180000_topic_pages.sql, and make sure the topic-ai function is deployed (Lovable does it on sync).
-No Vercel keys are needed. The model falls back to OmniRoute, then to GEMINI_API_KEY, if the gateway fails.
-The daily GitHub job (a few overviews a day) uses the GEMINI_API_KEY secret.
+The production Neon database must contain topic_pages, the review metadata columns, publish_topic_page and save_topic_deep.
+These are already present in the production Neon branch checked on 2026-11-27. Keep the historical SQL migration files in the repository
+as migration history; do not rerun the old Supabase migrations against the retired project.
 
 ## Pictures from the web
 
@@ -60,10 +62,13 @@ author and licence, and remembers the answer on the device for 30 days. If nothi
 
 To correct or approve a page, edit its row in topic_pages (set reviewed to true when a doctor has checked it) or delete the row to have it rewritten.
 
-## How the AI writes and publishes now (2026-10-13)
+## How the AI writes and publishes now (Neon)
 
-When the `topic-ai` edge function is not deployed, the topic page asks Ompath AI (already deployed) for the page in 2 to 3 short parts
-(`supabase/functions/_shared/topicParts.js`, run from `src/lib/topicWriter.ts`), joins and checks them, then saves the page with the database function
-`publish_topic_page` (migration `20261013100000_publish_topic_page_rpc.sql`, run it once). The function only adds pages that do not exist, refuses links and scripts,
-and stops after 150 new pages a day. Visitors who look like crawlers never trigger a write, and each visitor can trigger 5 a day.
-Published pages appear in: the A-Z list and static pages at the next deploy (the build reads `topic_pages`), `/topics-sitemap.xml` straight away, and "New topic pages" on the home page.
+The dedicated Neon-backed writer is the primary route; Ompath AI chat is the secondary route. Both use the same Neon Auth
+session and the same `publish_topic_page` RPC. The RPC refuses unsafe or unreviewed content and caps new topic pages at 150 per day.
+Deep exam notes use `/api/topic-write` with `mode: "deep"`, require a Neon Auth session, and persist through `save_topic_deep`.
+
+The daily GitHub workflow reads and updates `articles`, `mcq_sets`, `essays` and `topic_pages` directly in Neon using the
+`NEON_DATABASE_URL` repository secret. It rebuilds static topic pages, updates the image sitemap, reviews legacy pages with Gemini,
+and fills the deep-note queue. The Vercel build merges committed, Gemini-passed content without rereading the entire database.
+Newly generated static pages are included in the topic index, prerendered HTML and sitemap on the next deployment.
