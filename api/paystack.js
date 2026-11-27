@@ -130,6 +130,13 @@ async function accessCode(req, res) {
   const b = req.body || {};
   const action = String(b.action || "verify");
   const sql = db();
+  if (action === "list") {
+    if (!user?.id) return out(res, 401, { error: "Sign in required." });
+    const roles = await sql.query("SELECT 1 FROM public.user_roles WHERE user_id=$1 AND role='admin' LIMIT 1", [user.id]);
+    if (!roles[0]) return out(res, 403, { error: "Administrator access required." });
+    const rows = await sql.query("SELECT code,plan,amount,currency,expires_at,redeem_count,created_at FROM public.access_grants ORDER BY created_at DESC LIMIT 25");
+    return out(res, 200, { passes: rows.map((g) => ({ code: String(g.code).slice(0,3) + "•••" + String(g.code).slice(-3), plan: g.plan, amount: Number(g.amount || 0), currency: g.currency || "KES", expires_at: g.expires_at, redeem_count: g.redeem_count })) });
+  }
   if (action === "verify") {
     if (!b.code) return out(res, 400, { valid: false, error: "Code required." });
     const g = await findGrant(sql, b.code);
