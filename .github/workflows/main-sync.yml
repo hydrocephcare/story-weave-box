@@ -53,6 +53,13 @@ jobs:
           node --check scripts/git/commit-generated.mjs
           node --check api/_lib/topicWrite.js
           node --check api/_lib/aiChat.js
+          node --check api/_lib/topicMaintenance.js
+          node --check api/neon-functions.js
+          node --check scripts/topics/maintenance-client.mjs
+          node --check scripts/topics/corpus.mjs
+          node --check scripts/topics/review-database-pages.mjs
+          node --check scripts/topics/deep-fill-database.mjs
+          node --check scripts/topics/verify-maintenance.mjs
           node --check api/_lib/entitlements.js
           node --check api/sitemap.js
           node --check api/_lib/blogPolish.js
