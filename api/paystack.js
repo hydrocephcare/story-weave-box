@@ -145,8 +145,9 @@ async function accessCode(req, res) {
     const g = await findGrant(sql, b.code);
     if (!g) return out(res, 200, { valid: false, error: "That code was not found." });
     if (new Date(g.expires_at).getTime() < Date.now()) return out(res, 200, { valid: false, expired: true, error: "That pass has expired." });
-    if ((g.user_id && g.user_id !== user?.id) || (g.email && g.email.toLowerCase() !== (user?.email || ""))) return out(res, 200, { valid: false, error: "That pass belongs to another email account." });
-    const updated = await sql.query("UPDATE public.access_grants SET redeem_count=redeem_count+1,last_redeemed_at=now(),email=COALESCE(email,$1),user_id=COALESCE(user_id,$2) WHERE id=$3 RETURNING code,plan,expires_at,allow_download", [user?.email || null,user?.id || null,g.id]);
+    const sameEmail = !!user?.email && !!g.email && g.email.toLowerCase() === user.email;
+    if ((g.email && !sameEmail) || (g.user_id && g.user_id !== user?.id && !sameEmail)) return out(res, 200, { valid: false, error: "That pass belongs to another email account." });
+    const updated = await sql.query("UPDATE public.access_grants SET redeem_count=redeem_count+1,last_redeemed_at=now(),email=COALESCE(email,$1),user_id=COALESCE($2,user_id) WHERE id=$3 RETURNING code,plan,expires_at,allow_download", [user?.email || null,user?.id || null,g.id]);
     const v = updated[0] || g;
     return out(res, 200, { valid: true, code: v.code, plan: v.plan, expires_at: v.expires_at, allow_download: v.allow_download !== false });
   }
@@ -189,7 +190,7 @@ async function accessCode(req, res) {
     if(!current || next.length<6 || next.length>24) return out(res,400,{success:false,error:"Choose a code between 6 and 24 characters."});
     const g=await findGrant(sql,current);
     if(!g) return out(res,404,{success:false,error:"That pass was not found."});
-    if(g.user_id && g.user_id!==user.id) return out(res,403,{success:false,error:"That pass belongs to another account."});
+    if(g.user_id && g.user_id!==user.id && (!g.email || g.email.toLowerCase()!==user.email)) return out(res,403,{success:false,error:"That pass belongs to another account."});
     if(new Date(g.expires_at).getTime()<Date.now()) return out(res,400,{success:false,error:"That pass has expired."});
     const clash=await findGrant(sql,next);
     if(clash && clash.id!==g.id) return out(res,409,{success:false,error:"That code is already taken."});
