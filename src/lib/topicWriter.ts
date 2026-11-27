@@ -1,6 +1,6 @@
 // Writes a topic page when a reader opens one the site has little on, then publishes it for everyone.
-// Route 1 (best): the topic-ai edge function (one call, server-side checks). Route 2 (works today): Ompath AI, the assistant that is already
-// deployed, asked for the page in two or three short parts, then the page is saved with the publish_topic_page database function.
+// Route 1: the Neon-backed topic writer (Groq generation + independent Gemini review). Route 2: Neon-backed Ompath AI chat
+// generates the page in short parts. Both routes save through the Neon publish_topic_page RPC.
 // Nothing here may break a page: every failure returns a status, and the reader keeps what the site already has.
 import { supabase } from "@/integrations/supabase/client";
 import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/functions/_shared/topicParts.js";
@@ -105,8 +105,7 @@ export async function writeTopicPage({ name, category, context, choices, keepSlu
     return { status: "published", page: viaApi.page, saved, slug: cleanSlug, name: cleanName };
   }
 
-  // Do not call the retired Supabase topic-ai Edge Function; it cannot accept Neon Auth sessions.
-  if (!viaApi) return { status: "failed" };
+  // If the dedicated writer is busy or unavailable, continue with the Neon-backed Ompath AI chat fallback below.
 
   if (aiPaused()) return { status: "paused" };
   // Route 2: Ompath AI in short parts, then publish with the database function
