@@ -1,5 +1,4 @@
 import { balanceBank } from "../../supabase/functions/_shared/mcqPositions.js";
-import { createClient as createNeonClient } from "@neondatabase/neon-js";
 import { neon } from "@neondatabase/serverless";
 import { verifyNeonToken, isNeonAdmin } from "../../api/_lib/neonAdmin.js";
 
@@ -25,6 +24,8 @@ export async function onRequest({ request: req }: { request: Request }) {
     const identity = await verifyNeonToken(bearer);
     if (!identity) return json({ error: "Authentication required" }, 401);
     const user = { id: identity.id, email: identity.email };
+    // Neon Auth initialises async runtime state; load it only after the request has entered the handler.
+    const { createClient: createNeonClient } = await import("@neondatabase/neon-js");
     const dataApi = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API);
     const admin = createNeonClient({ dataApi: { url: dataApi, getToken: async () => bearer } });
     const body = await req.json();
