@@ -1,5 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
+import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -71,6 +72,38 @@ export default async function handler(req, res) {
     if (task === "health") {
       const rows = await getDb()`SELECT count(*)::int AS count FROM public.topic_pages WHERE status = 'published'`;
       return res.status(200).json({ ok: true, publishedTopics: Number(rows[0]?.count || 0) });
+    }
+
+    if (task === "generate-publish") {
+      const name = String(body.name || "").trim();
+      const category = String(body.category || "").slice(0, 60);
+      const context = String(body.context || "").slice(0, 5000);
+      if (name.length < 4 || name.length > 80 || name.includes("<") || name.includes(">")) {
+        return res.status(400).json({ error: "Invalid topic name." });
+      }
+      const env = {
+        GROQ_API_KEYS: String(process.env.GROQ_API_KEYS || ""),
+        GEMINI_API_KEYS: String(process.env.GEMINI_API_KEYS || ""),
+      };
+      if (!env.GROQ_API_KEYS.trim() || !env.GEMINI_API_KEYS.trim()) {
+        return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
+      }
+      const generated = await generateReviewedTopicPage({ name, category, context }, { env });
+      const page = generated?.page;
+      if (!page || page.medical !== true) return res.status(422).json({ ok: false, reason: "not_medical" });
+      if (page.aiReview?.status !== "passed" || !String(page.aiReview?.model || "").trim()
+          || !Array.isArray(page.sections) || page.sections.length < 3
+          || !Array.isArray(page.exam) || page.exam.length < 8
+          || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
+        return res.status(422).json({ ok: false, reason: "review_or_structure" });
+      }
+      const slug = name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
+      const rows = await getDb()`SELECT public.publish_topic_page(
+        ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
+      ) AS result`;
+      const result = rows[0]?.result || { ok: false, reason: "empty_result" };
+      if (!result.ok) return res.status(result.reason === "busy" ? 429 : 422).json(result);
+      return res.status(200).json({ ...result, slug, name, page });
     }
 
     if (task === "publish") {
