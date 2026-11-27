@@ -151,11 +151,11 @@ async function viaGemini(messages, env, send) {
   return false;
 }
 
-export async function onRequestOptions() {
+async function onRequestOptions() {
   return new Response(null, { status: 204, headers: { "Cache-Control": "no-store" } });
 }
 
-export async function onRequestPost({ request, env }) {
+async function onRequestPost({ request, env }) {
   const groqKeys = splitKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
   const geminiKeys = splitKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
   if (!groqKeys.length && !geminiKeys.length) return json({ error: "Ompath AI is not configured yet." }, 503);
@@ -199,4 +199,12 @@ export async function onRequestPost({ request, env }) {
     },
   });
   return new Response(stream, { status: 200, headers: { "Content-Type": "text/event-stream; charset=utf-8", "Cache-Control": "no-store, no-transform", "X-Accel-Buffering": "no" } });
+}
+
+
+// Use the universal Pages handler so POST/OPTIONS dispatch is explicit on every Pages runtime.
+export async function onRequest(context) {
+  if (context.request.method === "OPTIONS") return onRequestOptions();
+  if (context.request.method !== "POST") return json({ error: "Method not allowed" }, 405);
+  return onRequestPost(context);
 }
