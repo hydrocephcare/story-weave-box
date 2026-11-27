@@ -12,8 +12,9 @@ import write from "./_lib/adminWrite.js";
 import sb from "./_lib/sbCache.js";
 import transcribe from "./_lib/transcribe.js";
 import assist from "./_lib/storyAssist.js";
+import polishConfig from "./_lib/polishConfig.js";
 
-const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo, write, sb, transcribe, assist };
+const TASKS = { chat, topic, outline, study, polish, polishConfig, draft, health, agent, seo, write, sb, transcribe, assist };
 
 export default async function handler(req, res) {
   const origin = String(req.headers.origin || "");
