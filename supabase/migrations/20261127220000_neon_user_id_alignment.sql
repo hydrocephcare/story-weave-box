@@ -7,6 +7,7 @@ AS $function$
 DECLARE
   v_verified boolean := false;
   v_found boolean := false;
+  v_legacy_present boolean := false;
   v_legacy uuid;
   v_ref record;
   v_rows integer := 0;
@@ -30,6 +31,11 @@ BEGIN
   INSERT INTO auth.users(id,email)
   VALUES(_user_id,NULL)
   ON CONFLICT(id) DO NOTHING;
+
+  SELECT EXISTS(
+    SELECT 1 FROM auth.users a
+    WHERE lower(a.email)=lower(_email) AND a.id<>_user_id
+  ) INTO v_legacy_present;
 
   -- Only move legacy records after Neon Auth has verified ownership of the email.
   IF v_verified THEN
@@ -67,7 +73,7 @@ BEGIN
   RETURN jsonb_build_object(
     'user_id', _user_id,
     'email_verified', v_verified,
-    'migration_pending', NOT v_verified,
+    'migration_pending', (NOT v_verified AND v_legacy_present),
     'migrated_rows', v_migrated,
     'skipped', to_jsonb(v_skipped)
   );
