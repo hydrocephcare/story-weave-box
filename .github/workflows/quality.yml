@@ -49,6 +49,8 @@ jobs:
           node --check scripts/topics/verify-maintenance.mjs
           node --check api/_lib/entitlements.js
           node --check api/_lib/onekitty.js
+          node --check api/_lib/topicMaintenance.js
+          node --check scripts/topics/bulk-fill.mjs
           node --check api/neon-functions.js
           node --check api/_lib/blogPolish.js
           node --check api/_lib/blogPolishVerify.js
