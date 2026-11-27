@@ -75,7 +75,7 @@ async function viaGroq(msgs, res, keys) {
 }
 
 async function viaGemini(msgs, res, keys) {
-  const models = list(process.env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite,gemini-3.8-flash");
+  const models = list(process.env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite");
   const system = msgs[0].content;
   const contents = msgs.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = keys.length ? turn++ % keys.length : 0;
@@ -98,8 +98,8 @@ async function viaGemini(msgs, res, keys) {
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
-  const groq = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY);
-  const gemini = list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY);
+  const groq = list(process.env.GROQ_API_KEYS, process.env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => process.env["GROQ_API_KEY_" + (i + 2)]));
+  const gemini = list(process.env.GEMINI_API_KEYS, process.env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => process.env["GEMINI_API_KEY_" + (i + 2)]));
   if (!groq.length && !gemini.length) return res.status(503).json({ error: "not configured" });
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
