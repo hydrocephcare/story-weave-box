@@ -90,7 +90,8 @@ export default async function handler(req, res) {
       }
       const generated = await generateReviewedTopicPage({ name, category, context }, { env });
       const page = generated?.page;
-      if (!page || page.medical !== true) return res.status(422).json({ ok: false, reason: "not_medical" });
+      if (!page) return res.status(422).json({ ok: false, reason: "no_page" });
+      if (page.medical !== true) return res.status(200).json({ ok: true, medical: false, slug: body.slug || null, page });
       if (page.aiReview?.status !== "passed" || !String(page.aiReview?.model || "").trim()
           || !Array.isArray(page.sections) || page.sections.length < 3
           || !Array.isArray(page.exam) || page.exam.length < 8
