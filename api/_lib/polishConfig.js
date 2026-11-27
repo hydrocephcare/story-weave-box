@@ -26,6 +26,7 @@ export default async function handler(req, res) {
         configured,
         runtimeReady: runtimeRows[0]?.matches === true,
         runtimeKeyConfigured: runtimeKey.length >= 24,
+        syncAvailable: !configured && runtimeKey.length >= 24,
         aiReady: aiReady(),
         updatedAt: rows[0]?.updated_at || null,
       });
@@ -39,7 +40,7 @@ export default async function handler(req, res) {
         "INSERT INTO public.polish_secret (id,secret,updated_at) VALUES (1,$1,now()) ON CONFLICT (id) DO UPDATE SET secret=EXCLUDED.secret,updated_at=now()",
         [key],
       );
-      return res.status(200).json({ configured: true, runtimeReady: true, runtimeKeyConfigured: true, aiReady: aiReady(), updatedAt: new Date().toISOString(), synced: true });
+      return res.status(200).json({ configured: true, runtimeReady: true, runtimeKeyConfigured: true, syncAvailable: false, aiReady: aiReady(), updatedAt: new Date().toISOString(), synced: true });
     }
     if (body.action !== "rotate") return res.status(400).json({ error: "Unknown polishing configuration action." });
     const key = randomBytes(32).toString("hex");
@@ -47,7 +48,7 @@ export default async function handler(req, res) {
       "INSERT INTO public.polish_secret (id,secret,updated_at) VALUES (1,$1,now()) ON CONFLICT (id) DO UPDATE SET secret=EXCLUDED.secret,updated_at=now()",
       [key],
     );
-    return res.status(200).json({ configured: true, runtimeReady: false, runtimeKeyConfigured: false, aiReady: aiReady(), updatedAt: new Date().toISOString(), key });
+    return res.status(200).json({ configured: true, runtimeReady: false, runtimeKeyConfigured: true, syncAvailable: false, aiReady: aiReady(), updatedAt: new Date().toISOString(), key });
   } catch (error) {
     console.error("[polish-config]", error instanceof Error ? error.message : String(error));
     return res.status(503).json({ error: "Could not update the polishing configuration in Neon." });
