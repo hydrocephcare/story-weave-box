@@ -33,7 +33,7 @@ export const onRequest = async (context:PagesContext):Promise<Response> => {
   // Main-site crawler rendering: keep article, MCQ, flashcard, exam and hub metadata
   // on Cloudflare instead of relying on Vercel rewrites.
   if (host !== "stories.ompathstudy.com") {
-    if (!bot || url.searchParams.has("write") || path.startsWith("/api/") || path.startsWith("/assets/") || /\\.(xml|txt|json|js|css|png|jpe?g|webp|svg|ico|woff2?)$/i.test(path)) return context.next();
+    if (!bot || url.searchParams.has("write") || path.startsWith("/api/") || path.startsWith("/assets/") || /\.(xml|txt|json|js|css|png|jpe?g|webp|svg|ico|woff2?)$/i.test(path)) return context.next();
     const target = new URL("/api/og-meta", request.url);
     target.searchParams.set("path", path + url.search);
     return mainOgMeta(new Request(target, request));
