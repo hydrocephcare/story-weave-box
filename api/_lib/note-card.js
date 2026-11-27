@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
-import { noteCardTree } from "../src/lib/noteCard.js";
+import { noteCardTree } from "../../src/lib/noteCard.js";
 
 let font;
 const loadFont = () => (font ??= fs.readFileSync(path.join(process.cwd(), "api", "_assets", "inter-700.woff")));

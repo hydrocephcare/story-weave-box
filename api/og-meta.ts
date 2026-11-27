@@ -1005,17 +1005,16 @@ const ZONE_GAMES: Record<string, string> = { quiz: "Quiz", lightning: "Lightning
 /** A Friend Zone room link: "Davis invites you to play Thyroid", with a game card and the room code. Crawlers only; people get the app. */
 async function zoneInviteHtml(path: string, who = ""): Promise<string> {
   const code = (path.split("?")[0].split("/").filter(Boolean)[1] || "").toUpperCase().replace(/[^A-Z0-9-]/g, "").slice(0, 12);
-  const { url, key } = getSupabaseConfig();
   let room: { host?: string; title?: string; game?: string; mode?: string; n?: number; players?: number; perQ?: number; live?: boolean; status?: string } | null = null;
   try {
-    const res = await fetch(`${url}/rest/v1/rpc/zone_peek`, { method: "POST", headers: { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json" }, body: JSON.stringify({ p_code: code }) });
-    if (res.ok) room = await res.json();
+    const { data, error } = await neon.rpc("zone_peek", { p_code: code });
+    if (!error && data) room = (Array.isArray(data) ? data[0] : data) as typeof room;
   } catch { /* fall back to a general invitation */ }
   // a shared result (?n=Name): the card says what that player did, read from the finished game, never from the link
   if (who) {
     try {
-      const rp = await fetch(url + "/rest/v1/rpc/zone_peek_player", { method: "POST", headers: { apikey: key, Authorization: "Bearer " + key, "content-type": "application/json" }, body: JSON.stringify({ p_code: code, p_nick: who }) });
-      const pl = rp.ok ? await rp.json() as { nick: string; title: string; score: number; rank: number; players: number; correct: number; answered: number } | null : null;
+      const { data, error } = await neon.rpc("zone_peek_player", { p_code: code, p_nick: who });
+      const pl = !error && data ? (Array.isArray(data) ? data[0] : data) as { nick: string; title: string; score: number; rank: number; players: number; correct: number; answered: number } | null : null;
       if (pl) {
         const won = pl.rank === 1 && pl.players > 1;
         const q = new URLSearchParams({ won: "1", name: pl.nick, title: pl.title, score: String(pl.score), rank: String(pl.rank), of: String(pl.players), acc: pl.answered ? pl.correct + "/" + pl.answered : "", kind: "Friend Zone" });
