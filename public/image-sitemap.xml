@@ -2055,6 +2055,33 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/collagen</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q17-f56036c8.jpg</image:loc>
+      <image:caption>Reticular fibres</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q26-38bab905.jpg</image:loc>
+      <image:caption>Photomicrograph of dense regular connective tissue with parallel collagen fibres</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q39-fb37382a.jpg</image:loc>
+      <image:caption>Q39 - connective tissue histology</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q39-7ff4c6d2.jpg</image:loc>
+      <image:caption>Q39 - dense regular connective tissue histology</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q20-774cf540.jpg</image:loc>
+      <image:caption>Fibrocartilage</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q27-1e5c76a9.jpg</image:loc>
+      <image:caption>Photomicrograph of hyaline cartilage with chondrocytes in lacunae</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/cytokines</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s7-1-703797e8.jpg</image:loc>
@@ -2214,6 +2241,13 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q04-b926c79d.jpg</image:loc>
       <image:caption>Spleen</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/type-1-diabetes</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/content-images/articles/clinical-endocrinology-cases-pituitary-tumour-pcos-type-1-diabetes-and-hhs/content/1-50535912.png</image:loc>
+      <image:caption>Clinical Endocrinology Cases: Pituitary Tumour, PCOS, Type 1 Diabetes, and HHS</image:caption>
     </image:image>
   </url>
   <url>
