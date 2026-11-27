@@ -176,7 +176,7 @@ async function contentHits(query: string, terms: string[], skip: Set<string>, ye
   const needle = query.trim().replace(/[,%]/g, " ");
   if (needle.length < 3) return [];
   try {
-    let q = supabase.from("articles").select("id, title, slug, category, content").eq("published", true).is("deleted_at", null).ilike("content", `%${needle}%`).limit(14);
+    let q = supabase.from("articles").select("id, title, slug, category, content").eq("published", true).is("deleted_at", null).eq("password_protected", false).or("scheduled_at.is.null,scheduled_at.lte." + new Date().toISOString()).ilike("content", `%${needle}%`).limit(14);
     if (year) q = q.ilike("category", `Year ${year}:%`);
     const { data } = await q;
     const out: SiteHit[] = [];
