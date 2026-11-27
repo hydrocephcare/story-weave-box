@@ -438,7 +438,7 @@ const NEON_DATA_API_URL =
 async function sbFetch(table: string, params: string) {
   if (!/^[a-z_][a-z0-9_]*$/i.test(table)) throw new Error("Invalid metadata table.");
   const search = new URLSearchParams(params);
-  const url = `${NEON_DATA_API_URL.replace(/\\/+$/, "")}/${table}?${search.toString()}`;
+  const url = `${NEON_DATA_API_URL.replace(/\/+$/, "")}/${table}?${search.toString()}`;
   const response = await fetch(url, {
     method: "GET",
     headers: { Accept: "application/json" },
