@@ -4,6 +4,7 @@ const read = (p) => fs.readFileSync(p, "utf8");
 const meta = read("api/og-meta.ts");
 const vercel = JSON.parse(read("vercel.json"));
 const sitemap = read("api/sitemap.js");
+const sitemapIndex = read("api/sitemap-index.js");
 const robots = read("public/robots.txt");
 const essayPage = read("src/pages/EssayStudy.tsx");
 const css = read("src/index.css");
@@ -48,6 +49,7 @@ const checks = [
   ["library pages expose selected descendant resources to crawlers", libraryPrerender.includes("Selected resources in this section") && libraryPrerender.includes("collectDescendants")],
   ["robots.txt publishes the primary sitemap", /Sitemap:\s*https:\/\/www\.ompathstudy\.com\/sitemap\.xml/i.test(robots)],
   ["robots.txt permits public crawling by default", /User-agent:\s*\*\s*\nAllow:\s*\//i.test(robots)],
+  ["runtime robots.txt uses real line breaks rather than literal backslash-n text", sitemapIndex.includes('lines.join("\\n")') && !sitemapIndex.includes('lines.join("\\\\n")')],
 ];
 
 let failed = false;
