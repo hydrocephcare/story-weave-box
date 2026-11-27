@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   if (!(await isAdmin(bearer(req)))) return res.status(403).json({ error: "Administrator access required." });
 
   const result = {
-    unportedFunctions: { ok: false, ready: false, functions: ["google-drive-import", "google-drive-oauth"] },
+    unportedFunctions: { ok: true, ready: true, functions: [] },
   };
   const deepAI = new URL(req.url, "https://www.ompathstudy.com").searchParams.get("deep") === "1";
   result.neonDatabase = await check("neon-database", async () => {
