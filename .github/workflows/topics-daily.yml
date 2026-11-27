@@ -85,8 +85,6 @@ jobs:
         continue-on-error: true
         timeout-minutes: 60
         env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           TOPIC_DEEP_DB_COUNT: ${{ inputs.deep || (github.event_name == 'push' && '4') || '40' }}
           TOPIC_DEEP_DB_PARALLEL: "2"
         run: node scripts/topics/deep-fill-database.mjs
@@ -94,9 +92,6 @@ jobs:
         id: static_deep
         continue-on-error: true
         timeout-minutes: 45
-        env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
         run: node scripts/topics/deep-fill.mjs ${{ inputs.deep || (github.event_name == 'push' && '4') || '40' }}
       - name: Merge generated deep exam notes into the static topic pages
         id: merge_deep
@@ -110,15 +105,11 @@ jobs:
         id: note_check
         continue-on-error: true
         timeout-minutes: 30
-        env:
         run: node scripts/imed/validate-notes.mjs ${{ inputs.check || (github.event_name == 'push' && '4') || '40' }}
       - name: Write page summaries
         id: summaries
         continue-on-error: true
         timeout-minutes: 15
-        env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/summaries/fill.mjs 25 --parallel=2
       - name: Save generated topic and review data
         if: always()
