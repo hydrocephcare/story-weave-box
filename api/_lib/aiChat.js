@@ -17,7 +17,7 @@ const list = (...values) => [...new Set(values.flatMap((value) => {
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
   } catch {}
-  return raw.split(/[\\s,;]+/).map((item) => item.trim()).filter(Boolean);
+  return raw.split(/[\s,;]+/).map((item) => item.trim()).filter(Boolean);
 }))].reverse();
 
 const PERSONA = `You are Ompath AI, the study assistant of Ompath Study, a medical study site used by medical and clinical students in many countries, including low-resource hospitals.
