@@ -50,6 +50,7 @@ describe("subscription prompt over the AI panel", () => {
     expect(annual.getAttribute("aria-checked")).toBe("false");
     fireEvent.click(annual);
     expect(annual.getAttribute("aria-checked")).toBe("true");
-    expect(screen.getByText("Unlimited Ompath AI questions")).toBeTruthy();
+    expect(screen.getByText("Questions and full answer keys")).toBeTruthy();
+    expect(screen.getByText("Explanations and study resources")).toBeTruthy();
   });
 });
