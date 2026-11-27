@@ -206,7 +206,7 @@ export default async function handler(req, res) {
       ].join("\n");
       let essays = { saqs: [], laqs: [] };
       try { essays = parseEssays(await generateText(essayPrompt, 4500)); } catch {}
-      if (essays.saqs.length < 3 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
+      if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
 
       const date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
       const title = "Weekly " + unit + " Exam - " + date;
