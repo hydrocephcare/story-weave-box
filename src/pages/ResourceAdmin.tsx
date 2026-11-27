@@ -110,7 +110,7 @@ export default function ResourceAdmin() {
   async function remove(row: StudyResource) {
     if (!window.confirm(`Remove “${row.title}” from the library?`)) return;
     try {
-      if (!/^https?:\/\//i.test(row.file_path)) {
+      if (!/^https?:\/\//i.test(row.file_path) && !row.file_path.startsWith("drive://")) {
         await deleteFilesFromR2(RESOURCE_BUCKET, [row.file_path]);
       }
       await deleteResource(row.id);
