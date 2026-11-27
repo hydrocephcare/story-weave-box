@@ -54,7 +54,7 @@ function parseEssays(raw) {
 
 async function reviewQuestions(questions, strict = true) {
   const kept = [], disputed = [];
-  let dropped = 0, fixed = 0;
+  let dropped = 0, fixed = 0, reviewerUnavailable = false;
   for (let i = 0; i < questions.length; i += 15) {
     const chunk = questions.slice(i, i + 15);
     const prompt = [
@@ -74,7 +74,7 @@ async function reviewQuestions(questions, strict = true) {
       } catch { result = null; }
     }
     if (!Array.isArray(result)) {
-      if (strict) dropped += chunk.length;
+      if (strict) { dropped += chunk.length; reviewerUnavailable = true; }
       else kept.push(...chunk);
       continue;
     }
@@ -92,7 +92,7 @@ async function reviewQuestions(questions, strict = true) {
       kept.push({ ...q, options: optionsOk && !mismatch ? checked.options.map((x) => x.trim()) : q.options, explanation });
     });
   }
-  return { kept, dropped, disputed, fixed };
+  return { kept, dropped, disputed, fixed, reviewerUnavailable };
 }
 
 export default async function handler(req, res) {
@@ -118,6 +118,7 @@ export default async function handler(req, res) {
       const before = Array.isArray(rows[0]?.questions) ? rows[0].questions : [];
       const weekly = /^Weekly Exam/i.test(target.category || "");
       const review = await reviewQuestions(before, weekly);
+      if (review.reviewerUnavailable) return send(res, 503, { error: "The independent Gemini reviewer is unavailable. The question bank was not marked as reviewed; try again later." });
       const balanced = balanceBank(review.kept, { seed: String(target.id) }).questions;
       const changed = review.dropped > 0 || review.fixed > 0 || balanced.length !== before.length
         || balanced.some((q, i) => JSON.stringify(q.options) !== JSON.stringify(before[i]?.options));
@@ -192,6 +193,7 @@ export default async function handler(req, res) {
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " usable MCQs generated."); continue; }
 
       const review = await reviewQuestions(questions, true);
+      if (review.reviewerUnavailable) { skipped.push(unit + ": independent Gemini review is temporarily unavailable."); continue; }
       questions = balanceBank(review.kept, { seed: unit + new Date().toISOString().slice(0, 10) }).questions;
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " MCQs passed independent review."); continue; }
       questions = placeNewQuestions(questions.slice(0, 30));
