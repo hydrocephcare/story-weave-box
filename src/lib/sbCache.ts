@@ -1,8 +1,7 @@
 /**
- * Cuts the data the site pulls from Supabase (the free plan limits it, and the site was blocked once for going over).
- * Public, read-only list and page queries from visitors who are not signed in go through a Cloudflare Worker that keeps the answers in R2 (15 minutes for lists, 3 hours for one article, a minute for settings; if Supabase is down the saved copy is served), so thousands of visits cost one database read. Identical requests made at the same moment are also merged into one.
- * Signed-in users, writes, counts and anything not on the list below go straight to Supabase, exactly as before. If the cache is unreachable the
- * request falls back to Supabase, so a cache problem can never take the site down.
+ * Legacy public-read cache adapter retained for older Supabase-backed builds.
+ * The current Neon client does not import this module; do not wire it into Neon
+ * requests until the cache Worker itself has been migrated and tested.
  */
 const CACHE_WORKER = "https://ompath-sb-cache.hydrocephcare.workers.dev"; // keeps the answers in Cloudflare R2 (no download fees), see cloudflare/workers/sb-cache
 const PUBLIC_TABLES = "articles|mcq_sets|flashcard_sets|stories|essays|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|semesters|units|syllabus_topics|site_flags|article_comments|note_comments|slide_corrections|paper_answers|paper_seo|paper_similar|blog_polish|category_counts|search_aliases|pending_institutions|contest_university_results|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds|rpc/exam_catalog";
