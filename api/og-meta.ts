@@ -389,7 +389,7 @@ function tokenScore(target: string, candidate: string): number {
 }
 
 async function closestLivePath(table: string, param: string, prefix: "/blog" | "/mcqs" | "/flashcards" | "/essays" | "/contests", fallback: string): Promise<string | null> {
-  const rows = await sbFetch(table, "select=id,title,slug&published=eq.true&deleted_at=is.null&limit=1000");
+  const rows = await sbFetch(table, "select=id,title,slug,password_protected,scheduled_at,published,deleted_at&published=eq.true&deleted_at=is.null&limit=1000");
   let best: Record<string, string> | null = null;
   let score = 0;
   for (const row of rows || []) {
@@ -478,17 +478,22 @@ async function sbFetch(table: string, params: string) {
   return data || [];
 }
 
+function isPublicScheduled(row: Record<string, any> | null | undefined): boolean {
+  return Boolean(row && row.published === true && !row.deleted_at && row.password_protected !== true
+    && (!row.scheduled_at || new Date(row.scheduled_at).getTime() <= Date.now()));
+}
+
 async function fetchArticleBySlug(slug: string) {
   const decoded = decodeURIComponent(slug).trim().toLowerCase();
   const cols =
-    "id,title,content,slug,published,deleted_at,meta_title,meta_description,og_image_url,created_at,updated_at,category";
+    "id,title,content,slug,published,deleted_at,password_protected,scheduled_at,meta_title,meta_description,og_image_url,created_at,updated_at,category";
 
   // 1. Try exact slug match
   const bySlug = await sbFetch(
     "articles",
     `select=${cols}&slug=eq.${encodeURIComponent(decoded)}&published=eq.true&deleted_at=is.null&order=created_at.asc&limit=1`
   );
-  if (bySlug && bySlug.length > 0) return bySlug[0];
+  if (bySlug && bySlug.length > 0 && isPublicScheduled(bySlug[0])) return bySlug[0];
 
   // 2. Check if param is UUID-prefixed: {uuid}-{slug}
   const uuidPrefixMatch = decoded.match(UUID_PREFIX_REGEX);
@@ -501,14 +506,14 @@ async function fetchArticleBySlug(slug: string) {
       "articles",
       `select=${cols}&id=eq.${encodeURIComponent(uuid)}&published=eq.true&deleted_at=is.null&limit=1`
     );
-    if (byId && byId.length > 0) return byId[0];
+    if (byId && byId.length > 0 && isPublicScheduled(byId[0])) return byId[0];
 
     // 2b. Try stripped slug
     const byStripped = await sbFetch(
       "articles",
       `select=${cols}&slug=eq.${encodeURIComponent(strippedSlug)}&published=eq.true&deleted_at=is.null&limit=1`
     );
-    if (byStripped && byStripped.length > 0) return byStripped[0];
+    if (byStripped && byStripped.length > 0 && isPublicScheduled(byStripped[0])) return byStripped[0];
   }
 
   // 3. Try pure UUID
@@ -517,7 +522,7 @@ async function fetchArticleBySlug(slug: string) {
       "articles",
       `select=${cols}&id=eq.${encodeURIComponent(decoded)}&published=eq.true&deleted_at=is.null&limit=1`
     );
-    if (byId && byId.length > 0) return byId[0];
+    if (byId && byId.length > 0 && isPublicScheduled(byId[0])) return byId[0];
   }
 
   const candidates = await sbFetch(
@@ -525,7 +530,7 @@ async function fetchArticleBySlug(slug: string) {
     `select=id,title,slug&published=eq.true&deleted_at=is.null&limit=1000`
   );
   const wantedCanonical = cleanPublicSlug(decoded, "", "article");
-  const match = (candidates || []).find((row: Record<string, string>) =>
+  const match = (candidates || []).filter(isPublicScheduled).find((row: Record<string, string>) =>
     cleanPublicSlug(row.slug, row.title, "article") === wantedCanonical ||
     slugify(row.title || "") === decoded ||
     // the public address (hash suffix removed) is what the sitemap lists
@@ -537,7 +542,7 @@ async function fetchArticleBySlug(slug: string) {
       "articles",
       `select=${cols}&id=eq.${encodeURIComponent(match.id)}&published=eq.true&deleted_at=is.null&limit=1`
     );
-    if (byClean && byClean.length > 0) return byClean[0];
+    if (byClean && byClean.length > 0 && isPublicScheduled(byClean[0])) return byClean[0];
   }
 
   return null;
@@ -687,8 +692,8 @@ async function buildLiveIndexLinks(section: string, year?: string): Promise<stri
     `<li><a href="${htmlEscape(href)}">${htmlEscape(label)}</a>${category ? ` <small>${htmlEscape(category.replace(/^Year\s*\d+:\s*/i, ""))}</small>` : ""}</li>`;
 
   if (section === "blog" || section === "year") {
-    const rows = (await sbFetch("articles", "select=id,title,slug,category&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000")) || [];
-    const links = rows.filter(filterYear).map((row: Record<string, string>) => link(`/blog/${cleanPublicSlug(row.slug, row.title, "article")}`, row.title, row.category));
+    const rows = (await sbFetch("articles", "select=id,title,slug,category,published,deleted_at,password_protected,scheduled_at&published=eq.true&deleted_at=is.null&order=updated_at.desc&limit=1000")) || [];
+    const links = rows.filter(isPublicScheduled).filter(filterYear).map((row: Record<string, string>) => link(`/blog/${cleanPublicSlug(row.slug, row.title, "article")}`, row.title, row.category));
     return links.length ? `<section><h2>Live study notes</h2><ul>${links.join("\n")}</ul></section>` : "";
   }
   if (section === "mcqs") {
@@ -702,8 +707,8 @@ async function buildLiveIndexLinks(section: string, year?: string): Promise<stri
     return links.length ? `<section><h2>Live flashcards</h2><ul>${links.join("\n")}</ul></section>` : "";
   }
   if (section === "stories") {
-    const rows = (await sbFetch("stories", "select=id,title,slug,category&published=eq.true&deleted_at=is.null&order=created_at.desc&limit=1000")) || [];
-    const links = rows.map((row: Record<string, string>) => link(`/stories/${row.id}-${cleanPublicSlug(row.slug, row.title, "story")}`, row.title, row.category));
+    const rows = (await sbFetch("stories", "select=id,title,slug,category,published,deleted_at,password_protected,scheduled_at&published=eq.true&deleted_at=is.null&order=created_at.desc&limit=1000")) || [];
+    const links = rows.filter(isPublicScheduled).map((row: Record<string, string>) => link(`/stories/${row.id}-${cleanPublicSlug(row.slug, row.title, "story")}`, row.title, row.category));
     return links.length ? `<section><h2>Live stories</h2><ul>${links.join("\n")}</ul></section>` : "";
   }
   return "";
@@ -810,12 +815,12 @@ function publicStoryImage(...values: unknown[]): string {
 
 async function fetchStoryByParam(param: string) {
   const storyId = extractUuidFromParam(param);
-  const cols = "id,title,slug,content,category,cover_image_url,og_image_url,meta_title,meta_description,created_at,tags";
+  const cols = "id,title,slug,content,category,cover_image_url,og_image_url,meta_title,meta_description,created_at,tags,published,deleted_at,password_protected,scheduled_at";
   const rows = await sbFetch(
     "stories",
     `select=${cols}&${storyId ? `id=eq.${encodeURIComponent(storyId)}` : `slug=eq.${encodeURIComponent(param)}`}&published=eq.true&deleted_at=is.null&limit=1`
   );
-  return rows && rows.length > 0 ? rows[0] : null;
+  return rows && rows.length > 0 && isPublicScheduled(rows[0]) ? rows[0] : null;
 }
 
 interface ParsedQuestion {
