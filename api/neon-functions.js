@@ -1,5 +1,4 @@
 import topicMaintenance from "./_lib/topicMaintenance.js";
-import generateSitemap from "./generate-sitemap";
 import paystackHandler from "./paystack.js";
 import sendNotification from "./_lib/sendNotification.js";
 import generateExam from "./_lib/generateExam.js";
@@ -39,6 +38,7 @@ export default async function handler(req, res) {
       ...(req.query || {}),
       file: req.body?.file || req.query?.file || "all.xml",
     };
+    const { default: generateSitemap } = await import("./generate-sitemap");
     return generateSitemap(req, res);
   }
 
