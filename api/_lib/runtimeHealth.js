@@ -1,5 +1,6 @@
 import { isAdmin } from "./adminAgent.js";
 import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
+import { verifyNeonToken } from "./neonAdmin.js";
 
 const DEFAULT_JWKS = "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth/.well-known/jwks.json";
 const DEFAULT_DATA_API = "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
@@ -36,8 +37,21 @@ export default async function handler(req, res) {
       to_regprocedure('public.publish_topic_page(text,text,text,jsonb,text)') IS NOT NULL AS topic_publish_rpc,
       to_regprocedure('public.save_topic_deep(text,text,text,jsonb,jsonb)') IS NOT NULL AS topic_deep_rpc,
       to_regprocedure('public.consume_feature(text,integer)') IS NOT NULL AS entitlement_rpc,
-      to_regprocedure('public.is_mku_student(uuid)') IS NOT NULL AS mku_student_rpc`);
+      to_regprocedure('public.is_mku_student(uuid)') IS NOT NULL AS mku_student_rpc,
+      to_regprocedure('public.ensure_neon_user(uuid,text)') IS NOT NULL AS ensure_neon_user_rpc`);
     return rows[0] || {};
+  });
+
+  result.userIdentity = await check("user-identity", async () => {
+    const identity = await verifyNeonToken(bearer(req));
+    if (!identity) return { ready: false, reason: "Neon Auth token could not be verified." };
+    const sql = getPolishSql();
+    const account = await sql.query('SELECT email,"emailVerified" FROM neon_auth."user" WHERE id=$1 LIMIT 1', [identity.id]);
+    const email = String(identity.email || account[0]?.email || "").trim().toLowerCase();
+    if (!email || account[0]?.emailVerified !== true) return { ready: false, reason: "Verified Neon Auth email is required." };
+    const rows = await sql.query("SELECT public.ensure_neon_user($1,$2) AS result", [identity.id, email]);
+    const result = rows[0]?.result || {};
+    return { ready: true, migratedRows: Number(result.migrated_rows || 0), skipped: Array.isArray(result.skipped) ? result.skipped.length : 0 };
   });
 
   result.searchDataApi = await check("search-data-api", async () => {
