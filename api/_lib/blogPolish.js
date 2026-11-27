@@ -7,9 +7,8 @@
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
-import { getPolishSql, verifyPolishWriteKey } from "./neonPolishStore.js";
+import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
 
-const WRITE_KEY = () => process.env.POLISH_WRITE_KEY || "";
 const DAILY_CAP = Number(process.env.POLISH_DAILY_CAP || 40);
 const hits = new Map();
 const LIMIT = 20;
@@ -21,10 +20,9 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
   const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
   const gem = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-  const writeKey = WRITE_KEY();
-  if (!writeKey || !groq.trim() || !gem.trim()) return res.status(503).json({ status: "unavailable" });
+  if (!groq.trim() || !gem.trim()) return res.status(503).json({ status: "unavailable" });
   const sql = getPolishSql();
-  if (!(await verifyPolishWriteKey(writeKey))) return res.status(503).json({ status: "unavailable" });
+  if (!(await hasPolishWriteKey())) return res.status(503).json({ status: "unavailable" });
 
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
