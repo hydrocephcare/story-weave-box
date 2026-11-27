@@ -2,7 +2,7 @@ import { randomBytes } from "node:crypto";
 import { isAdmin } from "./adminAgent.js";
 import { getPolishSql } from "./neonPolishStore.js";
 
-const bearer = (req) => String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
+const bearer = (req) => String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
 const aiReady = () => Boolean(
   String(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "").trim()
   && String(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "").trim()
