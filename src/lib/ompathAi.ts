@@ -9,7 +9,6 @@
 //            ─► answer     (model, streamed, grounded on those passages)  /  fallback (passages shown as the answer)
 import { supabase } from "@/integrations/supabase/client";
 import { onSubscriptionMode, subscriptionsOn } from "@/lib/subscriptionMode";
-import { SUPABASE_PUBLISHABLE_KEY, SUPABASE_URL } from "@/lib/supabase-config";
 import { siteSearch, type SiteHit } from "@/lib/siteSearch";
 import { PAPER_NOTES, STATIC_NOTES, loadStaticNoteText, type StaticNote } from "@/data/staticNotes";
 import { parseQuery, scoringTerms, type ParsedQuery } from "@/lib/ompathAiQuery";
@@ -237,24 +236,21 @@ export async function streamAnswer(t: AiTurnInput, h: StreamHandlers): Promise<s
     ? t.question
     : `${t.question}\n\n(Nothing on Ompath Study matched this. Answer from sound general medical knowledge and begin by saying it is general guidance, not from the site's notes.)`;
   const payload = JSON.stringify({ question, history: t.history.slice(-6), sources: buildSources(t.retrieval) });
-  // our own server first (Groq, then Gemini, keys in turn); the older function is the fallback
+  // Use the Neon-backed site API only. The retired Supabase Edge Function rejects Neon Auth tokens.
   const send = async () => {
     const { data: sessionData } = await supabase.auth.getSession();
     const token = sessionData.session?.access_token;
     const headers = { "Content-Type": "application/json", ...(token ? { Authorization: `Bearer ${token}` } : {}) };
-    if (!chatApiDown()) {
-      try {
-        const r = await fetch("/api/ai-chat", { method: "POST", headers, body: payload, signal: h.signal });
-        if (r.ok && r.body) return r;
-        if (r.status === 404 || r.status === 503 || r.status === 405) markChatApiDown();
-      } catch (e) { if ((e as Error).name === "AbortError") throw e; }
+    if (chatApiDown()) throw new Error("Ompath AI service is temporarily unavailable.");
+    try {
+      const r = await fetch("/api/ai-chat", { method: "POST", headers, body: payload, signal: h.signal });
+      if (r.status === 404 || r.status === 503 || r.status === 405) markChatApiDown();
+      return r;
+    } catch (e) {
+      if ((e as Error).name === "AbortError") throw e;
+      markChatApiDown();
+      throw e;
     }
-    return fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, {
-      method: "POST",
-      headers: { ...headers, apikey: SUPABASE_PUBLISHABLE_KEY },
-      body: payload,
-      signal: h.signal,
-    });
   };
   // a dropped connection or a busy server (5xx, 429) is tried once more before we fall back to the notes
   let res = await send().catch((e) => { if ((e as Error).name === "AbortError") throw e; return null; });
