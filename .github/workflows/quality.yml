@@ -28,6 +28,7 @@ jobs:
           node --check scripts/imed/validate-notes.mjs
           node --check scripts/blogs/polish-batch.mjs
           node --check scripts/zone/daily.mjs
+          node --check scripts/topics/corpus.mjs
           node --check scripts/topics/bulk-fill.mjs
           node --check scripts/topics/deep-fill.mjs
           node --check scripts/topics/merge-ai.mjs
