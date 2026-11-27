@@ -13,6 +13,7 @@ on:
       - "scripts/topics/deep-fill-database.mjs"
       - "scripts/topics/review-database-pages.mjs"
       - "scripts/topics/build-topics.mjs"
+      - "scripts/topics/corpus.mjs"
       - "supabase/functions/_shared/topicAi.js"
       - "supabase/functions/_shared/contentCheck.js"
   workflow_dispatch:
