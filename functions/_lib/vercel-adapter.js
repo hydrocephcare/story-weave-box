@@ -1,5 +1,5 @@
 // Minimal Vercel-style request/response adapter for legacy API handlers running as Pages Functions.
-export async function runVercelHandler(handler, request) {
+export async function runVercelHandler(handler, request, ...handlerArgs) {
   const url = new URL(request.url);
   const query = {};
   for (const [key, value] of url.searchParams) {
@@ -7,10 +7,11 @@ export async function runVercelHandler(handler, request) {
     else query[key] = value;
   }
 
-  const headersIn = Object.fromEntries(request.headers.entries());
+  let rawBytes = new Uint8Array();
   let body;
   if (request.method !== "GET" && request.method !== "HEAD") {
-    const raw = await request.text();
+    rawBytes = new Uint8Array(await request.arrayBuffer());
+    const raw = new TextDecoder().decode(rawBytes);
     if (raw) {
       const type = request.headers.get("content-type") || "";
       if (type.includes("application/json")) {
@@ -23,9 +24,10 @@ export async function runVercelHandler(handler, request) {
   const req = {
     method: request.method,
     url: request.url,
-    headers: headersIn,
+    headers: Object.fromEntries(request.headers.entries()),
     query,
     body,
+    async *[Symbol.asyncIterator]() { if (rawBytes.length) yield rawBytes; },
   };
 
   let statusCode = 200;
@@ -41,8 +43,7 @@ export async function runVercelHandler(handler, request) {
     set statusCode(value) { statusCode = Number(value) || 200; },
     get headersSent() { return headersSent; },
     setHeader(name, value) {
-      if (Array.isArray(value)) responseHeaders.set(name, value.join(", "));
-      else responseHeaders.set(name, String(value));
+      responseHeaders.set(name, Array.isArray(value) ? value.join(", ") : String(value));
       return this;
     },
     getHeader(name) { return responseHeaders.get(name); },
@@ -68,27 +69,32 @@ export async function runVercelHandler(handler, request) {
         headersSent = true;
       }
       if (value !== undefined && value !== null) {
-        const bytes = typeof value === "string" ? new TextEncoder().encode(value) : value;
-        streamController.enqueue(bytes);
+        streamController.enqueue(typeof value === "string" ? new TextEncoder().encode(value) : value);
       }
       return true;
     },
     end(value) {
       if (stream) {
-        if (value !== undefined && value !== null) {
-          const bytes = typeof value === "string" ? new TextEncoder().encode(value) : value;
-          streamController.enqueue(bytes);
-        }
+        if (value !== undefined && value !== null) streamController.enqueue(typeof value === "string" ? new TextEncoder().encode(value) : value);
         try { streamController.close(); } catch {}
       } else if (value !== undefined && value !== null) responseBody = value;
       headersSent = true;
       ended = true;
       return this;
     },
+    redirect(statusOrUrl, maybeUrl) {
+      const code = typeof statusOrUrl === "number" ? statusOrUrl : 302;
+      const target = typeof statusOrUrl === "number" ? maybeUrl : statusOrUrl;
+      statusCode = code;
+      responseHeaders.set("location", String(target || "/"));
+      ended = true;
+      headersSent = true;
+      return this;
+    },
   };
 
   try {
-    await handler(req, res);
+    await handler(req, res, ...handlerArgs);
   } catch (error) {
     if (streamController) {
       try { streamController.error(error); } catch {}
