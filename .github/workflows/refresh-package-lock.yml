@@ -41,3 +41,5 @@ jobs:
           git add package-lock.json
           git commit -m "Fix npm lockfile synchronization for Cloudflare build"
           git push origin HEAD:main
+
+# Keep this workflow as the canonical lockfile synchronization step for Cloudflare Pages.
