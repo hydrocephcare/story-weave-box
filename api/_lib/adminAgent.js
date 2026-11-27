@@ -1,5 +1,5 @@
 // POST /api/ai?task=agent { message, history, context }: the admin assistant. It only PLANS: it returns { reply, actions } and the browser, with the admin's own
-// login, runs the actions after the admin presses Yes. Requires a signed-in administrator (checked against Supabase with the caller's own token).
+// login, runs the actions after the admin presses Yes. Requires a signed-in administrator (checked against Neon Auth and the caller's own token).
 import { askJson } from "./llm.js";
 import { isNeonAdmin } from "./neonAdmin.js";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
