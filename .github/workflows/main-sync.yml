@@ -101,4 +101,4 @@ jobs:
           VERCEL: "1"
 
       - name: Compile Cloudflare Pages Functions
-        run: npx wrangler pages functions build ./functions --outdir ./.wrangler/pages-functions --compatibility-date 2026-11-27
+        run: npx wrangler pages functions build ./functions --outdir ./.wrangler/pages-functions --compatibility-date 2026-11-27 --compatibility-flags nodejs_compat,nodejs_compat_populate_process_env
