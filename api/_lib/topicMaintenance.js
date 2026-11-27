@@ -2,7 +2,8 @@ import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -171,6 +172,59 @@ PAGE TEXT:
         [limit, offset],
       );
       return res.status(200).json({ rows });
+    }
+
+    if (task === "review-topic") {
+      const slug = String(body.slug || "");
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
+      const rows = await getDb()`SELECT slug,name,category,content,updated_at,ai_review_status FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
+      const row = rows[0];
+      if (!row) return res.status(404).json({ error: "Published topic not found." });
+      if (row.ai_review_status === "passed" && row.content?.aiReview?.status === "passed"
+          && (row.content?.sections?.length || 0) >= 9 && (row.content?.exam?.length || 0) >= 8
+          && (row.content?.faq?.length || 0) >= 3 && JSON.stringify(row.content).split(/\\s+/).length >= 700) {
+        return res.status(200).json({ status: "existing", slug });
+      }
+      const prior = row.content || {};
+      const context = JSON.stringify({ priorSummary: prior.summary, priorSections: prior.sections, priorExam: prior.exam }).slice(0, 5000);
+      const result = await generateReviewedTopicPage({
+        name: row.name, category: row.category || "Medicine", context,
+        choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
+      }, { env: process.env, maxFixRounds: 1, timeoutMs: 55000 });
+      if (!result.page?.medical || result.review?.status !== "passed") return res.status(422).json({ status: "held", slug, reason: "independent_review_failed" });
+      const page = { ...result.page, aiReview: { ...(result.page.aiReview || {}), status: "passed", model: result.review.model, rounds: result.review.rounds || 0 } };
+      if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3
+          || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
+        return res.status(422).json({ status: "held", slug, reason: "structure_check_failed" });
+      }
+      const saved = await getDb()`UPDATE public.topic_pages
+        SET content = ${JSON.stringify(page)}::jsonb, model = ${page.model || "groq"},
+            reviewed = false, updated_at = now(), generator_model = ${page.model || "groq"},
+            ai_review_status = 'passed', ai_review_model = ${String(result.review.model || "gemini")},
+            ai_reviewed_at = now(), ai_review_fix_rounds = ${Number(result.review.rounds) || 0}
+        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
+        RETURNING slug`;
+      return res.status(200).json({ status: saved.length ? "reviewed" : "conflict", slug });
+    }
+
+    if (task === "deep-topic") {
+      const slug = String(body.slug || "");
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
+      const rows = await getDb()`SELECT slug,name,category,content,updated_at FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
+      const row = rows[0];
+      if (!row) return res.status(404).json({ error: "Published topic not found." });
+      if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
+      const deep = await generateCheckedDeep(
+        { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
+        process.env, fetch, 240000,
+      );
+      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
+      const content = { ...(row.content || {}), deep };
+      const saved = await getDb()`UPDATE public.topic_pages
+        SET content = ${JSON.stringify(content)}::jsonb, updated_at = now()
+        WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
+        RETURNING slug`;
+      return res.status(200).json({ status: saved.length ? "deep_saved" : "conflict", slug });
     }
 
     if (task === "review-save") {
