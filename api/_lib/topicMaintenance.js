@@ -85,7 +85,7 @@ export default async function handler(req, res) {
           || !String(page.aiReview?.model || "").trim() || !Array.isArray(page.sections) || page.sections.length < 3
           || !Array.isArray(page.exam) || page.exam.length < 8 || String(page.summary || "").length < 100
           || JSON.stringify(page).length > 60000
-          || /https?:|www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text/i.test(JSON.stringify(page))) {
+          || (/https?:|javascript:|data:text/i.test(JSON.stringify(page)) || JSON.stringify(page).toLowerCase().includes("www.") || /<[a-z/!]/i.test(JSON.stringify(page)) || /(?:onerror|onload) *=/i.test(JSON.stringify(page)))) {
         return res.status(400).json({ error: "Topic did not pass the publication safeguards." });
       }
       const rows = await getDb()`SELECT public.publish_topic_page(
