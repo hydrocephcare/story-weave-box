@@ -30,7 +30,10 @@ describe("Ompath AI query parsing", () => {
     expect(parseQuery("anemia in pediatrics").topic).toContain("paediatrics");
   });
   it("corrects common medical spelling errors such as autophagy", () => {
-    expect(parseQuery("whats auphagy").topic).toBe("autophagy");
+    const p = parseQuery("whats auphagy");
+    expect(p.topic).toBe("autophagy");
+    expect(p.isQuestion).toBe(true);
+    expect(p.wants).toBe("answer");
   });
   it("gives search words and follow-ups", () => {
     const p = parseQuery("nephrotic syndrome in children");
