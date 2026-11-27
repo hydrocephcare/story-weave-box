@@ -105,5 +105,5 @@ export async function runVercelHandler(handler, request, ...handlerArgs) {
 
   if (stream) return new Response(stream, { status: statusCode, headers: responseHeaders });
   if (!ended && responseBody === null) responseBody = "";
-  return new Response(responseBody, { status: statusCode, headers: responseHeaders });
+  return new Response(statusCode === 204 || statusCode === 304 ? null : responseBody, { status: statusCode, headers: responseHeaders });
 }
