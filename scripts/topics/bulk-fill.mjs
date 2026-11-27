@@ -43,7 +43,7 @@ async function worker() {
       for (let attempt = 0; attempt < 5 && !page; attempt++) {
         try {
           if (inGitHubActions) {
-            const generated = await maintenanceRequest("generate-publish", { name: t.n, category: t.c, context: contextOf(t, existing) });
+            const generated = await maintenanceRequest("generate-publish", { slug: it.s, name: t.n, category: t.c, context: contextOf(t, existing) });
             if (!generated?.ok || !generated.page) throw new Error("Cloudflare generation/publication refused: " + String(generated?.reason || "no reviewed page"));
             page = generated.page;
           } else {
