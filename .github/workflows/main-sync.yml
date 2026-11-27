@@ -73,6 +73,8 @@ jobs:
           node --check api/_lib/student-data.js
           node --check api/paystack.js
           node --check api/paystack-webhook.js
+          node --check api/_lib/onekitty.js
+          node --check api/neon-functions.js
           node --check api/sitemap.js
           node --check api/_lib/blogPolish.js
           node --check api/_lib/blogPolishVerify.js
