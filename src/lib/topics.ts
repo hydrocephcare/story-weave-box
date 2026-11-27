@@ -283,7 +283,7 @@ export async function writeDeepNotes(slug: string, name: string, category: strin
       headers: { "content-type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify({ mode: "deep", slug, name, category, base: digest, past: past.slice(0, 12) }),
     });
-    const j = (await r.json().catch(() => null)) as { status?: string; deep?: DeepNotes } | null;
+    const j = (await r.json().catch(() => null)) as { status?: string; deep?: DeepNotes; saved?: boolean } | null;
     if (j?.status === "published" && j.deep && j.saved === true) {
       return { deep: j.deep };
     }
