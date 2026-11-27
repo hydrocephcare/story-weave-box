@@ -52,6 +52,7 @@ export default function AiHealthAdmin() {
           const c = runtime.checks || {};
           const checks = [
             ["Neon database", c.neonDatabase?.ok && c.neonDatabase?.connected],
+            ["Neon user identity", c.userIdentity?.ok && c.userIdentity?.ready && (c.userIdentity?.skipped || 0) === 0],
             ["Search Data API", c.searchDataApi?.ok && c.searchDataApi?.connected],
             ["Neon Auth keys", c.authJwks?.ok && c.authJwks?.reachable],
             ["Main XML sitemap", c.mainSitemap?.ok && c.mainSitemap?.ready],
