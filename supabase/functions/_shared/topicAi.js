@@ -181,7 +181,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
   // Google keys: any number, comma separated in GEMINI_API_KEYS (or GEMINI_API_KEY, _2, _3). They take turns, so no single key is worn out,
   // and a key that is over its limit or refused is skipped for the rest of this run.
   const keys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
-  const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
+  const models = String(env.GEMINI_MODELS ?? "gemini-3.8-flash,gemini-3.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
   const start = keys.length ? turn++ % keys.length : 0;
   for (let i = 0; i < keys.length; i++) {
     const key = keys[(start + i) % keys.length];
@@ -235,7 +235,7 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
 
 
 
-  const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
+  const models = String(env.GEMINI_MODELS ?? "gemini-3.8-flash,gemini-3.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
   if (!keys.length) throw new Error("Gemini review is not configured (GEMINI_API_KEYS).");
   if (!models.length) throw new Error("No Gemini review model is configured.");
 
