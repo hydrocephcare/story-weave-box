@@ -88,7 +88,8 @@ export default async function handler(req, res) {
   if (mode === "research" || mode === "topics" || mode === "stories") return extraSitemap(req, res, mode);
   try {
     const file = typeof req.query?.file === "string" ? req.query.file : "all.xml";
-    const upstream = await fetch(`https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/generate-sitemap?file=${encodeURIComponent(file)}`, {
+    const sitemapUrl = new URL(`/api/generate-sitemap?file=${encodeURIComponent(file)}`, `https://${req.headers.host || "www.ompathstudy.com"}`);
+    const upstream = await fetch(sitemapUrl, {
       method: "GET",
       headers: { Accept: "application/xml,text/xml;q=0.9,*/*;q=0.8" },
     });
