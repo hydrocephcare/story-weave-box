@@ -1,6 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -89,9 +90,10 @@ export default async function handler(req, res) {
         return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
       }
       const generated = await generateReviewedTopicPage({ name, category, context }, { env });
-      const page = generated?.page;
-      if (!page) return res.status(422).json({ ok: false, reason: "no_page" });
-      if (page.medical !== true) return res.status(200).json({ ok: true, medical: false, slug: body.slug || null, page });
+      const generatedPage = generated?.page;
+      if (!generatedPage) return res.status(422).json({ ok: false, reason: "no_page" });
+      if (generatedPage.medical !== true) return res.status(200).json({ ok: true, medical: false, slug: body.slug || null, page: generatedPage });
+      const page = { ...generatedPage, subject: pickSubject(generatedPage.subject, `${name} ${category}`) };
       if (page.aiReview?.status !== "passed" || !String(page.aiReview?.model || "").trim()
           || !Array.isArray(page.sections) || page.sections.length < 3
           || !Array.isArray(page.exam) || page.exam.length < 8
