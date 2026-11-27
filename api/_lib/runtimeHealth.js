@@ -223,6 +223,20 @@ export default async function handler(req, res) {
       authenticatedPoliciesMissing: authenticatedMissing, anonymousPoliciesMissing: anonymousMissing };
   });
 
+  result.googleDrive = await check("google-drive", async () => {
+    const rows = await getPolishSql().query(`SELECT
+      to_regclass('public.study_resources') IS NOT NULL AS study_resources,
+      to_regclass('public.google_drive_connections') IS NOT NULL AS connections,
+      to_regclass('public.google_drive_oauth_states') IS NOT NULL AS oauth_states,
+      to_regclass('public.google_drive_import_jobs') IS NOT NULL AS import_jobs,
+      to_regclass('public.google_drive_import_items') IS NOT NULL AS import_items`);
+    const schema = rows[0] || {};
+    const credentialsConfigured = Boolean(process.env.GOOGLE_DRIVE_CLIENT_ID && process.env.GOOGLE_DRIVE_CLIENT_SECRET);
+    return { ready: Object.values(schema).every((value) => value === true) && credentialsConfigured,
+      credentialsConfigured, schema,
+      redirectUri: process.env.GOOGLE_DRIVE_REDIRECT_URI || "https://ompathstudy.com/api/google-drive-oauth" };
+  });
+
   result.contestManagement = await check("contest-management", async () => {
     const rows = await getPolishSql().query(`SELECT
       to_regclass('public.contests') IS NOT NULL AS contests,
