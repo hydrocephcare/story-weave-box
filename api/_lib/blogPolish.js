@@ -25,10 +25,10 @@ export default async function handler(req, res) {
   const sql = getPolishSql();
   if (!(await hasPolishWriteKey())) return res.status(503).json({ status: "unavailable" });
   const workflow = await isTrustedBlogWorkflow(req.headers.authorization);
+  const now = Date.now();
 
   if (!workflow) {
     const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
-    const now = Date.now();
     const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
     if (mine.length >= LIMIT) return res.status(429).json({ status: "busy" });
     hits.set(ip, [...mine, now]);
