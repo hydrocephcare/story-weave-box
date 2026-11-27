@@ -5,6 +5,7 @@ describe("Cloudflare Pages runtime", () => {
   it("has Pages Function entrypoints for the production API routes", () => {
     const required = [
       "functions/api/ai.js",
+      "functions/api/ai-polish.js",
       "functions/api/neon-functions.js",
       "functions/api/paystack-webhook.js",
       "api/_lib/onekitty.js",
