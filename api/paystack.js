@@ -23,10 +23,13 @@ async function userFromRequest(req) {
     const id = String(p.sub || "");
     if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
     const sql = db();
-    const account = await sql.query("SELECT email FROM auth.users WHERE id=$1 LIMIT 1", [id]);
-    const email = String(p.email || p.user?.email || account[0]?.email || "").trim().toLowerCase();
+    const account = await sql.query("SELECT email,name FROM neon_auth.\"user\" WHERE id=$1 LIMIT 1", [id]);
+    const legacy = account[0] ? [] : await sql.query("SELECT email FROM auth.users WHERE id=$1 LIMIT 1", [id]);
+    const email = String(p.email || p.user?.email || account[0]?.email || legacy[0]?.email || "").trim().toLowerCase();
     if (!email) return null;
-    return { id, email, name: String(p.name || p.user?.name || "").slice(0, 120) };
+    // Keep the migrated auth.users compatibility table in sync for existing foreign keys.
+    await sql.query("INSERT INTO auth.users (id,email) VALUES ($1,$2) ON CONFLICT (id) DO UPDATE SET email=EXCLUDED.email", [id,email]);
+    return { id, email, name: String(p.name || p.user?.name || account[0]?.name || "").slice(0, 120) };
   } catch { return null; }
 }
 async function verifyWithPaystack(reference, secret) {
@@ -132,7 +135,7 @@ async function accessCode(req, res) {
   const sql = db();
   if (action === "list") {
     if (!user?.id) return out(res, 401, { error: "Sign in required." });
-    const roles = await sql.query("SELECT 1 FROM public.user_roles WHERE user_id=$1 AND role='admin' LIMIT 1", [user.id]);
+    const roles = await sql.query("SELECT 1 FROM public.user_roles r JOIN auth.users u ON u.id=r.user_id WHERE lower(u.email)=$1 AND r.role='admin' LIMIT 1", [user.email]);
     if (!roles[0]) return out(res, 403, { error: "Administrator access required." });
     const rows = await sql.query("SELECT code,plan,amount,currency,expires_at,redeem_count,created_at FROM public.access_grants ORDER BY created_at DESC LIMIT 25");
     return out(res, 200, { passes: rows.map((g) => ({ code: String(g.code).slice(0,3) + "•••" + String(g.code).slice(-3), plan: g.plan, amount: Number(g.amount || 0), currency: g.currency || "KES", expires_at: g.expires_at, redeem_count: g.redeem_count })) });
