@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { maintenanceRequest } from "./maintenance-client.mjs";
 
 const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 1000);
