@@ -7,6 +7,7 @@ describe("Cloudflare Pages runtime", () => {
       "functions/api/ai.js",
       "functions/api/neon-functions.js",
       "functions/api/paystack-webhook.js",
+      "api/_lib/onekitty.js",
       "functions/api/note-card.js",
       "functions/api/source-pdf.js",
       "functions/api/sitemap-index.js",
