@@ -1,17 +1,14 @@
 // Writes the deep exam notes ahead of time for topic pages that already have a revision page, a few each day, so search engines and readers
 // find them without anyone spending credits at the moment of reading. Runs in the daily workflow after the revision pages.
 //   node scripts/topics/deep-fill.mjs [count]
-// Reads and writes src/data/topicAi/<slug>.json (adds a "deep" key). Most-used topics first. Stops by itself when the AI keys run out.
+// Reads and writes src/data/topicAi/<slug>.json (adds a "deep" key). Most-used topics first. Stops by itself when Cloudflare AI capacity is unavailable.
 import fs from "node:fs";
 import path from "node:path";
-import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
+import { maintenanceRequest } from "./maintenance-client.mjs";
 
 const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 40);
 const ONLY = (process.argv.find((a) => a.startsWith("--slug=")) || "").split("=")[1];
-const local = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
-const env = { GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local(".gemini-keys.local")].filter(Boolean).join(","), GROQ_API_KEYS: [process.env.GROQ_API_KEYS, local(".groq-keys.local")].filter(Boolean).join(",") };
-if (!env.GEMINI_API_KEYS || !env.GROQ_API_KEYS) throw new Error("Both GROQ_API_KEYS and GEMINI_API_KEYS are required.");
 if (!fs.existsSync("public/topics/index.json") || !fs.existsSync(DIR)) { console.log("No topic pages yet."); process.exit(0); }
 
 const index = JSON.parse(fs.readFileSync("public/topics/index.json", "utf8"));
@@ -31,7 +28,8 @@ for (const slug of todo) {
   try {
     const full = fs.existsSync(path.join("public/topics", `${slug}.json`)) ? JSON.parse(fs.readFileSync(path.join("public/topics", `${slug}.json`), "utf8")) : {};
     const past = [...(full.qs ?? []).map((x) => x.q), ...(full.es ?? []).map((x) => x.q)].slice(0, 12);
-    const deep = await generateCheckedDeep({ name: t?.n ?? page.title ?? slug.replace(/-/g, " "), category: t?.c ?? page.subject ?? "", base: page, past }, env);
+    const result = await maintenanceRequest("deep-static", { name: t?.n ?? page.title ?? slug.replace(/-/g, " "), category: t?.c ?? page.subject ?? "", base: page, past });
+    const deep = result.deep;
     // the notes were cross-checked (and repaired once if needed) inside generateCheckedDeep; a serious error left over throws and nothing is saved
     fs.writeFileSync(file, JSON.stringify({ ...page, deep: deep }, null, 1) + "\n");
     written++; misses = 0;
