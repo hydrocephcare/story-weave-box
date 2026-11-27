@@ -149,7 +149,7 @@ export default async function handler(req, res) {
     const requestedYear = Number(body.year) || 0;
     const requestedUnit = String(body.unit || "").toLowerCase();
     const force = body.force === true;
-    const maxUnits = Math.max(1, Math.min(3, Number(body.units) || 1));
+    const maxUnits = Math.max(1, Math.min(3, Number(body.units) || 3));
     const candidates = [...groups.entries()].filter(([unit, g]) =>
       g.articles.length + g.banks.length >= 3 &&
       (!requestedYear || yearOf(unit) === requestedYear) &&
