@@ -55,6 +55,7 @@ export default function AiHealthAdmin() {
             ["Neon user identity", c.userIdentity?.ok && c.userIdentity?.ready && (c.userIdentity?.skipped || 0) === 0],
             ["Search Data API", c.searchDataApi?.ok && c.searchDataApi?.connected],
             ["Neon Auth keys", c.authJwks?.ok && c.authJwks?.reachable],
+            ["AI entitlements", c.entitlements?.ok && c.entitlements?.ready],
             ["Main XML sitemap", c.mainSitemap?.ok && c.mainSitemap?.ready],
             ["Stories XML sitemap", c.storiesSitemap?.ok && c.storiesSitemap?.ready],
             ["Main crawler metadata", c.crawlerMetadata?.ok && c.crawlerMetadata?.ready],
