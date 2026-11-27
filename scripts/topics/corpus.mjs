@@ -1,9 +1,8 @@
-// Reads the OmpathStudy teaching corpus from Neon for the topic builder.
-// Database access is server-side only: NEON_DATABASE_URL (or DATABASE_URL) is required.
-// No Supabase URL, anon key, cache worker, or legacy Supabase fallback is used.
+// Reads the public OmpathStudy teaching corpus through Neon Data API.
+// Uses a short-lived anonymous Neon Auth token; no PostgreSQL password is needed in GitHub Actions.
 import fs from "node:fs";
 import path from "node:path";
-import { neon } from "@neondatabase/serverless";
+import { createClient, SupabaseAuthAdapter } from "@neondatabase/neon-js";
 
 function readDotEnv() {
   if (!fs.existsSync(".env")) return {};
@@ -15,9 +14,17 @@ function readDotEnv() {
     }));
 }
 const env = { ...readDotEnv(), ...process.env };
-const connectionString = env.NEON_DATABASE_URL || env.DATABASE_URL || "";
-if (!connectionString) throw new Error("NEON_DATABASE_URL (or DATABASE_URL) is required. Topic builds must not fall back to Supabase.");
-const db = neon(connectionString);
+const AUTH_URL = env.NEON_AUTH_URL || env.VITE_NEON_AUTH_URL;
+const DATA_API_URL = env.NEON_DATA_API_URL || env.VITE_NEON_DATA_API_URL;
+if (!AUTH_URL || !DATA_API_URL) throw new Error("NEON_AUTH_URL and NEON_DATA_API_URL are required.");
+
+const client = createClient({
+  auth: { adapter: SupabaseAuthAdapter(), url: AUTH_URL, allowAnonymous: true },
+  dataApi: {
+    url: DATA_API_URL,
+    options: { global: { headers: env.POLISH_WRITE_KEY ? { "x-polish-key": env.POLISH_WRITE_KEY } : {} } },
+  },
+});
 
 const CACHE = ".cache/topics-corpus.json";
 const COLS = {
@@ -27,35 +34,30 @@ const COLS = {
 };
 const PAGE_SIZE = 500;
 
-async function all(table, columns, where = "published = true AND deleted_at IS NULL") {
-  if (!Object.hasOwn(COLS, table) && table !== "topic_pages") throw new Error("Unsupported topic corpus table: " + table);
+async function all(table, columns, filter) {
   const output = [];
   for (let offset = 0; ; offset += PAGE_SIZE) {
-    const rows = await db.query(
-      `SELECT ${columns} FROM public.${table} WHERE ${where} ORDER BY created_at DESC LIMIT $1 OFFSET $2`,
-      [PAGE_SIZE, offset],
-    );
+    let query = client.from(table).select(columns).order("created_at", { ascending: false }).range(offset, offset + PAGE_SIZE - 1);
+    if (filter === "library") query = query.eq("published", true).is("deleted_at", null);
+    if (filter === "topics") query = query.eq("status", "published");
+    const { data, error } = await query;
+    if (error) throw new Error("Neon Data API " + table + ": " + error.message);
+    const rows = data || [];
     output.push(...rows);
     if (rows.length < PAGE_SIZE) break;
   }
   return output;
 }
 
-/** Published AI topic pages are read from Neon so static builds and sitemaps include newly published pages. */
 export async function loadPublishedTopicPages() {
-  try {
-    return await all("topic_pages", "slug,name,category,content,reviewed,updated_at", "status = 'published'");
-  } catch (error) {
-    console.error("[topics] Could not read published topic pages from Neon:", error instanceof Error ? error.message : String(error));
-    throw error;
-  }
+  return all("topic_pages", "slug,name,category,content,reviewed,updated_at", "topics");
 }
 
 export async function loadCorpus() {
   const [articles, mcqs, essays] = await Promise.all([
-    all("articles", COLS.articles),
-    all("mcq_sets", COLS.mcq_sets),
-    all("essays", COLS.essays),
+    all("articles", COLS.articles, "library"),
+    all("mcq_sets", COLS.mcq_sets, "library"),
+    all("essays", COLS.essays, "library"),
   ]);
   const notes = JSON.parse(fs.readFileSync("src/data/staticNotes.json", "utf8"))
     .filter((note) => !note.unlisted)
