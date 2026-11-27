@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   if (!(await isAdmin(bearer(req)))) return res.status(403).json({ error: "Administrator access required." });
 
   const result = {
-    unportedFunctions: { ok: false, ready: false, functions: ["contest-control", "google-drive-import", "google-drive-oauth"] },
+    unportedFunctions: { ok: false, ready: false, functions: ["google-drive-import", "google-drive-oauth"] },
   };
   const deepAI = new URL(req.url, "https://www.ompathstudy.com").searchParams.get("deep") === "1";
   result.neonDatabase = await check("neon-database", async () => {
@@ -209,7 +209,20 @@ export default async function handler(req, res) {
     return { configured, ready: false, reason: "Google Drive OAuth and import tables still need migration to Neon." };
   });
 
-  result.contestManagement = { ok: false, ready: false, reason: "Contest management is not yet ported to Neon." };
+  result.contestManagement = await check("contest-management", async () => {
+    const rows = await getPolishSql().query(`SELECT
+      to_regclass('public.contests') IS NOT NULL AS contests,
+      to_regclass('public.contest_rounds') IS NOT NULL AS rounds,
+      to_regclass('public.contest_questions') IS NOT NULL AS questions,
+      to_regclass('public.contest_registrations') IS NOT NULL AS registrations,
+      to_regclass('public.contest_attempts') IS NOT NULL AS attempts,
+      to_regclass('private.contest_answer_keys') IS NOT NULL AS answer_keys,
+      to_regprocedure('public.admin_replace_contest_questions(uuid,jsonb)') IS NOT NULL AS question_import_rpc,
+      to_regprocedure('public.score_contest_attempt(uuid)') IS NOT NULL AS scoring_rpc`);
+    const schema = rows[0] || {};
+    const ready = Object.values(schema).every((value) => value === true);
+    return { ready, schema, handler: "cloudflare-pages-neon" };
+  });
 
   result.storiesSitemap = await check("stories-sitemap", async () => {
     const response = await fetch("https://stories.ompathstudy.com/stories-sitemap.xml", { signal: AbortSignal.timeout(10000) });
