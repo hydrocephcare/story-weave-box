@@ -13,7 +13,7 @@ const db = () => {
 };
 const env = () => process.env;
 const normalizeUnit = (value) => String(value || "Uncategorized").trim();
-const yearOf = (value) => Number(/Year\\s*(\\d)/i.exec(String(value))?.[1]) || 0;
+const yearOf = (value) => Number(/Year\s*(\d)/i.exec(String(value))?.[1]) || 0;
 
 async function generateText(prompt, maxTokens = 5000) {
   const result = await askModel(prompt, { env: env(), timeoutMs: 60000, maxTokens, plain: true });
@@ -38,7 +38,7 @@ function parseMcqs(raw) {
 }
 
 function parseEssays(raw) {
-  const match = raw.match(/\\{[\\s\\S]*\\}/);
+  const match = raw.match(/\{[\s\S]*\}/);
   if (!match) return { saqs: [], laqs: [] };
   try {
     const data = JSON.parse(match[0]);
@@ -62,13 +62,13 @@ async function reviewQuestions(questions, strict = true) {
       "For every question determine your own single best answer, status (ok, incomplete, ambiguous), and rewrite options to similar length and grammar without changing their meaning or order.",
       "Do not preserve an incorrect answer key. If your answer differs from the supplied key or two answers could be correct, mark ambiguous.",
       "Return ONLY a JSON array: [{\"i\":0,\"your_answer\":0,\"status\":\"ok\",\"options\":[\"A\",\"B\",\"C\",\"D\",\"E\"],\"explanation\":\"...\"}].",
-      chunk.map((q, k) => k + ". " + q.question + "\\n" + q.options.map((o, n) => "ABCDE"[n] + ". " + o).join("\\n") + "\\nKey: " + q.correct_answer + "\\nExplanation: " + q.explanation).join("\\n\\n"),
-    ].join("\\n\\n");
+      chunk.map((q, k) => k + ". " + q.question + "\n" + q.options.map((o, n) => "ABCDE"[n] + ". " + o).join("\n") + "\nKey: " + q.correct_answer + "\nExplanation: " + q.explanation).join("\n\n"),
+    ].join("\n\n");
     let result = null;
     for (let attempt = 0; attempt < (strict ? 2 : 1); attempt++) {
       try {
         const answer = await askGeminiModel(prompt, { env: env(), timeoutMs: 45000, maxTokens: 5000 });
-        const match = answer.text.match(/\\[[\\s\\S]*\\]/);
+        const match = answer.text.match(/\[[\s\S]*\]/);
         result = match ? JSON.parse(match[0]) : null;
         if (Array.isArray(result)) break;
       } catch { result = null; }
@@ -100,7 +100,7 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") return send(res, 405, { error: "POST only." });
   try {
-    const token = String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "");
+    const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
     if (!(await isNeonAdmin(token))) return send(res, 403, { error: "Administrator access required." });
     const body = parseBody(req.body);
     const sql = db();
@@ -169,7 +169,7 @@ export default async function handler(req, res) {
     for (const [unit, group] of chosen) {
       const articleContext = group.articles.slice(0, 20).map((x) => "[Article] " + x.title + ": " + String(x.content || "").slice(0, 700));
       const mcqContext = group.banks.slice(0, 10).flatMap((x) => (Array.isArray(x.questions) ? x.questions.slice(0, 8) : []).map((q) => "[MCQ] " + String(q?.question || "")));
-      const context = articleContext.concat(mcqContext).join("\\n");
+      const context = articleContext.concat(mcqContext).join("\n");
       if (context.length < 300) { skipped.push(unit + ": insufficient source content."); continue; }
 
       const prompt = [
@@ -179,8 +179,8 @@ export default async function handler(req, res) {
         "Do not use all/none of the above. Vary the correct answer position and do not repeat the same tested fact.",
         "Each explanation must be one concise sentence of no more than 25 words.",
         "Return ONLY a valid JSON array with objects: question, options (five strings), correct_answer (zero-based integer), explanation.",
-        "Use the following source material as the syllabus context:\\n" + context,
-      ].join("\\n\\n");
+        "Use the following source material as the syllabus context:\n" + context,
+      ].join("\n\n");
       let questions = [];
       try { questions = parseMcqs(await generateText(prompt, 6000)); }
       catch (error) { skipped.push(unit + ": " + (error instanceof Error ? error.message : String(error))); continue; }
@@ -197,8 +197,8 @@ export default async function handler(req, res) {
         "Create exactly four SAQs with five marks each and one LAQ with twenty marks.",
         "Questions must require application, reasoning, comparison or justified clinical decisions, not simple recall.",
         "Each answer must be structured, proportionate to marks, clinically accurate and concise.",
-        "Schema: {\\\"saqs\\\":[{\\\"question\\\":\\\"...\\\",\\\"model_answer\\\":\\\"...\\\"}],\\\"laqs\\\":[{\\\"question\\\":\\\"...\\\",\\\"model_answer\\\":\\\"...\\\"}]}",
-      ].join("\\n");
+        "Schema: {\\"saqs\\":[{\\"question\\":\\"...\\",\\"model_answer\\":\\"...\\"}],\\"laqs\\":[{\\"question\\":\\"...\\",\\"model_answer\\":\\"...\\"}]}",
+      ].join("\n");
       let essays = { saqs: [], laqs: [] };
       try { essays = parseEssays(await generateText(essayPrompt, 4500)); } catch {}
       if (essays.saqs.length < 3 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
