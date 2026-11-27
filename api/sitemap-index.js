@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       "# OmpathStudy crawl policy","User-agent: *","Allow: /",
       "Disallow: /contests/*/register","Disallow: /contests/*/lobby","Disallow: /contests/*/round/","Disallow: /contests/*/progress","Disallow: /contests/*/certificate/",
       "Disallow: /*?file=","Disallow: /*&file=","Disallow: /*?write=","Disallow: /*?tab=","Disallow: /*?trim=",
-      "Sitemap: https://www.ompathstudy.com/sitemap.xml","Sitemap: https://www.ompathstudy.com/library-sitemap.xml",
+      "Sitemap: https://www.ompathstudy.com/sitemap.xml","Sitemap: https://www.ompathstudy.com/topics-sitemap.xml","Sitemap: https://www.ompathstudy.com/library-sitemap.xml",
       "Sitemap: https://www.ompathstudy.com/image-sitemap.xml","Sitemap: https://www.ompathstudy.com/dental-sitemap.xml",
       "Sitemap: https://www.ompathstudy.com/it-sitemap.xml","Sitemap: https://www.ompathstudy.com/business-sitemap.xml",
       "Sitemap: https://www.ompathstudy.com/hospitality-sitemap.xml","Sitemap: https://www.ompathstudy.com/social-sitemap.xml",
@@ -41,6 +41,9 @@ export default async function handler(req, res) {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sections.map((file) => `  <sitemap>\n    <loc>https://www.ompathstudy.com/sitemap/${file}</loc>\n  </sitemap>`).join("\n")}
+  <sitemap>
+    <loc>https://www.ompathstudy.com/topics-sitemap.xml</loc>
+  </sitemap>
   <sitemap>
     <loc>https://www.ompathstudy.com/library-sitemap.xml</loc>
   </sitemap>
