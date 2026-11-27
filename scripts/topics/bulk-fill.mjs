@@ -8,7 +8,7 @@ import { generateReviewedTopicPage } from "../../supabase/functions/_shared/topi
 import { maintenanceRequest } from "./maintenance-client.mjs";
 
 const DIR = "src/data/topicAi";
-const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 1000);
+const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 150);
 const PAR = Number((process.argv.find((a) => a.startsWith("--parallel=")) || "--parallel=4").split("=")[1]);
 const local = fs.existsSync(".gemini-keys.local") ? fs.readFileSync(".gemini-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
 const groq = fs.existsSync(".groq-keys.local") ? fs.readFileSync(".groq-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
@@ -31,7 +31,7 @@ const todo = index.filter((t) => {
 console.log(`${todo.length} new or thin/unverified topics to write, ${PAR} at a time`);
 const contextOf = (t, p = {}) => [t.lead?.t, ...(t.sec ?? []).flatMap((s) => [s.h, ...s.b]), ...(t.snip ?? []).map((s) => s.t), p.summary, ...(p.sections ?? []).flatMap((s) => [s.h, ...(s.b ?? [])]), ...(p.exam ?? [])].filter(Boolean).join("\n").slice(0, 5000);
 
-let done = 0, skipped = 0, failed = 0, next = 0;
+let done = 0, skipped = 0, failed = 0, next = 0, capReached = false;
 async function worker() {
   while (next < todo.length) {
     const it = todo[next++];
@@ -52,11 +52,20 @@ async function worker() {
           if (!page) lastError = "AI provider returned no reviewed page";
         } catch (e) {
           lastError = e instanceof Error ? e.message : String(e);
+          if (/HTTP 429|daily_cap/i.test(lastError)) {
+            capReached = true;
+            next = todo.length;
+            console.log("Neon daily publishing cap reached; stopping the remaining queue.");
+            break;
+          }
           console.warn(`[topic-generation] ${t.n}, attempt ${attempt + 1}/5: ${lastError.slice(0, 300)}`);
           await new Promise((r) => setTimeout(r, 8000 * (attempt + 1)));
         }
       }
-      if (!page) { failed++; console.log("failed", t.n, "-", lastError.slice(0, 300)); continue; }
+      if (!page) {
+        if (capReached) break;
+        failed++; console.log("failed", t.n, "-", lastError.slice(0, 300)); continue;
+      }
       if (!page.medical) { skipped++; console.log("not medical", t.n); continue; }
       if (!inGitHubActions) console.log("local generation only; Neon publication is reserved for the authenticated GitHub workflow");
       fs.writeFileSync(path.join(DIR, `${it.s}.json`), JSON.stringify({ ...page, reviewed: false }, null, 1) + "\n");
@@ -66,5 +75,5 @@ async function worker() {
   }
 }
 await Promise.all(Array.from({ length: PAR }, worker));
-console.log(`finished: ${done} written, ${skipped} not medical, ${failed} failed`);
+console.log(`finished: ${done} written, ${skipped} not medical, ${failed} failed${capReached ? " (daily Neon publish cap reached)" : ""}`);
 if (failed) process.exitCode = 1;
