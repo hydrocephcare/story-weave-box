@@ -1,22 +1,78 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, CheckCircle2, Loader2, RefreshCw, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 import { clearAiFailures, loadAiFailures, markAiFailuresSeen, type AiFailure } from "@/lib/aiHealth";
 
+type RuntimeHealth = { checkedAt: string; checks: Record<string, any> };
 const KIND: Record<string, string> = { answer: "AI answer", search: "Search", quiz: "Quiz", essay: "Essays", paper: "Paper", drill: "Anatomy drill", other: "Other" };
 const when = (iso: string) => new Date(iso).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 
 /** Admin: the times Ompath AI failed for a student, and what the student saw instead. */
 export default function AiHealthAdmin() {
   const [rows, setRows] = useState<AiFailure[] | null>(null);
+  const [runtime, setRuntime] = useState<RuntimeHealth | null>(null);
+  const [runtimeBusy, setRuntimeBusy] = useState(false);
+  const [runtimeError, setRuntimeError] = useState("");
   const load = useCallback(async () => { setRows(null); setRows(await loadAiFailures(150)); markAiFailuresSeen(); window.dispatchEvent(new Event("ompath:ai-health")); }, []);
-  useEffect(() => { void load(); }, [load]);
+  const loadRuntime = useCallback(async () => {
+    setRuntimeBusy(true); setRuntimeError("");
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session?.access_token) throw new Error("Sign in with the administrator account first.");
+      const response = await fetch("/api/ai?task=runtimeHealth", {
+        headers: { Authorization: `Bearer ${session.access_token}` },
+        cache: "no-store",
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || `Backend check failed (${response.status}).`);
+      setRuntime(data as RuntimeHealth);
+    } catch (error) {
+      setRuntimeError(error instanceof Error ? error.message : "Could not run backend checks.");
+    } finally { setRuntimeBusy(false); }
+  }, []);
+  useEffect(() => { void load(); void loadRuntime(); }, [load, loadRuntime]);
 
   const day = useMemo(() => (rows ?? []).filter((r) => Date.now() - Date.parse(r.created_at) < 86_400_000).length, [rows]);
   const byKind = useMemo(() => { const m = new Map<string, number>(); (rows ?? []).forEach((r) => m.set(r.kind, (m.get(r.kind) ?? 0) + 1)); return [...m.entries()].sort((a, b) => b[1] - a[1]); }, [rows]);
 
   return (
     <div className="space-y-4">
+      <section className="rounded-xl border border-border bg-card p-4 space-y-3">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 className="font-serif text-lg font-bold">Backend readiness</h3>
+            <p className="text-xs text-muted-foreground">Live checks for Neon, search access, AI providers, Paystack and automatic publishing dependencies.</p>
+          </div>
+          <Button variant="outline" size="sm" disabled={runtimeBusy} onClick={() => void loadRuntime()}><RefreshCw className={`mr-1.5 h-4 w-4 ${runtimeBusy ? "animate-spin" : ""}`} /> Check backend</Button>
+        </div>
+        {runtimeError && <p className="text-sm text-destructive">{runtimeError}</p>}
+        {!runtime && !runtimeError && <p className="text-sm text-muted-foreground">Run the checks to inspect production readiness.</p>}
+        {runtime && (() => {
+          const c = runtime.checks || {};
+          const checks = [
+            ["Neon database", c.neonDatabase?.ok && c.neonDatabase?.connected],
+            ["Search Data API", c.searchDataApi?.ok && c.searchDataApi?.connected],
+            ["Neon Auth keys", c.authJwks?.ok && c.authJwks?.reachable],
+            ["Groq", c.groq?.ok && c.groq?.reachable],
+            ["Gemini", c.gemini?.ok && c.gemini?.reachable],
+            ["Paystack API", c.paystack?.ok && c.paystack?.reachable],
+            ["Blog polish secret", c.polish?.ok && c.polish?.databaseSecretMatchesRuntime && c.polish?.aiKeysConfigured],
+            ["Paystack enabled", c.payments?.ok && c.payments?.enabled],
+            ["Topic publishing RPC", c.schema?.ok && c.schema?.topic_publish_rpc],
+            ["Deep-note RPC", c.schema?.ok && c.schema?.topic_deep_rpc],
+          ] as [string, boolean][];
+          return <>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {checks.map(([label, ok]) => <div key={label} className="flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm">
+                {ok ? <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600" /> : <AlertTriangle className="h-4 w-4 shrink-0 text-amber-600" />}
+                <span>{label}</span><span className="ml-auto text-xs font-semibold text-muted-foreground">{ok ? "Ready" : "Needs attention"}</span>
+              </div>)}
+            </div>
+            <p className="text-[11px] text-muted-foreground">Checked {when(runtime.checkedAt)}. These checks verify connectivity and credentials; they do not charge a payment or publish a test article.</p>
+          </>;
+        })()}
+      </section>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
           <h2 className="font-serif text-xl font-bold text-foreground">AI health</h2>
