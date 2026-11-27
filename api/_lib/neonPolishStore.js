@@ -8,17 +8,15 @@ export function getPolishSql() {
   return neon(url);
 }
 
-/** The database key must match the Cloudflare runtime secret. A row alone is not sufficient. */
+/** The administrator-managed Neon record is the source of truth; Cloudflare and GitHub do not need duplicate copies. */
 export async function hasPolishWriteKey() {
-  const key = String(process.env.POLISH_WRITE_KEY || "");
-  if (key.length < 24) return false;
   const rows = await getPolishSql().query(
-    "SELECT EXISTS (SELECT 1 FROM public.polish_secret WHERE id = 1 AND secret = $1 AND length(secret) >= 24) AS configured",
-    [key],
+    "SELECT EXISTS (SELECT 1 FROM public.polish_secret WHERE id = 1 AND length(secret) >= 24) AS configured",
   );
   return rows[0]?.configured === true;
 }
 
+/** Explicit-key verification remains available for local batch tools and protected provider-health checks. */
 export async function verifyPolishWriteKey(value) {
   const key = String(value || "");
   if (key.length < 24) return false;
