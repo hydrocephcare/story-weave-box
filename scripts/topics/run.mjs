@@ -5,9 +5,10 @@
 import fs from "node:fs";
 import { spawnSync } from "node:child_process";
 
-// Deploys must not read the whole library from Supabase. The daily workflow commits the corpus;
+// Hosted Vercel and Cloudflare Pages builds must not read the whole library from Neon. The daily workflow commits the corpus;
 // this deploy-time merge only attaches complete, Gemini-passed local topic JSON to the static pages.
-if (process.env.VERCEL && !process.env.FORCE_TOPICS && fs.existsSync("public/topics/index.json")) {
+const hostedStaticBuild = Boolean(process.env.VERCEL || process.env.CF_PAGES || process.env.CF_PAGES_BRANCH);
+if (hostedStaticBuild && !process.env.FORCE_TOPICS && fs.existsSync("public/topics/index.json")) {
   const merged = spawnSync(process.execPath, ["scripts/topics/merge-ai.mjs"], { encoding: "utf8", env: { ...process.env }, maxBuffer: 16 * 1024 * 1024 });
   if (merged.stdout) process.stdout.write(merged.stdout);
   if (merged.stderr) process.stderr.write(merged.stderr);

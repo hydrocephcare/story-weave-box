@@ -1,12 +1,32 @@
 // POST /api/topic-write { name, category, context }: Groq drafts a topic page and Gemini independently reviews it. The browser then saves it with the
 // publish_topic_page database function. Provider keys remain server-side; Gemini review is mandatory before a page is returned.
-import { generateReviewedTopicPage, validName } from "../../supabase/functions/_shared/topicAi.js";
+import { neon } from "@neondatabase/serverless";
+import { generateReviewedTopicPage, validName, slugOf } from "../../supabase/functions/_shared/topicAi.js";
 import { consumeEntitlement } from "./entitlements.js";
 import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 
 const hits = new Map(); // per visitor, per hour (best effort: a cold start forgets it)
 const LIMIT = 30;
+const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL || "";
+let database;
+function getDatabase() {
+  if (!databaseUrl) throw new Error("DATABASE_URL is not configured for topic persistence.");
+  database ||= neon(databaseUrl);
+  return database;
+}
+async function saveTopicPage({ slug, name, category, page }) {
+  const rows = await getDatabase()`select public.publish_topic_page(
+    ${slug}, ${name}, ${category || page.subject || ""}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
+  ) as result`;
+  return rows[0]?.result || { ok: false, reason: "empty_result" };
+}
+async function saveDeepNotes({ slug, name, category, base, deep }) {
+  const rows = await getDatabase()`select public.save_topic_deep(
+    ${slug}, ${name}, ${category || base.subject || ""}, ${JSON.stringify(base)}::jsonb, ${JSON.stringify(deep)}::jsonb
+  ) as result`;
+  return rows[0]?.result || { ok: false, reason: "empty_result" };
+}
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
@@ -38,7 +58,10 @@ export default async function handler(req, res) {
       const base = body.base && typeof body.base === "object" ? body.base : {};
       const past = (Array.isArray(body.past) ? body.past : []).map((x) => String(x).slice(0, 240)).slice(0, 12);
       const deep = await generateCheckedDeep({ name, category: String(body.category ?? "").slice(0, 60), base, past }, { GROQ_API_KEYS: groq, ...geminiEnv }, fetch, 50000);
-      return res.status(200).json({ status: "published", deep });
+      const slug = String(body.slug || slugOf(name));
+      const saved = await saveDeepNotes({ slug, name, category: String(body.category ?? "").slice(0, 60), base, deep });
+      if (!saved?.ok) return res.status(saved?.reason === "busy" ? 429 : 502).json({ status: saved?.reason === "busy" ? "busy" : "failed" });
+      return res.status(200).json({ status: "published", deep, saved: true });
     } catch (e) {
       return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed", reason: String(e?.message ?? "").slice(0, 240) });
     }
@@ -50,7 +73,13 @@ export default async function handler(req, res) {
     const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), choices: body.choices && typeof body.choices === "object" ? body.choices : undefined };
     const { page } = await generateReviewedTopicPage(input, { env: { GROQ_API_KEYS: groq, ...geminiEnv }, fetchImpl: fetch });
     if (!page.medical) return res.status(200).json({ status: "rejected" });
-    return res.status(200).json({ status: "published", page: { ...page, subject: pickSubject(page.subject, `${name} ${body.category ?? ""}`) } });
+    const finalPage = { ...page, subject: pickSubject(page.subject, `${name} ${body.category ?? ""}`) };
+    const generatedTitle = String(finalPage.title || "").trim();
+    const finalName = body.keepSlug || !validName(generatedTitle) ? name : generatedTitle;
+    const finalSlug = body.keepSlug ? slugOf(name) : slugOf(finalName) || slugOf(name);
+    const saved = await saveTopicPage({ slug: finalSlug, name: finalName, category: input.category, page: finalPage });
+    if (!saved?.ok) return res.status(saved?.reason === "busy" ? 429 : 502).json({ status: saved?.reason === "busy" ? "busy" : "failed" });
+    return res.status(200).json({ status: "published", page: finalPage, saved: true, slug: finalSlug, name: finalName });
   } catch (e) {
     return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed" });
   }

@@ -1,3 +1,4 @@
+import { neon } from "@neondatabase/serverless";
 // the simulator cases that ship with the site (the AI-written ones are read from the database below)
 const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const BUILTIN_CASES = ["med-acs","med-aki","med-dka","med-gibleed","med-hf","med-malaria","med-mening","med-pe","med-stroke","med-tb","ob-aph","ob-ectopic","ob-labour","ob-pe","ob-pid","ob-pph","pd-asthma","pd-dehyd","pd-malaria","pd-neo","pd-pneu","pd-sam","pd-scd","ps-adhd","ps-delirium","ps-depr","ps-dts","ps-mania","ps-panic","ps-schiz","sg-appy","sg-breast","sg-burn","sg-foot","sg-obstruct","sg-trauma"];
@@ -76,9 +77,34 @@ async function extraSitemap(req, res, mode) {
     res.setHeader("Cache-Control","public, s-maxage=3600, stale-while-revalidate=86400");
     return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
   }
-  // Topic detail pages are emitted as static HTML by the daily topic builder and production build.
-  // Database-only pages have no static crawler response yet, so listing them creates thin SPA-shell URLs.
-  // They enter the sitemap automatically after the daily builder commits their complete static topic pages.
+  if (mode === "topics") {
+    const entries = [{ slug: null, updated_at: null }];
+    try {
+      const connectionString = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
+      if (connectionString) {
+        const db = neon(connectionString);
+        const rows = await db`SELECT slug, updated_at FROM public.topic_pages
+          WHERE status = 'published' AND ai_review_status = 'passed'
+          ORDER BY updated_at DESC LIMIT 5000`;
+        for (const row of rows) {
+          if (typeof row.slug === "string" && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(row.slug)) entries.push(row);
+        }
+      }
+    } catch (error) {
+      // Keep the hub URL available if the database is temporarily unreachable.
+      console.error("[topics-sitemap] Neon lookup failed:", error instanceof Error ? error.message : String(error));
+    }
+    const xmlEscape = (value) => String(value ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    const urls = entries.map((entry) => {
+      const loc = entry.slug ? `${SITE}/topic/${entry.slug}` : `${SITE}/topics`;
+      const lastmod = entry.updated_at ? `<lastmod>${xmlEscape(new Date(entry.updated_at).toISOString().slice(0, 10))}</lastmod>` : "";
+      return `<url><loc>${xmlEscape(loc)}</loc>${lastmod}<changefreq>${entry.slug ? "monthly" : "daily"}</changefreq><priority>${entry.slug ? "0.6" : "0.7"}</priority></url>`;
+    }).join("");
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, s-maxage=900, stale-while-revalidate=86400");
+    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
+  }
+  // The topics branch above lists Neon pages only after independent Gemini review; static pages remain in library-sitemap.xml.
   res.setHeader("Content-Type","application/xml; charset=utf-8");
   res.setHeader("Cache-Control","public, s-maxage=900, stale-while-revalidate=86400");
   return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + SITE + '/topics</loc><changefreq>daily</changefreq><priority>0.7</priority></url></urlset>');
@@ -114,7 +140,7 @@ export default async function handler(req, res) {
     // Do not repeat them in all.xml, which robots.txt also discovers independently.
 
     // All story landing and article URLs are listed in the Stories subdomain sitemap, not here.
-    xml = xml.replace(/\\s*<url>\\s*<loc>https:\\/\\/www\\.ompathstudy\\.com\\/(?:stories(?:\\/[^<]*)?|share-your-story(?:\\/[^<]*)?|finalists)<\\/loc>[\\s\\S]*?<\\/url>/g, "");
+    xml = xml.replace(/\s*<url>\s*<loc>https:\/\/www\.ompathstudy\.com\/(?:stories(?:\/[^<]*)?|share-your-story(?:\/[^<]*)?|finalists)<\/loc>[\s\S]*?<\/url>/g, "");
     // exams are taken at /exams/<slug>/start, a noindex page: the exam list (/exams) is the page for search, so single exams are not listed
     xml = xml.replace(/\s*<url>\s*<loc>https:\/\/www\.ompathstudy\.com\/exams\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "");
     // Individual clinical simulator cases are interactive/noindex; keep only the public /clinical hub.
