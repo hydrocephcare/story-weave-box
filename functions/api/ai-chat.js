@@ -70,7 +70,7 @@ function sse(value) {
 }
 
 async function viaGroq(messages, env, send) {
-  const keys = splitKeys(env.GROQ_API_KEYS || env.GROQ_API_KEY);
+  const keys = splitKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
   const models = splitKeys(env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,openai/gpt-oss-20b");
   const start = keys.length ? turn++ % keys.length : 0;
   for (let i = 0; i < keys.length; i++) {
@@ -115,8 +115,8 @@ async function viaGroq(messages, env, send) {
 }
 
 async function viaGemini(messages, env, send) {
-  const keys = splitKeys(env.GEMINI_API_KEYS || env.GEMINI_API_KEY);
-  const models = splitKeys(env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite,gemini-2.5-flash,gemini-2.5-flash-lite");
+  const keys = splitKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
+  const models = splitKeys(env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite");
   const system = messages[0].content;
   const contents = messages.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = keys.length ? turn++ % keys.length : 0;
