@@ -202,7 +202,7 @@ export default async function handler(req, res) {
         "Create exactly four SAQs with five marks each and one LAQ with twenty marks.",
         "Questions must require application, reasoning, comparison or justified clinical decisions, not simple recall.",
         "Each answer must be structured, proportionate to marks, clinically accurate and concise.",
-        "Schema: {\\"saqs\\":[{\\"question\\":\\"...\\",\\"model_answer\\":\\"...\\"}],\\"laqs\\":[{\\"question\\":\\"...\\",\\"model_answer\\":\\"...\\"}]}",
+        'Schema: {"saqs":[{"question":"...","model_answer":"..."}],"laqs":[{"question":"...","model_answer":"..."}]}',
       ].join("\n");
       let essays = { saqs: [], laqs: [] };
       try { essays = parseEssays(await generateText(essayPrompt, 4500)); } catch {}
