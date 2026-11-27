@@ -23,10 +23,10 @@ async function userFromRequest(req) {
     const id = String(payload.sub || "");
     if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
     const sql = db();
-    const account = await sql.query('SELECT email,name FROM neon_auth."user" WHERE id=$1 LIMIT 1', [id]);
+    const account = await sql.query('SELECT email,name,"emailVerified" FROM neon_auth."user" WHERE id=$1 LIMIT 1', [id]);
     const email = String(payload.email || payload.user?.email || account[0]?.email || "").trim().toLowerCase();
-    if (!email || !account[0]) return null;
-    await sql.query("INSERT INTO auth.users(id,email) VALUES($1,NULL) ON CONFLICT(id) DO NOTHING", [id]);
+    if (!email || !account[0] || account[0].emailVerified !== true) return null;
+    await sql.query("SELECT public.ensure_neon_user($1,$2)", [id,email]);
     return { id, neonId: id, email, name: String(payload.name || payload.user?.name || account[0]?.name || "").slice(0, 120) };
   } catch { return null; }
 }
