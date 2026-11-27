@@ -21,8 +21,10 @@ export default async function handler(req, res) {
     const identity = await verifyNeonToken(token);
     if (!identity) return json(res, 401, { error: "Invalid administrator session." });
     const userId = identity.id;
-    const adminEmail = identity.email;
     const sql = db();
+    const adminRows = await sql.query('SELECT email,"emailVerified" FROM neon_auth."user" WHERE id=$1 LIMIT 1', [userId]);
+    const adminEmail = String(identity.email || adminRows[0]?.email || "").trim().toLowerCase();
+    if (!adminEmail || adminRows[0]?.emailVerified !== true) return json(res, 401, { error: "Administrator email is unavailable or unverified." });
     const ensureNeonUser = async (neonId) => {
       await sql.query("INSERT INTO auth.users(id,email) VALUES($1,NULL) ON CONFLICT(id) DO NOTHING", [neonId]);
       return neonId;
