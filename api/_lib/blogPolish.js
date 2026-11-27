@@ -36,9 +36,9 @@ export default async function handler(req, res) {
   if (!UUID.test(id)) return res.status(400).json({ status: "invalid" });
 
   // only public, published blogs
-  const got = await sql.query("SELECT id,title,category,content,original_notes,published,deleted_at,password_protected FROM public.articles WHERE id=$1 LIMIT 1", [id]);
+  const got = await sql.query("SELECT id,title,category,content,original_notes,published,deleted_at,password_protected,scheduled_at FROM public.articles WHERE id=$1 LIMIT 1", [id]);
   const a = got[0];
-  if (!a || !a.published || a.deleted_at || a.password_protected) return res.status(404).json({ status: "invalid" });
+  if (!a || !a.published || a.deleted_at || a.password_protected || (a.scheduled_at && new Date(a.scheduled_at).getTime() > Date.now())) return res.status(404).json({ status: "invalid" });
 
   // already finished, or being worked on: nothing to do. A finished page is never polished again.
   // (progress on a long page is kept at the top of its saved text as <!--parts:N-->, so no extra database column is needed)
