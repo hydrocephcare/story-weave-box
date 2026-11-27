@@ -1,2 +1,4 @@
 import handler from "../../api/og-meta.ts";
-export const onRequest = ({ request }) => handler(request);
+import { runVercelHandler } from "../_lib/vercel-adapter.js";
+
+export const onRequest = ({ request }) => runVercelHandler(handler, request);
