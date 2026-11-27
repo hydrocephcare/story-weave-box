@@ -1,39 +1,78 @@
-// Keeps a signed-in student's Ompath AI chats on their account. Needs supabase/migrations/20261008130000_ompath_ai_history_sync.sql;
-// without it everything here quietly does nothing and chats stay on the device.
+// Sync signed-in Ompath AI chats through the authenticated Neon API.
+// Chat history remains local if account sync is temporarily unavailable.
 import { useEffect, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { aiStore, useAiStore } from "@/lib/ompathAiStore";
 
-const db = supabase as unknown as { from: (t: string) => any }; // eslint-disable-line @typescript-eslint/no-explicit-any
+async function accessToken(): Promise<string | null> {
+  try {
+    const { data, error } = await supabase.auth.getSession();
+    if (error) return null;
+    return data.session?.access_token ?? null;
+  } catch {
+    return null;
+  }
+}
 
 export function useAiAccountSync(userId: string | null) {
   const { sessions } = useAiStore();
   const ready = useRef<string | null>(null);
 
-  // 1. when a student signs in, bring their saved chats in
+  // Load the account copy before enabling writes, so a fresh device never overwrites saved chats.
   useEffect(() => {
     ready.current = null;
     if (!userId) return;
-    let on = true;
+    let active = true;
     (async () => {
+      const token = await accessToken();
+      if (!token) return;
       try {
-        const { data, error } = await db.from("ai_user_history").select("data").eq("user_id", userId).maybeSingle();
-        if (!on) return;
-        if (!error && data?.data) aiStore.mergeRemote(Array.isArray(data.data.sessions) ? data.data.sessions : [], Array.isArray(data.data.deleted) ? data.data.deleted : []);
-        if (!error) ready.current = userId; // only start saving once the account copy has been read, so it is never overwritten blind
-      } catch { /* table not set up, or offline */ }
+        const response = await fetch("/api/ai-history", {
+          method: "GET",
+          headers: { Authorization: `Bearer ${token}` },
+          cache: "no-store",
+        });
+        if (!response.ok) return;
+        const result = await response.json();
+        if (!active) return;
+        const data = result?.data;
+        if (data && typeof data === "object") {
+          aiStore.mergeRemote(
+            Array.isArray(data.sessions) ? data.sessions : [],
+            Array.isArray(data.deleted) ? data.deleted : [],
+          );
+        }
+        ready.current = userId;
+      } catch {
+        // Local chat history remains available when remote sync is offline.
+      }
     })();
-    return () => { on = false; };
+    return () => { active = false; };
   }, [userId]);
 
-  // 2. a few seconds after anything changes, save the chats to the account
+  // Save after changes, using a server-verified Neon identity rather than direct table access.
   useEffect(() => {
     if (!userId || ready.current !== userId) return;
-    const t = window.setTimeout(() => {
-      const payload = aiStore.exportForSync();
-      if (!payload.sessions.length && !payload.deleted.length) return; // nothing to save: never overwrite the account copy with an empty one
-      void db.from("ai_user_history").upsert({ user_id: userId, data: payload, updated_at: new Date().toISOString() }).then(() => undefined, () => undefined);
+    const timer = window.setTimeout(() => {
+      void (async () => {
+        const payload = aiStore.exportForSync();
+        if (!payload.sessions.length && !payload.deleted.length) return;
+        const token = await accessToken();
+        if (!token) return;
+        try {
+          await fetch("/api/ai-history", {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ data: payload }),
+          });
+        } catch {
+          // Never interrupt an AI conversation because history sync failed.
+        }
+      })();
     }, 4000);
-    return () => window.clearTimeout(t);
+    return () => window.clearTimeout(timer);
   }, [userId, sessions]);
 }
