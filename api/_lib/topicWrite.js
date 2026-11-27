@@ -74,9 +74,12 @@ export default async function handler(req, res) {
     const { page } = await generateReviewedTopicPage(input, { env: { GROQ_API_KEYS: groq, ...geminiEnv }, fetchImpl: fetch });
     if (!page.medical) return res.status(200).json({ status: "rejected" });
     const finalPage = { ...page, subject: pickSubject(page.subject, `${name} ${body.category ?? ""}`) };
-    const saved = await saveTopicPage({ name, category: input.category, page: finalPage });
+    const generatedTitle = String(finalPage.title || "").trim();
+    const finalName = body.keepSlug || !validName(generatedTitle) ? name : generatedTitle;
+    const finalSlug = body.keepSlug ? slugOf(name) : slugOf(finalName) || slugOf(name);
+    const saved = await saveTopicPage({ slug: finalSlug, name: finalName, category: input.category, page: finalPage });
     if (!saved?.ok) return res.status(saved?.reason === "busy" ? 429 : 502).json({ status: saved?.reason === "busy" ? "busy" : "failed" });
-    return res.status(200).json({ status: "published", page: finalPage, saved: true });
+    return res.status(200).json({ status: "published", page: finalPage, saved: true, slug: finalSlug, name: finalName });
   } catch (e) {
     return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed" });
   }
