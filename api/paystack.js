@@ -167,7 +167,7 @@ async function accessCode(req, res) {
     const existing = await sql.query("SELECT * FROM public.access_grants WHERE payment_id=$1 LIMIT 1", [payment.id]);
     if (existing[0]) { const g = existing[0]; if (!g.user_id || !g.email) await sql.query("UPDATE public.access_grants SET user_id=$1,email=$2 WHERE id=$3",[user.id,user.email,g.id]); return out(res,200,{success:true,code:g.code,plan:g.plan,expires_at:g.expires_at,allow_download:g.allow_download!==false}); }
     const s = await sql.query("SELECT value FROM public.app_settings WHERE key='access_plans' LIMIT 1");
-    let plans=[]; try { plans=JSON.parse(String(s[0]?.value || "[]")); } catch {}
+    let plans=[]; try { const parsed=JSON.parse(String(s[0]?.value || "[]")); plans=Array.isArray(parsed)?parsed:[]; } catch {}
     const planId = String(b.plan || payment.package_type || "annual");
     const plan = plans.find((x)=>x.id===planId) || plans.find((x)=>Number(x.price)===Number(payment.amount)) || {id:"annual",days:365,download:true};
     for(let i=0;i<5;i++){
