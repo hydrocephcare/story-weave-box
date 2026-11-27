@@ -133,8 +133,8 @@ async function accessCode(req, res) {
   const sql = db();
   if (action === "list") {
     if (!user?.id) return out(res, 401, { error: "Sign in required." });
-    const roles = await sql.query("SELECT 1 FROM public.user_roles r JOIN auth.users u ON u.id=r.user_id WHERE lower(u.email)=$1 AND r.role='admin' LIMIT 1", [user.email]);
-    if (!roles[0]) return out(res, 403, { error: "Administrator access required." });
+    const roles = await sql.query("SELECT public.has_role($1::uuid,'admin'::app_role) AS is_admin", [user.id]);
+    if (roles[0]?.is_admin !== true) return out(res, 403, { error: "Administrator access required." });
     const rows = await sql.query("SELECT code,plan,amount,currency,expires_at,redeem_count,created_at FROM public.access_grants ORDER BY created_at DESC LIMIT 25");
     return out(res, 200, { passes: rows.map((g) => ({ code: String(g.code).slice(0,3) + "•••" + String(g.code).slice(-3), plan: g.plan, amount: Number(g.amount || 0), currency: g.currency || "KES", expires_at: g.expires_at, redeem_count: g.redeem_count })) });
   }
