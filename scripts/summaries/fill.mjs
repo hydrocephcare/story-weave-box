@@ -2,17 +2,11 @@
 // Result: src/data/pageSummaries.json  { "n:<note slug>" | "a:<article slug>": { s: "summary", t: ["term", ...] } }
 //   node scripts/summaries/fill.mjs [count] [--parallel=3]
 import fs from "node:fs";
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { maintenanceRequest } from "../topics/maintenance-client.mjs";
 
 const FILE = "src/data/pageSummaries.json";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 40);
 const PAR = Number((process.argv.find((a) => a.startsWith("--parallel=")) || "--parallel=3").split("=")[1]);
-const read = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
-const env = { GROQ_API_KEYS: [process.env.GROQ_API_KEYS, read(".groq-keys.local")].filter(Boolean).join(","), GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, read(".gemini-keys.local")].filter(Boolean).join(",") };
-if (!env.GROQ_API_KEYS && !env.GEMINI_API_KEYS) { console.log("No AI keys: nothing to do."); process.exit(0); }
-const SB = "https://strfwaqvxvkhjbqrwmla.supabase.co";
-const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
-
 const have = fs.existsSync(FILE) ? JSON.parse(fs.readFileSync(FILE, "utf8")) : {};
 const plain = (t) => String(t ?? "").replace(/<[^>]+>/g, " ").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[*_#>`|]/g, " ").replace(/\s+/g, " ").trim();
 
@@ -24,19 +18,18 @@ for (const n of JSON.parse(fs.readFileSync("src/data/staticNotes.json", "utf8"))
   todo.push({ key: `n:${n.slug}`, title: n.title, where: `Year ${n.year} · ${n.unit}`, text: plain(md) });
 }
 try {
-  for (let from = 0; from < 2000; from += 200) {
-    const r = await fetch(`${SB}/rest/v1/articles?select=id,slug,title,category,content&published=eq.true&deleted_at=is.null&order=created_at.desc&offset=${from}&limit=200`, { headers: { apikey: ANON, Authorization: `Bearer ${ANON}` } });
-    if (!r.ok) break;
-    const rows = await r.json();
+  for (let from = 0; from < 2000; from += 100) {
+    const result = await maintenanceRequest("corpus", { table: "articles", limit: 100, offset: from });
+    const rows = result.rows || [];
     for (const a of rows) {
       if (!a.slug || have[`a:${a.slug}`] || /^stories/i.test(a.category || "")) continue;
       const text = plain(a.content);
       if (text.length < 600) continue;
-      todo.push({ key: `a:${a.slug}`, title: a.title, where: a.category || "", text, paper: /past paper|questions & answers|exam|cat\b/i.test(a.title) });
+      todo.push({ key: `a:${a.slug}`, title: a.title, where: a.category || "", text, paper: /past paper|questions & answers|exam|cat\\b/i.test(a.title) });
     }
-    if (rows.length < 200) break;
+    if (rows.length < 100) break;
   }
-} catch (e) { console.log("could not read the blogs:", e.message); }
+} catch (e) { console.log("could not read the Neon article library:", e.message); }
 todo.sort((a, b) => Number(Boolean(a.paper)) - Number(Boolean(b.paper)));
 const batch = todo.slice(0, COUNT);
 console.log(`${todo.length} pages still need a summary; writing ${batch.length}.`);
@@ -51,9 +44,8 @@ PAGE TEXT:
 ${p.text.slice(0, 3200)}
 """`;
 
-async function ask(prompt) {
-  if (env.GROQ_API_KEYS) { try { return await askModel(prompt, { env: { GROQ_API_KEYS: env.GROQ_API_KEYS }, timeoutMs: 40000, maxTokens: 900 }); } catch (e) { if (!globalThis.__g) { globalThis.__g = 1; console.log("groq said:", String(e.message).slice(0, 120)); } } }
-  return askModel(prompt, { env, timeoutMs: 40000, maxTokens: 900 });
+async function ask(page) {
+  return maintenanceRequest("summarize", { title: page.title, where: page.where, text: page.text.slice(0, 5000) });
 }
 
 let next = 0, done = 0, failed = 0;
@@ -61,8 +53,7 @@ async function worker() {
   while (next < batch.length) {
     const p = batch[next++];
     try {
-      const { text } = await ask(PROMPT(p));
-      const j = JSON.parse(text.match(/\{[\s\S]*\}/)[0]);
+      const j = await ask(p);
       const s = String(j.summary ?? "").replace(/\s+/g, " ").trim();
       const t = (Array.isArray(j.terms) ? j.terms : []).map((x) => String(x).trim()).filter((x) => x.length >= 3 && x.length <= 40).slice(0, 7);
       if (s.length < 40 || s.length > 420 || /\d+\s?(mg|mcg|g)\b/i.test(s)) throw new Error("unusable");
