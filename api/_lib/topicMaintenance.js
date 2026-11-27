@@ -73,6 +73,28 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, publishedTopics: Number(rows[0]?.count || 0) });
     }
 
+    if (task === "publish") {
+      const slug = String(body.slug || "");
+      const name = String(body.name || "").trim();
+      const category = String(body.category || "").slice(0, 60);
+      const page = body.page;
+      if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || !name || name.length > 80) {
+        return res.status(400).json({ error: "Invalid topic identity." });
+      }
+      if (!page || typeof page !== "object" || page.medical !== true || page.aiReview?.status !== "passed"
+          || !String(page.aiReview?.model || "").trim() || !Array.isArray(page.sections) || page.sections.length < 3
+          || !Array.isArray(page.exam) || page.exam.length < 8 || String(page.summary || "").length < 100
+          || JSON.stringify(page).length > 60000
+          || /https?:|www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text/i.test(JSON.stringify(page))) {
+        return res.status(400).json({ error: "Topic did not pass the publication safeguards." });
+      }
+      const rows = await getDb()`SELECT public.publish_topic_page(
+        ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
+      ) AS result`;
+      const result = rows[0]?.result || { ok: false, reason: "empty_result" };
+      return res.status(result.ok ? 200 : result.reason === "busy" ? 429 : 422).json(result);
+    }
+
     if (task === "corpus") {
       const table = String(body.table || "");
       const config = TABLES[table];
