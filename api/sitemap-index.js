@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       "User-agent: Amazonbot","Disallow: /","User-agent: Applebot-Extended","Disallow: /","User-agent: cohere-ai","Disallow: /",
       "User-agent: Diffbot","Disallow: /","User-agent: FacebookBot","Disallow: /","User-agent: meta-externalagent","Disallow: /",""
     ];
-    return res.status(200).send(lines.join("\\n"));
+    return res.status(200).send(lines.join("\n"));
   }
   if (host === "stories.ompathstudy.com") {
     res.setHeader("Content-Type", "application/xml; charset=utf-8");
