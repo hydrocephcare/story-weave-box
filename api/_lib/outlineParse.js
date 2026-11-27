@@ -1,6 +1,6 @@
 // POST /api/outline-parse { text, year, semester, unit } (admin only): reads a course outline's text with AI and returns its rows as
 // { items: [{ week, topic, lecturer, detail }] }. Groq first, Gemini as the backup (keys in turn), the same as the rest of the site's AI.
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, providerKeys } from "../../supabase/functions/_shared/topicAi.js";
 import { isNeonAdmin } from "./neonAdmin.js";
 
 
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
   const text = String(body.text ?? "").replace(/\r/g, "").trim();
   if (text.length < 40) return res.status(400).json({ error: "Paste the outline text first." });
   const ctx = `Year ${Number(body.year) || "?"}, semester ${String(body.semester ?? "?").slice(0, 12)}${body.unit ? `, unit ${String(body.unit).slice(0, 80)}` : ""}.`;
-  const env = { GROQ_API_KEYS: process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "", GEMINI_API_KEYS: process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "" };
+  const env = { GROQ_API_KEYS: providerKeys(process.env, "GROQ").join(","), GEMINI_API_KEYS: providerKeys(process.env, "GEMINI").join(",") };
   // long outlines are read in pieces so nothing is cut off
   const pieces = []; for (let i = 0; i < Math.min(text.length, 60000); i += 7000) pieces.push(text.slice(i, i + 7500));
   const items = []; const seen = new Set();
