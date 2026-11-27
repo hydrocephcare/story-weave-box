@@ -15,9 +15,9 @@ function getDatabase() {
   database ||= neon(databaseUrl);
   return database;
 }
-async function saveTopicPage({ name, category, page }) {
+async function saveTopicPage({ slug, name, category, page }) {
   const rows = await getDatabase()`select public.publish_topic_page(
-    ${slugOf(name)}, ${name}, ${category || page.subject || ""}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
+    ${slug}, ${name}, ${category || page.subject || ""}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
   ) as result`;
   return rows[0]?.result || { ok: false, reason: "empty_result" };
 }
