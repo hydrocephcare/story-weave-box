@@ -67,6 +67,7 @@ export default function AiHealthAdmin() {
             ["Gemini", c.gemini?.ok && c.gemini?.reachable],
             ["Gemini generation", c.geminiGeneration?.ok && c.geminiGeneration?.ready],
             ["Paystack API", c.paystack?.ok && c.paystack?.reachable],
+            ["Stories sitemap / SEO", c.storiesSitemap?.ok && c.storiesSitemap?.ready],
             ["Paystack webhook route", c.paystackWebhook?.ok && c.paystackWebhook?.ready],
             ["OneKitty configuration", c.onekitty?.ok && c.onekitty?.ready],
             ["Google Drive import", c.googleDrive?.ok && c.googleDrive?.ready],
