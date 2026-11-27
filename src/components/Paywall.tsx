@@ -10,7 +10,7 @@ import { getSetting } from "@/lib/store";
 
 /**
  * Paywall shown where the free portion of a page ends. Two ways in:
- *  1. M-Pesa (Palpluss STK push) -> a pass code is issued automatically
+ *  1. Paystack checkout (card, M-Pesa or Airtel Money) -> a pass is issued after verification
  *  2. Entering a pass code already bought on another device
  */
 export function Paywall({
@@ -233,44 +233,6 @@ export function Paywall({
     setMessage(data.provider_message || "Payment prompt sent. Approve it on your phone; you can stay on this page.");
     void pollPayment(data.transaction_id, plan.id);
   };
-  const pay = async () => {
-    if (!user) {
-      setState("error");
-      setMessage("Please sign in with Google first — it ties the subscription to your account.");
-      return;
-    }
-    if (!/^(\+?254|0)?\d{9}$/.test(phone.replace(/\s+/g, ""))) {
-      setState("error");
-      setMessage("Enter a valid Safaricom number, e.g. 07XXXXXXXX.");
-      return;
-    }
-    setState("sending");
-    setMessage("");
-    const { data, error } = await supabase.functions.invoke("initiate-payment", {
-      body: { phone, amount: plan.price || settings.price, package_type: plan.id },
-    });
-    if (error || !data?.success) {
-      setState("error");
-      const code = String(data?.code || "").toUpperCase();
-      const retryAfter = Number(data?.details?.retryAfterSeconds || 0);
-      const actionableMessage =
-        code === "NO_PAYMENT_CHANNELS"
-          ? "Payments are not fully configured yet. The administrator needs to add a PalPlus payment channel."
-          : code === "NO_DEFAULT_CHANNEL"
-            ? "Payments are not fully configured yet. The administrator needs to select a default PalPlus payment channel."
-            : code === "INSUFFICIENT_SERVICE_BALANCE"
-              ? "The payment service wallet needs to be topped up. Please try again shortly."
-              : code === "STK_TEMP_BANNED" && retryAfter > 0
-                ? `M-Pesa requests are temporarily paused. Please retry in about ${Math.ceil(retryAfter / 60)} minute(s).`
-                : data?.error || error?.message || "Could not start the payment. Please try again.";
-      setMessage(actionableMessage);
-      return;
-    }
-    setState("waiting");
-    setMessage("Sent. Check your phone and enter your M-Pesa PIN — keep this page open.");
-    pollPayment(data.transaction_id);
-  };
-
   const redeem = async () => {
     setState("sending");
     setMessage("");
