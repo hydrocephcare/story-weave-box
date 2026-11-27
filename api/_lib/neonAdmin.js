@@ -11,7 +11,7 @@ export async function verifyNeonToken(token) {
     const verified = await jwtVerify(bearer, jwks);
     const id = String(verified.payload?.sub || "");
     const email = String(verified.payload?.email || "").trim().toLowerCase();
-    if (!/^[0-9a-f-]{36}$/i.test(id) || !email) return null;
+    if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
     return { id, email, payload: verified.payload };
   } catch {
     return null;
