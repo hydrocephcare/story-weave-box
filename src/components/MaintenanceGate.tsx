@@ -1,22 +1,22 @@
 import type { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
+import { useSiteConfig } from "@/lib/siteConfig";
 import { Button } from "@/components/ui/button";
 import { Loader2, LockKeyhole, LogIn, LogOut, Wrench } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const ADMIN_EMAIL = "hydrocephcare@gmail.com";
-
 /**
  * Temporary site-wide maintenance gate.
- * Only the named owner account can enter the application. Login and auth
- * callback routes remain available so the owner can authenticate.
+ * The maintenance switch is controlled from Admin → Site manager. Authorised
+ * administrators can always enter to turn maintenance off again.
  */
 export default function MaintenanceGate({ children }: { children: ReactNode }) {
-  const { user, loading, signOut } = useAuth();
+  const { user, isAdmin, loading, signOut } = useAuth();
+  const config = useSiteConfig();
   const location = useLocation();
   const authRoute = location.pathname === "/login" || location.pathname === "/auth/callback";
-  const authorised = user?.email?.trim().toLowerCase() === ADMIN_EMAIL;
+  const authorised = isAdmin;
 
   if (loading) {
     return (
@@ -26,7 +26,7 @@ export default function MaintenanceGate({ children }: { children: ReactNode }) {
     );
   }
 
-  if (authorised || authRoute) return <>{children}</>;
+  if (!config.maintenanceEnabled || authorised || authRoute) return <>{children}</>;
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-background px-5 py-12 text-foreground">
