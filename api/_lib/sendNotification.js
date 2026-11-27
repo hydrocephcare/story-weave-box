@@ -25,11 +25,8 @@ export default async function handler(req, res) {
     const adminRows = await sql.query('SELECT email,"emailVerified" FROM neon_auth."user" WHERE id=$1 LIMIT 1', [userId]);
     const adminEmail = String(identity.email || adminRows[0]?.email || "").trim().toLowerCase();
     if (!adminEmail || adminRows[0]?.emailVerified !== true) return json(res, 401, { error: "Administrator email is unavailable or unverified." });
-    const ensureNeonUser = async (neonId) => {
-      await sql.query("INSERT INTO auth.users(id,email) VALUES($1,NULL) ON CONFLICT(id) DO NOTHING", [neonId]);
-      return neonId;
-    };
-    const adminNeonId = await ensureNeonUser(userId);
+    await sql.query("INSERT INTO auth.users(id,email) VALUES($1,NULL) ON CONFLICT(id) DO NOTHING", [userId]);
+    const adminNeonId = userId;
 
     const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
     const title = String(body.title || "").trim().slice(0, 120);
@@ -64,7 +61,7 @@ export default async function handler(req, res) {
     for (const r of recipients) {
       const email = String(r.email || "").trim().toLowerCase();
       if (!r.neon_id || !email) continue;
-      const neonId = await ensureNeonUser(String(r.neon_id));
+      const neonId = String(r.neon_id);
       if (!unique.has(neonId)) unique.set(neonId, { id: neonId, email, emailVerified: r.email_verified === true });
     }
     const users = [...unique.values()];
