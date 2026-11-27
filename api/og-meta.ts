@@ -1,8 +1,7 @@
 import { topicTitle } from "../src/lib/topicMeta.js";
 import { createClient, SupabaseAuthAdapter } from "@neondatabase/neon-js";
-export const config = {
-  runtime: "edge",
-};
+// Use the default Node.js runtime: Neon Auth SDK imports Node-compatible modules
+// that Vercel Edge Runtime does not support.
 
 /** Which subject picture (public/unit-img) goes on a share card, by the words of the unit or the page. */
 const SUBJECT_PICS: [RegExp, string][] = [
