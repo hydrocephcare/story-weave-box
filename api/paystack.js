@@ -21,8 +21,11 @@ async function userFromRequest(req) {
     const result = await jwtVerify(token, jwks);
     const p = result.payload;
     const id = String(p.sub || "");
-    const email = String(p.email || p.user?.email || "").trim().toLowerCase();
-    if (!/^[0-9a-f-]{36}$/i.test(id) || !email) return null;
+    if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
+    const sql = db();
+    const account = await sql.query("SELECT email FROM auth.users WHERE id=$1 LIMIT 1", [id]);
+    const email = String(p.email || p.user?.email || account[0]?.email || "").trim().toLowerCase();
+    if (!email) return null;
     return { id, email, name: String(p.name || p.user?.name || "").slice(0, 120) };
   } catch { return null; }
 }
