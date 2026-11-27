@@ -82,6 +82,9 @@ export default function AiHealthAdmin() {
               </div>)}
             </div>
             <p className="text-[11px] text-muted-foreground">Checked {when(runtime.checkedAt)}. These checks verify connectivity and credentials; they do not charge a payment or publish a test article.</p>
+            {(!c.storiesSitemap?.ready || !c.storiesCrawlerMetadata?.ready) && <p className="text-sm text-amber-700 dark:text-amber-300">Stories runs in a separate Cloudflare Pages project named <strong>stories-platform</strong>. Add the same Neon <strong>DATABASE_URL</strong> as an encrypted Production secret in that project; the main site's secret is not shared automatically.</p>}
+            {c.resend?.configured === false && <p className="text-sm text-amber-700 dark:text-amber-300">In-app notifications can work, but email delivery needs a <strong>RESEND_API_KEY</strong> in the main Cloudflare Production environment.</p>}
+            {c.polish?.databaseSecretMatchesRuntime === false && c.polish?.aiKeysConfigured && <p className="text-sm text-amber-700 dark:text-amber-300">Open Admin → Polish and select <strong>Sync existing Cloudflare secret</strong> to save the configured POLISH_WRITE_KEY in Neon.</p>}
           </>;
         })()}
       </section>
