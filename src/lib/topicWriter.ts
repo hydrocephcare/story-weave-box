@@ -3,7 +3,6 @@
 // deployed, asked for the page in two or three short parts, then the page is saved with the publish_topic_page database function.
 // Nothing here may break a page: every failure returns a status, and the reader keeps what the site already has.
 import { supabase } from "@/integrations/supabase/client";
-import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
 import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/functions/_shared/topicParts.js";
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
@@ -36,11 +35,8 @@ export async function askOmpathAi(question: string, snippet: string, name: strin
   const token = sessionData.session?.access_token;
   if (!token) throw new Error("login required");
   const authHeaders = { "Content-Type": "application/json", Authorization: `Bearer ${token}` };
-  // the site's own server first (what the Ompath AI chat uses), the older Supabase function only as a fallback
-  let res = await fetch("/api/ai-chat", { method: "POST", signal, headers: authHeaders, body: payload }).catch((e) => { if ((e as Error).name === "AbortError") throw e; return null; });
-  if (!res || !res.ok || !res.body) {
-    res = await fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, { method: "POST", signal, headers: { ...authHeaders, apikey: SUPABASE_PUBLISHABLE_KEY }, body: payload });
-  }
+  // Use the Neon-backed site API only; the retired Supabase function cannot validate Neon Auth sessions.
+  const res = await fetch("/api/ai-chat", { method: "POST", signal, headers: authHeaders, body: payload });
   if (res.status === 402 || res.status === 429) { pauseAi(); throw new Error("paused"); }
   if (!res.ok || !res.body) throw new Error(`ai ${res.status}`);
   const reader = res.body.getReader(); const dec = new TextDecoder();
@@ -109,18 +105,8 @@ export async function writeTopicPage({ name, category, context, choices, keepSlu
     return { status: "published", page: viaApi.page, saved, slug: cleanSlug, name: cleanName };
   }
 
-  // Route 1: the server function, when it has been deployed
-  if (!fnKnownDown()) {
-    try {
-      const { data, error } = await supabase.functions.invoke("topic-ai", { body: { name, category, context: context.slice(0, 3000) } });
-      const status = (data as { status?: string } | null)?.status;
-      if (!error && status === "published" && (data as { page?: AiPage }).page) { countWrite(); return { status: "published", page: (data as { page: AiPage }).page, saved: true }; }
-      if (!error && status === "rejected") return { status: "rejected" };
-      if (!error && status === "busy") return { status: "busy" };
-      if (error && !(error as { context?: Response }).context) markFnDown();
-      else if (error) { const code = (error as { context?: Response }).context?.status; if (code === 404 || code === 0 || code === undefined) markFnDown(); }
-    } catch { markFnDown(); }
-  }
+  // Do not call the retired Supabase topic-ai Edge Function; it cannot accept Neon Auth sessions.
+  if (!viaApi) return { status: "failed" };
 
   if (aiPaused()) return { status: "paused" };
   // Route 2: Ompath AI in short parts, then publish with the database function
