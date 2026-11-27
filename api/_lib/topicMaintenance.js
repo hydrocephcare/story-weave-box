@@ -228,7 +228,7 @@ PAGE TEXT:
       if (!row) return res.status(404).json({ error: "Published topic not found." });
       if (row.ai_review_status === "passed" && row.content?.aiReview?.status === "passed"
           && (row.content?.sections?.length || 0) >= 9 && (row.content?.exam?.length || 0) >= 8
-          && (row.content?.faq?.length || 0) >= 3 && JSON.stringify(row.content).split(/\\s+/).length >= 700) {
+          && (row.content?.faq?.length || 0) >= 3 && JSON.stringify(row.content).split(/\s+/).length >= 700) {
         return res.status(200).json({ status: "existing", slug });
       }
       const prior = row.content || {};
