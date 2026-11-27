@@ -34,12 +34,9 @@ export default function GoogleDriveImportAdmin() {
   const loadConnection = async () => {
     setLoading(true);
     try {
-      const { data, error } = await (supabase as any)
-        .from("google_drive_connections")
-        .select("google_email")
-        .maybeSingle();
+      const { data, error } = await supabase.functions.invoke("google-drive-import", { body: { action: "connection-status" } });
       if (error) throw error;
-      setEmail((data as { google_email?: string } | null)?.google_email ?? null);
+      setEmail(data?.email ?? null);
     } catch (err: any) {
       toast({ title: "Could not check Google Drive connection", description: err.message, variant: "destructive" });
     } finally {
@@ -51,7 +48,7 @@ export default function GoogleDriveImportAdmin() {
     loadConnection();
     loadJob();
     const onMessage = (event: MessageEvent) => {
-      if (event.origin !== "https://strfwaqvxvkhjbqrwmla.supabase.co") return;
+      if (event.origin !== "https://ompathstudy.com") return;
       if (event.data?.source === "ompathstudy-google-drive") loadConnection();
     };
     window.addEventListener("message", onMessage);
