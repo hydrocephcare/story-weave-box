@@ -12,7 +12,11 @@ const clientId = () => String(process.env.GOOGLE_DRIVE_CLIENT_ID || "");
 const clientSecret = () => String(process.env.GOOGLE_DRIVE_CLIENT_SECRET || "");
 const redirectUri = () => String(process.env.GOOGLE_DRIVE_REDIRECT_URI || DEFAULT_REDIRECT);
 const cors = { "Access-Control-Allow-Origin": APP_ORIGIN, "Access-Control-Allow-Headers": "authorization, content-type", "Access-Control-Allow-Methods": "POST, GET, OPTIONS" };
-const json = (res, status, data) => res.status(status).setHeader("Cache-Control", "no-store").json(data);
+const json = (res, status, data) => {
+  res.status(status);
+  res.setHeader("Cache-Control", "no-store");
+  return res.json(data);
+};
 
 function b64(bytes) { let value = ""; for (const byte of bytes) value += String.fromCharCode(byte); return btoa(value); }
 async function encrypt(value) {
@@ -25,7 +29,10 @@ async function encrypt(value) {
 function html(res, message, ok = true) {
   const safe = String(message).replace(/[<>&"]/g, (c) => ({ "<":"&lt;", ">":"&gt;", "&":"&amp;", '"':"&quot;" }[c]));
   const page = `<!doctype html><html><head><meta charset="utf-8"><title>OmpathStudy Drive</title></head><body style="font-family:system-ui;padding:40px"><h2>${ok ? "Google Drive connected" : "Connection failed"}</h2><p>${safe}</p><script>if(window.opener){window.opener.postMessage({source:"ompathstudy-google-drive",ok:${ok}}, "https://ompathstudy.com");}</script></body></html>`;
-  return res.status(ok ? 200 : 400).setHeader("Content-Type", "text/html; charset=utf-8").setHeader("Cache-Control", "no-store").send(page);
+  res.status(ok ? 200 : 400);
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.setHeader("Cache-Control", "no-store");
+  return res.send(page);
 }
 
 export default async function handler(req, res) {
