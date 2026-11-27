@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const sql = db();
     const account = await sql.query('SELECT email,"emailVerified" FROM neon_auth."user" WHERE id=$1 LIMIT 1', [identity.id]);
     const email = String(identity.email || account[0]?.email || "").trim().toLowerCase();
-    if (!email || account[0]?.emailVerified !== true) return res.status(403).json({ error: "Verify your email address before syncing your account." });
+    if (!email) return res.status(403).json({ error: "A valid account email is required." });
     const rows = await sql.query("SELECT public.ensure_neon_user($1,$2) AS result", [identity.id, email]);
     return res.status(200).json({ success: true, ...(rows[0]?.result || {}) });
   } catch (error) {
