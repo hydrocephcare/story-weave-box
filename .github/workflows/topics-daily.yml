@@ -78,8 +78,6 @@ jobs:
         continue-on-error: true
         timeout-minutes: 30
         env:
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           TOPIC_REVIEW_COUNT: ${{ inputs.review || (github.event_name == 'push' && '4') || '40' }}
         run: node scripts/topics/review-database-pages.mjs
       - name: Generate comprehensive deep exam notes for live topic pages
@@ -113,8 +111,6 @@ jobs:
         continue-on-error: true
         timeout-minutes: 30
         env:
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/imed/validate-notes.mjs ${{ inputs.check || (github.event_name == 'push' && '4') || '40' }}
       - name: Write page summaries
         id: summaries
