@@ -27,10 +27,24 @@ export default async function handler(req,res) {
     const reference=String(event?.data?.reference||"").trim();
     if(!reference) return send(res,200,{success:true,ignored:true,reason:"Missing transaction reference."});
     const sql=neon(process.env.DATABASE_URL);
-    const rows=await sql.query("SELECT id,amount,currency,payment_status,transaction_id,provider_txn_id FROM public.payments WHERE transaction_id=$1 LIMIT 1",[reference]);
+    const rows=await sql.query("SELECT id,amount,currency,payment_status,transaction_id,provider_txn_id,package_type,phone_number,buyer_email,user_id FROM public.payments WHERE transaction_id=$1 LIMIT 1",[reference]);
     const payment=rows[0];
     if(!payment || !String(payment.provider_txn_id||"").startsWith("paystack:")) return send(res,200,{success:true,ignored:true,reason:"No matching Paystack payment."});
-    if(payment.payment_status==="completed") return send(res,200,{success:true,duplicate:true});
+    const issueGrant = async () => {
+      const existing = await sql.query("SELECT code,plan,expires_at FROM public.access_grants WHERE payment_id=$1 LIMIT 1",[payment.id]);
+      if(existing[0]) return false;
+      const setting = await sql.query("SELECT value FROM public.app_settings WHERE key='access_plans' LIMIT 1");
+      let plans=[]; try { plans=JSON.parse(String(setting[0]?.value || "[]")); } catch {}
+      const planId=String(payment.package_type || "annual");
+      const plan=plans.find((p)=>p && p.id===planId) || plans.find((p)=>Number(p.price)===Number(payment.amount)) || {id:"annual",days:365,download:true};
+      const code="OM-"+randomBytes(8).toString("hex").toUpperCase().slice(0,8);
+      const inserted=await sql.query("INSERT INTO public.access_grants(code,plan,expires_at,payment_id,phone_number,amount,currency,allow_download,email,user_id) VALUES($1,$2,now()+($3::int * interval '1 day'),$4,$5,$6,$7,$8,$9,$10) ON CONFLICT (payment_id) WHERE payment_id IS NOT NULL DO NOTHING RETURNING id",[code,plan.id,Math.max(1,Number(plan.days)||365),payment.id,payment.phone_number,Number(payment.amount||0),String(payment.currency||"KES").toUpperCase(),plan.download!==false,payment.buyer_email||null,payment.user_id||null]);
+      return inserted.length>0;
+    };
+    if(payment.payment_status==="completed") {
+      const issued=await issueGrant();
+      return send(res,200,{success:true,duplicate:true,grant_issued:issued});
+    }
     const verify=await fetch("https://api.paystack.co/transaction/verify/"+encodeURIComponent(reference),{headers:{Authorization:"Bearer "+secret,Accept:"application/json"}});
     const payload=await verify.json().catch(()=>({}));
     const txn=payload?.data;
@@ -42,7 +56,8 @@ export default async function handler(req,res) {
     const status=String(txn.status||"").toLowerCase();
     if(status==="success") {
       await sql.query("UPDATE public.payments SET payment_status='completed',updated_at=now() WHERE id=$1 AND payment_status='pending'",[payment.id]);
-      return send(res,200,{success:true,status:"completed",reference});
+      const issued=await issueGrant();
+      return send(res,200,{success:true,status:"completed",reference,grant_issued:issued});
     }
     if(status==="failed" && eventName==="charge.failed") {
       await sql.query("UPDATE public.payments SET payment_status='failed',updated_at=now() WHERE id=$1 AND payment_status='pending'",[payment.id]);
