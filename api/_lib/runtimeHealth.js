@@ -21,7 +21,9 @@ export default async function handler(req, res) {
   if (req.method !== "GET") return res.status(405).json({ error: "GET only." });
   if (!(await isAdmin(bearer(req)))) return res.status(403).json({ error: "Administrator access required." });
 
-  const result = {};
+  const result = {
+    unportedFunctions: { ok: true, ready: false, functions: ["contest-control", "google-drive-import", "onekitty-initiate"] },
+  };
   const deepAI = new URL(req.url, "https://www.ompathstudy.com").searchParams.get("deep") === "1";
   result.neonDatabase = await check("neon-database", async () => {
     const rows = await getPolishSql().query("SELECT 1 AS ok");
