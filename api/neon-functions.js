@@ -12,7 +12,7 @@ import mcqQualityFix from "./_lib/mcqQualityFix.js";
 import saveTopicDeep from "./_lib/saveTopicDeep.js";
 
 /** Neon-backed function dispatcher for Cloudflare Pages and crawler requests. */
-export const config = { maxDuration: 120 };
+export const config = { maxDuration: 300 };
 export default async function handler(req, res) {
   const name = String(req.query?.name || "").trim();
   if (!/^[a-z0-9-]+$/i.test(name)) {
