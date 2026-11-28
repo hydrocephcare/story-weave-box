@@ -97,8 +97,17 @@ ${text}`;
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
   if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
   questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-  const review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
-  if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
+  let review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
+  if(!review.validated){
+    const repairPrompt=`You are correcting medical examination MCQs after an independent Gemini clinical review. Preserve every correct question. Correct each listed factual, answer-key or safety issue. Keep exactly four plausible options and one best answer per question. Return ONLY the complete corrected JSON array in the original schema. Do not invent doses, thresholds or references.\nREVIEW FINDINGS:\n${(review.issues||[]).map((x,i)=>(i+1)+". "+x.problem+" Correction: "+x.fix).join("\n")}\nCURRENT MCQS:\n${JSON.stringify(questions)}`;
+    const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+    const corrected=parseNoteMcqs(fixed.text);
+    if(corrected.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ clinical repair returned too few valid questions.");
+    const hardened=placeNewQuestions(dedupeNoteMcqs(corrected,avoid));
+    review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(hardened),env,timeoutMs:45000});
+    if(!review.validated||!review.model)throw new Error("MCQs failed independent Gemini review after one targeted repair: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
+    questions.splice(0,questions.length,...hardened);
+  }
   return {questions,review};
 }
 
