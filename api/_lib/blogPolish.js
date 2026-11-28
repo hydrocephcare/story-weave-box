@@ -82,7 +82,7 @@ export default async function handler(req, res) {
   if (!claimed.length) return res.status(200).json({ status: "working", more: false });
 
   const env = supabaseAiEnv(req, { workflow });
-  const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
+  const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true, allowDirectFallback: workflow }).then((r) => r.text);
   const save = async (row) => {
     const allowed = new Set(["title","description","image_query","verdict","reason","model","content","status","ai_review_status","ai_review_model","ai_reviewed_at","ai_review_issues","parts_done"]);
     const entries = Object.entries(row || {}).filter(([key, value]) => allowed.has(key) && value !== undefined);
@@ -98,7 +98,7 @@ export default async function handler(req, res) {
         await save({ title: r.title, description: r.description, image_query: r.image_query, content: null, verdict: r.verdict, reason: r.reason || null, status: "partial", ai_review_status: null, model: "groq" });
         return res.status(200).json({ status: "partial", more: false });
       }
-      const review = await verifyBlogContent(a, r.content, env, { allowRepair: true, timeoutMs: 22000 });
+      const review = await verifyBlogContent(a, r.content, env, { allowRepair: true, timeoutMs: 22000, allowDirectFallback: workflow });
       const reason = review.status === "held" ? "Gemini review held for automatic correction: " + (review.issues?.[0]?.problem || "review did not pass") : (r.reason || null);
       await save({ title: r.title, description: r.description, image_query: r.image_query,
         content: review.status === "passed" ? review.content : null, verdict: r.verdict, reason,
