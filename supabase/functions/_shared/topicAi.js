@@ -166,7 +166,7 @@ async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetc
   const token = String(env.OMPATH_SUPABASE_AI_TOKEN || "");
   if (!url || !token) return null;
   const authKind = env.OMPATH_SUPABASE_AI_AUTH_KIND === "github" ? "x-github-oidc" : "x-neon-authorization";
-  const bearer = token.replace(/^Bearer\\s+/i, "");
+  const bearer = token.replace(/^Bearer\s+/i, "");
   const headers = { "Content-Type": "application/json", apikey: String(env.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY || "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP") };
   headers[authKind] = bearer;
   const response = await fetchImpl(url, { method: "POST", headers, signal: AbortSignal.timeout(timeoutMs + 1500), body: JSON.stringify({ task: "provider_call", provider, prompt: String(prompt).slice(0, 26000), plain, temperature, maxTokens, timeoutMs, feature: String(env.OMPATH_AI_FEATURE || "") }) });
