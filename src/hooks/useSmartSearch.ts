@@ -16,9 +16,12 @@ export function useSmartSearch(query: string, opts: { year?: string; contentType
   const request = useRef(0);
 
   useEffect(() => {
-    const q = query.trim();
-    if (q.length < 2) { setState(EMPTY); return; }
     const id = ++request.current;
+    const q = query.trim();
+    if (q.length < 2) {
+      setState(EMPTY);
+      return () => { if (request.current === id) request.current++; };
+    }
     setState((s) => ({ ...s, loading: true }));
     const timer = window.setTimeout(() => {
       void findHits(q, { ...opts, deep: false }).then((fast) => {
@@ -28,9 +31,14 @@ export function useSmartSearch(query: string, opts: { year?: string; contentType
           if (id !== request.current) return;
           setState({ hits: full.hits, related: full.related, parsed: full.parsed, loading: false, deepLoading: false, searched: true });
         });
-      }).catch(() => { if (id === request.current) setState((s) => ({ ...s, loading: false, deepLoading: false, searched: true })); });
-    }, 120);
-    return () => window.clearTimeout(timer);
+      }).catch(() => {
+        if (id === request.current) setState((s) => ({ ...s, loading: false, deepLoading: false, searched: true }));
+      });
+    }, 280);
+    return () => {
+      clearTimeout(timer);
+      if (request.current === id) request.current++;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, opts.year, opts.contentType]);
 
