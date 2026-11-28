@@ -67,6 +67,48 @@ function parseEssays(raw) {
   const laqs=Array.isArray(data.laqs)?data.laqs.filter(q=>q?.question&&(q.model_answer||q.answer)).map(q=>({question:compact(q.question),answer:compact(q.model_answer||q.answer),marks:Number(q.marks)||20})):[];
   return {saqs,laqs};
 }
+
+function parseFlashcards(raw,count) {
+  const match=String(raw||"").match(/\[[\s\S]*\]/);
+  if(!match)throw new Error("Could not parse flashcards.");
+  const data=JSON.parse(match[0]);
+  if(!Array.isArray(data))throw new Error("Flashcards were not an array.");
+  return data.filter(x=>x?.question&&x?.answer)
+    .map(x=>({question:compact(x.question),answer:compact(Array.isArray(x.answer)?x.answer.join("\\n"):x.answer)}))
+    .filter(x=>x.question.length>=8&&x.answer.length>=20)
+    .slice(0,count);
+}
+
+async function generateReviewedStructured({prompt,title,kind,env,maxTokens,parse,valid}) {
+  let corrections=[];
+  let current=null;
+  for(let round=0;round<=2;round++){
+    const request=prompt+(corrections.length
+      ? "\\n\\nINDEPENDENT GEMINI CLINICAL REVIEW / VALIDATION FINDINGS — CORRECT EVERY ITEM:\\n- "+corrections.join("\\n- ")+"\\nReturn the complete corrected JSON only. Preserve the requested structure."
+      : "");
+    const generated=await askGroqModel(request,{env,plain:true,maxTokens,timeoutMs:65000});
+    try { current=parse(generated.text); }
+    catch(e) {
+      if(round===2)throw new Error("Groq did not return valid structured medical content after correction attempts.");
+      corrections=["The previous response was not valid JSON in the requested structure. Return the complete requested JSON object or array."];
+      continue;
+    }
+    if(!valid(current)){
+      if(round===2)throw new Error("Groq returned incomplete medical content after correction attempts.");
+      corrections=["The previous response did not meet the required question/card counts and structure. Return the complete requested output with all required fields."];
+      continue;
+    }
+    const review=await checkContent({title,kind,text:JSON.stringify(current),env,timeoutMs:55000});
+    if(review.validated)return current;
+    if(round===2)throw new Error("Independent Gemini clinical review did not approve this content; nothing was returned for publication.");
+    corrections=(review.issues||[]).map((item,index)=>
+      (index+1)+". ["+item.severity+"] "+item.where+": "+item.problem+". Correct it to: "+item.fix
+    );
+    if(!corrections.length)corrections=["Gemini did not approve the content. Recheck medical accuracy, completeness and answer keys."];
+    corrections.push("Current draft for correction: "+JSON.stringify(current).slice(0,16000));
+  }
+  throw new Error("Independent clinical review did not approve the generated content.");
+}
 const parseJson = (raw) => { const m=String(raw||"").match(/\{[\s\S]*\}/); if(!m)throw new Error("The AI did not return valid JSON."); return JSON.parse(m[0]); };
 async function callAI(messages,env,{plain=false,maxTokens=6000,timeoutMs=60000}={}) {
   const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
@@ -111,7 +153,9 @@ export default async function handler(req,res) {
     }
     if(type==="essay-qa") {
       messages=[{role:"system",content:"You are a medical examiner. Create exam-style written questions. Return ONLY JSON: {\"saqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":5}],\"laqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":20}]}. Create exactly six SAQs of 5 marks and one LAQ of 20 marks. Answers should be clinically structured and concise. No markdown."},{role:"user",content:safe}];
-      raw=await callAI(messages,env,{maxTokens:7000}); return res.status(200).json(parseEssays(raw));
+      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\\n"+String(m.content||"")).join("\\n\\n");
+      const result=await generateReviewedStructured({prompt,title:customTitle||"Medical examination questions",kind:"medical SAQs, LAQs and model answers",env,maxTokens:7000,parse:parseEssays,valid:x=>x.saqs.length===6&&x.laqs.length===1});
+      return res.status(200).json(result);
     }
     if(type==="publish-format") {
       messages=[{role:"system",content:"You are a fast medical publishing formatter. Return ONLY JSON: {\"title\":\"...\",\"content\":\"...\",\"tags\":[\"...\"],\"meta_title\":\"...\",\"meta_description\":\"...\",\"university\":\"Mount Kenya University\",\"school\":\"School of Medicine\",\"unit\":\"...\",\"exam_type\":\"...\",\"exam_year\":\"...\"}. Fix format only; do not rewrite academic meaning, shorten or remove questions, images or tables. Preserve MKU when present. Use clean markdown, 4-8 concise tags, and never invent exam details."},{role:"user",content:"Title: "+customTitle+"\n\nContent:\n"+safe}];
@@ -125,22 +169,20 @@ export default async function handler(req,res) {
     }
     if(type==="direct-article"||type==="article") {
       messages=[{role:"system",content:"You are a medical education expert. Convert these notes into a comprehensive exam-focused study article in markdown. Title on first line. Include ## Summary, ## Key Points, ## Detailed Notes with ### subsections, and ## Practice Questions with at least 8 clinical Q→A lines. Use explanatory paragraphs, preserve all tables and content, do not use code fences. Do not fabricate facts, doses or references."},{role:"user",content:(customTitle?"Title: "+customTitle+"\n\n":"")+safe}];
-      if(type==="article") { const result=await generateReviewedArticle(messages,customTitle,env); return res.status(200).json(result); }
-      raw=await callAI(messages,env,{plain:true,maxTokens:9000});
-      const result=normalizeArticleOutput(raw); if(customTitle)result.title=customTitle;
+      const result=await generateReviewedArticle(messages,customTitle,env);
       return res.status(200).json(result);
     }
     if(type==="direct-mcqs"||type==="mcqs") {
       messages=[{role:"system",content:"You are a senior medical exam writer. Create EXACTLY "+cardCount+" clinically oriented MCQs. Return ONLY a JSON array with objects {\"question\":\"...\",\"options\":[\"A\",\"B\",\"C\",\"D\"],\"correct_answer\":0,\"explanation\":\"...\"}. Use four plausible options of similar length, exactly one best answer, no all/none of the above, clear clinical explanations. Spread correct positions naturally. Use accepted medical knowledge only."},{role:"user",content:"Create "+cardCount+" MCQs from these notes:\n\n"+safe}];
-      raw=await callAI(messages,env,{maxTokens:9000});
-      return res.status(200).json(parseMcqs(raw,cardCount));
+      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\\n"+String(m.content||"")).join("\\n\\n");
+      const result=await generateReviewedStructured({prompt,title:customTitle||"Medical multiple-choice questions",kind:"medical MCQs with answer keys and explanations",env,maxTokens:9000,parse:raw=>parseMcqs(raw,cardCount),valid:items=>items.length>=Math.max(5,Math.floor(cardCount*0.6))&&items.every(q=>q.options.length===4&&Number.isInteger(q.correct_answer))});
+      return res.status(200).json(result);
     }
     if(type==="direct-flashcards"||type==="flashcards") {
       messages=[{role:"system",content:"You are a medical flashcard writer. Return ONLY a JSON array [{\"question\":\"...\",\"answer\":\"...\"}]. Create up to "+cardCount+" high-yield non-repetitive cards grounded in the supplied notes. Each answer should be concise but explanatory."},{role:"user",content:safe}];
-      raw=await callAI(messages,env,{maxTokens:8000});
-      const match=raw.match(/\[[\s\S]*\]/); if(!match)throw new Error("Failed to parse flashcards.");
-      const parsed=JSON.parse(match[0]); if(!Array.isArray(parsed))throw new Error("Flashcards were not an array.");
-      return res.status(200).json(parsed.filter(x=>x?.question&&x?.answer).map(x=>({question:compact(x.question),answer:compact(x.answer)})).slice(0,cardCount));
+      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\\n"+String(m.content||"")).join("\\n\\n");
+      const result=await generateReviewedStructured({prompt,title:customTitle||"Medical revision flashcards",kind:"medical revision flashcards",env,maxTokens:8000,parse:raw=>parseFlashcards(raw,cardCount),valid:items=>items.length>=Math.max(5,Math.floor(cardCount*0.5))});
+      return res.status(200).json(result);
     }
     if(type==="generate-seo-meta") {
       messages=[{role:"system",content:"You are a medical SEO editor. Return ONLY JSON {\"meta_title\":\"...\",\"meta_description\":\"...\",\"slug\":\"...\"}. Title max 60 chars, description max 155 chars, slug lowercase hyphenated 3-6 words; do not invent clinical claims."},{role:"user",content:safe.slice(0,5000)}];
