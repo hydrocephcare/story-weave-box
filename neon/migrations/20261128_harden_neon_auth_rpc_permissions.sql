@@ -1,6 +1,9 @@
--- Restrict role and entitlement RPCs to authenticated callers.
--- has_role is a SECURITY DEFINER function: anonymous callers must not be able to
--- enumerate another user's role membership by supplying arbitrary UUIDs.
+-- Harden role and entitlement RPCs while preserving public RLS evaluation.
+-- Public SELECT policies call auth.uid() and has_role(); anonymous callers must
+-- be able to execute these helpers, but has_role returns false when auth.uid()
+-- is NULL and never reveals another user's role to an anonymous caller.
+GRANT USAGE ON SCHEMA auth TO anonymous, authenticated, service_role;
+GRANT EXECUTE ON FUNCTION auth.uid() TO anonymous, authenticated, service_role;
 CREATE OR REPLACE FUNCTION public.has_role(_user_id uuid, _role public.app_role)
 RETURNS boolean
 LANGUAGE plpgsql
@@ -52,8 +55,8 @@ BEGIN
 END;
 $function$;
 
-REVOKE ALL ON FUNCTION public.has_role(uuid, public.app_role) FROM PUBLIC, anonymous;
-GRANT EXECUTE ON FUNCTION public.has_role(uuid, public.app_role) TO authenticated, service_role;
+REVOKE ALL ON FUNCTION public.has_role(uuid, public.app_role) FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.has_role(uuid, public.app_role) TO anonymous, authenticated, service_role;
 
 -- consume_feature checks auth.uid() internally, but it must not be callable
 -- without authentication; keep the same authenticated/server grants as the
