@@ -18,15 +18,37 @@ export default function AiHealthAdmin() {
   const loadRuntime = useCallback(async () => {
     setRuntimeBusy(true); setRuntimeError("");
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session?.access_token) throw new Error("Sign in with the administrator account first.");
-      const response = await fetch("/api/ai?task=runtimeHealth&deep=1", {
-        headers: { Authorization: `Bearer ${session.access_token}` },
-        cache: "no-store",
-      });
-      const data = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(data.error || `Backend check failed (${response.status}).`);
-      setRuntime(data as RuntimeHealth);
+      const authAdapter = supabase.auth as typeof supabase.auth & { getJWTToken?: () => Promise<string | null> };
+      const token = await authAdapter.getJWTToken?.();
+      if (!token || token.split(".").length !== 3) throw new Error("Sign in with the administrator account first.");
+      const [runtimeResponse, aiResponse] = await Promise.all([
+        fetch("/api/ai?task=runtimeHealth&deep=1", {
+          headers: { Authorization: `Bearer ${token}` },
+          cache: "no-store",
+        }),
+        fetch("https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP",
+            "x-neon-authorization": `Bearer ${token}`,
+          },
+          body: JSON.stringify({ task: "health" }),
+          cache: "no-store",
+        }),
+      ]);
+      const runtimeData = await runtimeResponse.json().catch(() => ({}));
+      const aiData = await aiResponse.json().catch(() => ({}));
+      if (!runtimeResponse.ok) throw new Error(runtimeData.error || `Backend check failed (${runtimeResponse.status}).`);
+      if (!aiResponse.ok) throw new Error(aiData.error || `Supabase AI health check failed (${aiResponse.status}).`);
+      const checks = { ...(runtimeData.checks || {}) } as Record<string, any>;
+      checks.supabaseAI = { ok: Boolean(aiData.ok), version: aiData.functionVersion };
+      checks.groq = { ok: true, reachable: Number(aiData.providers?.groq?.configuredKeys || 0) > 0 };
+      checks.groqGeneration = { ok: Boolean(aiData.providers?.groq?.ok), ready: Boolean(aiData.providers?.groq?.ok), model: aiData.providers?.groq?.model };
+      checks.gemini = { ok: true, reachable: Number(aiData.providers?.gemini?.configuredKeys || 0) > 0 };
+      checks.geminiGeneration = { ok: Boolean(aiData.providers?.gemini?.ok), ready: Boolean(aiData.providers?.gemini?.ok), model: aiData.providers?.gemini?.model };
+      checks.neonDatabase = { ...(checks.neonDatabase || {}), ok: Boolean(aiData.neonStorage?.ok), connected: Boolean(aiData.neonStorage?.ok) };
+      setRuntime({ ...runtimeData, checkedAt: aiData.checkedAt || new Date().toISOString(), checks } as RuntimeHealth);
     } catch (error) {
       setRuntimeError(error instanceof Error ? error.message : "Could not run backend checks.");
     } finally { setRuntimeBusy(false); }
@@ -51,6 +73,7 @@ export default function AiHealthAdmin() {
         {runtime && (() => {
           const c = runtime.checks || {};
           const checks = [
+            ["Supabase AI gateway", c.supabaseAI?.ok],
             ["Neon database", c.neonDatabase?.ok && c.neonDatabase?.connected],
             ["Neon user identity", c.userIdentity?.ok && c.userIdentity?.ready && (c.userIdentity?.skipped || 0) === 0],
             ["Legacy workflows remaining", c.unportedFunctions?.ready === true],
