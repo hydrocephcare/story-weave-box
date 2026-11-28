@@ -9,6 +9,7 @@ import blogPolishQueue from "./_lib/blogPolishQueue.js";
 import paperDoctor from "./_lib/paperDoctor.js";
 import generateContent from "./_lib/generateContent.js";
 import mcqQualityFix from "./_lib/mcqQualityFix.js";
+import saveTopicDeep from "./_lib/saveTopicDeep.js";
 
 /** Neon-backed function dispatcher for Cloudflare Pages and crawler requests. */
 export const config = { maxDuration: 120 };
@@ -18,6 +19,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Invalid function name" });
   }
 
+  if (name === "save-topic-deep") return saveTopicDeep(req, res);
   if (name === "topic-maintenance") return topicMaintenance(req, res);
   if (name === "send-notification") return sendNotification(req, res);
   if (name === "generate-exam") return generateExam(req, res);
