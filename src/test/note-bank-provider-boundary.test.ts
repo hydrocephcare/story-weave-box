@@ -41,6 +41,7 @@ describe("medical note-bank provider separation", () => {
 
   it("preserves existing MCQ review/audit history during top-ups", () => {
     expect(maintenance).not.toContain("DELETE FROM public.mcq_review_log");
+    expect(maintenance).not.toContain("askModel(");
   });
 
 
