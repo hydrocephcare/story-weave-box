@@ -50,6 +50,27 @@ describe("weekly written exam generation", () => {
     expect(result.essays.laqs[0].aiReview).toMatchObject({ status: "passed", model: "gemini-review-test" });
   });
 
+  it("supports the six-SAQ admin paper format", async () => {
+    const sixSaqPaper = {
+      ...paper,
+      saqs: Array.from({ length: 6 }, (_, i) => ({
+        question: `Explain the clinical reasoning behind admin question ${i + 1} in this examination.`,
+        model_answer: "A structured answer explaining the mechanism, clinical interpretation and appropriate management implications.",
+      })),
+    };
+    groqMock.mockResolvedValueOnce({ text: JSON.stringify(sixSaqPaper), model: "groq-exam-test" });
+    const result = await generateReviewedEssayPaper({
+      prompt: "Write a six-SAQ medical exam.",
+      title: "Medical written examination",
+      unit: "Medicine",
+      env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" },
+      saqCount: 6,
+      laqCount: 1,
+    });
+    expect(result.essays.saqs).toHaveLength(6);
+    expect(result.essays.laqs).toHaveLength(1);
+  });
+
   it("repairs a written paper with Groq and rechecks it with Gemini", async () => {
     reviewMock
       .mockResolvedValueOnce({ validated: false, model: "gemini-review-test", issues: [{ problem: "The model answer contains an incorrect clinical recommendation.", fix: "Use the appropriate evidence-based management step." }] })
