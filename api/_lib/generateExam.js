@@ -1,7 +1,8 @@
 import { neon } from "@neondatabase/serverless";
 import { randomBytes } from "node:crypto";
 import { isNeonAdmin } from "./neonAdmin.js";
-import { askModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
+import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { balanceBank, placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
@@ -17,7 +18,7 @@ const normalizeUnit = (value) => String(value || "Uncategorized").trim();
 const yearOf = (value) => Number(/Year\s*(\d)/i.exec(String(value))?.[1]) || 0;
 
 async function generateText(prompt, maxTokens = 5000, aiEnv) {
-  const result = await askModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
+  const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
   if (!result?.text?.trim()) throw new Error("The AI writer returned an empty response.");
   return result.text;
 }
@@ -194,7 +195,7 @@ export default async function handler(req, res) {
       catch (error) { skipped.push(unit + ": " + (error instanceof Error ? error.message : String(error))); continue; }
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " usable MCQs generated."); continue; }
 
-      const review = await reviewQuestions(questions, true);
+      const review = await reviewQuestions(questions, true, aiEnv);
       if (review.reviewerUnavailable) { skipped.push(unit + ": independent Gemini review is temporarily unavailable."); continue; }
       questions = balanceBank(review.kept, { seed: unit + new Date().toISOString().slice(0, 10) }).questions;
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " MCQs passed independent review."); continue; }
@@ -209,8 +210,45 @@ export default async function handler(req, res) {
         'Schema: {"saqs":[{"question":"...","model_answer":"..."}],"laqs":[{"question":"...","model_answer":"..."}]}',
       ].join("\n");
       let essays = { saqs: [], laqs: [] };
-      try { essays = parseEssays(await generateText(essayPrompt, 4500, aiEnv)); } catch {}
+      try { essays = parseEssays(await generateText(essayPrompt, 4500, aiEnv)); }
+      catch { skipped.push(unit + ": written paper generation failed."); continue; }
       if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
+
+      // The written paper must pass an independent Gemini review before any exam is persisted.
+      let essayReview = await checkContent({
+        title: "Weekly " + unit + " written examination",
+        kind: "medical SAQ and LAQ questions with model answers",
+        text: JSON.stringify(essays),
+        env: aiEnv,
+        timeoutMs: 45000,
+      });
+      if (!essayReview.validated) {
+        const repairPrompt = [
+          "Correct the medical factual errors and clinically unsafe or ambiguous statements in this written medical examination.",
+          "Preserve exactly four SAQs and one LAQ, their marks, the topic scope and useful correct teaching detail. Do not invent doses or unsupported criteria.",
+          "Return ONLY JSON with keys saqs and laqs using the original schema.",
+          "INDEPENDENT GEMINI FINDINGS:",
+          (essayReview.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\n"),
+          "SOURCE CONTEXT:",
+          context,
+          "WRITTEN EXAM TO CORRECT:",
+          JSON.stringify(essays),
+        ].join("\n\n");
+        try { essays = parseEssays(await generateText(repairPrompt, 4500, aiEnv)); }
+        catch { skipped.push(unit + ": written exam correction failed."); continue; }
+        if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": corrected written paper did not pass format validation."); continue; }
+        essayReview = await checkContent({
+          title: "Weekly " + unit + " written examination",
+          kind: "corrected medical SAQ and LAQ questions with model answers",
+          text: JSON.stringify(essays),
+          env: aiEnv,
+          timeoutMs: 45000,
+        });
+      }
+      if (!essayReview.validated || !String(essayReview.model || "").trim()) {
+        skipped.push(unit + ": independent Gemini review did not clear the written examination.");
+        continue;
+      }
 
       const date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
       const title = "Weekly " + unit + " Exam - " + date;
