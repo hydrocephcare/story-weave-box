@@ -145,9 +145,7 @@ export default async function handler(req,res) {
     }
     if(type==="direct-article"||type==="article") {
       messages=[{role:"system",content:"You are a medical education expert. Convert these notes into a comprehensive exam-focused study article in markdown. Title on first line. Include ## Summary, ## Key Points, ## Detailed Notes with ### subsections, and ## Practice Questions with at least 8 clinical Q→A lines. Use explanatory paragraphs, preserve all tables and content, do not use code fences. Do not fabricate facts, doses or references."},{role:"user",content:(customTitle?"Title: "+customTitle+"\n\n":"")+safe}];
-      if(type==="article") { const result=await generateReviewedArticle(messages,customTitle,env); return res.status(200).json(result); }
-      raw=await callAI(messages,env,{plain:true,maxTokens:9000});
-      const result=normalizeArticleOutput(raw); if(customTitle)result.title=customTitle;
+      const result=await generateReviewedArticle(messages,customTitle,env);
       return res.status(200).json(result);
     }
     if(type==="direct-mcqs"||type==="mcqs") {
