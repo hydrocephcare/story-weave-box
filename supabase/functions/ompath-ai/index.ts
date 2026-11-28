@@ -241,9 +241,11 @@ Deno.serve(async(req:Request)=>{
       }catch{return {configured:Boolean(configuredNeonWriteProxy()&&NEON_WRITE_PROXY_SECRET.length>=32),ok:false,status:0};}})()
     ]);
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
-    return reply({ok:(groq.ok||gemini.ok)&&storage.ok&&deepPersistence.ok,checkedAt:new Date().toISOString(),
+    const ready=groq.ok&&gemini.ok&&storage.ok&&deepPersistence.ok;
+    return reply({ok:ready,checkedAt:new Date().toISOString(),
       providers:{groq:{...groq,configuredKeys:g.length},gemini:{...gemini,configuredKeys:m.length}},
-      neonStorage:storage,deepPersistence,auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
+      neonStorage:storage,deepPersistence,auth:{ok:true},
+      deploymentId:Deno.env.get("DENO_DEPLOYMENT_ID")||null},ready?200:503,origin);
   }
   if(!token)return reply({error:"login_required"},401,origin);
   if(!env.GROQ_API_KEYS&&!env.GROQ_API_KEY&&!env.GEMINI_API_KEYS&&!env.GEMINI_API_KEY&&!env.GROQ_API_KEYS_EXTRA)
@@ -274,6 +276,9 @@ Deno.serve(async(req:Request)=>{
     } catch(e) {
       console.warn("Topic cache lookup timed out",String(e).slice(0,120));
     }
+    const hasGroq=providerKeys(env,"GROQ").length>0;
+    const hasGemini=providerKeys(env,"GEMINI").length>0;
+    if(!hasGroq||!hasGemini)return reply({status:"unavailable",reason:"providers_not_configured",providers:{groq:hasGroq,gemini:hasGemini}},503,origin);
     const quota=await entitlement(token,"topic_page_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
@@ -312,6 +317,9 @@ Deno.serve(async(req:Request)=>{
     if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)||slug.length>80)return reply({status:"invalid",reason:"slug"},400,origin);
     const proxyUrl=configuredNeonWriteProxy();
     if(!proxyUrl||NEON_WRITE_PROXY_SECRET.length<32)return reply({status:"failed",reason:"persistence_unconfigured"},503,origin);
+    const hasGroq=providerKeys(env,"GROQ").length>0;
+    const hasGemini=providerKeys(env,"GEMINI").length>0;
+    if(!hasGroq||!hasGemini)return reply({status:"unavailable",reason:"providers_not_configured",providers:{groq:hasGroq,gemini:hasGemini}},503,origin);
     const quota=await entitlement(token,"ai_note_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
