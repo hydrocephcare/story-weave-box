@@ -1,4 +1,5 @@
 import { generateReviewedTopicPage, validName, slugOf, askModel, askGroqModel, askGeminiModel, providerKeys } from "./topicAi.js";
+import { generateCheckedDeep } from "../_shared/contentCheck.js";
 import { createRemoteJWKSet, jwtVerify } from "npm:jose@5.9.6";
 
 const ALLOWED = new Set(["https://www.ompathstudy.com","https://ompathstudy.com","https://stories.ompathstudy.com"]);
@@ -270,6 +271,37 @@ Deno.serve(async(req:Request)=>{
       return reply({status:"published",page,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath topic generation failed",String(e).slice(0,400));
+      return reply({status:"failed",reason:"generation"},502,origin);
+    }
+  }
+
+  if(body.task==="deep") {
+    const name=String(body.name??"").trim();
+    const category=String(body.category??"").slice(0,60);
+    if(!validName(name))return reply({status:"invalid"},400,origin);
+    const base=body.base&&typeof body.base==="object"?body.base:{};
+    const past=(Array.isArray(body.past)?body.past:[]).map((x:any)=>String(x).slice(0,240)).slice(0,12);
+    const slug=String(body.slug||slugOf(name));
+    const quota=await entitlement(token,"ai_note_generation");
+    if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
+    try {
+      const deep=await generateCheckedDeep({name,category,base,past},{...env},fetch,55000);
+      const saved=await fetch(DATA_API_URL+"/rpc/save_topic_deep",{
+        method:"POST",
+        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
+        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category||String(base.subject||""),p_base:base,p_deep:deep}),
+        signal:AbortSignal.timeout(15000)
+      });
+      if(!saved.ok) {
+        const detail=(await saved.text()).slice(0,240);
+        console.error("Deep-note persistence failed",saved.status,detail);
+        return reply({status:"failed",reason:"persistence"},502,origin);
+      }
+      const result=await saved.json();
+      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
+      return reply({status:"published",deep,saved:true,slug,name,quota:quota.quota},200,origin);
+    } catch(e) {
+      console.error("Ompath deep-note generation failed",String(e).slice(0,400));
       return reply({status:"failed",reason:"generation"},502,origin);
     }
   }
