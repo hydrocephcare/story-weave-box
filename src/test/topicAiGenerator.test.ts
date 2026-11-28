@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
-import { askGeminiModel, askGroqModel, askModel, buildPrompt, generateReviewedTopicPage, providerKeys, sanitizePage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { askGeminiModel, askGroqModel, askModel as askSharedModel, buildPrompt, generateReviewedTopicPage, providerKeys, sanitizePage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel as askGatewayModel } from "../../supabase/functions/ompath-ai/topicAi.js";
 const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
 const makePage = (title: string, subject: string, count = 13) => {
   const explanation = Array.from({ length: 8 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
@@ -236,18 +237,41 @@ describe("topic validation and provider routing", () => {
     expect(result.text).toContain('"ok":true');
   });
 
-  it("falls back to Gemini when Groq is unavailable", async () => {
+  it("falls back to Groq when Gemini is unavailable in the shared serverless AI client", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response("Gemini unavailable", { status: 503 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({
+        choices: [{ message: { content: '{"fallback":"groq"}' } }],
+      }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await askSharedModel("Return a small JSON object.", {
+      env: {
+        GEMINI_API_KEYS: "gemini-shared-fallback-key",
+        GEMINI_MODELS: "gemini-3.8-flash",
+        GROQ_API_KEYS: "groq-shared-fallback-key",
+        GROQ_MODELS: "openai/gpt-oss-20b",
+      },
+      fetchImpl,
+    });
+
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("generativelanguage.googleapis.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+    expect(result.model).toBe("openai/gpt-oss-20b");
+  });
+
+  it("falls back to Gemini when Groq is unavailable in the active Supabase gateway client", async () => {
     const fetchImpl = vi.fn()
       .mockResolvedValueOnce(new Response("Groq unavailable", { status: 503 }))
       .mockResolvedValueOnce(new Response(JSON.stringify({
         candidates: [{ content: { parts: [{ text: '{"fallback":"gemini"}' }] } }],
       }), { status: 200, headers: { "Content-Type": "application/json" } }));
 
-    const result = await askModel("Return a small JSON object.", {
+    const result = await askGatewayModel("Return a small JSON object.", {
       env: {
-        GROQ_API_KEYS: "groq-fallback-test-key",
+        GROQ_API_KEYS: "groq-gateway-fallback-key",
         GROQ_MODELS: "openai/gpt-oss-120b",
-        GEMINI_API_KEYS: "gemini-fallback-test-key",
+        GEMINI_API_KEYS: "gemini-gateway-fallback-key",
         GEMINI_MODELS: "gemini-3.8-flash",
       },
       fetchImpl,
