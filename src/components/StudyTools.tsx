@@ -94,13 +94,13 @@ export default function StudyTools({ title, path, text, className = "", pictures
   const makeEssays = async () => {
     if (!allowed("essays")) return;
     setBusy("essays"); setNote(null);
-    try { const { essays: e } = await call("essays", title, text, session?.access_token); spendOne("essays"); if (alive.current) { setOpenEssay(null); setEssays(e); } }
+    try { const { essays: e } = await call("essays", title, text); spendOne("essays"); if (alive.current) { setOpenEssay(null); setEssays(e); } }
     catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
   const makeQuiz = async () => {
     if (!allowed("quiz")) return;
     setBusy("quiz"); setNote(null);
-    try { const { questions } = await call("quiz", title, text, session?.access_token); spendOne("quiz"); if (alive.current) { setPicked({}); setQuiz(spread(questions)); } }
+    try { const { questions } = await call("quiz", title, text); spendOne("quiz"); if (alive.current) { setPicked({}); setQuiz(spread(questions)); } }
     catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
   const score = quiz ? quiz.filter((q, i) => picked[i] === q.answer).length : 0;
