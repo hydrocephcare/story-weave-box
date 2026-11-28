@@ -2,11 +2,6 @@ import { neon } from "@neondatabase/serverless";
 import { timingSafeEqual } from "node:crypto";
 import { verifyNeonToken } from "./neonAdmin.js";
 
-const reply = (res, status, body) => {
-  res.setHeader("Cache-Control", "no-store");
-  return res.status(status).json(body);
-};
-
 function equalSecret(provided, expected) {
   const a = Buffer.from(String(provided || ""));
   const b = Buffer.from(String(expected || ""));
@@ -35,14 +30,19 @@ export default async function saveTopicDeep(req, res) {
   const user = await verifyNeonToken(bearer(req));
   if (!user) return res.status(401).json({ status: "unauthorized", reason: "invalid_session" });
 
-  const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : (req.body || {});
+  let body;
+  try {
+    body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : (req.body || {});
+  } catch {
+    return res.status(400).json({ status: "invalid", reason: "invalid_json" });
+  }
   const slug = String(body.slug || "").trim().toLowerCase();
   const name = String(body.name || "").trim();
   const category = String(body.category || "").trim().slice(0, 60);
   const base = body.base && typeof body.base === "object" && !Array.isArray(body.base) ? body.base : {};
   const deep = body.deep && typeof body.deep === "object" && !Array.isArray(body.deep) ? body.deep : null;
 
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 120 || name.length < 3 || name.length > 160 || !deep) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 80 || name.length < 3 || name.length > 160 || !deep) {
     return res.status(400).json({ status: "invalid", reason: "invalid_payload" });
   }
 
@@ -52,7 +52,7 @@ export default async function saveTopicDeep(req, res) {
   } catch {
     return res.status(400).json({ status: "invalid", reason: "invalid_payload" });
   }
-  if (payloadSize > 1_500_000) {
+  if (payloadSize > 150_000 || Buffer.byteLength(JSON.stringify(deep), "utf8") > 80_000) {
     return res.status(413).json({ status: "invalid", reason: "payload_too_large" });
   }
 
