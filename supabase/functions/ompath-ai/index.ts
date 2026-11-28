@@ -219,14 +219,21 @@ Deno.serve(async(req:Request)=>{
         return {ok:Boolean(result.text?.trim()),model:result.model||null};
       } catch(e) { return {ok:false,error:String(e).slice(0,180)}; }
     };
-    const [groq,gemini,storage]=await Promise.all([
+    const [groq,gemini,storage,deepPersistence]=await Promise.all([
       probe("groq"),probe("gemini"),
-      (async()=>{try{const r=await fetch(DATA_API_URL+"/topic_pages?select=slug&limit=1",{headers:{Authorization:"Bearer "+token,Accept:"application/json"},signal:AbortSignal.timeout(8000)});return {ok:r.ok,status:r.status};}catch{return {ok:false,status:0};}})()
+      (async()=>{try{const r=await fetch(DATA_API_URL+"/topic_pages?select=slug&limit=1",{headers:{Authorization:"Bearer "+token,Accept:"application/json"},signal:AbortSignal.timeout(8000)});return {ok:r.ok,status:r.status};}catch{return {ok:false,status:0};}})(),
+      (async()=>{try{
+        if(!NEON_WRITE_PROXY_URL||NEON_WRITE_PROXY_SECRET.length<32)return {configured:false,ok:false,status:0};
+        const url=new URL(NEON_WRITE_PROXY_URL);url.searchParams.set("health","1");
+        const r=await fetch(url.toString(),{headers:{"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET},signal:AbortSignal.timeout(8000)});
+        const data=await r.json().catch(()=>({}));
+        return {configured:true,ok:r.ok&&data.database===true,status:r.status};
+      }catch{return {configured:Boolean(NEON_WRITE_PROXY_URL&&NEON_WRITE_PROXY_SECRET.length>=32),ok:false,status:0};}})()
     ]);
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
     return reply({ok:groq.ok||gemini.ok,checkedAt:new Date().toISOString(),
       providers:{groq:{...groq,configuredKeys:g.length},gemini:{...gemini,configuredKeys:m.length}},
-      neonStorage:storage,deepPersistence:{configured:Boolean(NEON_WRITE_PROXY_URL&&NEON_WRITE_PROXY_SECRET.length>=32)},auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
+      neonStorage:storage,deepPersistence,auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
   }
   if(!env.GROQ_API_KEYS&&!env.GROQ_API_KEY&&!env.GEMINI_API_KEYS&&!env.GEMINI_API_KEY&&!env.GROQ_API_KEYS_EXTRA)
     return reply({error:"ai_provider_not_configured"},503,origin);
