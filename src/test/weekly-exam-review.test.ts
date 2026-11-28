@@ -47,6 +47,16 @@ describe("weekly exam independent MCQ review", () => {
     expect(result.disputed).toHaveLength(questions.length);
   });
 
+  it("fails closed on an unexpected Gemini status instead of accepting it", async () => {
+    geminiMock.mockResolvedValue({
+      text: JSON.stringify(questions.map((q, i) => ({ i, your_answer: 0, status: "uncertain", options: q.options, explanation: q.explanation }))),
+      model: "gemini-review-test",
+    });
+    const result = await reviewQuestions(questions, false, { GEMINI_API_KEYS: "test-key" });
+    expect(result.kept).toHaveLength(0);
+    expect(result.dropped).toBe(questions.length);
+  });
+
   it("records the actual Gemini reviewer model on a successful review", async () => {
     geminiMock.mockResolvedValue({
       text: JSON.stringify(questions.map((q, i) => ({ i, your_answer: 0, status: "ok", options: q.options, explanation: q.explanation }))),
