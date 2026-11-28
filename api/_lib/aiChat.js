@@ -1,24 +1,9 @@
-// POST /api/ai-chat { question, history, sources }: Ompath AI answers, streamed as OpenAI-style server-sent events (what the site already reads).
-// Groq first (fast, keys take turns), Gemini (keys take turns) when Groq is busy or out of quota. Keys: GROQ_API_KEYS, GEMINI_API_KEYS.
-import { consumeEntitlement } from "./entitlements.js";
+// Legacy /api/ai-chat route. All inference and quota enforcement now run through Supabase AI.
+import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const hits = new Map();
 const LIMIT = 80; // questions per visitor per hour (best effort)
-let turn = 0;
-const dead = new Map(); // key+model -> until
-const isDead = (id) => (dead.get(id) ?? 0) > Date.now();
-const kill = (id, ms = 45_000) => dead.set(id, Date.now() + ms);
-
-// the last key is the one kept for manual use: people waiting on an answer here try it first, and the scheduled jobs never use it
-const list = (...values) => [...new Set(values.flatMap((value) => {
-  const raw = String(value ?? "").trim();
-  if (!raw) return [];
-  try {
-    const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
-  } catch {}
-  return raw.split(/[\s,;]+/).map((item) => item.trim()).filter(Boolean);
-}))].reverse();
 
 const PERSONA = `You are Ompath AI, the study assistant of Ompath Study, a medical study site used by medical and clinical students in many countries, including low-resource hospitals.
 How you answer:
@@ -48,68 +33,9 @@ const sse = (res, text) => {
   return res.write(`data: ${JSON.stringify({ choices: [{ delta: { content: text } }] })}\n\n`);
 };
 
-async function viaGroq(msgs, res, keys) {
-  const models = list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,openai/gpt-oss-20b");
-  const start = keys.length ? turn++ % keys.length : 0;
-  for (let i = 0; i < keys.length; i++) {
-    const key = keys[(start + i) % keys.length];
-    for (const model of models) {
-      const id = key + model;
-      if (isDead(id)) continue;
-      try {
-        const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers: { "content-type": "application/json", Authorization: `Bearer ${key}` }, body: JSON.stringify({ model, stream: true, temperature: 0.4, max_tokens: 1800, reasoning_effort: "low", messages: msgs }) });
-        if (r.status === 429 || r.status === 503 || r.status === 404) { kill(id); continue; }
-        if (!r.ok || !r.body) continue;
-        const reader = r.body.getReader(); const dec = new TextDecoder();
-        let buf = "", sent = false;
-        for (;;) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          buf += dec.decode(value, { stream: true });
-          const lines = buf.split("\n"); buf = lines.pop() ?? "";
-          for (const l of lines) {
-            const d = l.trim();
-            if (!d.startsWith("data:")) continue;
-            const p = d.slice(5).trim();
-            if (!p || p === "[DONE]") continue;
-            try { const piece = JSON.parse(p)?.choices?.[0]?.delta?.content; if (piece) { sse(res, piece); sent = true; } } catch { /* partial */ }
-          }
-        }
-        if (sent) return true;
-      } catch { /* try the next key */ }
-    }
-  }
-  return false;
-}
-
-async function viaGemini(msgs, res, keys) {
-  const models = list(process.env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite");
-  const system = msgs[0].content;
-  const contents = msgs.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
-  const start = keys.length ? turn++ % keys.length : 0;
-  for (let i = 0; i < keys.length; i++) {
-    const key = keys[(start + i) % keys.length];
-    for (const model of models) {
-      const id = key + model;
-      if (isDead(id)) continue;
-      try {
-        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents, generationConfig: { temperature: 0.4, maxOutputTokens: 1800, ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : {}) } }) });
-        if (r.status === 429 || r.status === 503 || r.status === 404) { kill(id); continue; }
-        if (!r.ok) continue;
-        const text = (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
-        if (text?.trim()) { sse(res, text); return true; }
-      } catch { /* try the next key */ }
-    }
-  }
-  return false;
-}
-
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
-  const groq = list(process.env.GROQ_API_KEYS, process.env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => process.env["GROQ_API_KEY_" + (i + 2)]));
-  const gemini = list(process.env.GEMINI_API_KEYS, process.env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => process.env["GEMINI_API_KEY_" + (i + 2)]));
-  if (!groq.length && !gemini.length) return res.status(503).json({ error: "not configured" });
-  const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
+  const ip = String(req.headers["cf-connecting-ip"] || req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
   const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
   if (mine.length >= LIMIT) return res.status(429).json({ error: "Too many questions for now. Please try again later." });
@@ -118,11 +44,20 @@ export default async function handler(req, res) {
 
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   if (!String(body.question ?? "").trim()) return res.status(400).json({ error: "Ask a question." });
-  const quota = await consumeEntitlement(req, "ompath_ai_questions");
-  if (!quota.allowed) return res.status(quota.status || 402).json({ error: quota.reason === "quota_exhausted" ? "You have reached your free Ompath AI allowance. Unlock premium access for more questions." : quota.reason === "login_required" || quota.reason === "invalid_session" ? "Please sign in to use Ompath AI." : "We could not verify your access. Please try again.", upgrade_required: quota.status === 402, quota });
+  const env = supabaseAiEnv(req, { feature: "ompath_ai_questions" });
+  if (!env.OMPATH_SUPABASE_AI_TOKEN) return res.status(401).json({ error: "Please sign in to use Ompath AI." });
   const msgs = buildMessages(body);
-  const ok = (groq.length && (await viaGroq(msgs, res, groq))) || (gemini.length && (await viaGemini(msgs, res, gemini)));
-  if (!ok) return res.status(502).json({ error: "Ompath AI is busy. Please try again in a moment." });
-  res.write("data: [DONE]\n\n");
-  res.end();
+  const prompt = msgs.map((m) => String(m.role).toUpperCase() + ":\\n" + String(m.content || "")).join("\\n\\n");
+  try {
+    const result = await askModel(prompt, { env, timeoutMs: 60000, maxTokens: 1800, plain: true, temperature: 0.4 });
+    if (!result.text?.trim()) return res.status(502).json({ error: "Ompath AI returned an empty answer. Please try again." });
+    sse(res, result.text);
+    res.write("data: [DONE]\\n\\n");
+    return res.end();
+  } catch (error) {
+    const status = Number(error?.status);
+    const safeStatus = status >= 400 && status <= 599 ? status : 502;
+    console.error("[ompath-ai-legacy-route]", String(error?.message || error).slice(0, 220));
+    return res.status(safeStatus).json({ error: safeStatus === 402 ? "You have reached your Ompath AI allowance. Unlock premium access for more questions." : "Ompath AI is busy. Please try again in a moment." });
+  }
 }
