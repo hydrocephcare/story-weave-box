@@ -2,7 +2,7 @@ import { neon } from "@neondatabase/serverless";
 import { deepNoteReady, topicBaseReady } from "./deepNoteReadiness.js";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
@@ -136,7 +136,7 @@ export default async function handler(req, res) {
         } catch { return []; }
       };
       const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
-      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
+      const draft = await askGroqModel(prompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
       let questions = parse(draft.text);
       if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
       let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 12000 });
@@ -144,13 +144,13 @@ export default async function handler(req, res) {
         const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
           + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
           + "\nQUESTIONS:\n" + JSON.stringify(questions);
-        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
+        const fixed = await askGroqModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
         questions = parse(fixed.text);
         if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
         review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 12000 });
       }
       if (!review.validated) return res.status(422).json({ validated: false, issues: review.issues || [] });
-      return res.status(200).json({ validated: true, questions, reviewModel: review.model || null });
+      return res.status(200).json({ validated: true, reviewStatus: "passed", questions, reviewModel: review.model || null, reviewedAt: review.at || new Date().toISOString() });
     }
 
 
