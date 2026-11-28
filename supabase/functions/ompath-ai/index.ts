@@ -1,3 +1,5 @@
+import { neon } from "npm:@neondatabase/serverless@1.0.2";
+import { publishReviewedTopic, saveReviewedDeep, checkNeonDatabase } from "./persistence.js";
 import { generateReviewedTopicPage, validName, slugOf, askModel, askGroqModel, askGeminiModel, providerKeys } from "./topicAi.js";
 import { generateCheckedDeep } from "./contentCheck.js";
 import { createRemoteJWKSet, jwtVerify } from "npm:jose@5.9.6";
@@ -13,6 +15,9 @@ const reply = (data:unknown,status=200,origin="") => new Response(JSON.stringify
 });
 const JWKS_URL=Deno.env.get("NEON_AUTH_JWKS_URL")||"";
 const DATA_API_URL=(Deno.env.get("NEON_DATA_API_URL")||"").replace(/\/+$/,"");
+const NEON_DATABASE_URL=Deno.env.get("NEON_DATABASE_URL")||Deno.env.get("DATABASE_URL")||"";
+let neonDb:any=null;
+function getNeonDb(){if(!NEON_DATABASE_URL)throw new Error("neon_database_not_configured");neonDb ||= neon(NEON_DATABASE_URL);return neonDb;}
 const jwks=JWKS_URL?createRemoteJWKSet(new URL(JWKS_URL)):null;
 
 const split=(v:unknown)=>[...new Set(String(v??"").split(/[\s,]+/).map(k=>k.trim()).filter(Boolean))];
@@ -219,7 +224,7 @@ Deno.serve(async(req:Request)=>{
     };
     const [groq,gemini,storage]=await Promise.all([
       probe("groq"),probe("gemini"),
-      (async()=>{try{const r=await fetch(DATA_API_URL+"/topic_pages?select=slug&limit=1",{headers:{Authorization:"Bearer "+token,Accept:"application/json"},signal:AbortSignal.timeout(8000)});return {ok:r.ok,status:r.status};}catch{return {ok:false,status:0};}})()
+      (async()=>{try{return {configured:true,...await checkNeonDatabase(getNeonDb())};}catch(e){return {ok:false,configured:Boolean(NEON_DATABASE_URL),error:String(e).slice(0,120)};}})()
     ]);
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
     return reply({ok:groq.ok||gemini.ok,checkedAt:new Date().toISOString(),
@@ -261,19 +266,11 @@ Deno.serve(async(req:Request)=>{
       const page=generated.page;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
-      const saved=await fetch(DATA_API_URL+"/rpc/publish_topic_page",{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category,p_content:page,p_model:page.model||"groq"}),
-        signal:AbortSignal.timeout(15000)
-      });
-      if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Topic persistence failed",saved.status,detail);
-        return reply({status:"failed",reason:"persistence"},502,origin);
+      const result=await publishReviewedTopic(getNeonDb(),{slug,name,category,page});
+      if(!result?.ok){
+        console.error("Topic persistence failed",String(result?.reason||"unknown").slice(0,80));
+        return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       }
-      const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       return reply({status:"published",page,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath topic generation failed",String(e).slice(0,400));
@@ -292,19 +289,13 @@ Deno.serve(async(req:Request)=>{
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
       const deep=await generateCheckedDeep({name,category,base,past},{...env},fetch,55000);
-      const saved=await fetch(DATA_API_URL+"/rpc/save_topic_deep",{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category||String(base.subject||""),p_base:base,p_deep:deep}),
-        signal:AbortSignal.timeout(15000)
+      const result=await saveReviewedDeep(getNeonDb(),{
+        slug,name,category:category||String(base.subject||""),base,deep
       });
-      if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Deep-note persistence failed",saved.status,detail);
-        return reply({status:"failed",reason:"persistence"},502,origin);
+      if(!result?.ok){
+        console.error("Deep-note persistence failed",String(result?.reason||"unknown").slice(0,80));
+        return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       }
-      const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       return reply({status:"published",deep,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath deep-note generation failed",String(e).slice(0,400));
