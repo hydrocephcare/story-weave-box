@@ -34,8 +34,10 @@ const usedKey = (m: string) => `ompath_study_${m}_${new Date().toISOString().sli
 const used = (m: string) => { try { return Number(localStorage.getItem(usedKey(m)) ?? 0); } catch { return 0; } };
 const spendOne = (m: string) => { try { localStorage.setItem(usedKey(m), String(used(m) + 1)); } catch { /* ignore */ } };
 
-async function call(mode: "cards" | "quiz" | "essays", title: string, text: string) {
-  const r = await fetch("/api/page-study", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ mode, title, text }) });
+async function call(mode: "cards" | "quiz" | "essays", title: string, text: string, token?: string) {
+  const headers: Record<string, string> = { "content-type": "application/json" };
+  if (token) headers.Authorization = "Bearer " + token;
+  const r = await fetch("/api/page-study", { method: "POST", headers, body: JSON.stringify({ mode, title, text }) });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(j.error || "Ompath AI could not do this just now. Please try again.");
   return j;
@@ -45,7 +47,7 @@ async function call(mode: "cards" | "quiz" | "essays", title: string, text: stri
 export default function StudyTools({ title, path, text, className = "", pictures = false, articleId }: { title: string; path: string; text: string; className?: string; pictures?: boolean; articleId?: string }) {
   const [busy, setBusy] = useState<"" | "cards" | "quiz" | "essays">("");
   const { hasPass } = useAccess();
-  const { isAdmin } = useAuth();
+  const { isAdmin, session } = useAuth();
   const unlimited = hasPass || isAdmin;
   const [essays, setEssays] = useState<Essay[] | null>(null);
   const [openEssay, setOpenEssay] = useState<number | null>(null);
@@ -77,7 +79,7 @@ export default function StudyTools({ title, path, text, className = "", pictures
           return;
         }
       }
-      const { cards } = await call("cards", title, text);
+      const { cards } = await call("cards", title, text, session?.access_token);
       const deck = saveGeneratedFlashcardDeck(title, path, cards);
       spendOne("cards");
       if (alive.current) {
@@ -89,13 +91,13 @@ export default function StudyTools({ title, path, text, className = "", pictures
   const makeEssays = async () => {
     if (!allowed("essays")) return;
     setBusy("essays"); setNote(null);
-    try { const { essays: e } = await call("essays", title, text); spendOne("essays"); if (alive.current) { setOpenEssay(null); setEssays(e); } }
+    try { const { essays: e } = await call("essays", title, text, session?.access_token); spendOne("essays"); if (alive.current) { setOpenEssay(null); setEssays(e); } }
     catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
   const makeQuiz = async () => {
     if (!allowed("quiz")) return;
     setBusy("quiz"); setNote(null);
-    try { const { questions } = await call("quiz", title, text); spendOne("quiz"); if (alive.current) { setPicked({}); setQuiz(spread(questions)); } }
+    try { const { questions } = await call("quiz", title, text, session?.access_token); spendOne("quiz"); if (alive.current) { setPicked({}); setQuiz(spread(questions)); } }
     catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
   const score = quiz ? quiz.filter((q, i) => picked[i] === q.answer).length : 0;
