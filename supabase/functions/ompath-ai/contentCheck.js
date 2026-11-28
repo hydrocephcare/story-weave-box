@@ -60,17 +60,31 @@ Reply with ONLY one JSON object: {"real": [numbers of the claims that are real e
   return issues.filter((_, i) => keep.has(i + 1));
 }
 
-/** Splits long text at "##" headings into pieces of about 14,000 characters, so each answer stays short and accurate. */
-export function chunkText(text, max = 14000) {
-  const parts = String(text).split(/(?=^##\s)/m);
+/** Split at safe boundaries while preserving every character, including long JSON arrays with no headings or line breaks. */
+export function chunkText(text, max = 13000) {
+  const source = String(text ?? "");
+  if (!source.length) return [""];
   const out = [];
-  let cur = "";
-  for (const p of parts) {
-    if (cur && cur.length + p.length > max) { out.push(cur); cur = ""; }
-    cur += p;
+  let start = 0;
+  while (start < source.length) {
+    let end = Math.min(start + max, source.length);
+    if (end < source.length) {
+      const floor = start + Math.floor(max * 0.55);
+      const newline = source.lastIndexOf("\n", end - 1);
+      const space = source.lastIndexOf(" ", end - 1);
+      const boundary = Math.max(newline, space);
+      if (boundary >= floor) end = boundary + 1;
+      // Do not split a UTF-16 surrogate pair.
+      if (end > start && end < source.length) {
+        const code = source.charCodeAt(end - 1);
+        if (code >= 0xD800 && code <= 0xDBFF) end--;
+      }
+    }
+    if (end <= start) end = Math.min(start + max, source.length);
+    out.push(source.slice(start, end));
+    start = end;
   }
-  if (cur.trim()) out.push(cur);
-  return out.length ? out : [""];
+  return out;
 }
 
 /** Checks the whole text (in pieces) with the AI keys in env; returns { validated, high, medium, issues, model }. Throws when no answer could be had. */
