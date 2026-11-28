@@ -1,6 +1,9 @@
 /** A deep note is complete only after an independent AI check and the required exam material exist. */
 export function deepNoteReady(deep) {
   return Boolean(deep?.checked)
+    && deep?.reviewStatus === "passed"
+    && String(deep?.reviewModel || "").trim().length > 0
+    && Boolean(deep?.reviewedAt)
     && (deep?.sections?.length || 0) >= 7
     && ((deep?.vivas?.length || 0) >= 12 || (deep?.exam?.length || 0) >= 12)
     && (deep?.mcqs?.length || 0) >= 6
