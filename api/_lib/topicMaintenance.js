@@ -3,6 +3,7 @@ import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -72,6 +73,7 @@ export default async function handler(req, res) {
 
   const body = req.body && typeof req.body === "object" ? req.body : {};
   const task = String(body.task || "");
+  const aiEnv = supabaseAiEnv(req, { workflow: true });
 
   try {
     if (task === "health") {
@@ -103,8 +105,8 @@ export default async function handler(req, res) {
       if (!["quiz", "case", "drug"].includes(kind) || name.length < 4 || !Number.isInteger(year) || year < 1 || year > 6) {
         return res.status(400).json({ error: "Invalid daily game request." });
       }
-      const groqEnv = { GROQ_API_KEYS: String(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "") };
-      const geminiEnv = { GEMINI_API_KEYS: String(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "") };
+      const groqEnv = aiEnv;
+      const geminiEnv = aiEnv;
       if (!groqEnv.GROQ_API_KEYS.trim() || !geminiEnv.GEMINI_API_KEYS.trim()) {
         return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
       }
@@ -218,7 +220,7 @@ Return ONLY JSON: {"summary":"2 or 3 plain sentences, 55 words at most, no hype,
 Use only information supported by the source text. Do not invent content.
 PAGE TEXT:
 """${sourceText}"""`;
-      const result = await askModel(prompt, { env: process.env, timeoutMs: 40000, maxTokens: 900 });
+      const result = await askModel(prompt, { env: aiEnv, timeoutMs: 40000, maxTokens: 900 });
       const match = String(result?.text || "").match(/\{[\s\S]*\}/);
       if (!match) return res.status(502).json({ error: "The AI summary was not valid JSON." });
       let parsed;
@@ -249,7 +251,7 @@ PAGE TEXT:
       const base = body.base && typeof body.base === "object" ? body.base : null;
       if (name.length < 2 || !base || !Array.isArray(base.sections) || base.sections.length < 3) return res.status(400).json({ error: "A valid topic name and revision page are required." });
       const past = Array.isArray(body.past) ? body.past.slice(0, 12).map(x => String(x).slice(0, 220)) : [];
-      const deep = await generateCheckedDeep({ name, category, base, past }, process.env, fetch, 240000);
+      const deep = await generateCheckedDeep({ name, category, base, past }, aiEnv, fetch, 240000);
       if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
       return res.status(200).json({ deep });
     }
@@ -266,7 +268,7 @@ PAGE TEXT:
         }
         return result;
       };
-      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: process.env, timeoutMs: 45000 }), original);
+      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: aiEnv, timeoutMs: 45000 }), original);
       let final = first, correctedBody = null, repairStatus = "clean";
       if (!first.validated) {
         const prompt = [
@@ -305,7 +307,7 @@ PAGE TEXT:
       const result = await generateReviewedTopicPage({
         name: row.name, category: row.category || "Medicine", context,
         choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
-      }, { env: process.env, maxFixRounds: 1, timeoutMs: 55000 });
+      }, { env: aiEnv, maxFixRounds: 1, timeoutMs: 55000 });
       if (!result.page?.medical || result.review?.status !== "passed") return res.status(422).json({ status: "held", slug, reason: "independent_review_failed" });
       const page = { ...result.page, aiReview: { ...(result.page.aiReview || {}), status: "passed", model: result.review.model, rounds: result.review.rounds || 0 } };
       if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3
@@ -331,7 +333,7 @@ PAGE TEXT:
       if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const deep = await generateCheckedDeep(
         { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
-        process.env, fetch, 240000,
+        aiEnv, fetch, 240000,
       );
       if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
       const content = { ...(row.content || {}), deep };
