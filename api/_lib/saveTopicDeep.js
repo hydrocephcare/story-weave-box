@@ -14,17 +14,30 @@ function bearer(req) {
 
 export default async function saveTopicDeep(req, res) {
   res.setHeader("Cache-Control", "no-store");
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ status: "invalid", reason: "method_not_allowed" });
-  }
-
   const expectedSecret = String(process.env.OMPATH_NEON_WRITE_SECRET || "");
   if (!expectedSecret) {
     return res.status(503).json({ status: "unavailable", reason: "proxy_secret_not_configured" });
   }
   if (!equalSecret(req.headers?.["x-ompath-neon-write-secret"], expectedSecret)) {
     return res.status(401).json({ status: "unauthorized" });
+  }
+
+  const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
+  if (req.method === "GET" && String(req.query?.health || "") === "1") {
+    if (!databaseUrl) return res.status(503).json({ status: "unavailable", database: false });
+    try {
+      const sql = neon(databaseUrl);
+      const rows = await sql`SELECT 1 AS ok`;
+      return res.status(200).json({ status: "ok", database: Number(rows?.[0]?.ok) === 1 });
+    } catch (error) {
+      console.error("[save-topic-deep] health probe failed:", String(error?.code || error?.name || "database_error"));
+      return res.status(502).json({ status: "unavailable", database: false });
+    }
+  }
+
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "GET, POST");
+    return res.status(405).json({ status: "invalid", reason: "method_not_allowed" });
   }
 
   const user = await verifyNeonToken(bearer(req));
@@ -55,8 +68,6 @@ export default async function saveTopicDeep(req, res) {
   if (payloadSize > 150_000 || Buffer.byteLength(JSON.stringify(deep), "utf8") > 80_000) {
     return res.status(413).json({ status: "invalid", reason: "payload_too_large" });
   }
-
-  const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
   if (!databaseUrl) return res.status(503).json({ status: "unavailable", reason: "database_not_configured" });
 
   try {
