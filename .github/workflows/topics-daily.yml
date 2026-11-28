@@ -29,6 +29,10 @@ on:
         description: "How many note-based flashcard decks to generate"
         required: false
         default: "4"
+      essays:
+        description: "How many note-based essay question sets to generate"
+        required: false
+        default: "4"
 permissions:
   contents: write
   id-token: write
