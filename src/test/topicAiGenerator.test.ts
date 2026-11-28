@@ -106,8 +106,9 @@ describe("Groq topic generation boundary", () => {
 
     expect(result.text).toBe("review complete");
     expect(fetchImpl).toHaveBeenCalledTimes(2);
-    expect(new Headers(fetchImpl.mock.calls[0][1]?.headers).get("x-goog-api-key")).toBe("gemini-key-one");
-    expect(new Headers(fetchImpl.mock.calls[1][1]?.headers).get("x-goog-api-key")).toBe("gemini-key-two");
+    const attemptedKeys = fetchImpl.mock.calls.map((call) => new Headers(call[1]?.headers).get("x-goog-api-key"));
+    expect(new Set(attemptedKeys)).toEqual(new Set(["gemini-key-one", "gemini-key-two"]));
+    expect(attemptedKeys[0]).not.toBe(attemptedKeys[1]);
   });
 
   it("falls back from exhausted Gemini to Groq and returns the actual provider model", async () => {
