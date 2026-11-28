@@ -91,6 +91,7 @@ export default async function handler(req, res) {
     : requestedMode === "quiz" ? "ai_mcq_generation"
     : requestedMode === "essays" ? "ai_note_generation" : "search_prediction";
   const env = supabaseAiEnv(req, { feature });
+  if (!env.OMPATH_SUPABASE_AI_TOKEN) return res.status(401).json({ error: "Please sign in to use Ompath AI." });
   if (body.mode === "spell") {
     // a misspelt medical term: the correctly spelt terms the student most likely meant
     const typed = String(body.query ?? "").replace(/[^A-Za-z0-9 '\-,./]/g, " ").trim().slice(0, 80);
