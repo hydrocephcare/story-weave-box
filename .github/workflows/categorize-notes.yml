@@ -8,6 +8,11 @@ on:
     - cron: "0 3 * * 1"
   workflow_dispatch:
     inputs:
+      publish_to_main:
+        description: "Approve committing the generated index to production main"
+        type: boolean
+        required: true
+        default: false
       all:
         description: "Re-sort every file, not just new ones"
         type: boolean
@@ -23,7 +28,7 @@ concurrency:
 jobs:
   sort:
     # Prevent scheduled automation from pushing to production main by default.
-    if: vars.ALLOW_AUTOMATED_MAIN_WRITES == 'true'
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_to_main == true
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
