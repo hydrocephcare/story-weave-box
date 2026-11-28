@@ -57,9 +57,9 @@ async function viaGemini(msgs, opt, why) {
  * Returns { text } or { error } where error says what went wrong in plain words.
  */
 async function askSupabaseAI(msgs, opt) {
-  const token = String(opt.authToken || "").replace(/^Bearer\\s+/i, "").trim();
+  const token = String(opt.authToken || "").replace(/^Bearer\s+/i, "").trim();
   if (!token) return null;
-  const prompt = msgs.map((m) => String(m.content ?? "")).join("\\n\\n").slice(0, 26000);
+  const prompt = msgs.map((m) => String(m.content ?? "")).join("\n\n").slice(0, 26000);
   const response = await fetch("https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai", {
     method: "POST",
     headers: { "Content-Type": "application/json", apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP", "x-neon-authorization": token },
