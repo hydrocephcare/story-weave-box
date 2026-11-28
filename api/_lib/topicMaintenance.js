@@ -65,7 +65,7 @@ async function verifyWorkflow(req) {
 
 
 function cleanStudyNote(value) {
-  return String(value || "").replace(/\\r\\n/g, "\\n").replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g, "").slice(0, 12000);
+  return String(value || "").replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 12000);
 }
 function parseNoteMcqs(raw) {
   const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
@@ -82,7 +82,7 @@ function parseNoteCards(raw) {
   let data; try{data=JSON.parse(text.slice(start,end+1));}catch{return [];}
   if(!Array.isArray(data))return [];
   const seen=new Set();
-  return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\\n"):String(c.answer).trim()}))
+  return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
     .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);if(key.length<8||seen.has(key)||c.answer.length<30)return false;seen.add(key);return true;});
 }
 function dedupeNoteMcqs(items, existing=[]) {
@@ -96,7 +96,7 @@ At least two thirds should be short clinical vignettes. Each question must have 
 Do not use all/none of the above. Do not make the correct option conspicuously longer. Use only supported facts; never invent doses or diagnostic criteria.
 Return ONLY a JSON array of objects: {"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}.
 TOPIC: ${article.title} | ${article.category}
-AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\\n")}
+AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
 SOURCE NOTE:
 ${text}`;
   const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
@@ -243,7 +243,7 @@ export default async function handler(req, res) {
       let candidate=body.article_id?[{id:String(body.article_id)}]:await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
       let upgrade=null;
       if(!candidate.length){
-        const old=await getDb().query("SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%\\"v\\":2%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1");
+        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":2%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
       }
       if(!candidate.length)return res.status(200).json({success:true,done:true});
