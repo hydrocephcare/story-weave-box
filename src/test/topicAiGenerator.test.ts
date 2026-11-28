@@ -132,6 +132,29 @@ describe("Groq topic generation boundary", () => {
     expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
   });
 
+  it("retries a structurally thin Groq draft before sending it to Gemini", async () => {
+    const thinPage = makePage("Asthma", "Medicine", 13);
+    thinPage.sections[0].p = "Asthma is a respiratory condition.";
+    thinPage.sections[0].b = [];
+    const completePage = makePage("Asthma", "Medicine", 13);
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(thinPage) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(completePage) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await generateReviewedTopicPage(
+      { name: "Asthma", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl },
+    );
+
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][1]?.body)).toContain("thin sections");
+    expect(String(fetchImpl.mock.calls[2][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.review.status).toBe("passed");
+  });
+
   it("does not fall back to Gemini when Groq is not configured", async () => {
     const fetchImpl = vi.fn();
 
