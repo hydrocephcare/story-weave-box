@@ -35,6 +35,18 @@ describe("AI provider key configuration", () => {
     expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
   });
 
+  it("fails closed when a configured Supabase gateway has no authentication token", async () => {
+    const fetchImpl = vi.fn();
+    await expect(askGroqModel("Write a topic", {
+      env: {
+        OMPATH_SUPABASE_AI_URL: "https://ai.example.test/functions/v1/ompath-ai",
+        GROQ_API_KEYS: "direct-groq-test-key",
+      },
+      fetchImpl,
+    })).rejects.toThrow("authentication token is missing");
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
+
   it("never bypasses authentication or entitlement failures with a direct provider fallback", async () => {
     const fetchImpl = vi.fn().mockResolvedValueOnce(new Response('{"error":"limit"}', { status: 402 }));
     await expect(askGroqModel("Write a topic", {
