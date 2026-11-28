@@ -77,6 +77,8 @@ export function Paywall({
   const [pricingCountryReady, setPricingCountryReady] = useState(false);
   const detectCountry = (value: string) => {
     const digits = value.replace(/\D/g, "");
+    // Kenyan national-format mobile numbers (07… and 01…) omit the +254 prefix.
+    if (/^(?:07|01)\d{8}$/.test(digits)) return "KE";
     const matches = callingCodes.filter(([, info]) => digits.startsWith(info.dial));
     if (!value.trim().startsWith("+") && matches.length === 0) return null;
     return matches.find(([code]) => code === countryCode)?.[0] || matches[0]?.[0] || "OTHER";
