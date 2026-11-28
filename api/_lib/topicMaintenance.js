@@ -5,8 +5,8 @@ import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
-import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
 import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
+import { generateNoteMcqs, generateNoteFlashcards } from "../../supabase/functions/_shared/noteBanks.js";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
@@ -65,66 +65,6 @@ async function verifyWorkflow(req) {
 }
 
 
-function cleanStudyNote(value) {
-  return String(value || "").replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 12000);
-}
-function parseNoteMcqs(raw) {
-  const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
-  if(start<0||end<=start)return [];
-  let data; try{data=JSON.parse(text.slice(start,end+1));}catch{return [];}
-  if(!Array.isArray(data))return [];
-  return data.filter(q=>q?.question&&Array.isArray(q.options)&&q.options.length>=4&&Number.isInteger(q.correct_answer)&&q.correct_answer>=0&&q.correct_answer<=3)
-    .map(q=>({question:String(q.question).trim(),options:q.options.slice(0,4).map(x=>String(x).trim()),correct_answer:q.correct_answer,explanation:String(q.explanation||"").trim()}))
-    .filter(q=>q.question.length>=12&&q.options.every(x=>x.length>0)&&new Set(q.options.map(x=>x.toLowerCase())).size===4&&!/all of the above|none of the above/i.test(q.options.join(" ")));
-}
-function parseNoteCards(raw) {
-  const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
-  if(start<0||end<=start)return [];
-  let data; try{data=JSON.parse(text.slice(start,end+1));}catch{return [];}
-  if(!Array.isArray(data))return [];
-  const seen=new Set();
-  return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
-    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);if(key.length<8||seen.has(key)||c.answer.length<30)return false;seen.add(key);return true;});
-}
-function dedupeNoteMcqs(items, existing=[]) {
-  const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
-  return items.filter(q=>{const key=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60);if(seen.has(key))return false;seen.add(key);return true;});
-}
-async function generateNoteMcqs(article, env, count=24, avoid=[]) {
-  const text=cleanStudyNote(article.content);
-  const prompt=`Write exactly ${count} challenging single-best-answer MCQs for medical students from this study note.
-At least two thirds should be short clinical vignettes. Each question must have exactly four plausible options, one best answer, a 0-based correct_answer index, and a concise explanation.
-Do not use all/none of the above. Do not make the correct option conspicuously longer. Use only supported facts; never invent doses or diagnostic criteria.
-Return ONLY a JSON array of objects: {"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}.
-TOPIC: ${article.title} | ${article.category}
-AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
-SOURCE NOTE:
-${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
-  let questions=parseNoteMcqs(draft.text);
-  if(questions.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
-  const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
-  if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
-  questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-  const review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
-  if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
-  return {questions,review};
-}
-async function generateNoteFlashcards(article, env) {
-  const text=cleanStudyNote(article.content).slice(0,10000);
-  const count=Math.max(10,Math.min(22,Math.round(text.length/450)));
-  const prompt=`Create ${count} high-yield revision flashcards for medical students from this study note.
-Each card covers one distinct angle: definition, causes, pathophysiology, clinical features, classification, investigations, differentials, management/pharmacology, complications, ward-round points, prognosis or prevention. Use only angles supported by the note.
-Each answer is 35–60 words: a direct answer, then 3–4 short explanatory lines, and a final Related line. Do not repeat facts across cards. No invented doses or criteria.
-Return ONLY JSON array: [{"question":"...","answer":"..."}].
-TOPIC: ${article.title} | ${article.category}
-SOURCE NOTE:
-${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
-  const cards=parseNoteCards(draft.text);
-  if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
-  return cards;
-}
 
 
 
@@ -222,7 +162,7 @@ export default async function handler(req, res) {
         if(needed<4){await getDb().query("UPDATE public.mcq_sets SET original_notes=$2,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify({topped:true,topup_note:"already enough"})]);return res.status(200).json({success:true,status:"already enough"});}
         const extra=await generateNoteMcqs(article,aiEnv,Math.min(needed,18),have.map(q=>q.question));
         const merged=[...have,...placeNewQuestions(dedupeNoteMcqs(extra.questions,have.map(q=>q.question)),{existing:have})].slice(0,36);
-        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length)})]);
+        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length),reviewed:true,review_model:extra.review.model||null})]);
         await getDb().query("DELETE FROM public.mcq_review_log WHERE set_id=$1::uuid",[set.id]);
         return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length});
       }
@@ -245,9 +185,10 @@ export default async function handler(req, res) {
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
-      const cards=await generateNoteFlashcards(article,aiEnv);
+      const generated=await generateNoteFlashcards(article,aiEnv);
+      const cards=generated.cards;
       const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
-      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString()});
+      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:generated.review.model||null});
       if(upgrade){
         await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid",[upgrade.id,JSON.stringify(cards),meta,description]);
         return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true});
