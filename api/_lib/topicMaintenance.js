@@ -127,9 +127,10 @@ ${text}`;
 
 function deepReady(deep) {
   return Boolean(deep?.checked) && (deep?.sections?.length || 0) >= 7
-    && (deep?.vivas?.length || 0) >= 12 && (deep?.mcqs?.length || 0) >= 6
+    && ((deep?.vivas?.length || 0) >= 12 || (deep?.exam?.length || 0) >= 12)
+    && (deep?.mcqs?.length || 0) >= 6
     && (deep?.cases?.length || 0) >= 2 && (deep?.facts?.length || 0) >= 6
-    && (deep?.mistakes?.length || 0) >= 5 && (deep?.exam?.length || 0) >= 12;
+    && (deep?.mistakes?.length || 0) >= 5;
 }
 
 export default async function handler(req, res) {
