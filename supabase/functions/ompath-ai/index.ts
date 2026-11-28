@@ -15,7 +15,7 @@ const reply = (data:unknown,status=200,origin="") => new Response(JSON.stringify
 });
 const JWKS_URL=Deno.env.get("NEON_AUTH_JWKS_URL")||"";
 const DATA_API_URL=(Deno.env.get("NEON_DATA_API_URL")||"").replace(/\/+$/,"");
-const NEON_DATABASE_URL=Deno.env.get("NEON_DATABASE_URL")||Deno.env.get("DATABASE_URL")||"";
+const NEON_DATABASE_URL=Deno.env.get("NEON_DATABASE_URL")||"";
 let neonDb:any=null;
 function getNeonDb(){if(!NEON_DATABASE_URL)throw new Error("neon_database_not_configured");neonDb ||= neon(NEON_DATABASE_URL);return neonDb;}
 const jwks=JWKS_URL?createRemoteJWKSet(new URL(JWKS_URL)):null;
