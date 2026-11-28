@@ -3,6 +3,7 @@
 import { isAdmin } from "./adminAgent.js";
 import { askJson } from "./llm.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
+import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 
@@ -43,6 +44,18 @@ Return ONLY JSON: {"content": "the full revised markdown", "meta_description": "
 
 const parse = (raw) => { try { return JSON.parse(String(raw).replace(/^```(?:json)?|```$/gm, "").trim()); } catch { return null; } };
 
+async function reviewDraft(res, title, kind, text, env) {
+  const review = await checkContent({ title, kind, text: String(text || ""), env, timeoutMs: 45000 });
+  if (!review.validated || !String(review.model || "").trim()) {
+    res.status(422).json({
+      error: "This draft was held because independent Gemini clinical review did not clear it. It has not been published.",
+      issues: (review.issues || []).slice(0, 12),
+    });
+    return null;
+  }
+  return { reviewed: true, review_model: review.model, reviewed_at: new Date().toISOString() };
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
   const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
@@ -57,8 +70,8 @@ export default async function handler(req, res) {
   const system = mode === "mcq_import" ? MCQ_IMPORT : mode === "mcq" ? MCQ(count) : mode === "cards" ? CARDS(count) : mode === "article" ? ARTICLE(cats) : mode === "revise" ? REVISE : NOTE(cats, Boolean(body.enrich), Boolean(body.continued));
   const user = mode === "revise" ? `INSTRUCTION: ${String(body.instruction ?? "").slice(0, 500)}\nNOTE:\n${text}` : `${body.title ? `Title hint: ${String(body.title).slice(0, 120)}\n` : ""}${body.category ? `Category hint: ${String(body.category).slice(0, 120)}\n` : ""}${mode === "article" ? "TOPIC" : "TEXT"}:\n${text}`;
   const msgs = [{ role: "system", content: system }, { role: "user", content: user }];
-  // long writing jobs go to Gemini first (large context, generous free limits); short ones are fine on Groq
-  const got = await askJson(msgs, { prefer: text.length > 3500 || mode === "article" || mode === "note" ? "gemini" : "groq", temperature: 0.3, maxTokens: mode === "mcq_import" ? 7000 : 6500, authToken: token });
+  // Groq drafts every medical item; Gemini independently reviews it before it is shown for admin approval.
+  const got = await askJson(msgs, { prefer: "groq", temperature: 0.3, maxTokens: mode === "mcq_import" ? 7000 : 6500, authToken: token });
   if (got.error) return res.status(502).json({ error: got.error });
   const raw = got.text;
   const out = parse(raw);
@@ -71,7 +84,9 @@ export default async function handler(req, res) {
       correct_answer: Number(q?.correct_answer), explanation: String(q?.explanation ?? "").trim(),
     })).filter((q) => q.question.length > 5 && q.options.length >= 2 && q.options.length <= 6 && q.options.every(Boolean) && Number.isInteger(q.correct_answer) && q.correct_answer >= 0 && q.correct_answer < q.options.length);
     if (!qs.length) return res.status(502).json({ error: "I could not find multiple-choice questions in that text." });
-    return res.status(200).json({ questions: qs.slice(0, 120), dropped: Math.max(0, (out.questions?.length || 0) - qs.length) });
+    const clinical = await reviewDraft(res, body.title || "Imported medical MCQs", "imported medical multiple-choice questions and answer keys", JSON.stringify(qs.slice(0, 120)), aiEnv);
+    if (!clinical) return;
+    return res.status(200).json({ questions: qs.slice(0, 120), dropped: Math.max(0, (out.questions?.length || 0) - qs.length), ...clinical });
   }
   if (mode === "mcq") {
     const qs = (Array.isArray(out.questions) ? out.questions : []).map((q) => ({
@@ -84,12 +99,18 @@ export default async function handler(req, res) {
       const weakIdx = qs.map((q, i) => (weakness(q).filter((w) => w !== "recall").length ? i : -1)).filter((i) => i >= 0).slice(0, 10);
       if (weakIdx.length) { const fixed = await hardenBatch(aiEnv, weakIdx.map((i) => qs[i]), { subject: String(body.title || ""), manual: true }); weakIdx.forEach((i, k) => { if (fixed[k]) qs[i] = fixed[k]; }); }
     } catch { /* the questions are kept as written */ }
-    return res.status(200).json({ questions: qs.slice(0, count), dropped: Math.max(0, (out.questions?.length || 0) - qs.length) });
+    const selected = qs.slice(0, count);
+    const clinical = await reviewDraft(res, body.title || "Medical MCQs", "medical single-best-answer MCQs and explanations", JSON.stringify(selected), aiEnv);
+    if (!clinical) return;
+    return res.status(200).json({ questions: selected, dropped: Math.max(0, (out.questions?.length || 0) - qs.length), ...clinical });
   }
   if (mode === "cards") {
     const cards = (Array.isArray(out.cards) ? out.cards : []).map((c) => ({ question: String(c?.question ?? "").trim(), answer: String(c?.answer ?? "").trim() })).filter((c) => c.question.length > 6 && c.answer.length > 2 && c.answer.length < 800);
     if (!cards.length) return res.status(502).json({ error: "The writer could not make usable flashcards from that text." });
-    return res.status(200).json({ cards: cards.slice(0, count) });
+    const selected = cards.slice(0, count);
+    const clinical = await reviewDraft(res, body.title || "Medical flashcards", "medical revision flashcards and answers", JSON.stringify(selected), aiEnv);
+    if (!clinical) return;
+    return res.status(200).json({ cards: selected, ...clinical });
   }
   // pictures that came with the paste (links from ChatGPT or another site) expire or are not ours to show: only the site's own picture hosts stay,
   // and the note gets relevant, credited pictures from the picture job a few minutes after it is published
@@ -98,11 +119,13 @@ export default async function handler(req, res) {
   // a search description ends at a word, not in the middle of one
   const clip = (t, n) => { const s = String(t ?? "").trim(); if (s.length <= n) return s; const cut = s.slice(0, n); const at = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(" ")); return (at > n * 0.6 ? cut.slice(0, at) : cut).replace(/[\s,;:]+$/, "") + (at > n * 0.6 && cut.lastIndexOf(". ") === at ? "." : ""); };
   if (content.length < 80) return res.status(502).json({ error: "The writer returned too little. Try again." });
-  if (mode === "revise") return res.status(200).json({ content, meta_description: clip(out.meta_description, 160) });
+  const clinical = await reviewDraft(res, out.title || body.title || "Medical study note", "medical education note and clinical explanations", content, aiEnv);
+  if (!clinical) return;
+  if (mode === "revise") return res.status(200).json({ content, meta_description: clip(out.meta_description, 160), ...clinical });
   const category = cats.includes(String(out.category)) ? String(out.category) : "";
   return res.status(200).json({
     title: String(out.title ?? "").trim().slice(0, 100), category, year: Number.isInteger(Number(out.year)) ? Number(out.year) : null,
     meta_title: clip(out.meta_title, 60), meta_description: clip(out.meta_description, 160),
-    tags: (Array.isArray(out.tags) ? out.tags : []).map((t) => String(t).toLowerCase().trim()).filter(Boolean).slice(0, 8), content,
+    tags: (Array.isArray(out.tags) ? out.tags : []).map((t) => String(t).toLowerCase().trim()).filter(Boolean).slice(0, 8), content, ...clinical,
   });
 }
