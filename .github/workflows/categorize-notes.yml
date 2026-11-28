@@ -3,9 +3,8 @@ name: Sort new Drive notes with AI
 # Every Monday at 06:00 Nairobi time (03:00 UTC) the new files in the Google Drive notes folder are filed into Year > Unit by the AI,
 # and the result (public/data/drive-notes-index.json) is committed, which redeploys the site.
 # Run it yourself any time: GitHub > Actions > "Sort new Drive notes with AI" > Run workflow (tick "all" to re-sort everything).
+# Automatic commits to main are paused during the production freeze. Manual dispatch only.
 on:
-  schedule:
-    - cron: "0 3 * * 1"
   workflow_dispatch:
     inputs:
       all:
