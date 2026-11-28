@@ -231,15 +231,15 @@ BEGIN
   -- Current deep-note generation stores viva questions under "vivas"; older
   -- records used "exam" as an array of "question — answer" strings. Accept
   -- either representation, but require a substantive set of at least six.
-  IF jsonb_typeof(p_deep->'sections') <> 'array'
-     OR jsonb_array_length(p_deep->'sections') < 4
-     OR jsonb_array_length(p_deep->'sections') > 14
+  IF jsonb_typeof(p_deep->'sections') IS DISTINCT FROM 'array'
+     OR (CASE WHEN jsonb_typeof(p_deep->'sections') = 'array'
+              THEN jsonb_array_length(p_deep->'sections') ELSE 0 END) NOT BETWEEN 4 AND 14
      OR NOT (
-       (jsonb_typeof(p_deep->'vivas') = 'array'
-        AND jsonb_array_length(p_deep->'vivas') BETWEEN 6 AND 20)
+       (CASE WHEN jsonb_typeof(p_deep->'vivas') = 'array'
+             THEN jsonb_array_length(p_deep->'vivas') ELSE 0 END) BETWEEN 6 AND 20
        OR
-       (jsonb_typeof(p_deep->'exam') = 'array'
-        AND jsonb_array_length(p_deep->'exam') BETWEEN 6 AND 14)
+       (CASE WHEN jsonb_typeof(p_deep->'exam') = 'array'
+             THEN jsonb_array_length(p_deep->'exam') ELSE 0 END) BETWEEN 6 AND 14
      ) THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'shape');
   END IF;
@@ -264,7 +264,9 @@ BEGIN
     RETURN jsonb_build_object('ok', false, 'reason', 'name');
   END IF;
   IF p_base IS NULL OR jsonb_typeof(p_base) <> 'object' OR pg_column_size(p_base) > 60000
-     OR jsonb_typeof(p_base->'sections') <> 'array' OR jsonb_array_length(p_base->'sections') < 3
+     OR jsonb_typeof(p_base->'sections') IS DISTINCT FROM 'array'
+     OR (CASE WHEN jsonb_typeof(p_base->'sections') = 'array'
+              THEN jsonb_array_length(p_base->'sections') ELSE 0 END) < 3
      OR length(coalesce(p_base->>'summary', '')) < 40 THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'base');
   END IF;
