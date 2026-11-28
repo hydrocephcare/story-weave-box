@@ -81,7 +81,7 @@ export default async function handler(req, res) {
   else claimed = await sql.query("INSERT INTO public.blog_polish (article_id,status) VALUES ($1,$2) ON CONFLICT (article_id) DO NOTHING RETURNING article_id", [id, "working"]);
   if (!claimed.length) return res.status(200).json({ status: "working", more: false });
 
-  const env = workflow ? supabaseAiEnv(req, { workflow: true }) : { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem };
+  const env = supabaseAiEnv(req, { workflow });
   const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
   const save = async (row) => {
     const allowed = new Set(["title","description","image_query","verdict","reason","model","content","status","ai_review_status","ai_review_model","ai_reviewed_at","ai_review_issues","parts_done"]);
