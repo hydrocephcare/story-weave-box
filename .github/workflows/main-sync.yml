@@ -69,6 +69,7 @@ jobs:
           node --check api/_lib/runtimeHealth.js
           node --check api/_lib/sendNotification.js
           node --check api/_lib/neonAdmin.js
+          node --check api/_lib/topicWriteDb.js
           node --check api/_lib/ensureUser.js
           node --check api/_lib/drive-notes.js
           node --check api/_lib/generateExam.js
