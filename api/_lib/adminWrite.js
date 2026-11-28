@@ -61,8 +61,8 @@ async function reviewMedicalDraft(out, title, env, kind) {
         aiReview: { status: "passed", model: review.model || "gemini", reviewedAt: review.at || new Date().toISOString() },
       };
     }
-    if (round === 2) {
-      throw new Error("Independent Gemini review held this medical draft: " + (review.issues || []).slice(0, 4).map((x) => x.problem).join("; "));
+    if (round === 1) {
+      throw new Error("Independent Gemini review held this medical draft after one correction round: " + (review.issues || []).slice(0, 4).map((x) => x.problem).join("; "));
     }
     const repairPrompt = [
       "You are the original medical writer. Correct every clinical accuracy issue raised by the independent reviewer.",
