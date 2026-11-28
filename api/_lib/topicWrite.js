@@ -1,59 +1,50 @@
-// POST /api/topic-write { name, category, context }: Groq drafts a topic page and Gemini independently reviews it. The browser then saves it with the
-// publish_topic_page database function. Provider keys remain server-side; Gemini review is mandatory before a page is returned.
-import { neon } from "@neondatabase/serverless";
-import { generateReviewedTopicPage, validName, slugOf, providerKeys } from "../../supabase/functions/_shared/topicAi.js";
-import { consumeEntitlement } from "./entitlements.js";
-import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
-import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-
-const hits = new Map(); // per visitor, per hour (best effort: a cold start forgets it)
+// Topic generation and deep-note generation are executed by the central Supabase AI gateway.
+// Neon remains the source of truth; the gateway validates the session, charges entitlement once,
+// performs generation and independent clinical review, and persists the result through Neon Data API.
+const AI_URL = "https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai";
+const AI_PUBLISHABLE_KEY = "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP";
+const hits = new Map();
 const LIMIT = 30;
-const databaseUrl = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL || "";
-let database;
-function getDatabase() {
-  if (!databaseUrl) throw new Error("DATABASE_URL is not configured for topic persistence.");
-  database ||= neon(databaseUrl);
-  return database;
+
+function bearer(req) {
+  return String(req.headers["x-neon-authorization"] || req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
 }
-async function saveTopicPage({ slug, name, category, page }) {
-  const rows = await getDatabase()`select public.publish_topic_page(
-    ${slug}, ${name}, ${category || page.subject || ""}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
-  ) as result`;
-  return rows[0]?.result || { ok: false, reason: "empty_result" };
-}
-async function saveDeepNotes({ slug, name, category, base, deep }) {
-  const rows = await getDatabase()`select public.save_topic_deep(
-    ${slug}, ${name}, ${category || base.subject || ""}, ${JSON.stringify(base)}::jsonb, ${JSON.stringify(deep)}::jsonb
-  ) as result`;
-  return rows[0]?.result || { ok: false, reason: "empty_result" };
+
+async function invokeGateway(token, payload, timeoutMs = 90000) {
+  if (!token) return { status: 401, data: { status: "login_required" } };
+  try {
+    const response = await fetch(AI_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: AI_PUBLISHABLE_KEY,
+        "x-neon-authorization": token,
+      },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    const data = await response.json().catch(() => ({}));
+    return { status: response.status, data };
+  } catch (error) {
+    console.error("[topic-write] Supabase AI gateway unavailable:", String(error?.message || error).slice(0, 180));
+    return { status: 503, data: { status: "unavailable", reason: "ai_gateway_unavailable" } };
+  }
 }
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
+  const token = bearer(req);
+
   if (req.method === "GET" && new URL(req.url, "https://ompathstudy.com").searchParams.get("health") === "1") {
-    const groqKeys = providerKeys(process.env, "GROQ");
-    const geminiKeys = providerKeys(process.env, "GEMINI");
-    const probe = async (url, headers) => {
-      try { const response = await fetch(url, { headers, signal: AbortSignal.timeout(8000) }); return { reachable: response.ok, status: response.status }; }
-      catch { return { reachable: false, status: 0 }; }
-    };
-    const [groqChecks, geminiChecks, database] = await Promise.all([
-      Promise.all(groqKeys.map((key) => probe("https://api.groq.com/openai/v1/models", { Authorization: "Bearer " + key }))),
-      Promise.all(geminiKeys.map((key) => probe("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1", { "x-goog-api-key": key }))),
-      (async () => { try { const rows = await getDatabase()`select 1 as ok`; return { configured: true, connected: rows[0]?.ok === 1 }; } catch { return { configured: Boolean(databaseUrl), connected: false }; } })(),
-    ]);
-    return res.status(200).json({
-      ok: groqChecks.some((x) => x.reachable) && geminiChecks.some((x) => x.reachable) && database.connected,
-      groq: { configuredKeys: groqKeys.length, healthyKeys: groqChecks.filter((x) => x.reachable).length, statuses: groqChecks.map((x) => x.status) },
-      gemini: { configuredKeys: geminiKeys.length, healthyKeys: geminiChecks.filter((x) => x.reachable).length, statuses: geminiChecks.map((x) => x.status) },
-      database,
-      auth: { jwksConfigured: true, dataApiConfigured: true },
-    });
+    const result = await invokeGateway(token, { task: "health" }, 30000);
+    return res.status(result.status).json(result.data);
   }
+
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
-  const geminiEnv = { GEMINI_API_KEYS: providerKeys(process.env, "GEMINI").join(",") };
-  const hasGemini = Boolean(geminiEnv.GEMINI_API_KEYS);
-  const groq = providerKeys(process.env, "GROQ").join(",");
+  const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
+  const name = String(body.name ?? "").trim();
+  if (name.length < 3 || name.length > 100) return res.status(400).json({ status: "invalid" });
+
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
   const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
@@ -61,42 +52,24 @@ export default async function handler(req, res) {
   hits.set(ip, [...mine, now]);
   if (hits.size > 5000) hits.clear();
 
-  const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
-  const name = String(body.name ?? "").trim();
-  if (!validName(name)) return res.status(400).json({ status: "invalid" });
-  if (body.mode === "deep") {
-    // Preserve the existing deep-notes generator and its original provider fallback.
-    if (!groq.trim() && !hasGemini) return res.status(503).json({ status: "unavailable" });
-    const quota = await consumeEntitlement(req, "ai_note_generation");
-    if (!quota.allowed) return res.status(quota.status || 402).json({ status: "limit", upgrade_required: quota.status === 402, quota });
-    try {
-      const base = body.base && typeof body.base === "object" ? body.base : {};
-      const past = (Array.isArray(body.past) ? body.past : []).map((x) => String(x).slice(0, 240)).slice(0, 12);
-      const deep = await generateCheckedDeep({ name, category: String(body.category ?? "").slice(0, 60), base, past }, { GROQ_API_KEYS: groq, ...geminiEnv }, fetch, 50000);
-      const slug = String(body.slug || slugOf(name));
-      const saved = await saveDeepNotes({ slug, name, category: String(body.category ?? "").slice(0, 60), base, deep });
-      if (!saved?.ok) return res.status(saved?.reason === "busy" ? 429 : 502).json({ status: saved?.reason === "busy" ? "busy" : "failed" });
-      return res.status(200).json({ status: "published", deep, saved: true });
-    } catch (e) {
-      return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed", reason: String(e?.message ?? "").slice(0, 240) });
-    }
-  }
-  if (!groq.trim() || !hasGemini) return res.status(503).json({ status: "unavailable" });
-  const quota = await consumeEntitlement(req, "topic_page_generation");
-  if (!quota.allowed) return res.status(quota.status || 402).json({ status: "limit", upgrade_required: quota.status === 402, quota });
-  try {
-    const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), choices: body.choices && typeof body.choices === "object" ? body.choices : undefined };
-    const { page } = await generateReviewedTopicPage(input, { env: { GROQ_API_KEYS: groq, ...geminiEnv }, fetchImpl: fetch });
-    if (!page.medical) return res.status(200).json({ status: "rejected" });
-    const finalPage = { ...page, subject: pickSubject(page.subject, `${name} ${body.category ?? ""}`) };
-    const generatedTitle = String(finalPage.title || "").trim();
-    const finalName = body.keepSlug || !validName(generatedTitle) ? name : generatedTitle;
-    const finalSlug = body.keepSlug ? slugOf(name) : slugOf(finalName) || slugOf(name);
-    const saved = await saveTopicPage({ slug: finalSlug, name: finalName, category: input.category, page: finalPage });
-    if (!saved?.ok) return res.status(saved?.reason === "busy" ? 429 : 502).json({ status: saved?.reason === "busy" ? "busy" : "failed" });
-    return res.status(200).json({ status: "published", page: finalPage, saved: true, slug: finalSlug, name: finalName });
-  } catch (e) {
-    console.error("[topic-write] generation or persistence failed:", String(e?.message ?? e).slice(0, 500));
-    return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed", reason: String(e?.message ?? "Topic generation failed").slice(0, 240) });
-  }
+  const deep = body.mode === "deep";
+  const payload = deep
+    ? {
+        task: "deep",
+        name,
+        category: String(body.category ?? "").slice(0, 60),
+        base: body.base && typeof body.base === "object" ? body.base : {},
+        past: (Array.isArray(body.past) ? body.past : []).map((x) => String(x).slice(0, 240)).slice(0, 12),
+        slug: String(body.slug || "").slice(0, 120),
+      }
+    : {
+        task: "topic",
+        name,
+        category: String(body.category ?? "").slice(0, 60),
+        context: String(body.context ?? "").slice(0, 3000),
+        choices: body.choices && typeof body.choices === "object" ? body.choices : undefined,
+      };
+
+  const result = await invokeGateway(token, payload, deep ? 90000 : 90000);
+  return res.status(result.status).json(result.data);
 }
