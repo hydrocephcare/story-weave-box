@@ -40,7 +40,10 @@ export default async function handler(req, res) {
       to_regprocedure('public.save_topic_deep(text,text,text,jsonb,jsonb)') IS NOT NULL AS topic_deep_rpc,
       to_regprocedure('public.consume_feature(text,integer)') IS NOT NULL AS entitlement_rpc,
       to_regprocedure('public.is_mku_student(uuid)') IS NOT NULL AS mku_student_rpc,
-      to_regprocedure('public.ensure_neon_user(uuid,text)') IS NOT NULL AS ensure_neon_user_rpc`);
+      to_regprocedure('public.ensure_neon_user(uuid,text)') IS NOT NULL AS ensure_neon_user_rpc,
+      has_schema_privilege('anonymous','auth','USAGE') AS anonymous_auth_schema_usage,
+      has_function_privilege('authenticated', to_regprocedure('public.publish_topic_page(text,text,text,jsonb,text)'), 'EXECUTE') AS authenticated_can_publish_topic,
+      has_function_privilege('authenticated', to_regprocedure('public.save_topic_deep(text,text,text,jsonb,jsonb)'), 'EXECUTE') AS authenticated_can_save_deep`);
     return rows[0] || {};
   });
 
@@ -51,9 +54,9 @@ export default async function handler(req, res) {
     const account = await sql.query('SELECT email,"emailVerified" FROM neon_auth."user" WHERE id=$1 LIMIT 1', [identity.id]);
     const email = String(identity.email || account[0]?.email || "").trim().toLowerCase();
     if (!email || account[0]?.emailVerified !== true) return { ready: false, reason: "Verified Neon Auth email is required." };
-    const rows = await sql.query("SELECT public.ensure_neon_user($1,$2) AS result", [identity.id, email]);
-    const result = rows[0]?.result || {};
-    return { ready: true, migratedRows: Number(result.migrated_rows || 0), skipped: Array.isArray(result.skipped) ? result.skipped.length : 0 };
+    // Diagnostics must be strictly read-only: ensure_neon_user inserts auth.users
+    // and can migrate legacy user IDs and foreign-key references across public tables.
+    return { ready: true, readOnly: true, identityExists: true, emailVerified: true, migrationPerformed: false };
   });
 
   result.searchDataApi = await check("search-data-api", async () => {
@@ -136,15 +139,15 @@ export default async function handler(req, res) {
   });
 
   result.mkuStudentAccess = await check("mku-student-access", async () => {
-    const base = String(process.env.NEON_DATA_API_URL || process.env.VITE_NEON_DATA_API_URL || DEFAULT_DATA_API).replace(/\/+$/, "");
-    const response = await fetch(base + "/rpc/is_mku_student", {
-      method: "POST",
-      headers: { Authorization: "Bearer " + bearer(req), "Content-Type": "application/json", Accept: "application/json" },
-      body: "{}",
-      signal: AbortSignal.timeout(10000),
-    });
-    const allowed = response.ok ? await response.json().catch(() => false) : false;
-    return { endpointReachable: response.ok, currentAdminAllowed: allowed === true, status: response.status };
+    // is_mku_student() inserts into auth.users. Check the same underlying facts
+    // with SELECTs instead of invoking that mutating RPC from a health endpoint.
+    const identity = await verifyNeonToken(bearer(req));
+    if (!identity) return { endpointReachable: false, currentAdminAllowed: false, reason: "Verified Neon Auth identity unavailable." };
+    const rows = await getPolishSql().query(`SELECT
+      EXISTS(SELECT 1 FROM public.student_access WHERE user_id=$1 AND status='verified') AS student_verified,
+      public.has_role($1,'admin'::public.app_role) AS admin_allowed`, [identity.id]);
+    return { endpointReachable: true, currentAdminAllowed: rows[0]?.admin_allowed === true,
+      studentVerified: rows[0]?.student_verified === true, readOnly: true };
   });
 
   result.entitlements = await check("entitlements", async () => {
@@ -217,8 +220,16 @@ export default async function handler(req, res) {
     const row = rows[0] || {};
     const authenticatedMissing = Number(row.authenticated_policies_missing || 0);
     const anonymousMissing = Number(row.anonymous_policies_missing || 0);
-    return { ready: authenticatedMissing === 0 && anonymousMissing === 0,
-      authenticatedPoliciesMissing: authenticatedMissing, anonymousPoliciesMissing: anonymousMissing };
+    const privileges = await getPolishSql().query(`SELECT
+      has_schema_privilege('anonymous','auth','USAGE') AS anonymous_auth_schema_usage,
+      has_function_privilege('authenticated', to_regprocedure('public.publish_topic_page(text,text,text,jsonb,text)'), 'EXECUTE') AS authenticated_can_publish_topic,
+      has_function_privilege('authenticated', to_regprocedure('public.save_topic_deep(text,text,text,jsonb,jsonb)'), 'EXECUTE') AS authenticated_can_save_deep`);
+    const privilege = privileges[0] || {};
+    return { ready: authenticatedMissing === 0 && anonymousMissing === 0 && privilege.anonymous_auth_schema_usage === true,
+      authenticatedPoliciesMissing: authenticatedMissing, anonymousPoliciesMissing: anonymousMissing,
+      anonymousAuthSchemaUsage: privilege.anonymous_auth_schema_usage === true,
+      authenticatedCanPublishTopic: privilege.authenticated_can_publish_topic === true,
+      authenticatedCanSaveDeep: privilege.authenticated_can_save_deep === true };
   });
 
   result.googleDrive = await check("google-drive", async () => {
