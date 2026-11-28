@@ -5,6 +5,8 @@ import { spawnSync } from "node:child_process";
 const message = process.env.GENERATED_COMMIT_MESSAGE || process.argv[2] || "Automated content update";
 const targets = process.argv.slice(3).filter(Boolean);
 if (!targets.length) throw new Error("Pass one or more generated paths.");
+const targetBranch = process.env.GENERATED_TARGET_BRANCH || process.env.GITHUB_REF_NAME || "main";
+if (!/^[A-Za-z0-9._/-]+$/.test(targetBranch) || targetBranch.includes("..")) throw new Error("Unsafe generated-content target branch.");
 const root = process.cwd();
 const git = (args, allowFailure = false) => {
   const r = spawnSync("git", args, { encoding: "utf8" });
@@ -27,8 +29,8 @@ for (const item of records) {
 git(["config", "user.name", "ompath-bot"]);
 git(["config", "user.email", "ompath-bot@users.noreply.github.com"]);
 for (let attempt = 1; attempt <= 5; attempt++) {
-  git(["fetch", "origin", "main"]);
-  git(["reset", "--hard", "origin/main"]);
+  git(["fetch", "origin", targetBranch]);
+  git(["reset", "--hard", "origin/" + targetBranch]);
   for (const item of records) {
     const dest = path.resolve(root, item.rel), saved = path.join(tmp, item.rel);
     if (item.code.includes("D")) { fs.rmSync(dest, { recursive: true, force: true }); continue; }
@@ -37,9 +39,9 @@ for (let attempt = 1; attempt <= 5; attempt++) {
     fs.cpSync(saved, dest, { recursive: true });
   }
   git(["add", "-A", "--", ...targets]);
-  if (git(["diff", "--cached", "--quiet"], true).status === 0) { console.log("Generated content is already current on main."); process.exit(0); }
+  if (git(["diff", "--cached", "--quiet"], true).status === 0) { console.log("Generated content is already current on " + targetBranch + "."); process.exit(0); }
   git(["commit", "-m", message]);
-  if (git(["push", "origin", "HEAD:main"], true).status === 0) { console.log("Generated changes committed to main."); process.exit(0); }
+  if (git(["push", "origin", "HEAD:" + targetBranch], true).status === 0) { console.log("Generated changes committed to " + targetBranch + "."); process.exit(0); }
   console.warn("Push attempt " + attempt + " raced with another main update; retrying from latest main.");
 }
 throw new Error("Could not push generated changes after five retries.");
