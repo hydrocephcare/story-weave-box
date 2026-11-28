@@ -1,7 +1,6 @@
 name: New Friend Zone games every day
+# Automatic publishing is paused during the production freeze. Manual dispatch only.
 on:
-  schedule:
-    - cron: "30 2 * * *"
   workflow_dispatch:
 permissions:
   contents: write
