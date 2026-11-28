@@ -231,6 +231,9 @@ BEGIN
     RETURN jsonb_build_object('ok', false, 'reason', 'size');
   END IF;
   IF length(coalesce(p_deep->>'checked', '')) < 8
+     OR p_deep->>'reviewStatus' IS DISTINCT FROM 'passed'
+     OR length(coalesce(p_deep->>'reviewModel', '')) = 0
+     OR length(coalesce(p_deep->>'reviewedAt', '')) < 8
      OR jsonb_typeof(p_deep->'sections') IS DISTINCT FROM 'array'
      OR (CASE WHEN jsonb_typeof(p_deep->'sections') = 'array'
               THEN jsonb_array_length(p_deep->'sections') ELSE 0 END) NOT BETWEEN 7 AND 14
@@ -274,7 +277,11 @@ BEGIN
     RETURN jsonb_build_object('ok', false, 'reason', 'base');
   END IF;
 
-  IF existing.content ? 'deep' AND (existing.content->'deep') ? 'vivas' THEN
+  IF existing.content ? 'deep'
+     AND existing.content->'deep'->>'reviewStatus' = 'passed'
+     AND length(coalesce(existing.content->'deep'->>'reviewModel', '')) > 0
+     AND length(coalesce(existing.content->'deep'->>'reviewedAt', '')) >= 8
+     AND (existing.content->'deep') ? 'vivas' THEN
     RETURN jsonb_build_object('ok', true, 'existing', true);
   END IF;
 
