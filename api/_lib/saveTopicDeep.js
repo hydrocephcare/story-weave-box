@@ -15,7 +15,7 @@ function bearer(req) {
 export default async function saveTopicDeep(req, res) {
   res.setHeader("Cache-Control", "no-store");
   const expectedSecret = String(process.env.OMPATH_NEON_WRITE_SECRET || "");
-  if (!expectedSecret) {
+  if (Buffer.byteLength(expectedSecret, "utf8") < 32) {
     return res.status(503).json({ status: "unavailable", reason: "proxy_secret_not_configured" });
   }
   if (!equalSecret(req.headers?.["x-ompath-neon-write-secret"], expectedSecret)) {
