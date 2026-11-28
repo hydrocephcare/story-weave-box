@@ -134,7 +134,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
       kind: kind + " (batch " + (offset + index + 1) + ")",
       text: "SOURCE NOTE (reference only; assess every flashcard against accepted medical knowledge):\n" + source + "\n\nFLASHCARDS TO REVIEW:\n" + JSON.stringify(batch),
       env,
-      timeoutMs: 8000,
+      timeoutMs: 15000,
     })));
     results.push(...wave);
   }
