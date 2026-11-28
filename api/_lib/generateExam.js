@@ -62,7 +62,8 @@ async function reviewQuestions(questions, strict = true, aiEnv) {
       } catch { result = null; }
     }
     if (!Array.isArray(result)) {
-      if (strict) { dropped += chunk.length; reviewerUnavailable = true; }
+      reviewerUnavailable = true;
+      if (strict) dropped += chunk.length;
       else kept.push(...chunk);
       continue;
     }
