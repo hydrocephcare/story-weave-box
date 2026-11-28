@@ -136,18 +136,18 @@ export default async function handler(req, res) {
         } catch { return []; }
       };
       const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
-      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
       let questions = parse(draft.text);
       if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
-      let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+      let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 12000 });
       if (!review.validated) {
         const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
           + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
           + "\nQUESTIONS:\n" + JSON.stringify(questions);
-        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
         questions = parse(fixed.text);
         if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
-        review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+        review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 12000 });
       }
       if (!review.validated) return res.status(422).json({ validated: false, issues: review.issues || [] });
       return res.status(200).json({ validated: true, questions, reviewModel: review.model || null });
@@ -327,7 +327,7 @@ PAGE TEXT:
         }
         return result;
       };
-      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: aiEnv, timeoutMs: 45000 }), original);
+      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: aiEnv, timeoutMs: 12000 }), original);
       let final = first, correctedBody = null, repairStatus = "clean";
       if (!first.validated) {
         const prompt = [
@@ -339,11 +339,11 @@ PAGE TEXT:
           "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
           "ORIGINAL NOTE:", original
         ].join("\n\n");
-        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 25000, maxTokens: 10000, plain: true });
         let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
         fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
         if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
-          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: aiEnv, timeoutMs: 45000 }), fixed);
+          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: aiEnv, timeoutMs: 12000 }), fixed);
           if (final.validated) { correctedBody = fixed; repairStatus = "auto-repaired"; } else repairStatus = "held";
         } else repairStatus = "held";
       }
@@ -366,7 +366,7 @@ PAGE TEXT:
       const result = await generateReviewedTopicPage({
         name: row.name, category: row.category || "Medicine", context,
         choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
-      }, { env: aiEnv, maxFixRounds: 1, timeoutMs: 55000 });
+      }, { env: aiEnv, maxFixRounds: 1, timeoutMs: 25000 });
       if (!result.page?.medical || result.review?.status !== "passed") return res.status(422).json({ status: "held", slug, reason: "independent_review_failed" });
       const page = { ...result.page, aiReview: { ...(result.page.aiReview || {}), status: "passed", model: result.review.model, rounds: result.review.rounds || 0 } };
       if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3
