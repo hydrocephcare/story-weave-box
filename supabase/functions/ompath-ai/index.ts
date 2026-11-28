@@ -326,6 +326,7 @@ Deno.serve(async(req:Request)=>{
     }
   }
 
+  if(!token)return reply({error:"login_required"},401,origin);
   const feature=String(body.feature||"").trim();
   if(!/^[a-z][a-z0-9_]{1,63}$/.test(feature))return reply({error:"feature_required"},400,origin);
   const messages=Array.isArray(body.messages)?body.messages.slice(-20):[];
