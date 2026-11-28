@@ -173,3 +173,17 @@ REVOKE ALL ON FUNCTION public.cleanup_lite_health_data() FROM PUBLIC, anonymous,
 GRANT EXECUTE ON FUNCTION public.cleanup_lite_health_data() TO service_role;
 REVOKE ALL ON FUNCTION public.zone_close_stale() FROM PUBLIC, anonymous, authenticated;
 GRANT EXECUTE ON FUNCTION public.zone_close_stale() TO service_role;
+
+-- Candidate-selection RPCs are internal maintenance helpers. The API's
+-- privileged database connection invokes them directly; they are not
+-- intended to be exposed through anonymous/authenticated PostgREST RPC.
+REVOKE ALL ON FUNCTION public.essay_pending_candidates(integer) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.essay_pending_candidates(integer) TO service_role;
+REVOKE ALL ON FUNCTION public.note_essay_candidates(integer) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.note_essay_candidates(integer) TO service_role;
+REVOKE ALL ON FUNCTION public.note_flashcard_candidates(integer) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.note_flashcard_candidates(integer) TO service_role;
+REVOKE ALL ON FUNCTION public.note_mcq_candidates(integer) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.note_mcq_candidates(integer) TO service_role;
+REVOKE ALL ON FUNCTION public.note_mcq_topup_candidates(integer) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.note_mcq_topup_candidates(integer) TO service_role;
