@@ -7,7 +7,7 @@ async function call(body: Record<string, unknown>): Promise<Reply> {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        apikey: "sb_publishable_HdlAHkp2wXJRCYqWLnPckw_dOUcjEVP",
+        apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP",
       },
       body: JSON.stringify({ task: "public_assist", ...body }),
     });
