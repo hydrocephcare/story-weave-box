@@ -164,6 +164,18 @@ describe("saveTopicDeep privileged persistence proxy", () => {
     expect(neonMock).not.toHaveBeenCalled();
   });
 
+  it("rejects complete-looking notes when independent Gemini review evidence is absent", async () => {
+    const req = makeReq();
+    delete req.body.deep.reviewStatus;
+    delete req.body.deep.reviewModel;
+    delete req.body.deep.reviewedAt;
+    const res = makeRes();
+    await handler(req, res);
+    expect(res.statusCode).toBe(400);
+    expect(res.body.reason).toBe("incomplete_deep_notes");
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
   it("does not report success when the database RPC rejects the payload", async () => {
     sqlMock.mockResolvedValueOnce([{ result: { ok: false, reason: "slug_conflict" } }]);
     const res = makeRes();
