@@ -3,6 +3,7 @@ import { randomBytes } from "node:crypto";
 import { isNeonAdmin } from "./neonAdmin.js";
 import { askModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
 import { balanceBank, placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const send = (res, status, data) => res.status(status).json(data);
 const parseBody = (body) => typeof body === "string" ? JSON.parse(body || "{}") : body || {};
@@ -11,12 +12,12 @@ const db = () => {
   if (!url) throw new Error("DATABASE_URL is not configured.");
   return neon(url);
 };
-const env = () => process.env;
+
 const normalizeUnit = (value) => String(value || "Uncategorized").trim();
 const yearOf = (value) => Number(/Year\s*(\d)/i.exec(String(value))?.[1]) || 0;
 
-async function generateText(prompt, maxTokens = 5000) {
-  const result = await askModel(prompt, { env: env(), timeoutMs: 60000, maxTokens, plain: true });
+async function generateText(prompt, maxTokens = 5000, aiEnv) {
+  const result = await askModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
   if (!result?.text?.trim()) throw new Error("The AI writer returned an empty response.");
   return result.text;
 }
@@ -52,7 +53,7 @@ function parseEssays(raw) {
   } catch { return { saqs: [], laqs: [] }; }
 }
 
-async function reviewQuestions(questions, strict = true) {
+async function reviewQuestions(questions, strict = true, aiEnv) {
   const kept = [], disputed = [];
   let dropped = 0, fixed = 0, reviewerUnavailable = false;
   for (let i = 0; i < questions.length; i += 15) {
@@ -67,7 +68,7 @@ async function reviewQuestions(questions, strict = true) {
     let result = null;
     for (let attempt = 0; attempt < (strict ? 2 : 1); attempt++) {
       try {
-        const answer = await askGeminiModel(prompt, { env: env(), timeoutMs: 45000, maxTokens: 5000 });
+        const answer = await askGeminiModel(prompt, { env: aiEnv, timeoutMs: 45000, maxTokens: 5000 });
         const match = answer.text.match(/\[[\s\S]*\]/);
         result = match ? JSON.parse(match[0]) : null;
         if (Array.isArray(result)) break;
@@ -103,6 +104,7 @@ export default async function handler(req, res) {
     const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
     if (!(await isNeonAdmin(token))) return send(res, 403, { error: "Administrator access required." });
     const body = parseBody(req.body);
+    const aiEnv = supabaseAiEnv(req);
     const sql = db();
 
     if (body.review) {
@@ -117,7 +119,7 @@ export default async function handler(req, res) {
       const rows = await sql.query("SELECT questions FROM public.mcq_sets WHERE id=$1 LIMIT 1", [target.id]);
       const before = Array.isArray(rows[0]?.questions) ? rows[0].questions : [];
       const weekly = /^Weekly Exam/i.test(target.category || "");
-      const review = await reviewQuestions(before, weekly);
+      const review = await reviewQuestions(before, weekly, aiEnv);
       if (review.reviewerUnavailable) return send(res, 503, { error: "The independent Gemini reviewer is unavailable. The question bank was not marked as reviewed; try again later." });
       const balanced = balanceBank(review.kept, { seed: String(target.id) }).questions;
       const changed = review.dropped > 0 || review.fixed > 0 || balanced.length !== before.length
@@ -188,7 +190,7 @@ export default async function handler(req, res) {
         "Use the following source material as the syllabus context:\n" + context,
       ].join("\n\n");
       let questions = [];
-      try { questions = parseMcqs(await generateText(prompt, 6000)); }
+      try { questions = parseMcqs(await generateText(prompt, 6000, aiEnv)); }
       catch (error) { skipped.push(unit + ": " + (error instanceof Error ? error.message : String(error))); continue; }
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " usable MCQs generated."); continue; }
 
@@ -207,7 +209,7 @@ export default async function handler(req, res) {
         'Schema: {"saqs":[{"question":"...","model_answer":"..."}],"laqs":[{"question":"...","model_answer":"..."}]}',
       ].join("\n");
       let essays = { saqs: [], laqs: [] };
-      try { essays = parseEssays(await generateText(essayPrompt, 4500)); } catch {}
+      try { essays = parseEssays(await generateText(essayPrompt, 4500, aiEnv)); } catch {}
       if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
 
       const date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
