@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { askGeminiModel, askGroqModel, askModel as askSharedModel, buildPrompt, generateReviewedTopicPage, providerKeys, sanitizePage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
-import { askModel as askGatewayModel } from "../../supabase/functions/ompath-ai/topicAi.js";
+import { askModel as askGatewayModel, sanitizePage as sanitizeGatewayPage } from "../../supabase/functions/ompath-ai/topicAi.js";
 const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
 const makePage = (title: string, subject: string, count = 13) => {
   const explanation = Array.from({ length: 8 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
@@ -26,6 +26,19 @@ describe("AI provider key configuration", () => {
 });
 
 describe("Groq topic generation boundary", () => {
+  it("counts substantial bullet and table content when checking section depth", () => {
+    const page = makePage("Laughing gas", "Medicine", 13);
+    page.sections = page.sections.map((section) => ({
+      h: section.h,
+      b: [
+        "Nitrous oxide has a rapid onset because it is absorbed through the lungs and reaches the central nervous system quickly.",
+        "Its analgesic effect is mediated through several pathways, including endogenous opioid and noradrenergic signalling.",
+        "It is used in selected clinical settings where rapid, titratable analgesia or sedation is appropriate.",
+      ],
+    }));
+    expect(sanitizeGatewayPage(page).sections).toHaveLength(13);
+  });
+
   it("disambiguates neonatal umbilical vein thrombosis and requires a sufficiently deep page", () => {
     const prompt = buildPrompt({ name: "Umbilical Vein Thrombosis", category: "Paediatrics / Neonatal" });
 
