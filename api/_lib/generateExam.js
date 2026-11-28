@@ -1,7 +1,9 @@
 import { neon } from "@neondatabase/serverless";
 import { randomBytes } from "node:crypto";
 import { isNeonAdmin } from "./neonAdmin.js";
-import { askModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
+import { generateReviewedEssayPaper } from "../../supabase/functions/_shared/essayExam.js";
+import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { balanceBank, placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
@@ -17,7 +19,7 @@ const normalizeUnit = (value) => String(value || "Uncategorized").trim();
 const yearOf = (value) => Number(/Year\s*(\d)/i.exec(String(value))?.[1]) || 0;
 
 async function generateText(prompt, maxTokens = 5000, aiEnv) {
-  const result = await askModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
+  const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
   if (!result?.text?.trim()) throw new Error("The AI writer returned an empty response.");
   return result.text;
 }
@@ -38,24 +40,9 @@ function parseMcqs(raw) {
   } catch { return []; }
 }
 
-function parseEssays(raw) {
-  const match = raw.match(/\{[\s\S]*\}/);
-  if (!match) return { saqs: [], laqs: [] };
-  try {
-    const data = JSON.parse(match[0]);
-    const saqs = Array.isArray(data.saqs) ? data.saqs.filter((x) => x?.question && (x.model_answer || x.answer)).map((x) => ({
-      question: String(x.question).trim(), answer: String(x.model_answer || x.answer).trim(), marks: 5,
-    })) : [];
-    const laqs = Array.isArray(data.laqs) ? data.laqs.filter((x) => x?.question && (x.model_answer || x.answer)).map((x) => ({
-      question: String(x.question).trim(), answer: String(x.model_answer || x.answer).trim(), marks: 20,
-    })) : [];
-    return { saqs, laqs };
-  } catch { return { saqs: [], laqs: [] }; }
-}
-
 async function reviewQuestions(questions, strict = true, aiEnv) {
   const kept = [], disputed = [];
-  let dropped = 0, fixed = 0, reviewerUnavailable = false;
+  let dropped = 0, fixed = 0, reviewerUnavailable = false, reviewModel = null;
   for (let i = 0; i < questions.length; i += 15) {
     const chunk = questions.slice(i, i + 15);
     const prompt = [
@@ -69,6 +56,7 @@ async function reviewQuestions(questions, strict = true, aiEnv) {
     for (let attempt = 0; attempt < (strict ? 2 : 1); attempt++) {
       try {
         const answer = await askGeminiModel(prompt, { env: aiEnv, timeoutMs: 45000, maxTokens: 5000 });
+        reviewModel = answer.model || reviewModel;
         const match = answer.text.match(/\[[\s\S]*\]/);
         result = match ? JSON.parse(match[0]) : null;
         if (Array.isArray(result)) break;
@@ -93,7 +81,7 @@ async function reviewQuestions(questions, strict = true, aiEnv) {
       kept.push({ ...q, options: optionsOk && !mismatch ? checked.options.map((x) => x.trim()) : q.options, explanation });
     });
   }
-  return { kept, dropped, disputed, fixed, reviewerUnavailable };
+  return { kept, dropped, disputed, fixed, reviewerUnavailable, reviewModel };
 }
 
 export default async function handler(req, res) {
@@ -209,8 +197,24 @@ export default async function handler(req, res) {
         'Schema: {"saqs":[{"question":"...","model_answer":"..."}],"laqs":[{"question":"...","model_answer":"..."}]}',
       ].join("\n");
       let essays = { saqs: [], laqs: [] };
-      try { essays = parseEssays(await generateText(essayPrompt, 4500, aiEnv)); } catch {}
-      if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
+      let essayReview = null;
+      try {
+        const reviewed = await generateReviewedEssayPaper({
+          prompt: essayPrompt,
+          title: "Weekly exam: " + unit,
+          unit,
+          env: aiEnv,
+        });
+        essays = reviewed.essays;
+        essayReview = reviewed.review;
+      } catch (error) {
+        skipped.push(unit + ": " + (error instanceof Error ? error.message : String(error)));
+        continue;
+      }
+      if (essays.saqs.length !== 4 || essays.laqs.length !== 1 || !essayReview?.validated) {
+        skipped.push(unit + ": written paper did not pass independent Gemini review.");
+        continue;
+      }
 
       const date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
       const title = "Weekly " + unit + " Exam - " + date;
@@ -219,7 +223,7 @@ export default async function handler(req, res) {
       try {
         const mcq = await sql.query(
           "INSERT INTO public.mcq_sets(title,slug,questions,published,original_notes,category,access_password) VALUES($1,$2,$3::jsonb,false,$4,$5,$6) RETURNING id,title",
-          [title + " (Section A: MCQs)", slug, JSON.stringify(questions), JSON.stringify({ type: "weekly_exam", unit, review: "Independent Gemini review passed", generated_at: new Date().toISOString() }), "Weekly Exam: " + unit, password],
+          [title + " (Section A: MCQs)", slug, JSON.stringify(questions), JSON.stringify({ type: "weekly_exam", unit, review: "Independent Gemini review passed", review_model: review.reviewModel || null, generated_at: new Date().toISOString() }), "Weekly Exam: " + unit, password],
         );
         mcqId = mcq[0]?.id;
         if (!mcqId) throw new Error("MCQ paper could not be saved.");
@@ -231,7 +235,7 @@ export default async function handler(req, res) {
         if (!essayId) throw new Error("Written paper could not be saved.");
         await sql.query("UPDATE public.essays SET published=true,updated_at=now() WHERE id=$1", [essayId]);
         await sql.query("UPDATE public.mcq_sets SET published=true,updated_at=now() WHERE id=$1", [mcqId]);
-        created.push({ unit, exam_id: mcqId, title: mcq[0].title, mcq_count: questions.length, saq_count: essays.saqs.length, laq_count: essays.laqs.length });
+        created.push({ unit, exam_id: mcqId, title: mcq[0].title, mcq_count: questions.length, saq_count: essays.saqs.length, laq_count: essays.laqs.length, mcq_review_model: review.reviewModel || null, essay_review_model: essayReview.model || null });
       } catch (error) {
         if (essayId) await sql.query("DELETE FROM public.essays WHERE id=$1", [essayId]).catch(() => {});
         if (mcqId) await sql.query("DELETE FROM public.mcq_sets WHERE id=$1", [mcqId]).catch(() => {});
