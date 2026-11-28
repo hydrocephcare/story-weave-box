@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { askGroqModel, buildPrompt, generateReviewedTopicPage, providerKeys, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, buildPrompt, generateReviewedTopicPage, providerKeys, sanitizePage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
 const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
 const makePage = (title: string, subject: string, count = 13) => {
   const explanation = Array.from({ length: 8 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
@@ -14,6 +14,26 @@ const makePage = (title: string, subject: string, count = 13) => {
   };
 };
 
+
+describe("topic page section depth validation", () => {
+  const paragraphOnlyPage = (wordCount: number) => {
+    const page = makePage("Asthma", "Medicine", 13);
+    const paragraph = Array.from({ length: wordCount }, (_, i) => `clinical explanation word${i} describes a relevant mechanism and its clinical significance`).join(" ");
+    return { ...page, sections: page.sections.map(({ h }) => ({ h, p: paragraph })) };
+  };
+
+  it("counts words in explanatory paragraphs without requiring bullets or tables", () => {
+    const page = sanitizePage(paragraphOnlyPage(80), { name: "Asthma", category: "Medicine" });
+    expect(page.sections).toHaveLength(13);
+    expect(page.sections.every((section) => section.p && !section.b && !section.t)).toBe(true);
+  });
+
+  it("still rejects genuinely thin paragraph-only sections", () => {
+    const page = paragraphOnlyPage(80);
+    page.sections[4].p = Array.from({ length: 64 }, (_, i) => `short clinical explanation word${i}`).join(" ");
+    expect(() => sanitizePage(page, { name: "Asthma", category: "Medicine" })).toThrow("thin sections");
+  });
+});
 
 describe("AI provider key configuration", () => {
   it("parses comma, whitespace, semicolon and JSON-array key lists without duplicates", () => {
