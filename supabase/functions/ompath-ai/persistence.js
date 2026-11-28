@@ -9,7 +9,19 @@ export async function publishReviewedTopic(db, { slug, name, category, page }) {
   return rows?.[0]?.result || { ok: false, reason: "empty_result" };
 }
 
+export function deepReady(deep) {
+  return Boolean(deep?.checked)
+    && (deep?.sections?.length || 0) >= 7
+    && (deep?.vivas?.length || 0) >= 12
+    && (deep?.mcqs?.length || 0) >= 6
+    && (deep?.cases?.length || 0) >= 2
+    && (deep?.facts?.length || 0) >= 6
+    && (deep?.mistakes?.length || 0) >= 5
+    && (deep?.exam?.length || 0) >= 12;
+}
+
 export async function saveReviewedDeep(db, { slug, name, category, base, deep }) {
+  if (!deepReady(deep)) return { ok: false, reason: "quality" };
   const rows = await db.query(
     "SELECT public.save_topic_deep($1, $2, $3, $4::jsonb, $5::jsonb) AS result",
     [slug, name, category, JSON.stringify(base || {}), JSON.stringify(deep)],
