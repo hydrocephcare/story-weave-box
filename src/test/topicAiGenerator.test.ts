@@ -31,9 +31,9 @@ describe("Groq topic generation boundary", () => {
     page.sections = page.sections.map((section) => ({
       h: section.h,
       b: [
-        "Nitrous oxide has a rapid onset because it is absorbed through the lungs and reaches the central nervous system quickly.",
-        "Its analgesic effect is mediated through several pathways, including endogenous opioid and noradrenergic signalling.",
-        "It is used in selected clinical settings where rapid, titratable analgesia or sedation is appropriate.",
+        "Nitrous oxide has a rapid onset because it is absorbed through the lungs and reaches the central nervous system quickly, producing effects within minutes.",
+        "Its analgesic effect involves endogenous opioid and noradrenergic pathways, while its NMDA receptor antagonism contributes to dissociative anaesthetic effects at higher concentrations.",
+        "It is used in selected clinical settings for rapid, titratable analgesia or sedation, including labour and procedural settings when appropriate monitoring and trained staff are available.",
       ],
     }));
     expect(sanitizeGatewayPage(page).sections).toHaveLength(13);
