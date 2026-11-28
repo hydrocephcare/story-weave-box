@@ -158,7 +158,7 @@ export const parseProviderKeys = (...values) => [...new Set(values.flatMap((valu
   return raw.split(/[\s,;]+/).map((key) => key.trim()).filter(Boolean);
 }))];
 export const providerKeys = (env = {}, provider = "GEMINI") => parseProviderKeys(
-  env[provider + "_API_KEYS"], env[provider + "_API_KEY"],
+  env[provider + "_API_KEYS"], env[provider + "_API_KEY"], env[provider + "_API_KEYS_EXTRA"],
   ...Array.from({ length: 20 }, (_, i) => env[provider + "_API_KEY_" + (i + 2)])
 );
 async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
