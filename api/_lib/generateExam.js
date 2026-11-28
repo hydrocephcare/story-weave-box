@@ -53,7 +53,7 @@ function parseEssays(raw) {
   } catch { return { saqs: [], laqs: [] }; }
 }
 
-async function reviewQuestions(questions, strict = true, aiEnv) {
+export async function reviewQuestions(questions, strict = true, aiEnv) {
   const kept = [], disputed = [];
   let dropped = 0, fixed = 0, reviewerUnavailable = false;
   for (let i = 0; i < questions.length; i += 15) {
