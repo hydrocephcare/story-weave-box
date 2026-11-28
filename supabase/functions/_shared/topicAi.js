@@ -365,11 +365,11 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
 }
 
 /**
- * Groq drafts; Gemini independently reviews. A maximum of one targeted rewrite
- * are allowed. Any unresolved clinical issue or unavailable reviewer holds the
- * page back: topicAiCore must never save an unreviewed draft as published.
+ * Groq drafts; Gemini independently reviews. Up to two targeted rewrites are allowed:
+ * one structural correction and one clinical correction. Any unresolved clinical
+ * issue or unavailable reviewer holds the page back: no unreviewed page is published.
  */
-export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs } = {}) {
+export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 2, timeoutMs } = {}) {
   const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
   const fixes = [];
   let page;
@@ -446,7 +446,7 @@ ${JSON.stringify({ title: page.title, clinicalScope: page.clinicalScope, summary
 
 /** Writes a checked page (or {medical:false}). `fetchImpl` is injectable for tests. */
 export async function generateTopicPage(input) {
-  const result = await generateReviewedTopicPage(input, { env: input.env, fetchImpl: input.fetchImpl ?? fetch, timeoutMs: input.timeoutMs, maxFixRounds: 1 });
+  const result = await generateReviewedTopicPage(input, { env: input.env, fetchImpl: input.fetchImpl ?? fetch, timeoutMs: input.timeoutMs, maxFixRounds: 2 });
   return result.page;
 }
 
