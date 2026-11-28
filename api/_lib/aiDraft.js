@@ -54,6 +54,6 @@ export async function health(req, res) {
   };
   const out = [];
   for (const k of providerKeys(process.env, "GROQ")) out.push({ ...(await test("Groq", "https://api.groq.com/openai/v1/models", k, (x) => ({ Authorization: `Bearer ${x}` }))), tail: k.slice(-4) });
-  for (const k of providerKeys(process.env, "GEMINI")) out.push({ ...(await test("Gemini", `https://generativelanguage.googleapis.com/v1beta/models?key=${k}`, k, () => ({}))), tail: k.slice(-4) });
+  for (const k of providerKeys(process.env, "GEMINI")) out.push({ ...(await test("Gemini", "https://generativelanguage.googleapis.com/v1beta/models", k, (x) => ({ "x-goog-api-key": x }))), tail: k.slice(-4) });
   return res.status(200).json({ keys: out, writeKey: true });
 }
