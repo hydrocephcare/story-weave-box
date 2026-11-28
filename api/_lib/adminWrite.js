@@ -3,6 +3,7 @@
 import { isAdmin } from "./adminAgent.js";
 import { askJson } from "./llm.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 
 const ENRICH = `
@@ -47,6 +48,7 @@ export default async function handler(req, res) {
   const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
   if (!token || !(await isAdmin(token))) return res.status(403).json({ error: "Administrators only." });
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
+  const aiEnv = supabaseAiEnv(req);
   const mode = ["mcq", "mcq_import", "cards", "article", "revise"].includes(body.mode) ? body.mode : "note";
   const text = String(body.text ?? "").slice(0, 24000).trim();
   if (text.length < (mode === "article" ? 3 : 40)) return res.status(400).json({ error: mode === "article" ? "Tell me the topic." : "Give me at least a few lines of text." });
@@ -80,7 +82,7 @@ export default async function handler(req, res) {
     // an answer that gives itself away (the longest option, "always" in a wrong option) is rewritten before the admin sees it
     try {
       const weakIdx = qs.map((q, i) => (weakness(q).filter((w) => w !== "recall").length ? i : -1)).filter((i) => i >= 0).slice(0, 10);
-      if (weakIdx.length) { const fixed = await hardenBatch(process.env, weakIdx.map((i) => qs[i]), { subject: String(body.title || ""), manual: true }); weakIdx.forEach((i, k) => { if (fixed[k]) qs[i] = fixed[k]; }); }
+      if (weakIdx.length) { const fixed = await hardenBatch(aiEnv, weakIdx.map((i) => qs[i]), { subject: String(body.title || ""), manual: true }); weakIdx.forEach((i, k) => { if (fixed[k]) qs[i] = fixed[k]; }); }
     } catch { /* the questions are kept as written */ }
     return res.status(200).json({ questions: qs.slice(0, count), dropped: Math.max(0, (out.questions?.length || 0) - qs.length) });
   }
