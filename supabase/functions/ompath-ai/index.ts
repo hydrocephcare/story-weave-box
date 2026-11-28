@@ -1,4 +1,4 @@
-import { generateReviewedTopicPage, validName, slugOf } from "./topicAi.js";
+import { generateReviewedTopicPage, validName, slugOf, askModel, askGroqModel, askGeminiModel, providerKeys } from "./topicAi.js";
 import { createRemoteJWKSet, jwtVerify } from "npm:jose@5.9.6";
 
 const ALLOWED = new Set(["https://www.ompathstudy.com","https://ompathstudy.com","https://stories.ompathstudy.com"]);
@@ -21,49 +21,10 @@ const GEM=["gemini-3.5-flash","gemini-flash-lite-latest","gemini-2.5-flash","gem
 const GROQ=["openai/gpt-oss-120b","qwen/qwen3.8-27b","openai/gpt-oss-20b"];
 const rotate=(a:any[],n:number,size:number)=>a.length?[...a.slice((n*size)%a.length),...a.slice(0,(n*size)%a.length)]:a;
 
-async function chatText(env:Record<string,string>,messages:any[],temperature:number,maxTokens:number,timeoutMs:number,maxAttempts=0,preferGroq=false) {
-  // Accept comma/newline-separated lists and individually named secrets,
-  // e.g. GROQ_API_KEY_1, GROQ_API_KEY_2, GEMINI_API_KEY_1.
-  const collectKeys=(provider:string)=>{
-    const pattern=new RegExp("^"+provider+"_API_KEYS?(?:_\\d+)?$");
-    return [...new Set(Object.keys(env).filter(name=>pattern.test(name)).sort()
-      .flatMap(name=>split(env[name])))];
-  };
-  const g0=collectKeys("GROQ");
-  const extra=split(env.GROQ_API_KEYS_EXTRA).filter(k=>!g0.includes(k));
-  const g=[...g0,...extra];
-  const m=collectKeys("GEMINI");
-  console.log("Ompath AI provider key inventory",{groq:g.length,gemini:m.length});
-  const entries=(keys:string[],url:string,models:string[])=>keys.flatMap((key,ki)=>models.map(model=>({key,url,model,id:model+":"+ki})));
-  const gem=entries(m,"https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",GEM);
-  const groq=entries(g,"https://api.groq.com/openai/v1/chat/completions",GROQ);
-  if(!gem.length&&!groq.length) throw new Error("No AI provider keys configured");
-  const n=turn++,first=preferGroq||n%2===1||!gem.length;
-  const A=rotate(first?groq:gem,Math.floor(n/2),first?GROQ.length:GEM.length);
-  const B=rotate(first?gem:groq,Math.floor(n/2),first?GEM.length:GROQ.length);
-  const all=[...A,...B],now=Date.now();
-  const ordered=[...all.filter(t=>(cooldown.get(t.id)||0)<=now),...all.filter(t=>(cooldown.get(t.id)||0)>now)];
-  const errors:string[]=[];
-  let attempted=0;
-  for(const p of ordered) {
-    if(maxAttempts>0&&attempted>=maxAttempts)break;
-    attempted++;
-    const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(),timeoutMs);
-    try {
-      const r=await fetch(p.url,{method:"POST",headers:{Authorization:"Bearer "+p.key,"Content-Type":"application/json"},body:JSON.stringify({model:p.model,messages,temperature,max_tokens:maxTokens}),signal:ctl.signal});
-      if(r.ok) {
-        const answer=(await r.json())?.choices?.[0]?.message?.content;
-        if(typeof answer==="string"&&answer.trim()) return answer;
-        errors.push(p.model+":empty");continue;
-      }
-      const providerDetail=(await r.text()).slice(0,240).replaceAll(p.key,"[redacted]");
-      errors.push(p.model+":"+r.status+":"+providerDetail);
-      if(r.status===429)cooldown.set(p.id,Date.now()+60000);
-      if(r.status===404)cooldown.set(p.id,Date.now()+3600000);
-    } catch(e) { errors.push(p.model+":"+String(e).slice(0,80)); }
-    finally { clearTimeout(timer); }
-  }
-  throw new Error("Provider fallback exhausted: "+errors.slice(-8).join("; "));
+async function chatText(env:Record<string,string>,messages:any[],temperature:number,maxTokens:number,timeoutMs:number) {
+  const prompt=messages.map(m=>String(m.content||"")).join("\n\n");
+  const result=await askModel(prompt,{env,fetchImpl:fetch,timeoutMs,maxTokens,plain:true,temperature});
+  return result.text;
 }
 
 async function authenticate(req:Request) {
@@ -75,6 +36,30 @@ async function authenticate(req:Request) {
     return token;
   } catch { return null; }
 }
+const githubJwks=createRemoteJWKSet(new URL("https://token.actions.githubusercontent.com/.well-known/jwks"));
+async function authenticateWorkflow(req:Request) {
+  const token=(req.headers.get("x-github-oidc")||"").replace(/^Bearer\\s+/i,"").trim();
+  if(!token)return false;
+  try {
+    const {payload}=await jwtVerify(token,githubJwks,{issuer:"https://token.actions.githubusercontent.com",audience:"ompathstudy-topic-maintenance"});
+    const allowed=new Set([
+      "hydrocephcare/story-weave-box/.github/workflows/topics-daily.yml@refs/heads/main",
+      "hydrocephcare/story-weave-box/.github/workflows/zone-daily.yml@refs/heads/main"
+    ]);
+    return payload.repository==="hydrocephcare/story-weave-box"&&payload.ref==="refs/heads/main"&&allowed.has(String(payload.workflow_ref||""))&&["push","schedule","workflow_dispatch"].includes(String(payload.event_name||""));
+  } catch { return false; }
+}
+async function hasAdminRole(token:string) {
+  try {
+    const {payload}=await jwtVerify(token,jwks!);
+    const response=await fetch(DATA_API_URL+"/rpc/has_role",{
+      method:"POST",headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({_user_id:payload.sub,_role:"admin"}),signal:AbortSignal.timeout(8000)
+    });
+    return response.ok&&(await response.json())===true;
+  } catch { return false; }
+}
+
 async function entitlement(token:string,feature:string) {
   const r=await fetch(DATA_API_URL+"/rpc/consume_feature",{
     method:"POST",headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
@@ -97,6 +82,57 @@ Deno.serve(async(req:Request)=>{
   const body=await req.json().catch(()=>null);
   if(!body||typeof body!=="object")return reply({error:"invalid_json"},400,origin);
   const env=Deno.env.toObject();
+  if(body.task==="provider_call") {
+    const workflow=await authenticateWorkflow(req);
+    let token=null;
+    if(!workflow) {
+      token=await authenticate(req);
+      if(!token)return reply({error:"login_required"},401,origin);
+      const feature=String(body.feature||"").trim();
+      if(feature) {
+        if(!["ai_flashcard_generation","ai_mcq_generation","ai_note_generation","search_prediction","ompath_ai_questions"].includes(feature))
+          return reply({error:"feature_not_allowed"},403,origin);
+        const quota=await entitlement(token,feature);
+        if(!quota.ok)return reply({error:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
+      } else if(!await hasAdminRole(token)) {
+        return reply({error:"admin_required"},403,origin);
+      }
+    }
+    const provider=String(body.provider||"auto");
+    if(!["auto","groq","gemini"].includes(provider))return reply({error:"invalid_provider"},400,origin);
+    const prompt=String(body.prompt||"").slice(0,26000);
+    if(prompt.length<2)return reply({error:"prompt_required"},400,origin);
+    try {
+      const options={env,fetchImpl:fetch,timeoutMs:Math.min(90000,Math.max(3000,Number(body.timeoutMs)||50000)),
+        maxTokens:Math.min(12000,Math.max(32,Number(body.maxTokens)||3500)),plain:body.plain===true,
+        temperature:Math.min(1.5,Math.max(0,Number(body.temperature)||0.3))};
+      const result=provider==="groq"?await askGroqModel(prompt,options):provider==="gemini"?await askGeminiModel(prompt,options):await askModel(prompt,options);
+      return reply({text:result.text,model:result.model||provider,provider},200,origin);
+    } catch(e) {
+      console.error("Supabase provider proxy failed",provider,String(e).slice(0,240));
+      return reply({error:"provider_unavailable",detail:String(e).slice(0,180)},503,origin);
+    }
+  }
+  if(body.task==="health") {
+    const token=await authenticate(req);
+    if(!token)return reply({error:"login_required"},401,origin);
+    if(!await hasAdminRole(token))return reply({error:"admin_required"},403,origin);
+    const probe=async(provider:string)=> {
+      try {
+        const prompt='Return only this JSON object: {"ok":true}';
+        const result=provider==="groq"?await askGroqModel(prompt,{env,fetchImpl:fetch,timeoutMs:12000,maxTokens:80}):await askGeminiModel(prompt,{env,fetchImpl:fetch,timeoutMs:12000,maxTokens:80});
+        return {ok:Boolean(result.text?.trim()),model:result.model||null};
+      } catch(e) { return {ok:false,error:String(e).slice(0,180)}; }
+    };
+    const [groq,gemini,storage]=await Promise.all([
+      probe("groq"),probe("gemini"),
+      (async()=>{try{const r=await fetch(DATA_API_URL+"/topic_pages?select=slug&limit=1",{headers:{Authorization:"Bearer "+token,Accept:"application/json"},signal:AbortSignal.timeout(8000)});return {ok:r.ok,status:r.status};}catch{return {ok:false,status:0};}})()
+    ]);
+    const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
+    return reply({ok:groq.ok||gemini.ok,checkedAt:new Date().toISOString(),
+      providers:{groq:{...groq,configuredKeys:g.length},gemini:{...gemini,configuredKeys:m.length}},
+      neonStorage:storage,auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
+  }
   if(!env.GROQ_API_KEYS&&!env.GROQ_API_KEY&&!env.GEMINI_API_KEYS&&!env.GEMINI_API_KEY&&!env.GROQ_API_KEYS_EXTRA)
     return reply({error:"ai_provider_not_configured"},503,origin);
 
