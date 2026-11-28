@@ -25,7 +25,7 @@ function parseNoteCards(raw) {
     .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);const words=c.answer.split(/\s+/).filter(Boolean).length;if(key.length<8||seen.has(key)||words<30||words>75)return false;seen.add(key);return true;});
 }
 export function dedupeNoteMcqs(items, existing=[]) {
-  const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
+  const seen=new Set(existing.map(q=>String(typeof q==="string"?q:q?.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
   return items.filter(q=>{const key=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60);if(seen.has(key))return false;seen.add(key);return true;});
 }
 export async function generateNoteMcqs(article, env, count=24, avoid=[]) {
