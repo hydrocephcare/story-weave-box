@@ -61,7 +61,7 @@ Reply with ONLY one JSON object: {"real": [numbers of the claims that are real e
 }
 
 /** Split at safe boundaries while preserving every character, including long JSON arrays with no headings or line breaks. */
-export function chunkText(text, max = 10000) {
+export function chunkText(text, max = 13000) {
   const source = String(text ?? "");
   if (!source.length) return [""];
   const out = [];
