@@ -22,7 +22,7 @@ function parseNoteCards(raw) {
   if(!Array.isArray(data))return [];
   const seen=new Set();
   return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
-    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);const words=c.answer.split(/\\s+/).filter(Boolean).length;if(key.length<8||seen.has(key)||words<30||words>75)return false;seen.add(key);return true;});
+    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);const words=c.answer.split(/\s+/).filter(Boolean).length;if(key.length<8||seen.has(key)||words<30||words>75)return false;seen.add(key);return true;});
 }
 export function dedupeNoteMcqs(items, existing=[]) {
   const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
