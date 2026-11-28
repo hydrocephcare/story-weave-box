@@ -74,6 +74,58 @@ async function callAI(messages,env,{plain=false,maxTokens=6000,timeoutMs=60000}=
   if(!out?.text?.trim())throw new Error("Supabase AI returned an empty response.");
   return out.text;
 }
+async function callGroqAI(messages,env,{plain=false,maxTokens=6000,timeoutMs=60000}={}) {
+  const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
+  const out=await askGroqModel(prompt,{env,plain,maxTokens,timeoutMs});
+  if(!out?.text?.trim())throw new Error("Groq returned an empty response.");
+  return out.text;
+}
+function parseFlashcards(raw,count) {
+  const match=String(raw||"").match(/\[[\s\S]*\]/);
+  if(!match)throw new Error("Could not parse the flashcard array.");
+  const parsed=JSON.parse(match[0]);
+  if(!Array.isArray(parsed))throw new Error("Flashcard output was not an array.");
+  return parsed.filter(x=>x?.question&&x?.answer).map(x=>({question:compact(x.question),answer:compact(x.answer)})).filter(x=>x.question.length>8&&x.answer.length>25).slice(0,count);
+}
+async function reviewGeneratedItems({title,kind,source,items,env,batchSize=8,parse,maxTokens=5000}) {
+  const checked=[];
+  let model="";
+  for(let offset=0;offset<items.length;offset+=batchSize) {
+    const batchNumber=Math.floor(offset/batchSize)+1;
+    let batch=items.slice(offset,offset+batchSize);
+    const review=async(values)=>checkContent({
+      title,
+      kind:kind+" (batch "+batchNumber+")",
+      text:"SOURCE NOTES (reference only):\n"+String(source||"").slice(0,5000)+"\n\nGENERATED ITEMS TO REVIEW:\n"+JSON.stringify(values),
+      env,
+      timeoutMs:45000,
+    });
+    let result=await review(batch);
+    model=result.model||model;
+    if(!result.validated) {
+      const repairPrompt=[
+        "Correct medical factual errors, unsafe advice, ambiguous answer keys and clinically misleading statements in these study materials.",
+        "Preserve the number of items, requested schema, topic scope and all correct teaching detail. Do not invent doses or unsupported diagnostic criteria.",
+        "Return ONLY the complete corrected JSON array using the original schema.",
+        "INDEPENDENT GEMINI FINDINGS:",
+        (result.issues||[]).map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" Correct: "+x.fix).join("\n"),
+        "SOURCE NOTES:",
+        String(source||"").slice(0,5000),
+        "ITEMS TO CORRECT:",
+        JSON.stringify(batch),
+      ].join("\n\n");
+      const fixed=parse(await callGroqAI([{role:"user",content:repairPrompt}],env,{plain:true,maxTokens,timeoutMs:60000}),batch.length);
+      if(fixed.length!==batch.length)throw new Error("Gemini flagged "+kind+" and Groq did not return a complete corrected batch.");
+      batch=fixed;
+      result=await review(batch);
+      model=result.model||model;
+    }
+    if(!result.validated||!String(result.model||"").trim())throw new Error(kind+" withheld: independent Gemini review did not clear batch "+batchNumber+".");
+    checked.push(...batch);
+  }
+  return {items:checked,reviewModel:model};
+}
+
 async function generateReviewedArticle(messages,customTitle,env) {
   const base=messages.map(m=>String(m.role).toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
   let corrections=[];
@@ -111,7 +163,17 @@ export default async function handler(req,res) {
     }
     if(type==="essay-qa") {
       messages=[{role:"system",content:"You are a medical examiner. Create exam-style written questions. Return ONLY JSON: {\"saqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":5}],\"laqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":20}]}. Create exactly six SAQs of 5 marks and one LAQ of 20 marks. Answers should be clinically structured and concise. No markdown."},{role:"user",content:safe}];
-      raw=await callAI(messages,env,{maxTokens:7000}); return res.status(200).json(parseEssays(raw));
+      let essays=parseEssays(await callGroqAI(messages,env,{maxTokens:7000,plain:true}));
+      if(essays.saqs.length<6||essays.laqs.length<1)throw new Error("The written exam did not contain the requested SAQs and LAQ.");
+      let review=await checkContent({title:customTitle||"Medical written examination",kind:"medical SAQ and LAQ questions with model answers",text:"SOURCE NOTES:\n"+safe.slice(0,5000)+"\n\nWRITTEN EXAM:\n"+JSON.stringify(essays),env,timeoutMs:45000});
+      if(!review.validated) {
+        const repairPrompt="Correct the medical factual errors and clinically unsafe or ambiguous statements in this written examination. Preserve six SAQs and one LAQ, marks and correct teaching detail. Return ONLY JSON with saqs and laqs.\n\nGEMINI FINDINGS:\n"+(review.issues||[]).map(x=>x.problem+" Correct: "+x.fix).join("\n")+"\n\nSOURCE NOTES:\n"+safe.slice(0,5000)+"\n\nEXAM:\n"+JSON.stringify(essays);
+        essays=parseEssays(await callGroqAI([{role:"user",content:repairPrompt}],env,{maxTokens:7000,plain:true}));
+        if(essays.saqs.length<6||essays.laqs.length<1)throw new Error("The corrected written exam was incomplete.");
+        review=await checkContent({title:customTitle||"Medical written examination",kind:"corrected medical SAQ and LAQ questions with model answers",text:JSON.stringify(essays),env,timeoutMs:45000});
+      }
+      if(!review.validated||!review.model)throw new Error("The written examination was withheld by independent Gemini review.");
+      return res.status(200).json({...essays,reviewed:true,review_model:review.model});
     }
     if(type==="publish-format") {
       messages=[{role:"system",content:"You are a fast medical publishing formatter. Return ONLY JSON: {\"title\":\"...\",\"content\":\"...\",\"tags\":[\"...\"],\"meta_title\":\"...\",\"meta_description\":\"...\",\"university\":\"Mount Kenya University\",\"school\":\"School of Medicine\",\"unit\":\"...\",\"exam_type\":\"...\",\"exam_year\":\"...\"}. Fix format only; do not rewrite academic meaning, shorten or remove questions, images or tables. Preserve MKU when present. Use clean markdown, 4-8 concise tags, and never invent exam details."},{role:"user",content:"Title: "+customTitle+"\n\nContent:\n"+safe}];
@@ -125,22 +187,24 @@ export default async function handler(req,res) {
     }
     if(type==="direct-article"||type==="article") {
       messages=[{role:"system",content:"You are a medical education expert. Convert these notes into a comprehensive exam-focused study article in markdown. Title on first line. Include ## Summary, ## Key Points, ## Detailed Notes with ### subsections, and ## Practice Questions with at least 8 clinical Q→A lines. Use explanatory paragraphs, preserve all tables and content, do not use code fences. Do not fabricate facts, doses or references."},{role:"user",content:(customTitle?"Title: "+customTitle+"\n\n":"")+safe}];
-      if(type==="article") { const result=await generateReviewedArticle(messages,customTitle,env); return res.status(200).json(result); }
+      if(type==="article"||type==="direct-article") { const result=await generateReviewedArticle(messages,customTitle,env); return res.status(200).json(result); }
       raw=await callAI(messages,env,{plain:true,maxTokens:9000});
       const result=normalizeArticleOutput(raw); if(customTitle)result.title=customTitle;
       return res.status(200).json(result);
     }
     if(type==="direct-mcqs"||type==="mcqs") {
       messages=[{role:"system",content:"You are a senior medical exam writer. Create EXACTLY "+cardCount+" clinically oriented MCQs. Return ONLY a JSON array with objects {\"question\":\"...\",\"options\":[\"A\",\"B\",\"C\",\"D\"],\"correct_answer\":0,\"explanation\":\"...\"}. Use four plausible options of similar length, exactly one best answer, no all/none of the above, clear clinical explanations. Spread correct positions naturally. Use accepted medical knowledge only."},{role:"user",content:"Create "+cardCount+" MCQs from these notes:\n\n"+safe}];
-      raw=await callAI(messages,env,{maxTokens:9000});
-      return res.status(200).json(parseMcqs(raw,cardCount));
+      const questions=parseMcqs(await callGroqAI(messages,env,{maxTokens:9000,plain:true}),cardCount).filter(q=>q.options.length===4);
+      if(questions.length<Math.min(5,cardCount))throw new Error("Too few valid MCQs were generated.");
+      const reviewed=await reviewGeneratedItems({title:customTitle||"Medical MCQs",kind:"medical multiple-choice questions",source:safe,items:questions,env,batchSize:8,parse:(value,count)=>parseMcqs(value,count).filter(q=>q.options.length===4),maxTokens:5000});
+      return res.status(200).json({questions:reviewed.items,reviewed:true,review_model:reviewed.reviewModel});
     }
     if(type==="direct-flashcards"||type==="flashcards") {
       messages=[{role:"system",content:"You are a medical flashcard writer. Return ONLY a JSON array [{\"question\":\"...\",\"answer\":\"...\"}]. Create up to "+cardCount+" high-yield non-repetitive cards grounded in the supplied notes. Each answer should be concise but explanatory."},{role:"user",content:safe}];
-      raw=await callAI(messages,env,{maxTokens:8000});
-      const match=raw.match(/\[[\s\S]*\]/); if(!match)throw new Error("Failed to parse flashcards.");
-      const parsed=JSON.parse(match[0]); if(!Array.isArray(parsed))throw new Error("Flashcards were not an array.");
-      return res.status(200).json(parsed.filter(x=>x?.question&&x?.answer).map(x=>({question:compact(x.question),answer:compact(x.answer)})).slice(0,cardCount));
+      const cards=parseFlashcards(await callGroqAI(messages,env,{maxTokens:8000,plain:true}),cardCount);
+      if(cards.length<Math.min(5,cardCount))throw new Error("Too few valid flashcards were generated.");
+      const reviewed=await reviewGeneratedItems({title:customTitle||"Medical flashcards",kind:"medical revision flashcards and answers",source:safe,items:cards,env,batchSize:6,parse:parseFlashcards,maxTokens:5000});
+      return res.status(200).json({cards:reviewed.items,reviewed:true,review_model:reviewed.reviewModel});
     }
     if(type==="generate-seo-meta") {
       messages=[{role:"system",content:"You are a medical SEO editor. Return ONLY JSON {\"meta_title\":\"...\",\"meta_description\":\"...\",\"slug\":\"...\"}. Title max 60 chars, description max 155 chars, slug lowercase hyphenated 3-6 words; do not invent clinical claims."},{role:"user",content:safe.slice(0,5000)}];
