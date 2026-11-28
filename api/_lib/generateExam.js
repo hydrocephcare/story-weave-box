@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { randomBytes } from "node:crypto";
 import { isNeonAdmin } from "./neonAdmin.js";
-import { askModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
 import { balanceBank, placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { reviewEssayPaper } from "./essayReview.js";
@@ -18,7 +18,7 @@ const normalizeUnit = (value) => String(value || "Uncategorized").trim();
 const yearOf = (value) => Number(/Year\s*(\d)/i.exec(String(value))?.[1]) || 0;
 
 async function generateText(prompt, maxTokens = 5000, aiEnv) {
-  const result = await askModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
+  const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
   if (!result?.text?.trim()) throw new Error("The AI writer returned an empty response.");
   return result.text;
 }
