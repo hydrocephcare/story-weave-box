@@ -356,13 +356,14 @@ export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeou
 }
 
 /** Generates and sanitizes a topic page using Groq, without Gemini generation fallback. */
-export async function generateGroqTopicPage({ name, category, context, choices, fixes = [], env, fetchImpl = fetch, timeoutMs }) {
+export async function generateGroqTopicPage({ name, category, context, choices, fixes = [], env, fetchImpl = fetch, timeoutMs, allowDirectFallback = false }) {
   const deep = cleanChoices(choices).depth === "full";
   const { text, model } = await askGroqModel(buildPrompt({ name, category, context, choices, fixes }), {
     env,
     fetchImpl,
     timeoutMs: timeoutMs ?? (deep ? 40000 : 35000),
     maxTokens: deep ? 8500 : 4500,
+    allowDirectFallback,
   });
   const json = extractJson(text);
   if (!json) throw new Error("Groq returned no valid JSON.");
@@ -375,13 +376,13 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
  * are allowed. Any unresolved clinical issue or unavailable reviewer holds the
  * page back: topicAiCore must never save an unreviewed draft as published.
  */
-export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs } = {}) {
+export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs, allowDirectFallback = false } = {}) {
   const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
   const fixes = [];
   let page;
   let review;
   for (let round = 0; round <= rounds; round++) {
-    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs, allowDirectFallback });
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const pageText = [
       page.summary,
@@ -417,7 +418,7 @@ CATEGORY: ${input.category ?? "unspecified"}
 SELECTED SCOPE: ${page.clinicalScope ?? "not stated"}
 PAGE:
 ${JSON.stringify({ title: page.title, clinicalScope: page.clinicalScope, summary: page.summary, sections: page.sections, whenToSeekHelp: page.whenToSeekHelp, faq: page.faq, exam: page.exam }).slice(0, 24000)}`;
-    const result = await askGeminiModel(reviewPrompt, { env, fetchImpl, timeoutMs: timeoutMs ?? 35000, maxTokens: 2200 });
+    const result = await askGeminiModel(reviewPrompt, { env, fetchImpl, timeoutMs: timeoutMs ?? 35000, maxTokens: 2200, allowDirectFallback });
     const parsed = extractJson(result.text);
     if (!parsed || !Array.isArray(parsed.issues) || !["ok", "issues"].includes(parsed.verdict) || (parsed.verdict === "issues" && parsed.issues.length === 0) || (parsed.verdict === "ok" && parsed.issues.length !== 0)) {
       throw new Error("Gemini clinical review returned an invalid response; page held back.");
@@ -541,9 +542,9 @@ export function sanitizeDeep(parts, name = "this topic") {
   return { sections: sections.slice(0, 14), facts, mnemonics, vivas, mcqs, cases, mistakes, exam: vivas.slice(0, 14).map((x) => `${x.q} — ${x.a}`) };
 }
 
-export async function generateDeepNotes({ name, category, base, past = [], fixes = [], env, fetchImpl = fetch, timeoutMs }) {
+export async function generateDeepNotes({ name, category, base, past = [], fixes = [], env, fetchImpl = fetch, timeoutMs, allowDirectFallback = false }) {
   const run = async (part) => {
-    const { text, model } = await askModel(buildDeepPrompt({ name, category, base, part, past, fixes }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
+    const { text, model } = await askGroqModel(buildDeepPrompt({ name, category, base, part, past, fixes }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000, allowDirectFallback });
     const json = extractJson(text);
     if (!json) throw new Error("no JSON in the reply");
     return { json, model };
@@ -557,10 +558,20 @@ export async function generateDeepNotes({ name, category, base, past = [], fixes
  * clinical review performed by generateCheckedDeep.
  */
 /** Deep-note generation is Groq-only; Gemini is reserved for independent verification. */
-export async function generateDeepWithFallback(input, env) {
-  const groq = String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").trim();
-  if (!groq) throw new Error("GROQ_API_KEYS is required for deep-note generation; Gemini is reserved for verification.");
-  return generateDeepNotes({ ...input, timeoutMs: input.timeoutMs ?? 55000, env: { GROQ_API_KEYS: groq, GROQ_MODELS: env.GROQ_MODELS } });
+export async function generateDeepWithFallback(input, env, { allowDirectFallback = false } = {}) {
+  const groqKeys = providerKeys(env, "GROQ");
+  if (!groqKeys.length) throw new Error("GROQ_API_KEYS is required for deep-note generation; Gemini is reserved for verification.");
+  // Keep the Groq-only generation boundary while retaining the trusted Supabase
+  // workflow transport; the independent Gemini check remains a separate call.
+  const groqEnv = {
+    ...env,
+    GROQ_API_KEYS: groqKeys.join(","),
+    GROQ_API_KEY: "",
+    GEMINI_API_KEYS: "",
+    GEMINI_API_KEY: "",
+    GEMINI_MODELS: "",
+  };
+  return generateDeepNotes({ ...input, timeoutMs: input.timeoutMs ?? 55000, env: groqEnv, allowDirectFallback });
 }
 
 /** The first complete JSON object in a model's reply (text before or after it, or a second object, is ignored). Returns null when there is none. */
