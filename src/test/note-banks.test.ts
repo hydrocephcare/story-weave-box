@@ -78,6 +78,19 @@ describe("note-derived MCQs and flashcards", () => {
     expect(result.review.validated).toBe(true);
   });
 
+  it("repairs small requested MCQ banks without imposing an eight-question minimum", async () => {
+    const five = questions.slice(0, 5);
+    reviewMock
+      .mockResolvedValueOnce({ validated: false, model: "gemini-review-test", issues: [{ problem: "One answer needs correction.", fix: "Use the supported answer." }] })
+      .mockResolvedValueOnce({ validated: true, model: "gemini-review-test" });
+    groqMock
+      .mockResolvedValueOnce({ text: JSON.stringify(five), model: "groq-test-model" })
+      .mockResolvedValueOnce({ text: JSON.stringify(five), model: "groq-test-model" });
+    const result = await generateNoteMcqs(article, { GROQ_API_KEYS: "groq-test-key" }, 5);
+    expect(result.questions).toHaveLength(5);
+    expect(reviewMock).toHaveBeenCalledTimes(2);
+  });
+
   it("generates flashcards with Groq and requires independent Gemini review before returning", async () => {
     groqMock.mockResolvedValueOnce({ text: JSON.stringify(cards), model: "groq-test-model" });
 
@@ -89,6 +102,13 @@ describe("note-derived MCQs and flashcards", () => {
     expect(reviewMock.mock.calls[0][0].kind).toBe("medical revision flashcards");
     expect(result.cards).toHaveLength(10);
     expect(result.review.model).toBe("gemini-review-test");
+  });
+
+  it("respects a requested flashcard count below five", async () => {
+    groqMock.mockResolvedValueOnce({ text: JSON.stringify(cards.slice(0, 3)), model: "groq-test-model" });
+    const result = await generateNoteFlashcards(article, { GROQ_API_KEYS: "groq-test-key" }, 3);
+    expect(result.cards).toHaveLength(3);
+    expect(reviewMock).toHaveBeenCalledTimes(1);
   });
 
   it("repairs flashcards and rechecks them before returning", async () => {
