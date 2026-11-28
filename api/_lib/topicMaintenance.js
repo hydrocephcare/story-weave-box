@@ -117,19 +117,37 @@ ${text}`;
   return {questions,review};
 }
 async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
-  // Keep each prompt below contentCheck's 15,000-character limit; 10s provider calls leave headroom for draft, repair and re-review within maxDuration=120.
+  // One hard deadline per batch, including all Gemini key/model fallbacks and issue verification.
+  // This prevents configured key rotation from multiplying the Vercel route's execution time.
   const batchSize = 4;
   const concurrency = 3;
   const batches = [];
   for (let offset = 0; offset < cards.length; offset += batchSize) batches.push(cards.slice(offset, offset + batchSize));
   const results = [];
   for (let offset = 0; offset < batches.length; offset += concurrency) {
-    const wave = await Promise.all(batches.slice(offset, offset + concurrency).map((batch, index) => checkContent({
-      title,
-      kind: kind + " (batch " + (offset + index + 1) + ")",
-      text: "SOURCE NOTE (reference only; assess every flashcard against accepted medical knowledge):\n" + source + "\n\nFLASHCARDS TO REVIEW:\n" + JSON.stringify(batch),
-      env,
-      timeoutMs: 10000,
+    const wave = await Promise.all(batches.slice(offset, offset + concurrency).map(async (batch, index) => {
+      const deadline = Date.now() + 10000;
+      const reviewFetch = (url, options = {}) => {
+        const remaining = deadline - Date.now();
+        if (remaining <= 0) return Promise.reject(new Error("Gemini review batch exceeded its 10-second deadline."));
+        const controller = new AbortController();
+        const abortFromCaller = () => controller.abort();
+        if (options.signal?.aborted) controller.abort();
+        else options.signal?.addEventListener("abort", abortFromCaller, { once: true });
+        const timer = setTimeout(() => controller.abort(), remaining);
+        return fetch(url, { ...options, signal: controller.signal }).finally(() => {
+          clearTimeout(timer);
+          options.signal?.removeEventListener("abort", abortFromCaller);
+        });
+      };
+      return checkContent({
+        title,
+        kind: kind + " (batch " + (offset + index + 1) + ")",
+        text: "SOURCE NOTE (reference only; assess every flashcard against accepted medical knowledge):\\n" + source + "\\n\\nFLASHCARDS TO REVIEW:\\n" + JSON.stringify(batch),
+        env,
+        fetchImpl: reviewFetch,
+        timeoutMs: 10000,
+      });
     })));
     results.push(...wave);
   }
@@ -141,6 +159,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
     && high === 0 && medium === 0 && Boolean(model);
   return { validated, high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
 }
+
 export async function generateNoteFlashcards(article, env) {
   const text = cleanStudyNote(article.content).slice(0, 10000);
   const count = Math.max(10, Math.min(22, Math.round(text.length / 450)));
