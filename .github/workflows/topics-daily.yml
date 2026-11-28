@@ -39,7 +39,7 @@ jobs:
   topics:
     # This workflow writes generated content to GitHub main. Keep it disabled
     # unless an administrator explicitly enables the repository variable.
-    if: vars.ALLOW_TOPICS_DAILY_PUBLISH == 'true'
+    if: vars.ALLOW_AUTOMATED_MAIN_WRITES == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
