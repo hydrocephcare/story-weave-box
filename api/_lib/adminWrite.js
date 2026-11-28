@@ -82,7 +82,7 @@ export default async function handler(req, res) {
     // an answer that gives itself away (the longest option, "always" in a wrong option) is rewritten before the admin sees it
     try {
       const weakIdx = qs.map((q, i) => (weakness(q).filter((w) => w !== "recall").length ? i : -1)).filter((i) => i >= 0).slice(0, 10);
-      if (weakIdx.length) { const fixed = await hardenBatch(aiEnv, weakIdx.map((i) => qs[i]), { subject: String(body.title || ""), manual: true }); weakIdx.forEach((i, k) => { if (fixed[k]) qs[i] = fixed[k]; }); }
+      if (weakIdx.length) { const fixed = await hardenBatch(aiEnv, weakIdx.map((i) => qs[i]), { subject: String(body.title || ""), manual: true, allowDirectFallback: true }); weakIdx.forEach((i, k) => { if (fixed[k]) qs[i] = fixed[k]; }); }
     } catch { /* the questions are kept as written */ }
     return res.status(200).json({ questions: qs.slice(0, count), dropped: Math.max(0, (out.questions?.length || 0) - qs.length) });
   }
