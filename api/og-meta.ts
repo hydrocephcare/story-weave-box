@@ -435,10 +435,16 @@ const NEON_DATA_API_URL =
  * importing the Neon Auth SDK here initialises async crypto/network state at
  * Worker module scope, which Cloudflare Pages correctly rejects.
  */
+function trimTrailingSlashes(value: string): string {
+  let end = value.length;
+  while (end > 0 && value[end - 1] === "/") end -= 1;
+  return value.slice(0, end);
+}
+
 async function sbFetch(table: string, params: string) {
   if (!/^[a-z_][a-z0-9_]*$/i.test(table)) throw new Error("Invalid metadata table.");
   const search = new URLSearchParams(params);
-  const url = `${NEON_DATA_API_URL.replace(/\/+$/, "")}/${table}?${search.toString()}`;
+  const url = `${trimTrailingSlashes(NEON_DATA_API_URL)}/${table}?${search.toString()}`;
   const response = await fetch(url, {
     method: "GET",
     headers: { Accept: "application/json" },
@@ -455,7 +461,7 @@ async function sbFetch(table: string, params: string) {
 /** Call a public, read-only PostgREST RPC through the same Neon Data API. */
 async function neonRpc<T = unknown>(fn: string, args: Record<string, unknown>): Promise<T> {
   if (!/^[a-z_][a-z0-9_]*$/i.test(fn)) throw new Error("Invalid metadata RPC.");
-  const url = `${NEON_DATA_API_URL.replace(/\/+$/, "")}/rpc/${fn}`;
+  const url = `${trimTrailingSlashes(NEON_DATA_API_URL)}/rpc/${fn}`;
   const response = await fetch(url, {
     method: "POST",
     headers: { Accept: "application/json", "Content-Type": "application/json" },
