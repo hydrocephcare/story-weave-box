@@ -70,6 +70,10 @@ describe("medical note-bank provider separation", () => {
     expect(neonMigration).toContain("ALTER FUNCTION public.polish_write_ok() SET search_path = pg_catalog");
     expect(neonMigration).toContain("REVOKE ALL ON FUNCTION public.handle_new_user() FROM PUBLIC, anonymous, authenticated");
     expect(neonMigration).toContain("REVOKE ALL ON FUNCTION public.handle_new_user_admission() FROM PUBLIC, anonymous, authenticated");
+    expect(neonMigration).toContain("IF auth.uid() IS DISTINCT FROM _user_id THEN");
+    expect(neonMigration).toContain("REVOKE ALL ON FUNCTION public.ensure_neon_user(uuid, text) FROM PUBLIC, anonymous");
+    expect(neonMigration).toContain("DO $harden_security_definer_search_paths$");
+    expect(neonMigration).toContain("safe_path := safe_path || ', pg_temp'");
   });
 
   it("records the independent flashcard review model and timestamp", () => {
