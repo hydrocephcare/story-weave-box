@@ -128,7 +128,7 @@ export function sanitizePage(raw, options = {}) {
     if (sections.length < minimum) throw new Error(`thin topic page: ${sections.length} sections; ${minimum} required`);
     const thin = sections.filter((section) => {
       const structured = (section.b?.length ?? 0) + (section.t?.length ?? 0);
-      const words = (section.p ?? "").split(/\\s+/).filter(Boolean).length;
+      const words = (section.p ?? "").split(/\s+/).filter(Boolean).length;
       return structured < 4 && words < 65;
     });
     if (thin.length) throw new Error(`thin sections: ${thin.map((section) => section.h).slice(0, 4).join(", ")}`);
@@ -375,7 +375,18 @@ export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch,
   let page;
   let review;
   for (let round = 0; round <= rounds; round++) {
-    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    try {
+      page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    } catch (error) {
+      const message = String(error?.message ?? error);
+      const isValidationFailure = /^(?:not an object|summary not acceptable|too few sections|thin topic page:|thin sections:|full topic page needs|Groq returned no valid JSON)/i.test(message);
+      if (!isValidationFailure || round >= rounds) throw error;
+      fixes.push(
+        "The previous draft failed structural validation: " + message +
+        ". Ensure each section contains at least 65 words or four meaningful structured points, while preserving topic-specific accuracy and avoiding repetition."
+      );
+      continue;
+    }
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const pageText = [
       page.summary,
