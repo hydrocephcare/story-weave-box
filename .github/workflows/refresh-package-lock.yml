@@ -13,6 +13,8 @@ permissions:
 
 jobs:
   refresh-lockfile:
+    # Require explicit repository opt-in before this job writes to main.
+    if: vars.ALLOW_AUTOMATED_MAIN_WRITES == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Check out main
