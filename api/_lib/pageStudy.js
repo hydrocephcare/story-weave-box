@@ -1,7 +1,7 @@
 // POST /api/page-study { mode: "cards" | "quiz", title, text }: flashcards or a short quiz made from the page the reader is on.
 // Groq first, Gemini as the backup (keys take turns), the same as the rest of the site's AI.
-import { askModel, providerKeys } from "../../supabase/functions/_shared/topicAi.js";
-import { consumeEntitlement } from "./entitlements.js";
+import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const hits = new Map();
 const LIMIT = 40; // per visitor per hour (best effort)
@@ -41,15 +41,12 @@ ${text}
 };
 
 async function ask(prompt, env, maxTokens = 1800) {
-  if (env.GROQ_API_KEYS.trim()) { try { return await askModel(prompt, { env: { GROQ_API_KEYS: env.GROQ_API_KEYS }, timeoutMs: 35000, maxTokens }); } catch { /* try Gemini */ } }
   return askModel(prompt, { env, timeoutMs: 35000, maxTokens });
 }
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
-  const env = { GROQ_API_KEYS: providerKeys(process.env, "GROQ").join(","), GEMINI_API_KEYS: providerKeys(process.env, "GEMINI").join(",") };
-  if (!env.GROQ_API_KEYS.trim() && !env.GEMINI_API_KEYS.trim()) return res.status(503).json({ error: "not configured" });
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
   const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
@@ -57,6 +54,11 @@ export default async function handler(req, res) {
   hits.set(ip, [...mine, now]); if (hits.size > 5000) hits.clear();
 
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
+  const requestedMode = body.mode === "quiz" ? "quiz" : body.mode === "essays" ? "essays" : body.mode === "spell" ? "spell" : "cards";
+  const feature = requestedMode === "cards" ? "ai_flashcard_generation"
+    : requestedMode === "quiz" ? "ai_mcq_generation"
+    : requestedMode === "essays" ? "ai_note_generation" : "search_prediction";
+  const env = supabaseAiEnv(req, { feature });
   if (body.mode === "spell") {
     // a misspelt medical term: the correctly spelt terms the student most likely meant
     const typed = String(body.query ?? "").replace(/[^A-Za-z0-9 '\-,./]/g, " ").trim().slice(0, 80);
@@ -73,22 +75,6 @@ export default async function handler(req, res) {
   const text = String(body.text ?? "").replace(/\s+/g, " ").trim().slice(0, 5500);
   if (text.length < 200) return res.status(400).json({ error: "There is not enough text on this page yet." });
 
-  // Generated study aids consume the same account-based weekly allowances as the other AI tools.
-  const feature = mode === "cards" ? "ai_flashcard_generation"
-    : mode === "quiz" ? "ai_mcq_generation"
-    : "ai_note_generation";
-  const quota = await consumeEntitlement(req, feature);
-  if (!quota.allowed) {
-    return res.status(quota.status || 402).json({
-      error: quota.reason === "quota_exhausted"
-        ? "Your free allowance for this AI study tool has been used. Unlock premium access to continue."
-        : quota.reason === "login_required" || quota.reason === "invalid_session"
-          ? "Please sign in to generate study aids."
-          : "We could not verify your access. Please try again.",
-      upgrade_required: quota.status === 402,
-      quota,
-    });
-  }
   try {
     const { text: out } = await ask(PROMPTS[mode](title, text), env, mode === "essays" ? 3400 : mode === "cards" ? 3600 : 1800);
     const j = JSON.parse(out.match(/\{[\s\S]*\}/)[0]);
