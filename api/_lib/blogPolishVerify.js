@@ -23,7 +23,7 @@ export async function verifyBlogContent(article, candidate, env, { allowRepair =
   if (review.validated && issues.length === 0) {
     return { status: "passed", content: candidate == null ? null : source, model: review.model, at: new Date().toISOString(), issues: [] };
   }
-  if (!allowRepair || !env.GROQ_API_KEYS || source.length > 24000) {
+  if (!allowRepair || (!env.OMPATH_SUPABASE_AI_TOKEN && !env.GROQ_API_KEYS) || source.length > 24000) {
     return { status: "held", content: null, model: review.model, at: new Date().toISOString(), issues: issues.slice(0, 12) };
   }
 
