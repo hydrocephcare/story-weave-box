@@ -7,7 +7,7 @@ vi.mock("jose", () => ({
 }));
 vi.mock("@neondatabase/serverless", () => ({ neon: vi.fn() }));
 vi.mock("../../supabase/functions/_shared/topicParts.js", () => ({ pickSubject: vi.fn() }));
-vi.mock("../../supabase/functions/_shared/topicAi.js", () => ({ askModel: vi.fn(), generateReviewedTopicPage: vi.fn() }));
+vi.mock("../../supabase/functions/_shared/topicAi.js", () => ({ askModel: vi.fn(), askGroqModel: vi.fn(), generateReviewedTopicPage: vi.fn() }));
 vi.mock("../../supabase/functions/_shared/contentCheck.js", () => ({ generateCheckedDeep: vi.fn(), checkContent: vi.fn() }));
 vi.mock("../../api/_lib/supabaseAiEnv.js", () => ({ supabaseAiEnv: vi.fn() }));
 vi.mock("../../supabase/functions/_shared/mcqPositions.js", () => ({ placeNewQuestions: vi.fn() }));
