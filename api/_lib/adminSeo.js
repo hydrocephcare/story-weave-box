@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   const items = (Array.isArray(body.items) ? body.items : []).slice(0, 15).map((x) => ({ id: String(x?.id ?? ""), title: String(x?.title ?? "").slice(0, 200), snippet: String(x?.snippet ?? "").slice(0, 700) })).filter((x) => x.id);
   if (!items.length) return res.status(400).json({ error: "Nothing to write." });
   const msgs = [{ role: "system", content: PROMPT }, { role: "user", content: JSON.stringify(items) }];
-  const got = await askJson(msgs, { prefer: "groq", temperature: 0.3, maxTokens: 3000 });
+  const got = await askJson(msgs, { prefer: "groq", temperature: 0.3, maxTokens: 3000, authToken: token });
   if (got.error) return res.status(502).json({ error: got.error });
   const raw = got.text;
   let out; try { out = JSON.parse(String(raw).replace(/^```(?:json)?|```$/gm, "").trim()); } catch { return res.status(502).json({ error: "The writer gave an unreadable answer." }); }
