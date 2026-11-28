@@ -266,7 +266,7 @@ BEGIN
 
   INSERT INTO public.topic_pages (slug, name, category, status, content, model, reviewed, updated_at)
   VALUES (p_slug, p_name, left(coalesce(p_category, ''), 60), 'published',
-    (p_base - 'deep') || jsonb_build_object('deep', p_deep), 'gemini', false, now())
+    (p_base - 'deep') || jsonb_build_object('deep', p_deep), 'groq', false, now())
   ON CONFLICT (slug) DO NOTHING;
   GET DIAGNOSTICS affected_rows = ROW_COUNT;
   IF affected_rows = 0 THEN RETURN jsonb_build_object('ok', false, 'reason', 'slug_conflict'); END IF;
