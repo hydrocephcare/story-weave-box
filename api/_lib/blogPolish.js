@@ -4,7 +4,7 @@
 //   - a verdict (keep / review / irrelevant) that the admin can act on; nothing is ever deleted here
 // Very long pages are left to the batch job (scripts/blogs/polish-batch.mjs). The stored article is never changed: the result is saved in
 // blog_polish, which the page reads. Writing needs POLISH_WRITE_KEY in Vercel (made on /admin/polish): the database checks it, so the Supabase service key is not needed.
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, providerKeys } from "../../supabase/functions/_shared/topicAi.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
 import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
@@ -20,10 +20,10 @@ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
-  const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
-  const gem = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
+  const groq = providerKeys(process.env, "GROQ");
+  const gem = providerKeys(process.env, "GEMINI");
   const workflow = await isTrustedBlogWorkflow(req.headers.authorization);
-  if (!workflow && (!groq.trim() || !gem.trim())) return res.status(503).json({ status: "unavailable" });
+  if (!workflow && (!groq.length || !gem.length)) return res.status(503).json({ status: "unavailable" });
   const sql = getPolishSql();
   if (!(await hasPolishWriteKey())) return res.status(503).json({ status: "unavailable" });
   const now = Date.now();
