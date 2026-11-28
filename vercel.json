@@ -712,7 +712,7 @@
   },
   "functions": {
     "api/ai.js": {
-      "maxDuration": 60
+      "maxDuration": 120
     },
     "api/utility.js": {
       "includeFiles": "{public/data/**,api/_assets/**}"
