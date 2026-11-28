@@ -137,7 +137,7 @@ ${text}`;
   if(!review.validated){
     const issues=(review.issues||[]).map((item,index)=>
       (index+1)+". ["+item.where+"] "+item.problem+" Correct it to: "+item.fix
-    ).join("\\n");
+    ).join("\n");
     const repairPrompt=`Repair the medical accuracy and safety problems identified by an independent clinical reviewer.
 Preserve the source-note scope, medical-student level and flashcard format. Do not introduce unsupported facts, doses or diagnostic thresholds.
 Return ONLY a JSON array of flashcards with question and answer fields.
