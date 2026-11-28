@@ -61,7 +61,8 @@ describe("admin medical writing requires independent Gemini review", () => {
   it("holds a medical note when Gemini still rejects it after correction", async () => {
     groqMock
       .mockResolvedValueOnce({ text: JSON.stringify({ title: "Asthma", content: "## Asthma\\n\\nAn initial clinical explanation that contains an inaccurate management statement and requires review." }) })
-      .mockResolvedValueOnce({ text: JSON.stringify({ title: "Asthma", content: "## Asthma\\n\\nA corrected clinical explanation that still needs another independent review before publication." }) });
+      .mockResolvedValueOnce({ text: JSON.stringify({ title: "Asthma", content: "## Asthma\\n\\nA corrected clinical explanation that still needs another independent review before publication." }) })
+      .mockResolvedValueOnce({ text: JSON.stringify({ title: "Asthma", content: "## Asthma\\n\\nA second correction still requires independent clinical review before it can be approved." }) });
     reviewMock
       .mockResolvedValueOnce({ validated: false, model: "gemini-review-test", issues: [{ problem: "Incorrect management claim.", fix: "Use accepted management principles." }] })
       .mockResolvedValueOnce({ validated: false, model: "gemini-review-test", issues: [{ problem: "The management claim remains incomplete.", fix: "Correct the clinical statement." }] })
