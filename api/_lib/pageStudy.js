@@ -1,7 +1,8 @@
 // POST /api/page-study { mode: "cards" | "quiz", title, text }: flashcards or a short quiz made from the page the reader is on.
-// Groq first, Gemini as the backup (keys take turns), the same as the rest of the site's AI.
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+// Groq drafts; Gemini independently reviews every student-facing medical study aid.
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
+import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 
 const hits = new Map();
 const LIMIT = 40; // per visitor per hour (best effort)
@@ -41,7 +42,13 @@ ${text}
 };
 
 async function ask(prompt, env, maxTokens = 1800) {
-  return askModel(prompt, { env, timeoutMs: 35000, maxTokens });
+  return askGroqModel(prompt, { env, timeoutMs: 35000, maxTokens });
+}
+
+async function requireGeminiReview(title, kind, value, env) {
+  const review = await checkContent({ title, kind, text: JSON.stringify(value), env, timeoutMs: 35000 });
+  if (!review.validated) throw new Error("Gemini independent review did not pass.");
+  return { status: "passed", model: review.model || null, reviewedAt: review.at || new Date().toISOString() };
 }
 
 export default async function handler(req, res) {
@@ -81,18 +88,21 @@ export default async function handler(req, res) {
     if (mode === "cards") {
       const cards = (Array.isArray(j.cards) ? j.cards : []).map((c) => ({ q: String(c?.q ?? "").trim().slice(0, 220), a: String(c?.a ?? "").trim().slice(0, 900) })).filter((c) => c.q.length > 8 && c.a.length > 4).slice(0, 16);
       if (cards.length < 3) throw new Error("few");
-      return res.status(200).json({ cards });
+      const aiReview = await requireGeminiReview(title, "medical revision flashcards", cards, env);
+      return res.status(200).json({ cards, aiReview });
     }
     if (mode === "essays") {
       const essays = (Array.isArray(j.essays) ? j.essays : []).map((e) => ({ q: String(e?.q ?? "").trim().slice(0, 300), marks: [5, 8, 10, 12, 15, 20].includes(Number(e?.marks)) ? Number(e.marks) : 10, points: (Array.isArray(e?.points) ? e.points : []).map((p) => String(p).trim().slice(0, 200)).filter(Boolean).slice(0, 7), answer: String(e?.answer ?? "").trim().slice(0, 1300) }))
         .filter((e) => e.q.length > 12 && e.answer.length > 80).slice(0, 5);
       if (essays.length < 3) throw new Error("few");
-      return res.status(200).json({ essays });
+      const aiReview = await requireGeminiReview(title, "medical written examination questions and model answers", essays, env);
+      return res.status(200).json({ essays, aiReview });
     }
     const questions = (Array.isArray(j.questions) ? j.questions : []).map((x) => ({ q: String(x?.q ?? "").trim().slice(0, 300), options: (Array.isArray(x?.options) ? x.options : []).map((o) => String(o).trim().slice(0, 200)), answer: Number(x?.answer), why: String(x?.why ?? "").trim().slice(0, 300) }))
       .filter((x) => x.q.length > 10 && x.options.length === 4 && x.options.every(Boolean) && Number.isInteger(x.answer) && x.answer >= 0 && x.answer <= 3).slice(0, 6);
     if (questions.length < 3) throw new Error("few");
-    return res.status(200).json({ questions });
+    const aiReview = await requireGeminiReview(title, "medical multiple-choice questions", questions, env);
+    return res.status(200).json({ questions, aiReview });
   } catch {
     return res.status(502).json({ error: "Ompath AI could not make these just now. Please try again in a moment." });
   }
