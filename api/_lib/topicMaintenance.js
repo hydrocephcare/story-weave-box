@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
@@ -119,10 +119,51 @@ Return ONLY JSON array: [{"question":"...","answer":"..."}].
 TOPIC: ${article.title} | ${article.category}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
-  const cards=parseNoteCards(draft.text);
+  // Drafting is deliberately Groq-only. Gemini remains an independent clinical reviewer.
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
+  let cards=parseNoteCards(draft.text);
   if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
-  return cards;
+
+  let review=await checkContent({
+    title:article.title,
+    kind:"medical revision flashcards",
+    text:JSON.stringify(cards),
+    env,
+    timeoutMs:45000,
+  });
+
+  // One controlled repair pass: Groq repairs only the issues identified by Gemini,
+  // then Gemini independently reviews the complete repaired deck again.
+  if(!review.validated){
+    const issues=(review.issues||[]).map((item,index)=>
+      (index+1)+". ["+item.where+"] "+item.problem+" Correct it to: "+item.fix
+    ).join("\\n");
+    const repairPrompt=`Repair the medical accuracy and safety problems identified by an independent clinical reviewer.
+Preserve the source-note scope, medical-student level and flashcard format. Do not introduce unsupported facts, doses or diagnostic thresholds.
+Return ONLY a JSON array of flashcards with question and answer fields.
+REVIEW FINDINGS:
+${issues}
+CURRENT FLASHCARDS:
+${JSON.stringify(cards)}
+SOURCE NOTE:
+${text}`;
+    const repaired=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
+    const repairedCards=parseNoteCards(repaired.text);
+    if(repairedCards.length<8)throw new Error("Clinically repaired flashcard deck was incomplete; nothing was saved.");
+    cards=repairedCards;
+    review=await checkContent({
+      title:article.title,
+      kind:"medical revision flashcards",
+      text:JSON.stringify(cards),
+      env,
+      timeoutMs:45000,
+    });
+  }
+
+  if(!review.validated){
+    throw new Error("Flashcards failed independent Gemini clinical review; nothing was saved.");
+  }
+  return {cards,review};
 }
 
 function deepReady(deep) {
@@ -249,18 +290,18 @@ export default async function handler(req, res) {
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
-      const cards=await generateNoteFlashcards(article,aiEnv);
+      const {cards,review}=await generateNoteFlashcards(article,aiEnv);
       const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
-      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString()});
+      const meta=JSON.stringify({type:"note_flashcards",v:3,article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:review.model||null});
       if(upgrade){
         await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid",[upgrade.id,JSON.stringify(cards),meta,description]);
-        return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true});
+        return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true,reviewed:true,reviewModel:review.model||null});
       }
       const title=`${cleanTopicTitle(article.title)}: Flashcards`;
       const base=title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70);
       const slug=`${base}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
       await getDb().query("INSERT INTO public.flashcard_sets(title,slug,category,cards,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())",[title,slug,article.category,JSON.stringify(cards),String(article.id),description,meta]);
-      return res.status(200).json({success:true,title:article.title,cards:cards.length});
+      return res.status(200).json({success:true,title:article.title,cards:cards.length,reviewed:true,reviewModel:review.model||null});
     }
 
     if (task === "generate-publish") {
