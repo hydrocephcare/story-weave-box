@@ -141,7 +141,7 @@ export default async function handler(req, res) {
     try {
       const system = answerMode ? SYSTEM_MCQ : SYSTEM;
       const user = `${seg === 0 ? `TITLE: ${article.title}\nCATEGORY: ${article.category}\nDESCRIPTION: ${article.meta_description || ""}\n\n` : ""}${parts.length > 1 ? `SECTION ${seg + 1} OF ${parts.length}\n` : ""}PAGE:\n${parts[seg]}`;
-      const result = await askModel(system + "\n\n" + user, { env: aiEnv, plain: true, timeoutMs: 85000, maxTokens: 4500 });
+      const result = await askModel(system + "\n\n" + user, { env: aiEnv, plain: true, timeoutMs: 85000, maxTokens: 4500, allowDirectFallback: true });
       raw = result.text;
     } catch (e) {
       await save("skipped", { issues: [`AI unavailable: ${String(e?.message || e).slice(0, 120)}`] });
