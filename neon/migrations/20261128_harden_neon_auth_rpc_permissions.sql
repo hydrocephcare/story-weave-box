@@ -228,9 +228,19 @@ BEGIN
   IF p_deep IS NULL OR jsonb_typeof(p_deep) <> 'object' OR pg_column_size(p_deep) > 90000 THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'size');
   END IF;
-  IF jsonb_typeof(p_deep->'sections') <> 'array' OR jsonb_typeof(p_deep->'exam') <> 'array'
-     OR jsonb_array_length(p_deep->'sections') < 4 OR jsonb_array_length(p_deep->'sections') > 14
-     OR jsonb_array_length(p_deep->'exam') < 6 OR jsonb_array_length(p_deep->'exam') > 14 THEN
+  -- Current deep-note generation stores viva questions under "vivas"; older
+  -- records used "exam" as an array of "question — answer" strings. Accept
+  -- either representation, but require a substantive set of at least six.
+  IF jsonb_typeof(p_deep->'sections') <> 'array'
+     OR jsonb_array_length(p_deep->'sections') < 4
+     OR jsonb_array_length(p_deep->'sections') > 14
+     OR NOT (
+       (jsonb_typeof(p_deep->'vivas') = 'array'
+        AND jsonb_array_length(p_deep->'vivas') BETWEEN 6 AND 20)
+       OR
+       (jsonb_typeof(p_deep->'exam') = 'array'
+        AND jsonb_array_length(p_deep->'exam') BETWEEN 6 AND 14)
+     ) THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'shape');
   END IF;
   IF p_deep::text ~* '(https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text)' THEN
