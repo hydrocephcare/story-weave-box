@@ -107,9 +107,6 @@ export default async function handler(req, res) {
       }
       const groqEnv = aiEnv;
       const geminiEnv = aiEnv;
-      if (!groqEnv.GROQ_API_KEYS.trim() || !geminiEnv.GEMINI_API_KEYS.trim()) {
-        return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
-      }
       const prompts = {
         quiz: `Write 10 multiple-choice questions on "${name}" (${unit}) for a Year ${year} MBChB student.`,
         case: `Write 8 short clinical case questions on "${name}" (${unit}) for a Year ${year} MBChB student. Each needs a 2–3 sentence vignette and asks for the most likely diagnosis or next best step.`,
