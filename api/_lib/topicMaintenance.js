@@ -98,7 +98,7 @@ ${text}`;
   if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
   questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
   let review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
-  if(!review.validated){
+  if(!review.validated||!review.model){
     const repairPrompt=`You are correcting medical examination MCQs after an independent Gemini clinical review. Preserve every correct question. Correct each listed factual, answer-key or safety issue. Keep exactly four plausible options and one best answer per question. Return ONLY the complete corrected JSON array in the original schema. Do not invent doses, thresholds or references.\nREVIEW FINDINGS:\n${(review.issues||[]).map((x,i)=>(i+1)+". "+x.problem+" Correction: "+x.fix).join("\n")}\nCURRENT MCQS:\n${JSON.stringify(questions)}`;
     const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
     const corrected=parseNoteMcqs(fixed.text);
