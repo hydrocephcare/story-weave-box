@@ -138,7 +138,7 @@ export const DOMAIN_STYLE: Record<string, { hue: string; label: string }> = {
 // The full page: what the site has (built at deploy time), what AI has already written and saved, and, when neither is enough, asking
 // the server to write it now. The reader never waits on a blank screen: the site's own material is shown at once and the rest slots in.
 
-export type TopicPhase = "loading" | "ready" | "writing" | "unavailable" | "failed" | "rejected" | "missing";
+export type TopicPhase = "loading" | "ready" | "writing" | "unavailable" | "failed" | "rejected" | "missing" | "limit" | "busy";
 const deslug = (slug: string) => decodeURIComponent(slug).replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase());
 export const slugFromName = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
@@ -149,7 +149,7 @@ export async function loadStoredPage(slug: string): Promise<AiPage | null> {
   } catch { return null; }
 }
 
-type Ask = { status: "published"; page: AiPage; redirect?: string } | { status: "generating" | "unavailable" | "busy" | "failed" | "rejected" };
+type Ask = { status: "published"; page: AiPage; redirect?: string } | { status: "generating" | "unavailable" | "busy" | "limit" | "failed" | "rejected" };
 // pages written but not saved (the publish step was not available) are kept on this device for a day, so the reader is not charged twice
 const LOCAL = "ompath_topic_local";
 const readLocal = (slug: string): AiPage | null => { try { const m = JSON.parse(localStorage.getItem(LOCAL) ?? "{}") as Record<string, { at: number; page: AiPage }>; const v = m[slug]; return v && Date.now() - v.at < 86_400_000 ? v.page : null; } catch { return null; } };
@@ -173,7 +173,8 @@ async function askServer(slug: string, name: string, category: string, context: 
     if (finalSlug !== slug) { try { const m = JSON.parse(localStorage.getItem("ompath_topic_alias") ?? "{}") as Record<string, string>; m[slug] = finalSlug; localStorage.setItem("ompath_topic_alias", JSON.stringify(m)); } catch { /* ignore */ } return { status: "published", page: r.page, redirect: finalSlug }; }
     return { status: "published", page: r.page }; }
   if (r.status === "rejected") { markRejected(slug); return { status: "rejected" }; }
-  if (r.status === "busy" || r.status === "limit") return { status: "busy" };
+  if (r.status === "limit") return { status: "limit" };
+  if (r.status === "busy") return { status: "busy" };
   return { status: r.status === "bot" || r.status === "paused" ? "unavailable" : "failed" };
 }
 
@@ -251,6 +252,8 @@ export function useTopicPage(slug: string) {
         if (res.status === "published" && res.redirect) { setRedirectTo(res.redirect); return; }
         if (res.status === "published") { setPage(res.page); setPhase("ready"); setFresh(Boolean(t)); return; }
         if (res.status === "generating") { await new Promise((r) => setTimeout(r, 4000)); continue; }
+        if (res.status === "limit") { setPhase("limit"); return; }
+        if (res.status === "busy") { setPhase("busy"); return; }
         if (res.status === "rejected") { setPhase(t ? "ready" : "rejected"); return; }
         setPhase(t ? "ready" : res.status === "unavailable" ? "unavailable" : "failed");
         if (t) setFresh(false);
