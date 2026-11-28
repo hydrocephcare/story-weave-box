@@ -1,12 +1,30 @@
 import { randomBytes } from "node:crypto";
 import { isAdmin } from "./adminAgent.js";
 import { getPolishSql } from "./neonPolishStore.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const bearer = (req) => String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
-const aiReady = () => Boolean(
-  String(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "").trim()
-  && String(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "").trim()
-);
+async function aiReady(req) {
+  try {
+    const ai = supabaseAiEnv(req);
+    if (!ai.OMPATH_SUPABASE_AI_TOKEN) return false;
+    const response = await fetch(ai.OMPATH_SUPABASE_AI_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: ai.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY,
+        "x-neon-authorization": ai.OMPATH_SUPABASE_AI_TOKEN,
+      },
+      body: JSON.stringify({ task: "health" }),
+      signal: AbortSignal.timeout(30000),
+    });
+    const data = await response.json().catch(() => ({}));
+    return response.ok && data.providers?.groq?.ok === true
+      && data.providers?.gemini?.ok === true && data.neonStorage?.ok === true;
+  } catch {
+    return false;
+  }
+}
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
@@ -18,7 +36,7 @@ export default async function handler(req, res) {
     if (req.method === "GET") {
       const rows = await sql.query("SELECT updated_at FROM public.polish_secret WHERE id=1 AND length(secret)>=24 LIMIT 1");
       const configured = rows.length > 0;
-      return res.status(200).json({ configured, runtimeReady: configured, aiReady: aiReady(), updatedAt: rows[0]?.updated_at || null });
+      return res.status(200).json({ configured, runtimeReady: configured, aiReady: await aiReady(req), updatedAt: rows[0]?.updated_at || null });
     }
 
     const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
