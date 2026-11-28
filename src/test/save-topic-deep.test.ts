@@ -21,10 +21,15 @@ const makeReq = (overrides = {}) => ({
     slug: "test-topic",
     name: "Test Topic",
     category: "Year 4",
-    base: { subject: "Test Topic" },
+    base: {
+      subject: "Test Topic",
+      summary: "A sufficiently detailed synthetic summary for a valid deep-note persistence test.",
+      sections: Array.from({ length: 3 }, (_, i) => ({ h: `Base section ${i + 1}`, p: "Base revision content." })),
+    },
     deep: {
-      sections: Array.from({ length: 4 }, (_, i) => ({ heading: `Section ${i + 1}`, content: "Reviewed content" })),
-      exam: Array.from({ length: 6 }, (_, i) => ({ question: `Question ${i + 1}`, answer: "Answer" })),
+      checked: "2026-11-28",
+      sections: Array.from({ length: 4 }, (_, i) => ({ h: `Section ${i + 1}`, p: "Reviewed content" })),
+      exam: Array.from({ length: 6 }, (_, i) => `Question ${i + 1} — Answer`),
     },
   },
   ...overrides,
@@ -108,6 +113,17 @@ describe("saveTopicDeep privileged persistence proxy", () => {
     expect(res.body).toMatchObject({ status: "saved", slug: "test-topic", saved: true, existing: false });
     expect(neonMock).toHaveBeenCalledWith(process.env.DATABASE_URL);
     expect(sqlMock).toHaveBeenCalledTimes(1);
+    const [, slug, name, category, baseJson, deepJson] = sqlMock.mock.calls[0];
+    expect([slug, name, category]).toEqual(["test-topic", "Test Topic", "Year 4"]);
+    expect(JSON.parse(baseJson)).toMatchObject({
+      summary: "A sufficiently detailed synthetic summary for a valid deep-note persistence test.",
+      sections: expect.arrayContaining([expect.objectContaining({ h: "Base section 1" })]),
+    });
+    expect(JSON.parse(deepJson)).toMatchObject({
+      checked: "2026-11-28",
+      sections: expect.arrayContaining([expect.objectContaining({ h: "Section 1" })]),
+      exam: expect.arrayContaining(["Question 1 — Answer"]),
+    });
     expect(res.headers["Cache-Control"]).toBe("no-store");
   });
 
