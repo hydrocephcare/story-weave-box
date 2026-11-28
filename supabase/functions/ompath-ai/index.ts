@@ -261,20 +261,9 @@ Deno.serve(async(req:Request)=>{
       const page=generated.page;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
-      const saved=await fetch(DATA_API_URL+"/rpc/publish_topic_page",{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category,p_content:page,p_model:page.model||"groq"}),
-        signal:AbortSignal.timeout(15000)
-      });
-      if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Topic persistence failed",saved.status,detail);
-        return reply({status:"failed",reason:"persistence"},502,origin);
-      }
-      const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
-      return reply({status:"published",page,saved:true,slug,name,quota:quota.quota},200,origin);
+      // The Vercel topic-write route persists through its privileged Neon DATABASE_URL.
+      // The browser-facing Neon Auth token must never execute the server-only publication RPC.
+      return reply({status:"generated",page,saved:false,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath topic generation failed",String(e).slice(0,400));
       return reply({status:"failed",reason:"generation"},502,origin);
@@ -292,20 +281,8 @@ Deno.serve(async(req:Request)=>{
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
       const deep=await generateCheckedDeep({name,category,base,past},{...env},fetch,55000);
-      const saved=await fetch(DATA_API_URL+"/rpc/save_topic_deep",{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category||String(base.subject||""),p_base:base,p_deep:deep}),
-        signal:AbortSignal.timeout(15000)
-      });
-      if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Deep-note persistence failed",saved.status,detail);
-        return reply({status:"failed",reason:"persistence"},502,origin);
-      }
-      const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
-      return reply({status:"published",deep,saved:true,slug,name,quota:quota.quota},200,origin);
+      // Deep notes are persisted by the authenticated Vercel route using its privileged Neon connection.
+      return reply({status:"generated",deep,saved:false,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath deep-note generation failed",String(e).slice(0,400));
       return reply({status:"failed",reason:"generation"},502,origin);
