@@ -6,16 +6,6 @@ import { supabaseAiEnv } from "./supabaseAiEnv.js";
 const DEFAULT_JWKS = "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth/.well-known/jwks.json";
 const DEFAULT_DATA_API = "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
 const bearer = (req) => String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
-const keys = (...values) => [...new Set(values.flatMap((value) => {
-  const raw = String(value ?? "").trim();
-  if (!raw) return [];
-  try {
-    const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed)) return parsed.map((item) => String(item).trim()).filter(Boolean);
-  } catch {}
-  return raw.split(/[\s,;]+/).map((item) => item.trim()).filter(Boolean);
-}))];
-
 async function check(name, fn) {
   try { return { ok: true, ...(await fn()) }; }
   catch (error) {
