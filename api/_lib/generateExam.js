@@ -69,7 +69,7 @@ export async function reviewQuestions(questions, strict = true, aiEnv) {
     }
     chunk.forEach((q, k) => {
       const checked = result.find((x) => Number(x?.i) === k);
-      if (!checked || checked.status === "incomplete") { dropped++; return; }
+      if (!checked || checked.status !== "ok") { dropped++; return; }
       const mismatch = Number(checked.your_answer) !== q.correct_answer || checked.status === "ambiguous";
       if (mismatch) {
         disputed.push({ index: i + k, question: q.question.slice(0, 120), supplied: q.correct_answer, reviewer: checked.your_answer });
