@@ -4,6 +4,7 @@ import { isNeonAdmin } from "./neonAdmin.js";
 import { askModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
 import { balanceBank, placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
+import { reviewEssayPaper } from "./essayReview.js";
 
 const send = (res, status, data) => res.status(status).json(data);
 const parseBody = (body) => typeof body === "string" ? JSON.parse(body || "{}") : body || {};
@@ -211,6 +212,18 @@ export default async function handler(req, res) {
       let essays = { saqs: [], laqs: [] };
       try { essays = parseEssays(await generateText(essayPrompt, 4500, aiEnv)); } catch {}
       if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
+
+      let essayReview;
+      try {
+        essayReview = await reviewEssayPaper({ unit, essays, env: aiEnv });
+      } catch (error) {
+        skipped.push(unit + ": independent Gemini review is temporarily unavailable.");
+        continue;
+      }
+      if (!essayReview.validated) {
+        skipped.push(unit + ": written paper did not pass independent Gemini review.");
+        continue;
+      }
 
       const date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
       const title = "Weekly " + unit + " Exam - " + date;
