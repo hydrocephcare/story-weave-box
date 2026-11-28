@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { askGroqModel, buildPrompt, generateReviewedTopicPage, providerKeys, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { askGeminiModel, askGroqModel, askModel, buildPrompt, generateReviewedTopicPage, providerKeys, sanitizePage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
 const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
 const makePage = (title: string, subject: string, count = 13) => {
   const explanation = Array.from({ length: 8 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
@@ -179,5 +179,83 @@ describe("Groq topic generation boundary", () => {
       { name: "Asthma", category: "Medicine" },
       { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl, maxFixRounds: 0 },
     )).rejects.toThrow("malformed clinical findings");
+  });
+});
+
+describe("topic validation and provider routing", () => {
+  it("counts whitespace-separated paragraph words instead of treating a paragraph as one word", () => {
+    const page = makePage("Asthma", "Medicine", 13);
+    page.sections = page.sections.map(({ h, p }) => ({ h, p }));
+    const clean = sanitizePage(page, { name: "Asthma", category: "Medicine" });
+    expect(clean.sections).toHaveLength(13);
+  });
+
+  it("continues to reject genuinely thin sections", () => {
+    const page = makePage("Asthma", "Medicine", 13);
+    page.sections = page.sections.map(({ h }) => ({ h, p: "Too short." }));
+    expect(() => sanitizePage(page, { name: "Asthma", category: "Medicine" })).toThrow("thin sections");
+  });
+
+  it("retries a structural draft failure before invoking the independent Gemini review", async () => {
+    const thinPage = makePage("Asthma", "Medicine", 4);
+    const completePage = makePage("Asthma", "Medicine", 13);
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(thinPage) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockImplementationOnce(async (_url: RequestInfo | URL, init?: RequestInit) => {
+        const body = JSON.parse(String(init?.body));
+        expect(body.messages?.[0]?.content).toContain("previous draft failed structural validation");
+        return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(completePage) } }] }), { status: 200, headers: { "Content-Type": "application/json" } });
+      })
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await generateReviewedTopicPage(
+      { name: "Asthma", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-validation-retry-key", GEMINI_API_KEYS: "gemini-validation-retry-key" }, fetchImpl },
+    );
+
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[2][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.page.aiReview.status).toBe("passed");
+    expect(result.page.aiReview.fixRounds).toBe(0);
+  });
+
+  it("can call Gemini independently without routing through Groq", async () => {
+    const fetchImpl = vi.fn().mockResolvedValueOnce(new Response(JSON.stringify({
+      candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }],
+    }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await askGeminiModel("Return a small JSON object.", {
+      env: { GEMINI_API_KEYS: "gemini-independent-key", GEMINI_MODELS: "gemini-3.8-flash" },
+      fetchImpl,
+    });
+
+    expect(fetchImpl).toHaveBeenCalledTimes(1);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.text).toContain('"ok":true');
+  });
+
+  it("falls back to Gemini when Groq is unavailable", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response("Groq unavailable", { status: 503 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({
+        candidates: [{ content: { parts: [{ text: '{"fallback":"gemini"}' }] } }],
+      }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await askModel("Return a small JSON object.", {
+      env: {
+        GROQ_API_KEYS: "groq-fallback-test-key",
+        GROQ_MODELS: "openai/gpt-oss-120b",
+        GEMINI_API_KEYS: "gemini-fallback-test-key",
+        GEMINI_MODELS: "gemini-3.8-flash",
+      },
+      fetchImpl,
+    });
+
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.model).toBe("gemini-3.8-flash");
   });
 });
