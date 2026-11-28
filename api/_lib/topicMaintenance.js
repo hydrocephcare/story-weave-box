@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
@@ -67,6 +67,13 @@ async function verifyWorkflow(req) {
 function cleanStudyNote(value) {
   return String(value || "").replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 12000);
 }
+function parseOriginalNotes(existing) {
+  const raw = String(existing || "");
+  if (!raw) return {};
+  try { const parsed = JSON.parse(raw); return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : { legacy_original_notes: raw.slice(0, 2000) }; }
+  catch { return { legacy_original_notes: raw.slice(0, 2000) }; }
+}
+function mergeOriginalNotes(existing, patch) { return JSON.stringify({ ...parseOriginalNotes(existing), ...patch }); }
 function parseNoteMcqs(raw) {
   const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
   if(start<0||end<=start)return [];
@@ -109,20 +116,104 @@ ${text}`;
   if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
   return {questions,review};
 }
-async function generateNoteFlashcards(article, env) {
-  const text=cleanStudyNote(article.content).slice(0,10000);
-  const count=Math.max(10,Math.min(22,Math.round(text.length/450)));
-  const prompt=`Create ${count} high-yield revision flashcards for medical students from this study note.
+async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
+  // One hard deadline per batch, including all Gemini key/model fallbacks and issue verification.
+  // This prevents configured key rotation from multiplying the Vercel route's execution time.
+  const batchSize = 4;
+  const concurrency = 3;
+  const batches = [];
+  for (let offset = 0; offset < cards.length; offset += batchSize) batches.push(cards.slice(offset, offset + batchSize));
+  const results = [];
+  for (let offset = 0; offset < batches.length; offset += concurrency) {
+    const wave = await Promise.all(batches.slice(offset, offset + concurrency).map(async (batch, index) => {
+      const deadline = Date.now() + 10000;
+      const reviewFetch = (url, options = {}) => {
+        const remaining = deadline - Date.now();
+        if (remaining <= 0) return Promise.reject(new Error("Gemini review batch exceeded its 10-second deadline."));
+        const controller = new AbortController();
+        const abortFromCaller = () => controller.abort();
+        if (options.signal?.aborted) controller.abort();
+        else options.signal?.addEventListener("abort", abortFromCaller, { once: true });
+        const timer = setTimeout(() => controller.abort(), remaining);
+        return fetch(url, { ...options, signal: controller.signal }).finally(() => {
+          clearTimeout(timer);
+          options.signal?.removeEventListener("abort", abortFromCaller);
+        });
+      };
+      return checkContent({
+        title,
+        kind: kind + " (batch " + (offset + index + 1) + ")",
+        text: "SOURCE NOTE (reference only; assess every flashcard against accepted medical knowledge):\\n" + source + "\\n\\nFLASHCARDS TO REVIEW:\\n" + JSON.stringify(batch),
+        env,
+        fetchImpl: reviewFetch,
+        timeoutMs: 10000,
+      });
+    }));
+    results.push(...wave);
+  }
+  const issues = results.flatMap((result, index) => (result.issues || []).map((item) => ({ ...item, where: "Flashcard batch " + (index + 1) + ": " + item.where })));
+  const model = results.map((result) => result.model || "").find(Boolean) || "";
+  const high = issues.filter((item) => item.severity === "high").length;
+  const medium = issues.filter((item) => item.severity === "medium").length;
+  const validated = results.length === batches.length && results.every((result) => result.validated && Boolean(String(result.model || "").trim()))
+    && high === 0 && medium === 0 && Boolean(model);
+  return { validated, high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
+}
+
+export async function generateNoteFlashcards(article, env) {
+  const text = cleanStudyNote(article.content).slice(0, 10000);
+  const count = Math.max(10, Math.min(22, Math.round(text.length / 450)));
+  const prompt = `Create ${count} high-yield revision flashcards for medical students from this study note.
 Each card covers one distinct angle: definition, causes, pathophysiology, clinical features, classification, investigations, differentials, management/pharmacology, complications, ward-round points, prognosis or prevention. Use only angles supported by the note.
 Each answer is 35–60 words: a direct answer, then 3–4 short explanatory lines, and a final Related line. Do not repeat facts across cards. No invented doses or criteria.
 Return ONLY JSON array: [{"question":"...","answer":"..."}].
 TOPIC: ${article.title} | ${article.category}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
-  const cards=parseNoteCards(draft.text);
-  if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
-  return cards;
+  // Generation is Groq-only. Gemini is reserved for the independent clinical review.
+  const draft = await askGroqModel(prompt, { env, plain: true, timeoutMs: 18000, maxTokens: 7000 });
+  let cards = parseNoteCards(draft.text);
+  if (cards.length < 8) throw new Error("Flashcard generation returned too few distinct usable cards.");
+
+  // Every card is independently reviewed in a bounded batch with the same source note.
+  // This prevents long JSON arrays from being silently truncated or split away from their source.
+  const reviewSource = text;
+  let review = await reviewFlashcardDeck({
+    title: article.title,
+    kind: "medical revision flashcards and their answers",
+    source: reviewSource,
+    cards,
+    env,
+  });
+  if (!review.validated) {
+    const repairPrompt = [
+      "Correct the medical or clinical errors in these medical-student flashcards.",
+      "Use the supplied source note as the primary scope. Preserve all correct cards and useful teaching detail. Do not shorten answers, invent drug doses or criteria, or introduce unsupported facts.",
+      "Remove duplicate cards and ensure each answer is clinically accurate, clear and consistent with standard accepted medical knowledge.",
+      "Return ONLY a complete JSON array of {question, answer} objects.",
+      "ISSUES:",
+      (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\n"),
+      "SOURCE NOTE:",
+      text,
+      "FLASHCARDS TO CORRECT:",
+      JSON.stringify(cards),
+    ].join("\n\n");
+    const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 18000, maxTokens: 7000 });
+    cards = parseNoteCards(repaired.text);
+    if (cards.length < 8) throw new Error("Gemini flagged the flashcards and the Groq repair returned too few usable cards.");
+    review = await reviewFlashcardDeck({
+      title: article.title,
+      kind: "repaired medical revision flashcards and their answers",
+      source: reviewSource,
+      cards,
+      env,
+    });
+  }
+  if (!review.validated || !String(review.model || "").trim()) {
+    const findings = (review.issues || []).slice(0, 3).map((item) => item.problem).join("; ");
+    throw new Error("Flashcards withheld: independent Gemini clinical review did not pass after repair. " + findings);
+  }
+  return { cards, review };
 }
 
 function deepReady(deep) {
@@ -223,11 +314,17 @@ export default async function handler(req, res) {
         const article=src[0]; if(!article) return res.status(200).json({success:true,status:"no source"});
         const have=Array.isArray(set.questions)?set.questions:[];
         const needed=Math.max(0,Math.min(30,Math.round(cleanStudyNote(article.content).length/250))-have.length);
-        if(needed<4){await getDb().query("UPDATE public.mcq_sets SET original_notes=$2,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify({topped:true,topup_note:"already enough"})]);return res.status(200).json({success:true,status:"already enough"});}
+        if (needed < 4) { const metadata = mergeOriginalNotes(set.original_notes, { topped: true, topup_note: "already enough", topup_checked_at: new Date().toISOString() }); await getDb().query("UPDATE public.mcq_sets SET original_notes=$2,updated_at=now() WHERE id=$1::uuid", [set.id, metadata]); return res.status(200).json({ success: true, status: "already enough" }); }
         const extra=await generateNoteMcqs(article,aiEnv,Math.min(needed,18),have.map(q=>q.question));
         const merged=[...have,...placeNewQuestions(dedupeNoteMcqs(extra.questions,have.map(q=>q.question)),{existing:have})].slice(0,36);
-        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length)})]);
-        await getDb().query("DELETE FROM public.mcq_review_log WHERE set_id=$1::uuid",[set.id]);
+        const previousRows = await getDb().query("SELECT reviewed_at,checked,dropped,disputed FROM public.mcq_review_log WHERE set_id=$1::uuid LIMIT 1", [set.id]);
+        const previousReview = previousRows[0] ? { reviewed_at: previousRows[0].reviewed_at, checked: Number(previousRows[0].checked || 0), dropped: Number(previousRows[0].dropped || 0), disputed: previousRows[0].disputed || [] } : null;
+        const previousMetadata = parseOriginalNotes(set.original_notes);
+        const reviewHistory = Array.isArray(previousMetadata.review_history) ? previousMetadata.review_history.slice(-19) : [];
+        if (previousReview && !reviewHistory.some((item) => String(item.reviewed_at) === String(previousReview.reviewed_at))) reviewHistory.push(previousReview);
+        const topupMetadata = mergeOriginalNotes(set.original_notes, { topped: true, topup_note: "added " + (merged.length-have.length), topup_checked: extra.questions.length, topup_reviewed: Boolean(extra.review && extra.review.validated && extra.review.model), topup_review_model: extra.review && extra.review.model || null, topup_reviewed_at: extra.review && extra.review.at || new Date().toISOString(), review_history: reviewHistory });
+        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid", [set.id, JSON.stringify(merged), `${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`, topupMetadata]);
+        await getDb().query("INSERT INTO public.mcq_review_log(set_id,reviewed_at,checked,dropped,disputed) VALUES($1::uuid,now(),$2,$3,$4::jsonb) ON CONFLICT (set_id) DO UPDATE SET reviewed_at=EXCLUDED.reviewed_at,checked=EXCLUDED.checked,dropped=EXCLUDED.dropped,disputed=EXCLUDED.disputed", [set.id, extra.questions.length, Math.max(0, extra.questions.length - (merged.length - have.length)), JSON.stringify([])]);
         return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length});
       }
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
@@ -243,24 +340,34 @@ export default async function handler(req, res) {
       let candidate=body.article_id?[{id:String(body.article_id)}]:await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
       let upgrade=null;
       if(!candidate.length){
-        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":2%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
+        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":3%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
       }
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
-      const cards=await generateNoteFlashcards(article,aiEnv);
-      const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
-      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString()});
-      if(upgrade){
-        await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid",[upgrade.id,JSON.stringify(cards),meta,description]);
-        return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true});
+      const generated = await generateNoteFlashcards(article, aiEnv);
+      const cards = generated.cards;
+      const review = generated.review;
+      const description = `${cards.length} independently reviewed flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
+      const meta = JSON.stringify({
+        type: "note_flashcards",
+        v: 3,
+        article_id: article.id,
+        generated_at: new Date().toISOString(),
+        independently_reviewed: true,
+        review_model: review.model,
+        review_date: review.at,
+      });
+      if (upgrade) {
+        await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid", [upgrade.id, JSON.stringify(cards), meta, description]);
+        return res.status(200).json({ success: true, title: article.title, cards: cards.length, upgraded: true, reviewed: true, review_model: review.model });
       }
-      const title=`${cleanTopicTitle(article.title)}: Flashcards`;
-      const base=title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70);
-      const slug=`${base}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
-      await getDb().query("INSERT INTO public.flashcard_sets(title,slug,category,cards,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())",[title,slug,article.category,JSON.stringify(cards),String(article.id),description,meta]);
-      return res.status(200).json({success:true,title:article.title,cards:cards.length});
+      const title = `${cleanTopicTitle(article.title)}: Flashcards`;
+      const base = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
+      const slug = `${base}-${String(article.id).replace(/-/g, "").slice(0, 8)}`;
+      await getDb().query("INSERT INTO public.flashcard_sets(title,slug,category,cards,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())", [title, slug, article.category, JSON.stringify(cards), String(article.id), description, meta]);
+      return res.status(200).json({ success: true, title: article.title, cards: cards.length, reviewed: true, review_model: review.model });
     }
 
     if (task === "generate-publish") {
