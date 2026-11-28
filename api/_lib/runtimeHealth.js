@@ -174,7 +174,7 @@ export default async function handler(req, res) {
   });
 
   result.groq = await check("groq", async () => {
-    const providerKeys = keys(process.env.GROQ_API_KEYS, process.env.GROQ_API_KEY,
+    const providerKeys = keys(process.env.GROQ_API_KEYS, process.env.GROQ_API_KEY, process.env.GROQ_API_KEYS_EXTRA,
       ...Array.from({ length: 20 }, (_, i) => process.env["GROQ_API_KEY_" + (i + 2)]));
     if (!providerKeys.length) return { configured: false, reachable: false, configuredKeyCount: 0 };
     const checks = await Promise.all(providerKeys.map(async (key) => {
@@ -190,7 +190,7 @@ export default async function handler(req, res) {
   });
 
   result.gemini = await check("gemini", async () => {
-    const providerKeys = keys(process.env.GEMINI_API_KEYS, process.env.GEMINI_API_KEY,
+    const providerKeys = keys(process.env.GEMINI_API_KEYS, process.env.GEMINI_API_KEY, process.env.GEMINI_API_KEYS_EXTRA,
       ...Array.from({ length: 20 }, (_, i) => process.env["GEMINI_API_KEY_" + (i + 2)]));
     if (!providerKeys.length) return { configured: false, reachable: false, configuredKeyCount: 0 };
     const checks = await Promise.all(providerKeys.map(async (key) => {
