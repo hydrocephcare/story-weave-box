@@ -371,9 +371,14 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
  */
 /**
  * @param {{name:string,category?:string,context?:string,choices?:any}} input
- * @param {{env:Record<string,string|undefined>,fetchImpl?:typeof fetch,maxFixRounds?:number,timeoutMs?:number}} options
+ * @param {{env?:Record<string,string|undefined>,fetchImpl?:typeof fetch,maxFixRounds?:number,timeoutMs?:number}} options
+ * @returns {Promise<{page:Record<string,any>,review:Record<string,any>}>}
  */
-export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs } = {}) {
+export async function generateReviewedTopicPage(input, options = {}) {
+  const env = options.env ?? {};
+  const fetchImpl = options.fetchImpl ?? fetch;
+  const maxFixRounds = options.maxFixRounds ?? 1;
+  const timeoutMs = options.timeoutMs;
   const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
   const fixes = [];
   /** @type {Record<string, any>} */
