@@ -31,6 +31,7 @@ export default function AiHealthAdmin() {
           headers: {
             "Content-Type": "application/json",
             apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP",
+            authorization: `Bearer ${token}`,
             "x-neon-authorization": `Bearer ${token}`,
           },
           body: JSON.stringify({ task: "health" }),

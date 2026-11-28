@@ -169,6 +169,7 @@ async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetc
   const bearer = token.replace(/^Bearer\s+/i, "");
   const headers = { "Content-Type": "application/json", apikey: String(env.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY || "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP") };
   headers[authKind] = bearer;
+  if (authKind === "x-neon-authorization") headers["authorization"] = "Bearer " + bearer;
   const response = await fetchImpl(url, { method: "POST", headers, signal: AbortSignal.timeout(timeoutMs + 1500), body: JSON.stringify({ task: "provider_call", provider, prompt: String(prompt).slice(0, 26000), plain, temperature, maxTokens, timeoutMs, feature: String(env.OMPATH_AI_FEATURE || "") }) });
   const data = await response.json().catch(() => ({}));
   if (!response.ok || typeof data.text !== "string" || !data.text.trim()) { const error = new Error(String(data.error || data.detail || ("Supabase AI request failed (" + response.status + ").")).slice(0, 240)); error.status = response.status; throw error; }

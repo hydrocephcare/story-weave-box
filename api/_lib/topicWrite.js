@@ -18,6 +18,7 @@ async function invokeGateway(token, payload, timeoutMs = 90000) {
       headers: {
         "Content-Type": "application/json",
         apikey: AI_PUBLISHABLE_KEY,
+        authorization: `Bearer ${token}`,
         "x-neon-authorization": token,
       },
       body: JSON.stringify(payload),

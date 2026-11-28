@@ -64,6 +64,7 @@ async function viaServer(
       headers: {
         "Content-Type": "application/json",
         apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP",
+        authorization: `Bearer ${token}`,
         "x-neon-authorization": `Bearer ${token}`,
       },
       body: JSON.stringify({ task: "topic", name, category, context: context.slice(0, 3000), choices, keepSlug }),

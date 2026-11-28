@@ -62,6 +62,7 @@ async function onRequestPost({ request }) {
       headers: {
         "Content-Type": "application/json",
         apikey: AI_PUBLISHABLE_KEY,
+        authorization: `Bearer ${token}`,
         "x-neon-authorization": token,
       },
       body: JSON.stringify({

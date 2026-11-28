@@ -187,6 +187,7 @@ async function predictSearchQueries(input: string): Promise<string[]> {
       headers: {
         "Content-Type": "application/json",
         apikey: SUPABASE_AI_PUBLISHABLE_KEY,
+        authorization: `Bearer ${token}`,
         "x-neon-authorization": `Bearer ${token}`,
       },
       body: JSON.stringify({ task: "search_predict", query: key }),
@@ -318,6 +319,7 @@ Be warm, accurate, plain-language and exam-aware.${sourceContext}`;
     headers: {
       "Content-Type": "application/json",
       "apikey": SUPABASE_AI_PUBLISHABLE_KEY,
+      authorization: `Bearer ${accessToken}`,
       "x-neon-authorization": `Bearer ${accessToken}`,
     },
     body: JSON.stringify({

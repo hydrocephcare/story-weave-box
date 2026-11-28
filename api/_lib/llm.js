@@ -62,7 +62,7 @@ async function askSupabaseAI(msgs, opt) {
   const prompt = msgs.map((m) => String(m.content ?? "")).join("\n\n").slice(0, 26000);
   const response = await fetch("https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai", {
     method: "POST",
-    headers: { "Content-Type": "application/json", apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP", "x-neon-authorization": token },
+    headers: { "Content-Type": "application/json", apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP", authorization: `Bearer ${token}`, "x-neon-authorization": token },
     signal: AbortSignal.timeout(opt.timeoutMs || (opt.fast ? 15000 : 65000)),
     body: JSON.stringify({ task: "provider_call", provider: "auto", prompt, plain: false, temperature: opt.temperature ?? 0.3, maxTokens: opt.maxTokens ?? 4000, timeoutMs: opt.timeoutMs || (opt.fast ? 12000 : 60000) }),
   });
