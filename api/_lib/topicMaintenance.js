@@ -67,18 +67,13 @@ async function verifyWorkflow(req) {
 function cleanStudyNote(value) {
   return String(value || "").replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 12000);
 }
-function mergeOriginalNotes(existing, patch) {
-  let base = {};
+function parseOriginalNotes(existing) {
   const raw = String(existing || "");
-  if (raw) {
-    try {
-      const parsed = JSON.parse(raw);
-      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) base = parsed;
-      else base = { legacy_original_notes: raw.slice(0, 2000) };
-    } catch { base = { legacy_original_notes: raw.slice(0, 2000) }; }
-  }
-  return JSON.stringify({ ...base, ...patch });
+  if (!raw) return {};
+  try { const parsed = JSON.parse(raw); return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : { legacy_original_notes: raw.slice(0, 2000) }; }
+  catch { return { legacy_original_notes: raw.slice(0, 2000) }; }
 }
+function mergeOriginalNotes(existing, patch) { return JSON.stringify({ ...parseOriginalNotes(existing), ...patch }); }
 function parseNoteMcqs(raw) {
   const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
   if(start<0||end<=start)return [];
@@ -303,8 +298,14 @@ export default async function handler(req, res) {
         if (needed < 4) { const metadata = mergeOriginalNotes(set.original_notes, { topped: true, topup_note: "already enough", topup_checked_at: new Date().toISOString() }); await getDb().query("UPDATE public.mcq_sets SET original_notes=$2,updated_at=now() WHERE id=$1::uuid", [set.id, metadata]); return res.status(200).json({ success: true, status: "already enough" }); }
         const extra=await generateNoteMcqs(article,aiEnv,Math.min(needed,18),have.map(q=>q.question));
         const merged=[...have,...placeNewQuestions(dedupeNoteMcqs(extra.questions,have.map(q=>q.question)),{existing:have})].slice(0,36);
-        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,mergeOriginalNotes(set.original_notes, { topped: true, topup_note: "added " + (merged.length-have.length), topup_checked: extra.questions.length, topup_reviewed: Boolean(extra.review && extra.review.validated && extra.review.model), topup_review_model: extra.review && extra.review.model || null, topup_reviewed_at: extra.review && extra.review.at || new Date().toISOString() })]);
-        await getDb().query("INSERT INTO public.mcq_review_log(set_id,reviewed_at,checked,dropped,disputed) VALUES($1::uuid,now(),$2,$3,$4::jsonb)", [set.id, extra.questions.length, Math.max(0, extra.questions.length - (merged.length - have.length)), JSON.stringify([])]);
+        const previousRows = await getDb().query("SELECT reviewed_at,checked,dropped,disputed FROM public.mcq_review_log WHERE set_id=$1::uuid LIMIT 1", [set.id]);
+        const previousReview = previousRows[0] ? { reviewed_at: previousRows[0].reviewed_at, checked: Number(previousRows[0].checked || 0), dropped: Number(previousRows[0].dropped || 0), disputed: previousRows[0].disputed || [] } : null;
+        const previousMetadata = parseOriginalNotes(set.original_notes);
+        const reviewHistory = Array.isArray(previousMetadata.review_history) ? previousMetadata.review_history.slice(-19) : [];
+        if (previousReview && !reviewHistory.some((item) => String(item.reviewed_at) === String(previousReview.reviewed_at))) reviewHistory.push(previousReview);
+        const topupMetadata = mergeOriginalNotes(set.original_notes, { topped: true, topup_note: "added " + (merged.length-have.length), topup_checked: extra.questions.length, topup_reviewed: Boolean(extra.review && extra.review.validated && extra.review.model), topup_review_model: extra.review && extra.review.model || null, topup_reviewed_at: extra.review && extra.review.at || new Date().toISOString(), review_history: reviewHistory });
+        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid", [set.id, JSON.stringify(merged), `${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`, topupMetadata]);
+        await getDb().query("INSERT INTO public.mcq_review_log(set_id,reviewed_at,checked,dropped,disputed) VALUES($1::uuid,now(),$2,$3,$4::jsonb) ON CONFLICT (set_id) DO UPDATE SET reviewed_at=EXCLUDED.reviewed_at,checked=EXCLUDED.checked,dropped=EXCLUDED.dropped,disputed=EXCLUDED.disputed", [set.id, extra.questions.length, Math.max(0, extra.questions.length - (merged.length - have.length)), JSON.stringify([])]);
         return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length});
       }
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
