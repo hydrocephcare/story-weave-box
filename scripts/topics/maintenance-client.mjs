@@ -1,6 +1,9 @@
 import { postJsonPreservingRedirect } from "../../supabase/functions/_shared/postJson.js";
 
-const endpoint = process.env.TOPIC_MAINTENANCE_URL || "https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance";
+const configuredEndpoint = String(process.env.TOPIC_MAINTENANCE_URL || "").trim();
+const workflowBranch = process.env.GITHUB_REF_NAME || "main";
+const endpoint = configuredEndpoint || (workflowBranch === "main" ? "https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance" : "");
+if (!endpoint) throw new Error("Set TOPIC_MAINTENANCE_URL to an isolated staging endpoint before running this workflow outside main.");
 const audience = "ompathstudy-topic-maintenance";
 
 async function getWorkflowToken() {
