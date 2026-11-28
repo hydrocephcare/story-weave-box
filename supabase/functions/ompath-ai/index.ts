@@ -56,7 +56,7 @@ async function authenticate(req:Request) {
 }
 const githubJwks=createRemoteJWKSet(new URL("https://token.actions.githubusercontent.com/.well-known/jwks"));
 async function authenticateWorkflow(req:Request) {
-  const token=(req.headers.get("x-github-oidc")||"").replace(/^Bearer\\s+/i,"").trim();
+  const token=(req.headers.get("x-github-oidc")||"").replace(/^Bearer\s+/i,"").trim();
   if(!token)return false;
   const validBranch=(value:string)=>/^[A-Za-z0-9._/-]+$/.test(value)&&!value.includes("..")&&value!=="main";
   const topicStaging=String(Deno.env.get("TOPIC_MAINTENANCE_STAGING_BRANCH")||"").trim();
