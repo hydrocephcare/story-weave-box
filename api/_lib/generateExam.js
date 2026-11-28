@@ -55,10 +55,12 @@ export async function reviewQuestions(questions, strict = true, aiEnv) {
     for (let attempt = 0; attempt < (strict ? 2 : 1); attempt++) {
       try {
         const answer = await askGeminiModel(prompt, { env: aiEnv, timeoutMs: 45000, maxTokens: 5000 });
-        reviewModel = answer.model || reviewModel;
         const match = answer.text.match(/\[[\s\S]*\]/);
         result = match ? JSON.parse(match[0]) : null;
-        if (Array.isArray(result)) break;
+        if (Array.isArray(result)) {
+          reviewModel = answer.model || reviewModel;
+          break;
+        }
       } catch { result = null; }
     }
     if (!Array.isArray(result)) {
