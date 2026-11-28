@@ -231,7 +231,7 @@ Deno.serve(async(req:Request)=>{
       }catch{return {configured:Boolean(NEON_WRITE_PROXY_URL&&NEON_WRITE_PROXY_SECRET.length>=32),ok:false,status:0};}})()
     ]);
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
-    return reply({ok:groq.ok||gemini.ok,checkedAt:new Date().toISOString(),
+    return reply({ok:(groq.ok||gemini.ok)&&storage.ok&&deepPersistence.ok,checkedAt:new Date().toISOString(),
       providers:{groq:{...groq,configuredKeys:g.length},gemini:{...gemini,configuredKeys:m.length}},
       neonStorage:storage,deepPersistence,auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
   }
