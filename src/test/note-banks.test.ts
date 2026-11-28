@@ -23,7 +23,7 @@ const article = {
 };
 const cards = Array.from({ length: 10 }, (_, i) => ({
   question: `Asthma revision question number ${i + 1}?`,
-  answer: `Asthma answer ${i + 1} explains the relevant mechanism, clinical presentation, investigation and management implications in sufficient detail for revision.`,
+  answer: `Asthma is a chronic inflammatory airway disorder characterised by variable expiratory airflow limitation. This card explains airway hyperresponsiveness, common triggers, episodic wheeze, cough, chest tightness, objective confirmation, differential diagnoses, inhaled therapy, exacerbation prevention, monitoring, prognosis and patient education. It connects pathophysiology with clinical decisions and safe follow-up for medical students.`,
 }));
 const questions = Array.from({ length: 12 }, (_, i) => ({
   question: `Which clinical feature is most consistent with asthma number ${i + 1}?`,
