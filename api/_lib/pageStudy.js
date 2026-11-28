@@ -46,7 +46,7 @@ async function ask(prompt, env, maxTokens = 1800) {
 }
 
 function parseStudyJson(raw) {
-  const match = String(raw || "").match(/\\{[\\s\\S]*\\}/);
+  const match = String(raw || "").match(/\{[\s\S]*\}/);
   if (!match) throw new Error("The AI did not return valid study JSON.");
   return JSON.parse(match[0]);
 }
@@ -65,7 +65,7 @@ async function reviewStudyOutput({ mode, title, source, data, env }) {
     const result = await checkContent({
       title,
       kind: mode === "cards" ? "medical flashcards and answers" : mode === "essays" ? "medical essay questions and model answers" : "medical multiple-choice questions",
-      text: "SOURCE PAGE (reference only):\\n" + source + "\\n\\nGENERATED ITEMS (batch " + batchNumber + "):\\n" + JSON.stringify(batch),
+      text: "SOURCE PAGE (reference only):\n" + source + "\n\nGENERATED ITEMS (batch " + batchNumber + "):\n" + JSON.stringify(batch),
       env,
       timeoutMs: 35000,
     });
@@ -117,12 +117,12 @@ export default async function handler(req, res) {
         "Use the supplied source page as the primary scope, preserve every correct item and the requested schema, and do not invent drug doses or unsupported criteria.",
         "Return only the complete original JSON object.",
         "INDEPENDENT GEMINI FINDINGS:",
-        (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\\n"),
+        (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\n"),
         "SOURCE PAGE:",
         text,
         "STUDY MATERIALS TO CORRECT:",
         JSON.stringify(j),
-      ].join("\\n\\n");
+      ].join("\n\n");
       j = parseStudyJson((await ask(repairPrompt, env, mode === "essays" ? 5000 : mode === "cards" ? 5000 : 3500)).text);
       review = await reviewStudyOutput({ mode, title, source: text, data: j, env });
     }
