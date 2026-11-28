@@ -8,3 +8,11 @@ export function deepNoteReady(deep) {
     && (deep?.facts?.length || 0) >= 6
     && (deep?.mistakes?.length || 0) >= 5;
 }
+
+/** A published revision page must exist before deep notes can enrich it. */
+export function topicBaseReady(page) {
+  return Boolean(page && typeof page === "object" && !Array.isArray(page))
+    && String(page.summary || "").trim().length >= 40
+    && Array.isArray(page.sections)
+    && page.sections.length >= 3;
+}
