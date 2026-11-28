@@ -4,6 +4,7 @@ import imageProxy from "./_lib/image-proxy.js";
 import driveNotes from "./_lib/drive-notes.js";
 import studentData from "./_lib/student-data.js";
 import noteCard from "./_lib/note-card.js";
+import sitemapIndex from "./_lib/sitemap-index.js";
 
 const handlers = {
   "ai-cases": aiCases,
@@ -11,6 +12,7 @@ const handlers = {
   "drive-notes": driveNotes,
   "student-data": studentData,
   "note-card": noteCard,
+  "sitemap-index": sitemapIndex,
 };
 
 export default async function handler(req, res) {
