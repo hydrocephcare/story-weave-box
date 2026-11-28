@@ -1,8 +1,9 @@
 import { maintenanceRequest } from "./maintenance-client.mjs";
 
-const mode = process.argv[2] === "flashcards" ? "flashcards" : "mcqs";
-const count = Math.max(1, Math.min(20, Number(process.env[mode === "mcqs" ? "NOTE_MCQ_COUNT" : "NOTE_FLASHCARD_COUNT"] || 4)));
-const task = mode === "mcqs" ? "note-mcqs" : "note-flashcards";
+const mode = ["flashcards","essays"].includes(process.argv[2]) ? process.argv[2] : "mcqs";
+const countKey = mode === "mcqs" ? "NOTE_MCQ_COUNT" : mode === "essays" ? "NOTE_ESSAY_COUNT" : "NOTE_FLASHCARD_COUNT";
+const count = Math.max(1, Math.min(20, Number(process.env[countKey] || 4)));
+const task = mode === "mcqs" ? "note-mcqs" : mode === "essays" ? "note-essays" : "note-flashcards";
 let completed = 0, failed = 0;
 for (let i = 0; i < count; i++) {
   try {

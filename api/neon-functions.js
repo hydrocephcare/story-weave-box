@@ -1,4 +1,5 @@
 import topicMaintenance from "./_lib/topicMaintenance.js";
+import topicWriteDb from "./_lib/topicWriteDb.js";
 import paystackHandler from "./paystack.js";
 import sendNotification from "./_lib/sendNotification.js";
 import generateExam from "./_lib/generateExam.js";
@@ -19,6 +20,7 @@ export default async function handler(req, res) {
   }
 
   if (name === "topic-maintenance") return topicMaintenance(req, res);
+  if (name === "topic-write") return topicWriteDb(req, res);
   if (name === "send-notification") return sendNotification(req, res);
   if (name === "generate-exam") return generateExam(req, res);
   if (name === "transcribe") return transcribe(req, res);

@@ -1,9 +1,10 @@
 import { neon } from "@neondatabase/serverless";
 import { randomBytes } from "node:crypto";
 import { isNeonAdmin } from "./neonAdmin.js";
-import { askModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
 import { balanceBank, placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
+import { reviewEssayPaper } from "./essayReview.js";
 
 const send = (res, status, data) => res.status(status).json(data);
 const parseBody = (body) => typeof body === "string" ? JSON.parse(body || "{}") : body || {};
@@ -17,7 +18,7 @@ const normalizeUnit = (value) => String(value || "Uncategorized").trim();
 const yearOf = (value) => Number(/Year\s*(\d)/i.exec(String(value))?.[1]) || 0;
 
 async function generateText(prompt, maxTokens = 5000, aiEnv) {
-  const result = await askModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
+  const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
   if (!result?.text?.trim()) throw new Error("The AI writer returned an empty response.");
   return result.text;
 }
@@ -53,7 +54,7 @@ function parseEssays(raw) {
   } catch { return { saqs: [], laqs: [] }; }
 }
 
-async function reviewQuestions(questions, strict = true, aiEnv) {
+export async function reviewQuestions(questions, strict = true, aiEnv) {
   const kept = [], disputed = [];
   let dropped = 0, fixed = 0, reviewerUnavailable = false;
   for (let i = 0; i < questions.length; i += 15) {
@@ -194,7 +195,7 @@ export default async function handler(req, res) {
       catch (error) { skipped.push(unit + ": " + (error instanceof Error ? error.message : String(error))); continue; }
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " usable MCQs generated."); continue; }
 
-      const review = await reviewQuestions(questions, true);
+      const review = await reviewQuestions(questions, true, aiEnv);
       if (review.reviewerUnavailable) { skipped.push(unit + ": independent Gemini review is temporarily unavailable."); continue; }
       questions = balanceBank(review.kept, { seed: unit + new Date().toISOString().slice(0, 10) }).questions;
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " MCQs passed independent review."); continue; }
@@ -211,6 +212,18 @@ export default async function handler(req, res) {
       let essays = { saqs: [], laqs: [] };
       try { essays = parseEssays(await generateText(essayPrompt, 4500, aiEnv)); } catch {}
       if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
+
+      let essayReview;
+      try {
+        essayReview = await reviewEssayPaper({ unit, essays, env: aiEnv });
+      } catch (error) {
+        skipped.push(unit + ": independent Gemini review is temporarily unavailable.");
+        continue;
+      }
+      if (!essayReview.validated) {
+        skipped.push(unit + ": written paper did not pass independent Gemini review.");
+        continue;
+      }
 
       const date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
       const title = "Weekly " + unit + " Exam - " + date;

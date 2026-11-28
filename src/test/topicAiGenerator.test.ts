@@ -16,6 +16,72 @@ const makePage = (title: string, subject: string, count = 13) => {
 
 
 describe("AI provider key configuration", () => {
+  it("falls back to server-side Groq keys when the Supabase provider gateway is unavailable", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response('{"error":"provider_unavailable"}', { status: 503 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: "draft from direct Groq" } }] }), { status: 200 }));
+    const result = await askGroqModel("Write a topic", {
+      env: {
+        OMPATH_SUPABASE_AI_URL: "https://ai.example.test/functions/v1/ompath-ai",
+        OMPATH_SUPABASE_AI_TOKEN: "workflow-test-token",
+        OMPATH_SUPABASE_AI_AUTH_KIND: "github",
+        GROQ_API_KEYS: "direct-groq-test-key",
+      },
+      fetchImpl,
+    });
+    expect(result.text).toBe("draft from direct Groq");
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("ai.example.test");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+  });
+
+  it("fails closed when a configured Supabase gateway has no authentication token", async () => {
+    const fetchImpl = vi.fn();
+    await expect(askGroqModel("Write a topic", {
+      env: {
+        OMPATH_SUPABASE_AI_URL: "https://ai.example.test/functions/v1/ompath-ai",
+        GROQ_API_KEYS: "direct-groq-test-key",
+      },
+      fetchImpl,
+    })).rejects.toThrow("authentication token is missing");
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
+
+  it("never bypasses authentication or entitlement failures with a direct provider fallback", async () => {
+    const fetchImpl = vi.fn().mockResolvedValueOnce(new Response('{"error":"limit"}', { status: 402 }));
+    await expect(askGroqModel("Write a topic", {
+      env: {
+        OMPATH_SUPABASE_AI_URL: "https://ai.example.test/functions/v1/ompath-ai",
+        OMPATH_SUPABASE_AI_TOKEN: "workflow-test-token",
+        OMPATH_SUPABASE_AI_AUTH_KIND: "github",
+        GROQ_API_KEYS: "direct-groq-test-key",
+      },
+      fetchImpl,
+    })).rejects.toThrow("limit");
+    expect(fetchImpl).toHaveBeenCalledTimes(1);
+  });
+
+  it("keeps independent Gemini review on Gemini when the Supabase gateway is unavailable", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response('{"error":"provider_unavailable"}', { status: 503 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: "independent Gemini review" }] } }] }), { status: 200 }));
+    const result = await import("../../supabase/functions/_shared/topicAi.js").then(({ askGeminiModel }) =>
+      askGeminiModel("Review the clinical content", {
+        env: {
+          OMPATH_SUPABASE_AI_URL: "https://ai.example.test/functions/v1/ompath-ai",
+          OMPATH_SUPABASE_AI_TOKEN: "workflow-test-token",
+          OMPATH_SUPABASE_AI_AUTH_KIND: "github",
+          GEMINI_API_KEYS: "direct-gemini-test-key",
+        },
+        fetchImpl,
+      }),
+    );
+    expect(result.text).toBe("independent Gemini review");
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("generativelanguage.googleapis.com");
+    expect(new Headers(fetchImpl.mock.calls[1][1]?.headers).get("x-goog-api-key")).toBe("direct-gemini-test-key");
+  });
+
   it("parses comma, whitespace, semicolon and JSON-array key lists without duplicates", () => {
     expect(providerKeys({ GEMINI_API_KEYS: "gem-a, gem-b; gem-c", GEMINI_API_KEY_2: "gem-b", GEMINI_API_KEY_3: "gem-d" }, "GEMINI"))
       .toEqual(["gem-a", "gem-b", "gem-c", "gem-d"]);
@@ -54,6 +120,32 @@ describe("Groq topic generation boundary", () => {
       { name: "Umbilical Vein Thrombosis", category: "Paediatrics / Neonatal" },
       { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl, maxFixRounds: 0 },
     );
+  });
+
+  it("repairs thin generated sections with Groq before independent Gemini review", async () => {
+    const thin = makePage("Pleural effusion", "Medicine", 13);
+    thin.sections[2] = { h: "Causes and risk factors", p: "A thin section.", b: [] };
+    const complete = makePage("Pleural effusion", "Medicine", 13);
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(thin) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockImplementationOnce(async (_url: RequestInfo | URL, init?: RequestInit) => {
+        expect(String(init?.body)).toContain("COMPLETE corrected sections array");
+        expect(String(init?.body)).toContain("Causes and risk factors");
+        return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ sections: complete.sections }) } }] }), { status: 200, headers: { "Content-Type": "application/json" } });
+      })
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await generateReviewedTopicPage(
+      { name: "Pleural effusion", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl, maxFixRounds: 0 },
+    );
+
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[2][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.page.aiReview.status).toBe("passed");
+    expect(result.page.structureRepairModel).toBeTruthy();
   });
 
   it("sends generation requests only to Groq and returns the model used", async () => {

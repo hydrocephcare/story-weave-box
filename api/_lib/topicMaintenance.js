@@ -1,12 +1,13 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
 import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
+import { generateReviewedNoteFlashcards, generateReviewedNoteEssays } from "./noteBankGeneration.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -76,15 +77,6 @@ function parseNoteMcqs(raw) {
     .map(q=>({question:String(q.question).trim(),options:q.options.slice(0,4).map(x=>String(x).trim()),correct_answer:q.correct_answer,explanation:String(q.explanation||"").trim()}))
     .filter(q=>q.question.length>=12&&q.options.every(x=>x.length>0)&&new Set(q.options.map(x=>x.toLowerCase())).size===4&&!/all of the above|none of the above/i.test(q.options.join(" ")));
 }
-function parseNoteCards(raw) {
-  const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
-  if(start<0||end<=start)return [];
-  let data; try{data=JSON.parse(text.slice(start,end+1));}catch{return [];}
-  if(!Array.isArray(data))return [];
-  const seen=new Set();
-  return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
-    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);if(key.length<8||seen.has(key)||c.answer.length<30)return false;seen.add(key);return true;});
-}
 function dedupeNoteMcqs(items, existing=[]) {
   const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
   return items.filter(q=>{const key=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60);if(seen.has(key))return false;seen.add(key);return true;});
@@ -99,30 +91,24 @@ TOPIC: ${article.title} | ${article.category}
 AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
   let questions=parseNoteMcqs(draft.text);
   if(questions.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
   if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
   questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-  const review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
-  if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
+  let review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
+  if(!review.validated||!review.model){
+    const repairPrompt=`You are correcting medical examination MCQs after an independent Gemini clinical review. Preserve every correct question. Correct each listed factual, answer-key or safety issue. Keep exactly four plausible options and one best answer per question. Return ONLY the complete corrected JSON array in the original schema. Do not invent doses, thresholds or references.\nREVIEW FINDINGS:\n${(review.issues||[]).map((x,i)=>(i+1)+". "+x.problem+" Correction: "+x.fix).join("\n")}\nCURRENT MCQS:\n${JSON.stringify(questions)}`;
+    const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+    const corrected=parseNoteMcqs(fixed.text);
+    if(corrected.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ clinical repair returned too few valid questions.");
+    const hardened=placeNewQuestions(dedupeNoteMcqs(corrected,avoid));
+    review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(hardened),env,timeoutMs:45000});
+    if(!review.validated||!review.model)throw new Error("MCQs failed independent Gemini review after one targeted repair: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
+    questions.splice(0,questions.length,...hardened);
+  }
   return {questions,review};
-}
-async function generateNoteFlashcards(article, env) {
-  const text=cleanStudyNote(article.content).slice(0,10000);
-  const count=Math.max(10,Math.min(22,Math.round(text.length/450)));
-  const prompt=`Create ${count} high-yield revision flashcards for medical students from this study note.
-Each card covers one distinct angle: definition, causes, pathophysiology, clinical features, classification, investigations, differentials, management/pharmacology, complications, ward-round points, prognosis or prevention. Use only angles supported by the note.
-Each answer is 35–60 words: a direct answer, then 3–4 short explanatory lines, and a final Related line. Do not repeat facts across cards. No invented doses or criteria.
-Return ONLY JSON array: [{"question":"...","answer":"..."}].
-TOPIC: ${article.title} | ${article.category}
-SOURCE NOTE:
-${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
-  const cards=parseNoteCards(draft.text);
-  if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
-  return cards;
 }
 
 function deepReady(deep) {
@@ -243,15 +229,16 @@ export default async function handler(req, res) {
       let candidate=body.article_id?[{id:String(body.article_id)}]:await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
       let upgrade=null;
       if(!candidate.length){
-        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":2%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
+        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":3%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
       }
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
-      const cards=await generateNoteFlashcards(article,aiEnv);
-      const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
-      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString()});
+      const generated=await generateReviewedNoteFlashcards(article,aiEnv,fetch);
+      const cards=generated.cards;
+      const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, independently checked for clinical accuracy.`;
+      const meta=JSON.stringify({type:"note_flashcards",v:3,article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:generated.review.model||null});
       if(upgrade){
         await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid",[upgrade.id,JSON.stringify(cards),meta,description]);
         return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true});
@@ -261,6 +248,26 @@ export default async function handler(req, res) {
       const slug=`${base}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
       await getDb().query("INSERT INTO public.flashcard_sets(title,slug,category,cards,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())",[title,slug,article.category,JSON.stringify(cards),String(article.id),description,meta]);
       return res.status(200).json({success:true,title:article.title,cards:cards.length});
+    }
+
+    if (task === "note-essays") {
+      const candidate = body.article_id
+        ? [{ id: String(body.article_id) }]
+        : await getDb().query("SELECT id FROM public.note_essay_candidates(1)");
+      if (!candidate.length) return res.status(200).json({ success: true, done: true });
+      const rows = await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
+      const article = rows[0];
+      if (!article) return res.status(404).json({ error: "Published study note not found." });
+      const generated = await generateReviewedNoteEssays(article,aiEnv,fetch);
+      const title = `${cleanTopicTitle(article.title)}: Essay questions`;
+      const base = title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70);
+      const slug = `${base}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
+      const description = `${generated.saqs.length + generated.laqs.length} independently reviewed essay questions with model answers on ${cleanTopicTitle(article.title)}.`;
+      await getDb().query(
+        "INSERT INTO public.essays(title,slug,category,article_id,short_answer_questions,long_answer_questions,published,meta_title,meta_description,updated_at) VALUES($1,$2,$3,$4::uuid,$5::jsonb,$6::jsonb,true,$7,$8,now())",
+        [title,slug,article.category,String(article.id),JSON.stringify(generated.saqs),JSON.stringify(generated.laqs),title,description],
+      );
+      return res.status(200).json({success:true,title:article.title,saqs:generated.saqs.length,laqs:generated.laqs.length,reviewed:true,reviewModel:generated.review.model||null});
     }
 
     if (task === "generate-publish") {
