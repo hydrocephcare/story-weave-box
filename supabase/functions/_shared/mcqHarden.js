@@ -45,11 +45,11 @@ const lengthsOk = (opts, ci) => {
 };
 
 /** Rewrites the given weak questions in one request. Returns an array the same length as `qs`: the better question, or null where the rewrite was not good enough. */
-export async function hardenBatch(env, qs, { subject = "", manual = false, stats = {} } = {}) {
+export async function hardenBatch(env, qs, { subject = "", manual = false, stats = {}, allowDirectFallback = false } = {}) {
   const no = (why) => { stats[why] = (stats[why] || 0) + 1; };
   if (!qs.length) return [];
   const body = qs.map((q, i) => `#${i}\nQUESTION: ${q.question}\nOPTIONS: ${q.options.map((o, k) => `${String.fromCharCode(65 + k)}) ${o}`).join(" | ")}\nCORRECT: ${String.fromCharCode(65 + q.correct_answer)}\nEXPLANATION: ${q.explanation || ""}`).join("\n\n");
-  const raw = await chatText(env, [{ role: "system", content: SYSTEM }, { role: "user", content: `Subject: ${subject}\n\n${body}` }], { temperature: 0.5, maxTokens: 6000, timeoutMs: 80000, manual });
+  const raw = await chatText(env, [{ role: "system", content: SYSTEM }, { role: "user", content: `Subject: ${subject}\n\n${body}` }], { temperature: 0.5, maxTokens: 6000, timeoutMs: 80000, manual, allowDirectFallback });
   const a = raw.indexOf("{"), b = raw.lastIndexOf("}");
   let items = [];
   try { items = JSON.parse(raw.slice(a, b + 1)).items || []; } catch { return qs.map(() => null); }
