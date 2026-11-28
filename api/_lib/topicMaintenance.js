@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
@@ -91,7 +91,7 @@ TOPIC: ${article.title} | ${article.category}
 AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
   let questions=parseNoteMcqs(draft.text);
   if(questions.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
