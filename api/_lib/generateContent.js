@@ -56,12 +56,12 @@ async function callAI(messages,env,{plain=false,maxTokens=6000,timeoutMs=60000}=
 async function generateReviewedArticle(messages,customTitle,env) {
   const base=messages.map(m=>String(m.role).toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
   let corrections=[];
-  for(let round=0;round<=2;round++){
+  for(let round=0;round<=1;round++){
     const prompt=base+(corrections.length?"\n\nCLINICAL REVIEW FINDINGS — CORRECT EACH ITEM:\n- "+corrections.join("\n- ")+"\nPreserve structure and correct only what is necessary.":"");
-    const generated=await askGroqModel(prompt,{env,plain:true,maxTokens:8000,timeoutMs:65000});
+    const generated=await askGroqModel(prompt,{env,plain:true,maxTokens:8000,timeoutMs:25000});
     const article=normalizeArticleOutput(generated.text);
     if(customTitle)article.title=customTitle;
-    const review=await checkContent({title:article.title,kind:"medical education article",text:article.content,env,timeoutMs:55000});
+    const review=await checkContent({title:article.title,kind:"medical education article",text:article.content,env,timeoutMs:12000});
     if(!review.issues?.length)return {...article,aiReview:{status:"passed",generator:generated.model,reviewer:review.model,reviewedAt:review.at,fixRounds:round}};
     if(round===2)throw new Error("Clinical review held the article after two correction rounds: "+review.issues.map(x=>x.where+": "+x.problem).join(" | ").slice(0,500));
     corrections=review.issues.map(x=>"["+x.severity+"] "+x.where+": "+x.problem+". Correct statement: "+x.fix);
