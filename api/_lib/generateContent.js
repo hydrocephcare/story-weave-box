@@ -1,6 +1,8 @@
 import { isNeonAdmin } from "./neonAdmin.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { askModel, askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
+import { generateReviewedEssayPaper } from "../../supabase/functions/_shared/essayExam.js";
+import { generateNoteMcqs, generateNoteFlashcards } from "../../supabase/functions/_shared/noteBanks.js";
 import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 
@@ -111,7 +113,16 @@ export default async function handler(req,res) {
     }
     if(type==="essay-qa") {
       messages=[{role:"system",content:"You are a medical examiner. Create exam-style written questions. Return ONLY JSON: {\"saqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":5}],\"laqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":20}]}. Create exactly six SAQs of 5 marks and one LAQ of 20 marks. Answers should be clinically structured and concise. No markdown."},{role:"user",content:safe}];
-      raw=await callAI(messages,env,{maxTokens:7000}); return res.status(200).json(parseEssays(raw));
+      const prompt=messages.map(m=>String(m.role).toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
+      const reviewed=await generateReviewedEssayPaper({
+        prompt,
+        title:customTitle||"Medical written examination",
+        unit:String(body.category||"Medical notes"),
+        env,
+        saqCount:6,
+        laqCount:1,
+      });
+      return res.status(200).json(reviewed.essays);
     }
     if(type==="publish-format") {
       messages=[{role:"system",content:"You are a fast medical publishing formatter. Return ONLY JSON: {\"title\":\"...\",\"content\":\"...\",\"tags\":[\"...\"],\"meta_title\":\"...\",\"meta_description\":\"...\",\"university\":\"Mount Kenya University\",\"school\":\"School of Medicine\",\"unit\":\"...\",\"exam_type\":\"...\",\"exam_year\":\"...\"}. Fix format only; do not rewrite academic meaning, shorten or remove questions, images or tables. Preserve MKU when present. Use clean markdown, 4-8 concise tags, and never invent exam details."},{role:"user",content:"Title: "+customTitle+"\n\nContent:\n"+safe}];
@@ -125,22 +136,35 @@ export default async function handler(req,res) {
     }
     if(type==="direct-article"||type==="article") {
       messages=[{role:"system",content:"You are a medical education expert. Convert these notes into a comprehensive exam-focused study article in markdown. Title on first line. Include ## Summary, ## Key Points, ## Detailed Notes with ### subsections, and ## Practice Questions with at least 8 clinical Q→A lines. Use explanatory paragraphs, preserve all tables and content, do not use code fences. Do not fabricate facts, doses or references."},{role:"user",content:(customTitle?"Title: "+customTitle+"\n\n":"")+safe}];
-      if(type==="article") { const result=await generateReviewedArticle(messages,customTitle,env); return res.status(200).json(result); }
+      if(type==="article"||type==="direct-article") { const result=await generateReviewedArticle(messages,customTitle,env); return res.status(200).json(result); }
       raw=await callAI(messages,env,{plain:true,maxTokens:9000});
       const result=normalizeArticleOutput(raw); if(customTitle)result.title=customTitle;
       return res.status(200).json(result);
     }
     if(type==="direct-mcqs"||type==="mcqs") {
       messages=[{role:"system",content:"You are a senior medical exam writer. Create EXACTLY "+cardCount+" clinically oriented MCQs. Return ONLY a JSON array with objects {\"question\":\"...\",\"options\":[\"A\",\"B\",\"C\",\"D\"],\"correct_answer\":0,\"explanation\":\"...\"}. Use four plausible options of similar length, exactly one best answer, no all/none of the above, clear clinical explanations. Spread correct positions naturally. Use accepted medical knowledge only."},{role:"user",content:"Create "+cardCount+" MCQs from these notes:\n\n"+safe}];
-      raw=await callAI(messages,env,{maxTokens:9000});
-      return res.status(200).json(parseMcqs(raw,cardCount));
+      const generated=await generateNoteMcqs({
+        title:customTitle||"Medical revision questions",
+        category:String(body.category||"Medicine"),
+        content:safe,
+      },env,cardCount);
+      const reviewedQuestions=generated.questions.map(q=>({
+        ...q,
+        correct_answer_text:q.options[q.correct_answer],
+        aiReview:{status:"passed",model:generated.review.model||"gemini",reviewedAt:generated.review.at||new Date().toISOString().slice(0,10)},
+      }));
+      return res.status(200).json(reviewedQuestions);
     }
     if(type==="direct-flashcards"||type==="flashcards") {
-      messages=[{role:"system",content:"You are a medical flashcard writer. Return ONLY a JSON array [{\"question\":\"...\",\"answer\":\"...\"}]. Create up to "+cardCount+" high-yield non-repetitive cards grounded in the supplied notes. Each answer should be concise but explanatory."},{role:"user",content:safe}];
-      raw=await callAI(messages,env,{maxTokens:8000});
-      const match=raw.match(/\[[\s\S]*\]/); if(!match)throw new Error("Failed to parse flashcards.");
-      const parsed=JSON.parse(match[0]); if(!Array.isArray(parsed))throw new Error("Flashcards were not an array.");
-      return res.status(200).json(parsed.filter(x=>x?.question&&x?.answer).map(x=>({question:compact(x.question),answer:compact(x.answer)})).slice(0,cardCount));
+      const generated=await generateNoteFlashcards({
+        title:customTitle||"Medical revision flashcards",
+        category:String(body.category||"Medicine"),
+        content:safe,
+      },env,cardCount);
+      return res.status(200).json(generated.cards.map(card=>({
+        ...card,
+        aiReview:{status:"passed",model:generated.review.model||"gemini",reviewedAt:generated.review.at||new Date().toISOString().slice(0,10)},
+      })));
     }
     if(type==="generate-seo-meta") {
       messages=[{role:"system",content:"You are a medical SEO editor. Return ONLY JSON {\"meta_title\":\"...\",\"meta_description\":\"...\",\"slug\":\"...\"}. Title max 60 chars, description max 155 chars, slug lowercase hyphenated 3-6 words; do not invent clinical claims."},{role:"user",content:safe.slice(0,5000)}];
