@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: categorize-notes
+  group: categorize-notes-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-node@v4
         with:
@@ -49,5 +49,5 @@ jobs:
             git add public/data/drive-notes-index.json
             git commit -m "Sort new Drive notes (weekly)"
             git pull --rebase origin main
-            git push origin main
+            git push origin "$GITHUB_REF_NAME"
           fi
