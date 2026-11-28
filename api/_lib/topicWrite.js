@@ -6,8 +6,8 @@ const AI_PUBLISHABLE_KEY = "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP";
 const hits = new Map();
 const LIMIT = 30;
 
-function bearer(req) {
-  return String(req.headers["x-neon-authorization"] || req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
+export function extractBearer(req) {
+  return String(req.headers["x-neon-authorization"] || req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
 }
 
 async function invokeGateway(token, payload, timeoutMs = 90000) {
@@ -33,7 +33,7 @@ async function invokeGateway(token, payload, timeoutMs = 90000) {
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
-  const token = bearer(req);
+  const token = extractBearer(req);
 
   if (req.method === "GET" && new URL(req.url, "https://ompathstudy.com").searchParams.get("health") === "1") {
     const result = await invokeGateway(token, { task: "health" }, 30000);
