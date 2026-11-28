@@ -60,3 +60,7 @@ GRANT EXECUTE ON FUNCTION public.has_role(uuid, public.app_role) TO authenticate
 -- freemium entitlement migration.
 REVOKE ALL ON FUNCTION public.consume_feature(text, integer) FROM PUBLIC, anonymous;
 GRANT EXECUTE ON FUNCTION public.consume_feature(text, integer) TO authenticated, service_role;
+
+-- All objects referenced by consume_feature are schema-qualified; pin its
+-- SECURITY DEFINER search_path to pg_catalog to prevent object shadowing.
+ALTER FUNCTION public.consume_feature(text, integer) SET search_path = pg_catalog;
