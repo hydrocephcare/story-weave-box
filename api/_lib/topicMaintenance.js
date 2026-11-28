@@ -122,33 +122,30 @@ ${text}`;
   return {questions,review};
 }
 async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
-  const batchSize = 2;
-  const issues = [];
-  let model = "";
-  let allValidated = true;
+  // Keep the review within the 120-second Vercel route budget: two parallel batches, not eleven serial calls.
+  const batchSize = 11;
+  const batches = [];
   for (let offset = 0; offset < cards.length; offset += batchSize) {
-    const batch = cards.slice(offset, offset + batchSize);
-    const batchNumber = Math.floor(offset / batchSize) + 1;
-    const reviewText = "SOURCE NOTE (reference only; assess every flashcard in this batch against accepted medical knowledge):\n"
-      + source + "\n\nFLASHCARDS TO REVIEW (batch " + batchNumber + "):\n" + JSON.stringify(batch);
-    const result = await checkContent({
-      title,
-      kind: kind + " (batch " + batchNumber + ")",
-      text: reviewText,
-      env,
-      timeoutMs: 45000,
-    });
-    model = result.model || model;
-    if (!result.validated) allValidated = false;
-    for (const item of result.issues || []) {
-      issues.push({ ...item, where: "Flashcard batch " + batchNumber + ": " + item.where });
-    }
+    batches.push(cards.slice(offset, offset + batchSize));
   }
+  const results = await Promise.all(batches.map((batch, index) => checkContent({
+    title,
+    kind: kind + " (batch " + (index + 1) + ")",
+    text: "SOURCE NOTE (reference only; assess every flashcard against accepted medical knowledge):\n" + source + "\n\nFLASHCARDS TO REVIEW:\n" + JSON.stringify(batch),
+    env,
+    timeoutMs: 15000,
+  })));
+  const issues = results.flatMap((result, index) => (result.issues || []).map((item) => ({
+    ...item,
+    where: "Flashcard batch " + (index + 1) + ": " + item.where,
+  })));
+  const model = results.map((result) => result.model || "").find(Boolean) || "";
   const high = issues.filter((item) => item.severity === "high").length;
   const medium = issues.filter((item) => item.severity === "medium").length;
-  return { validated: allValidated && high === 0 && medium === 0 && Boolean(model), high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
+  const validated = results.length === batches.length && results.every((result) => result.validated)
+    && high === 0 && medium === 0 && Boolean(model);
+  return { validated, high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
 }
-
 async function generateNoteFlashcards(article, env) {
   const text = cleanStudyNote(article.content).slice(0, 10000);
   const count = Math.max(10, Math.min(22, Math.round(text.length / 450)));
@@ -160,7 +157,7 @@ TOPIC: ${article.title} | ${article.category}
 SOURCE NOTE:
 ${text}`;
   // Generation is Groq-only. Gemini is reserved for the independent clinical review.
-  const draft = await askGroqModel(prompt, { env, plain: true, timeoutMs: 55000, maxTokens: 7000 });
+  const draft = await askGroqModel(prompt, { env, plain: true, timeoutMs: 20000, maxTokens: 7000 });
   let cards = parseNoteCards(draft.text);
   if (cards.length < 8) throw new Error("Flashcard generation returned too few distinct usable cards.");
 
@@ -187,7 +184,7 @@ ${text}`;
       "FLASHCARDS TO CORRECT:",
       JSON.stringify(cards),
     ].join("\n\n");
-    const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 55000, maxTokens: 7000 });
+    const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 20000, maxTokens: 7000 });
     cards = parseNoteCards(repaired.text);
     if (cards.length < 8) throw new Error("Gemini flagged the flashcards and the Groq repair returned too few usable cards.");
     review = await reviewFlashcardDeck({
