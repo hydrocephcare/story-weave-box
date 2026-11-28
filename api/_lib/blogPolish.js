@@ -81,7 +81,7 @@ export default async function handler(req, res) {
   else claimed = await sql.query("INSERT INTO public.blog_polish (article_id,status) VALUES ($1,$2) ON CONFLICT (article_id) DO NOTHING RETURNING article_id", [id, "working"]);
   if (!claimed.length) return res.status(200).json({ status: "working", more: false });
 
-  const env = workflow ? supabaseAiEnv(req, { workflow: true }) : env;
+  const env = workflow ? supabaseAiEnv(req, { workflow: true }) : { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem };
   const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
   const save = async (row) => {
     const allowed = new Set(["title","description","image_query","verdict","reason","model","content","status","ai_review_status","ai_review_model","ai_reviewed_at","ai_review_issues","parts_done"]);
@@ -98,7 +98,7 @@ export default async function handler(req, res) {
         await save({ title: r.title, description: r.description, image_query: r.image_query, content: null, verdict: r.verdict, reason: r.reason || null, status: "partial", ai_review_status: null, model: "groq" });
         return res.status(200).json({ status: "partial", more: false });
       }
-      const review = await verifyBlogContent(a, r.content, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, { allowRepair: true, timeoutMs: 22000 });
+      const review = await verifyBlogContent(a, r.content, env, { allowRepair: true, timeoutMs: 22000 });
       const reason = review.status === "held" ? "Gemini review held for automatic correction: " + (review.issues?.[0]?.problem || "review did not pass") : (r.reason || null);
       await save({ title: r.title, description: r.description, image_query: r.image_query,
         content: review.status === "passed" ? review.content : null, verdict: r.verdict, reason,
