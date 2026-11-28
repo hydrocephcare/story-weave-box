@@ -117,7 +117,7 @@ ${text}`;
   return {questions,review};
 }
 async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
-  // Keep each prompt below contentCheck's 15,000-character limit; 8s provider calls leave headroom for draft, repair and re-review within maxDuration=120.
+  // Keep each prompt below contentCheck's 15,000-character limit; 10s provider calls leave headroom for draft, repair and re-review within maxDuration=120.
   const batchSize = 4;
   const concurrency = 3;
   const batches = [];
@@ -129,7 +129,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
       kind: kind + " (batch " + (offset + index + 1) + ")",
       text: "SOURCE NOTE (reference only; assess every flashcard against accepted medical knowledge):\n" + source + "\n\nFLASHCARDS TO REVIEW:\n" + JSON.stringify(batch),
       env,
-      timeoutMs: 15000,
+      timeoutMs: 10000,
     })));
     results.push(...wave);
   }
