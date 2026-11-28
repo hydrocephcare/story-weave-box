@@ -15,7 +15,7 @@ permissions:
   contents: read
   id-token: write
 concurrency:
-  group: blogs-polish
+  group: blogs-polish-${{ github.ref_name }}
   cancel-in-progress: false
 jobs:
   polish:
@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -33,4 +33,5 @@ jobs:
           COUNT: ${{ github.event.inputs.count || '40' }}
           YEAR: ${{ github.event.inputs.year }}
           MINUTES: "50"
+          BLOG_POLISH_BASE_URL: ${{ github.ref == 'refs/heads/main' && 'https://www.ompathstudy.com' || vars.BLOG_POLISH_STAGING_BASE_URL }}
         run: node scripts/blogs/polish-runner.mjs
