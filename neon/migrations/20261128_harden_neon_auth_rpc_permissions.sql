@@ -227,16 +227,25 @@ BEGIN
   IF p_deep IS NULL OR jsonb_typeof(p_deep) <> 'object' OR pg_column_size(p_deep) > 90000 THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'size');
   END IF;
-  IF jsonb_typeof(p_deep->'sections') IS DISTINCT FROM 'array'
+  IF length(coalesce(p_deep->>'checked', '')) < 8
+     OR jsonb_typeof(p_deep->'sections') IS DISTINCT FROM 'array'
      OR (CASE WHEN jsonb_typeof(p_deep->'sections') = 'array'
-              THEN jsonb_array_length(p_deep->'sections') ELSE 0 END) NOT BETWEEN 4 AND 14
+              THEN jsonb_array_length(p_deep->'sections') ELSE 0 END) NOT BETWEEN 7 AND 14
      OR NOT (
        (CASE WHEN jsonb_typeof(p_deep->'vivas') = 'array'
-             THEN jsonb_array_length(p_deep->'vivas') ELSE 0 END) BETWEEN 6 AND 20
+             THEN jsonb_array_length(p_deep->'vivas') ELSE 0 END) BETWEEN 12 AND 20
        OR
        (CASE WHEN jsonb_typeof(p_deep->'exam') = 'array'
-             THEN jsonb_array_length(p_deep->'exam') ELSE 0 END) BETWEEN 6 AND 14
-     ) THEN
+             THEN jsonb_array_length(p_deep->'exam') ELSE 0 END) BETWEEN 12 AND 14
+     )
+     OR (CASE WHEN jsonb_typeof(p_deep->'mcqs') = 'array'
+              THEN jsonb_array_length(p_deep->'mcqs') ELSE 0 END) NOT BETWEEN 6 AND 10
+     OR (CASE WHEN jsonb_typeof(p_deep->'cases') = 'array'
+              THEN jsonb_array_length(p_deep->'cases') ELSE 0 END) NOT BETWEEN 2 AND 3
+     OR (CASE WHEN jsonb_typeof(p_deep->'facts') = 'array'
+              THEN jsonb_array_length(p_deep->'facts') ELSE 0 END) NOT BETWEEN 6 AND 12
+     OR (CASE WHEN jsonb_typeof(p_deep->'mistakes') = 'array'
+              THEN jsonb_array_length(p_deep->'mistakes') ELSE 0 END) NOT BETWEEN 5 AND 10 THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'shape');
   END IF;
   IF p_deep::text ~* '(https?:|www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text)' THEN
