@@ -115,3 +115,61 @@ $function$;
 
 REVOKE ALL ON FUNCTION public.admin_replace_contest_questions(uuid, jsonb) FROM PUBLIC, anonymous;
 GRANT EXECUTE ON FUNCTION public.admin_replace_contest_questions(uuid, jsonb) TO authenticated, service_role;
+
+-- Internal admission helper: only trusted SECURITY DEFINER wrappers/triggers
+-- should call this. Direct RPC access would let callers verify arbitrary IDs.
+REVOKE ALL ON FUNCTION public._process_admission(uuid, text, text) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public._process_admission(uuid, text, text) TO service_role;
+
+-- Contest scoring must be limited to the attempt owner, an administrator,
+-- or the trusted service role. Prevent callers from finalizing another
+-- student's active attempt by guessing its UUID.
+CREATE OR REPLACE FUNCTION public.score_contest_attempt(p_attempt_id uuid)
+RETURNS numeric
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path TO ''
+AS $function$
+DECLARE
+  result numeric;
+BEGIN
+  IF coalesce(nullif(current_setting('request.jwt.claim.role', true), ''), '') <> 'service_role' THEN
+    IF auth.uid() IS NULL OR NOT EXISTS (
+      SELECT 1
+      FROM public.contest_attempts ca
+      WHERE ca.id = p_attempt_id
+        AND (ca.user_id = auth.uid() OR public.has_role(auth.uid(), 'admin'::public.app_role))
+    ) THEN
+      RAISE EXCEPTION 'attempt_not_owned';
+    END IF;
+  END IF;
+
+  SELECT CASE WHEN count(q.id) = 0 THEN 0 ELSE greatest(0, round(100.0 * (
+    count(*) FILTER (WHERE a.selected_index = k.correct_index) * r.marks_correct
+    + count(*) FILTER (WHERE a.selected_index IS NOT NULL AND a.selected_index <> k.correct_index) * r.marks_incorrect
+  ) / (count(q.id) * r.marks_correct), 2)) END
+  INTO result
+  FROM public.contest_attempts ca
+  JOIN public.contest_rounds r ON r.id = ca.round_id
+  JOIN public.contest_questions q ON q.round_id = ca.round_id
+  LEFT JOIN public.contest_answers a ON a.attempt_id = ca.id AND a.question_id = q.id
+  JOIN private.contest_answer_keys k ON k.question_id = q.id
+  WHERE ca.id = p_attempt_id
+  GROUP BY r.marks_correct, r.marks_incorrect;
+
+  UPDATE public.contest_attempts
+  SET status = 'submitted', submitted_at = now(), score = coalesce(result, 0)
+  WHERE id = p_attempt_id AND status = 'active';
+  IF NOT FOUND THEN RAISE EXCEPTION 'Attempt is not active'; END IF;
+  RETURN coalesce(result, 0);
+END;
+$function$;
+
+REVOKE ALL ON FUNCTION public.score_contest_attempt(uuid) FROM PUBLIC, anonymous;
+GRANT EXECUTE ON FUNCTION public.score_contest_attempt(uuid) TO authenticated, service_role;
+
+-- Maintenance-only functions should not be invokable through anonymous RPC.
+REVOKE ALL ON FUNCTION public.cleanup_lite_health_data() FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.cleanup_lite_health_data() TO service_role;
+REVOKE ALL ON FUNCTION public.zone_close_stale() FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.zone_close_stale() TO service_role;
