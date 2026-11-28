@@ -166,6 +166,44 @@ async function gatherPassages(hits: SiteHit[], p: ParsedQuery): Promise<Passage[
 // ---------- retrieval ----------
 export interface FindOptions { /** Also look inside the text of notes. Slower, so the search page asks for it second. */ deep?: boolean; year?: string; contentType?: string; /** The student's own year: its notes come first. */ prefer?: number | null }
 const findCache = new Map<string, { parsed: ParsedQuery; hits: SiteHit[]; related: string[] }>();
+const predictionCache = new Map<string, { at: number; queries: string[] }>();
+let lastPredictionAt = 0;
+
+/** Optional AI query expansion. Local search always runs first; prediction is only used for weak matches. */
+async function predictSearchQueries(input: string): Promise<string[]> {
+  const key = input.trim().toLowerCase().replace(/\\s+/g, " ");
+  if (key.length < 4) return [];
+  const cached = predictionCache.get(key);
+  if (cached && Date.now() - cached.at < 10 * 60_000) return cached.queries;
+  if (Date.now() - lastPredictionAt < 8_000) return [];
+  lastPredictionAt = Date.now();
+  try {
+    const authAdapter = supabase.auth as typeof supabase.auth & { getJWTToken?: () => Promise<string | null> };
+    const token = await authAdapter.getJWTToken?.();
+    if (!token || token.split(".").length !== 3) return [];
+    const response = await fetch(SUPABASE_AI_URL, {
+      method: "POST",
+      signal: AbortSignal.timeout(4_500),
+      headers: {
+        "Content-Type": "application/json",
+        apikey: SUPABASE_AI_PUBLISHABLE_KEY,
+        "x-neon-authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify({ task: "search_predict", query: key }),
+    });
+    if (!response.ok) return [];
+    const result = await response.json() as { predictions?: unknown };
+    const queries = [...new Set((Array.isArray(result.predictions) ? result.predictions : [])
+      .map((x) => String(x ?? "").trim())
+      .filter((x) => x.length >= 3 && x.length <= 100 && x.toLowerCase() !== key))].slice(0, 3);
+    predictionCache.set(key, { at: Date.now(), queries });
+    if (predictionCache.size > 80) predictionCache.delete(predictionCache.keys().next().value as string);
+    return queries;
+  } catch {
+    return [];
+  }
+}
+
 
 /**
  * Everything on the site that matches what a student typed, understood the way Ompath AI understands it
@@ -184,6 +222,17 @@ export async function findHits(input: string, o: FindOptions = {}): Promise<{ pa
   const runs = await Promise.all(queries.map((q, i) => siteSearch(q, { ...opts, deep: deepOn && (i === 0 || q === longest) }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }))));
   // students often forget the year: if a year was given and nothing came back, drop the filter
   let all = runs.flatMap((r) => r.hits);
+  // Predict alternate medical terminology only when ordinary retrieval is weak.
+  // This never blocks the first-pass results and is cached/throttled to protect latency and quota.
+  if (deepOn && all.length < 3 && !o.contentType) {
+    const predicted = await predictSearchQueries(input);
+    if (predicted.length) {
+      const predictedRuns = await Promise.all(predicted.map((q) =>
+        siteSearch(q, { ...opts, deep: false }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }))
+      ));
+      all = [...all, ...predictedRuns.flatMap((r) => r.hits)];
+    }
+  }
   if (yearNum && !o.year && all.length < 3) {
     const loose = await siteSearch(parsed.topic, { deep: deepOn, contentType: o.contentType || undefined }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }));
     all = [...all, ...loose.hits];
