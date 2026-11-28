@@ -103,7 +103,7 @@ Each section needs "p", "b" or "t". 3 faq items.
 Plan first, then write. The reader is a clinical-year student, so before you write, decide the angles an examiner would use for this topic: the bedside approach (history, examination, a patient lying in bed), internal medicine, surgery, pathology, pharmacology, complications and look-alike conditions, and the first things to do in an emergency. "exam" must hold ${deep ? "10-12" : "6-8"} strategic, tricky questions across those angles (what would you do next, what distinguishes it from, why is this drug avoided), never plain definitions.
 ${ACCURACY_RULES}
 Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics or references. Lab thresholds and diagnostic criteria are welcome. Every bullet under ${deep ? 40 : 28} words. Plain words a first-year student can follow.
-${fixes.length ? `\nA CLINICAL REVIEWER FOUND THESE ERRORS IN THE PREVIOUS DRAFT. Correct them precisely and do not repeat them:\n- ${fixes.map((x) => clip(x, 400)).join("\n- ")}\n` : ""}${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
+${fixes.length ? `\nTHE PREVIOUS DRAFT FAILED VALIDATION. Correct these issues precisely and do not repeat them:\n- ${fixes.map((x) => clip(x, 400)).join("\n- ")}\n` : ""}${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
 }
 
 /** Checks and tidies whatever the model returned. Returns {medical:false} or a safe page; throws when it is not usable. */
@@ -398,7 +398,7 @@ export async function generateReviewedTopicPage(input, options = {}) {
       page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
     } catch (error) {
       const message = String(error?.message ?? error);
-      const contentValidationFailure = /^(?:too few sections|thin topic page:|thin sections:|full topic page needs|Groq returned no valid JSON)/i.test(message);
+      const contentValidationFailure = /^(?:not an object|summary not acceptable|too few sections|thin topic page:|thin sections:|full topic page needs|Groq returned no valid JSON)/i.test(message);
       if (!contentValidationFailure || round >= rounds) throw error;
       fixes.push(
         "The previous draft failed the structural content check: " + message +
