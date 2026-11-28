@@ -99,7 +99,7 @@ TOPIC: ${article.title} | ${article.category}
 AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
   let questions=parseNoteMcqs(draft.text);
   if(questions.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
@@ -267,9 +267,11 @@ export default async function handler(req, res) {
         if(needed<4){await getDb().query("UPDATE public.mcq_sets SET original_notes=$2,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify({topped:true,topup_note:"already enough"})]);return res.status(200).json({success:true,status:"already enough"});}
         const extra=await generateNoteMcqs(article,aiEnv,Math.min(needed,18),have.map(q=>q.question));
         const merged=[...have,...placeNewQuestions(dedupeNoteMcqs(extra.questions,have.map(q=>q.question)),{existing:have})].slice(0,36);
-        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length)})]);
+        const mergedReview=await checkContent({title:article.title,kind:"complete medical MCQ bank",text:JSON.stringify(merged),env:aiEnv,timeoutMs:45000});
+        if(!mergedReview.validated)throw new Error("Completed MCQ bank failed independent Gemini review; existing bank was left unchanged.");
+        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length),reviewed:true,review_model:mergedReview.model||null})]);
         await getDb().query("DELETE FROM public.mcq_review_log WHERE set_id=$1::uuid",[set.id]);
-        return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length});
+        return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length,reviewed:true,reviewModel:mergedReview.model||null});
       }
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0]; if(!article)return res.status(404).json({error:"Published study note not found."});
@@ -277,7 +279,7 @@ export default async function handler(req, res) {
       const title=`${cleanTopicTitle(article.title)}: MCQs`;
       const slug=`${title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70)}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
       await getDb().query("INSERT INTO public.mcq_sets(title,slug,category,questions,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())",[title,slug,article.category,JSON.stringify(questionsResult.questions),String(article.id),`${questionsResult.questions.length} practice MCQs with explanations on ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`,JSON.stringify({type:"note_mcqs",article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:questionsResult.review.model||null})]);
-      return res.status(200).json({success:true,title:article.title,questions:questionsResult.questions.length,reviewed:true});
+      return res.status(200).json({success:true,title:article.title,questions:questionsResult.questions.length,reviewed:true,reviewModel:questionsResult.review.model||null});
     }
 
     if (task === "note-flashcards") {
