@@ -219,7 +219,6 @@ SET search_path TO 'pg_catalog'
 AS $function$
 DECLARE
   existing public.topic_pages%rowtype;
-  today_count integer;
   affected_rows integer;
 BEGIN
   IF p_slug IS NULL OR p_slug !~ '^[a-z0-9]+(-[a-z0-9]+)*$' OR length(p_slug) > 80 THEN
@@ -228,9 +227,6 @@ BEGIN
   IF p_deep IS NULL OR jsonb_typeof(p_deep) <> 'object' OR pg_column_size(p_deep) > 90000 THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'size');
   END IF;
-  -- Current deep-note generation stores viva questions under "vivas"; older
-  -- records used "exam" as an array of "question — answer" strings. Accept
-  -- either representation, but require a substantive set of at least six.
   IF jsonb_typeof(p_deep->'sections') IS DISTINCT FROM 'array'
      OR (CASE WHEN jsonb_typeof(p_deep->'sections') = 'array'
               THEN jsonb_array_length(p_deep->'sections') ELSE 0 END) NOT BETWEEN 4 AND 14
@@ -243,45 +239,34 @@ BEGIN
      ) THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'shape');
   END IF;
-  IF p_deep::text ~* '(https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text)' THEN
+  IF p_deep::text ~* '(https?:|www\\.|<[a-z/!]|javascript:|onerror\\s*=|data:text)' THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'unsafe');
   END IF;
 
-  SELECT * INTO existing FROM public.topic_pages WHERE slug = p_slug AND status = 'published';
-  IF FOUND THEN
-    IF existing.content ? 'deep' AND (existing.content->'deep') ? 'vivas' THEN
-      RETURN jsonb_build_object('ok', true, 'existing', true);
-    END IF;
-    UPDATE public.topic_pages
-    SET content = (existing.content - 'deep') || jsonb_build_object('deep', p_deep), updated_at = now()
-    WHERE slug = p_slug AND status = 'published';
-    GET DIAGNOSTICS affected_rows = ROW_COUNT;
-    IF affected_rows = 0 THEN RETURN jsonb_build_object('ok', false, 'reason', 'slug_conflict'); END IF;
-    RETURN jsonb_build_object('ok', true, 'saved', true);
+  -- Deep notes enrich an existing published topic only. This RPC must never
+  -- create a new public topic or accept caller-supplied base content as a page.
+  SELECT * INTO existing
+  FROM public.topic_pages
+  WHERE slug = p_slug AND status = 'published'
+  FOR UPDATE;
+
+  IF NOT FOUND THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'missing');
   END IF;
 
-  IF p_name IS NULL OR length(p_name) < 3 OR length(p_name) > 80 OR p_name ~ '[<>]' THEN
-    RETURN jsonb_build_object('ok', false, 'reason', 'name');
+  IF existing.content ? 'deep' AND (existing.content->'deep') ? 'vivas' THEN
+    RETURN jsonb_build_object('ok', true, 'existing', true);
   END IF;
-  IF p_base IS NULL OR jsonb_typeof(p_base) <> 'object' OR pg_column_size(p_base) > 60000
-     OR jsonb_typeof(p_base->'sections') IS DISTINCT FROM 'array'
-     OR (CASE WHEN jsonb_typeof(p_base->'sections') = 'array'
-              THEN jsonb_array_length(p_base->'sections') ELSE 0 END) < 3
-     OR length(coalesce(p_base->>'summary', '')) < 40 THEN
-    RETURN jsonb_build_object('ok', false, 'reason', 'base');
-  END IF;
-  IF p_base::text ~* '(https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text)' THEN
-    RETURN jsonb_build_object('ok', false, 'reason', 'unsafe');
-  END IF;
-  SELECT count(*) INTO today_count FROM public.topic_pages WHERE created_at > now() - interval '1 day';
-  IF today_count >= 150 THEN RETURN jsonb_build_object('ok', false, 'reason', 'busy'); END IF;
 
-  INSERT INTO public.topic_pages (slug, name, category, status, content, model, reviewed, updated_at)
-  VALUES (p_slug, p_name, left(coalesce(p_category, ''), 60), 'published',
-    (p_base - 'deep') || jsonb_build_object('deep', p_deep), 'groq', false, now())
-  ON CONFLICT (slug) DO NOTHING;
+  UPDATE public.topic_pages
+  SET content = (existing.content - 'deep') || jsonb_build_object('deep', p_deep),
+      updated_at = now()
+  WHERE slug = p_slug AND status = 'published';
   GET DIAGNOSTICS affected_rows = ROW_COUNT;
-  IF affected_rows = 0 THEN RETURN jsonb_build_object('ok', false, 'reason', 'slug_conflict'); END IF;
+
+  IF affected_rows = 0 THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'slug_conflict');
+  END IF;
   RETURN jsonb_build_object('ok', true, 'saved', true);
 END;
 $function$;
