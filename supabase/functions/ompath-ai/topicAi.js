@@ -128,7 +128,15 @@ export function sanitizePage(raw, options = {}) {
     if (sections.length < minimum) throw new Error(`thin topic page: ${sections.length} sections; ${minimum} required`);
     const thin = sections.filter((section) => {
       const structured = (section.b?.length ?? 0) + (section.t?.length ?? 0);
-      const words = (section.p ?? "").split(/\s+/).filter(Boolean).length;
+      // Count the actual teaching content, not only the paragraph field.
+      // A section with three substantial bullets or table rows should not be
+      // rejected merely because its explanatory text is stored in b/t.
+      const sectionText = [
+        section.p ?? "",
+        ...(section.b ?? []),
+        ...(section.t ?? []).flatMap((row) => [row.a, row.b]),
+      ].filter(Boolean).join(" ");
+      const words = sectionText.split(/\s+/).filter(Boolean).length;
       return structured < 4 && words < 65;
     });
     if (thin.length) throw new Error(`thin sections: ${thin.map((section) => section.h).slice(0, 4).join(", ")}`);
