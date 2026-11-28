@@ -277,7 +277,8 @@ Deno.serve(async(req:Request)=>{
     const quota=await entitlement(token,"topic_page_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
-      const generated=await generateReviewedTopicPage({name,category,context,choices:body.choices&&typeof body.choices==="object"?body.choices:undefined},{env,fetchImpl:fetch,timeoutMs:75000});
+      const reviewOptions={env,fetchImpl:fetch,timeoutMs:75000} as unknown as Parameters<typeof generateReviewedTopicPage>[1];
+      const generated=await generateReviewedTopicPage({name,category,context,choices:body.choices&&typeof body.choices==="object"?body.choices:undefined},reviewOptions);
       const page=generated.page as Record<string, any>;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
