@@ -175,56 +175,21 @@ async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetc
   return { text: data.text, model: String(data.model || provider) };
 }
 export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
+  // Cloudflare callers may proxy through the central Supabase gateway. Inside Supabase,
+  // the gateway URL is deliberately absent from env so this function calls providers directly.
   const remote = await remoteProviderCall("auto", prompt, { env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
   if (remote) return remote;
-  const gateways = [];
-  if (env.LOVABLE_API_KEY) gateways.push(["https://ai.gateway.lovable.dev/v1/chat/completions", env.LOVABLE_API_KEY, env.TOPIC_AI_MODEL || "google/gemini-3-flash-preview"]);
-  if (env.OMNIROUTE_BASE_URL && env.OMNIROUTE_API_KEY) gateways.push([`${String(env.OMNIROUTE_BASE_URL).replace(/\/+$/, "").replace(/\/v1$/, "")}/v1/chat/completions`, env.OMNIROUTE_API_KEY, env.OMNIROUTE_MODEL || "ompathstudy"]);
-  let lastErr = new Error("no model configured");
+
   const timed = async (fn) => {
     const ctl = new AbortController();
     const timer = setTimeout(() => ctl.abort(), timeoutMs);
     try { return await fn(ctl.signal); } finally { clearTimeout(timer); }
   };
-  for (const [url, key, model] of gateways) {
-    try {
-      const text = await timed(async (signal) => {
-        const r = await fetchImpl(url, { method: "POST", signal, headers: { "content-type": "application/json", Authorization: `Bearer ${key}` }, body: JSON.stringify({ model, stream: false, temperature, max_tokens: 3600, messages: [{ role: "user", content: prompt }] }) });
-        if (!r.ok) throw new Error(`model API ${r.status}`);
-        return (await r.json())?.choices?.[0]?.message?.content;
-      });
-      if (typeof text === "string" && text.trim()) return { text, model };
-      lastErr = new Error("empty reply");
-    } catch (e) { lastErr = e; }
-  }
-  // Google keys: any number, comma separated in GEMINI_API_KEYS (or GEMINI_API_KEY, _2, _3). They take turns, so no single key is worn out,
-  // and a key that is over its limit or refused is skipped for the rest of this run.
-  const keys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
-  const models = String(env.GEMINI_MODELS ?? "gemini-3.8-flash,gemini-3.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
-  const start = keys.length ? turn++ % keys.length : 0;
-  for (let i = 0; i < keys.length; i++) {
-    const key = keys[(start + i) % keys.length];
-    if (deadKeys.has(key)) continue;
-    for (const model of models) {
-      if (deadModels.has(key + model)) continue;
-      try {
-        const text = await timed(async (signal) => {
-          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature, maxOutputTokens: maxTokens, ...(plain ? {} : { responseMimeType: "application/json" }), ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : model.startsWith("gemini-3") ? { thinkingConfig: { thinkingLevel: "low" } } : {}) } }) });
-          if (r.status === 404) deadModels.add(key + model);
-          if (r.status === 429 || r.status === 503) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
-          if (r.status === 403 || r.status === 401) deadKeys.add(key);
-          if (!r.ok) throw new Error(`gemini ${r.status}`);
-          return (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
-        });
-        if (text?.trim()) return { text, model };
-        lastErr = new Error("empty reply");
-      } catch (e) { lastErr = e; }
-      if (deadKeys.has(key)) break;
-    }
-  }
-  // Groq: a free backup that takes over when every Gemini key is out of quota. Keys in GROQ_API_KEYS (comma separated), used in turn.
+  let lastErr = new Error("No working Groq or Gemini provider is configured.");
+
+  // Groq is the primary generation provider.
   const groqKeys = parseProviderKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
-  const groqModels = String(env.GROQ_MODELS ?? "openai/gpt-oss-20b,openai/gpt-oss-120b").split(",").map((m) => m.trim()).filter(Boolean);
+  const groqModels = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
   const gStart = groqKeys.length ? turn++ % groqKeys.length : 0;
   for (let i = 0; i < groqKeys.length; i++) {
     const key = groqKeys[(gStart + i) % groqKeys.length];
@@ -232,14 +197,58 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       if (deadModels.has(key + model)) continue;
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature, max_tokens: maxTokens, reasoning_effort: "low", ...(plain ? {} : { response_format: { type: "json_object" } }), messages: [{ role: "user", content: prompt }] }) });
-          if (r.status === 429 || r.status === 503 || r.status === 404) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
+          const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST", signal,
+            headers: { "content-type": "application/json", Authorization: "Bearer " + key },
+            body: JSON.stringify({ model, temperature, max_tokens: maxTokens, reasoning_effort: "low",
+              ...(plain ? {} : { response_format: { type: "json_object" } }),
+              messages: [{ role: "user", content: prompt }] }),
+          });
+          if (r.status === 429 || r.status === 503 || r.status === 404) {
+            deadModels.add(key + model);
+            setTimeout(() => deadModels.delete(key + model), 45_000).unref?.();
+          }
           if (!r.ok) throw new Error("groq " + r.status);
           return (await r.json())?.choices?.[0]?.message?.content;
         });
-        if (text?.trim()) return { text, model };
-        lastErr = new Error("empty reply");
-      } catch (e) { lastErr = e; }
+        if (typeof text === "string" && text.trim()) return { text, model };
+        lastErr = new Error("Groq returned an empty answer.");
+      } catch (e) { lastErr = e instanceof Error ? e : new Error(String(e)); }
+    }
+  }
+
+  // Gemini is the independent fallback when Groq is unavailable.
+  const geminiKeys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
+  const geminiModels = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
+  const mStart = geminiKeys.length ? turn++ % geminiKeys.length : 0;
+  for (let i = 0; i < geminiKeys.length; i++) {
+    const key = geminiKeys[(mStart + i) % geminiKeys.length];
+    if (deadKeys.has(key)) continue;
+    for (const model of geminiModels) {
+      if (deadModels.has(key + model)) continue;
+      try {
+        const text = await timed(async (signal) => {
+          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+            method: "POST", signal,
+            headers: { "content-type": "application/json", "x-goog-api-key": key },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }],
+              generationConfig: { temperature, maxOutputTokens: maxTokens,
+                ...(plain ? {} : { responseMimeType: "application/json" }),
+                ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : {}) } }),
+          });
+          if (r.status === 404) deadModels.add(key + model);
+          if (r.status === 429 || r.status === 503) {
+            deadModels.add(key + model);
+            setTimeout(() => deadModels.delete(key + model), 45_000).unref?.();
+          }
+          if (r.status === 403 || r.status === 401) deadKeys.add(key);
+          if (!r.ok) throw new Error("gemini " + r.status);
+          return (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
+        });
+        if (typeof text === "string" && text.trim()) return { text, model };
+        lastErr = new Error("Gemini returned an empty answer.");
+      } catch (e) { lastErr = e instanceof Error ? e : new Error(String(e)); }
+      if (deadKeys.has(key)) break;
     }
   }
   throw lastErr;
@@ -256,7 +265,7 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
 
 
 
-  const models = String(env.GEMINI_MODELS ?? "gemini-3.8-flash,gemini-3.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
+  const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
   if (!keys.length) throw new Error("Gemini review is not configured (GEMINI_API_KEYS).");
   if (!models.length) throw new Error("No Gemini review model is configured.");
 
