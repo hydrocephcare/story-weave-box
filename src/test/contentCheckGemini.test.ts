@@ -1,6 +1,31 @@
 import { describe, expect, it, vi } from "vitest";
 import { askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
 import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
+import { attachDeepReviewEvidence } from "../../supabase/functions/ompath-ai/contentCheck.js";
+
+describe("deep-note clinical review evidence", () => {
+  it("attaches the independent Gemini review metadata required by Neon persistence", () => {
+    const deep = { sections: [{ h: "Mechanisms" }] };
+    const reviewed = attachDeepReviewEvidence(deep, {
+      validated: true,
+      model: "gemini-3.8-flash",
+      at: "2026-11-28",
+    });
+    expect(reviewed.reviewStatus).toBe("passed");
+    expect(reviewed.reviewModel).toBe("gemini-3.8-flash");
+    expect(reviewed.reviewedAt).toBe("2026-11-28");
+    expect(reviewed.checked).toBe("2026-11-28");
+  });
+
+  it("refuses to attach review evidence when the independent check did not pass", () => {
+    expect(() => attachDeepReviewEvidence({}, {
+      validated: false, model: "gemini-3.8-flash", at: "2026-11-28",
+    })).toThrow("cannot be marked reviewed");
+    expect(() => attachDeepReviewEvidence({}, {
+      validated: true, model: "", at: "2026-11-28",
+    })).toThrow("cannot be marked reviewed");
+  });
+});
 
 describe("Gemini clinical review boundary", () => {
   it("calls Google's Gemini API directly even when Groq credentials are present", async () => {
