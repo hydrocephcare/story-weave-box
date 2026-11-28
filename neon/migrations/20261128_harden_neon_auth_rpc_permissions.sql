@@ -208,3 +208,71 @@ ALTER FUNCTION public.note_mcq_candidates(integer) SET search_path = pg_catalog;
 ALTER FUNCTION public.note_mcq_topup_candidates(integer) SET search_path = pg_catalog;
 ALTER FUNCTION public.zone_finish_room(uuid) SET search_path = pg_catalog;
 ALTER FUNCTION public.zone_sync_lives(public.zone_rooms, integer) SET search_path = pg_catalog;
+
+-- Deep-note persistence must never report success when ON CONFLICT skipped an
+-- insert (for example, when a slug is already in a non-published state).
+CREATE OR REPLACE FUNCTION public.save_topic_deep(p_slug text, p_name text, p_category text, p_base jsonb, p_deep jsonb)
+RETURNS jsonb
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path TO 'pg_catalog'
+AS $function$
+DECLARE
+  existing public.topic_pages%rowtype;
+  today_count integer;
+  affected_rows integer;
+BEGIN
+  IF p_slug IS NULL OR p_slug !~ '^[a-z0-9]+(-[a-z0-9]+)*$' OR length(p_slug) > 80 THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'slug');
+  END IF;
+  IF p_deep IS NULL OR jsonb_typeof(p_deep) <> 'object' OR pg_column_size(p_deep) > 90000 THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'size');
+  END IF;
+  IF jsonb_typeof(p_deep->'sections') <> 'array' OR jsonb_typeof(p_deep->'exam') <> 'array'
+     OR jsonb_array_length(p_deep->'sections') < 4 OR jsonb_array_length(p_deep->'sections') > 14
+     OR jsonb_array_length(p_deep->'exam') < 6 OR jsonb_array_length(p_deep->'exam') > 14 THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'shape');
+  END IF;
+  IF p_deep::text ~* '(https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text)' THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'unsafe');
+  END IF;
+
+  SELECT * INTO existing FROM public.topic_pages WHERE slug = p_slug AND status = 'published';
+  IF FOUND THEN
+    IF existing.content ? 'deep' AND (existing.content->'deep') ? 'vivas' THEN
+      RETURN jsonb_build_object('ok', true, 'existing', true);
+    END IF;
+    UPDATE public.topic_pages
+    SET content = (existing.content - 'deep') || jsonb_build_object('deep', p_deep), updated_at = now()
+    WHERE slug = p_slug AND status = 'published';
+    GET DIAGNOSTICS affected_rows = ROW_COUNT;
+    IF affected_rows = 0 THEN RETURN jsonb_build_object('ok', false, 'reason', 'slug_conflict'); END IF;
+    RETURN jsonb_build_object('ok', true, 'saved', true);
+  END IF;
+
+  IF p_name IS NULL OR length(p_name) < 3 OR length(p_name) > 80 OR p_name ~ '[<>]' THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'name');
+  END IF;
+  IF p_base IS NULL OR jsonb_typeof(p_base) <> 'object' OR pg_column_size(p_base) > 60000
+     OR jsonb_typeof(p_base->'sections') <> 'array' OR jsonb_array_length(p_base->'sections') < 3
+     OR length(coalesce(p_base->>'summary', '')) < 40 THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'base');
+  END IF;
+  IF p_base::text ~* '(https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text)' THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'unsafe');
+  END IF;
+  SELECT count(*) INTO today_count FROM public.topic_pages WHERE created_at > now() - interval '1 day';
+  IF today_count >= 150 THEN RETURN jsonb_build_object('ok', false, 'reason', 'busy'); END IF;
+
+  INSERT INTO public.topic_pages (slug, name, category, status, content, model, reviewed, updated_at)
+  VALUES (p_slug, p_name, left(coalesce(p_category, ''), 60), 'published',
+    (p_base - 'deep') || jsonb_build_object('deep', p_deep), 'gemini', false, now())
+  ON CONFLICT (slug) DO NOTHING;
+  GET DIAGNOSTICS affected_rows = ROW_COUNT;
+  IF affected_rows = 0 THEN RETURN jsonb_build_object('ok', false, 'reason', 'slug_conflict'); END IF;
+  RETURN jsonb_build_object('ok', true, 'saved', true);
+END;
+$function$;
+
+REVOKE ALL ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb) TO service_role;
