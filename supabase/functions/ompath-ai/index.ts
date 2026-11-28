@@ -226,7 +226,7 @@ Deno.serve(async(req:Request)=>{
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
     return reply({ok:groq.ok||gemini.ok,checkedAt:new Date().toISOString(),
       providers:{groq:{...groq,configuredKeys:g.length},gemini:{...gemini,configuredKeys:m.length}},
-      neonStorage:storage,auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
+      neonStorage:storage,deepPersistence:{configured:Boolean(NEON_WRITE_PROXY_URL&&NEON_WRITE_PROXY_SECRET.length>=32)},auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
   }
   if(!env.GROQ_API_KEYS&&!env.GROQ_API_KEY&&!env.GEMINI_API_KEYS&&!env.GEMINI_API_KEY&&!env.GROQ_API_KEYS_EXTRA)
     return reply({error:"ai_provider_not_configured"},503,origin);
