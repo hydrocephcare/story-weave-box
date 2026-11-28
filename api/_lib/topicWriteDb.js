@@ -65,7 +65,6 @@ export default async function topicWriteDb(req, res) {
 
   const body = req.body && typeof req.body === "object" ? req.body : {};
   const task = String(body.task || "");
-  const sql = neon(databaseUrl);
 
   try {
     if (task === "publish_topic") {
@@ -76,6 +75,7 @@ export default async function topicWriteDb(req, res) {
       if (!slug || name.length < 3 || name.length > 80 || /[<>]/.test(name) || !safePage(page)) {
         return res.status(400).json({ error: "Topic publication payload did not pass validation." });
       }
+      const sql = neon(databaseUrl);
       const rows = await sql`SELECT public.publish_topic_page_system(
         ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${String(page.model || "groq")}
       ) AS result`;
@@ -92,6 +92,7 @@ export default async function topicWriteDb(req, res) {
       if (!slug || name.length < 3 || !deepReady(deep)) {
         return res.status(400).json({ error: "Deep-note payload did not pass validation." });
       }
+      const sql = neon(databaseUrl);
       const rows = await sql`SELECT public.save_topic_deep(
         ${slug}, ${name}, ${category}, NULL::jsonb, ${JSON.stringify(deep)}::jsonb
       ) AS result`;
