@@ -124,10 +124,12 @@ ${text}`;
   let cards = parseNoteCards(draft.text);
   if (cards.length < 8) throw new Error("Flashcard generation returned too few distinct usable cards.");
 
+  const reviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\\n"
+    + text.slice(0, 6500) + "\\n\\nFLASHCARDS TO REVIEW:\\n" + JSON.stringify(cards);
   let review = await checkContent({
     title: article.title,
     kind: "medical revision flashcards and their answers",
-    text: JSON.stringify(cards),
+    text: reviewText,
     env,
     timeoutMs: 45000,
   });
@@ -147,10 +149,12 @@ ${text}`;
     const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 55000, maxTokens: 7000 });
     cards = parseNoteCards(repaired.text);
     if (cards.length < 8) throw new Error("Gemini flagged the flashcards and the Groq repair returned too few usable cards.");
+    const repairedReviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\\n"
+      + text.slice(0, 6500) + "\\n\\nREPAIRED FLASHCARDS TO REVIEW:\\n" + JSON.stringify(cards);
     review = await checkContent({
       title: article.title,
       kind: "repaired medical revision flashcards and their answers",
-      text: JSON.stringify(cards),
+      text: repairedReviewText,
       env,
       timeoutMs: 45000,
     });
@@ -280,7 +284,7 @@ export default async function handler(req, res) {
       let candidate=body.article_id?[{id:String(body.article_id)}]:await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
       let upgrade=null;
       if(!candidate.length){
-        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":2%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
+        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":2%' AND coalesce(original_notes,'') NOT LIKE '%"v":3%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
       }
       if(!candidate.length)return res.status(200).json({success:true,done:true});
