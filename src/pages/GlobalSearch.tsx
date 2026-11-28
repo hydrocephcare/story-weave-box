@@ -35,8 +35,11 @@ function QuickAnswer({ q, topic, hits, ready }: { q: string; topic: string; hits
     setText(""); setState("busy");
     streamQuickAnswer(query, hits, ctl.signal, (value) => {
       if (!ctl.signal.aborted) setText(value);
-    }).then(() => {
-      if (!ctl.signal.aborted) { done.current = query; setState("done"); }
+    }).then((answer) => {
+      if (!ctl.signal.aborted) {
+        if (answer.trim()) { done.current = query; setState("done"); }
+        else setState("off");
+      }
     }).catch((e) => { if ((e as Error).name !== "AbortError") setState("off"); });
     return () => ctl.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
