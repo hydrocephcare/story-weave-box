@@ -47,7 +47,7 @@ const TABLES = {
   },
 };
 
-async function verifyWorkflow(req) {
+export async function verifyWorkflow(req) {
   const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
   if (!token) return false;
   try {
