@@ -14,22 +14,25 @@ The browser never receives `DATABASE_URL` or the shared secret. The Neon RPC fun
 
 ## Required environment configuration
 
-Set the same randomly generated secret (at least 32 characters) in both locations. Do not put the value in Git, source code, a browser variable, issue, chat, or build log.
+Set the same randomly generated secret (at least 32 characters) in Cloudflare Pages Production and the Supabase Edge Function secrets. Do not put the value in Git, source code, a browser variable, issue, chat, or build log.
 
-### Vercel
+### Cloudflare Pages
 
-Project: `story-weave-box-j8ry`
+Project: `ompathstudy-main`
 
-- `NEON_DB_GATEWAY_SECRET`: sensitive environment variable, **Production only**.
-- `DATABASE_URL`: existing server-side Neon connection; do not expose it through a `VITE_` variable.
+The live `/api/neon-functions?name=topic-write` endpoint is routed through the Cloudflare Pages Function at `functions/api/neon-functions.js`, which invokes the shared handler through `runVercelHandler`.
 
-Do not add the gateway secret to Preview or Development targets. Preview deployments must fail closed unless a separate non-production database and secret are deliberately configured.
+- `NEON_DB_GATEWAY_SECRET`: add as a **Production secret** to the Cloudflare Pages project.
+- `DATABASE_URL`: already exists as a Production secret in the project; keep it server-side.
+- The project already enables `nodejs_compat` and `nodejs_compat_populate_process_env`, which the handler relies on to read its runtime bindings through `process.env`.
+
+Do not add the gateway secret to Preview. Preview currently has no production database binding and must fail closed. Do not change the existing database secret or its value.
 
 ### Supabase
 
 Project: `rcntjfzivtnijnkliouc`, Edge Function: `ompath-ai`
 
-- `NEON_DB_GATEWAY_SECRET`: the same value as the Vercel Production secret.
+- `NEON_DB_GATEWAY_SECRET`: the same value as the Cloudflare Pages Production secret.
 - `NEON_DB_WRITE_URL`: optional override; defaults to `https://www.ompathstudy.com/api/neon-functions?name=topic-write`.
 - `NEON_AUTH_JWKS_URL` and `NEON_DATA_API_URL`: retain the verified URLs for the active Neon production branch.
 
@@ -41,5 +44,6 @@ If the shared secret is absent or invalid, topic writes return a controlled fail
 - Confirm the Vercel route rejects a missing/wrong shared secret and invalid Neon JWT.
 - Confirm topic publication requires `aiReview.status === "passed"` and a reviewer model identity.
 - Confirm deep-note writes use the restricted server-side Neon function.
-- After the user authorizes deployment and configures the secret, run one real authenticated topic generation and one deep-note generation; verify persisted rows by reading them back from Neon.
+- Confirm Cloudflare Pages Production has the gateway secret configured, without printing its value.
+- After the user authorizes deployment and configures the Supabase secret, run one real authenticated topic generation and one deep-note generation; verify persisted rows by reading them back from Neon.
 - Do not treat an HTTP success response alone as proof of persistence.
