@@ -233,7 +233,7 @@ export default async function handler(req, res) {
         } catch { return []; }
       };
       const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
-      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+      const draft = await askGroqModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
       let questions = parse(draft.text);
       if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
       let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
@@ -241,7 +241,7 @@ export default async function handler(req, res) {
         const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
           + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
           + "\nQUESTIONS:\n" + JSON.stringify(questions);
-        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+        const fixed = await askGroqModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
         questions = parse(fixed.text);
         if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
         review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
