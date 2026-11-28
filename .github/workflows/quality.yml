@@ -2,7 +2,7 @@ name: Repository quality checks
 
 on:
   push:
-    branches: [main, staging-preview-fix, fix/flashcards-independent-clinical-review]
+    branches: [main, staging-preview-fix, fix/flashcards-independent-clinical-review, audit/fix-sitemap-and-neon-anon-access]
   pull_request:
     branches: [main]
 
