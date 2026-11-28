@@ -254,6 +254,14 @@ BEGIN
     RETURN jsonb_build_object('ok', false, 'reason', 'missing');
   END IF;
 
+  IF existing.content IS NULL OR jsonb_typeof(existing.content) <> 'object'
+     OR jsonb_typeof(existing.content->'sections') IS DISTINCT FROM 'array'
+     OR (CASE WHEN jsonb_typeof(existing.content->'sections') = 'array'
+              THEN jsonb_array_length(existing.content->'sections') ELSE 0 END) < 3
+     OR length(coalesce(existing.content->>'summary', '')) < 40 THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'base');
+  END IF;
+
   IF existing.content ? 'deep' AND (existing.content->'deep') ? 'vivas' THEN
     RETURN jsonb_build_object('ok', true, 'existing', true);
   END IF;
