@@ -306,3 +306,17 @@ GRANT EXECUTE ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb)
 REVOKE ALL ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text) FROM PUBLIC, anonymous;
 GRANT EXECUTE ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text) TO authenticated, service_role;
 ALTER FUNCTION public.publish_topic_page(text, text, text, jsonb, text) SET search_path = pg_catalog;
+
+-- RLS helper for the administrator-managed blog-polish key. The function
+-- must remain callable by app roles because the topic_pages UPDATE policy
+-- invokes it, but it reads only the secret table through a qualified name.
+REVOKE ALL ON FUNCTION public.polish_write_ok() FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.polish_write_ok() TO anonymous, authenticated, service_role;
+ALTER FUNCTION public.polish_write_ok() SET search_path = pg_catalog;
+
+-- These legacy trigger-returning helpers are not attached to any trigger on
+-- this database and must not be exposed as public RPCs.
+REVOKE ALL ON FUNCTION public.handle_new_user() FROM PUBLIC, anonymous, authenticated;
+REVOKE ALL ON FUNCTION public.handle_new_user_admission() FROM PUBLIC, anonymous, authenticated;
+ALTER FUNCTION public.handle_new_user() SET search_path = pg_catalog;
+ALTER FUNCTION public.handle_new_user_admission() SET search_path = pg_catalog;
