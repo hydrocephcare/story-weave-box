@@ -22,7 +22,7 @@ function configuredNeonWriteProxy():URL|null {
     const configuredHosts=String(Deno.env.get("NEON_WRITE_PROXY_ALLOWED_HOSTS")||"")
       .split(/[\s,;]+/).map(host=>host.trim().toLowerCase()).filter(Boolean);
     const allowedHosts=new Set(["ompathstudy.com","www.ompathstudy.com",...configuredHosts]);
-    if(url.protocol!=="https:"||url.username||url.password||!allowedHosts.has(url.hostname.toLowerCase())||url.pathname!=="/api/neon-functions"||url.searchParams.get("name")!=="save-topic-deep")return null;
+    if(url.protocol!=="https:"||(url.port&&url.port!=="443")||url.username||url.password||!allowedHosts.has(url.hostname.toLowerCase())||url.pathname!=="/api/neon-functions"||url.searchParams.get("name")!=="save-topic-deep")return null;
     return url;
   } catch { return null; }
 }
