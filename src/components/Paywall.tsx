@@ -64,12 +64,18 @@ export function Paywall({
   };
   const callingCodes = Object.entries(countryData).sort((a,b)=>b[1].dial.length-a[1].dial.length);
   const savedPaymentDetails = (() => { try { return JSON.parse(localStorage.getItem("ompath_payment_details") || "{}"); } catch { return {}; } })();
+  const savedPhoneDigits = String(savedPaymentDetails.phone || "").replace(/\D/g, "");
+  const savedPhoneCountry = callingCodes.find(([, info]) => savedPhoneDigits.startsWith(info.dial))?.[0];
+  const savedCountryCode = String(savedPaymentDetails.countryCode || "").toUpperCase();
+  // Older builds could save "+254…" as OTHER because the country detector used an
+  // incorrectly escaped digit regex. Recover the country from the actual number.
+  const initialCountry = countryData[savedCountryCode] ? savedCountryCode : (savedPhoneCountry || "KE");
   const [phone, setPhone] = useState(() => savedPaymentDetails.phone || "");
-  const [countryCode, setCountryCode] = useState(() => savedPaymentDetails.countryCode || "KE");
+  const [countryCode, setCountryCode] = useState(() => initialCountry);
   const [pricingCountry, setPricingCountry] = useState<string | null>(null);
   const [pricingCountryReady, setPricingCountryReady] = useState(false);
   const detectCountry = (value: string) => {
-    const digits = value.replace(/\\D/g, "");
+    const digits = value.replace(/\D/g, "");
     const matches = callingCodes.filter(([, info]) => digits.startsWith(info.dial));
     if (!value.trim().startsWith("+") && matches.length === 0) return null;
     return matches.find(([code]) => code === countryCode)?.[0] || matches[0]?.[0] || "OTHER";
@@ -79,7 +85,7 @@ export function Paywall({
   useEffect(() => {
     let active = true;
     const loadLocationDefault = async () => {
-      const fallback = String(savedPaymentDetails.countryCode || "KE").toUpperCase();
+      const fallback = initialCountry;
       try {
         const response = await fetch("https://ipapi.co/json/", { signal: AbortSignal.timeout(3500) });
         if (!response.ok) throw new Error("Location lookup unavailable");
@@ -88,12 +94,12 @@ export function Paywall({
         if (!/^[A-Z]{2}$/.test(code)) throw new Error("Location country unavailable");
         if (!active) return;
         setPricingCountry(code);
-        if (!savedPaymentDetails.countryCode) setCountryCode(code);
-        setPaymentMethod(code === "KE" && (savedPaymentDetails.countryCode || code) === "KE" ? "mpesa" : "card");
+        setCountryCode(initialCountry);
+        setPaymentMethod(code === "KE" && initialCountry === "KE" ? "mpesa" : "card");
       } catch {
         if (!active) return;
         setPricingCountry(fallback);
-        if (!savedPaymentDetails.countryCode) setCountryCode(fallback);
+        setCountryCode(fallback);
         setPaymentMethod(fallback === "KE" ? "mpesa" : "card");
       } finally {
         if (active) setPricingCountryReady(true);
