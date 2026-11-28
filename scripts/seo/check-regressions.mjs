@@ -4,7 +4,7 @@ const read = (p) => fs.readFileSync(p, "utf8");
 const meta = read("api/og-meta.ts");
 const vercel = JSON.parse(read("vercel.json"));
 const sitemap = read("api/sitemap.js");
-const sitemapIndex = read("api/sitemap-index.js");
+const sitemapIndex = read("api/_lib/sitemap-index.js");
 const robots = read("public/robots.txt");
 const essayPage = read("src/pages/EssayStudy.tsx");
 const css = read("src/index.css");
