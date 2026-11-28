@@ -63,6 +63,15 @@ describe("saveTopicDeep privileged persistence proxy", () => {
     expect(neonMock).not.toHaveBeenCalled();
   });
 
+  it("rejects a shared secret shorter than 32 bytes", async () => {
+    process.env.OMPATH_NEON_WRITE_SECRET = "too-short";
+    const res = makeRes();
+    await handler(makeReq(), res);
+    expect(res.statusCode).toBe(503);
+    expect(res.body.reason).toBe("proxy_secret_not_configured");
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
   it("rejects a caller without the shared secret before token or database work", async () => {
     const req = makeReq({ headers: { authorization: "Bearer valid-user-token", "x-ompath-neon-write-secret": "wrong" } });
     const res = makeRes();
