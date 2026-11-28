@@ -112,11 +112,11 @@ describe("saveTopicDeep privileged persistence proxy", () => {
   });
 
   it("does not report success when the database RPC rejects the payload", async () => {
-    sqlMock.mockResolvedValueOnce([{ result: { ok: false, reason: "missing" } }]);
+    sqlMock.mockResolvedValueOnce([{ result: { ok: false, reason: "slug_conflict" } }]);
     const res = makeRes();
     await handler(makeReq(), res);
     expect(res.statusCode).toBe(422);
-    expect(res.body).toMatchObject({ status: "failed", reason: "missing" });
+    expect(res.body).toMatchObject({ status: "failed", reason: "slug_conflict" });
   });
 
   it("rejects invalid slugs before opening a database connection", async () => {
