@@ -6,16 +6,18 @@ permissions:
   contents: write
   id-token: write
 concurrency:
-  group: zone-daily
+  group: zone-daily-${{ github.ref_name }}
   cancel-in-progress: false
 jobs:
   games:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      TOPIC_MAINTENANCE_URL: ${{ github.ref == 'refs/heads/main' && 'https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance' || vars.TOPIC_MAINTENANCE_STAGING_URL }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
