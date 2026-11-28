@@ -386,12 +386,15 @@ export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch,
   for (let round = 0; round <= rounds; round++) {
     try {
       page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
-    } catch (err) {
-      if (round < rounds && /thin|sections|questions|faq/i.test(err?.message || "")) {
-        fixes.push(`Correction needed: ${err.message}. Ensure at least 9 substantive sections with detailed bullets or rich clinical prose, 8 examiner questions, and 3 FAQs.`);
-        continue;
-      }
-      throw err;
+    } catch (error) {
+      const message = String(error?.message ?? error);
+      const isValidationFailure = /^(?:not an object|summary not acceptable|too few sections|thin topic page:|thin sections:|full topic page needs|Groq returned no valid JSON)/i.test(message);
+      if (!isValidationFailure || round >= rounds) throw error;
+      fixes.push(
+        "The previous draft failed structural validation: " + message +
+        ". Ensure each section contains at least 65 words or four meaningful structured points, while preserving topic-specific accuracy and avoiding repetition."
+      );
+      continue;
     }
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const pageText = [
