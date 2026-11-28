@@ -455,7 +455,7 @@ async function sbFetch(table: string, params: string) {
 /** Call a public, read-only PostgREST RPC through the same Neon Data API. */
 async function neonRpc<T = unknown>(fn: string, args: Record<string, unknown>): Promise<T> {
   if (!/^[a-z_][a-z0-9_]*$/i.test(fn)) throw new Error("Invalid metadata RPC.");
-  const url = `${NEON_DATA_API_URL.replace(/\\/+$/, "")}/rpc/${fn}`;
+  const url = `${NEON_DATA_API_URL.replace(/\/+$/, "")}/rpc/${fn}`;
   const response = await fetch(url, {
     method: "POST",
     headers: { Accept: "application/json", "Content-Type": "application/json" },
