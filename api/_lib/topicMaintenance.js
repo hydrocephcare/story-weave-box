@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, askGroqModel, askGeminiModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
@@ -184,7 +184,21 @@ export default async function handler(req, res) {
   try {
     if (task === "health") {
       const rows = await getDb()`SELECT count(*)::int AS count FROM public.topic_pages WHERE status = 'published'`;
-      return res.status(200).json({ ok: true, publishedTopics: Number(rows[0]?.count || 0) });
+      const probe = async (provider) => {
+        try {
+          const prompt = 'Return only this JSON object: {"ok":true}';
+          const result = provider === "groq"
+            ? await askGroqModel(prompt, { env: aiEnv, timeoutMs: 12000, maxTokens: 80 })
+            : await askGeminiModel(prompt, { env: aiEnv, timeoutMs: 12000, maxTokens: 80 });
+          return { ok: Boolean(result.text?.trim()), model: result.model || null };
+        } catch (error) {
+          return { ok: false, error: String(error instanceof Error ? error.message : error).slice(0, 180) };
+        }
+      };
+      const [groq, gemini] = await Promise.all([probe("groq"), probe("gemini")]);
+      const publishedTopics = Number(rows[0]?.count || 0);
+      const ok = groq.ok && gemini.ok;
+      return res.status(ok ? 200 : 503).json({ ok, publishedTopics, providers: { groq, gemini } });
     }
 
     if (task === "zone-topics") {
