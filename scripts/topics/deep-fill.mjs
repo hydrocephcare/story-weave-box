@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { maintenanceRequest } from "./maintenance-client.mjs";
+import { deepNoteReady } from "../../api/_lib/deepNoteReadiness.js";
 
 const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 40);
@@ -16,7 +17,7 @@ const weight = new Map(index.map((t) => [t.s, (t.d ?? 0) + (t.q ?? 0) * 2 + (t.i
 const names = new Map(index.map((t) => [t.s, t]));
 const todo = fs.readdirSync(DIR).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, ""))
   .filter((slug) => !ONLY || slug === ONLY)
-  .filter((slug) => { try { const p = JSON.parse(fs.readFileSync(path.join(DIR, `${slug}.json`), "utf8")); const d = p.deep; return p.medical !== false && Array.isArray(p.sections) && p.sections.length >= 3 && (!d?.checked || (d.sections?.length || 0) < 7 || ((d.vivas?.length || 0) < 12 && (d.exam?.length || 0) < 12) || (d.mcqs?.length || 0) < 6 || (d.cases?.length || 0) < 2 || (d.facts?.length || 0) < 6 || (d.mistakes?.length || 0) < 5); } catch { return false; } })
+  .filter((slug) => { try { const p = JSON.parse(fs.readFileSync(path.join(DIR, `${slug}.json`), "utf8")); const d = p.deep; return p.medical !== false && Array.isArray(p.sections) && p.sections.length >= 3 && !deepNoteReady(d); } catch { return false; } })
   .sort((a, b) => (weight.get(b) ?? 0) - (weight.get(a) ?? 0)).slice(0, COUNT);
 console.log(`${todo.length} topic(s) get deep notes today.`);
 
