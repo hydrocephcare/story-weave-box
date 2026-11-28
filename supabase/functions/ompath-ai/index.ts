@@ -40,7 +40,7 @@ async function authenticate(req:Request) {
 }
 const githubJwks=createRemoteJWKSet(new URL("https://token.actions.githubusercontent.com/.well-known/jwks"));
 async function authenticateWorkflow(req:Request) {
-  const token=(req.headers.get("x-github-oidc")||"").replace(/^Bearer\\s+/i,"").trim();
+  const token=(req.headers.get("x-github-oidc")||"").replace(/^Bearer\s+/i,"").trim();
   if(!token)return false;
   const workflows=[
     {audience:"ompathstudy-topic-maintenance",refs:new Set([
