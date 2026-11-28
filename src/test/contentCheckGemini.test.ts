@@ -21,6 +21,20 @@ describe("Gemini clinical review boundary", () => {
     expect(result.model).toBe("gemini-3.8-flash");
   });
 
+  it("surfaces safe Gemini API error details while redacting key-shaped values", async () => {
+    const testKey = "AIza" + "A".repeat(32);
+    const fetchImpl = vi.fn(async () => new Response(JSON.stringify({
+      error: { message: "API key rejected: " + testKey },
+    }), { status: 400, headers: { "Content-Type": "application/json" } }));
+
+    await expect(askGeminiModel("Review this medical note", {
+      env: { GEMINI_API_KEYS: "gemini-test-key", GEMINI_MODELS: "gemini-3.8-flash" },
+      fetchImpl,
+    })).rejects.toThrow("Gemini review failed (400): API key rejected: [redacted]");
+
+    expect(fetchImpl).toHaveBeenCalledTimes(1);
+  });
+
   it("does not use Groq when Gemini review credentials are missing", async () => {
     const fetchImpl = vi.fn();
 
