@@ -1,7 +1,13 @@
 import { postJsonPreservingRedirect } from "../../supabase/functions/_shared/postJson.js";
 
 const audience="ompathstudy-blog-polish";
-const base="https://www.ompathstudy.com";
+const workflowBranch=process.env.GITHUB_REF_NAME||"main";
+const configuredBase=String(process.env.BLOG_POLISH_BASE_URL||"").trim();
+const baseUrl=configuredBase||(workflowBranch==="main"?"https://www.ompathstudy.com":"");
+if(!baseUrl) throw new Error("Set BLOG_POLISH_BASE_URL to an isolated staging host before running article polishing outside main.");
+const parsedBase=new URL(baseUrl);
+if(parsedBase.protocol!=="https:"||parsedBase.username||parsedBase.password||parsedBase.pathname!=="/"||parsedBase.search||parsedBase.hash) throw new Error("BLOG_POLISH_BASE_URL must be an HTTPS origin without credentials or a path.");
+const base=parsedBase.origin;
 const requestUrl=process.env.ACTIONS_ID_TOKEN_REQUEST_URL;
 const requestToken=process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN;
 if(!requestUrl||!requestToken) throw new Error("GitHub Actions OIDC token access is not enabled.");
