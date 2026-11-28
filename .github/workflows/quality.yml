@@ -44,6 +44,7 @@ jobs:
           node --check api/_lib/generateExam.js
           node --check api/_lib/pageStudy.js
           node --check api/_lib/generateContent.js
+          node --check api/_lib/adminWrite.js
           node --check api/_lib/blogPolishVerify.js
           node --check supabase/functions/ompath-ai/contentCheck.js
           node --check api/_lib/blogPolishAuth.js
