@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
@@ -89,6 +89,49 @@ function dedupeNoteMcqs(items, existing=[]) {
   const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
   return items.filter(q=>{const key=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60);if(seen.has(key))return false;seen.add(key);return true;});
 }
+async function reviewNoteMcqBatches({ article, questions, source, env }) {
+  const batchSize = 8;
+  const checked = [];
+  let model = "";
+  for (let offset = 0; offset < questions.length; offset += batchSize) {
+    const batchNumber = Math.floor(offset / batchSize) + 1;
+    let batch = questions.slice(offset, offset + batchSize);
+    const review = async (items) => checkContent({
+      title: article.title,
+      kind: "medical multiple-choice questions (batch " + batchNumber + ")",
+      text: "SOURCE NOTE (reference only):\n" + source + "\n\nMCQs TO REVIEW:\n" + JSON.stringify(items),
+      env,
+      timeoutMs: 45000,
+    });
+    let result = await review(batch);
+    model = result.model || model;
+    if (!result.validated) {
+      const repairPrompt = [
+        "Correct the medical factual errors, unsafe advice and ambiguous answer keys in these medical-student MCQs.",
+        "Preserve the number of questions, four options per question, one best answer, the original topic and all correct teaching detail. Do not invent doses or unsupported criteria.",
+        "Return ONLY a JSON array using the original MCQ schema.",
+        "INDEPENDENT GEMINI FINDINGS:",
+        (result.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\n"),
+        "SOURCE NOTE:",
+        source,
+        "MCQs TO CORRECT:",
+        JSON.stringify(batch),
+      ].join("\n\n");
+      const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 55000, maxTokens: 5000 });
+      const fixed = parseNoteMcqs(repaired.text);
+      if (fixed.length !== batch.length) throw new Error("Gemini flagged MCQs and Groq did not return a complete corrected batch.");
+      batch = fixed;
+      result = await review(batch);
+      model = result.model || model;
+    }
+    if (!result.validated || !String(result.model || "").trim()) {
+      throw new Error("MCQs withheld: independent Gemini review did not clear batch " + batchNumber + ".");
+    }
+    checked.push(...batch);
+  }
+  return { questions: checked, review: { validated: true, model } };
+}
+
 async function generateNoteMcqs(article, env, count=24, avoid=[]) {
   const text=cleanStudyNote(article.content);
   const prompt=`Write exactly ${count} challenging single-best-answer MCQs for medical students from this study note.
@@ -99,15 +142,14 @@ TOPIC: ${article.title} | ${article.category}
 AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
   let questions=parseNoteMcqs(draft.text);
   if(questions.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
   if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
   questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-  const review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
-  if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
-  return {questions,review};
+  const reviewed=await reviewNoteMcqBatches({article,questions,source:text.slice(0,5000),env});
+  return reviewed;
 }
 async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
   const batchSize = 2;
@@ -260,7 +302,7 @@ export default async function handler(req, res) {
         } catch { return []; }
       };
       const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
-      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+      const draft = await askGroqModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
       let questions = parse(draft.text);
       if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
       let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
@@ -268,7 +310,7 @@ export default async function handler(req, res) {
         const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
           + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
           + "\nQUESTIONS:\n" + JSON.stringify(questions);
-        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+        const fixed = await askGroqModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
         questions = parse(fixed.text);
         if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
         review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
@@ -412,7 +454,7 @@ Return ONLY JSON: {"summary":"2 or 3 plain sentences, 55 words at most, no hype,
 Use only information supported by the source text. Do not invent content.
 PAGE TEXT:
 """${sourceText}"""`;
-      const result = await askModel(prompt, { env: aiEnv, timeoutMs: 40000, maxTokens: 900 });
+      const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 40000, maxTokens: 900 });
       const match = String(result?.text || "").match(/\{[\s\S]*\}/);
       if (!match) return res.status(502).json({ error: "The AI summary was not valid JSON." });
       let parsed;
@@ -472,7 +514,7 @@ PAGE TEXT:
           "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
           "ORIGINAL NOTE:", original
         ].join("\n\n");
-        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        const draft = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
         let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
         fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
         if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
