@@ -124,7 +124,7 @@ export default async function handler(req, res) {
       await save({ ...row, content: partialText, status: "partial", reason: (why ?? "").slice(0, 400) || null, ai_review_status: null });
       return res.status(200).json({ status: "partial", more: true, hiccup: Boolean(step.hiccup), progress: step.parts_done + "/" + step.total });
     }
-    const review = await verifyBlogContent(a, step.content, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, { allowRepair: true, timeoutMs: 22000 });
+    const review = await verifyBlogContent(a, step.content, env, { allowRepair: true, timeoutMs: 22000 });
     const reason = review.status === "held" ? "Gemini review held for automatic correction: " + (review.issues?.[0]?.problem || "review did not pass") : (why || null);
     await save({ ...row, content: review.status === "passed" ? review.content : null, status: "done", reason,
       ai_review_status: review.status, ai_review_model: review.model, ai_reviewed_at: review.at, ai_review_issues: review.issues || [] });
