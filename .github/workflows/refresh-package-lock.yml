@@ -7,6 +7,13 @@ on:
     paths:
       - "package.json"
       - ".github/workflows/refresh-package-lock.yml"
+  workflow_dispatch:
+    inputs:
+      publish_to_main:
+        description: "Approve committing the regenerated lockfile to production main"
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: write
@@ -14,7 +21,7 @@ permissions:
 jobs:
   refresh-lockfile:
     # Require explicit repository opt-in before this job writes to main.
-    if: vars.ALLOW_AUTOMATED_MAIN_WRITES == 'true'
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_to_main == true
     runs-on: ubuntu-latest
     steps:
       - name: Check out main
