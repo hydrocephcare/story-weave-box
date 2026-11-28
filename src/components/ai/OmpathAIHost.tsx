@@ -1,6 +1,6 @@
 import SafeTextarea from "@/components/SafeTextarea";
 import { listen as listenRecall, recordSpeech, recordingSupported, transcribe } from "@/lib/voiceRecall";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowUp, MoreHorizontal, Bookmark, BookOpen, Check, Copy, ExternalLink, History, FilePlus2, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
@@ -150,10 +150,10 @@ export default function OmpathAIHost() {
   const myYear = profileYear ?? toldYear;
   const myTimetable = useTimetable(myYear ?? 1);
   const used = questionsUsedToday();
+  const deferredQuery = useDeferredValue(q);
 
-
-  // Live suggestions while typing, so a student can jump straight to a note without waiting for an answer.
-  const live = useSiteSearch(q.trim().length >= 3 && !quickReply(q) ? parseQuery(q).topic : "", {}, open && !busy);
+  // Defer database-backed suggestions so editing the question remains responsive.
+  const live = useSiteSearch(deferredQuery.trim().length >= 3 && !quickReply(deferredQuery) ? parseQuery(deferredQuery).topic : "", {}, open && !busy);
   const liveHits = useMemo(() => live.hits.filter((h) => h.group !== "Pages").slice(0, 4), [live.hits]);
 
   const askRef = useRef<(q: string) => Promise<void>>(async () => undefined);
