@@ -41,6 +41,9 @@ jobs:
           node --check api/_lib/aiChat.js
           node --check api/sitemap.js
           node --check api/_lib/topicMaintenance.js
+          node --check api/_lib/generateExam.js
+          node --check api/_lib/pageStudy.js
+          node --check supabase/functions/ompath-ai/contentCheck.js
           node --check api/_lib/blogPolishAuth.js
           node --check api/_lib/blogPolishQueue.js
           node --check scripts/blogs/polish-runner.mjs
