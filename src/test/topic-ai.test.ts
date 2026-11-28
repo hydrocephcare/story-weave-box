@@ -84,6 +84,21 @@ describe("topic page writer", () => {
     expect(String(fetchImpl.mock.calls[1][0])).toContain("generativelanguage.googleapis.com");
   });
 
+  it("retries a structurally thin draft with explicit section-level corrections before Gemini review", async () => {
+    const thin = fullPage();
+    thin.sections = thin.sections.map((section) => ({ h: section.h, p: "Short paragraph.", b: ["Brief item."] }));
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify(thin) } }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify(deepPage) } }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }) });
+    const page = await generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { GROQ_API_KEYS: "g", GEMINI_API_KEYS: "v" }, fetchImpl });
+    expect(page.aiReview.status).toBe("passed");
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    const correctionPrompt = String(fetchImpl.mock.calls[1][1].body);
+    expect(correctionPrompt).toContain("STRUCTURAL REWRITE REQUIRED");
+    expect(correctionPrompt).toContain("thin sections");
+  });
+
   it("does not use Gemini as a writer when Groq is not configured", async () => {
     const fetchImpl = vi.fn();
     await expect(generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { GEMINI_API_KEYS: "v" }, fetchImpl })).rejects.toThrow("Groq generation is not configured");
