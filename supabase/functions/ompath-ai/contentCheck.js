@@ -117,6 +117,20 @@ export function dropFlagged(deep, issues) {
   return { deep: out, removed };
 }
 
+/** Attach auditable evidence from the independent Gemini check before persistence. */
+export function attachDeepReviewEvidence(deep, review) {
+  if (!review?.validated || !review?.model || !review?.at) {
+    throw new Error("Deep notes cannot be marked reviewed without a successful Gemini check.");
+  }
+  return {
+    ...deep,
+    checked: review.at,
+    reviewStatus: "passed",
+    reviewModel: review.model,
+    reviewedAt: review.at,
+  };
+}
+
 /**
  * Writes the deep notes, has a second AI check them, and if the check finds a serious error writes them once more with the errors listed.
  * If a serious error is still there, the flagged statements are cut out and the rest is published when enough remains.
@@ -132,7 +146,7 @@ export async function generateCheckedDeep(input, env, fetchImpl = fetch, budgetM
     if (round > 0 && Date.now() - t0 > budgetMs * 0.5) break;
     deep = await generateDeepWithFallback({ ...input, fixes }, env);
     last = await checkContent({ title: input.name, kind: "deep exam notes", text: deepToText(deep), env, fetchImpl });
-    if (last.validated) return { ...deep, checked: last.at };
+    if (last.validated) return attachDeepReviewEvidence(deep, last);
     fixes = last.issues.filter((x) => x.severity !== "low").map((x) => x.problem + " Correct: " + x.fix);
   }
   const unresolved = (last?.issues ?? []).map((x) => `[${x.severity}] ${x.where}: ${x.problem} — ${x.fix}`).join(" | ");
