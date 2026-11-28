@@ -1,11 +1,12 @@
-const ALLOWED_HOSTS = new Set(["ompathstudy.com", "www.ompathstudy.com"]);
+const CANONICAL_HOSTS = new Set(["ompathstudy.com", "www.ompathstudy.com"]);
+const isCanonicalPair = (a, b) => CANONICAL_HOSTS.has(a.toLowerCase()) && CANONICAL_HOSTS.has(b.toLowerCase());
 const REDIRECTS = new Set([301, 302, 303, 307, 308]);
 
 /** POST JSON while preserving POST across same-site canonical-host redirects. */
 export async function postJsonPreservingRedirect(url, body, headers, timeoutMs = 55_000, fetchImpl = fetch) {
   let target = new URL(url);
-  if (target.protocol !== "https:" || !ALLOWED_HOSTS.has(target.hostname.toLowerCase())) {
-    throw new Error("Refusing to send workflow credentials to an untrusted host.");
+  if (target.protocol !== "https:" || target.username || target.password) {
+    throw new Error("Refusing to send workflow credentials to an insecure or invalid endpoint.");
   }
 
   let redirects = 0;
@@ -24,7 +25,9 @@ export async function postJsonPreservingRedirect(url, body, headers, timeoutMs =
       if (!location) return { response, data: {}, finalUrl: target.toString(), redirects };
       const next = new URL(location, target);
       if (next.protocol !== "https:"
-          || !ALLOWED_HOSTS.has(next.hostname.toLowerCase())
+          || next.username
+          || next.password
+          || (next.origin !== target.origin && !isCanonicalPair(target.hostname, next.hostname))
           || next.pathname !== target.pathname
           || next.search !== target.search) {
         throw new Error("Publishing API redirected outside its approved same-site endpoint.");
