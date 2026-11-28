@@ -5,7 +5,7 @@ const AI_PUBLISHABLE_KEY = "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP";
 export function supabaseAiEnv(req, { feature = "", workflow = false, base = process.env } = {}) {
   const headers = req?.headers || {};
   const raw = String(workflow ? (headers["x-github-oidc"] || headers.authorization || "") : (headers["x-neon-authorization"] || headers.authorization || ""));
-  const token = raw.replace(/^Bearer\\s+/i, "").trim();
+  const token = raw.replace(/^Bearer\s+/i, "").trim();
   return {
     ...base,
     OMPATH_SUPABASE_AI_URL: AI_URL,
