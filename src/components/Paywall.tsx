@@ -127,9 +127,12 @@ export function Paywall({
     const savedPhone = typeof metadata?.payment_phone === "string" ? metadata.payment_phone : "";
     const savedCountry = typeof metadata?.payment_country === "string" ? metadata.payment_country : "";
     if (savedPhone && !phone) setPhone(savedPhone);
-    if (savedCountry && countryData[savedCountry]) {
-      setCountryCode(savedCountry);
-      setPaymentMethod(savedCountry === "KE" ? "mpesa" : "card");
+    const savedPhoneDigits = savedPhone.replace(/\D/g, "");
+    const phoneCountry = callingCodes.find(([, info]) => savedPhoneDigits.startsWith(info.dial))?.[0];
+    const resolvedSavedCountry = countryData[savedCountry] ? savedCountry : phoneCountry;
+    if (resolvedSavedCountry) {
+      setCountryCode(resolvedSavedCountry);
+      setPaymentMethod(resolvedSavedCountry === "KE" ? "mpesa" : "card");
     }
   }, [user]);
   const [signingIn, setSigningIn] = useState(false);
