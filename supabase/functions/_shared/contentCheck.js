@@ -40,7 +40,7 @@ export function sanitizeCheck(raw) {
 }
 
 /** A second look at what the first pass claimed: each claim is kept only if a fresh read agrees it is a real error in the text. */
-export async function verifyIssues({ text, issues, env, fetchImpl = fetch, timeoutMs = 50000 }) {
+export async function verifyIssues({ text, issues, env, fetchImpl = fetch, timeoutMs = 50000, allowDirectFallback = false }) {
   if (!issues.length) return issues;
   const list = issues.map((x, i) => `${i + 1}. [${x.where}] claimed problem: ${x.problem} | claimed fix: ${x.fix}`).join("\n");
   const prompt = `You are a senior consultant. A junior reviewer claims the problems below exist in the TEXT. Many such claims are wrong: the reviewer may have misread, or the text may already say exactly what the reviewer wants. For each claim decide if it is a REAL error in the TEXT according to current standard guidelines.
@@ -53,7 +53,7 @@ ${String(text).slice(0, 15000)}
 
 Reply with ONLY one JSON object: {"real": [numbers of the claims that are real errors]}`;
   // Re-check with Gemini directly; the verifier must remain independent of Groq generation.
-  const r = await askGeminiModel(prompt, { env, fetchImpl, timeoutMs, maxTokens: 800 });
+  const r = await askGeminiModel(prompt, { env, fetchImpl, timeoutMs, maxTokens: 800, allowDirectFallback });
   const json = extractJson(r.text);
   if (!json) return issues;
   const keep = new Set((json.real ?? []).map(Number));
@@ -74,16 +74,16 @@ export function chunkText(text, max = 14000) {
 }
 
 /** Checks the whole text (in pieces) with the AI keys in env; returns { validated, high, medium, issues, model }. Throws when no answer could be had. */
-export async function checkContent({ title, kind = "note", text, env, fetchImpl = fetch, timeoutMs = 50000 }) {
+export async function checkContent({ title, kind = "note", text, env, fetchImpl = fetch, timeoutMs = 50000, allowDirectFallback = false }) {
   let model = "";
   const pieces = chunkText(text).filter((p) => p.trim());
   const results = await Promise.all(pieces.map(async (piece) => {
-    const r = await askGeminiModel(buildCheckPrompt({ title, kind, text: piece }), { env, fetchImpl, timeoutMs, maxTokens: 3500 });
+    const r = await askGeminiModel(buildCheckPrompt({ title, kind, text: piece }), { env, fetchImpl, timeoutMs, maxTokens: 3500, allowDirectFallback });
     model = r.model;
     const json = extractJson(r.text);
     if (!json) throw new Error("no JSON in the reply");
     const found = sanitizeCheck(json).issues.filter((x) => x.severity !== "low");
-    return verifyIssues({ text: piece, issues: found, env, fetchImpl, timeoutMs });
+    return verifyIssues({ text: piece, issues: found, env, fetchImpl, timeoutMs, allowDirectFallback });
   }));
   return { ...sanitizeCheck({ issues: results.flat() }), model, at: new Date().toISOString().slice(0, 10) };
 }
@@ -122,7 +122,7 @@ export function dropFlagged(deep, issues) {
  * If a serious error is still there, the flagged statements are cut out and the rest is published when enough remains.
  * Returns the notes with the date they passed. Throws when too little would be left (nothing wrong is ever published).
  */
-export async function generateCheckedDeep(input, env, fetchImpl = fetch, budgetMs = 600000) {
+export async function generateCheckedDeep(input, env, fetchImpl = fetch, budgetMs = 600000, allowDirectFallback = false) {
   let fixes = [];
   let deep = null;
   let last = null;
@@ -130,8 +130,8 @@ export async function generateCheckedDeep(input, env, fetchImpl = fetch, budgetM
   for (let round = 0; round < 2; round++) {
     // a second write only when there is time left inside the caller's limit (a web request has about a minute)
     if (round > 0 && Date.now() - t0 > budgetMs * 0.5) break;
-    deep = await generateDeepWithFallback({ ...input, fixes }, env);
-    last = await checkContent({ title: input.name, kind: "deep exam notes", text: deepToText(deep), env, fetchImpl });
+    deep = await generateDeepWithFallback({ ...input, fixes }, env, { allowDirectFallback });
+    last = await checkContent({ title: input.name, kind: "deep exam notes", text: deepToText(deep), env, fetchImpl, allowDirectFallback });
     if (last.validated) return { ...deep, checked: last.at };
     fixes = last.issues.filter((x) => x.severity !== "low").map((x) => x.problem + " Correct: " + x.fix);
   }
