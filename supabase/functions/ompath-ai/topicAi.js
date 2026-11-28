@@ -171,7 +171,7 @@ async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetc
   headers[authKind] = bearer;
   const response = await fetchImpl(url, { method: "POST", headers, signal: AbortSignal.timeout(timeoutMs + 1500), body: JSON.stringify({ task: "provider_call", provider, prompt: String(prompt).slice(0, 26000), plain, temperature, maxTokens, timeoutMs, feature: String(env.OMPATH_AI_FEATURE || "") }) });
   const data = await response.json().catch(() => ({}));
-  if (!response.ok || typeof data.text !== "string" || !data.text.trim()) throw new Error(String(data.error || data.detail || ("Supabase AI request failed (" + response.status + ").")).slice(0, 240));
+  if (!response.ok || typeof data.text !== "string" || !data.text.trim()) { const error = new Error(String(data.error || data.detail || ("Supabase AI request failed (" + response.status + ").")).slice(0, 240)); error.status = response.status; throw error; }
   return { text: data.text, model: String(data.model || provider) };
 }
 export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
