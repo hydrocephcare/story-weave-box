@@ -61,7 +61,7 @@ export default async function saveTopicDeep(req, res) {
   const base = body.base && typeof body.base === "object" && !Array.isArray(body.base) ? body.base : {};
   const deep = body.deep && typeof body.deep === "object" && !Array.isArray(body.deep) ? body.deep : null;
 
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 80 || name.length < 3 || name.length > 80 || !deep || !deepNoteReady(deep)) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 80 || name.length < 3 || name.length > 80 || !deep) {
     return res.status(400).json({ status: "invalid", reason: "invalid_payload" });
   }
 
@@ -74,6 +74,7 @@ export default async function saveTopicDeep(req, res) {
   if (payloadSize > 150_000 || Buffer.byteLength(JSON.stringify(deep), "utf8") > 80_000) {
     return res.status(413).json({ status: "invalid", reason: "payload_too_large" });
   }
+  if (!deepNoteReady(deep)) return res.status(400).json({ status: "invalid", reason: "incomplete_deep_notes" });
   if (!databaseUrl) return res.status(503).json({ status: "unavailable", reason: "database_not_configured" });
 
   try {
