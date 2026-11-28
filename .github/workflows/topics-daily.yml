@@ -5,6 +5,11 @@ on:
   # Use workflow_dispatch after a controlled Cloudflare release; scheduled runs keep publishing daily.
   workflow_dispatch:
     inputs:
+      publish_to_main:
+        description: "Approve publishing generated topics and notes to production main"
+        type: boolean
+        required: true
+        default: false
       count:
         description: "How many new comprehensive topic pages to write"
         required: false
@@ -39,7 +44,7 @@ jobs:
   topics:
     # This workflow writes generated content to GitHub main. Keep it disabled
     # unless an administrator explicitly enables the repository variable.
-    if: vars.ALLOW_AUTOMATED_MAIN_WRITES == 'true'
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_to_main == true
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
