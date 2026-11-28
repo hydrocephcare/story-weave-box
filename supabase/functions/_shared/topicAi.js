@@ -174,8 +174,21 @@ async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetc
   if (!response.ok || typeof data.text !== "string" || !data.text.trim()) { const error = new Error(String(data.error || data.detail || ("Supabase AI request failed (" + response.status + ").")).slice(0, 240)); error.status = response.status; throw error; }
   return { text: data.text, model: String(data.model || provider) };
 }
+
+async function remoteProviderOrFallback(provider, options) {
+  try {
+    return await remoteProviderCall(provider, options.prompt, options);
+  } catch (error) {
+    const status = Number(error?.status || 0);
+    // Authentication, entitlement and policy failures must never be bypassed.
+    if ([401, 402, 403].includes(status)) throw error;
+    console.warn("[topic-ai] Supabase provider gateway unavailable; trying server-side provider fallback.", status || "network");
+    return null;
+  }
+}
+
 export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
-  const remote = await remoteProviderCall("auto", prompt, { env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
+  const remote = await remoteProviderOrFallback("auto", { prompt, env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
   if (remote) return remote;
   const gateways = [];
   if (env.LOVABLE_API_KEY) gateways.push(["https://ai.gateway.lovable.dev/v1/chat/completions", env.LOVABLE_API_KEY, env.TOPIC_AI_MODEL || "google/gemini-3-flash-preview"]);
@@ -250,7 +263,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
  * no Lovable/OmniRoute gateway and no Groq fallback are permitted here.
  */
 export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 3500, plain = false, temperature = 0.2 } = {}) {
-  const remote = await remoteProviderCall("gemini", prompt, { env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
+  const remote = await remoteProviderOrFallback("gemini", { prompt, env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
   if (remote) return remote;
   const keys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
 
@@ -304,7 +317,7 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
  * independent Gemini review must never silently become the same model family.
  */
 export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
-  const remote = await remoteProviderCall("groq", prompt, { env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
+  const remote = await remoteProviderOrFallback("groq", { prompt, env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
   if (remote) return remote;
   const keys = parseProviderKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
   const models = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
