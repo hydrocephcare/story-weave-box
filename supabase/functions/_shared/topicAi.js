@@ -164,7 +164,12 @@ export const providerKeys = (env = {}, provider = "GEMINI") => parseProviderKeys
 async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
   const url = String(env.OMPATH_SUPABASE_AI_URL || "");
   const token = String(env.OMPATH_SUPABASE_AI_TOKEN || "");
-  if (!url || !token) return null;
+  if (!url) return null;
+  if (!token) {
+    const error = new Error("Supabase AI gateway authentication token is missing.");
+    error.status = 401;
+    throw error;
+  }
   const authKind = env.OMPATH_SUPABASE_AI_AUTH_KIND === "github" ? "x-github-oidc" : "x-neon-authorization";
   const bearer = token.replace(/^Bearer\s+/i, "");
   const headers = { "Content-Type": "application/json", apikey: String(env.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY || "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP") };
