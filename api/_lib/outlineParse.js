@@ -6,7 +6,7 @@ import { isNeonAdmin } from "./neonAdmin.js";
 
 
 async function askJson(prompt, env) {
-  return askModel(prompt, { env, timeoutMs: 40000, maxTokens: 6000 });
+  return askModel(prompt, { env, timeoutMs: 40000, maxTokens: 6000, allowDirectFallback: true });
 }
 
 const PROMPT = (chunk, ctx) => `You read a medical school course outline and list what is taught, week by week.
