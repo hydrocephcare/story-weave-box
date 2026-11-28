@@ -1,4 +1,5 @@
 import { maintenanceRequest } from "./maintenance-client.mjs";
+import { noteBankRequest } from "./note-bank-plan.mjs";
 
 const mode = process.argv[2] === "flashcards" ? "flashcards" : "mcqs";
 const count = Math.max(1, Math.min(20, Number(process.env[mode === "mcqs" ? "NOTE_MCQ_COUNT" : "NOTE_FLASHCARD_COUNT"] || 4)));
@@ -6,7 +7,7 @@ const task = mode === "mcqs" ? "note-mcqs" : "note-flashcards";
 let completed = 0, failed = 0;
 for (let i = 0; i < count; i++) {
   try {
-    const result = await maintenanceRequest(task);
+    const result = await maintenanceRequest(task, noteBankRequest(mode, i));
     if (result.done) {
       console.log(`No more eligible ${mode} source notes remain.`);
       break;

@@ -1,7 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, askGroqModel, askGeminiModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
@@ -99,7 +99,7 @@ TOPIC: ${article.title} | ${article.category}
 AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
   let questions=parseNoteMcqs(draft.text);
   if(questions.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
@@ -119,10 +119,51 @@ Return ONLY JSON array: [{"question":"...","answer":"..."}].
 TOPIC: ${article.title} | ${article.category}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
-  const cards=parseNoteCards(draft.text);
+  // Drafting is deliberately Groq-only. Gemini remains an independent clinical reviewer.
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
+  let cards=parseNoteCards(draft.text);
   if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
-  return cards;
+
+  let review=await checkContent({
+    title:article.title,
+    kind:"medical revision flashcards",
+    text:JSON.stringify(cards),
+    env,
+    timeoutMs:45000,
+  });
+
+  // One controlled repair pass: Groq repairs only the issues identified by Gemini,
+  // then Gemini independently reviews the complete repaired deck again.
+  if(!review.validated){
+    const issues=(review.issues||[]).map((item,index)=>
+      (index+1)+". ["+item.where+"] "+item.problem+" Correct it to: "+item.fix
+    ).join("\n");
+    const repairPrompt=`Repair the medical accuracy and safety problems identified by an independent clinical reviewer.
+Preserve the source-note scope, medical-student level and flashcard format. Do not introduce unsupported facts, doses or diagnostic thresholds.
+Return ONLY a JSON array of flashcards with question and answer fields.
+REVIEW FINDINGS:
+${issues}
+CURRENT FLASHCARDS:
+${JSON.stringify(cards)}
+SOURCE NOTE:
+${text}`;
+    const repaired=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
+    const repairedCards=parseNoteCards(repaired.text);
+    if(repairedCards.length<8)throw new Error("Clinically repaired flashcard deck was incomplete; nothing was saved.");
+    cards=repairedCards;
+    review=await checkContent({
+      title:article.title,
+      kind:"medical revision flashcards",
+      text:JSON.stringify(cards),
+      env,
+      timeoutMs:45000,
+    });
+  }
+
+  if(!review.validated){
+    throw new Error("Flashcards failed independent Gemini clinical review; nothing was saved.");
+  }
+  return {cards,review};
 }
 
 function deepReady(deep) {
@@ -143,7 +184,21 @@ export default async function handler(req, res) {
   try {
     if (task === "health") {
       const rows = await getDb()`SELECT count(*)::int AS count FROM public.topic_pages WHERE status = 'published'`;
-      return res.status(200).json({ ok: true, publishedTopics: Number(rows[0]?.count || 0) });
+      const probe = async (provider) => {
+        try {
+          const prompt = 'Return only this JSON object: {"ok":true}';
+          const result = provider === "groq"
+            ? await askGroqModel(prompt, { env: aiEnv, timeoutMs: 12000, maxTokens: 80 })
+            : await askGeminiModel(prompt, { env: aiEnv, timeoutMs: 12000, maxTokens: 80 });
+          return { ok: Boolean(result.text?.trim()), model: result.model || null };
+        } catch (error) {
+          return { ok: false, error: String(error instanceof Error ? error.message : error).slice(0, 180) };
+        }
+      };
+      const [groq, gemini] = await Promise.all([probe("groq"), probe("gemini")]);
+      const publishedTopics = Number(rows[0]?.count || 0);
+      const ok = groq.ok && gemini.ok;
+      return res.status(ok ? 200 : 503).json({ ok, publishedTopics, providers: { groq, gemini } });
     }
 
     if (task === "zone-topics") {
@@ -192,7 +247,7 @@ export default async function handler(req, res) {
         } catch { return []; }
       };
       const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
-      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+      const draft = await askGroqModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
       let questions = parse(draft.text);
       if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
       let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
@@ -200,7 +255,7 @@ export default async function handler(req, res) {
         const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
           + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
           + "\nQUESTIONS:\n" + JSON.stringify(questions);
-        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+        const fixed = await askGroqModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
         questions = parse(fixed.text);
         if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
         review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
@@ -226,9 +281,11 @@ export default async function handler(req, res) {
         if(needed<4){await getDb().query("UPDATE public.mcq_sets SET original_notes=$2,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify({topped:true,topup_note:"already enough"})]);return res.status(200).json({success:true,status:"already enough"});}
         const extra=await generateNoteMcqs(article,aiEnv,Math.min(needed,18),have.map(q=>q.question));
         const merged=[...have,...placeNewQuestions(dedupeNoteMcqs(extra.questions,have.map(q=>q.question)),{existing:have})].slice(0,36);
-        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length)})]);
+        const mergedReview=await checkContent({title:article.title,kind:"complete medical MCQ bank",text:JSON.stringify(merged),env:aiEnv,timeoutMs:45000});
+        if(!mergedReview.validated)throw new Error("Completed MCQ bank failed independent Gemini review; existing bank was left unchanged.");
+        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length),reviewed:true,review_model:mergedReview.model||null})]);
         await getDb().query("DELETE FROM public.mcq_review_log WHERE set_id=$1::uuid",[set.id]);
-        return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length});
+        return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length,reviewed:true,reviewModel:mergedReview.model||null});
       }
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0]; if(!article)return res.status(404).json({error:"Published study note not found."});
@@ -236,31 +293,36 @@ export default async function handler(req, res) {
       const title=`${cleanTopicTitle(article.title)}: MCQs`;
       const slug=`${title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70)}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
       await getDb().query("INSERT INTO public.mcq_sets(title,slug,category,questions,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())",[title,slug,article.category,JSON.stringify(questionsResult.questions),String(article.id),`${questionsResult.questions.length} practice MCQs with explanations on ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`,JSON.stringify({type:"note_mcqs",article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:questionsResult.review.model||null})]);
-      return res.status(200).json({success:true,title:article.title,questions:questionsResult.questions.length,reviewed:true});
+      return res.status(200).json({success:true,title:article.title,questions:questionsResult.questions.length,reviewed:true,reviewModel:questionsResult.review.model||null});
     }
 
     if (task === "note-flashcards") {
-      let candidate=body.article_id?[{id:String(body.article_id)}]:await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
+      let candidate=body.article_id?[{id:String(body.article_id)}]:[];
       let upgrade=null;
-      if(!candidate.length){
-        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":2%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
+      const pickLegacyUpgrade=async()=>{
+        const old=await getDb().query(`SELECT f.id,f.source_reference FROM public.flashcard_sets f WHERE f.source_type='note_generated' AND f.published=true AND f.deleted_at IS NULL AND coalesce(f.original_notes,'') NOT LIKE '%"v":3%' AND f.source_reference IS NOT NULL AND EXISTS (SELECT 1 FROM public.articles a WHERE a.id::text=f.source_reference AND a.published=true AND a.deleted_at IS NULL) ORDER BY f.created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
-      }
+      };
+      // Alternate daily capacity between new decks and legacy-deck upgrades so
+      // old unreviewed v2 decks do not wait until every article has a new deck.
+      if(!body.article_id && body.upgrade_legacy===true) await pickLegacyUpgrade();
+      if(!candidate.length && !body.article_id) candidate=await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
+      if(!candidate.length && !upgrade && !body.article_id) await pickLegacyUpgrade();
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
-      const cards=await generateNoteFlashcards(article,aiEnv);
+      const {cards,review}=await generateNoteFlashcards(article,aiEnv);
       const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
-      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString()});
+      const meta=JSON.stringify({type:"note_flashcards",v:3,article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:review.model||null});
       if(upgrade){
         await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid",[upgrade.id,JSON.stringify(cards),meta,description]);
-        return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true});
+        return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true,reviewed:true,reviewModel:review.model||null});
       }
       const title=`${cleanTopicTitle(article.title)}: Flashcards`;
       const base=title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70);
       const slug=`${base}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
       await getDb().query("INSERT INTO public.flashcard_sets(title,slug,category,cards,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())",[title,slug,article.category,JSON.stringify(cards),String(article.id),description,meta]);
-      return res.status(200).json({success:true,title:article.title,cards:cards.length});
+      return res.status(200).json({success:true,title:article.title,cards:cards.length,reviewed:true,reviewModel:review.model||null});
     }
 
     if (task === "generate-publish") {
@@ -394,7 +456,7 @@ PAGE TEXT:
           "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
           "ORIGINAL NOTE:", original
         ].join("\n\n");
-        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        const draft = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
         let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
         fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
         if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
@@ -411,31 +473,90 @@ PAGE TEXT:
       const rows = await getDb()`SELECT slug,name,category,content,updated_at,ai_review_status FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(404).json({ error: "Published topic not found." });
-      if (row.ai_review_status === "passed" && row.content?.aiReview?.status === "passed"
-          && (row.content?.sections?.length || 0) >= 9 && (row.content?.exam?.length || 0) >= 8
-          && (row.content?.faq?.length || 0) >= 3 && JSON.stringify(row.content).split(/\s+/).length >= 700) {
+      const prior = row.content && typeof row.content === "object" ? row.content : {};
+      const structureReady = (page) => Boolean(page?.medical === true)
+        && String(page?.summary || "").length >= 100
+        && (page?.sections?.length || 0) >= 9
+        && (page?.exam?.length || 0) >= 8
+        && (page?.faq?.length || 0) >= 3
+        && JSON.stringify(page).length <= 60000;
+      if (row.ai_review_status === "passed" && prior.aiReview?.status === "passed" && structureReady(prior)) {
         return res.status(200).json({ status: "existing", slug });
       }
-      const prior = row.content || {};
-      const context = JSON.stringify({ priorSummary: prior.summary, priorSections: prior.sections, priorExam: prior.exam }).slice(0, 5000);
-      const result = await generateReviewedTopicPage({
-        name: row.name, category: row.category || "Medicine", context,
-        choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
-      }, { env: aiEnv, maxFixRounds: 1, timeoutMs: 55000 });
-      if (!result.page?.medical || result.review?.status !== "passed") return res.status(422).json({ status: "held", slug, reason: "independent_review_failed" });
-      const page = { ...result.page, aiReview: { ...(result.page.aiReview || {}), status: "passed", model: result.review.model, rounds: result.review.rounds || 0 } };
-      if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3
-          || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
-        return res.status(422).json({ status: "held", slug, reason: "structure_check_failed" });
+
+      // Review the existing page first. Do not regenerate or replace a legacy topic
+      // merely to add review metadata when its content already passes.
+      let page = prior;
+      let review = await checkContent({
+        title: row.name,
+        kind: "published medical topic page",
+        text: JSON.stringify(prior),
+        env: aiEnv,
+        timeoutMs: 55000,
+      });
+      let rounds = 0;
+      const needsRepair = !review.validated || !structureReady(prior);
+
+      if (needsRepair) {
+        const findings = (review.issues || []).map((item, index) =>
+          (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + ". Correct it to: " + item.fix
+        );
+        if (!structureReady(prior)) findings.push("The page must contain at least 9 substantive sections, 8 examination points, 3 FAQs and a summary of at least 100 characters.");
+        const repairPrompt = `Repair this existing medical topic page while preserving its original content.
+Keep every existing section heading, clinical detail, table, examination point, FAQ and useful example. Do not shorten, remove or replace accurate material. Make only clinically necessary corrections and add missing material where required.
+Return ONLY the complete corrected JSON object. Preserve all existing top-level fields and the sections/exam/faq array structures.
+INDEPENDENT REVIEW FINDINGS:
+${findings.join("\n")}
+EXISTING TOPIC PAGE:
+${JSON.stringify(prior)}`;
+        const repaired = await askGroqModel(repairPrompt, { env: aiEnv, plain: true, timeoutMs: 65000, maxTokens: 12000 });
+        const match = String(repaired.text || "").match(/\{[\s\S]*\}/);
+        if (!match) return res.status(422).json({ status: "held", slug, reason: "repair_json_invalid" });
+        let candidate;
+        try { candidate = JSON.parse(match[0]); }
+        catch { return res.status(422).json({ status: "held", slug, reason: "repair_json_invalid" }); }
+
+        const oldHeadings = (prior.sections || []).map(section => String(section?.h || section?.heading || "").trim().toLowerCase()).filter(Boolean);
+        const newHeadings = new Set((candidate.sections || []).map(section => String(section?.h || section?.heading || "").trim().toLowerCase()).filter(Boolean));
+        const retainedHeadings = oldHeadings.filter(heading => newHeadings.has(heading)).length;
+        const retainedRatio = oldHeadings.length ? retainedHeadings / oldHeadings.length : 1;
+        const oldLength = JSON.stringify(prior).length;
+        const newLength = JSON.stringify(candidate).length;
+        if (!structureReady(candidate)
+            || (candidate.sections?.length || 0) < (prior.sections?.length || 0)
+            || (candidate.exam?.length || 0) < (prior.exam?.length || 0)
+            || (candidate.faq?.length || 0) < (prior.faq?.length || 0)
+            || retainedRatio < 0.9
+            || newLength < Math.min(800, oldLength * 0.75)) {
+          return res.status(422).json({ status: "held", slug, reason: "repair_failed_content_preservation_checks" });
+        }
+        page = candidate;
+        review = await checkContent({
+          title: row.name,
+          kind: "repaired medical topic page",
+          text: JSON.stringify(page),
+          env: aiEnv,
+          timeoutMs: 55000,
+        });
+        rounds = 1;
+        if (!review.validated) return res.status(422).json({ status: "held", slug, reason: "independent_review_failed_after_repair" });
       }
+
+      if (!structureReady(page)) return res.status(422).json({ status: "held", slug, reason: "structure_check_failed" });
+      page = { ...page, aiReview: { ...(page.aiReview || {}), status: "passed", model: review.model || "gemini", rounds } };
       const saved = await getDb()`UPDATE public.topic_pages
-        SET content = ${JSON.stringify(page)}::jsonb, model = ${page.model || "groq"},
-            reviewed = false, updated_at = now(), generator_model = ${page.model || "groq"},
-            ai_review_status = 'passed', ai_review_model = ${String(result.review.model || "gemini")},
-            ai_reviewed_at = now(), ai_review_fix_rounds = ${Number(result.review.rounds) || 0}
+        SET content = ${JSON.stringify(page)}::jsonb,
+            model = ${page.model || "legacy"},
+            reviewed = false,
+            updated_at = now(),
+            generator_model = ${page.model || "legacy"},
+            ai_review_status = 'passed',
+            ai_review_model = ${String(review.model || "gemini")},
+            ai_reviewed_at = now(),
+            ai_review_fix_rounds = ${rounds}
         WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
         RETURNING slug`;
-      return res.status(200).json({ status: saved.length ? "reviewed" : "conflict", slug });
+      return res.status(200).json({ status: saved.length ? "reviewed" : "conflict", slug, repaired: rounds > 0, reviewModel: review.model || null });
     }
 
     if (task === "deep-topic") {
