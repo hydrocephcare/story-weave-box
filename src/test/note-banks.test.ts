@@ -13,7 +13,7 @@ vi.mock("../../supabase/functions/_shared/contentCheck.js", () => ({ checkConten
 vi.mock("../../supabase/functions/_shared/mcqHarden.js", () => ({ weakness: weaknessMock, hardenBatch: hardenMock }));
 vi.mock("../../supabase/functions/_shared/mcqPositions.js", () => ({ placeNewQuestions: positionMock }));
 
-import { generateNoteFlashcards, generateNoteMcqs } from "../../supabase/functions/_shared/noteBanks.js";
+import { dedupeNoteMcqs, generateNoteFlashcards, generateNoteMcqs } from "../../supabase/functions/_shared/noteBanks.js";
 
 const article = {
   id: "11111111-1111-4111-8111-111111111111",
@@ -31,6 +31,14 @@ const questions = Array.from({ length: 12 }, (_, i) => ({
   correct_answer: 0,
   explanation: "Asthma is characterised by variable expiratory airflow limitation.",
 }));
+
+describe("note MCQ deduplication", () => {
+  it("does not re-add questions already present in the bank", () => {
+    const fresh = [{ question: "What is the mechanism of asthma?" }, { question: "Define status asthmaticus" }];
+    const result = dedupeNoteMcqs(fresh, ["What is the mechanism of asthma?"]);
+    expect(result).toEqual([{ question: "Define status asthmaticus" }]);
+  });
+});
 
 describe("note-derived MCQs and flashcards", () => {
   beforeEach(() => {
