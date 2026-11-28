@@ -74,7 +74,7 @@ function parseFlashcards(raw,count) {
   const data=JSON.parse(match[0]);
   if(!Array.isArray(data))throw new Error("Flashcards were not an array.");
   return data.filter(x=>x?.question&&x?.answer)
-    .map(x=>({question:compact(x.question),answer:compact(Array.isArray(x.answer)?x.answer.join("\\n"):x.answer)}))
+    .map(x=>({question:compact(x.question),answer:compact(Array.isArray(x.answer)?x.answer.join("\n"):x.answer)}))
     .filter(x=>x.question.length>=8&&x.answer.length>=20)
     .slice(0,count);
 }
@@ -84,7 +84,7 @@ async function generateReviewedStructured({prompt,title,kind,env,maxTokens,parse
   let current=null;
   for(let round=0;round<=2;round++){
     const request=prompt+(corrections.length
-      ? "\\n\\nINDEPENDENT GEMINI CLINICAL REVIEW / VALIDATION FINDINGS — CORRECT EVERY ITEM:\\n- "+corrections.join("\\n- ")+"\\nReturn the complete corrected JSON only. Preserve the requested structure."
+      ? "\n\nINDEPENDENT GEMINI CLINICAL REVIEW / VALIDATION FINDINGS — CORRECT EVERY ITEM:\n- "+corrections.join("\n- ")+"\nReturn the complete corrected JSON only. Preserve the requested structure."
       : "");
     const generated=await askGroqModel(request,{env,plain:true,maxTokens,timeoutMs:65000});
     try { current=parse(generated.text); }
