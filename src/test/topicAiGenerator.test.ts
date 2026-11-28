@@ -94,6 +94,43 @@ describe("Groq topic generation boundary", () => {
     expect(result).toEqual({ text: '{"medical":true}', model: "openai/gpt-oss-120b" });
   });
 
+  it("rotates to the next Gemini key when the first key is rate-limited", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ error: { message: "quota exceeded" } }), { status: 429 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: "review complete" }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await askGeminiModel("Review this note", {
+      env: { GEMINI_API_KEYS: "gemini-key-one,gemini-key-two", GEMINI_MODELS: "gemini-3.8-flash" },
+      fetchImpl,
+    });
+
+    expect(result.text).toBe("review complete");
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(new Headers(fetchImpl.mock.calls[0][1]?.headers).get("x-goog-api-key")).toBe("gemini-key-one");
+    expect(new Headers(fetchImpl.mock.calls[1][1]?.headers).get("x-goog-api-key")).toBe("gemini-key-two");
+  });
+
+  it("falls back from exhausted Gemini to Groq and returns the actual provider model", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ error: { message: "quota exceeded" } }), { status: 429 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: "fallback answer" } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await askModel("Answer this prompt", {
+      env: {
+        GEMINI_API_KEYS: "gemini-test-key",
+        GEMINI_MODELS: "gemini-3.8-flash",
+        GROQ_API_KEYS: "groq-test-key",
+        GROQ_MODELS: "openai/gpt-oss-20b",
+      },
+      fetchImpl,
+    });
+
+    expect(result).toEqual({ text: "fallback answer", model: "openai/gpt-oss-20b" });
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("generativelanguage.googleapis.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+  });
+
   it("does not fall back to Gemini when Groq is not configured", async () => {
     const fetchImpl = vi.fn();
 
