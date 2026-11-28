@@ -6,7 +6,7 @@ import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_s
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
-import { generateNoteMcqs, generateNoteFlashcards } from "../../supabase/functions/_shared/noteBanks.js";
+import { dedupeNoteMcqs, generateNoteMcqs, generateNoteFlashcards } from "../../supabase/functions/_shared/noteBanks.js";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
