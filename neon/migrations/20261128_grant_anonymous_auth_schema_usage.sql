@@ -1,0 +1,11 @@
+-- Neon Data API: allow the anonymous API role to resolve the auth helpers
+-- referenced by imported Supabase RLS policies.
+--
+-- The anonymous role already has SELECT on the public catalog tables and
+-- EXECUTE on auth.uid(), auth.role(), and auth.jwt(). Without USAGE on the
+-- auth schema, policies that call auth.uid() fail with SQLSTATE 42501 and the
+-- Data API returns HTTP 403 (even when the row is published).
+--
+-- This grants schema visibility only. It does not grant access to auth tables
+-- or change any RLS policy, table privilege, or row data.
+GRANT USAGE ON SCHEMA auth TO anonymous;
