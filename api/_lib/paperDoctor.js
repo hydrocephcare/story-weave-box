@@ -58,29 +58,29 @@ Answer in exactly this layout (no JSON, no code fences):
 the COMPLETE text of this section with the answers added, every question included`;
 
 const needsAnswers = (text) => {
-  const mcqPart = text.split(/\\n\\s*(?:#+\\s*)?\\**\\s*(?:short answer|essay|long answer|saq|laq)/i)[0];
-  const questions = (mcqPart.match(/(?:^|\\n)\\s*\\(?a[.)]\\s+\\S/gi) || []).length;
-  const answers = (mcqPart.match(/answer\\s*[:：]/gi) || []).length;
-  const written = (mcqPart.match(/\\(\\s*\\d+\\s*marks?\\s*\\)/gi) || []).length;
+  const mcqPart = text.split(/\n\s*(?:#+\s*)?\**\s*(?:short answer|essay|long answer|saq|laq)/i)[0];
+  const questions = (mcqPart.match(/(?:^|\n)\s*\(?a[.)]\s+\S/gi) || []).length;
+  const answers = (mcqPart.match(/answer\s*[:：]/gi) || []).length;
+  const written = (mcqPart.match(/\(\s*\d+\s*marks?\s*\)/gi) || []).length;
   return questions >= 6 && answers < questions * 0.4 && written < 3;
 };
-const MCQ_LINE = /^\\s*(?:#+\\s*)?(?:Question\\s+)?\\d{1,3}[.)]\\s+\\S/i;
-const QUESTION_LINE = /^\\s*(?:#+\\s*)?Question\\s+\\d+/i;
+const MCQ_LINE = /^\s*(?:#+\s*)?(?:Question\s+)?\d{1,3}[.)]\s+\S/i;
+const QUESTION_LINE = /^\s*(?:#+\s*)?Question\s+\d+/i;
 const SEG_MAX = 8000;
 function sections(text, mcq = false) {
   const max = mcq ? 5500 : SEG_MAX;
   if (text.length <= max + 1500) return [text];
-  const lines = text.split("\\n"), out = [];
+  const lines = text.split("\n"), out = [];
   let cur = "";
   for (const line of lines) {
     if (cur.length >= max && (mcq ? MCQ_LINE : QUESTION_LINE).test(line)) { out.push(cur); cur = ""; }
     else if (cur.length >= max * 1.5 && line.trim() === "") { out.push(cur); cur = ""; }
-    cur += line + "\\n";
+    cur += line + "\n";
   }
   if (cur.trim()) out.push(cur);
   return out;
 }
-const countQuestions = (value, mcq = false) => value.split("\\n").filter((line) => (mcq ? MCQ_LINE : QUESTION_LINE).test(line)).length;
+const countQuestions = (value, mcq = false) => value.split("\n").filter((line) => (mcq ? MCQ_LINE : QUESTION_LINE).test(line)).length;
 
 const db = () => {
   const url = process.env.DATABASE_URL || process.env.NEON_DATABASE_URL;
@@ -94,7 +94,7 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") return res.status(405).json({ error: "POST only." });
   try {
-    const token = String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "");
+    const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
     if (!(await isNeonAdmin(token))) return res.status(403).json({ error: "Administrator access required." });
     const body = parseBody(req.body);
     const sql = db();
@@ -105,7 +105,7 @@ export default async function handler(req, res) {
     const article = rows[0];
     if (!article) return res.status(404).json({ error: "Published paper not found." });
 
-    const original = String(article.content || "").replace(/\\r\\n/g, "\\n");
+    const original = String(article.content || "").replace(/\r\n/g, "\n");
     const answerMode = needsAnswers(original) || body.mode === "answers";
     const level = answerMode ? 3 : 2;
     const parts = sections(original, answerMode);
@@ -140,8 +140,8 @@ export default async function handler(req, res) {
     let raw = "";
     try {
       const system = answerMode ? SYSTEM_MCQ : SYSTEM;
-      const user = `${seg === 0 ? `TITLE: ${article.title}\\nCATEGORY: ${article.category}\\nDESCRIPTION: ${article.meta_description || ""}\\n\\n` : ""}${parts.length > 1 ? `SECTION ${seg + 1} OF ${parts.length}\\n` : ""}PAGE:\\n${parts[seg]}`;
-      const result = await askModel(system + "\\n\\n" + user, { env: aiEnv, plain: true, timeoutMs: 85000, maxTokens: 4500 });
+      const user = `${seg === 0 ? `TITLE: ${article.title}\nCATEGORY: ${article.category}\nDESCRIPTION: ${article.meta_description || ""}\n\n` : ""}${parts.length > 1 ? `SECTION ${seg + 1} OF ${parts.length}\n` : ""}PAGE:\n${parts[seg]}`;
+      const result = await askModel(system + "\n\n" + user, { env: aiEnv, plain: true, timeoutMs: 85000, maxTokens: 4500 });
       raw = result.text;
     } catch (e) {
       await save("skipped", { issues: [`AI unavailable: ${String(e?.message || e).slice(0, 120)}`] });
@@ -151,19 +151,19 @@ export default async function handler(req, res) {
     const part = (name) => {
       const start = raw.indexOf(`===${name}===`);
       if (start < 0) return "";
-      const from = start + name.length + 6, next = raw.indexOf("\\n===", from);
+      const from = start + name.length + 6, next = raw.indexOf("\n===", from);
       return raw.slice(from, next < 0 ? undefined : next).trim();
     };
-    const unchanged = /^\\s*NO_CHANGE/i.test(raw) || !raw.includes("===CONTENT===");
+    const unchanged = /^\s*NO_CHANGE/i.test(raw) || !raw.includes("===CONTENT===");
     let segText = parts[seg], segIssues = [];
     if (!unchanged) {
-      segText = part("CONTENT").replace(/^```(?:markdown)?\\n?/, "").replace(/\\n?```$/, "");
-      segIssues = part("ISSUES").split("\\n").map((x) => x.replace(/^[-*\\s]+/, "").trim()).filter(Boolean).map((x) => x.slice(0, 200));
+      segText = part("CONTENT").replace(/^```(?:markdown)?\n?/, "").replace(/\n?```$/, "");
+      segIssues = part("ISSUES").split("\n").map((x) => x.replace(/^[-*\s]+/, "").trim()).filter(Boolean).map((x) => x.slice(0, 200));
       if (segText.length < parts[seg].length * 0.75 || countQuestions(segText, answerMode) < countQuestions(parts[seg], answerMode)) {
         segText = parts[seg]; segIssues = ["Part of the AI rewrite was incomplete, so the original section was preserved."];
       }
     }
-    const doneText = (resume?.new_content ? String(resume.new_content) : "") + (resume?.new_content ? "\\n" : "") + segText.replace(/\\n+$/, "");
+    const doneText = (resume?.new_content ? String(resume.new_content) : "") + (resume?.new_content ? "\n" : "") + segText.replace(/\n+$/, "");
     const issues = [...(resume?.issues || []), ...segIssues].slice(0, 30);
     const changed = Boolean(resume?.changed) || segText.trim() !== parts[seg].trim();
     const title = seg === 0 ? (part("TITLE") || article.title).slice(0, 120) : resume?.new_title || article.title;
