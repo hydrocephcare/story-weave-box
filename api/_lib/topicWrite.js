@@ -17,7 +17,7 @@ function getDb() {
 }
 
 function slugOf(value) {
-  return String(value || "").normalize("NFKD").replace(/[\\u0300-\\u036f]/g, "")
+  return String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
     .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
 }
 
@@ -41,7 +41,7 @@ function deepReady(deep) {
 
 export function bearer(req) {
   return String(req.headers["x-neon-authorization"] || req.headers.authorization || "")
-    .replace(/^Bearer\\s+/i, "").trim();
+    .replace(/^Bearer\s+/i, "").trim();
 }
 
 async function invokeGateway(token, payload, timeoutMs = 90000) {
