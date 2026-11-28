@@ -13,7 +13,7 @@ function parseNoteMcqs(raw) {
   if(!Array.isArray(data))return [];
   return data.filter(q=>q?.question&&Array.isArray(q.options)&&q.options.length>=4&&Number.isInteger(q.correct_answer)&&q.correct_answer>=0&&q.correct_answer<=3)
     .map(q=>({question:String(q.question).trim(),options:q.options.slice(0,4).map(x=>String(x).trim()),correct_answer:q.correct_answer,explanation:String(q.explanation||"").trim()}))
-    .filter(q=>q.question.length>=12&&q.options.every(x=>x.length>0)&&new Set(q.options.map(x=>x.toLowerCase())).size===4&&!/all of the above|none of the above/i.test(q.options.join(" ")));
+    .filter(q=>q.question.length>=12&&q.explanation.length>=12&&q.options.every(x=>x.length>0)&&new Set(q.options.map(x=>x.toLowerCase())).size===4&&!/all of the above|none of the above/i.test(q.options.join(" ")));
 }
 function parseNoteCards(raw) {
   const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
@@ -22,7 +22,7 @@ function parseNoteCards(raw) {
   if(!Array.isArray(data))return [];
   const seen=new Set();
   return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
-    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);if(key.length<8||seen.has(key)||c.answer.length<30)return false;seen.add(key);return true;});
+    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);const words=c.answer.split(/\\s+/).filter(Boolean).length;if(key.length<8||seen.has(key)||words<30||words>75)return false;seen.add(key);return true;});
 }
 export function dedupeNoteMcqs(items, existing=[]) {
   const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
