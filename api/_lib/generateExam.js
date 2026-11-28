@@ -3,7 +3,6 @@ import { randomBytes } from "node:crypto";
 import { isNeonAdmin } from "./neonAdmin.js";
 import { askGroqModel, askGeminiModel } from "../../supabase/functions/_shared/topicAi.js";
 import { generateReviewedEssayPaper } from "../../supabase/functions/_shared/essayExam.js";
-import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { balanceBank, placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
