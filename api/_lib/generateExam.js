@@ -214,8 +214,8 @@ export default async function handler(req, res) {
       if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper did not pass format validation."); continue; }
       let essayReview = await checkContent({title:"Weekly " + unit + " written examination",kind:"medical SAQs, LAQs and model answers",text:JSON.stringify(essays),env:aiEnv,timeoutMs:55000});
       if (!essayReview.validated) {
-        const findings=(essayReview.issues||[]).map((x,i)=>(i+1)+". "+x.where+": "+x.problem+". Correct it to: "+x.fix).join("\\n");
-        const repairPrompt=essayPrompt+"\\n\\nINDEPENDENT GEMINI REVIEW FINDINGS — CORRECT ALL ISSUES:\\n"+findings+"\\nCURRENT WRITTEN PAPER:\\n"+JSON.stringify(essays)+"\\nReturn the complete corrected JSON only.";
+        const findings=(essayReview.issues||[]).map((x,i)=>(i+1)+". "+x.where+": "+x.problem+". Correct it to: "+x.fix).join("\n");
+        const repairPrompt=essayPrompt+"\n\nINDEPENDENT GEMINI REVIEW FINDINGS — CORRECT ALL ISSUES:\n"+findings+"\nCURRENT WRITTEN PAPER:\n"+JSON.stringify(essays)+"\nReturn the complete corrected JSON only.";
         try { essays=parseEssays(await generateText(repairPrompt,4500,aiEnv)); } catch {}
         if (essays.saqs.length < 4 || essays.laqs.length < 1) { skipped.push(unit + ": written paper repair was incomplete."); continue; }
         essayReview=await checkContent({title:"Weekly " + unit + " written examination",kind:"medical SAQs, LAQs and model answers",text:JSON.stringify(essays),env:aiEnv,timeoutMs:55000});
