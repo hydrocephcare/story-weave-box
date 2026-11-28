@@ -4,7 +4,7 @@
 //   - a verdict (keep / review / irrelevant) that the admin can act on; nothing is ever deleted here
 // Very long pages are left to the batch job (scripts/blogs/polish-batch.mjs). The stored article is never changed: the result is saved in
 // blog_polish, which the page reads. Writing needs POLISH_WRITE_KEY in Vercel (made on /admin/polish): the database checks it, so the Supabase service key is not needed.
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
 import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
@@ -82,7 +82,7 @@ export default async function handler(req, res) {
   if (!claimed.length) return res.status(200).json({ status: "working", more: false });
 
   const env = supabaseAiEnv(req, { workflow });
-  const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
+  const ask = (prompt, timeoutMs, maxTokens) => askGroqModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
   const save = async (row) => {
     const allowed = new Set(["title","description","image_query","verdict","reason","model","content","status","ai_review_status","ai_review_model","ai_reviewed_at","ai_review_issues","parts_done"]);
     const entries = Object.entries(row || {}).filter(([key, value]) => allowed.has(key) && value !== undefined);
