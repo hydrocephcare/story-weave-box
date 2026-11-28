@@ -70,8 +70,8 @@ export function chunkText(text, max = 13000) {
     let end = Math.min(start + max, source.length);
     if (end < source.length) {
       const floor = start + Math.floor(max * 0.55);
-      const newline = source.lastIndexOf("\n", end);
-      const space = source.lastIndexOf(" ", end);
+      const newline = source.lastIndexOf("\n", end - 1);
+      const space = source.lastIndexOf(" ", end - 1);
       const boundary = Math.max(newline, space);
       if (boundary >= floor) end = boundary + 1;
       // Do not split a UTF-16 surrogate pair.
