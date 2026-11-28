@@ -6,7 +6,7 @@ RETURNS boolean
 LANGUAGE plpgsql
 STABLE
 SECURITY DEFINER
-SET search_path TO 'public', 'auth', 'neon_auth'
+SET search_path TO 'pg_catalog'
 AS $function$
 DECLARE
   v_caller uuid := auth.uid();
