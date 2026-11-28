@@ -320,3 +320,108 @@ REVOKE ALL ON FUNCTION public.handle_new_user() FROM PUBLIC, anonymous, authenti
 REVOKE ALL ON FUNCTION public.handle_new_user_admission() FROM PUBLIC, anonymous, authenticated;
 ALTER FUNCTION public.handle_new_user() SET search_path = pg_catalog;
 ALTER FUNCTION public.handle_new_user_admission() SET search_path = pg_catalog;
+
+-- A Neon-authenticated caller may only migrate the identity represented by
+-- their own verified JWT. Without this check, any signed-in user could pass
+-- another user's ID and email and trigger SECURITY DEFINER identity remapping.
+CREATE OR REPLACE FUNCTION public.ensure_neon_user(_user_id uuid, _email text)
+RETURNS jsonb
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = pg_catalog
+AS $function$
+DECLARE
+  v_verified boolean := false;
+  v_found boolean := false;
+  v_legacy_present boolean := false;
+  v_legacy uuid;
+  v_ref record;
+  v_rows integer := 0;
+  v_migrated integer := 0;
+  v_skipped text[] := ARRAY[]::text[];
+BEGIN
+  IF _user_id IS NULL OR coalesce(trim(_email),'') = '' THEN
+    RAISE EXCEPTION 'A Neon Auth user ID and email are required';
+  END IF;
+
+  IF auth.uid() IS DISTINCT FROM _user_id THEN
+    RAISE EXCEPTION 'The authenticated user does not match the requested Neon user';
+  END IF;
+
+  SELECT coalesce(u."emailVerified",false), true
+    INTO v_verified, v_found
+  FROM neon_auth."user" u
+  WHERE u.id = _user_id AND lower(u.email) = lower(_email)
+  LIMIT 1;
+
+  IF NOT coalesce(v_found,false) THEN
+    RAISE EXCEPTION 'Neon Auth user not found';
+  END IF;
+
+  INSERT INTO auth.users(id,email)
+  VALUES(_user_id,NULL)
+  ON CONFLICT(id) DO NOTHING;
+
+  SELECT EXISTS(
+    SELECT 1 FROM auth.users a
+    WHERE lower(a.email)=lower(_email) AND a.id<>_user_id
+  ) INTO v_legacy_present;
+
+  IF v_verified THEN
+    FOR v_legacy IN
+      SELECT a.id
+      FROM auth.users a
+      WHERE lower(a.email) = lower(_email) AND a.id <> _user_id
+    LOOP
+      FOR v_ref IN
+        SELECT DISTINCT refs.table_name, refs.column_name
+        FROM (
+          SELECT c.oid::regclass AS table_name, a.attname AS column_name
+          FROM pg_constraint fk
+          JOIN pg_class c ON c.oid = fk.conrelid
+          JOIN pg_namespace n ON n.oid = c.relnamespace
+          JOIN unnest(fk.conkey) k(attnum) ON true
+          JOIN pg_attribute a ON a.attrelid = c.oid AND a.attnum = k.attnum
+          WHERE fk.contype = 'f'
+            AND fk.confrelid = 'auth.users'::regclass
+            AND n.nspname = 'public'
+          UNION
+          SELECT c.oid::regclass AS table_name, a.attname AS column_name
+          FROM pg_class c
+          JOIN pg_namespace n ON n.oid = c.relnamespace
+          JOIN pg_attribute a ON a.attrelid = c.oid
+          WHERE n.nspname = 'public'
+            AND c.relkind IN ('r','p')
+            AND a.attnum > 0
+            AND NOT a.attisdropped
+            AND a.atttypid = 'uuid'::regtype
+            AND a.attname IN ('user_id','owner_id','created_by','updated_by','reviewed_by','actor_id','decided_by')
+        ) refs
+        ORDER BY refs.table_name, refs.column_name
+      LOOP
+        BEGIN
+          EXECUTE format(
+            'UPDATE %s SET %I = $1 WHERE %I = $2',
+            v_ref.table_name, v_ref.column_name, v_ref.column_name
+          ) USING _user_id, v_legacy;
+          GET DIAGNOSTICS v_rows = ROW_COUNT;
+          v_migrated := v_migrated + v_rows;
+        EXCEPTION WHEN unique_violation THEN
+          v_skipped := array_append(v_skipped, v_ref.table_name::text || '.' || v_ref.column_name);
+        END;
+      END LOOP;
+    END LOOP;
+  END IF;
+
+  RETURN jsonb_build_object(
+    'user_id', _user_id,
+    'email_verified', v_verified,
+    'migration_pending', (NOT v_verified AND v_legacy_present),
+    'migrated_rows', v_migrated,
+    'skipped', to_jsonb(v_skipped)
+  );
+END;
+$function$;
+
+REVOKE ALL ON FUNCTION public.ensure_neon_user(uuid, text) FROM PUBLIC, anonymous;
+GRANT EXECUTE ON FUNCTION public.ensure_neon_user(uuid, text) TO authenticated, service_role;
