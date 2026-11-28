@@ -106,6 +106,25 @@ Deno.serve(async(req:Request)=>{
     const category=String(body.category??"").slice(0,60);
     const context=String(body.context??"").slice(0,3000);
     if(!validName(name))return reply({status:"invalid"},400,origin);
+    const slug=slugOf(name);
+    // Return an already-published topic immediately; only new topics pay the two-model generation/review cost.
+    try {
+      const cached=await fetch(DATA_API_URL+"/topic_pages?slug=eq."+encodeURIComponent(slug)+"&select=status,content&limit=1",{
+        headers:{Authorization:"Bearer "+token,Accept:"application/json"},
+        signal:AbortSignal.timeout(5000)
+      });
+      if(cached.ok) {
+        const rows=await cached.json();
+        const existing=Array.isArray(rows)?rows[0]:null;
+        if(existing?.status==="published"&&existing.content) {
+          return reply({status:"published",page:existing.content,saved:true,slug,name,existing:true},200,origin);
+        }
+      } else {
+        console.warn("Topic cache lookup unavailable",cached.status);
+      }
+    } catch(e) {
+      console.warn("Topic cache lookup timed out",String(e).slice(0,120));
+    }
     const quota=await entitlement(token,"topic_page_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
@@ -113,7 +132,6 @@ Deno.serve(async(req:Request)=>{
       const page=generated.page;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
-      const slug=slugOf(name);
       const saved=await fetch(DATA_API_URL+"/rpc/publish_topic_page",{
         method:"POST",
         headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
