@@ -425,3 +425,46 @@ $function$;
 
 REVOKE ALL ON FUNCTION public.ensure_neon_user(uuid, text) FROM PUBLIC, anonymous;
 GRANT EXECUTE ON FUNCTION public.ensure_neon_user(uuid, text) TO authenticated, service_role;
+
+-- Keep application roles from creating objects in public and make pg_temp
+-- explicit and last for every SECURITY DEFINER function in public. PostgreSQL
+-- otherwise searches an implicit temporary schema before ordinary schemas.
+REVOKE CREATE ON SCHEMA public FROM PUBLIC, anonymous, authenticated;
+
+DO $harden_security_definer_search_paths$
+DECLARE
+  f record;
+  existing_path text;
+  schema_name text;
+  safe_path text;
+BEGIN
+  FOR f IN
+    SELECT p.oid, p.proconfig
+    FROM pg_proc p
+    JOIN pg_namespace n ON n.oid = p.pronamespace
+    WHERE n.nspname = 'public' AND p.prosecdef
+  LOOP
+    existing_path := NULL;
+    IF f.proconfig IS NOT NULL THEN
+      SELECT regexp_replace(item, '^search_path=', '')
+        INTO existing_path
+      FROM unnest(f.proconfig) AS x(item)
+      WHERE item LIKE 'search_path=%'
+      LIMIT 1;
+    END IF;
+
+    safe_path := 'pg_catalog';
+    IF existing_path IS NOT NULL THEN
+      FOREACH schema_name IN ARRAY string_to_array(replace(existing_path, '"', ''), ',')
+      LOOP
+        schema_name := btrim(schema_name);
+        IF schema_name <> '' AND schema_name NOT IN ('pg_catalog', 'pg_temp') THEN
+          safe_path := safe_path || ', ' || quote_ident(schema_name);
+        END IF;
+      END LOOP;
+    END IF;
+    safe_path := safe_path || ', pg_temp';
+    EXECUTE format('ALTER FUNCTION %s SET search_path = %s', f.oid::regprocedure, safe_path);
+  END LOOP;
+END;
+$harden_security_definer_search_paths$;
