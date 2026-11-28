@@ -1,7 +1,7 @@
 import { isAdmin } from "./adminAgent.js";
 import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
 import { verifyNeonToken } from "./neonAdmin.js";
-import { askGeminiModel, askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const DEFAULT_JWKS = "https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth/.well-known/jwks.json";
 const DEFAULT_DATA_API = "https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1";
@@ -173,53 +173,42 @@ export default async function handler(req, res) {
     return { ready: response.ok && allowed === true, status: response.status };
   });
 
-  result.groq = await check("groq", async () => {
-    const providerKeys = keys(process.env.GROQ_API_KEYS, process.env.GROQ_API_KEY,
-      ...Array.from({ length: 20 }, (_, i) => process.env["GROQ_API_KEY_" + (i + 2)]));
-    if (!providerKeys.length) return { configured: false, reachable: false, configuredKeyCount: 0 };
-    const checks = await Promise.all(providerKeys.map(async (key) => {
-      const response = await fetch("https://api.groq.com/openai/v1/models", {
-        headers: { Authorization: "Bearer " + key, Accept: "application/json" },
-        signal: AbortSignal.timeout(10000),
-      });
-      return { ok: response.ok, status: response.status };
-    }));
-    return { configured: true, reachable: checks.some((item) => item.ok),
-      configuredKeyCount: checks.length, healthyKeyCount: checks.filter((item) => item.ok).length,
-      statuses: checks.map((item) => item.status) };
+  // Probe the actual central Supabase gateway, not Vercel's separate provider environment.
+  // The gateway performs real Groq and Gemini requests and checks Neon Data API access.
+  result.supabaseAi = await check("supabase-ai", async () => {
+    const ai = supabaseAiEnv(req);
+    if (!ai.OMPATH_SUPABASE_AI_TOKEN) return { ready: false, reason: "Authenticated Neon token is missing." };
+    const response = await fetch(ai.OMPATH_SUPABASE_AI_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: ai.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY,
+        "x-neon-authorization": ai.OMPATH_SUPABASE_AI_TOKEN,
+      },
+      body: JSON.stringify({ task: "health" }),
+      signal: AbortSignal.timeout(30000),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) return { ready: false, status: response.status, reason: data.error || data.detail || "Supabase AI health check failed." };
+    const groqOk = data.providers?.groq?.ok === true;
+    const geminiOk = data.providers?.gemini?.ok === true;
+    return {
+      ready: groqOk && geminiOk && data.neonStorage?.ok === true,
+      functionVersion: data.functionVersion || null,
+      providers: data.providers || {},
+      neonStorage: data.neonStorage || { ok: false },
+      auth: data.auth || { ok: false },
+    };
   });
-
-  result.gemini = await check("gemini", async () => {
-    const providerKeys = keys(process.env.GEMINI_API_KEYS, process.env.GEMINI_API_KEY,
-      ...Array.from({ length: 20 }, (_, i) => process.env["GEMINI_API_KEY_" + (i + 2)]));
-    if (!providerKeys.length) return { configured: false, reachable: false, configuredKeyCount: 0 };
-    const checks = await Promise.all(providerKeys.map(async (key) => {
-      const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=100", {
-        headers: { "x-goog-api-key": key, Accept: "application/json" },
-        signal: AbortSignal.timeout(10000),
-      });
-      const data = await response.json().catch(() => ({}));
-      const modelNames = Array.isArray(data.models) ? data.models.map((model) => String(model.name || "").replace(/^models\//, "")) : [];
-      return { ok: response.ok, status: response.status, models: modelNames.length,
-        hasCurrentFlash: modelNames.includes("gemini-3.8-flash"),
-        hasCurrentFlashLite: modelNames.includes("gemini-3.5-flash-lite") };
-    }));
-    return { configured: true, reachable: checks.some((item) => item.ok),
-      configuredKeyCount: checks.length, healthyKeyCount: checks.filter((item) => item.ok).length,
-      statuses: checks.map((item) => item.status),
-      currentFlashAvailable: checks.some((item) => item.ok && item.hasCurrentFlash),
-      currentFlashLiteAvailable: checks.some((item) => item.ok && item.hasCurrentFlashLite) };
-  });
-
+  result.groq = result.supabaseAi?.providers?.groq
+    ? { ok: result.supabaseAi.providers.groq.ok === true, ...result.supabaseAi.providers.groq }
+    : { ok: false, error: result.supabaseAi?.error || "Supabase gateway did not return Groq status." };
+  result.gemini = result.supabaseAi?.providers?.gemini
+    ? { ok: result.supabaseAi.providers.gemini.ok === true, ...result.supabaseAi.providers.gemini }
+    : { ok: false, error: result.supabaseAi?.error || "Supabase gateway did not return Gemini status." };
   if (deepAI) {
-    result.groqGeneration = await check("groq-generation", async () => {
-      const out = await askGroqModel("Reply with the single word OK.", { env: process.env, timeoutMs: 15000, maxTokens: 8 });
-      return { ready: Boolean(out?.text?.trim()), model: out?.model || null };
-    });
-    result.geminiGeneration = await check("gemini-generation", async () => {
-      const out = await askGeminiModel("Reply with the single word OK.", { env: process.env, timeoutMs: 15000, maxTokens: 8 });
-      return { ready: Boolean(out?.text?.trim()), model: out?.model || null };
-    });
+    result.groqGeneration = { ...result.groq, ready: result.groq.ok === true };
+    result.geminiGeneration = { ...result.gemini, ready: result.gemini.ok === true };
   }
 
   result.onekitty = await check("onekitty", async () => {
@@ -304,7 +293,8 @@ export default async function handler(req, res) {
 
   result.polish = await check("polish", async () => ({
     databaseSecretMatchesRuntime: await hasPolishWriteKey(),
-    aiKeysConfigured: Boolean(keys(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY).length && keys(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY).length),
+    aiKeysConfigured: result.supabaseAi?.providers?.groq?.ok === true
+      && result.supabaseAi?.providers?.gemini?.ok === true,
   }));
 
   result.payments = await check("payments", async () => {
