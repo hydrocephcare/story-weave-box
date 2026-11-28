@@ -1,6 +1,7 @@
 // POST /api/page-study { mode: "cards" | "quiz", title, text }: flashcards or a short quiz made from the page the reader is on.
 // Groq first, Gemini as the backup (keys take turns), the same as the rest of the site's AI.
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
+import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const hits = new Map();
@@ -41,7 +42,38 @@ ${text}
 };
 
 async function ask(prompt, env, maxTokens = 1800) {
-  return askModel(prompt, { env, timeoutMs: 35000, maxTokens });
+  return askGroqModel(prompt, { env, timeoutMs: 35000, maxTokens, plain: true });
+}
+
+function parseStudyJson(raw) {
+  const match = String(raw || "").match(/\\{[\\s\\S]*\\}/);
+  if (!match) throw new Error("The AI did not return valid study JSON.");
+  return JSON.parse(match[0]);
+}
+
+async function reviewStudyOutput({ mode, title, source, data, env }) {
+  const field = mode === "cards" ? "cards" : mode === "essays" ? "essays" : "questions";
+  const items = Array.isArray(data?.[field]) ? data[field] : [];
+  if (!items.length) throw new Error("The generated study material was empty.");
+  const batchSize = mode === "essays" ? 1 : 2;
+  const issues = [];
+  let model = "";
+  let validated = true;
+  for (let offset = 0; offset < items.length; offset += batchSize) {
+    const batch = items.slice(offset, offset + batchSize);
+    const batchNumber = Math.floor(offset / batchSize) + 1;
+    const result = await checkContent({
+      title,
+      kind: mode === "cards" ? "medical flashcards and answers" : mode === "essays" ? "medical essay questions and model answers" : "medical multiple-choice questions",
+      text: "SOURCE PAGE (reference only):\\n" + source + "\\n\\nGENERATED ITEMS (batch " + batchNumber + "):\\n" + JSON.stringify(batch),
+      env,
+      timeoutMs: 35000,
+    });
+    model = result.model || model;
+    if (!result.validated) validated = false;
+    for (const issue of result.issues || []) issues.push({ ...issue, where: "Batch " + batchNumber + ": " + issue.where });
+  }
+  return { validated: validated && Boolean(model), issues, model };
 }
 
 export default async function handler(req, res) {
@@ -76,23 +108,40 @@ export default async function handler(req, res) {
   if (text.length < 200) return res.status(400).json({ error: "There is not enough text on this page yet." });
 
   try {
-    const { text: out } = await ask(PROMPTS[mode](title, text), env, mode === "essays" ? 3400 : mode === "cards" ? 3600 : 1800);
-    const j = JSON.parse(out.match(/\{[\s\S]*\}/)[0]);
+    const prompt = PROMPTS[mode](title, text);
+    let j = parseStudyJson((await ask(prompt, env, mode === "essays" ? 3400 : mode === "cards" ? 3600 : 1800)).text);
+    let review = await reviewStudyOutput({ mode, title, source: text, data: j, env });
+    if (!review.validated) {
+      const repairPrompt = [
+        "Correct the medical factual errors, unsafe advice and ambiguous answer keys in these generated study materials.",
+        "Use the supplied source page as the primary scope, preserve every correct item and the requested schema, and do not invent drug doses or unsupported criteria.",
+        "Return only the complete original JSON object.",
+        "INDEPENDENT GEMINI FINDINGS:",
+        (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\\n"),
+        "SOURCE PAGE:",
+        text,
+        "STUDY MATERIALS TO CORRECT:",
+        JSON.stringify(j),
+      ].join("\\n\\n");
+      j = parseStudyJson((await ask(repairPrompt, env, mode === "essays" ? 5000 : mode === "cards" ? 5000 : 3500)).text);
+      review = await reviewStudyOutput({ mode, title, source: text, data: j, env });
+    }
+    if (!review.validated || !review.model) throw new Error("Independent Gemini review did not clear the generated study material.");
     if (mode === "cards") {
       const cards = (Array.isArray(j.cards) ? j.cards : []).map((c) => ({ q: String(c?.q ?? "").trim().slice(0, 220), a: String(c?.a ?? "").trim().slice(0, 900) })).filter((c) => c.q.length > 8 && c.a.length > 4).slice(0, 16);
       if (cards.length < 3) throw new Error("few");
-      return res.status(200).json({ cards });
+      return res.status(200).json({ cards, reviewed: true, review_model: review.model });
     }
     if (mode === "essays") {
       const essays = (Array.isArray(j.essays) ? j.essays : []).map((e) => ({ q: String(e?.q ?? "").trim().slice(0, 300), marks: [5, 8, 10, 12, 15, 20].includes(Number(e?.marks)) ? Number(e.marks) : 10, points: (Array.isArray(e?.points) ? e.points : []).map((p) => String(p).trim().slice(0, 200)).filter(Boolean).slice(0, 7), answer: String(e?.answer ?? "").trim().slice(0, 1300) }))
         .filter((e) => e.q.length > 12 && e.answer.length > 80).slice(0, 5);
       if (essays.length < 3) throw new Error("few");
-      return res.status(200).json({ essays });
+      return res.status(200).json({ essays, reviewed: true, review_model: review.model });
     }
     const questions = (Array.isArray(j.questions) ? j.questions : []).map((x) => ({ q: String(x?.q ?? "").trim().slice(0, 300), options: (Array.isArray(x?.options) ? x.options : []).map((o) => String(o).trim().slice(0, 200)), answer: Number(x?.answer), why: String(x?.why ?? "").trim().slice(0, 300) }))
       .filter((x) => x.q.length > 10 && x.options.length === 4 && x.options.every(Boolean) && Number.isInteger(x.answer) && x.answer >= 0 && x.answer <= 3).slice(0, 6);
     if (questions.length < 3) throw new Error("few");
-    return res.status(200).json({ questions });
+    return res.status(200).json({ questions, reviewed: true, review_model: review.model });
   } catch {
     return res.status(502).json({ error: "Ompath AI could not make these just now. Please try again in a moment." });
   }
