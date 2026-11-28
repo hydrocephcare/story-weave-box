@@ -10,6 +10,7 @@ import { useAccess } from "@/lib/access";
 import { useAuth } from "@/hooks/useAuth";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { cn } from "@/lib/utils";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Q { q: string; options: string[]; answer: number; why: string }
 
@@ -34,9 +35,11 @@ const usedKey = (m: string) => `ompath_study_${m}_${new Date().toISOString().sli
 const used = (m: string) => { try { return Number(localStorage.getItem(usedKey(m)) ?? 0); } catch { return 0; } };
 const spendOne = (m: string) => { try { localStorage.setItem(usedKey(m), String(used(m) + 1)); } catch { /* ignore */ } };
 
-async function call(mode: "cards" | "quiz" | "essays", title: string, text: string, token?: string) {
-  const headers: Record<string, string> = { "content-type": "application/json" };
-  if (token) headers.Authorization = "Bearer " + token;
+async function call(mode: "cards" | "quiz" | "essays", title: string, text: string) {
+  const authAdapter = supabase.auth as typeof supabase.auth & { getJWTToken?: () => Promise<string | null> };
+  const token = await authAdapter.getJWTToken?.();
+  if (!token || token.split(".").length !== 3) throw new Error("Please sign in again to use Ompath AI.");
+  const headers: Record<string, string> = { "content-type": "application/json", Authorization: "Bearer " + token };
   const r = await fetch("/api/page-study", { method: "POST", headers, body: JSON.stringify({ mode, title, text }) });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(j.error || "Ompath AI could not do this just now. Please try again.");
@@ -47,7 +50,7 @@ async function call(mode: "cards" | "quiz" | "essays", title: string, text: stri
 export default function StudyTools({ title, path, text, className = "", pictures = false, articleId }: { title: string; path: string; text: string; className?: string; pictures?: boolean; articleId?: string }) {
   const [busy, setBusy] = useState<"" | "cards" | "quiz" | "essays">("");
   const { hasPass } = useAccess();
-  const { isAdmin, session } = useAuth();
+  const { isAdmin } = useAuth();
   const unlimited = hasPass || isAdmin;
   const [essays, setEssays] = useState<Essay[] | null>(null);
   const [openEssay, setOpenEssay] = useState<number | null>(null);
@@ -79,7 +82,7 @@ export default function StudyTools({ title, path, text, className = "", pictures
           return;
         }
       }
-      const { cards } = await call("cards", title, text, session?.access_token);
+      const { cards } = await call("cards", title, text);
       const deck = saveGeneratedFlashcardDeck(title, path, cards);
       spendOne("cards");
       if (alive.current) {
