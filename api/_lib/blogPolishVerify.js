@@ -1,4 +1,4 @@
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, providerKeys } from "../../supabase/functions/_shared/topicAi.js";
 import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { kindOf } from "./blogPolishCore.js";
 
@@ -23,7 +23,7 @@ export async function verifyBlogContent(article, candidate, env, { allowRepair =
   if (review.validated && issues.length === 0) {
     return { status: "passed", content: candidate == null ? null : source, model: review.model, at: new Date().toISOString(), issues: [] };
   }
-  if (!allowRepair || (!env.OMPATH_SUPABASE_AI_TOKEN && !env.GROQ_API_KEYS) || source.length > 24000) {
+  if (!allowRepair || (!env.OMPATH_SUPABASE_AI_TOKEN && !providerKeys(env, "GROQ").length) || source.length > 24000) {
     return { status: "held", content: null, model: review.model, at: new Date().toISOString(), issues: issues.slice(0, 12) };
   }
 
@@ -53,7 +53,7 @@ export async function verifyBlogContent(article, candidate, env, { allowRepair =
   }
 
   const second = await checkContent({ title: article.title || "Medical education article", kind: "published medical education article",
-    text: corrected, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS }, timeoutMs });
+    text: corrected, env: { GEMINI_API_KEYS: providerKeys(env, "GEMINI").join(",") }, timeoutMs });
   const remaining = [...(second.issues || []), ...thinnessIssues(corrected)];
   if (!second.validated || remaining.length) {
     return { status: "held", content: null, model: second.model || review.model, at: new Date().toISOString(), issues: remaining.slice(0, 12) };
