@@ -452,6 +452,23 @@ async function sbFetch(table: string, params: string) {
   return Array.isArray(data) ? data : [];
 }
 
+/** Call a public, read-only PostgREST RPC through the same Neon Data API. */
+async function neonRpc<T = unknown>(fn: string, args: Record<string, unknown>): Promise<T> {
+  if (!/^[a-z_][a-z0-9_]*$/i.test(fn)) throw new Error("Invalid metadata RPC.");
+  const url = `${NEON_DATA_API_URL.replace(/\\/+$/, "")}/rpc/${fn}`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers: { Accept: "application/json", "Content-Type": "application/json" },
+    body: JSON.stringify(args),
+    signal: AbortSignal.timeout(12000),
+  });
+  if (!response.ok) {
+    const detail = (await response.text()).slice(0, 240);
+    throw new Error(`Neon metadata RPC failed on ${fn} (${response.status}): ${detail}`);
+  }
+  return await response.json() as T;
+}
+
 function isPublicScheduled(row: Record<string, any> | null | undefined): boolean {
   return Boolean(row && row.published === true && !row.deleted_at && row.password_protected !== true
     && (!row.scheduled_at || new Date(row.scheduled_at).getTime() <= Date.now()));
@@ -986,14 +1003,14 @@ async function zoneInviteHtml(path: string, who = ""): Promise<string> {
   const code = (path.split("?")[0].split("/").filter(Boolean)[1] || "").toUpperCase().replace(/[^A-Z0-9-]/g, "").slice(0, 12);
   let room: { host?: string; title?: string; game?: string; mode?: string; n?: number; players?: number; perQ?: number; live?: boolean; status?: string } | null = null;
   try {
-    const { data, error } = await neon.rpc("zone_peek", { p_code: code });
-    if (!error && data) room = (Array.isArray(data) ? data[0] : data) as typeof room;
+    const data = await neonRpc("zone_peek", { p_code: code });
+    if (data) room = (Array.isArray(data) ? data[0] : data) as typeof room;
   } catch { /* fall back to a general invitation */ }
   // a shared result (?n=Name): the card says what that player did, read from the finished game, never from the link
   if (who) {
     try {
-      const { data, error } = await neon.rpc("zone_peek_player", { p_code: code, p_nick: who });
-      const pl = !error && data ? (Array.isArray(data) ? data[0] : data) as { nick: string; title: string; score: number; rank: number; players: number; correct: number; answered: number } | null : null;
+      const data = await neonRpc("zone_peek_player", { p_code: code, p_nick: who });
+      const pl = data ? (Array.isArray(data) ? data[0] : data) as { nick: string; title: string; score: number; rank: number; players: number; correct: number; answered: number } | null : null;
       if (pl) {
         const won = pl.rank === 1 && pl.players > 1;
         const q = new URLSearchParams({ won: "1", name: pl.nick, title: pl.title, score: String(pl.score), rank: String(pl.rank), of: String(pl.players), acc: pl.answered ? pl.correct + "/" + pl.answered : "", kind: "Friend Zone" });
