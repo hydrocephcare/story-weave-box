@@ -18,7 +18,7 @@ const normalizeUnit = (value) => String(value || "Uncategorized").trim();
 const yearOf = (value) => Number(/Year\s*(\d)/i.exec(String(value))?.[1]) || 0;
 
 async function generateText(prompt, maxTokens = 5000, aiEnv) {
-  const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 60000, maxTokens, plain: true });
+  const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 25000, maxTokens, plain: true });
   if (!result?.text?.trim()) throw new Error("The AI writer returned an empty response.");
   return result.text;
 }
@@ -54,7 +54,7 @@ export async function reviewQuestions(questions, strict = true, aiEnv) {
     let result = null;
     for (let attempt = 0; attempt < (strict ? 2 : 1); attempt++) {
       try {
-        const answer = await askGeminiModel(prompt, { env: aiEnv, timeoutMs: 45000, maxTokens: 5000 });
+        const answer = await askGeminiModel(prompt, { env: aiEnv, timeoutMs: 8000, maxTokens: 5000 });
         const match = answer.text.match(/\[[\s\S]*\]/);
         result = match ? JSON.parse(match[0]) : null;
         if (Array.isArray(result)) {
