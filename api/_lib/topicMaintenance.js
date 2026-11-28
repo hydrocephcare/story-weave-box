@@ -174,7 +174,7 @@ export default async function handler(req, res) {
           || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
         return res.status(422).json({ ok: false, reason: "review_or_structure" });
       }
-      const rows = await getDb()`SELECT public.publish_topic_page(
+      const rows = await getDb()`SELECT public.publish_topic_page_system(
         ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
       ) AS result`;
       const result = rows[0]?.result || { ok: false, reason: "empty_result" };
@@ -197,7 +197,7 @@ export default async function handler(req, res) {
           || (/https?:|javascript:|data:text/i.test(JSON.stringify(page)) || JSON.stringify(page).toLowerCase().includes("www.") || /<[a-z/!]/i.test(JSON.stringify(page)) || /(?:onerror|onload) *=/i.test(JSON.stringify(page)))) {
         return res.status(400).json({ error: "Topic did not pass the publication safeguards." });
       }
-      const rows = await getDb()`SELECT public.publish_topic_page(
+      const rows = await getDb()`SELECT public.publish_topic_page_system(
         ${slug}, ${name}, ${category}, ${JSON.stringify(page)}::jsonb, ${page.model || "groq"}
       ) AS result`;
       const result = rows[0]?.result || { ok: false, reason: "empty_result" };
