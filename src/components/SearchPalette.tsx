@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, BookOpen, Minus, CalendarDays, ClipboardList, CornerDownLeft, File, FileText, FolderOpen, GraduationCap, Layers, Loader2, Newspaper, Presentation, Search, Film, Image as ImageIcon, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
@@ -33,22 +33,23 @@ export default function SearchPalette() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
+  const deferredQuery = useDeferredValue(q);
   const [active, setActive] = useState(0);
   const [recent, setRecent] = useState<string[]>([]);
   const [mini, setMini] = useState(false); // shrunk to a small pill so the page can be read while the search waits
   const topicIndex = useTopicIndex();
   const listRef = useRef<HTMLDivElement>(null);
   const { year: myYear } = useMyYear();
-  const { hits, loading, searched } = useSiteSearch(q, { prefer: myYear }, open);
-  const topic = useMemo(() => parseQuery(q).topic || q.trim(), [q]);
+  const { hits, loading, searched } = useSiteSearch(deferredQuery, { prefer: myYear }, open);
+  const topic = useMemo(() => parseQuery(deferredQuery).topic || deferredQuery.trim(), [deferredQuery]);
   const askAi = useCallback((question: string) => { setOpen(false); setQ(""); window.setTimeout(() => openAI(question), 60); }, []);
 
 
   const topicHits = useMemo(() => {
-    const needle = q.trim().toLowerCase();
+    const needle = deferredQuery.trim().toLowerCase();
     if (needle.length < 3 || !topicIndex) return [];
     return topicIndex.filter((t) => t.n.toLowerCase() === needle || t.a.some((a) => a.toLowerCase() === needle) || t.n.toLowerCase().startsWith(needle)).sort((a, b) => Number(b.ai) - Number(a.ai) || b.d - a.d).slice(0, 2);
-  }, [q, topicIndex]);
+  }, [deferredQuery, topicIndex]);
 
   // the card under the search box opens the full topic page (written once, then kept); no AI is spent while typing
   const readMore = askable(q.trim()) && searched && !loading && topicHits.length === 0 && !/(outline|timetable|past papers?|cat|exams?|notes|mcqs?|flashcards?)\s*$/i.test(q.trim());
