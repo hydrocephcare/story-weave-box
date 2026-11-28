@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: quality-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   quality:
@@ -69,6 +69,8 @@ jobs:
           node --check supabase/functions/_shared/topicAi.js
           node --check supabase/functions/_shared/contentCheck.js
 
+      - name: Build Cloudflare Pages Functions without deploying
+        run: npx --yes wrangler@4 pages functions build functions --outdir /tmp/ompath-pages-functions --compatibility-date 2026-11-28
       - name: Unit tests
         run: npm test -- --reporter=dot
       - name: Production build (reuse committed topic corpus; do not reread Supabase)
