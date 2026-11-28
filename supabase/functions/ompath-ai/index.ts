@@ -40,16 +40,25 @@ async function authenticate(req:Request) {
 }
 const githubJwks=createRemoteJWKSet(new URL("https://token.actions.githubusercontent.com/.well-known/jwks"));
 async function authenticateWorkflow(req:Request) {
-  const token=(req.headers.get("x-github-oidc")||"").replace(/^Bearer\s+/i,"").trim();
+  const token=(req.headers.get("x-github-oidc")||"").replace(/^Bearer\\s+/i,"").trim();
   if(!token)return false;
-  try {
-    const {payload}=await jwtVerify(token,githubJwks,{issuer:"https://token.actions.githubusercontent.com",audience:"ompathstudy-topic-maintenance"});
-    const allowed=new Set([
+  const workflows=[
+    {audience:"ompathstudy-topic-maintenance",refs:new Set([
       "hydrocephcare/story-weave-box/.github/workflows/topics-daily.yml@refs/heads/main",
       "hydrocephcare/story-weave-box/.github/workflows/zone-daily.yml@refs/heads/main"
-    ]);
-    return payload.repository==="hydrocephcare/story-weave-box"&&payload.ref==="refs/heads/main"&&allowed.has(String(payload.workflow_ref||""))&&["push","schedule","workflow_dispatch"].includes(String(payload.event_name||""));
-  } catch { return false; }
+    ]),events:["push","schedule","workflow_dispatch"]},
+    {audience:"ompathstudy-blog-polish",refs:new Set([
+      "hydrocephcare/story-weave-box/.github/workflows/blogs-polish.yml@refs/heads/main",
+      "hydrocephcare/story-weave-box/.github/workflows/blogs-restructure.yml@refs/heads/main"
+    ]),events:["schedule","workflow_dispatch"]}
+  ];
+  for(const workflow of workflows) {
+    try {
+      const {payload}=await jwtVerify(token,githubJwks,{issuer:"https://token.actions.githubusercontent.com",audience:workflow.audience});
+      if(payload.repository==="hydrocephcare/story-weave-box"&&payload.ref==="refs/heads/main"&&workflow.refs.has(String(payload.workflow_ref||""))&&workflow.events.includes(String(payload.event_name||"")))return true;
+    } catch { /* try the other exact workflow audience */ }
+  }
+  return false;
 }
 async function hasAdminRole(token:string) {
   try {
