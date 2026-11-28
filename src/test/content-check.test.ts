@@ -20,6 +20,13 @@ describe("clinical review chunking", () => {
     expect(chunks.join("")).toBe(source);
   });
 
+  it("never exceeds the requested maximum when a separator sits just beyond the boundary", () => {
+    const source = "a".repeat(120) + "\n" + "b".repeat(20);
+    const chunks = chunkText(source, 120);
+    expect(chunks.every((part) => part.length <= 120)).toBe(true);
+    expect(chunks.join("")).toBe(source);
+  });
+
   it("returns one empty chunk for empty input", () => {
     expect(chunkText("")).toEqual([""]);
   });
