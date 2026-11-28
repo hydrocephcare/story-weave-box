@@ -148,7 +148,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
         fetchImpl: reviewFetch,
         timeoutMs: 10000,
       });
-    })));
+    }));
     results.push(...wave);
   }
   const issues = results.flatMap((result, index) => (result.issues || []).map((item) => ({ ...item, where: "Flashcard batch " + (index + 1) + ": " + item.where })));
