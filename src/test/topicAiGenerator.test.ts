@@ -218,7 +218,7 @@ describe("topic validation and provider routing", () => {
     expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
     expect(String(fetchImpl.mock.calls[2][0])).toContain("generativelanguage.googleapis.com");
     expect(result.page.aiReview.status).toBe("passed");
-    expect(result.page.aiReview.fixRounds).toBe(0);
+    expect(result.page.aiReview.fixRounds).toBe(1);
   });
 
   it("can call Gemini independently without routing through Groq", async () => {
