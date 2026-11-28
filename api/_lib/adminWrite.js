@@ -56,7 +56,7 @@ export default async function handler(req, res) {
   const user = mode === "revise" ? `INSTRUCTION: ${String(body.instruction ?? "").slice(0, 500)}\nNOTE:\n${text}` : `${body.title ? `Title hint: ${String(body.title).slice(0, 120)}\n` : ""}${body.category ? `Category hint: ${String(body.category).slice(0, 120)}\n` : ""}${mode === "article" ? "TOPIC" : "TEXT"}:\n${text}`;
   const msgs = [{ role: "system", content: system }, { role: "user", content: user }];
   // long writing jobs go to Gemini first (large context, generous free limits); short ones are fine on Groq
-  const got = await askJson(msgs, { prefer: text.length > 3500 || mode === "article" || mode === "note" ? "gemini" : "groq", temperature: 0.3, maxTokens: mode === "mcq_import" ? 7000 : 6500 });
+  const got = await askJson(msgs, { prefer: text.length > 3500 || mode === "article" || mode === "note" ? "gemini" : "groq", temperature: 0.3, maxTokens: mode === "mcq_import" ? 7000 : 6500, authToken: token });
   if (got.error) return res.status(502).json({ error: got.error });
   const raw = got.text;
   const out = parse(raw);
