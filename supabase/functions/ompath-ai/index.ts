@@ -73,6 +73,32 @@ async function hasAdminRole(token:string) {
   } catch { return false; }
 }
 
+const DB_WRITE_URL=Deno.env.get("NEON_DB_WRITE_URL")||"https://www.ompathstudy.com/api/neon-functions?name=topic-write";
+const DB_WRITE_SECRET=Deno.env.get("NEON_DB_GATEWAY_SECRET")||"";
+
+async function persistTopicWrite(token:string,task:string,payload:Record<string,unknown>) {
+  if(DB_WRITE_SECRET.length<32)return {ok:false,status:503,reason:"gateway_not_configured"};
+  try {
+    const response=await fetch(DB_WRITE_URL,{
+      method:"POST",
+      headers:{
+        Authorization:"Bearer "+token,
+        "Content-Type":"application/json",
+        "x-neon-db-gateway-secret":DB_WRITE_SECRET
+      },
+      body:JSON.stringify({task,...payload}),
+      signal:AbortSignal.timeout(15000)
+    });
+    const data=await response.json().catch(()=>null);
+    return response.ok&&data?.ok!==false
+      ? {ok:true,data}
+      : {ok:false,status:response.status,reason:String(data?.reason||data?.error||"persistence")};
+  } catch(e) {
+    console.error("Neon write gateway unavailable",String(e).slice(0,180));
+    return {ok:false,status:503,reason:"gateway_unavailable"};
+  }
+}
+
 async function entitlement(token:string,feature:string) {
   const r=await fetch(DATA_API_URL+"/rpc/consume_feature",{
     method:"POST",headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
@@ -261,19 +287,11 @@ Deno.serve(async(req:Request)=>{
       const page=generated.page;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
-      const saved=await fetch(DATA_API_URL+"/rpc/publish_topic_page",{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category,p_content:page,p_model:page.model||"groq"}),
-        signal:AbortSignal.timeout(15000)
-      });
-      if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Topic persistence failed",saved.status,detail);
+      const persisted=await persistTopicWrite(token,"publish_topic",{slug,name,category,page});
+      if(!persisted.ok) {
+        console.error("Topic persistence failed",persisted.status,persisted.reason);
         return reply({status:"failed",reason:"persistence"},502,origin);
       }
-      const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       return reply({status:"published",page,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath topic generation failed",String(e).slice(0,400));
@@ -292,19 +310,11 @@ Deno.serve(async(req:Request)=>{
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
       const deep=await generateCheckedDeep({name,category,base,past},{...env},fetch,55000);
-      const saved=await fetch(DATA_API_URL+"/rpc/save_topic_deep",{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category||String(base.subject||""),p_base:base,p_deep:deep}),
-        signal:AbortSignal.timeout(15000)
-      });
-      if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Deep-note persistence failed",saved.status,detail);
+      const persisted=await persistTopicWrite(token,"save_deep",{slug,name,category:category||String(base.subject||""),deep});
+      if(!persisted.ok) {
+        console.error("Deep-note persistence failed",persisted.status,persisted.reason);
         return reply({status:"failed",reason:"persistence"},502,origin);
       }
-      const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       return reply({status:"published",deep,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath deep-note generation failed",String(e).slice(0,400));
