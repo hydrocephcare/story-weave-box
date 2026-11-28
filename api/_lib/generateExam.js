@@ -110,9 +110,19 @@ export default async function handler(req, res) {
       const review = await reviewQuestions(before, weekly, aiEnv);
       if (review.reviewerUnavailable) return send(res, 503, { error: "The independent Gemini reviewer is unavailable. The question bank was not marked as reviewed; try again later." });
       const balanced = balanceBank(review.kept, { seed: String(target.id) }).questions;
+      const minimumKept = Math.max(8, Math.floor(before.length * 0.6));
+      if (balanced.length < minimumKept) {
+        return send(res, 422, {
+          error: "Too many questions failed independent review. The bank was not changed or marked reviewed.",
+          before: before.length,
+          kept: balanced.length,
+          dropped: review.dropped,
+          disputed: review.disputed.length,
+        });
+      }
       const changed = review.dropped > 0 || review.fixed > 0 || balanced.length !== before.length
         || balanced.some((q, i) => JSON.stringify(q.options) !== JSON.stringify(before[i]?.options));
-      if (balanced.length >= Math.max(8, Math.floor(before.length * 0.6)) && changed) {
+      if (changed) {
         await sql.query("UPDATE public.mcq_sets SET questions=$2::jsonb,updated_at=now() WHERE id=$1", [target.id, JSON.stringify(balanced)]);
       }
       await sql.query(
