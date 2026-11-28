@@ -175,6 +175,10 @@
       "destination": "/api/utility?task=image-proxy"
     },
     {
+      "source": "/api/sitemap-index",
+      "destination": "/api/utility?task=sitemap-index"
+    },
+    {
       "source": "/api/drive-notes",
       "destination": "/api/utility?task=drive-notes"
     },
@@ -188,7 +192,7 @@
     },
     {
       "source": "/robots.txt",
-      "destination": "/api/sitemap-index?mode=robots"
+      "destination": "/api/utility?task=sitemap-index&mode=robots"
     },
     {
       "source": "/stories-sitemap.xml",
@@ -224,7 +228,7 @@
     },
     {
       "source": "/sitemap.xml",
-      "destination": "/api/sitemap-index"
+      "destination": "/api/utility?task=sitemap-index"
     },
     {
       "source": "/sitemap-dynamic.xml",
