@@ -153,7 +153,7 @@ export default async function handler(req,res) {
     }
     if(type==="essay-qa") {
       messages=[{role:"system",content:"You are a medical examiner. Create exam-style written questions. Return ONLY JSON: {\"saqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":5}],\"laqs\":[{\"question\":\"...\",\"model_answer\":\"...\",\"marks\":20}]}. Create exactly six SAQs of 5 marks and one LAQ of 20 marks. Answers should be clinically structured and concise. No markdown."},{role:"user",content:safe}];
-      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\\n"+String(m.content||"")).join("\\n\\n");
+      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
       const result=await generateReviewedStructured({prompt,title:customTitle||"Medical examination questions",kind:"medical SAQs, LAQs and model answers",env,maxTokens:7000,parse:parseEssays,valid:x=>x.saqs.length===6&&x.laqs.length===1});
       return res.status(200).json(result);
     }
@@ -174,13 +174,13 @@ export default async function handler(req,res) {
     }
     if(type==="direct-mcqs"||type==="mcqs") {
       messages=[{role:"system",content:"You are a senior medical exam writer. Create EXACTLY "+cardCount+" clinically oriented MCQs. Return ONLY a JSON array with objects {\"question\":\"...\",\"options\":[\"A\",\"B\",\"C\",\"D\"],\"correct_answer\":0,\"explanation\":\"...\"}. Use four plausible options of similar length, exactly one best answer, no all/none of the above, clear clinical explanations. Spread correct positions naturally. Use accepted medical knowledge only."},{role:"user",content:"Create "+cardCount+" MCQs from these notes:\n\n"+safe}];
-      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\\n"+String(m.content||"")).join("\\n\\n");
+      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
       const result=await generateReviewedStructured({prompt,title:customTitle||"Medical multiple-choice questions",kind:"medical MCQs with answer keys and explanations",env,maxTokens:9000,parse:raw=>parseMcqs(raw,cardCount),valid:items=>items.length>=Math.max(5,Math.floor(cardCount*0.6))&&items.every(q=>q.options.length===4&&Number.isInteger(q.correct_answer))});
       return res.status(200).json(result);
     }
     if(type==="direct-flashcards"||type==="flashcards") {
       messages=[{role:"system",content:"You are a medical flashcard writer. Return ONLY a JSON array [{\"question\":\"...\",\"answer\":\"...\"}]. Create up to "+cardCount+" high-yield non-repetitive cards grounded in the supplied notes. Each answer should be concise but explanatory."},{role:"user",content:safe}];
-      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\\n"+String(m.content||"")).join("\\n\\n");
+      const prompt=messages.map(m=>String(m.role||"user").toUpperCase()+":\n"+String(m.content||"")).join("\n\n");
       const result=await generateReviewedStructured({prompt,title:customTitle||"Medical revision flashcards",kind:"medical revision flashcards",env,maxTokens:8000,parse:raw=>parseFlashcards(raw,cardCount),valid:items=>items.length>=Math.max(5,Math.floor(cardCount*0.5))});
       return res.status(200).json(result);
     }
