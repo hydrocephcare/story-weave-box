@@ -3,7 +3,7 @@
 //   - notes in the style of the Year 4 notes (intro, numbered sections, practice questions); question banks and papers only laid out properly
 //   - a verdict (keep / review / irrelevant) that the admin can act on; nothing is ever deleted here
 // Very long pages are left to the batch job (scripts/blogs/polish-batch.mjs). The stored article is never changed: the result is saved in
-// blog_polish, which the page reads. Writing needs POLISH_WRITE_KEY in Vercel (made on /admin/polish): the database checks it, so the Supabase service key is not needed.
+// blog_polish, which the page reads. Writing is enabled only when the current Neon environment has an administrator-managed public.polish_secret record (created from Admin → Polish). No Supabase service key is needed.
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
