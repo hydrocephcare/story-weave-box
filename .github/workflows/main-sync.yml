@@ -71,6 +71,7 @@ jobs:
           node --check api/_lib/runtimeHealth.js
           node --check api/_lib/sendNotification.js
           node --check api/_lib/neonAdmin.js
+          node --check api/_lib/saveTopicDeep.js
           node --check api/_lib/ensureUser.js
           node --check api/_lib/drive-notes.js
           node --check api/_lib/generateExam.js
@@ -100,6 +101,14 @@ jobs:
           VITE_NEON_AUTH_URL: https://ep-dry-haze-benks3ew.neonauth.c-9.us-east-2.aws.neon.tech/neondb/auth
           VITE_NEON_DATA_API_URL: https://ep-dry-haze-benks3ew.apirest.c-9.us-east-2.aws.neon.tech/neondb/rest/v1
           VERCEL: "1"
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Type-check Supabase AI Edge Function
+        run: deno check --no-lock supabase/functions/ompath-ai/index.ts
 
       - name: Compile Cloudflare Pages Functions
         run: npx wrangler pages functions build ./functions --outdir ./.wrangler/pages-functions --compatibility-date 2026-11-27 --compatibility-flags nodejs_compat,nodejs_compat_populate_process_env
