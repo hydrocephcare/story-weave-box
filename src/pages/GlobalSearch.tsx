@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, BookOpen, Search, Sparkles } from "lucide-react";
@@ -58,27 +58,31 @@ function QuickAnswer({ q, hits, ready }: { q: string; hits: SiteHit[]; ready: bo
 export default function GlobalSearch() {
   const [params, setParams] = useSearchParams();
   const [q, setQ] = useState(params.get("q") || "");
+  const deferredQuery = useDeferredValue(q);
   const [asked, setAsked] = useState(params.get("q") || "");
   const [year, setYear] = useState(params.get("year") || "");
   const [contentType, setContentType] = useState(params.get("type") || "");
 
   const opts = useMemo(() => ({ year: year || undefined, contentType: contentType || undefined }), [year, contentType]);
-  const { hits, related, loading, deepLoading, searched, parsed } = useSmartSearch(q, opts);
+  const { hits, related, loading, deepLoading, searched, parsed } = useSmartSearch(deferredQuery, opts);
   const groups = useMemo(() => groupSiteHits(hits), [hits]);
   const topicIndex = useTopicIndex();
   const topicHits = useMemo(() => {
-    const needle = q.trim().toLowerCase();
+    const needle = deferredQuery.trim().toLowerCase();
     if (needle.length < 3 || !topicIndex) return [];
     return topicIndex.filter((t) => t.n.toLowerCase() === needle || t.a.some((a) => a.toLowerCase() === needle) || t.n.toLowerCase().startsWith(needle)).sort((a, b) => Number(b.ai) - Number(a.ai) || b.d - a.d).slice(0, 3);
-  }, [q, topicIndex]);
+  }, [deferredQuery, topicIndex]);
 
   useEffect(() => {
-    const trimmed = q.trim();
-    const next: Record<string, string> = {};
-    if (trimmed) next.q = trimmed;
-    if (year) next.year = year;
-    if (contentType) next.type = contentType;
-    setParams(next, { replace: true });
+    const timer = window.setTimeout(() => {
+      const trimmed = q.trim();
+      const next: Record<string, string> = {};
+      if (trimmed) next.q = trimmed;
+      if (year) next.year = year;
+      if (contentType) next.type = contentType;
+      setParams(next, { replace: true });
+    }, 350);
+    return () => window.clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q, year, contentType]);
 
@@ -94,7 +98,7 @@ export default function GlobalSearch() {
       <Helmet><title>Search Medical Study Resources | Ompath Study</title><meta name="robots" content="noindex,follow" /></Helmet>
 
       <header className="relative isolate overflow-hidden">
-        <HeroAurora about={q} year={year ? Number(year) : null} />
+        <HeroAurora about={deferredQuery} year={year ? Number(year) : null} />
         <div className="mx-auto max-w-3xl px-5 pb-9 pt-9 sm:pt-14">
           <h1 className="font-serif text-4xl font-bold leading-tight text-foreground sm:text-5xl">Search</h1>
           <p className="mt-2 text-[16px] text-foreground/70">Notes, the text inside them, library files, outline topics and topic pages.</p>
