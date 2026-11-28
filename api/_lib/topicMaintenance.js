@@ -297,12 +297,17 @@ export default async function handler(req, res) {
     }
 
     if (task === "note-flashcards") {
-      let candidate=body.article_id?[{id:String(body.article_id)}]:await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
+      let candidate=body.article_id?[{id:String(body.article_id)}]:[];
       let upgrade=null;
-      if(!candidate.length){
+      const pickLegacyUpgrade=async()=>{
         const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":3%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
-      }
+      };
+      // Alternate daily capacity between new decks and legacy-deck upgrades so
+      // old unreviewed v2 decks do not wait until every article has a new deck.
+      if(!body.article_id && body.upgrade_legacy===true) await pickLegacyUpgrade();
+      if(!candidate.length && !body.article_id) candidate=await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
+      if(!candidate.length && !upgrade && !body.article_id) await pickLegacyUpgrade();
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
