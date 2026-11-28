@@ -36,7 +36,7 @@ describe("Groq topic generation boundary", () => {
         "It is used in selected clinical settings for rapid, titratable analgesia or sedation, including labour and procedural settings when appropriate monitoring and trained staff are available.",
       ],
     }));
-    expect(sanitizeGatewayPage(page).sections).toHaveLength(13);
+    expect(sanitizeGatewayPage(page, { name: "Laughing gas", category: "Medicine" }).sections).toHaveLength(13);
   });
 
   it("disambiguates neonatal umbilical vein thrombosis and requires a sufficiently deep page", () => {
