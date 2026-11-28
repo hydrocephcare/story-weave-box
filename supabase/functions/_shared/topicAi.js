@@ -349,9 +349,44 @@ export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeou
   throw lastError;
 }
 
+function pageWordCount(page) {
+  const parts = [
+    page.summary,
+    ...(page.sections ?? []).flatMap((x) => [x.h, x.p, ...(x.b ?? []), ...(x.t ?? []).flatMap((r) => [r.a, r.b])]),
+    ...(page.exam ?? []),
+    ...(page.faq ?? []).flatMap((x) => [x.q, x.a]),
+  ];
+  return parts.filter(Boolean).join(" ").trim().split(/\\s+/).filter(Boolean).length;
+}
+
+async function repairTopicStructure(raw, { name, category, context, choices, env, fetchImpl, timeoutMs, deep }) {
+  const kind = kindOf(category ?? "", name ?? "");
+  const expected = deep ? DEEP_KINDS[kind] : KINDS[kind];
+  const minimum = deep ? Math.max(9, expected.length - 1) : Math.max(3, expected.length - 1);
+  const prompt = `You are completing a medical education page that failed structural quality checks. This is a targeted repair, not a new article.
+Keep the selected clinical entity, population, scope, title, summary, and all correct facts. Do not invent doses, statistics, references, or unsupported guideline claims.
+Return ONLY a JSON object with one property: "sections", containing the COMPLETE corrected sections array.
+Required topic-specific heading plan: ${expected.join("; ")}.
+The complete page must contain at least ${minimum} substantive sections. Every section must have either at least four distinct, useful bullets OR an explanatory paragraph of at least 65 words, with bullets/tables where they materially improve teaching. Investigations must explain what each test answers and how to interpret results. Management must explain rationale, monitoring, and safety.
+Do not pad with repeated sentences. Keep each section specific to its heading. Preserve existing correct information and repair only missing or thin material.
+TOPIC: ${name}
+CATEGORY: ${category || "Medicine"}
+CONTEXT: ${String(context || "").slice(0, 1800)}
+CURRENT PAGE:
+${JSON.stringify(raw).slice(0, 30000)}`;
+  const repaired = await askGroqModel(prompt, {
+    env, fetchImpl, timeoutMs: timeoutMs ?? (deep ? 45000 : 35000),
+    maxTokens: deep ? 7000 : 4500,
+  });
+  const parsed = extractJson(repaired.text);
+  if (!parsed || !Array.isArray(parsed.sections)) throw new Error("Groq structural repair returned no valid sections array.");
+  return { sections: parsed.sections, model: repaired.model };
+}
+
 /** Generates and sanitizes a topic page using Groq, without Gemini generation fallback. */
 export async function generateGroqTopicPage({ name, category, context, choices, fixes = [], env, fetchImpl = fetch, timeoutMs }) {
   const deep = cleanChoices(choices).depth === "full";
+  const options = { name, category, choices };
   const { text, model } = await askGroqModel(buildPrompt({ name, category, context, choices, fixes }), {
     env,
     fetchImpl,
@@ -360,8 +395,33 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
   });
   const json = extractJson(text);
   if (!json) throw new Error("Groq returned no valid JSON.");
-  const page = sanitizePage(json, { name, category, choices });
-  return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
+  let page;
+  let repairModel = "";
+  let structuralError = "";
+  try {
+    page = sanitizePage(json, options);
+    if (deep && pageWordCount(page) < 700) structuralError = "full topic page needs at least 700 meaningful words";
+  } catch (error) {
+    structuralError = error instanceof Error ? error.message : String(error);
+  }
+  if (structuralError) {
+    if (!/thin sections|thin topic page|too few sections|full topic page needs|applied examiner questions|useful FAQs/i.test(structuralError)) {
+      throw new Error(structuralError);
+    }
+    const repaired = await repairTopicStructure(json, {
+      name, category, context, choices, env, fetchImpl, timeoutMs, deep,
+    });
+    repairModel = repaired.model;
+    page = sanitizePage({ ...json, sections: repaired.sections }, options);
+    if (deep && pageWordCount(page) < 700) throw new Error("Topic page remained below 700 meaningful words after structural repair.");
+  }
+  return page.medical ? {
+    ...page,
+    kind: kindOf(category, name),
+    model,
+    ...(repairModel ? { structureRepairModel: repairModel } : {}),
+    generatedAt: new Date().toISOString().slice(0, 10),
+  } : page;
 }
 
 /**
