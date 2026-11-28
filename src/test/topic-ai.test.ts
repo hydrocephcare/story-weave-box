@@ -99,6 +99,23 @@ describe("topic page writer", () => {
     expect(correctionPrompt).toContain("thin sections");
   });
 
+  it("preserves Gemini's independent clinical correction after a structural rewrite", async () => {
+    const thin = fullPage();
+    thin.sections = thin.sections.map((section) => ({ h: section.h, p: "Short paragraph.", b: ["Brief item."] }));
+    const issue = { verdict: "issues", issues: [{ severity: "high", where: "Management", problem: "The escalation step is incomplete.", fix: "State when urgent referral and monitoring are required." }] };
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify(thin) } }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify(deepPage) } }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(issue) }] } }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify(deepPage) } }] }) })
+      .mockResolvedValueOnce({ ok: true, status: 200, json: async () => ({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }) });
+    const page = await generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { GROQ_API_KEYS: "g", GEMINI_API_KEYS: "v" }, fetchImpl });
+    expect(page.aiReview.status).toBe("passed");
+    expect(page.aiReview.fixRounds).toBe(2);
+    expect(fetchImpl).toHaveBeenCalledTimes(5);
+    expect(String(fetchImpl.mock.calls[3][1].body)).toContain("The escalation step is incomplete.");
+  });
+
   it("does not use Gemini as a writer when Groq is not configured", async () => {
     const fetchImpl = vi.fn();
     await expect(generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { GEMINI_API_KEYS: "v" }, fetchImpl })).rejects.toThrow("Groq generation is not configured");
