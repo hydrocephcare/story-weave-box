@@ -250,27 +250,27 @@ describe("topic validation and provider routing", () => {
     expect(result.text).toContain('"ok":true');
   });
 
-  it("falls back to Groq when Gemini is unavailable in the shared serverless AI client", async () => {
+  it("falls back to Gemini when Groq is unavailable in the shared serverless AI client", async () => {
     const fetchImpl = vi.fn()
-      .mockResolvedValueOnce(new Response("Gemini unavailable", { status: 503 }))
+      .mockResolvedValueOnce(new Response("Groq unavailable", { status: 503 }))
       .mockResolvedValueOnce(new Response(JSON.stringify({
-        choices: [{ message: { content: '{"fallback":"groq"}' } }],
+        candidates: [{ content: { parts: [{ text: '{"fallback":"gemini"}' }] } }],
       }), { status: 200, headers: { "Content-Type": "application/json" } }));
 
     const result = await askSharedModel("Return a small JSON object.", {
       env: {
-        GEMINI_API_KEYS: "gemini-shared-fallback-key",
-        GEMINI_MODELS: "gemini-3.8-flash",
         GROQ_API_KEYS: "groq-shared-fallback-key",
         GROQ_MODELS: "openai/gpt-oss-20b",
+        GEMINI_API_KEYS: "gemini-shared-fallback-key",
+        GEMINI_MODELS: "gemini-3.8-flash",
       },
       fetchImpl,
     });
 
     expect(fetchImpl).toHaveBeenCalledTimes(2);
-    expect(String(fetchImpl.mock.calls[0][0])).toContain("generativelanguage.googleapis.com");
-    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
-    expect(result.model).toBe("openai/gpt-oss-20b");
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.model).toBe("gemini-3.8-flash");
   });
 
   it("falls back to Gemini when Groq is unavailable in the active Supabase gateway client", async () => {
