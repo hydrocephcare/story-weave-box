@@ -2,7 +2,7 @@ import { neon } from "@neondatabase/serverless";
 import { deepNoteReady, topicBaseReady } from "./deepNoteReadiness.js";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askGroqModel, askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
@@ -342,7 +342,7 @@ Return ONLY JSON: {"summary":"2 or 3 plain sentences, 55 words at most, no hype,
 Use only information supported by the source text. Do not invent content.
 PAGE TEXT:
 """${sourceText}"""`;
-      const result = await askModel(prompt, { env: aiEnv, timeoutMs: 40000, maxTokens: 900 });
+      const result = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 40000, maxTokens: 900 });
       const match = String(result?.text || "").match(/\{[\s\S]*\}/);
       if (!match) return res.status(502).json({ error: "The AI summary was not valid JSON." });
       let parsed;
@@ -402,7 +402,7 @@ PAGE TEXT:
           "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
           "ORIGINAL NOTE:", original
         ].join("\n\n");
-        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        const draft = await askGroqModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
         let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
         fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
         if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
