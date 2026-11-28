@@ -300,7 +300,7 @@ export default async function handler(req, res) {
       let candidate=body.article_id?[{id:String(body.article_id)}]:[];
       let upgrade=null;
       const pickLegacyUpgrade=async()=>{
-        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":3%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
+        const old=await getDb().query(`SELECT f.id,f.source_reference FROM public.flashcard_sets f WHERE f.source_type='note_generated' AND f.published=true AND f.deleted_at IS NULL AND coalesce(f.original_notes,'') NOT LIKE '%"v":3%' AND f.source_reference IS NOT NULL AND EXISTS (SELECT 1 FROM public.articles a WHERE a.id::text=f.source_reference AND a.published=true AND a.deleted_at IS NULL) ORDER BY f.created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
       };
       // Alternate daily capacity between new decks and legacy-deck upgrades so
