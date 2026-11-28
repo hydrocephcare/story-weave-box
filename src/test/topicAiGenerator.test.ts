@@ -18,7 +18,7 @@ const makePage = (title: string, subject: string, count = 13) => {
 describe("topic page section depth validation", () => {
   const paragraphOnlyPage = (wordCount: number) => {
     const page = makePage("Asthma", "Medicine", 13);
-    const paragraph = Array.from({ length: wordCount }, (_, i) => `clinical explanation word${i} describes a relevant mechanism and its clinical significance`).join(" ");
+    const paragraph = Array.from({ length: wordCount }, () => "clinical").join(" ");
     return { ...page, sections: page.sections.map(({ h }) => ({ h, p: paragraph })) };
   };
 
@@ -30,7 +30,7 @@ describe("topic page section depth validation", () => {
 
   it("still rejects genuinely thin paragraph-only sections", () => {
     const page = paragraphOnlyPage(80);
-    page.sections[4].p = Array.from({ length: 64 }, (_, i) => `short clinical explanation word${i}`).join(" ");
+    page.sections[4].p = Array.from({ length: 64 }, () => "short").join(" ");
     expect(() => sanitizePage(page, { name: "Asthma", category: "Medicine" })).toThrow("thin sections");
   });
 });
