@@ -9,6 +9,7 @@ import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 import { verifyBlogContent } from "./blogPolishVerify.js";
 import { getPolishSql, hasPolishWriteKey } from "./neonPolishStore.js";
 import { isTrustedBlogWorkflow } from "./blogPolishAuth.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const DAILY_CAP = Number(process.env.POLISH_DAILY_CAP || 40);
 const hits = new Map();
@@ -21,10 +22,10 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
   const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
   const gem = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-  if (!groq.trim() || !gem.trim()) return res.status(503).json({ status: "unavailable" });
+  const workflow = await isTrustedBlogWorkflow(req.headers.authorization);
+  if (!workflow && (!groq.trim() || !gem.trim())) return res.status(503).json({ status: "unavailable" });
   const sql = getPolishSql();
   if (!(await hasPolishWriteKey())) return res.status(503).json({ status: "unavailable" });
-  const workflow = await isTrustedBlogWorkflow(req.headers.authorization);
   const now = Date.now();
 
   if (!workflow) {
@@ -80,7 +81,7 @@ export default async function handler(req, res) {
   else claimed = await sql.query("INSERT INTO public.blog_polish (article_id,status) VALUES ($1,$2) ON CONFLICT (article_id) DO NOTHING RETURNING article_id", [id, "working"]);
   if (!claimed.length) return res.status(200).json({ status: "working", more: false });
 
-  const env = { GROQ_API_KEYS: groq };
+  const env = workflow ? supabaseAiEnv(req, { workflow: true }) : env;
   const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
   const save = async (row) => {
     const allowed = new Set(["title","description","image_query","verdict","reason","model","content","status","ai_review_status","ai_review_model","ai_reviewed_at","ai_review_issues","parts_done"]);
