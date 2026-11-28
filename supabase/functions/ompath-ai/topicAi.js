@@ -161,7 +161,22 @@ export const providerKeys = (env = {}, provider = "GEMINI") => parseProviderKeys
   env[provider + "_API_KEYS"], env[provider + "_API_KEY"],
   ...Array.from({ length: 20 }, (_, i) => env[provider + "_API_KEY_" + (i + 2)])
 );
-export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false } = {}) {
+async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
+  const url = String(env.OMPATH_SUPABASE_AI_URL || "");
+  const token = String(env.OMPATH_SUPABASE_AI_TOKEN || "");
+  if (!url || !token) return null;
+  const authKind = env.OMPATH_SUPABASE_AI_AUTH_KIND === "github" ? "x-github-oidc" : "x-neon-authorization";
+  const bearer = token.replace(/^Bearer\\s+/i, "");
+  const headers = { "Content-Type": "application/json", apikey: String(env.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY || "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP") };
+  headers[authKind] = bearer;
+  const response = await fetchImpl(url, { method: "POST", headers, signal: AbortSignal.timeout(timeoutMs + 1500), body: JSON.stringify({ task: "provider_call", provider, prompt: String(prompt).slice(0, 26000), plain, temperature, maxTokens, timeoutMs, feature: String(env.OMPATH_AI_FEATURE || "") }) });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || typeof data.text !== "string" || !data.text.trim()) throw new Error(String(data.error || data.detail || ("Supabase AI request failed (" + response.status + ").")).slice(0, 240));
+  return { text: data.text, model: String(data.model || provider) };
+}
+export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
+  const remote = await remoteProviderCall("auto", prompt, { env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
+  if (remote) return remote;
   const gateways = [];
   if (env.LOVABLE_API_KEY) gateways.push(["https://ai.gateway.lovable.dev/v1/chat/completions", env.LOVABLE_API_KEY, env.TOPIC_AI_MODEL || "google/gemini-3-flash-preview"]);
   if (env.OMNIROUTE_BASE_URL && env.OMNIROUTE_API_KEY) gateways.push([`${String(env.OMNIROUTE_BASE_URL).replace(/\/+$/, "").replace(/\/v1$/, "")}/v1/chat/completions`, env.OMNIROUTE_API_KEY, env.OMNIROUTE_MODEL || "ompathstudy"]);
@@ -174,7 +189,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
   for (const [url, key, model] of gateways) {
     try {
       const text = await timed(async (signal) => {
-        const r = await fetchImpl(url, { method: "POST", signal, headers: { "content-type": "application/json", Authorization: `Bearer ${key}` }, body: JSON.stringify({ model, stream: false, temperature: 0.3, max_tokens: 3600, messages: [{ role: "user", content: prompt }] }) });
+        const r = await fetchImpl(url, { method: "POST", signal, headers: { "content-type": "application/json", Authorization: `Bearer ${key}` }, body: JSON.stringify({ model, stream: false, temperature, max_tokens: 3600, messages: [{ role: "user", content: prompt }] }) });
         if (!r.ok) throw new Error(`model API ${r.status}`);
         return (await r.json())?.choices?.[0]?.message?.content;
       });
@@ -194,7 +209,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       if (deadModels.has(key + model)) continue;
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: maxTokens, ...(plain ? {} : { responseMimeType: "application/json" }), ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : model.startsWith("gemini-3") ? { thinkingConfig: { thinkingLevel: "low" } } : {}) } }) });
+          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature, maxOutputTokens: maxTokens, ...(plain ? {} : { responseMimeType: "application/json" }), ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : model.startsWith("gemini-3") ? { thinkingConfig: { thinkingLevel: "low" } } : {}) } }) });
           if (r.status === 404) deadModels.add(key + model);
           if (r.status === 429 || r.status === 503) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
           if (r.status === 403 || r.status === 401) deadKeys.add(key);
@@ -217,7 +232,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       if (deadModels.has(key + model)) continue;
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature: 0.3, max_tokens: maxTokens, reasoning_effort: "low", ...(plain ? {} : { response_format: { type: "json_object" } }), messages: [{ role: "user", content: prompt }] }) });
+          const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature, max_tokens: maxTokens, reasoning_effort: "low", ...(plain ? {} : { response_format: { type: "json_object" } }), messages: [{ role: "user", content: prompt }] }) });
           if (r.status === 429 || r.status === 503 || r.status === 404) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
           if (!r.ok) throw new Error("groq " + r.status);
           return (await r.json())?.choices?.[0]?.message?.content;
@@ -234,7 +249,9 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
  * Calls Google's Gemini API directly. This is the independent review boundary:
  * no Lovable/OmniRoute gateway and no Groq fallback are permitted here.
  */
-export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 3500 } = {}) {
+export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 3500, plain = false, temperature = 0.2 } = {}) {
+  const remote = await remoteProviderCall("gemini", prompt, { env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
+  if (remote) return remote;
   const keys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
 
 
@@ -258,9 +275,9 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
           body: JSON.stringify({
             contents: [{ parts: [{ text: prompt }] }],
             generationConfig: {
-              temperature: 0.2,
+              temperature,
               maxOutputTokens: maxTokens,
-              responseMimeType: "application/json",
+              ...(plain ? {} : { responseMimeType: "application/json" }),
               ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
             },
           }),
@@ -286,7 +303,9 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
  * Calls Groq only. This provider boundary is deliberate: content generation and
  * independent Gemini review must never silently become the same model family.
  */
-export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000 } = {}) {
+export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
+  const remote = await remoteProviderCall("groq", prompt, { env, fetchImpl, timeoutMs, maxTokens, plain, temperature });
+  if (remote) return remote;
   const keys = parseProviderKeys(env.GROQ_API_KEYS, env.GROQ_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GROQ_API_KEY_" + (i + 2)]));
   const models = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
   if (!keys.length) throw new Error("Groq generation is not configured (GROQ_API_KEYS).");
@@ -306,10 +325,10 @@ export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeou
           headers: { "content-type": "application/json", Authorization: "Bearer " + key },
           body: JSON.stringify({
             model,
-            temperature: 0.3,
+            temperature,
             max_tokens: maxTokens,
             reasoning_effort: "low",
-            response_format: { type: "json_object" },
+            ...(plain ? {} : { response_format: { type: "json_object" } }),
             messages: [{ role: "user", content: prompt }],
           }),
         });
