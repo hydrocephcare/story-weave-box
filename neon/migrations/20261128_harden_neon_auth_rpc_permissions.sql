@@ -296,4 +296,6 @@ GRANT EXECUTE ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb)
 
 -- Topic publication uses only schema-qualified application objects; pin its
 -- SECURITY DEFINER search_path as well, while preserving authenticated execution.
+REVOKE ALL ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text) FROM PUBLIC, anonymous;
+GRANT EXECUTE ON FUNCTION public.publish_topic_page(text, text, text, jsonb, text) TO authenticated, service_role;
 ALTER FUNCTION public.publish_topic_page(text, text, text, jsonb, text) SET search_path = pg_catalog;
