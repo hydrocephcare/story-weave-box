@@ -46,7 +46,7 @@ export default async function handler(req, res) {
       "INSERT INTO public.polish_secret (id,secret,updated_at) VALUES (1,$1,now()) ON CONFLICT (id) DO UPDATE SET secret=EXCLUDED.secret,updated_at=now()",
       [key],
     );
-    return res.status(200).json({ configured: true, runtimeReady: true, aiReady: aiReady(), updatedAt: new Date().toISOString(), key });
+    return res.status(200).json({ configured: true, runtimeReady: true, aiReady: await aiReady(req), updatedAt: new Date().toISOString(), key });
   } catch (error) {
     console.error("[polish-config]", error instanceof Error ? error.message : String(error));
     return res.status(503).json({ error: "Could not update the polishing configuration in Neon." });
