@@ -259,7 +259,7 @@ BEGIN
   END IF;
 
   UPDATE public.topic_pages
-  SET content = (existing.content - 'deep') || jsonb_build_object('deep', p_deep),
+  SET content = (coalesce(existing.content, '{}'::jsonb) - 'deep') || jsonb_build_object('deep', p_deep),
       updated_at = now()
   WHERE slug = p_slug AND status = 'published';
   GET DIAGNOSTICS affected_rows = ROW_COUNT;
