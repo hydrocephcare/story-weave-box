@@ -195,3 +195,16 @@ REVOKE ALL ON FUNCTION public.zone_finish_room(uuid) FROM PUBLIC, anonymous, aut
 GRANT EXECUTE ON FUNCTION public.zone_finish_room(uuid) TO service_role;
 REVOKE ALL ON FUNCTION public.zone_sync_lives(public.zone_rooms, integer) FROM PUBLIC, anonymous, authenticated;
 GRANT EXECUTE ON FUNCTION public.zone_sync_lives(public.zone_rooms, integer) TO service_role;
+
+-- Pin remaining SECURITY DEFINER maintenance helpers to pg_catalog. Their
+-- application objects are explicitly schema-qualified in their definitions.
+ALTER FUNCTION public._process_admission(uuid, text, text) SET search_path = pg_catalog;
+ALTER FUNCTION public.cleanup_lite_health_data() SET search_path = pg_catalog;
+ALTER FUNCTION public.zone_close_stale() SET search_path = pg_catalog;
+ALTER FUNCTION public.essay_pending_candidates(integer) SET search_path = pg_catalog;
+ALTER FUNCTION public.note_essay_candidates(integer) SET search_path = pg_catalog;
+ALTER FUNCTION public.note_flashcard_candidates(integer) SET search_path = pg_catalog;
+ALTER FUNCTION public.note_mcq_candidates(integer) SET search_path = pg_catalog;
+ALTER FUNCTION public.note_mcq_topup_candidates(integer) SET search_path = pg_catalog;
+ALTER FUNCTION public.zone_finish_room(uuid) SET search_path = pg_catalog;
+ALTER FUNCTION public.zone_sync_lives(public.zone_rooms, integer) SET search_path = pg_catalog;
