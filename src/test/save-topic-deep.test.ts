@@ -81,6 +81,17 @@ describe("saveTopicDeep privileged persistence proxy", () => {
     expect(neonMock).not.toHaveBeenCalled();
   });
 
+
+  it("runs a read-only database health probe with the shared secret", async () => {
+    sqlMock.mockResolvedValueOnce([{ ok: 1 }]);
+    const res = makeRes();
+    await handler(makeReq({ method: "GET", query: { health: "1" } }), res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toEqual({ status: "ok", database: true });
+    expect(verifyTokenMock).not.toHaveBeenCalled();
+    expect(sqlMock).toHaveBeenCalledTimes(1);
+  });
+
   it("persists only after both secret and Neon token verification", async () => {
     const res = makeRes();
     await handler(makeReq(), res);
