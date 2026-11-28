@@ -124,8 +124,8 @@ ${text}`;
   let cards = parseNoteCards(draft.text);
   if (cards.length < 8) throw new Error("Flashcard generation returned too few distinct usable cards.");
 
-  const reviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\\n"
-    + text.slice(0, 6500) + "\\n\\nFLASHCARDS TO REVIEW:\\n" + JSON.stringify(cards);
+  const reviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\n"
+    + text.slice(0, 6500) + "\n\nFLASHCARDS TO REVIEW:\n" + JSON.stringify(cards);
   let review = await checkContent({
     title: article.title,
     kind: "medical revision flashcards and their answers",
@@ -149,8 +149,8 @@ ${text}`;
     const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 55000, maxTokens: 7000 });
     cards = parseNoteCards(repaired.text);
     if (cards.length < 8) throw new Error("Gemini flagged the flashcards and the Groq repair returned too few usable cards.");
-    const repairedReviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\\n"
-      + text.slice(0, 6500) + "\\n\\nREPAIRED FLASHCARDS TO REVIEW:\\n" + JSON.stringify(cards);
+    const repairedReviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\n"
+      + text.slice(0, 6500) + "\n\nREPAIRED FLASHCARDS TO REVIEW:\n" + JSON.stringify(cards);
     review = await checkContent({
       title: article.title,
       kind: "repaired medical revision flashcards and their answers",
