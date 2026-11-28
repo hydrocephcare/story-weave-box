@@ -13,6 +13,8 @@ const reply = (data:unknown,status=200,origin="") => new Response(JSON.stringify
 });
 const JWKS_URL=Deno.env.get("NEON_AUTH_JWKS_URL")||"";
 const DATA_API_URL=(Deno.env.get("NEON_DATA_API_URL")||"").replace(/\/+$/,"");
+const NEON_WRITE_PROXY_URL=Deno.env.get("NEON_WRITE_PROXY_URL")||"";
+const NEON_WRITE_PROXY_SECRET=Deno.env.get("OMPATH_NEON_WRITE_SECRET")||"";
 const jwks=JWKS_URL?createRemoteJWKSet(new URL(JWKS_URL)):null;
 
 const split=(v:unknown)=>[...new Set(String(v??"").split(/[\s,]+/).map(k=>k.trim()).filter(Boolean))];
@@ -285,26 +287,33 @@ Deno.serve(async(req:Request)=>{
     const name=String(body.name??"").trim();
     const category=String(body.category??"").slice(0,60);
     if(!validName(name))return reply({status:"invalid"},400,origin);
-    const base=body.base&&typeof body.base==="object"?body.base:{};
+    const base=body.base&&typeof body.base==="object"&&!Array.isArray(body.base)?body.base:{};
     const past=(Array.isArray(body.past)?body.past:[]).map((x:any)=>String(x).slice(0,240)).slice(0,12);
-    const slug=String(body.slug||slugOf(name));
+    const slug=String(body.slug||slugOf(name)).trim().toLowerCase();
+    if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)||slug.length>80)return reply({status:"invalid",reason:"slug"},400,origin);
+    let proxyUrl:URL;
+    try {
+      proxyUrl=new URL(NEON_WRITE_PROXY_URL);
+      if(proxyUrl.protocol!=="https:"||NEON_WRITE_PROXY_SECRET.length<32)throw new Error("proxy_not_configured");
+    } catch {
+      return reply({status:"failed",reason:"persistence_unconfigured"},503,origin);
+    }
     const quota=await entitlement(token,"ai_note_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
       const deep=await generateCheckedDeep({name,category,base,past},{...env},fetch,55000);
-      const saved=await fetch(DATA_API_URL+"/rpc/save_topic_deep",{
+      const saved=await fetch(proxyUrl.toString(),{
         method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category||String(base.subject||""),p_base:base,p_deep:deep}),
+        headers:{Authorization:"Bearer "+token,"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET,"Content-Type":"application/json",Accept:"application/json"},
+        body:JSON.stringify({slug,name,category:category||String(base.subject||""),base,deep}),
         signal:AbortSignal.timeout(15000)
       });
       if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Deep-note persistence failed",saved.status,detail);
+        console.error("Deep-note persistence proxy failed",saved.status);
         return reply({status:"failed",reason:"persistence"},502,origin);
       }
       const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
+      if(result?.status!=="saved"||result?.saved!==true)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       return reply({status:"published",deep,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath deep-note generation failed",String(e).slice(0,400));
