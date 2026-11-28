@@ -468,31 +468,90 @@ PAGE TEXT:
       const rows = await getDb()`SELECT slug,name,category,content,updated_at,ai_review_status FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(404).json({ error: "Published topic not found." });
-      if (row.ai_review_status === "passed" && row.content?.aiReview?.status === "passed"
-          && (row.content?.sections?.length || 0) >= 9 && (row.content?.exam?.length || 0) >= 8
-          && (row.content?.faq?.length || 0) >= 3 && JSON.stringify(row.content).split(/\s+/).length >= 700) {
+      const prior = row.content && typeof row.content === "object" ? row.content : {};
+      const structureReady = (page) => Boolean(page?.medical === true)
+        && String(page?.summary || "").length >= 100
+        && (page?.sections?.length || 0) >= 9
+        && (page?.exam?.length || 0) >= 8
+        && (page?.faq?.length || 0) >= 3
+        && JSON.stringify(page).length <= 60000;
+      if (row.ai_review_status === "passed" && prior.aiReview?.status === "passed" && structureReady(prior)) {
         return res.status(200).json({ status: "existing", slug });
       }
-      const prior = row.content || {};
-      const context = JSON.stringify({ priorSummary: prior.summary, priorSections: prior.sections, priorExam: prior.exam }).slice(0, 5000);
-      const result = await generateReviewedTopicPage({
-        name: row.name, category: row.category || "Medicine", context,
-        choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
-      }, { env: aiEnv, maxFixRounds: 1, timeoutMs: 55000 });
-      if (!result.page?.medical || result.review?.status !== "passed") return res.status(422).json({ status: "held", slug, reason: "independent_review_failed" });
-      const page = { ...result.page, aiReview: { ...(result.page.aiReview || {}), status: "passed", model: result.review.model, rounds: result.review.rounds || 0 } };
-      if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3
-          || String(page.summary || "").length < 100 || JSON.stringify(page).length > 60000) {
-        return res.status(422).json({ status: "held", slug, reason: "structure_check_failed" });
+
+      // Review the existing page first. Do not regenerate or replace a legacy topic
+      // merely to add review metadata when its content already passes.
+      let page = prior;
+      let review = await checkContent({
+        title: row.name,
+        kind: "published medical topic page",
+        text: JSON.stringify(prior),
+        env: aiEnv,
+        timeoutMs: 55000,
+      });
+      let rounds = 0;
+      const needsRepair = !review.validated || !structureReady(prior);
+
+      if (needsRepair) {
+        const findings = (review.issues || []).map((item, index) =>
+          (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + ". Correct it to: " + item.fix
+        );
+        if (!structureReady(prior)) findings.push("The page must contain at least 9 substantive sections, 8 examination points, 3 FAQs and a summary of at least 100 characters.");
+        const repairPrompt = `Repair this existing medical topic page while preserving its original content.
+Keep every existing section heading, clinical detail, table, examination point, FAQ and useful example. Do not shorten, remove or replace accurate material. Make only clinically necessary corrections and add missing material where required.
+Return ONLY the complete corrected JSON object. Preserve all existing top-level fields and the sections/exam/faq array structures.
+INDEPENDENT REVIEW FINDINGS:
+${findings.join("\n")}
+EXISTING TOPIC PAGE:
+${JSON.stringify(prior)}`;
+        const repaired = await askGroqModel(repairPrompt, { env: aiEnv, plain: true, timeoutMs: 65000, maxTokens: 12000 });
+        const match = String(repaired.text || "").match(/\{[\s\S]*\}/);
+        if (!match) return res.status(422).json({ status: "held", slug, reason: "repair_json_invalid" });
+        let candidate;
+        try { candidate = JSON.parse(match[0]); }
+        catch { return res.status(422).json({ status: "held", slug, reason: "repair_json_invalid" }); }
+
+        const oldHeadings = (prior.sections || []).map(section => String(section?.h || section?.heading || "").trim().toLowerCase()).filter(Boolean);
+        const newHeadings = new Set((candidate.sections || []).map(section => String(section?.h || section?.heading || "").trim().toLowerCase()).filter(Boolean));
+        const retainedHeadings = oldHeadings.filter(heading => newHeadings.has(heading)).length;
+        const retainedRatio = oldHeadings.length ? retainedHeadings / oldHeadings.length : 1;
+        const oldLength = JSON.stringify(prior).length;
+        const newLength = JSON.stringify(candidate).length;
+        if (!structureReady(candidate)
+            || (candidate.sections?.length || 0) < (prior.sections?.length || 0)
+            || (candidate.exam?.length || 0) < (prior.exam?.length || 0)
+            || (candidate.faq?.length || 0) < (prior.faq?.length || 0)
+            || retainedRatio < 0.9
+            || newLength < Math.min(800, oldLength * 0.75)) {
+          return res.status(422).json({ status: "held", slug, reason: "repair_failed_content_preservation_checks" });
+        }
+        page = candidate;
+        review = await checkContent({
+          title: row.name,
+          kind: "repaired medical topic page",
+          text: JSON.stringify(page),
+          env: aiEnv,
+          timeoutMs: 55000,
+        });
+        rounds = 1;
+        if (!review.validated) return res.status(422).json({ status: "held", slug, reason: "independent_review_failed_after_repair" });
       }
+
+      if (!structureReady(page)) return res.status(422).json({ status: "held", slug, reason: "structure_check_failed" });
+      page = { ...page, aiReview: { ...(page.aiReview || {}), status: "passed", model: review.model || "gemini", rounds } };
       const saved = await getDb()`UPDATE public.topic_pages
-        SET content = ${JSON.stringify(page)}::jsonb, model = ${page.model || "groq"},
-            reviewed = false, updated_at = now(), generator_model = ${page.model || "groq"},
-            ai_review_status = 'passed', ai_review_model = ${String(result.review.model || "gemini")},
-            ai_reviewed_at = now(), ai_review_fix_rounds = ${Number(result.review.rounds) || 0}
+        SET content = ${JSON.stringify(page)}::jsonb,
+            model = ${page.model || "legacy"},
+            reviewed = false,
+            updated_at = now(),
+            generator_model = ${page.model || "legacy"},
+            ai_review_status = 'passed',
+            ai_review_model = ${String(review.model || "gemini")},
+            ai_reviewed_at = now(),
+            ai_review_fix_rounds = ${rounds}
         WHERE slug = ${slug} AND status = 'published' AND updated_at = ${row.updated_at}
         RETURNING slug`;
-      return res.status(200).json({ status: saved.length ? "reviewed" : "conflict", slug });
+      return res.status(200).json({ status: saved.length ? "reviewed" : "conflict", slug, repaired: rounds > 0, reviewModel: review.model || null });
     }
 
     if (task === "deep-topic") {
