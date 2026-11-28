@@ -31,6 +31,24 @@ describe("publishing workflow POST redirects", () => {
     expect(fetchImpl.mock.calls[1][1].body).toBe(JSON.stringify({ count: 4 }));
   });
 
+  it("supports a configured HTTPS staging host without weakening redirect checks", async () => {
+    const fetchImpl = vi.fn().mockResolvedValueOnce(new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    }));
+    const result = await postJsonPreservingRedirect(
+      "https://preview.ompathstudy.test/api/neon-functions?name=topic-maintenance",
+      { task: "health" },
+      { Authorization: "Bearer staging-test-token" },
+      1000,
+      fetchImpl,
+    );
+    expect(result.response.status).toBe(200);
+    expect(result.data.success).toBe(true);
+    expect(fetchImpl).toHaveBeenCalledTimes(1);
+    expect(fetchImpl.mock.calls[0][1].method).toBe("POST");
+  });
+
   it("refuses to forward the workflow token to an external redirect target", async () => {
     const fetchImpl = vi.fn().mockResolvedValueOnce(new Response(null, {
       status: 302,
