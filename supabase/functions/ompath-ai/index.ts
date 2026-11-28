@@ -186,8 +186,7 @@ Deno.serve(async(req:Request)=>{
     if(!workflow) {
       token=await authenticate(req);
       if(!token)return reply({error:"login_required"},401,origin);
-      if(!token)return reply({error:"login_required"},401,origin);
-  const feature=String(body.feature||"").trim();
+      const feature=String(body.feature||"").trim();
       if(feature) {
         if(!["ai_flashcard_generation","ai_mcq_generation","ai_note_generation","search_prediction","ompath_ai_questions"].includes(feature))
           return reply({error:"feature_not_allowed"},403,origin);
