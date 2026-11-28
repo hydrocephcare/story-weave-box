@@ -222,7 +222,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
           if (r.status === 404) deadModels.add(key + model);
           if (r.status === 429 || r.status === 503) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
           if (r.status === 403 || r.status === 401) deadKeys.add(key);
-          if (!r.ok) throw new Error(`gemini ${r.status}`);
+          if (!r.ok) throw await providerFailure(r, "Gemini");
           return (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
         });
         if (text?.trim()) return { text, model };
@@ -243,7 +243,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
         const text = await timed(async (signal) => {
           const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature, max_tokens: maxTokens, reasoning_effort: "low", ...(plain ? {} : { response_format: { type: "json_object" } }), messages: [{ role: "user", content: prompt }] }) });
           if (r.status === 429 || r.status === 503 || r.status === 404) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
-          if (!r.ok) throw new Error("groq " + r.status);
+          if (!r.ok) throw await providerFailure(r, "Groq");
           return (await r.json())?.choices?.[0]?.message?.content;
         });
         if (text?.trim()) return { text, model };
