@@ -879,13 +879,14 @@ export default function AdminEditor() {
       });
       if (error) throw new Error(error.message);
       if (data?.error) throw new Error(data.error);
-      if (!Array.isArray(data) || data.length === 0) throw new Error("No MCQs generated");
-      
-      const normalized = normalizeMcqQuestions(data as any[]);
+      if (!Array.isArray(data?.questions) || data.questions.length === 0 || data?.aiReview?.status !== "passed" || !data?.aiReview?.reviewer) {
+        throw new Error("Generated MCQs did not pass independent Gemini clinical review.");
+      }
+
+      const normalized = normalizeMcqQuestions(data.questions as any[]);
       if (!normalized.length) throw new Error("Generated questions did not contain valid answer keys");
-      await requireMcqClinicalReview(supabase, normalized, set.title);
       await supabase.from("mcq_sets").update({ questions: normalized as any, updated_at: new Date().toISOString() } as any).eq("id", setId);
-      toast({ title: `Updated ${data.length} MCQs with AI!` });
+      toast({ title: `Updated ${data.questions.length} Gemini-reviewed MCQs with AI!` });
       await loadContent();
     } catch (err: any) {
       toast({ title: "AI update failed", description: err.message, variant: "destructive" });
@@ -939,19 +940,19 @@ export default function AdminEditor() {
       if (error) throw error;
       if (data?.error) throw new Error(data.error);
       
-      if (editorMode === "mcqs" && Array.isArray(data)) {
+      if (editorMode === "mcqs" && Array.isArray(data?.questions) && data?.aiReview?.status === "passed" && data?.aiReview?.reviewer) {
         const cat = editCategory || `Year ${selectedYear}: General`;
         const title = editTitle || extractTitleFromNotes(geminiNotes) || `MCQ: ${cat.split(":").pop()?.trim() || "General"}`;
         const written = parseWrittenQuestionsFromText(geminiNotes);
-        const combined = [...data.map((q: any) => ({ type: "mcq", ...q })), ...written];
-        await requireMcqClinicalReview(supabase, combined, title);
+        const combined = [...data.questions.map((q: any) => ({ type: "mcq", ...q })), ...written];
+        if (written.length) await requireMcqClinicalReview(supabase, written, title);
         await saveMcqSet({
           title,
           questions: combined as any, published: true, category: cat,
           original_notes: geminiNotes, access_password: "",
           created_at: new Date().toISOString(),
         } as any);
-        toast({ title: `Created ${data.length} MCQs${written.length ? ` + ${written.length} written questions` : ""}!` });
+        toast({ title: `Created ${data.questions.length} Gemini-reviewed MCQs${written.length ? ` + ${written.length} reviewed written questions` : ""}!` });
         setIsAddMode(false);
         await loadContent();
       } else {
