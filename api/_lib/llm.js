@@ -6,6 +6,7 @@ const list = (...values) => parseProviderKeys(...values);
 const providerKeys = (provider) => parseProviderKeys(
   process.env[provider + "_API_KEYS"],
   process.env[provider + "_API_KEY"],
+  process.env[provider + "_API_KEYS_EXTRA"],
   ...Array.from({ length: 20 }, (_, i) => process.env[provider + "_API_KEY_" + (i + 2)]),
 );
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
