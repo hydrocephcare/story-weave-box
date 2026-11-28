@@ -219,7 +219,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
 
   // Gemini is the independent fallback when Groq is unavailable.
   const geminiKeys = parseProviderKeys(env.GEMINI_API_KEYS, env.GEMINI_API_KEY, ...Array.from({ length: 20 }, (_, i) => env["GEMINI_API_KEY_" + (i + 2)]));
-  const geminiModels = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
+  const geminiModels = String(env.GEMINI_MODELS ?? "gemini-3.8-flash,gemini-3.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
   const mStart = geminiKeys.length ? turn++ % geminiKeys.length : 0;
   for (let i = 0; i < geminiKeys.length; i++) {
     const key = geminiKeys[(mStart + i) % geminiKeys.length];
@@ -265,7 +265,7 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
 
 
 
-  const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
+  const models = String(env.GEMINI_MODELS ?? "gemini-3.8-flash,gemini-3.5-flash-lite").split(",").map((model) => model.trim()).filter(Boolean);
   if (!keys.length) throw new Error("Gemini review is not configured (GEMINI_API_KEYS).");
   if (!models.length) throw new Error("No Gemini review model is configured.");
 
