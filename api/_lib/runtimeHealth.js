@@ -30,7 +30,7 @@ export default async function handler(req, res) {
   if (!(await isAdmin(bearer(req)))) return res.status(403).json({ error: "Administrator access required." });
 
   const result = {
-    unportedFunctions: { ok: true, ready: true, functions: [] },
+    unportedFunctions: { ok: true, ready: false, functions: ["Public on-demand blog polishing still uses the Cloudflare provider route; scheduled blog polishing uses Supabase AI."] },
   };
   const deepAI = new URL(req.url, "https://www.ompathstudy.com").searchParams.get("deep") === "1";
   result.neonDatabase = await check("neon-database", async () => {
