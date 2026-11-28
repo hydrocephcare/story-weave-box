@@ -1,4 +1,4 @@
-import { postJsonPreservingRedirect } from "./post-json.mjs";
+import { postJsonPreservingRedirect } from "../../supabase/functions/_shared/postJson.js";
 
 const audience="ompathstudy-blog-polish";
 const base="https://www.ompathstudy.com";
