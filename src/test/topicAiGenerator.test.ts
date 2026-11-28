@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { askGeminiModel, askGroqModel, askModel, buildPrompt, generateReviewedTopicPage, providerKeys, sanitizePage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { sanitizePage as sanitizeEdgePage } from "../../supabase/functions/ompath-ai/topicAi.js";
 const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
 const makePage = (title: string, subject: string, count = 13) => {
   const explanation = Array.from({ length: 8 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
@@ -24,6 +25,12 @@ describe("topic page section depth validation", () => {
 
   it("counts words in explanatory paragraphs without requiring bullets or tables", () => {
     const page = sanitizePage(paragraphOnlyPage(80), { name: "Asthma", category: "Medicine" });
+    expect(page.sections).toHaveLength(13);
+    expect(page.sections.every((section) => section.p && !section.b && !section.t)).toBe(true);
+  });
+
+  it("uses the same paragraph word-count fix in the deployed Edge Function module", () => {
+    const page = sanitizeEdgePage(paragraphOnlyPage(80), { name: "Asthma", category: "Medicine" });
     expect(page.sections).toHaveLength(13);
     expect(page.sections.every((section) => section.p && !section.b && !section.t)).toBe(true);
   });
