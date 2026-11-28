@@ -21,6 +21,14 @@ on:
         description: "How many library notes to cross-check"
         required: false
         default: "40"
+      mcqs:
+        description: "How many note-based MCQ banks to generate"
+        required: false
+        default: "4"
+      flashcards:
+        description: "How many note-based flashcard decks to generate"
+        required: false
+        default: "4"
 permissions:
   contents: write
   id-token: write
@@ -106,6 +114,20 @@ jobs:
         continue-on-error: true
         timeout-minutes: 30
         run: node scripts/imed/validate-notes.mjs ${{ inputs.check || (github.event_name == 'push' && '4') || '40' }}
+      - name: Generate note-based MCQ banks through Supabase AI and save them to Neon
+        id: note_mcqs
+        continue-on-error: true
+        timeout-minutes: 45
+        env:
+          NOTE_MCQ_COUNT: ${{ inputs.mcqs || '4' }}
+        run: node scripts/topics/generate-note-banks.mjs mcqs
+      - name: Generate note-based flashcard decks through Supabase AI and save them to Neon
+        id: note_flashcards
+        continue-on-error: true
+        timeout-minutes: 45
+        env:
+          NOTE_FLASHCARD_COUNT: ${{ inputs.flashcards || '4' }}
+        run: node scripts/topics/generate-note-banks.mjs flashcards
       - name: Write page summaries
         id: summaries
         continue-on-error: true
@@ -129,9 +151,11 @@ jobs:
           IMAGE_NEW: ${{ steps.image_sitemap_after_topics.outcome }}
           IMAGE_FINAL: ${{ steps.final_image_sitemap.outcome }}
           SUMMARIES: ${{ steps.summaries.outcome }}
+          NOTE_MCQS: ${{ steps.note_mcqs.outcome }}
+          NOTE_FLASHCARDS: ${{ steps.note_flashcards.outcome }}
         run: |
           failed=0
-          for value in "$REBUILD" "$TOPICS" "$LEGACY_REVIEW" "$LIVE_DEEP" "$STATIC_DEEP" "$NOTE_CHECK" "$MERGE_NEW" "$MERGE_DEEP" "$IMAGE_INITIAL" "$IMAGE_NEW" "$IMAGE_FINAL" "$SUMMARIES"; do
+          for value in "$REBUILD" "$TOPICS" "$LEGACY_REVIEW" "$LIVE_DEEP" "$STATIC_DEEP" "$NOTE_CHECK" "$NOTE_MCQS" "$NOTE_FLASHCARDS" "$MERGE_NEW" "$MERGE_DEEP" "$IMAGE_INITIAL" "$IMAGE_NEW" "$IMAGE_FINAL" "$SUMMARIES"; do
             echo "$value"
             if [ "$value" != "success" ]; then failed=1; fi
           done
