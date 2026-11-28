@@ -93,7 +93,7 @@ export default async function handler(req, res) {
   const msgs = [{ role: "system", content: system(ctx) }];
   for (const h of (Array.isArray(body.history) ? body.history : []).slice(-8)) if (h && (h.role === "user" || h.role === "assistant")) msgs.push({ role: h.role, content: String(h.content ?? "").slice(0, 1500) });
   msgs.push({ role: "user", content: message });
-  const got = await askJson(msgs, { prefer: "groq", fast: true, temperature: 0.1, maxTokens: 1500 });
+  const got = await askJson(msgs, { prefer: "groq", fast: true, temperature: 0.1, maxTokens: 1500, authToken: token });
   if (got.error) return res.status(502).json({ error: got.error });
   const raw = got.text;
   let out;
