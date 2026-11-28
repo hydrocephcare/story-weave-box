@@ -1,6 +1,13 @@
 // One place that talks to the AI providers for every admin tool. It tries several models on several keys, in an order that suits the job, retries when a provider
 // says "slow down", drops options a model rejects, and tells the caller WHY it failed (rate limit, missing key, refused) instead of a bare "busy".
-const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
+import { parseProviderKeys } from "../../supabase/functions/_shared/topicAi.js";
+
+const list = (...values) => parseProviderKeys(...values);
+const providerKeys = (provider) => parseProviderKeys(
+  process.env[provider + "_API_KEYS"],
+  process.env[provider + "_API_KEY"],
+  ...Array.from({ length: 20 }, (_, i) => process.env[provider + "_API_KEY_" + (i + 2)]),
+);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let turn = 0;
 // a model that just said "quota used up" (429) or "does not exist" (404) is skipped for a while, so one bad model does not slow every request
@@ -12,7 +19,7 @@ const GROQ_MODELS = () => list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-1
 const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-3.8-flash,gemini-3.5-flash-lite,gemini-2.5-flash,gemini-2.5-flash-lite");
 
 async function viaGroq(msgs, opt, why) {
-  const keys = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY); if (!keys.length) { why.push("no Groq key"); return null; }
+  const keys = providerKeys("GROQ"); if (!keys.length) { why.push("no Groq key"); return null; }
   const start = turn++ % keys.length;
   const tooBig = new Set();   // a request that is too large for a model is too large on every key: do not repeat it
   const models = opt.fast ? ["openai/gpt-oss-20b", ...GROQ_MODELS().filter((m) => m !== "openai/gpt-oss-20b")] : GROQ_MODELS();
@@ -36,7 +43,7 @@ async function viaGroq(msgs, opt, why) {
 }
 
 async function viaGemini(msgs, opt, why) {
-  const keys = list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY); if (!keys.length) { why.push("no Gemini key"); return null; }
+  const keys = providerKeys("GEMINI"); if (!keys.length) { why.push("no Gemini key"); return null; }
   const system = msgs[0].content;
   const contents = msgs.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = turn++ % keys.length;
@@ -71,15 +78,25 @@ async function askSupabaseAI(msgs, opt) {
   return data.text;
 }
 export async function askJson(msgs, opt = {}) {
-  if (opt.authToken) { try { const text = await askSupabaseAI(msgs, opt); if (text) return { text, provider: "supabase" }; } catch (e) { return { error: String(e?.message || e), why: [String(e?.message || e)] }; } }
-  const order = opt.prefer === "gemini" ? [viaGemini, viaGroq] : [viaGroq, viaGemini];
   const why = [];
+  if (opt.authToken) {
+    try {
+      const text = await askSupabaseAI(msgs, opt);
+      if (text) return { text, provider: "supabase" };
+      why.push("Supabase AI returned an empty answer");
+    } catch (e) {
+      // These callers authenticate and authorise the administrator before reaching this helper.
+      // If the central gateway is unavailable, keep the admin workflow alive using server-side provider keys.
+      why.push("Supabase AI: " + String(e?.message || e).slice(0, 160));
+    }
+  }
+  const order = opt.prefer === "gemini" ? [viaGemini, viaGroq] : [viaGroq, viaGemini];
   for (let round = 0; round < 2; round++) {
     for (const via of order) { const t = await via(msgs, opt, why); if (t) return { text: t }; }
     if (!why.some((w) => /rate limit|429/.test(w))) break;  // only a rate limit is worth waiting for
     await sleep(2500);
   }
-  const configured = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY).length + list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY).length;
+  const configured = providerKeys("GROQ").length + providerKeys("GEMINI").length;
   const limited = why.some((w) => /rate limit|429/.test(w));
   return { error: !configured ? "No AI key is set on the server." : limited ? "The AI providers are rate-limited right now (free quota used up for a moment). Wait about a minute and press send again." : `The AI providers refused the request (${[...new Set(why)].slice(0, 3).join("; ")}).`, why };
 }
