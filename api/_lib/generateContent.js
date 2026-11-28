@@ -63,7 +63,7 @@ async function generateReviewedArticle(messages,customTitle,env) {
     if(customTitle)article.title=customTitle;
     const review=await checkContent({title:article.title,kind:"medical education article",text:article.content,env,timeoutMs:12000});
     if(!review.issues?.length)return {...article,aiReview:{status:"passed",generator:generated.model,reviewer:review.model,reviewedAt:review.at,fixRounds:round}};
-    if(round===2)throw new Error("Clinical review held the article after two correction rounds: "+review.issues.map(x=>x.where+": "+x.problem).join(" | ").slice(0,500));
+    if(round===1)throw new Error("Clinical review held the article after one correction round: "+review.issues.map(x=>x.where+": "+x.problem).join(" | ").slice(0,500));
     corrections=review.issues.map(x=>"["+x.severity+"] "+x.where+": "+x.problem+". Correct statement: "+x.fix);
   }
   throw new Error("Clinical review did not approve this article.");
