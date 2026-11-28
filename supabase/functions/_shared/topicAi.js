@@ -128,7 +128,7 @@ export function sanitizePage(raw, options = {}) {
     if (sections.length < minimum) throw new Error(`thin topic page: ${sections.length} sections; ${minimum} required`);
     const thin = sections.filter((section) => {
       const structured = (section.b?.length ?? 0) + (section.t?.length ?? 0);
-      const words = (section.p ?? "").split(/\\s+/).filter(Boolean).length;
+      const words = (section.p ?? "").split(/\s+/).filter(Boolean).length;
       return structured < 4 && words < 65;
     });
     if (thin.length) throw new Error(`thin sections: ${thin.map((section) => section.h).slice(0, 4).join(", ")}`);
