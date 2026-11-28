@@ -12,13 +12,13 @@ const thinnessIssues = (text) => {
   return [{ severity: "medium", where: "overall structure", problem: "The article does not meet the comprehensive-note standard: it needs at least 750 words, eight substantive numbered sections and eight taught practice questions.", fix: "Expand with topic-specific physiology, types/classification, mechanisms, clinical relevance, investigations and interpretation, management, pharmacology, complications and prevention where relevant; add eight answered practice questions." }];
 };
 
-export async function verifyBlogContent(article, candidate, env, { allowRepair = false, timeoutMs = 35000 } = {}) {
+export async function verifyBlogContent(article, candidate, env, { allowRepair = false, timeoutMs = 35000, allowDirectFallback = false } = {}) {
   const original = String(article?.content || "");
   const source = String(candidate ?? original).trim();
   if (!source) return { status: "held", content: null, model: null, at: new Date().toISOString(), issues: [{ severity: "high", where: "article", problem: "No article text was available to verify.", fix: "Retry after the article text is available." }] };
 
   const review = await checkContent({ title: article.title || "Medical education article", kind: "published medical education article",
-    text: source, env, timeoutMs });
+    text: source, env, timeoutMs, allowDirectFallback });
   const issues = [...(review.issues || []), ...thinnessIssues(source)];
   if (review.validated && issues.length === 0) {
     return { status: "passed", content: candidate == null ? null : source, model: review.model, at: new Date().toISOString(), issues: [] };
@@ -45,7 +45,7 @@ export async function verifyBlogContent(article, candidate, env, { allowRepair =
     "Output only the complete corrected Markdown."
   ].join("\n\n");
 
-  const repaired = await askModel(prompt, { env, plain: true,
+  const repaired = await askModel(prompt, { env, allowDirectFallback, plain: true,
     timeoutMs: Math.max(timeoutMs, 50000), maxTokens: 11000 });
   const corrected = String(repaired.text || "").trim();
   if (!corrected || corrected.length < Math.min(500, source.length * 0.65)) {
