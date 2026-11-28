@@ -125,9 +125,9 @@ ${text}`;
   if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
   let review=await checkContent({title:article.title,kind:"medical revision flashcards",text:JSON.stringify(cards),env,timeoutMs:45000});
   if(!review.validated){
-    const repairPrompt="Correct the clinical or factual problems identified by the independent reviewer. Keep the same topic, retain distinct high-yield cards, and use only accepted medical knowledge. Return ONLY the complete JSON array of flashcards.\\nISSUES:\\n"
-      +(review.issues||[]).map((item,index)=>(index+1)+". "+item.problem+" Fix: "+item.fix).join("\\n")
-      +"\\nFLASHCARDS:\\n"+JSON.stringify(cards);
+    const repairPrompt="Correct the clinical or factual problems identified by the independent reviewer. Keep the same topic, retain distinct high-yield cards, and use only accepted medical knowledge. Return ONLY the complete JSON array of flashcards.\nISSUES:\n"
+      +(review.issues||[]).map((item,index)=>(index+1)+". "+item.problem+" Fix: "+item.fix).join("\n")
+      +"\nFLASHCARDS:\n"+JSON.stringify(cards);
     const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
     cards=parseNoteCards(fixed.text);
     if(cards.length<8)throw new Error("The repaired flashcard set was incomplete.");
