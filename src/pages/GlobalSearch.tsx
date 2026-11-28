@@ -19,7 +19,7 @@ import { trackEngagement } from "@/lib/analytics";
 
 const YEARS = [1, 2, 3, 4, 5, 6];
 /** A short answer to what was searched, written from the site's own results first. Asked once per search, remembered for the session. */
-function QuickAnswer({ q, hits, ready }: { q: string; hits: SiteHit[]; ready: boolean }) {
+function QuickAnswer({ q, topic, hits, ready }: { q: string; topic: string; hits: SiteHit[]; ready: boolean }) {
   const { hasPass } = useAccess();
   const [text, setText] = useState("");
   const [state, setState] = useState<"idle" | "busy" | "done" | "limit" | "off">("idle");
@@ -53,7 +53,14 @@ function QuickAnswer({ q, hits, ready }: { q: string; hits: SiteHit[]; ready: bo
       ) : (
         <div className="mt-3 max-w-[68ch] text-foreground/90"><Answer text={text} /></div>
       )}
-      <button type="button" onClick={() => openAI(q.trim())} className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline">Continue in the chat <ArrowRight className="h-4 w-4" aria-hidden /></button>
+      <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+        <Link to={topicPath(slugFromName(topic || q.trim()))} className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline">
+          Open the full exam-ready topic page <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
+        <button type="button" onClick={() => openAI(q.trim())} className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-primary">
+          Continue in the chat
+        </button>
+      </div>
     </section>
   );
 }
@@ -130,7 +137,7 @@ export default function GlobalSearch() {
           <p className="mt-6 text-sm text-muted-foreground">Showing results for <strong className="text-foreground">{parsed.topic}</strong>{parsed.year && !year ? <> in <strong className="text-foreground">Year {parsed.year}</strong></> : null}</p>
         )}
 
-        <QuickAnswer q={asked} hits={hits} ready={searched && !loading} />
+        <QuickAnswer q={asked} topic={parsed?.topic ?? asked} hits={hits} ready={searched && !loading} />
 
         {topicHits.length > 0 ? (
           <section className="mt-8" aria-label="Topic pages">
