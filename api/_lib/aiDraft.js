@@ -1,3 +1,4 @@
+import { providerKeys } from "../../supabase/functions/_shared/topicAi.js";
 // POST /api/ai?task=draft: saves strong, unanswered Ompath AI study notes as drafts for admin approval.
 // GET /api/ai?task=health: checks provider keys for the admin Activity page.
 import { getPolishSql, hasPolishWriteKey, verifyPolishWriteKey } from "./neonPolishStore.js";
@@ -51,9 +52,8 @@ export async function health(req, res) {
     try { const r = await fetch(url, { headers: header(key), signal: AbortSignal.timeout(8000) }); return { provider: name, ok: r.ok, status: r.status }; }
     catch { return { provider: name, ok: false, status: 0 }; }
   };
-  const list = (v) => String(v || "").split(/[ ,\s]+/).filter(Boolean);
   const out = [];
-  for (const k of list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY)) out.push({ ...(await test("Groq", "https://api.groq.com/openai/v1/models", k, (x) => ({ Authorization: `Bearer ${x}` }))), tail: k.slice(-4) });
-  for (const k of list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY)) out.push({ ...(await test("Gemini", `https://generativelanguage.googleapis.com/v1beta/models?key=${k}`, k, () => ({}))), tail: k.slice(-4) });
+  for (const k of providerKeys(process.env, "GROQ")) out.push({ ...(await test("Groq", "https://api.groq.com/openai/v1/models", k, (x) => ({ Authorization: `Bearer ${x}` }))), tail: k.slice(-4) });
+  for (const k of providerKeys(process.env, "GEMINI")) out.push({ ...(await test("Gemini", `https://generativelanguage.googleapis.com/v1beta/models?key=${k}`, k, () => ({}))), tail: k.slice(-4) });
   return res.status(200).json({ keys: out, writeKey: true });
 }
