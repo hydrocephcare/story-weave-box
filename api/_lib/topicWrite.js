@@ -6,8 +6,8 @@ const AI_PUBLISHABLE_KEY = "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP";
 const hits = new Map();
 const LIMIT = 30;
 
-function bearer(req) {
-  return String(req.headers["x-neon-authorization"] || req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
+export function bearer(req) {
+  return String(req.headers["x-neon-authorization"] || req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
 }
 
 async function invokeGateway(token, payload, timeoutMs = 90000) {
