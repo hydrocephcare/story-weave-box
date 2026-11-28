@@ -7,6 +7,7 @@ import { supabaseAiEnv } from "./supabaseAiEnv.js";
 import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
 import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
+import { generateReviewedNoteFlashcards, generateReviewedNoteEssays } from "./noteBankGeneration.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
 const REPOSITORY = "hydrocephcare/story-weave-box";
@@ -249,9 +250,10 @@ export default async function handler(req, res) {
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
-      const cards=await generateNoteFlashcards(article,aiEnv);
-      const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
-      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString()});
+      const generated=await generateReviewedNoteFlashcards(article,aiEnv,fetch);
+      const cards=generated.cards;
+      const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, independently checked for clinical accuracy.`;
+      const meta=JSON.stringify({type:"note_flashcards",v:3,article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:generated.review.model||null});
       if(upgrade){
         await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid",[upgrade.id,JSON.stringify(cards),meta,description]);
         return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true});
@@ -261,6 +263,26 @@ export default async function handler(req, res) {
       const slug=`${base}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
       await getDb().query("INSERT INTO public.flashcard_sets(title,slug,category,cards,published,source_reference,source_type,meta_description,original_notes,updated_at) VALUES($1,$2,$3,$4::jsonb,true,$5,'note_generated',$6,$7,now())",[title,slug,article.category,JSON.stringify(cards),String(article.id),description,meta]);
       return res.status(200).json({success:true,title:article.title,cards:cards.length});
+    }
+
+    if (task === "note-essays") {
+      const candidate = body.article_id
+        ? [{ id: String(body.article_id) }]
+        : await getDb().query("SELECT id FROM public.note_essay_candidates(1)");
+      if (!candidate.length) return res.status(200).json({ success: true, done: true });
+      const rows = await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
+      const article = rows[0];
+      if (!article) return res.status(404).json({ error: "Published study note not found." });
+      const generated = await generateReviewedNoteEssays(article,aiEnv,fetch);
+      const title = `${cleanTopicTitle(article.title)}: Essay questions`;
+      const base = title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70);
+      const slug = `${base}-${String(article.id).replace(/-/g,"").slice(0,8)}`;
+      const description = `${generated.saqs.length + generated.laqs.length} independently reviewed essay questions with model answers on ${cleanTopicTitle(article.title)}.`;
+      await getDb().query(
+        "INSERT INTO public.essays(title,slug,category,article_id,short_answer_questions,long_answer_questions,published,meta_title,meta_description,updated_at) VALUES($1,$2,$3,$4::uuid,$5::jsonb,$6::jsonb,true,$7,$8,now())",
+        [title,slug,article.category,String(article.id),JSON.stringify(generated.saqs),JSON.stringify(generated.laqs),title,description],
+      );
+      return res.status(200).json({success:true,title:article.title,saqs:generated.saqs.length,laqs:generated.laqs.length,reviewed:true,reviewModel:generated.review.model||null});
     }
 
     if (task === "generate-publish") {
