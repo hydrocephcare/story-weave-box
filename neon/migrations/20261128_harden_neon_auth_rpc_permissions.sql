@@ -293,3 +293,7 @@ $function$;
 
 REVOKE ALL ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb) FROM PUBLIC, anonymous, authenticated;
 GRANT EXECUTE ON FUNCTION public.save_topic_deep(text, text, text, jsonb, jsonb) TO service_role;
+
+-- Topic publication uses only schema-qualified application objects; pin its
+-- SECURITY DEFINER search_path as well, while preserving authenticated execution.
+ALTER FUNCTION public.publish_topic_page(text, text, text, jsonb, text) SET search_path = pg_catalog;
