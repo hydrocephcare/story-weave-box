@@ -24,7 +24,7 @@ function parseNoteCards(raw) {
   return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
     .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);if(key.length<8||seen.has(key)||c.answer.length<30)return false;seen.add(key);return true;});
 }
-function dedupeNoteMcqs(items, existing=[]) {
+export function dedupeNoteMcqs(items, existing=[]) {
   const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
   return items.filter(q=>{const key=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60);if(seen.has(key))return false;seen.add(key);return true;});
 }
