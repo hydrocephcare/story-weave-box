@@ -17,7 +17,7 @@ BEGIN
   IF p_deep IS NULL OR jsonb_typeof(p_deep) <> 'object' OR pg_column_size(p_deep) > 90000 THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'size');
   END IF;
-  IF coalesce(p_deep->>'checked', 'false') <> 'true' THEN
+  IF nullif(btrim(coalesce(p_deep->>'checked', '')), '') IS NULL THEN
     RETURN jsonb_build_object('ok', false, 'reason', 'review');
   END IF;
   IF coalesce(jsonb_typeof(p_deep->'sections'), '') <> 'array'
@@ -51,7 +51,7 @@ BEGIN
   END IF;
 
   old_deep := existing.content->'deep';
-  IF coalesce(old_deep->>'checked', 'false') = 'true'
+  IF nullif(btrim(coalesce(old_deep->>'checked', '')), '') IS NOT NULL
      AND coalesce(jsonb_typeof(old_deep->'sections'), '') = 'array'
      AND coalesce(jsonb_typeof(old_deep->'vivas'), '') = 'array'
      AND coalesce(jsonb_typeof(old_deep->'mcqs'), '') = 'array'
