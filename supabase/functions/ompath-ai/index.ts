@@ -141,7 +141,7 @@ Deno.serve(async(req:Request)=>{
     if(!quota.ok)return reply({predictions:[],quota_limited:true},200,origin);
     try {
       const prompt='You are a medical-study search query predictor. Do not answer the question. Infer the most likely medical subject and return only JSON: {"queries":[string]}. Give at most three short alternate search queries using standard medical terminology, synonyms, common abbreviations or likely corrected spelling. Preserve the intended subject; do not broaden to unrelated topics, invent a year level, or include explanations. If the query is already clear and needs no expansion, return an empty array.\nQUERY: '+query;
-      const raw=await chatText(env,[{role:"system",content:"Return valid JSON only. Be conservative and precise."},{role:"user",content:prompt}],0.1,420,3500,2,true);
+      const raw=await chatText(env,[{role:"system",content:"Return valid JSON only. Be conservative and precise."},{role:"user",content:prompt}],0.1,420,3000,4,true);
       const match=raw.match(/\{[\s\S]*\}/);
       const parsed=match?JSON.parse(match[0]):{};
       const predictions=[...new Set((Array.isArray(parsed.queries)?parsed.queries:[])
