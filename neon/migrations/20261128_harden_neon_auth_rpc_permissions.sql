@@ -187,3 +187,11 @@ REVOKE ALL ON FUNCTION public.note_mcq_candidates(integer) FROM PUBLIC, anonymou
 GRANT EXECUTE ON FUNCTION public.note_mcq_candidates(integer) TO service_role;
 REVOKE ALL ON FUNCTION public.note_mcq_topup_candidates(integer) FROM PUBLIC, anonymous, authenticated;
 GRANT EXECUTE ON FUNCTION public.note_mcq_topup_candidates(integer) TO service_role;
+
+-- These room lifecycle helpers are called by token-checked SECURITY DEFINER
+-- wrappers (zone_state, zone_end, zone_close_mine) and maintenance code. Direct
+-- RPC access would let a caller end arbitrary rooms or rewrite player lives.
+REVOKE ALL ON FUNCTION public.zone_finish_room(uuid) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.zone_finish_room(uuid) TO service_role;
+REVOKE ALL ON FUNCTION public.zone_sync_lives(public.zone_rooms, integer) FROM PUBLIC, anonymous, authenticated;
+GRANT EXECUTE ON FUNCTION public.zone_sync_lives(public.zone_rooms, integer) TO service_role;
