@@ -47,13 +47,13 @@ const parse = (raw) => { try { return JSON.parse(String(raw).replace(/^```(?:jso
 
 async function reviewMedicalDraft(out, title, env, kind) {
   let candidate = out;
-  for (let round = 0; round <= 2; round++) {
+  for (let round = 0; round <= 1; round++) {
     const review = await checkContent({
       title: String(candidate.title || title || "Medical study note"),
       kind,
       text: String(candidate.content || ""),
       env,
-      timeoutMs: 45000,
+      timeoutMs: 12000,
     });
     if (review.validated) {
       return {
@@ -73,7 +73,7 @@ async function reviewMedicalDraft(out, title, env, kind) {
       "DRAFT:",
       JSON.stringify(candidate),
     ].join("\n");
-    const fixed = await askGroqModel(repairPrompt, { env, plain: false, timeoutMs: 55000, maxTokens: 7000 });
+    const fixed = await askGroqModel(repairPrompt, { env, plain: false, timeoutMs: 25000, maxTokens: 7000 });
     candidate = parse(fixed.text);
     if (!candidate || typeof candidate.content !== "string" || candidate.content.length < 80) {
       throw new Error("Groq could not produce a complete clinical correction.");
@@ -110,7 +110,7 @@ export default async function handler(req, res) {
   // Keep non-medical formatting/moderation on the general assistant; medical prose is Groq-drafted.
   const medicalDraft = ["note", "article", "revise", "mcq_import"].includes(mode);
   const generated = medicalDraft
-    ? await askGroqModel(msgs.map((m) => m.role.toUpperCase() + ":\n" + m.content).join("\n\n"), { env: aiEnv, plain: false, timeoutMs: 60000, maxTokens: mode === "mcq_import" ? 7000 : 6500 })
+    ? await askGroqModel(msgs.map((m) => m.role.toUpperCase() + ":\n" + m.content).join("\n\n"), { env: aiEnv, plain: false, timeoutMs: 25000, maxTokens: mode === "mcq_import" ? 7000 : 6500 })
     : await askJson(msgs, { prefer: "groq", temperature: 0.3, maxTokens: mode === "mcq_import" ? 7000 : 6500, authToken: token });
   if (!medicalDraft && generated.error) return res.status(502).json({ error: generated.error });
   const raw = medicalDraft ? generated.text : generated.text;
