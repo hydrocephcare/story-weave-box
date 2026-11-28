@@ -56,9 +56,11 @@ ${text}`;
   if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
   return {questions,review};
 }
-export async function generateNoteFlashcards(article, env) {
+export async function generateNoteFlashcards(article, env, requestedCount = null) {
   const text=cleanStudyNote(article.content).slice(0,10000);
-  const count=Math.max(10,Math.min(22,Math.round(text.length/450)));
+  const count=requestedCount===null||requestedCount===undefined
+    ? Math.max(10,Math.min(22,Math.round(text.length/450)))
+    : Math.max(8,Math.min(100,Math.round(Number(requestedCount)||10)));
   const prompt=`Create ${count} high-yield revision flashcards for medical students from this study note.
 Each card covers one distinct angle: definition, causes, pathophysiology, clinical features, classification, investigations, differentials, management/pharmacology, complications, ward-round points, prognosis or prevention. Use only angles supported by the note.
 Each answer is 35–60 words: a direct answer, then 3–4 short explanatory lines, and a final Related line. Do not repeat facts across cards. No invented doses or criteria.
