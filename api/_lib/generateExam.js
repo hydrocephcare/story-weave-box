@@ -53,7 +53,7 @@ function parseEssays(raw) {
   } catch { return { saqs: [], laqs: [] }; }
 }
 
-async function reviewQuestions(questions, strict = true, aiEnv) {
+export async function reviewQuestions(questions, strict = true, aiEnv) {
   const kept = [], disputed = [];
   let dropped = 0, fixed = 0, reviewerUnavailable = false;
   for (let i = 0; i < questions.length; i += 15) {
@@ -194,7 +194,7 @@ export default async function handler(req, res) {
       catch (error) { skipped.push(unit + ": " + (error instanceof Error ? error.message : String(error))); continue; }
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " usable MCQs generated."); continue; }
 
-      const review = await reviewQuestions(questions, true);
+      const review = await reviewQuestions(questions, true, aiEnv);
       if (review.reviewerUnavailable) { skipped.push(unit + ": independent Gemini review is temporarily unavailable."); continue; }
       questions = balanceBank(review.kept, { seed: unit + new Date().toISOString().slice(0, 10) }).questions;
       if (questions.length < 20) { skipped.push(unit + ": only " + questions.length + " MCQs passed independent review."); continue; }
