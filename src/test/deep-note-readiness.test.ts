@@ -3,6 +3,9 @@ import { deepNoteReady, topicBaseReady } from "../../api/_lib/deepNoteReadiness.
 
 const common = {
   checked: "2026-11-28",
+  reviewStatus: "passed",
+  reviewModel: "gemini-3.8-flash",
+  reviewedAt: "2026-11-28",
   sections: Array.from({ length: 7 }, (_, i) => ({ h: `Section ${i + 1}` })),
   mcqs: Array.from({ length: 6 }, (_, i) => ({ q: `Question ${i + 1}` })),
   cases: Array.from({ length: 2 }, (_, i) => ({ v: `Case ${i + 1}` })),
@@ -38,6 +41,14 @@ describe("deep-note readiness", () => {
       ...common,
       exam: Array.from({ length: 12 }, (_, i) => `Question ${i + 1} — Answer`),
     })).toBe(true);
+  });
+
+  it("rejects a caller-supplied checked date without Gemini review evidence", () => {
+    const { reviewStatus, reviewModel, reviewedAt, ...unchecked } = common;
+    expect(deepNoteReady({
+      ...unchecked,
+      vivas: Array.from({ length: 12 }, () => ({ q: "Viva question", a: "Answer" })),
+    })).toBe(false);
   });
 
   it("rejects notes without a completed independent check", () => {
