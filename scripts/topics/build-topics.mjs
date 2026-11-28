@@ -14,7 +14,7 @@ import { loadCorpus, loadPublishedTopicPages } from "./corpus.mjs";
 import { SEED_LIST, SEED_TOPICS, GENERIC_TOKENS, DOMAINS, SEED_DOMAIN_OF } from "./seeds.mjs";
 
 const OUT = "public/topics";
-const MAX_TOPICS = Number(process.env.MAX_TOPICS || 3500);
+// Allow the source-backed topic catalogue to grow towards the 100,000-topic target without truncating discoveries.\nconst MAX_TOPICS = Number(process.env.MAX_TOPICS || 100000);
 
 // ------------------------------------------------------------------ helpers
 const slugify = (s) => s.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
