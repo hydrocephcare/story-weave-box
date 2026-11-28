@@ -156,7 +156,7 @@ Make everything feel polished and professional.
 ### **Add Your API Key:**
 
 1. Look for the "Settings" or "API Configuration" page in your admin dashboard
-2. Paste your API key: `AIzaSyCSzU5G7oNuyxznxZMahi0m5G7zhpbI3sM`
+2. Paste your API key: `[REDACTED — configure this as a secret; never commit API keys]`
 3. Save it
 
 ### **Test It:**
