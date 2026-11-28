@@ -158,13 +158,7 @@ export default async function handler(req, res) {
       if (Number(dailyRows[0]?.count || 0) >= 150) {
         return res.status(429).json({ ok: false, reason: "daily_cap", error: "The Neon topic publishing limit of 150 pages per rolling day has been reached." });
       }
-      const env = {
-        GROQ_API_KEYS: String(process.env.GROQ_API_KEYS || ""),
-        GEMINI_API_KEYS: String(process.env.GEMINI_API_KEYS || ""),
-      };
-      if (!env.GROQ_API_KEYS.trim() || !env.GEMINI_API_KEYS.trim()) {
-        return res.status(503).json({ error: "Groq and Gemini keys are not configured in Cloudflare." });
-      }
+      const env = aiEnv;
       const generated = await generateReviewedTopicPage({ name, category, context }, { env });
       const generatedPage = generated?.page;
       if (!generatedPage) return res.status(422).json({ ok: false, reason: "no_page" });
@@ -280,11 +274,11 @@ PAGE TEXT:
           "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
           "ORIGINAL NOTE:", original
         ].join("\n\n");
-        const draft = await askModel(prompt, { env: process.env, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
         let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
         fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
         if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
-          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: process.env, timeoutMs: 45000 }), fixed);
+          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: aiEnv, timeoutMs: 45000 }), fixed);
           if (final.validated) { correctedBody = fixed; repairStatus = "auto-repaired"; } else repairStatus = "held";
         } else repairStatus = "held";
       }
