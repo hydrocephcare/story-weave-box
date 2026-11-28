@@ -56,6 +56,32 @@ describe("Groq topic generation boundary", () => {
     );
   });
 
+  it("repairs thin generated sections with Groq before independent Gemini review", async () => {
+    const thin = makePage("Pleural effusion", "Medicine", 13);
+    thin.sections[2] = { h: "Causes and risk factors", p: "A thin section.", b: [] };
+    const complete = makePage("Pleural effusion", "Medicine", 13);
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(thin) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockImplementationOnce(async (_url: RequestInfo | URL, init?: RequestInit) => {
+        expect(String(init?.body)).toContain("COMPLETE corrected sections array");
+        expect(String(init?.body)).toContain("Causes and risk factors");
+        return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ sections: complete.sections }) } }] }), { status: 200, headers: { "Content-Type": "application/json" } });
+      })
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await generateReviewedTopicPage(
+      { name: "Pleural effusion", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl, maxFixRounds: 0 },
+    );
+
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[2][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.page.aiReview.status).toBe("passed");
+    expect(result.page.structureRepairModel).toBeTruthy();
+  });
+
   it("sends generation requests only to Groq and returns the model used", async () => {
     const fetchImpl = vi.fn(async (_url: RequestInfo | URL, _init?: RequestInit) =>
       new Response(JSON.stringify({
