@@ -394,7 +394,18 @@ export async function generateReviewedTopicPage(input, options = {}) {
   let page;
   let review;
   for (let round = 0; round <= rounds; round++) {
-    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    try {
+      page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    } catch (error) {
+      const message = String(error?.message ?? error);
+      const contentValidationFailure = /^(?:too few sections|thin topic page:|thin sections:|full topic page needs|Groq returned no valid JSON)/i.test(message);
+      if (!contentValidationFailure || round >= rounds) throw error;
+      fixes.push(
+        "The previous draft failed the structural content check: " + message +
+        ". Regenerate the entire page with at least nine substantive topic-specific sections, each with at least 65 meaningful words or four useful structured points, at least eight applied examiner questions and three useful FAQs. Preserve clinical accuracy and do not pad or invent facts.",
+      );
+      continue;
+    }
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const pageText = [
       page.summary,
