@@ -1,6 +1,7 @@
 // POST /api/ai?task=draft: saves strong, unanswered Ompath AI study notes as drafts for admin approval.
 // GET /api/ai?task=health: checks provider keys for the admin Activity page.
 import { getPolishSql, hasPolishWriteKey, verifyPolishWriteKey } from "./neonPolishStore.js";
+import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const MAX_PENDING = 200;
 const hits = new Map();
@@ -55,5 +56,33 @@ export async function health(req, res) {
   const out = [];
   for (const k of list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY)) out.push({ ...(await test("Groq", "https://api.groq.com/openai/v1/models", k, (x) => ({ Authorization: `Bearer ${x}` }))), tail: k.slice(-4) });
   for (const k of list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY)) out.push({ ...(await test("Gemini", `https://generativelanguage.googleapis.com/v1beta/models?key=${k}`, k, () => ({}))), tail: k.slice(-4) });
-  return res.status(200).json({ keys: out, writeKey: true });
+  const ai = supabaseAiEnv(req);
+  let supabaseAI = { ready: false, reason: "A signed-in Neon Auth session is required for the central gateway health check." };
+  if (ai.OMPATH_SUPABASE_AI_TOKEN) {
+    try {
+      const response = await fetch(ai.OMPATH_SUPABASE_AI_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: ai.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY,
+          "x-neon-authorization": ai.OMPATH_SUPABASE_AI_TOKEN,
+        },
+        body: JSON.stringify({ task: "health" }),
+        signal: AbortSignal.timeout(30000),
+      });
+      const data = await response.json().catch(() => ({}));
+      supabaseAI = {
+        ready: response.ok && data.providers?.groq?.ok === true
+          && data.providers?.gemini?.ok === true && data.neonStorage?.ok === true,
+        status: response.status,
+        functionVersion: data.functionVersion || null,
+        providers: data.providers || {},
+        neonStorage: data.neonStorage || {},
+        error: response.ok ? undefined : data.error || data.detail || "Gateway health check failed.",
+      };
+    } catch {
+      supabaseAI = { ready: false, reason: "Could not reach the Supabase AI gateway." };
+    }
+  }
+  return res.status(200).json({ keys: out, supabaseAI, writeKey: true });
 }
