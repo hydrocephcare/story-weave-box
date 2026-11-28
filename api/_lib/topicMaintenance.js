@@ -110,15 +110,15 @@ ${text}`;
   return {questions,review};
 }
 async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
-  const batchSize = 3;
+  const batchSize = 2;
   const issues = [];
   let model = "";
   let allValidated = true;
   for (let offset = 0; offset < cards.length; offset += batchSize) {
     const batch = cards.slice(offset, offset + batchSize);
     const batchNumber = Math.floor(offset / batchSize) + 1;
-    const reviewText = "SOURCE NOTE (reference only; assess every flashcard in this batch against accepted medical knowledge):\\n"
-      + source + "\\n\\nFLASHCARDS TO REVIEW (batch " + batchNumber + "):\\n" + JSON.stringify(batch);
+    const reviewText = "SOURCE NOTE (reference only; assess every flashcard in this batch against accepted medical knowledge):\n"
+      + source + "\n\nFLASHCARDS TO REVIEW (batch " + batchNumber + "):\n" + JSON.stringify(batch);
     const result = await checkContent({
       title,
       kind: kind + " (batch " + batchNumber + ")",
@@ -154,7 +154,7 @@ ${text}`;
 
   // Every card is independently reviewed in a bounded batch with the same source note.
   // This prevents long JSON arrays from being silently truncated or split away from their source.
-  const reviewSource = text.slice(0, 5500).replace(/^#{1,6}\\s+/gm, "");
+  const reviewSource = text;
   let review = await reviewFlashcardDeck({
     title: article.title,
     kind: "medical revision flashcards and their answers",
@@ -169,12 +169,12 @@ ${text}`;
       "Remove duplicate cards and ensure each answer is clinically accurate, clear and consistent with standard accepted medical knowledge.",
       "Return ONLY a complete JSON array of {question, answer} objects.",
       "ISSUES:",
-      (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\\n"),
+      (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\n"),
       "SOURCE NOTE:",
       text,
       "FLASHCARDS TO CORRECT:",
       JSON.stringify(cards),
-    ].join("\\n\\n");
+    ].join("\n\n");
     const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 55000, maxTokens: 7000 });
     cards = parseNoteCards(repaired.text);
     if (cards.length < 8) throw new Error("Gemini flagged the flashcards and the Groq repair returned too few usable cards.");
