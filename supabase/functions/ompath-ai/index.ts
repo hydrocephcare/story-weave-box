@@ -77,13 +77,14 @@ Deno.serve(async(req:Request)=>{
   if(req.method!=="POST")return reply({error:"POST only"},405,origin);
   if(origin&&!ALLOWED.has(origin))return reply({error:"origin_not_allowed"},403,origin);
   if(!JWKS_URL||!DATA_API_URL)return reply({error:"neon_auth_not_configured",detail:"Set NEON_AUTH_JWKS_URL and NEON_DATA_API_URL."},503,origin);
-  const token=await authenticate(req);
-  if(!token)return reply({error:"login_required"},401,origin);
   const body=await req.json().catch(()=>null);
   if(!body||typeof body!=="object")return reply({error:"invalid_json"},400,origin);
+  const workflowAuthenticated=body.task==="provider_call" ? await authenticateWorkflow(req) : false;
+  const token=await authenticate(req);
+  if(!token&&!workflowAuthenticated)return reply({error:"login_required"},401,origin);
   const env=Deno.env.toObject();
   if(body.task==="provider_call") {
-    const workflow=await authenticateWorkflow(req);
+    const workflow=workflowAuthenticated;
     let token=null;
     if(!workflow) {
       token=await authenticate(req);
