@@ -1,5 +1,5 @@
 import { neon } from "@neondatabase/serverless";
-import { deepNoteReady } from "./deepNoteReadiness.js";
+import { deepNoteReady, topicBaseReady } from "./deepNoteReadiness.js";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
@@ -359,7 +359,7 @@ PAGE TEXT:
       const name = String(body.name || "").slice(0, 180);
       const category = String(body.category || "").slice(0, 100);
       const base = body.base && typeof body.base === "object" ? body.base : null;
-      if (name.length < 2 || !base || !Array.isArray(base.sections) || base.sections.length < 3) return res.status(400).json({ error: "A valid topic name and revision page are required." });
+      if (name.length < 2 || !topicBaseReady(base)) return res.status(400).json({ error: "A valid topic name and complete revision page are required." });
       const past = Array.isArray(body.past) ? body.past.slice(0, 12).map(x => String(x).slice(0, 220)) : [];
       const deep = await generateCheckedDeep({ name, category, base, past }, aiEnv, fetch, 240000);
       if (!deepNoteReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
@@ -440,6 +440,7 @@ PAGE TEXT:
       const rows = await getDb()`SELECT slug,name,category,content,updated_at FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(404).json({ error: "Published topic not found." });
+      if (!topicBaseReady(row.content)) return res.status(422).json({ status: "held", slug, reason: "published_base_page_incomplete" });
       if (deepNoteReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const deep = await generateCheckedDeep(
         { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
@@ -490,6 +491,7 @@ PAGE TEXT:
         WHERE slug = ${slug} AND status = 'published' AND updated_at = ${body.updatedAt} LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(200).json({ status: "conflict", slug });
+      if (!topicBaseReady(row.content)) return res.status(422).json({ status: "held", slug, reason: "published_base_page_incomplete" });
       if (deepNoteReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const content = { ...(row.content || {}), deep };
       const saved = await getDb()`UPDATE public.topic_pages
