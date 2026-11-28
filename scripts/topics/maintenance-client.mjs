@@ -19,7 +19,7 @@ export async function maintenanceRequest(task, fields = {}) {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
     body: JSON.stringify({ task, ...fields }),
-    signal: AbortSignal.timeout(task === "deep-topic" || task === "deep-static" ? 260000 : task === "check-note" ? 180000 : task === "zone-write" ? 180000 : 58000),
+    signal: AbortSignal.timeout(task === "deep-topic" || task === "deep-static" ? 260000 : task === "check-note" || task === "zone-write" || task === "note-mcqs" || task === "note-flashcards" ? 180000 : 58000),
   });
   const result = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(result.error || `Topic maintenance API returned HTTP ${response.status}`);
