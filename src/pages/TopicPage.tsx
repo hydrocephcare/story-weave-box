@@ -491,6 +491,20 @@ export default function TopicPage() {
       <main className="mx-auto max-w-xl px-5 py-16">
         <Helmet><title>{name} | Ompath Study</title><meta name="robots" content="noindex" /></Helmet>
         {phase === "writing" && <Writing name={name} />}
+        {phase === "limit" && (
+          <div className="text-center">
+            <h1 className="font-serif text-2xl font-bold">Topic page allowance reached</h1>
+            <p className="mt-2 text-sm text-muted-foreground">The full-page generator has reached the available usage allowance for this account. Quick Answer is separate and can continue working. Try again when the allowance resets, or check the available plans.</p>
+            <button type="button" onClick={() => openSubscribePrompt("Unlock more full topic-page generation on Ompath Study.")} className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">View plans</button>
+          </div>
+        )}
+        {phase === "busy" && (
+          <div className="text-center">
+            <h1 className="font-serif text-2xl font-bold">Topic generation is temporarily busy</h1>
+            <p className="mt-2 text-sm text-muted-foreground">The full-page service is temporarily unavailable. Your Quick Answer feature is unaffected. Please try again shortly.</p>
+            <button type="button" onClick={retry} className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"><RefreshCw className="h-4 w-4" /> Try again</button>
+          </div>
+        )}
         {phase === "rejected" && <div className="text-center"><h1 className="font-serif text-2xl font-bold">“{name}” is not on Ompath Study</h1><p className="mt-2 text-sm text-muted-foreground">We only cover medicine and health: diseases, anatomy, physiology, pathology, microbiology, pharmacology, and reproductive and public health.</p><DidYouMean query={name} className="mt-6 text-left" /></div>}
         {(phase === "failed" || phase === "unavailable" || phase === "missing") && (
           <div className="text-center">
