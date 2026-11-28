@@ -22,6 +22,8 @@ concurrency:
 
 jobs:
   sort:
+    # Prevent scheduled automation from pushing to production main by default.
+    if: vars.ALLOW_AUTOMATED_MAIN_WRITES == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
