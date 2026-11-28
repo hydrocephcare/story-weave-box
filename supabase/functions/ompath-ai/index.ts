@@ -278,7 +278,7 @@ Deno.serve(async(req:Request)=>{
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
       const generated=await generateReviewedTopicPage({name,category,context,choices:body.choices&&typeof body.choices==="object"?body.choices:undefined},{env,fetchImpl:fetch,timeoutMs:75000});
-      const page=generated.page;
+      const page=generated.page as Record<string, any>;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
       const saved=await fetch(DATA_API_URL+"/rpc/publish_topic_page",{
