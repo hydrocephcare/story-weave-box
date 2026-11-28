@@ -72,11 +72,11 @@ jobs:
           node --check api/_lib/ensureUser.js
           node --check api/_lib/drive-notes.js
           node --check api/_lib/generateExam.js
+          node --check api/_lib/generateContent.js
           node --check api/_lib/student-data.js
           node --check api/paystack.js
           node --check api/paystack-webhook.js
           node --check api/_lib/onekitty.js
-          node --check api/_lib/topicMaintenance.js
           node --check scripts/topics/bulk-fill.mjs
           node --check api/neon-functions.js
           node --check api/sitemap.js
