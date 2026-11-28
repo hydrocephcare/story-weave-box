@@ -1,10 +1,6 @@
-// POST /api/ai?task=transcribe { audio: base64, mime, hint }: speech to text with Whisper on Groq, which understands medical words and accents far better than the
-// browser's own recogniser. `hint` (the card's question and key words) is given to Whisper as a prompt, so "flumazenil" is heard as flumazenil.
-const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
+// Speech-to-text requests are proxied to Supabase, which calls Groq Whisper. The hint helps preserve medical terminology.
 const hits = new Map();
 const LIMIT = 240;   // clips per visitor per hour (best effort)
-
-const EXT = (mime) => (/mp4|m4a|aac/i.test(mime) ? "m4a" : /ogg/i.test(mime) ? "ogg" : /wav/i.test(mime) ? "wav" : /mpeg|mp3/i.test(mime) ? "mp3" : "webm");
 
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
