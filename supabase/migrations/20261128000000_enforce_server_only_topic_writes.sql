@@ -26,8 +26,10 @@ BEGIN
      OR coalesce(jsonb_typeof(p_deep->'cases'), '') <> 'array'
      OR coalesce(jsonb_typeof(p_deep->'facts'), '') <> 'array'
      OR coalesce(jsonb_typeof(p_deep->'mistakes'), '') <> 'array'
-     OR coalesce(jsonb_typeof(p_deep->'exam'), '') <> 'array'
-     OR jsonb_array_length(p_deep->'sections') < 7 OR jsonb_array_length(p_deep->'sections') > 14
+     OR coalesce(jsonb_typeof(p_deep->'exam'), '') <> 'array' THEN
+    RETURN jsonb_build_object('ok', false, 'reason', 'shape');
+  END IF;
+  IF jsonb_array_length(p_deep->'sections') < 7 OR jsonb_array_length(p_deep->'sections') > 14
      OR jsonb_array_length(p_deep->'vivas') < 12 OR jsonb_array_length(p_deep->'vivas') > 40
      OR jsonb_array_length(p_deep->'mcqs') < 6 OR jsonb_array_length(p_deep->'mcqs') > 24
      OR jsonb_array_length(p_deep->'cases') < 2 OR jsonb_array_length(p_deep->'cases') > 10
@@ -56,15 +58,16 @@ BEGIN
      AND coalesce(jsonb_typeof(old_deep->'cases'), '') = 'array'
      AND coalesce(jsonb_typeof(old_deep->'facts'), '') = 'array'
      AND coalesce(jsonb_typeof(old_deep->'mistakes'), '') = 'array'
-     AND coalesce(jsonb_typeof(old_deep->'exam'), '') = 'array'
-     AND jsonb_array_length(old_deep->'sections') >= 7
-     AND jsonb_array_length(old_deep->'vivas') >= 12
-     AND jsonb_array_length(old_deep->'mcqs') >= 6
-     AND jsonb_array_length(old_deep->'cases') >= 2
-     AND jsonb_array_length(old_deep->'facts') >= 6
-     AND jsonb_array_length(old_deep->'mistakes') >= 5
-     AND jsonb_array_length(old_deep->'exam') >= 12 THEN
-    RETURN jsonb_build_object('ok', true, 'existing', true);
+     AND coalesce(jsonb_typeof(old_deep->'exam'), '') = 'array' THEN
+    IF jsonb_array_length(old_deep->'sections') >= 7
+       AND jsonb_array_length(old_deep->'vivas') >= 12
+       AND jsonb_array_length(old_deep->'mcqs') >= 6
+       AND jsonb_array_length(old_deep->'cases') >= 2
+       AND jsonb_array_length(old_deep->'facts') >= 6
+       AND jsonb_array_length(old_deep->'mistakes') >= 5
+       AND jsonb_array_length(old_deep->'exam') >= 12 THEN
+      RETURN jsonb_build_object('ok', true, 'existing', true);
+    END IF;
   END IF;
 
   UPDATE public.topic_pages
