@@ -129,7 +129,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
       kind: kind + " (batch " + (offset + index + 1) + ")",
       text: "SOURCE NOTE (reference only; assess every flashcard against accepted medical knowledge):\n" + source + "\n\nFLASHCARDS TO REVIEW:\n" + JSON.stringify(batch),
       env,
-      timeoutMs: 15000,
+      timeoutMs: 8000,
     })));
     results.push(...wave);
   }
@@ -141,7 +141,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
     && high === 0 && medium === 0 && Boolean(model);
   return { validated, high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
 }
-export export async function generateNoteFlashcards(article, env) {
+async function generateNoteFlashcards(article, env) {
   const text = cleanStudyNote(article.content).slice(0, 10000);
   const count = Math.max(10, Math.min(22, Math.round(text.length / 450)));
   const prompt = `Create ${count} high-yield revision flashcards for medical students from this study note.
