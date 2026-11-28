@@ -378,7 +378,7 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
  * are allowed. Any unresolved clinical issue or unavailable reviewer holds the
  * page back: topicAiCore must never save an unreviewed draft as published.
  */
-export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs } = {}) {
+export async function generateReviewedTopicPage(input, { env = input?.env || {}, fetchImpl = fetch, maxFixRounds = 1, timeoutMs = input?.timeoutMs } = {}) {
   const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
   const fixes = [];
   let page;

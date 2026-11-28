@@ -28,6 +28,11 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Setup Deno for Supabase Edge Function checks
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.1.4
+
       - name: Install dependencies
         run: npm install --legacy-peer-deps --no-audit --no-fund
 
@@ -36,6 +41,9 @@ jobs:
 
       - name: Validate production monitor syntax
         run: node --check scripts/seo/audit-production.mjs
+
+      - name: Type-check the Supabase AI gateway
+        run: deno check --node-modules-dir=auto supabase/functions/ompath-ai/index.ts
 
       - name: Validate automation script syntax
         run: |
@@ -70,7 +78,8 @@ jobs:
           node --check api/_lib/sendNotification.js
           node --check api/_lib/neonAdmin.js
           node --check api/_lib/ensureUser.js
-          node --check api/drive-notes.js
+          node --check supabase/functions/ompath-ai/persistence.js
+          node --check supabase/functions/ompath-ai/topicAi.js
           node --check api/_lib/drive-notes.js
           node --check api/_lib/generateExam.js
           node --check api/_lib/student-data.js
