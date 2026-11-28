@@ -227,7 +227,7 @@ Deno.serve(async(req:Request)=>{
       (async()=>{try{return {configured:true,...await checkNeonDatabase(getNeonDb())};}catch(e){return {ok:false,configured:Boolean(NEON_DATABASE_URL),error:String(e).slice(0,120)};}})()
     ]);
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
-    return reply({ok:groq.ok||gemini.ok,checkedAt:new Date().toISOString(),
+    return reply({ok:(groq.ok||gemini.ok)&&storage.ok,checkedAt:new Date().toISOString(),
       providers:{groq:{...groq,configuredKeys:g.length},gemini:{...gemini,configuredKeys:m.length}},
       neonStorage:storage,auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
   }
