@@ -238,7 +238,7 @@ Deno.serve(async(req:Request)=>{
         const r=await fetch(url.toString(),{headers:{"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET},signal:AbortSignal.timeout(8000)});
         const data=await r.json().catch(()=>({}));
         return {configured:true,ok:r.ok&&data.database===true&&data.canSave===true,status:r.status,canSave:data.canSave===true};
-      }catch{return {configured:Boolean(NEON_WRITE_PROXY_URL&&NEON_WRITE_PROXY_SECRET.length>=32),ok:false,status:0};}})()
+      }catch{return {configured:Boolean(configuredNeonWriteProxy()&&NEON_WRITE_PROXY_SECRET.length>=32),ok:false,status:0};}})()
     ]);
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
     return reply({ok:(groq.ok||gemini.ok)&&storage.ok&&deepPersistence.ok,checkedAt:new Date().toISOString(),
