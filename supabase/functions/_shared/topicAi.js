@@ -157,6 +157,15 @@ export const parseProviderKeys = (...values) => [...new Set(values.flatMap((valu
   } catch {}
   return raw.split(/[\s,;]+/).map((key) => key.trim()).filter(Boolean);
 }))];
+async function providerFailure(response, provider) {
+  const body = await response.json().catch(() => ({}));
+  const raw = body?.error?.message || body?.error?.code || body?.message || response.statusText || "request rejected";
+  const detail = String(raw)
+    .replace(/AIza[0-9A-Za-z_-]{20,}/g, "[redacted]")
+    .replace(/gsk_[0-9A-Za-z_-]{20,}/g, "[redacted]")
+    .slice(0, 180);
+  return new Error(`${provider} failed (${response.status}): ${detail}`);
+}
 export const providerKeys = (env = {}, provider = "GEMINI") => parseProviderKeys(
   env[provider + "_API_KEYS"], env[provider + "_API_KEY"],
   ...Array.from({ length: 20 }, (_, i) => env[provider + "_API_KEY_" + (i + 2)])
@@ -283,7 +292,7 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
           }),
         });
         if (!response.ok) {
-          lastError = new Error(`Gemini review failed (${response.status}).`);
+          lastError = await providerFailure(response, "Gemini review");
           continue;
         }
         const text = (await response.json())?.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("");
@@ -333,7 +342,7 @@ export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeou
           }),
         });
         if (!response.ok) {
-          lastError = new Error("Groq generation failed (" + response.status + ").");
+          lastError = await providerFailure(response, "Groq generation");
           continue;
         }
         const text = (await response.json())?.choices?.[0]?.message?.content;
