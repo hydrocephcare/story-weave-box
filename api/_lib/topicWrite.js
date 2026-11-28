@@ -7,7 +7,7 @@ const hits = new Map();
 const LIMIT = 30;
 
 function bearer(req) {
-  return String(req.headers["x-neon-authorization"] || req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
+  return String(req.headers["x-neon-authorization"] || req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
 }
 
 async function invokeGateway(token, payload, timeoutMs = 90000) {
