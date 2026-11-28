@@ -117,13 +117,14 @@ export async function writeTopicPage({
   const result = await viaServer(name, category, context, choices, keepSlug, signal);
   if (!result) return { status: "failed" };
   if (result.status !== "published") return result;
-  if (!result.saved) return { status: "failed" };
-
+  // A generated page is still useful when persistent publication is temporarily
+  // unavailable. The caller stores unsaved pages in its local fallback cache.
+  // Count the generation either way so failed persistence cannot bypass limits.
   countWrite();
   return {
     status: "published",
     page: result.page,
-    saved: true,
+    saved: result.saved,
     slug: result.slug || slugOf(name),
     name: result.name || name,
   };
