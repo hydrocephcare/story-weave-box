@@ -158,7 +158,7 @@ export const parseProviderKeys = (...values) => [...new Set(values.flatMap((valu
   return raw.split(/[\s,;]+/).map((key) => key.trim()).filter(Boolean);
 }))];
 export const providerKeys = (env = {}, provider = "GEMINI") => parseProviderKeys(
-  env[provider + "_API_KEYS"], env[provider + "_API_KEY"],
+  env[provider + "_API_KEYS"], env[provider + "_API_KEY"], env[provider + "_API_KEYS_EXTRA"],
   ...Array.from({ length: 20 }, (_, i) => env[provider + "_API_KEY_" + (i + 2)])
 );
 async function remoteProviderCall(provider, prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000, plain = false, temperature = 0.3 } = {}) {
@@ -561,9 +561,14 @@ export async function generateDeepNotes({ name, category, base, past = [], fixes
  */
 /** Deep-note generation is Groq-only; Gemini is reserved for independent verification. */
 export async function generateDeepWithFallback(input, env) {
-  const groq = String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").trim();
-  if (!groq) throw new Error("GROQ_API_KEYS is required for deep-note generation; Gemini is reserved for verification.");
-  return generateDeepNotes({ ...input, timeoutMs: input.timeoutMs ?? 55000, env: { GROQ_API_KEYS: groq, GROQ_MODELS: env.GROQ_MODELS } });
+  const groq = providerKeys(env, "GROQ");
+  if (!groq.length) throw new Error("GROQ_API_KEYS is required for deep-note generation; Gemini is reserved for verification.");
+  // Keep the generation stage Groq-only; Gemini remains the independent reviewer.
+  return generateDeepNotes({
+    ...input,
+    timeoutMs: input.timeoutMs ?? 55000,
+    env: { GROQ_API_KEYS: groq.join(","), GROQ_MODELS: env.GROQ_MODELS },
+  });
 }
 
 /** The first complete JSON object in a model's reply (text before or after it, or a second object, is ignored). Returns null when there is none. */
