@@ -2,7 +2,6 @@ import { askGroqModel } from "./topicAi.js";
 import { checkContent } from "./contentCheck.js";
 import { hardenBatch, weakness } from "./mcqHarden.js";
 import { placeNewQuestions } from "./mcqPositions.js";
-import { cleanTopicTitle } from "./topicTitle.js";
 
 function cleanStudyNote(value) {
   return String(value || "").replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 12000);
@@ -45,7 +44,7 @@ ${text}`;
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
   if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
   questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-  const review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
+  let review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
   if(!review.validated) {
     const repairPrompt=`Correct the clinical or assessment-quality problems below. Preserve the source-note scope. Ensure exactly four plausible options, one best answer, a valid 0-based answer index and a concise explanation. Use only facts supported by the source note. Return ONLY a JSON array in the same schema.\nISSUES:\n${(review.issues||[]).map((x,i)=>(i+1)+". "+x.problem+" Fix: "+x.fix).join("\n")}\nQUESTIONS:\n${JSON.stringify(questions)}`;
     const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
