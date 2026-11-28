@@ -77,15 +77,6 @@ function parseNoteMcqs(raw) {
     .map(q=>({question:String(q.question).trim(),options:q.options.slice(0,4).map(x=>String(x).trim()),correct_answer:q.correct_answer,explanation:String(q.explanation||"").trim()}))
     .filter(q=>q.question.length>=12&&q.options.every(x=>x.length>0)&&new Set(q.options.map(x=>x.toLowerCase())).size===4&&!/all of the above|none of the above/i.test(q.options.join(" ")));
 }
-function parseNoteCards(raw) {
-  const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
-  if(start<0||end<=start)return [];
-  let data; try{data=JSON.parse(text.slice(start,end+1));}catch{return [];}
-  if(!Array.isArray(data))return [];
-  const seen=new Set();
-  return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
-    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);if(key.length<8||seen.has(key)||c.answer.length<30)return false;seen.add(key);return true;});
-}
 function dedupeNoteMcqs(items, existing=[]) {
   const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
   return items.filter(q=>{const key=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60);if(seen.has(key))return false;seen.add(key);return true;});
@@ -109,21 +100,6 @@ ${text}`;
   const review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
   if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
   return {questions,review};
-}
-async function generateNoteFlashcards(article, env) {
-  const text=cleanStudyNote(article.content).slice(0,10000);
-  const count=Math.max(10,Math.min(22,Math.round(text.length/450)));
-  const prompt=`Create ${count} high-yield revision flashcards for medical students from this study note.
-Each card covers one distinct angle: definition, causes, pathophysiology, clinical features, classification, investigations, differentials, management/pharmacology, complications, ward-round points, prognosis or prevention. Use only angles supported by the note.
-Each answer is 35–60 words: a direct answer, then 3–4 short explanatory lines, and a final Related line. Do not repeat facts across cards. No invented doses or criteria.
-Return ONLY JSON array: [{"question":"...","answer":"..."}].
-TOPIC: ${article.title} | ${article.category}
-SOURCE NOTE:
-${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
-  const cards=parseNoteCards(draft.text);
-  if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
-  return cards;
 }
 
 function deepReady(deep) {
