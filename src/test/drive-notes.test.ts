@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { kindOf, parseFolder } from "../../api/drive-notes.js";
+import { kindOf, parseFolder } from "../../api/_lib/drive-notes.js";
 import { flattenDrive } from "@/lib/driveNotes";
 
 const page = `<html><head><title>Ompath notes</title></head><body>
