@@ -55,7 +55,7 @@ export default async function saveTopicDeep(req, res) {
   const base = body.base && typeof body.base === "object" && !Array.isArray(body.base) ? body.base : {};
   const deep = body.deep && typeof body.deep === "object" && !Array.isArray(body.deep) ? body.deep : null;
 
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 80 || name.length < 3 || name.length > 160 || !deep) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 80 || name.length < 3 || name.length > 80 || !deep) {
     return res.status(400).json({ status: "invalid", reason: "invalid_payload" });
   }
 
