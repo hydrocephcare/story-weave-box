@@ -18,6 +18,7 @@ const split=(v:unknown)=>[...new Set(String(v??"").split(/[\s,]+/).map(k=>k.trim
 let turn=0;
 const cooldown=new Map<string,number>();
 const publicAssistHits=new Map<string,number[]>();
+const publicTranscribeHits=new Map<string,number[]>();
 const GEM=["gemini-3.5-flash","gemini-flash-lite-latest","gemini-2.5-flash","gemini-2.5-flash-lite"];
 const GROQ=["openai/gpt-oss-120b","qwen/qwen3.8-27b","openai/gpt-oss-20b"];
 const rotate=(a:any[],n:number,size:number)=>a.length?[...a.slice((n*size)%a.length),...a.slice(0,(n*size)%a.length)]:a;
@@ -81,6 +82,40 @@ Deno.serve(async(req:Request)=>{
   const body=await req.json().catch(()=>null);
   if(!body||typeof body!=="object")return reply({error:"invalid_json"},400,origin);
   const env=Deno.env.toObject();
+  if(body.task==="public_transcribe") {
+    const ip=req.headers.get("x-client-ip")||req.headers.get("cf-connecting-ip")||String(req.headers.get("x-forwarded-for")||"").split(",")[0]||"unknown";
+    const now=Date.now(),recent=(publicTranscribeHits.get(ip)||[]).filter(t=>now-t<3600000);
+    if(recent.length>=240)return reply({error:"rate_limited",message:"Too many voice clips this hour. Try again later."},429,origin);
+    recent.push(now);publicTranscribeHits.set(ip,recent);if(publicTranscribeHits.size>5000)publicTranscribeHits.clear();
+    const audio=String(body.audio||"");
+    if(audio.length<400)return reply({error:"No sound was received."},400,origin);
+    if(audio.length>3800000)return reply({error:"That clip is too long."},413,origin);
+    const mime=String(body.mime||"audio/webm").slice(0,40);
+    const hint=String(body.hint||"").replace(/\s+/g," ").trim().slice(0,400);
+    const ext=/mp4|m4a|aac/i.test(mime)?"m4a":/ogg/i.test(mime)?"ogg":/wav/i.test(mime)?"wav":/mpeg|mp3/i.test(mime)?"mp3":"webm";
+    const keys=providerKeys(env,"GROQ").reverse();
+    if(!keys.length)return reply({error:"Voice transcription is not configured."},503,origin);
+    let lastStatus=0;
+    try {
+      const bytes=Uint8Array.from(atob(audio),c=>c.charCodeAt(0));
+      for(const key of keys)for(const model of ["whisper-large-v3-turbo","whisper-large-v3"]) {
+        try {
+          const form=new FormData();
+          form.append("file",new Blob([bytes],{type:mime}),"clip."+ext);
+          form.append("model",model);form.append("language","en");form.append("temperature","0");form.append("response_format","json");
+          if(hint)form.append("prompt",hint);
+          const response=await fetch("https://api.groq.com/openai/v1/audio/transcriptions",{method:"POST",headers:{Authorization:"Bearer "+key},body:form,signal:AbortSignal.timeout(25000)});
+          if(response.ok) {
+            const text=String((await response.json())?.text||"").replace(/\s+/g," ").trim();
+            return reply({text:/^(thank you[.!]?|thanks for watching[.!]?|you)$/i.test(text)?"":text},200,origin);
+          }
+          lastStatus=response.status;
+          if(response.status===400)return reply({error:"That recording could not be read."},400,origin);
+        } catch(e) { console.warn("Whisper attempt failed",String(e).slice(0,100)); }
+      }
+    } catch(e) { console.warn("Whisper request failed",String(e).slice(0,100)); }
+    return reply({error:"The voice service is busy ("+lastStatus+"). Try again."},502,origin);
+  }
   if(body.task==="public_assist") {
     const ip=req.headers.get("cf-connecting-ip")||String(req.headers.get("x-forwarded-for")||"").split(",")[0]||"unknown";
     const now=Date.now(),recent=(publicAssistHits.get(ip)||[]).filter(t=>now-t<3600000);
