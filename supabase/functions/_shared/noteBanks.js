@@ -38,20 +38,20 @@ TOPIC: ${article.title} | ${article.category}
 AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:25000,maxTokens:6500});
   let questions=parseNoteMcqs(draft.text).slice(0,count);
   if(questions.length<Math.max(Math.min(8,count),Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
   const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
   if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
   questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-  let review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
+  let review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:12000});
   if(!review.validated) {
     const repairPrompt=`Correct the clinical or assessment-quality problems below. Preserve the source-note scope. Ensure exactly four plausible options, one best answer, a valid 0-based answer index and a concise explanation. Use only facts supported by the source note. Return ONLY a JSON array in the same schema.\nISSUES:\n${(review.issues||[]).map((x,i)=>(i+1)+". "+x.problem+" Fix: "+x.fix).join("\n")}\nQUESTIONS:\n${JSON.stringify(questions)}`;
-    const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
+    const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:25000,maxTokens:6500});
     questions=parseNoteMcqs(fixed.text).slice(0,count);
     if(questions.length<Math.max(Math.min(8,count),Math.floor(count*0.55)))throw new Error("MCQ correction returned too few valid questions.");
     questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-    review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
+    review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:12000});
   }
   if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
   return {questions,review};
@@ -68,16 +68,16 @@ Return ONLY JSON array: [{"question":"...","answer":"..."}].
 TOPIC: ${article.title} | ${article.category}
 SOURCE NOTE:
 ${text}`;
-  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
+  const draft=await askGroqModel(prompt,{env,plain:true,timeoutMs:25000,maxTokens:7000});
   let cards=parseNoteCards(draft.text).slice(0,count);
   if(cards.length<Math.max(Math.min(8,count),Math.floor(count*0.55)))throw new Error("Flashcard generation returned too few distinct usable cards.");
-  let review=await checkContent({title:article.title,kind:"medical revision flashcards",text:JSON.stringify(cards),env,timeoutMs:45000});
+  let review=await checkContent({title:article.title,kind:"medical revision flashcards",text:JSON.stringify(cards),env,timeoutMs:12000});
   if(!review.validated) {
     const repairPrompt=`Correct the clinical errors below in this flashcard set. Preserve the source-note scope. Each answer must remain 35–60 words, accurate, distinct and suitable for medical students. Use only supported facts. Return ONLY the complete JSON array in the same schema.\nISSUES:\n${(review.issues||[]).map((x,i)=>(i+1)+". "+x.problem+" Fix: "+x.fix).join("\n")}\nFLASHCARDS:\n${JSON.stringify(cards)}`;
-    const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
+    const fixed=await askGroqModel(repairPrompt,{env,plain:true,timeoutMs:25000,maxTokens:7000});
     cards=parseNoteCards(fixed.text).slice(0,count);
     if(cards.length<Math.max(Math.min(8,count),Math.floor(count*0.55)))throw new Error("Flashcard correction returned too few distinct usable cards.");
-    review=await checkContent({title:article.title,kind:"medical revision flashcards",text:JSON.stringify(cards),env,timeoutMs:45000});
+    review=await checkContent({title:article.title,kind:"medical revision flashcards",text:JSON.stringify(cards),env,timeoutMs:12000});
   }
   if(!review.validated)throw new Error("Flashcards failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
   return {cards,review};
