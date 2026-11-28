@@ -447,7 +447,7 @@ PAGE TEXT:
       if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const deep = await generateCheckedDeep(
         { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
-        aiEnv, fetch, 240000,
+        aiEnv, fetch, 240000, true,
       );
       if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
       const content = { ...(row.content || {}), deep };
