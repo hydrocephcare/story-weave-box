@@ -1,5 +1,5 @@
 import { generateReviewedTopicPage, validName, slugOf, askModel, askGroqModel, askGeminiModel, providerKeys } from "./topicAi.js";
-import { generateCheckedDeep } from "../_shared/contentCheck.js";
+import { generateCheckedDeep } from "./contentCheck.js";
 import { createRemoteJWKSet, jwtVerify } from "npm:jose@5.9.6";
 
 const ALLOWED = new Set(["https://www.ompathstudy.com","https://ompathstudy.com","https://stories.ompathstudy.com"]);
