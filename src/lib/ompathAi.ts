@@ -171,7 +171,7 @@ let lastPredictionAt = 0;
 
 /** Optional AI query expansion. Local search always runs first; prediction is only used for weak matches. */
 async function predictSearchQueries(input: string): Promise<string[]> {
-  const key = input.trim().toLowerCase().replace(/\\s+/g, " ");
+  const key = input.trim().toLowerCase().replace(/\s+/g, " ");
   if (key.length < 4) return [];
   const cached = predictionCache.get(key);
   if (cached && Date.now() - cached.at < 10 * 60_000) return cached.queries;
