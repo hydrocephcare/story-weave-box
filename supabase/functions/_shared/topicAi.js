@@ -48,14 +48,14 @@ const clip = (s, n) => String(s ?? "").replace(/\s+/g, " ").trim().slice(0, n);
 export function cleanChoices(c) {
   const pick = (v, ok, d) => (ok.includes(v) ? v : d);
   return {
-    level: pick(c?.level, ["year3", "year4", "year5"], "year4"),
+    level: pick(c?.level, ["year1", "year2", "year3", "year4", "year5", "year6"], "year4"),
     angles: (Array.isArray(c?.angles) ? c.angles : []).filter((a) => Object.hasOwn(ANGLE_TEXT, a)).slice(0, 6),
     setting: pick(c?.setting, ["tropical", "general"], "tropical"),
     depth: "full",
   };
 }
 const ANGLE_TEXT = { bedside: "the bedside (history, how to examine, named signs and how to elicit them)", medicine: "internal medicine reasoning", surgery: "surgical angles and when to operate", pathology: "pathology and mechanisms", drugs: "pharmacology (why each drug, why others are avoided, monitoring)", emergency: "emergency first steps" };
-const READER = { year3: "an early clinical student (explain mechanisms simply and link them to basic science)", year4: "a Year 4 clinical student preparing for ward rounds and written and oral exams", year5: "a final-year student or intern who must manage the patient (decisions, escalation, monitoring)" };
+const READER = { year1: "a first-year medical student (start with foundational biology, terminology and basic sciences; define every clinical term)", year2: "a second-year medical student (build from anatomy, physiology, biochemistry, pathology and pharmacology foundations)", year3: "an early clinical student (explain mechanisms simply and link them to basic science)", year4: "a Year 4 clinical student preparing for ward rounds and written and oral exams", year5: "a senior clinical student preparing for independent patient assessment and management", year6: "a final-year student or intern who must manage the patient (decisions, escalation, monitoring and safe handover)" };
 
 const ACCURACY_RULES = `
 ACCURACY RULES (read before you write): every number, cut-off, drug and sign must match standard current guidelines. Name a sign, score or eponym only if you are certain of the name and of what it shows; otherwise describe it in plain words. Write each threshold the same way every time it appears (for example always "250 or more", never "over 250" in one place and "250 or more" in another). Describe examination signs by what actually happens (for example in shifting dullness the fluid falls to the dependent flank, so that flank is dull and the upper flank is resonant). If you are not sure of a fact, leave it out. Do not invent statistics.`;
