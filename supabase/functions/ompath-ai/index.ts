@@ -15,6 +15,15 @@ const JWKS_URL=Deno.env.get("NEON_AUTH_JWKS_URL")||"";
 const DATA_API_URL=(Deno.env.get("NEON_DATA_API_URL")||"").replace(/\/+$/,"");
 const NEON_WRITE_PROXY_URL=Deno.env.get("NEON_WRITE_PROXY_URL")||"";
 const NEON_WRITE_PROXY_SECRET=Deno.env.get("OMPATH_NEON_WRITE_SECRET")||"";
+function configuredNeonWriteProxy():URL|null {
+  try {
+    const url=new URL(NEON_WRITE_PROXY_URL);
+    const allowedHosts=new Set(["ompathstudy.com","www.ompathstudy.com"]);
+    if(url.protocol!=="https:"||!allowedHosts.has(url.hostname.toLowerCase())||url.pathname!=="/api/neon-functions"||url.searchParams.get("name")!=="save-topic-deep")return null;
+    return url;
+  } catch { return null; }
+}
+
 const jwks=JWKS_URL?createRemoteJWKSet(new URL(JWKS_URL)):null;
 
 const split=(v:unknown)=>[...new Set(String(v??"").split(/[\s,]+/).map(k=>k.trim()).filter(Boolean))];
@@ -223,8 +232,9 @@ Deno.serve(async(req:Request)=>{
       probe("groq"),probe("gemini"),
       (async()=>{try{const r=await fetch(DATA_API_URL+"/topic_pages?select=slug&limit=1",{headers:{Authorization:"Bearer "+token,Accept:"application/json"},signal:AbortSignal.timeout(8000)});return {ok:r.ok,status:r.status};}catch{return {ok:false,status:0};}})(),
       (async()=>{try{
-        if(!NEON_WRITE_PROXY_URL||NEON_WRITE_PROXY_SECRET.length<32)return {configured:false,ok:false,status:0};
-        const url=new URL(NEON_WRITE_PROXY_URL);url.searchParams.set("health","1");
+        const url=configuredNeonWriteProxy();
+        if(!url||NEON_WRITE_PROXY_SECRET.length<32)return {configured:false,ok:false,status:0};
+        url.searchParams.set("health","1");
         const r=await fetch(url.toString(),{headers:{"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET},signal:AbortSignal.timeout(8000)});
         const data=await r.json().catch(()=>({}));
         return {configured:true,ok:r.ok&&data.database===true&&data.canSave===true,status:r.status,canSave:data.canSave===true};
@@ -298,13 +308,8 @@ Deno.serve(async(req:Request)=>{
     const past=(Array.isArray(body.past)?body.past:[]).map((x:any)=>String(x).slice(0,240)).slice(0,12);
     const slug=String(body.slug||slugOf(name)).trim().toLowerCase();
     if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)||slug.length>80)return reply({status:"invalid",reason:"slug"},400,origin);
-    let proxyUrl:URL;
-    try {
-      proxyUrl=new URL(NEON_WRITE_PROXY_URL);
-      if(proxyUrl.protocol!=="https:"||NEON_WRITE_PROXY_SECRET.length<32)throw new Error("proxy_not_configured");
-    } catch {
-      return reply({status:"failed",reason:"persistence_unconfigured"},503,origin);
-    }
+    const proxyUrl=configuredNeonWriteProxy();
+    if(!proxyUrl||NEON_WRITE_PROXY_SECRET.length<32)return reply({status:"failed",reason:"persistence_unconfigured"},503,origin);
     const quota=await entitlement(token,"ai_note_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
