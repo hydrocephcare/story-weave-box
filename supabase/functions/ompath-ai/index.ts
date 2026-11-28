@@ -186,7 +186,8 @@ Deno.serve(async(req:Request)=>{
     if(!workflow) {
       token=await authenticate(req);
       if(!token)return reply({error:"login_required"},401,origin);
-      const feature=String(body.feature||"").trim();
+      if(!token)return reply({error:"login_required"},401,origin);
+  const feature=String(body.feature||"").trim();
       if(feature) {
         if(!["ai_flashcard_generation","ai_mcq_generation","ai_note_generation","search_prediction","ompath_ai_questions"].includes(feature))
           return reply({error:"feature_not_allowed"},403,origin);
@@ -236,6 +237,7 @@ Deno.serve(async(req:Request)=>{
 
   // Full topic generation runs on Supabase. Neon remains the source of truth for topic_pages.
   if(body.task==="topic") {
+    if(!token)return reply({error:"login_required"},401,origin);
     const name=String(body.name??"").trim();
     const category=String(body.category??"").slice(0,60);
     const context=String(body.context??"").slice(0,3000);
@@ -262,8 +264,8 @@ Deno.serve(async(req:Request)=>{
     const quota=await entitlement(token,"topic_page_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
-      const generated=await generateReviewedTopicPage({name,category,context,choices:body.choices&&typeof body.choices==="object"?body.choices:undefined,env,fetchImpl:fetch},{env,fetchImpl:fetch,timeoutMs:75000});
-      const page=generated.page;
+      const generated=await generateReviewedTopicPage({name,category,context,choices:body.choices&&typeof body.choices==="object"?body.choices:undefined,env,timeoutMs:75000},{env,fetchImpl:fetch,timeoutMs:75000});
+      const page:any=generated.page;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
       const result=await publishReviewedTopic(getNeonDb(),{slug,name,category,page});
@@ -279,6 +281,7 @@ Deno.serve(async(req:Request)=>{
   }
 
   if(body.task==="deep") {
+    if(!token)return reply({error:"login_required"},401,origin);
     const name=String(body.name??"").trim();
     const category=String(body.category??"").slice(0,60);
     if(!validName(name))return reply({status:"invalid"},400,origin);
@@ -304,13 +307,14 @@ Deno.serve(async(req:Request)=>{
   }
 
   if(body.task==="search_predict") {
+    if(!token)return reply({error:"login_required"},401,origin);
     const query=String(body.query??"").trim().slice(0,180);
     if(query.length<3)return reply({predictions:[]},200,origin);
     const quota=await entitlement(token,"search_prediction");
     if(!quota.ok)return reply({predictions:[],quota_limited:true},200,origin);
     try {
       const prompt='You are a medical-study search query predictor. Do not answer the question. Infer the most likely medical subject and return only JSON: {"queries":[string]}. Give at most three short alternate search queries using standard medical terminology, synonyms, common abbreviations or likely corrected spelling. Preserve the intended subject; do not broaden to unrelated topics, invent a year level, or include explanations. If the query is already clear and needs no expansion, return an empty array.\nQUERY: '+query;
-      const raw=await chatText(env,[{role:"system",content:"Return valid JSON only. Be conservative and precise."},{role:"user",content:prompt}],0.1,420,3000,4,true);
+      const raw=await chatText(env,[{role:"system",content:"Return valid JSON only. Be conservative and precise."},{role:"user",content:prompt}],0.1,420,3000);
       const match=raw.match(/\{[\s\S]*\}/);
       const parsed=match?JSON.parse(match[0]):{};
       const predictions=[...new Set((Array.isArray(parsed.queries)?parsed.queries:[])
