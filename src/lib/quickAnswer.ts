@@ -1,5 +1,7 @@
 // A short answer to what was searched, streamed from the site's AI and kept for the session. Used by the search box (Ctrl+K) and the /search page.
 // The free allowance is shared, so a visitor cannot use up the AI by searching.
+import { supabase } from "@/integrations/supabase/client";
+
 export const FREE_PER_DAY = 12;
 const dayKey = () => `ompath_search_ai_${new Date().toISOString().slice(0, 10)}`;
 export const usedToday = () => { try { return Number(localStorage.getItem(dayKey()) ?? 0); } catch { return 0; } };
@@ -12,9 +14,27 @@ export const askable = (q: string) => q.trim().length >= 4 && !/^[A-Za-z]{3,4}\s
 
 /** Streams a short answer (three bullets); `onText` gets the text so far. Throws when nothing came back. */
 async function once(q: string, sources: { title: string; subtitle?: string; snippet?: string }[], signal: AbortSignal, onText: (t: string) => void): Promise<string> {
+  let token: string | null = null;
+  try {
+    const authAdapter = supabase.auth as typeof supabase.auth & { getJWTToken?: () => Promise<string | null> };
+    token = await authAdapter.getJWTToken?.();
+  } catch {
+    token = null;
+  }
+
+  // Ompath AI requires sign-in; exit cleanly without console 401s if unauthenticated
+  if (!token || token.split(".").length !== 3) {
+    return "";
+  }
+
   const query = q.trim();
   const body = { question: `Explain "${query}" for a medical student in exactly three short bullet points, about 60 words in all. Start with what it is. Use the site's notes first. If a word appears misspelled, infer and answer the most likely intended medical term, especially when any part of the query is clearly medical. Only reply with NOT_MEDICAL when the query is clearly unrelated to medicine or health even after correcting likely typos.`, history: [], sources: sources.slice(0, 5).map((h) => ({ kind: "site", title: h.title, subtitle: h.subtitle, snippet: (h.snippet ?? "").slice(0, 900) })) };
-  const r = await fetch("/api/ai-chat", { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+  const headers: Record<string, string> = {
+    "content-type": "application/json",
+    "authorization": `Bearer ${token}`,
+    "x-neon-authorization": `Bearer ${token}`,
+  };
+  const r = await fetch("/api/ai-chat", { method: "POST", signal, headers, body: JSON.stringify(body) });
   if (!r.ok || !r.body) throw new Error("off");
   const reader = r.body.getReader(); const dec = new TextDecoder();
   let buf = "", out = "";

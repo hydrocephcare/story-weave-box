@@ -1,3 +1,4 @@
+import { supabase } from "@/integrations/supabase/client";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -49,7 +50,19 @@ export function parseAssessment(text: string): { mcqs: Mcq[]; essays: string[] }
 }
 
 async function ask(prompt: string): Promise<string> {
-  const r = await fetch("/api/ai-chat", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ question: prompt, history: [], sources: [] }) });
+  let token: string | null = null;
+  try {
+    const authAdapter = supabase.auth as typeof supabase.auth & { getJWTToken?: () => Promise<string | null> };
+    token = await authAdapter.getJWTToken?.();
+  } catch {
+    token = null;
+  }
+  const headers: Record<string, string> = { "content-type": "application/json" };
+  if (token) {
+    headers["authorization"] = `Bearer ${token}`;
+    headers["x-neon-authorization"] = `Bearer ${token}`;
+  }
+  const r = await fetch("/api/ai-chat", { method: "POST", headers, body: JSON.stringify({ question: prompt, history: [], sources: [] }) });
   if (!r.ok || !r.body) throw new Error("off");
   const reader = r.body.getReader(); const dec = new TextDecoder(); let buf = "", out = "";
   for (;;) {
