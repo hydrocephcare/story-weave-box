@@ -40,6 +40,8 @@ Object.assign(supabase, {
     invoke: async <T = any>(name: string, options?: { body?: unknown; headers?: Record<string, string> }) => {
       const client = getNeonClient();
       const { data: { session } } = await client.auth.getSession();
+      const authAdapter = client.auth as typeof client.auth & { getJWTToken?: () => Promise<string | null> };
+      const neonToken = await authAdapter.getJWTToken?.() || session?.access_token || null;
       const directRoutes: Record<string, string> = {
         "contest-control": "/api/contest-control",
         "google-drive-oauth": "/api/google-drive-oauth",
@@ -50,7 +52,7 @@ Object.assign(supabase, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+          ...(neonToken ? { Authorization: `Bearer ${neonToken}` } : {}),
           ...(options?.headers || {}),
         },
         body: JSON.stringify(options?.body ?? {}),
