@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 const mocks = vi.hoisted(() => ({
   sql: vi.fn(),
@@ -38,6 +38,11 @@ const validDeep = {
   mistakes: Array.from({ length: 5 }, (_, i) => "Mistake " + i),
   exam: Array.from({ length: 12 }, (_, i) => ({ question: "Exam " + i, answer: "Answer." })),
 };
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.unstubAllEnvs();
+});
 
 beforeEach(() => {
   vi.clearAllMocks();
