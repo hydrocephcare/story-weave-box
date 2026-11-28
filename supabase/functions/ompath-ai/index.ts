@@ -87,7 +87,7 @@ Deno.serve(async(req:Request)=>{
     if(recent.length>=20)return reply({error:"rate_limited",message:"You have used the writing helper a lot this hour. Please try again later."},429,origin);
     recent.push(now);publicAssistHits.set(ip,recent);if(publicAssistHits.size>5000)publicAssistHits.clear();
     const mode=String(body.mode||"");
-    const clip=(v:any,n:number)=>String(v??"").replace(/\\r/g,"").trim().slice(0,n);
+    const clip=(v:any,n:number)=>String(v??"").replace(/\r/g,"").trim().slice(0,n);
     let system="",user="",maxTokens=600,timeoutMs=20000;
     if(mode==="bio") {
       const year=Number(body.year),level=year===7?"a finalist":year>=1&&year<=6?"a Year "+year+" student":"a medical student";
@@ -102,12 +102,12 @@ Deno.serve(async(req:Request)=>{
       user=clip(body.text,6000);if(user.length<80)return reply({error:"Write a little more first, then ask for title ideas."},400,origin);
       system='Suggest four short, honest titles (maximum 70 characters each) for this story. They should sound human, not like an advert, and use only what is in the story. Return ONLY JSON: {"titles":["...","...","...","..."]}.';
     } else if(mode==="caption") {
-      const near=clip(body.text,1200),file=clip(body.name,80).replace(/[_-]+/g," ").replace(/\\.[a-z0-9]+$/i,"");
+      const near=clip(body.text,1200),file=clip(body.name,80).replace(/[_-]+/g," ").replace(/\.[a-z0-9]+$/i,"");
       system='Write one short caption (maximum 120 characters) for a picture a contributor is adding to a story. Use only nearby story text and the file name. Do not claim to see details you cannot know or invent facts. Plain words, no quotes or hashtags. Return ONLY JSON: {"text":"the caption"}.';
-      user="Nearby text: "+(near||"(none)")+"\\nFile name: "+(file||"(none)");
+      user="Nearby text: "+(near||"(none)")+"\nFile name: "+(file||"(none)");
     } else return reply({error:"unknown_mode"},400,origin);
     try {
-      const result=await askModel(system+"\\n\\n"+user,{env,fetchImpl:fetch,timeoutMs,maxTokens,plain:false,temperature:0.4});
+      const result=await askModel(system+"\n\n"+user,{env,fetchImpl:fetch,timeoutMs,maxTokens,plain:false,temperature:0.4});
       const parsed=JSON.parse(result.text);
       if(mode==="titles") {
         const titles=Array.isArray(parsed?.titles)?parsed.titles.map((x:any)=>clip(x,90)).filter(Boolean).slice(0,4):[];
