@@ -8,7 +8,7 @@ on:
       count:
         description: "How many new comprehensive topic pages to write"
         required: false
-        default: "40"
+        default: "50"
       review:
         description: "How many legacy topic pages to regenerate and Gemini-review"
         required: false
@@ -58,10 +58,10 @@ jobs:
         id: image_sitemap
         continue-on-error: true
         run: node scripts/seo/image-sitemap.mjs
-      - name: Generate, independently review and publish new topic pages through Cloudflare
+      - name: Generate, independently review with Supabase AI and publish topic pages to Neon
         id: topic_pages
         continue-on-error: true
-        run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || (github.event_name == 'push' && '4') || '40' }} --parallel=3
+        run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || (github.event_name == 'push' && '4') || '50' }} --parallel=3
       - name: Rebuild static topic pages with the new comprehensive AI content
         id: merge_new_topics
         continue-on-error: true
