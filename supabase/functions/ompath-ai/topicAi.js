@@ -93,7 +93,7 @@ Otherwise reply with ONLY one JSON object:
 {"medical": true, "clinicalScope": "one precise sentence naming the clinical entity and population/setting covered", "title": "the clean title a textbook would give this page: 2 to 8 words, correctly spelled, no typing mistakes and no phrases like 'difference btw' or 'what is'; for a comparison write 'A versus B'", "subject": "ONE of: Anatomy, Physiology, Biochemistry & genetics, Pharmacology, Microbiology & immunology, Pathology, Psychiatry, Paediatrics, Obstetrics & gynaecology, Surgery, Public health, Medicine", "summary": "2-3 plain sentences, under 60 words", "aka": ["other names/abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}], "whenToSeekHelp": ["warning signs needing urgent medical care (diseases only, else [])"], "faq": [{"q": "question", "a": "short answer"}], "exam": ["${deep ? "10-12" : "6-8"} strategic examiner questions, each followed by ' — ' and the key points of a good answer"], "related": ["4-8 related topic names"]}
 
 Section headings, in order (skip one only if it truly does not apply): ${headings.map((h) => `"${h}"`).join(", ")}.
-MINIMUM DEPTH: provide at least ${minimumSections} substantive sections. Do not collapse the page into 3-4 broad headings. Each section must contain topic-specific information that belongs under its heading; for full depth use 4-8 meaningful bullets or a genuinely explanatory paragraph plus relevant bullets. Include the specific causes, clinical presentation, investigations, management decisions, complications and follow-up applicable to the chosen entity.
+MINIMUM DEPTH: provide at least ${minimumSections} substantive sections. Do not collapse the page into 3-4 broad headings. Each section must contain topic-specific information that belongs under its heading. HARD STRUCTURAL CHECK: every section must contain either at least four meaningful bullets/table rows OR an explanatory paragraph of at least 65 words; a heading with only 1-3 short bullets is invalid. Keep all applicable headings and reach at least 700 meaningful words overall. Do not pad or repeat content. Include the specific causes, clinical presentation, investigations, management decisions, complications and follow-up applicable to the chosen entity.
 Reasoning to build in (for diseases): do not stop at the label. Give the diagnostic criteria; stage the severity with the recognised system; categorise where the problem is; list causes by category, most likely first, including infections and conditions common in the tropics and low-resource settings (for example HIV, TB, malaria, hepatitis B, rheumatic heart disease, sickle cell, schistosomiasis, herbal remedies) where relevant; then what could kill the patient soon.
 "Investigations" uses the "t" table: every row is Test -> the question it answers -> what a result means. Never list a test without its reason. Mention what to do when a test is unavailable.
 "Management": treat the cause, then supportive care and monitoring; give drug classes and usual medicine names and say WHY each is chosen and why alternatives are avoided (toxicity, bleeding, interactions). Never give doses.
@@ -374,17 +374,27 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
 }
 
 /**
- * Groq drafts; Gemini independently reviews. A maximum of one targeted rewrite
- * are allowed. Any unresolved clinical issue or unavailable reviewer holds the
- * page back: topicAiCore must never save an unreviewed draft as published.
+ * Groq drafts; Gemini independently reviews. Up to two targeted rewrites are allowed:
+ * one structural correction and one clinical correction. Any unresolved clinical
+ * issue or unavailable reviewer holds the page back: no unreviewed page is published.
  */
-export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs } = {}) {
+export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 2, timeoutMs } = {}) {
   const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
   const fixes = [];
   let page;
   let review;
   for (let round = 0; round <= rounds; round++) {
-    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    try {
+      page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    } catch (error) {
+      const message = String(error?.message || error);
+      const structural = /thin topic page|thin sections|too few sections|summary not acceptable|full topic page needs/i.test(message);
+      if (structural && round < rounds) {
+        fixes.push(`STRUCTURAL REWRITE REQUIRED. The previous draft failed validation: ${message}. Regenerate the entire page, keep every applicable heading, and make each section contain at least four meaningful bullets/table rows OR a paragraph of at least 65 words. Ensure at least nine substantive sections, 700 meaningful words, eight applied examiner questions and three useful FAQs. Do not pad or invent facts.`);
+        continue;
+      }
+      throw error;
+    }
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const pageText = [
       page.summary,
@@ -445,7 +455,7 @@ ${JSON.stringify({ title: page.title, clinicalScope: page.clinicalScope, summary
 
 /** Writes a checked page (or {medical:false}). `fetchImpl` is injectable for tests. */
 export async function generateTopicPage(input) {
-  const result = await generateReviewedTopicPage(input, { env: input.env, fetchImpl: input.fetchImpl ?? fetch, timeoutMs: input.timeoutMs, maxFixRounds: 1 });
+  const result = await generateReviewedTopicPage(input, { env: input.env, fetchImpl: input.fetchImpl ?? fetch, timeoutMs: input.timeoutMs, maxFixRounds: 2 });
   return result.page;
 }
 
