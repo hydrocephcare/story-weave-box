@@ -129,7 +129,7 @@ async function reviewNoteMcqBatches({ article, questions, source, env }) {
     }
     checked.push(...batch);
   }
-  return { questions: checked, review: { validated: true, model } };
+  return { questions: checked, review: { validated: true, model, at: new Date().toISOString().slice(0, 10), issues: [] } };
 }
 
 async function generateNoteMcqs(article, env, count=24, avoid=[]) {
@@ -176,7 +176,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
   }
   const high = issues.filter((item) => item.severity === "high").length;
   const medium = issues.filter((item) => item.severity === "medium").length;
-  return { validated: allValidated && high === 0 && medium === 0 && Boolean(model), high, medium, issues, model };
+  return { validated: allValidated && high === 0 && medium === 0 && Boolean(model), high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
 }
 
 async function generateNoteFlashcards(article, env) {
