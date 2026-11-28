@@ -81,7 +81,7 @@ export function Paywall({
     return matches.find(([code]) => code === countryCode)?.[0] || matches[0]?.[0] || "OTHER";
   };
   const countries = countryData;
-  const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">(() => savedPaymentDetails.countryCode && savedPaymentDetails.countryCode !== "KE" ? "card" : "mpesa");
+  const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">(() => initialCountry === "KE" ? "mpesa" : "card");
   useEffect(() => {
     let active = true;
     const loadLocationDefault = async () => {
