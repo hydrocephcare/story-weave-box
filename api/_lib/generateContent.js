@@ -4,7 +4,6 @@ import { askModel, askGroqModel } from "../../supabase/functions/_shared/topicAi
 import { generateReviewedEssayPaper } from "../../supabase/functions/_shared/essayExam.js";
 import { generateNoteMcqs, generateNoteFlashcards } from "../../supabase/functions/_shared/noteBanks.js";
 import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
-import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 
 const UNIT_CATEGORIES = [
   "Pathology","General Pathology","Basic Pharmacology II","Pharmacology","Hematopathology",
@@ -46,28 +45,6 @@ function normalizeArticleOutput(raw) {
   const detailed=paragraphs.slice(1).join("\n\n")||summary;
   const practice=[1,2,3,4,5,6,7,8].map((n)=>n+". Explain a clinically important aspect of "+title+". → Provide the key mechanism, finding or management principle.");
   return {title,content:["## Summary",summary,"","## Key Points",...(keyPoints.length?keyPoints:["- Add high-yield points for this topic."]),"","## Detailed Notes",detailed,"","## Practice Questions",...practice].join("\n")};
-}
-function parseMcqs(raw,count) {
-  const match=String(raw||"").match(/\[[\s\S]*\]/);
-  if(!match)throw new Error("Could not parse the MCQ array.");
-  const parsed=JSON.parse(match[0]);
-  if(!Array.isArray(parsed))throw new Error("MCQ output was not an array.");
-  const cleaned=parsed.map((item)=>{
-    if(!item?.question||!Array.isArray(item.options)||item.options.length<2)return null;
-    const question=compact(item.question),options=item.options.slice(0,6).map(compact);
-    const correct=Number.isInteger(item.correct_answer)?Math.min(Math.max(item.correct_answer,0),options.length-1):0;
-    return question?{question,options:options.map(x=>x.replace(/\s+—\s+related\s+(?:option|finding)$/i,"").slice(0,140)),correct_answer:correct,correct_answer_text:options[correct],explanation:compact(item.explanation)}:null;
-  }).filter(Boolean);
-  const seen=new Set(),unique=cleaned.filter((q)=>{const k=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim();if(seen.has(k))return false;seen.add(k);return true;});
-  return placeNewQuestions(unique.slice(0,count));
-}
-function parseEssays(raw) {
-  const match=String(raw||"").match(/\{[\s\S]*\}/);
-  if(!match)throw new Error("Could not parse written questions.");
-  const data=JSON.parse(match[0]);
-  const saqs=Array.isArray(data.saqs)?data.saqs.filter(q=>q?.question&&(q.model_answer||q.answer)).map(q=>({question:compact(q.question),answer:compact(q.model_answer||q.answer),marks:Number(q.marks)||5})):[];
-  const laqs=Array.isArray(data.laqs)?data.laqs.filter(q=>q?.question&&(q.model_answer||q.answer)).map(q=>({question:compact(q.question),answer:compact(q.model_answer||q.answer),marks:Number(q.marks)||20})):[];
-  return {saqs,laqs};
 }
 const parseJson = (raw) => { const m=String(raw||"").match(/\{[\s\S]*\}/); if(!m)throw new Error("The AI did not return valid JSON."); return JSON.parse(m[0]); };
 async function callAI(messages,env,{plain=false,maxTokens=6000,timeoutMs=60000}={}) {
@@ -142,7 +119,6 @@ export default async function handler(req,res) {
       return res.status(200).json(result);
     }
     if(type==="direct-mcqs"||type==="mcqs") {
-      messages=[{role:"system",content:"You are a senior medical exam writer. Create EXACTLY "+cardCount+" clinically oriented MCQs. Return ONLY a JSON array with objects {\"question\":\"...\",\"options\":[\"A\",\"B\",\"C\",\"D\"],\"correct_answer\":0,\"explanation\":\"...\"}. Use four plausible options of similar length, exactly one best answer, no all/none of the above, clear clinical explanations. Spread correct positions naturally. Use accepted medical knowledge only."},{role:"user",content:"Create "+cardCount+" MCQs from these notes:\n\n"+safe}];
       const generated=await generateNoteMcqs({
         title:customTitle||"Medical revision questions",
         category:String(body.category||"Medicine"),
