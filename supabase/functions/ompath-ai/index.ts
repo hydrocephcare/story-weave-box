@@ -25,7 +25,8 @@ const rotate=(a:any[],n:number,size:number)=>a.length?[...a.slice((n*size)%a.len
 
 async function chatText(env:Record<string,string>,messages:any[],temperature:number,maxTokens:number,timeoutMs:number) {
   const prompt=messages.map(m=>String(m.content||"")).join("\n\n");
-  const result=await askModel(prompt,{env,fetchImpl:fetch,timeoutMs,maxTokens,plain:true,temperature});
+  const modelEnv=timeoutMs<=5000?{...env,GEMINI_MODELS:"gemini-3.5-flash-lite",GROQ_MODELS:"openai/gpt-oss-20b"}:env;
+  const result=await askModel(prompt,{env:modelEnv,fetchImpl:fetch,timeoutMs,maxTokens,plain:true,temperature});
   return result.text;
 }
 
