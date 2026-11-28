@@ -28,7 +28,12 @@ export default async function saveTopicDeep(req, res) {
     try {
       const sql = neon(databaseUrl);
       const rows = await sql`SELECT 1 AS ok, has_function_privilege(current_user, 'public.save_topic_deep(text,text,text,jsonb,jsonb)', 'EXECUTE') AS can_save`;
-      return res.status(200).json({ status: "ok", database: Number(rows?.[0]?.ok) === 1, canSave: rows?.[0]?.can_save === true });
+      const database = Number(rows?.[0]?.ok) === 1;
+      const canSave = rows?.[0]?.can_save === true;
+      if (!database || !canSave) {
+        return res.status(503).json({ status: "unavailable", database, canSave });
+      }
+      return res.status(200).json({ status: "ok", database, canSave });
     } catch (error) {
       console.error("[save-topic-deep] health probe failed:", String(error?.code || error?.name || "database_error"));
       return res.status(502).json({ status: "unavailable", database: false });
