@@ -160,6 +160,6 @@ export default async function handler(req, res) {
   return res.status(200).json({
     title: String(out.title ?? "").trim().slice(0, 100), category, year: Number.isInteger(Number(out.year)) ? Number(out.year) : null,
     meta_title: clip(out.meta_title, 60), meta_description: clip(out.meta_description, 160),
-    tags: (Array.isArray(out.tags) ? out.tags : []).map((t) => String(t).toLowerCase().trim()).filter(Boolean).slice(0, 8), content,
+    tags: (Array.isArray(out.tags) ? out.tags : []).map((t) => String(t).toLowerCase().trim()).filter(Boolean).slice(0, 8), content, ...(out.aiReview ? { aiReview: out.aiReview } : {}),
   });
 }
