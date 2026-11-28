@@ -300,7 +300,7 @@ export default async function handler(req, res) {
       let candidate=body.article_id?[{id:String(body.article_id)}]:await getDb().query("SELECT id FROM public.note_flashcard_candidates(1)");
       let upgrade=null;
       if(!candidate.length){
-        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":2%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
+        const old=await getDb().query(`SELECT id,source_reference FROM public.flashcard_sets WHERE source_type='note_generated' AND published=true AND deleted_at IS NULL AND coalesce(original_notes,'') NOT LIKE '%"v":3%' AND source_reference IS NOT NULL ORDER BY created_at ASC LIMIT 1`);
         if(old.length){candidate=[{id:old[0].source_reference}];upgrade={id:old[0].id};}
       }
       if(!candidate.length)return res.status(200).json({success:true,done:true});
