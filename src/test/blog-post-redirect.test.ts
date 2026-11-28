@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { postJsonPreservingRedirect } from "../../scripts/blogs/post-json.mjs";
+import { postJsonPreservingRedirect } from "../../supabase/functions/_shared/postJson.js";
 
 describe("publishing workflow POST redirects", () => {
   it("preserves POST and authorization across a same-site canonical-host redirect", async () => {
