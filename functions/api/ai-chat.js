@@ -44,7 +44,7 @@ async function onRequestPost({ request }) {
   const question = String(body?.question ?? "").trim();
   if (!question) return json({ error: "Ask a question." }, 400);
 
-  const token = (request.headers.get("x-neon-authorization") || request.headers.get("authorization") || "").replace(/^Bearer\\s+/i, "").trim();
+  const token = (request.headers.get("x-neon-authorization") || request.headers.get("authorization") || "").replace(/^Bearer\s+/i, "").trim();
   if (!token) return json({ error: "Please sign in to use Ompath AI." }, 401);
 
   const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
@@ -99,7 +99,7 @@ async function onRequestPost({ request }) {
   const stream = new ReadableStream({
     start(controller) {
       controller.enqueue(new TextEncoder().encode(sse(answer)));
-      controller.enqueue(new TextEncoder().encode("data: [DONE]\\n\\n"));
+      controller.enqueue(new TextEncoder().encode("data: [DONE]\n\n"));
       controller.close();
     },
   });
