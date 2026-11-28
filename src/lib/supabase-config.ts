@@ -1,6 +1,5 @@
-// Canonical production backend (the project's own Supabase instance).
-// Kept here so every direct REST / edge-function call uses the same host as
-// the generated client, regardless of build-time environment variables.
-export const SUPABASE_URL = "https://strfwaqvxvkhjbqrwmla.supabase.co";
-export const SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
+// Canonical Supabase project used by the connected AI gateway and auth client.
+// The publishable key is intended for browser use; service-role credentials stay server-side.
+export const SUPABASE_URL = "https://rcntjfzivtnijnkliouc.supabase.co";
+export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP";
 export const SUPABASE_FUNCTIONS_URL = `${SUPABASE_URL}/functions/v1`;
