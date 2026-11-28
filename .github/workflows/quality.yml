@@ -2,7 +2,7 @@ name: Repository quality checks
 
 on:
   push:
-    branches: [main, staging-preview-fix]
+    branches: [main, staging-preview-fix, fix/neon-anonymous-auth-schema-access]
   pull_request:
     branches: [main]
 
