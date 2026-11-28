@@ -6,9 +6,10 @@ import transcribe from "./_lib/transcribe.js";
 import aiCases from "./_lib/ai-cases.js";
 import { initiate as oneKittyInitiate, callback as oneKittyCallback } from "./_lib/onekitty.js";
 import blogPolishQueue from "./_lib/blogPolishQueue.js";
+import paperDoctor from "./_lib/paperDoctor.js";
 
 /** Neon-backed function dispatcher for Cloudflare Pages and crawler requests. */
-export const config = { maxDuration: 60 };
+export const config = { maxDuration: 120 };
 export default async function handler(req, res) {
   const name = String(req.query?.name || "").trim();
   if (!/^[a-z0-9-]+$/i.test(name)) {
@@ -23,6 +24,7 @@ export default async function handler(req, res) {
   if (name === "onekitty-initiate") return oneKittyInitiate(req, res);
   if (name === "onekitty-callback") return oneKittyCallback(req, res);
   if (name === "blog-polish-queue") return blogPolishQueue(req, res);
+  if (name === "paper-doctor") return paperDoctor(req, res);
 
   // api/sitemap.js fetches this endpoint with GET; browser-side function calls use POST.
   if (["initiate-paystack", "check-payment", "access-code"].includes(name)) {
