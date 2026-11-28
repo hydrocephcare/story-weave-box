@@ -69,6 +69,7 @@ export function Paywall({
   const savedCountryCode = String(savedPaymentDetails.countryCode || "").toUpperCase();
   // Older builds could save "+254…" as OTHER because the country detector used an
   // incorrectly escaped digit regex. Recover the country from the actual number.
+  const hasSavedCountry = !!countryData[savedCountryCode] || !!savedPhoneCountry;
   const initialCountry = countryData[savedCountryCode] ? savedCountryCode : (savedPhoneCountry || "KE");
   const [phone, setPhone] = useState(() => savedPaymentDetails.phone || "");
   const [countryCode, setCountryCode] = useState(() => initialCountry);
@@ -94,8 +95,9 @@ export function Paywall({
         if (!/^[A-Z]{2}$/.test(code)) throw new Error("Location country unavailable");
         if (!active) return;
         setPricingCountry(code);
-        setCountryCode(initialCountry);
-        setPaymentMethod(code === "KE" && initialCountry === "KE" ? "mpesa" : "card");
+        const selectedCountry = hasSavedCountry ? initialCountry : code;
+        setCountryCode(selectedCountry);
+        setPaymentMethod(code === "KE" && selectedCountry === "KE" ? "mpesa" : "card");
       } catch {
         if (!active) return;
         setPricingCountry(fallback);
