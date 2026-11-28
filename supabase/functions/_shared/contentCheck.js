@@ -132,7 +132,13 @@ export async function generateCheckedDeep(input, env, fetchImpl = fetch, budgetM
     if (round > 0 && Date.now() - t0 > budgetMs * 0.5) break;
     deep = await generateDeepWithFallback({ ...input, fixes }, env);
     last = await checkContent({ title: input.name, kind: "deep exam notes", text: deepToText(deep), env, fetchImpl });
-    if (last.validated) return { ...deep, checked: last.at };
+    if (last.validated) return {
+      ...deep,
+      checked: last.at,
+      reviewStatus: "passed",
+      reviewModel: last.model || "gemini",
+      reviewedAt: last.at,
+    };
     fixes = last.issues.filter((x) => x.severity !== "low").map((x) => x.problem + " Correct: " + x.fix);
   }
   const unresolved = (last?.issues ?? []).map((x) => `[${x.severity}] ${x.where}: ${x.problem} — ${x.fix}`).join(" | ");
