@@ -1,11 +1,16 @@
-// The writing helper for stories and the author profile (served by /api/ai?task=assist). It returns text only; the writer decides what to keep.
+// The writing helper uses the shared Supabase AI backend; the writer decides what to keep.
 type Reply = { text?: string; titles?: string[]; error?: string };
 
 async function call(body: Record<string, unknown>): Promise<Reply> {
   try {
-    const isStoriesSite = typeof window !== "undefined" && window.location.hostname === "stories.ompathstudy.com";
-    const endpoint = isStoriesSite ? "/api/story-assist" : "/api/ai?task=assist";
-    const r = await fetch(endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+    const r = await fetch("https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        apikey: "sb_publishable_HdlAHkp2wXJRCYqWLnPckw_dOUcjEVP",
+      },
+      body: JSON.stringify({ task: "public_assist", ...body }),
+    });
     const j = (await r.json().catch(() => ({}))) as Reply;
     if (!r.ok) throw new Error(j.error || "The helper is busy. Please try again in a minute.");
     return j;
