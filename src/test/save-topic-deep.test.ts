@@ -29,7 +29,7 @@ const makeReq = (overrides = {}) => ({
     deep: {
       checked: "2026-11-28",
       sections: Array.from({ length: 4 }, (_, i) => ({ h: `Section ${i + 1}`, p: "Reviewed content" })),
-      exam: Array.from({ length: 6 }, (_, i) => `Question ${i + 1} — Answer`),
+      vivas: Array.from({ length: 15 }, (_, i) => ({ q: `Question ${i + 1} for the clinical examination?`, a: `Answer ${i + 1} with the key clinical reasoning.` })),
     },
   },
   ...overrides,
@@ -122,7 +122,7 @@ describe("saveTopicDeep privileged persistence proxy", () => {
     expect(JSON.parse(deepJson)).toMatchObject({
       checked: "2026-11-28",
       sections: expect.arrayContaining([expect.objectContaining({ h: "Section 1" })]),
-      exam: expect.arrayContaining(["Question 1 — Answer"]),
+      vivas: expect.arrayContaining([expect.objectContaining({ q: "Question 1 for the clinical examination?", a: "Answer 1 with the key clinical reasoning." })]),
     });
     expect(res.headers["Cache-Control"]).toBe("no-store");
   });
