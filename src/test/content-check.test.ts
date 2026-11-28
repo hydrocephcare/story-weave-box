@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { chunkText } from "../../supabase/functions/_shared/contentCheck.js";
+import { chunkText as gatewayChunkText } from "../../supabase/functions/ompath-ai/contentCheck.js";
 
 describe("clinical review chunking", () => {
   it("preserves a long single-line JSON payload without truncation", () => {
@@ -24,6 +25,13 @@ describe("clinical review chunking", () => {
     const source = "a".repeat(120) + "\n" + "b".repeat(20);
     const chunks = chunkText(source, 120);
     expect(chunks.every((part) => part.length <= 120)).toBe(true);
+    expect(chunks.join("")).toBe(source);
+  });
+
+  it("uses the same lossless chunking in the Supabase gateway reviewer", () => {
+    const source = JSON.stringify({ cards: Array.from({ length: 90 }, (_, i) => ({ q: "Q" + i, a: "Answer " + i + " 🩺" })) });
+    const chunks = gatewayChunkText(source, 160);
+    expect(chunks.every((part) => part.length <= 160)).toBe(true);
     expect(chunks.join("")).toBe(source);
   });
 
