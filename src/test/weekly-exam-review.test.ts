@@ -20,16 +20,16 @@ const questions = Array.from({ length: 10 }, (_, i) => ({
 describe("weekly exam independent MCQ review", () => {
   beforeEach(() => geminiMock.mockReset());
 
-  it("does not treat a bank as reviewed when Gemini is unavailable in non-strict review", async () => {
-    geminiMock.mockImplementation(() => Promise.reject(new Error("Gemini unavailable")));
+  it("does not treat a bank as reviewed when Gemini returns an unusable response in non-strict review", async () => {
+    geminiMock.mockResolvedValue({ text: "not valid JSON", model: "gemini-review-test" });
     const result = await reviewQuestions(questions, false, { GEMINI_API_KEYS: "test-key" });
     expect(result.reviewerUnavailable).toBe(true);
     expect(result.kept).toHaveLength(questions.length);
     expect(result.reviewModel).toBe(null);
   });
 
-  it("fails closed and drops the chunk when Gemini is unavailable in strict weekly-exam review", async () => {
-    geminiMock.mockImplementation(() => Promise.reject(new Error("Gemini unavailable")));
+  it("fails closed and drops the chunk when Gemini returns an unusable response in strict weekly-exam review", async () => {
+    geminiMock.mockResolvedValue({ text: "not valid JSON", model: "gemini-review-test" });
     const result = await reviewQuestions(questions, true, { GEMINI_API_KEYS: "test-key" });
     expect(result.reviewerUnavailable).toBe(true);
     expect(result.kept).toHaveLength(0);
