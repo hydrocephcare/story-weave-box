@@ -5,7 +5,7 @@ import type { AiPage } from "@/lib/topics";
 import { parseQuery, streamAnswer, type Retrieval } from "@/lib/ompathAi";
 
 export type TopicChoices = {
-  level: "year3" | "year4" | "year5";
+  level: "year1" | "year2" | "year3" | "year4" | "year5" | "year6";
   angles: string[];
   setting: "tropical" | "general";
   depth: "quick" | "full";
@@ -54,18 +54,19 @@ async function viaServer(
   | null
 > {
   try {
-    const { data: sessionData } = await supabase.auth.getSession();
-    const token = sessionData.session?.access_token;
-    if (!token) return { status: "rejected" };
+    const authAdapter = supabase.auth as typeof supabase.auth & { getJWTToken?: () => Promise<string | null> };
+    const token = await authAdapter.getJWTToken?.();
+    if (!token || token.split(".").length !== 3) return { status: "rejected" };
 
-    const response = await fetch("/api/topic-write", {
+    const response = await fetch("https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai", {
       method: "POST",
       signal,
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+        apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP",
+        "x-neon-authorization": `Bearer ${token}`,
       },
-      body: JSON.stringify({ name, category, context: context.slice(0, 3000), choices, keepSlug }),
+      body: JSON.stringify({ task: "topic", name, category, context: context.slice(0, 3000), choices, keepSlug }),
     });
 
     if (response.status === 401) return { status: "rejected" };
