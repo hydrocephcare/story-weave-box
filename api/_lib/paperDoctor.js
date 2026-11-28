@@ -1,6 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import { isNeonAdmin } from "./neonAdmin.js";
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
+import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
 
 const SYSTEM = `You tidy written exam papers for a free medical study website used by Kenyan medical students. The text was pasted or scanned from Word and PDF files, so its structure is often damaged.
@@ -141,7 +142,7 @@ export default async function handler(req, res) {
     try {
       const system = answerMode ? SYSTEM_MCQ : SYSTEM;
       const user = `${seg === 0 ? `TITLE: ${article.title}\nCATEGORY: ${article.category}\nDESCRIPTION: ${article.meta_description || ""}\n\n` : ""}${parts.length > 1 ? `SECTION ${seg + 1} OF ${parts.length}\n` : ""}PAGE:\n${parts[seg]}`;
-      const result = await askModel(system + "\n\n" + user, { env: aiEnv, plain: true, timeoutMs: 85000, maxTokens: 4500 });
+      const result = await askGroqModel(system + "\n\n" + user, { env: aiEnv, plain: true, timeoutMs: 85000, maxTokens: 4500 });
       raw = result.text;
     } catch (e) {
       await save("skipped", { issues: [`AI unavailable: ${String(e?.message || e).slice(0, 120)}`] });
@@ -163,6 +164,60 @@ export default async function handler(req, res) {
         segText = parts[seg]; segIssues = ["Part of the AI rewrite was incomplete, so the original section was preserved."];
       }
     }
+    if (!unchanged && segText.trim() !== parts[seg].trim()) {
+      try {
+        let review = await checkContent({
+          title: article.title,
+          kind: answerMode ? "medical examination questions and model answers" : "medical examination paper structure and content",
+          text: segText,
+          env: aiEnv,
+          timeoutMs: 35000,
+        });
+        if (!review.validated) {
+          const repairPrompt = [
+            "Correct the medical factual errors or clinically unsafe statements identified by the independent Gemini reviewer in this examination-paper section.",
+            "Preserve every question, mark, number, unit, drug name, answer and original teaching point. Do not shorten or invent facts. Return only the complete corrected section.",
+            "GEMINI FINDINGS:",
+            (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\n"),
+            "ORIGINAL SOURCE SECTION:",
+            parts[seg],
+            "SECTION TO CORRECT:",
+            segText,
+          ].join("\n\n");
+          const repaired = await askGroqModel(repairPrompt, { env: aiEnv, plain: true, timeoutMs: 55000, maxTokens: 4500 });
+          const corrected = String(repaired.text || "").trim();
+          if (corrected.length >= parts[seg].length * 0.75 && countQuestions(corrected, answerMode) >= countQuestions(parts[seg], answerMode)) {
+            const second = await checkContent({
+              title: article.title,
+              kind: answerMode ? "corrected medical examination questions and model answers" : "corrected medical examination paper section",
+              text: corrected,
+              env: aiEnv,
+              timeoutMs: 35000,
+            });
+            if (second.validated && second.model) {
+              segText = corrected;
+              segIssues.push("Independent Gemini clinical review passed after Groq correction (" + second.model + ").");
+            } else {
+              segText = parts[seg];
+              segIssues.push("Gemini review did not clear the correction; original section preserved.");
+            }
+          } else {
+            segText = parts[seg];
+            segIssues.push("The corrected section was incomplete; original section preserved.");
+          }
+        } else if (review.model) {
+          segIssues.push("Independent Gemini clinical review passed (" + review.model + ").");
+        } else {
+          segText = parts[seg];
+          segIssues.push("Gemini reviewer identity was missing; original section preserved.");
+        }
+      } catch (reviewError) {
+        segText = parts[seg];
+        segIssues.push("Independent Gemini review was unavailable; original section preserved.");
+        console.warn("[paper-doctor-review]", String(reviewError?.message || reviewError).slice(0, 180));
+      }
+    }
+
     const doneText = (resume?.new_content ? String(resume.new_content) : "") + (resume?.new_content ? "\n" : "") + segText.replace(/\n+$/, "");
     const issues = [...(resume?.issues || []), ...segIssues].slice(0, 30);
     const changed = Boolean(resume?.changed) || segText.trim() !== parts[seg].trim();
