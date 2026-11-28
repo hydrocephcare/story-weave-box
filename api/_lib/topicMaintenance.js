@@ -48,23 +48,31 @@ const TABLES = {
 };
 
 async function verifyWorkflow(req) {
-  const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
+  const token = String(req.headers.authorization || "").replace(/^Bearer\\s+/i, "").trim();
   if (!token) return false;
   try {
     const { payload } = await jwtVerify(token, jwks, {
       issuer: "https://token.actions.githubusercontent.com",
       audience: AUDIENCE,
     });
+    const stagingBranch = String(process.env.TOPIC_MAINTENANCE_STAGING_BRANCH || "").trim();
+    const validStagingBranch = /^[A-Za-z0-9._/-]+$/.test(stagingBranch) && !stagingBranch.includes("..");
+    const allowedBranches = new Set(["refs/heads/main"]);
+    const allowedRefs = new Set(WORKFLOW_REFS);
+    if (validStagingBranch && stagingBranch !== "main") {
+      const ref = "refs/heads/" + stagingBranch;
+      allowedBranches.add(ref);
+      allowedRefs.add(REPOSITORY + "/.github/workflows/topics-daily.yml@" + ref);
+      allowedRefs.add(REPOSITORY + "/.github/workflows/zone-daily.yml@" + ref);
+    }
     return payload.repository === REPOSITORY
-      && payload.ref === "refs/heads/main"
-      && WORKFLOW_REFS.has(String(payload.workflow_ref || ""))
+      && allowedBranches.has(String(payload.ref || ""))
+      && allowedRefs.has(String(payload.workflow_ref || ""))
       && ["push", "schedule", "workflow_dispatch"].includes(String(payload.event_name));
   } catch {
     return false;
   }
 }
-
-
 
 
 
