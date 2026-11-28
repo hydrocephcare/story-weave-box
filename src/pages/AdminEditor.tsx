@@ -22,6 +22,7 @@ import {
   type McqSet, type Article, type ArticleCategory,
 } from "@/lib/store";
 import { supabase } from "@/integrations/supabase/client";
+import { requireMcqClinicalReview } from "@/lib/requireMcqClinicalReview";
 import { slugifyText, SITE_URL, extractFirstImageFromContent, stripRichText } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 import { Helmet } from "react-helmet-async";
@@ -882,6 +883,7 @@ export default function AdminEditor() {
       
       const normalized = normalizeMcqQuestions(data as any[]);
       if (!normalized.length) throw new Error("Generated questions did not contain valid answer keys");
+      await requireMcqClinicalReview(supabase, normalized, set.title);
       await supabase.from("mcq_sets").update({ questions: normalized as any, updated_at: new Date().toISOString() } as any).eq("id", setId);
       toast({ title: `Updated ${data.length} MCQs with AI!` });
       await loadContent();
@@ -916,8 +918,10 @@ export default function AdminEditor() {
         if (parsed.length + written.length >= 1) {
           const cat = editCategory || `Year ${selectedYear}: General`;
           const title = editTitle || extractTitleFromNotes(geminiNotes) || `MCQ: ${cat.split(":").pop()?.trim() || "General"}`;
+          const combined = [...parsed, ...written];
+          await requireMcqClinicalReview(supabase, combined, title);
           await saveMcqSet({
-            title, questions: [...parsed, ...written] as any, published: true, category: cat,
+            title, questions: combined as any, published: true, category: cat,
             original_notes: geminiNotes, access_password: "",
             created_at: new Date().toISOString(),
           } as any);
@@ -939,9 +943,11 @@ export default function AdminEditor() {
         const cat = editCategory || `Year ${selectedYear}: General`;
         const title = editTitle || extractTitleFromNotes(geminiNotes) || `MCQ: ${cat.split(":").pop()?.trim() || "General"}`;
         const written = parseWrittenQuestionsFromText(geminiNotes);
+        const combined = [...data.map((q: any) => ({ type: "mcq", ...q })), ...written];
+        await requireMcqClinicalReview(supabase, combined, title);
         await saveMcqSet({
           title,
-          questions: [...data.map((q: any) => ({ type: "mcq", ...q })), ...written] as any, published: true, category: cat,
+          questions: combined as any, published: true, category: cat,
           original_notes: geminiNotes, access_password: "",
           created_at: new Date().toISOString(),
         } as any);
