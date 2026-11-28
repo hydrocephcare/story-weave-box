@@ -1,4 +1,5 @@
 import { neon } from "@neondatabase/serverless";
+import { deepNoteReady } from "./deepNoteReadiness.js";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
@@ -125,13 +126,7 @@ ${text}`;
   return cards;
 }
 
-function deepReady(deep) {
-  return Boolean(deep?.checked) && (deep?.sections?.length || 0) >= 7
-    && ((deep?.vivas?.length || 0) >= 12 || (deep?.exam?.length || 0) >= 12)
-    && (deep?.mcqs?.length || 0) >= 6
-    && (deep?.cases?.length || 0) >= 2 && (deep?.facts?.length || 0) >= 6
-    && (deep?.mistakes?.length || 0) >= 5;
-}
+
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed." });
@@ -367,7 +362,7 @@ PAGE TEXT:
       if (name.length < 2 || !base || !Array.isArray(base.sections) || base.sections.length < 3) return res.status(400).json({ error: "A valid topic name and revision page are required." });
       const past = Array.isArray(body.past) ? body.past.slice(0, 12).map(x => String(x).slice(0, 220)) : [];
       const deep = await generateCheckedDeep({ name, category, base, past }, aiEnv, fetch, 240000);
-      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
+      if (!deepNoteReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
       return res.status(200).json({ deep });
     }
 
@@ -445,12 +440,12 @@ PAGE TEXT:
       const rows = await getDb()`SELECT slug,name,category,content,updated_at FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(404).json({ error: "Published topic not found." });
-      if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
+      if (deepNoteReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const deep = await generateCheckedDeep(
         { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
         aiEnv, fetch, 240000,
       );
-      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
+      if (!deepNoteReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
       const content = { ...(row.content || {}), deep };
       const saved = await getDb()`UPDATE public.topic_pages
         SET content = ${JSON.stringify(content)}::jsonb, updated_at = now()
@@ -487,7 +482,7 @@ PAGE TEXT:
       const slug = String(body.slug || "");
       const deep = body.deep;
       if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
-      if (!deepReady(deep) || JSON.stringify(deep).length > 90000
+      if (!deepNoteReady(deep) || JSON.stringify(deep).length > 90000
           || /https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text/i.test(JSON.stringify(deep))) {
         return res.status(400).json({ error: "Deep-note payload did not pass the required structure checks." });
       }
@@ -495,7 +490,7 @@ PAGE TEXT:
         WHERE slug = ${slug} AND status = 'published' AND updated_at = ${body.updatedAt} LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(200).json({ status: "conflict", slug });
-      if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
+      if (deepNoteReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const content = { ...(row.content || {}), deep };
       const saved = await getDb()`UPDATE public.topic_pages
         SET content = ${JSON.stringify(content)}::jsonb, updated_at = now()
