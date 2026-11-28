@@ -144,6 +144,20 @@ describe("saveTopicDeep privileged persistence proxy", () => {
     expect(res.headers["Cache-Control"]).toBe("no-store");
   });
 
+  it("rejects incomplete deep notes before opening the database connection", async () => {
+    const req = makeReq({ body: {
+      slug: "test-topic",
+      name: "Test Topic",
+      category: "Year 4",
+      deep: { checked: "2026-11-28", sections: [{ h: "Only one section" }], vivas: [{ q: "Question?", a: "Answer" }] },
+    } });
+    const res = makeRes();
+    await handler(req, res);
+    expect(res.statusCode).toBe(400);
+    expect(res.body.reason).toBe("incomplete_deep_notes");
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
   it("does not report success when the database RPC rejects the payload", async () => {
     sqlMock.mockResolvedValueOnce([{ result: { ok: false, reason: "slug_conflict" } }]);
     const res = makeRes();
