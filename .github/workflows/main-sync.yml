@@ -43,7 +43,7 @@ jobs:
         run: node --check scripts/seo/audit-production.mjs
 
       - name: Type-check the Supabase AI gateway
-        run: deno check supabase/functions/ompath-ai/index.ts
+        run: deno check --node-modules-dir=auto supabase/functions/ompath-ai/index.ts
 
       - name: Validate automation script syntax
         run: |
