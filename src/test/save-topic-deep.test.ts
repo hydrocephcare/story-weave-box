@@ -28,8 +28,12 @@ const makeReq = (overrides = {}) => ({
     },
     deep: {
       checked: "2026-11-28",
-      sections: Array.from({ length: 4 }, (_, i) => ({ h: `Section ${i + 1}`, p: "Reviewed content" })),
+      sections: Array.from({ length: 7 }, (_, i) => ({ h: `Section ${i + 1}`, p: "Reviewed content" })),
       vivas: Array.from({ length: 15 }, (_, i) => ({ q: `Question ${i + 1} for the clinical examination?`, a: `Answer ${i + 1} with the key clinical reasoning.` })),
+      mcqs: Array.from({ length: 6 }, (_, i) => ({ q: `MCQ ${i + 1}`, o: ["A", "B", "C", "D"], a: 0, e: "Explanation" })),
+      cases: Array.from({ length: 2 }, (_, i) => ({ v: `Clinical case ${i + 1}`, qs: [{ q: "Question?", a: "Answer" }, { q: "Question two?", a: "Answer two" }] })),
+      facts: Array.from({ length: 6 }, (_, i) => `Clinical fact ${i + 1}`),
+      mistakes: Array.from({ length: 5 }, (_, i) => `Common mistake ${i + 1}`),
     },
   },
   ...overrides,
@@ -132,6 +136,10 @@ describe("saveTopicDeep privileged persistence proxy", () => {
       checked: "2026-11-28",
       sections: expect.arrayContaining([expect.objectContaining({ h: "Section 1" })]),
       vivas: expect.arrayContaining([expect.objectContaining({ q: "Question 1 for the clinical examination?", a: "Answer 1 with the key clinical reasoning." })]),
+      mcqs: expect.arrayContaining([expect.objectContaining({ q: "MCQ 1" })]),
+      cases: expect.arrayContaining([expect.objectContaining({ v: "Clinical case 1" })]),
+      facts: expect.arrayContaining(["Clinical fact 1"]),
+      mistakes: expect.arrayContaining(["Common mistake 1"]),
     });
     expect(res.headers["Cache-Control"]).toBe("no-store");
   });
