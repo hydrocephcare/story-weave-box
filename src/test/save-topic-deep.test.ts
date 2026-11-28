@@ -83,11 +83,11 @@ describe("saveTopicDeep privileged persistence proxy", () => {
 
 
   it("runs a read-only database health probe with the shared secret", async () => {
-    sqlMock.mockResolvedValueOnce([{ ok: 1 }]);
+    sqlMock.mockResolvedValueOnce([{ ok: 1, can_save: true }]);
     const res = makeRes();
     await handler(makeReq({ method: "GET", query: { health: "1" } }), res);
     expect(res.statusCode).toBe(200);
-    expect(res.body).toEqual({ status: "ok", database: true });
+    expect(res.body).toEqual({ status: "ok", database: true, canSave: true });
     expect(verifyTokenMock).not.toHaveBeenCalled();
     expect(sqlMock).toHaveBeenCalledTimes(1);
   });
