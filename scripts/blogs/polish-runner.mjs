@@ -1,3 +1,5 @@
+import { postJsonPreservingRedirect } from "./post-json.mjs";
+
 const audience="ompathstudy-blog-polish";
 const base="https://www.ompathstudy.com";
 const requestUrl=process.env.ACTIONS_ID_TOKEN_REQUEST_URL;
@@ -15,12 +17,10 @@ const deadline=Date.now()+Math.max(1,Math.min(50,Number(process.env.MINUTES)||50
 const headers={"Content-Type":"application/json",Authorization:"Bearer "+token};
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function post(path,body,timeout=55_000) {
-  const response=await fetch(base+path,{method:"POST",headers,body:JSON.stringify(body),signal:AbortSignal.timeout(timeout)});
-  const data=await response.json().catch(()=>({}));
-  return {response,data};
+  return postJsonPreservingRedirect(base+path,body,headers,timeout);
 }
 const queued=await post("/api/neon-functions?name=blog-polish-queue",{count,year});
-if(!queued.response.ok||queued.data.success!==true) throw new Error(queued.data.error||"Could not load the published-article queue ("+queued.response.status+").");
+if(!queued.response.ok||queued.data.success!==true) throw new Error(queued.data.error||("Could not load the published-article queue (HTTP "+queued.response.status+"; final URL "+queued.finalUrl+"; redirects "+queued.redirects+")."));
 const articles=Array.isArray(queued.data.articles)?queued.data.articles:[];
 console.log(articles.length+" published articles queued for incremental polishing.");
 let polished=0,failed=0,held=0;
