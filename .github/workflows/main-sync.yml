@@ -86,6 +86,16 @@ jobs:
           node --check api/_lib/blogPolishPrompts.js
           node --check supabase/functions/_shared/topicAi.js
           node --check supabase/functions/_shared/contentCheck.js
+          node --check supabase/functions/_shared/aiChat.js
+          node --check supabase/functions/_shared/mcqHarden.js
+          node --check functions/api/ai-chat.js
+          node --check api/_lib/llm.js
+          node --check api/_lib/aiDraft.js
+          node --check api/_lib/blogPolishVerify.js
+          node --check api/_lib/generateContent.js
+          node --check api/_lib/generateExam.js
+          node --check api/_lib/outlineParse.js
+          node --check supabase/functions/_shared/contentCheck.js
 
       - name: Test combined Lovable and repository code
         run: npm test
