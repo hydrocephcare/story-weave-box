@@ -73,7 +73,8 @@ export async function reviewQuestions(questions, strict = true, aiEnv) {
       const mismatch = Number(checked.your_answer) !== q.correct_answer || checked.status === "ambiguous";
       if (mismatch) {
         disputed.push({ index: i + k, question: q.question.slice(0, 120), supplied: q.correct_answer, reviewer: checked.your_answer });
-        if (strict) { dropped++; return; }
+        dropped++;
+        return;
       }
       const optionsOk = Array.isArray(checked.options) && checked.options.length === q.options.length && checked.options.every((x) => typeof x === "string" && x.trim());
       const explanation = q.explanation || String(checked.explanation || "").trim();
