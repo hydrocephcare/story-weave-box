@@ -56,7 +56,22 @@ async function viaGemini(msgs, opt, why) {
  * Ask for JSON text. opt.prefer = "gemini" for long writing jobs (big context, generous limits) or "groq" for short planning (fast).
  * Returns { text } or { error } where error says what went wrong in plain words.
  */
+async function askSupabaseAI(msgs, opt) {
+  const token = String(opt.authToken || "").replace(/^Bearer\\s+/i, "").trim();
+  if (!token) return null;
+  const prompt = msgs.map((m) => String(m.content ?? "")).join("\\n\\n").slice(0, 26000);
+  const response = await fetch("https://rcntjfzivtnijnkliouc.supabase.co/functions/v1/ompath-ai", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", apikey: "sb_publishable_HdlAHkp2wXjRCYqWLnPckw_dOUcjEVP", "x-neon-authorization": token },
+    signal: AbortSignal.timeout(opt.timeoutMs || (opt.fast ? 15000 : 65000)),
+    body: JSON.stringify({ task: "provider_call", provider: "auto", prompt, plain: false, temperature: opt.temperature ?? 0.3, maxTokens: opt.maxTokens ?? 4000, timeoutMs: opt.timeoutMs || (opt.fast ? 12000 : 60000) }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || typeof data.text !== "string" || !data.text.trim()) throw new Error(String(data.error || data.detail || ("Supabase AI request failed (" + response.status + ").")).slice(0, 220));
+  return data.text;
+}
 export async function askJson(msgs, opt = {}) {
+  if (opt.authToken) { try { const text = await askSupabaseAI(msgs, opt); if (text) return { text, provider: "supabase" }; } catch (e) { return { error: String(e?.message || e), why: [String(e?.message || e)] }; } }
   const order = opt.prefer === "gemini" ? [viaGemini, viaGroq] : [viaGroq, viaGemini];
   const why = [];
   for (let round = 0; round < 2; round++) {
