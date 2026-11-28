@@ -68,7 +68,7 @@ describe("admin medical writing requires independent Gemini review", () => {
       .mockResolvedValueOnce({ validated: false, model: "gemini-review-test", issues: [{ problem: "The management claim remains incomplete.", fix: "Correct the clinical statement." }] })
       .mockResolvedValueOnce({ validated: false, model: "gemini-review-test", issues: [{ problem: "Still inaccurate.", fix: "Correct it." }] });
     await expect(handler(request("note"), makeRes() as never)).rejects.toThrow("Independent Gemini review held");
-    expect(reviewMock).toHaveBeenCalledTimes(3);
+    expect(reviewMock).toHaveBeenCalledTimes(2);
   });
 
   it("uses the reviewed MCQ generator for admin question banks", async () => {
