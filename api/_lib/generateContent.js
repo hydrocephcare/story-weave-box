@@ -104,6 +104,26 @@ export default async function handler(req,res) {
     const safe=clipNotes(notes),env=supabaseAiEnv(req);
     let messages=[],raw="";
 
+    if(type==="review-mcqs") {
+      let questions;
+      try { questions = JSON.parse(safe); } catch { return res.status(400).json({ validated: false, error: "Question payload is not valid JSON." }); }
+      if (!Array.isArray(questions) || questions.length < 1 || questions.length > 100) {
+        return res.status(400).json({ validated: false, error: "Provide between 1 and 100 questions for review." });
+      }
+      const reviewText = questions.map((question, index) => "## Question " + (index + 1) + "\n" + JSON.stringify(question)).join("\n\n");
+      const review = await checkContent({
+        title: customTitle || "Medical question bank",
+        kind: "medical examination MCQs and written questions",
+        text: reviewText,
+        env,
+        timeoutMs: 45000,
+      });
+      if (!review.validated || !review.model) {
+        return res.status(422).json({ validated: false, issues: review.issues || [], reviewModel: review.model || null });
+      }
+      return res.status(200).json({ validated: true, reviewModel: review.model, reviewedAt: review.at });
+    }
+
     if(type==="categorize") {
       const prompt="Categorize these medical notes into ONE best unit from this exact list: "+UNIT_CATEGORIES.join("; ")+". Return only the exact category name, no explanation.\n\n"+safe.slice(0,5000);
       try { const value=(await callAI([{role:"user",content:prompt}],env,{plain:true,maxTokens:80})).trim().replace(/^"|"$/g,""); const exact=UNIT_CATEGORIES.find(c=>c.toLowerCase()===value.toLowerCase()); if(exact)return res.status(200).json({category:exact}); } catch {}
