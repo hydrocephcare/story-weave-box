@@ -36,6 +36,17 @@ describe("weekly exam independent MCQ review", () => {
     expect(result.dropped).toBe(questions.length);
   });
 
+  it("drops questions when Gemini disagrees with the supplied answer key", async () => {
+    geminiMock.mockResolvedValue({
+      text: JSON.stringify(questions.map((q, i) => ({ i, your_answer: 1, status: "ok", options: q.options, explanation: q.explanation }))),
+      model: "gemini-review-test",
+    });
+    const result = await reviewQuestions(questions, false, { GEMINI_API_KEYS: "test-key" });
+    expect(result.kept).toHaveLength(0);
+    expect(result.dropped).toBe(questions.length);
+    expect(result.disputed).toHaveLength(questions.length);
+  });
+
   it("records the actual Gemini reviewer model on a successful review", async () => {
     geminiMock.mockResolvedValue({
       text: JSON.stringify(questions.map((q, i) => ({ i, your_answer: 0, status: "ok", options: q.options, explanation: q.explanation }))),
