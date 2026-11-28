@@ -20,8 +20,8 @@ let turn=0;
 const cooldown=new Map<string,number>();
 const publicAssistHits=new Map<string,number[]>();
 const publicTranscribeHits=new Map<string,number[]>();
-const GEM=["gemini-3.5-flash","gemini-flash-lite-latest","gemini-2.5-flash","gemini-2.5-flash-lite"];
-const GROQ=["openai/gpt-oss-120b","qwen/qwen3.8-27b","openai/gpt-oss-20b"];
+const GEM=["gemini-3.8-flash","gemini-3.5-flash-lite"];
+const GROQ=["openai/gpt-oss-120b","openai/gpt-oss-20b"];
 const rotate=(a:any[],n:number,size:number)=>a.length?[...a.slice((n*size)%a.length),...a.slice(0,(n*size)%a.length)]:a;
 
 async function chatText(env:Record<string,string>,messages:any[],temperature:number,maxTokens:number,timeoutMs:number) {
@@ -93,6 +93,12 @@ Deno.serve(async(req:Request)=>{
   const body=await req.json().catch(()=>null);
   if(!body||typeof body!=="object")return reply({error:"invalid_json"},400,origin);
   const env=Deno.env.toObject();
+  // This function is the AI gateway itself: never proxy its own provider calls back into itself.
+  delete env.OMPATH_SUPABASE_AI_URL;
+  delete env.OMPATH_SUPABASE_AI_TOKEN;
+  delete env.OMPATH_SUPABASE_AI_AUTH_KIND;
+  delete env.OMPATH_SUPABASE_AI_PUBLISHABLE_KEY;
+  delete env.OMPATH_AI_FEATURE;
   if(body.task==="public_transcribe") {
     const ip=req.headers.get("x-client-ip")||req.headers.get("cf-connecting-ip")||String(req.headers.get("x-forwarded-for")||"").split(",")[0]||"unknown";
     const now=Date.now(),recent=(publicTranscribeHits.get(ip)||[]).filter(t=>now-t<3600000);
