@@ -1,4 +1,4 @@
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { kindOf } from "./blogPolishCore.js";
 
@@ -45,7 +45,7 @@ export async function verifyBlogContent(article, candidate, env, { allowRepair =
     "Output only the complete corrected Markdown."
   ].join("\n\n");
 
-  const repaired = await askModel(prompt, { env, plain: true,
+  const repaired = await askGroqModel(prompt, { env, plain: true,
     timeoutMs: Math.max(timeoutMs, 50000), maxTokens: 11000 });
   const corrected = String(repaired.text || "").trim();
   if (!corrected || corrected.length < Math.min(500, source.length * 0.65)) {
@@ -53,7 +53,7 @@ export async function verifyBlogContent(article, candidate, env, { allowRepair =
   }
 
   const second = await checkContent({ title: article.title || "Medical education article", kind: "published medical education article",
-    text: corrected, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS }, timeoutMs });
+    text: corrected, env, timeoutMs });
   const remaining = [...(second.issues || []), ...thinnessIssues(corrected)];
   if (!second.validated || remaining.length) {
     return { status: "held", content: null, model: second.model || review.model, at: new Date().toISOString(), issues: remaining.slice(0, 12) };
