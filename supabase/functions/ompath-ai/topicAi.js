@@ -3,10 +3,10 @@
 // Nothing here is clinical advice: the page says so, and every page is saved as "not reviewed" until a person marks it reviewed.
 import { placeNewQuestions, seededRandom } from "./mcqPositions.js";
 
-export const DEEP_DISEASE = ["Definition and epidemiology", "Causes and risk factors, most likely first", "How it develops (pathophysiology)", "How it presents", "Bedside: history and how to examine", "Differential diagnosis", "Investigations and how to read them", "Severity and staging", "Complicating and confounding factors", "Management, step by step", "Complications and red flags", "Special groups", "Prognosis, follow-up and prevention", "Where results can mislead"];
+export const DEEP_DISEASE = ["Relevant normal anatomy, histology and physiology", "Definition and epidemiology", "Causes and risk factors, most likely first", "How it presents", "Bedside: history and how to examine", "Differential diagnosis", "Investigations and how to read them", "Severity and staging", "Complicating and confounding factors", "Management, step by step", "Complications and red flags", "Special groups", "Prognosis, follow-up and prevention", "Where results can mislead"];
 
 export const KINDS = {
-  disease: ["Definition and diagnosis", "Severity and staging", "Causes, most likely first", "How it presents", "Investigations", "Red flags and complications", "Management", "Follow-up and prevention", "Often confused with", "Where results can mislead"],
+  disease: ["Relevant anatomy and normal physiology", "Definition and diagnosis", "Severity and staging", "Causes, most likely first", "How it presents", "Investigations", "Red flags and complications", "Management", "Follow-up and prevention", "Often confused with", "Where results can mislead"],
   anatomy: ["Overview", "Location and structure", "Relations", "Blood supply", "Nerve supply", "Function", "Clinical relevance and injuries", "Exam pearls"],
   physiology: ["Overview", "How it works", "Regulation", "What goes wrong", "Clinical relevance", "Exam pearls"],
   pharmacology: ["Drug class and classification", "Mechanism of action", "Clinical uses", "Adverse effects", "Contraindications and interactions", "Monitoring", "Exam pearls"],
@@ -21,7 +21,7 @@ export const DEEP_KINDS = {
   anatomy: ["Definition and anatomical overview", "Embryological development", "Gross anatomy and relations", "Blood supply", "Nerve supply and lymphatic drainage", "Histology and microanatomy", "Functions and biomechanics", "Applied anatomy and clinical correlations", "Common injuries and pathology", "Imaging and examination", "Variations and congenital anomalies", "Exam approach"],
   physiology: ["Overview and homeostasis", "Normal physiology step by step", "Cellular and molecular mechanisms", "Regulation and feedback", "Integration across organ systems", "Factors affecting normal function", "Pathophysiology: what goes wrong", "Clinical manifestations", "Investigations and interpretation", "Clinical applications", "Common misconceptions", "Exam approach"],
   pharmacology: ["Drug class and classification", "Prototypes and structure-activity relationships", "Mechanism of action", "Pharmacokinetics", "Pharmacodynamics", "Indications and clinical selection", "Contraindications and precautions", "Adverse effects and toxicity", "Interactions", "Monitoring and special populations", "Resistance and stewardship", "Exam approach"],
-  pathology: ["Definition and classification", "Aetiology and risk factors", "Pathogenesis step by step", "Gross morphology", "Microscopic morphology", "Clinical manifestations", "Investigations and diagnostic criteria", "Grading and staging", "Complications and prognosis", "Treatment principles", "Clinical-pathological correlations", "Exam approach"],
+  pathology: ["Relevant normal anatomy and histology", "Definition and classification", "Aetiology and risk factors", "Pathogenesis step by step", "Gross morphology", "Microscopic morphology", "Clinical manifestations", "Investigations and diagnostic criteria", "Grading and staging", "Complications and prognosis", "Treatment principles", "Clinical-pathological correlations", "Exam approach"],
   microbe: ["Classification and overview", "Morphology and structure", "Virulence factors", "Transmission and epidemiology", "Pathogenesis and host response", "Clinical manifestations", "Laboratory diagnosis and interpretation", "Treatment and antimicrobial pharmacology", "Resistance", "Prevention and public health", "Complications", "Exam approach"],
   biochemistry: ["Overview and biological role", "Structure and key components", "Pathway or mechanism step by step", "Enzymes and cofactors", "Regulation", "Integration and energy balance", "Clinical and disease correlations", "Laboratory assessment and interpretation", "Disorders and consequences", "Therapeutic implications", "Common errors", "Exam approach"],
   publicHealth: ["Definition and scope", "Epidemiology and burden", "Determinants and risk factors", "Surveillance and data interpretation", "Screening and prevention", "Interventions and implementation", "Health systems and policy", "Equity and community engagement", "Monitoring and evaluation", "Clinical relevance", "Common limitations", "Exam approach"],
@@ -36,7 +36,7 @@ export function kindOf(category = "", name = "") {
   if (/biochem|molecular|genetic|metabolic pathway/.test(c)) return "biochemistry";
   if (/public health|epidemiolog|community health|health promotion/.test(c)) return "publicHealth";
   if (/physiolog|homeostasis|physiological/.test(c)) return "physiology";
-  if (/medicine|psychiatr|paediatr|obstet|gynae|surger|disease|disorder|syndrome|clinical/.test(c)) return "disease";
+  if (/carcinoma|cancer|neoplasm|malignan|tumou?r|medicine|psychiatr|paediatr|obstet|gynae|surger|disease|disorder|syndrome|clinical/.test(c)) return "disease";
   return "general";
 }
 
