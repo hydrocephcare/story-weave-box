@@ -1,6 +1,7 @@
 import { generateReviewedTopicPage, validName, slugOf, askModel, askGroqModel, askGeminiModel, providerKeys } from "./topicAi.js";
 import { generateCheckedDeep } from "./contentCheck.js";
 import { createRemoteJWKSet, jwtVerify } from "npm:jose@5.9.6";
+import { postJsonPreservingRedirect } from "../_shared/postJson.js";
 
 const ALLOWED = new Set(["https://www.ompathstudy.com","https://ompathstudy.com","https://stories.ompathstudy.com"]);
 const headers = (origin: string) => ({
@@ -324,17 +325,16 @@ Deno.serve(async(req:Request)=>{
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
       const deep=await generateCheckedDeep({name,category,base,past},{...env},fetch,55000);
-      const saved=await fetch(proxyUrl.toString(),{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({slug,name,category:category||String(base.subject||""),base,deep}),
-        signal:AbortSignal.timeout(15000)
-      });
+      const {response:saved,data:result,finalUrl,redirects}=await postJsonPreservingRedirect(
+        proxyUrl.toString(),
+        {slug,name,category:category||String(base.subject||""),base,deep},
+        {Authorization:"Bearer "+token,"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET,"Content-Type":"application/json",Accept:"application/json"},
+        15000
+      );
       if(!saved.ok) {
-        console.error("Deep-note persistence proxy failed",saved.status);
+        console.error("Deep-note persistence proxy failed",saved.status,finalUrl,redirects);
         return reply({status:"failed",reason:"persistence"},502,origin);
       }
-      const result=await saved.json();
       if(result?.status!=="saved"||result?.saved!==true)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       return reply({status:"published",deep,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
