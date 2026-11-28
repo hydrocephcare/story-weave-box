@@ -26,7 +26,7 @@ const cards = Array.from({ length: 10 }, (_, i) => ({
   answer: `Asthma is a chronic inflammatory airway disorder characterised by variable expiratory airflow limitation. This card explains airway hyperresponsiveness, common triggers, episodic wheeze, cough, chest tightness, objective confirmation, differential diagnoses, inhaled therapy, exacerbation prevention, monitoring, prognosis and patient education. It connects pathophysiology with clinical decisions and safe follow-up for medical students.`,
 }));
 const questions = Array.from({ length: 12 }, (_, i) => ({
-  question: `Which clinical feature is most consistent with asthma number ${i + 1}?`,
+  question: `Asthma item ${i + 1}: Which clinical feature is most consistent with this presentation?`,
   options: ["Variable expiratory airflow limitation", "Fixed upper airway obstruction", "Reduced lung compliance", "Pleural fluid accumulation"],
   correct_answer: 0,
   explanation: "Asthma is characterised by variable expiratory airflow limitation.",
