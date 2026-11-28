@@ -21,7 +21,7 @@ describe("weekly exam independent MCQ review", () => {
   beforeEach(() => geminiMock.mockReset());
 
   it("does not treat a bank as reviewed when Gemini is unavailable in non-strict review", async () => {
-    geminiMock.mockRejectedValue(new Error("Gemini unavailable"));
+    geminiMock.mockImplementation(() => Promise.reject(new Error("Gemini unavailable")));
     const result = await reviewQuestions(questions, false, { GEMINI_API_KEYS: "test-key" });
     expect(result.reviewerUnavailable).toBe(true);
     expect(result.kept).toHaveLength(questions.length);
@@ -29,7 +29,7 @@ describe("weekly exam independent MCQ review", () => {
   });
 
   it("fails closed and drops the chunk when Gemini is unavailable in strict weekly-exam review", async () => {
-    geminiMock.mockRejectedValue(new Error("Gemini unavailable"));
+    geminiMock.mockImplementation(() => Promise.reject(new Error("Gemini unavailable")));
     const result = await reviewQuestions(questions, true, { GEMINI_API_KEYS: "test-key" });
     expect(result.reviewerUnavailable).toBe(true);
     expect(result.kept).toHaveLength(0);
