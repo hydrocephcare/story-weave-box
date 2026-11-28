@@ -106,6 +106,15 @@ describe("saveTopicDeep privileged persistence proxy", () => {
     expect(sqlMock).toHaveBeenCalledTimes(1);
   });
 
+  it("does not report a healthy proxy when the database role cannot execute the save function", async () => {
+    sqlMock.mockResolvedValueOnce([{ ok: 1, can_save: false }]);
+    const res = makeRes();
+    await handler(makeReq({ method: "GET", query: { health: "1" } }), res);
+    expect(res.statusCode).toBe(503);
+    expect(res.body).toEqual({ status: "unavailable", database: true, canSave: false });
+    expect(verifyTokenMock).not.toHaveBeenCalled();
+  });
+
   it("persists only after both secret and Neon token verification", async () => {
     const res = makeRes();
     await handler(makeReq(), res);
