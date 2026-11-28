@@ -47,12 +47,12 @@ export default async function handler(req, res) {
   const env = supabaseAiEnv(req, { feature: "ompath_ai_questions" });
   if (!env.OMPATH_SUPABASE_AI_TOKEN) return res.status(401).json({ error: "Please sign in to use Ompath AI." });
   const msgs = buildMessages(body);
-  const prompt = msgs.map((m) => String(m.role).toUpperCase() + ":\\n" + String(m.content || "")).join("\\n\\n");
+  const prompt = msgs.map((m) => String(m.role).toUpperCase() + ":\n" + String(m.content || "")).join("\n\n");
   try {
     const result = await askModel(prompt, { env, timeoutMs: 60000, maxTokens: 1800, plain: true, temperature: 0.4 });
     if (!result.text?.trim()) return res.status(502).json({ error: "Ompath AI returned an empty answer. Please try again." });
     sse(res, result.text);
-    res.write("data: [DONE]\\n\\n");
+    res.write("data: [DONE]\n\n");
     return res.end();
   } catch (error) {
     const status = Number(error?.status);
