@@ -26,14 +26,18 @@ function QuickAnswer({ q, hits, ready }: { q: string; hits: SiteHit[]; ready: bo
   const done = useRef("");
   useEffect(() => {
     const query = q.trim();
-    if (!ready || !askable(query) || done.current === query) return;
+    if (!ready || !askable(query)) return;
     const cached = cachedAnswer(query);
-    done.current = query;
-    if (cached) { setText(cached); setState("done"); return; }
-    if (!hasPass && usedToday() >= FREE_PER_DAY) { setText(""); setState("limit"); return; }
+    if (cached) { done.current = query; setText(cached); setState("done"); return; }
+    if (done.current === query) return;
+    if (!hasPass && usedToday() >= FREE_PER_DAY) { done.current = query; setText(""); setState("limit"); return; }
     const ctl = new AbortController();
     setText(""); setState("busy");
-    streamQuickAnswer(query, hits, ctl.signal, setText).then(() => setState("done")).catch((e) => { if ((e as Error).name !== "AbortError") setState("off"); });
+    streamQuickAnswer(query, hits, ctl.signal, (value) => {
+      if (!ctl.signal.aborted) setText(value);
+    }).then(() => {
+      if (!ctl.signal.aborted) { done.current = query; setState("done"); }
+    }).catch((e) => { if ((e as Error).name !== "AbortError") setState("off"); });
     return () => ctl.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q, ready]);
