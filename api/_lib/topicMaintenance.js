@@ -109,6 +109,34 @@ ${text}`;
   if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
   return {questions,review};
 }
+async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
+  const batchSize = 3;
+  const issues = [];
+  let model = "";
+  let allValidated = true;
+  for (let offset = 0; offset < cards.length; offset += batchSize) {
+    const batch = cards.slice(offset, offset + batchSize);
+    const batchNumber = Math.floor(offset / batchSize) + 1;
+    const reviewText = "SOURCE NOTE (reference only; assess every flashcard in this batch against accepted medical knowledge):\\n"
+      + source + "\\n\\nFLASHCARDS TO REVIEW (batch " + batchNumber + "):\\n" + JSON.stringify(batch);
+    const result = await checkContent({
+      title,
+      kind: kind + " (batch " + batchNumber + ")",
+      text: reviewText,
+      env,
+      timeoutMs: 45000,
+    });
+    model = result.model || model;
+    if (!result.validated) allValidated = false;
+    for (const item of result.issues || []) {
+      issues.push({ ...item, where: "Flashcard batch " + batchNumber + ": " + item.where });
+    }
+  }
+  const high = issues.filter((item) => item.severity === "high").length;
+  const medium = issues.filter((item) => item.severity === "medium").length;
+  return { validated: allValidated && high === 0 && medium === 0 && Boolean(model), high, medium, issues, model };
+}
+
 async function generateNoteFlashcards(article, env) {
   const text = cleanStudyNote(article.content).slice(0, 10000);
   const count = Math.max(10, Math.min(22, Math.round(text.length / 450)));
@@ -124,16 +152,15 @@ ${text}`;
   let cards = parseNoteCards(draft.text);
   if (cards.length < 8) throw new Error("Flashcard generation returned too few distinct usable cards.");
 
-  // Keep the source and all cards in one reviewer chunk so Gemini can compare them together.
-  const reviewSource = text.slice(0, 5500).replace(/^#{1,6}\s+/gm, "");
-  const reviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\n"
-    + reviewSource + "\n\nFLASHCARDS TO REVIEW:\n" + JSON.stringify(cards);
-  let review = await checkContent({
+  // Every card is independently reviewed in a bounded batch with the same source note.
+  // This prevents long JSON arrays from being silently truncated or split away from their source.
+  const reviewSource = text.slice(0, 5500).replace(/^#{1,6}\\s+/gm, "");
+  let review = await reviewFlashcardDeck({
     title: article.title,
     kind: "medical revision flashcards and their answers",
-    text: reviewText,
+    source: reviewSource,
+    cards,
     env,
-    timeoutMs: 45000,
   });
   if (!review.validated) {
     const repairPrompt = [
@@ -142,23 +169,21 @@ ${text}`;
       "Remove duplicate cards and ensure each answer is clinically accurate, clear and consistent with standard accepted medical knowledge.",
       "Return ONLY a complete JSON array of {question, answer} objects.",
       "ISSUES:",
-      (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\n"),
+      (review.issues || []).map((item, index) => (index + 1) + ". [" + item.severity + "] " + item.where + ": " + item.problem + " Correct: " + item.fix).join("\\n"),
       "SOURCE NOTE:",
       text,
       "FLASHCARDS TO CORRECT:",
       JSON.stringify(cards),
-    ].join("\n\n");
+    ].join("\\n\\n");
     const repaired = await askGroqModel(repairPrompt, { env, plain: true, timeoutMs: 55000, maxTokens: 7000 });
     cards = parseNoteCards(repaired.text);
     if (cards.length < 8) throw new Error("Gemini flagged the flashcards and the Groq repair returned too few usable cards.");
-    const repairedReviewText = "SOURCE NOTE (reference only; assess the flashcards against accepted medical knowledge):\n"
-      + reviewSource + "\n\nREPAIRED FLASHCARDS TO REVIEW:\n" + JSON.stringify(cards);
-    review = await checkContent({
+    review = await reviewFlashcardDeck({
       title: article.title,
       kind: "repaired medical revision flashcards and their answers",
-      text: repairedReviewText,
+      source: reviewSource,
+      cards,
       env,
-      timeoutMs: 45000,
     });
   }
   if (!review.validated || !String(review.model || "").trim()) {
