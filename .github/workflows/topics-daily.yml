@@ -1,8 +1,6 @@
 name: Daily topic pages and AI overviews
+# Automatic publishing is paused during the production freeze. Manual dispatch only.
 on:
-  schedule:
-    - cron: "0 2 * * *"
-  # Use workflow_dispatch after a controlled Cloudflare release; scheduled runs keep publishing daily.
   workflow_dispatch:
     inputs:
       count:
@@ -33,14 +31,14 @@ permissions:
   contents: write
   id-token: write
 concurrency:
-  group: topics-daily
+  group: topics-daily-${{ github.ref_name }}
   cancel-in-progress: true
 jobs:
   topics:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
-      TOPIC_MAINTENANCE_URL: https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance
+      TOPIC_MAINTENANCE_URL: ${{ github.ref == 'refs/heads/main' && 'https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance' || vars.TOPIC_MAINTENANCE_STAGING_URL }}
     steps:
       - uses: actions/checkout@v4
         with:

@@ -13,7 +13,7 @@ export default async function handler(req,res) {
     const groq=String(process.env.GROQ_API_KEYS||process.env.GROQ_API_KEY||"");
     const gem=String(process.env.GEMINI_API_KEYS||process.env.GEMINI_API_KEY||"");
     if(!groq.trim()||!gem.trim()) return json(res,503,{error:"Groq and Gemini API keys are not configured in Cloudflare."});
-    if(!(await hasPolishWriteKey())) return json(res,503,{error:"The Cloudflare polishing key has not been synced to Neon. Open Admin → Polish and sync the existing Cloudflare secret."});
+    if(!(await hasPolishWriteKey())) return json(res,503,{error:"Article polishing is not configured in this Neon environment. Open Admin → Polish and create a staging-only write key."});
     const body=typeof req.body==="string"?JSON.parse(req.body||"{}"):req.body||{};
     const count=Math.max(1,Math.min(100,Number(body.count)||40));
     const onlyYear=Math.max(0,Math.min(6,Number(body.year)||0));

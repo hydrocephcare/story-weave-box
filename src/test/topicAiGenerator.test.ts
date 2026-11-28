@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
-import { askGroqModel, buildPrompt, generateReviewedTopicPage, providerKeys, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { askGeminiModel, askGroqModel, askModel, buildPrompt, generateReviewedTopicPage, providerKeys, sanitizePage, topicAiCore } from "../../supabase/functions/_shared/topicAi.js";
+import { sanitizePage as sanitizeEdgePage } from "../../supabase/functions/ompath-ai/topicAi.js";
 const sectionNames = ["Definition and diagnosis","Severity and staging","Causes and risk factors","Mechanisms and pathophysiology","Clinical presentation","Investigations and interpretation","Management principles","Pharmacology and safety","Complications and prognosis","Follow-up and prevention","Special populations","Differential diagnosis","Clinical examples"];
 const makePage = (title: string, subject: string, count = 13) => {
   const explanation = Array.from({ length: 8 }, (_, i) => title + " clinical detail " + (i + 1) + " explains the mechanism, clinical significance, diagnostic reasoning and management implications in an accurate, evidence-based way.").join(" ");
@@ -14,6 +15,32 @@ const makePage = (title: string, subject: string, count = 13) => {
   };
 };
 
+
+describe("topic page section depth validation", () => {
+  const paragraphOnlyPage = (wordCount: number) => {
+    const page = makePage("Asthma", "Medicine", 13);
+    const paragraph = Array.from({ length: wordCount }, () => "clinical").join(" ");
+    return { ...page, sections: page.sections.map(({ h }) => ({ h, p: paragraph })) };
+  };
+
+  it("counts words in explanatory paragraphs without requiring bullets or tables", () => {
+    const page = sanitizePage(paragraphOnlyPage(80), { name: "Asthma", category: "Medicine" });
+    expect(page.sections).toHaveLength(13);
+    expect(page.sections.every((section) => section.p && !section.b && !section.t)).toBe(true);
+  });
+
+  it("uses the same paragraph word-count fix in the deployed Edge Function module", () => {
+    const page = sanitizeEdgePage(paragraphOnlyPage(80), { name: "Asthma", category: "Medicine" });
+    expect(page.sections).toHaveLength(13);
+    expect(page.sections.every((section) => section.p && !section.b && !section.t)).toBe(true);
+  });
+
+  it("still rejects genuinely thin paragraph-only sections", () => {
+    const page = paragraphOnlyPage(80);
+    page.sections[4].p = Array.from({ length: 64 }, () => "short").join(" ");
+    expect(() => sanitizePage(page, { name: "Asthma", category: "Medicine" })).toThrow("thin sections");
+  });
+});
 
 describe("AI provider key configuration", () => {
   it("parses comma, whitespace, semicolon and JSON-array key lists without duplicates", () => {
@@ -72,6 +99,67 @@ describe("Groq topic generation boundary", () => {
     expect(fetchImpl.mock.calls[0][0]).toBe("https://api.groq.com/openai/v1/chat/completions");
     expect(new Headers(fetchImpl.mock.calls[0][1]?.headers).get("Authorization")).toBe("Bearer groq-test-key");
     expect(result).toEqual({ text: '{"medical":true}', model: "openai/gpt-oss-120b" });
+  });
+
+  it("rotates to the next Gemini key when the first key is rate-limited", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ error: { message: "quota exceeded" } }), { status: 429 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: "review complete" }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await askGeminiModel("Review this note", {
+      env: { GEMINI_API_KEYS: "gemini-key-one,gemini-key-two", GEMINI_MODELS: "gemini-3.8-flash" },
+      fetchImpl,
+    });
+
+    expect(result.text).toBe("review complete");
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    const attemptedKeys = fetchImpl.mock.calls.map((call) => new Headers(call[1]?.headers).get("x-goog-api-key"));
+    expect(new Set(attemptedKeys)).toEqual(new Set(["gemini-key-one", "gemini-key-two"]));
+    expect(attemptedKeys[0]).not.toBe(attemptedKeys[1]);
+  });
+
+  it("falls back from exhausted Gemini to Groq and returns the actual provider model", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ error: { message: "quota exceeded" } }), { status: 429 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: "fallback answer" } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await askModel("Answer this prompt", {
+      env: {
+        GEMINI_API_KEYS: "gemini-test-key",
+        GEMINI_MODELS: "gemini-3.8-flash",
+        GROQ_API_KEYS: "groq-test-key",
+        GROQ_MODELS: "openai/gpt-oss-20b",
+      },
+      fetchImpl,
+    });
+
+    expect(result).toEqual({ text: "fallback answer", model: "openai/gpt-oss-20b" });
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("generativelanguage.googleapis.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+  });
+
+  it("retries a structurally thin Groq draft before sending it to Gemini", async () => {
+    const thinPage = makePage("Asthma", "Medicine", 13);
+    thinPage.sections[0].p = "Asthma is a respiratory condition.";
+    thinPage.sections[0].b = [];
+    const completePage = makePage("Asthma", "Medicine", 13);
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(thinPage) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(completePage) } }] }), { status: 200, headers: { "Content-Type": "application/json" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: '{"verdict":"ok","issues":[]}' }] } }] }), { status: 200, headers: { "Content-Type": "application/json" } }));
+
+    const result = await generateReviewedTopicPage(
+      { name: "Asthma", category: "Medicine" },
+      { env: { GROQ_API_KEYS: "groq-test-key", GEMINI_API_KEYS: "gemini-test-key" }, fetchImpl },
+    );
+
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    expect(String(fetchImpl.mock.calls[0][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][0])).toContain("api.groq.com");
+    expect(String(fetchImpl.mock.calls[1][1]?.body)).toContain("thin sections");
+    expect(String(fetchImpl.mock.calls[2][0])).toContain("generativelanguage.googleapis.com");
+    expect(result.review.status).toBe("passed");
   });
 
   it("does not fall back to Gemini when Groq is not configured", async () => {

@@ -3,7 +3,7 @@
 // Required GitHub Actions secrets: DATABASE_URL, POLISH_WRITE_KEY, GROQ_API_KEYS, GEMINI_API_KEYS.
 import fs from "node:fs";
 import { neon } from "@neondatabase/serverless";
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "../../api/_lib/blogPolishCore.js";
 import { polishArticle } from "../../api/_lib/blogPolishRun.js";
 import { verifyBlogContent } from "../../api/_lib/blogPolishVerify.js";
@@ -59,7 +59,7 @@ const queue = articles.filter((a) => (!ONLY || yearOf(a.category) === ONLY) && e
 console.log(`${queue.length} published blogs eligible; processing up to ${COUNT} in ${MINUTES} minutes.`);
 
 const ask = (prompt, timeoutMs, maxTokens) =>
-  askModel(prompt, { env: { GROQ_API_KEYS: groq }, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
+  askGroqModel(prompt, { env: { GROQ_API_KEYS: groq }, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
 const save = async (id, row) => {
   const allowed = new Set(["title","description","image_query","verdict","reason","model","content","status","ai_review_status","ai_review_model","ai_reviewed_at","ai_review_issues"]);
   const entries = Object.entries(row).filter(([key, value]) => allowed.has(key) && value !== undefined);

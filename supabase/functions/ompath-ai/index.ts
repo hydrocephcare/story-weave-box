@@ -1,6 +1,7 @@
 import { generateReviewedTopicPage, validName, slugOf, askModel, askGroqModel, askGeminiModel, providerKeys } from "./topicAi.js";
 import { generateCheckedDeep } from "./contentCheck.js";
 import { createRemoteJWKSet, jwtVerify } from "npm:jose@5.9.6";
+import { postJsonPreservingRedirect } from "../_shared/postJson.js";
 
 const ALLOWED = new Set(["https://www.ompathstudy.com","https://ompathstudy.com","https://stories.ompathstudy.com"]);
 const headers = (origin: string) => ({
@@ -13,6 +14,19 @@ const reply = (data:unknown,status=200,origin="") => new Response(JSON.stringify
 });
 const JWKS_URL=Deno.env.get("NEON_AUTH_JWKS_URL")||"";
 const DATA_API_URL=(Deno.env.get("NEON_DATA_API_URL")||"").replace(/\/+$/,"");
+const NEON_WRITE_PROXY_URL=Deno.env.get("NEON_WRITE_PROXY_URL")||"";
+const NEON_WRITE_PROXY_SECRET=Deno.env.get("OMPATH_NEON_WRITE_SECRET")||"";
+function configuredNeonWriteProxy():URL|null {
+  try {
+    const url=new URL(NEON_WRITE_PROXY_URL);
+    const configuredHosts=String(Deno.env.get("NEON_WRITE_PROXY_ALLOWED_HOSTS")||"")
+      .split(/[\s,;]+/).map(host=>host.trim().toLowerCase()).filter(Boolean);
+    const allowedHosts=new Set(["ompathstudy.com","www.ompathstudy.com",...configuredHosts]);
+    if(url.protocol!=="https:"||(url.port&&url.port!=="443")||url.username||url.password||!allowedHosts.has(url.hostname.toLowerCase())||url.pathname!=="/api/neon-functions"||url.searchParams.get("name")!=="save-topic-deep")return null;
+    return url;
+  } catch { return null; }
+}
+
 const jwks=JWKS_URL?createRemoteJWKSet(new URL(JWKS_URL)):null;
 
 const split=(v:unknown)=>[...new Set(String(v??"").split(/[\s,]+/).map(k=>k.trim()).filter(Boolean))];
@@ -217,15 +231,26 @@ Deno.serve(async(req:Request)=>{
         return {ok:Boolean(result.text?.trim()),model:result.model||null};
       } catch(e) { return {ok:false,error:String(e).slice(0,180)}; }
     };
-    const [groq,gemini,storage]=await Promise.all([
+    const [groq,gemini,storage,deepPersistence]=await Promise.all([
       probe("groq"),probe("gemini"),
-      (async()=>{try{const r=await fetch(DATA_API_URL+"/topic_pages?select=slug&limit=1",{headers:{Authorization:"Bearer "+token,Accept:"application/json"},signal:AbortSignal.timeout(8000)});return {ok:r.ok,status:r.status};}catch{return {ok:false,status:0};}})()
+      (async()=>{try{const r=await fetch(DATA_API_URL+"/topic_pages?select=slug&limit=1",{headers:{Authorization:"Bearer "+token,Accept:"application/json"},signal:AbortSignal.timeout(8000)});return {ok:r.ok,status:r.status};}catch{return {ok:false,status:0};}})(),
+      (async()=>{try{
+        const url=configuredNeonWriteProxy();
+        if(!url||NEON_WRITE_PROXY_SECRET.length<32)return {configured:false,ok:false,status:0};
+        url.searchParams.set("health","1");
+        const r=await fetch(url.toString(),{headers:{"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET},signal:AbortSignal.timeout(8000)});
+        const data=await r.json().catch(()=>({}));
+        return {configured:true,ok:r.ok&&data.database===true&&data.canSave===true,status:r.status,canSave:data.canSave===true};
+      }catch{return {configured:Boolean(configuredNeonWriteProxy()&&NEON_WRITE_PROXY_SECRET.length>=32),ok:false,status:0};}})()
     ]);
     const g=providerKeys(env,"GROQ"),m=providerKeys(env,"GEMINI");
-    return reply({ok:groq.ok||gemini.ok,checkedAt:new Date().toISOString(),
+    const ready=groq.ok&&gemini.ok&&storage.ok&&deepPersistence.ok;
+    return reply({ok:ready,checkedAt:new Date().toISOString(),
       providers:{groq:{...groq,configuredKeys:g.length},gemini:{...gemini,configuredKeys:m.length}},
-      neonStorage:storage,auth:{ok:true},functionVersion:"ompath-ai"},200,origin);
+      neonStorage:storage,deepPersistence,auth:{ok:true},
+      deploymentId:Deno.env.get("DENO_DEPLOYMENT_ID")||null},ready?200:503,origin);
   }
+  if(!token)return reply({error:"login_required"},401,origin);
   if(!env.GROQ_API_KEYS&&!env.GROQ_API_KEY&&!env.GEMINI_API_KEYS&&!env.GEMINI_API_KEY&&!env.GROQ_API_KEYS_EXTRA)
     return reply({error:"ai_provider_not_configured"},503,origin);
 
@@ -254,11 +279,15 @@ Deno.serve(async(req:Request)=>{
     } catch(e) {
       console.warn("Topic cache lookup timed out",String(e).slice(0,120));
     }
+    const hasGroq=providerKeys(env,"GROQ").length>0;
+    const hasGemini=providerKeys(env,"GEMINI").length>0;
+    if(!hasGroq||!hasGemini)return reply({status:"unavailable",reason:"providers_not_configured",providers:{groq:hasGroq,gemini:hasGemini}},503,origin);
     const quota=await entitlement(token,"topic_page_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
-      const generated=await generateReviewedTopicPage({name,category,context,choices:body.choices&&typeof body.choices==="object"?body.choices:undefined,env,fetchImpl:fetch},{env,fetchImpl:fetch,timeoutMs:75000});
-      const page=generated.page;
+      const reviewOptions={env,fetchImpl:fetch,timeoutMs:75000} as unknown as Parameters<typeof generateReviewedTopicPage>[1];
+      const generated=await generateReviewedTopicPage({name,category,context,choices:body.choices&&typeof body.choices==="object"?body.choices:undefined},reviewOptions);
+      const page=generated.page as Record<string, any>;
       if(!page?.medical)return reply({status:"rejected"},422,origin);
       if(page.aiReview?.status!=="passed"||!page.aiReview?.model)return reply({status:"failed",reason:"review"},502,origin);
       const saved=await fetch(DATA_API_URL+"/rpc/publish_topic_page",{
@@ -285,26 +314,30 @@ Deno.serve(async(req:Request)=>{
     const name=String(body.name??"").trim();
     const category=String(body.category??"").slice(0,60);
     if(!validName(name))return reply({status:"invalid"},400,origin);
-    const base=body.base&&typeof body.base==="object"?body.base:{};
+    const base=body.base&&typeof body.base==="object"&&!Array.isArray(body.base)?body.base:{};
     const past=(Array.isArray(body.past)?body.past:[]).map((x:any)=>String(x).slice(0,240)).slice(0,12);
-    const slug=String(body.slug||slugOf(name));
+    const slug=String(body.slug||slugOf(name)).trim().toLowerCase();
+    if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)||slug.length>80)return reply({status:"invalid",reason:"slug"},400,origin);
+    const proxyUrl=configuredNeonWriteProxy();
+    if(!proxyUrl||NEON_WRITE_PROXY_SECRET.length<32)return reply({status:"failed",reason:"persistence_unconfigured"},503,origin);
+    const hasGroq=providerKeys(env,"GROQ").length>0;
+    const hasGemini=providerKeys(env,"GEMINI").length>0;
+    if(!hasGroq||!hasGemini)return reply({status:"unavailable",reason:"providers_not_configured",providers:{groq:hasGroq,gemini:hasGemini}},503,origin);
     const quota=await entitlement(token,"ai_note_generation");
     if(!quota.ok)return reply({status:quota.reason,upgrade_required:quota.status===402,quota:quota.quota},quota.status,origin);
     try {
       const deep=await generateCheckedDeep({name,category,base,past},{...env},fetch,55000);
-      const saved=await fetch(DATA_API_URL+"/rpc/save_topic_deep",{
-        method:"POST",
-        headers:{Authorization:"Bearer "+token,"Content-Type":"application/json",Accept:"application/json"},
-        body:JSON.stringify({p_slug:slug,p_name:name,p_category:category||String(base.subject||""),p_base:base,p_deep:deep}),
-        signal:AbortSignal.timeout(15000)
-      });
+      const {response:saved,data:result,finalUrl,redirects}=await postJsonPreservingRedirect(
+        proxyUrl.toString(),
+        {slug,name,category:category||String(base.subject||""),base,deep},
+        {Authorization:"Bearer "+token,"x-ompath-neon-write-secret":NEON_WRITE_PROXY_SECRET,"Content-Type":"application/json",Accept:"application/json"},
+        15000
+      );
       if(!saved.ok) {
-        const detail=(await saved.text()).slice(0,240);
-        console.error("Deep-note persistence failed",saved.status,detail);
+        console.error("Deep-note persistence proxy failed",saved.status,finalUrl,redirects);
         return reply({status:"failed",reason:"persistence"},502,origin);
       }
-      const result=await saved.json();
-      if(!result?.ok)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
+      if(result?.status!=="saved"||result?.saved!==true)return reply({status:"failed",reason:result?.reason||"persistence"},502,origin);
       return reply({status:"published",deep,saved:true,slug,name,quota:quota.quota},200,origin);
     } catch(e) {
       console.error("Ompath deep-note generation failed",String(e).slice(0,400));
@@ -319,7 +352,7 @@ Deno.serve(async(req:Request)=>{
     if(!quota.ok)return reply({predictions:[],quota_limited:true},200,origin);
     try {
       const prompt='You are a medical-study search query predictor. Do not answer the question. Infer the most likely medical subject and return only JSON: {"queries":[string]}. Give at most three short alternate search queries using standard medical terminology, synonyms, common abbreviations or likely corrected spelling. Preserve the intended subject; do not broaden to unrelated topics, invent a year level, or include explanations. If the query is already clear and needs no expansion, return an empty array.\nQUERY: '+query;
-      const raw=await chatText(env,[{role:"system",content:"Return valid JSON only. Be conservative and precise."},{role:"user",content:prompt}],0.1,420,3000,4,true);
+      const raw=await chatText(env,[{role:"system",content:"Return valid JSON only. Be conservative and precise."},{role:"user",content:prompt}],0.1,420,3000);
       const match=raw.match(/\{[\s\S]*\}/);
       const parsed=match?JSON.parse(match[0]):{};
       const predictions=[...new Set((Array.isArray(parsed.queries)?parsed.queries:[])

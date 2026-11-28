@@ -103,7 +103,7 @@ Each section needs "p", "b" or "t". 3 faq items.
 Plan first, then write. The reader is a clinical-year student, so before you write, decide the angles an examiner would use for this topic: the bedside approach (history, examination, a patient lying in bed), internal medicine, surgery, pathology, pharmacology, complications and look-alike conditions, and the first things to do in an emergency. "exam" must hold ${deep ? "10-12" : "6-8"} strategic, tricky questions across those angles (what would you do next, what distinguishes it from, why is this drug avoided), never plain definitions.
 ${ACCURACY_RULES}
 Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics or references. Lab thresholds and diagnostic criteria are welcome. Every bullet under ${deep ? 40 : 28} words. Plain words a first-year student can follow.
-${fixes.length ? `\nA CLINICAL REVIEWER FOUND THESE ERRORS IN THE PREVIOUS DRAFT. Correct them precisely and do not repeat them:\n- ${fixes.map((x) => clip(x, 400)).join("\n- ")}\n` : ""}${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
+${fixes.length ? `\nTHE PREVIOUS DRAFT FAILED VALIDATION. Correct these issues precisely and do not repeat them:\n- ${fixes.map((x) => clip(x, 400)).join("\n- ")}\n` : ""}${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
 }
 
 /** Checks and tidies whatever the model returned. Returns {medical:false} or a safe page; throws when it is not usable. */
@@ -128,7 +128,7 @@ export function sanitizePage(raw, options = {}) {
     if (sections.length < minimum) throw new Error(`thin topic page: ${sections.length} sections; ${minimum} required`);
     const thin = sections.filter((section) => {
       const structured = (section.b?.length ?? 0) + (section.t?.length ?? 0);
-      const words = (section.p ?? "").split(/\\s+/).filter(Boolean).length;
+      const words = (section.p ?? "").split(/\s+/).filter(Boolean).length;
       return structured < 4 && words < 65;
     });
     if (thin.length) throw new Error(`thin sections: ${thin.map((section) => section.h).slice(0, 4).join(", ")}`);
@@ -157,6 +157,15 @@ export const parseProviderKeys = (...values) => [...new Set(values.flatMap((valu
   } catch {}
   return raw.split(/[\s,;]+/).map((key) => key.trim()).filter(Boolean);
 }))];
+async function providerFailure(response, provider) {
+  const body = await response.json().catch(() => ({}));
+  const raw = body?.error?.message || body?.error?.code || body?.message || response.statusText || "request rejected";
+  const detail = String(raw)
+    .replace(/AIza[0-9A-Za-z_-]{20,}/g, "[redacted]")
+    .replace(/gsk_[0-9A-Za-z_-]{20,}/g, "[redacted]")
+    .slice(0, 180);
+  return new Error(`${provider} failed (${response.status}): ${detail}`);
+}
 export const providerKeys = (env = {}, provider = "GEMINI") => parseProviderKeys(
   env[provider + "_API_KEYS"], env[provider + "_API_KEY"],
   ...Array.from({ length: 20 }, (_, i) => env[provider + "_API_KEY_" + (i + 2)])
@@ -213,7 +222,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
           if (r.status === 404) deadModels.add(key + model);
           if (r.status === 429 || r.status === 503) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
           if (r.status === 403 || r.status === 401) deadKeys.add(key);
-          if (!r.ok) throw new Error(`gemini ${r.status}`);
+          if (!r.ok) throw await providerFailure(r, "Gemini");
           return (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
         });
         if (text?.trim()) return { text, model };
@@ -234,7 +243,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
         const text = await timed(async (signal) => {
           const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature, max_tokens: maxTokens, reasoning_effort: "low", ...(plain ? {} : { response_format: { type: "json_object" } }), messages: [{ role: "user", content: prompt }] }) });
           if (r.status === 429 || r.status === 503 || r.status === 404) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
-          if (!r.ok) throw new Error("groq " + r.status);
+          if (!r.ok) throw await providerFailure(r, "Groq");
           return (await r.json())?.choices?.[0]?.message?.content;
         });
         if (text?.trim()) return { text, model };
@@ -283,7 +292,7 @@ export async function askGeminiModel(prompt, { env = {}, fetchImpl = fetch, time
           }),
         });
         if (!response.ok) {
-          lastError = new Error(`Gemini review failed (${response.status}).`);
+          lastError = await providerFailure(response, "Gemini review");
           continue;
         }
         const text = (await response.json())?.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("");
@@ -333,7 +342,7 @@ export async function askGroqModel(prompt, { env = {}, fetchImpl = fetch, timeou
           }),
         });
         if (!response.ok) {
-          lastError = new Error("Groq generation failed (" + response.status + ").");
+          lastError = await providerFailure(response, "Groq generation");
           continue;
         }
         const text = (await response.json())?.choices?.[0]?.message?.content;
@@ -369,13 +378,34 @@ export async function generateGroqTopicPage({ name, category, context, choices, 
  * are allowed. Any unresolved clinical issue or unavailable reviewer holds the
  * page back: topicAiCore must never save an unreviewed draft as published.
  */
-export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch, maxFixRounds = 1, timeoutMs } = {}) {
+/**
+ * @param {{name:string,category?:string,context?:string,choices?:any}} input
+ * @param {{env?:Record<string,string|undefined>,fetchImpl?:typeof fetch,maxFixRounds?:number,timeoutMs?:number}} options
+ * @returns {Promise<{page:Record<string,any>,review:Record<string,any>}>}
+ */
+export async function generateReviewedTopicPage(input, options = {}) {
+  const env = options.env ?? {};
+  const fetchImpl = options.fetchImpl ?? fetch;
+  const maxFixRounds = options.maxFixRounds ?? 1;
+  const timeoutMs = options.timeoutMs;
   const rounds = Math.max(0, Math.min(2, Number(maxFixRounds) || 0));
   const fixes = [];
+  /** @type {Record<string, any>} */
   let page;
   let review;
   for (let round = 0; round <= rounds; round++) {
-    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    try {
+      page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    } catch (error) {
+      const message = String(error?.message ?? error);
+      const contentValidationFailure = /^(?:not an object|summary not acceptable|too few sections|thin topic page:|thin sections:|full topic page needs|Groq returned no valid JSON)/i.test(message);
+      if (!contentValidationFailure || round >= rounds) throw error;
+      fixes.push(
+        "The previous draft failed the structural content check: " + message +
+        ". Regenerate the entire page with at least nine substantive topic-specific sections, each with at least 65 meaningful words or four useful structured points, at least eight applied examiner questions and three useful FAQs. Preserve clinical accuracy and do not pad or invent facts.",
+      );
+      continue;
+    }
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const pageText = [
       page.summary,

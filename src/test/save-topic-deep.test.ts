@@ -1,0 +1,205 @@
+import { beforeEach, describe, expect, it, vi } from "vitest";
+
+const { neonMock, verifyTokenMock } = vi.hoisted(() => ({
+  neonMock: vi.fn(),
+  verifyTokenMock: vi.fn(),
+}));
+
+vi.mock("@neondatabase/serverless", () => ({ neon: neonMock }));
+vi.mock("../../api/_lib/neonAdmin.js", () => ({ verifyNeonToken: verifyTokenMock }));
+
+import handler from "../../api/_lib/saveTopicDeep.js";
+
+const SECRET = "test-secret-value-that-is-at-least-thirty-two-bytes";
+const makeReq = (overrides = {}) => ({
+  method: "POST",
+  headers: {
+    authorization: "Bearer valid-user-token",
+    "x-ompath-neon-write-secret": SECRET,
+  },
+  body: {
+    slug: "test-topic",
+    name: "Test Topic",
+    category: "Year 4",
+    base: {
+      subject: "Test Topic",
+      summary: "A sufficiently detailed synthetic summary for a valid deep-note persistence test.",
+      sections: Array.from({ length: 3 }, (_, i) => ({ h: `Base section ${i + 1}`, p: "Base revision content." })),
+    },
+    deep: {
+      checked: "2026-11-28",
+      reviewStatus: "passed",
+      reviewModel: "gemini-3.8-flash",
+      reviewedAt: "2026-11-28",
+      sections: Array.from({ length: 7 }, (_, i) => ({ h: `Section ${i + 1}`, p: "Reviewed content" })),
+      vivas: Array.from({ length: 15 }, (_, i) => ({ q: `Question ${i + 1} for the clinical examination?`, a: `Answer ${i + 1} with the key clinical reasoning.` })),
+      mcqs: Array.from({ length: 6 }, (_, i) => ({ q: `MCQ ${i + 1}`, o: ["A", "B", "C", "D"], a: 0, e: "Explanation" })),
+      cases: Array.from({ length: 2 }, (_, i) => ({ v: `Clinical case ${i + 1}`, qs: [{ q: "Question?", a: "Answer" }, { q: "Question two?", a: "Answer two" }] })),
+      facts: Array.from({ length: 6 }, (_, i) => `Clinical fact ${i + 1}`),
+      mistakes: Array.from({ length: 5 }, (_, i) => `Common mistake ${i + 1}`),
+    },
+  },
+  ...overrides,
+});
+
+function makeRes() {
+  const res = {
+    statusCode: 200,
+    body: null,
+    headers: {},
+    setHeader(name, value) { this.headers[name] = value; return this; },
+    status(code) { this.statusCode = code; return this; },
+    json(body) { this.body = body; return this; },
+  };
+  return res;
+}
+
+describe("saveTopicDeep privileged persistence proxy", () => {
+  let sqlMock;
+
+  beforeEach(() => {
+    process.env.OMPATH_NEON_WRITE_SECRET = SECRET;
+    process.env.DATABASE_URL = "postgres://test.invalid/neondb";
+    verifyTokenMock.mockReset().mockResolvedValue({ id: "11111111-1111-4111-8111-111111111111" });
+    sqlMock = vi.fn().mockResolvedValue([{ result: { ok: true, saved: true } }]);
+    neonMock.mockReset().mockReturnValue(sqlMock);
+  });
+
+  it("fails closed when the shared proxy secret is not configured", async () => {
+    delete process.env.OMPATH_NEON_WRITE_SECRET;
+    const res = makeRes();
+    await handler(makeReq(), res);
+    expect(res.statusCode).toBe(503);
+    expect(res.body.reason).toBe("proxy_secret_not_configured");
+    expect(verifyTokenMock).not.toHaveBeenCalled();
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
+  it("rejects a shared secret shorter than 32 bytes", async () => {
+    process.env.OMPATH_NEON_WRITE_SECRET = "too-short";
+    const res = makeRes();
+    await handler(makeReq(), res);
+    expect(res.statusCode).toBe(503);
+    expect(res.body.reason).toBe("proxy_secret_not_configured");
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
+  it("rejects a caller without the shared secret before token or database work", async () => {
+    const req = makeReq({ headers: { authorization: "Bearer valid-user-token", "x-ompath-neon-write-secret": "wrong" } });
+    const res = makeRes();
+    await handler(req, res);
+    expect(res.statusCode).toBe(401);
+    expect(verifyTokenMock).not.toHaveBeenCalled();
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
+  it("requires a valid Neon Auth token", async () => {
+    verifyTokenMock.mockResolvedValueOnce(null);
+    const res = makeRes();
+    await handler(makeReq(), res);
+    expect(res.statusCode).toBe(401);
+    expect(res.body.reason).toBe("invalid_session");
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
+
+  it("runs a read-only database health probe with the shared secret", async () => {
+    sqlMock.mockResolvedValueOnce([{ ok: 1, can_save: true }]);
+    const res = makeRes();
+    await handler(makeReq({ method: "GET", query: { health: "1" } }), res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toEqual({ status: "ok", database: true, canSave: true });
+    expect(verifyTokenMock).not.toHaveBeenCalled();
+    expect(sqlMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not report a healthy proxy when the database role cannot execute the save function", async () => {
+    sqlMock.mockResolvedValueOnce([{ ok: 1, can_save: false }]);
+    const res = makeRes();
+    await handler(makeReq({ method: "GET", query: { health: "1" } }), res);
+    expect(res.statusCode).toBe(503);
+    expect(res.body).toEqual({ status: "unavailable", database: true, canSave: false });
+    expect(verifyTokenMock).not.toHaveBeenCalled();
+  });
+
+  it("persists only after both secret and Neon token verification", async () => {
+    const res = makeRes();
+    await handler(makeReq(), res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatchObject({ status: "saved", slug: "test-topic", saved: true, existing: false });
+    expect(neonMock).toHaveBeenCalledWith(process.env.DATABASE_URL);
+    expect(sqlMock).toHaveBeenCalledTimes(1);
+    const [, slug, name, category, baseJson, deepJson] = sqlMock.mock.calls[0];
+    expect([slug, name, category]).toEqual(["test-topic", "Test Topic", "Year 4"]);
+    expect(JSON.parse(baseJson)).toMatchObject({
+      summary: "A sufficiently detailed synthetic summary for a valid deep-note persistence test.",
+      sections: expect.arrayContaining([expect.objectContaining({ h: "Base section 1" })]),
+    });
+    expect(JSON.parse(deepJson)).toMatchObject({
+      checked: "2026-11-28",
+      reviewStatus: "passed",
+      reviewModel: "gemini-3.8-flash",
+      reviewedAt: "2026-11-28",
+      sections: expect.arrayContaining([expect.objectContaining({ h: "Section 1" })]),
+      vivas: expect.arrayContaining([expect.objectContaining({ q: "Question 1 for the clinical examination?", a: "Answer 1 with the key clinical reasoning." })]),
+      mcqs: expect.arrayContaining([expect.objectContaining({ q: "MCQ 1" })]),
+      cases: expect.arrayContaining([expect.objectContaining({ v: "Clinical case 1" })]),
+      facts: expect.arrayContaining(["Clinical fact 1"]),
+      mistakes: expect.arrayContaining(["Common mistake 1"]),
+    });
+    expect(res.headers["Cache-Control"]).toBe("no-store");
+  });
+
+  it("rejects incomplete deep notes before opening the database connection", async () => {
+    const req = makeReq({ body: {
+      slug: "test-topic",
+      name: "Test Topic",
+      category: "Year 4",
+      deep: { checked: "2026-11-28", sections: [{ h: "Only one section" }], vivas: [{ q: "Question?", a: "Answer" }] },
+    } });
+    const res = makeRes();
+    await handler(req, res);
+    expect(res.statusCode).toBe(400);
+    expect(res.body.reason).toBe("incomplete_deep_notes");
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
+  it("rejects complete-looking notes when independent Gemini review evidence is absent", async () => {
+    const req = makeReq();
+    delete req.body.deep.reviewStatus;
+    delete req.body.deep.reviewModel;
+    delete req.body.deep.reviewedAt;
+    const res = makeRes();
+    await handler(req, res);
+    expect(res.statusCode).toBe(400);
+    expect(res.body.reason).toBe("incomplete_deep_notes");
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
+  it("does not report success when the database RPC rejects the payload", async () => {
+    sqlMock.mockResolvedValueOnce([{ result: { ok: false, reason: "slug_conflict" } }]);
+    const res = makeRes();
+    await handler(makeReq(), res);
+    expect(res.statusCode).toBe(422);
+    expect(res.body).toMatchObject({ status: "failed", reason: "slug_conflict" });
+  });
+
+  it("rejects invalid slugs before opening a database connection", async () => {
+    const req = makeReq({ body: { slug: "../bad", name: "Test Topic", category: "Year 4", deep: { sections: [], exam: [] } } });
+    const res = makeRes();
+    await handler(req, res);
+    expect(res.statusCode).toBe(400);
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+
+  it("rejects malformed JSON and oversized deep payloads", async () => {
+    const malformed = makeRes();
+    await handler(makeReq({ body: "{" }), malformed);
+    expect(malformed.statusCode).toBe(400);
+
+    const oversized = makeRes();
+    await handler(makeReq({ body: { slug: "test-topic", name: "Test Topic", deep: { text: "x".repeat(81_000) } } }), oversized);
+    expect(oversized.statusCode).toBe(413);
+    expect(neonMock).not.toHaveBeenCalled();
+  });
+});

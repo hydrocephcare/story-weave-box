@@ -2,7 +2,7 @@
 //   node scripts/blogs/polish-try.mjs <outDir> <slug-or-id-part> [more...]   (uses .groq-keys.local / .gemini-keys.local or the environment)
 import fs from "node:fs";
 import path from "node:path";
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 import { kindOf, plain } from "../../api/_lib/blogPolishCore.js";
 import { polishArticle } from "../../api/_lib/blogPolishRun.js";
 
@@ -11,7 +11,7 @@ const env = { GROQ_API_KEYS: [process.env.GROQ_API_KEYS, read(".groq-keys.local"
 const [outDir, ...want] = process.argv.slice(2);
 fs.mkdirSync(outDir, { recursive: true });
 const ANON = fs.readFileSync("scripts/blogs/restructure.mjs", "utf8").match(/ANON = "([^"]+)"/)[1];
-const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
+const ask = (prompt, timeoutMs, maxTokens) => askGroqModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
 for (const w of want) {
   const r = await fetch(`https://strfwaqvxvkhjbqrwmla.supabase.co/rest/v1/articles?select=id,title,category,content,original_notes&published=eq.true&or=(slug.ilike.*${encodeURIComponent(w)}*,title.ilike.*${encodeURIComponent(w)}*)&limit=1`, { headers: { apikey: ANON, Authorization: `Bearer ${ANON}` } });
   const a = (await r.json())[0];

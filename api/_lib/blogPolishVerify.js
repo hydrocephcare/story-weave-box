@@ -1,4 +1,4 @@
-import { askModel } from "../../supabase/functions/_shared/topicAi.js";
+import { askGroqModel } from "../../supabase/functions/_shared/topicAi.js";
 import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { kindOf } from "./blogPolishCore.js";
 
@@ -45,7 +45,7 @@ export async function verifyBlogContent(article, candidate, env, { allowRepair =
     "Output only the complete corrected Markdown."
   ].join("\n\n");
 
-  const repaired = await askModel(prompt, { env, plain: true,
+  const repaired = await askGroqModel(prompt, { env, plain: true,
     timeoutMs: Math.max(timeoutMs, 50000), maxTokens: 11000 });
   const corrected = String(repaired.text || "").trim();
   if (!corrected || corrected.length < Math.min(500, source.length * 0.65)) {

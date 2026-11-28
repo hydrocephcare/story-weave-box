@@ -1,4 +1,9 @@
-const endpoint = process.env.TOPIC_MAINTENANCE_URL || "https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance";
+import { postJsonPreservingRedirect } from "../../supabase/functions/_shared/postJson.js";
+
+const configuredEndpoint = String(process.env.TOPIC_MAINTENANCE_URL || "").trim();
+const workflowBranch = process.env.GITHUB_REF_NAME || "main";
+const endpoint = configuredEndpoint || (workflowBranch === "main" ? "https://www.ompathstudy.com/api/neon-functions?name=topic-maintenance" : "");
+if (!endpoint) throw new Error("Set TOPIC_MAINTENANCE_URL to an isolated staging endpoint before running this workflow outside main.");
 const audience = "ompathstudy-topic-maintenance";
 
 async function getWorkflowToken() {
@@ -15,13 +20,13 @@ async function getWorkflowToken() {
 
 export async function maintenanceRequest(task, fields = {}) {
   const token = await getWorkflowToken();
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-    body: JSON.stringify({ task, ...fields }),
-    signal: AbortSignal.timeout(task === "deep-topic" || task === "deep-static" ? 260000 : task === "check-note" || task === "zone-write" || task === "note-mcqs" || task === "note-flashcards" ? 180000 : 58000),
-  });
-  const result = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(result.error || `Topic maintenance API returned HTTP ${response.status}`);
+  const timeoutMs = task === "deep-topic" || task === "deep-static" ? 260000 : task === "check-note" || task === "zone-write" || task === "note-mcqs" || task === "note-flashcards" ? 180000 : 58000;
+  const { response, data: result, finalUrl, redirects } = await postJsonPreservingRedirect(
+    endpoint,
+    { task, ...fields },
+    { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+    timeoutMs,
+  );
+  if (!response.ok) throw new Error(result.error || `Topic maintenance API returned HTTP ${response.status} at ${finalUrl} after ${redirects} redirects`);
   return result;
 }

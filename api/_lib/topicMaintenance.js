@@ -1,11 +1,12 @@
 import { neon } from "@neondatabase/serverless";
+import { deepNoteReady, topicBaseReady } from "./deepNoteReadiness.js";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
-import { askModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { askModel, askGroqModel, generateReviewedTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 import { generateCheckedDeep, checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 import { supabaseAiEnv } from "./supabaseAiEnv.js";
-import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
 import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
+import { dedupeNoteMcqs, generateNoteMcqs, generateNoteFlashcards } from "../../supabase/functions/_shared/noteBanks.js";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 const AUDIENCE = "ompathstudy-topic-maintenance";
@@ -46,7 +47,7 @@ const TABLES = {
   },
 };
 
-async function verifyWorkflow(req) {
+export async function verifyWorkflow(req) {
   const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "").trim();
   if (!token) return false;
   try {
@@ -54,9 +55,19 @@ async function verifyWorkflow(req) {
       issuer: "https://token.actions.githubusercontent.com",
       audience: AUDIENCE,
     });
+    const stagingBranch = String(process.env.TOPIC_MAINTENANCE_STAGING_BRANCH || "").trim();
+    const validStagingBranch = /^[A-Za-z0-9._/-]+$/.test(stagingBranch) && !stagingBranch.includes("..");
+    const allowedBranches = new Set(["refs/heads/main"]);
+    const allowedRefs = new Set(WORKFLOW_REFS);
+    if (validStagingBranch && stagingBranch !== "main") {
+      const ref = "refs/heads/" + stagingBranch;
+      allowedBranches.add(ref);
+      allowedRefs.add(REPOSITORY + "/.github/workflows/topics-daily.yml@" + ref);
+      allowedRefs.add(REPOSITORY + "/.github/workflows/zone-daily.yml@" + ref);
+    }
     return payload.repository === REPOSITORY
-      && payload.ref === "refs/heads/main"
-      && WORKFLOW_REFS.has(String(payload.workflow_ref || ""))
+      && allowedBranches.has(String(payload.ref || ""))
+      && allowedRefs.has(String(payload.workflow_ref || ""))
       && ["push", "schedule", "workflow_dispatch"].includes(String(payload.event_name));
   } catch {
     return false;
@@ -64,73 +75,6 @@ async function verifyWorkflow(req) {
 }
 
 
-function cleanStudyNote(value) {
-  return String(value || "").replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 12000);
-}
-function parseNoteMcqs(raw) {
-  const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
-  if(start<0||end<=start)return [];
-  let data; try{data=JSON.parse(text.slice(start,end+1));}catch{return [];}
-  if(!Array.isArray(data))return [];
-  return data.filter(q=>q?.question&&Array.isArray(q.options)&&q.options.length>=4&&Number.isInteger(q.correct_answer)&&q.correct_answer>=0&&q.correct_answer<=3)
-    .map(q=>({question:String(q.question).trim(),options:q.options.slice(0,4).map(x=>String(x).trim()),correct_answer:q.correct_answer,explanation:String(q.explanation||"").trim()}))
-    .filter(q=>q.question.length>=12&&q.options.every(x=>x.length>0)&&new Set(q.options.map(x=>x.toLowerCase())).size===4&&!/all of the above|none of the above/i.test(q.options.join(" ")));
-}
-function parseNoteCards(raw) {
-  const text=String(raw||""); const start=text.indexOf("["); const end=text.lastIndexOf("]");
-  if(start<0||end<=start)return [];
-  let data; try{data=JSON.parse(text.slice(start,end+1));}catch{return [];}
-  if(!Array.isArray(data))return [];
-  const seen=new Set();
-  return data.filter(c=>c?.question&&c?.answer).map(c=>({question:String(c.question).trim(),answer:Array.isArray(c.answer)?c.answer.map(x=>"- "+String(x)).join("\n"):String(c.answer).trim()}))
-    .filter(c=>{const key=c.question.toLowerCase().replace(/[^a-z0-9]+/g," ").slice(0,60);if(key.length<8||seen.has(key)||c.answer.length<30)return false;seen.add(key);return true;});
-}
-function dedupeNoteMcqs(items, existing=[]) {
-  const seen=new Set(existing.map(q=>String(q.question||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60)));
-  return items.filter(q=>{const key=q.question.toLowerCase().replace(/[^a-z0-9]+/g," ").trim().slice(0,60);if(seen.has(key))return false;seen.add(key);return true;});
-}
-async function generateNoteMcqs(article, env, count=24, avoid=[]) {
-  const text=cleanStudyNote(article.content);
-  const prompt=`Write exactly ${count} challenging single-best-answer MCQs for medical students from this study note.
-At least two thirds should be short clinical vignettes. Each question must have exactly four plausible options, one best answer, a 0-based correct_answer index, and a concise explanation.
-Do not use all/none of the above. Do not make the correct option conspicuously longer. Use only supported facts; never invent doses or diagnostic criteria.
-Return ONLY a JSON array of objects: {"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}.
-TOPIC: ${article.title} | ${article.category}
-AVOID REPEATING: ${avoid.slice(0,30).map(q=>String(q).slice(0,120)).join("\n")}
-SOURCE NOTE:
-${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:6500});
-  let questions=parseNoteMcqs(draft.text);
-  if(questions.length<Math.max(8,Math.floor(count*0.55)))throw new Error("MCQ generation returned too few valid questions.");
-  const weak=questions.map((q,i)=>weakness(q).some(w=>w!=="recall")?i:-1).filter(i=>i>=0).slice(0,8);
-  if(weak.length){try{const fixed=await hardenBatch(env,weak.map(i=>questions[i]),{subject:article.title+" ("+article.category+")"});weak.forEach((i,k)=>{if(fixed[k])questions[i]={...fixed[k]};});}catch{}}
-  questions=placeNewQuestions(dedupeNoteMcqs(questions,avoid));
-  const review=await checkContent({title:article.title,kind:"medical multiple-choice questions",text:JSON.stringify(questions),env,timeoutMs:45000});
-  if(!review.validated)throw new Error("MCQs failed independent medical review: "+(review.issues||[]).slice(0,3).map(x=>x.problem).join("; "));
-  return {questions,review};
-}
-async function generateNoteFlashcards(article, env) {
-  const text=cleanStudyNote(article.content).slice(0,10000);
-  const count=Math.max(10,Math.min(22,Math.round(text.length/450)));
-  const prompt=`Create ${count} high-yield revision flashcards for medical students from this study note.
-Each card covers one distinct angle: definition, causes, pathophysiology, clinical features, classification, investigations, differentials, management/pharmacology, complications, ward-round points, prognosis or prevention. Use only angles supported by the note.
-Each answer is 35–60 words: a direct answer, then 3–4 short explanatory lines, and a final Related line. Do not repeat facts across cards. No invented doses or criteria.
-Return ONLY JSON array: [{"question":"...","answer":"..."}].
-TOPIC: ${article.title} | ${article.category}
-SOURCE NOTE:
-${text}`;
-  const draft=await askModel(prompt,{env,plain:true,timeoutMs:55000,maxTokens:7000});
-  const cards=parseNoteCards(draft.text);
-  if(cards.length<8)throw new Error("Flashcard generation returned too few distinct usable cards.");
-  return cards;
-}
-
-function deepReady(deep) {
-  return Boolean(deep?.checked) && (deep?.sections?.length || 0) >= 7
-    && (deep?.vivas?.length || 0) >= 12 && (deep?.mcqs?.length || 0) >= 6
-    && (deep?.cases?.length || 0) >= 2 && (deep?.facts?.length || 0) >= 6
-    && (deep?.mistakes?.length || 0) >= 5 && (deep?.exam?.length || 0) >= 12;
-}
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed." });
@@ -192,21 +136,21 @@ export default async function handler(req, res) {
         } catch { return []; }
       };
       const prompt = prompts[kind] + " Reply with ONLY a JSON object containing a questions array. Each question must have four options, one clearly best answer, a correct index and a one-sentence explanation. No all-of-the-above. Use standard medical terminology and accepted medical facts only.";
-      const draft = await askModel(prompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+      const draft = await askGroqModel(prompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
       let questions = parse(draft.text);
       if (questions.length < 5) return res.status(422).json({ validated: false, error: "The AI returned too few valid questions." });
-      let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+      let review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 12000 });
       if (!review.validated) {
         const repairPrompt = "Correct the medical or examination-quality problems listed below. Preserve the topic and year level. Ensure one best answer, plausible distractors and a clear explanation. Use accepted medical knowledge only. Output ONLY the complete JSON object with a questions array.\nISSUES:\n"
           + (review.issues || []).map((item, index) => (index + 1) + ". " + item.problem + " Fix: " + item.fix).join("\n")
           + "\nQUESTIONS:\n" + JSON.stringify(questions);
-        const fixed = await askModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 45000, maxTokens: 5000 });
+        const fixed = await askGroqModel(repairPrompt, { env: groqEnv, plain: true, timeoutMs: 12000, maxTokens: 5000 });
         questions = parse(fixed.text);
         if (questions.length < 5) return res.status(422).json({ validated: false, error: "The repaired question set was incomplete." });
-        review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 45000 });
+        review = await checkContent({ title: name + " " + label, kind: "medical MCQ, clinical case and pharmacology questions", text: JSON.stringify(questions), env: geminiEnv, timeoutMs: 12000 });
       }
       if (!review.validated) return res.status(422).json({ validated: false, issues: review.issues || [] });
-      return res.status(200).json({ validated: true, questions, reviewModel: review.model || null });
+      return res.status(200).json({ validated: true, reviewStatus: "passed", questions, reviewModel: review.model || null, reviewedAt: review.at || new Date().toISOString() });
     }
 
 
@@ -226,7 +170,7 @@ export default async function handler(req, res) {
         if(needed<4){await getDb().query("UPDATE public.mcq_sets SET original_notes=$2,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify({topped:true,topup_note:"already enough"})]);return res.status(200).json({success:true,status:"already enough"});}
         const extra=await generateNoteMcqs(article,aiEnv,Math.min(needed,18),have.map(q=>q.question));
         const merged=[...have,...placeNewQuestions(dedupeNoteMcqs(extra.questions,have.map(q=>q.question)),{existing:have})].slice(0,36);
-        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length)})]);
+        await getDb().query("UPDATE public.mcq_sets SET questions=$2::jsonb,meta_description=$3,original_notes=$4,updated_at=now() WHERE id=$1::uuid",[set.id,JSON.stringify(merged),`${merged.length} practice MCQs with explanations on ${String(article.title).slice(0,70)}, written from Ompath Study notes.`,JSON.stringify({topped:true,topup_note:"added "+(merged.length-have.length),reviewed:true,review_model:extra.review.model||null})]);
         await getDb().query("DELETE FROM public.mcq_review_log WHERE set_id=$1::uuid",[set.id]);
         return res.status(200).json({success:true,status:"topped up",title:set.title,questions:merged.length});
       }
@@ -249,9 +193,10 @@ export default async function handler(req, res) {
       if(!candidate.length)return res.status(200).json({success:true,done:true});
       const rows=await getDb().query("SELECT id,title,category,content FROM public.articles WHERE id=$1::uuid AND published=true AND deleted_at IS NULL LIMIT 1",[candidate[0].id]);
       const article=rows[0];if(!article)return res.status(404).json({error:"Published study note not found."});
-      const cards=await generateNoteFlashcards(article,aiEnv);
+      const generated=await generateNoteFlashcards(article,aiEnv);
+      const cards=generated.cards;
       const description=`${cards.length} flashcards to revise ${cleanTopicTitle(article.title)}, written from Ompath Study notes.`;
-      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString()});
+      const meta=JSON.stringify({type:"note_flashcards",v:2,article_id:article.id,generated_at:new Date().toISOString(),reviewed:true,review_model:generated.review.model||null});
       if(upgrade){
         await getDb().query("UPDATE public.flashcard_sets SET cards=$2::jsonb,original_notes=$3,meta_description=$4,updated_at=now() WHERE id=$1::uuid",[upgrade.id,JSON.stringify(cards),meta,description]);
         return res.status(200).json({success:true,title:article.title,cards:cards.length,upgraded:true});
@@ -363,10 +308,10 @@ PAGE TEXT:
       const name = String(body.name || "").slice(0, 180);
       const category = String(body.category || "").slice(0, 100);
       const base = body.base && typeof body.base === "object" ? body.base : null;
-      if (name.length < 2 || !base || !Array.isArray(base.sections) || base.sections.length < 3) return res.status(400).json({ error: "A valid topic name and revision page are required." });
+      if (name.length < 2 || !topicBaseReady(base)) return res.status(400).json({ error: "A valid topic name and complete revision page are required." });
       const past = Array.isArray(body.past) ? body.past.slice(0, 12).map(x => String(x).slice(0, 220)) : [];
       const deep = await generateCheckedDeep({ name, category, base, past }, aiEnv, fetch, 240000);
-      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
+      if (!deepNoteReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ error: "Deep notes did not pass independent clinical validation." });
       return res.status(200).json({ deep });
     }
 
@@ -382,7 +327,7 @@ PAGE TEXT:
         }
         return result;
       };
-      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: aiEnv, timeoutMs: 45000 }), original);
+      const first = applyThin(await checkContent({ title, kind: "study note", text: original, env: aiEnv, timeoutMs: 12000 }), original);
       let final = first, correctedBody = null, repairStatus = "clean";
       if (!first.validated) {
         const prompt = [
@@ -394,11 +339,11 @@ PAGE TEXT:
           "NOTE: " + title, "ISSUES:", first.issues.map((x,i)=>(i+1)+". ["+x.severity+"] "+x.where+": "+x.problem+" | Correction: "+x.fix).join("\n"),
           "ORIGINAL NOTE:", original
         ].join("\n\n");
-        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 55000, maxTokens: 10000, plain: true });
+        const draft = await askModel(prompt, { env: aiEnv, timeoutMs: 25000, maxTokens: 10000, plain: true });
         let fixed = String(draft.text || "").replace(/^\x60{3}(?:markdown|md)?\s*/i, "").replace(/\x60{3}\s*$/, "").trim();
         fixed = fixed.replace(/^---[\s\S]*?---\r?\n?/, "");
         if (fixed && fixed.length >= Math.min(500, original.length * 0.65)) {
-          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: aiEnv, timeoutMs: 45000 }), fixed);
+          final = applyThin(await checkContent({ title, kind: "study note", text: fixed, env: aiEnv, timeoutMs: 12000 }), fixed);
           if (final.validated) { correctedBody = fixed; repairStatus = "auto-repaired"; } else repairStatus = "held";
         } else repairStatus = "held";
       }
@@ -421,7 +366,7 @@ PAGE TEXT:
       const result = await generateReviewedTopicPage({
         name: row.name, category: row.category || "Medicine", context,
         choices: { level: "year4", setting: "tropical", depth: "full", angles: [] },
-      }, { env: aiEnv, maxFixRounds: 1, timeoutMs: 55000 });
+      }, { env: aiEnv, maxFixRounds: 1, timeoutMs: 25000 });
       if (!result.page?.medical || result.review?.status !== "passed") return res.status(422).json({ status: "held", slug, reason: "independent_review_failed" });
       const page = { ...result.page, aiReview: { ...(result.page.aiReview || {}), status: "passed", model: result.review.model, rounds: result.review.rounds || 0 } };
       if ((page.sections?.length || 0) < 9 || (page.exam?.length || 0) < 8 || (page.faq?.length || 0) < 3
@@ -444,12 +389,13 @@ PAGE TEXT:
       const rows = await getDb()`SELECT slug,name,category,content,updated_at FROM public.topic_pages WHERE slug = ${slug} AND status = 'published' LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(404).json({ error: "Published topic not found." });
-      if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
+      if (!topicBaseReady(row.content)) return res.status(422).json({ status: "held", slug, reason: "published_base_page_incomplete" });
+      if (deepNoteReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const deep = await generateCheckedDeep(
         { name: row.name, category: row.category || "Medicine", base: row.content || {}, past: [] },
         aiEnv, fetch, 240000,
       );
-      if (!deepReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
+      if (!deepNoteReady(deep) || JSON.stringify(deep).length > 90000) return res.status(422).json({ status: "held", slug, reason: "deep_note_validation_failed" });
       const content = { ...(row.content || {}), deep };
       const saved = await getDb()`UPDATE public.topic_pages
         SET content = ${JSON.stringify(content)}::jsonb, updated_at = now()
@@ -486,7 +432,7 @@ PAGE TEXT:
       const slug = String(body.slug || "");
       const deep = body.deep;
       if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) return res.status(400).json({ error: "Invalid topic slug." });
-      if (!deepReady(deep) || JSON.stringify(deep).length > 90000
+      if (!deepNoteReady(deep) || JSON.stringify(deep).length > 90000
           || /https?:|www\.|<[a-z/!]|javascript:|onerror\s*=|data:text/i.test(JSON.stringify(deep))) {
         return res.status(400).json({ error: "Deep-note payload did not pass the required structure checks." });
       }
@@ -494,7 +440,8 @@ PAGE TEXT:
         WHERE slug = ${slug} AND status = 'published' AND updated_at = ${body.updatedAt} LIMIT 1`;
       const row = rows[0];
       if (!row) return res.status(200).json({ status: "conflict", slug });
-      if (deepReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
+      if (!topicBaseReady(row.content)) return res.status(422).json({ status: "held", slug, reason: "published_base_page_incomplete" });
+      if (deepNoteReady(row.content?.deep)) return res.status(200).json({ status: "existing", slug });
       const content = { ...(row.content || {}), deep };
       const saved = await getDb()`UPDATE public.topic_pages
         SET content = ${JSON.stringify(content)}::jsonb, updated_at = now()
