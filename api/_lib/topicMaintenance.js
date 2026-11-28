@@ -143,7 +143,8 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
   const high = issues.filter((item) => item.severity === "high").length;
   const medium = issues.filter((item) => item.severity === "medium").length;
   const validated = results.length === batches.length && results.every((result) => result.validated)
-    && results.every((result) => result.validated && Boolean(String(result.model || "").trim()))\n    && high === 0 && medium === 0 && Boolean(model);
+    && results.every((result) => result.validated && Boolean(String(result.model || "").trim()))
+    && high === 0 && medium === 0 && Boolean(model);
   return { validated, high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
 }
 async function generateNoteFlashcards(article, env) {
