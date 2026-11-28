@@ -141,7 +141,7 @@ async function reviewFlashcardDeck({ title, source, cards, env, kind }) {
     && high === 0 && medium === 0 && Boolean(model);
   return { validated, high, medium, issues, model, at: new Date().toISOString().slice(0, 10) };
 }
-export async function generateNoteFlashcards(article, env) {
+export export async function generateNoteFlashcards(article, env) {
   const text = cleanStudyNote(article.content).slice(0, 10000);
   const count = Math.max(10, Math.min(22, Math.round(text.length / 450)));
   const prompt = `Create ${count} high-yield revision flashcards for medical students from this study note.
