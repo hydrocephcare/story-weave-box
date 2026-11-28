@@ -11,6 +11,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   games:
+    # Prevent scheduled game generation from pushing to production main by default.
+    if: vars.ALLOW_AUTOMATED_MAIN_WRITES == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
