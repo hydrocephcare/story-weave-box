@@ -128,7 +128,7 @@ export function sanitizePage(raw, options = {}) {
     if (sections.length < minimum) throw new Error(`thin topic page: ${sections.length} sections; ${minimum} required`);
     const thin = sections.filter((section) => {
       const structured = (section.b?.length ?? 0) + (section.t?.length ?? 0);
-      const words = (section.p ?? "").split(/\\s+/).filter(Boolean).length;
+      const words = (section.p ?? "").split(/\s+/).filter(Boolean).length;
       return structured < 4 && words < 65;
     });
     if (thin.length) throw new Error(`thin sections: ${thin.map((section) => section.h).slice(0, 4).join(", ")}`);
@@ -384,7 +384,15 @@ export async function generateReviewedTopicPage(input, { env, fetchImpl = fetch,
   let page;
   let review;
   for (let round = 0; round <= rounds; round++) {
-    page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    try {
+      page = await generateGroqTopicPage({ ...input, fixes, env, fetchImpl, timeoutMs });
+    } catch (err) {
+      if (round < rounds && /thin|sections|questions|faq/i.test(err?.message || "")) {
+        fixes.push(`Correction needed: ${err.message}. Ensure at least 9 substantive sections with detailed bullets or rich clinical prose, 8 examiner questions, and 3 FAQs.`);
+        continue;
+      }
+      throw err;
+    }
     if (!page.medical) return { page, review: { status: "not_applicable", rounds: round } };
     const pageText = [
       page.summary,
